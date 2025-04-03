@@ -1,11 +1,7 @@
-t.d(n, {
-    A: function () {
-        return i;
-    }
-});
-var a = t(442837),
-    r = t(826581);
+n.d(t, { A: () => i });
+var r = n(442837),
+    a = n(826581);
 function i(e) {
-    let { guildId: n } = e;
-    return (0, a.e7)([r.Z], () => r.Z.getSubmittedGuildJoinRequestTotal(n), [n]);
+    let { guildId: t } = e;
+    return (0, r.e7)([a.Z], () => (null != t ? a.Z.getSubmittedGuildJoinRequestTotal(t) : void 0), [t]);
 }

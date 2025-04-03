@@ -1,79 +1,118 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-});
-var s = n(735250),
-    a = n(470079),
-    i = n(120356),
-    r = n.n(i),
+n.d(t, { Z: () => g });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(481060),
     o = n(456935),
     c = n(259580),
     d = n(981631),
-    u = n(689938),
-    _ = n(70529);
-function I(e) {
+    u = n(388032),
+    m = n(296205);
+function g(e) {
     let { guild: t } = e,
-        i = t.verificationLevel,
-        I = a.useMemo(() => (0, o.I9)(i), [i]);
-    return (0, s.jsxs)(l.Clickable, {
+        s = t.verificationLevel,
+        g = i.useMemo(() => (0, o.I9)(s), [s]);
+    return (0, r.jsxs)(l.P3F, {
         onClick: () =>
-            (0, l.openModalLazy)(async () => {
-                let { default: e } = await n.e('27933').then(n.bind(n, 694278));
-                return (n) =>
-                    (0, s.jsx)(e, {
-                        ...n,
-                        guild: t,
-                        hideColors: !0
-                    });
+            (0, l.ZDy)(async () => {
+                let { default: e } = await n.e('72458').then(n.bind(n, 694278));
+                return (n) => {
+                    var i, s;
+                    return (0, r.jsx)(
+                        e,
+                        ((i = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, n)),
+                        (s = s =
+                            {
+                                guild: t,
+                                hideColors: !0
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(s)).forEach(function (e) {
+                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                              }),
+                        i)
+                    );
+                };
             }),
-        className: r()(_.simpleItemWrapper, _.clickable),
+        className: a()(m.simpleItemWrapper, m.clickable),
         children: [
-            (0, s.jsxs)('div', {
-                className: _.itemContent,
+            (0, r.jsxs)('div', {
+                className: m.itemContent,
                 children: [
-                    (0, s.jsx)(l.Heading, {
+                    (0, r.jsx)(l.X6q, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: u.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL
+                        children: u.NW.string(u.t.DpRdYG)
                     }),
-                    (0, s.jsx)(l.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: u.Z.Messages.GUILD_SETTINGS_SAFETY_VERIFICATION_DESCRIPTION
+                        children: u.NW.string(u.t.mA17eH)
                     }),
-                    (0, s.jsx)('div', {
-                        className: _.__invalid_pillRow,
-                        children: (0, s.jsxs)(l.Text, {
+                    (0, r.jsx)('div', {
+                        className: m.__invalid_pillRow,
+                        children: (0, r.jsxs)(l.Text, {
                             variant: 'text-xs/medium',
                             color: 'interactive-normal',
-                            className: _.valuePill,
+                            className: m.valuePill,
                             children: [
-                                i === d.sFg.VERY_HIGH
-                                    ? (0, s.jsx)(l.MobilePhoneIcon, {
+                                s === d.sFg.VERY_HIGH
+                                    ? (0, r.jsx)(l.AtH, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 16,
                                           height: 16
                                       })
-                                    : (0, s.jsx)(l.EnvelopeIcon, {
+                                    : (0, r.jsx)(l._XJ, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 16,
                                           height: 16
                                       }),
-                                I
+                                g
                             ]
                         })
                     })
                 ]
             }),
-            (0, s.jsx)(c.Z, {
+            (0, r.jsx)(c.Z, {
                 height: 24,
                 width: 24,
                 direction: c.Z.Directions.RIGHT,
-                className: _.caret
+                className: m.caret
             })
         ]
     });

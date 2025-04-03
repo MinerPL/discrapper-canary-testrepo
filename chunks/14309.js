@@ -1,8 +1,4 @@
-n.d(t, {
-    S: function () {
-        return i;
-    }
-});
+n.d(t, { S: () => i });
 let r = [];
 for (let e = 0; e < 256; ++e) r.push((e + 256).toString(16).slice(1));
 function i(e, t = 0) {

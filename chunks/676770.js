@@ -1,46 +1,38 @@
 n.d(t, {
-    Fl: function () {
-        return o;
-    },
-    c1: function () {
-        return l;
-    },
-    cv: function () {
-        return u;
-    },
-    lp: function () {
-        return s;
-    }
+    Fl: () => s,
+    c1: () => l,
+    cv: () => c,
+    lp: () => a
 });
 var r = n(149765),
     i = n(231338),
-    a = n(689938);
-let s = 2,
-    o = 2,
+    o = n(388032);
+let a = 2,
+    s = 2,
     l = () => [
         {
             value: 1,
-            label: a.Z.Messages.GUILD_SERVER_LOCKDOWN_DURATION_1_HOUR
+            label: o.NW.string(o.t['GA/d4O'])
         },
         {
             value: 2,
-            label: a.Z.Messages.GUILD_SERVER_LOCKDOWN_DURATION_2_HOURS
+            label: o.NW.string(o.t['+rHFen'])
         },
         {
             value: 4,
-            label: a.Z.Messages.GUILD_SERVER_LOCKDOWN_DURATION_4_HOURS
+            label: o.NW.string(o.t['5CNt/P'])
         },
         {
             value: 6,
-            label: a.Z.Messages.GUILD_SERVER_LOCKDOWN_DURATION_6_HOURS
+            label: o.NW.string(o.t.oQ4PND)
         },
         {
             value: 12,
-            label: a.Z.Messages.GUILD_SERVER_LOCKDOWN_DURATION_12_HOURS
+            label: o.NW.string(o.t.LOQ0j4)
         },
         {
             value: 24,
-            label: a.Z.Messages.GUILD_SERVER_LOCKDOWN_DURATION_24_HOURS
+            label: o.NW.string(o.t['W0+Lsb'])
         }
     ],
-    u = r.$e(i.Pl.ADMINISTRATOR, i.Pl.MANAGE_GUILD, i.Pl.BAN_MEMBERS, i.Pl.KICK_MEMBERS, i.Pl.MODERATE_MEMBERS);
+    c = r.$e(i.Pl.ADMINISTRATOR, i.Pl.MANAGE_GUILD, i.Pl.BAN_MEMBERS, i.Pl.KICK_MEMBERS, i.Pl.MODERATE_MEMBERS);

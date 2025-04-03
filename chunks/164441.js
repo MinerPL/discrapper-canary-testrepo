@@ -1,8 +1,4 @@
-n.d(t, {
-    u: function () {
-        return i;
-    }
-});
+n.d(t, { u: () => i });
 var r = n(40284);
 function i() {
     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,

@@ -1,108 +1,108 @@
-n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    o = n(770146),
+n.d(t, { Z: () => N }), n(566702), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(481060),
+    s = n(770146),
     c = n(600164),
-    d = n(424218),
-    u = n(823379),
-    _ = n(358085),
-    E = n(843445),
-    h = n(981631),
-    m = n(689938),
-    I = n(456733);
-let g = {
-    [h.TaA.WINDOWS]: _.PlatformTypes.WINDOWS,
-    [h.TaA.MACOS]: _.PlatformTypes.OSX,
-    [h.TaA.LINUX]: _.PlatformTypes.LINUX
+    u = n(424218),
+    d = n(823379),
+    p = n(358085),
+    h = n(843445),
+    f = n(981631),
+    g = n(388032),
+    m = n(208039);
+let b = {
+    [f.TaA.WINDOWS]: p.PlatformTypes.WINDOWS,
+    [f.TaA.MACOS]: p.PlatformTypes.OSX,
+    [f.TaA.LINUX]: p.PlatformTypes.LINUX
 };
-class p extends a.PureComponent {
+class _ extends i.PureComponent {
     render() {
-        let { active: e, children: t, pageSize: n, onClick: a } = this.props,
-            s = n === E.b.LARGE;
-        return (0, i.jsx)(l.Button, {
-            size: s ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
-            fullWidth: !s,
-            color: e ? I.tabSelectedColor : I.tabNotSelectedColor,
-            className: r()({
-                [I.tabPageLarge]: s,
-                [I.tabPageSmall]: !s,
-                [I.tabSelected]: e,
-                [I.tabNotSelected]: !e
+        let { active: e, children: t, pageSize: n, onClick: i } = this.props,
+            l = n === h.b.LARGE;
+        return (0, r.jsx)(o.zxk, {
+            size: l ? o.zxk.Sizes.MIN : o.zxk.Sizes.LARGE,
+            fullWidth: !l,
+            color: e ? m.tabSelectedColor : m.tabNotSelectedColor,
+            className: a()({
+                [m.tabPageLarge]: l,
+                [m.tabPageSmall]: !l,
+                [m.tabSelected]: e,
+                [m.tabNotSelected]: !e
             }),
-            onClick: a,
+            onClick: i,
             children: t
         });
     }
 }
-let T = (e) => [
+let E = (e) => [
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_OS,
+        key: g.NW.string(g.t['0TcHzs']),
         value: e.operating_system_version
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_CPU,
+        key: g.NW.string(g.t.eOX6Hh),
         value: e.cpu
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_MEMORY,
-        value: null != e.ram ? m.Z.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({ size: (0, d.BU)(1000 * e.ram, { showDecimalForGB: !1 }) }) : null
+        key: g.NW.string(g.t['+WJ5XV']),
+        value: null != e.ram ? g.NW.formatToPlainString(g.t.RNRSl5, { size: (0, u.BU)(1000 * e.ram, { showDecimalForGB: !1 }) }) : null
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_VIDEO,
+        key: g.NW.string(g.t['+3s/V1']),
         value: e.gpu
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_STORAGE,
-        value: null != e.disk ? (0, d.BU)(1000 * e.disk, { showDecimalForGB: !1 }) : null
+        key: g.NW.string(g.t['L+x5wM']),
+        value: null != e.disk ? (0, u.BU)(1000 * e.disk, { showDecimalForGB: !1 }) : null
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_SOUND,
+        key: g.NW.string(g.t['Ghp2/P']),
         value: e.sound_card
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_NETWORK,
+        key: g.NW.string(g.t['+w6nJi']),
         value: e.network
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_NOTES,
+        key: g.NW.string(g.t.Au3Vbm),
         value: e.notes
     }
 ];
-class S extends a.PureComponent {
+class O extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { systemRequirements: n } = e,
-            { selectedOperatingSystem: i } = t,
-            a = Object.keys(n);
-        return a.includes(i) ? null : { selectedOperatingSystem: a[0] };
+            { selectedOperatingSystem: r } = t,
+            i = Object.keys(n);
+        return i.includes(r) ? null : { selectedOperatingSystem: i[0] };
     }
     renderTabs() {
         let { pageSize: e, systemRequirements: t } = this.props,
             { selectedOperatingSystem: n } = this.state,
-            a = Object.keys(t);
-        return 1 === a.length
+            i = Object.keys(t);
+        return 1 === i.length
             ? null
-            : (0, i.jsxs)(c.Z, {
-                  className: I.tabs,
+            : (0, r.jsxs)(c.Z, {
+                  className: m.tabs,
                   children: [
-                      (0, i.jsx)('div', { className: I.separator }),
-                      a.map((t) =>
-                          (0, i.jsx)(
-                              p,
+                      (0, r.jsx)('div', { className: m.separator }),
+                      i.map((t) =>
+                          (0, r.jsx)(
+                              _,
                               {
                                   active: t === n,
                                   onClick: () => this.handleSelectOperatingSystem(t),
                                   pageSize: e,
                                   children: (function (e) {
                                       switch (e) {
-                                          case h.TaA.WINDOWS:
-                                              return m.Z.Messages.WINDOWS;
-                                          case h.TaA.MACOS:
-                                              return m.Z.Messages.MACOS;
-                                          case h.TaA.LINUX:
-                                              return m.Z.Messages.LINUX;
+                                          case f.TaA.WINDOWS:
+                                              return g.NW.string(g.t['0/xHFB']);
+                                          case f.TaA.MACOS:
+                                              return g.NW.string(g.t.E4u4n5);
+                                          case f.TaA.LINUX:
+                                              return g.NW.string(g.t.tcawo6);
                                       }
                                   })(t)
                               },
@@ -114,18 +114,18 @@ class S extends a.PureComponent {
     }
     renderRequirementsSection(e, t) {
         if (null == e) return null;
-        let n = T(e)
+        let n = E(e)
             .map((e, t) => {
                 let n = null != e.value ? e.value.trim() : null;
                 return null == n || 0 === n.length
                     ? null
-                    : (0, i.jsxs)(
+                    : (0, r.jsxs)(
                           'div',
                           {
-                              className: I.requirement,
+                              className: m.requirement,
                               children: [
-                                  (0, i.jsxs)('span', {
-                                      className: I.requirementKey,
+                                  (0, r.jsxs)('span', {
+                                      className: m.requirementKey,
                                       children: [e.key, ':']
                                   }),
                                   n
@@ -134,11 +134,11 @@ class S extends a.PureComponent {
                           t
                       );
             })
-            .filter(u.lm);
-        return (0, i.jsxs)('div', {
-            className: I.requirements,
+            .filter(d.lm);
+        return (0, r.jsxs)('div', {
+            className: m.requirements,
             children: [
-                (0, i.jsx)(o.Z, {
+                (0, r.jsx)(s.Z, {
                     tag: 'h4',
                     children: t
                 }),
@@ -148,38 +148,37 @@ class S extends a.PureComponent {
     }
     renderBody() {
         let { minimum: e, recommended: t } = this.props.systemRequirements[this.state.selectedOperatingSystem];
-        return (0, i.jsxs)('div', {
-            className: I.requirementsContainer,
-            children: [this.renderRequirementsSection(e, m.Z.Messages.APPLICATION_STORE_SPECS_MINIMUM), this.renderRequirementsSection(t, m.Z.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)]
+        return (0, r.jsxs)('div', {
+            className: m.requirementsContainer,
+            children: [this.renderRequirementsSection(e, g.NW.string(g.t.QCCMXF)), this.renderRequirementsSection(t, g.NW.string(g.t.He39ws))]
         });
     }
     render() {
-        return (0, i.jsxs)('div', {
+        return (0, r.jsxs)('div', {
             className: this.props.className,
-            children: [(0, i.jsx)(o.Z, { children: m.Z.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS }), this.renderTabs(), this.renderBody()]
+            children: [(0, r.jsx)(s.Z, { children: g.NW.string(g.t.IkOAoq) }), this.renderTabs(), this.renderBody()]
         });
     }
     constructor(e) {
-        var t, n, i;
+        var t, n;
         super(e),
-            (t = this),
-            (n = 'handleSelectOperatingSystem'),
-            (i = (e) => {
+            (t = 'handleSelectOperatingSystem'),
+            (n = (e) => {
                 this.setState({ selectedOperatingSystem: e });
             }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
+            t in this
+                ? Object.defineProperty(this, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i);
-        let a = (0, _.getPlatform)(),
-            s = Object.keys(e.systemRequirements),
-            r = s[0];
-        for (let e of s) g[e] === a && (r = e);
-        this.state = { selectedOperatingSystem: r };
+                : (this[t] = n);
+        let r = (0, p.getPlatform)(),
+            i = Object.keys(e.systemRequirements),
+            l = i[0];
+        for (let e of i) b[e] === r && (l = e);
+        this.state = { selectedOperatingSystem: l };
     }
 }
-t.Z = S;
+let N = O;

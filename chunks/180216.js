@@ -1,78 +1,73 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(442837),
-    l = n(481060),
-    r = n(592125),
-    o = n(430824),
+n.d(t, { Z: () => b }), n(47120), n(266796);
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(592125),
+    s = n(430824),
     c = n(584825),
     u = n(406074),
     d = n(660196),
-    h = n(36246),
-    m = n(305342),
-    p = n(981631),
-    _ = n(689938),
-    E = n(721802);
-function f(e) {
+    p = n(36246),
+    h = n(305342),
+    f = n(981631),
+    m = n(388032),
+    g = n(845230);
+function b(e) {
     let { guildId: t, channelId: n } = e,
-        f = (0, u.C)({
+        b = (0, u.C)({
             guildId: t,
             channelId: n
         }),
-        C = (0, c.GG)(t),
-        g = (0, c.YB)(t),
-        I = (0, s.e7)([o.Z], () => o.Z.getGuild(t), [t]),
-        x = null == I ? void 0 : I.name,
-        T = (0, s.e7)([r.Z], () => r.Z.getChannel(n)),
-        N = a.useMemo(() => {
+        _ = (0, c.GG)(t),
+        C = (0, c.YB)(t),
+        y = (0, l.e7)([s.Z], () => s.Z.getGuild(t), [t]),
+        x = null == y ? void 0 : y.name,
+        v = (0, l.e7)([a.Z], () => a.Z.getChannel(n)),
+        j = i.useMemo(() => {
             let e = {};
-            for (let t of C) for (let n of t.subscription_listings_ids) e[n] = t.id;
+            for (let t of _) for (let n of t.subscription_listings_ids) e[n] = t.id;
             return e;
-        }, [C]);
+        }, [_]);
     return ((0, d.Z)({
         guildId: t,
-        location: p.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
-        relevantSubscriptionListingIds: f.map((e) => e.id)
+        location: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
+        relevantSubscriptionListingIds: b.map((e) => e.id)
     }),
-    null == I)
-        ? (0, i.jsx)('div', {
-              className: E.__invalid_spinnerContainer,
-              children: (0, i.jsx)(l.Spinner, { className: E.__invalid_spinner })
+    null == y)
+        ? (0, r.jsx)('div', {
+              className: g.__invalid_spinnerContainer,
+              children: (0, r.jsx)(o.$jN, { className: g.__invalid_spinner })
           })
-        : (0, i.jsxs)(l.ScrollerAuto, {
-              className: E.pageContainer,
+        : (0, r.jsxs)(o.w0Z, {
+              className: g.pageContainer,
               children: [
-                  (0, i.jsx)(l.Heading, {
+                  (0, r.jsx)(o.X6q, {
                       variant: 'heading-xl/semibold',
-                      className: E.joinCtaTitle,
-                      children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_UPSELL_PAGE_CTA.format({
+                      className: g.joinCtaTitle,
+                      children: m.NW.format(m.t.xHMpys, {
                           serverName: x,
-                          channelName: null == T ? void 0 : T.name
+                          channelName: null == v ? void 0 : v.name
                       })
                   }),
-                  (0, i.jsx)(l.Text, {
-                      className: E.joinCtaSubtitle,
+                  (0, r.jsx)(o.Text, {
+                      className: g.joinCtaSubtitle,
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: null == g ? void 0 : g.description
+                      children: null == C ? void 0 : C.description
                   }),
-                  (0, i.jsx)(h.Z, {
+                  (0, r.jsx)(p.Z, {
                       guildId: t,
-                      children: f
-                          .filter((e) => null != N[e.id])
+                      children: b
+                          .filter((e) => null != j[e.id])
                           .map((e) =>
-                              (0, i.jsx)(
-                                  m.Z,
+                              (0, r.jsx)(
+                                  h.Z,
                                   {
                                       guildId: t,
                                       listingId: e.id,
-                                      groupListingId: N[e.id],
-                                      analyticsLocation: p.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
+                                      groupListingId: j[e.id],
+                                      analyticsLocation: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
                                   },
                                   e.id
                               )

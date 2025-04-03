@@ -1,107 +1,106 @@
 n.d(t, {
-    SR: function () {
-        return c;
-    },
-    Vk: function () {
-        return o;
-    },
-    r2: function () {
-        return u;
-    },
-    xl: function () {
-        return d;
-    }
+    SR: () => o,
+    Vk: () => l,
+    xl: () => c
 });
-var s = n(544891),
-    a = n(570140),
-    i = n(981631);
-let r = 3628800000;
-function l(e, t) {
+var r = n(544891),
+    i = n(570140),
+    s = n(981631);
+function a(e, t) {
     let n = new Date(),
-        a = new Date(n.getTime() - (n.getDay() + 1) * 86400000 - r);
-    return s.tn.get({
+        i = new Date(n.getTime() - (n.getDay() + 1) * 86400000 - 3628800000);
+    return r.tn.get({
         url: t(e),
         query: {
-            start: a.toISOString(),
+            start: i.toISOString(),
             end: n.toISOString(),
             interval: 2
         },
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
 }
-function o(e) {
-    return l(e, i.ANM.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(
+function l(e) {
+    return a(e, s.ANM.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(
         (t) => {
             let { body: n } = t;
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS',
                 guildId: e,
                 stats: n.slice(0, 2)
             });
         },
         (e) => {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE',
                 error: e.body
             });
         }
     );
 }
-function c(e) {
-    return l(e, i.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(
+function o(e) {
+    return a(e, s.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(
         (t) => {
             let { body: n } = t;
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS',
                 guildId: e,
                 stats: n.slice(0, 2)
             });
         },
         (e) => {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE',
                 error: e.body
             });
         }
     );
 }
-function d(e) {
-    return l(e, i.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(
+function c(e) {
+    return a(e, s.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(
         (t) => {
             let { body: n } = t,
-                s = n
+                r = n
                     .filter((e) => e.hasOwnProperty('pct_retained'))
                     .map((e) => {
-                        let { interval_start_timestamp: t, pct_retained: n, ...s } = e;
-                        return {
-                            interval_start_timestamp: t,
-                            pct_retained: n
-                        };
+                        let { interval_start_timestamp: t, pct_retained: n } = e;
+                        return (
+                            (function (e, t) {
+                                if (null != e) {
+                                    var n,
+                                        r,
+                                        i = (function (e, t) {
+                                            if (null == e) return {};
+                                            var n,
+                                                r,
+                                                i = {},
+                                                s = Object.keys(e);
+                                            for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                            return i;
+                                        })(e, t);
+                                    if (Object.getOwnPropertySymbols) {
+                                        var s = Object.getOwnPropertySymbols(e);
+                                        for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                    }
+                                }
+                            })(e, ['interval_start_timestamp', 'pct_retained']),
+                            {
+                                interval_start_timestamp: t,
+                                pct_retained: n
+                            }
+                        );
                     });
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS',
                 guildId: e,
-                stats: s.slice(0, 2)
+                stats: r.slice(0, 2)
             });
         },
         (e) => {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE',
                 error: e.body
             });
         }
-    );
-}
-function u(e) {
-    return s.tn.get({ url: i.ANM.GUILD_ANALYTICS_MEMBER_INSIGHTS(e) }).then(
-        (t) => {
-            a.Z.dispatch({
-                type: 'GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS',
-                guildId: e,
-                hasAccessRate: t.body.has_access_rate,
-                accessRate: t.body.access_rate
-            });
-        },
-        () => {}
     );
 }

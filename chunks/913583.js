@@ -1,51 +1,47 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var s = n(735250);
-n(470079);
-var r = n(990547),
-    i = n(481060),
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(990547),
+    o = n(481060),
     a = n(213609),
     l = n(388905),
-    o = n(760213),
-    c = n(689938),
-    u = n(539951);
+    s = n(760213),
+    c = n(388032),
+    u = n(122605);
 function d(e) {
     let { onDismiss: t } = e;
     return (
         (0, a.Z)({
-            type: r.ImpressionTypes.MODAL,
-            name: r.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING
+            type: i.ImpressionTypes.MODAL,
+            name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING
         }),
-        (0, s.jsxs)(l.ZP, {
+        (0, r.jsxs)(l.ZP, {
             className: u.chooseAccountAuthBox,
             children: [
-                (0, s.jsx)(l.Dx, { children: c.Z.Messages.SWITCH_ACCOUNTS_CHOOSE_ACCOUNT }),
-                (0, s.jsx)(i.Text, {
+                (0, r.jsx)(l.Dx, { children: c.NW.string(c.t['bVbB6+']) }),
+                (0, r.jsx)(o.Text, {
                     className: u.chooseAccountHelpText,
                     variant: 'text-md/normal',
                     color: 'header-secondary',
-                    children: c.Z.Messages.SWITCH_ACCOUNTS_CHOOSE_ACCOUNT_HELPER
+                    children: c.NW.string(c.t['0M5fNz'])
                 }),
-                (0, s.jsx)(o.Z, {
-                    actionText: c.Z.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN,
+                (0, r.jsx)(s.Z, {
+                    actionText: c.NW.string(c.t['DSN+h4']),
                     onAction: (e) => {
-                        e === o.W.LOGIN_REQUIRED && t();
+                        e === s.W.LOGIN_REQUIRED && t();
                     }
                 }),
-                (0, s.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: u.actions,
-                    children: (0, s.jsx)(i.Button, {
+                    children: (0, r.jsx)(o.zxk, {
                         className: u.__invalid_chooseAccountButton,
-                        look: i.Button.Looks.LINK,
-                        color: i.Button.Colors.PRIMARY,
+                        look: o.zxk.Looks.LINK,
+                        color: o.zxk.Colors.PRIMARY,
                         onClick: t,
-                        size: i.Button.Sizes.MEDIUM,
-                        children: (0, s.jsx)(i.Text, {
+                        size: o.zxk.Sizes.MEDIUM,
+                        children: (0, r.jsx)(o.Text, {
                             variant: 'text-sm/normal',
-                            children: c.Z.Messages.SWITCH_ACCOUNTS_ADD_AN_ACCOUNT_BUTTON
+                            children: c.NW.string(c.t['9g2mqa'])
                         })
                     })
                 })

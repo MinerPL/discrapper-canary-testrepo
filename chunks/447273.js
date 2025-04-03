@@ -1,18 +1,14 @@
-s.d(t, {
-    B: function () {
-        return l;
-    },
-    D: function () {
-        return n;
-    }
+s.d(e, {
+    B: () => n,
+    D: () => a
 });
-var a = s(570140);
-function l() {
-    a.Z.dispatch({ type: 'APPLICATION_STORE_ACCEPT_STORE_TERMS' });
+var l = s(570140);
+function n() {
+    l.Z.dispatch({ type: 'APPLICATION_STORE_ACCEPT_STORE_TERMS' });
 }
-function n(e) {
-    a.Z.dispatch({
+function a(t) {
+    l.Z.dispatch({
         type: 'APPLICATION_STORE_ACCEPT_EULA',
-        eulaId: e
+        eulaId: t
     });
 }

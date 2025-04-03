@@ -1,39 +1,40 @@
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(249458),
+    o = n.n(i),
+    a = n(481060),
+    s = n(249458),
     l = n(138599),
-    u = n(689938),
-    c = n(652051);
-t.Z = (e) => {
-    let { onPlay: t, externalURL: n, className: i, renderLinkComponent: d, inactive: _, messageId: E, channelId: f } = e;
-    return (0, r.jsx)(o.G.Consumer, {
+    c = n(388032),
+    u = n(364812);
+let d = (e) => {
+    let { onPlay: t, externalURL: n, className: i, renderLinkComponent: d, inactive: f, messageId: _, channelId: p } = e;
+    return (0, r.jsx)(s.G.Consumer, {
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: a()(i, c.wrapper, { [c.disableInteractions]: e.disableInteractions }),
+                className: o()(i, u.wrapper, { [u.disableInteractions]: e.disableInteractions }),
                 children: [
-                    _ && null == t
+                    f && null == t
                         ? (0, r.jsx)('div', {
-                              className: c.iconWrapper,
-                              children: (0, r.jsx)(s.PlayIcon, {
+                              className: u.iconWrapper,
+                              children: (0, r.jsx)(a.o1U, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: c.iconPlay
+                                  className: u.iconPlay
                               })
                           })
                         : null,
                     null != t
-                        ? (0, r.jsx)(s.Clickable, {
+                        ? (0, r.jsx)(a.P3F, {
                               onClick: t,
-                              className: a()(c.iconWrapperActive),
-                              tabIndex: _ ? -1 : 0,
-                              'aria-label': u.Z.Messages.PLAY,
-                              children: (0, r.jsx)(s.PlayIcon, {
+                              className: u.iconWrapperActive,
+                              tabIndex: f ? -1 : 0,
+                              'aria-label': c.NW.string(c.t.RscU7O),
+                              children: (0, r.jsx)(a.o1U, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: c.iconPlay
+                                  className: u.iconPlay
                               })
                           })
                         : null,
@@ -42,13 +43,13 @@ t.Z = (e) => {
                               href: n,
                               target: '_blank',
                               rel: 'noreferrer noopener',
-                              className: c.iconWrapperActive,
+                              className: u.iconWrapperActive,
                               children: (0, r.jsx)(l.Z, {
-                                  'aria-label': u.Z.Messages.OPEN_LINK,
-                                  className: null != t ? c.iconExternalMargins : c.iconExternal
+                                  'aria-label': c.NW.string(c.t.wuRE8P),
+                                  className: null != t ? u.iconExternalMargins : u.iconExternal
                               }),
-                              messageId: E,
-                              channelId: f
+                              messageId: _,
+                              channelId: p
                           })
                         : null
                 ]

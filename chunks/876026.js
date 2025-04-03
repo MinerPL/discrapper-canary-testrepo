@@ -1,6 +1,2 @@
-n.d(t, {
-    C: function () {
-        return r;
-    }
-});
+n.d(t, { C: () => r });
 var r = [];

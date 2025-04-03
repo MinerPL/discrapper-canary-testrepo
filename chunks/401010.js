@@ -4,8 +4,4 @@ function r(e, t, n) {
     }, '');
     return null != r ? r : n;
 }
-n.d(t, {
-    R: function () {
-        return r;
-    }
-});
+n.d(t, { R: () => r });

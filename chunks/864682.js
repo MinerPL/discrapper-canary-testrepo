@@ -1,34 +1,31 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(47120);
-var i = n(735250);
-n(470079);
-var l = n(442837),
-    r = n(481060),
+n.d(t, { Z: () => h }), n(47120);
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(540059),
     a = n(594174),
     s = n(74538),
-    o = n(327943),
-    c = n(997945),
-    u = n(630117),
-    d = n(441319);
+    c = n(327943),
+    u = n(997945),
+    d = n(630117),
+    p = n(441319);
 function h() {
-    let [e, t, n] = (0, l.Wu)([a.default, o.Z], () => [o.Z.getCurrentDesktopIcon(), o.Z.isEditorOpen, s.ZP.isPremium(a.default.getCurrentUser())]),
-        h = d.QA[e],
-        p = e !== c.aH.DEFAULT && (n || t),
-        _ = (0, r.useRedesignIconContext)().enabled,
-        f = (0, i.jsx)(r.ClydeIcon, {
+    let e = (0, o.Q3)('AppIconHome'),
+        [t, n, h] = (0, i.Wu)([a.default, c.Z], () => [c.Z.getCurrentDesktopIcon(), c.Z.isEditorOpen, s.ZP.isPremium(a.default.getCurrentUser())]),
+        f = (0, p.aW)(t),
+        g = t !== u.aH.DEFAULT && (h || n),
+        m = e ? 24 : 30,
+        b = (0, r.jsx)(l.gw7, {
             size: 'custom',
             color: 'currentColor',
-            width: 30,
-            height: _ ? 30 : 22
+            width: m,
+            height: m
         });
-    return null != h && p
-        ? (0, i.jsx)(u.Z, {
-              id: e,
+    return null != f && g
+        ? (0, r.jsx)(d.Z, {
+              id: t,
               width: 48
           })
-        : f;
+        : b;
 }

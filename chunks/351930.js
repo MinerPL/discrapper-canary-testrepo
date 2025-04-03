@@ -1,232 +1,201 @@
-t.d(r, {
-    Z: function () {
-        return k;
-    }
-}),
-    t(47120),
-    t(411104);
-var a = t(735250),
-    n = t(470079),
-    i = t(120356),
-    o = t.n(i),
-    l = t(399606),
-    c = t(544891),
-    s = t(481060),
-    d = t(355467),
-    u = t(78839),
-    h = t(246992),
-    m = t(981631),
-    g = t(535271),
-    p = t(384712);
-let b = [
+n.d(t, { Z: () => _ }), n(47120), n(230036);
+var r = n(200651),
+    a = n(192379),
+    l = n(120356),
+    i = n.n(l),
+    o = n(544891),
+    s = n(481060),
+    c = n(255078),
+    d = n(246992),
+    u = n(41340),
+    m = n(981631),
+    x = n(474936),
+    h = n(616257),
+    p = n(173166);
+let b = async () =>
+        (
+            await o.tn.get({
+                url: m.ANM.BILLING_SUBSCRIPTIONS,
+                query: {
+                    include_inactive: !0,
+                    limit: 5
+                },
+                rejectWithError: !1
+            })
+        ).body.map((e) => c.Z.createFromServer(e)),
+    f = [
         {
             label: 'Nitro Monthly',
-            value: '511651880837840896'
+            value: x.Xh.PREMIUM_MONTH_TIER_2
         },
         {
             label: 'Nitro Yearly',
-            value: '511651885459963904'
+            value: x.Xh.PREMIUM_YEAR_TIER_2
         },
         {
             label: 'Nitro Classic Monthly',
-            value: '511651871736201216'
+            value: x.Xh.PREMIUM_MONTH_TIER_1
         },
         {
             label: 'Nitro Classic Yearly',
-            value: '511651876987469824'
+            value: x.Xh.PREMIUM_YEAR_TIER_1
         },
         {
             label: 'Basic Monthly',
-            value: '978380692553465866'
+            value: x.Xh.PREMIUM_MONTH_TIER_0
         },
         {
             label: 'Basic Yearly',
-            value: '1024422698568122368'
+            value: x.Xh.PREMIUM_YEAR_TIER_0
         },
         {
             label: 'Reverse Trial 1-week',
-            value: '1267968635301789696'
+            value: x.dO
         },
         {
             label: 'Reverse Trial 2-week',
-            value: '1267969164312576000'
+            value: x.xT
         }
-    ],
-    f = {
-        [m.O0b.UNPAID]: 'Unpaid',
-        [m.O0b.ACTIVE]: 'Active',
-        [m.O0b.PAST_DUE]: 'Past Due',
-        [m.O0b.CANCELED]: 'Canceled',
-        [m.O0b.ENDED]: 'Ended',
-        [m.O0b.ACCOUNT_HOLD]: 'Account Hold',
-        [m.O0b.BILLING_RETRY]: 'Billing Retry',
-        [m.O0b.PAUSED]: 'Paused',
-        [m.O0b.PAUSE_PENDING]: 'Pause Pending'
-    },
-    y = [
-        {
-            label: 'Unpaid',
-            value: m.O0b.UNPAID
-        },
-        {
-            label: 'Active',
-            value: m.O0b.ACTIVE
-        },
-        {
-            label: 'Past Due',
-            value: m.O0b.PAST_DUE
-        },
-        {
-            label: 'Canceled',
-            value: m.O0b.CANCELED
-        },
-        {
-            label: 'Ended',
-            value: m.O0b.ENDED
-        },
-        {
-            label: 'Account Hold',
-            value: m.O0b.ACCOUNT_HOLD
-        },
-        {
-            label: 'Billing Retry',
-            value: m.O0b.BILLING_RETRY
-        },
-        {
-            label: 'Paused',
-            value: m.O0b.PAUSED
-        },
-        {
-            label: 'Pause Pending',
-            value: m.O0b.PAUSE_PENDING
-        }
-    ],
-    x = {
-        '511651880837840896': 'Nitro Monthly',
-        '511651885459963904': 'Nitro Yearly',
-        '511651871736201216': 'Nitro Classic Monthly',
-        '511651876987469824': 'Nitro Classic Yearly',
-        '978380692553465866': 'Basic Monthly',
-        '1024422698568122368': 'Basic Yearly'
-    };
-function k() {
-    let [e, r] = n.useState('511651880837840896'),
-        t = (0, l.e7)([u.ZP], () => u.ZP.getPremiumSubscription()),
-        i = async () => {
-            await c.tn.post({
-                url: '/debug/subscription',
-                body: { plan_id: e }
-            }),
-                await (0, d.jg)();
-        },
-        m = async () => {
-            await c.tn.del('/debug/subscription'), await (0, d.jg)();
+    ];
+function _() {
+    let [e, t] = a.useState('511651880837840896'),
+        [n, l] = a.useState([]),
+        [c, x] = a.useState(!1),
+        _ = async () => {
+            try {
+                x(!0);
+                let e = await b();
+                l(e);
+            } finally {
+                x(!1);
+            }
         };
-    return (0, a.jsx)(s.ScrollerThin, {
-        className: o()(g.panel),
-        children: (0, a.jsxs)('div', {
+    a.useEffect(() => {
+        _();
+    }, []);
+    let g = a.useMemo(() => n.find((e) => e.status === m.O0b.ACTIVE), [n]),
+        v = a.useMemo(() => n.filter((e) => e.status !== m.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [n]),
+        j = async () => {
+            await o.tn.post({
+                url: '/debug/subscription',
+                body: { plan_id: e },
+                rejectWithError: !1
+            }),
+                await _();
+        },
+        y = async () => {
+            await o.tn.del({
+                url: '/debug/subscription',
+                rejectWithError: !1
+            }),
+                await _();
+        };
+    return (0, r.jsx)(s.zJl, {
+        className: h.panel,
+        children: (0, r.jsxs)('div', {
             className: p.panelInner,
             children: [
-                (0, a.jsx)(s.Text, {
-                    style: { marginBottom: '16px' },
-                    variant: 'text-lg/bold',
-                    children: 'Manage Subscription'
-                }),
-                (0, a.jsxs)('section', {
-                    className: p.buttons,
+                (0, r.jsxs)('div', {
+                    className: p.headerWrapper,
                     children: [
-                        null == t &&
-                            (0, a.jsxs)(a.Fragment, {
-                                children: [
-                                    (0, a.jsx)(s.Text, {
-                                        variant: 'text-md/normal',
-                                        children: ' Subscription Type'
-                                    }),
-                                    (0, a.jsx)(s.Select, {
-                                        serialize: (e) => e,
-                                        isSelected: (r) => r === e,
-                                        options: b,
-                                        select: r,
-                                        popoutLayerContext: h.O$
-                                    }),
-                                    (0, a.jsx)(s.Button, {
-                                        size: s.Button.Sizes.SMALL,
-                                        onClick: i,
-                                        children: 'Create Subscription'
+                        (0, r.jsx)('div', {
+                            children: (0, r.jsx)(s.Text, {
+                                style: { marginBottom: '8px' },
+                                variant: 'text-lg/bold',
+                                children: 'Manage Subscription'
+                            })
+                        }),
+                        (0, r.jsx)('div', {
+                            children: (0, r.jsx)(s.zxk, {
+                                disabled: c,
+                                look: s.zxk.Looks.BLANK,
+                                size: s.zxk.Sizes.ICON,
+                                onClick: _,
+                                children: (0, r.jsx)('span', {
+                                    title: 'Refresh',
+                                    children: (0, r.jsx)(s.DuK, {
+                                        size: 'xs',
+                                        color: 'currentColor'
                                     })
-                                ]
-                            }),
-                        (0, a.jsx)(s.Button, {
-                            size: s.Button.Sizes.SMALL,
-                            onClick: m,
-                            children: 'Delete Subscription'
+                                })
+                            })
                         })
                     ]
                 }),
-                null != t && (0, a.jsx)(v, { subscription: t })
-            ]
-        })
-    });
-}
-function v(e) {
-    let { subscription: r } = e,
-        t = (e) => {
-            if ((null == e && (e = r.status), e in f)) return f[e];
-            throw Error('Unknown status');
-        },
-        n = async (e) => {
-            await c.tn.patch({
-                url: '/debug/subscription',
-                body: { subscription_status: e }
-            });
-        },
-        i =
-            r.planIdFromItems in
-            {
-                '978380692553465866': !0,
-                '1024422698568122368': !0
-            };
-    return (0, a.jsxs)(a.Fragment, {
-        children: [
-            (0, a.jsx)(s.Text, {
-                style: { marginTop: '15px' },
-                variant: 'text-md/normal',
-                children: 'Existing Subscription'
-            }),
-            (0, a.jsxs)('div', {
-                className: o()(p.card, i ? p.gradientWrapperTier0 : p.gradientWrapperTier2),
-                children: [
-                    (0, a.jsxs)(s.Text, {
-                        variant: 'text-md/normal',
+                (0, r.jsx)('section', {
+                    className: i()([p.section, p.buttons]),
+                    children:
+                        null == g &&
+                        (0, r.jsxs)(r.Fragment, {
+                            children: [
+                                (0, r.jsx)(s.Text, {
+                                    variant: 'text-md/normal',
+                                    children: ' Subscription Type'
+                                }),
+                                (0, r.jsx)(s.PhF, {
+                                    serialize: (e) => e,
+                                    isSelected: (t) => t === e,
+                                    options: f,
+                                    select: t,
+                                    popoutLayerContext: d.O$
+                                }),
+                                (0, r.jsx)(s.zxk, {
+                                    size: s.zxk.Sizes.SMALL,
+                                    onClick: j,
+                                    children: 'Create Subscription'
+                                })
+                            ]
+                        })
+                }),
+                (0, r.jsx)(s.Text, {
+                    style: { marginBottom: '8px' },
+                    variant: 'text-lg/bold',
+                    children: 'Bulk action'
+                }),
+                (0, r.jsx)('section', {
+                    className: i()([p.section, p.buttons]),
+                    children: (0, r.jsx)(s.zxk, {
+                        size: s.zxk.Sizes.SMALL,
+                        onClick: y,
+                        children: 'End All Subscriptions'
+                    })
+                }),
+                null != g &&
+                    (0, r.jsxs)(r.Fragment, {
                         children: [
-                            ' Subscription Type: ',
-                            (() => {
-                                let e = r.planIdFromItems;
-                                if (null == e) throw Error('No plan id');
-                                if (e in x) return x[e];
-                                throw Error('Unknown plan id');
-                            })(),
-                            ' '
+                            (0, r.jsx)(s.Text, {
+                                style: { marginTop: '15px' },
+                                variant: 'text-md/normal',
+                                children: 'Existing active subscription'
+                            }),
+                            (0, r.jsx)(u.Z, {
+                                subscription: g,
+                                onUpdated: _
+                            })
                         ]
                     }),
-                    (0, a.jsxs)(s.Text, {
-                        variant: 'text-md/normal',
-                        children: [' Subscription ID ', r.id, ' ']
-                    }),
-                    (0, a.jsxs)(s.Text, {
-                        style: { marginBottom: '15px' },
-                        variant: 'text-md/normal',
-                        children: ['Subscription Status: ', t()]
-                    }),
-                    (0, a.jsx)(s.Select, {
-                        serialize: (e) => t(e),
-                        isSelected: (e) => e === r.status,
-                        options: y,
-                        select: n,
-                        popoutLayerContext: h.O$
+                v.length > 0 &&
+                    (0, r.jsxs)('div', {
+                        style: { marginTop: '8px' },
+                        children: [
+                            (0, r.jsx)(s.Text, {
+                                style: { marginTop: '15px' },
+                                variant: 'text-md/normal',
+                                children: 'Previous subscriptions'
+                            }),
+                            v.map((e) =>
+                                (0, r.jsx)(
+                                    u.Z,
+                                    {
+                                        subscription: e,
+                                        onUpdated: _
+                                    },
+                                    e.id
+                                )
+                            )
+                        ]
                     })
-                ]
-            })
-        ]
+            ]
+        })
     });
 }

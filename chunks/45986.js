@@ -1,10 +1,6 @@
 n.d(t, {
-    o: function () {
-        return i;
-    },
-    u: function () {
-        return a;
-    }
+    o: () => i,
+    u: () => o
 });
 var r = n(570140);
 function i(e) {
@@ -13,7 +9,7 @@ function i(e) {
         url: e
     });
 }
-function a(e) {
+function o(e) {
     r.Z.dispatch({
         type: 'MASKED_LINK_ADD_TRUSTED_PROTOCOL',
         url: e

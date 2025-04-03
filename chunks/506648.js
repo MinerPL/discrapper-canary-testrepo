@@ -1,112 +1,137 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(481060),
-    r = n(770146),
-    l = n(863969),
-    o = n(38761),
+n.d(t, { Z: () => b });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    a = n(770146),
+    o = n(863969),
+    s = n(38761),
     c = n(6074),
-    d = n(39377),
-    u = n(981631),
-    _ = n(689938),
-    h = n(269866);
-let E = [
+    u = n(39377),
+    d = n(981631),
+    p = n(388032),
+    h = n(46703);
+let f = [
         {
-            feature: u.Qa3.SINGLE_PLAYER,
-            getText: () => _.Z.Messages.APPLICATION_STORE_SINGLE_PLAYER,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_SINGLE_PLAYER_TOOLTIP,
-            IconComponent: s.UserIcon
+            feature: d.Qa3.SINGLE_PLAYER,
+            getText: () => p.NW.string(p.t['V+/FjI']),
+            getTooltip: () => p.NW.string(p.t['w+X9sb']),
+            IconComponent: l.tBG
         },
         {
-            feature: u.Qa3.LOCAL_MULTIPLAYER,
-            getText: () => _.Z.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER_TOOLTIP,
-            IconComponent: s.GroupIcon
+            feature: d.Qa3.LOCAL_MULTIPLAYER,
+            getText: () => p.NW.string(p.t.srnWrq),
+            getTooltip: () => p.NW.string(p.t.sDdLWF),
+            IconComponent: l.BFJ
         },
         {
-            feature: u.Qa3.ONLINE_MULTIPLAYER,
-            getText: () => _.Z.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER_TOOLTIP,
-            IconComponent: s.GroupIcon
+            feature: d.Qa3.ONLINE_MULTIPLAYER,
+            getText: () => p.NW.string(p.t.xPHbgI),
+            getTooltip: () => p.NW.string(p.t.g6kR4O),
+            IconComponent: l.BFJ
         },
         {
-            feature: u.Qa3.PVP,
-            getText: () => _.Z.Messages.APPLICATION_STORE_PVP,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_PVP_TOOLTIP,
-            IconComponent: s.ModerationIcon
+            feature: d.Qa3.PVP,
+            getText: () => p.NW.string(p.t.qhgwx8),
+            getTooltip: () => p.NW.string(p.t['5jGrhI']),
+            IconComponent: l.HI3
         },
         {
-            feature: u.Qa3.LOCAL_COOP,
-            getText: () => _.Z.Messages.APPLICATION_STORE_LOCAL_COOP,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_LOCAL_COOP_TOOLTIP,
-            IconComponent: s.GroupIcon
+            feature: d.Qa3.LOCAL_COOP,
+            getText: () => p.NW.string(p.t.FqbalJ),
+            getTooltip: () => p.NW.string(p.t.vIgDgY),
+            IconComponent: l.BFJ
         },
         {
-            feature: u.Qa3.ONLINE_COOP,
-            getText: () => _.Z.Messages.APPLICATION_STORE_ONLINE_COOP,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_ONLINE_COOP_TOOLTIP,
-            IconComponent: s.GroupIcon
+            feature: d.Qa3.ONLINE_COOP,
+            getText: () => p.NW.string(p.t.lDHO4e),
+            getTooltip: () => p.NW.string(p.t.VXDpho),
+            IconComponent: l.BFJ
         },
         {
-            feature: u.Qa3.CROSS_PLATFORM,
-            getText: () => _.Z.Messages.APPLICATION_STORE_CROSS_PLATFORM,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_CROSS_PLATFORM_TOOLTIP,
-            IconComponent: s.RefreshIcon
+            feature: d.Qa3.CROSS_PLATFORM,
+            getText: () => p.NW.string(p.t.SWo2HR),
+            getTooltip: () => p.NW.string(p.t.ll2wzc),
+            IconComponent: l.DuK
         },
         {
-            feature: u.Qa3.RICH_PRESENCE,
-            getText: () => _.Z.Messages.APPLICATION_STORE_RICH_PRESENCE,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_RICH_PRESENCE_TOOLTIP,
+            feature: d.Qa3.RICH_PRESENCE,
+            getText: () => p.NW.string(p.t.PVSVtL),
+            getTooltip: () => p.NW.string(p.t.O6Yp4e),
             IconComponent: c.Z
         },
         {
-            feature: u.Qa3.DISCORD_GAME_INVITES,
-            getText: () => _.Z.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES_TOOLTIP,
+            feature: d.Qa3.DISCORD_GAME_INVITES,
+            getText: () => p.NW.string(p.t.agm68P),
+            getTooltip: () => p.NW.string(p.t.kS2vFB),
+            IconComponent: s.Z
+        },
+        {
+            feature: d.Qa3.SPECTATOR_MODE,
+            getText: () => p.NW.string(p.t['ZtiU7+']),
+            getTooltip: () => p.NW.string(p.t.kUtiKS),
+            IconComponent: l.Odl
+        },
+        {
+            feature: d.Qa3.CONTROLLER_SUPPORT,
+            getText: () => p.NW.string(p.t.UlBQ8P),
+            getTooltip: () => p.NW.string(p.t.iG00jI),
+            IconComponent: l.xoD
+        },
+        {
+            feature: d.Qa3.CLOUD_SAVES,
+            getText: () => p.NW.string(p.t.rOcNrK),
+            getTooltip: () => p.NW.string(p.t.kvw18P),
             IconComponent: o.Z
         },
         {
-            feature: u.Qa3.SPECTATOR_MODE,
-            getText: () => _.Z.Messages.APPLICATION_STORE_SPECTATOR_MODE,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_SPECTATOR_MODE_TOOLTIP,
-            IconComponent: s.VideoIcon
-        },
-        {
-            feature: u.Qa3.CONTROLLER_SUPPORT,
-            getText: () => _.Z.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT_TOOLTIP,
-            IconComponent: s.DpadIcon
-        },
-        {
-            feature: u.Qa3.CLOUD_SAVES,
-            getText: () => _.Z.Messages.APPLICATION_STORE_CLOUD_SAVES,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_CLOUD_SAVES_TOOLTIP,
-            IconComponent: l.Z
-        },
-        {
-            feature: u.Qa3.SECURE_NETWORKING,
-            getText: () => _.Z.Messages.APPLICATION_STORE_SECURE_NETWORKING,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_SECURE_NETWORKING_TOOLTIP,
-            IconComponent: d.Z
+            feature: d.Qa3.SECURE_NETWORKING,
+            getText: () => p.NW.string(p.t.GKFWLy),
+            getTooltip: () => p.NW.string(p.t.VudViI),
+            IconComponent: u.Z
         }
     ],
-    m = (e) => {
-        let { IconComponent: t, text: n, tooltip: a } = e;
-        return (0, i.jsxs)('div', {
+    g = (e) => {
+        let { IconComponent: t, text: n, tooltip: i } = e;
+        return (0, r.jsxs)('div', {
             className: h.row,
             children: [
-                (0, i.jsx)(s.Tooltip, {
-                    text: a,
+                (0, r.jsx)(l.ua7, {
+                    text: i,
                     children: (e) =>
-                        (0, i.jsx)(t, {
-                            className: h.featureIcon,
-                            ...e
-                        })
+                        (0, r.jsx)(
+                            t,
+                            (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({ className: h.featureIcon }, e)
+                        )
                 }),
-                (0, i.jsx)('span', {
+                (0, r.jsx)('span', {
                     className: h.featureText,
                     children: n
                 }),
-                (0, i.jsx)(s.CheckmarkLargeIcon, {
+                (0, r.jsx)(l.dz2, {
                     size: 'md',
                     color: 'currentColor',
                     className: h.checkmarkIcon
@@ -114,30 +139,32 @@ let E = [
             ]
         });
     };
-class I extends a.PureComponent {
+class m extends i.PureComponent {
     render() {
         let { sku: e } = this.props,
-            t = E.filter((t) => {
-                let { feature: n } = t;
-                return e.features.has(n);
-            }).map((e) => {
-                let { feature: t, IconComponent: n, getText: a, getTooltip: s } = e;
-                return (0, i.jsx)(
-                    m,
-                    {
-                        IconComponent: n,
-                        text: a(),
-                        tooltip: s()
-                    },
-                    t
-                );
-            });
+            t = f
+                .filter((t) => {
+                    let { feature: n } = t;
+                    return e.features.has(n);
+                })
+                .map((e) => {
+                    let { feature: t, IconComponent: n, getText: i, getTooltip: l } = e;
+                    return (0, r.jsx)(
+                        g,
+                        {
+                            IconComponent: n,
+                            text: i(),
+                            tooltip: l()
+                        },
+                        t
+                    );
+                });
         return 0 === t.length
             ? null
-            : (0, i.jsxs)('div', {
+            : (0, r.jsxs)('div', {
                   className: h.features,
-                  children: [(0, i.jsx)(r.Z, { children: _.Z.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES }), t]
+                  children: [(0, r.jsx)(a.Z, { children: p.NW.string(p.t.XXENra) }), t]
               });
     }
 }
-t.Z = I;
+let b = m;

@@ -1,127 +1,122 @@
 n.d(t, {
-    Iq: function () {
-        return c;
-    },
-    UR: function () {
-        return _;
-    },
-    Ww: function () {
-        return d;
-    },
-    c$: function () {
-        return E;
-    },
-    g: function () {
-        return u;
-    },
-    i2: function () {
-        return p;
-    },
-    tR: function () {
-        return h;
-    },
-    tV: function () {
-        return f;
-    }
-});
+    Iq: () => _,
+    UR: () => h,
+    Ww: () => p,
+    c$: () => m,
+    g: () => f,
+    i2: () => b,
+    tR: () => E,
+    tV: () => g
+}),
+    n(301563);
 var r = n(860911),
     i = n(544891),
-    a = n(893776),
-    s = n(592125),
-    o = n(944486),
+    o = n(893776),
+    a = n(592125),
+    s = n(944486),
     l = n(981631);
-function u(e) {
+let c = '10000',
+    u = '10000';
+function d() {
+    var e, t, n;
+    let r = s.Z.getChannelId(),
+        i = a.Z.getBasicChannel(r);
+    return {
+        guild_id: null != (e = null == i ? void 0 : i.guild_id) ? e : c,
+        channel_id: null != (t = null == i ? void 0 : i.id) ? t : u,
+        channel_type: null != (n = null == i ? void 0 : i.type) ? n : l.d4z.UNKNOWN
+    };
+}
+function f(e) {
     return i.tn.post({
         url: l.ANM.OAUTH2_WHITELIST_ACCEPT,
         query: { token: e },
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
 }
-async function c(e) {
-    let { authorize: t, clientId: n, scopes: r, responseType: a, redirectUri: u, codeChallenge: c, codeChallengeMethod: d, state: _, permissions: E, guildId: f, channelId: h, integrationType: p, nonce: m } = e;
+async function _(e) {
+    let { authorize: t, clientId: n, scopes: r, responseType: o, redirectUri: a, codeChallenge: s, codeChallengeMethod: c, state: u, permissions: f, guildId: _, channelId: p, integrationType: h, nonce: m } = e;
     return (
         await i.tn.post({
             url: l.ANM.OAUTH2_AUTHORIZE,
             query: {
                 client_id: n,
-                response_type: a,
-                redirect_uri: u,
-                code_challenge: c,
-                code_challenge_method: d,
+                response_type: o,
+                redirect_uri: a,
+                code_challenge: s,
+                code_challenge_method: c,
                 scope: r.join(' '),
-                state: _,
+                state: u,
                 nonce: m
             },
             body: {
-                guild_id: f,
-                webhook_channel_id: null != f && null != h ? h : void 0,
-                channel_id: null == f && null != h ? h : void 0,
-                permissions: E,
+                guild_id: _,
+                webhook_channel_id: null != _ && null != p ? p : void 0,
+                channel_id: null == _ && null != p ? p : void 0,
+                permissions: f,
                 authorize: t,
-                integration_type: p,
-                location_context: (function () {
-                    var e, t, n;
-                    let r = o.Z.getChannelId(),
-                        i = s.Z.getBasicChannel(r);
-                    return {
-                        guild_id: null !== (e = null == i ? void 0 : i.guild_id) && void 0 !== e ? e : '10000',
-                        channel_id: null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : '10000',
-                        channel_type: null !== (n = null == i ? void 0 : i.type) && void 0 !== n ? n : l.d4z.UNKNOWN
-                    };
-                })()
+                integration_type: h,
+                location_context: d()
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
     ).body;
 }
-async function d(e) {
-    let { clientId: t, scopes: n, responseType: r, redirectUri: a, codeChallenge: s, codeChallengeMethod: o, state: u, integrationType: c, nonce: d } = e;
+async function p(e) {
+    let { clientId: t, scopes: n, responseType: r, redirectUri: o, codeChallenge: a, codeChallengeMethod: s, state: c, integrationType: u, nonce: d, signal: f } = e;
     return (
         await i.tn.get({
             url: l.ANM.OAUTH2_AUTHORIZE,
             query: {
                 client_id: t,
                 response_type: r,
-                redirect_uri: a,
-                code_challenge: s,
-                code_challenge_method: o,
+                redirect_uri: o,
+                code_challenge: a,
+                code_challenge_method: s,
                 scope: n.join(' '),
-                state: u,
-                integration_type: c,
+                state: c,
+                integration_type: u,
                 nonce: d
             },
+            signal: f,
             retries: 3,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
     ).body;
 }
-async function _(e) {
+async function h(e) {
     let { body: t } = await i.tn.get({
         url: l.ANM.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
         query: { guild_id: e },
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
     return t;
 }
-function E(e) {
-    a.Z.logout((0, r.U)(e.pathname + e.search, !1));
+function m(e) {
+    o.Z.logout((0, r.Ui)(e.pathname + e.search, !1));
 }
-async function f(e) {
+async function g(e) {
     return await i.tn.post({
         url: l.ANM.OAUTH2_DEVICE_VERIFY,
-        body: { user_code: e }
+        body: { user_code: e },
+        rejectWithError: !1
     });
 }
-async function h(e, t) {
+async function E(e, t) {
     return await i.tn.post({
         url: l.ANM.OAUTH2_DEVICE_FINISH,
         body: {
             user_code: e,
             result: t
-        }
+        },
+        rejectWithError: !1
     });
 }
-async function p(e, t, n) {
+async function b(e, t, n) {
     return await i.tn.post({
         url: l.ANM.OAUTH2_DEVICE_FINISH,
         body: {
@@ -129,6 +124,7 @@ async function p(e, t, n) {
             result: 'two_way_link_error',
             error_code: t,
             error_source: n
-        }
+        },
+        rejectWithError: !1
     });
 }

@@ -1,27 +1,22 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return a;
-        }
-    });
-var r = t(735250);
-t(470079);
-var i = t(481060),
-    s = t(239091),
-    u = t(299660),
-    o = t(517640),
-    c = t(689938);
-function a(n) {
-    let { guild: e, onSelect: t } = n,
-        a = (0, o.Z)(e),
-        l = (0, u.Z)(e.id);
-    return (0, r.jsx)(i.Menu, {
+t.d(i, { default: () => l });
+var r = t(200651);
+t(192379);
+var s = t(481060),
+    o = t(239091),
+    e = t(299660),
+    c = t(517640),
+    a = t(388032);
+function l(n) {
+    let { guild: i, onSelect: t } = n,
+        l = (0, c.Z)(i),
+        u = (0, e.Z)(i.id);
+    return (0, r.jsx)(s.v2r, {
         navId: 'role-subscription-context',
-        'aria-label': c.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_ACTION_MENU_LABEL,
-        onClose: s.Zy,
+        'aria-label': a.NW.string(a.t.g3KvYG),
+        onClose: o.Zy,
         onSelect: t,
-        children: (0, r.jsxs)(i.MenuGroup, {
-            children: [a, l]
+        children: (0, r.jsxs)(s.kSQ, {
+            children: [l, u]
         })
     });
 }

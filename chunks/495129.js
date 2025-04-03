@@ -1,154 +1,144 @@
-n.d(t, {
-    H: function () {
-        return S;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(442837),
-    l = n(481060),
-    o = n(904245),
+n.d(t, { H: () => O }), n(301563);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    a = n.n(i),
+    l = n(442837),
+    o = n(481060),
+    s = n(904245),
     c = n(287734),
     u = n(957730),
     d = n(739566),
-    _ = n(779125),
-    E = n(599706),
-    I = n(703656),
-    m = n(592125),
-    T = n(430824),
-    h = n(594174),
-    N = n(938475),
-    f = n(5192),
-    C = n(981631),
-    p = n(689938),
-    g = n(745571);
-function S(e) {
-    var t, n, a, S, A, R, x, O, M, v;
-    let { message: L, channel: Z } = e,
-        P =
-            null === (a = L.embeds[0]) || void 0 === a
+    p = n(779125),
+    m = n(599706),
+    f = n(703656),
+    h = n(592125),
+    g = n(430824),
+    _ = n(594174),
+    b = n(938475),
+    x = n(5192),
+    y = n(981631),
+    E = n(388032),
+    v = n(653072);
+function O(e) {
+    var t, n, i, O, N, j, C, I, S, T;
+    let { message: P, channel: A } = e,
+        w =
+            null == (i = P.embeds[0]) ||
+            null == (n = i.fields) ||
+            null ==
+                (t = n.find((e) => {
+                    let { rawName: t } = e;
+                    return 'guild_id' === t;
+                }))
                 ? void 0
-                : null === (n = a.fields) || void 0 === n
-                  ? void 0
-                  : null ===
-                          (t = n.find((e) => {
-                              let { rawName: t } = e;
-                              return 'guild_id' === t;
-                          })) || void 0 === t
-                    ? void 0
-                    : t.rawValue,
-        b =
-            null === (R = L.embeds[0]) || void 0 === R
+                : t.rawValue,
+        Z =
+            null == (j = P.embeds[0]) ||
+            null == (N = j.fields) ||
+            null ==
+                (O = N.find((e) => {
+                    let { rawName: t } = e;
+                    return 'channel_id' === t;
+                }))
                 ? void 0
-                : null === (A = R.fields) || void 0 === A
-                  ? void 0
-                  : null ===
-                          (S = A.find((e) => {
-                              let { rawName: t } = e;
-                              return 'channel_id' === t;
-                          })) || void 0 === S
-                    ? void 0
-                    : S.rawValue,
-        D = (0, r.e7)([T.Z], () => T.Z.getGuild(P)),
-        j = (0, r.e7)([m.Z], () => m.Z.getChannel(b)),
-        U = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
-        y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)),
-        B = null === (x = Z.recipients) || void 0 === x ? void 0 : x.find((e) => e !== L.author.id),
-        k = (0, r.e7)([h.default], () => (null != B ? h.default.getUser(B) : null)),
-        G = (0, d.ZP)(L),
-        F = (0, f._T)(Z.getGuildId(), Z.id, k),
-        w = (0, r.Wu)([N.ZP], () => (null != j ? N.ZP.getVoiceStatesForChannel(j) : []), [j]),
-        V = w.some((e) => e.user.id === (null == U ? void 0 : U.id)),
+                : O.rawValue,
+        k = (0, l.e7)([g.Z], () => g.Z.getGuild(w)),
+        R = (0, l.e7)([h.Z], () => h.Z.getChannel(Z)),
+        D = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
+        L = (0, l.e7)([], () => P.author.id === (null == D ? void 0 : D.id)),
+        M = null == (C = A.recipients) ? void 0 : C.find((e) => e !== P.author.id),
+        W = (0, l.e7)([_.default], () => (null != M ? _.default.getUser(M) : null)),
+        U = (0, d.ZP)(P),
+        F = (0, x._T)(A.getGuildId(), A.id, W),
+        B = (0, l.Wu)([b.ZP], () => (null != R ? b.ZP.getVoiceStatesForChannel(R) : []), [R]),
+        G = B.some((e) => e.user.id === (null == D ? void 0 : D.id)),
         H =
-            null === (v = L.embeds[0]) || void 0 === v
+            null == (T = P.embeds[0]) ||
+            null == (S = T.fields) ||
+            null ==
+                (I = S.find((e) => {
+                    let { rawName: t } = e;
+                    return 'voice_user_ids' === t;
+                }))
                 ? void 0
-                : null === (M = v.fields) || void 0 === M
-                  ? void 0
-                  : null ===
-                          (O = M.find((e) => {
-                              let { rawName: t } = e;
-                              return 'voice_user_ids' === t;
-                          })) || void 0 === O
-                    ? void 0
-                    : O.rawValue,
-        Y = null != H ? H.split(',') : [],
-        W = (0, r.Wu)([h.default], () => Y.map((e) => h.default.getUser(e)).filter(Boolean)),
-        K = y && null != k ? p.Z.Messages.WAVED_AT_USER.format({ username: F }) : p.Z.Messages.WAVED_AT_YOU.format({ username: G.nick }),
-        z = null != D && null != j,
-        Q = null;
-    (Q = z ? (y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) }) : p.Z.Messages.THEY_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) })) : p.Z.Messages.CANNOT_ACCESS_HANGOUT), 0 === w.length && (Q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
-    let q = y ? p.Z.Messages.WAVE_AGAIN : p.Z.Messages.WAVE_BACK;
-    return (0, i.jsxs)('div', {
+                : I.rawValue,
+        V = null != H ? H.split(',') : [],
+        z = (0, l.Wu)([_.default], () => V.map((e) => _.default.getUser(e)).filter(Boolean)),
+        K = L && null != W ? E.NW.formatToPlainString(E.t['er/cHx'], { username: F }) : E.NW.formatToPlainString(E.t.noNjkZ, { username: U.nick }),
+        Y = null != k && null != R,
+        X = null;
+    (X = Y ? (L || G ? E.NW.format(E.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != R ? R : void 0 }, t) }) : E.NW.format(E.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != R ? R : void 0 }, t) })) : E.NW.string(E.t['tHT/Vl'])), 0 === B.length && (X = L ? E.NW.string(E.t.IE2uZW) : E.NW.string(E.t.QVhmGx));
+    let q = L ? E.NW.string(E.t['00XIbm']) : E.NW.string(E.t['7CrE9/']);
+    return (0, r.jsxs)('div', {
         children: [
-            (0, i.jsxs)('div', {
-                className: g.card,
+            (0, r.jsxs)('div', {
+                className: v.card,
                 children: [
-                    (0, i.jsx)(l.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: K
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: Q
+                        children: X
                     }),
-                    w.length > 0
-                        ? (0, i.jsx)('div', {
-                              className: g.participants,
-                              children: (0, i.jsx)(E.Z, {
-                                  guildId: P,
+                    B.length > 0
+                        ? (0, r.jsx)('div', {
+                              className: v.participants,
+                              children: (0, r.jsx)(m.Z, {
+                                  guildId: w,
                                   partySize: {
-                                      knownSize: w.length,
+                                      knownSize: B.length,
                                       unknownSize: 0,
-                                      totalSize: w.length
+                                      totalSize: B.length
                                   },
-                                  members: w.map((e) => e.user),
+                                  members: B.map((e) => e.user),
                                   maxAvatarsShown: 5
                               })
                           })
-                        : (0, i.jsx)('div', {
-                              className: s()(g.participants, g.disabled),
-                              children: (0, i.jsx)(E.Z, {
-                                  guildId: P,
+                        : (0, r.jsx)('div', {
+                              className: a()(v.participants, v.disabled),
+                              children: (0, r.jsx)(m.Z, {
+                                  guildId: w,
                                   partySize: {
-                                      knownSize: W.length,
-                                      unknownSize: Y.length - W.length,
-                                      totalSize: Y.length
+                                      knownSize: z.length,
+                                      unknownSize: V.length - z.length,
+                                      totalSize: V.length
                                   },
-                                  members: W,
+                                  members: z,
                                   maxAvatarsShown: 5
                               })
                           })
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: g.actions,
+            (0, r.jsxs)('div', {
+                className: v.actions,
                 children: [
-                    (0, i.jsxs)(l.Button, {
-                        color: l.Button.Colors.BRAND,
+                    (0, r.jsxs)(o.zxk, {
+                        color: o.zxk.Colors.BRAND,
                         onClick: () => {
-                            null != b && null != P && ((0, I.uL)(C.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
+                            null != Z && null != w && ((0, f.uL)(y.Z5c.CHANNEL(w, Z)), c.default.selectVoiceChannel(Z));
                         },
-                        className: g.button,
-                        innerClassName: g.buttonInner,
-                        disabled: V || !z,
+                        className: v.button,
+                        innerClassName: v.buttonInner,
+                        disabled: G || !Y,
                         children: [
-                            (0, i.jsx)(l.VoiceNormalIcon, {
+                            (0, r.jsx)(o.gj8, {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            p.Z.Messages.JOIN_HANGOUT
+                            E.NW.string(E.t.zIeJq6)
                         ]
                     }),
-                    (0, i.jsx)(l.Button, {
-                        color: l.Button.Colors.PRIMARY,
+                    (0, r.jsx)(o.zxk, {
+                        color: o.zxk.Colors.PRIMARY,
                         onClick: () => {
-                            o.Z.sendMessage(Z.id, u.ZP.parse(Z, '\uD83D\uDC4B'));
+                            s.Z.sendMessage(A.id, u.ZP.parse(A, '\uD83D\uDC4B'));
                         },
-                        className: g.button,
+                        className: v.button,
                         children: q
                     })
                 ]

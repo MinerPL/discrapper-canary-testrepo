@@ -1,74 +1,138 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var l = n(735250),
-    r = n(470079),
-    i = n(70097),
-    a = n(947849),
-    o = n(981631),
-    s = n(689938);
-function d(e) {
-    let { poster: t, src: n, width: a, height: s, naturalWidth: d, naturalHeight: u, play: m = !0, className: h, alt: c, responsive: p } = e,
-        b = r.useRef(null);
+t.d(l, { Z: () => d }), t(866573), t(642549), t(787622);
+var n = t(200651),
+    r = t(192379),
+    i = t(70097),
+    s = t(947849),
+    a = t(981631),
+    o = t(388032);
+function u(e) {
+    let { poster: l, src: t, width: s, height: o, naturalWidth: u, naturalHeight: d, play: c = !0, className: h, alt: m, responsive: p } = e,
+        g = r.useRef(null);
     return (r.useEffect(() => {
-        let { current: e } = b;
-        if (null != e) m ? e.play() : e.pause();
-    }, [m]),
-    (d <= o.N_j && u <= o.XKF) || (d <= o.XKF && u <= o.N_j))
-        ? (0, l.jsx)(i.Z, {
-              ref: b,
+        let { current: e } = g;
+        null != e &&
+            (c
+                ? e.play().catch((e) => {
+                      if (!(e instanceof DOMException) || 'NotAllowedError' !== e.name) throw e;
+                  })
+                : e.pause());
+    }, [c]),
+    (u <= a.N_j && d <= a.XKF) || (u <= a.XKF && d <= a.N_j))
+        ? (0, n.jsx)(i.Z, {
+              ref: g,
               className: h,
-              poster: t,
-              src: n,
-              width: a,
-              height: s,
+              poster: l,
+              src: t,
+              width: s,
+              height: o,
               responsive: p,
               muted: !0,
               loop: !0,
-              autoPlay: m,
+              autoPlay: c,
+              playsInline: !0,
               preload: 'none',
-              'aria-label': c
+              'aria-label': m
           })
-        : (0, l.jsx)('img', {
+        : (0, n.jsx)('img', {
               alt: '',
-              src: t,
-              width: a,
-              height: s
+              src: l,
+              width: s,
+              height: o
           });
 }
-function u(e) {
-    let { src: t, poster: n, naturalWidth: r, naturalHeight: i, responsive: o, autoPlay: u, className: m, playable: h = !0, renderImageComponent: c, renderForwardComponent: p, alt: b = s.Z.Messages.GIF, ...g } = e;
-    return (0, l.jsx)(a.h.Consumer, {
-        children: (e) =>
-            c({
-                ...g,
-                alt: b,
-                src: n,
-                containerClassName: m,
-                autoPlay: u,
-                animated: h,
-                responsive: o,
-                renderAccessory: e,
-                renderForwardComponent: p,
-                tabIndex: h ? 0 : -1,
-                dataSafeSrc: t,
-                children(e) {
-                    let { src: n, size: a, animating: s, alt: u } = e;
-                    return (0, l.jsx)(d, {
-                        alt: u,
-                        className: m,
-                        poster: n,
+function d(e) {
+    var { src: l, poster: t, naturalWidth: r, naturalHeight: i, responsive: a, autoPlay: d, className: c, playable: h = !0, renderImageComponent: m, alt: p = o.NW.string(o.t.I5gL2N), sourceMetadata: g } = e,
+        b = (function (e, l) {
+            if (null == e) return {};
+            var t,
+                n,
+                r = (function (e, l) {
+                    if (null == e) return {};
+                    var t,
+                        n,
+                        r = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (t = i[n]), l.indexOf(t) >= 0 || (r[t] = e[t]);
+                    return r;
+                })(e, l);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (t = i[n]), !(l.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+            }
+            return r;
+        })(e, ['src', 'poster', 'naturalWidth', 'naturalHeight', 'responsive', 'autoPlay', 'className', 'playable', 'renderImageComponent', 'alt', 'sourceMetadata']);
+    return (0, n.jsx)(s.h.Consumer, {
+        children: (e) => {
+            var s, o;
+            return m(
+                ((s = (function (e) {
+                    for (var l = 1; l < arguments.length; l++) {
+                        var t = null != arguments[l] ? arguments[l] : {},
+                            n = Object.keys(t);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(t).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                })
+                            )),
+                            n.forEach(function (l) {
+                                var n;
+                                (n = t[l]),
+                                    l in e
+                                        ? Object.defineProperty(e, l, {
+                                              value: n,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[l] = n);
+                            });
+                    }
+                    return e;
+                })({}, b)),
+                (o = o =
+                    {
+                        alt: p,
                         src: t,
-                        width: a.width,
-                        height: a.height,
-                        naturalWidth: r,
-                        naturalHeight: i,
-                        responsive: o,
-                        play: h && s
-                    });
-                }
-            })
+                        containerClassName: c,
+                        autoPlay: d,
+                        animated: h,
+                        responsive: a,
+                        renderAccessory: e,
+                        tabIndex: h ? 0 : -1,
+                        dataSafeSrc: l,
+                        children(e) {
+                            let { src: t, size: s, animating: o, alt: d } = e;
+                            return (0, n.jsx)(u, {
+                                alt: d,
+                                className: c,
+                                poster: t,
+                                src: l,
+                                width: s.width,
+                                height: s.height,
+                                naturalWidth: r,
+                                naturalHeight: i,
+                                responsive: a,
+                                play: h && o
+                            });
+                        },
+                        sourceMetadata: g,
+                        analyticsSource: 'LazyGIFV'
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(o))
+                    : (function (e, l) {
+                          var t = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var n = Object.getOwnPropertySymbols(e);
+                              t.push.apply(t, n);
+                          }
+                          return t;
+                      })(Object(o)).forEach(function (e) {
+                          Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(o, e));
+                      }),
+                s)
+            );
+        }
     });
 }

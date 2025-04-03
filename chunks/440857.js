@@ -1,120 +1,164 @@
-l.d(t, {
-    Z: function () {
-        return T;
+n.d(t, { Z: () => v }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    o = n(692547),
+    a = n(215569),
+    i = n(180035),
+    s = n(481060),
+    c = n(749210),
+    u = n(852860),
+    d = n(367907),
+    C = n(314897),
+    m = n(626135),
+    b = n(910693),
+    p = n(241559),
+    f = n(256003),
+    h = n(981631),
+    j = n(388032),
+    g = n(571031);
+function x(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-}),
-    l(47120);
-var n = l(735250),
-    a = l(470079),
-    o = l(692547),
-    s = l(215569),
-    i = l(180035),
-    r = l(481060),
-    C = l(749210),
-    c = l(852860),
-    d = l(367907),
-    u = l(314897),
-    m = l(626135),
-    _ = l(910693),
-    E = l(241559),
-    h = l(256003),
-    M = l(981631),
-    x = l(689938),
-    b = l(469797);
-function T(e) {
+    return e;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function v(e) {
     let { guildId: t } = e,
-        T = (0, E.xC)(t),
-        { selectedUserIds: L, clearSelection: g } = (0, h.Z)(t),
-        I = L.size > 0,
-        p = async (e, t, l, n) => {
+        v = (0, p.xC)(t),
+        { selectedUserIds: O, clearSelection: N } = (0, f.Z)(t),
+        _ = O.size > 0,
+        H = async (e, t, n, r) => {
             try {
-                let a = await C.Z.banMultipleUsers(e, t, l, n);
-                (0, r.showToast)((0, r.createToast)(x.Z.Messages.BAN_MULTIPLE_SUCCESS_TOAST, r.ToastType.SUCCESS)),
-                    m.default.track(M.rMx.BULK_MODERATION_ACTION_COMPLETED, {
-                        ...(0, d.hH)(e),
-                        action_type: _.jQ.BAN,
-                        target_user_ids: [...L],
-                        mod_user_id: u.default.getId(),
-                        successful_user_ids: a.body.banned_users,
-                        location
-                    });
+                let l = await c.Z.banMultipleUsers(e, t, n, r);
+                (0, s.showToast)((0, s.createToast)(j.NW.string(j.t.AsCe5O), s.ToastType.SUCCESS)),
+                    m.default.track(
+                        h.rMx.BULK_MODERATION_ACTION_COMPLETED,
+                        y(x({}, (0, d.hH)(e)), {
+                            action_type: b.jQ.BAN,
+                            target_user_ids: [...O],
+                            mod_user_id: C.default.getId(),
+                            successful_user_ids: l.body.banned_users,
+                            location
+                        })
+                    );
             } catch (e) {
-                (0, r.showToast)((0, r.createToast)(x.Z.Messages.BAN_MULTIPLE_FAILED_TOAST, r.ToastType.FAILURE));
+                (0, s.showToast)((0, s.createToast)(j.NW.string(j.t.mICAWV), s.ToastType.FAILURE));
             }
-            g();
+            N();
         },
-        H = a.useCallback(() => {
-            g();
-        }, [g]),
-        f = (0, n.jsxs)('span', {
-            className: b.messageContainer,
+        w = l.useCallback(() => {
+            N();
+        }, [N]),
+        S = (0, r.jsxs)('span', {
+            className: g.messageContainer,
             children: [
-                (0, n.jsx)(r.UserIcon, {
+                (0, r.jsx)(s.tBG, {
                     size: 'custom',
                     width: 24,
                     height: 24,
                     color: (0, i.d)(o.Z.unsafe_rawColors.PRIMARY_500).hex()
                 }),
-                (0, n.jsx)(r.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: 'heading-md/bold',
                     color: 'text-normal',
-                    children: x.Z.Messages.MEMBER_SAFETY_ACTION_NOTICE_SELECTED_MEMBERS_MESSAGE.format({ count: L.size })
+                    children: j.NW.format(j.t.TstoSU, { count: O.size })
                 }),
-                (0, n.jsx)(r.Button, {
-                    color: r.Button.Colors.LINK,
-                    look: r.Button.Looks.LINK,
-                    onClick: H,
-                    className: b.clearButton,
-                    children: x.Z.Messages.MEMBER_SAFETY_ACTION_NOTICE_CLEAR_SELECTION
+                (0, r.jsx)(s.zxk, {
+                    color: s.zxk.Colors.LINK,
+                    look: s.zxk.Looks.LINK,
+                    onClick: w,
+                    className: g.clearButton,
+                    children: j.NW.string(j.t.yW6ZdH)
                 })
             ]
         }),
-        N = (0, n.jsxs)('span', {
-            className: b.buttonContainer,
+        D = (0, r.jsxs)('span', {
+            className: g.buttonContainer,
             children: [
-                (0, n.jsx)(r.HammerIcon, {
+                (0, r.jsx)(s.pgN, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 20,
                     height: 20
                 }),
-                (0, n.jsx)(r.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: 'text-sm/semibold',
-                    children: x.Z.Messages.MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION
+                    children: j.NW.string(j.t['2a50fH'])
                 })
             ]
         });
-    return T
-        ? (0, n.jsx)(s.W, {
+    return v
+        ? (0, r.jsx)(a.W, {
               component: 'div',
-              className: b.saveNoticeContainer,
+              className: g.saveNoticeContainer,
               children:
-                  I &&
-                  (0, n.jsx)(r.SlideIn, {
-                      children: (0, n.jsx)(c.Z, {
+                  _ &&
+                  (0, r.jsx)(s.oXn, {
+                      children: (0, r.jsx)(u.Z, {
                           onSave: () => {
-                              m.default.track(M.rMx.BULK_MODERATION_ACTION_STARTED, {
-                                  ...(0, d.hH)(t),
-                                  action_type: _.jQ.BAN,
-                                  target_user_ids: [...L],
-                                  mod_user_id: u.default.getId(),
-                                  location
-                              }),
-                                  (0, r.openModalLazy)(async () => {
-                                      let { default: e } = await l.e('43350').then(l.bind(l, 98746));
-                                      return (l) =>
-                                          (0, n.jsx)(e, {
-                                              ...l,
-                                              guildId: t,
-                                              canBulkBan: T,
-                                              userIds: L,
-                                              onBanMultiple: p
-                                          });
+                              m.default.track(
+                                  h.rMx.BULK_MODERATION_ACTION_STARTED,
+                                  y(x({}, (0, d.hH)(t)), {
+                                      action_type: b.jQ.BAN,
+                                      target_user_ids: [...O],
+                                      mod_user_id: C.default.getId(),
+                                      location
+                                  })
+                              ),
+                                  (0, s.ZDy)(async () => {
+                                      let { default: e } = await n.e('43350').then(n.bind(n, 98746));
+                                      return (n) =>
+                                          (0, r.jsx)(
+                                              e,
+                                              y(x({}, n), {
+                                                  guildId: t,
+                                                  canBulkBan: v,
+                                                  userIds: O,
+                                                  onBanMultiple: H
+                                              })
+                                          );
                                   });
                           },
-                          onSaveText: N,
-                          onSaveButtonColor: r.ButtonColors.RED,
-                          message: f
+                          onSaveText: D,
+                          onSaveButtonColor: s.Ttl.RED,
+                          message: S
                       })
                   })
           })

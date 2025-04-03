@@ -1,16 +1,12 @@
 i.d(n, {
-    T: function () {
-        return h;
-    },
-    o: function () {
-        return d;
-    }
+    T: () => h,
+    o: () => d
 });
-var l = i(512722),
-    a = i.n(l),
-    t = i(287734),
-    s = i(471253),
-    r = i(922482),
+var t = i(512722),
+    l = i.n(t),
+    a = i(287734),
+    r = i(471253),
+    s = i(922482),
     c = i(592125),
     o = i(19780),
     u = i(765305);
@@ -20,13 +16,13 @@ async function d(e, n) {
         case u.WX.STAGE_INSTANCE: {
             let n = o.Z.getChannelId(),
                 i = c.Z.getChannel(e.channel_id);
-            a()(null != i, 'could not find channel'), n !== i.id && (await r.TM(i, !0), await r.R5(i, null, !1)), await (0, s.RK)(i, !1, !0);
+            l()(null != i, 'could not find channel'), n !== i.id && (await s.TM(i, !0), await s.R5(i, null, !1)), await (0, r.RK)(i, !1, !0);
             break;
         }
         case u.WX.VOICE: {
             let n = o.Z.getChannelId(),
                 i = c.Z.getChannel(e.channel_id);
-            a()(null != i, 'could not find channel'), n !== i.id && t.default.selectVoiceChannel(i.id);
+            l()(null != i, 'could not find channel'), n !== i.id && a.default.selectVoiceChannel(i.id);
         }
     }
 }

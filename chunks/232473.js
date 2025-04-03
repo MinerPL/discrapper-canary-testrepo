@@ -1,14 +1,11 @@
-n.d(t, {
-    C: function () {
-        return i;
-    }
-});
-var s = n(544891),
-    a = n(981631);
-let i = async (e, t) =>
+n.d(t, { C: () => s });
+var r = n(544891),
+    i = n(981631);
+let s = async (e, t) =>
     (
-        await s.tn.get({
-            url: a.ANM.PAYMENT_PAYOUT_GROUPS(e),
-            query: t
+        await r.tn.get({
+            url: i.ANM.PAYMENT_PAYOUT_GROUPS(e),
+            query: t,
+            rejectWithError: !1
         })
     ).body;

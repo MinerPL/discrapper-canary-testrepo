@@ -1,8 +1,4 @@
-n.d(t, {
-    j: function () {
-        return i;
-    }
-});
+n.d(t, { j: () => i });
 var r = {};
 function i() {
     return r;

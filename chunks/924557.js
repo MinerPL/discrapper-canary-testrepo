@@ -1,31 +1,19 @@
 n.d(t, {
-    Go: function () {
-        return E;
-    },
-    NV: function () {
-        return c;
-    },
-    Zq: function () {
-        return f;
-    },
-    ln: function () {
-        return _;
-    },
-    nM: function () {
-        return h;
-    },
-    xt: function () {
-        return p;
-    }
+    Go: () => _,
+    NV: () => u,
+    Zq: () => p,
+    ln: () => f,
+    nM: () => h,
+    xt: () => m
 });
 var r = n(818083),
-    i = n(836157),
-    a = n(441167),
-    s = n(131951),
-    o = n(74538),
+    i = n(441167),
+    o = n(131951),
+    a = n(74538),
+    s = n(435064),
     l = n(779618),
-    u = n(474936);
-let c = (0, r.B)({
+    c = n(474936);
+let u = (0, r.B)({
         kind: 'user',
         id: '2022-11_clips_experiment',
         label: 'Clips Experiment',
@@ -94,34 +82,34 @@ let c = (0, r.B)({
             }
         ]
     });
-function _() {
-    if (!(0, l.Z)(s.Z)) return !1;
+function f() {
+    if (!(0, l.Z)(o.Z)) return !1;
     let { enableClips: e } = d.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
-        { enableClips: t } = c.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
-        { enableDecoupledGameClipping: n } = i.Z.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
-        { enableViewerClipping: r } = a.Z.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 });
+        { enableClips: t } = u.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
+        n = s.Z.isDecoupledGameClippingEnabled(),
+        { enableViewerClipping: r } = i.Z.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 });
     return e || t || n || r;
 }
-function E() {
-    let e = (0, l.Z)(s.Z),
+function _() {
+    let e = (0, l.Z)(o.Z),
         { enableClips: t } = d.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
-        { enableClips: n } = c.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
-        { enableDecoupledGameClipping: r } = i.Z.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
-        { enableViewerClipping: o } = a.Z.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 });
-    return (n || t || r || o) && e;
+        { enableClips: n } = u.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
+        r = s.Z.isDecoupledGameClippingEnabled(),
+        { enableViewerClipping: a } = i.Z.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 });
+    return (n || t || r || a) && e;
 }
-let f = (e) => {
+let p = (e) => {
         let { autoTrackExposure: t } = e,
-            n = (0, l.Z)(s.Z),
+            n = (0, l.Z)(o.Z),
             { enablePremiumEarlyAccessGoLiveRoadblock: r } = d.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: t && n });
         return !!n && r;
     },
     h = (e) => {
         let { autoTrackExposure: t } = e,
-            n = (0, l.Z)(s.Z),
+            n = (0, l.Z)(o.Z),
             { enablePremiumEarlyAccessAnnouncementCoachmark: r } = d.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: t && n });
         return !!n && r;
     };
-function p(e) {
-    return o.ZP.isPremiumAtLeast(e.premiumType, u.p9.TIER_2);
+function m(e) {
+    return a.ZP.isPremiumAtLeast(e.premiumType, c.p9.TIER_2);
 }

@@ -1,69 +1,74 @@
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    r = n(785681),
-    i = n(841409),
-    l = n(880257),
-    o = n(631885),
-    c = n(568671),
-    d = n(292352),
-    _ = n(689938),
-    u = n(31778),
-    E = n(633488),
-    T = n(361848);
-let I = () => {
-    let e = (0, o.mq)(d.ne.ACTIVE),
-        t = (0, l.Z)(),
-        { handleTabChange: n } = (0, i.Z)();
-    return (0, o.VM)() || (t && e.length > 0)
-        ? null
-        : (0, s.jsx)('div', {
-              className: u.button,
-              children: t
-                  ? (0, s.jsx)(a.Button, {
-                        fullWidth: !1,
-                        size: a.ButtonSizes.LARGE,
-                        onClick: () => n(d.dG.REQUESTS),
-                        children: _.Z.Messages.GET_STARTED
-                    })
-                  : (0, s.jsx)(c.Z, {})
-          });
-};
-t.Z = () => {
-    let e = (0, l.Z)(),
-        t = (0, r.o)(_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_TEEN, _.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_PARENT),
-        n = (0, r.o)(_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({ articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), _.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_PARENT.format({ articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
-    return (0, s.jsxs)('div', {
-        className: u.container,
-        children: [
-            (0, s.jsxs)('div', {
-                children: [
-                    (0, s.jsx)('div', {
-                        children: (0, s.jsxs)('div', {
-                            className: u.headerText,
-                            children: [
-                                (0, s.jsx)(a.Heading, {
-                                    variant: 'heading-xl/medium',
-                                    children: (0, s.jsx)(a.HeadingLevel, { children: t })
-                                }),
-                                (0, s.jsx)(a.Text, {
-                                    variant: 'text-sm/medium',
-                                    color: 'text-muted',
-                                    children: n
-                                })
-                            ]
+n.d(t, { Z: () => _ });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(785681),
+    o = n(841409),
+    c = n(880257),
+    d = n(631885),
+    u = n(568671),
+    m = n(292352),
+    g = n(332495),
+    p = n(388032),
+    h = n(864903),
+    f = n(589608),
+    b = n(633488),
+    N = n(361848);
+let x = () => {
+        let e = (0, d.mq)(m.ne.ACTIVE),
+            t = (0, c.Z)(),
+            { handleTabChange: n } = (0, o.Z)();
+        return (0, d.VM)() || (t && e.length > 0)
+            ? null
+            : (0, r.jsx)('div', {
+                  className: h.button,
+                  children: t
+                      ? (0, r.jsx)(a.zxk, {
+                            fullWidth: !1,
+                            size: a.PhG.LARGE,
+                            onClick: () => n(m.dG.REQUESTS),
+                            children: p.NW.string(p.t.LhlgY2)
                         })
-                    }),
-                    (0, s.jsx)(I, {})
-                ]
-            }),
-            (0, s.jsx)('div', {
-                className: u.headerImage,
-                children: (0, s.jsx)('img', {
-                    src: e ? E : T,
-                    alt: _.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_IMAGE_ALT
+                      : (0, r.jsx)(u.Z, {})
+              });
+    },
+    _ = () => {
+        let e = (0, c.Z)(),
+            t = (0, l.o)(p.NW.string(g.Z.T7GyW1), p.NW.string(g.Z.goKE2d)),
+            n = (0, l.o)(p.NW.format(g.Z.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), p.NW.format(g.Z.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
+        return (0, r.jsxs)('div', {
+            className: s()(h.container, f.box),
+            children: [
+                (0, r.jsxs)('div', {
+                    children: [
+                        (0, r.jsx)('div', {
+                            children: (0, r.jsxs)('div', {
+                                className: h.headerText,
+                                children: [
+                                    (0, r.jsx)(a.X6q, {
+                                        variant: 'heading-xl/medium',
+                                        children: (0, r.jsx)(a.y5t, { children: t })
+                                    }),
+                                    (0, r.jsx)(a.Text, {
+                                        variant: 'text-sm/medium',
+                                        color: 'text-muted',
+                                        children: n
+                                    })
+                                ]
+                            })
+                        }),
+                        (0, r.jsx)(x, {})
+                    ]
+                }),
+                (0, r.jsx)('div', {
+                    className: h.headerImage,
+                    children: (0, r.jsx)('img', {
+                        src: e ? b : N,
+                        alt: p.NW.string(g.Z.ffg6xc)
+                    })
                 })
-            })
-        ]
-    });
-};
+            ]
+        });
+    };

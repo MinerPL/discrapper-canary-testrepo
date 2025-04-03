@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => o }), n(47120);
 var r = n(251625);
 function i(e, t, n) {
     return (
@@ -18,12 +13,15 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     keys() {
         return this.cachedKeys(this.version);
     }
     values() {
         return this.cachedValues(this.version);
+    }
+    entries() {
+        return this.cachedEntries(this.version);
     }
     size() {
         return this.data.size;
@@ -42,6 +40,6 @@ class a {
         0 !== this.data.size && (this.data.clear(), this.version++);
     }
     constructor() {
-        i(this, 'version', 0), i(this, 'data', new Map()), i(this, 'cachedValues', void 0), i(this, 'cachedKeys', void 0), (this.cachedValues = (0, r.oH)((e) => Array.from(this.data.values()))), (this.cachedKeys = (0, r.oH)((e) => Array.from(this.data.keys())));
+        i(this, 'version', 0), i(this, 'data', new Map()), i(this, 'cachedValues', void 0), i(this, 'cachedKeys', void 0), i(this, 'cachedEntries', void 0), (this.cachedValues = (0, r.oH)((e) => Array.from(this.data.values()))), (this.cachedKeys = (0, r.oH)((e) => Array.from(this.data.keys()))), (this.cachedEntries = (0, r.oH)((e) => Array.from(this.data.entries())));
     }
 }

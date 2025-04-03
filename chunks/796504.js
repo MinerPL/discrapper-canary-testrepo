@@ -1,50 +1,45 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return f;
-        }
-    });
-var r = t(735250),
-    l = t(470079),
-    a = t(442837),
-    o = t(481060),
-    i = t(668274),
-    c = t(600164),
-    s = t(241209),
-    u = t(807693),
-    d = t(689938),
-    h = t(438442);
+r.d(t, { default: () => f });
+var n = r(200651),
+    l = r(192379),
+    a = r(442837),
+    o = r(481060),
+    c = r(668274),
+    i = r(600164),
+    s = r(241209),
+    u = r(807693),
+    d = r(388032),
+    p = r(539752);
 function f(e) {
-    var n;
-    let { eulaId: t, transitionState: f, onClose: p } = e,
-        g = (0, a.e7)([u.Z], () => u.Z.getEULA(t));
+    var t;
+    let { eulaId: r, transitionState: f, onClose: h } = e,
+        g = (0, a.e7)([u.Z], () => u.Z.getEULA(r));
     l.useEffect(() => {
-        (0, i.N)(t);
-    }, [t]);
-    let m = null !== (n = null == g ? void 0 : g.name) && void 0 !== n ? n : d.Z.Messages.LOADING,
-        b =
+        (0, c.N)(r);
+    }, [r]);
+    let b = null != (t = null == g ? void 0 : g.name) ? t : d.NW.string(d.t.ZTNur6),
+        m =
             null != g
-                ? (0, r.jsx)(s.Z, {
+                ? (0, n.jsx)(s.Z, {
                       children: g.content,
-                      className: h.markdown
+                      className: p.markdown
                   })
-                : (0, r.jsx)(o.Spinner, { className: h.spinner });
-    return (0, r.jsxs)(o.ModalRoot, {
+                : (0, n.jsx)(o.$jN, { className: p.spinner });
+    return (0, n.jsxs)(o.Y0X, {
         transitionState: f,
-        size: o.ModalSize.SMALL,
-        'aria-label': m,
+        size: o.CgR.SMALL,
+        'aria-label': b,
         children: [
-            (0, r.jsxs)(o.ModalHeader, {
-                justify: c.Z.Justify.BETWEEN,
+            (0, n.jsxs)(o.xBx, {
+                justify: i.Z.Justify.BETWEEN,
                 children: [
-                    (0, r.jsx)(o.Heading, {
+                    (0, n.jsx)(o.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: m
+                        children: b
                     }),
-                    (0, r.jsx)(o.ModalCloseButton, { onClick: p })
+                    (0, n.jsx)(o.olH, { onClick: h })
                 ]
             }),
-            (0, r.jsx)(o.ModalContent, { children: b })
+            (0, n.jsx)(o.hzk, { children: m })
         ]
     });
 }

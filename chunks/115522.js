@@ -3,10 +3,6 @@ function r() {
 }
 function i(e) {}
 n.d(t, {
-    I: function () {
-        return i;
-    },
-    n: function () {
-        return r;
-    }
+    I: () => i,
+    n: () => r
 });

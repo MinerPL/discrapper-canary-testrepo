@@ -1,26 +1,25 @@
-t.d(r, {
-    Z: function () {
-        return p;
-    }
-});
-var a = t(735250);
-t(470079);
-var n = t(120356),
-    i = t.n(n),
-    o = t(481060),
-    l = t(45114),
-    c = t(110478),
-    s = t(423932),
-    d = t(601948),
-    u = t(594174),
-    h = t(804637),
-    m = t(224499);
-let g = () => {
-    Promise.all([t.e('52030'), t.e('55900')])
-        .then(t.bind(t, 24031))
+n.d(t, { Z: () => _ });
+var r = n(200651);
+n(192379);
+var a = n(120356),
+    l = n.n(a),
+    i = n(481060),
+    o = n(168107),
+    s = n(480916),
+    c = n(963886),
+    d = n(110478),
+    u = n(423932),
+    m = n(695346),
+    x = n(601948),
+    h = n(594174),
+    p = n(994331),
+    b = n(20493);
+let f = () => {
+    Promise.all([n.e('52030'), n.e('58717')])
+        .then(n.bind(n, 24031))
         .then((e) => {
-            let { openMFAModal: r } = e;
-            r(
+            let { openMFAModal: t } = e;
+            t(
                 {
                     ticket: 'ticket',
                     methods: [
@@ -41,42 +40,62 @@ let g = () => {
             );
         });
 };
-function p() {
-    let e = u.default.getCurrentUser(),
-        r = null == e ? void 0 : e.isStaff();
-    return (0, a.jsxs)(a.Fragment, {
+function _() {
+    let e = h.default.getCurrentUser(),
+        t = null == e ? void 0 : e.isStaff(),
+        n = m.Rt.useSetting();
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, a.jsx)('div', {
-                className: i()(h.buttonsContainer, m.marginBottom20),
-                children: (0, a.jsx)(d.S, { isDevTools: !0 })
+            (0, r.jsx)('div', {
+                className: l()(p.buttonsContainer, b.marginBottom20),
+                children: (0, r.jsx)(x.S, { isDevTools: !0 })
             }),
-            (0, a.jsx)('div', {
-                className: i()(h.buttonsContainer, m.marginBottom20),
-                children: (0, a.jsx)(o.Button, {
-                    onClick: g,
+            (0, r.jsx)('div', {
+                className: l()(p.buttonsContainer, b.marginBottom20),
+                children: (0, r.jsx)(i.zxk, {
+                    onClick: f,
                     children: 'Launch MFA'
                 })
             }),
-            (0, a.jsx)('div', {
-                className: i()(h.buttonsContainer, m.marginBottom20),
-                children: (0, a.jsx)(o.Button, {
-                    onClick: () => (0, s.Z)(),
+            (0, r.jsx)('div', {
+                className: l()(p.buttonsContainer, b.marginBottom20),
+                children: (0, r.jsx)(i.zxk, {
+                    onClick: () => (0, u.Z)(),
                     children: 'Launch Vibing Wumpus'
                 })
             }),
-            (0, a.jsx)('div', {
-                className: i()(h.buttonsContainer, m.marginBottom20),
-                children: (0, a.jsx)(o.Button, {
-                    onClick: l.YJ,
-                    children: 'Clear Message Requests Read State'
-                })
-            }),
-            r &&
-                (0, a.jsx)('div', {
-                    className: i()(h.buttonsContainer, m.marginBottom20),
-                    children: (0, a.jsx)(o.Button, {
-                        onClick: () => (0, c.N)(),
+            t &&
+                (0, r.jsx)('div', {
+                    className: l()(p.buttonsContainer, b.marginBottom20),
+                    children: (0, r.jsx)(i.zxk, {
+                        onClick: () => (0, d.N)(),
                         children: 'Launch Captcha Test Tool'
+                    })
+                }),
+            t &&
+                (0, r.jsx)('div', {
+                    className: l()(p.buttonsContainer, b.marginBottom20),
+                    children: (0, r.jsx)(i.zxk, {
+                        onClick: () => (0, c.E)(),
+                        children: 'Launch Age Verification Test Tool'
+                    })
+                }),
+            t &&
+                (0, r.jsx)('div', {
+                    className: l()(p.buttonsContainer, b.marginBottom20),
+                    children: (0, r.jsx)(i.zxk, {
+                        onClick: () => o.Z.showAgeVerificationGetStartedModal(s.cU.DEV_TOOLS_QUICK_ACTIONS),
+                        children: 'Launch Age Verification Modal'
+                    })
+                }),
+            t &&
+                (0, r.jsx)('div', {
+                    className: l()(p.buttonsContainer, b.marginBottom20),
+                    children: (0, r.jsx)(i.j7V, {
+                        value: n,
+                        onChange: (e) => m.Rt.updateSetting(e),
+                        hideBorder: !0,
+                        children: 'Ignore profile speedbump disabled'
                     })
                 })
         ]

@@ -1,12 +1,8 @@
-r.d(t, {
-    _: function () {
-        return a;
-    }
-});
-let n = (e, t) => (e > t[1] ? 'poor' : e > t[0] ? 'needs-improvement' : 'good'),
-    a = (e, t, r, a) => {
-        let o, i;
-        return (_) => {
-            t.value >= 0 && (_ || a) && ((i = t.value - (o || 0)) || void 0 === o) && ((o = t.value), (t.delta = i), (t.rating = n(t.value, r)), e(t));
+a.d(e, { _: () => n });
+let r = (t, e) => (t > e[1] ? 'poor' : t > e[0] ? 'needs-improvement' : 'good'),
+    n = (t, e, a, n) => {
+        let _, o;
+        return (i) => {
+            e.value >= 0 && (i || n) && ((o = e.value - (_ || 0)) || void 0 === _) && ((_ = e.value), (e.delta = o), (e.rating = r(e.value, a)), t(e));
         };
     };

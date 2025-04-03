@@ -1,22 +1,18 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var o = t(735250);
-t(470079);
-var r = t(442837),
-    a = t(481060),
-    i = t(223245),
-    c = t(246946),
-    l = t(689938);
-function u() {
-    let e = (0, r.e7)([c.Z], () => c.Z.enabled, []);
-    return (0, o.jsx)(a.MenuCheckboxItem, {
+r.d(t, { Z: () => s });
+var n = r(200651);
+r(192379);
+var i = r(442837),
+    o = r(481060),
+    c = r(223245),
+    a = r(246946),
+    l = r(388032);
+function s() {
+    let e = (0, i.e7)([a.Z], () => a.Z.enabled, []);
+    return (0, n.jsx)(o.S89, {
         id: 'streamer-mode-toggle',
-        label: l.Z.Messages.ENABLE_STREAMER_MODE_LABEL,
+        label: l.NW.string(l.t.p9ZAJS),
         action: () => {
-            i.Z.setEnabled(!e);
+            c.Z.setEnabled(!e);
         },
         checked: e
     });

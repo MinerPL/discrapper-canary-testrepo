@@ -1,45 +1,41 @@
-t.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(120356),
-    l = t.n(a),
-    o = t(481060),
-    r = t(314734),
-    s = t(689938),
-    c = t(449784);
-function d(e) {
-    let { sortOrder: n, onSortOptionClick: t, closePopout: a } = e,
-        d = (e) => {
-            t(e), a();
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(314734),
+    c = n(388032),
+    s = n(148520);
+function u(e) {
+    let { sortOrder: t, onSortOptionClick: n, closePopout: r } = e,
+        u = (e) => {
+            n(e), r();
         };
     return (0, i.jsx)('div', {
-        className: l()(r.Jh, c.container),
-        children: (0, i.jsx)(o.Menu, {
+        className: l()(o.Jh, s.container),
+        children: (0, i.jsx)(a.v2r, {
             navId: 'command-list-sort',
-            'aria-label': s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_A11Y_LABEL,
+            'aria-label': c.NW.string(c.t.Ugo9ub),
             hideScroller: !0,
-            onClose: a,
-            onSelect: a,
-            children: (0, i.jsxs)(o.MenuGroup, {
-                label: s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_HEADER,
+            onClose: r,
+            onSelect: r,
+            children: (0, i.jsxs)(a.kSQ, {
+                label: c.NW.string(c.t.yeYaHR),
                 children: [
-                    (0, i.jsx)(o.MenuRadioItem, {
+                    (0, i.jsx)(a.k5B, {
                         id: 'sort-by-popular',
                         group: 'sort-by',
-                        label: s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR,
-                        action: () => d(r.bS.POPULAR),
-                        checked: n === r.bS.POPULAR
+                        label: c.NW.string(c.t.SzxiqK),
+                        action: () => u(o.bS.POPULAR),
+                        checked: t === o.bS.POPULAR
                     }),
-                    (0, i.jsx)(o.MenuRadioItem, {
+                    (0, i.jsx)(a.k5B, {
                         id: 'sort-by-alphabetical',
                         group: 'sort-by',
-                        label: s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_ALPHABETICAL,
-                        action: () => d(r.bS.ALPHABETICAL),
-                        checked: n === r.bS.ALPHABETICAL
+                        label: c.NW.string(c.t.m8xstr),
+                        action: () => u(o.bS.ALPHABETICAL),
+                        checked: t === o.bS.ALPHABETICAL
                     })
                 ]
             })

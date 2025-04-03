@@ -1,48 +1,40 @@
-n.d(e, {
-    HV: function () {
-        return o;
-    },
-    IS: function () {
-        return u;
-    },
-    VY: function () {
-        return c;
-    }
+n.d(t, {
+    HV: () => s,
+    IS: () => i,
+    VY: () => c
 }),
     n(627494),
     n(757143),
+    n(301563),
     n(201133);
-var a = n(5192),
-    r = n(561308),
-    l = n(689938);
-let u = (t, e) =>
-        l.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
-            username: e.username,
-            activity: t.extra.game_name
+var r = n(5192),
+    a = n(561308),
+    l = n(388032);
+let i = (e, t) =>
+        l.NW.formatToPlainString(l.t.tAwI1t, {
+            username: t.username,
+            activity: e.extra.game_name
         }),
-    i = (t) => {
-        let e = (0, r.kr)(t);
-        return (0, r.Ol)(t) ? (e ? l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME : l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME) : e ? l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME : l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
+    o = (e) => {
+        let t = (0, a.kr)(e);
+        return (0, a.Ol)(e) ? (t ? l.t.MHO1AQ : l.t.i7AOz8) : t ? l.t.lLPKY2 : l.t['bES+y8'];
     },
-    o = (t, e, n) => {
-        let r = i(t),
-            l = a.ZP.getName(null == e ? void 0 : e.guild_id, null == e ? void 0 : e.id, n),
-            u = t.extra.game_name;
-        return r
-            .plainFormat({
-                gameName: u,
-                userName: l
-            })
-            .replaceAll('*', '');
+    s = (e, t, n) => {
+        let a = o(e),
+            i = r.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+            s = e.extra.game_name;
+        return l.NW.formatToMarkdownString(a, {
+            gameName: s,
+            userName: i
+        }).replaceAll('*', '');
     },
-    c = (t) => {
-        let { entry: e, channel: n, users: u, countOthers: i } = t;
-        return ((0, r.kr)(e) ? l.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYING : l.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED)
-            .plainFormat({
-                gameName: e.extra.game_name,
-                user1: a.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, u[0]),
-                user2: a.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, u[1]),
-                countOthers: i
-            })
-            .replaceAll('*', '');
+    c = (e) => {
+        let { entry: t, channel: n, users: i, countOthers: o } = e,
+            s = (0, a.kr)(t) ? l.t.QaUWPT : l.t['7j/5mp'];
+        return l.NW.formatToMarkdownString(s, {
+            gameName: t.extra.game_name,
+            user1: r.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[0]),
+            user2: r.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[1]),
+            countOthers: o
+        }).replaceAll('*', '');
     };

@@ -1,23 +1,14 @@
-var r, i;
 n.d(t, {
-    Jj: function () {
-        return s;
-    },
-    OF: function () {
-        return o;
-    },
-    WW: function () {
-        return l;
-    },
-    hV: function () {
-        return r;
-    },
-    mT: function () {
-        return a;
-    }
+    Jj: () => i,
+    OF: () => o,
+    WW: () => s,
+    hV: () => a,
+    mT: () => r
 });
-let a = 550,
-    s = 350,
+let r = 550,
+    i = 350,
     o = 40;
-((i = r || (r = {})).STATIC = 'STATIC'), (i.RESPONSIVE = 'RESPONSIVE'), (i.MOSAIC = 'MOSAIC');
-let l = 20;
+var a = (function (e) {
+    return (e.STATIC = 'STATIC'), (e.RESPONSIVE = 'RESPONSIVE'), (e.MOSAIC = 'MOSAIC'), e;
+})({});
+let s = 20;

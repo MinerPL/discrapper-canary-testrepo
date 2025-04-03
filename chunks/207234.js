@@ -1,26 +1,22 @@
-t.d(n, {
-    M: function () {
-        return a;
-    },
-    P: function () {
-        return E;
-    }
+n.d(t, {
+    M: () => o,
+    a: () => l
 });
-var i = t(392711),
-    l = t.n(i),
-    o = t(585483),
-    r = t(981631);
-let E = {
+var r = n(392711),
+    i = n.n(r),
+    s = n(585483),
+    a = n(981631);
+let l = {
         binds: ['mod+i'],
         comboKeysBindGlobal: !0,
-        action: () => (o.S.dispatch(r.CkL.TOGGLE_INBOX_UNREADS_TAB), !1)
+        action: () => (s.S.dispatch(a.CkL.TOGGLE_INBOX), !1)
     },
-    a = {
+    o = {
         binds: ['mod+shift+e'],
         comboKeysBindGlobal: !0,
-        action: l().debounce(
+        action: i().debounce(
             () => {
-                if (o.S.hasSubscribers(r.CkL.MARK_TOP_INBOX_CHANNEL_READ)) return o.S.dispatch(r.CkL.MARK_TOP_INBOX_CHANNEL_READ), !1;
+                if (s.S.hasSubscribers(a.CkL.MARK_TOP_INBOX_CHANNEL_READ)) return s.S.dispatch(a.CkL.MARK_TOP_INBOX_CHANNEL_READ), !1;
             },
             100,
             { leading: !0 }

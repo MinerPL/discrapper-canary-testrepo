@@ -1,10 +1,12 @@
-let r = new (n(113638).Z)(function (e) {
+n.d(t, { Z: () => o });
+let r = new (n(113638).Z)(i);
+function i(e) {
     {
         let t = n(160170).B[e];
         return void 0 !== t ? t().then((e) => e.default) : Promise.resolve({});
     }
-});
-t.Z = {
+}
+let o = {
     setEmojiLocale: function (e) {
         r.setParams(e);
     },

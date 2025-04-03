@@ -3,8 +3,4 @@ function r(e, t) {
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });

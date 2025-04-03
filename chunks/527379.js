@@ -1,71 +1,79 @@
-t.d(n, {
-    Dr: function () {
-        return E;
-    },
-    YO: function () {
-        return _;
-    },
-    _X: function () {
-        return I;
-    },
-    _o: function () {
-        return f;
-    },
-    nb: function () {
-        return g;
-    },
-    zO: function () {
-        return d;
-    }
+n.d(t, {
+    Dr: () => _,
+    YO: () => f,
+    _X: () => O,
+    _o: () => E,
+    nb: () => g,
+    zO: () => p
 });
-var r = t(570140),
-    i = t(434404),
-    o = t(703656),
-    l = t(430824),
-    u = t(241559),
-    a = t(327999),
-    s = t(981631),
-    c = t(176505);
-async function d(e) {
+var r = n(570140),
+    i = n(63568),
+    l = n(434404),
+    o = n(703656),
+    a = n(430824),
+    u = n(241559),
+    s = n(327999),
+    c = n(981631),
+    d = n(176505);
+async function p(e) {
     await r.Z.dispatch({
         type: 'INITIALIZE_MEMBER_SAFETY_STORE',
         guildId: e
     });
 }
-function _(e) {
+function f(e) {
     r.Z.dispatch({
         type: 'MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH',
         guildId: e
     });
 }
-function f(e, n) {
-    let { continuationToken: t, ...i } = n;
+function E(e, t) {
+    var { continuationToken: n } = t,
+        i = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(t, ['continuationToken']);
     r.Z.dispatch({
         type: 'MEMBER_SAFETY_PAGINATION_UPDATE',
         guildId: e,
         pagination: i
     });
 }
-async function E(e, n) {
+async function _(e, t) {
     await r.Z.dispatch({
         type: 'MEMBER_SAFETY_SEARCH_STATE_UPDATE',
         guildId: e,
-        searchState: n
+        searchState: t
     });
 }
-function I(e) {
-    let n = (0, u.lv)(e),
-        t = l.Z.getGuild(e);
-    return !!n && null != t && (t.hasFeature(s.oNc.COMMUNITY) || t.hasFeature(s.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, o.uL)(s.Z5c.CHANNEL(e, c.oC.MEMBER_SAFETY)), !0) : (i.Z.open(t.id, s.pNK.MEMBERS), !0));
+function O(e) {
+    let t = (0, u.lv)(e),
+        n = a.Z.getGuild(e);
+    return !!t && null != n && (((0, i.K2)(e, 'Guild Sidebar') && n.hasFeature(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) || n.hasFeature(c.oNc.COMMUNITY) || n.hasFeature(c.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? (0, o.uL)(c.Z5c.CHANNEL(e, d.oC.MEMBER_SAFETY)) : l.Z.open(n.id, c.pNK.MEMBERS), !0);
 }
-async function g(e, n) {
-    let t = await (0, a._2)(e, n);
-    return 0 === t.length
+async function g(e, t) {
+    let n = await (0, s._2)(e, t);
+    return 0 === n.length
         ? []
         : (await r.Z.dispatch({
               type: 'FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS',
               guildId: e,
-              memberSupplementals: t
+              memberSupplementals: n
           }),
-          t);
+          n);
 }

@@ -1,25 +1,26 @@
-var r = n(684827),
-    i = n(482682);
-function a(e, t, n) {
+i.d(e, { Z: () => h });
+var s = i(684827),
+    n = i(482682);
+function a(t, e, i) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
-        e
+            : (t[e] = i),
+        t
     );
 }
-t.Z = class e {
+let h = class {
     initialize() {
         (this.img = new Image()),
             (this.img.onload = () => {
                 this.loaded = !0;
             }),
-            (this.img.src = i),
+            (this.img.src = n),
             this.bind();
     }
     bind() {
@@ -31,12 +32,12 @@ t.Z = class e {
     terminate() {
         (this.img = null), (this.loaded = !1), (this.isFilled = !1), (this.alpha = 0), this.unbind();
     }
-    update(e) {
-        if (!!this.loaded) !this.isFilled && this.alpha < 1 ? (this.alpha = Math.min(1, this.alpha + e)) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * e)), (this.velX += (0, r.B)(this.targetX, this.x, this.velX, this.spring) * e), (this.velY += (0, r.B)(this.targetY, this.y, this.velY, this.spring) * e), (this.x += this.velX * e), (this.y += this.velY * e);
+    update(t) {
+        this.loaded && (!this.isFilled && this.alpha < 1 ? (this.alpha = Math.min(1, this.alpha + t)) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * t)), (this.velX += (0, s.B)(this.targetX, this.x, this.velX, this.spring) * t), (this.velY += (0, s.B)(this.targetY, this.y, this.velY, this.spring) * t), (this.x += this.velX * t), (this.y += this.velY * t));
     }
-    render(e) {
-        let { img: t } = this;
-        if (!!this.loaded && null != t) e.save(), (e.globalCompositeOperation = 'source-atop'), (e.globalAlpha = this.alpha), e.drawImage(t, this.x + 20, this.y + 20), e.restore();
+    render(t) {
+        let { img: e } = this;
+        this.loaded && null != e && (t.save(), (t.globalCompositeOperation = 'source-atop'), (t.globalAlpha = this.alpha), t.drawImage(e, this.x + 20, this.y + 20), t.restore());
     }
     fill() {
         this.isFilled = !0;
@@ -58,9 +59,9 @@ t.Z = class e {
                 friction: 60,
                 tension: 100
             }),
-            a(this, 'handleMouseMove', (e) => {
-                let { clientX: t, clientY: n } = e;
-                (this.targetX = (t / window.innerWidth) * 20 + 20), (this.targetY = (n / window.innerWidth) * 20 + 20);
+            a(this, 'handleMouseMove', (t) => {
+                let { clientX: e, clientY: i } = t;
+                (this.targetX = (e / window.innerWidth) * 20 + 20), (this.targetY = (i / window.innerWidth) * 20 + 20);
             });
     }
 };

@@ -1,13 +1,7 @@
 n.d(t, {
-    ZP: function () {
-        return i;
-    },
-    _$: function () {
-        return a;
-    },
-    d7: function () {
-        return s;
-    }
+    ZP: () => i,
+    _$: () => o,
+    d7: () => a
 }),
     n(47120);
 var r = n(149765);
@@ -19,10 +13,10 @@ function i(e) {
                 (n.allow = r.vB(n.allow)), (n.deny = r.vB(n.deny));
             }
 }
-function a(e) {
+function o(e) {
     for (let [t, n] of e) i(n);
 }
-function s(e) {
+function a(e) {
     let { permissionOverwrites_: t } = e;
     if (null != t)
         for (let e in t) {

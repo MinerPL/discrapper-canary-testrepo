@@ -1,115 +1,111 @@
 n.d(t, {
-    Z: function () {
-        return j;
-    },
-    _: function () {
-        return M;
-    }
+    Z: () => T,
+    _: () => S
 }),
     n(47120);
-var a = n(735250),
-    s = n(470079),
-    r = n(512722),
-    l = n.n(r),
-    i = n(338545),
+var r = n(200651),
+    a = n(192379),
+    i = n(512722),
+    l = n.n(i),
+    s = n(642128),
     o = n(442837),
     c = n(481060),
     d = n(53281),
     u = n(607070),
     m = n(541716),
     h = n(859235),
-    _ = n(898463),
-    g = n(592125),
-    x = n(703558),
-    f = n(117530),
-    C = n(585483),
-    p = n(127654),
-    T = n(228392),
-    I = n(981631),
-    E = n(374443);
-let N = {
+    g = n(898463),
+    f = n(592125),
+    p = n(703558),
+    x = n(117530),
+    b = n(585483),
+    j = n(127654),
+    v = n(228392),
+    C = n(981631),
+    _ = n(933897);
+let y = {
         scale: 0.95,
         opacity: 0
     },
-    b = {
+    N = {
         scale: 1,
         opacity: 1
     },
-    v = {
+    O = {
         scale: 1,
         opacity: 1
     },
-    S = {
+    w = {
         tension: 2400,
         friction: 52
     };
-function M(e) {
-    let { channelId: t, onClick: n, onClose: r, onMouseEnter: i } = e,
-        u = s.useRef(null),
-        m = (0, o.e7)([g.Z], () => g.Z.getChannel(t), [t]);
+function S(e) {
+    let { channelId: t, onClick: n, onClose: i, onMouseEnter: s } = e,
+        u = a.useRef(null),
+        m = (0, o.e7)([f.Z], () => f.Z.getChannel(t), [t]);
     return (
         l()(null != m, 'Forum Channel is null'),
-        (0, a.jsxs)(c.Clickable, {
-            className: E.uploadInput,
-            onMouseEnter: i,
+        (0, r.jsxs)(c.P3F, {
+            className: _.uploadInput,
+            onMouseEnter: s,
             onClick: () => {
-                (0, T.N3)({ isMobile: !1 }), null == n || n();
+                (0, v.N3)({ isMobile: !1 }), null == n || n();
             },
             onKeyPress: (e) => {
                 if ('Enter' === e.key) {
                     var t;
-                    null === (t = u.current) || void 0 === t || t.activateUploadDialogue(), (0, T.N3)({ isMobile: !1 });
+                    null == (t = u.current) || t.activateUploadDialogue(), (0, v.N3)({ isMobile: !1 });
                 }
             },
             children: [
-                (0, a.jsx)(d.Z, {
-                    className: E.fileInput,
+                (0, r.jsx)(d.Z, {
+                    className: _.fileInput,
                     ref: u,
                     onChange: (e) => {
-                        null == r || r(), (0, p.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, { requireConfirm: !0 }), C.S.dispatch(I.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
+                        null == i || i(), (0, j.d)(e.currentTarget.files, m, p.d.FirstThreadMessage, { requireConfirm: !0 }), b.S.dispatch(C.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
                     },
                     multiple: m.rateLimitPerUser <= 0,
                     tabIndex: -1,
                     'aria-hidden': !0
                 }),
-                (0, a.jsx)(c.ImagePlusIcon, {
+                (0, r.jsx)(c.FmF, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 28,
                     height: 28,
-                    className: E.uploadIcon
+                    className: _.uploadIcon
                 })
             ]
         })
     );
 }
-function A(e) {
+function P(e) {
     let { channelId: t, closePopout: n } = e,
-        [r, l] = s.useState(!1),
-        { reducedMotion: d } = s.useContext(c.AccessibilityPreferencesContext),
-        g = (0, c.useSpring)(
+        [i, l] = a.useState(!1),
+        { reducedMotion: d } = a.useContext(c.Sfi),
+        f = (0, c.q_F)(
             {
-                from: d.enabled ? b : N,
-                to: v,
-                config: S
+                from: d.enabled ? N : y,
+                to: O,
+                config: w
             },
             'animate-always'
         ),
-        x = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
-        C = (0, o.e7)([f.Z], () => f.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type));
-    return (0, a.jsx)(i.animated.div, {
-        className: E.popoutContainer,
+        p = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
+        b = (0, o.e7)([x.Z], () => x.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type));
+    return (0, r.jsx)(s.animated.div, {
+        className: _.popoutContainer,
         onMouseLeave: () => {
-            !r && n();
+            i || n();
         },
-        style: g,
-        children: (0, a.jsxs)(c.ScrollerThin, {
+        style: f,
+        children: (0, r.jsxs)(c.zJl, {
             orientation: 'horizontal',
-            className: E.popout,
+            className: _.popout,
             paddingFix: !1,
             fade: !0,
             children: [
-                (0, a.jsx)(M, {
+                (0, r.jsx)(S, {
                     channelId: t,
                     onClick: () => {
                         l(!0);
@@ -118,16 +114,16 @@ function A(e) {
                         l(!1), n();
                     }
                 }),
-                (0, a.jsx)('div', {
-                    className: E.uploads,
-                    children: C.map((e) =>
-                        (0, a.jsx)(
-                            _.Z,
+                (0, r.jsx)('div', {
+                    className: _.uploads,
+                    children: b.map((e) =>
+                        (0, r.jsx)(
+                            g.Z,
                             {
                                 channelId: t,
-                                draftType: m.I.CREATE_FORUM_POST.drafts.type,
+                                draftType: m.Ie.CREATE_FORUM_POST.drafts.type,
                                 upload: e,
-                                keyboardModeEnabled: x,
+                                keyboardModeEnabled: p,
                                 hideFileName: !0,
                                 size: h.q.SMALL
                             },
@@ -139,45 +135,45 @@ function A(e) {
         })
     });
 }
-function j(e) {
+function T(e) {
     let { channelId: t } = e,
-        [n, r] = s.useState(!1),
-        l = (0, o.e7)([f.Z], () => f.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type)),
-        i = l.length,
-        c = i > 0;
-    s.useEffect(() => {
-        n && !c && r(!1);
+        [n, i] = a.useState(!1),
+        l = (0, o.e7)([x.Z], () => x.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
+        s = l.length,
+        c = s > 0;
+    a.useEffect(() => {
+        n && !c && i(!1);
     }, [n, c]);
     let d = () => {
-        c && r(!0);
+        c && i(!0);
     };
-    return (0, a.jsxs)('div', {
-        className: E.container,
+    return (0, r.jsxs)('div', {
+        className: _.container,
         children: [
             c
-                ? (0, a.jsxs)(a.Fragment, {
+                ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, a.jsx)(_.r, {
+                          (0, r.jsx)(g.r, {
                               upload: l[0],
                               size: h.q.SMALL,
                               onMouseEnter: d
                           }),
                           !n &&
-                              (0, a.jsx)('div', {
-                                  className: E.badge,
-                                  children: i
+                              (0, r.jsx)('div', {
+                                  className: _.badge,
+                                  children: s
                               })
                       ]
                   })
-                : (0, a.jsx)(M, {
+                : (0, r.jsx)(S, {
                       onMouseEnter: d,
                       channelId: t
                   }),
             n &&
-                (0, a.jsx)(A, {
+                (0, r.jsx)(P, {
                     channelId: t,
                     closePopout: () => {
-                        r(!1);
+                        i(!1);
                     }
                 })
         ]

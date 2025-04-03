@@ -1,65 +1,105 @@
-t.d(n, {
-    C4: function () {
-        return C;
-    },
-    Fi: function () {
-        return E;
-    },
-    KK: function () {
-        return _;
-    },
-    f6: function () {
-        return u;
-    },
-    n: function () {
-        return I;
-    }
+n.d(t, {
+    C4: () => p,
+    Fi: () => h,
+    KK: () => u,
+    f6: () => x,
+    n: () => _
 }),
-    t(47120);
-var o = t(913527),
-    i = t.n(o),
-    a = t(544891),
-    s = t(367907),
-    l = t(434404),
-    r = t(430824),
-    d = t(626135),
-    c = t(981631);
-function _(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-    if (0 !== n.length)
-        d.default.track(c.rMx.GUILD_RAID_REPORTED, {
-            ...(0, s.hH)(e),
-            guild_id: e,
-            raid_types: n
-        });
+    n(47120);
+var r = n(913527),
+    i = n.n(r),
+    o = n(544891),
+    l = n(367907),
+    s = n(434404),
+    a = n(430824),
+    c = n(626135),
+    d = n(981631);
+function u(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+    if (0 !== t.length) {
+        var n, r;
+        c.default.track(
+            d.rMx.GUILD_RAID_REPORTED,
+            ((n = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, (0, l.hH)(e))),
+            (r = r =
+                {
+                    guild_id: e,
+                    raid_types: t
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                  }),
+            n)
+        );
+    }
 }
-async function u(e, n) {
-    let t = new Set(e.features);
-    t.has(c.oNc.COMMUNITY) ? (n ? t.delete(c.oNc.RAID_ALERTS_DISABLED) : t.add(c.oNc.RAID_ALERTS_DISABLED)) : n ? t.add(c.oNc.NON_COMMUNITY_RAID_ALERTS) : t.delete(c.oNc.NON_COMMUNITY_RAID_ALERTS), await l.Z.saveGuild(e.id, { features: t }, { throwErr: !0 });
+async function x(e, t) {
+    let n = new Set(e.features);
+    n.has(d.oNc.COMMUNITY) ? (t ? n.delete(d.oNc.RAID_ALERTS_DISABLED) : n.add(d.oNc.RAID_ALERTS_DISABLED)) : t ? n.add(d.oNc.NON_COMMUNITY_RAID_ALERTS) : n.delete(d.oNc.NON_COMMUNITY_RAID_ALERTS), await s.Z.saveGuild(e.id, { features: n }, { throwErr: !0 });
 }
-async function I(e, n, t, o) {
-    let s = i()().add(o, 'hours').toISOString();
-    return await a.tn.put({
-        url: c.ANM.GUILD_INCIDENT_ACTIONS(e),
+async function _(e, t, n, r) {
+    let l = i()().add(r, 'hours').toISOString();
+    return await o.tn.put({
+        url: d.ANM.GUILD_INCIDENT_ACTIONS(e),
         body: {
-            invites_disabled_until: n ? s : null,
-            dms_disabled_until: t ? s : null
-        }
+            invites_disabled_until: t ? l : null,
+            dms_disabled_until: n ? l : null
+        },
+        rejectWithError: !1
     });
 }
-async function E(e, n, t) {
-    let o = r.Z.getGuild(e);
-    return null == (null == o ? void 0 : o.getSafetyAlertsChannelId())
+async function h(e, t, n) {
+    let r = a.Z.getGuild(e);
+    return null == (null == r ? void 0 : r.getSafetyAlertsChannelId())
         ? null
-        : await a.tn.post({
-              url: c.ANM.GUILD_INCIDENT_REPORT_FALSE_ALARM(e),
+        : await o.tn.post({
+              url: d.ANM.GUILD_INCIDENT_REPORT_FALSE_ALARM(e),
               body: {
-                  alert_message_id: n,
-                  reason: t
-              }
+                  alert_message_id: t,
+                  reason: n
+              },
+              rejectWithError: !1
           });
 }
-async function C(e) {
-    let n = r.Z.getGuild(e);
-    return null == (null == n ? void 0 : n.getSafetyAlertsChannelId()) ? null : await a.tn.post({ url: c.ANM.GUILD_INCIDENT_REPORT_RAID(e) });
+async function p(e) {
+    let t = a.Z.getGuild(e);
+    return null == (null == t ? void 0 : t.getSafetyAlertsChannelId())
+        ? null
+        : await o.tn.post({
+              url: d.ANM.GUILD_INCIDENT_REPORT_RAID(e),
+              rejectWithError: !1
+          });
 }

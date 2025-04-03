@@ -1,44 +1,49 @@
-n(411104);
-var r = n(990547),
-    i = n(283693),
-    a = n(570140),
-    s = n(408987),
-    o = n(9156),
-    l = n(621600),
-    u = n(573261),
-    c = n(92114),
-    d = n(981631),
-    _ = n(526761);
-t.Z = {
+l.d(t, { Z: () => d }), l(411104);
+var n = l(990547),
+    r = l(283693),
+    a = l(570140),
+    s = l(408987),
+    o = l(9156),
+    i = l(621600),
+    u = l(573261),
+    c = l(87051),
+    p = l(981631),
+    h = l(526761);
+let d = {
     createChannel(e) {
-        let { guildId: t, type: n, name: E, permissionOverwrites: f = [], bitrate: h, userLimit: p, parentId: m, skuId: I, branchId: T } = e;
-        a.Z.dispatch({ type: 'CREATE_CHANNEL_MODAL_SUBMIT' });
-        let g = {
-            type: n,
-            name: E,
-            permission_overwrites: f
+        let { guildId: t, type: l, name: d, permissionOverwrites: g = [], bitrate: f, userLimit: y, parentId: E, skuId: b, branchId: v } = e;
+        a.Z.dispatch({
+            type: 'CREATE_CHANNEL_MODAL_SUBMIT',
+            guildId: t,
+            channelType: l
+        });
+        let N = {
+            type: l,
+            name: d,
+            permission_overwrites: g
         };
-        if ((null != h && h !== d.epw && (g.bitrate = h), null != p && p > 0 && (g.user_limit = p), null != m && (g.parent_id = m), n === d.d4z.GUILD_STORE)) {
-            if (null == I) throw Error('Unexpected missing SKU');
-            (g.sku_id = I), (g.branch_id = T);
+        if ((null != f && f !== p.epw && (N.bitrate = f), null != y && y > 0 && (N.user_limit = y), null != E && (N.parent_id = E), l === p.d4z.GUILD_STORE)) {
+            if (null == b) throw Error('Unexpected missing SKU');
+            (N.sku_id = b), (N.branch_id = v);
         }
         return u.Z.post({
-            url: d.ANM.GUILD_CHANNELS(t),
-            body: g,
+            url: p.ANM.GUILD_CHANNELS(t),
+            body: N,
             oldFormErrors: !0,
             trackedActionData: {
-                event: r.NetworkActionNames.CHANNEL_CREATE,
+                event: n.NetworkActionNames.CHANNEL_CREATE,
                 properties: (e) => {
-                    var t, n;
-                    return (0, i.iG)({
-                        is_private: f.length > 0,
-                        channel_id: null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.id,
-                        channel_type: null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.type
+                    var t, l;
+                    return (0, r.iG)({
+                        is_private: g.length > 0,
+                        channel_id: null == e || null == (t = e.body) ? void 0 : t.id,
+                        channel_type: null == e || null == (l = e.body) ? void 0 : l.type
                     });
                 }
-            }
+            },
+            rejectWithError: !1
         }).then(
-            (e) => (o.ZP.isOptInEnabled(t) && c.Z.updateChannelOverrideSettings(t, e.body.id, { flags: _.ic.OPT_IN_ENABLED }, l.ZB.OptedIn), s.Z.checkGuildTemplateDirty(t), e),
+            (e) => (o.ZP.isOptInEnabled(t) && c.Z.updateChannelOverrideSettings(t, e.body.id, { flags: h.ic.OPT_IN_ENABLED }, i.ZB.OptedIn), s.Z.checkGuildTemplateDirty(t), e),
             (e) => {
                 throw (
                     (a.Z.dispatch({
@@ -50,25 +55,26 @@ t.Z = {
             }
         );
     },
-    createRoleSubscriptionTemplateChannel: (e, t, n, a) =>
+    createRoleSubscriptionTemplateChannel: (e, t, l, a) =>
         u.Z.post({
-            url: d.ANM.GUILD_CHANNELS(e),
+            url: p.ANM.GUILD_CHANNELS(e),
             body: {
                 name: t,
-                type: n,
+                type: l,
                 topic: a
             },
             oldFormErrors: !0,
             trackedActionData: {
-                event: r.NetworkActionNames.CHANNEL_CREATE,
+                event: n.NetworkActionNames.CHANNEL_CREATE,
                 properties: (e) => {
-                    var t, n;
-                    return (0, i.iG)({
+                    var t, l;
+                    return (0, r.iG)({
                         is_private: !0,
-                        channel_id: null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.id,
-                        channel_type: null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.type
+                        channel_id: null == e || null == (t = e.body) ? void 0 : t.id,
+                        channel_type: null == e || null == (l = e.body) ? void 0 : l.type
                     });
                 }
-            }
+            },
+            rejectWithError: !1
         })
 };

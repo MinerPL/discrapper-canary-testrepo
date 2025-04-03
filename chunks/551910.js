@@ -1,8 +1,4 @@
-var r, i;
-n.d(t, {
-    j: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {}))[(i.ALL = 1)] = 'ALL'),
-    (i[(i.TIERED = 2)] = 'TIERED');
+n.d(t, { j: () => r });
+var r = (function (e) {
+    return (e[(e.ALL = 1)] = 'ALL'), (e[(e.TIERED = 2)] = 'TIERED'), e;
+})({});

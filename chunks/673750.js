@@ -1,37 +1,30 @@
 n.d(t, {
-    $V: function () {
-        return i;
-    },
-    Bz: function () {
-        return C;
-    },
-    hc: function () {
-        return y;
-    }
+    $V: () => A,
+    Bz: () => R,
+    ZP: () => L,
+    hc: () => P
 }),
     n(653041),
-    n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(512722),
-    l = n.n(o),
-    u = n(261470),
-    c = n(544891),
-    d = n(911969),
-    _ = n(367907),
-    E = n(710845),
-    f = n(432877),
-    h = n(873741),
-    p = n(314897),
-    m = n(866960),
-    I = n(70956),
-    T = n(403182),
-    g = n(651655),
-    S = n(861990),
-    A = n(141795),
-    N = n(981631);
+    n(47120),
+    n(26686);
+var r = n(512722),
+    i = n.n(r),
+    o = n(544891),
+    a = n(911969),
+    s = n(367907),
+    l = n(710845),
+    c = n(432877),
+    u = n(873741),
+    d = n(931301),
+    f = n(314897),
+    _ = n(866960),
+    p = n(70956),
+    h = n(403182),
+    m = n(651655),
+    g = n(861990),
+    E = n(141795),
+    b = n(981631),
+    y = n(959517);
 function v(e, t, n) {
     return (
         t in e
@@ -45,13 +38,73 @@ function v(e, t, n) {
         e
     );
 }
-let O = null;
-__OVERLAY__ && (O = n(237997).Z), ((a = r || (r = {})).OVERLAY_UNLOCKED = 'overlay_unlocked'), (a.OVERLAY_UNLOCKED_PINNED = 'overlay_unlocked_pinned'), (a.OVERLAY_LOCKED_ACTIVATED = 'overlay_locked_activated'), ((s = i || (i = {}))[(s.SEND = 0)] = 'SEND'), (s[(s.EDIT = 1)] = 'EDIT'), (s[(s.COMMAND = 2)] = 'COMMAND');
-let R = (e) => 0 === e.type,
-    C = (e) => 1 === e.type,
-    y = (e) => (R(e) ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id),
-    D = [1 * I.Z.Millis.MINUTE, 5 * I.Z.Millis.MINUTE];
-class L extends g.Z {
+function O(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                v(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function I(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function S(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : I(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function T(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = N(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function N(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+var A = (function (e) {
+    return (e[(e.SEND = 0)] = 'SEND'), (e[(e.EDIT = 1)] = 'EDIT'), (e[(e.COMMAND = 2)] = 'COMMAND'), e;
+})({});
+let C = (e) => 0 === e.type,
+    R = (e) => 1 === e.type,
+    P = (e) => (C(e) ? e.message.nonce : R(e) ? e.message.messageId : e.message.data.id),
+    w = [+p.Z.Millis.MINUTE, 5 * p.Z.Millis.MINUTE];
+class D extends m.Z {
     isFull() {
         return this.queue.length >= this.maxSize;
     }
@@ -69,7 +122,7 @@ class L extends g.Z {
     }
     cancelRequest(e) {
         var t;
-        this.logger.log('Cancel message send: ', e), null === (t = this.requests.get(e)) || void 0 === t || t.abort(), this.requests.delete(e), this.cancelQueueMetricTimers(e);
+        this.logger.log('Cancel message send: ', e), null == (t = this.requests.get(e)) || t.abort(), this.requests.delete(e), this.cancelQueueMetricTimers(e);
     }
     cancelPendingSendRequests(e) {
         let t = [],
@@ -82,33 +135,34 @@ class L extends g.Z {
         return this.queue.push(...n), this.logger.log('Cancel pending send requests', t.length), t;
     }
     startQueueMetricTimers(e) {
-        let t = D.map((e) =>
+        let t = w.map((e) =>
             setTimeout(() => {
-                (0, _.yw)(N.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
+                (0, s.yw)(b.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e)
         );
         this.analyticsTimeouts.set(e, t);
     }
     cancelQueueMetricTimers(e) {
         var t;
-        null === (t = this.analyticsTimeouts.get(e)) || void 0 === t || t.forEach(clearTimeout), this.analyticsTimeouts.delete(e);
+        null == (t = this.analyticsTimeouts.get(e)) || t.forEach(clearTimeout), this.analyticsTimeouts.delete(e);
     }
     createResponseHandler(e, t) {
         return (n) => {
             if ((null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr)) return t(null, n);
-            null != n.body && (n.body.code === N.evJ.SLOWMODE_RATE_LIMITED || n.body.code === N.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) ? t(null, n) : 429 === n.status ? t({ retryAfter: n.body.retry_after * I.Z.Millis.SECOND }) : t(null, n);
+            if (null != n.body && (n.body.code === b.evJ.SLOWMODE_RATE_LIMITED || n.body.code === b.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)) t(null, n);
+            else if (429 === n.status) {
+                let e = parseInt(n.headers['retry-after']);
+                isNaN(e) ? t(null, n) : t({ retryAfter: e * p.Z.Millis.SECOND });
+            } else t(null, n);
         };
     }
     handleSend(e, t) {
-        let n;
-        let { channelId: r, file: i, filename: a, ...s } = e,
-            o = (0, h.d)(),
-            l = {
-                mobile_network_type: m.Z.getType(),
-                ...s,
-                ...(null != o && { signal_strength: o })
-            };
-        if (f.ZP.get('send_fail_100')) {
+        let n,
+            { channelId: r } = e,
+            i = T(e, ['channelId']),
+            a = (0, u.d)(),
+            s = O({ mobile_network_type: _.Z.getType() }, i, null != a && { signal_strength: a });
+        if (c.ZP.get('send_fail_100')) {
             this.logger.log('Skipping message send because send_fail_100 is enabled'),
                 t(null, {
                     ok: !1,
@@ -120,69 +174,45 @@ class L extends g.Z {
                 });
             return;
         }
-        null != O && (O.isInstanceUILocked() ? (n = { location: 'overlay_locked_activated' }) : !O.isInstanceUILocked() && (n = O.isPinned(N.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
-        let d = this.createResponseHandler(e.nonce, t),
-            _ = new AbortController();
-        if ((this.startQueueMetricTimers(e.nonce), null != i && null != a && '' !== a))
-            c.tn.post(
-                {
-                    url: N.ANM.MESSAGES(r),
-                    fields: Object.entries(l).map((e) => {
-                        let [t, n] = e;
-                        return {
-                            name: t,
-                            value: n
-                        };
-                    }),
-                    attachments: [
+        let l = (0, d.Z)();
+        null != l && ((n = { location: l }), this.logger.log('Overlay location: ', n));
+        let f = this.createResponseHandler(e.nonce, t),
+            p = new AbortController();
+        this.startQueueMetricTimers(e.nonce),
+            o.tn.post(
+                S(
+                    O(
                         {
-                            name: 'file',
-                            file: i,
-                            filename: a
-                        }
-                    ],
-                    context: n,
-                    oldFormErrors: !0,
-                    signal: _.signal,
-                    onRequestCreated: () => {
-                        null != e.nonce && this.requests.set(e.nonce, _);
-                    }
-                },
-                d
-            );
-        else {
-            let t;
-            (t = {
-                timeout: 60 * I.Z.Millis.SECOND,
-                retries: 3,
-                backoff: new u.Z()
-            }),
-                c.tn.post(
+                            url: b.ANM.MESSAGES(r),
+                            body: s,
+                            context: n,
+                            oldFormErrors: !0
+                        },
+                        y.hs
+                    ),
                     {
-                        url: N.ANM.MESSAGES(r),
-                        body: l,
-                        context: n,
-                        oldFormErrors: !0,
-                        ...t,
-                        signal: _.signal,
+                        signal: p.signal,
+                        rejectWithError: !0,
                         onRequestCreated: () => {
-                            null != e.nonce && this.requests.set(e.nonce, _);
+                            null != e.nonce && this.requests.set(e.nonce, p);
                         }
-                    },
-                    d
-                );
-        }
+                    }
+                ),
+                f
+            );
     }
     handleEdit(e, t) {
-        let { channelId: n, messageId: r, ...i } = e,
-            a = new AbortController();
-        c.tn.patch(
+        var { channelId: n, messageId: r } = e,
+            i = T(e, ['channelId', 'messageId']);
+        let a = new AbortController();
+        o.tn.patch(
             {
-                url: N.ANM.MESSAGE(n, r),
+                url: b.ANM.MESSAGE(n, r),
                 body: i,
                 retries: 1,
                 oldFormErrors: !0,
                 signal: a.signal,
+                rejectWithError: !0,
                 onRequestCreated: () => {
                     this.requests.set(r, a);
                 }
@@ -192,48 +222,51 @@ class L extends g.Z {
     }
     handleCommand(e, t) {
         let n,
-            { applicationId: r, guildId: i, channelId: a, data: s, nonce: o, attachments: u, maxSizeCallback: _, analytics_location: E, sectionName: f } = e,
-            h = {
-                type: d.B8.APPLICATION_COMMAND,
+            { applicationId: r, guildId: s, channelId: l, data: c, nonce: u, attachments: d, maxSizeCallback: _, analytics_location: p, sectionName: m, source: y } = e,
+            v = {
+                type: a.B8.APPLICATION_COMMAND,
                 application_id: r,
-                guild_id: i,
-                channel_id: a,
-                session_id: p.default.getSessionId(),
-                data: s,
-                nonce: o,
-                analytics_location: E,
-                section_name: f
+                guild_id: s,
+                channel_id: l,
+                session_id: f.default.getSessionId(),
+                data: c,
+                nonce: u,
+                analytics_location: p,
+                section_name: m,
+                source: y
             };
-        if (null != u) {
-            (h.data.attachments = []), (n = []);
-            h.data.attachments = u.map((e, t) => (l()(e.status === A.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, S.B)(e, t)));
+        if (null != d) {
+            (v.data.attachments = []), (n = []);
+            let e = d;
+            v.data.attachments = e.map((e, t) => (i()(e.status === E.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, g.B)(e, t)));
         }
-        let m = new AbortController();
-        c.tn.post(
+        let O = new AbortController();
+        o.tn.post(
             {
-                url: N.ANM.INTERACTIONS,
+                url: b.ANM.INTERACTIONS,
                 fields: [
                     {
                         name: 'payload_json',
-                        value: JSON.stringify(h)
+                        value: JSON.stringify(v)
                     }
                 ],
                 attachments: n,
-                signal: m.signal,
+                signal: O.signal,
+                rejectWithError: !0,
                 onRequestCreated: (e) => {
-                    this.requests.set(o, m),
+                    this.requests.set(u, O),
                         e.on('progress', (e) => {
                             let { total: t } = e,
-                                n = (0, T.dg)(i);
-                            null != t && t > n && (this.cancelRequest(o), null == _ || _(n));
+                                n = (0, h.dg)(s);
+                            null != t && t > n && (this.cancelRequest(u), null == _ || _(n));
                         });
                 }
             },
-            this.createResponseHandler(o, t)
+            this.createResponseHandler(u, t)
         );
     }
     constructor(e = 5) {
-        super(new E.Z('MessageQueue')), v(this, 'maxSize', void 0), v(this, 'requests', void 0), v(this, 'analyticsTimeouts', void 0), (this.maxSize = e), (this.requests = new Map()), (this.analyticsTimeouts = new Map());
+        super(new l.Z('MessageQueue')), v(this, 'maxSize', void 0), v(this, 'requests', void 0), v(this, 'analyticsTimeouts', void 0), (this.maxSize = e), (this.requests = new Map()), (this.analyticsTimeouts = new Map());
     }
 }
-t.ZP = new L();
+let L = new D();

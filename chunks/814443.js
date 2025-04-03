@@ -1,9 +1,9 @@
-n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var r,
     i = n(442837),
-    a = n(570140),
-    s = n(699516);
-function o(e, t, n) {
+    o = n(570140),
+    a = n(699516);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,75 +16,94 @@ function o(e, t, n) {
         e
     );
 }
-let l = !1,
-    u = Object.freeze({
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let c = 86400000,
+    u = !1,
+    d = Object.freeze({
         userAffinities: [],
         affinityUserIds: new Set(),
         lastFetched: 0
     }),
-    c = Object.freeze({
+    f = Object.freeze({
         userAffinitiesMap: new Map(),
         affinityUserIds: new Set()
     }),
-    d = { ...u },
-    _ = { ...c };
-function E() {
+    _ = l({}, d),
+    p = l({}, f);
+function h() {
+    (_ = l({}, d)), (p = l({}, f));
+}
+function m() {
+    u = !1;
+}
+function g() {
+    u = !0;
+}
+function E(e) {
+    var t;
+    let { affinities: n } = e;
+    (_.userAffinities = null != (t = n.user_affinities) ? t : []), (_.lastFetched = Date.now()), b(), (u = !1);
+}
+function b() {
     let e = new Map(
-            d.userAffinities
+            _.userAffinities
                 .filter((e) => {
                     let { user_id: t } = e;
-                    return !s.Z.isBlocked(t);
+                    return !a.Z.isBlockedOrIgnored(t);
                 })
                 .map((e) => [e.user_id, e])
         ),
         t = new Set(e.keys());
-    _ = {
+    p = {
         userAffinitiesMap: e,
         affinityUserIds: t
     };
 }
-class f extends (r = i.ZP.PersistedStore) {
+class y extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z), null != e && ((d.userAffinities = e.userAffinities), (d.lastFetched = e.lastFetched), E()), this.syncWith([s.Z], E);
+        this.waitFor(a.Z), null != e && ((_.userAffinities = e.userAffinities), (_.lastFetched = e.lastFetched), b()), this.syncWith([a.Z], b);
     }
     needsRefresh() {
-        return !l && Date.now() - d.lastFetched > 86400000;
+        return !u && Date.now() - _.lastFetched > c;
     }
     getFetching() {
-        return l;
+        return u;
     }
     getState() {
-        return d;
+        return _;
     }
     getUserAffinities() {
-        return d.userAffinities;
+        return _.userAffinities;
     }
     getUserAffinitiesMap() {
-        return _.userAffinitiesMap;
+        return p.userAffinitiesMap;
     }
     getUserAffinity(e) {
-        return _.userAffinitiesMap.get(e);
+        return p.userAffinitiesMap.get(e);
     }
     getUserAffinitiesUserIds() {
-        return _.affinityUserIds;
+        return p.affinityUserIds;
     }
 }
-o(f, 'displayName', 'UserAffinitiesStore'),
-    o(f, 'persistKey', 'UserAffinitiesStore'),
-    o(f, 'migrations', [(e) => null]),
-    (t.Z = new f(a.Z, {
-        LOAD_USER_AFFINITIES_SUCCESS: function (e) {
-            var t;
-            let { affinities: n } = e;
-            (d.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : []), (d.lastFetched = Date.now()), E(), (l = !1);
-        },
-        LOAD_USER_AFFINITIES: function () {
-            l = !0;
-        },
-        LOAD_USER_AFFINITIES_FAILURE: function () {
-            l = !1;
-        },
-        LOGOUT: function () {
-            (d = { ...u }), (_ = { ...c });
-        }
-    }));
+s(y, 'displayName', 'UserAffinitiesStore'), s(y, 'persistKey', 'UserAffinitiesStore'), s(y, 'migrations', [(e) => null]);
+let v = new y(o.Z, {
+    LOAD_USER_AFFINITIES_SUCCESS: E,
+    LOAD_USER_AFFINITIES: g,
+    LOAD_USER_AFFINITIES_FAILURE: m,
+    LOGOUT: h
+});

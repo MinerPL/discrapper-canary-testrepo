@@ -1,37 +1,38 @@
 var r = n(687249),
     i = n(718332),
-    a = n(995542),
-    s = n(92141),
-    o = n(53919),
+    o = n(995542),
+    a = n(92141),
+    s = n(53919),
     l = n(290677),
-    u = n(551023),
-    c = n(454745),
-    d = '[object Arguments]',
+    c = n(551023),
+    u = n(454745),
+    d = 1,
+    f = '[object Arguments]',
     _ = '[object Array]',
-    E = '[object Object]',
-    f = Object.prototype.hasOwnProperty;
-e.exports = function (e, t, n, h, p, m) {
-    var I = l(e),
-        T = l(t),
-        g = I ? _ : o(e),
-        S = T ? _ : o(t);
-    (g = g == d ? E : g), (S = S == d ? E : S);
-    var A = g == E,
-        N = S == E,
-        v = g == S;
-    if (v && u(e)) {
-        if (!u(t)) return !1;
-        (I = !0), (A = !1);
+    p = '[object Object]',
+    h = Object.prototype.hasOwnProperty;
+e.exports = function (e, t, n, m, g, E) {
+    var b = l(e),
+        y = l(t),
+        v = b ? _ : s(e),
+        O = y ? _ : s(t);
+    (v = v == f ? p : v), (O = O == f ? p : O);
+    var I = v == p,
+        S = O == p,
+        T = v == O;
+    if (T && c(e)) {
+        if (!c(t)) return !1;
+        (b = !0), (I = !1);
     }
-    if (v && !A) return m || (m = new r()), I || c(e) ? i(e, t, n, h, p, m) : a(e, t, g, n, h, p, m);
-    if (!(1 & n)) {
-        var O = A && f.call(e, '__wrapped__'),
-            R = N && f.call(t, '__wrapped__');
-        if (O || R) {
-            var C = O ? e.value() : e,
-                y = R ? t.value() : t;
-            return m || (m = new r()), p(C, y, n, h, m);
+    if (T && !I) return E || (E = new r()), b || u(e) ? i(e, t, n, m, g, E) : o(e, t, v, n, m, g, E);
+    if (!(n & d)) {
+        var N = I && h.call(e, '__wrapped__'),
+            A = S && h.call(t, '__wrapped__');
+        if (N || A) {
+            var C = N ? e.value() : e,
+                R = A ? t.value() : t;
+            return E || (E = new r()), g(C, R, n, m, E);
         }
     }
-    return !!v && (m || (m = new r()), s(e, t, n, h, p, m));
+    return !!T && (E || (E = new r()), a(e, t, n, m, g, E));
 };

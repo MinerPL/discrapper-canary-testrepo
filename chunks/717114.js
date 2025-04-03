@@ -1,46 +1,80 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(442837),
-    s = n(481060),
-    o = n(923928),
+n.d(t, { Z: () => g }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(923928),
     l = n(468026),
-    u = n(594190),
-    c = n(131951),
+    c = n(594190),
+    u = n(131951),
     d = n(19780),
-    _ = n(63063),
-    E = n(981631),
-    f = n(689938);
-t.Z = () => {
-    let [e, t] = (0, a.Wu)([u.ZP], () => [u.ZP.canShowAdminWarning, u.ZP.getVisibleGame()], []),
-        n = (0, a.e7)([d.Z], () => d.Z.isConnected(), []),
-        h = (0, a.e7)([c.Z], () => c.Z.getMode() === E.pM4.PUSH_TO_TALK, []),
-        p = null != t && t.elevated && n && h && e,
-        m = i.useRef(null);
-    function I() {
-        null !== m.current && ((0, s.closeModal)(m.current), (m.current = null));
+    f = n(63063),
+    _ = n(981631),
+    p = n(388032);
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let g = () => {
+    let [e, t] = (0, o.Wu)([c.ZP], () => [c.ZP.canShowAdminWarning, c.ZP.getVisibleGame()], []),
+        n = (0, o.e7)([d.Z], () => d.Z.isConnected(), []),
+        h = (0, o.e7)([u.Z], () => u.Z.getMode() === _.pM4.PUSH_TO_TALK, []),
+        g = null != t && t.elevated && n && h && e,
+        E = i.useRef(null);
+    function b() {
+        null !== E.current && ((0, a.Mr3)(E.current), (E.current = null));
     }
     return (
         i.useEffect(
             () => (
-                p
-                    ? (m.current = (0, s.openModal)((e) =>
-                          (0, r.jsx)(l.default, {
-                              title: f.Z.Messages.PTT_PERMISSION_TITLE,
-                              body: f.Z.Messages.PTT_PERMISSION_BODY.format({ game: null == t ? void 0 : t.name }),
-                              secondaryConfirmText: f.Z.Messages.DONT_SHOW_AGAIN,
-                              onConfirmSecondary: () => o.Z.clearPTTAdminWarning(),
-                              onConfirm: () => window.open(_.Z.getArticleURL(E.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), '_blank'),
-                              confirmText: f.Z.Messages.HELP_DESK,
-                              ...e
-                          })
+                g
+                    ? (E.current = (0, a.h7j)((e) =>
+                          (0, r.jsx)(
+                              l.default,
+                              m(
+                                  {
+                                      title: p.NW.string(p.t.eotlXF),
+                                      body: p.NW.formatToPlainString(p.t.Lw6KXV, { game: null == t ? void 0 : t.name }),
+                                      secondaryConfirmText: p.NW.string(p.t['5E9SBw']),
+                                      onConfirmSecondary: () => s.Z.clearPTTAdminWarning(),
+                                      onConfirm: () => window.open(f.Z.getArticleURL(_.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), '_blank'),
+                                      confirmText: p.NW.string(p.t.psXQHB)
+                                  },
+                                  e
+                              )
+                          )
                       ))
-                    : I(),
+                    : b(),
                 () => {
-                    I();
+                    b();
                 }
             ),
-            [t, p]
+            [t, g]
         ),
         null
     );

@@ -1,101 +1,140 @@
-t.d(n, {
-    I9: function () {
-        return m;
-    }
+n.d(t, {
+    I9: () => f,
+    ZP: () => b
 });
-var a = t(735250),
-    r = t(470079),
-    i = t(692547),
-    s = t(481060),
-    o = t(496675),
-    l = t(484455),
-    c = t(981631),
-    d = t(689938),
-    u = t(944309);
-function m(e) {
+var r = n(200651),
+    i = n(192379),
+    o = n(692547),
+    c = n(481060),
+    s = n(496675),
+    a = n(484455),
+    l = n(981631),
+    u = n(388032),
+    d = n(664305);
+function f(e) {
     switch (e) {
-        case c.sFg.LOW:
-            return d.Z.Messages.VERIFICATION_LEVEL_LOW;
-        case c.sFg.MEDIUM:
-            return d.Z.Messages.VERIFICATION_LEVEL_MEDIUM;
-        case c.sFg.HIGH:
-            return d.Z.Messages.VERIFICATION_LEVEL_HIGH;
-        case c.sFg.VERY_HIGH:
-            return d.Z.Messages.VERIFICATION_LEVEL_VERY_HIGH;
+        case l.sFg.LOW:
+            return u.NW.string(u.t.SsCK8P);
+        case l.sFg.MEDIUM:
+            return u.NW.string(u.t.WwNoR0);
+        case l.sFg.HIGH:
+            return u.NW.string(u.t.I2jMUF);
+        case l.sFg.VERY_HIGH:
+            return u.NW.string(u.t.cJY8w8);
         default:
             return '';
     }
 }
-let _ = {
-    [c.sFg.NONE]: '',
-    [c.sFg.LOW]: i.Z.unsafe_rawColors.GREEN_360.css,
-    [c.sFg.MEDIUM]: i.Z.unsafe_rawColors.YELLOW_300.css,
-    [c.sFg.HIGH]: i.Z.unsafe_rawColors.ORANGE_345.css,
-    [c.sFg.VERY_HIGH]: i.Z.unsafe_rawColors.RED_400.css
-};
-n.ZP = function (e) {
-    let { guild: n } = e,
-        i = o.Z.can(c.Plq.MANAGE_GUILD, n),
-        f = n.verificationLevel,
-        C = f === c.sFg.VERY_HIGH ? s.MobilePhoneIcon : s.EnvelopeIcon,
-        h = r.useMemo(() => m(f), [f]),
-        x = _[f],
-        p = (0, a.jsx)('div', {
-            className: u.verificationLevelTitle,
-            children: d.Z.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
-                verificationLevelHook: function () {
-                    return (0, a.jsx)(
-                        s.Text,
-                        {
-                            className: u.verificationLevelHook,
-                            style: { color: x },
-                            variant: 'text-sm/semibold',
-                            children: h
-                        },
-                        'hook'
-                    );
-                }
-            })
-        }),
-        g = f === c.sFg.VERY_HIGH ? d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
-    return (0, a.jsx)(l.Z, {
-        title: p,
-        children: (0, a.jsxs)('div', {
-            className: u.verificationContainer,
-            children: [
-                (0, a.jsx)(C, {
-                    size: 'custom',
-                    color: 'currentColor',
-                    width: 20,
-                    height: 20,
-                    className: u.icon
-                }),
-                (0, a.jsx)(s.Text, {
-                    className: u.guildVerificationText,
-                    variant: 'text-sm/normal',
-                    children: g
-                }),
-                i &&
-                    (0, a.jsx)(s.Clickable, {
-                        className: u.iconInteractiveContainer,
-                        onClick: () =>
-                            (0, s.openModalLazy)(async () => {
-                                let { default: e } = await t.e('72458').then(t.bind(t, 694278));
-                                return (t) =>
-                                    (0, a.jsx)(e, {
-                                        ...t,
-                                        guild: n
-                                    });
-                            }),
-                        children: (0, a.jsx)(s.PencilIcon, {
-                            size: 'custom',
-                            color: 'currentColor',
-                            width: 20,
-                            height: 20,
-                            className: u.iconInteractive
+let p = {
+        [l.sFg.NONE]: '',
+        [l.sFg.LOW]: o.Z.unsafe_rawColors.GREEN_360.css,
+        [l.sFg.MEDIUM]: o.Z.unsafe_rawColors.YELLOW_300.css,
+        [l.sFg.HIGH]: o.Z.unsafe_rawColors.ORANGE_345.css,
+        [l.sFg.VERY_HIGH]: o.Z.unsafe_rawColors.RED_400.css
+    },
+    b = function (e) {
+        let { guild: t } = e,
+            o = s.Z.can(l.Plq.MANAGE_GUILD, t),
+            b = t.verificationLevel,
+            j = b === l.sFg.VERY_HIGH ? c.AtH : c._XJ,
+            y = i.useMemo(() => f(b), [b]),
+            m = p[b],
+            g = (0, r.jsx)('div', {
+                className: d.verificationLevelTitle,
+                children: u.NW.format(u.t.OpV87e, {
+                    verificationLevelHook: function () {
+                        return (0, r.jsx)(
+                            c.Text,
+                            {
+                                className: d.verificationLevelHook,
+                                style: { color: m },
+                                variant: 'text-sm/semibold',
+                                children: y
+                            },
+                            'hook'
+                        );
+                    }
+                })
+            }),
+            O = b === l.sFg.VERY_HIGH ? u.NW.string(u.t.IlXyd3) : u.NW.string(u.t.JlzMPj);
+        return (0, r.jsx)(a.Z, {
+            title: g,
+            children: (0, r.jsxs)('div', {
+                className: d.verificationContainer,
+                children: [
+                    (0, r.jsx)(j, {
+                        size: 'custom',
+                        color: 'currentColor',
+                        width: 20,
+                        height: 20,
+                        className: d.icon
+                    }),
+                    (0, r.jsx)(c.Text, {
+                        className: d.guildVerificationText,
+                        variant: 'text-sm/normal',
+                        children: O
+                    }),
+                    o &&
+                        (0, r.jsx)(c.P3F, {
+                            className: d.iconInteractiveContainer,
+                            onClick: () =>
+                                (0, c.ZDy)(async () => {
+                                    let { default: e } = await n.e('72458').then(n.bind(n, 694278));
+                                    return (n) => {
+                                        var i, o;
+                                        return (0, r.jsx)(
+                                            e,
+                                            ((i = (function (e) {
+                                                for (var t = 1; t < arguments.length; t++) {
+                                                    var n = null != arguments[t] ? arguments[t] : {},
+                                                        r = Object.keys(n);
+                                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                                        (r = r.concat(
+                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                            })
+                                                        )),
+                                                        r.forEach(function (t) {
+                                                            var r;
+                                                            (r = n[t]),
+                                                                t in e
+                                                                    ? Object.defineProperty(e, t, {
+                                                                          value: r,
+                                                                          enumerable: !0,
+                                                                          configurable: !0,
+                                                                          writable: !0
+                                                                      })
+                                                                    : (e[t] = r);
+                                                        });
+                                                }
+                                                return e;
+                                            })({}, n)),
+                                            (o = o = { guild: t }),
+                                            Object.getOwnPropertyDescriptors
+                                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                                                : (function (e, t) {
+                                                      var n = Object.keys(e);
+                                                      if (Object.getOwnPropertySymbols) {
+                                                          var r = Object.getOwnPropertySymbols(e);
+                                                          n.push.apply(n, r);
+                                                      }
+                                                      return n;
+                                                  })(Object(o)).forEach(function (e) {
+                                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                                                  }),
+                                            i)
+                                        );
+                                    };
+                                }),
+                            children: (0, r.jsx)(c.vdY, {
+                                size: 'custom',
+                                color: 'currentColor',
+                                width: 20,
+                                height: 20,
+                                className: d.iconInteractive
+                            })
                         })
-                    })
-            ]
-        })
-    });
-};
+                ]
+            })
+        });
+    };

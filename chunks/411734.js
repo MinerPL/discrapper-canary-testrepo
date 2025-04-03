@@ -1,50 +1,45 @@
-n.d(t, {
-    R: function () {
-        return o;
-    },
-    n: function () {
-        return s;
-    }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079);
-let a = 0;
-function s(e, t) {
-    let [n] = i.useState(() => a++),
-        r = ''.concat('data-focus-blocked', '-').concat(n);
+n.d(t, { R: () => u }), n(47120);
+var r = n(200651),
+    i = n(192379);
+let o = 'data-focus-blocked',
+    a = 0;
+function s() {
+    return a++;
+}
+function l(e) {
+    return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, { acceptNode: (e) => (e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP) });
+}
+function c(e, t) {
+    let [n] = i.useState(() => s()),
+        r = ''.concat(o, '-').concat(n);
     i.useLayoutEffect(() => {
         if (t) {
             let t = e.current;
             if (null != t) {
-                var n;
-                let e = ((n = t), document.createTreeWalker(n, NodeFilter.SHOW_ELEMENT, { acceptNode: (e) => (e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP) })),
-                    i = e.currentNode;
-                for (; null !== i; ) {
-                    let t = i,
-                        n = t.tabIndex;
-                    (t.tabIndex = -1), t.setAttribute(r, String(n)), (i = e.nextNode());
+                let e = l(t),
+                    n = e.currentNode;
+                for (; null !== n; ) {
+                    let t = n,
+                        i = t.tabIndex;
+                    (t.tabIndex = -1), t.setAttribute(r, String(i)), (n = e.nextNode());
                 }
                 return () => {
                     t.querySelectorAll('['.concat(r, ']')).forEach((e) => {
                         let t = e.getAttribute(r);
-                        if (null != t) {
-                            let n = parseInt(t, 10);
-                            e.tabIndex = n;
-                        }
+                        null != t && (e.tabIndex = parseInt(t, 10));
                     });
                 };
             }
         }
-    }, [t]);
+    }, [t, e, r]);
 }
-function o(e) {
-    let { children: t, className: n, enabled: a = !0 } = e,
-        o = i.useRef(null);
+function u(e) {
+    let { children: t, className: n, enabled: o = !0 } = e,
+        a = i.useRef(null);
     return (
-        s(o, a),
+        c(a, o),
         (0, r.jsx)('div', {
-            ref: o,
+            ref: a,
             className: n,
             children: t
         })

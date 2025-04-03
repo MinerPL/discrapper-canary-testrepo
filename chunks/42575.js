@@ -1,29 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(481060),
-    r = n(194359),
-    l = n(906732),
-    o = n(388380),
+n.d(t, { Z: () => b });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    a = n(194359),
+    o = n(906732),
+    s = n(388380),
     c = n(171368),
-    d = n(626135),
-    u = n(321488),
-    _ = n(417183),
-    E = n(170245),
-    h = n(981631),
-    m = n(689938),
-    I = n(423442);
-function g(e) {
-    let { user: t, nickname: n, status: g, isFocused: p } = e,
-        T = a.useContext(d.AnalyticsContext),
-        { analyticsLocations: S } = (0, l.ZP)(),
-        f = (e) => {
+    u = n(626135),
+    d = n(321488),
+    p = n(417183),
+    h = n(170245),
+    f = n(981631),
+    g = n(388032),
+    m = n(292568);
+function b(e) {
+    let { user: t, nickname: n, status: b, isFocused: _ } = e,
+        E = i.useContext(u.AnalyticsContext),
+        { analyticsLocations: O } = (0, o.ZP)(),
+        N = (e) => {
             null == e || e.stopPropagation(),
-                r.Z.addRelationship({
+                a.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Friends' },
                     type: void 0,
@@ -31,51 +27,51 @@ function g(e) {
                     fromFriendSuggestion: !0
                 });
         },
-        C = (e) => {
-            null == e || e.stopPropagation(), o.Z.ignore(t.id);
+        y = (e) => {
+            null == e || e.stopPropagation(), s.Z.ignore(t.id);
         },
-        N = g === h.Skl.OFFLINE ? h.Skl.UNKNOWN : g;
-    return (0, i.jsx)(_.Z, {
-        isFocused: p,
+        I = b === f.Skl.OFFLINE ? f.Skl.UNKNOWN : b;
+    return (0, r.jsx)(p.Z, {
+        isFocused: _,
         user: t,
         onClick: () =>
             (0, c.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: S,
-                analyticsLocation: T.location
+                sourceAnalyticsLocations: O,
+                analyticsLocation: E.location
             }),
         children: (e) => {
-            let a = (0, i.jsxs)(i.Fragment, {
+            let i = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)(u.Z, {
-                        icon: s.CheckmarkLargeIcon,
-                        actionType: u.Z.ActionTypes.ACCEPT,
-                        tooltip: m.Z.Messages.FRIEND_REQUEST_ACCEPT,
-                        onClick: f,
+                    (0, r.jsx)(d.Z, {
+                        icon: l.dz2,
+                        actionType: d.Z.ActionTypes.ACCEPT,
+                        tooltip: g.NW.string(g.t.ZcibdX),
+                        onClick: N,
                         shouldHighlight: e
                     }),
-                    (0, i.jsx)(u.Z, {
-                        icon: s.XSmallIcon,
-                        actionType: u.Z.ActionTypes.DENY,
-                        tooltip: m.Z.Messages.FRIEND_REQUEST_IGNORE,
-                        onClick: C,
+                    (0, r.jsx)(d.Z, {
+                        icon: l.Dio,
+                        actionType: d.Z.ActionTypes.DENY,
+                        tooltip: g.NW.string(g.t.xuio0N),
+                        onClick: y,
                         shouldHighlight: e
                     })
                 ]
             });
-            return (0, i.jsxs)('div', {
-                className: I.listItemContents,
+            return (0, r.jsxs)('div', {
+                className: m.listItemContents,
                 children: [
-                    (0, i.jsx)(E.Z, {
+                    (0, r.jsx)(h.Z, {
                         user: t,
                         hovered: e,
-                        status: N,
+                        status: I,
                         subText: n,
-                        className: I.__invalid_userInfo
+                        className: m.__invalid_userInfo
                     }),
-                    (0, i.jsx)('div', {
-                        className: I.actions,
-                        children: a
+                    (0, r.jsx)('div', {
+                        className: m.actions,
+                        children: i
                     })
                 ]
             });

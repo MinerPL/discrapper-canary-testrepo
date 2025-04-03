@@ -1,63 +1,53 @@
-n.d(e, {
-    Rt: function () {
-        return s;
-    },
-    iY: function () {
-        return c;
-    },
-    l4: function () {
-        return o;
-    },
-    qT: function () {
-        return u;
-    }
+a.d(e, {
+    Rt: () => _,
+    iY: () => c,
+    l4: () => o,
+    qT: () => i
 });
-var r = n(573736);
-let i = n(899517).n;
-function s(t, e = {}) {
+var r = a(573736);
+let n = a(899517).n;
+function _(t, e = {}) {
     if (!t) return '<unknown>';
     try {
-        let n,
-            s = t,
+        let a,
+            _ = t,
             o = [],
-            u = 0,
+            i = 0,
             c = 0,
-            a = 3,
-            l = Array.isArray(e) ? e : e.keyAttrs,
-            f = (!Array.isArray(e) && e.maxStringLength) || 80;
+            s = Array.isArray(e) ? e : e.keyAttrs,
+            E = (!Array.isArray(e) && e.maxStringLength) || 80;
         for (
             ;
-            s &&
-            u++ < 5 &&
-            ((n = (function (t, e) {
-                let n = [];
+            _ &&
+            i++ < 5 &&
+            ((a = (function (t, e) {
+                let a = [];
                 if (!t || !t.tagName) return '';
-                if (i.HTMLElement && t instanceof HTMLElement && t.dataset) {
+                if (n.HTMLElement && t instanceof HTMLElement && t.dataset) {
                     if (t.dataset.sentryComponent) return t.dataset.sentryComponent;
                     if (t.dataset.sentryElement) return t.dataset.sentryElement;
                 }
-                n.push(t.tagName.toLowerCase());
-                let s = e && e.length ? e.filter((e) => t.getAttribute(e)).map((e) => [e, t.getAttribute(e)]) : null;
-                if (s && s.length)
-                    s.forEach((t) => {
-                        n.push(`[${t[0]}="${t[1]}"]`);
+                a.push(t.tagName.toLowerCase());
+                let _ = e && e.length ? e.filter((e) => t.getAttribute(e)).map((e) => [e, t.getAttribute(e)]) : null;
+                if (_ && _.length)
+                    _.forEach((t) => {
+                        a.push(`[${t[0]}="${t[1]}"]`);
                     });
                 else {
-                    t.id && n.push(`#${t.id}`);
+                    t.id && a.push(`#${t.id}`);
                     let e = t.className;
-                    if (e && (0, r.HD)(e)) for (let t of e.split(/\s+/)) n.push(`.${t}`);
+                    if (e && (0, r.HD)(e)) for (let t of e.split(/\s+/)) a.push(`.${t}`);
                 }
                 for (let e of ['aria-label', 'type', 'name', 'title', 'alt']) {
                     let r = t.getAttribute(e);
-                    r && n.push(`[${e}="${r}"]`);
+                    r && a.push(`[${e}="${r}"]`);
                 }
-                return n.join('');
-            })(s, l)),
-            'html' !== n && (!(u > 1) || !(c + o.length * a + n.length >= f)));
+                return a.join('');
+            })(_, s)),
+            'html' !== a && (!(i > 1) || !(c + 3 * o.length + a.length >= E)));
 
-        ) {
-            o.push(n), (c += n.length), (s = s.parentNode);
-        }
+        )
+            o.push(a), (c += a.length), (_ = _.parentNode);
         return o.reverse().join(' > ');
     } catch (t) {
         return '<unknown>';
@@ -65,16 +55,16 @@ function s(t, e = {}) {
 }
 function o() {
     try {
-        return i.document.location.href;
+        return n.document.location.href;
     } catch (t) {
         return '';
     }
 }
-function u(t) {
-    return i.document && i.document.querySelector ? i.document.querySelector(t) : null;
+function i(t) {
+    return n.document && n.document.querySelector ? n.document.querySelector(t) : null;
 }
 function c(t) {
-    if (!i.HTMLElement) return null;
+    if (!n.HTMLElement) return null;
     let e = t;
     for (let t = 0; t < 5 && e; t++) {
         if (e instanceof HTMLElement) {

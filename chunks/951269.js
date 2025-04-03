@@ -1,59 +1,54 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return u;
-        }
-    });
-var o = s(735250);
-s(470079);
-var a = s(481060),
-    n = s(112831),
-    l = s(313201),
-    i = s(689938),
-    c = s(765374),
-    r = s(462991);
-function u(e) {
-    let { onClose: t, transitionState: s, kind: u } = e,
-        d = (0, l.Dt)();
-    return (0, o.jsxs)(a.ModalRoot, {
+s.d(e, { default: () => d });
+var a = s(200651);
+s(192379);
+var i = s(481060),
+    n = s(118012),
+    c = s(313201),
+    l = s(388032),
+    o = s(701675),
+    r = s(559325);
+function d(t) {
+    let { onClose: e, transitionState: s, kind: d } = t,
+        u = (0, c.Dt)();
+    return (0, a.jsxs)(i.Y0X, {
         transitionState: s,
-        'aria-labelledby': d,
-        size: a.ModalSize.SMALL,
+        'aria-labelledby': u,
+        size: i.CgR.SMALL,
         children: [
-            (0, o.jsxs)(a.ModalContent, {
-                className: c.content,
+            (0, a.jsxs)(i.hzk, {
+                className: o.content,
                 children: [
-                    (0, o.jsx)(a.ModalCloseButton, {
-                        className: c.closeButton,
-                        onClick: t
+                    (0, a.jsx)(i.olH, {
+                        className: o.closeButton,
+                        onClick: e
                     }),
-                    (0, o.jsx)('img', {
-                        className: c.image,
+                    (0, a.jsx)('img', {
+                        className: o.image,
                         src: r,
                         alt: ''
                     }),
-                    (0, o.jsx)(n.Z, {
-                        className: c.title,
-                        id: d,
+                    (0, a.jsx)(n.Z, {
+                        className: o.title,
+                        id: u,
                         size: n.Z.Sizes.SIZE_24,
                         color: n.Z.Colors.HEADER_PRIMARY,
-                        children: i.Z.Messages.INACCESSIBLE_CHANNEL_LINK_TITLE
+                        children: l.NW.string(l.t.r0DLNj)
                     }),
-                    (0, o.jsx)(a.Text, {
-                        className: c.subtitle,
+                    (0, a.jsx)(i.Text, {
+                        className: o.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: 'user' === u ? i.Z.Messages.INACCESSIBLE_USER_LINK_SUBTITLE : i.Z.Messages.INACCESSIBLE_CHANNEL_LINK_SUBTITLE
+                        children: 'user' === d ? l.NW.string(l.t.Fqqbho) : l.NW.string(l.t['6Y0JlJ'])
                     })
                 ]
             }),
-            (0, o.jsx)(a.ModalFooter, {
-                children: (0, o.jsx)(a.Button, {
-                    className: c.button,
-                    color: a.Button.Colors.BRAND,
-                    onClick: t,
-                    size: a.Button.Sizes.LARGE,
-                    children: i.Z.Messages.OKAY
+            (0, a.jsx)(i.mzw, {
+                children: (0, a.jsx)(i.zxk, {
+                    className: o.button,
+                    color: i.zxk.Colors.BRAND,
+                    onClick: e,
+                    size: i.zxk.Sizes.LARGE,
+                    children: l.NW.string(l.t.BddRzc)
                 })
             })
         ]

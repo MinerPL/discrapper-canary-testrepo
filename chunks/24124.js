@@ -1,8 +1,38 @@
-var r = n(718043).default,
-    i = n(682595);
-(e.exports = function (e) {
-    var t = i(e, 'string');
-    return 'symbol' == r(t) ? t : t + '';
-}),
-    (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+n.d(t, {
+    GG: () => a,
+    R2: () => o,
+    h7: () => l,
+    rh: () => i
+});
+var r = n(570140);
+function l(e, t, n) {
+    return new Promise((l) => {
+        setTimeout(() => {
+            r.Z.dispatch({
+                type: 'ACTIVITY_INVITE_MODAL_OPEN',
+                activity: e,
+                isPrivate: t,
+                context: n,
+                resolve: l
+            });
+        }, 0);
+    });
+}
+function i(e) {
+    r.Z.dispatch({
+        type: 'ACTIVITY_INVITE_MODAL_QUERY',
+        query: e
+    });
+}
+function a(e) {
+    r.Z.dispatch({
+        type: 'ACTIVITY_INVITE_MODAL_SEND',
+        channelId: e
+    });
+}
+function o(e) {
+    r.Z.dispatch({
+        type: 'ACTIVITY_INVITE_MODAL_SEND',
+        userId: e
+    });
+}

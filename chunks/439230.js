@@ -1,2 +1,1 @@
-var e = n(294377);
-t.exports = e('document', 'documentElement');
+t.exports = n(294377)('document', 'documentElement');

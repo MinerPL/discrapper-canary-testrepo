@@ -1,19 +1,9 @@
 n.d(t, {
-    AC: function () {
-        return s;
-    },
-    IW: function () {
-        return o;
-    },
-    aC: function () {
-        return l;
-    },
-    bT: function () {
-        return i;
-    },
-    z: function () {
-        return a;
-    }
+    AC: () => a,
+    IW: () => s,
+    aC: () => l,
+    bT: () => i,
+    z: () => o
 });
 var r = n(818083);
 let i = (0, r.B)({
@@ -29,7 +19,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (0, r.B)({
+    o = (0, r.B)({
         kind: 'guild',
         id: '2022-09_creator_monetization_raven',
         label: 'Creator Monetization Onboarding v2',
@@ -42,7 +32,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    a = (0, r.B)({
         kind: 'user',
         id: '2022-09_creator_monetization_raven_users',
         label: 'Creator Monetization Onboarding v2 Users',
@@ -55,7 +45,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    o = (0, r.B)({
+    s = (0, r.B)({
         kind: 'guild',
         id: '2022-11_creator_monetization_onboarding_waitlist',
         label: 'Creator Monetization Onboarding Waitlist',

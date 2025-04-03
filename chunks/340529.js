@@ -1,75 +1,71 @@
-n.d(t, {
-    z: function () {
-        return T;
-    }
-});
-var r = n(735250);
-n(470079);
-var s = n(120356),
-    i = n.n(s),
-    o = n(399606),
-    a = n(433517),
-    l = n(481060),
-    c = n(607070),
-    d = n(357352),
-    C = n(703656),
-    u = n(652515),
-    _ = n(847033),
-    x = n(857428),
-    f = n(307537),
-    I = n(987513),
-    p = n(895737),
-    h = n(629481),
-    m = n(981631),
-    L = n(176505),
-    E = n(689938),
-    S = n(249736);
-function g(e) {
-    let { icon: t, title: n, body: s, selected: o, disabled: a = !1, onClick: c, onPreviewDismiss: d, isNew: C = !1 } = e;
-    return (0, r.jsxs)(l.ClickableContainer, {
-        onClick: a ? void 0 : c,
-        'aria-disabled': a,
-        className: i()(S.tab, {
-            [S.selected]: o,
-            [S.tabDisabled]: a,
-            [S.preview]: !o && null != d
+r.d(t, { z: () => _ });
+var n = r(200651);
+r(192379);
+var i = r(120356),
+    o = r.n(i),
+    s = r(399606),
+    c = r(433517),
+    l = r(481060),
+    a = r(607070),
+    d = r(357352),
+    u = r(703656),
+    C = r(652515),
+    p = r(847033),
+    f = r(544978),
+    b = r(307537),
+    j = r(987513),
+    g = r(895737),
+    h = r(629481),
+    m = r(981631),
+    x = r(176505),
+    O = r(388032),
+    v = r(953007);
+function y(e) {
+    let { icon: t, title: r, body: i, selected: s, disabled: c = !1, onClick: a, onPreviewDismiss: d, isNew: u = !1 } = e;
+    return (0, n.jsxs)(l.kL8, {
+        onClick: c ? void 0 : a,
+        'aria-disabled': c,
+        className: o()(v.tab, {
+            [v.selected]: s,
+            [v.tabDisabled]: c,
+            [v.preview]: !s && null != d
         }),
-        'aria-label': n,
+        'aria-label': r,
         children: [
-            (0, r.jsx)('div', {
-                className: S.iconContainer,
+            (0, n.jsx)('div', {
+                className: v.iconContainer,
                 children: t
             }),
-            (0, r.jsx)(l.Spacer, {
+            (0, n.jsx)(l.LZC, {
                 size: 8,
                 horizontal: !0
             }),
-            (0, r.jsxs)('div', {
+            (0, n.jsxs)('div', {
                 children: [
-                    (0, r.jsx)(l.Text, {
+                    (0, n.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
-                        color: o ? 'always-white' : 'header-primary',
-                        children: n
+                        color: s ? 'always-white' : 'header-primary',
+                        children: r
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, n.jsx)(l.Text, {
                         variant: 'text-xs/normal',
-                        color: o ? 'always-white' : a ? 'text-muted' : 'header-primary',
-                        children: s
+                        color: s ? 'always-white' : c ? 'text-muted' : 'header-primary',
+                        children: i
                     })
                 ]
             }),
-            C &&
-                (0, r.jsx)(l.TextBadge, {
-                    color: l.tokens.unsafe_rawColors.BRAND_260.css,
-                    className: S.newBadge,
-                    text: E.Z.Messages.NEW
+            u &&
+                (0, n.jsx)(l.IGR, {
+                    color: l.TVs.unsafe_rawColors.BRAND_260.css,
+                    className: v.newBadge,
+                    text: O.NW.string(O.t.y2b7CA)
                 }),
             null != d &&
-                (0, r.jsx)(l.Clickable, {
-                    className: S.tabPreviewClose,
+                (0, n.jsx)(l.P3F, {
+                    className: v.tabPreviewClose,
                     onClick: d,
-                    'aria-label': E.Z.Messages.DISMISS,
-                    children: (0, r.jsx)(l.CircleXIcon, {
+                    'aria-label': O.NW.string(O.t.WAI6xs),
+                    children: (0, n.jsx)(l.k$p, {
                         size: 'xs',
                         color: 'currentColor'
                     })
@@ -77,69 +73,69 @@ function g(e) {
         ]
     });
 }
-function T(e) {
+function _(e) {
     let { guild: t } = e,
-        n = (0, u.RF)(t.id, 'guild_shop_category_selector'),
-        { selectedTab: s, setSelectedTab: i, categoryTabs: T, handlePreviewDismiss: v } = (0, _.m)(),
-        R = 'false' === a.K.get(h.Hr, 'false'),
-        j = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        P = T.map((e) => {
+        r = (0, C.RF)(t.id, 'guild_shop_category_selector'),
+        { selectedTab: i, setSelectedTab: o, categoryTabs: _, handlePreviewDismiss: w } = (0, p.m)(),
+        P = 'false' === c.K.get(h.Hr, 'false'),
+        N = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
+        S = _.map((e) => {
             switch (e) {
-                case x.y.GUILD_PRODUCTS:
-                    return (0, r.jsx)(
-                        g,
+                case f.y.GUILD_PRODUCTS:
+                    return (0, n.jsx)(
+                        y,
                         {
-                            icon: (0, r.jsx)(f.Z, {
+                            icon: (0, n.jsx)(b.Z, {
                                 width: 20,
                                 height: 20
                             }),
-                            title: E.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_SELECTOR_TITLE,
-                            body: E.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_BODY,
-                            selected: s === x.y.GUILD_PRODUCTS,
-                            onClick: () => i(x.y.GUILD_PRODUCTS)
+                            title: O.NW.string(O.t.odvTUl),
+                            body: O.NW.string(O.t['0JFpRU']),
+                            selected: i === f.y.GUILD_PRODUCTS,
+                            onClick: () => o(f.y.GUILD_PRODUCTS)
                         },
                         e
                     );
-                case x.y.GUILD_ROLE_SUBSCRIPTIONS:
-                    return (0, r.jsx)(
-                        g,
+                case f.y.GUILD_ROLE_SUBSCRIPTIONS:
+                    return (0, n.jsx)(
+                        y,
                         {
-                            icon: (0, r.jsx)(I.Z, {
+                            icon: (0, n.jsx)(j.Z, {
                                 width: 20,
                                 height: 20
                             }),
-                            title: E.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
-                            body: n ? E.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY_AFTER_CONSOLIDATION : E.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY.format({ openRoleSubPage: () => (0, C.uL)(m.Z5c.CHANNEL(t.id, L.oC.ROLE_SUBSCRIPTIONS)) }),
-                            disabled: !n,
-                            selected: s === x.y.GUILD_ROLE_SUBSCRIPTIONS,
-                            onClick: () => i(x.y.GUILD_ROLE_SUBSCRIPTIONS)
+                            title: O.NW.string(O.t['KzCF//']),
+                            body: r ? O.NW.string(O.t['jqz+l5']) : O.NW.format(O.t.ycs4oK, { openRoleSubPage: () => (0, u.uL)(m.Z5c.CHANNEL(t.id, x.oC.ROLE_SUBSCRIPTIONS)) }),
+                            disabled: !r,
+                            selected: i === f.y.GUILD_ROLE_SUBSCRIPTIONS,
+                            onClick: () => o(f.y.GUILD_ROLE_SUBSCRIPTIONS)
                         },
                         e
                     );
-                case x.y.GUILD_PRODUCTS_PREVIEW:
-                    return (0, r.jsx)(
-                        g,
+                case f.y.GUILD_PRODUCTS_PREVIEW:
+                    return (0, n.jsx)(
+                        y,
                         {
-                            icon: R
-                                ? (0, r.jsx)('img', {
-                                      src: j ? (0, d.b)('server_products/storefront/question-mark.png') : (0, d.b)('server_products/storefront/question-mark.gif'),
-                                      className: S.questionMark,
+                            icon: P
+                                ? (0, n.jsx)('img', {
+                                      src: N ? (0, d.b)('server_products/storefront/question-mark.png') : (0, d.b)('server_products/storefront/question-mark.gif'),
+                                      className: v.questionMark,
                                       alt: ''
                                   })
-                                : (0, r.jsx)(l.GiftIcon, {
+                                : (0, n.jsx)(l.OgN, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 20,
                                       height: 20
                                   }),
-                            title: E.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_SELECTOR_TITLE,
-                            body: E.Z.Messages.GUILD_STORE_PREVIEW_TAB_SELECTOR_BODY,
-                            selected: s === x.y.GUILD_PRODUCTS_PREVIEW,
+                            title: O.NW.string(O.t.odvTUl),
+                            body: O.NW.string(O.t['827i8P']),
+                            selected: i === f.y.GUILD_PRODUCTS_PREVIEW,
                             onClick: () => {
-                                i(x.y.GUILD_PRODUCTS_PREVIEW), a.K.set(h.Hr, 'true');
+                                o(f.y.GUILD_PRODUCTS_PREVIEW), c.K.set(h.Hr, 'true');
                             },
-                            onPreviewDismiss: v,
-                            isNew: R
+                            onPreviewDismiss: w,
+                            isNew: P
                         },
                         e
                     );
@@ -147,23 +143,23 @@ function T(e) {
                     return null;
             }
         });
-    return (0, r.jsxs)('div', {
-        className: S.container,
+    return (0, n.jsxs)('div', {
+        className: v.container,
         children: [
-            (0, r.jsx)(l.Heading, {
+            (0, n.jsx)(l.X6q, {
                 variant: 'heading-sm/bold',
-                className: S.header,
-                children: E.Z.Messages.GUILD_SHOP_SUPPORT_SERVER_HEADER
+                className: v.header,
+                children: O.NW.string(O.t.GF433N)
             }),
-            (0, r.jsx)(l.Spacer, { size: 12 }),
-            (0, r.jsxs)('div', {
-                className: S.filters,
+            (0, n.jsx)(l.LZC, { size: 12 }),
+            (0, n.jsxs)('div', {
+                className: v.filters,
                 children: [
-                    (0, r.jsx)('div', {
-                        className: S.tabs,
-                        children: P
+                    (0, n.jsx)('div', {
+                        className: v.tabs,
+                        children: S
                     }),
-                    s === x.y.GUILD_PRODUCTS && (0, r.jsx)(p.Z, {})
+                    i === f.y.GUILD_PRODUCTS && (0, n.jsx)(g.Z, {})
                 ]
             })
         ]

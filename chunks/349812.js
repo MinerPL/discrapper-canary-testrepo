@@ -1,63 +1,59 @@
-r.d(t, {
-    Pd: function () {
-        return _;
+a.d(e, { Pd: () => i });
+var r = a(622916),
+    n = a(617726),
+    _ = a(14588),
+    o = a(255768);
+function i(t) {
+    function e(...t) {
+        o.X && r.kg.info('[Offline]:', ...t);
     }
-});
-var n = r(622916),
-    a = r(617726),
-    o = r(14588),
-    i = r(255768);
-function _(e) {
-    function t(...e) {
-        i.X && n.kg.info('[Offline]:', ...e);
-    }
-    return (r) => {
-        let n;
-        let i = e(r);
-        if (!r.createStore) throw Error('No `createStore` function was provided');
-        let _ = r.createStore(r),
-            E = 5000;
-        function s(e) {
-            n && clearTimeout(n),
+    return (a) => {
+        let r,
+            o = t(a);
+        if (!a.createStore) throw Error('No `createStore` function was provided');
+        let i = a.createStore(a),
+            c = 5000;
+        function s(t) {
+            r && clearTimeout(r),
                 'number' !=
-                    typeof (n = setTimeout(async () => {
-                        n = void 0;
-                        let e = await _.shift();
-                        e &&
-                            (t('Attempting to send previously queued event'),
-                            (e[0].sent_at = new Date().toISOString()),
-                            I(e, !0).catch((e) => {
-                                t('Failed to retry sending', e);
+                    typeof (r = setTimeout(async () => {
+                        r = void 0;
+                        let t = await i.shift();
+                        t &&
+                            (e('Attempting to send previously queued event'),
+                            (t[0].sent_at = new Date().toISOString()),
+                            l(t, !0).catch((t) => {
+                                e('Failed to retry sending', t);
                             }));
-                    }, e)) &&
-                    n.unref &&
-                    n.unref();
+                    }, t)) &&
+                    r.unref &&
+                    r.unref();
         }
-        function c() {
-            if (!n) s(E), (E = Math.min(2 * E, 3600000));
+        function E() {
+            r || (s(c), (c = Math.min(2 * c, 3600000)));
         }
-        async function I(e, n = !1) {
-            if (!n && (0, a.R)(e, ['replay_event', 'replay_recording'])) return await _.push(e), s(100), {};
+        async function l(t, r = !1) {
+            if (!r && (0, n.R)(t, ['replay_event', 'replay_recording'])) return await i.push(t), s(100), {};
             try {
-                let t = await i.send(e),
-                    r = 100;
-                if (t) {
-                    if (t.headers && t.headers['retry-after']) r = (0, o.JY)(t.headers['retry-after']);
-                    else if (t.headers && t.headers['x-sentry-rate-limits']) r = 60000;
-                    else if ((t.statusCode || 0) >= 400) return t;
+                let e = await o.send(t),
+                    a = 100;
+                if (e) {
+                    if (e.headers && e.headers['retry-after']) a = (0, _.JY)(e.headers['retry-after']);
+                    else if (e.headers && e.headers['x-sentry-rate-limits']) a = 60000;
+                    else if ((e.statusCode || 0) >= 400) return e;
                 }
-                return s(r), (E = 5000), t;
-            } catch (o) {
-                var I, u, l;
-                if (await ((I = e), (u = o), (l = E), !(0, a.R)(I, ['client_report']) && (!r.shouldStore || r.shouldStore(I, u, l)))) return n ? await _.unshift(e) : await _.push(e), c(), t('Error sending. Event queued.', o), {};
-                throw o;
+                return s(a), (c = 5000), e;
+            } catch (_) {
+                var u;
+                if (await ((u = c), !(0, n.R)(t, ['client_report']) && (!a.shouldStore || a.shouldStore(t, _, u)))) return r ? await i.unshift(t) : await i.push(t), E(), e('Error sending. Event queued.', _), {};
+                throw _;
             }
         }
         return (
-            r.flushAtStartup && c(),
+            a.flushAtStartup && E(),
             {
-                send: I,
-                flush: (e) => i.flush(e)
+                send: l,
+                flush: (t) => o.flush(t)
             }
         );
     };

@@ -1,10 +1,4 @@
-var r, i;
-t.d(n, {
-    $: function () {
-        return r;
-    }
-}),
-    t(47120),
-    ((i = r || (r = {}))[(i.IS_GUEST_INVITE = 1)] = 'IS_GUEST_INVITE'),
-    (i[(i.IS_VIEWED = 2)] = 'IS_VIEWED'),
-    (i[(i.IS_ENHANCED = 4)] = 'IS_ENHANCED');
+n.d(t, { $: () => r }), n(47120);
+var r = (function (e) {
+    return (e[(e.IS_GUEST_INVITE = 1)] = 'IS_GUEST_INVITE'), (e[(e.IS_VIEWED = 2)] = 'IS_VIEWED'), (e[(e.IS_ENHANCED = 4)] = 'IS_ENHANCED'), (e[(e.IS_APPLICATION_BYPASS = 8)] = 'IS_APPLICATION_BYPASS'), (e[(e.ASSIGNABLE_FLAGS_MASK = 9)] = 'ASSIGNABLE_FLAGS_MASK'), e;
+})({});

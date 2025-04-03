@@ -1,6 +1,27 @@
+n.d(t, { Z: () => a });
 var r = n(126387),
     i = n(740078);
-t.Z = {
+function o(e, t, n) {
+    var o = (0, r.Z)(e),
+        a = [i.t$, i.we].indexOf(o) >= 0 ? -1 : 1,
+        s = 'function' == typeof n ? n(Object.assign({}, t, { placement: e })) : n,
+        l = s[0],
+        c = s[1];
+    return (
+        (l = l || 0),
+        (c = (c || 0) * a),
+        [i.t$, i.F2].indexOf(o) >= 0
+            ? {
+                  x: c,
+                  y: l
+              }
+            : {
+                  x: l,
+                  y: c
+              }
+    );
+}
+let a = {
     name: 'offset',
     enabled: !0,
     phase: 'main',
@@ -8,37 +29,15 @@ t.Z = {
     fn: function (e) {
         var t = e.state,
             n = e.options,
-            a = e.name,
-            s = n.offset,
-            o = void 0 === s ? [0, 0] : s,
+            r = e.name,
+            a = n.offset,
+            s = void 0 === a ? [0, 0] : a,
             l = i.Ct.reduce(function (e, n) {
-                var a, s, l, u, c, d, _, E;
-                return (
-                    (e[n] =
-                        ((a = n),
-                        (s = t.rects),
-                        (l = o),
-                        (u = (0, r.Z)(a)),
-                        (c = [i.t$, i.we].indexOf(u) >= 0 ? -1 : 1),
-                        (_ = (d = 'function' == typeof l ? l(Object.assign({}, s, { placement: a })) : l)[0]),
-                        (E = d[1]),
-                        (_ = _ || 0),
-                        (E = (E || 0) * c),
-                        [i.t$, i.F2].indexOf(u) >= 0
-                            ? {
-                                  x: E,
-                                  y: _
-                              }
-                            : {
-                                  x: _,
-                                  y: E
-                              })),
-                    e
-                );
+                return (e[n] = o(n, t.rects, s)), e;
             }, {}),
-            u = l[t.placement],
-            c = u.x,
-            d = u.y;
-        null != t.modifiersData.popperOffsets && ((t.modifiersData.popperOffsets.x += c), (t.modifiersData.popperOffsets.y += d)), (t.modifiersData[a] = l);
+            c = l[t.placement],
+            u = c.x,
+            d = c.y;
+        null != t.modifiersData.popperOffsets && ((t.modifiersData.popperOffsets.x += u), (t.modifiersData.popperOffsets.y += d)), (t.modifiersData[r] = l);
     }
 };

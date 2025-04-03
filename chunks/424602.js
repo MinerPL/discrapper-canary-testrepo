@@ -1,92 +1,101 @@
 n.d(t, {
-    T: function () {
-        return i;
-    },
-    m1: function () {
-        return a;
-    },
-    nS: function () {
-        return s;
-    }
+    PM: () => u,
+    _f: () => a,
+    aZ: () => c,
+    aq: () => o,
+    gu: () => s
 });
-var r = n(818083);
-let i = (0, r.B)({
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
         kind: 'user',
-        id: '2023-11_app_launcher_desktop',
-        label: 'App Launcher - Desktop',
-        defaultConfig: { enabled: !1 },
+        id: '2024-08_open_platform_app_launcher_holdout',
+        label: 'Open Platform App Launcher Holdout',
+        commonTriggerPoint: i.$P.VOICE_CALL,
+        defaultConfig: { clickOnHomeActivityOpensAppDetail: !0 },
         treatments: [
             {
                 id: 1,
-                label: 'Enable the app launcher feature on desktop',
-                config: { enabled: !0 }
+                label: 'clicking activity in voice app launcher -> performs activity action',
+                config: { clickOnHomeActivityOpensAppDetail: !1 }
+            },
+            {
+                id: 2,
+                label: 'clicking activity in voice app launcher -> opens activity detail page',
+                config: { clickOnHomeActivityOpensAppDetail: !0 }
             }
         ]
     }),
     a = (0, r.B)({
         kind: 'user',
-        id: '2024-06_desktop_app_launcher_in_activities_shelf',
-        label: 'Desktop App Launcher In Activities Shelf',
+        id: '2024-09_user_app_install_education',
+        label: 'User App Install Education Experiment',
         defaultConfig: {
             enabled: !1,
-            clickOnHomeActivityOpensAppDetail: !1
+            showsTooltip: !1
         },
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
-                label: 'Enable the desktop app launcher in activities shelf: On home screen, clicking activity card -> performs activity action (i.e. launch)',
+                label: 'show animation on app launcher icon + tooltip when a user app is authorized when in a channel instead of showing auth success modal',
                 config: {
                     enabled: !0,
-                    clickOnHomeActivityOpensAppDetail: !1
+                    showsTooltip: !0
                 }
             },
             {
                 id: 2,
-                label: 'Enable the desktop app launcher in activities shelf: On home screen, clicking activity card -> activity detail page',
+                label: 'show animation on app launcher icon when a user app is authorized when in a channel instead of showing auth success modal',
                 config: {
                     enabled: !0,
-                    clickOnHomeActivityOpensAppDetail: !0
+                    showsTooltip: !1
                 }
             }
         ]
+    }),
+    s = '1211781489931452447',
+    l = (0, r.B)({
+        kind: 'guild',
+        id: '2025-02_filter_wordle_from_voice_channel_launcher',
+        label: 'Filter Wordle From Voice Channel Launcher',
+        defaultConfig: { enabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'Filter Wordle From Voice Channels',
+                config: { enabled: !0 }
+            }
+        ]
     });
-(0, r.B)({
+function c(e, t) {
+    return void 0 !== e && (null == e ? void 0 : e.isGuildVoice()) && l.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
+}
+let u = (0, r.B)({
     kind: 'user',
-    id: '2024-06_mobile_app_launcher_in_activities_shelf',
-    label: '[Mobile] App Launcher in Activities Shelf',
+    id: '2025-03_app_launcher_pep_button_label',
+    label: 'Change PEP Button Label To Play',
     defaultConfig: {
         enabled: !1,
-        clickOnHomeActivityOpensAppDetail: !1
+        altLayout: !1
     },
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
-            label: 'Enable the activities shelf getting replaced by App Launcher on mobile',
+            label: 'Change PEP Button Label To Play',
             config: {
                 enabled: !0,
-                clickOnHomeActivityOpensAppDetail: !1
+                altLayout: !1
             }
         },
         {
             id: 2,
-            label: 'On home screen, clicking activity card -> activity detail page',
+            label: 'Change PEP Button Label To Play With Alt Layout',
             config: {
                 enabled: !0,
-                clickOnHomeActivityOpensAppDetail: !0
+                altLayout: !0
             }
-        }
-    ]
-});
-let s = (0, r.B)({
-    kind: 'user',
-    id: '2024-07_open_platform_app_launcher',
-    label: 'Open Platform App Launcher',
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'Enable the App Launcher changes for Open Platform',
-            config: { enabled: !0 }
         }
     ]
 });

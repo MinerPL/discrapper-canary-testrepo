@@ -1,62 +1,39 @@
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    i = n(296386),
-    r = n(150192),
-    l = n(285888),
-    o = n(203377),
-    c = n(592602);
-t.Z = (e) => {
-    let { guild: t, guildMetadata: n, menuPlacement: d, disabled: u } = e,
-        _ = (e) => {
-            let { secondaryCategoryIds: s } = n,
-                a = e.map((e) => e.value);
-            if (e.length < s.length) s.filter((e) => !a.includes(e)).forEach((e) => (0, i.K0)(t.id, e));
-            else {
-                if (s.length >= o.Pg) return;
-                a.filter((e) => !s.includes(e)).forEach((e) => (0, i.Kq)(t.id, e));
-            }
-        },
-        I = (e) => {
-            (0, i.K0)(t.id, e);
-        },
-        E = (e) => {
-            e.preventDefault(), e.stopPropagation();
-        },
-        T = r.Z.getAllCategories().map((e) => {
-            let { categoryId: t, name: n } = e;
-            return {
-                value: t,
-                label: n
-            };
-        });
-    return (0, s.jsx)(l.Z, {
-        value: n.secondaryCategoryIds,
-        searchable: !0,
-        clearable: !1,
-        options: T,
-        onChange: (e) => _(e),
-        multiValueRenderer: (e) => {
-            let { label: t, value: n } = e;
-            return (0, s.jsxs)('span', {
-                className: c.subcategory,
-                onMouseDown: E,
-                children: [
-                    t,
-                    (0, s.jsx)(a.Clickable, {
-                        className: c.closeWrapper,
-                        onClick: () => I(n),
-                        children: (0, s.jsx)(a.XSmallIcon, {
-                            size: 'xs',
-                            color: 'currentColor',
-                            className: c.close
-                        })
-                    })
-                ]
-            });
-        },
-        menuPlacement: d,
-        disabled: u,
-        isMulti: !0
-    });
+n.d(t, { Z: () => d });
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(456268),
+    o = n(526429),
+    c = n(203377);
+let d = (e) => {
+    let { guild: t, guildMetadata: n, disabled: d } = e,
+        u = (0, s.Wu)([o.Z], () => o.Z.getAllCategories()),
+        m = i.useMemo(
+            () =>
+                u.map((e) => {
+                    let { categoryId: t, name: n } = e;
+                    return {
+                        value: t,
+                        label: n
+                    };
+                }),
+            [u]
+        );
+    return 0 === m.length
+        ? (0, r.jsx)(a.$jN, {})
+        : (0, r.jsx)(a.VcW, {
+              value: n.secondaryCategoryIds,
+              options: m,
+              onChange: (e) => {
+                  let { secondaryCategoryIds: r } = n;
+                  if (e.length < r.length) r.filter((t) => !e.includes(t)).forEach((e) => (0, l.K0)(t.id, e));
+                  else {
+                      if (r.length >= c.Pg) return;
+                      e.filter((e) => !r.includes(e)).forEach((e) => (0, l.Kq)(t.id, e));
+                  }
+              },
+              isDisabled: d,
+              multi: !0
+          });
 };

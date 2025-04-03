@@ -1,12 +1,8 @@
-n.d(t, {
-    a: function () {
-        return l;
-    }
-});
-var i = n(442837),
-    a = n(355298),
-    s = n(869404),
-    r = n(333984);
-function l() {
-    return (0, i.e7)([a.Z, r.Z], () => (0, s.IO)([a.Z, r.Z]));
+n.d(t, { a: () => o });
+var r = n(442837),
+    i = n(355298),
+    l = n(869404),
+    a = n(333984);
+function o() {
+    return (0, r.e7)([i.Z, a.Z], () => (0, l.IO)([i.Z, a.Z]));
 }

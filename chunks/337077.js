@@ -1,73 +1,67 @@
-n.d(t, {
-    M: function () {
-        return o;
-    }
-}),
-    n(47120),
-    n(653041);
-var a = n(470079),
-    s = n(392711),
-    r = n(591759),
-    l = n(158222),
-    i = n(154135);
-function o(e, t, n) {
-    let o = a.useRef(new Map()),
-        [, c] = a.useState(null),
-        [d, u] = a.useState(null),
-        m = a.useMemo(
+n.d(t, { M: () => c }), n(301563), n(47120), n(653041);
+var r = n(192379),
+    a = n(392711),
+    i = n(990169),
+    l = n(591759),
+    s = n(158222),
+    o = n(154135);
+function c(e, t, n) {
+    let c = r.useRef(new Map()),
+        [, d] = r.useState(null),
+        [u, m] = r.useState(null),
+        h = r.useMemo(
             () =>
-                s.debounce((e, n) => {
+                a.debounce((e, n) => {
                     if (null == n || e || 0 === t) return;
-                    let a = n.match(r.Z.URL_REGEX);
-                    if (null == a || 0 === a.length) {
-                        (o.current = new Map()), u(null);
+                    let r = n.match(l.Z.URL_REGEX);
+                    if (null == r || 0 === r.length) {
+                        (c.current = new Map()), m(null);
                         return;
                     }
-                    u(s.uniq(a).slice(0, i.Yh));
+                    m(a.uniq(r).slice(0, o.Yh));
                 }, 1000),
-            [t, o]
+            [t, c, m]
         );
-    a.useEffect(() => {
-        m(e, n);
-    }, [m, n, e]),
-        a.useEffect(() => {
-            (async function e(e, t) {
+    r.useEffect(() => {
+        h(e, n);
+    }, [h, n, e]),
+        r.useEffect(() => {
+            !(async function (e, t) {
                 if (null == t) return;
                 let n = e.current,
-                    a = new Set(n.keys()),
-                    s = t.filter((e) => !(null == a ? void 0 : a.has(e)));
-                if (0 !== s.length)
+                    r = new Set(n.keys()),
+                    a = t.filter((e) => !(null == r ? void 0 : r.has(e)));
+                if (0 !== a.length)
                     try {
-                        let t = await l.V6(s);
-                        (e.current = (function (e, t, n) {
-                            return (
-                                null == n ||
-                                    n.forEach((n) => {
-                                        let a = (function (e, t) {
-                                            return e.find((e) => (null == t ? void 0 : t.url) != null && e.startsWith(t.url));
-                                        })(t, n);
-                                        if (null == a) return;
-                                        let s = e.get(a);
-                                        null == s ? e.set(a, [n]) : s.push(n);
-                                    }),
-                                e
-                            );
-                        })(new Map(n), s, null == t ? void 0 : t.embeds)),
-                            c({});
+                        var i, l, o;
+                        let t = await s.V6(a);
+                        (i = new Map(n)),
+                            (l = a),
+                            (o = null == t ? void 0 : t.embeds),
+                            null == o ||
+                                o.forEach((e) => {
+                                    var t, n;
+                                    let r = ((t = l), (n = e), t.find((e) => (null == n ? void 0 : n.url) != null && e.startsWith(n.url)));
+                                    if (null == r) return;
+                                    let a = i.get(r);
+                                    null == a ? i.set(r, [e]) : a.push(e);
+                                }),
+                            (e.current = i),
+                            d({});
                     } catch (e) {}
-            })(o, d);
-        }, [d]);
-    let h = o.current,
-        _ = a.useMemo(() => {
+            })(c, u);
+        }, [u]);
+    let g = (0, i.Z)(c),
+        f = r.useMemo(() => {
             let e = [];
             return (
-                null == d ||
-                    d.forEach((t) => {
-                        let n = h.get(t);
+                null == u ||
+                    u.forEach((t) => {
+                        let n = g.get(t);
                         null != n && e.push(...n);
                     }),
                 e.length > 0 ? e : null
             );
-        }, [d, h]);
-    return { embeds: e ? null : _ };
+        }, [u, g]);
+    return { embeds: e ? null : f };
 }

@@ -1,30 +1,28 @@
-n.d(s, {
-    i: function () {
-        return l;
-    },
-    w: function () {
-        return r;
-    }
+t.d(s, {
+    i: () => l,
+    w: () => o
 });
-var t = n(990547),
-    o = n(573261),
-    a = n(981631);
+var n = t(990547),
+    r = t(573261),
+    a = t(981631);
 function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return o.Z.put({
+    return r.Z.put({
         url: a.ANM.USER_EMAIL,
         trackedActionData: {
-            event: t.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
+            event: n.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
             properties: { is_resend: e }
-        }
+        },
+        rejectWithError: !1
     });
 }
-async function r(e) {
+async function o(e) {
     return (
-        await o.Z.post({
+        await r.Z.post({
             url: a.ANM.USER_EMAIL_VERIFY_CODE,
             body: { code: e },
-            trackedActionData: { event: t.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE }
+            trackedActionData: { event: n.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE },
+            rejectWithError: !1
         })
     ).body;
 }

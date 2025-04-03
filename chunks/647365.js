@@ -1,29 +1,30 @@
-var s = n(735250);
-n(470079);
+n.d(t, { Z: () => i });
+var r = n(200651);
+n(192379);
 var o = n(453217),
-    r = n(100805),
-    a = n(988953);
-t.Z = function (e) {
-    let { collapsedHeight: t, expandedContentRef: n, expansionSpring: l, isExpanded: i, isExpansionAnimationComplete: c, onCtxMenuOpened: d, onCtxMenuClosed: u, onCtxMenuSelection: p, quest: x, useReducedMotion: m } = e;
-    return (0, s.jsx)(r.Z, {
-        expansionSpring: l,
+    s = n(578080),
+    a = n(665600);
+let i = function (e) {
+    let { collapsedHeight: t, expandedContentRef: n, expansionSpring: i, isExpanded: l, isExpansionAnimationComplete: c, onCtxMenuOpened: d, onCtxMenuClosed: u, onCtxMenuSelection: p, quest: m, useReducedMotion: f } = e;
+    return (0, r.jsx)(s.Z, {
+        expansionSpring: i,
         className: a.content,
         collapsedHeight: t,
         onCtxMenuOpen: d,
         onCtxMenuClose: u,
         onCtxMenuSelect: p,
-        isExpanded: i,
+        isExpanded: l,
         isExpansionAnimationComplete: c,
-        quest: x,
-        useReducedMotion: m,
+        quest: m,
+        useReducedMotion: f,
         ref: n,
-        children: (0, s.jsx)(o.Z, {
+        children: (0, r.jsx)(o.Z, {
             className: a.content,
-            expansionSpring: l,
-            isExpanded: i,
+            expansionSpring: i,
+            isExpanded: l,
             isExpansionAnimationComplete: c,
-            quest: x,
-            useReducedMotion: m
+            quest: m,
+            useReducedMotion: f
         })
     });
 };

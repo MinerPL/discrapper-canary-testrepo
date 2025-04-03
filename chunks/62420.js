@@ -1,58 +1,52 @@
-t.d(n, {
-    Z: function () {
-        return o;
+n.d(t, { Z: () => s }), n(653041), n(47120);
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(117984),
+    a = n(593214),
+    o = n(362658),
+    c = n(388032);
+function s(e) {
+    let t = (0, a.Mt)(),
+        n = (0, a.s4)(e.id),
+        s = (0, a.zv)(),
+        { isFavoritesPerk: u } = (0, o.z)('useChannelMoveToCategory');
+    if (__OVERLAY__ || !t || null == n || !u) return null;
+    let [d, f] = (function (e) {
+        let t = [],
+            n = null;
+        for (let r of e) null == r.id ? (n = r) : t.push(r);
+        return [n, t];
+    })(s.filter((e) => e.id !== (null == n ? void 0 : n.parentId)));
+    function O(e) {
+        null != n && (0, l.uA)(n.id, e);
     }
-}),
-    t(653041),
-    t(47120);
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    l = t(117984),
-    r = t(593214),
-    u = t(362658),
-    s = t(689938);
-function o(e) {
-    let n = (0, r.Mt)(),
-        t = (0, r.s4)(e.id),
-        o = (0, r.zv)(),
-        { isFavoritesPerk: d } = (0, u.z)('useChannelMoveToCategory');
-    if (__OVERLAY__ || !n || null == t || !d) return null;
-    let [c, _] = (function (e) {
-        let n = [],
-            t = null;
-        for (let i of e) null == i.id ? (t = i) : n.push(i);
-        return [t, n];
-    })(o.filter((e) => e.id !== (null == t ? void 0 : t.parentId)));
-    function M(e) {
-        null != t && (0, l.uA)(t.id, e);
-    }
-    return null == c && 0 === _.length
+    return null == d && 0 === f.length
         ? null
-        : (0, i.jsxs)(a.MenuItem, {
+        : (0, r.jsxs)(i.sNh, {
               id: 'move-to-category',
-              label: s.Z.Messages.MOVE_TO,
+              label: c.NW.string(c.t.FAplmp),
               children: [
-                  null != c &&
-                      (0, i.jsx)(a.MenuGroup, {
-                          children: (0, i.jsx)(a.MenuItem, {
+                  null != d &&
+                      (0, r.jsx)(i.kSQ, {
+                          children: (0, r.jsx)(i.sNh, {
                               id: 'favorite-uncategorized',
-                              label: c.name,
-                              action: () => M(c.id)
+                              label: d.name,
+                              action: () => O(d.id)
                           })
                       }),
-                  _.length > 0 &&
-                      (0, i.jsx)(a.MenuGroup, {
-                          children: _.map((e) => {
-                              let { id: n, name: t } = e;
-                              return (0, i.jsx)(
-                                  a.MenuItem,
+                  f.length > 0 &&
+                      (0, r.jsx)(i.kSQ, {
+                          children: f.map((e) => {
+                              let { id: t, name: n } = e;
+                              return (0, r.jsx)(
+                                  i.sNh,
                                   {
-                                      id: 'favorite-'.concat(n),
-                                      label: t,
-                                      action: () => M(n)
+                                      id: 'favorite-'.concat(t),
+                                      label: n,
+                                      action: () => O(t)
                                   },
-                                  n
+                                  t
                               );
                           })
                       })

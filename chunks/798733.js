@@ -1,28 +1,26 @@
 n.d(t, {
-    Z: function () {
-        return l;
-    }
+    Z: () => l,
+    f: () => o
 });
-var a,
-    s,
-    o = n(689938);
+var r,
+    a = n(388032),
+    o = (((r = {}).COULD_NOT_FIND = "I couldn't find what I was looking for"), (r.CONFUSING_LANGUAGE = 'I found the language confusing'), (r.OTHER = 'Other'), r);
 function l() {
     return [
         {
-            label: o.Z.Messages.IAR_FEEDBACK_PROBLEM_COULD_NOT_FIND,
+            label: a.NW.string(a.t.cigGCQ),
             code: 2,
             value: "I couldn't find what I was looking for"
         },
         {
-            label: o.Z.Messages.IAR_FEEDBACK_PROBLEM_CONFUSING_LANGUAGE,
+            label: a.NW.string(a.t.ZyXA0t),
             code: 3,
             value: 'I found the language confusing'
         },
         {
-            label: o.Z.Messages.CALL_FEEDBACK_OPTION_OTHER,
+            label: a.NW.string(a.t['emlT9/']),
             code: 1,
             value: 'Other'
         }
     ];
 }
-((a = s || (s = {})).COULD_NOT_FIND = "I couldn't find what I was looking for"), (a.CONFUSING_LANGUAGE = 'I found the language confusing'), (a.OTHER = 'Other');

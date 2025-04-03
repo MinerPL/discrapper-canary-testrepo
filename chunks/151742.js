@@ -1,6 +1,19 @@
-n(177593), n(47120);
+n.d(t, { Z: () => l }), n(177593), n(47120);
 var r = n(147913),
     i = n(695346);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 let a = !1;
 class s extends r.Z {
     maybeShowChangeLanguageToast() {}
@@ -14,25 +27,14 @@ class s extends r.Z {
         i.rN.getSetting() !== e && setImmediate(() => i.rN.updateSetting(e));
     }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
+            o(this, 'actions', {
                 POST_CONNECTION_OPEN: () => {
                     this.setVerifyTimezone(), this.maybeShowChangeLanguageToast();
                 },
                 OVERLAY_INITIALIZE: this.setVerifyTimezone,
                 USER_SETTINGS_PROTO_UPDATE: this.ensureTimezoneUpdated
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            });
     }
 }
-t.Z = new s();
+let l = new s();

@@ -1,85 +1,81 @@
-t.d(s, {
-    Z: function () {
-        return N;
-    }
-});
-var n = t(735250),
-    a = t(470079),
-    i = t(120356),
-    r = t.n(i),
-    o = t(481060),
-    l = t(906732),
-    c = t(864106),
-    d = t(1585),
-    _ = t(580747),
-    E = t(345861),
-    u = t(150039),
-    I = t(993413),
-    T = t(689938),
-    S = t(539523);
-function N(e) {
-    let { user: s, guild: t, className: i, sectionTitle: E, forcedDivider: N = !1, withTutorial: m = !1, isTryItOutFlow: A = !1 } = e,
-        { analyticsLocations: O } = (0, l.ZP)(),
-        g = null != t,
-        { userAvatarDecoration: h, guildAvatarDecoration: p, pendingAvatarDecoration: R, pendingErrors: x } = (0, u.$U)(s, t),
-        M = (0, _.Z)('enable_avatar_decoration_uploads'),
-        f = a.useCallback(
+n.d(t, { Z: () => b });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
+    o = n(906732),
+    c = n(864106),
+    d = n(1585),
+    u = n(580747),
+    m = n(345861),
+    g = n(150039),
+    p = n(993413),
+    h = n(388032),
+    f = n(142436);
+function b(e) {
+    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: x = !1, isTryItOutFlow: _ = !1 } = e,
+        { analyticsLocations: E } = (0, o.ZP)(),
+        j = null != n,
+        { userAvatarDecoration: O, guildAvatarDecoration: C, pendingAvatarDecoration: S, pendingErrors: v } = (0, g.$U)(t, n),
+        T = (0, u.Z)('enable_avatar_decoration_uploads'),
+        I = i.useCallback(
             () =>
                 (0, d.ps)({
-                    analyticsLocations: O,
-                    isTryItOutFlow: A,
-                    guild: t
+                    analyticsLocations: E,
+                    isTryItOutFlow: _,
+                    guild: n
                 }),
-            [O, A, t]
+            [E, _, n]
         ),
-        D = A || void 0 !== R ? null != R : (g ? p : h) != null,
-        P = m ? o.ShinyButton : o.Button;
-    return (0, n.jsxs)(I.Z, {
-        className: i,
-        forcedDivider: N,
+        y = _ || void 0 !== S ? null != S : (j ? C : O) != null,
+        A = x ? l.gtL : l.zxk;
+    return (0, r.jsxs)(p.Z, {
+        className: s,
+        forcedDivider: b,
         hasBackground: !0,
-        title: E,
-        errors: x,
+        title: m,
+        errors: v,
         children: [
-            (0, n.jsxs)('div', {
-                className: S.buttonsContainer,
+            (0, r.jsxs)('div', {
+                className: f.buttonsContainer,
                 children: [
-                    (0, n.jsx)(P, {
-                        size: o.Button.Sizes.SMALL,
-                        onClick: f,
-                        className: r()({ [S.buttonHighlighted]: m }),
-                        children: T.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+                    (0, r.jsx)(A, {
+                        size: l.zxk.Sizes.SMALL,
+                        onClick: I,
+                        className: a()({ [f.buttonHighlighted]: x }),
+                        children: h.NW.string(h.t['Tna/TU'])
                     }),
-                    D &&
-                        (0, n.jsx)(o.Button, {
-                            className: S.removeButton,
-                            color: o.Button.Colors.PRIMARY,
-                            look: o.Button.Looks.LINK,
-                            size: o.Button.Sizes.SMALL,
+                    y &&
+                        (0, r.jsx)(l.zxk, {
+                            className: f.removeButton,
+                            color: l.zxk.Colors.PRIMARY,
+                            look: l.zxk.Looks.LINK,
+                            size: l.zxk.Sizes.SMALL,
                             onClick: function () {
-                                (0, u.PO)(null == t ? void 0 : t.id, null);
+                                (0, g.PO)(null == n ? void 0 : n.id, null);
                             },
-                            children: (0, c.ad)(s, t) ? T.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : T.Z.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
+                            children: (0, c.ad)(t, n) ? h.NW.string(h.t['GsW4/v']) : h.NW.string(h.t.GReZ6O)
                         })
                 ]
             }),
-            s.isStaff() && M && (0, n.jsx)(C, { user: s })
+            t.isStaff() && T && (0, r.jsx)(N, { user: t })
         ]
     });
 }
-let C = (e) => {
-    let { user: s } = e;
-    return (0, n.jsxs)('div', {
-        className: S.overrideButtonsContainer,
+let N = (e) => {
+    let { user: t } = e;
+    return (0, r.jsxs)('div', {
+        className: f.overrideButtonsContainer,
         children: [
-            (0, n.jsx)(o.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-xs/bold',
                 children: 'STAFF ONLY and Experimental. Upload a decoration to view throughout the app.'
             }),
-            (0, n.jsx)(E.Z, {
+            (0, r.jsx)(m.Z, {
                 onChange: (e) => {
                     null != e &&
-                        (s.avatarDecoration = {
+                        (t.avatarDecoration = {
                             asset: e,
                             skuID: 'PALUE000000001'
                         });

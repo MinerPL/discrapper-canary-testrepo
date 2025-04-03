@@ -1,10 +1,6 @@
-i.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var e = i(442837),
-    a = i(236289);
-function o() {
-    return (0, e.e7)([a.Z], () => a.Z.isFetching());
+n.d(e, { Z: () => _ });
+var i = n(442837),
+    E = n(236289);
+function _() {
+    return (0, i.e7)([E.Z], () => E.Z.isFetching());
 }

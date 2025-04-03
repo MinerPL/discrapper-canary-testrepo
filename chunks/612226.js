@@ -1,395 +1,387 @@
-t.d(n, {
-    Q2: function () {
-        return i;
-    },
-    Rv: function () {
-        return X;
-    },
-    U6: function () {
-        return Y;
-    },
-    UD: function () {
-        return w;
-    },
-    oT: function () {
-        return x;
-    }
+n.d(t, {
+    Q2: () => V,
+    Rv: () => Y,
+    U6: () => F,
+    UD: () => G,
+    ZP: () => K,
+    oT: () => z
 }),
-    t(411104),
-    t(653041);
-var i,
-    l,
-    o = t(346610),
-    r = t(121254),
-    E = t(186070),
-    a = t(185514),
-    u = t(395878),
-    s = t(321697),
-    d = t(775774),
-    _ = t(570408),
-    c = t(438846),
-    C = t(360038),
-    I = t(175724),
-    A = t(705371),
-    S = t(138976),
-    T = t(296805),
-    L = t(561716),
-    N = t(239748),
-    O = t(337482),
-    g = t(679080),
-    h = t(777019),
-    D = t(523147),
-    R = t(400332),
-    f = t(510761),
-    p = t(189509),
-    P = t(673553),
-    Z = t(280492),
-    G = t(746887),
-    M = t(861007),
-    b = t(89028),
-    U = t(300644),
-    H = t(721383),
-    m = t(207234),
-    k = t(997292),
-    v = t(743810),
-    K = t(620212),
-    B = t(188051),
-    y = t(547420),
-    V = t(981631),
-    F = t(689938);
-function w(e) {
+    n(411104),
+    n(653041);
+var r,
+    i = n(346610),
+    s = n(2818),
+    a = n(186070),
+    l = n(185514),
+    o = n(395878),
+    c = n(321697),
+    d = n(775774),
+    u = n(570408),
+    m = n(438846),
+    g = n(360038),
+    p = n(175724),
+    h = n(705371),
+    f = n(138976),
+    b = n(296805),
+    N = n(561716),
+    x = n(239748),
+    _ = n(337482),
+    E = n(679080),
+    j = n(777019),
+    O = n(523147),
+    C = n(400332),
+    S = n(908552),
+    v = n(189509),
+    T = n(673553),
+    I = n(280492),
+    y = n(746887),
+    A = n(861007),
+    P = n(89028),
+    R = n(300644),
+    D = n(721383),
+    Z = n(207234),
+    w = n(997292),
+    k = n(743810),
+    W = n(620212),
+    L = n(188051),
+    B = n(547420),
+    M = n(981631),
+    U = n(388032),
+    V = (((r = {}).NAVIGATION = 'NAVIGATION'), (r.CHAT = 'CHAT'), (r.VOICE_AND_VIDEO = 'VOICE_AND_VIDEO'), (r.MISCELLANEOUS = 'MISCELLANEOUS'), (r.MESSAGE = 'MESSAGE'), (r.DND = 'DND'), r);
+function G(e) {
     switch (e) {
         case 'NAVIGATION':
-            return F.Z.Messages.USER_SETTINGS_KEYBINDS_NAVIGATION_SECTION_TITLE;
+            return U.NW.string(U.t['yGE+jo']);
         case 'VOICE_AND_VIDEO':
-            return F.Z.Messages.USER_SETTINGS_KEYBINDS_VOICE_AND_VIDEO_SECTION_TITLE;
+            return U.NW.string(U.t.bI8F5u);
         case 'CHAT':
-            return F.Z.Messages.USER_SETTINGS_KEYBINDS_CHAT_SECTION_TITLE;
+            return U.NW.string(U.t.hDhbb2);
         case 'MISCELLANEOUS':
-            return F.Z.Messages.USER_SETTINGS_KEYBINDS_MISCELLANEOUS_SECTION_TITLE;
+            return U.NW.string(U.t.cBdwqq);
         case 'MESSAGE':
-            return F.Z.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_SECTION_TITLE;
+            return U.NW.string(U.t['5fpmX1']);
         case 'DND':
-            return F.Z.Messages.USER_SETTINGS_KEYBINDS_DND_SECTION_TITLE;
+            return U.NW.string(U.t['69j6+/']);
     }
 }
-function Y(e) {
+function F(e) {
     switch (e) {
         case 'MESSAGE':
-            return F.Z.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_DESCRIPTION;
+            return U.NW.string(U.t.iepGDg);
         case 'DND':
-            return F.Z.Messages.USER_SETTINGS_KEYBINDS_DND_DESCRIPTION;
+            return U.NW.string(U.t.LBsB0d);
         default:
             return null;
     }
 }
-function W() {
-    for (var e = arguments.length, n = Array(e), t = 0; t < e; t++) n[t] = arguments[t];
-    return n.map((e) => {
-        let n = x[e];
-        if (null == n) throw Error('getBindsFor(...): No bind for '.concat(n));
-        return n.binds[0];
+function H() {
+    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+    return t.map((e) => {
+        let t = z[e];
+        if (null == t) throw Error('getBindsFor(...): No bind for '.concat(t));
+        return t.binds[0];
     });
 }
-((l = i || (i = {})).NAVIGATION = 'NAVIGATION'), (l.CHAT = 'CHAT'), (l.VOICE_AND_VIDEO = 'VOICE_AND_VIDEO'), (l.MISCELLANEOUS = 'MISCELLANEOUS'), (l.MESSAGE = 'MESSAGE'), (l.DND = 'DND');
-let x = {
-    [V.EkH.SERVER_NEXT]: f.nq,
-    [V.EkH.SERVER_PREV]: f.X3,
-    [V.EkH.CHANNEL_NEXT]: a.tQ,
-    [V.EkH.CHANNEL_PREV]: a.x5,
-    [V.EkH.NAVIGATE_BACK]: a.Nx,
-    [V.EkH.NAVIGATE_FORWARD]: a.On,
-    [V.EkH.UNREAD_NEXT]: v.pd,
-    [V.EkH.UNREAD_PREV]: v.wk,
-    [V.EkH.MENTION_CHANNEL_NEXT]: v.Nv,
-    [V.EkH.MENTION_CHANNEL_PREV]: v.uX,
-    [V.EkH.TOGGLE_PREVIOUS_GUILD]: a.$c,
-    [V.EkH.JUMP_TO_GUILD]: C.u,
-    [V.EkH.SUBMIT]: p.z,
-    [V.EkH.TEXTAREA_FOCUS]: P.U,
-    [V.EkH.MARK_CHANNEL_READ]: I.f,
-    [V.EkH.MARK_SERVER_READ]: A.l,
-    [V.EkH.TOGGLE_CHANNEL_PINS]: M.u,
-    [V.EkH.TOGGLE_FOR_LATER]: b.f,
-    [V.EkH.TOGGLE_INBOX_UNREADS_TAB]: m.P,
-    [V.EkH.MARK_TOP_INBOX_CHANNEL_READ]: m.M,
-    [V.EkH.TOGGLE_USERS]: k.r,
-    [V.EkH.TOGGLE_HELP]: U.O,
-    [V.EkH.VIBE_WITH_WUMPUS]: B.w,
-    [V.EkH.TOGGLE_MUTE]: Z.iN,
-    [V.EkH.TOGGLE_DEAFEN]: Z.oV,
-    [V.EkH.TOGGLE_CATEGORY_COLLAPSED]: G.u,
-    [V.EkH.SEARCH_SOUNDBOARD]: D.Z,
-    [V.EkH.SCROLL_UP]: O.B2,
-    [V.EkH.SCROLL_DOWN]: O.gN,
-    [V.EkH.QUICKSWITCHER_SHOW]: L.$,
-    [V.EkH.CREATE_DM_GROUP]: u.K,
-    [V.EkH.SEARCH_EMOJIS]: g.S,
-    [V.EkH.SEARCH_GIFS]: h.O,
-    [V.EkH.SEARCH_STICKERS]: R.U,
-    [V.EkH.TOGGLE_HOTKEYS]: H._,
-    [V.EkH.JUMP_TO_FIRST_UNREAD]: S.O,
-    [V.EkH.CREATE_GUILD]: s.r,
-    [V.EkH.UPLOAD_FILE]: K.U,
-    [V.EkH.RETURN_TO_AUDIO_CHANNEL]: N.F,
-    [V.EkH.CALL_ACCEPT]: E.IL,
-    [V.EkH.CALL_START]: E.FI,
-    [V.EkH.FOCUS_SEARCH]: _.I,
-    [V.EkH.JUMP_TO_CURRENT_CALL]: c.K,
-    [V.EkH.ZOOM_IN]: y.UF,
-    [V.EkH.ZOOM_OUT]: y.RC,
-    [V.EkH.ZOOM_RESET]: y.MY,
-    [V.EkH.OPEN_APP_DIRECTORY]: T.T,
-    [V.EkH.BROWSER_DEVTOOLS]: d.p
+let z = {
+    [M.EkH.SERVER_NEXT]: S.nq,
+    [M.EkH.SERVER_PREV]: S.X3,
+    [M.EkH.CHANNEL_NEXT]: l.tQ,
+    [M.EkH.CHANNEL_PREV]: l.x5,
+    [M.EkH.NAVIGATE_BACK]: l.Nx,
+    [M.EkH.NAVIGATE_FORWARD]: l.On,
+    [M.EkH.UNREAD_NEXT]: k.pd,
+    [M.EkH.UNREAD_PREV]: k.wk,
+    [M.EkH.MENTION_CHANNEL_NEXT]: k.Nv,
+    [M.EkH.MENTION_CHANNEL_PREV]: k.uX,
+    [M.EkH.TOGGLE_PREVIOUS_GUILD]: l.$c,
+    [M.EkH.JUMP_TO_GUILD]: g.u,
+    [M.EkH.SUBMIT]: v.z,
+    [M.EkH.TEXTAREA_FOCUS]: T.U,
+    [M.EkH.MARK_CHANNEL_READ]: p.f,
+    [M.EkH.MARK_SERVER_READ]: h.l,
+    [M.EkH.TOGGLE_CHANNEL_PINS]: A.u,
+    [M.EkH.TOGGLE_FOR_LATER]: P.f,
+    [M.EkH.TOGGLE_INBOX]: Z.a,
+    [M.EkH.MARK_TOP_INBOX_CHANNEL_READ]: Z.M,
+    [M.EkH.TOGGLE_USERS]: w.r,
+    [M.EkH.TOGGLE_HELP]: R.O,
+    [M.EkH.VIBE_WITH_WUMPUS]: L.w,
+    [M.EkH.TOGGLE_MUTE]: I.iN,
+    [M.EkH.TOGGLE_DEAFEN]: I.oV,
+    [M.EkH.TOGGLE_CATEGORY_COLLAPSED]: y.u,
+    [M.EkH.SEARCH_SOUNDBOARD]: O.Z,
+    [M.EkH.SCROLL_UP]: _.B2,
+    [M.EkH.SCROLL_DOWN]: _.gN,
+    [M.EkH.QUICKSWITCHER_SHOW]: N.$,
+    [M.EkH.CREATE_DM_GROUP]: o.K,
+    [M.EkH.SEARCH_EMOJIS]: E.S,
+    [M.EkH.SEARCH_GIFS]: j.O,
+    [M.EkH.SEARCH_STICKERS]: C.U,
+    [M.EkH.TOGGLE_HOTKEYS]: D._,
+    [M.EkH.JUMP_TO_FIRST_UNREAD]: f.O,
+    [M.EkH.CREATE_GUILD]: c.r,
+    [M.EkH.UPLOAD_FILE]: W.U,
+    [M.EkH.RETURN_TO_AUDIO_CHANNEL]: x.F,
+    [M.EkH.CALL_ACCEPT]: a.IL,
+    [M.EkH.CALL_START]: a.FI,
+    [M.EkH.FOCUS_SEARCH]: u.I,
+    [M.EkH.JUMP_TO_CURRENT_CALL]: m.K,
+    [M.EkH.ZOOM_IN]: B.UF,
+    [M.EkH.ZOOM_OUT]: B.RC,
+    [M.EkH.ZOOM_RESET]: B.MY,
+    [M.EkH.OPEN_APP_DIRECTORY]: b.T,
+    [M.EkH.BROWSER_DEVTOOLS]: d.p
 };
-function X() {
+function Y() {
     let e = [
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,
-            binds: W(V.EkH.SERVER_PREV, V.EkH.SERVER_NEXT),
+            description: U.NW.string(U.t.bx4Uy8),
+            binds: H(M.EkH.SERVER_PREV, M.EkH.SERVER_NEXT),
             group: 'NAVIGATION'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_CHANNELS,
-            binds: W(V.EkH.CHANNEL_PREV, V.EkH.CHANNEL_NEXT),
+            description: U.NW.string(U.t['+Wem6u']),
+            binds: H(M.EkH.CHANNEL_PREV, M.EkH.CHANNEL_NEXT),
             group: 'NAVIGATION'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_BACK_FORWARD,
-            binds: W(V.EkH.NAVIGATE_BACK, V.EkH.NAVIGATE_FORWARD),
+            description: U.NW.string(U.t['+2fcd3']),
+            binds: H(M.EkH.NAVIGATE_BACK, M.EkH.NAVIGATE_FORWARD),
             group: 'NAVIGATION'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_CHANNELS,
-            binds: W(V.EkH.UNREAD_PREV, V.EkH.UNREAD_NEXT),
+            description: U.NW.string(U.t.eVmj1N),
+            binds: H(M.EkH.UNREAD_PREV, M.EkH.UNREAD_NEXT),
             group: 'NAVIGATION'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_MENTION_CHANNELS,
-            binds: W(V.EkH.MENTION_CHANNEL_PREV, V.EkH.MENTION_CHANNEL_NEXT),
+            description: U.NW.string(U.t.EcqS7e),
+            binds: H(M.EkH.MENTION_CHANNEL_PREV, M.EkH.MENTION_CHANNEL_NEXT),
             group: 'NAVIGATION'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_TO_CALL,
-            binds: W(V.EkH.JUMP_TO_CURRENT_CALL),
+            description: U.NW.string(U.t['4I3pwc']),
+            binds: H(M.EkH.JUMP_TO_CURRENT_CALL),
             group: 'NAVIGATION'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PREVIOUS_GUILD,
-            binds: W(V.EkH.TOGGLE_PREVIOUS_GUILD),
+            description: U.NW.string(U.t['Bqss7+']),
+            binds: H(M.EkH.TOGGLE_PREVIOUS_GUILD),
             group: 'NAVIGATION'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_QUICKSWITCHER,
-            binds: W(V.EkH.QUICKSWITCHER_SHOW),
+            description: U.NW.string(U.t.yYsRlJ),
+            binds: H(M.EkH.QUICKSWITCHER_SHOW),
             group: 'NAVIGATION'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_GUILD,
-            binds: W(V.EkH.CREATE_GUILD),
+            description: U.NW.string(U.t.O7ouXF),
+            binds: H(M.EkH.CREATE_GUILD),
             group: 'NAVIGATION',
             groupEnd: !0
         },
         {
-            description: F.Z.Messages.DND_OPERATION_LABEL_START,
+            description: U.NW.string(U.t.Lns0FR),
             binds: ['mod+d'],
             group: 'DND'
         },
         {
-            description: F.Z.Messages.DND_OPERATION_LABEL_MOVE,
+            description: U.NW.string(U.t.dmMqa2),
             binds: ['up', 'down'],
             group: 'DND'
         },
         {
-            description: F.Z.Messages.DND_OPERATION_LABEL_DROP,
+            description: U.NW.string(U.t['cs/HVF']),
             binds: ['spacebar', 'enter'],
             group: 'DND'
         },
         {
-            description: F.Z.Messages.DND_OPERATION_LABEL_CANCEL,
+            description: U.NW.string(U.t['1ioMJS']),
             binds: ['esc'],
             group: 'DND',
             groupEnd: !0
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_SERVER_READ,
-            binds: W(V.EkH.MARK_SERVER_READ),
+            description: U.NW.string(U.t.UaXAPz),
+            binds: H(M.EkH.MARK_SERVER_READ),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_CHANNEL_READ,
-            binds: W(V.EkH.MARK_CHANNEL_READ),
+            description: U.NW.string(U.t['5X9vFh']),
+            binds: H(M.EkH.MARK_CHANNEL_READ),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_DM_GROUP,
-            binds: W(V.EkH.CREATE_DM_GROUP),
+            description: U.NW.string(U.t.wxQFsr),
+            binds: H(M.EkH.CREATE_DM_GROUP),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PINS,
-            binds: W(V.EkH.TOGGLE_CHANNEL_PINS),
+            description: U.NW.string(U.t['C+XV7e']),
+            binds: H(M.EkH.TOGGLE_CHANNEL_PINS),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_INBOX,
-            binds: W(V.EkH.TOGGLE_INBOX_UNREADS_TAB),
+            description: U.NW.string(U.t['Q+YV/f']),
+            binds: H(M.EkH.TOGGLE_INBOX),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_TOP_INBOX_CHANNEL_READ,
-            binds: W(V.EkH.MARK_TOP_INBOX_CHANNEL_READ),
+            description: U.NW.string(U.t['YEjV+f']),
+            binds: H(M.EkH.MARK_TOP_INBOX_CHANNEL_READ),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_USERS,
-            binds: W(V.EkH.TOGGLE_USERS),
+            description: U.NW.string(U.t.AcBI9f),
+            binds: H(M.EkH.TOGGLE_USERS),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_EMOJIS,
-            binds: W(V.EkH.SEARCH_EMOJIS),
+            description: U.NW.string(U.t.JoxNnp),
+            binds: H(M.EkH.SEARCH_EMOJIS),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_GIFS,
-            binds: W(V.EkH.SEARCH_GIFS),
+            description: U.NW.string(U.t['3PHxo6']),
+            binds: H(M.EkH.SEARCH_GIFS),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_STICKERS,
-            binds: W(V.EkH.SEARCH_STICKERS),
+            description: U.NW.string(U.t.YFl7eX),
+            binds: H(M.EkH.SEARCH_STICKERS),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SCROLL_CHAT,
-            binds: W(V.EkH.SCROLL_UP, V.EkH.SCROLL_DOWN),
+            description: U.NW.string(U.t.L3RYYG),
+            binds: H(M.EkH.SCROLL_UP, M.EkH.SCROLL_DOWN),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_JUMP_TO_FIRST_UNREAD,
-            binds: W(V.EkH.JUMP_TO_FIRST_UNREAD),
+            description: U.NW.string(U.t['3HAurK']),
+            binds: H(M.EkH.JUMP_TO_FIRST_UNREAD),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
-            binds: W(V.EkH.TEXTAREA_FOCUS),
+            description: U.NW.string(U.t.rrYBEh),
+            binds: H(M.EkH.TEXTAREA_FOCUS),
             group: 'CHAT'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_UPLOAD_FILE,
-            binds: W(V.EkH.UPLOAD_FILE),
+            description: U.NW.string(U.t.sUJlPD),
+            binds: H(M.EkH.UPLOAD_FILE),
             group: 'CHAT',
             groupEnd: !0
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_MUTE,
-            binds: W(V.EkH.TOGGLE_MUTE),
+            description: U.NW.string(U.t.tL6eVV),
+            binds: H(M.EkH.TOGGLE_MUTE),
             group: 'VOICE_AND_VIDEO'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_DEAFEN,
-            binds: W(V.EkH.TOGGLE_DEAFEN),
+            description: U.NW.string(U.t['QXe/7e']),
+            binds: H(M.EkH.TOGGLE_DEAFEN),
             group: 'VOICE_AND_VIDEO'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_ACCEPT,
-            binds: W(V.EkH.CALL_ACCEPT),
+            description: U.NW.string(U.t.d6UIio),
+            binds: H(M.EkH.CALL_ACCEPT),
             group: 'VOICE_AND_VIDEO'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_DECLINE,
-            binds: W(V.EkH.MARK_CHANNEL_READ),
+            description: U.NW.string(U.t.IcEW09),
+            binds: H(M.EkH.MARK_CHANNEL_READ),
             group: 'VOICE_AND_VIDEO'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_START,
-            binds: W(V.EkH.CALL_START),
+            description: U.NW.string(U.t.WN2dsb),
+            binds: H(M.EkH.CALL_START),
             group: 'VOICE_AND_VIDEO',
             groupEnd: !0
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_SOUNDBOARD,
-            binds: W(V.EkH.SEARCH_SOUNDBOARD),
+            description: U.NW.string(U.t.rUK0kp),
+            binds: H(M.EkH.SEARCH_SOUNDBOARD),
             group: 'VOICE_AND_VIDEO'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_HELP,
-            binds: W(V.EkH.TOGGLE_HELP),
+            description: U.NW.string(U.t.vkGkSk),
+            binds: H(M.EkH.TOGGLE_HELP),
             group: 'MISCELLANEOUS'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH,
-            binds: W(V.EkH.FOCUS_SEARCH),
+            description: U.NW.string(U.t['FJvZ8/']),
+            binds: H(M.EkH.FOCUS_SEARCH),
             group: 'MISCELLANEOUS'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG,
+            description: U.NW.string(U.t.HnNtEB),
             binds: ['h+h+right+n+k'],
             group: 'MISCELLANEOUS',
             groupEnd: !0
         },
         {
-            description: F.Z.Messages.EDIT_MESSAGE,
+            description: U.NW.string(U.t.fsBWmZ),
             binds: ['e'],
             group: 'MESSAGE'
         },
         {
-            description: F.Z.Messages.DELETE_MESSAGE,
+            description: U.NW.string(U.t.xwMqDw),
             binds: ['backspace'],
             group: 'MESSAGE'
         },
         {
-            description: F.Z.Messages.PIN_MESSAGE,
+            description: U.NW.string(U.t['CvQ18/']),
             binds: ['p'],
             group: 'MESSAGE'
         },
         {
-            description: F.Z.Messages.ADD_REACTION,
+            description: U.NW.string(U.t.lfIHs7),
             binds: ['plus'],
             group: 'MESSAGE'
         },
         {
-            description: F.Z.Messages.MESSAGE_ACTION_REPLY,
+            description: U.NW.string(U.t['5IEsGx']),
             binds: ['r'],
             group: 'MESSAGE'
         },
         {
-            description: F.Z.Messages.COPY_TEXT,
+            description: U.NW.string(U.t.JrGD7O),
             binds: ['mod+c'],
             group: 'MESSAGE'
         },
         {
-            description: F.Z.Messages.MARK_UNREAD,
+            description: U.NW.string(U.t.RpE9k5),
             binds: ['alt+enter'],
             group: 'MESSAGE'
         },
         {
-            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
+            description: U.NW.string(U.t.rrYBEh),
             binds: ['escape'],
             group: 'MESSAGE',
             groupEnd: !0
         },
         {
-            description: F.Z.Messages.USER_SETTINGS_KEYBIND_VIBE_WITH_WUMPUS_DESCRIPTION,
-            binds: W(V.EkH.VIBE_WITH_WUMPUS),
+            description: U.NW.string(U.t.z9c6mp),
+            binds: H(M.EkH.VIBE_WITH_WUMPUS),
             group: 'MISCELLANEOUS'
         }
     ];
+    (0, i.WT)({ location: 'keybinds' }, { autoTrackExposure: !1 }).canForwardMessages &&
+        e.push({
+            description: U.NW.string(U.t.zSyDdH),
+            binds: ['f'],
+            group: 'MESSAGE'
+        });
+    let { enabled: t, inInbox: n } = s.Z.getCurrentConfig({ location: 'keybinds' }, { autoTrackExposure: !1 });
     return (
-        (0, o.WT)({ location: 'keybinds' }, { autoTrackExposure: !1 }).canForwardMessages &&
+        t &&
+            !n &&
             e.push({
-                description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_FORWARD_MESSAGE,
-                binds: ['f'],
-                group: 'MESSAGE'
-            }),
-        r.Z.getCurrentConfig({ location: 'keybinds' }, { autoTrackExposure: !1 }).enabled &&
-            e.push({
-                description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_FOR_LATER,
-                binds: W(V.EkH.TOGGLE_FOR_LATER),
+                description: U.NW.string(U.t.IWNSoK),
+                binds: H(M.EkH.TOGGLE_FOR_LATER),
                 group: 'CHAT'
             }),
         e
     );
 }
-n.ZP = 12633 == t.j ? x : null;
+let K = 12633 == n.j ? z : null;

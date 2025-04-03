@@ -1,1 +1,1 @@
-e.exports = { tile: 'tile_f1e0c3' };
+e.exports = '/assets/a64d26006d97d530.svg';

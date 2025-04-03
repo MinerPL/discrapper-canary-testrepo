@@ -1,62 +1,30 @@
 n.d(t, {
-    $k: function () {
-        return s;
-    },
-    GQ: function () {
-        return c;
-    },
-    Hb: function () {
-        return d;
-    },
-    JD: function () {
-        return f;
-    },
-    MF: function () {
-        return m;
-    },
-    NY: function () {
-        return u;
-    },
-    Pw: function () {
-        return r;
-    },
-    Q0: function () {
-        return p;
-    },
-    Q1: function () {
-        return l;
-    },
-    QP: function () {
-        return a;
-    },
-    VE: function () {
-        return g;
-    },
-    Vf: function () {
-        return o;
-    },
-    cx: function () {
-        return h;
-    },
-    hl: function () {
-        return _;
-    },
-    yE: function () {
-        return i;
-    }
+    $k: () => a,
+    GQ: () => c,
+    Hb: () => d,
+    JD: () => f,
+    MF: () => m,
+    NY: () => u,
+    Pw: () => l,
+    Q0: () => h,
+    Q1: () => i,
+    QP: () => o,
+    VE: () => g,
+    Vf: () => s,
+    cx: () => p,
+    yE: () => r
 });
-let i = 8,
-    l = 32,
-    r = 40,
+let r = 8,
+    i = 32,
+    l = 40,
+    o = 12,
     a = 12,
-    s = 12,
-    o = 34,
+    s = 34,
     c = 41.5,
     u = 16,
     d = 32,
-    h = 8,
-    p = 84,
-    _ = 135,
+    p = 8,
+    h = 84,
     f = 16,
     g = 5,
     m = {

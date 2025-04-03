@@ -1,37 +1,40 @@
-var n = t(544891),
-    a = t(570140),
-    i = t(881052),
-    r = t(981631);
-let o = {
-    [r.gkr.HOUSE_1]: 1,
-    [r.gkr.HOUSE_2]: 2,
-    [r.gkr.HOUSE_3]: 3
-};
-s.Z = {
-    joinHypeSquadOnline: (e) =>
-        n.tn
-            .post({
-                url: r.ANM.HYPESQUAD_ONLINE,
-                body: { house_id: o[e.houseID] },
-                oldFormErrors: !0
-            })
-            .then(() =>
-                a.Z.dispatch({
-                    type: 'HYPESQUAD_ONLINE_MEMBERSHIP_JOIN_SUCCESS',
-                    houseID: e.houseID
+n.d(t, { Z: () => o });
+var r = n(544891),
+    i = n(570140),
+    s = n(881052),
+    a = n(981631);
+let l = {
+        [a.gkr.HOUSE_1]: 1,
+        [a.gkr.HOUSE_2]: 2,
+        [a.gkr.HOUSE_3]: 3
+    },
+    o = {
+        joinHypeSquadOnline: (e) =>
+            r.tn
+                .post({
+                    url: a.ANM.HYPESQUAD_ONLINE,
+                    body: { house_id: l[e.houseID] },
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
-            )
-            .catch((e) => {
-                throw new i.yZ(e);
-            }),
-    leaveHypeSquadOnline: () =>
-        n.tn
-            .del({
-                url: r.ANM.HYPESQUAD_ONLINE,
-                oldFormErrors: !0
-            })
-            .then(() => a.Z.dispatch({ type: 'HYPESQUAD_ONLINE_MEMBERSHIP_LEAVE_SUCCESS' }))
-            .catch((e) => {
-                throw new i.yZ(e);
-            })
-};
+                .then(() =>
+                    i.Z.dispatch({
+                        type: 'HYPESQUAD_ONLINE_MEMBERSHIP_JOIN_SUCCESS',
+                        houseID: e.houseID
+                    })
+                )
+                .catch((e) => {
+                    throw new s.yZ(e);
+                }),
+        leaveHypeSquadOnline: () =>
+            r.tn
+                .del({
+                    url: a.ANM.HYPESQUAD_ONLINE,
+                    oldFormErrors: !0,
+                    rejectWithError: !1
+                })
+                .then(() => i.Z.dispatch({ type: 'HYPESQUAD_ONLINE_MEMBERSHIP_LEAVE_SUCCESS' }))
+                .catch((e) => {
+                    throw new s.yZ(e);
+                })
+    };

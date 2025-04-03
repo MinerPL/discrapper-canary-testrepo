@@ -1,229 +1,281 @@
-I.d(_, {
-    Z: function () {
-        return m;
+n.d(t, { Z: () => D }), n(47120), n(773603);
+var i = n(200651),
+    a = n(192379),
+    l = n(392711),
+    r = n(442837),
+    o = n(481060),
+    s = n(640108),
+    c = n(406432),
+    d = n(169525),
+    u = n(786761),
+    m = n(499376),
+    p = n(3148),
+    h = n(739566),
+    f = n(492593),
+    g = n(219797),
+    y = n(524444),
+    x = n(884182),
+    j = n(25015),
+    v = n(963550),
+    b = n(845080),
+    O = n(367814),
+    E = n(594174),
+    _ = n(956664),
+    w = n(709054),
+    A = n(236289),
+    P = n(788080),
+    N = n(800530),
+    T = n(981631),
+    C = n(217702),
+    S = n(966378);
+function k(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i);
+            });
     }
-}),
-    I(47120),
-    I(773603);
-var A = I(735250),
-    O = I(470079),
-    T = I(392711),
-    S = I(442837),
-    C = I(481060),
-    N = I(640108),
-    D = I(406432),
-    R = I(169525),
-    e = I(786761),
-    V = I(3148),
-    P = I(492593),
-    i = I(219797),
-    n = I(524444),
-    t = I(884182),
-    L = I(546432),
-    a = I(25015),
-    l = I(963550),
-    s = I(845080),
-    o = I(594174),
-    M = I(956664),
-    r = I(709054),
-    U = I(788080),
-    Y = I(800530),
-    c = I(981631),
-    G = I(217702),
-    d = I(499712);
-let F = (E, _) => {
-        let I = E.attachments.map((E) => {
-            var I, A, O, T;
-            let S = {
-                ...E,
-                filename: (0, U.eS)(E),
+    return e;
+}
+function I(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let L = (e, t, n, i) => {
+        let a = e.attachments.map((e) => {
+            var n, i, a, l;
+            let r = I(k({}, e), {
+                filename: (0, P.eS)(e),
                 size: 0,
-                proxy_url: E.url
-            };
-            if (!((0, D.CO)(E.filename) || (0, D.NU)(E.filename))) return S;
-            return {
-                ...S,
-                width: null !== (O = null === (I = _[E.id]) || void 0 === I ? void 0 : I.width) && void 0 !== O ? O : Y.Sv,
-                height: null !== (T = null === (A = _[E.id]) || void 0 === A ? void 0 : A.height) && void 0 !== T ? T : Y.EY
-            };
+                proxy_url: e.url
+            });
+            return (0, c.CO)(e.filename) || (0, c.NU)(e.filename)
+                ? I(k({}, r), {
+                      width: null != (a = null == (n = t[e.id]) ? void 0 : n.width) ? a : N.Sv,
+                      height: null != (l = null == (i = t[e.id]) ? void 0 : i.height) ? l : N.EY
+                  })
+                : r;
         });
-        return (0, e.e5)({
-            ...(0, V.ZP)({
-                nonce: E.id,
-                content: E.content,
-                type: c.uaV.DEFAULT,
-                channelId: c.lds
-            }),
-            timestamp: new Date(r.default.extractTimestamp(E.id)).toISOString(),
-            attachments: I,
-            state: c.yb.SENT
-        });
-    },
-    u = (E) => {
-        let { message: _ } = E,
-            { attachments: I } = _;
-        if (0 === I.length) return null;
-        let O = (E, _, I) => {
-                let O = Y.Sv,
-                    S = Y.EY;
-                if (null != _.width && null != _.height) {
-                    let E = (0, M.Dc)({
-                        width: _.width,
-                        height: _.height,
-                        maxWidth: Y.Sv,
-                        maxHeight: Y.EY
-                    });
-                    (O = (0, T.clamp)(Math.round(_.width * E), 0, Y.Sv)), (S = (0, T.clamp)(Math.round(_.height * E), 0, Y.EY));
+        return (0, u.e5)(
+            I(
+                k(
+                    {},
+                    (0, p.ZP)({
+                        author:
+                            null != n
+                                ? n
+                                : {
+                                      id: '',
+                                      avatar: void 0,
+                                      discriminator: '0000',
+                                      username: i
+                                  },
+                        nonce: e.id,
+                        content: e.content,
+                        type: T.uaV.DEFAULT,
+                        channelId: T.lds
+                    })
+                ),
+                {
+                    timestamp: new Date(w.default.extractTimestamp(e.id)).toISOString(),
+                    attachments: a,
+                    state: T.yb.SENT
                 }
-                return (0, A.jsx)('div', {
+            )
+        );
+    },
+    U = (e) => {
+        let { message: t } = e,
+            { attachments: n } = t;
+        if (0 === n.length) return null;
+        let a = (e, t, n) => {
+                let a = N.Sv,
+                    r = N.EY;
+                if (null != t.width && null != t.height) {
+                    let e = (0, _.Dc)({
+                        width: t.width,
+                        height: t.height,
+                        maxWidth: N.Sv,
+                        maxHeight: N.EY
+                    });
+                    (a = (0, l.clamp)(Math.round(t.width * e), 0, N.Sv)), (r = (0, l.clamp)(Math.round(t.height * e), 0, N.EY));
+                }
+                return (0, i.jsx)('div', {
                     style: {
-                        width: I ? O : '100%',
-                        height: I ? S : '100%'
+                        width: n ? a : '100%',
+                        height: n ? r : '100%'
                     },
-                    children: (0, A.jsx)(N.ZP, {
-                        className: E.className,
+                    children: (0, i.jsx)(s.ZP, {
+                        className: e.className,
                         forceExternal: !1,
-                        src: _.url,
-                        width: I ? O : '100%',
-                        height: I ? S : '100%',
+                        src: t.url,
+                        width: n ? a : '100%',
+                        height: n ? r : '100%',
                         responsive: !0,
-                        volume: E.volume,
+                        volume: e.volume,
                         autoPlay: !1,
                         autoMute: !1,
-                        type: N.ZP.Types.VIDEO,
-                        mediaLayoutType: E.mediaLayoutType,
-                        fileName: _.filename,
-                        fileSize: null == _.size ? void 0 : _.size.toString(),
+                        type: s.ZP.Types.VIDEO,
+                        mediaLayoutType: e.mediaLayoutType,
+                        fileName: t.filename,
+                        fileSize: null == t.size ? void 0 : t.size.toString(),
                         playable: !0,
-                        renderLinkComponent: n.iT,
-                        onClick: E.onClick,
-                        onPlay: E.onPlay,
-                        onEnded: E.onEnded,
-                        onVolumeChange: E.onVolumeChange,
-                        onMute: E.onMute,
+                        renderLinkComponent: y.iT,
+                        onClick: e.onClick,
+                        onPlay: e.onPlay,
+                        onEnded: e.onEnded,
+                        onVolumeChange: e.onVolumeChange,
+                        onMute: e.onMute,
                         downloadable: !1
                     })
                 });
             },
-            S = 1 === I.length;
-        function C(E, _) {
-            return (0, R.dn)(E.originalItem, _);
+            r = 1 === n.length;
+        function o(e, t) {
+            return (0, d.dn)(e.originalItem, t);
         }
-        return (0, A.jsx)('div', {
-            className: d.classificationEvidenceMessageAttachment,
-            children: (0, A.jsx)(t.Z, {
-                items: I.map((E) => ({
+        return (0, i.jsx)('div', {
+            className: S.classificationEvidenceMessageAttachment,
+            children: (0, i.jsx)(x.Z, {
+                items: n.map((e) => ({
                     item: {
-                        uniqueId: E.id,
-                        originalItem: E,
-                        type: (0, L.aw)(E, !0),
-                        downloadUrl: E.proxy_url,
-                        height: E.height,
-                        width: E.width,
-                        spoiler: E.spoiler,
-                        contentType: E.content_type
+                        uniqueId: e.id,
+                        originalItem: e,
+                        type: (0, m.aw)(e, !0),
+                        downloadUrl: e.proxy_url,
+                        height: e.height,
+                        width: e.width,
+                        spoiler: e.spoiler,
+                        contentType: e.content_type
                     },
-                    message: _,
-                    mediaLayoutType: G.hV.MOSAIC,
+                    message: t,
+                    mediaLayoutType: C.hV.MOSAIC,
                     autoPlayGif: !1,
                     canRemoveItem: !1,
-                    isSingleMosaicItem: S,
-                    onRemoveItem: T.noop,
-                    renderVideoComponent: (_) => O(_, E, S),
-                    renderImageComponent: (E) =>
-                        (0, A.jsx)(i.dS, {
-                            ...E,
-                            hiddenSpoilers: !0,
-                            shouldHideMediaOptions: !0,
-                            shouldLink: !1
-                        }),
-                    renderAudioComponent: i.q7,
-                    renderPlaintextFilePreview: i.d4,
-                    renderGenericFileComponent: i.ZK,
-                    renderMosaicItemFooter: i.L9,
-                    getObscureReason: C,
+                    isSingleMosaicItem: r,
+                    onRemoveItem: l.noop,
+                    renderVideoComponent: (t) => a(t, e, r),
+                    renderImageComponent: (e) =>
+                        (0, i.jsx)(
+                            g.dS,
+                            I(k({}, e), {
+                                hiddenSpoilers: !0,
+                                shouldHideMediaOptions: !0,
+                                shouldLink: !1
+                            })
+                        ),
+                    renderAudioComponent: g.q7,
+                    renderPlaintextFilePreview: g.d4,
+                    renderGenericFileComponent: g.ZK,
+                    renderMosaicItemFooter: g.L9,
+                    getObscureReason: o,
                     gifFavoriteButton: () => null
                 }))
             })
         });
     };
-function m(E) {
-    var _;
-    let { flaggedContent: I } = E,
-        T = (0, S.e7)([o.default], () => o.default.getCurrentUser()),
-        [N, R] = O.useState({}),
-        [e, V] = O.useState(!0),
-        i = I[0],
-        n = F(i, N),
-        t = (0, a.Z)(n, {
+function D(e) {
+    var t, n;
+    let { flaggedContent: l } = e,
+        s = (0, r.e7)([E.default], () => E.default.getCurrentUser()),
+        [d, u] = a.useState({}),
+        [m, p] = a.useState(!0),
+        g = (0, r.e7)([A.Z], () => A.Z.getUsername()),
+        y = l[0],
+        x = L(y, d, s, g),
+        _ = (0, h.ZP)(x),
+        w = null != (t = x.getGuildId()) ? t : void 0,
+        P = (0, O.Z)(_),
+        N = (0, j.Z)(x, {
             hideSimpleEmbedContent: !1,
             allowList: !1,
             allowHeading: !1,
             allowLinks: !1,
             previewLinkTarget: !1
         });
-    return (O.useEffect(() => {
+    return (a.useEffect(() => {
         Promise.all(
-            i.attachments
-                .filter((E) => {
-                    let { filename: _ } = E;
-                    return (0, D.CO)(_) || (0, D.NU)(_);
+            y.attachments
+                .filter((e) => {
+                    let { filename: t } = e;
+                    return (0, c.CO)(t) || (0, c.NU)(t);
                 })
-                .map((E) => {
-                    var _;
-                    return ((_ = E),
-                    new Promise((E, I) => {
-                        if ((0, D.CO)(_.filename)) {
-                            let A = new Image();
-                            (A.src = _.url),
-                                (A.onload = () => {
-                                    E(A);
+                .map((e) =>
+                    new Promise((t, n) => {
+                        if ((0, c.CO)(e.filename)) {
+                            let i = new Image();
+                            (i.src = e.url),
+                                (i.onload = () => {
+                                    t(i);
                                 }),
-                                (A.onerror = () => {
-                                    I();
+                                (i.onerror = () => {
+                                    n();
                                 });
-                        } else if ((0, D.NU)(_.filename)) {
-                            let A = document.createElement('video');
-                            (A.src = _.url),
-                                (A.onloadedmetadata = () => {
-                                    let _ = A.videoWidth;
-                                    E({
-                                        width: _,
-                                        height: A.videoHeight
+                        } else if ((0, c.NU)(e.filename)) {
+                            let i = document.createElement('video');
+                            (i.src = e.url),
+                                (i.onloadedmetadata = () => {
+                                    t({
+                                        width: i.videoWidth,
+                                        height: i.videoHeight
                                     });
                                 }),
-                                (A.onerror = () => {
-                                    I();
+                                (i.onerror = () => {
+                                    n();
                                 });
                         } else
-                            E({
+                            t({
                                 width: 0,
                                 height: 0
                             });
-                    })).then((_) =>
-                        R((I) => ({
-                            ...I,
-                            [E.id]: _
-                        }))
-                    );
-                })
-        ).finally(() => V(!1));
-    }, [i.attachments]),
-    '' === n.content && 0 === n.attachments.length)
+                    }).then((t) => u((n) => I(k({}, n), { [e.id]: t })))
+                )
+        ).finally(() => p(!1));
+    }, [y.attachments]),
+    '' === x.content && 0 === x.attachments.length)
         ? null
-        : (0, A.jsx)('div', {
-              className: d.classificationEvidenceCard,
-              children: e
-                  ? (0, A.jsx)(C.Spinner, {})
-                  : (0, A.jsx)(P.Z, {
+        : (0, i.jsx)('div', {
+              className: S.classificationEvidenceCard,
+              children: m
+                  ? (0, i.jsx)(o.$jN, {})
+                  : (0, i.jsx)(f.Z, {
                         compact: !1,
-                        childrenHeader: (0, s.Z)({
-                            author: {
-                                ...T,
+                        childrenHeader: (0, b.Z)({
+                            author: I(k({}, s), {
                                 colorString: '',
-                                nick: null !== (_ = null == T ? void 0 : T.username) && void 0 !== _ ? _ : ''
-                            },
-                            message: n,
+                                nick: null != (n = null == s ? void 0 : s.username) ? n : g
+                            }),
+                            message: x,
                             channel: void 0,
                             guildId: void 0,
                             compact: !1,
@@ -232,10 +284,12 @@ function m(E) {
                             roleIcon: void 0,
                             hideTimestamp: !1
                         }),
-                        childrenAccessories: (0, A.jsx)(u, { message: n }),
-                        childrenMessageContent: (0, l.Z)({ message: n }, t.content),
+                        childrenAccessories: (0, i.jsx)(U, { message: x }),
+                        childrenMessageContent: (0, v.Z)({ message: x }, N.content),
                         hasThread: !1,
-                        hasReply: !1
+                        hasReply: !1,
+                        authorHasGradientRole: P,
+                        guildId: w
                     })
           });
 }

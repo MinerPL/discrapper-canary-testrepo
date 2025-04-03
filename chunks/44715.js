@@ -1,31 +1,27 @@
 n.d(t, {
-    Qu: function () {
-        return s;
-    },
-    W2: function () {
-        return a;
-    }
+    Qu: () => a,
+    W2: () => o
 });
 var r = n(327999);
 let i = {};
-function a(e) {
+function o(e) {
     return null == i[e] && (i[e] = {}), i[e];
 }
-function s(e, t) {
+function a(e, t) {
     if (0 === t.length) return !1;
-    let n = a(e);
+    let n = o(e);
     return (
         t.forEach((e) => {
-            var t, i, a, s, o, l, u, c;
+            var t, i, o, a, s, l, c, u;
             let d = n[e.userId],
-                _ = null !== (i = null !== (t = e.joinSourceType) && void 0 !== t ? t : null == d ? void 0 : d.joinSourceType) && void 0 !== i ? i : null;
-            (null == _ || _ === r.gq.UNSPECIFIED) && null != e.sourceInviteCode && (_ = r.gq.INVITE),
+                f = null != (i = null != (t = e.joinSourceType) ? t : null == d ? void 0 : d.joinSourceType) ? i : null;
+            (null == f || f === r.gq.UNSPECIFIED) && null != e.sourceInviteCode && (f = r.gq.INVITE),
                 (n[e.userId] = {
                     userId: e.userId,
-                    sourceInviteCode: null !== (s = null !== (a = e.sourceInviteCode) && void 0 !== a ? a : null == d ? void 0 : d.sourceInviteCode) && void 0 !== s ? s : null,
-                    joinSourceType: _,
-                    inviterId: null !== (l = null !== (o = e.inviterId) && void 0 !== o ? o : null == d ? void 0 : d.inviterId) && void 0 !== l ? l : null,
-                    integrationType: null !== (c = null !== (u = e.integrationType) && void 0 !== u ? u : null == d ? void 0 : d.integrationType) && void 0 !== c ? c : null
+                    sourceInviteCode: null != (a = null != (o = e.sourceInviteCode) ? o : null == d ? void 0 : d.sourceInviteCode) ? a : null,
+                    joinSourceType: f,
+                    inviterId: null != (l = null != (s = e.inviterId) ? s : null == d ? void 0 : d.inviterId) ? l : null,
+                    integrationType: null != (u = null != (c = e.integrationType) ? c : null == d ? void 0 : d.integrationType) ? u : null
                 });
         }),
         !0

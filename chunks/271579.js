@@ -1,15 +1,13 @@
 n.d(t, {
-    WS: function () {
-        return l;
-    },
-    ZP: function () {
-        return c;
-    },
-    zS: function () {
-        return u;
-    }
+    WS: () => p,
+    ZP: () => m,
+    zS: () => h
 }),
+    n(474991),
+    n(398202),
+    n(301563),
     n(315314),
+    n(309749),
     n(610138),
     n(216116),
     n(78328),
@@ -17,48 +15,72 @@ n.d(t, {
     n(47120);
 var r = n(264344),
     i = n.n(r),
-    a = n(772848),
-    s = n(511266);
-let o = 'https://discordapp.page.link';
-function l() {
-    return (0, a.Z)();
+    o = n(772848),
+    a = n(511266);
+function s(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = l(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
 }
-function u(e) {
-    if (!e.startsWith(o)) return null;
+function l(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let c = 'com.discord',
+    u = 985746746,
+    d = 'com.hammerandchisel.discord',
+    f = 'https://discordapp.page.link';
+function _() {
+    var e, t;
+    let n = ['WebView', '(iPhone|iPod|iPad)(?!.*Safari/)'],
+        r = RegExp('('.concat(n.join('|'), ')'), 'ig'),
+        o = (null === i() || void 0 === i() || null == (e = i().ua) ? void 0 : e.match(r)) != null,
+        a = (null === i() || void 0 === i() ? void 0 : i().name) === 'Safari' && !o;
+    return (null === i() || void 0 === i() || null == (t = i().os) ? void 0 : t.family) !== 'iOS' || a;
+}
+function p() {
+    return (0, o.Z)();
+}
+function h(e) {
+    if (!e.startsWith(f)) return null;
     try {
         var t;
         let n = new URL(e).searchParams,
             r = n.get('link');
         if (null == r) return null;
         let i = decodeURIComponent(r),
-            a = new URL(i).searchParams,
-            s = { utmSource: null !== (t = n.get('utm_source')) && void 0 !== t ? t : void 0 };
-        for (let [e, t] of a.entries()) s[e] = t;
-        return s;
-    } catch {
+            o = new URL(i).searchParams,
+            a = { utmSource: null != (t = n.get('utm_source')) ? t : void 0 };
+        for (let [e, t] of o.entries()) a[e] = t;
+        return a;
+    } catch (e) {
         return null;
     }
 }
-function c(e, t) {
-    let { utmSource: n, androidFallbackLink: r, iosFallbackLink: a, ...l } = t,
-        u = new URL(e);
-    for (let e in l) {
-        let t = l[e];
-        null != t && u.searchParams.set(e, t);
+function m(e, t) {
+    let { utmSource: n, androidFallbackLink: r, iosFallbackLink: i } = t,
+        o = s(t, ['utmSource', 'androidFallbackLink', 'iosFallbackLink']),
+        l = new URL(e);
+    for (let e in o) {
+        let t = o[e];
+        null != t && l.searchParams.set(e, t);
     }
-    let c = encodeURIComponent(u.toString()),
-        d = encodeURIComponent((0, s.Z)()),
-        _ = !(function () {
-            var e, t;
-            let n = RegExp('('.concat('WebView|(iPhone|iPod|iPad)(?!.*Safari/)', ')'), 'ig'),
-                r = (null === i() || void 0 === i() ? void 0 : null === (e = i().ua) || void 0 === e ? void 0 : e.match(n)) != null,
-                a = (null === i() || void 0 === i() ? void 0 : i().name) === 'Safari' && !r;
-            return (null === i() || void 0 === i() ? void 0 : null === (t = i().os) || void 0 === t ? void 0 : t.family) !== 'iOS' || a;
-        })()
-            ? 0
-            : 1,
-        E = null != r ? encodeURIComponent(r) : null,
-        f = null != a ? encodeURIComponent(a) : null,
-        h = ''.concat(o, '/?link=').concat(c, '&utm_source=').concat(n, '&apn=').concat('com.discord', '&isi=').concat(985746746, '&ibi=').concat('com.hammerandchisel.discord', '&sd=').concat(d, '&efr=').concat(_);
-    return null != E && (h += '&afl='.concat(E)), null != f && (h += '&ifl='.concat(f)), h;
+    let p = encodeURIComponent(l.toString()),
+        h = encodeURIComponent((0, a.Z)()),
+        m = +!!_(),
+        g = null != r ? encodeURIComponent(r) : null,
+        E = null != i ? encodeURIComponent(i) : null,
+        b = ''.concat(f, '/?link=').concat(p, '&utm_source=').concat(n, '&apn=').concat(c, '&isi=').concat(u, '&ibi=').concat(d, '&sd=').concat(h, '&efr=').concat(m);
+    return null != g && (b += '&afl='.concat(g)), null != E && (b += '&ifl='.concat(E)), b;
 }

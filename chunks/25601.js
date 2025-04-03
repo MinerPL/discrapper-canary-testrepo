@@ -1,21 +1,17 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
-var i = n(735250);
-n(470079);
-var l = n(831209),
-    r = n(481060),
-    a = n(731408);
-function s(e) {
-    let { mentionsCount: t } = e;
-    return (0, i.jsx)('div', {
-        className: a.mentionsBadge,
+n.d(t, { Z: () => a });
+var r = n(200651);
+n(192379);
+var i = n(831209),
+    l = n(481060),
+    o = n(646094);
+function a(e) {
+    let { mentionsCount: t, isMentionLowImportance: n } = e;
+    return (0, r.jsx)('div', {
+        className: o.mentionsBadge,
         'aria-hidden': !0,
-        children: (0, i.jsx)(r.NumberBadge, {
+        children: (0, r.jsx)(l.mAB, {
             count: t,
-            color: l.Z.STATUS_DANGER
+            color: n ? i.Z.BACKGROUND_ACCENT : i.Z.STATUS_DANGER
         })
     });
 }

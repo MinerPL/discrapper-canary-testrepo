@@ -1,27 +1,14 @@
 n.d(t, {
-    IF: function () {
-        return c;
-    },
-    LU: function () {
-        return l;
-    },
-    Rt: function () {
-        return _;
-    },
-    hW: function () {
-        return u;
-    },
-    t3: function () {
-        return d;
-    }
+    IF: () => _,
+    LU: () => c,
+    Rt: () => h,
+    hW: () => u,
+    t3: () => p
 }),
-    n(724458),
     n(653041),
     n(47120);
-var r,
-    i,
-    a = n(271383),
-    s = n(588215);
+var r = n(271383),
+    i = n(588215);
 function o(e, t, n) {
     return (
         t in e
@@ -35,28 +22,68 @@ function o(e, t, n) {
         e
     );
 }
-let l = [12, 25, 50, 100],
-    u = 7;
-function c() {
+function a(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function s(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function l(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : s(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let c = [12, 25, 50, 100],
+    u = 7,
+    d = 5,
+    f = 250;
+function _() {
     return {
-        pageSize: l[0],
+        pageSize: c[0],
         currentPage: 1,
         continuationToken: null,
-        sort: s.d$.ORDER_BY_UNSPECIFIED,
+        sort: i.d$.ORDER_BY_UNSPECIFIED,
         elasticSearchCursor: null
     };
 }
-function d(e) {
-    return Math.max(5 * e.pageSize, 250);
+function p(e) {
+    return Math.max(e.pageSize * d, f);
 }
-((i = r || (r = {}))[(i.FORWARD = 1)] = 'FORWARD'), (i[(i.BACKWARD = -1)] = 'BACKWARD');
-class _ {
+class h {
     reset() {
-        (this._paginationState = c()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
+        (this._paginationState = _()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
     }
     isMemberOnCurrentPage(e) {
         var t;
-        return (null !== (t = this._cachedPaginationChunks[this._paginationState.currentPage]) && void 0 !== t ? t : []).includes(e);
+        return (null != (t = this._cachedPaginationChunks[this._paginationState.currentPage]) ? t : []).includes(e);
     }
     isMemberInAnyChunk(e) {
         return this._sortedMemberIds.includes(e);
@@ -76,14 +103,7 @@ class _ {
         return this._paginationState;
     }
     updatePaginationToken(e) {
-        return (
-            e !== this._paginationState.continuationToken &&
-            ((this._paginationState = {
-                ...this._paginationState,
-                continuationToken: e
-            }),
-            !0)
-        );
+        return e !== this._paginationState.continuationToken && ((this._paginationState = l(a({}, this._paginationState), { continuationToken: e })), !0);
     }
     _calculateNewPageFromPageSizeChange(e, t) {
         let { currentPage: n, pageSize: r } = this._paginationState;
@@ -93,16 +113,9 @@ class _ {
         let t = !1;
         if (null != e.pageSize && e.pageSize !== this._paginationState.pageSize) {
             var n;
-            (t = !0), (e.currentPage = this._calculateNewPageFromPageSizeChange(null !== (n = e.pageSize) && void 0 !== n ? n : this._paginationState.pageSize, e.currentPage));
+            (t = !0), (e.currentPage = this._calculateNewPageFromPageSizeChange(null != (n = e.pageSize) ? n : this._paginationState.pageSize, e.currentPage));
         }
-        return (
-            (this._paginationState = {
-                ...this._paginationState,
-                ...e
-            }),
-            t && this._rebuildPaginationChunksFromStoredMembers(),
-            [!0, t]
-        );
+        return (this._paginationState = a({}, this._paginationState, e)), t && this._rebuildPaginationChunksFromStoredMembers(), [!0, t];
     }
     updateSortedMembers(e) {
         let [t, n] = this._initPaginationFromRawMembers(e);
@@ -115,12 +128,10 @@ class _ {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
             n = e;
         n < this._sortedMemberIds.length && (n = this._sortedMemberIds.length - 1), n < 0 && (n = 0);
-        let r = this._sortedMemberIds[e],
-            i = a.ZP.getMember(this.guildId, r);
-        for (; null == i && !((e += t) < 0) && !(e >= this._sortedMemberIds.length); ) {
-            (r = this._sortedMemberIds[e]), (null == (i = a.ZP.getMember(this.guildId, r)) ? void 0 : i.joinedAt) == null && (i = null);
-        }
-        return i;
+        let i = this._sortedMemberIds[e],
+            o = r.ZP.getMember(this.guildId, i);
+        for (; null == o && !((e += t) < 0) && !(e >= this._sortedMemberIds.length); ) (i = this._sortedMemberIds[e]), (null == (o = r.ZP.getMember(this.guildId, i)) ? void 0 : o.joinedAt) == null && (o = null);
+        return o;
     }
     getElasticSearchPagination() {
         return this.getPaginationState().elasticSearchCursor;
@@ -142,7 +153,7 @@ class _ {
                 return null == e[r] && (e[r] = []), e[r].push(t), e;
             }),
             (this.guildId = e),
-            (this._paginationState = c()),
+            (this._paginationState = _()),
             (this._version = 0);
         let [n, r] = this._initPaginationFromRawMembers(t);
         (this._sortedMemberIds = n), (this._cachedPaginationChunks = r), (this._version += 1);

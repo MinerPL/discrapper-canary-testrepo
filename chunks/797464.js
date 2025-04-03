@@ -1,94 +1,88 @@
-o.r(t),
-    o.d(t, {
-        default: function () {
-            return u;
-        }
-    }),
-    o(47120);
-var s = o(735250),
-    a = o(470079),
-    n = o(120356),
-    l = o.n(n),
-    i = o(481060),
-    c = o(313201),
-    d = o(689938),
-    r = o(232629);
-function u(e) {
-    let { transitionState: t, onConfirm: o, onClose: n, onDismiss: u } = e,
-        [S, _] = a.useState(!1),
-        [M, E] = a.useState(!0),
-        [h, m] = a.useState(!0),
-        g = (0, c.Dt)(),
-        A = () => {
-            u(), n();
+a.d(e, { default: () => u }), a(47120);
+var n = a(200651),
+    o = a(192379),
+    s = a(120356),
+    l = a.n(s),
+    i = a(481060),
+    r = a(313201),
+    d = a(388032),
+    c = a(957684);
+function u(t) {
+    let { transitionState: e, onConfirm: a, onClose: s, onDismiss: u } = t,
+        [m, h] = o.useState(!1),
+        [g, x] = o.useState(!0),
+        [N, b] = o.useState(!0),
+        p = (0, r.Dt)(),
+        C = () => {
+            u(), s();
         };
-    return (0, s.jsxs)(i.ModalRoot, {
-        transitionState: t,
-        'aria-labelledby': g,
-        size: i.ModalSize.SMALL,
+    return (0, n.jsxs)(i.Y0X, {
+        transitionState: e,
+        'aria-labelledby': p,
+        size: i.CgR.SMALL,
         children: [
-            (0, s.jsxs)(i.ModalContent, {
-                className: r.modalContent,
+            (0, n.jsxs)(i.hzk, {
+                className: c.modalContent,
                 children: [
-                    (0, s.jsx)(i.ModalCloseButton, {
-                        onClick: A,
-                        className: r.closeButton
+                    (0, n.jsx)(i.olH, {
+                        onClick: C,
+                        className: c.closeButton
                     }),
-                    (0, s.jsx)(i.Heading, {
-                        id: g,
+                    (0, n.jsx)(i.X6q, {
+                        id: p,
                         variant: 'heading-lg/extrabold',
                         color: 'header-primary',
-                        className: r.__invalid_modalTitle,
-                        children: d.Z.Messages.MESSAGE_REQUESTS_SPAM_HAM_MODAL_HEADER
+                        className: c.__invalid_modalTitle,
+                        children: d.NW.string(d.t['6rP+BQ'])
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, n.jsx)(i.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: r.modalBody,
-                        children: d.Z.Messages.MESSAGE_REQUESTS_SPAM_HAM_MODAL_SUBHEADER
+                        className: c.modalBody,
+                        children: d.NW.string(d.t['1LuCnZ'])
                     }),
-                    (0, s.jsx)(i.FormSwitch, {
+                    (0, n.jsx)(i.j7V, {
                         hideBorder: !0,
-                        onChange: (e) => {
-                            E(e);
+                        onChange: (t) => {
+                            x(t);
                         },
-                        className: l()(r.modalBody, r.toggle),
-                        value: M,
-                        children: d.Z.Messages.MESSAGE_REQUESTS_SPAM_HAM_TOGGLE
+                        className: l()(c.modalBody, c.toggle),
+                        value: g,
+                        children: d.NW.string(d.t['zLb+u7'])
                     })
                 ]
             }),
-            (0, s.jsxs)(i.ModalFooter, {
+            (0, n.jsxs)(i.mzw, {
                 children: [
-                    (0, s.jsx)(i.Button, {
+                    (0, n.jsx)(i.zxk, {
                         type: 'submit',
-                        color: i.Button.Colors.BRAND,
+                        color: i.zxk.Colors.BRAND,
                         onClick: () => {
-                            if (!S) _(!0), o(M, h), _(!1), n();
+                            m || (h(!0), a(g, N), h(!1), s());
                         },
-                        submitting: S,
-                        children: d.Z.Messages.CONFIRM
+                        submitting: m,
+                        children: d.NW.string(d.t['cY+Ooa'])
                     }),
-                    (0, s.jsx)(i.Button, {
+                    (0, n.jsx)(i.zxk, {
                         type: 'submit',
-                        color: i.Button.Colors.TRANSPARENT,
+                        color: i.zxk.Colors.TRANSPARENT,
                         grow: !0,
-                        look: i.ButtonLooks.LINK,
-                        onClick: A,
-                        submitting: S,
-                        className: r.cancelButton,
-                        children: d.Z.Messages.CANCEL
+                        look: i.iLD.LINK,
+                        onClick: C,
+                        submitting: m,
+                        className: c.cancelButton,
+                        children: d.NW.string(d.t['ETE/oK'])
                     }),
-                    (0, s.jsx)(i.Checkbox, {
-                        value: h,
-                        type: i.Checkbox.Types.INVERTED,
-                        onChange: (e, t) => {
-                            m(t);
+                    (0, n.jsx)(i.XZJ, {
+                        value: N,
+                        type: i.XZJ.Types.INVERTED,
+                        onChange: (t, e) => {
+                            b(e);
                         },
-                        children: (0, s.jsx)(i.Text, {
+                        children: (0, n.jsx)(i.Text, {
                             tag: 'span',
                             variant: 'text-sm/normal',
-                            children: d.Z.Messages.MESSAGE_REQUESTS_SPAM_HAM_OPT_OUT
+                            children: d.NW.string(d.t.KX8WJi)
                         })
                     })
                 ]

@@ -1,10 +1,6 @@
-o.d(e, {
-    P: function () {
-        return n;
-    }
-});
-var a = o(481060),
-    s = o(689938);
-function n() {
-    (0, a.showToast)((0, a.createToast)(s.Z.Messages.USER_SETTINGS_UPDATE_FAILURE, a.ToastType.FAILURE));
+n.d(t, { P: () => s });
+var r = n(481060),
+    i = n(388032);
+function s() {
+    (0, r.showToast)((0, r.createToast)(i.NW.string(i.t['TGg/2t']), r.ToastType.FAILURE));
 }

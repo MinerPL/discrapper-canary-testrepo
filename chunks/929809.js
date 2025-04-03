@@ -1,20 +1,16 @@
-n.d(e, {
-    H: function () {
-        return l;
-    },
-    c: function () {
-        return i;
-    }
+n.d(t, {
+    H: () => o,
+    c: () => i
 });
 var r = n(570140);
-function i(t) {
+function i(e) {
     r.Z.wait(() =>
         r.Z.dispatch({
             type: 'NUF_NEW_USER',
-            newUserType: t
+            newUserType: e
         })
     );
 }
-function l() {
+function o() {
     r.Z.wait(() => r.Z.dispatch({ type: 'NUF_COMPLETE' }));
 }

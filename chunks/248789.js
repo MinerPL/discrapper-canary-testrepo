@@ -1,119 +1,150 @@
-n.d(t, {
-    Y: function () {
-        return f;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(286379),
-    l = n(442837),
-    r = n(481060),
-    o = n(797614),
+n.d(t, { Y: () => _ }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(286379),
+    o = n(442837),
+    a = n(481060),
+    s = n(797614),
     c = n(699516),
     u = n(378298),
     d = n(359119),
-    h = n(473092),
-    m = n(177342),
-    p = n(134612),
-    _ = n(689938);
-function f(e) {
-    let { channelId: t, warningId: f, senderId: E } = e,
-        g = a.useCallback(() => {
-            (0, u.T)(t, [f]);
-        }, [t, f]),
-        C = (0, l.e7)([c.Z], () => c.Z.isBlocked(E)),
-        I = a.useMemo(
+    p = n(473092),
+    h = n(177342),
+    f = n(134612),
+    m = n(388032);
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function _(e) {
+    let { channelId: t, warningId: _, senderId: C } = e,
+        y = i.useCallback(() => {
+            (0, u.T)(t, [_]);
+        }, [t, _]),
+        x = (0, o.e7)([c.Z], () => c.Z.isBlocked(C)),
+        v = i.useMemo(
             () => ({
                 channelId: t,
-                warningId: f,
-                senderId: E,
+                warningId: _,
+                senderId: C,
                 warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2
             }),
-            [t, f, E]
+            [t, _, C]
         );
-    a.useEffect(() => {
-        (0, h.KQ)({
-            ...I,
-            viewName: h.pb.SAFETY_WARNING_BANNER
-        }),
-            o.Z.increment({ name: s.V.SAFETY_WARNING_VIEW });
-    }, [I]);
-    let x = a.useCallback(
+    i.useEffect(() => {
+        (0, p.KQ)(b(g({}, v), { viewName: p.pb.SAFETY_WARNING_BANNER })), s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
+    }, [v]);
+    let j = i.useCallback(
             (e) => {
-                (0, h.qc)({
-                    ...I,
-                    cta: e
-                });
+                (0, p.qc)(b(g({}, v), { cta: e }));
             },
-            [I]
+            [v]
         ),
-        T = a.useCallback(() => {
-            (0, r.openModalLazy)(
+        O = i.useCallback(() => {
+            (0, a.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('37229'), n.e('89650')]).then(n.bind(n, 611446));
+                    let { default: e } = await Promise.all([n.e('49508'), n.e('89650')]).then(n.bind(n, 611446));
                     return (n) => {
-                        let { transitionState: a, onClose: s } = n;
-                        return (0, i.jsx)(e, {
-                            otherUserId: E,
+                        let { transitionState: i, onClose: l } = n;
+                        return (0, r.jsx)(e, {
+                            otherUserId: C,
                             channelId: t,
-                            warningId: f,
+                            warningId: _,
                             warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-                            transitionState: a,
-                            onClose: s
+                            transitionState: i,
+                            onClose: l
                         });
                     };
                 },
-                { modalKey: p.X_ }
+                { modalKey: f.X_ }
             ),
-                x(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
-        }, [t, E, f, x]),
-        N = a.useCallback(() => {
-            g(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
-        }, [g, x]),
-        v = a.useCallback(() => {
-            g(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
-        }, [g, x]),
-        S = a.useCallback(() => {
-            (0, r.openModalLazy)(async () => {
+                j(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
+        }, [t, C, _, j]),
+        E = i.useCallback(() => {
+            y(), j(p.NM.USER_BANNER_BLOCK_CONFIRM);
+        }, [y, j]),
+        N = i.useCallback(() => {
+            y(), j(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+        }, [y, j]),
+        I = i.useCallback(() => {
+            (0, a.ZDy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
                 return (n) => {
-                    let { transitionState: a, onClose: s } = n;
-                    return (0, i.jsx)(e, {
-                        transitionState: a,
-                        onBlock: N,
-                        onBlockAndReport: v,
+                    let { transitionState: i, onClose: l } = n;
+                    return (0, r.jsx)(e, {
+                        transitionState: i,
+                        onBlock: E,
+                        onBlockAndReport: N,
                         onCancel: () => {
-                            null == s || s(), x(h.NM.USER_BANNER_BLOCK_CANCEL);
+                            null == l || l(), j(p.NM.USER_BANNER_BLOCK_CANCEL);
                         },
-                        onClose: s,
-                        userId: E,
+                        onClose: l,
+                        userId: C,
                         channelId: t
                     });
                 };
             });
-        }, [N, v, E, t, x]);
-    return (0, i.jsx)(m.Q, {
+        }, [E, N, C, t, j]);
+    return (0, r.jsx)(h.Q, {
         channelId: t,
-        warningId: f,
-        senderId: E,
+        warningId: _,
+        senderId: C,
         warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-        header: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
-        description: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
-        onDismiss: g,
+        header: m.NW.string(m.t.ZzlB5u),
+        description: m.NW.string(m.t['D1aU+v']),
+        onDismiss: y,
         buttons: [
             {
-                text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
-                color: r.Button.Colors.BRAND,
-                onclick: T
+                text: m.NW.string(m.t.Qyu4UF),
+                color: a.zxk.Colors.BRAND,
+                onclick: O
             },
-            ...(C
+            ...(x
                 ? []
                 : [
                       {
-                          text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
-                          color: r.Button.Colors.PRIMARY,
-                          onclick: S
+                          text: m.NW.string(m.t['7q0bNT']),
+                          color: a.zxk.Colors.PRIMARY,
+                          onclick: I
                       }
                   ])
         ]

@@ -1,34 +1,30 @@
-t.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var s = t(442837),
-    i = t(496675),
-    a = t(981631);
+n.d(t, { Z: () => l });
+var i = n(442837),
+    r = n(496675),
+    s = n(981631);
 function l(e) {
     let {
-        canManageGuild: n,
-        canManageRoles: t,
+        canManageGuild: t,
+        canManageRoles: n,
         canBanMembers: l,
-        canManageNicknames: u,
+        canManageNicknames: a,
         canCreateEmojisAndStickers: o,
-        canManageEmojisAndStickers: r,
-        canManageWebhooks: d,
-        canViewAuditLog: c
-    } = (0, s.cj)(
-        [i.Z],
+        canManageEmojisAndStickers: c,
+        canManageWebhooks: u,
+        canViewAuditLog: d
+    } = (0, i.cj)(
+        [r.Z],
         () => ({
-            canManageGuild: i.Z.can(a.Plq.MANAGE_GUILD, e),
-            canManageRoles: i.Z.can(a.Plq.MANAGE_ROLES, e),
-            canBanMembers: i.Z.can(a.Plq.BAN_MEMBERS, e),
-            canManageNicknames: i.Z.can(a.Plq.MANAGE_NICKNAMES, e),
-            canCreateEmojisAndStickers: i.Z.can(a.Plq.CREATE_GUILD_EXPRESSIONS, e),
-            canManageEmojisAndStickers: i.Z.can(a.Plq.MANAGE_GUILD_EXPRESSIONS, e),
-            canManageWebhooks: i.Z.can(a.Plq.MANAGE_WEBHOOKS, e),
-            canViewAuditLog: i.Z.can(a.Plq.VIEW_AUDIT_LOG, e)
+            canManageGuild: r.Z.can(s.Plq.MANAGE_GUILD, e),
+            canManageRoles: r.Z.can(s.Plq.MANAGE_ROLES, e),
+            canBanMembers: r.Z.can(s.Plq.BAN_MEMBERS, e),
+            canManageNicknames: r.Z.can(s.Plq.MANAGE_NICKNAMES, e),
+            canCreateEmojisAndStickers: r.Z.can(s.Plq.CREATE_GUILD_EXPRESSIONS, e),
+            canManageEmojisAndStickers: r.Z.can(s.Plq.MANAGE_GUILD_EXPRESSIONS, e),
+            canManageWebhooks: r.Z.can(s.Plq.MANAGE_WEBHOOKS, e),
+            canViewAuditLog: r.Z.can(s.Plq.VIEW_AUDIT_LOG, e)
         }),
         [e]
     );
-    return n || t || l || u || o || r || d || c;
+    return t || n || l || a || o || c || u || d;
 }

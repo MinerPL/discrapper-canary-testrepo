@@ -1,21 +1,17 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    l = t(111618),
-    r = t(730954),
-    s = t(981631),
-    o = t(689938);
-function u(e, n) {
-    return e.state !== s.yb.SEND_FAILED
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(111618),
+    a = n(730954),
+    o = n(981631),
+    s = n(388032);
+function c(e, t) {
+    return e.state !== o.yb.SEND_FAILED
         ? null
-        : (0, i.jsx)(a.MenuItem, {
+        : (0, r.jsx)(i.sNh, {
               id: 'resend',
-              label: o.Z.Messages.RESEND_MESSAGE,
-              action: () => (0, r.Z)(n, e, void 0, l.Z.getOptions(e.id))
+              label: s.NW.string(s.t.lXHojo),
+              action: () => (0, a.Z)(t, e, void 0, l.Z.getOptions(e.id))
           });
 }

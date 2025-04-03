@@ -1,78 +1,74 @@
-a.d(t, {
-    Z: function () {
-        return b;
-    }
-});
-var n = a(735250),
-    l = a(470079),
-    i = a(120356),
-    r = a.n(i),
-    o = a(442837),
-    s = a(481060),
-    u = a(99690),
-    d = a(594174),
-    c = a(823379),
-    m = a(5192),
-    p = a(689938),
-    v = a(444926);
-function f(e) {
+n.d(t, { Z: () => h });
+var r = n(200651),
+    a = n(192379),
+    l = n(120356),
+    i = n.n(l),
+    o = n(442837),
+    s = n(481060),
+    u = n(99690),
+    c = n(594174),
+    d = n(823379),
+    m = n(5192),
+    p = n(388032),
+    f = n(542776);
+function v(e) {
     let { user: t } = e,
-        a = m.ZP.useName(null, null, t);
-    return (0, n.jsxs)('div', {
-        className: v.userItem,
+        n = m.ZP.useName(null, null, t);
+    return (0, r.jsxs)('div', {
+        className: f.userItem,
         children: [
-            (0, n.jsx)(u.Z, { user: t }),
-            (0, n.jsx)(s.Text, {
+            (0, r.jsx)(u.Z, { user: t }),
+            (0, r.jsx)(s.Text, {
                 color: 'header-primary',
                 variant: 'text-sm/medium',
-                children: a
+                children: n
             })
         ]
     });
 }
-function b(e) {
-    let { clip: t, className: a } = e,
-        i = (0, o.Wu)([d.default], () => t.users.map(d.default.getUser).filter(c.lm)),
-        u = l.useCallback(
+function h(e) {
+    let { clip: t, className: n } = e,
+        l = (0, o.Wu)([c.default], () => t.users.map(c.default.getUser).filter(d.lm)),
+        u = a.useCallback(
             (e) => {
                 let { row: t } = e,
-                    a = i[t];
-                return null == a ? null : (0, n.jsx)(f, { user: a }, t);
+                    n = l[t];
+                return null == n ? null : (0, r.jsx)(v, { user: n }, t);
             },
-            [i]
+            [l]
         );
-    return (0, n.jsxs)('div', {
-        className: r()(a, v.root),
+    return (0, r.jsxs)('div', {
+        className: i()(n, f.root),
         children: [
-            (0, n.jsx)('div', {
-                className: v.__invalid_header,
-                children: (0, n.jsxs)(s.FormTitle, {
-                    className: v.title,
+            (0, r.jsx)('div', {
+                className: f.__invalid_header,
+                children: (0, r.jsxs)(s.vwX, {
+                    className: f.title,
                     children: [
-                        p.Z.Messages.CLIPS_EDIT_USER_LIST_TITLE,
-                        (0, n.jsxs)('div', {
-                            className: v.userCountPill,
+                        p.NW.string(p.t.WTozwc),
+                        (0, r.jsxs)('div', {
+                            className: f.userCountPill,
                             children: [
-                                (0, n.jsx)(s.Text, {
+                                (0, r.jsx)(s.Text, {
                                     color: 'text-normal',
                                     variant: 'text-xs/medium',
-                                    children: i.length
+                                    children: l.length
                                 }),
-                                (0, n.jsx)(s.FriendsIcon, {
+                                (0, r.jsx)(s.iFz, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: v.userCountIcon
+                                    className: f.userCountIcon
                                 })
                             ]
                         })
                     ]
                 })
             }),
-            (0, n.jsx)(s.List, {
-                className: v.__invalid_userList,
+            (0, r.jsx)(s.aVo, {
+                className: f.__invalid_userList,
                 sectionHeight: 0,
                 rowHeight: 40,
-                sections: [i.length],
+                sections: [l.length],
                 renderRow: u
             })
         ]

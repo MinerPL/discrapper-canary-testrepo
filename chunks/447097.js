@@ -1,69 +1,62 @@
-s.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    s(757143),
-    s(47120),
-    s(773603);
-var n = s(735250),
-    l = s(470079),
-    i = s(658550),
-    r = s(481060),
-    o = s(507453),
-    a = s(689938);
-function d(e) {
-    let { mfaChallenge: t, finish: s, setSlide: d, onClose: u, isSlideReady: c } = e,
-        [h, f] = l.useState(!1),
-        [m, S] = l.useState(null),
-        [_, g] = l.useState(''),
-        x = l.useRef(null),
-        E = a.Z.Messages.TWO_FA_ENTER_BACKUP_LABEL,
-        C = a.Z.Messages.TWO_FA_BACKUP_CODE,
-        p = l.useCallback(
+r.d(t, { Z: () => c }), r(757143), r(301563), r(47120), r(773603);
+var n = r(200651),
+    l = r(192379),
+    s = r(658550),
+    i = r(481060),
+    o = r(507453),
+    a = r(388032);
+function c(e) {
+    let { mfaChallenge: t, finish: r, setSlide: c, onClose: u, isSlideReady: d } = e,
+        [f, h] = l.useState(!1),
+        [m, p] = l.useState(null),
+        [g, b] = l.useState(''),
+        j = l.useRef(null),
+        y = a.NW.string(a.t['C/ZAw8']),
+        x = a.NW.string(a.t.fZSi1N),
+        S = l.useCallback(
             (e) => {
-                g(e), S(null);
+                b(e), p(null);
             },
-            [g, S]
+            [b, p]
         );
     return (
         l.useEffect(() => {
-            if (c) {
+            if (d) {
                 var e;
-                null === (e = x.current) || void 0 === e || e.focus();
+                null == (e = j.current) || e.focus();
             }
-        }, [c]),
+        }, [d]),
         (0, n.jsxs)('form', {
             onSubmit: (e) => {
                 e.preventDefault(),
-                    f(!0),
-                    s({
+                    h(!0),
+                    r({
                         mfaType: 'backup',
-                        data: _.replace(/-/g, '')
+                        data: g.replace(/-/g, '')
                     })
                         .catch((e) => {
-                            var t, s;
-                            S(null !== (s = e.message) && void 0 !== s ? s : null === (t = e.body) || void 0 === t ? void 0 : t.message);
+                            var t, r;
+                            p(null != (r = null == (t = e.body) ? void 0 : t.message) ? r : e.message);
                         })
                         .finally(() => {
-                            f(!1);
+                            h(!1);
                         });
             },
             children: [
                 (0, n.jsx)(o.Z.SlideHeader, { onClose: u }),
                 (0, n.jsx)(o.Z.SlideContent, {
-                    children: (0, n.jsxs)(r.FormItem, {
-                        title: E,
+                    children: (0, n.jsxs)(i.xJW, {
+                        title: y,
                         children: [
-                            (0, n.jsx)(r.TextInput, {
-                                inputRef: x,
-                                onChange: p,
-                                placeholder: C,
-                                maxLength: i.tL,
-                                minLength: i.th,
-                                value: _,
+                            (0, n.jsx)(i.oil, {
+                                inputRef: j,
+                                onChange: S,
+                                placeholder: x,
+                                maxLength: s.tL,
+                                minLength: s.th,
+                                value: g,
                                 spellCheck: 'false',
-                                disabled: h
+                                disabled: f
                             }),
                             (0, n.jsx)(o.Z.SlideError, { error: m })
                         ]
@@ -71,10 +64,10 @@ function d(e) {
                 }),
                 (0, n.jsx)(o.Z.SlideFooter, {
                     mfaChallenge: t,
-                    setSlide: d,
+                    setSlide: c,
                     showConfirm: !0,
-                    disabled: _.length < 8,
-                    submitting: h
+                    disabled: g.length < 8,
+                    submitting: f
                 })
             ]
         })

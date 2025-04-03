@@ -1,21 +1,15 @@
 n.d(t, {
-    G8: function () {
-        return a;
-    },
-    O7: function () {
-        return s;
-    },
-    nJ: function () {
-        return i;
-    }
+    G8: () => o,
+    O7: () => a,
+    nJ: () => i
 });
 var r = n(570140);
 function i() {
     r.Z.dispatch({ type: 'APP_ICON_EDITOR_OPEN' });
 }
-function a() {
+function o() {
     r.Z.dispatch({ type: 'APP_ICON_EDITOR_CLOSE' });
 }
-function s() {
+function a() {
     r.Z.dispatch({ type: 'APP_ICON_EDITOR_RESET' });
 }

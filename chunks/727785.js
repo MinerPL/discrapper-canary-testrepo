@@ -1,5 +1,4 @@
-var r, i, a, s, o, l;
-function u(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,22 +12,22 @@ function u(e, t, n) {
     );
 }
 n.d(t, {
-    X5: function () {
-        return c;
-    },
-    a8: function () {
-        return r;
-    },
-    h8: function () {
-        return i;
-    },
-    xQ: function () {
-        return a;
-    }
+    X5: () => i,
+    a8: () => o,
+    h8: () => a,
+    xQ: () => s
 });
-class c {
+class i {
     constructor(e) {
-        u(this, 'id', void 0), u(this, 'text', void 0), (this.id = e), (this.text = e);
+        r(this, 'id', void 0), r(this, 'text', void 0), (this.id = e), (this.text = e);
     }
 }
-((s = r || (r = {})).UP = 'UP'), (s.DOWN = 'DOWN'), ((o = i || (i = {})).GUILD = 'GUILD'), (o.TEXT_CHANNEL = 'TEXT_CHANNEL'), (o.GROUP_DM = 'GROUP_DM'), (o.VOICE_CHANNEL = 'VOICE_CHANNEL'), (o.USER = 'USER'), (o.HEADER = 'HEADER'), (o.APPLICATION = 'APPLICATION'), (o.SKU = 'SKU'), (o.LINK = 'LINK'), (o.IN_APP_NAVIGATION = 'IN_APP_NAVIGATION'), ((l = a || (a = {})).USER = '@'), (l.TEXT_CHANNEL = '#'), (l.VOICE_CHANNEL = '!'), (l.GUILD = '*'), (l.APPLICATION = '$');
+var o = (function (e) {
+        return (e.UP = 'UP'), (e.DOWN = 'DOWN'), e;
+    })({}),
+    a = (function (e) {
+        return (e.GUILD = 'GUILD'), (e.TEXT_CHANNEL = 'TEXT_CHANNEL'), (e.GROUP_DM = 'GROUP_DM'), (e.VOICE_CHANNEL = 'VOICE_CHANNEL'), (e.USER = 'USER'), (e.HEADER = 'HEADER'), (e.APPLICATION = 'APPLICATION'), (e.SKU = 'SKU'), (e.LINK = 'LINK'), (e.IN_APP_NAVIGATION = 'IN_APP_NAVIGATION'), e;
+    })({}),
+    s = (function (e) {
+        return (e.USER = '@'), (e.TEXT_CHANNEL = '#'), (e.VOICE_CHANNEL = '!'), (e.GUILD = '*'), (e.APPLICATION = '$'), e;
+    })({});

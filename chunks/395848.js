@@ -1,6 +1,2 @@
-r.d(t, {
-    m: function () {
-        return n;
-    }
-});
-let n = r(899517).n;
+a.d(e, { m: () => r });
+let r = a(899517).n;

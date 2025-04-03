@@ -1,19 +1,13 @@
 n.d(t, {
-    NW: function () {
-        return a;
-    },
-    tf: function () {
-        return i;
-    },
-    zH: function () {
-        return s;
-    }
+    NW: () => o,
+    tf: () => i,
+    zH: () => a
 });
-var r = n(470079),
+var r = n(192379),
     i = function (e) {
         return (0, r.useEffect)(e, []);
     },
-    a = function () {
+    o = function () {
         var e = (0, r.useState)(0)[1],
             t = (0, r.useRef)(!1);
         return (
@@ -23,11 +17,11 @@ var r = n(470079),
                 };
             }),
             function () {
-                !t.current && e({});
+                t.current || e({});
             }
         );
     };
-function s(e) {
+function a(e) {
     var t = (0, r.useRef)(void 0);
     return (
         (0, r.useEffect)(function () {

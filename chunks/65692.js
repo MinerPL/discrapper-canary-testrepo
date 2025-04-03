@@ -1,52 +1,54 @@
-n.d(t, {
-    q: function () {
-        return d;
-    }
-}),
-    n(47120),
-    n(518263),
-    n(970173),
-    n(520712),
-    n(268111),
-    n(941497),
-    n(32026),
-    n(480839),
-    n(744285),
-    n(492257),
-    n(873817);
-var r = n(470079),
-    i = n(250683),
-    a = n(512722),
-    o = n.n(a),
-    s = n(442837),
-    u = n(253135),
-    l = n(314897),
-    c = n(19780),
-    E = n(760373);
-function d(e) {
+r.d(t, { q: () => g }), r(47120), r(518263), r(970173), r(520712), r(268111), r(941497), r(32026), r(480839), r(744285), r(492257), r(873817), r(610885), r(126298);
+var n = r(192379),
+    l = r(250683),
+    i = r(512722),
+    u = r.n(i),
+    s = r(442837),
+    a = r(253135),
+    o = r(314897),
+    c = r(131951),
+    d = r(19780),
+    f = r(760373),
+    E = r(65154);
+function g(e) {
     let { userId: t } = e,
-        n = (0, s.e7)([l.default], () => l.default.getId());
-    o()(n !== t, '[useSecureFramesPairwiseFingerprint] Should not pass current user id.');
-    let [a, d] = r.useState(null),
-        [f, _] = r.useState(!1),
-        h = (0, s.e7)([c.Z], () => c.Z.getSecureFramesRosterMapEntry(t)),
-        y = (0, s.e7)([c.Z], () => c.Z.getSecureFramesRosterMapEntry(n)),
-        I = r.useCallback(async (e, t, n, r) => {
-            _(!0);
-            let a = await (0, u.Il)(E.Xj, new Uint8Array(t), e, new Uint8Array(r), n);
-            d(i.fromByteArray(a)), _(!1);
-        }, []);
+        r = (0, s.e7)([o.default], () => o.default.getId());
+    u()(r !== t, '[useSecureFramesPairwiseFingerprint] Should not pass current user id.');
+    let [i, g] = n.useState(null),
+        [_, y] = n.useState(!1),
+        m = (0, s.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(t)),
+        S = (0, s.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(r)),
+        h = n.useCallback((e) => {
+            g(l.fromByteArray(e)), y(!1);
+        }, []),
+        N = n.useCallback(
+            async (e, t, r, n) => {
+                if (c.Z.supports(E.AN.MLS_PAIRWISE_FINGERPRINTS)) {
+                    var l;
+                    null == (l = d.Z.getRTCConnection()) ||
+                        l.getMLSPairwiseFingerprint(f.Xj, r, (e) => {
+                            h(new Uint8Array(e));
+                        });
+                } else h(await (0, a.Il)(f.Xj, new Uint8Array(t), e, new Uint8Array(n), r));
+            },
+            [h]
+        ),
+        p = n.useRef(null);
     return (
-        r.useEffect(() => {
-            null != h && null != y && I(n, y, t, h);
-        }, [n, y, I, t, h]),
-        r.useMemo(
+        n.useEffect(() => {
+            null != m && null != S && null == p.current && (y(!0), (p.current = setTimeout(() => N(r, S, t, m), 0)));
+            let e = p.current;
+            return () => {
+                null != e && clearTimeout(e);
+            };
+        }, [r, S, N, t, m]),
+        n.useMemo(
             () => ({
-                fingerprint: a,
-                userKey: h,
-                loading: f
+                fingerprint: i,
+                userKey: m,
+                loading: _
             }),
-            [a, f, h]
+            [i, _, m]
         )
     );
 }

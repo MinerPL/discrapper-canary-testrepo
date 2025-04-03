@@ -1,8 +1,4 @@
-n.d(t, {
-    _: function () {
-        return i;
-    }
-});
+n.d(t, { _: () => i });
 var r = n(36056);
 function i(e, t) {
     switch (t) {

@@ -1,66 +1,88 @@
-n.d(s, {
-    b: function () {
-        return L;
-    }
-});
-var t = n(735250),
-    r = n(470079),
-    i = n(512722),
-    l = n.n(i),
-    a = n(881602),
-    o = n(317269),
-    C = n(669079),
-    d = n(296848),
-    u = n(987209),
-    c = n(598),
-    _ = n(164513),
-    p = n(614277),
-    x = n(698708);
-function L(e) {
-    var s, n;
-    let i,
-        { handleClose: L, planGroup: h, onSubscriptionConfirmation: f, renderPurchaseConfirmation: I, postSuccessGuild: E, followupSKUInfo: M, continueSession: N } = e,
-        { activeSubscription: j, paymentSources: T, paymentSourceId: g, selectedPlan: m, selectedSkuId: A, step: O, updatedSubscription: S, startingPremiumSubscriptionPlanIdRef: R } = (0, c.usePaymentContext)(),
-        { isGift: P, giftRecipient: Z, giftCode: v, hasSentMessage: y, isSendingMessage: b, sendGiftMessage: U } = (0, u.wD)();
-    l()(null != m, 'Expected plan to selected'), l()(null != A, 'Expected selectedSkuId'), l()(null != O, 'Step should be set');
-    let B = r.useCallback(() => {
-        L(), null == f || f();
-    }, [L, f]);
+n.d(t, { b: () => y });
+var r = n(200651),
+    i = n(192379),
+    l = n(512722),
+    s = n.n(l),
+    o = n(704215),
+    a = n(605236),
+    C = n(881602),
+    d = n(717401),
+    c = n(286961),
+    u = n(317269),
+    p = n(669079),
+    _ = n(296848),
+    x = n(987209),
+    f = n(563132),
+    h = n(107998),
+    m = n(614277),
+    j = n(400981),
+    L = n(435020),
+    g = n(698708),
+    S = n(921944);
+function y(e) {
+    let t,
+        { handleClose: n, planGroup: l, onSubscriptionConfirmation: y, renderPurchaseConfirmation: E, postSuccessGuild: b, followupSKUInfo: I, continueSessionToInitialStep: N } = e,
+        { activeSubscription: T, paymentSources: M, paymentSourceId: P, selectedPlan: v, selectedSkuId: O, step: Z, updatedSubscription: w, startingPremiumSubscriptionPlanIdRef: k } = (0, f.JL)(),
+        { isGift: A, giftRecipient: U, giftCode: R, hasSentMessage: F, isSendingMessage: B, sendGiftMessage: H, claimableRewards: W, selectedGiftingPromotionReward: G } = (0, x.wD)(),
+        { confirmationFooter: D } = (0, h.zb)(),
+        Y = null != D,
+        z = (0, d.id)(v, A, W),
+        K = (0, c.Z)(),
+        X = (0, d.a5)(v),
+        V = (0, d.tK)(null == G ? void 0 : G.skuId),
+        Q = (0, L.$)(M, P),
+        q = A && null != G && X;
+    s()(null != v, 'Expected plan to selected'), s()(null != O, 'Expected selectedSkuId'), s()(null != Z, 'Step should be set');
+    let J = i.useCallback(() => {
+        n(), null == y || y();
+    }, [n, y]);
     return (
-        r.useEffect(() => {
-            if (!(!P || null == Z || null == v || y || b || (0, C.pO)(Z))) a.F.getCurrentConfig({ location: '36b986_1' }).enabled && U({ onSubscriptionConfirmation: f });
-        }, [U, P, Z, v, y, b, f]),
-        (i =
-            null != I
-                ? I(m, B, S)
-                : N
-                  ? (0, t.jsx)(o.VY, {})
-                  : P
-                    ? (0, t.jsx)(o.TB, {
-                          planId: m.id,
-                          onClose: B
+        i.useEffect(() => {
+            !(!A || null == U || null == R || F || B || (0, p.pO)(U)) && C.F.getCurrentConfig({ location: '36b986_1' }).enabled && H({ onSubscriptionConfirmation: y });
+        }, [H, A, U, R, F, B, y]),
+        i.useEffect(() => {
+            null != K && null != K.reminderNotice && z && (0, a.wH)(o.z.GIFTING_PROMOTION_REMINDER, K.dismissibleContentVersion, { dismissAction: S.L.INDIRECT_ACTION });
+        }, [K, z]),
+        (t =
+            null != E
+                ? E(v, J, w)
+                : null != N
+                  ? (0, r.jsx)(u.VY, {})
+                  : A
+                    ? (0, r.jsx)(u.TB, {
+                          planId: v.id,
+                          onClose: J
                       })
-                    : R.current === m.id
-                      ? (0, t.jsx)(o.ZP, {
-                            planId: m.id,
-                            postSuccessGuild: E,
-                            onClose: B,
-                            paymentSourceType: null === (s = T[null != g ? g : '']) || void 0 === s ? void 0 : s.type
+                    : k.current === v.id
+                      ? (0, r.jsx)(u.ZP, {
+                            planId: v.id,
+                            postSuccessGuild: b,
+                            onClose: J,
+                            paymentSourceType: Q,
+                            hideClose: Y
                         })
-                      : (0, t.jsx)(o.ZP, {
-                            followupSKUInfo: M,
-                            startingPremiumSubscriptionPlanId: R.current,
-                            planId: m.id,
-                            onClose: B,
-                            isDowngrade: null != j && (0, d.GY)(j, m.id, h),
-                            paymentSourceType: null === (n = T[null != g ? g : '']) || void 0 === n ? void 0 : n.type
+                      : (0, r.jsx)(u.ZP, {
+                            followupSKUInfo: I,
+                            startingPremiumSubscriptionPlanId: k.current,
+                            planId: v.id,
+                            onClose: J,
+                            isDowngrade: null != T && (0, _.GY)(T, v.id, l),
+                            paymentSourceType: Q,
+                            hideClose: Y
                         })),
-        (0, t.jsxs)(t.Fragment, {
+        (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, t.jsxs)(p.C3, {
-                    children: [(0, t.jsx)(x.Z, {}), i]
+                (0, r.jsxs)(m.C3, {
+                    children: [(0, r.jsx)(g.Z, {}), t]
                 }),
-                P && (0, t.jsx)(_.Z, { onClose: B })
+                null != D && D,
+                q &&
+                    null != V &&
+                    (0, r.jsx)(j.Z, {
+                        onClose: J,
+                        selectedPromotionalDecoPurchaseRecord: V,
+                        selectedGiftingPromotionReward: G
+                    })
             ]
         })
     );

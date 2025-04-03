@@ -1,78 +1,75 @@
-var e = r(197187),
+var n = r(197187),
     i = r(926515),
-    u = r(581031),
-    o = r(527221),
-    a = r(936940),
-    c = r(24033),
+    o = r(581031),
+    a = r(527221),
+    c = r(936940),
+    u = r(24033),
     s = r(354848),
-    f = r(35179),
-    l = r(959318),
-    h = r(552028),
+    l = r(35179),
+    f = r(959318),
+    p = r(552028),
     v = r(714050),
-    p = r(676125),
-    d = r(344597),
-    x = r(995739),
-    g = r(115726),
-    I = r(651673),
+    g = r(676125),
+    x = r(344597),
+    d = r(995739),
+    h = r(115726),
+    E = r(651673),
     y = r(641236)('replace'),
-    E = Math.max,
-    b = Math.min,
-    R = u([].concat),
-    $ = u([].push),
-    A = u(''.indexOf),
-    k = u(''.slice),
+    I = Math.max,
+    R = Math.min,
+    b = o([].concat),
+    A = o([].push),
+    S = o(''.indexOf),
+    $ = o(''.slice),
     m = '$0' === 'a'.replace(/./, '$0'),
-    C = !!/./[y] && '' === /./[y]('a', '$0');
-o(
+    w = !!/./[y] && '' === /./[y]('a', '$0');
+a(
     'replace',
-    function (n, t, r) {
-        var u = C ? '$' : '$0';
+    function (t, e, r) {
+        var o = w ? '$' : '$0';
         return [
-            function (n, r) {
-                var e = p(this),
-                    u = f(n) ? void 0 : x(n, y);
-                return u ? i(u, n, e, r) : i(t, v(e), n, r);
+            function (t, r) {
+                var n = g(this),
+                    o = l(t) ? void 0 : d(t, y);
+                return o ? i(o, t, n, r) : i(e, v(n), t, r);
             },
-            function (n, i) {
-                var o = c(this),
-                    a = v(n);
-                if ('string' == typeof i && -1 === A(i, u) && -1 === A(i, '$<')) {
-                    var f = r(t, o, a, i);
-                    if (f.done) return f.value;
+            function (t, i) {
+                var a = u(this),
+                    c = v(t);
+                if ('string' == typeof i && -1 === S(i, o) && -1 === S(i, '$<')) {
+                    var l = r(e, a, c, i);
+                    if (l.done) return l.value;
                 }
-                var p = s(i);
-                !p && (i = v(i));
-                var x = o.global;
-                x && ((T = o.unicode), (o.lastIndex = 0));
-                for (var y = []; null !== (O = I(o, a)); ) {
-                    if (($(y, O), !x)) break;
-                    '' === v(O[0]) && (o.lastIndex = d(a, h(o.lastIndex), T));
+                var g = s(i);
+                g || (i = v(i));
+                var d = a.global;
+                d && ((T = a.unicode), (a.lastIndex = 0));
+                for (var y = []; null !== (O = E(a, c)) && (A(y, O), d); ) {
+                    '' === v(O[0]) && (a.lastIndex = x(c, p(a.lastIndex), T));
                 }
-                for (var m = '', C = 0, S = 0; S < y.length; S++) {
-                    for (var w, T, O, _, U = v((O = y[S])[0]), M = E(b(l(O.index), a.length), 0), K = [], N = 1; N < O.length; N++) {
-                        $(K, void 0 === (w = O[N]) ? w : String(w));
-                    }
+                for (var m = '', w = 0, k = 0; k < y.length; k++) {
+                    for (var C, T, _, O = y[k], M = v(O[0]), D = I(R(f(O.index), c.length), 0), K = [], N = 1; N < O.length; N++) A(K, void 0 === (C = O[N]) ? C : String(C));
                     var P = O.groups;
-                    if (p) {
-                        var B = R([U], K, M, a);
-                        void 0 !== P && $(B, P), (_ = v(e(i, void 0, B)));
-                    } else _ = g(U, a, M, K, P, i);
-                    M >= C && ((m += k(a, C, M) + _), (C = M + U.length));
+                    if (g) {
+                        var U = b([M], K, D, c);
+                        void 0 !== P && A(U, P), (_ = v(n(i, void 0, U)));
+                    } else _ = h(M, c, D, K, P, i);
+                    D >= w && ((m += $(c, w, D) + _), (w = D + M.length));
                 }
-                return m + k(a, C);
+                return m + $(c, w);
             }
         ];
     },
-    !!a(function () {
-        var n = /./;
+    !!c(function () {
+        var t = /./;
         return (
-            (n.exec = function () {
-                var n = [];
-                return (n.groups = { a: '7' }), n;
+            (t.exec = function () {
+                var t = [];
+                return (t.groups = { a: '7' }), t;
             }),
-            '7' !== ''.replace(n, '$<a>')
+            '7' !== ''.replace(t, '$<a>')
         );
     }) ||
         !m ||
-        C
+        w
 );

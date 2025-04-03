@@ -1,18 +1,52 @@
-let r, i, a;
-n(47120);
-var s,
-    o,
-    l,
-    u,
-    c = n(392711),
-    d = n(442837),
-    _ = n(570140);
-let E = new Map(),
-    f = E,
-    h = !1;
-class p extends (s = d.ZP.Store) {
+let r, i, o;
+n.d(t, { Z: () => I }), n(47120);
+var a,
+    s = n(392711),
+    l = n(442837),
+    c = n(570140);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let d = new Map(),
+    f = d,
+    _ = !1,
+    p = !1,
+    h = (e) => {
+        (_ = !0), (i = void 0);
+    },
+    m = (e) => {
+        let { error: t } = e;
+        (f = d), (_ = !1), (i = t), (p = !0);
+    },
+    g = (e) => {
+        0 === e.purchases.length ? (f = d) : (0, s.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (p = !0), (_ = !1), (i = void 0);
+    },
+    E = (e) => {
+        (r = e.skuId), (o = void 0);
+    },
+    b = (e) => {
+        null == e.purchases || 0 === e.purchases.length ? (f = d) : (0, s.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (r = void 0), (o = void 0);
+    },
+    y = (e) => {
+        let { error: t, skuId: n } = e;
+        (r = n), (o = t);
+    },
+    v = (e) => {
+        (f = d), (_ = !1), (r = void 0), (i = void 0), (o = void 0), (p = !1);
+    };
+class O extends (a = l.ZP.Store) {
     get isFetching() {
-        return h;
+        return _;
     }
     get isClaiming() {
         return r;
@@ -24,43 +58,22 @@ class p extends (s = d.ZP.Store) {
         return i;
     }
     get claimError() {
-        return a;
+        return o;
+    }
+    get hasPreviouslyFetched() {
+        return p;
     }
     getPurchase(e) {
         return null != e ? f.get(e) : void 0;
     }
 }
-(u = 'CollectiblesPurchaseStore'),
-    (l = 'displayName') in (o = p)
-        ? Object.defineProperty(o, l, {
-              value: u,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (o[l] = u),
-    (t.Z = new p(_.Z, {
-        COLLECTIBLES_PURCHASES_FETCH: (e) => {
-            (h = !0), (i = void 0);
-        },
-        COLLECTIBLES_PURCHASES_FETCH_SUCCESS: (e) => {
-            0 === e.purchases.length ? (f = E) : !(0, c.isEqual)([...f.values()], e.purchases) && (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (h = !1), (i = void 0);
-        },
-        COLLECTIBLES_PURCHASES_FETCH_FAILURE: (e) => {
-            let { error: t } = e;
-            (f = E), (h = !1), (i = t);
-        },
-        COLLECTIBLES_CLAIM: (e) => {
-            (r = e.skuId), (a = void 0);
-        },
-        COLLECTIBLES_CLAIM_SUCCESS: (e) => {
-            null == e.purchases || 0 === e.purchases.length ? (f = E) : !(0, c.isEqual)([...f.values()], e.purchases) && (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (r = void 0), (a = void 0);
-        },
-        COLLECTIBLES_CLAIM_FAILURE: (e) => {
-            let { error: t, skuId: n } = e;
-            (r = n), (a = t);
-        },
-        LOGOUT: (e) => {
-            (f = E), (h = !1), (r = void 0), (i = void 0), (a = void 0);
-        }
-    }));
+u(O, 'displayName', 'CollectiblesPurchaseStore');
+let I = new O(c.Z, {
+    COLLECTIBLES_PURCHASES_FETCH: h,
+    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: g,
+    COLLECTIBLES_PURCHASES_FETCH_FAILURE: m,
+    COLLECTIBLES_CLAIM: E,
+    COLLECTIBLES_CLAIM_SUCCESS: b,
+    COLLECTIBLES_CLAIM_FAILURE: y,
+    LOGOUT: v
+});

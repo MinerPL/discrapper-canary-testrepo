@@ -1,119 +1,114 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(442837),
-    l = n(481060),
-    o = n(547972),
+n.d(t, { Z: () => y });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    a = n(442837),
+    o = n(481060),
+    s = n(547972),
     c = n(556296),
-    d = n(63063),
-    u = n(13140),
-    _ = n(435064),
-    E = n(39604),
-    h = n(356659),
-    m = n(981631),
-    I = n(332325),
-    g = n(689938),
-    p = n(801245);
-function T(e) {
-    (0, o.Z)(I.Z.CLIPS), (0, E.UW)(e);
+    u = n(63063),
+    d = n(13140),
+    p = n(435064),
+    h = n(39604),
+    f = n(356659),
+    g = n(981631),
+    m = n(332325),
+    b = n(388032),
+    _ = n(318098);
+function E(e) {
+    (0, s.Z)(m.Z.CLIPS), (0, h.UW)(e);
 }
-function S() {
-    let e = (0, r.e7)([c.Z], () => c.Z.getKeybindForAction(m.kg4.SAVE_CLIP));
-    if (null == e) return (0, i.jsx)(i.Fragment, { children: g.Z.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND });
-    let t = u.BB(e.shortcut, !0);
-    return (0, i.jsx)(i.Fragment, {
-        children: g.Z.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
+function O() {
+    let e = (0, a.e7)([c.ZP], () => c.ZP.getKeybindForAction(g.kg4.SAVE_CLIP));
+    if (null == e) return (0, r.jsx)(r.Fragment, { children: b.NW.string(b.t.miecxM) });
+    let t = d.BB(e.shortcut, !0);
+    return (0, r.jsx)(r.Fragment, {
+        children: b.NW.format(b.t.a3HdiI, {
             keybind: t,
             keybindHook: () =>
-                (0, i.jsx)('span', {
-                    className: p.keyCombo,
-                    children: (0, i.jsx)(l.KeyCombo, { shortcut: t })
+                (0, r.jsx)('span', {
+                    className: _.keyCombo,
+                    children: (0, r.jsx)(o.M2$, { shortcut: t })
                 })
         })
     });
 }
-let f = {
-    [h.D5.Error]: {
+let N = {
+    [f.D5.Error]: {
         textColor: 'text-primary',
-        buttonLook: l.Button.Looks.FILLED,
-        buttonColor: l.Button.Colors.PRIMARY,
+        buttonLook: o.zxk.Looks.FILLED,
+        buttonColor: o.zxk.Colors.PRIMARY,
         bodyCopy: () =>
-            (0, i.jsxs)(i.Fragment, {
+            (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)(l.WarningIcon, {
+                    (0, r.jsx)(o.aNP, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: p.errorWarningIcon
+                        className: _.errorWarningIcon
                     }),
-                    g.Z.Messages.CLIPS_USER_EDUCATION_ERROR_BODY
+                    b.NW.string(b.t.Sr64AA)
                 ]
             }),
-        buttonCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
+        buttonCopy: () => b.NW.string(b.t.vDGv9f),
         ctaOnClick: () => {
-            window.open(d.Z.getArticleURL(m.BhN.CLIPS), '_blank');
+            window.open(u.Z.getArticleURL(g.BhN.CLIPS), '_blank');
         },
-        containerClass: p.container
+        containerClass: _.container
     },
-    [h.D5.Disabled]: {
+    [f.D5.Disabled]: {
         textColor: 'text-primary',
-        buttonLook: l.Button.Looks.FILLED,
-        buttonColor: l.Button.Colors.BRAND,
-        bodyCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
-        buttonCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-        ctaOnClick: () => T(h.D5.Disabled),
-        containerClass: p.container
+        buttonLook: o.zxk.Looks.FILLED,
+        buttonColor: o.zxk.Colors.BRAND,
+        bodyCopy: () => b.NW.string(b.t.MhrVg4),
+        buttonCopy: () => b.NW.string(b.t.GMLBKS),
+        ctaOnClick: () => E(f.D5.Disabled),
+        containerClass: _.container
     },
-    [h.D5.Enabled]: {
+    [f.D5.Enabled]: {
         textColor: 'always-white',
-        buttonLook: l.Button.Looks.FILLED,
-        buttonColor: l.Button.Colors.BRAND_INVERTED,
-        bodyCopy: () => (0, i.jsx)(S, {}),
-        buttonCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-        ctaOnClick: () => T(h.D5.Enabled),
-        containerClass: s()(p.container, p.containerEnabled)
+        buttonLook: o.zxk.Looks.FILLED,
+        buttonColor: o.zxk.Colors.BRAND_INVERTED,
+        bodyCopy: () => (0, r.jsx)(O, {}),
+        buttonCopy: () => b.NW.string(b.t.GMLBKS),
+        ctaOnClick: () => E(f.D5.Enabled),
+        containerClass: l()(_.container, _.containerEnabled)
     }
 };
-function C() {
-    var e;
-    let { decoupledClipsEnabled: t, clipsError: n } = (0, r.cj)([_.Z], () => ({
-        decoupledClipsEnabled: _.Z.getSettings().decoupledClipsEnabled,
-        clipsError: _.Z.getLastClipsError()
-    }));
-    let a = ((e = t), null != n ? h.D5.Error : e ? h.D5.Enabled : h.D5.Disabled),
-        { bodyCopy: s, buttonCopy: o, ctaOnClick: c, textColor: d, buttonColor: u, buttonLook: m, containerClass: I } = f[a];
-    return (0, i.jsxs)('div', {
-        className: I,
+function y() {
+    let { decoupledClipsEnabled: e, clipsError: t } = (0, a.cj)([p.Z], () => ({
+            decoupledClipsEnabled: p.Z.getSettings().decoupledClipsEnabled,
+            clipsError: p.Z.getLastClipsError()
+        })),
+        n = null != t ? f.D5.Error : e ? f.D5.Enabled : f.D5.Disabled,
+        { bodyCopy: i, buttonCopy: l, ctaOnClick: s, textColor: c, buttonColor: u, buttonLook: d, containerClass: g } = N[n];
+    return (0, r.jsxs)('div', {
+        className: g,
         children: [
-            (0, i.jsx)(l.Text, {
-                color: d,
+            (0, r.jsx)(o.Text, {
+                color: c,
                 variant: 'text-sm/medium',
-                children: s()
+                children: i()
             }),
-            (0, i.jsx)(l.Button, {
-                onClick: () => (0, E.UW)(a),
-                size: l.Button.Sizes.NONE,
-                look: l.Button.Looks.BLANK,
-                className: p.buttonClose,
-                children: (0, i.jsx)(l.XSmallIcon, {
+            (0, r.jsx)(o.zxk, {
+                onClick: () => (0, h.UW)(n),
+                size: o.zxk.Sizes.NONE,
+                look: o.zxk.Looks.BLANK,
+                className: _.buttonClose,
+                children: (0, r.jsx)(o.Dio, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: p.dismissIcon
+                    className: _.dismissIcon
                 })
             }),
-            (0, i.jsx)(l.Button, {
-                onClick: c,
-                className: p.buttonCTA,
+            (0, r.jsx)(o.zxk, {
+                onClick: s,
+                className: _.buttonCTA,
                 color: u,
-                look: m,
+                look: d,
                 fullWidth: !0,
-                size: l.Button.Sizes.SMALL,
-                children: o()
+                size: o.zxk.Sizes.SMALL,
+                children: l()
             })
         ]
     });

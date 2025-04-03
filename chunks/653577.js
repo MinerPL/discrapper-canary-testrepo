@@ -1,69 +1,65 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-});
-var i = n(735250),
-    l = n(470079),
-    r = n(120356),
-    a = n.n(r),
-    s = n(442837),
-    o = n(481060),
+n.d(t, { Z: () => y });
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
     c = n(362721),
     u = n(12498),
     d = n(111028),
-    h = n(454585),
-    p = n(626135),
-    _ = n(981631),
-    f = n(689938),
-    g = n(51953),
-    m = n(910212);
-function C(e) {
-    let { channel: t, connected: n, hovered: r, subtitle: C, onClick: I, enableHangStatus: E, allowChannelTopic: N } = e,
-        x = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        S = null != x && x.length > 0,
-        v = (0, c.Z)(t, !0),
-        Z = (!E || !!N) && v,
-        T = null != C && C.length > 0;
-    l.useEffect(() => {
-        S &&
-            p.default.track(_.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
-                guild_id: t.guild_id,
-                channel_id: t.id
-            });
-    }, [t.id, S, t.guild_id]);
-    let L = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
-    if (null == t.guild_id) return null;
-    let A = a()(g.statusDiv, n && Z ? g.hoverable : null);
-    if (S)
-        return (0, i.jsx)(o.Clickable, {
-            className: A,
-            onClick: Z ? I : void 0,
-            children: (0, i.jsx)(o.Text, {
-                variant: 'text-xs/medium',
-                className: a()(g.statusText, m.markup),
-                children: (0, i.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(x, !0, { channelId: t.id }) })
+    p = n(454585),
+    h = n(626135),
+    f = n(981631),
+    g = n(388032),
+    m = n(32066),
+    b = n(73433);
+function y(e) {
+    let { channel: t, connected: n, hovered: l, subtitle: y, onClick: _ } = e,
+        v = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        O = null != v && v.length > 0,
+        j = (0, c.ZP)(t, !0),
+        x = null != y && y.length > 0;
+    if (
+        (i.useEffect(() => {
+            O &&
+                h.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+                    channel_id: t.id,
+                    guild_id: t.guild_id
+                });
+        }, [O, t.id, t.guild_id]),
+        null == t.guild_id)
+    )
+        return null;
+    let C = o()(m.statusDiv, n && j ? m.hoverable : null);
+    return O
+        ? (0, r.jsx)(s.P3F, {
+              className: C,
+              onClick: j ? _ : void 0,
+              children: (0, r.jsx)(s.Text, {
+                  variant: 'text-xs/medium',
+                  className: o()(m.statusText, b.markup),
+                  children: (0, r.jsx)(d.Z, { children: p.Z.parseVoiceChannelStatus(v, !0, { channelId: t.id }) })
+              })
+          })
+        : n && j && (!x || l)
+          ? (0, r.jsxs)(s.P3F, {
+                className: C,
+                onClick: _,
+                children: [
+                    (0, r.jsx)(s.Text, {
+                        variant: 'text-xs/medium',
+                        className: m.statusText,
+                        children: g.NW.string(g.t.Mgpxi4)
+                    }),
+                    (0, r.jsx)(s.vdY, {
+                        color: 'currentColor',
+                        className: m.pencilIcon,
+                        size: 'xxs'
+                    })
+                ]
             })
-        });
-    if (n && Z && (!T || r))
-        return (0, i.jsxs)(o.Clickable, {
-            className: A,
-            onClick: I,
-            children: [
-                (0, i.jsx)(o.Text, {
-                    variant: 'text-xs/medium',
-                    className: g.statusText,
-                    children: f.Z.Messages.VOICE_CHANNEL_SET_STATUS
-                }),
-                (0, i.jsx)(o.PencilIcon, {
-                    size: 'custom',
-                    color: 'currentColor',
-                    className: g.pencilIcon,
-                    width: L,
-                    height: L
-                })
-            ]
-        });
-    if (T) return (0, i.jsx)(d.Z, { children: C });
-    return null;
+          : x
+            ? (0, r.jsx)(d.Z, { children: y })
+            : null;
 }

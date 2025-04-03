@@ -1,85 +1,77 @@
-_.d(E, {
-    B2: function () {
-        return S;
-    },
-    DS: function () {
-        return a;
-    },
-    hj: function () {
-        return r;
-    },
-    nh: function () {
-        return M;
-    }
+n.d(e, {
+    B2: () => o,
+    DS: () => u,
+    hj: () => s,
+    nh: () => i
 });
-var s = _(63063),
-    t = _(981631),
-    n = _(689938);
-function a(e) {
-    let { application: E, username: _, usernameHook: a = t.dG4, applicationNameHook: M = t.dG4 } = e;
-    return null != E
-        ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED.format({
-              username: _,
-              otherUsername: E.name,
-              usernameHook: a,
-              otherUsernameHook: M,
-              helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+var r = n(63063),
+    a = n(981631),
+    l = n(388032);
+function u(t) {
+    let { application: e, username: n, usernameHook: u = a.dG4, applicationNameHook: i = a.dG4 } = t;
+    return null != e
+        ? l.NW.format(l.t.J8SaGx, {
+              username: n,
+              otherUsername: e.name,
+              usernameHook: u,
+              otherUsernameHook: i,
+              helpCenterLink: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           })
-        : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION.format({
-              username: _,
-              usernameHook: a,
-              helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+        : l.NW.format(l.t['+6V2sb'], {
+              username: n,
+              usernameHook: u,
+              helpCenterLink: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           });
 }
-function M(e) {
-    let { application: E, username: _, usernameHook: a = t.dG4, applicationNameHook: M = t.dG4 } = e;
-    return null != E
-        ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED.format({
-              username: _,
-              otherUsername: E.name,
-              usernameHook: a,
-              otherUsernameHook: M,
-              helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+function i(t) {
+    let { application: e, username: n, usernameHook: u = a.dG4, applicationNameHook: i = a.dG4 } = t;
+    return null != e
+        ? l.NW.format(l.t.eGCDam, {
+              username: n,
+              otherUsername: e.name,
+              usernameHook: u,
+              otherUsernameHook: i,
+              helpCenterLink: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           })
-        : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION.format({
-              username: _,
-              usernameHook: a,
-              helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+        : l.NW.format(l.t.sAX6rq, {
+              username: n,
+              usernameHook: u,
+              helpCenterLink: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           });
 }
-function S(e) {
-    let { application: E, username: _, usernameOnClick: a, applicationNameOnClick: M, medium: S } = e;
-    return null != E
-        ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_MOBILE.astFormat({
-              username: _,
-              otherUsername: E.name,
-              usernameOnClick: a,
-              otherUsernameOnClick: M,
-              medium: S,
-              helpCenterLink: { url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+function o(t) {
+    let { application: e, username: n, usernameOnClick: u, applicationNameOnClick: i, medium: o } = t;
+    return null != e
+        ? l.NW.formatToParts(l.t['8r+Z+P'], {
+              username: n,
+              otherUsername: e.name,
+              usernameOnClick: u,
+              otherUsernameOnClick: i,
+              medium: o,
+              helpCenterLink: { url: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           })
-        : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION_MOBILE.astFormat({
-              username: _,
-              usernameOnClick: a,
-              medium: S,
-              helpCenterLink: { url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+        : l.NW.formatToParts(l.t.ojysqa, {
+              username: n,
+              usernameOnClick: u,
+              medium: o,
+              helpCenterLink: { url: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           });
 }
-function r(e) {
-    let { application: E, username: _, usernameOnClick: a, applicationNameOnClick: M, medium: S } = e;
-    return null != E
-        ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_MOBILE.astFormat({
-              username: _,
-              otherUsername: E.name,
-              usernameOnClick: a,
-              otherUsernameOnClick: M,
-              medium: S,
-              helpCenterLink: { url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+function s(t) {
+    let { application: e, username: n, usernameOnClick: u, applicationNameOnClick: i, medium: o } = t;
+    return null != e
+        ? l.NW.formatToParts(l.t.zmc0mp, {
+              username: n,
+              otherUsername: e.name,
+              usernameOnClick: u,
+              otherUsernameOnClick: i,
+              medium: o,
+              helpCenterLink: { url: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           })
-        : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION_MOBILE.astFormat({
-              username: _,
-              usernameOnClick: a,
-              medium: S,
-              helpCenterLink: { url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+        : l.NW.formatToParts(l.t['x2CN/f'], {
+              username: n,
+              usernameOnClick: u,
+              medium: o,
+              helpCenterLink: { url: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           });
 }

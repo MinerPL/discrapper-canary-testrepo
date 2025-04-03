@@ -1,78 +1,177 @@
-function a(e) {
-    return e && e.__esModule ? e.default : e;
-}
-t.__esModule = !0;
-var n = r(61729);
-t.threezerotwofour = a(n);
-var s = r(556953);
-t.apathy = a(s);
-var o = r(872016);
-t.ashes = a(o);
-var i = r(517318);
-t.atelierDune = a(i);
-var c = r(512647);
-t.atelierForest = a(c);
-var u = r(74141);
-t.atelierHeath = a(u);
-var l = r(124875);
-t.atelierLakeside = a(l);
-var b = r(212254);
-t.atelierSeaside = a(b);
-var f = r(926630);
-t.bespin = a(f);
-var d = r(609723);
-t.brewer = a(d);
-var h = r(337145);
-t.bright = a(h);
-var p = r(457865);
-t.chalk = a(p);
-var y = r(924950);
-t.codeschool = a(y);
-var g = r(803401);
-t.colors = a(g);
-var v = r(297866);
-t.default = a(v);
-var m = r(335585);
-t.eighties = a(m);
-var O = r(600115);
-t.embers = a(O);
-var w = r(914697);
-t.flat = a(w);
-var k = r(522255);
-t.google = a(k);
-var E = r(897401);
-t.grayscale = a(E);
-var x = r(4827);
-t.greenscreen = a(x);
-var j = r(150817);
-t.harmonic = a(j);
-var C = r(554319);
-t.hopscotch = a(C);
-var M = r(113235);
-t.isotope = a(M);
-var _ = r(925636);
-t.marrakesh = a(_);
-var A = r(486808);
-t.mocha = a(A);
-var Z = r(999433);
-t.monokai = a(Z);
-var R = r(734211);
-t.ocean = a(R);
-var S = r(887931);
-t.paraiso = a(S);
-var D = r(899451);
-t.pop = a(D);
-var P = r(869431);
-t.railscasts = a(P);
-var B = r(539635);
-t.shapeshifter = a(B);
-var T = r(123265);
-t.solarized = a(T);
-var F = r(342762);
-t.summerfruit = a(F);
-var N = r(442748);
-t.tomorrow = a(N);
-var I = r(848042);
-t.tube = a(I);
-var L = r(796160);
-t.twilight = a(L);
+n.d(t, {
+    CR: () => h,
+    UU: () => m,
+    jE: () => d
+}),
+    n(266796),
+    n(627494),
+    n(757143),
+    n(301563);
+var r = n(884439),
+    a = n(55000),
+    l = n(693824),
+    i = n(690725),
+    o = n(561308),
+    s = n(737583),
+    c = n(169040),
+    u = n(388032);
+let d = (e) => {
+        let { timestamp: t } = e;
+        return [
+            {
+                iconPath: c.mb,
+                text: t
+            }
+        ];
+    },
+    m = (e) => {
+        var t;
+        let n = null == (t = (0, o.PJ)(e, r.N.AGGREGATE_COUNT)) ? void 0 : t.count;
+        return null == n
+            ? []
+            : [
+                  {
+                      iconPath: c.eF,
+                      text: u.NW.formatToPlainString(u.t.HtifnJ, { count: n })
+                  }
+              ];
+    },
+    p = (e) => {
+        let { avatarSrc: t, mediaImageSrc: n } = e;
+        return (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({ AvatarImage: t }, null != n && { MediaImage: n });
+    },
+    h = async (e) => {
+        let { user: t, channel: n, mediaImageSrc: r, artist: o, description: u, colors: d, badges: m } = e,
+            h = p({
+                avatarSrc: t.getAvatarURL(n.guild_id, 128),
+                mediaImageSrc: r
+            }),
+            f = o.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
+        return await (0, i.f)({
+            assetsToLoad: h,
+            drawImage: (e) => {
+                var t, n, r;
+                (function (e, t) {
+                    let n = t.map((e, t) => ({
+                        color: e,
+                        stop: t
+                    }));
+                    e.setSize(
+                        {
+                            w: c.nx,
+                            h: c.bg
+                        },
+                        4
+                    ),
+                        e.drawRoundedGradientRect(
+                            n,
+                            {
+                                x: 0,
+                                y: c.bg
+                            },
+                            {
+                                x: c.nx,
+                                y: 0
+                            },
+                            {
+                                x: 0,
+                                y: 0,
+                                h: c.bg,
+                                w: c.nx
+                            },
+                            8
+                        );
+                })(e, d),
+                    (t = e).drawRoundedImage(
+                        'MediaImage',
+                        {
+                            x: c.sB,
+                            y: c.sB
+                        },
+                        {
+                            w: c.Pu,
+                            h: c.Pu
+                        },
+                        8,
+                        { fillMode: l.JU.Contain }
+                    ) === l.vP.Failure &&
+                        t.drawPath(
+                            a.Cv,
+                            {
+                                x: c.sB,
+                                y: c.sB
+                            },
+                            !0,
+                            2 + 2 / 3
+                        ),
+                    e.drawRoundedImage(
+                        'AvatarImage',
+                        {
+                            x: c.Iq,
+                            y: c.sB
+                        },
+                        {
+                            w: c.$S,
+                            h: c.$S
+                        },
+                        50
+                    ),
+                    (n = e),
+                    (r = u),
+                    n.setColor('white'),
+                    n.setFont({
+                        size: 16,
+                        family: c.I8,
+                        weight: c.Ue,
+                        truncate: l.GX.Wrap
+                    }),
+                    n.drawText(
+                        r,
+                        {
+                            x: c.Iq,
+                            y: 64,
+                            h: 32,
+                            w: c.kC
+                        },
+                        !0
+                    ),
+                    (0, s.J)({
+                        canvas: e,
+                        badges: m,
+                        startPosition: c.Iq,
+                        maxWidth: c.kC
+                    });
+            },
+            exportConfigs: {
+                format: l.kH.CloudUpload,
+                quality: 1,
+                fileName: 'user-reacting-to-'.concat(f, '.png').toLowerCase(),
+                fileType: 'png',
+                channelId: n.id
+            }
+        });
+    };

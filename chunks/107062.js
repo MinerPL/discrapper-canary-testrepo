@@ -1,150 +1,166 @@
-n(627494), n(757143);
-var i = n(735250),
-    a = n(470079),
-    s = n(442837),
-    l = n(481060),
-    r = n(2052),
-    o = n(620662),
+n.d(t, { ZP: () => S }), n(627494), n(757143), n(301563);
+var r = n(200651),
+    a = n(192379),
+    l = n(442837),
+    i = n(481060),
+    o = n(456100),
+    s = n(620662),
     c = n(841784),
     u = n(429589),
-    d = n(403404),
-    h = n(906732),
-    m = n(522474),
-    p = n(706454),
-    _ = n(823379),
-    f = n(5192),
-    E = n(192918),
-    g = n(561308),
-    C = n(907152),
-    I = n(206295),
-    x = n(297781),
-    T = n(591853),
-    N = n(797342),
-    v = n(981631),
-    S = n(701488),
-    Z = n(689938);
-let A = (e, t) =>
-        Z.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+    d = n(499254),
+    m = n(827498),
+    p = n(541716),
+    h = n(706454),
+    f = n(823379),
+    g = n(5192),
+    x = n(379357),
+    v = n(192918),
+    y = n(561308),
+    j = n(907152),
+    P = n(206295),
+    O = n(297781),
+    b = n(591853),
+    C = n(797342),
+    N = n(981631),
+    I = n(388032);
+let E = (e, t) =>
+        I.NW.formatToPlainString(I.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name
         }),
-    M = (e, t, n) => {
-        let i = Z.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME,
-            a = f.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
-            s = e.extra.activity_name;
-        return i
-            .plainFormat({
-                gameName: s,
-                userName: a
-            })
-            .replaceAll('*', '');
+    w = (e, t, n) => {
+        let r = I.t['bES+y8'],
+            a = g.ZP.getName(t.guild_id, t.id, n),
+            l = e.extra.activity_name;
+        return I.NW.formatToMarkdownString(r, {
+            gameName: l,
+            userName: a
+        }).replaceAll('*', '');
     },
-    b = (e) => {
-        let { entry: t, channel: n, users: i, countOthers: a } = e;
-        return Z.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED.plainFormat({
+    Z = (e) => {
+        let { entry: t, channel: n, users: r, countOthers: a } = e,
+            l = I.t['7j/5mp'];
+        return I.NW.formatToMarkdownString(l, {
             gameName: t.extra.activity_name,
-            user1: f.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[0]),
-            user2: f.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[1]),
+            user1: g.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[0]),
+            user2: g.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[1]),
             countOthers: a
         }).replaceAll('*', '');
-    };
-t.ZP = (e) => {
-    var t;
-    let { channel: n, entry: f, requestId: R, closePopout: j } = e,
-        { iconUrl: L, iconTitle: P, user: O, details: y, activity: D, coverImageUrl: k, richIcon: U } = (0, N.n)(f),
-        { primaryColor: w, secondaryColor: B } = (0, I.Z)(L),
-        H = (0, s.e7)([p.default], () => p.default.locale),
-        { displayParticipants: G, participant1: V, participant2: F, numOtherParticipants: W } = (0, E.Z)(f, 3),
-        z = (0, r.O)(),
-        { analyticsLocations: Y } = (0, h.ZP)(),
-        K = m.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
-        q = () => {
-            (0, d.Z)({
-                guildId: n.guild_id,
-                locationObject: z.location,
-                openInPopout: K,
-                initialSelectedApplicationId: f.extra.application_id,
-                initialSlide: S.ag.SELECT_CHANNEL,
-                analyticsLocations: Y
-            });
-        },
-        X = a.useCallback(
-            (e) => {
-                if (null == L || null == n || null == O) return;
-                let t =
-                    W > 0
-                        ? b({
-                              entry: f,
-                              channel: n,
-                              users: [V, F],
-                              countOthers: W
-                          })
-                        : M(f, n, O);
-                return (0, C.C4)({
-                    entry: f,
-                    applicationImageSrc: L,
-                    avatarSrcs: G.map((e) => e.getAvatarURL(n.guild_id, 128)),
-                    description: t,
-                    timestamp: (0, g.yh)(f, H),
-                    colors: [w, B],
-                    channelId: e
-                });
+    },
+    S = (e) => {
+        let { channel: t, entry: n, onReaction: g, onVoiceChannelPreview: S } = e,
+            { largeImage: T } = (0, x.rv)({
+                entry: n,
+                showCoverImage: !1
+            }),
+            { user: A, details: _, activity: k, embeddedActivity: R } = (0, C.n)(n),
+            { primaryColor: M, secondaryColor: D } = (0, P.Z)(null == T ? void 0 : T.src),
+            L = (0, l.e7)([h.default], () => h.default.locale),
+            { displayParticipants: W, participant1: U, participant2: z, numOtherParticipants: B } = (0, v.Z)(n, 3),
+            H = () => {
+                d.__(m._b.TEXT, p.Ie.NORMAL, { applicationId: n.extra.application_id });
             },
-            [L, n, G, f, H, W, V, F, w, B, O]
-        );
-    if (null == O) return null;
-    let Q = (0, i.jsx)(x.PZ, {
-            location: x.Gt.POPOUT,
-            entry: f
-        }),
-        J = (0, i.jsx)(T.wG, {
-            thumbnailSrc: null !== (t = null != U ? U : k) && void 0 !== t ? t : L,
-            thumbnailTitle: P,
-            channel: n,
-            userDescription: (0, g.kr)(f) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-            title: f.extra.activity_name,
-            subtitle: y,
-            badges: Q,
-            entry: f,
-            onClickTitle: q,
-            onClickSubtitle: q,
-            onClickThumbnail: q
-        }),
-        $ =
-            (0, o.Z)(D, v.xjy.JOIN) || (0, c.Z)(D)
-                ? (0, i.jsx)(u.Z, {
-                      activity: D,
-                      user: O,
+            G = a.useCallback(
+                (e) => {
+                    if ((null == T ? void 0 : T.src) == null || null == t || null == A) return;
+                    let r =
+                        B > 0
+                            ? Z({
+                                  entry: n,
+                                  channel: t,
+                                  users: [U, z],
+                                  countOthers: B
+                              })
+                            : w(n, t, A);
+                    return (0, j.C4)({
+                        entry: n,
+                        applicationImageSrc: null == T ? void 0 : T.src,
+                        avatarSrcs: W.map((e) => e.getAvatarURL(t.guild_id, 128)),
+                        description: r,
+                        timestamp: (0, y.yh)(n, L),
+                        colors: [M, D],
+                        channelId: e
+                    });
+                },
+                [null == T ? void 0 : T.src, t, W, n, L, B, U, z, M, D, A]
+            ),
+            { enabled: F } = o.c.useExperiment({ location: 'MemberListAcitivtyContentPopout' }, { autoTrackExposure: !0 });
+        if (null == A) return null;
+        let V = (0, r.jsx)(O.PZ, {
+                location: O.Gt.POPOUT,
+                entry: n
+            }),
+            Y = (0, r.jsx)(b.wG, {
+                channel: t,
+                userDescription: (0, y.kr)(n) ? I.t.vPg1JS : I.t.rPqqtr,
+                title: n.extra.activity_name,
+                subtitle: _,
+                badges: V,
+                entry: n,
+                showCoverImage: !1,
+                onClickTitle: H,
+                onClickSubtitle: H,
+                onClickThumbnail: H
+            }),
+            q = (0, s.Z)(k, N.xjy.JOIN) || (0, c.Z)(k),
+            J = q
+                ? (0, r.jsx)(u.Z, {
+                      embeddedActivity: R,
+                      activity: k,
+                      user: A,
                       ButtonComponent: (e) =>
-                          (0, i.jsx)(T.Ll, {
-                              IconComponent: l.GameControllerIcon,
-                              ...e
-                          })
+                          (0, r.jsx)(
+                              b.Ll,
+                              (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(n);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                              })
+                                          )),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: r,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = r);
+                                          });
+                                  }
+                                  return e;
+                              })({ IconComponent: i.YVR }, e)
+                          )
                   })
                 : null,
-        ee = [
-            $,
-            (0, i.jsx)(T.Ll, {
-                onClick: q,
-                IconComponent: l.ActivitiesIcon,
-                children: Z.Z.Messages.CONTENT_INVENTORY_VIEW_ACTIVITY
-            })
-        ].filter(_.lm);
-    return (0, i.jsxs)(T.yR, {
-        children: [
-            J,
-            (0, i.jsx)(T.St, {
-                children: (0, i.jsx)(T.WT, {
-                    closePopout: j,
-                    user: O,
-                    channel: n,
-                    generateReactionImage: X,
-                    reactionImageAltText: A(f, O),
-                    entry: f,
-                    requestId: R,
-                    buttons: ee
+            X = F ? i.iWm : i.jje,
+            K = (0, r.jsx)(b.Ll, {
+                onClick: H,
+                IconComponent: X,
+                children: I.NW.string(I.t.GDWYR0)
+            }),
+            $ = [q ? J : K].filter(f.lm);
+        return (0, r.jsxs)(b.yR, {
+            children: [
+                Y,
+                (0, r.jsx)(b.St, {
+                    children: (0, r.jsx)(b.WT, {
+                        onReaction: g,
+                        onVoiceChannelPreview: S,
+                        user: A,
+                        channel: t,
+                        generateReactionImage: G,
+                        reactionImageAltText: E(n, A),
+                        entry: n,
+                        buttons: $
+                    })
                 })
-            })
-        ]
-    });
-};
+            ]
+        });
+    };

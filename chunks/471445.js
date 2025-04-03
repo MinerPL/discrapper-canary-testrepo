@@ -1,143 +1,130 @@
 n.d(t, {
-    KS: function () {
-        return f;
-    },
-    Th: function () {
-        return h;
-    },
-    bT: function () {
-        return E;
-    }
+    KS: () => p,
+    Th: () => h,
+    bT: () => _
 });
 var r = n(481060),
     i = n(281956),
-    a = n(271383),
-    s = n(430824),
-    o = n(607744),
+    o = n(271383),
+    a = n(430824),
+    s = n(607744),
     l = n(594174),
-    u = n(447003),
-    c = n(176505),
+    c = n(447003),
+    u = n(176505),
     d = n(981631),
-    _ = n(689938);
-function E(e, t, n, r) {
+    f = n(388032);
+function _(e, t, n, r) {
     if (null == e) return null;
-    if (e.id === (null == t ? void 0 : t.rulesChannelId)) return _.Z.Messages.CHANNEL_TOOLTIP_RULES;
+    if (e.id === (null == t ? void 0 : t.rulesChannelId)) return f.NW.string(f.t['/7EhaW']);
     switch (e.type) {
         case d.d4z.GUILD_TEXT:
-            if (r) return _.Z.Messages.CHANNEL_TOOLTIP_TEXT_ACTIVE_THREADS;
-            if (e.isNSFW()) return _.Z.Messages.CHANNEL_TOOLTIP_TEXT_NSFW;
-            if ((0, u.Z)(e)) return _.Z.Messages.CHANNEL_TOOLTIP_TEXT_LIMITED;
-            if (null != e.linkedLobby) return _.Z.Messages.CHANNEL_TOOLTIP_TEXT_LINKED_LOBBY;
-            return _.Z.Messages.CHANNEL_TOOLTIP_TEXT;
+            if (null != e.linkedLobby) return f.NW.string(f.t.Lt3PAA);
+            if (r) return f.NW.string(f.t.LKpYbm);
+            if (e.isNSFW()) return f.NW.string(f.t.vvASTU);
+            if ((0, c.Z)(e)) return f.NW.string(f.t.jQ1plp);
+            return f.NW.string(f.t.t1yj0N);
         case d.d4z.GUILD_FORUM:
             let i = e.isMediaChannel();
-            if (e.isNSFW()) return i ? _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW : _.Z.Messages.CHANNEL_TOOLTIP_FORUM_NSFW;
-            if ((0, u.Z)(e)) return i ? _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED : _.Z.Messages.CHANNEL_TOOLTIP_FORUM_LIMITED;
-            return i ? _.Z.Messages.MEDIA_CHANNEL : _.Z.Messages.FORUM;
+            if (e.isNSFW()) return i ? f.NW.string(f.t['pZ/fYW']) : f.NW.string(f.t.ibmpPj);
+            if ((0, c.Z)(e)) return i ? f.NW.string(f.t.gfVCfH) : f.NW.string(f.t.UbLM3N);
+            return i ? f.NW.string(f.t.seKITE) : f.NW.string(f.t['0sDXdn']);
         case d.d4z.GUILD_MEDIA:
-            if (e.isNSFW()) return _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW;
-            if ((0, u.Z)(e)) return _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED;
-            return _.Z.Messages.MEDIA_CHANNEL;
+            if (e.isNSFW()) return f.NW.string(f.t['pZ/fYW']);
+            if ((0, c.Z)(e)) return f.NW.string(f.t.gfVCfH);
+            return f.NW.string(f.t.seKITE);
         case d.d4z.GUILD_STAGE_VOICE:
-            if (n) return _.Z.Messages.CHANNEL_TOOLTIP_STAGE_LOCKED;
-            if ((0, u.Z)(e)) return _.Z.Messages.CHANNEL_TOOLTIP_STAGE_LIMITED;
-            return _.Z.Messages.CHANNEL_TOOLTIP_STAGE;
+            if (n) return f.NW.string(f.t.ZjZB3t);
+            if ((0, c.Z)(e)) return f.NW.string(f.t['7pRuCQ']);
+            return f.NW.string(f.t.eJFSiI);
         case d.d4z.GUILD_VOICE:
-            if (n) return _.Z.Messages.CHANNEL_TOOLTIP_VOICE_LOCKED;
-            if ((0, u.Z)(e)) return _.Z.Messages.CHANNEL_TOOLTIP_VOICE_LIMITED;
-            return _.Z.Messages.CHANNEL_TOOLTIP_VOICE;
+            if (n) return f.NW.string(f.t.xY8Wtr);
+            if ((0, c.Z)(e)) return f.NW.string(f.t.qaY8Dg);
+            return f.NW.string(f.t['0kBmo6']);
         case d.d4z.GUILD_ANNOUNCEMENT:
-            if (e.isNSFW()) return _.Z.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS_NSFW;
-            if ((0, u.Z)(e)) return _.Z.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS_LIMITED;
-            return _.Z.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS;
+            if (e.isNSFW()) return f.NW.string(f.t.eRc6o6);
+            if ((0, c.Z)(e)) return f.NW.string(f.t.EHLQws);
+            return f.NW.string(f.t.GtDRi4);
         case d.d4z.GUILD_STORE:
-            return _.Z.Messages.CHANNEL_TOOLTIP_STORE;
+            return f.NW.string(f.t.Ea4NDA);
         case d.d4z.DM:
-            return _.Z.Messages.DM;
+            return f.NW.string(f.t.jN2DfX);
         case d.d4z.GROUP_DM:
-            return _.Z.Messages.GROUP_DM;
+            return f.NW.string(f.t['e5y+go']);
         case d.d4z.GUILD_DIRECTORY:
-            return _.Z.Messages.CHANNEL_TOOLTIP_DIRECTORY;
+            return f.NW.string(f.t.IzZTIS);
         case d.d4z.PUBLIC_THREAD:
-            return _.Z.Messages.THREAD;
+            return f.NW.string(f.t['7Xm5QE']);
         case d.d4z.PRIVATE_THREAD:
-            return _.Z.Messages.PRIVATE_THREAD;
+            return f.NW.string(f.t.F1zyvb);
         default:
             return null;
     }
 }
-function f(e, t) {
+function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { locked: _ = !1, video: E = !1, stream: f = !1, hasActiveThreads: h = !1, textFocused: p = !1 } = n;
+        { locked: f = !1, video: _ = !1, stream: p = !1, hasActiveThreads: h = !1, textFocused: m = !1 } = n;
     if (null == e) return null;
-    null == t && (t = s.Z.getGuild(e.getGuildId()));
-    let m = (0, i.n)(null == t ? void 0 : t.id, [s.Z, o.Z, l.default, a.ZP]);
-    if ((null == e ? void 0 : e.id) === (null == t ? void 0 : t.rulesChannelId)) return r.BookCheckIcon;
+    null == t && (t = a.Z.getGuild(e.getGuildId()));
+    let g = (0, i.n)(null == t ? void 0 : t.id, [a.Z, s.Z, l.default, o.ZP]);
+    if ((null == e ? void 0 : e.id) === (null == t ? void 0 : t.rulesChannelId)) return r.snC;
     switch (e.type) {
         case d.d4z.GUILD_ANNOUNCEMENT:
-            if (h) {
-                if (e.isNSFW()) return r.AnnouncementsWarningIcon;
-                if ((0, u.Z)(e)) return r.AnnouncementsLockIcon;
-                else return r.AnnouncementsIcon;
-            }
-            if (e.isNSFW()) return r.AnnouncementsWarningIcon;
-            if ((0, u.Z)(e)) return r.AnnouncementsLockIcon;
-            return r.AnnouncementsIcon;
+            if (h)
+                if (e.isNSFW()) return r.ToS;
+                else if ((0, c.Z)(e)) return r.Fv2;
+                else return r.MqZ;
+            if (e.isNSFW()) return r.ToS;
+            if ((0, c.Z)(e)) return r.Fv2;
+            return r.MqZ;
         case d.d4z.GUILD_STORE:
-            return r.TagIcon;
+            return r.lO_;
         case d.d4z.DM:
         case d.d4z.GROUP_DM:
-            return r.AtIcon;
+            return r.lOy;
         case d.d4z.PRIVATE_THREAD:
-            return r.ThreadLockIcon;
+            return r.qtY;
         case d.d4z.ANNOUNCEMENT_THREAD:
         case d.d4z.PUBLIC_THREAD:
-            if (e.isNSFW()) return r.ThreadWarningIcon;
-            if (e.isForumPost()) return r.ChatIcon;
-            else return r.ThreadIcon;
+            if (e.isNSFW()) return r.Xn;
+            if (e.isForumPost()) return r.kBi;
+            return r.or_;
         case d.d4z.GUILD_TEXT:
-            if (h) {
-                if (e.isNSFW()) return r.TextWarningIcon;
-                if ((0, u.Z)(e)) return r.TextLockIcon;
-                else return r.TextIcon;
-            }
-            if (e.isNSFW()) return r.TextWarningIcon;
-            if ((0, u.Z)(e)) return r.TextLockIcon;
-            if (null != e.linkedLobby) return r.RefreshIcon;
-            return r.TextIcon;
+            if (null != e.linkedLobby) return r.rbH;
+            if (e.isNSFW()) return r.z0B;
+            if ((0, c.Z)(e)) return r.W4G;
+            return r.VL1;
         case d.d4z.GUILD_FORUM:
-            let I = e.isMediaChannel();
-            if (e.isNSFW()) return I ? r.ImageWarningIcon : r.ForumWarningIcon;
-            if ((0, u.Z)(e)) return I ? r.ImageLockIcon : r.ForumLockIcon;
-            else return I ? r.ImageIcon : r.ForumIcon;
+            let E = e.isMediaChannel();
+            if (e.isNSFW()) return E ? r.fFY : r.Mec;
+            if ((0, c.Z)(e)) return E ? r.D7T : r.BUe;
+            return E ? r.XBm : r.Mmi;
         case d.d4z.GUILD_MEDIA:
-            if (e.isNSFW()) return r.ImageWarningIcon;
-            if ((0, u.Z)(e)) return r.ImageLockIcon;
-            else return r.ImageIcon;
+            if (e.isNSFW()) return r.fFY;
+            if ((0, c.Z)(e)) return r.D7T;
+            return r.XBm;
         case d.d4z.GUILD_STAGE_VOICE:
-            if (m) return (0, u.Z)(e) ? r.LockIcon : r.StageLockIcon;
-            if (_) return r.LockIcon;
-            if ((0, u.Z)(e)) return r.StageLockIcon;
-            else return r.StageIcon;
+            if (g) return (0, c.Z)(e) ? r.mBM : r.pki;
+            if (f) return r.mBM;
+            if ((0, c.Z)(e)) return r.pki;
+            else return r.ewx;
         case d.d4z.GUILD_VOICE:
-            if (p) return r.ChatIcon;
-            if (e.isNSFW()) return r.VoiceWarningIcon;
-            if (f) return r.ScreenArrowIcon;
-            if (m) {
-                if ((0, u.Z)(e)) return r.LockIcon;
-                return E ? r.VideoLockIcon : r.VoiceLockIcon;
-            }
-            if (_) return r.LockIcon;
-            if ((0, u.Z)(e)) return E ? r.VideoLockIcon : r.VoiceLockIcon;
-            else return E ? r.VideoIcon : r.VoiceNormalIcon;
+            if (m) return r.kBi;
+            if (e.isNSFW()) return r.BVY;
+            if (p) return r.hGI;
+            if (g)
+                if ((0, c.Z)(e)) return r.mBM;
+                else return _ ? r.TLW : r.gjC;
+            if (f) return r.mBM;
+            if ((0, c.Z)(e)) return _ ? r.TLW : r.gjC;
+            else return _ ? r.Odl : r.gj8;
         case d.d4z.GUILD_DIRECTORY:
-            return r.HubIcon;
+            return r.aVH;
         case d.d4z.GUILD_CATEGORY:
-            return r.FolderIcon;
+            return r.ROc;
         default:
-            if (c.EC.has(e.id)) {
-                if (e.id === c.HY.GUILD_HOME || e.id === c.HY.SERVER_GUIDE) return r.SignPostIcon;
-                if (e.id === c.HY.CHANNEL_BROWSER || e.id === c.HY.CUSTOMIZE_COMMUNITY) return r.ChannelListMagnifyingGlassIcon;
+            if (u.EC.has(e.id)) {
+                if (e.id === u.HY.GUILD_HOME || e.id === u.HY.SERVER_GUIDE) return r.Vy8;
+                else if (e.id === u.HY.CHANNEL_BROWSER || e.id === u.HY.CUSTOMIZE_COMMUNITY) return r.H$4;
             }
             return null;
     }
@@ -145,27 +132,27 @@ function f(e, t) {
 function h(e) {
     switch (e) {
         case d.d4z.GUILD_ANNOUNCEMENT:
-            return r.AnnouncementsIcon;
+            return r.MqZ;
         case d.d4z.GUILD_STORE:
-            return r.TagIcon;
+            return r.lO_;
         case d.d4z.DM:
         case d.d4z.GROUP_DM:
-            return r.AtIcon;
+            return r.lOy;
         case d.d4z.PRIVATE_THREAD:
-            return r.ThreadLockIcon;
+            return r.qtY;
         case d.d4z.ANNOUNCEMENT_THREAD:
         case d.d4z.PUBLIC_THREAD:
-            return r.ThreadIcon;
+            return r.or_;
         case d.d4z.GUILD_TEXT:
         case d.d4z.GUILD_FORUM:
         case d.d4z.GUILD_MEDIA:
-            return r.TextIcon;
+            return r.VL1;
         case d.d4z.GUILD_STAGE_VOICE:
-            return r.StageIcon;
+            return r.ewx;
         case d.d4z.GUILD_VOICE:
-            return r.VoiceNormalIcon;
+            return r.gj8;
         case d.d4z.GUILD_CATEGORY:
-            return r.FolderIcon;
+            return r.ROc;
         default:
             return null;
     }

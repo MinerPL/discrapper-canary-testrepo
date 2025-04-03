@@ -1,94 +1,103 @@
 n.d(t, {
-    L$: function () {
-        return E;
-    },
-    Sr: function () {
-        return f;
-    },
-    WQ: function () {
-        return _;
-    },
-    cT: function () {
-        return d;
-    },
-    d$: function () {
-        return u;
-    },
-    hL: function () {
-        return c;
-    },
-    us: function () {
-        return l;
-    }
+    L$: () => _,
+    Sr: () => p,
+    WQ: () => f,
+    cT: () => d,
+    d$: () => c,
+    hL: () => u,
+    us: () => l
 });
 var r = n(525769),
     i = n(544891),
-    a = n(570140),
-    s = n(573261),
-    o = n(981631);
+    o = n(570140),
+    a = n(573261),
+    s = n(981631);
 async function l() {
-    return (await i.tn.post(o.ANM.WEBAUTHN_CONDITIONAL_UI_CHALLENGE)).body;
+    return (
+        await i.tn.post({
+            url: s.ANM.WEBAUTHN_CONDITIONAL_UI_CHALLENGE,
+            rejectWithError: !1
+        })
+    ).body;
 }
-async function u() {
-    let { challenge: e, ticket: t } = (await i.tn.post(o.ANM.WEBAUTHN_PASSWORDLESS_CHALLENGE)).body;
+async function c() {
+    let { challenge: e, ticket: t } = (
+        await i.tn.post({
+            url: s.ANM.WEBAUTHN_PASSWORDLESS_CHALLENGE,
+            rejectWithError: !1
+        })
+    ).body;
     return {
         challenge: e,
         ticket: t
     };
 }
-function c() {
-    i.tn.get(o.ANM.MFA_WEBAUTHN_CREDENTIALS).then((e) => {
-        a.Z.dispatch({
-            type: 'MFA_WEBAUTHN_CREDENTIALS_LOADED',
-            credentials: e.body
+function u() {
+    i.tn
+        .get({
+            url: s.ANM.MFA_WEBAUTHN_CREDENTIALS,
+            rejectWithError: !0
+        })
+        .then((e) => {
+            o.Z.dispatch({
+                type: 'MFA_WEBAUTHN_CREDENTIALS_LOADED',
+                credentials: e.body
+            });
         });
-    });
 }
 function d(e) {
-    i.tn.del(o.ANM.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
-        a.Z.dispatch({
-            type: 'AUTHENTICATOR_DELETE',
-            credential: e
+    i.tn
+        .del({
+            url: s.ANM.MFA_WEBAUTHN_CREDENTIAL(e.id),
+            rejectWithError: !0
+        })
+        .then(() => {
+            o.Z.dispatch({
+                type: 'AUTHENTICATOR_DELETE',
+                credential: e
+            });
         });
-    });
 }
-async function _(e, t) {
+async function f(e, t) {
     let n = await i.tn.patch({
-        url: o.ANM.MFA_WEBAUTHN_CREDENTIAL(e),
-        body: { name: t }
+        url: s.ANM.MFA_WEBAUTHN_CREDENTIAL(e),
+        body: { name: t },
+        rejectWithError: !1
     });
-    a.Z.dispatch({
+    o.Z.dispatch({
         type: 'AUTHENTICATOR_UPDATE',
         credential: n.body
     });
 }
-async function E() {
+async function _() {
     let {
         body: { ticket: e, challenge: t }
     } = await i.tn.post({
-        url: o.ANM.MFA_WEBAUTHN_CREDENTIALS,
-        body: {}
+        url: s.ANM.MFA_WEBAUTHN_CREDENTIALS,
+        body: {},
+        rejectWithError: !1
     });
     return {
         ticket: e,
         challenge: t
     };
 }
-async function f(e, t, n) {
-    let i = await s.Z.post({
-        url: o.ANM.MFA_WEBAUTHN_CREDENTIALS,
+async function p(e, t, n) {
+    let i = await a.Z.post({
+        url: s.ANM.MFA_WEBAUTHN_CREDENTIALS,
         body: {
             name: e,
             ticket: t,
             credential: n
         },
-        trackedActionData: { event: r.a.WEBAUTHN_REGISTER }
+        trackedActionData: { event: r.a.WEBAUTHN_REGISTER },
+        rejectWithError: !1
     });
-    a.Z.dispatch({
+    o.Z.dispatch({
         type: 'AUTHENTICATOR_CREATE',
         credential: i.body
     }),
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'MFA_ENABLE_SUCCESS',
             codes: i.body.backup_codes
         });

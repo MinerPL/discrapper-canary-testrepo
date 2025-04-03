@@ -1,171 +1,166 @@
-n.d(t, {
-    N: function () {
-        return H;
-    }
-});
-var s = n(399606),
-    a = n(780384),
-    r = n(230711),
-    i = n(410030),
+n.d(t, { N: () => M });
+var r = n(399606),
+    i = n(780384),
+    s = n(230711),
+    a = n(410030),
     l = n(594174),
     o = n(424218),
-    c = n(380684),
-    d = n(74538),
-    _ = n(474936),
+    c = n(74538),
+    d = n(474936),
     u = n(981631),
-    E = n(526761),
-    T = n(689938),
-    I = n(323780),
-    R = n(101732),
-    C = n(450598),
-    g = n(633030),
-    p = n(97942),
-    N = n(269987),
-    A = n(548629),
-    m = n(507084),
-    f = n(680313),
-    S = n(926433),
-    h = n(302036),
-    M = n(994554),
-    x = n(1549),
-    O = n(13327),
-    b = n(59137),
-    P = n(405991),
-    v = n(24615),
-    L = n(193943),
-    Z = n(334347),
+    m = n(526761),
+    g = n(388032),
+    p = n(323780),
+    h = n(101732),
+    f = n(450598),
+    b = n(633030),
+    N = n(97942),
+    x = n(269987),
+    _ = n(548629),
+    E = n(507084),
+    j = n(680313),
+    O = n(926433),
+    C = n(302036),
+    S = n(994554),
+    v = n(1549),
+    T = n(13327),
+    I = n(59137),
+    y = n(405991),
+    A = n(24615),
+    P = n(193943),
+    R = n(334347),
     D = n(943734),
-    B = n(603076),
-    j = n(472656),
-    U = n(912429),
-    G = n(772969),
-    y = n(926262);
-let k = (e, t, n) => ((0, a.wj)(e) ? t : n),
-    H = (e) => {
+    Z = n(603076),
+    w = n(472656),
+    k = n(912429),
+    W = n(772969),
+    L = n(926262);
+let B = (e, t, n) => ((0, i.wj)(e) ? t : n),
+    M = (e) => {
         let { styles: t } = e,
-            n = (0, i.ZP)(),
-            a = (0, s.e7)([l.default], () => {
+            n = (0, a.ZP)(),
+            i = (0, r.e7)([l.default], () => {
                 let e = l.default.getCurrentUser();
-                return d.ZP.canUsePremiumProfileCustomization(e);
+                return c.ZP.canUsePremiumProfileCustomization(e);
             }),
-            H = (0, o.BU)(((0, c.Xv)() ? _.wb : _.Uq) / 1024, { useKibibytes: !0 });
+            M = (0, o.BU)(d.Uq / 1024, { useKibibytes: !0 });
         return {
             badge: {
-                title: T.Z.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
-                description: T.Z.Messages.PREMIUM_MARKETING_BADGE_PERK_DESCRIPTION,
-                imageSource: C,
+                title: g.NW.string(g.t.SS87ra),
+                description: g.NW.string(g.t.oD6CRk),
+                imageSource: f,
                 imageClassName: t.badgeImage
             },
             badgeAlt: {
-                title: T.Z.Messages.PREMIUM_MARKETING_PERK_GRID_ITEM_HEADING_PREMIUM_SUBSCRIPTION_BADGE,
-                description: T.Z.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_BADGE_DESCRIPTION_VARIANT_1,
-                imageSource: k(n, I, R),
+                title: g.NW.string(g.t['5cYMu7']),
+                description: g.NW.string(g.t.vxk9vb),
+                imageSource: B(n, p, h),
                 imageClassName: t.badgeNewImage
             },
             clientThemes: {
-                title: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
-                description: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
+                title: g.NW.string(g.t['/xvEMz']),
+                description: g.NW.string(g.t.HKWdjo),
                 className: t.clientThemesCard,
-                imageSource: v,
+                imageSource: A,
                 imageClassName: t.clientThemesImage
             },
             customAppIcons: {
-                title: T.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
-                description: T.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-                imageSource: L,
+                title: g.NW.string(g.t.OuItFh),
+                description: g.NW.string(g.t.mPyrEx),
+                imageSource: P,
                 imageClassName: t.customAppIconImage
             },
             emoji: {
-                title: T.Z.Messages.PREMIUM_MARKETING_FEATURE_EMOJI_TITLE,
-                description: T.Z.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
-                imageSource: Z,
+                title: g.NW.string(g.t['R2IV/f']),
+                description: g.NW.string(g.t.R5Xag4),
+                imageSource: R,
                 imageClassName: t.emojiImage
             },
             guildProfile: {
-                title: T.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
+                title: g.NW.string(g.t.lKDhhI),
                 description: (e) => {
                     let t = () => {
-                        r.Z.open(u.oAB.PROFILE_CUSTOMIZATION, null, {
-                            scrollPosition: E.Y_.TRY_IT_OUT,
+                        s.Z.open(u.oAB.PROFILE_CUSTOMIZATION, null, {
+                            scrollPosition: m.Y_.TRY_IT_OUT,
                             analyticsLocations: e
                         });
                     };
-                    return a ? T.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_CHECK_IT_OUT.format({ onCheckItOutClick: t }) : T.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_TRY_IT_OUT.format({ onTryItOutClick: t });
+                    return i ? g.NW.format(g.t.aj1pfX, { onCheckItOutClick: t }) : g.NW.format(g.t.d2oYS0, { onTryItOutClick: t });
                 },
-                imageSource: p,
+                imageSource: N,
                 imageClassName: t.perGuildProfilesImage
             },
             longerMessages: {
-                title: T.Z.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
-                description: T.Z.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-                imageSource: k(n, D, B),
+                title: g.NW.string(g.t.BUSciY),
+                description: g.NW.string(g.t.vN6Xpa),
+                imageSource: B(n, D, Z),
                 imageClassName: t.longerMessagesImage
             },
             moreGuilds: {
-                title: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
-                description: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                imageSource: k(n, g, j),
+                title: g.NW.string(g.t.Bv8Pfn),
+                description: g.NW.string(g.t.JMfaTU),
+                imageSource: B(n, b, w),
                 imageClassName: t.moreGuildsImage
             },
             moreGuildsAlt: {
-                title: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
-                description: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                imageSource: k(n, m, f),
+                title: g.NW.string(g.t.Bv8Pfn),
+                description: g.NW.string(g.t.JMfaTU),
+                imageSource: B(n, E, j),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
-                title: T.Z.Messages.REMIXING_PERKS_CARD_TITLE,
-                description: T.Z.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-                imageSource: k(n, N, A),
+                title: g.NW.string(g.t.ZvulDg),
+                description: g.NW.string(g.t['8GwCPT']),
+                imageSource: B(n, x, _),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },
             soundboard: {
-                title: T.Z.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
-                description: T.Z.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-                imageSource: k(n, S, h),
+                title: g.NW.string(g.t['lGcW+f']),
+                description: g.NW.string(g.t['/fDyOz']),
+                imageSource: B(n, O, C),
                 imageClassName: t.soundboardImage
             },
             stickers: {
-                title: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
-                description: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: k(n, M, U),
+                title: g.NW.string(g.t['1c+xwc']),
+                description: g.NW.string(g.t.hJG8ZG),
+                imageSource: B(n, S, k),
                 imageClassName: t.stickersImage
             },
             stickersBurst: {
-                title: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
-                description: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: k(n, M, U),
+                title: g.NW.string(g.t.tzdIwM),
+                description: g.NW.string(g.t.hJG8ZG),
+                imageSource: B(n, S, k),
                 imageClassName: t.stickersImage
             },
             stickersPerkDiscoverability: {
-                title: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
-                description: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                imageSource: k(n, M, U),
+                title: g.NW.string(g.t.tzdIwM),
+                description: g.NW.string(g.t.FXlU29),
+                imageSource: B(n, S, k),
                 imageClassName: t.stickersImage
             },
             streaming: {
-                title: T.Z.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
-                description: T.Z.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
-                imageSource: G,
+                title: g.NW.string(g.t.RSXQYG),
+                description: g.NW.string(g.t.ymCPxs),
+                imageSource: W,
                 imageClassName: t.streamingImage
             },
             superReactions: {
-                title: T.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
-                description: T.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-                imageSource: k(n, x, O),
+                title: g.NW.string(g.t.uZt5q6),
+                description: g.NW.string(g.t.ZK3Zoa),
+                imageSource: B(n, v, T),
                 imageClassName: t.superReactionsImage
             },
             upload: {
-                title: T.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({ premiumMaxSize: H }),
-                description: T.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({ premiumMaxSize: H }),
-                imageSource: y,
+                title: g.NW.formatToPlainString(g.t.jqhAdH, { premiumMaxSize: M }),
+                description: g.NW.formatToPlainString(g.t['HI+cfn'], { premiumMaxSize: M }),
+                imageSource: L,
                 imageClassName: t.uploadImage
             },
             videoBackground: {
-                title: T.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
-                description: T.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-                imageSource: k(n, b, P),
+                title: g.NW.string(g.t.NaGpTU),
+                description: g.NW.string(g.t['A8O/Q0']),
+                imageSource: B(n, I, y),
                 imageClassName: t.videoBackgroundImage
             }
         };

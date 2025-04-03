@@ -1,25 +1,21 @@
-r.d(t, {
-    I: function () {
-        return _;
-    }
-});
-var n = r(395848),
-    a = r(383704),
-    o = r(202937),
-    i = r(896247);
-let _ = (e, t) => {
-    let r = (0, i.W)(),
-        _ = 'navigate';
+a.d(e, { I: () => i });
+var r = a(395848),
+    n = a(383704),
+    _ = a(202937),
+    o = a(896247);
+let i = (t, e) => {
+    let a = (0, o.W)(),
+        i = 'navigate';
     return (
-        r && ((n.m.document && n.m.document.prerendering) || (0, o.A)() > 0 ? (_ = 'prerender') : n.m.document && n.m.document.wasDiscarded ? (_ = 'restore') : r.type && (_ = r.type.replace(/_/g, '-'))),
+        a && ((r.m.document && r.m.document.prerendering) || (0, _.A)() > 0 ? (i = 'prerender') : r.m.document && r.m.document.wasDiscarded ? (i = 'restore') : a.type && (i = a.type.replace(/_/g, '-'))),
         {
-            name: e,
-            value: void 0 === t ? -1 : t,
+            name: t,
+            value: void 0 === e ? -1 : e,
             rating: 'good',
             delta: 0,
             entries: [],
-            id: (0, a.f)(),
-            navigationType: _
+            id: (0, n.f)(),
+            navigationType: i
         }
     );
 };

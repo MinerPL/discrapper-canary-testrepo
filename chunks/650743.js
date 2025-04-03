@@ -1,106 +1,132 @@
-n.d(t, {
-    Z: function () {
-        return A;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => S });
+var r = n(200651);
+n(192379);
 var i = n(399606),
-    a = n(704215),
-    s = n(481060),
-    o = n(596454),
+    o = n(704215),
+    a = n(481060),
+    s = n(596454),
     l = n(607070),
-    u = n(605236),
-    c = n(880949),
+    c = n(605236),
+    u = n(880949),
     d = n(28546),
-    _ = n(65029),
-    E = n(430824),
-    f = n(556296),
+    f = n(65029),
+    _ = n(430824),
+    p = n(556296),
     h = n(451478),
-    p = n(358085),
-    m = n(13140),
-    I = n(763296),
-    T = n(981631),
-    g = n(689938),
-    S = n(474288);
-function A(e) {
-    let { soundboardSound: t, closePicker: A } = e,
-        N = (0, d.Iu)((e) => e.searchQuery),
-        v = (0, i.e7)([I.Z], () => null != t && I.Z.isFavoriteSound(t.soundId)),
-        O = (0, i.e7)([E.Z], () => E.Z.getGuild(null == t ? void 0 : t.guildId)),
-        R = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
+    m = n(358085),
+    g = n(13140),
+    E = n(763296),
+    b = n(981631),
+    y = n(388032),
+    v = n(127253);
+function O(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function I(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                O(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function S(e) {
+    let { soundboardSound: t, closePicker: O } = e,
+        S = (0, d.Iu)((e) => e.searchQuery),
+        T = (0, i.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
+        N = (0, i.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
+        A = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
         C = (0, i.e7)([h.Z], () => h.Z.isFocused()),
-        y = (0, i.e7)([f.Z], () => f.Z.getKeybindForAction(T.kg4.SOUNDBOARD_HOLD));
-    if (null != t && N.length > 0)
-        return (0, r.jsx)(_.Z, {
+        R = (0, i.e7)([p.ZP], () => p.ZP.getKeybindForAction(b.kg4.SOUNDBOARD_HOLD));
+    if (null != t && S.length > 0)
+        return (0, r.jsx)(f.Z, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
-                    ? (0, r.jsx)(o.Z, {
+                    ? (0, r.jsx)(s.Z, {
                           emojiId: t.emojiId,
                           emojiName: t.emojiName,
-                          className: S.emoji
+                          className: v.emoji
                       })
-                    : (0, r.jsx)(s.ImageIcon, {
+                    : (0, r.jsx)(a.XBm, {
                           size: 'md',
                           color: 'currentColor',
-                          className: S.emoji
+                          className: v.emoji
                       }),
             graphicSecondary:
-                null != O
-                    ? (0, r.jsx)(c.Z, {
-                          guild: O,
-                          shouldAnimate: !R && C
+                null != N
+                    ? (0, r.jsx)(u.Z, {
+                          guild: N,
+                          shouldAnimate: !A && C
                       })
                     : null,
             titlePrimary: t.name,
-            titleSecondary: null == O ? void 0 : O.name,
-            isFavorite: v
+            titleSecondary: null == N ? void 0 : N.name,
+            isFavorite: T
         });
-    let D = () => {
-            A(),
-                (0, s.openModalLazy)(async () => {
+    let P = () => {
+            O(),
+                (0, a.ZDy)(async () => {
                     let { default: e } = await n.e('58120').then(n.bind(n, 355453));
-                    return (t) => (0, r.jsx)(e, { ...t });
+                    return (t) => (0, r.jsx)(e, I({}, t));
                 });
         },
-        L = (0, u.un)(a.z.SOUNDBOARD_KEYBIND_TIP),
-        b =
-            null != y && (0, p.isWindows)() && !L
-                ? g.Z.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
-                      keybind: (0, m.BB)(y.shortcut, !0),
+        w = (0, c.un)(o.z.SOUNDBOARD_KEYBIND_TIP),
+        D = () => (0, c.EW)(o.z.SOUNDBOARD_KEYBIND_TIP),
+        L =
+            null != R && (0, m.isWindows)() && !w
+                ? y.NW.format(y.t.udMTtr, {
+                      keybind: (0, g.BB)(R.shortcut, !0),
                       openSettingsHook: (e, t) =>
                           (0, r.jsx)(
-                              s.Anchor,
+                              a.eee,
                               {
-                                  onClick: D,
+                                  onClick: P,
                                   children: e
                               },
                               t
                           )
                   })
                 : null;
-    return null == b
+    return null == L
         ? null
         : (0, r.jsxs)('div', {
-              className: S.keybindHint,
+              className: v.keybindHint,
               children: [
-                  (0, r.jsx)(s.CircleWarningIcon, {
+                  (0, r.jsx)(a.P4T, {
                       size: 'custom',
                       width: 20,
                       height: 20,
                       color: 'currentColor',
-                      className: S.warningIcon
+                      className: v.warningIcon
                   }),
-                  (0, r.jsx)(s.Text, {
+                  (0, r.jsx)(a.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-normal',
-                      className: S.keybindHintText,
-                      children: b
+                      className: v.keybindHintText,
+                      children: L
                   }),
-                  (0, r.jsx)(s.Clickable, {
-                      className: S.closeButton,
-                      onClick: () => (0, u.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),
-                      children: (0, r.jsx)(s.XSmallIcon, {
+                  (0, r.jsx)(a.P3F, {
+                      className: v.closeButton,
+                      onClick: D,
+                      children: (0, r.jsx)(a.Dio, {
                           size: 'xs',
                           color: 'currentColor'
                       })

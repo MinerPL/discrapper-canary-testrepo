@@ -1,13 +1,4 @@
-var r, i, a, s;
-n.d(t, {
-    a: function () {
-        return r;
-    }
-}),
-    ((a = r || (r = {}))[(a.DISABLED = -1)] = 'DISABLED'),
-    (a[(a.NORMAL = 0)] = 'NORMAL'),
-    (a[(a.LOW_BIRTATE = 1)] = 'LOW_BIRTATE'),
-    (a[(a.AGGRESSIVE = 2)] = 'AGGRESSIVE'),
-    (a[(a.VERY_AGGRESSIVE = 3)] = 'VERY_AGGRESSIVE'),
-    ((s = i || (i = {}))[(s.NONE = 0)] = 'NONE'),
-    (s[(s.TIMEOUT = 1)] = 'TIMEOUT');
+n.d(t, { a: () => r });
+var r = (function (e) {
+    return (e[(e.DISABLED = -1)] = 'DISABLED'), (e[(e.NORMAL = 0)] = 'NORMAL'), (e[(e.LOW_BIRTATE = 1)] = 'LOW_BIRTATE'), (e[(e.AGGRESSIVE = 2)] = 'AGGRESSIVE'), (e[(e.VERY_AGGRESSIVE = 3)] = 'VERY_AGGRESSIVE'), e;
+})({});

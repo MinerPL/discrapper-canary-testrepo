@@ -1,61 +1,58 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
+n.d(t, { Z: () => f });
 var r = n(685516),
     i = n(285363),
-    a = n(175922),
-    s = n(406434),
-    o = n(6138),
+    o = n(175922),
+    a = n(406434),
+    s = n(6138),
     l = n(740078),
-    u = n(882159),
-    c = n(544338),
+    c = n(882159),
+    u = n(544338),
     d = n(581206);
-function _(e, t) {
+function f(e, t) {
     void 0 === t && (t = {});
     var n = t,
-        _ = n.placement,
-        E = void 0 === _ ? e.placement : _,
-        f = n.strategy,
-        h = void 0 === f ? e.strategy : f,
-        p = n.boundary,
-        m = void 0 === p ? l.zV : p,
-        I = n.rootBoundary,
-        T = void 0 === I ? l.Pj : I,
-        g = n.elementContext,
-        S = void 0 === g ? l.k5 : g,
-        A = n.altBoundary,
-        N = n.padding,
-        v = void 0 === N ? 0 : N,
-        O = (0, c.Z)('number' != typeof v ? v : (0, d.Z)(v, l.mv)),
-        R = S === l.k5 ? l.YP : l.k5,
+        f = n.placement,
+        _ = void 0 === f ? e.placement : f,
+        p = n.strategy,
+        h = void 0 === p ? e.strategy : p,
+        m = n.boundary,
+        g = void 0 === m ? l.zV : m,
+        E = n.rootBoundary,
+        b = void 0 === E ? l.Pj : E,
+        y = n.elementContext,
+        v = void 0 === y ? l.k5 : y,
+        O = n.altBoundary,
+        I = void 0 !== O && O,
+        S = n.padding,
+        T = void 0 === S ? 0 : S,
+        N = (0, u.Z)('number' != typeof T ? T : (0, d.Z)(T, l.mv)),
+        A = v === l.k5 ? l.YP : l.k5,
         C = e.rects.popper,
-        y = e.elements[void 0 !== A && A ? R : S],
-        D = (0, r.Z)((0, u.kK)(y) ? y : y.contextElement || (0, i.Z)(e.elements.popper), m, T, h),
-        L = (0, a.Z)(e.elements.reference),
-        b = (0, s.Z)({
-            reference: L,
+        R = e.elements[I ? A : v],
+        P = (0, r.Z)((0, c.kK)(R) ? R : R.contextElement || (0, i.Z)(e.elements.popper), g, b, h),
+        w = (0, o.Z)(e.elements.reference),
+        D = (0, a.Z)({
+            reference: w,
             element: C,
             strategy: 'absolute',
-            placement: E
+            placement: _
         }),
-        M = (0, o.Z)(Object.assign({}, C, b)),
-        P = S === l.k5 ? M : L,
-        U = {
-            top: D.top - P.top + O.top,
-            bottom: P.bottom - D.bottom + O.bottom,
-            left: D.left - P.left + O.left,
-            right: P.right - D.right + O.right
+        L = (0, s.Z)(Object.assign({}, C, D)),
+        x = v === l.k5 ? L : w,
+        M = {
+            top: P.top - x.top + N.top,
+            bottom: x.bottom - P.bottom + N.bottom,
+            left: P.left - x.left + N.left,
+            right: x.right - P.right + N.right
         },
-        w = e.modifiersData.offset;
-    if (S === l.k5 && w) {
-        var x = w[E];
-        Object.keys(U).forEach(function (e) {
+        k = e.modifiersData.offset;
+    if (v === l.k5 && k) {
+        var j = k[_];
+        Object.keys(M).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
                 n = [l.we, l.I].indexOf(e) >= 0 ? 'y' : 'x';
-            U[e] += x[n] * t;
+            M[e] += j[n] * t;
         });
     }
-    return U;
+    return M;
 }

@@ -1,16 +1,15 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
-var r = n(695346),
-    i = n(131951),
+n.d(t, { Z: () => s });
+var r,
+    i = n(695346),
+    o = n(131951),
     a = n(36703);
 function s(e) {
-    let t = (function () {
-        var e;
-        let t = r.kU.getSetting();
-        return (0, a.P)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100) / 100;
-    })();
-    return Math.min(e * t * Math.min(i.Z.getOutputVolume() / 100, 1), 1);
+    let t =
+        arguments.length > 1 && void 0 !== arguments[1]
+            ? arguments[1]
+            : (() => {
+                  var e;
+                  return null != (r = null == (e = i.kU.getSetting()) ? void 0 : e.volume) ? r : 100;
+              })();
+    return Math.min(e * ((0, a.P)(t) / 100) * Math.min(o.Z.getOutputVolume() / 100, 1), 1);
 }

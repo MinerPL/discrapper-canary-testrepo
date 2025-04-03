@@ -1,45 +1,41 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(866442),
-    s = n(481060),
-    r = n(689938),
-    l = n(628428);
-function o(e) {
-    let { locked: t, role: n, textVariant: o = 'text-xs/medium' } = e,
-        c = (0, s.useToken)(s.tokens.colors.INTERACTIVE_NORMAL).hex();
-    return (0, i.jsx)('div', {
+r.d(t, { Z: () => i });
+var n = r(200651);
+r(192379);
+var A = r(866442),
+    a = r(481060),
+    o = r(388032),
+    l = r(838997);
+function i(e) {
+    let { locked: t, role: r, textVariant: i = 'text-xs/medium' } = e,
+        s = (0, a.dQu)(a.TVs.colors.INTERACTIVE_NORMAL).hex();
+    return (0, n.jsx)('div', {
         className: l.roleTagContainer,
-        children: (0, i.jsxs)('div', {
+        children: (0, n.jsxs)('div', {
             className: l.roleTag,
             children: [
-                (0, i.jsx)('div', {
+                (0, n.jsx)('div', {
                     className: l.roleColor,
-                    style: { backgroundColor: (0, a.Rf)(n.color) }
+                    style: { backgroundColor: (0, A.Rf)(r.color) }
                 }),
-                (0, i.jsx)(s.Spacer, {
+                (0, n.jsx)(a.LZC, {
                     size: 8,
                     horizontal: !0
                 }),
-                (0, i.jsxs)(s.Text, {
-                    variant: o,
+                (0, n.jsxs)(a.Text, {
+                    variant: i,
                     color: 'text-normal',
-                    children: [(0, i.jsx)(s.HiddenVisually, { children: r.Z.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER }), n.name]
+                    children: [(0, n.jsx)(a.nn4, { children: o.NW.string(o.t.RnyseH) }), r.name]
                 }),
                 !0 === t &&
-                    (0, i.jsxs)(i.Fragment, {
+                    (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, i.jsx)(s.Spacer, {
+                            (0, n.jsx)(a.LZC, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, i.jsx)(s.LockIcon, {
+                            (0, n.jsx)(a.mBM, {
                                 size: 'md',
-                                color: c
+                                color: s
                             })
                         ]
                     })

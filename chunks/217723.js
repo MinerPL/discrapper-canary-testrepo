@@ -1,67 +1,61 @@
-o.r(t),
-    o.d(t, {
-        default: function () {
-            return c;
-        }
-    }),
-    o(47120);
-var a = o(735250),
-    s = o(470079),
-    l = o(481060),
-    n = o(313201),
-    i = o(689938),
-    d = o(981485);
-function c(e) {
-    let { transitionState: t, onConfirm: o, onClose: c, onDismiss: r } = e,
-        [u, h] = s.useState(!1),
-        m = (0, n.Dt)(),
-        C = async () => {
-            if (!u) {
-                h(!0);
+e.d(a, { default: () => c }), e(47120);
+var l = e(200651),
+    i = e(192379),
+    o = e(481060),
+    s = e(313201),
+    n = e(388032),
+    r = e(249045);
+function c(t) {
+    let { transitionState: a, onConfirm: e, onClose: c, onDismiss: d } = t,
+        [h, m] = i.useState(!1),
+        u = (0, s.Dt)(),
+        x = async () => {
+            if (!h) {
+                m(!0);
                 try {
-                    await o();
-                } catch (e) {
+                    await e();
+                } catch (t) {
                 } finally {
-                    h(!1);
+                    m(!1);
                 }
                 c();
             }
         };
-    return (0, a.jsxs)(l.ModalRoot, {
-        transitionState: t,
-        'aria-labelledby': m,
-        size: l.ModalSize.SMALL,
+    return (0, l.jsxs)(o.Y0X, {
+        transitionState: a,
+        'aria-labelledby': u,
+        size: o.CgR.SMALL,
         children: [
-            (0, a.jsxs)(l.ModalContent, {
+            (0, l.jsxs)(o.hzk, {
                 children: [
-                    (0, a.jsx)(l.ModalCloseButton, {
+                    (0, l.jsx)(o.olH, {
                         onClick: () => {
-                            r(), c();
+                            d(), c();
                         },
-                        className: d.closeButton
+                        className: r.closeButton
                     }),
-                    (0, a.jsx)(l.Heading, {
-                        id: m,
+                    (0, l.jsx)(o.X6q, {
+                        id: u,
                         variant: 'heading-lg/extrabold',
                         color: 'header-primary',
-                        className: d.modalTitle,
-                        children: i.Z.Messages.MESSAGE_REQUEST_ACCEPT_CONFIRMATION_TITLE
+                        className: r.modalTitle,
+                        children: n.NW.string(n.t['66tnnp'])
                     }),
-                    (0, a.jsx)(l.Text, {
+                    (0, l.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: d.modalBody,
-                        children: i.Z.Messages.MESSAGE_REQUEST_ACCEPT_CONFIRMATION_BODY
+                        className: r.modalBody,
+                        children: n.NW.string(n.t['c/k4SU'])
                     })
                 ]
             }),
-            (0, a.jsx)(l.ModalFooter, {
-                children: (0, a.jsx)(l.Button, {
+            (0, l.jsx)(o.mzw, {
+                children: (0, l.jsx)(o.zxk, {
                     type: 'submit',
-                    color: l.Button.Colors.BRAND,
-                    onClick: C,
-                    submitting: u,
-                    children: i.Z.Messages.CONFIRM
+                    color: o.zxk.Colors.BRAND,
+                    onClick: x,
+                    submitting: h,
+                    children: n.NW.string(n.t['cY+Ooa'])
                 })
             })
         ]

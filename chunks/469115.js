@@ -1,21 +1,17 @@
 n.d(t, {
-    XV: function () {
-        return _;
-    },
-    qt: function () {
-        return E;
-    }
+    Qf: () => _,
+    XV: () => f,
+    bV: () => p,
+    qt: () => h
 }),
     n(47120);
-var r,
-    i,
-    a = n(392711),
-    s = n(524437),
+var r = n(392711),
+    i = n(524437),
     o = n(231338),
-    l = n(689938);
-let u = [
+    a = n(388032);
+let s = [
         {
-            id: s.Us.MINT_APPLE,
+            id: i.Us.MINT_APPLE,
             theme: o.BR.LIGHT,
             colors: [
                 {
@@ -32,11 +28,11 @@ let u = [
                 }
             ],
             angle: 180,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_MINT_APPLE,
+            getName: () => a.NW.string(a.t.kCdS4e),
             midpointPercentage: 27
         },
         {
-            id: s.Us.CITRUS_SHERBERT,
+            id: i.Us.CITRUS_SHERBERT,
             theme: o.BR.LIGHT,
             colors: [
                 {
@@ -49,11 +45,11 @@ let u = [
                 }
             ],
             angle: 180,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_CITRUS_SHERBERT,
+            getName: () => a.NW.string(a.t.S4UnEx),
             midpointPercentage: 27
         },
         {
-            id: s.Us.RETRO_RAINCLOUD,
+            id: i.Us.RETRO_RAINCLOUD,
             theme: o.BR.LIGHT,
             colors: [
                 {
@@ -74,11 +70,11 @@ let u = [
                 }
             ],
             angle: 148.71,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_RETRO_RAINCLOUD,
+            getName: () => a.NW.string(a.t['48xnKS']),
             midpointPercentage: 50
         },
         {
-            id: s.Us.HANAMI,
+            id: i.Us.HANAMI,
             theme: o.BR.LIGHT,
             colors: [
                 {
@@ -95,11 +91,11 @@ let u = [
                 }
             ],
             angle: 38.08,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_HANAMI,
+            getName: () => a.NW.string(a.t.G4HsBA),
             midpointPercentage: 50
         },
         {
-            id: s.Us.SUNRISE,
+            id: i.Us.SUNRISE,
             theme: o.BR.LIGHT,
             colors: [
                 {
@@ -116,11 +112,11 @@ let u = [
                 }
             ],
             angle: 154.19,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_SUNRISE,
+            getName: () => a.NW.string(a.t['NAt88/']),
             midpointPercentage: 50
         },
         {
-            id: s.Us.COTTON_CANDY,
+            id: i.Us.COTTON_CANDY,
             theme: o.BR.LIGHT,
             colors: [
                 {
@@ -133,11 +129,11 @@ let u = [
                 }
             ],
             angle: 180.14,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_COTTON_CANDY,
+            getName: () => a.NW.string(a.t.godtzM),
             midpointPercentage: 50
         },
         {
-            id: s.Us.LOFI_VIBES,
+            id: i.Us.LOFI_VIBES,
             theme: o.BR.LIGHT,
             colors: [
                 {
@@ -158,11 +154,11 @@ let u = [
                 }
             ],
             angle: 179.52,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_LOFI_VIBES,
+            getName: () => a.NW.string(a.t.hlS2xs),
             midpointPercentage: 27
         },
         {
-            id: s.Us.DESERT_KHAKI,
+            id: i.Us.DESERT_KHAKI,
             theme: o.BR.LIGHT,
             colors: [
                 {
@@ -179,14 +175,15 @@ let u = [
                 }
             ],
             angle: 38.99,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_DESERT_KHAKI,
+            getName: () => a.NW.string(a.t['abMn9/']),
             midpointPercentage: 50
         }
     ],
+    l = o.BR.DARK,
     c = [
         {
-            id: s.Us.SUNSET,
-            theme: o.BR.DARK,
+            id: i.Us.SUNSET,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_SUNSET_1,
@@ -198,12 +195,12 @@ let u = [
                 }
             ],
             angle: 141.68,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_SUNSET,
+            getName: () => a.NW.string(a.t.JKDra2),
             midpointPercentage: 35
         },
         {
-            id: s.Us.CHROMA_GLOW,
-            theme: o.BR.DARK,
+            id: i.Us.CHROMA_GLOW,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_CHROMA_GLOW_1,
@@ -227,12 +224,12 @@ let u = [
                 }
             ],
             angle: 128.92,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_CHROMA_GLOW,
+            getName: () => a.NW.string(a.t.kwc8Ul),
             midpointPercentage: 15
         },
         {
-            id: s.Us.FOREST,
-            theme: o.BR.DARK,
+            id: i.Us.FOREST,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_FOREST_1,
@@ -256,12 +253,12 @@ let u = [
                 }
             ],
             angle: 162.27,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_FOREST,
+            getName: () => a.NW.string(a.t['TeA/j4']),
             midpointPercentage: 50
         },
         {
-            id: s.Us.CRIMSON_MOON,
-            theme: o.BR.DARK,
+            id: i.Us.CRIMSON_MOON,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_CRIMSON_MOON_1,
@@ -273,12 +270,12 @@ let u = [
                 }
             ],
             angle: 64.92,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_CRIMSON_MOON,
+            getName: () => a.NW.string(a.t.blIucn),
             midpointPercentage: 30
         },
         {
-            id: s.Us.MIDNIGHT_BLURPLE,
-            theme: o.BR.DARK,
+            id: i.Us.MIDNIGHT_BLURPLE,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_MIDNIGHT_BLURPLE_1,
@@ -290,12 +287,12 @@ let u = [
                 }
             ],
             angle: 48.17,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_MIDNIGHT_BLURPLE,
+            getName: () => a.NW.string(a.t.O1yOXF),
             midpointPercentage: 24
         },
         {
-            id: s.Us.MARS,
-            theme: o.BR.DARK,
+            id: i.Us.MARS,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_MARS_1,
@@ -307,12 +304,12 @@ let u = [
                 }
             ],
             angle: 170.82,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_MARS,
+            getName: () => a.NW.string(a.t['1swi9v']),
             midpointPercentage: 50
         },
         {
-            id: s.Us.DUSK,
-            theme: o.BR.DARK,
+            id: i.Us.DUSK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_DUSK_1,
@@ -324,12 +321,12 @@ let u = [
                 }
             ],
             angle: 180,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_DUSK,
+            getName: () => a.NW.string(a.t.So2Wur),
             midpointPercentage: 50
         },
         {
-            id: s.Us.UNDER_THE_SEA,
-            theme: o.BR.DARK,
+            id: i.Us.UNDER_THE_SEA,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_UNDER_THE_SEA_1,
@@ -345,12 +342,12 @@ let u = [
                 }
             ],
             angle: 179.14,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_UNDER_THE_SEA,
+            getName: () => a.NW.string(a.t['a22o4+']),
             midpointPercentage: 50
         },
         {
-            id: s.Us.RETRO_STORM,
-            theme: o.BR.DARK,
+            id: i.Us.RETRO_STORM,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_RETRO_STORM_1,
@@ -370,12 +367,12 @@ let u = [
                 }
             ],
             angle: 148.71,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_RETRO_STORM,
+            getName: () => a.NW.string(a.t.Bf294e),
             midpointPercentage: 61
         },
         {
-            id: s.Us.NEON_NIGHTS,
-            theme: o.BR.DARK,
+            id: i.Us.NEON_NIGHTS,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_NEON_NIGHTS_1,
@@ -391,12 +388,12 @@ let u = [
                 }
             ],
             angle: 180,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_NEON_NIGHTS,
+            getName: () => a.NW.string(a.t['p+XCtb']),
             midpointPercentage: 50
         },
         {
-            id: s.Us.STRAWBERRY_LEMONADE,
-            theme: o.BR.DARK,
+            id: i.Us.STRAWBERRY_LEMONADE,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_STRAWBERRY_LEMONADE_1,
@@ -412,12 +409,12 @@ let u = [
                 }
             ],
             angle: 161.03,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_STRAWBERRY_LEMONADE,
+            getName: () => a.NW.string(a.t['d5Ar+v']),
             midpointPercentage: 32
         },
         {
-            id: s.Us.AURORA,
-            theme: o.BR.DARK,
+            id: i.Us.AURORA,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_AURORA_1,
@@ -441,12 +438,12 @@ let u = [
                 }
             ],
             angle: 239.16,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_AURORA,
+            getName: () => a.NW.string(a.t.Je1FWF),
             midpointPercentage: 34
         },
         {
-            id: s.Us.SEPIA,
-            theme: o.BR.DARK,
+            id: i.Us.SEPIA,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_SEPIA_1,
@@ -458,13 +455,13 @@ let u = [
                 }
             ],
             angle: 69.98,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_SEPIA,
+            getName: () => a.NW.string(a.t['Z+Un4+']),
             midpointPercentage: 50
         }
     ],
-    d = {
-        id: s.Us.BLURPLE_TWILIGHT,
-        theme: o.BR.DARK,
+    u = {
+        id: i.Us.BLURPLE_TWILIGHT,
+        theme: l,
         colors: [
             {
                 token: o.Il.BG_GRADIENT_BLURPLE_TWILIGHT_1,
@@ -476,30 +473,44 @@ let u = [
             }
         ],
         angle: 47.61,
-        getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT,
+        getName: () => a.NW.string(a.t.Mfoe3t),
         midpointPercentage: 50
     },
-    _ = [
-        ...u,
-        ...c,
-        d,
+    d = {
+        id: i.Us.EASTER_EGG,
+        theme: o.BR.LIGHT,
+        colors: [
+            {
+                token: o.Il.BG_GRADIENT_EASTER_EGG_1,
+                stop: 4
+            },
+            {
+                token: o.Il.BG_GRADIENT_EASTER_EGG_2,
+                stop: 96
+            }
+        ],
+        angle: 180,
+        getName: () => a.NW.string(a.t.mFinbW),
+        midpointPercentage: 50
+    },
+    f = [...s, ...c, u, d],
+    _ = [u, ...c, ...s, d],
+    p = [
         {
-            id: s.Us.EASTER_EGG,
+            theme: l,
+            getName: () => a.NW.string(a.t.b8Cei4)
+        },
+        {
             theme: o.BR.LIGHT,
-            colors: [
-                {
-                    token: o.Il.BG_GRADIENT_EASTER_EGG_1,
-                    stop: 4
-                },
-                {
-                    token: o.Il.BG_GRADIENT_EASTER_EGG_2,
-                    stop: 96
-                }
-            ],
-            angle: 180,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_EASTER_EGG,
-            midpointPercentage: 50
+            getName: () => a.NW.string(a.t.K2sFfn)
+        },
+        {
+            theme: o.BR.MIDNIGHT,
+            getName: () => a.NW.string(a.t.pQwSpa)
+        },
+        {
+            theme: 'system',
+            getName: () => a.NW.string(a.t.zlvNOj)
         }
-    ];
-[...c, ...u], ((i = r || (r = {}))[(i.DARK = 0)] = 'DARK'), (i[(i.LIGHT = 1)] = 'LIGHT'), (i[(i.SYSTEM = 2)] = 'SYSTEM'), o.BR.DARK, o.BR.LIGHT, o.BR.DARKER, o.BR.LIGHT, o.BR.MIDNIGHT, () => l.Z.Messages.THEME_MIDNIGHT;
-let E = (0, a.keyBy)(_, 'id');
+    ],
+    h = (0, r.keyBy)(f, 'id');

@@ -1,34 +1,94 @@
-n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(46141);
-let c = {},
-    d = null,
-    _ = !1;
-function E(e) {
-    let { paymentSource: t } = e;
-    (c = {
-        ...c,
-        [t.id]: t
-    }),
-        (t.isDefault || 1 === Object.keys(c).length) && (d = t.id);
+    i = n(442837),
+    o = n(570140),
+    a = n(46141);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-class f extends (r = o.ZP.Store) {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = {},
+    f = null,
+    _ = !1;
+function p(e) {
+    let { paymentSources: t } = e;
+    for (let e of ((d = {}), (f = null), t)) (d[e.id] = a.ZP.createFromServer(e)), e.default && (f = e.id);
+    null == f && t.length > 0 && (f = t[0].id), (_ = !0);
+}
+function h(e) {
+    let { paymentSource: t } = e;
+    (d = u(l({}, d), { [t.id]: t })), (t.isDefault || 1 === Object.keys(d).length) && (f = t.id);
+}
+function m(e) {
+    let { id: t } = e;
+    if (((d = l({}, d)), delete d[t], f === t)) {
+        let e = Object.keys(d);
+        f = 0 === e.length ? null : e[0];
+    }
+}
+function g() {
+    (d = {}), (f = null), (_ = !1);
+}
+class E extends (r = i.ZP.Store) {
     get paymentSources() {
-        return c;
-    }
-    get paymentSourceIds() {
-        return Object.keys(c);
-    }
-    get defaultPaymentSourceId() {
         return d;
     }
+    get paymentSourceIds() {
+        return Object.keys(d);
+    }
+    get defaultPaymentSourceId() {
+        return f;
+    }
     get defaultPaymentSource() {
-        return null != d ? c[d] : null;
+        return null != f ? d[f] : null;
     }
     get hasFetchedPaymentSources() {
         return _;
@@ -38,35 +98,15 @@ class f extends (r = o.ZP.Store) {
         return null == e ? null : e.paymentMethodCountry;
     }
     getPaymentSource(e) {
-        return c[e];
+        return d[e];
     }
 }
-(s = 'PaymentSourceStore'),
-    (a = 'displayName') in (i = f)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new f(l.Z, {
-        BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: E,
-        BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: E,
-        BILLING_PAYMENT_SOURCE_FETCH_SUCCESS: E,
-        BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: function (e) {
-            let { paymentSources: t } = e;
-            for (let e of ((c = {}), (d = null), t)) (c[e.id] = u.ZP.createFromServer(e)), e.default && (d = e.id);
-            null == d && t.length > 0 && (d = t[0].id), (_ = !0);
-        },
-        BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: function (e) {
-            let { id: t } = e;
-            if (((c = { ...c }), delete c[t], d === t)) {
-                let e = Object.keys(c);
-                d = 0 === e.length ? null : e[0];
-            }
-        },
-        LOGOUT: function () {
-            (c = {}), (d = null), (_ = !1);
-        }
-    }));
+s(E, 'displayName', 'PaymentSourceStore');
+let b = new E(o.Z, {
+    BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: h,
+    BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: h,
+    BILLING_PAYMENT_SOURCE_FETCH_SUCCESS: h,
+    BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: p,
+    BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: m,
+    LOGOUT: g
+});

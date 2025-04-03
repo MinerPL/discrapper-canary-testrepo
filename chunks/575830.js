@@ -1,27 +1,22 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-}),
-    n(47120);
-var l = n(470079),
-    r = n(442837),
-    i = n(430824),
-    u = n(637565),
-    d = n(14263);
+n.d(t, { Z: () => s }), n(47120);
+var i = n(192379),
+    d = n(442837),
+    r = n(430824),
+    a = n(637565),
+    l = n(14263);
 function s(e, t) {
-    let n = (0, r.e7)([i.Z], () => (null != e ? i.Z.getRoles(e.id) : void 0)),
-        s = (0, d.Z)(null == e ? void 0 : e.id);
-    return l.useMemo(() => {
-        let l = null != e && null != n ? (0, u.T)(e, n, t) : [],
-            r = 0;
-        for (let e of l) {
+    let n = (0, d.e7)([r.Z], () => (null != e ? r.Z.getRoles(e.id) : void 0)),
+        s = (0, l.Z)(null == e ? void 0 : e.id);
+    return i.useMemo(() => {
+        let i = null != e && null != n ? (0, a.T)(e, n, t) : [],
+            d = 0;
+        for (let e of i) {
             let t = e.id;
             if (null != t) {
                 let e = null == s ? void 0 : s[t];
-                null != e && (r += e);
+                null != e && (d += e);
             }
         }
-        return r;
+        return d;
     }, [s, e, t, n]);
 }

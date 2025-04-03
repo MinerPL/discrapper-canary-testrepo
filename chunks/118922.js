@@ -1,37 +1,25 @@
-r.r(e),
-    r.d(e, {
-        IconVariant: function () {
-            return t;
-        },
-        default: function () {
-            return d;
-        }
-    }),
-    r(47120);
-var t,
-    o,
-    a = r(735250),
-    i = r(470079),
-    c = r(481060),
-    s = r(689938),
-    l = r(747313);
-((o = t || (t = {})).DANGER = 'danger'), (o.WARNING = 'warning');
-function d(n) {
-    let { transitionState: e, onClose: r, title: t, body: o, cta: d, closeLabel: u, onConfirm: h, iconVariant: g = 'warning' } = n,
-        [x, I] = i.useState(!1),
-        f = null != t ? t : s.Z.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE;
-    return (0, a.jsxs)(c.ModalRoot, {
-        size: c.ModalSize.DYNAMIC,
+r.d(e, { default: () => a }), r(47120);
+var i = r(200651),
+    t = r(192379),
+    s = r(481060),
+    c = r(388032),
+    o = r(421690);
+function a(n) {
+    let { transitionState: e, onClose: r, title: a, body: l, cta: d, closeLabel: h, onConfirm: x, iconVariant: u = 'warning' } = n,
+        [g, k] = t.useState(!1),
+        z = null != a ? a : c.NW.string(c.t.HMrgcn);
+    return (0, i.jsxs)(s.Y0X, {
+        size: s.CgR.DYNAMIC,
         transitionState: e,
-        'aria-label': f,
+        'aria-label': z,
         children: [
-            (0, a.jsxs)(c.ModalContent, {
-                className: l.content,
+            (0, i.jsxs)(s.hzk, {
+                className: o.content,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: l.header,
+                    (0, i.jsxs)('div', {
+                        className: o.header,
                         children: [
-                            (0, a.jsx)(c.CircleWarningIcon, {
+                            (0, i.jsx)(s.P4T, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,
@@ -39,56 +27,56 @@ function d(n) {
                                 className: (function (n) {
                                     switch (n) {
                                         case 'danger':
-                                            return l.dangerIcon;
+                                            return o.dangerIcon;
                                         case 'warning':
-                                            return l.warningIcon;
+                                            return o.warningIcon;
                                     }
-                                })(g)
+                                })(u)
                             }),
-                            (0, a.jsx)(c.Spacer, {
+                            (0, i.jsx)(s.LZC, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, a.jsx)(c.Heading, {
+                            (0, i.jsx)(s.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: f
+                                children: z
                             })
                         ]
                     }),
-                    (0, a.jsx)(c.Spacer, { size: 12 }),
-                    (0, a.jsx)(c.Text, {
+                    (0, i.jsx)(s.LZC, { size: 12 }),
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         color: 'text-muted',
-                        children: o
+                        children: l
                     })
                 ]
             }),
-            (0, a.jsxs)(c.ModalFooter, {
+            (0, i.jsxs)(s.mzw, {
                 children: [
-                    (0, a.jsx)(c.Button, {
-                        color: c.Button.Colors.BRAND,
+                    (0, i.jsx)(s.zxk, {
+                        color: s.zxk.Colors.BRAND,
                         onClick: () => {
-                            I(!0);
+                            k(!0);
                             try {
-                                h(), r();
+                                x(), r();
                             } finally {
-                                I(!1);
+                                k(!1);
                             }
                         },
-                        submitting: x,
+                        submitting: g,
                         children: d
                     }),
-                    (0, a.jsx)(c.Spacer, {
+                    (0, i.jsx)(s.LZC, {
                         size: 12,
                         horizontal: !0
                     }),
-                    null != u &&
-                        (0, a.jsx)(c.Button, {
-                            color: c.Button.Colors.PRIMARY,
-                            look: c.Button.Looks.OUTLINED,
+                    null != h &&
+                        (0, i.jsx)(s.zxk, {
+                            color: s.zxk.Colors.PRIMARY,
+                            look: s.zxk.Looks.OUTLINED,
                             onClick: r,
-                            children: u
+                            children: h
                         })
                 ]
             })

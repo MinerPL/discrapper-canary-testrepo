@@ -1,12 +1,8 @@
-n.d(t, {
-    s: function () {
-        return o;
-    }
-});
+n.d(t, { s: () => s });
 var r,
     i = n(778882),
-    a = n(401010);
-function s(e, t, n) {
+    o = n(401010);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,8 +15,8 @@ function s(e, t, n) {
         e
     );
 }
-var o =
-    (s((r = {}), i.FILE, {
+var s =
+    (a((r = {}), i.FILE, {
         exposeProperties: {
             files: function (e) {
                 return Array.prototype.slice.call(e.files);
@@ -31,26 +27,26 @@ var o =
         },
         matchesTypes: ['Files']
     }),
-    s(r, i.HTML, {
+    a(r, i.HTML, {
         exposeProperties: {
             html: function (e, t) {
-                return (0, a.R)(e, t, '');
+                return (0, o.R)(e, t, '');
             }
         },
         matchesTypes: ['Html', 'text/html']
     }),
-    s(r, i.URL, {
+    a(r, i.URL, {
         exposeProperties: {
             urls: function (e, t) {
-                return (0, a.R)(e, t, '').split('\n');
+                return (0, o.R)(e, t, '').split('\n');
             }
         },
         matchesTypes: ['Url', 'text/uri-list']
     }),
-    s(r, i.TEXT, {
+    a(r, i.TEXT, {
         exposeProperties: {
             text: function (e, t) {
-                return (0, a.R)(e, t, '');
+                return (0, o.R)(e, t, '');
             }
         },
         matchesTypes: ['Text', 'text/plain']

@@ -1,26 +1,27 @@
-var i = n(735250);
-n(470079);
-var a = n(82950),
-    s = n(536442),
-    r = n(703656),
-    l = n(922482),
-    o = n(981631),
-    c = n(689938),
-    d = n(882977);
-t.Z = (e) => {
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(324262),
+    l = n(536442),
+    a = n(703656),
+    o = n(922482),
+    s = n(981631),
+    c = n(388032),
+    u = n(882977);
+let d = (e) => {
     let { channel: t, guild: n } = e;
-    return (0, i.jsx)(a.Z, {
+    return (0, r.jsx)(i.Z, {
         guild: n,
         onDismissed: () => {
-            (0, s.Kw)(s.v6.HUB_STUDY_ROOM_NOTICE);
+            (0, l.Kw)(l.v6.HUB_STUDY_ROOM_NOTICE);
         },
         onClick: () => {
-            (0, s.Kw)(s.v6.HUB_STUDY_ROOM_NOTICE), null != t && null != t.getGuildId() && ((0, l.Cq)(t), (0, r.XU)(t.getGuildId(), t.id));
+            (0, l.Kw)(l.v6.HUB_STUDY_ROOM_NOTICE), null != t && null != t.getGuildId() && ((0, o.Cq)(t), (0, a.XU)(t.getGuildId(), t.id));
         },
-        title: c.Z.Messages.HUB_STUDY_ROOM_NOTICE_TITLE,
-        message: c.Z.Messages.HUB_STUDY_ROOM_NOTICE_DESCRIPTION,
-        cta: c.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA,
-        image: d,
-        type: o.vID.HUB_STUDY_ROOM
+        title: c.NW.string(c.t['4Y2AS0']),
+        message: c.NW.string(c.t.wTsxTU),
+        cta: c.NW.string(c.t.wBoE6O),
+        image: u,
+        type: s.vID.HUB_STUDY_ROOM
     });
 };

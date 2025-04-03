@@ -9,8 +9,4 @@ function r() {
               return e;
           }).apply(this, arguments);
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });

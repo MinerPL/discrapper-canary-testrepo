@@ -1,15 +1,9 @@
 n.d(t, {
-    HY: function () {
-        return g;
-    },
-    Tm: function () {
-        return I;
-    },
-    YM: function () {
-        return o;
-    },
-    bR: function () {
-        return function e(t, n) {
+    HY: () => g,
+    Tm: () => I,
+    YM: () => o,
+    bR: () =>
+        function e(t, n) {
             return (
                 (n = n || []),
                 null == t ||
@@ -21,20 +15,11 @@ n.d(t, {
                         : n.push(t)),
                 n
             );
-        };
-    },
-    h: function () {
-        return y;
-    },
-    kr: function () {
-        return M;
-    },
-    sY: function () {
-        return E;
-    },
-    wA: function () {
-        return b;
-    }
+        },
+    h: () => y,
+    kr: () => M,
+    sY: () => E,
+    wA: () => b
 });
 var r,
     o,
@@ -205,13 +190,13 @@ function S(e, t, n) {
 }
 function N(e, t, n, r, o) {
     var a;
-    e: if ('style' === t) {
+    e: if ('style' === t)
         if ('string' == typeof n) e.style.cssText = n;
         else {
             if (('string' == typeof r && (e.style.cssText = r = ''), r)) for (t in r) (n && t in n) || S(e.style, t, '');
             if (n) for (t in n) (r && n[t] === r[t]) || S(e.style, t, n[t]);
         }
-    } else if ('o' === t[0] && 'n' === t[1]) (a = t !== (t = t.replace(/Capture$/, ''))), (t = t.toLowerCase() in e ? t.toLowerCase().slice(2) : t.slice(2)), e.l || (e.l = {}), (e.l[t + a] = n), n ? r || e.addEventListener(t, a ? P : x, a) : e.removeEventListener(t, a ? P : x, a);
+    else if ('o' === t[0] && 'n' === t[1]) (a = t !== (t = t.replace(/Capture$/, ''))), (t = t.toLowerCase() in e ? t.toLowerCase().slice(2) : t.slice(2)), e.l || (e.l = {}), (e.l[t + a] = n), n ? r || e.addEventListener(t, a ? P : x, a) : e.removeEventListener(t, a ? P : x, a);
     else if ('dangerouslySetInnerHTML' !== t) {
         if (o) t = t.replace(/xlink(H|:h)/, 'h').replace(/sName$/, 's');
         else if ('width' !== t && 'height' !== t && 'href' !== t && 'list' !== t && 'form' !== t && 'tabIndex' !== t && 'download' !== t && t in e)

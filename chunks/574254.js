@@ -1,46 +1,50 @@
+n.d(t, { Z: () => p });
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(585483),
-    c = n(981631);
-let d = null,
-    _ = 0;
-function E() {
-    d = null;
+    i = n(442837),
+    o = n(570140),
+    a = n(585483),
+    s = n(981631);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-class f extends (s = o.ZP.Store) {
+let c = null,
+    u = 0;
+function d(e) {
+    let { contextMenu: t } = e;
+    u++, (c = t);
+}
+function f() {
+    c = null;
+}
+class _ extends (r = i.ZP.Store) {
     isOpen() {
-        return null != d;
+        return null != c;
     }
     get version() {
-        return _;
+        return u;
     }
     getContextMenu() {
-        return d;
+        return c;
     }
     close() {
-        return !!this.isOpen() && (u.S.dispatch(c.CkL.CONTEXT_MENU_CLOSE), !0);
+        return !!this.isOpen() && (a.S.dispatch(s.CkL.CONTEXT_MENU_CLOSE), !0);
     }
 }
-(a = 'ContextMenuStore'),
-    (i = 'displayName') in (r = f)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new f(l.Z, {
-        CONTEXT_MENU_OPEN: function (e) {
-            let { contextMenu: t } = e;
-            _++, (d = t);
-        },
-        LAYER_PUSH: E,
-        CONTEXT_MENU_CLOSE: E,
-        OVERLAY_SET_UI_LOCKED: E,
-        OVERLAY_DEACTIVATE_ALL_REGIONS: E
-    }));
+l(_, 'displayName', 'ContextMenuStore');
+let p = new _(o.Z, {
+    CONTEXT_MENU_OPEN: d,
+    LAYER_PUSH: f,
+    CONTEXT_MENU_CLOSE: f,
+    OVERLAY_SET_INPUT_LOCKED: f,
+    OVERLAY_DEACTIVATE_ALL_REGIONS: f
+});

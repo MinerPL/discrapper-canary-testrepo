@@ -1,19 +1,15 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-}),
-    n(653041),
-    n(47120);
+n.d(t, { Z: () => a }), n(653041), n(47120);
 var r = n(512722),
-    o = n.n(r),
-    i = n(90757),
-    a = n.n(i),
-    c = n(65154);
-function l(e, t, n) {
-    let r = window.DiscordNative;
-    o()(null != r, "Can't get desktop sources outside of native app"),
-        (t = null != t ? t : [c.vA.WINDOW, c.vA.SCREEN]),
+    i = n.n(r),
+    l = n(90757),
+    o = n.n(l),
+    u = n(65154);
+let s = [u.vA.WINDOW, u.vA.SCREEN];
+function a(e, t, n) {
+    var r;
+    let l = window.DiscordNative;
+    i()(null != l, "Can't get desktop sources outside of native app"),
+        (t = null != (r = null == t ? void 0 : t.filter((e) => s.includes(e))) ? r : s),
         (n =
             null != n
                 ? n
@@ -21,17 +17,17 @@ function l(e, t, n) {
                       width: 150,
                       height: 150
                   });
-    let i = [];
+    let a = [];
     return (
-        t.includes(c.vA.SCREEN) && e.supports(c.AN.SCREEN_PREVIEWS) && (i.push(e.getScreenPreviews(n.width, n.height)), (t = t.filter((e) => e !== c.vA.SCREEN))),
-        t.includes(c.vA.WINDOW) && e.supports(c.AN.WINDOW_PREVIEWS) && (i.push(e.getWindowPreviews(n.width, n.height)), (t = t.filter((e) => e !== c.vA.WINDOW))),
+        t.includes(u.vA.SCREEN) && e.supports(u.AN.SCREEN_PREVIEWS) && (a.push(e.getScreenPreviews(n.width, n.height)), (t = t.filter((e) => e !== u.vA.SCREEN))),
+        t.includes(u.vA.WINDOW) && e.supports(u.AN.WINDOW_PREVIEWS) && (a.push(e.getWindowPreviews(n.width, n.height)), (t = t.filter((e) => e !== u.vA.WINDOW))),
         0 !== t.length &&
-            i.push(
-                r.desktopCapture.getDesktopCaptureSources({
+            a.push(
+                l.desktopCapture.getDesktopCaptureSources({
                     types: t,
                     thumbnailSize: n
                 })
             ),
-        Promise.all(i).then((e) => a()(e))
+        Promise.all(a).then((e) => o()(e))
     );
 }

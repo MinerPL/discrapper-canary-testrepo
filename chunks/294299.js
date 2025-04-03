@@ -1,31 +1,27 @@
-t.d(e, {
-    Z: function () {
-        return l;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(442837),
-    u = t(481060),
-    c = t(978085),
-    d = t(283595),
-    r = t(417363);
-function l(n, e) {
-    let t = (0, a.e7)([r.Z], () => r.Z.getLaunchOptions(n.id, n.branchId)),
-        l = (0, a.e7)([d.Z], () => d.Z.getActiveLaunchOptionId(n.id, n.branchId));
-    return t.length < 2
+i.d(t, { Z: () => u });
+var a = i(200651);
+i(192379);
+var e = i(442837),
+    c = i(481060),
+    d = i(978085),
+    r = i(283595),
+    l = i(417363);
+function u(n, t) {
+    let i = (0, e.e7)([l.Z], () => l.Z.getLaunchOptions(n.id, n.branchId)),
+        u = (0, e.e7)([r.Z], () => r.Z.getActiveLaunchOptionId(n.id, n.branchId));
+    return i.length < 2
         ? null
-        : t.map((t) =>
-              (0, i.jsx)(
-                  u.MenuItem,
+        : i.map((i) =>
+              (0, a.jsx)(
+                  c.sNh,
                   {
-                      id: t.id,
-                      label: t.name,
-                      action: (i) => {
-                          t.id !== l && c.ul(n.id, n.branchId, t.id), null == e || e(i);
+                      id: i.id,
+                      label: i.name,
+                      action: (a) => {
+                          i.id !== u && d.ul(n.id, n.branchId, i.id), null == t || t(a);
                       }
                   },
-                  t.id
+                  i.id
               )
           );
 }

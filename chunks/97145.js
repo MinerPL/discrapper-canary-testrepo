@@ -1,16 +1,8 @@
-r.d(t, {
-    R: function () {
-        return a;
-    },
-    f: function () {
-        return o;
-    }
-});
-var n = r(981631);
-let a = [n.rMx.START_SPEAKING, n.rMx.START_LISTENING, n.rMx.APP_OPENED, n.rMx.NOTIFICATION_CLICKED, n.rMx.EXPERIMENT_USER_TRIGGERED, n.rMx.EXPERIMENT_DM_TRIGGERED, n.rMx.EXPERIMENT_GUILD_TRIGGERED];
-function o(e) {
-    let { maxBudgetMinute: t, maxBudgetHour: r } = e,
-        n = {
+a.d(e, { f: () => n });
+var r = a(981631);
+function n(t) {
+    let { maxBudgetMinute: e, maxBudgetHour: a } = t,
+        r = {
             minute: {
                 slot: 0,
                 budgetUsed: 0
@@ -21,9 +13,10 @@ function o(e) {
             }
         };
     return () => {
-        let e = Date.now(),
-            a = Math.round(e / 1000 / 60),
-            o = Math.round(e / 1000 / 60 / 60);
-        return n.minute.slot !== a && ((n.minute.slot = a), (n.minute.budgetUsed = 0)), n.hour.slot !== o && ((n.hour.slot = o), (n.hour.budgetUsed = 0)), !!(n.minute.budgetUsed < t) && (n.minute.budgetUsed++, !!(n.hour.budgetUsed < r)) && (n.hour.budgetUsed++, !0);
+        let t = Date.now(),
+            n = Math.round(t / 1000 / 60),
+            _ = Math.round(t / 1000 / 60 / 60);
+        return r.minute.slot !== n && ((r.minute.slot = n), (r.minute.budgetUsed = 0)), r.hour.slot !== _ && ((r.hour.slot = _), (r.hour.budgetUsed = 0)), !!(r.minute.budgetUsed < e) && (r.minute.budgetUsed++, !!(r.hour.budgetUsed < a)) && (r.hour.budgetUsed++, !0);
     };
 }
+r.rMx.START_SPEAKING, r.rMx.START_LISTENING, r.rMx.APP_OPENED, r.rMx.NOTIFICATION_CLICKED, r.rMx.EXPERIMENT_USER_TRIGGERED, r.rMx.EXPERIMENT_DM_TRIGGERED, r.rMx.EXPERIMENT_GUILD_TRIGGERED;

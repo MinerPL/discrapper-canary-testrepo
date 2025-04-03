@@ -1,40 +1,35 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return o;
-        }
-    });
-var a = t(735250);
-t(470079);
-var s = t(852229),
-    c = t(481060),
-    i = t(239091),
-    l = t(198620),
-    u = t(689938);
-function o(n) {
-    let { attachmentUrl: e, attachmentName: t, onSelect: o } = n;
-    return (0, a.jsx)(c.Menu, {
+a.d(n, { default: () => h });
+var i = a(200651);
+a(192379);
+var l = a(852229),
+    c = a(481060),
+    e = a(239091),
+    s = a(198620),
+    r = a(388032);
+function h(t) {
+    let { attachmentUrl: n, attachmentName: a, onSelect: h } = t;
+    return (0, i.jsx)(c.v2r, {
         navId: 'attachment-link-context',
-        onClose: i.Zy,
-        onSelect: o,
-        'aria-label': u.Z.Messages.LINK_OPTIONS,
-        children: (0, a.jsxs)(
-            c.MenuGroup,
+        onClose: e.Zy,
+        onSelect: h,
+        'aria-label': r.NW.string(r.t['5oIOLS']),
+        children: (0, i.jsxs)(
+            c.kSQ,
             {
                 children: [
-                    (0, a.jsx)(c.MenuItem, {
+                    (0, i.jsx)(c.sNh, {
                         id: 'attachment-link-copy-link',
-                        label: u.Z.Messages.COPY_LINK,
+                        label: r.NW.string(r.t.WqhZsr),
                         action: async () => {
-                            let n = await (0, l.B_)(e);
-                            (0, s.J)(null != n ? n : '');
+                            let t = await (0, s.B_)(n);
+                            (0, l.J)(null != t ? t : '');
                         }
                     }),
-                    (0, a.jsx)(c.MenuItem, {
+                    (0, i.jsx)(c.sNh, {
                         id: 'attachment-link-copy-name',
-                        label: u.Z.Messages.COPY_TEXT,
+                        label: r.NW.string(r.t.JrGD7O),
                         action: () => {
-                            (0, s.J)(null != t ? t : '');
+                            (0, l.J)(null != a ? a : '');
                         }
                     })
                 ]

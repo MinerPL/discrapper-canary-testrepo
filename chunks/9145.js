@@ -1,122 +1,121 @@
-n.d(t, {
-    Z: function () {
-        return w;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(442837),
-    o = n(993365),
+n.d(t, { Z: () => U }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(993365),
     c = n(481060),
     u = n(153867),
     d = n(110924),
-    h = n(607070),
-    m = n(900211),
-    p = n(740492),
-    _ = n(871499),
-    f = n(402113),
-    E = n(592125),
-    g = n(271383),
-    C = n(944486),
-    I = n(594174),
-    x = n(585483),
-    T = n(792125),
-    N = n(51144),
-    v = n(566620),
-    S = n(317381),
-    Z = n(619915),
-    A = n(988980),
-    M = n(952561),
-    b = n(563218),
-    R = n(884338),
-    j = n(719296),
-    L = n(651612),
-    P = n(918559),
-    O = n(981631),
-    y = n(689938),
-    D = n(402137);
-let k = R.u.SIZE_32,
-    U = {
-        [P.MI.NO_CHAT]: D.noChat,
-        [P.MI.RESIZABLE]: D.resizable
+    p = n(607070),
+    h = n(900211),
+    f = n(740492),
+    m = n(82965),
+    g = n(871499),
+    b = n(402113),
+    _ = n(592125),
+    C = n(271383),
+    y = n(944486),
+    x = n(594174),
+    v = n(585483),
+    j = n(51144),
+    O = n(566620),
+    E = n(317381),
+    N = n(619915),
+    I = n(988980),
+    P = n(16609),
+    S = n(952561),
+    Z = n(563218),
+    T = n(884338),
+    A = n(719296),
+    w = n(651612),
+    R = n(918559),
+    M = n(981631),
+    k = n(388032),
+    L = n(199570);
+let D = T.u.SIZE_32,
+    W = {
+        [R.MI.NO_CHAT]: L.noChat,
+        [R.MI.RESIZABLE]: L.resizable
     };
-function w(e) {
+function U(e) {
     var t, n;
-    let { maxHeight: s, connectedChannelId: w, renderExternalHeader: B } = e,
-        H = (0, M.Z)(),
-        G = (0, r.Wu)([S.ZP], () => (null != w ? S.ZP.getEmbeddedActivitiesForChannel(w) : []), [w]),
-        V = (0, r.e7)([E.Z], () => E.Z.getChannel(w)),
-        F = (0, Z.gb)(G),
-        W = (0, Z.uF)(F),
-        z = a.useCallback(() => {
-            (0, v.tg)(P.Ez.PIP);
+    let { maxHeight: l, connectedLocation: U, renderExternalHeader: B } = e,
+        H = (0, m.Z)({ location: 'ActivityPanelFocusedView' }),
+        F = (0, S.Z)(),
+        G = (0, a.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(U), [U]),
+        V = (0, P.pY)(U),
+        z = (0, a.e7)([_.Z], () => _.Z.getChannel(V)),
+        Y = (0, N.gb)(G),
+        q = (0, N.uF)(Y),
+        K = i.useCallback(() => {
+            (0, O.tg)(R.Ez.PIP);
         }, []),
-        Y = a.useRef(null),
-        K = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
-        q = K !== P.MI.NO_CHAT,
-        [X, Q] = a.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : s),
-        J = a.useCallback((e) => {
+        X = i.useRef(null),
+        Q = (0, a.e7)([E.ZP], () => E.ZP.getFocusedLayout()),
+        J = Q !== R.MI.NO_CHAT,
+        [$, ee] = i.useState(null != (t = f.ZP.activityPanelHeight) ? t : l),
+        et = i.useCallback((e) => {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
-        $ = a.useRef(null),
-        [ee, et] = a.useState({
+        en = i.useRef(null),
+        [er, ei] = i.useState({
             width: 0,
             height: 0
         });
-    a.useLayoutEffect(() => {
-        if (null == $.current) return;
+    i.useLayoutEffect(() => {
+        if (null == en.current) return;
         let e = new ResizeObserver(() => {
-            var e, t, n, i;
-            et({
-                width: null !== (n = null === (e = $.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0,
-                height: null !== (i = null === (t = $.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== i ? i : 0
+            var e, t, n, r;
+            ei({
+                width: null != (n = null == (e = en.current) ? void 0 : e.clientWidth) ? n : 0,
+                height: null != (r = null == (t = en.current) ? void 0 : t.clientHeight) ? r : 0
             });
         });
-        return e.observe($.current), () => e.disconnect();
+        return e.observe(en.current), () => e.disconnect();
     }, []);
-    let en = ee.width / Math.max(ee.height, 1) < P.I0,
-        ei = 0,
+    let el = er.width / Math.max(er.height, 1) < R.I0,
+        eo = 0,
         ea = 0,
-        es = (0, A.Z)(null == H ? void 0 : H.id);
+        es = (0, I.Z)(null == F ? void 0 : F.id);
     if (!es) {
-        let e = ee.width,
-            t = ee.height;
-        en ? ((t = ee.width / P.I0) > ee.height && (e = (t = ee.height) * P.I0), (ea = (ee.height - t) / 2)) : ((e = Math.min(ee.height * P.I0)) > ee.width && (t = (e = ee.width) / P.I0), (ei = (ee.width - e) / 2));
+        let e = er.width,
+            t = er.height;
+        el ? ((t = er.width / R.I0) > er.height && (e = (t = er.height) * R.I0), (ea = (er.height - t) / 2)) : ((e = Math.min(er.height * R.I0)) > er.width && (t = (e = er.width) / R.I0), (eo = (er.width - e) / 2));
     }
-    let el = W.get(null !== (n = null == H ? void 0 : H.id) && void 0 !== n ? n : ''),
-        er = (0, r.e7)([C.Z], () => C.Z.getChannelId()),
-        eo = (0, r.Wu)(
-            [g.ZP],
+    let ec = q.get(null != (n = null == F ? void 0 : F.id) ? n : ''),
+        eu = (0, a.e7)([y.Z], () => y.Z.getChannelId()),
+        ed = (0, a.Wu)(
+            [C.ZP],
             () => {
                 var e;
-                return null == V ? [] : Array.from(null !== (e = null == el ? void 0 : el.embeddedActivity.userIds) && void 0 !== e ? e : []).map((e) => g.ZP.getMember(V.guild_id, e));
+                return null == z ? [] : Array.from(null != (e = null == ec ? void 0 : ec.embeddedActivity.userIds) ? e : []).map((e) => C.ZP.getMember(z.guild_id, e));
             },
-            [el, V]
+            [ec, z]
         ),
-        ec = a.useMemo(() => {
+        ep = i.useMemo(() => {
             let e = new Map();
             return (
-                eo.forEach((t) => {
+                ed.forEach((t) => {
                     null != t && void 0 !== t && e.set(t.userId, t);
                 }),
                 e
             );
-        }, [eo]),
-        eu = (function (e, t, n) {
-            let i = (0, d.Z)(e),
-                s = e !== i,
-                [l, r] = a.useState(!1);
-            a.useEffect(() => {
-                r(!0);
-                let e = setTimeout(() => r(!1), 50);
+        }, [ed]),
+        eh = (function (e, t, n) {
+            let r = (0, d.Z)(e),
+                l = e !== r,
+                [o, a] = i.useState(!1);
+            i.useEffect(() => {
+                a(!0);
+                let e = setTimeout(() => a(!1), 50);
                 return () => clearTimeout(e);
             }, [e]);
-            let o = !h.Z.useReducedMotion && (s || l);
-            return a.useMemo(() => {
-                let i = o
+            let s = !p.Z.useReducedMotion && (l || o);
+            return i.useMemo(() => {
+                var r, i;
+                let l = s
                     ? {
                           transitionProperty: 'height, max-height',
                           transitionDuration: ''.concat(50, 'ms'),
@@ -124,37 +123,75 @@ function w(e) {
                       }
                     : void 0;
                 return e && null != t
-                    ? {
-                          ...i,
-                          minHeight: 200,
-                          maxHeight: n,
-                          height: t
-                      }
-                    : i;
-            }, [o, e, n, t]);
-        })(q, X, s);
-    if (null == H) return null;
-    let ed = [];
-    null != el &&
-        (ed = Array.from(el.embeddedActivity.userIds)
-            .map((e) => I.default.getUser(e))
+                    ? ((r = (function (e) {
+                          for (var t = 1; t < arguments.length; t++) {
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  r = Object.keys(n);
+                              'function' == typeof Object.getOwnPropertySymbols &&
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                      })
+                                  )),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      (r = n[t]),
+                                          t in e
+                                              ? Object.defineProperty(e, t, {
+                                                    value: r,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0
+                                                })
+                                              : (e[t] = r);
+                                  });
+                          }
+                          return e;
+                      })({}, l)),
+                      (i = i =
+                          {
+                              minHeight: 200,
+                              maxHeight: n,
+                              height: t
+                          }),
+                      Object.getOwnPropertyDescriptors
+                          ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                          : (function (e, t) {
+                                var n = Object.keys(e);
+                                if (Object.getOwnPropertySymbols) {
+                                    var r = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, r);
+                                }
+                                return n;
+                            })(Object(i)).forEach(function (e) {
+                                Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                            }),
+                      r)
+                    : l;
+            }, [s, e, n, t]);
+        })(J, $, l);
+    if (null == F) return null;
+    let ef = [];
+    null != ec &&
+        (ef = Array.from(ec.embeddedActivity.userIds)
+            .map((e) => x.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
-    let eh = (e, t) => {
+    let em = (e, t) => {
         var n;
         if (null == e || void 0 === e || void 0 === t) return null;
-        let a = ec.get(e.id),
-            s = null !== (n = null == a ? void 0 : a.nick) && void 0 !== n ? n : N.ZP.getName(e);
-        return (0, i.jsx)(
-            c.TooltipContainer,
+        let i = ep.get(e.id),
+            l = null != (n = null == i ? void 0 : i.nick) ? n : j.ZP.getName(e);
+        return (0, r.jsx)(
+            c.DY3,
             {
-                text: s,
+                text: l,
                 position: 'bottom',
-                children: (0, i.jsx)(
+                children: (0, r.jsx)(
                     'img',
                     {
-                        src: e.getAvatarURL(t.guild_id, k),
-                        alt: s,
-                        className: D.avatar
+                        src: e.getAvatarURL(t.guild_id, D),
+                        alt: l,
+                        className: L.avatar
                     },
                     e.id
                 )
@@ -162,97 +199,119 @@ function w(e) {
             e.id
         );
     };
-    return (0, i.jsxs)('div', {
-        className: l()(D.wrapper, U[K], (0, T.Q)(O.BRd.DARK)),
-        ref: Y,
-        style: eu,
-        children: [
-            null == B ? void 0 : B(),
-            (0, i.jsxs)('div', {
-                className: D.activityPanelContainer,
+    return (0, r.jsx)(c.f6W, {
+        theme: M.BRd.DARK,
+        children: (e) =>
+            (0, r.jsxs)('div', {
+                className: o()(L.wrapper, W[Q], e),
+                ref: X,
+                style: eh,
                 children: [
-                    q
-                        ? null
-                        : (0, i.jsx)('div', {
-                              className: D.header,
-                              children: (0, i.jsx)(o.x, {
-                                  color: 'header-primary',
-                                  variant: 'text-md/semibold',
-                                  className: D.headerTitle,
-                                  children: null == H ? void 0 : H.name
-                              })
-                          }),
-                    (0, i.jsx)('div', {
-                        className: l()(D.activityContainer, { [D.activityContainerNoMargin]: es }),
-                        style: {
-                            paddingLeft: ei,
-                            paddingRight: ei,
-                            paddingTop: ea,
-                            paddingBottom: ea
-                        },
-                        ref: $,
-                        children: (0, i.jsx)(b.Z, {
-                            className: D.iframe,
-                            embedId: (0, j.Z)(w, H.id)
-                        })
-                    }),
-                    null != er
-                        ? (0, i.jsxs)('div', {
-                              className: D.footer,
-                              children: [
-                                  (0, i.jsx)(R.Z, {
-                                      renderIcon: !1,
-                                      users: ed,
-                                      size: k,
-                                      max: 6,
-                                      className: D.userAvatars,
-                                      renderUser: (e) => eh(e, V)
+                    null == B ? void 0 : B(),
+                    (0, r.jsxs)('div', {
+                        className: L.activityPanelContainer,
+                        children: [
+                            J
+                                ? null
+                                : (0, r.jsx)('div', {
+                                      className: L.header,
+                                      children: (0, r.jsx)(s.x, {
+                                          color: 'header-primary',
+                                          variant: 'text-md/semibold',
+                                          className: L.headerTitle,
+                                          children: null == F ? void 0 : F.name
+                                      })
                                   }),
-                                  (0, i.jsxs)('div', {
-                                      className: D.footerButtons,
+                            (0, r.jsx)('div', {
+                                className: o()(L.activityContainer, { [L.activityContainerNoMargin]: es }),
+                                style: {
+                                    paddingLeft: eo,
+                                    paddingRight: eo,
+                                    paddingTop: ea,
+                                    paddingBottom: ea
+                                },
+                                ref: en,
+                                children: (0, r.jsx)(Z.Z, {
+                                    className: L.iframe,
+                                    embedId: (0, A.Z)(U.id, F.id)
+                                })
+                            }),
+                            null != eu
+                                ? (0, r.jsxs)('div', {
+                                      className: L.footer,
                                       children: [
-                                          (0, i.jsx)(L.Z, {
-                                              channelId: er,
-                                              className: D.circularButton
+                                          (0, r.jsx)(T.Z, {
+                                              renderIcon: !1,
+                                              users: ef,
+                                              size: D,
+                                              max: 6,
+                                              className: L.userAvatars,
+                                              renderUser: (e) => em(e, z)
                                           }),
-                                          (0, i.jsx)('div', {
-                                              className: D.leaveButtonContainer,
-                                              children: (0, i.jsx)(f.Z, {
-                                                  applicationId: H.id,
-                                                  channelId: w,
-                                                  centerButton: !0,
-                                                  color: 'red',
-                                                  className: D.leaveActivityButton
-                                              })
+                                          (0, r.jsxs)('div', {
+                                              className: L.footerButtons,
+                                              children: [
+                                                  H
+                                                      ? null
+                                                      : (0, r.jsx)(w.Z, {
+                                                            channelId: eu,
+                                                            className: L.circularButton
+                                                        }),
+                                                  H
+                                                      ? (0, r.jsxs)('div', {
+                                                            className: L.buttonSection,
+                                                            children: [
+                                                                (0, r.jsx)(w.Z, { channelId: eu }),
+                                                                (0, r.jsx)(g.d, {
+                                                                    label: k.NW.string(k.t.brPQ5e),
+                                                                    onClick: K,
+                                                                    iconComponent: c.dOc,
+                                                                    themeable: !0
+                                                                })
+                                                            ]
+                                                        })
+                                                      : null,
+                                                  (0, r.jsx)('div', {
+                                                      className: L.leaveButtonContainer,
+                                                      children: (0, r.jsx)(b.Z, {
+                                                          applicationId: F.id,
+                                                          location: U,
+                                                          centerButton: !0,
+                                                          color: 'disconnect',
+                                                          className: H ? void 0 : L.leaveActivityButton
+                                                      })
+                                                  }),
+                                                  H
+                                                      ? null
+                                                      : (0, r.jsx)(g.d, {
+                                                            label: k.NW.string(k.t.brPQ5e),
+                                                            onClick: K,
+                                                            iconComponent: c.dOc,
+                                                            themeable: !0,
+                                                            className: L.circularButton
+                                                        })
+                                              ]
                                           }),
-                                          (0, i.jsx)(_.d, {
-                                              label: y.Z.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
-                                              onClick: z,
-                                              iconComponent: c.MinimizeIcon,
-                                              themeable: !0,
-                                              className: D.circularButton
-                                          })
+                                          (0, r.jsx)('div', { className: L.flex })
                                       ]
-                                  }),
-                                  (0, i.jsx)('div', { className: D.flex })
-                              ]
+                                  })
+                                : null
+                        ]
+                    }),
+                    J
+                        ? (0, r.jsx)(h.Z, {
+                              minHeight: 480,
+                              maxHeight: l,
+                              resizableNode: X,
+                              onResize: (e) => {
+                                  v.S.dispatch(M.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), ee(e);
+                              },
+                              onResizeEnd: (e) => {
+                                  v.S.dispatch(M.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), et(e);
+                              }
                           })
                         : null
                 ]
-            }),
-            q
-                ? (0, i.jsx)(m.Z, {
-                      minHeight: 480,
-                      maxHeight: s,
-                      resizableNode: Y,
-                      onResize: (e) => {
-                          x.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), Q(e);
-                      },
-                      onResizeEnd: (e) => {
-                          x.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
-                      }
-                  })
-                : null
-        ]
+            })
     });
 }

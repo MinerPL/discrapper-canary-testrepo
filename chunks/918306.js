@@ -1,23 +1,18 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return r;
-        }
-    });
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    u = t(239091),
-    c = t(294299),
-    d = t(689938);
-function r(n) {
-    let { libraryApplication: e, onPlay: t, onSelect: r } = n,
-        l = (0, c.Z)(e, t);
-    return (0, i.jsx)(a.Menu, {
+i.d(t, { default: () => l });
+var a = i(200651);
+i(192379);
+var e = i(481060),
+    c = i(239091),
+    d = i(294299),
+    r = i(388032);
+function l(n) {
+    let { libraryApplication: t, onPlay: i, onSelect: l } = n,
+        u = (0, d.Z)(t, i);
+    return (0, a.jsx)(e.v2r, {
         navId: 'launch-context',
-        onClose: u.Zy,
-        'aria-label': d.Z.Messages.APPLICATION_ACTIONS_MENU_LABEL,
-        onSelect: r,
-        children: l
+        onClose: c.Zy,
+        'aria-label': r.NW.string(r.t.tKobzc),
+        onSelect: l,
+        children: u
     });
 }

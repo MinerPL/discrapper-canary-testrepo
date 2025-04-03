@@ -1,48 +1,47 @@
-t(653041), t(47120);
-var n,
-    a,
+n.d(t, { Z: () => m }), n(653041), n(47120), n(230036);
+var r,
     i,
-    r,
-    o = t(442837),
-    l = t(570140),
-    c = t(461655);
-let d = [];
-function _(e) {
-    let { payment: s } = e,
-        t = c.Z.createFromServer(s),
-        n = d.findIndex((e) => e.id === s.id);
-    -1 === n ? (d.push(t), d.sort((e, s) => s.createdAt.getTime() - e.createdAt.getTime())) : (d[n] = t), (d = [...d]);
+    s,
+    a = n(442837),
+    l = n(570140),
+    o = n(461655);
+let c = [];
+function d(e) {
+    let { payment: t } = e,
+        n = o.Z.createFromServer(t),
+        r = c.findIndex((e) => e.id === t.id);
+    -1 === r ? (c.push(n), c.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (c[r] = n), (c = [...c]);
 }
-class E extends (n = o.ZP.Store) {
+class u extends (r = a.ZP.Store) {
     getPayment(e) {
-        return d.find((s) => s.id === e);
+        return c.find((t) => t.id === e);
     }
     getPayments() {
-        return d;
+        return c;
     }
 }
-(r = 'PaymentStore'),
-    (i = 'displayName') in (a = E)
-        ? Object.defineProperty(a, i, {
-              value: r,
+(s = 'PaymentStore'),
+    (i = 'displayName') in u
+        ? Object.defineProperty(u, i, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[i] = r),
-    (s.Z = new E(l.Z, {
-        BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
-            let { payments: s } = e;
-            for (let e of s) {
-                let s = c.Z.createFromServer(e),
-                    t = d.findIndex((s) => s.id === e.id);
-                -1 !== t ? (d[t] = s) : d.push(s);
-            }
-            d.sort((e, s) => s.createdAt.getTime() - e.createdAt.getTime()), (d = [...d]);
-        },
-        PAYMENT_UPDATE: _,
-        BILLING_PAYMENT_FETCH_SUCCESS: _,
-        LOGOUT: function () {
-            d = [];
+        : (u[i] = s);
+let m = new u(l.Z, {
+    BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
+        let { payments: t } = e;
+        for (let e of t) {
+            let t = o.Z.createFromServer(e),
+                n = c.findIndex((t) => t.id === e.id);
+            -1 !== n ? (c[n] = t) : c.push(t);
         }
-    }));
+        c.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (c = [...c]);
+    },
+    PAYMENT_UPDATE: d,
+    BILLING_PAYMENT_FETCH_SUCCESS: d,
+    LOGOUT: function () {
+        c = [];
+    }
+});

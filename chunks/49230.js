@@ -1,60 +1,59 @@
 n.d(t, {
-    $: function () {
-        return _;
-    },
-    h: function () {
-        return E;
-    }
+    $: () => f,
+    h: () => g
 }),
     n(47120);
-var i = n(512722),
-    a = n.n(i),
-    s = n(46973),
-    r = n(304809),
-    l = n(131951),
-    o = n(747071);
-let c = null;
+var r = n(512722),
+    i = n.n(r),
+    l = n(46973),
+    a = n(304809),
+    o = n(399882),
+    s = n(545511),
+    c = n(131951),
+    u = n(747071);
+let d = null;
 try {
-    c = (0, r.N)();
-} catch {}
-let d = new Map();
-async function u(e) {
-    let t = d.get(e);
+    d = (0, a.N)();
+} catch (e) {}
+let p = new Map();
+async function h(e) {
+    let t = p.get(e);
     if (null != t) return t;
     let n = await (await fetch(e)).arrayBuffer(),
-        i = await (null == c ? void 0 : c.decodeAudioData(n));
-    return null != i && d.set(e, i), i;
+        r = await (null == d ? void 0 : d.decodeAudioData(n));
+    return null != r && p.set(e, r), r;
 }
-function _(e) {
-    let { soundKey: t, soundURL: n, soundVolume: i, reportSoundStartedPlaying: r } = e;
+function f(e) {
+    let { soundKey: t, soundURL: n, soundVolume: r, reportSoundStartedPlaying: a } = e;
     return new Promise(async (e) => {
-        let o = await u(n);
+        let o = await h(n);
         null == o && e(),
-            l.Z.getMediaEngine().eachConnection((n) => {
-                n.context === s.Yn.DEFAULT &&
-                    (r(),
-                    a()(null != o, 'audioBuffer cannot be null here'),
-                    n.startSamplesLocalPlayback(t, o, i, () => {
+            c.Z.getMediaEngine().eachConnection((n) => {
+                n.context === l.Yn.DEFAULT &&
+                    (a(),
+                    i()(null != o, 'audioBuffer cannot be null here'),
+                    n.startSamplesLocalPlayback(t, o, r, () => {
                         e();
                     }));
             });
     });
 }
-function E(e, t) {
-    let { soundKey: n, soundURL: i, soundVolume: a, reportSoundStartedPlaying: s } = e,
-        r = t.get(n);
-    if (null != r) {
-        r.currentTime = 0;
+function g(e, t) {
+    let { soundKey: n, soundURL: r, soundVolume: i, reportSoundStartedPlaying: l } = e,
+        a = t.get(n);
+    if (null != a) {
+        a.currentTime = 0;
         return;
     }
-    return new Promise((e) => {
-        let r = new Audio(i);
-        (r.volume = (0, o.Z)(a)),
-            r.addEventListener('canplaythrough', () => {
-                s(), t.set(n, r), r.play();
+    return new Promise(async (e) => {
+        let a = new (await (0, s.Z)(r))();
+        (a.src = r),
+            (a.volume = (0, u.Z)(i)),
+            a.addEventListener(a instanceof o.Z.OGVPlayer ? 'loadedmetadata' : 'canplaythrough', () => {
+                l(), t.set(n, a), a.play();
             }),
-            r.addEventListener('ended', () => {
-                t.delete(n), (r.src = ''), e();
+            a.addEventListener('ended', () => {
+                t.delete(n), (a.src = ''), e();
             });
     });
 }

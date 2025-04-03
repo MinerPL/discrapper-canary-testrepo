@@ -1,31 +1,17 @@
 n.d(t, {
-    L: function () {
-        return o;
-    },
-    a: function () {
-        return c;
-    }
+    L: () => s,
+    a: () => c
 });
-var i = n(442837),
-    l = n(480294),
-    r = n(451478),
-    a = n(817915),
-    s = n(981631);
-function o() {
-    let e = (0, i.e7)([r.Z], () => r.Z.windowSize().width);
-    return (function (e, t) {
-        return e > a.t && t;
-    })(
-        e,
-        (0, i.e7)([l.Z], () => l.Z.hasConsented(s.pjP.PERSONALIZATION))
-    );
+var r = n(442837),
+    i = n(480294),
+    l = n(451478),
+    o = n(817915),
+    a = n(981631);
+function s() {
+    var e, t;
+    return (e = (0, r.e7)([l.Z], () => l.Z.windowSize().width)), (t = (0, r.e7)([i.Z], () => i.Z.hasConsented(a.pjP.PERSONALIZATION))), e > o.t && t;
 }
 function c() {
-    let e = r.Z.windowSize().width;
-    return (function (e, t) {
-        return e > a.t && t;
-    })(e, l.Z.hasConsented(s.pjP.PERSONALIZATION));
-}
-function u(e, t) {
-    return e > a.t && t;
+    var e, t;
+    return (e = l.Z.windowSize().width), (t = i.Z.hasConsented(a.pjP.PERSONALIZATION)), e > o.t && t;
 }

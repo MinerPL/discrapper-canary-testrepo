@@ -1,32 +1,30 @@
-t.d(n, {
-    i: function () {
-        return o;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    l = t(359119),
-    r = t(832239),
-    u = t(100932),
-    s = t(689938);
-function o(e) {
-    let n = (0, u.x)(e);
-    if (null === n) return null;
-    let { isTier1: t, isTier2: o } = n;
+t.d(e, { i: () => o });
+var i = t(200651);
+t(192379);
+var l = t(481060),
+    r = t(359119),
+    d = t(832239),
+    s = t(237292),
+    a = t(100932),
+    u = t(388032);
+function o(n) {
+    let e = (0, a.x)(n),
+        t = (0, s.y0)({ location: 'inappropriate_conversation_context_menu' });
+    if (null === e || !t) return null;
+    let { isTier1: o, isTier2: c } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            !t &&
-                (0, i.jsx)(a.MenuItem, {
-                    id: 'mark-as-tier-1-inappro',
-                    label: s.Z.Messages.INAPPROPRIATE_CONVERSATION_MARK_AS_TIER_1,
-                    action: () => (0, r.KK)(e.id, l.pj.INAPPROPRIATE_CONVERSATION_TIER_1)
-                }),
             !o &&
-                (0, i.jsx)(a.MenuItem, {
+                (0, i.jsx)(l.sNh, {
+                    id: 'mark-as-tier-1-inappro',
+                    label: u.NW.string(u.t.EuzCER),
+                    action: () => (0, d.KK)(n.id, r.pj.INAPPROPRIATE_CONVERSATION_TIER_1)
+                }),
+            !c &&
+                (0, i.jsx)(l.sNh, {
                     id: 'mark-as-tier-2-inappro',
-                    label: s.Z.Messages.INAPPROPRIATE_CONVERSATION_MARK_AS_TIER_2,
-                    action: () => (0, r.KK)(e.id, l.pj.INAPPROPRIATE_CONVERSATION_TIER_2)
+                    label: u.NW.string(u.t['tBw/1t']),
+                    action: () => (0, d.KK)(n.id, r.pj.INAPPROPRIATE_CONVERSATION_TIER_2)
                 })
         ]
     });

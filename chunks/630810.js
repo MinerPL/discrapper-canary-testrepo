@@ -1,44 +1,42 @@
-t.d(n, {
-    m: function () {
-        return s;
-    }
+n.d(t, {
+    Z: () => g,
+    m: () => c
 });
 var l,
-    s,
-    a = t(493683),
-    i = t(904245),
-    r = t(710845),
-    o = t(592125),
-    d = t(70956),
-    u = t(651655);
-let c = 1 * d.Z.Millis.SECOND + 10;
-((l = s || (s = {}))[(l.GROUP_DM = 0)] = 'GROUP_DM'), (l[(l.USER = 1)] = 'USER'), (l[(l.CHANNEL = 2)] = 'CHANNEL');
-class h extends u.Z {
-    _sendInvite(e, n, t, l, s) {
-        i.Z.sendInvite(e.id, n, t, l).then(
-            () => s(null, !0),
-            () => s(null, !1)
+    i = n(493683),
+    s = n(904245),
+    r = n(710845),
+    a = n(592125),
+    o = n(70956),
+    d = n(651655);
+let u = +o.Z.Millis.SECOND + 10;
+var c = (((l = {})[(l.GROUP_DM = 0)] = 'GROUP_DM'), (l[(l.USER = 1)] = 'USER'), (l[(l.CHANNEL = 2)] = 'CHANNEL'), l);
+class h extends d.Z {
+    _sendInvite(e, t, n, l, i) {
+        s.Z.sendInvite(e.id, t, n, l).then(
+            () => i(null, !0),
+            () => i(null, !1)
         );
     }
-    drain(e, n) {
-        let { location: t, suggested: l } = e;
+    drain(e, t) {
+        let { location: n, suggested: l } = e;
         switch (e.type) {
             case 0:
             case 2:
-                this._sendInvite(e.channel, e.inviteKey, t, l, n);
+                this._sendInvite(e.channel, e.inviteKey, n, l, t);
                 break;
             case 1:
-                a.Z.ensurePrivateChannel(e.user.id).then(
-                    (s) => {
-                        let a = o.Z.getChannel(s);
-                        null != a && this._sendInvite(a, e.inviteKey, t, l, n);
+                i.Z.ensurePrivateChannel(e.user.id).then(
+                    (i) => {
+                        let s = a.Z.getChannel(i);
+                        null != s && this._sendInvite(s, e.inviteKey, n, l, t);
                     },
-                    () => n(null, !1)
+                    () => t(null, !1)
                 );
         }
     }
     constructor() {
-        super(new r.Z('InviteQueue'), c);
+        super(new r.Z('InviteQueue'), u);
     }
 }
-n.Z = new h();
+let g = new h();

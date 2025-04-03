@@ -1,126 +1,121 @@
-r.r(t),
-    r.d(t, {
-        createModeratorOverwrite: function () {
-            return p;
-        },
-        default: function () {
-            return C;
-        }
-    }),
-    r(47120);
-var n = r(735250),
-    l = r(470079),
-    a = r(442837),
-    o = r(481060),
-    i = r(741361),
-    d = r(881052),
-    s = r(911969),
-    c = r(185413),
-    u = r(600164),
-    h = r(313201),
-    x = r(592125),
-    g = r(430824),
-    m = r(700785),
-    M = r(146085),
-    S = r(71080),
-    b = r(689938),
-    E = r(888112);
-function p(e, t) {
+n.d(t, {
+    A: () => _,
+    default: () => j
+}),
+    n(47120);
+var r = n(200651),
+    l = n(192379),
+    i = n(442837),
+    a = n(481060),
+    s = n(741361),
+    o = n(881052),
+    d = n(911969),
+    c = n(185413),
+    u = n(600164),
+    h = n(313201),
+    x = n(592125),
+    g = n(430824),
+    m = n(700785),
+    b = n(146085),
+    k = n(71080),
+    p = n(388032),
+    N = n(441609);
+function _(e, t) {
     return {
         id: e,
         type: t,
         deny: m.Hn,
-        allow: M.yP
+        allow: b.yP
     };
 }
-function C(e) {
-    let { transitionState: t, onClose: r, channelId: m } = e,
-        C = (0, h.Dt)(),
-        N = (0, a.e7)([x.Z], () => x.Z.getChannel(m)),
-        R = (0, a.e7)([g.Z], () => g.Z.getGuild(null == N ? void 0 : N.getGuildId())),
-        [A, j] = l.useState({}),
-        [I, _] = l.useState(!1),
-        [f, y] = l.useState(null);
-    if (null == N || null == R) return null;
-    let L = async () => {
-        _(!0);
+function j(e) {
+    let { transitionState: t, onClose: n, channelId: m } = e,
+        j = (0, h.Dt)(),
+        C = (0, i.e7)([x.Z], () => x.Z.getChannel(m)),
+        R = (0, i.e7)([g.Z], () => g.Z.getGuild(null == C ? void 0 : C.getGuildId())),
+        [S, E] = l.useState({}),
+        [w, y] = l.useState(!1),
+        [f, A] = l.useState(null);
+    if (null == C || null == R) return null;
+    let z = async () => {
+        y(!0);
         try {
             await (function (e, t) {
-                let r = Object.values(t)
+                let n = Object.values(t)
                     .filter((e) => {
                         let { row: t } = e;
                         return null != t.id;
                     })
                     .map((e) => {
                         let { row: t } = e;
-                        return t.rowType === S.aC.ROLE ? p(t.id, s.BN.ROLE) : p(t.id, s.BN.MEMBER);
+                        return t.rowType === k.aC.ROLE ? _(t.id, d.BN.ROLE) : _(t.id, d.BN.MEMBER);
                     });
-                return (0, i.hw)(e.id, r, !0);
-            })(N, A),
-                r();
+                return (0, s.hw)(e.id, n, !0);
+            })(C, S),
+                n();
         } catch (t) {
-            let e = new d.Hx(t);
-            _(!1), y(e);
+            let e = new o.Hx(t);
+            y(!1), A(e);
         }
     };
-    return (0, n.jsxs)(o.ModalRoot, {
+    return (0, r.jsxs)(a.Y0X, {
         transitionState: t,
-        'aria-labelledby': C,
-        size: o.ModalSize.SMALL,
-        className: E.modalRoot,
+        'aria-labelledby': j,
+        size: a.CgR.SMALL,
+        className: N.modalRoot,
         children: [
-            (0, n.jsxs)(o.ModalHeader, {
+            (0, r.jsxs)(a.xBx, {
                 separator: !1,
                 direction: u.Z.Direction.VERTICAL,
                 align: u.Z.Align.CENTER,
-                className: E.header,
+                className: N.header,
                 children: [
-                    (0, n.jsx)(o.Heading, {
+                    (0, r.jsx)(a.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: b.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
+                        children: p.NW.string(p.t.dMJ3Y2)
                     }),
-                    (0, n.jsxs)(o.Text, {
+                    (0, r.jsxs)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: E.headerSubtitle,
+                        className: N.headerSubtitle,
                         children: [
-                            (0, n.jsx)(o.StageIcon, {
+                            (0, r.jsx)(a.ewx, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: E.headerSubtitleIcon
+                                className: N.headerSubtitleIcon
                             }),
-                            N.name
+                            C.name
                         ]
                     })
                 ]
             }),
-            (0, n.jsx)(c.AddMembersBody, {
+            (0, r.jsx)(c.U, {
                 guild: R,
-                channel: N,
-                permission: M.yP,
-                pendingAdditions: A,
-                setPendingAdditions: j
+                channel: C,
+                permission: b.yP,
+                pendingAdditions: S,
+                setPendingAdditions: E
             }),
             null != f
-                ? (0, n.jsx)(o.Text, {
-                      className: E.error,
+                ? (0, r.jsx)(a.Text, {
+                      className: N.error,
                       variant: 'text-xs/normal',
                       color: 'text-danger',
                       children: f.getAnyErrorMessage()
                   })
                 : null,
-            (0, n.jsxs)(o.ModalFooter, {
+            (0, r.jsxs)(a.mzw, {
                 children: [
-                    (0, n.jsx)(o.Button, {
-                        onClick: L,
-                        submitting: I,
-                        children: b.Z.Messages.ADD
+                    (0, r.jsx)(a.zxk, {
+                        onClick: z,
+                        submitting: w,
+                        children: p.NW.string(p.t.OYkgVl)
                     }),
-                    (0, n.jsx)(o.Button, {
-                        look: o.Button.Looks.LINK,
-                        color: o.Button.Colors.PRIMARY,
-                        onClick: r,
-                        children: b.Z.Messages.CANCEL
+                    (0, r.jsx)(a.zxk, {
+                        look: a.zxk.Looks.LINK,
+                        color: a.zxk.Colors.PRIMARY,
+                        onClick: n,
+                        children: p.NW.string(p.t['ETE/oK'])
                     })
                 ]
             })

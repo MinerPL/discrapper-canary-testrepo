@@ -1,3 +1,4 @@
 e.exports = function () {
-    return (this.callbacks = {}), (this.directMap = {}), this;
+    var e = this;
+    return (e.callbacks = {}), (e.directMap = {}), this;
 };

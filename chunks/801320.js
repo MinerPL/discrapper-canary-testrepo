@@ -1,84 +1,110 @@
-n.r(t),
-    n.d(t, {
-        VideoBackgroundIssue: function () {
-            return s;
-        },
-        default: function () {
-            return b;
-        }
-    });
-var a,
-    s,
-    l = n(735250),
-    o = n(470079),
-    r = n(481060),
-    i = n(332664),
-    c = n(142497),
-    u = n(626135),
-    d = n(981631),
-    _ = n(190378),
-    E = n(689938);
-((a = s || (s = {})).BAD_OUTLINE = 'BAD_OUTLINE'), (a.BACKGROUND_DETECTION_ACCURACY = 'BACKGROUND_DETECTION_ACCURACY'), (a.FLICKERING = 'FLICKERING'), (a.BACKGROUND_DETECTION_LAG = 'BACKGROUND_DETECTION_LAG'), (a.OTHER = 'OTHER');
-let C = ['OTHER'];
+n.d(t, { default: () => _ });
+var a = n(200651),
+    r = n(192379),
+    l = n(481060),
+    s = n(332664),
+    o = n(142497),
+    c = n(626135),
+    i = n(981631),
+    u = n(190378),
+    d = n(388032);
 function b(e) {
-    let { analyticsData: t, transitionState: a, onClose: s } = e;
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            a = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (a = a.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            a.forEach(function (t) {
+                var a;
+                (a = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: a,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = a);
+            });
+    }
+    return e;
+}
+let m = ['OTHER'];
+function _(e) {
+    let { analyticsData: t, transitionState: _, onClose: x } = e;
     return (
-        o.useEffect(() => {
-            u.default.track(d.rMx.OPEN_MODAL, { type: 'Video Background Feedback' });
+        r.useEffect(() => {
+            c.default.track(i.rMx.OPEN_MODAL, { type: 'Video Background Feedback' });
         }, []),
-        (0, l.jsx)(i.Z, {
-            header: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_HEADER,
-            body: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_BODY,
-            problemTitle: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_PROBLEM_TITLE,
+        (0, a.jsx)(s.Z, {
+            modalType: 'video_background',
+            header: d.NW.string(d.t.Wl8qXl),
+            body: d.NW.string(d.t.vPw6j4),
+            problemTitle: d.NW.string(d.t['UNFF8/']),
             problems: [
                 {
                     value: 'BAD_OUTLINE',
-                    label: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_OPTION_BAD_OUTLINE
+                    label: d.NW.string(d.t.pyhS3t)
                 },
                 {
                     value: 'BACKGROUND_DETECTION_ACCURACY',
-                    label: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_OPTION_BACKGROUND_DETECTION_ACCURACY
+                    label: d.NW.string(d.t.cymRTU)
                 },
                 {
                     value: 'FLICKERING',
-                    label: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_OPTION_FLICKERING
+                    label: d.NW.string(d.t.xZ60CA)
                 },
                 {
                     value: 'BACKGROUND_DETECTION_LAG',
-                    label: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_OPTION_BACKGROUND_DETECTION_LAG
+                    label: d.NW.string(d.t.DweTcX)
                 },
                 {
                     value: 'OTHER',
-                    label: E.Z.Messages.CALL_FEEDBACK_OPTION_OTHER
+                    label: d.NW.string(d.t['emlT9/'])
                 }
             ],
-            feedbackProblems: C,
+            freeformNeededProblems: m,
             onSubmit: function (e) {
-                var a, s, o, i;
-                let { rating: C, problem: b, dontShowAgain: N, feedback: O } = e;
-                if ((N && (0, c.Kw)(_.v.VIDEO_BACKGROUND_FEEDBACK), null != C))
-                    (a = C),
-                        (s = b),
-                        (o = O),
-                        (i = t),
-                        u.default.track(d.rMx.VIDEO_BACKGROUND_FEEDBACK, {
-                            ...i,
-                            reason: s,
-                            rating: a,
-                            feedback: o
-                        }),
-                        null != b &&
-                            (0, r.openModalLazy)(async () => {
+                var r, s, m, _;
+                let { rating: x, problem: p, dontShowAgain: f, feedback: h } = e;
+                f && (0, o.Kw)(u.v.VIDEO_BACKGROUND_FEEDBACK),
+                    null != x &&
+                        ((s = null != (r = null == p ? void 0 : p.value) ? r : null),
+                        c.default.track(
+                            i.rMx.VIDEO_BACKGROUND_FEEDBACK,
+                            ((m = b({}, t)),
+                            (_ = _ =
+                                {
+                                    reason: s,
+                                    rating: x,
+                                    feedback: h
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(m, Object.getOwnPropertyDescriptors(_))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var a = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, a);
+                                      }
+                                      return n;
+                                  })(Object(_)).forEach(function (e) {
+                                      Object.defineProperty(m, e, Object.getOwnPropertyDescriptor(_, e));
+                                  }),
+                            m)
+                        ),
+                        null != p &&
+                            (0, l.ZDy)(async () => {
                                 let { default: e } = await n.e('14466').then(n.bind(n, 729328));
-                                return (t) =>
-                                    (0, l.jsx)(e, {
-                                        body: E.Z.Messages.VIDEO_BACKGROUND_ISSUE_REPORTED_BODY,
-                                        ...t
-                                    });
-                            });
+                                return (t) => (0, a.jsx)(e, b({ body: d.NW.string(d.t.aHB11d) }, t));
+                            }));
             },
-            onClose: s,
-            transitionState: a,
+            onClose: x,
+            transitionState: _,
             otherKey: 'OTHER'
         })
     );

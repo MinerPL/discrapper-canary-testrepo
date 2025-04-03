@@ -1,44 +1,37 @@
-a.d(t, {
-    w: function () {
-        return l;
-    }
-}),
-    a(47120),
-    a(653041);
-var n = a(735630);
-async function l(e) {
-    let t = n.createFile(),
-        a = n.createFile(),
+async function r(e) {
+    let { default: t } = await n.e('32990').then(n.t.bind(n, 735630, 19)),
+        r = t.createFile(),
+        a = t.createFile(),
         l = {};
     (e.fileStart = 0),
-        (t.onReady = (e) => {
-            for (let n of (a.init({
+        (r.onReady = (e) => {
+            for (let t of (a.init({
                 duration: e.duration,
                 timescale: e.timescale
             }),
             e.audioTracks))
-                (l[n.id] = n),
-                    t.setExtractionOptions(n.id, null, { nbSamples: 1 / 0 }),
+                (l[t.id] = t),
+                    r.setExtractionOptions(t.id, null, { nbSamples: 1 / 0 }),
                     a.addTrack({
-                        id: n.id,
-                        timescale: n.timescale,
+                        id: t.id,
+                        timescale: t.timescale,
                         hdlr: 'soun',
                         type: 'mp4a',
-                        duration: n.duration,
-                        layer: n.layer,
-                        channel_count: n.audio.channel_count,
-                        samplerate: n.audio.sample_rate,
-                        samplesize: n.audio.sample_size,
-                        name: n.name
+                        duration: t.duration,
+                        layer: t.layer,
+                        channel_count: t.audio.channel_count,
+                        samplerate: t.audio.sample_rate,
+                        samplesize: t.audio.sample_size,
+                        name: t.name
                     });
-            t.start();
+            r.start();
         });
     let i = new Promise((e) => {
-        t.onSamples = (n, i, r) => {
-            for (let e of r) a.addSample(n, e.data, e);
-            t.releaseUsedSamples(n, r.length), delete l[n];
-            let o = a.getTrackById(n),
-                s = t.getTrackById(n);
+        r.onSamples = (t, n, i) => {
+            for (let e of i) a.addSample(t, e.data, e);
+            r.releaseUsedSamples(t, i.length), delete l[t];
+            let o = a.getTrackById(t),
+                s = r.getTrackById(t);
             if (null != s.edts) {
                 let e = s.edts.elst;
                 o.add('edts').boxes.push(e);
@@ -46,5 +39,6 @@ async function l(e) {
             0 === Object.keys(l).length && e();
         };
     });
-    return t.appendBuffer(e), t.flush(), await i, a.getBuffer();
+    return r.appendBuffer(e), r.flush(), await i, a.getBuffer();
 }
+n.d(t, { w: () => r }), n(47120), n(653041);

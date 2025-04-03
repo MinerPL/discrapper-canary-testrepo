@@ -4,8 +4,4 @@ function r(e, t) {
     for (let i = 0; i < r; i++) n |= e.charCodeAt(i) ^ t.charCodeAt(i);
     return 0 === n && e.length === t.length;
 }
-n.d(t, {
-    y: function () {
-        return r;
-    }
-});
+n.d(t, { y: () => r });

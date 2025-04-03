@@ -1,4 +1,5 @@
+r.d(t, { Z: () => o });
 var n = Object.prototype.toString;
-t.Z = function (e) {
+let o = function (e) {
     return n.call(e);
 };

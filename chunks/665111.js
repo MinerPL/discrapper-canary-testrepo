@@ -1,105 +1,167 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return _;
-        }
-    });
-var s = t(735250);
-t(470079);
-var i = t(481060),
-    r = t(313201),
-    c = t(471253),
-    a = t(930180),
-    o = t(582019),
-    l = t(939863),
-    d = t(689938),
-    u = t(647711);
+n.d(t, { default: () => _ });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    o = n(313201),
+    s = n(471253),
+    c = n(930180),
+    l = n(320596),
+    a = n(939863),
+    u = n(388032),
+    d = n(22946);
 function _(e) {
-    let { channel: n, transitionState: t, onClose: _, ...E } = e,
-        I = (0, r.Dt)(),
-        T = (0, a._d)(n.id),
-        N = async () => {
-            await (0, c.yi)(n), _();
+    var t,
+        n,
+        { channel: _, transitionState: h, onClose: b } = e,
+        p = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['channel', 'transitionState', 'onClose']);
+    let g = (0, o.Dt)(),
+        f = (0, c._d)(_.id),
+        m = (0, c.K3)(_.id),
+        j = async () => {
+            await (0, s.yi)(_), b();
         },
-        h = async () => {
-            await (0, c.RK)(n, !1), _();
+        O = async () => {
+            await (0, s.RK)(_, !1), b();
         };
-    return (0, s.jsx)(i.ModalRoot, {
-        transitionState: t,
-        'aria-labelledby': I,
-        ...E,
-        size: i.ModalSize.SMALL,
-        children: (0, s.jsxs)(i.ModalContent, {
-            className: u.content,
-            children: [
-                (0, s.jsx)(l.Z, {
-                    children: (0, s.jsx)('div', {
-                        className: u.stageIconBackground,
-                        children: (0, s.jsx)(i.StageIcon, {
-                            size: 'custom',
-                            color: 'currentColor',
-                            width: 40,
-                            height: 40,
-                            className: u.stageIcon
+    return (0, r.jsx)(
+        i.Y0X,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
-                    })
-                }),
-                (0, s.jsx)(i.Heading, {
-                    id: I,
-                    variant: 'heading-xl/semibold',
-                    color: 'header-primary',
-                    className: u.headerTitle,
-                    children: d.Z.Messages.STAGE_MODERATOR_JOIN_MODAL_TITLE
-                }),
-                (0, s.jsx)(i.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'header-secondary',
-                    className: u.headerSubtitle,
-                    children: d.Z.Messages.STAGE_MODERATOR_JOIN_MODAL_SUBTITLE
-                }),
-                T > 0 && (0, s.jsx)(o.mv, { channelId: n.id }),
-                (0, s.jsxs)('div', {
-                    className: u.buttonsContainer,
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                transitionState: h,
+                'aria-labelledby': g
+            },
+            p
+        )),
+        (n = n =
+            {
+                size: i.CgR.SMALL,
+                children: (0, r.jsxs)(i.hzk, {
+                    className: d.content,
                     children: [
-                        (0, s.jsxs)(i.Button, {
-                            color: i.Button.Colors.PRIMARY,
-                            className: u.button,
-                            innerClassName: u.innerButton,
-                            onClick: h,
-                            children: [
-                                (0, s.jsx)('div', {
-                                    className: u.icon,
-                                    children: (0, s.jsx)(i.MicrophoneIcon, {
-                                        size: 'custom',
-                                        color: 'currentColor',
-                                        width: 20,
-                                        height: 20
-                                    })
-                                }),
-                                d.Z.Messages.STAGE_MODERATOR_JOIN_MODAL_JOIN_SPEAKER
-                            ]
+                        (0, r.jsx)(a.Z, {
+                            children: (0, r.jsx)('div', {
+                                className: d.stageIconBackground,
+                                children: (0, r.jsx)(i.ewx, {
+                                    size: 'custom',
+                                    color: 'currentColor',
+                                    width: 40,
+                                    height: 40,
+                                    className: d.stageIcon
+                                })
+                            })
                         }),
-                        (0, s.jsxs)(i.Button, {
-                            color: i.Button.Colors.PRIMARY,
-                            className: u.button,
-                            innerClassName: u.innerButton,
-                            onClick: N,
+                        (0, r.jsx)(i.X6q, {
+                            id: g,
+                            variant: 'heading-xl/semibold',
+                            color: 'header-primary',
+                            className: d.headerTitle,
+                            children: u.NW.string(u.t.njetU1)
+                        }),
+                        (0, r.jsx)(i.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'header-secondary',
+                            className: d.headerSubtitle,
+                            children: u.NW.string(u.t.LQY4JS)
+                        }),
+                        (f > 0 || m > 0) && (0, r.jsx)(l.mv, { channelId: _.id }),
+                        (0, r.jsxs)('div', {
+                            className: d.buttonsContainer,
                             children: [
-                                (0, s.jsx)('div', {
-                                    className: u.icon,
-                                    children: (0, s.jsx)(i.GroupIcon, {
-                                        size: 'custom',
-                                        color: 'currentColor',
-                                        width: 20,
-                                        height: 20
-                                    })
+                                (0, r.jsxs)(i.zxk, {
+                                    color: i.zxk.Colors.PRIMARY,
+                                    className: d.button,
+                                    innerClassName: d.innerButton,
+                                    onClick: O,
+                                    children: [
+                                        (0, r.jsx)('div', {
+                                            className: d.icon,
+                                            children: (0, r.jsx)(i.S6n, {
+                                                size: 'custom',
+                                                color: 'currentColor',
+                                                width: 20,
+                                                height: 20
+                                            })
+                                        }),
+                                        u.NW.string(u.t['Q8o/tb'])
+                                    ]
                                 }),
-                                d.Z.Messages.STAGE_MODERATOR_JOIN_MODAL_JOIN_AUDIENCE
+                                (0, r.jsxs)(i.zxk, {
+                                    color: i.zxk.Colors.PRIMARY,
+                                    className: d.button,
+                                    innerClassName: d.innerButton,
+                                    onClick: j,
+                                    children: [
+                                        (0, r.jsx)('div', {
+                                            className: d.icon,
+                                            children: (0, r.jsx)(i.BFJ, {
+                                                size: 'custom',
+                                                color: 'currentColor',
+                                                width: 20,
+                                                height: 20
+                                            })
+                                        }),
+                                        u.NW.string(u.t['N3/Oyc'])
+                                    ]
+                                })
                             ]
                         })
                     ]
                 })
-            ]
-        })
-    });
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t)
+    );
 }

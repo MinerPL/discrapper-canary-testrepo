@@ -1,12 +1,7 @@
 e.exports = {
-    container: 'container_cbd271',
-    membersWrap: 'membersWrap_cbd271',
-    members: 'members_cbd271',
-    member: 'member_cbd271',
-    membersGroup: 'membersGroup_cbd271',
-    hiddenMembers: 'hiddenMembers_cbd271',
-    memberGroupsPlaceholder: 'memberGroupsPlaceholder_cbd271',
-    roleIcon: 'roleIcon_cbd271',
-    fullWidth: 'fullWidth_cbd271',
-    appIconWrapper: 'appIconWrapper_cbd271'
+    container: 'container__0d793',
+    textContainer: 'textContainer__0d793',
+    reconnectButton: 'reconnectButton__0d793',
+    headerText: 'headerText__0d793',
+    newBadge: 'newBadge__0d793'
 };

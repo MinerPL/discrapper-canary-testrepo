@@ -1,51 +1,46 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return d;
-        }
-    });
-var a = n(735250);
-n(470079);
-var i = n(481060),
-    s = n(313201),
-    r = n(689938),
-    o = n(253019),
-    l = n(365627);
-function d(t) {
-    let { transitionState: e, onClose: n, listing: d, subscription: c } = t,
-        I = (0, s.Dt)();
-    return (0, a.jsxs)(i.ModalRoot, {
+i.d(e, { default: () => o });
+var n = i(200651);
+i(192379);
+var r = i(481060),
+    a = i(313201),
+    s = i(388032),
+    l = i(708121),
+    c = i(365627);
+function o(t) {
+    let { transitionState: e, onClose: i, storeListing: o, subscription: d } = t,
+        u = (0, a.Dt)();
+    return (0, n.jsxs)(r.Y0X, {
         transitionState: e,
-        'aria-labelledby': I,
+        'aria-labelledby': u,
         children: [
-            (0, a.jsxs)(i.ModalContent, {
-                className: o.contentContainer,
+            (0, n.jsxs)(r.hzk, {
+                className: l.contentContainer,
                 children: [
-                    (0, a.jsx)('img', {
-                        src: l,
+                    (0, n.jsx)('img', {
+                        src: c,
                         alt: ''
                     }),
-                    (0, a.jsx)(i.Heading, {
-                        className: o.title,
+                    (0, n.jsx)(r.X6q, {
+                        className: l.title,
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        id: I,
-                        children: r.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({ tier: d.name })
+                        id: u,
+                        children: s.NW.format(s.t['wLFT6+'], { tier: o.summary })
                     }),
-                    (0, a.jsx)(i.Text, {
-                        className: o.subtitle,
+                    (0, n.jsx)(r.Text, {
+                        className: l.subtitle,
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: r.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({ timestamp: null == c ? void 0 : c.currentPeriodEnd })
+                        children: s.NW.format(s.t.OsAK9v, { timestamp: null == d ? void 0 : d.currentPeriodEnd })
                     })
                 ]
             }),
-            (0, a.jsx)(i.ModalFooter, {
-                children: (0, a.jsx)(i.Button, {
-                    size: i.Button.Sizes.MEDIUM,
+            (0, n.jsx)(r.mzw, {
+                children: (0, n.jsx)(r.zxk, {
+                    size: r.zxk.Sizes.MEDIUM,
                     grow: !1,
-                    onClick: n,
-                    children: r.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
+                    onClick: i,
+                    children: s.NW.string(s.t['JtWl+f'])
                 })
             })
         ]

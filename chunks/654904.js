@@ -1,76 +1,107 @@
 n.d(t, {
-    $r: function () {
-        return _;
-    },
-    DP: function () {
-        return p;
-    },
-    Ly: function () {
-        return f;
-    },
-    SG: function () {
-        return E;
-    },
-    ZT: function () {
-        return h;
-    }
-});
-var r = n(735250);
-n(470079);
+    $r: () => h,
+    DP: () => E,
+    Ly: () => g,
+    SG: () => m
+}),
+    n(757143),
+    n(301563);
+var r = n(200651);
+n(192379);
 var i = n(866442),
-    a = n(481060);
+    o = n(481060);
 n(531643);
-var s = n(768581);
+var a = n(643879),
+    s = n(768581);
 n(403182);
-var o = n(51144),
-    l = n(661543),
+var l = n(51144),
+    c = n(661543),
     u = n(200299),
-    c = n(486324),
-    d = n(689938);
-function _(e, t, i, s) {
-    (0, a.openModalLazy)(async () => {
-        let { default: a } = await n.e('82634').then(n.bind(n, 28130));
-        return (n) =>
-            (0, r.jsx)(a, {
-                filters: s,
-                maxFileSizeBytes: u.B,
-                imageSpecifications: e === c.pC.BANNER && d.Z.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
-                onComplete: (n, r) =>
-                    (0, l.j)({
-                        imageSrc: n,
-                        file: r,
-                        uploadType: e,
-                        guildId: t,
-                        isTryItOutFlow: i
-                    }),
-                uploadType: e,
-                showUpsellHeader: !0,
-                ...n
-            });
-    });
-}
-function E(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    if (null != e) return e;
-    let { size: i = 80, canAnimate: a = !0 } = r,
-        o = null === e;
-    return o && null == t ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator) : o || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, a) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, a);
-}
-function f(e) {
-    var t;
-    let { pendingNickname: n, pendingGlobalName: r, user: i, guildMember: a } = e,
-        s = '' === n ? null : null != n ? n : null == a ? void 0 : a.nick,
-        l = '' === r ? i.username : r;
-    return null !== (t = null != s ? s : l) && void 0 !== t ? t : o.ZP.getName(i);
-}
-function h(e) {
-    var t, n;
-    let { pendingProfileEffectId: r, displayProfile: i } = e,
-        a = null == i ? void 0 : null === (t = i._userProfile) || void 0 === t ? void 0 : t.profileEffectId,
-        s = null == i ? void 0 : null === (n = i._guildMemberProfile) || void 0 === n ? void 0 : n.profileEffectId,
-        o = null === r;
-    return o && null != s ? a : o ? null : null != r ? r : null == i ? void 0 : i.profileEffectId;
+    d = n(486324),
+    f = n(388032);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
 function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t, i, s) {
+    (0, o.ZDy)(async () => {
+        let { default: o } = await Promise.all([n.e('91689'), n.e('55849'), n.e('90851')]).then(n.bind(n, 192277));
+        return (n) =>
+            (0, r.jsx)(
+                o,
+                p(
+                    {
+                        filters: s,
+                        maxFileSizeBytes: u.B,
+                        imageSpecifications: e === d.pC.BANNER ? f.NW.string(f.t.IhzZlp) : void 0,
+                        onComplete: (n) => {
+                            let { assetOrigin: r, imageUri: o, file: s, originalAsset: l } = n,
+                                u = s.name.replace(/\.[^/.]+$/, ''),
+                                d = (0, a.Z1)({
+                                    filename: u,
+                                    assetOrigin: r
+                                }),
+                                f = (0, a.cN)({
+                                    assetOrigin: r,
+                                    imageUri: o,
+                                    description: d,
+                                    originalAsset: l
+                                });
+                            (0, c.j)({
+                                image: f,
+                                file: s,
+                                uploadType: e,
+                                guildId: t,
+                                isTryItOutFlow: i
+                            });
+                        },
+                        uploadType: e,
+                        showUpsellHeader: !0
+                    },
+                    n
+                )
+            );
+    });
+}
+function m(e, t, n) {
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    if (null != e) return e;
+    let { size: i = 80, canAnimate: o = !0 } = r,
+        a = null === e;
+    return a && null == t ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, o) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, o);
+}
+function g(e) {
+    var t;
+    let { pendingNickname: n, pendingGlobalName: r, user: i, guildMember: o } = e,
+        a = '' === n ? null : null != n ? n : null == o ? void 0 : o.nick,
+        s = '' === r ? i.username : r;
+    return null != (t = null != a ? a : s) ? t : l.ZP.getName(i);
+}
+function E(e) {
     return (null != e ? (0, i.Bd)(e) : 1) > 0.25;
 }

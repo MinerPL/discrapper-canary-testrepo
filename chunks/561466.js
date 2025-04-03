@@ -1,18 +1,17 @@
-var r, i, a, s;
 n.d(t, {
-    az: function () {
-        return i;
-    },
-    pC: function () {
-        return r;
-    },
-    si: function () {
-        return o;
-    }
+    az: () => o,
+    pC: () => i,
+    si: () => a
 });
-((a = r || (r = {}))[(a.MESSAGE = 0)] = 'MESSAGE'), (a[(a.SUCCESS = 1)] = 'SUCCESS'), (a[(a.FAILURE = 2)] = 'FAILURE'), (a[(a.CUSTOM = 3)] = 'CUSTOM'), (a[(a.CLIP = 4)] = 'CLIP'), (a[(a.LINK = 5)] = 'LINK'), (a[(a.FORWARD = 6)] = 'FORWARD'), (a[(a.BOOKMARK = 7)] = 'BOOKMARK'), (a[(a.CLOCK = 8)] = 'CLOCK'), ((s = i || (i = {}))[(s.TOP = 0)] = 'TOP'), (s[(s.BOTTOM = 1)] = 'BOTTOM');
-let o = {
+let r = 3000;
+var i = (function (e) {
+        return (e.MESSAGE = 'message'), (e.SUCCESS = 'success'), (e.FAILURE = 'failure'), (e.CUSTOM = 'custom'), (e.CLIP = 'clip'), (e.LINK = 'link'), (e.FORWARD = 'forward'), (e.INVITE = 'invite'), (e.BOOKMARK = 'bookmark'), (e.CLOCK = 'clock'), e;
+    })({}),
+    o = (function (e) {
+        return (e[(e.TOP = 0)] = 'TOP'), (e[(e.BOTTOM = 1)] = 'BOTTOM'), e;
+    })({});
+let a = {
     position: 0,
     component: null,
-    duration: 3000
+    duration: r
 };

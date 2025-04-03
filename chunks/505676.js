@@ -1,8 +1,4 @@
-function n(e, t) {
-    return null != e ? e : t();
+function r(t, e) {
+    return null != t ? t : e();
 }
-r.d(t, {
-    h: function () {
-        return n;
-    }
-});
+a.d(e, { h: () => r });

@@ -1,86 +1,111 @@
 n.d(t, {
-    Ne: function () {
-        return p;
-    },
-    Ny: function () {
-        return _;
-    },
-    Or: function () {
-        return f;
-    },
-    jt: function () {
-        return g;
-    }
+    Ne: () => f,
+    Ny: () => g,
+    Or: () => b,
+    jt: () => y
 }),
     n(47120);
-var i = n(735250);
-n(470079);
-var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(456100),
     s = n(44315),
-    o = n(246364),
-    c = n(460562),
-    u = n(510601),
+    c = n(246364),
+    u = n(460562),
     d = n(981631),
-    h = n(874043);
-function p(e, t) {
-    return (0, i.jsx)(a.NumberBadge, {
+    p = n(176330);
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    return (0, r.jsx)(o.mAB, {
         count: e,
         color: t
     });
 }
-function _() {
-    return (0, i.jsx)(a.IconBadge, {
-        icon: (0, a.makeIconCompat)(c.Z),
+function g() {
+    return (0, r.jsx)(o.G2e, {
+        icon: (0, o.GSL)(u.Z),
         disableColor: !0,
-        className: h.unavailableBadge
-    });
-}
-function f(e) {
-    let t,
-        { audio: n, video: i, screenshare: l, isCurrentUserConnected: r, liveStage: s, activeEvent: o, activity: c, gaming: d } = e,
-        h = (0, u.vg)('Guild Icon', !1);
-    if ((!o && !s && !c && !l && !i && d && u.ZP.trackExposure({ location: 'Guild Icon' }), o)) t = a.CalendarIcon;
-    else if (s) t = a.StageIcon;
-    else if (c) t = a.ActivitiesIcon;
-    else if (l) t = a.ScreenIcon;
-    else if (i) t = a.VideoIcon;
-    else if (d && h) t = a.GameControllerIcon;
-    else {
-        if (!n) return null;
-        t = a.VoiceNormalIcon;
-    }
-    return m({
-        icon: t,
-        isCurrentUserConnected: r
-    });
-}
-function g(e) {
-    let { guildJoinRequestStatus: t } = e,
-        [n, i] = (function (e) {
-            switch (e) {
-                case o.wB.SUBMITTED:
-                    return [void 0, a.ClockIcon];
-                case o.wB.REJECTED:
-                    return [d.Ilk.RED_400, a.XSmallIcon];
-                case o.wB.APPROVED:
-                    return [d.Ilk.GREEN_360, a.CheckmarkLargeIcon];
-                default:
-                    return [void 0, a.PencilIcon];
-            }
-        })(t);
-    return m({
-        icon: i,
-        color: n
+        className: p.unavailableBadge
     });
 }
 function m(e) {
-    let { icon: t, color: n, isCurrentUserConnected: l } = e,
-        o = null == n ? { disableColor: !0 } : { color: (0, s.Lq)(n) };
-    return (0, i.jsx)(a.IconBadge, {
+    let { enabled: t } = a.c.useExperiment({ location: 'renderMediaBadge' }, { autoTrackExposure: !0 }),
+        n = t ? o.iWm : o.nG3;
+    return (0, r.jsx)(n, h({}, e));
+}
+function b(e) {
+    let t,
+        { audio: n, video: r, screenshare: i, isCurrentUserConnected: l, liveStage: a, activeEvent: s, activity: c } = e;
+    if (s) t = o.Que;
+    else if (a) t = o.ewx;
+    else if (c) t = m;
+    else if (i) t = o.pzj;
+    else if (r) t = o.Odl;
+    else {
+        if (!n) return null;
+        t = o.gj8;
+    }
+    return _({
         icon: t,
-        className: r()(h.iconBadge, { [h.isCurrentUserConnected]: l }),
-        ...o
+        isCurrentUserConnected: l
     });
+}
+function y(e) {
+    let { guildJoinRequestStatus: t } = e,
+        [n, r] = (function (e) {
+            switch (e) {
+                case c.wB.SUBMITTED:
+                    return [void 0, o.T39];
+                case c.wB.REJECTED:
+                    return [d.Ilk.RED_400, o.Dio];
+                case c.wB.APPROVED:
+                    return [d.Ilk.GREEN_360, o.dz2];
+                default:
+                    return [void 0, o.vdY];
+            }
+        })(t);
+    return _({
+        icon: r,
+        color: n
+    });
+}
+function _(e) {
+    let { icon: t, color: n, isCurrentUserConnected: i } = e,
+        a = null == n ? { disableColor: !0 } : { color: (0, s.Lq)(n) };
+    return (0, r.jsx)(
+        o.G2e,
+        h(
+            {
+                icon: t,
+                className: l()(p.iconBadge, { [p.isCurrentUserConnected]: i })
+            },
+            a
+        )
+    );
 }

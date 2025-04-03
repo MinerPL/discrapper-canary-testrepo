@@ -1,42 +1,38 @@
-t.d(s, {
-    Z: function () {
-        return _;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(481060),
-    i = t(37234),
-    r = t(703656),
-    o = t(981631),
-    l = t(689938),
-    c = t(751507),
-    d = t(322221);
-function _() {
-    return (0, n.jsxs)('div', {
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(37234),
+    a = n(703656),
+    l = n(981631),
+    o = n(388032),
+    c = n(765058),
+    d = n(322221);
+function u() {
+    return (0, r.jsxs)('div', {
         className: c.emptyState,
         children: [
-            (0, n.jsx)('img', {
+            (0, r.jsx)('img', {
                 src: d,
                 alt: '',
                 className: c.image
             }),
-            (0, n.jsx)(a.Heading, {
+            (0, r.jsx)(i.X6q, {
                 className: c.topSpacing,
                 variant: 'heading-lg/extrabold',
-                children: l.Z.Messages.GUILD_IDENTITY_SETTINGS_EMPTY_STATE_TITLE
+                children: o.NW.string(o.t.Z1OZCQ)
             }),
-            (0, n.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 className: c.topSpacing,
                 variant: 'text-md/normal',
-                children: l.Z.Messages.GUILD_IDENTITY_SETTINGS_EMPTY_STATE_DESCRIPTION
+                children: o.NW.string(o.t.ZSt4Tk)
             }),
-            (0, n.jsx)(a.Button, {
+            (0, r.jsx)(i.zxk, {
                 className: c.topSpacing,
                 onClick: () => {
-                    (0, r.uL)(o.Z5c.GUILD_DISCOVERY), i.xf();
+                    (0, a.uL)(l.Z5c.GUILD_DISCOVERY), s.xf();
                 },
-                children: l.Z.Messages.GUILD_IDENTITY_SETTINGS_EMPTY_STATE_CTA
+                children: o.NW.string(o.t.jQ3pqq)
             })
         ]
     });

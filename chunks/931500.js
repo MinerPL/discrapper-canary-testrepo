@@ -1,22 +1,17 @@
-t.d(s, {
-    _: function () {
-        return o;
-    }
-}),
-    t(47120);
-var n = t(392711),
-    a = t.n(n),
-    i = t(442837),
-    r = t(651941);
-function o(e) {
-    return (0, i.Wu)([r.Z], () =>
-        a()(r.Z.getUserVerifiedKeys(e))
+n.d(t, { _: () => l }), n(47120);
+var r = n(392711),
+    i = n.n(r),
+    s = n(442837),
+    a = n(651941);
+function l(e) {
+    return (0, s.Wu)([a.Z], () =>
+        i()(a.Z.getUserVerifiedKeys(e))
             .entries()
             .map((e) => {
-                let [s, t] = e;
+                let [t, n] = e;
                 return {
-                    verifiedKey: s,
-                    timestamp: t
+                    verifiedKey: t,
+                    timestamp: n
                 };
             })
             .sortBy((e) => -1 * e.timestamp)

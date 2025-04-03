@@ -1,57 +1,53 @@
-t.d(s, {
-    Z: function () {
-        return N;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(442837),
-    i = t(481060),
-    r = t(230711),
-    o = t(574755),
-    l = t(663389),
-    c = t(309739),
-    d = t(293389),
-    _ = t(327885),
-    E = t(326528),
-    u = t(332325),
-    I = t(981631),
-    T = t(689938),
-    S = t(672280);
-function N() {
-    let e = (0, E.b)(),
-        s = (0, a.e7)([l.Z], () => l.Z.getSubsection()),
-        t = null != s && e.some((e) => e.id === s) ? s : e[0].id;
-    return (0, n.jsxs)(n.Fragment, {
+n.d(t, { Z: () => b });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    s = n(481060),
+    a = n(230711),
+    l = n(574755),
+    o = n(663389),
+    c = n(309739),
+    d = n(293389),
+    u = n(327885),
+    m = n(326528),
+    g = n(332325),
+    p = n(981631),
+    h = n(388032),
+    f = n(881328);
+function b() {
+    let e = (0, m.b)(),
+        t = (0, i.e7)([o.Z], () => o.Z.getSubsection()),
+        n = null != t && e.some((e) => e.id === t) ? t : e[0].id;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(i.Heading, {
-                className: S.heading,
+            (0, r.jsx)(s.X6q, {
+                className: f.heading,
                 variant: 'heading-xl/semibold',
-                children: T.Z.Messages.GAMES
+                children: h.NW.string(h.t.URyqtL)
             }),
-            (0, n.jsx)(i.TabBar, {
-                className: S.tabBar,
-                selectedItem: t,
+            (0, r.jsx)(s.njP, {
+                className: f.tabBar,
+                selectedItem: n,
                 onItemSelect: (e) => {
-                    r.Z.setSection(I.oAB.GAMES, e);
+                    a.Z.setSection(p.oAB.GAMES, e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
                 look: 'brand',
                 children: e.map((e) =>
-                    (0, n.jsxs)(
-                        i.TabBar.Item,
+                    (0, r.jsxs)(
+                        s.njP.Item,
                         {
-                            className: S.tab,
+                            className: f.tab,
                             id: e.id,
                             'aria-label': e.title,
                             children: [
-                                (0, n.jsx)(e.icon, {
-                                    className: S.tabIcon,
+                                (0, r.jsx)(e.icon, {
+                                    className: f.tabIcon,
                                     color: 'currentColor'
                                 }),
-                                (0, n.jsx)('div', {
-                                    className: S.iconTitle,
+                                (0, r.jsx)('div', {
+                                    className: f.iconTitle,
                                     children: e.title
                                 })
                             ]
@@ -61,26 +57,26 @@ function N() {
                 )
             }),
             (() => {
-                switch (t) {
-                    case u.Z.CLIPS:
-                        return (0, n.jsx)(o.Z, {
-                            className: S.body,
+                switch (n) {
+                    case g.Z.CLIPS:
+                        return (0, r.jsx)(l.Z, {
+                            className: f.body,
                             showHeader: !1
                         });
-                    case u.Z.OVERLAY:
-                        return (0, n.jsx)(_.Z, {
-                            className: S.body,
+                    case g.Z.OVERLAY:
+                        return (0, r.jsx)(u.Z, {
+                            className: f.body,
                             showHeader: !1
                         });
-                    case u.Z.ACTIVITY_PRIVACY:
-                        return (0, n.jsx)(c.Z, {
-                            className: S.body,
+                    case g.Z.ACTIVITY_PRIVACY:
+                        return (0, r.jsx)(c.Z, {
+                            className: f.body,
                             showHeader: !1
                         });
-                    case u.Z.MY_GAMES:
+                    case g.Z.MY_GAMES:
                     default:
-                        return (0, n.jsx)(d.Z, {
-                            className: S.body,
+                        return (0, r.jsx)(d.Z, {
+                            className: f.body,
                             showHeader: !1
                         });
                 }

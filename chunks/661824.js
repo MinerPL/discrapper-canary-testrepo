@@ -1,38 +1,39 @@
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(38068),
-    l = n(689938),
-    u = n(508140);
-t.Z = i.forwardRef(function (e, t) {
-    let { className: n, contentClassName: i, isUnread: a, children: c, id: d, role: _, 'aria-label': E } = e;
+n.d(t, { Z: () => u });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(38068),
+    l = n(388032),
+    c = n(735167);
+let u = i.forwardRef(function (e, t) {
+    let { className: n, contentClassName: i, isUnread: o, children: u, id: d, role: f, 'aria-label': _ } = e;
     return (0, r.jsxs)('div', {
-        className: s()(n, {
-            [u.divider]: !0,
-            [u.isUnread]: a,
-            [u.hasContent]: null != c
+        className: a()(n, {
+            [c.divider]: !0,
+            [c.isUnread]: o,
+            [c.hasContent]: null != u
         }),
         ref: t,
         id: d,
-        role: _,
-        'aria-label': E,
+        role: f,
+        'aria-label': _,
         children: [
-            null != c
+            null != u
                 ? (0, r.jsx)('span', {
-                      className: s()(u.content, i),
-                      children: c
+                      className: a()(c.content, i),
+                      children: u
                   })
                 : null,
-            a
+            o
                 ? (0, r.jsxs)('span', {
-                      className: u.unreadPill,
+                      className: c.unreadPill,
                       children: [
-                          (0, r.jsx)(o.Z, {
-                              foreground: u.unreadPillCapStroke,
-                              className: u.unreadPillCap
+                          (0, r.jsx)(s.Z, {
+                              foreground: c.unreadPillCapStroke,
+                              className: c.unreadPillCap
                           }),
-                          l.Z.Messages.NEW
+                          l.NW.string(l.t.y2b7CA)
                       ]
                   })
                 : null

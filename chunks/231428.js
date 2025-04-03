@@ -1,126 +1,184 @@
-t.d(s, {
-    Z: function () {
-        return v;
-    }
-}),
-    t(47120);
-var n,
-    a = t(735250),
-    i = t(470079),
-    r = t(120356),
-    o = t.n(r),
-    l = t(512722),
-    c = t.n(l),
-    d = t(91192),
-    _ = t(442837),
-    E = t(481060),
-    u = t(570140),
-    I = t(355467),
-    T = t(827837),
-    S = t(821849),
-    N = t(724757),
-    C = t(600164),
-    m = t(239827),
-    A = t(818035),
-    O = t(509545),
-    g = t(78839),
-    h = t(74538),
-    p = t(807160),
-    R = t(474936),
-    x = t(231338),
-    M = t(689938),
-    f = t(40810),
-    D = t(495018);
-function P(e, s, t) {
+n.d(t, { Z: () => W }), n(47120);
+var r,
+    i = n(200651),
+    s = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    o = n(512722),
+    c = n.n(o),
+    d = n(91192),
+    u = n(442837),
+    m = n(481060),
+    g = n(570140),
+    p = n(355467),
+    h = n(827837),
+    f = n(821849),
+    b = n(724757),
+    N = n(600164),
+    x = n(239827),
+    _ = n(818035),
+    E = n(509545),
+    j = n(78839),
+    O = n(74538),
+    C = n(807160),
+    S = n(981631),
+    v = n(474936),
+    T = n(231338),
+    I = n(388032),
+    y = n(474915),
+    A = n(468590);
+function P(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
+            : (e[t] = n),
         e
     );
 }
-function L(e) {
-    let { payments: s, locale: t, compactMode: n, numPages: r } = e,
-        l = i.useRef(null),
-        [c, _] = i.useState(0),
-        [u, T] = i.useState(null),
-        S = s.slice(10 * c, (c + 1) * 10);
-    i.useEffect(() => {
+function R(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                P(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function D(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function Z(e) {
+    let { payments: t, locale: n, compactMode: r, numPages: a } = e,
+        o = s.useRef(null),
+        [c, u] = s.useState(0),
+        [g, h] = s.useState(null),
+        f = t.slice(10 * c, (c + 1) * 10);
+    s.useEffect(() => {
         var e;
-        null === (e = l.current) || void 0 === e || e.scrollTo({ to: 0 });
+        null == (e = o.current) || e.scrollTo({ to: 0 });
     }, [c]);
-    let C = i.useCallback(
+    let N = s.useCallback(
             (e) => {
-                _(e);
-                let t = s[s.length - 1].id;
-                e >= r - 2 && u !== t && ((0, I.cQ)(10, t), T(t));
+                u(e);
+                let n = t[t.length - 1].id;
+                e >= a - 2 && g !== n && ((0, p.cQ)(10, n), h(n));
             },
-            [s, r, u]
+            [t, a, g]
         ),
-        A = (0, N.Z)('billing-history', l);
-    return (0, a.jsx)(d.bG, {
-        navigator: A,
-        children: (0, a.jsx)(d.SJ, {
+        _ = (0, b.Z)('billing-history', o);
+    return (0, i.jsx)(d.bG, {
+        navigator: _,
+        children: (0, i.jsx)(d.SJ, {
             children: (e) => {
-                let { ref: s, ...i } = e;
-                return (0, a.jsx)(m.Z, {
-                    className: o()(f.verticalFit, f.paginator),
-                    currentPageIndex: c,
-                    onChangePage: C,
-                    numPages: r,
-                    showPageCount: !1,
-                    ref: s,
-                    ...i,
-                    children: (0, a.jsx)(E.AdvancedScroller, {
-                        className: f.bottomDivider,
-                        ref: l,
-                        children: S.map((e, s) =>
-                            (0, a.jsx)(
-                                p.Z,
-                                {
-                                    className: o()(f.paymentRow, f.bottomDivider),
-                                    payment: e,
-                                    locale: t,
-                                    compactMode: n
-                                },
-                                s
-                            )
-                        )
-                    })
-                });
+                var { ref: t } = e,
+                    s = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            i = (function (e, t) {
+                                if (null == e) return {};
+                                var n,
+                                    r,
+                                    i = {},
+                                    s = Object.keys(e);
+                                for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                return i;
+                            })(e, t);
+                        if (Object.getOwnPropertySymbols) {
+                            var s = Object.getOwnPropertySymbols(e);
+                            for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                        }
+                        return i;
+                    })(e, ['ref']);
+                return (0, i.jsx)(
+                    x.Z,
+                    D(
+                        R(
+                            {
+                                className: l()(y.verticalFit, y.paginator),
+                                currentPageIndex: c,
+                                onChangePage: N,
+                                numPages: a,
+                                showPageCount: !1,
+                                ref: t
+                            },
+                            s
+                        ),
+                        {
+                            children: (0, i.jsx)(m.Den, {
+                                className: y.bottomDivider,
+                                ref: o,
+                                children: f.map((e, t) =>
+                                    (0, i.jsx)(
+                                        C.Z,
+                                        {
+                                            className: l()(y.paymentRow, y.bottomDivider),
+                                            payment: e,
+                                            locale: n,
+                                            compactMode: r
+                                        },
+                                        t
+                                    )
+                                )
+                            })
+                        }
+                    )
+                );
             }
         })
     });
 }
-class b extends (n = i.PureComponent) {
+class w extends (r = s.PureComponent) {
     get numPages() {
         return Math.max(Math.ceil(this.props.payments.length / 10), 1);
     }
     componentDidMount() {
-        u.Z.wait(() => {
-            (0, T.N)(), (0, I.cQ)(30);
+        g.Z.wait(() => {
+            (0, h.N)(), (0, p.cQ)(30);
         });
     }
     renderPremiumExternalSubscription(e) {
         return (
             c()(null != e.paymentGateway, 'Expected payment gateway when rendering for external subscription'),
-            (0, a.jsxs)(E.Card, {
-                className: f.externalRow,
+            (0, i.jsxs)(m.Zbd, {
+                className: y.externalRow,
                 children: [
-                    (0, a.jsx)('div', {
-                        className: f.externalRowHeader,
-                        children: M.Z.Messages.BILLING_EXTERNAL_HEADER.format({ paymentGatewayName: x.Vz[e.paymentGateway] })
+                    (0, i.jsx)('div', {
+                        className: y.externalRowHeader,
+                        children: I.NW.format(I.t['6mIX6u'], { paymentGatewayName: T.Vz[e.paymentGateway] })
                     }),
-                    (0, a.jsx)('div', {
-                        className: f.externalRowBody,
-                        children: M.Z.Messages.BILLING_EXTERNAL_DESCRIPTION.format({
-                            paymentGatewayName: x.Vz[e.paymentGateway],
-                            billingHistoryLink: (0, h.JE)(e.paymentGateway, 'BILLING_HISTORY')
+                    (0, i.jsx)('div', {
+                        className: y.externalRowBody,
+                        children: I.NW.format(I.t.eG0uZG, {
+                            paymentGatewayName: T.Vz[e.paymentGateway],
+                            billingHistoryLink: (0, O.JE)(e.paymentGateway, 'BILLING_HISTORY')
                         })
                     })
                 ]
@@ -128,43 +186,43 @@ class b extends (n = i.PureComponent) {
         );
     }
     render() {
-        let { compactMode: e, payments: s, subscription: t, locale: n } = this.props,
-            i = null != t && t.isPurchasedExternally;
-        return 0 !== s.length || i
-            ? (0, a.jsxs)('div', {
-                  className: f.verticalFit,
+        let { compactMode: e, payments: t, subscription: n, locale: r } = this.props,
+            s = null != n && n.isPurchasedExternally;
+        return 0 !== t.length || s
+            ? (0, i.jsxs)('div', {
+                  className: y.verticalFit,
                   children: [
-                      null != t && i ? this.renderPremiumExternalSubscription(t) : null,
-                      s.length > 0
-                          ? (0, a.jsxs)('div', {
-                                className: o()(f.paymentPane, f.verticalFit),
+                      null != n && s ? this.renderPremiumExternalSubscription(n) : null,
+                      t.length > 0
+                          ? (0, i.jsxs)('div', {
+                                className: l()(y.paymentPane, y.verticalFit),
                                 children: [
                                     e
                                         ? null
-                                        : (0, a.jsx)('div', {
-                                              className: o()(f.paymentRow, f.bottomDivider),
-                                              children: (0, a.jsxs)(C.Z, {
-                                                  className: f.paymentRowHeader,
+                                        : (0, i.jsx)('div', {
+                                              className: l()(y.paymentRow, y.bottomDivider),
+                                              children: (0, i.jsxs)(N.Z, {
+                                                  className: y.paymentRowHeader,
                                                   children: [
-                                                      (0, a.jsx)('div', {
-                                                          className: D.date,
-                                                          children: M.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_DATE
+                                                      (0, i.jsx)('div', {
+                                                          className: A.date,
+                                                          children: I.NW.string(I.t['5t11BQ'])
                                                       }),
-                                                      (0, a.jsx)('div', {
-                                                          className: f.paymentRowHeaderDescription,
-                                                          children: M.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_DESCRIPTION
+                                                      (0, i.jsx)('div', {
+                                                          className: y.paymentRowHeaderDescription,
+                                                          children: I.NW.string(I.t.yAAPb2)
                                                       }),
-                                                      (0, a.jsx)('div', {
-                                                          className: D.amount,
-                                                          children: M.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_AMOUNT
+                                                      (0, i.jsx)('div', {
+                                                          className: A.amount,
+                                                          children: I.NW.string(I.t['6MqHXV'])
                                                       })
                                                   ]
                                               })
                                           }),
-                                    (0, a.jsx)(L, {
+                                    (0, i.jsx)(Z, {
                                         compactMode: e,
-                                        locale: n,
-                                        payments: s,
+                                        locale: r,
+                                        payments: t,
                                         numPages: this.numPages
                                     })
                                 ]
@@ -175,52 +233,55 @@ class b extends (n = i.PureComponent) {
             : null;
     }
     constructor(...e) {
-        super(...e), P(this, 'scrollerRef', i.createRef());
+        super(...e), P(this, 'scrollerRef', s.createRef());
     }
 }
-function Z(e) {
-    var s;
-    let t = e.skuId,
-        n = null === (s = e.subscription) || void 0 === s ? void 0 : s.items[0].planId;
-    return !(null == t || null == n || Object.values(R.Si).includes(t) || (0, h.PV)(n));
+function k(e) {
+    var t;
+    let n = e.skuId,
+        r = null == (t = e.subscription) ? void 0 : t.items[0].planId;
+    return !(null == n || null == r || Object.values(v.Si).includes(n) || (0, O.PV)(r));
 }
-function v(e) {
-    let s = (0, _.e7)([A.Z], () => A.Z.getPayments()),
-        t = (0, _.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription()),
-        n = i.useMemo(
+function W(e) {
+    let t = (0, u.e7)([_.Z], () => _.Z.getPayments()),
+        n = (0, u.e7)([j.ZP], () => j.ZP.getPremiumTypeSubscription()),
+        r = s.useMemo(
             () =>
                 new Set(
-                    s.filter(Z).map((e) => {
-                        let { subscription: s } = e;
-                        return null == s ? void 0 : s.items[0].planId;
+                    t.filter(k).map((e) => {
+                        let { subscription: t } = e;
+                        return null == t ? void 0 : t.items[0].planId;
                     })
                 ),
-            [s]
+            [t]
         ),
-        r = i.useMemo(
+        a = s.useMemo(
             () =>
                 new Set(
-                    s.filter(Z).map((e) => {
-                        let { skuId: s } = e;
-                        return s;
+                    t.filter(k).map((e) => {
+                        let { skuId: t } = e;
+                        return t;
                     })
                 ),
-            [s]
+            [t]
         ),
-        o = (0, _.Wu)([O.Z], () => O.Z.getPlanIdsForSkus(Array.from(r))),
-        l = i.useCallback(() => o.length === n.size, [o, n]);
+        l = (0, u.Wu)([E.Z], () => E.Z.getPlanIdsForSkus(Array.from(a))),
+        o = s.useCallback(() => l.length === r.size, [l, r]),
+        c = s.useMemo(() => t.filter((e) => e.currency !== S.pKx.DISCORD_ORB), [t]);
     return (
-        i.useEffect(() => {
-            !l() &&
-                u.Z.wait(() => {
-                    r.forEach((e) => (0, S.GZ)(e, void 0, void 0, !0, void 0));
+        s.useEffect(() => {
+            o() ||
+                g.Z.wait(() => {
+                    a.forEach((e) => (0, f.GZ)(e, void 0, void 0, !0, void 0));
                 });
-        }, [l, r]),
-        (0, a.jsx)(b, {
-            ...e,
-            payments: l() ? s : [],
-            subscription: t
-        })
+        }, [o, a]),
+        (0, i.jsx)(
+            w,
+            D(R({}, e), {
+                payments: c,
+                subscription: n
+            })
+        )
     );
 }
-P(b, 'defaultProps', { compactMode: !1 });
+P(w, 'defaultProps', { compactMode: !1 });

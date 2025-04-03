@@ -1,1 +1,1 @@
-e.exports = { channelNameChange: 'channelNameChange_ce613b' };
+e.exports = '/assets/ce13b5035f7b18ca.svg';

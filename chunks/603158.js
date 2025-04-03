@@ -1,10 +1,35 @@
-n.d(t, {
-    F: function () {
-        return l;
+n.d(t, { F: () => i }), n(474991), n(398202), n(301563);
+let r = (function (e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-});
-let r = { '|': ' ' },
-    i = {
+    return e;
+})(
+    {},
+    {
+        '-': '-',
+        ' ': ' '
+    },
+    {
         '[': ' ',
         ']': ' ',
         '(': ' ',
@@ -12,28 +37,20 @@ let r = { '|': ' ' },
         '|': ' ',
         '~': ' '
     },
-    a = {
-        '-': '-',
-        ' ': ' '
-    },
-    s = {
+    {
         '\u200B': '',
         '‌': '',
         '‍': '',
         '\u200E': '',
         '\uFEFF': ''
     },
-    o = {
-        ...a,
-        ...i,
-        ...s,
-        ...r
-    };
-function l(e) {
+    { '|': ' ' }
+);
+function i(e) {
     let t = '';
     for (let n = 0; n < e.length; n++) {
-        let r = e[n];
-        null != o[r] ? (t += o[r]) : /[\p{Pd}\p{Pc}\p{Po}]/gu.test(r) ? (t += ' ') : (t += r);
+        let i = e[n];
+        null != r[i] ? (t += r[i]) : RegExp('[\\p{Pd}\\p{Pc}\\p{Po}]', 'gu').test(i) ? (t += ' ') : (t += i);
     }
     return t.toLowerCase();
 }

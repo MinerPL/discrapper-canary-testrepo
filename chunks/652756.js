@@ -1,18 +1,13 @@
 n.d(t, {
-    K5: function () {
-        return s;
-    },
-    g2: function () {
-        return a;
-    },
-    rK: function () {
-        return o;
-    }
+    K5: () => s,
+    g2: () => a,
+    rK: () => u
 });
 var r = n(868635),
-    i = n(816383);
+    i = n(816383),
+    o = 1;
 function a(e) {
-    var t = 1 === e.nodeType ? e : e.parentElement;
+    var t = e.nodeType === o ? e : e.parentElement;
     if (!t) return null;
     var n = t.getBoundingClientRect(),
         r = n.top;
@@ -27,44 +22,47 @@ function s(e) {
         y: e.clientY
     };
 }
-function o(e, t, n, s, o) {
-    var l,
-        u,
-        c,
-        d,
-        _,
-        E,
-        f,
-        h,
-        p,
-        m = 'IMG' === (l = t).nodeName && ((0, r.v)() || !(null !== (u = document.documentElement) && void 0 !== u && u.contains(l))),
-        I = a(m ? e : t),
-        T = {
-            x: n.x - I.x,
-            y: n.y - I.y
+function l(e) {
+    var t;
+    return 'IMG' === e.nodeName && ((0, r.v)() || !(null != (t = document.documentElement) && t.contains(e)));
+}
+function c(e, t, n, i) {
+    var o = e ? t.width : n,
+        a = e ? t.height : i;
+    return (
+        (0, r.G)() && e && ((a /= window.devicePixelRatio), (o /= window.devicePixelRatio)),
+        {
+            dragPreviewWidth: o,
+            dragPreviewHeight: a
+        }
+    );
+}
+function u(e, t, n, o, s) {
+    var u = l(t),
+        d = a(u ? e : t),
+        f = {
+            x: n.x - d.x,
+            y: n.y - d.y
         },
-        g = e.offsetWidth,
-        S = e.offsetHeight,
-        A = s.anchorX,
-        N = s.anchorY;
-    var v =
-            ((c = m),
-            (d = t),
-            (_ = g),
-            (E = S),
-            (f = c ? d.width : _),
-            (h = c ? d.height : E),
-            (0, r.G)() && c && ((h /= window.devicePixelRatio), (f /= window.devicePixelRatio)),
-            {
-                dragPreviewWidth: f,
-                dragPreviewHeight: h
-            }),
-        O = v.dragPreviewWidth,
-        R = v.dragPreviewHeight,
-        C = o.offsetX,
-        y = o.offsetY;
+        _ = e.offsetWidth,
+        p = e.offsetHeight,
+        h = o.anchorX,
+        m = o.anchorY,
+        g = c(u, t, _, p),
+        E = g.dragPreviewWidth,
+        b = g.dragPreviewHeight,
+        y = function () {
+            var e = new i.I([0, 0.5, 1], [f.y, (f.y / p) * b, f.y + b - p]).interpolate(m);
+            return (0, r.G)() && u && (e += (window.devicePixelRatio - 1) * b), e;
+        },
+        v = function () {
+            return new i.I([0, 0.5, 1], [f.x, (f.x / _) * E, f.x + E - _]).interpolate(h);
+        },
+        O = s.offsetX,
+        I = s.offsetY,
+        S = 0 === I || I;
     return {
-        x: 0 === C || C ? C : new i.I([0, 0.5, 1], [T.x, (T.x / g) * O, T.x + O - g]).interpolate(A),
-        y: 0 === y || y ? y : ((p = new i.I([0, 0.5, 1], [T.y, (T.y / S) * R, T.y + R - S]).interpolate(N)), (0, r.G)() && m && (p += (window.devicePixelRatio - 1) * R), p)
+        x: 0 === O || O ? O : v(),
+        y: S ? I : y()
     };
 }

@@ -1,64 +1,60 @@
-t.d(s, {
-    Z: function () {
-        return u;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(120356),
-    i = t.n(a),
-    r = t(913527),
-    o = t.n(r),
-    l = t(481060),
-    c = t(55935),
-    d = t(955204),
-    _ = t(674680),
-    E = t(384924);
-function u(e) {
-    let { achievementId: s, dateUnlocked: t } = e,
-        a = (0, d.oX)(s);
-    if (null == a) return null;
-    let r = null != t,
-        { name: u, description: I, hideDescriptionUntilUnlock: T, onAction: S } = a,
-        N = T && !r,
-        C = r ? 'header-primary' : 'text-muted',
-        m = r ? 'header-secondary' : 'text-muted',
-        A = o()(t),
-        O = null != S && r,
-        g = O ? l.Clickable : 'div';
-    return (0, n.jsxs)(g, {
-        className: i()(E.container, O && E.actionable),
+n.d(t, { Z: () => g }), n(266796);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(913527),
+    l = n.n(a),
+    o = n(481060),
+    c = n(55935),
+    d = n(955204),
+    u = n(674680),
+    m = n(927671);
+function g(e) {
+    let { achievementId: t, dateUnlocked: n } = e,
+        i = (0, d.oX)(t);
+    if (null == i) return null;
+    let a = null != n,
+        { name: g, description: p, hideDescriptionUntilUnlock: h, onAction: f } = i,
+        b = h && !a,
+        N = a ? 'header-primary' : 'text-muted',
+        x = a ? 'header-secondary' : 'text-muted',
+        _ = l()(n),
+        E = null != f && a,
+        j = E ? o.P3F : 'div';
+    return (0, r.jsxs)(j, {
+        className: s()(m.container, E && m.actionable),
         onClick: () => {
-            O && S();
+            E && f();
         },
         children: [
-            (0, n.jsx)('div', {
-                className: E.iconContainer,
-                children: (0, n.jsx)(_.Z, {
-                    achievementId: s,
-                    size: _.Z.Sizes.SIZE_40,
-                    unlocked: r
+            (0, r.jsx)('div', {
+                className: m.iconContainer,
+                children: (0, r.jsx)(u.Z, {
+                    achievementId: t,
+                    size: u.Z.Sizes.SIZE_40,
+                    unlocked: a
                 })
             }),
-            (0, n.jsxs)('div', {
-                className: E.nameContainer,
+            (0, r.jsxs)('div', {
+                className: m.nameContainer,
                 children: [
-                    null != t &&
-                        (0, n.jsx)(l.Text, {
+                    null != n &&
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-xxs/semibold',
                             color: 'text-muted',
-                            className: E.unlocked,
-                            children: (0, c.Y4)(A)
+                            className: m.unlocked,
+                            children: (0, c.Y4)(_)
                         }),
-                    (0, n.jsx)(l.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-md/medium',
-                        color: C,
-                        children: u()
+                        color: N,
+                        children: g()
                     }),
-                    (0, n.jsx)(l.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-xs/normal',
-                        color: m,
-                        children: N ? '?????' : I()
+                        color: x,
+                        children: b ? '?????' : p()
                     })
                 ]
             })

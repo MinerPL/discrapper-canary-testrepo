@@ -1,83 +1,77 @@
-r.d(t, {
-    O1: function () {
-        return s;
-    }
-});
-var n = r(349812),
-    a = r(617726),
-    o = r(387486);
-function i(e) {
-    return new Promise((t, r) => {
-        (e.oncomplete = e.onsuccess = () => t(e.result)), (e.onabort = e.onerror = () => r(e.error));
+a.d(e, { O1: () => s });
+var r = a(349812),
+    n = a(617726),
+    _ = a(387486);
+function o(t) {
+    return new Promise((e, a) => {
+        (t.oncomplete = t.onsuccess = () => e(t.result)), (t.onabort = t.onerror = () => a(t.error));
     });
 }
-function _(e) {
-    return i(e.getAllKeys());
+function i(t) {
+    return o(t.getAllKeys());
 }
-function E(e) {
-    let t;
-    function r() {
+function c(t) {
+    let e;
+    function a() {
         return (
-            void 0 == t &&
-                (t = (function (e, t) {
-                    let r = indexedDB.open(e);
-                    r.onupgradeneeded = () => r.result.createObjectStore(t);
-                    let n = i(r);
-                    return (e) => n.then((r) => e(r.transaction(t, 'readwrite').objectStore(t)));
-                })(e.dbName || 'sentry-offline', e.storeName || 'queue')),
-            t
+            void 0 == e &&
+                (e = (function (t, e) {
+                    let a = indexedDB.open(t);
+                    a.onupgradeneeded = () => a.result.createObjectStore(e);
+                    let r = o(a);
+                    return (t) => r.then((a) => t(a.transaction(e, 'readwrite').objectStore(e)));
+                })(t.dbName || 'sentry-offline', t.storeName || 'queue')),
+            e
         );
     }
     return {
-        push: async (t) => {
+        push: async (e) => {
             try {
-                var n, o, E;
-                let s = await (0, a.V$)(t);
-                await ((n = r()),
-                (o = s),
-                (E = e.maxQueueSize || 30),
-                n((e) =>
-                    _(e).then((t) => {
-                        if (!(t.length >= E)) return e.put(o, Math.max(...t, 0) + 1), i(e.transaction);
+                var r, _;
+                let c = await (0, n.V$)(e);
+                await ((r = a()),
+                (_ = t.maxQueueSize || 30),
+                r((t) =>
+                    i(t).then((e) => {
+                        if (!(e.length >= _)) return t.put(c, Math.max(...e, 0) + 1), o(t.transaction);
                     })
                 ));
-            } catch (e) {}
+            } catch (t) {}
         },
-        unshift: async (t) => {
+        unshift: async (e) => {
             try {
-                var n, o, E;
-                let s = await (0, a.V$)(t);
-                await ((n = r()),
-                (o = s),
-                (E = e.maxQueueSize || 30),
-                n((e) =>
-                    _(e).then((t) => {
-                        if (!(t.length >= E)) return e.put(o, Math.min(...t, 0) - 1), i(e.transaction);
+                var r, _;
+                let c = await (0, n.V$)(e);
+                await ((r = a()),
+                (_ = t.maxQueueSize || 30),
+                r((t) =>
+                    i(t).then((e) => {
+                        if (!(e.length >= _)) return t.put(c, Math.min(...e, 0) - 1), o(t.transaction);
                     })
                 ));
-            } catch (e) {}
+            } catch (t) {}
         },
         shift: async () => {
             try {
-                let e = await r()((e) =>
-                    _(e).then((t) => {
-                        let r = t[0];
-                        if (null != r) return i(e.get(r)).then((t) => (e.delete(r), i(e.transaction).then(() => t)));
+                let t = await a()((t) =>
+                    i(t).then((e) => {
+                        let a = e[0];
+                        if (null != a) return o(t.get(a)).then((e) => (t.delete(a), o(t.transaction).then(() => e)));
                     })
                 );
-                if (e) return (0, a.f4)(e);
-            } catch (e) {}
+                if (t) return (0, n.f4)(t);
+            } catch (t) {}
         }
     };
 }
-function s(e = o.f) {
-    var t;
+function s(t = _.f) {
+    var e;
     return (
-        (t = (0, n.Pd)(e)),
-        (e) =>
-            t({
-                ...e,
-                createStore: E
+        (e = (0, r.Pd)(t)),
+        (t) =>
+            e({
+                ...t,
+                createStore: c
             })
     );
 }

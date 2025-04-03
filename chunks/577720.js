@@ -1,22 +1,18 @@
-t.d(s, {
-    Z: function () {
-        return c;
-    }
-});
-var n = t(735250),
-    a = t(470079),
-    i = t(120356),
-    r = t.n(i),
-    o = t(981631),
-    l = t(946304);
-class c extends a.Component {
+n.d(t, { Z: () => c });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(981631),
+    o = n(973945);
+class c extends i.Component {
     render() {
-        let { className: e, videoID: s, videoClassName: t } = this.props;
-        return (0, n.jsx)('div', {
-            className: r()(e, l.videoWrapper),
-            children: (0, n.jsx)('iframe', {
-                className: r()(t, l.video),
-                src: 'https://www.youtube.com/embed/'.concat(s, '?rel=0&showinfo=0&controls=1&origin=https://').concat(o.$R1),
+        let { className: e, videoID: t, videoClassName: n } = this.props;
+        return (0, r.jsx)('div', {
+            className: a()(e, o.videoWrapper),
+            children: (0, r.jsx)('iframe', {
+                className: a()(n, o.video),
+                src: 'https://www.youtube.com/embed/'.concat(t, '?rel=0&showinfo=0&controls=1&origin=https://').concat(l.$R1),
                 allowFullScreen: !0,
                 sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
             })

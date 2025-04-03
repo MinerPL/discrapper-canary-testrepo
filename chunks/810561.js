@@ -1,57 +1,53 @@
-t.d(n, {
-    Z: function () {
-        return E;
-    }
-});
-var l = t(735250);
-t(470079);
-var s = t(120356),
-    o = t.n(s),
-    i = t(481060),
-    r = t(709054),
-    u = t(7697),
-    a = t(421032),
-    c = t(689938),
-    d = t(405327);
-function E(e) {
-    let { guildId: n, recurrenceRule: t, guildEventId: s, onRecurrenceClick: E, hideScroller: _ = !1, activeRecurrenceId: C } = e,
-        { recurrenceStartTimes: N, canViewMoreRecurrences: h, updateRecurrenceStartTimes: m } = (0, u.Z)(s, n, t);
-    return (0, l.jsxs)('div', {
+n.d(t, { Z: () => p });
+var r = n(200651);
+n(192379);
+var l = n(120356),
+    i = n.n(l),
+    s = n(481060),
+    o = n(709054),
+    c = n(7697),
+    u = n(421032),
+    a = n(388032),
+    d = n(862173);
+function p(e) {
+    let { guildId: t, recurrenceRule: n, guildEventId: l, onRecurrenceClick: p, hideScroller: b = !1, activeRecurrenceId: g } = e,
+        { recurrenceStartTimes: x, canViewMoreRecurrences: f, updateRecurrenceStartTimes: j } = (0, c.Z)(l, t, n);
+    return (0, r.jsxs)('div', {
         className: d.recurrences,
         children: [
-            (0, l.jsx)(i.Heading, {
+            (0, r.jsx)(s.X6q, {
                 variant: 'heading-sm/medium',
                 className: d.heading,
-                children: c.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS
+                children: a.NW.string(a.t['D/jjoa'])
             }),
-            (0, l.jsxs)(i.Scroller, {
-                className: o()(d.scroller, { [d.showScroller]: !_ }),
+            (0, r.jsxs)(s.Ttm, {
+                className: i()(d.scroller, { [d.showScroller]: !b }),
                 children: [
-                    N.map((e) => {
-                        let n = r.default.fromTimestamp(e.getTime());
-                        return (0, l.jsx)(
-                            a.Z,
+                    x.map((e) => {
+                        let t = o.default.fromTimestamp(e.getTime());
+                        return (0, r.jsx)(
+                            u.Z,
                             {
-                                recurrenceId: n,
+                                recurrenceId: t,
                                 originalScheduledStartTime: e,
-                                guildEventId: s,
-                                onClick: E,
-                                isActive: n === C
+                                guildEventId: l,
+                                onClick: p,
+                                isActive: t === g
                             },
-                            n
+                            t
                         );
                     }),
-                    h &&
-                        (0, l.jsx)(i.Button, {
+                    f &&
+                        (0, r.jsx)(s.zxk, {
                             grow: !1,
                             onClick: (e) => {
-                                e.stopPropagation(), m();
+                                e.stopPropagation(), j();
                             },
-                            look: i.Button.Looks.LINK,
-                            size: i.Button.Sizes.MIN,
-                            color: i.Button.Colors.LINK,
+                            look: s.zxk.Looks.LINK,
+                            size: s.zxk.Sizes.MIN,
+                            color: s.zxk.Colors.LINK,
                             className: d.button,
-                            children: c.Z.Messages.GUILD_SCHEDULED_EVENT_VIEW_MORE_RECURRENCES
+                            children: a.NW.string(a.t['8O7Hp6'])
                         })
                 ]
             })

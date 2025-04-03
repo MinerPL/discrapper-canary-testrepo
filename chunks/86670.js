@@ -1,24 +1,18 @@
 n.d(t, {
-    Pv: function () {
-        return s;
-    },
-    dI: function () {
-        return a;
-    },
-    gs: function () {
-        return o;
-    }
+    Pv: () => a,
+    dI: () => o,
+    gs: () => s
 });
 var r = n(570140);
 let i = new (n(710845).Z)('TryLoad');
-async function a(e) {
+async function o(e) {
     try {
         return await e();
     } catch (e) {
         return i.log('database load failed.', e), null;
     }
 }
-function s(e, t, n) {
+function a(e, t, n) {
     try {
         return t();
     } catch (t) {
@@ -37,7 +31,7 @@ function s(e, t, n) {
         );
     }
 }
-async function o(e, t, n) {
+async function s(e, t, n) {
     try {
         return await t();
     } catch (t) {

@@ -1,14 +1,13 @@
-var n = r(751177),
-    a = r(135615),
-    o = Object.prototype.propertyIsEnumerable,
-    i = Object.getOwnPropertySymbols,
-    _ = i
-        ? function (e) {
-              return null == e
-                  ? []
-                  : n(i((e = Object(e))), function (t) {
-                        return o.call(e, t);
-                    });
-          }
-        : a;
-e.exports = _;
+var r = a(751177),
+    n = a(135615),
+    _ = Object.prototype.propertyIsEnumerable,
+    o = Object.getOwnPropertySymbols;
+t.exports = o
+    ? function (t) {
+          return null == t
+              ? []
+              : r(o((t = Object(t))), function (e) {
+                    return _.call(t, e);
+                });
+      }
+    : n;

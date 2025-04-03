@@ -1,135 +1,178 @@
-s.d(t, {
-    Z: function () {
-        return _;
+n.d(t, { Z: () => v });
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(442837),
+    o = n(692547),
+    c = n(481060),
+    d = n(787014),
+    u = n(603211),
+    h = n(710344),
+    g = n(496675),
+    m = n(479099),
+    p = n(710352),
+    f = n(981631),
+    x = n(388032),
+    j = n(628961);
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-});
-var n = s(735250),
-    l = s(470079),
-    a = s(120356),
-    i = s.n(a),
-    r = s(442837),
-    o = s(692547),
-    d = s(481060),
-    c = s(787014),
-    u = s(603211),
-    h = s(710344),
-    m = s(496675),
-    g = s(479099),
-    E = s(710352),
-    T = s(981631),
-    p = s(689938),
-    N = s(654244);
-function _(e) {
+    return e;
+}
+function N(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function v(e) {
     let { channel: t } = e,
-        a = (0, r.e7)([m.Z], () => m.Z.can(T.Plq.MANAGE_CHANNELS, t), [t]),
-        u = t.availableTags.length >= E.pC,
-        g = t.availableTags.length > 0,
-        _ = l.useCallback(() => {
-            let e = t.availableTags.length >= E.pC;
-            a &&
+        l = (0, a.e7)([g.Z], () => g.Z.can(f.Plq.MANAGE_CHANNELS, t), [t]),
+        u = t.availableTags.length >= p.pC,
+        m = t.availableTags.length > 0,
+        v = i.useCallback(() => {
+            let e = t.availableTags.length >= p.pC;
+            l &&
                 !e &&
-                (0, d.openModalLazy)(async () => {
-                    let { default: e } = await s.e('21971').then(s.bind(s, 201049));
-                    return (s) =>
-                        (0, n.jsx)(e, {
-                            ...s,
-                            channelId: t.id,
-                            guildId: t.guild_id
-                        });
-                });
-        }, [t, a]),
-        x = l.useCallback(
-            (e) => {
-                a &&
-                    (0, d.openModalLazy)(async () => {
-                        let { default: l } = await s.e('21971').then(s.bind(s, 201049));
-                        return (s) =>
-                            (0, n.jsx)(l, {
-                                ...s,
+                (0, c.ZDy)(async () => {
+                    let { default: e } = await n.e('21971').then(n.bind(n, 201049));
+                    return (n) =>
+                        (0, r.jsx)(
+                            e,
+                            N(b({}, n), {
                                 channelId: t.id,
-                                guildId: t.guild_id,
-                                tag: e
-                            });
+                                guildId: t.guild_id
+                            })
+                        );
+                });
+        }, [t, l]),
+        C = i.useCallback(
+            (e) => {
+                l &&
+                    (0, c.ZDy)(async () => {
+                        let { default: i } = await n.e('21971').then(n.bind(n, 201049));
+                        return (n) =>
+                            (0, r.jsx)(
+                                i,
+                                N(b({}, n), {
+                                    channelId: t.id,
+                                    guildId: t.guild_id,
+                                    tag: e
+                                })
+                            );
                     });
             },
-            [a, t]
+            [l, t]
         ),
         {
-            handleDragStart: f,
-            handleDragReset: C,
-            handleDragComplete: I
+            handleDragStart: S,
+            handleDragReset: w,
+            handleDragComplete: Z
         } = (0, h.Z)(t.availableTags, (e) => {
-            (0, c.pW)({ availableTags: e });
+            (0, d.pW)({ availableTags: e });
         });
-    return (0, n.jsxs)('div', {
-        className: N.tags,
+    return (0, r.jsxs)('div', {
+        className: j.tags,
         children: [
-            g
+            m
                 ? t.availableTags.map((e) =>
-                      (0, n.jsx)(
-                          S,
+                      (0, r.jsx)(
+                          y,
                           {
                               tag: e,
                               availableTags: t.availableTags,
-                              canManageChannels: a,
-                              onTagClick: x,
-                              onDragComplete: I,
-                              onDragReset: C,
-                              onDragStart: f
+                              canManageChannels: l,
+                              onTagClick: C,
+                              onDragComplete: Z,
+                              onDragReset: w,
+                              onDragStart: S
                           },
                           e.id
                       )
                   )
                 : null,
-            g
-                ? (0, n.jsx)(d.Clickable, {
-                      onClick: _,
-                      className: i()(N.addTags, { [N.disabled]: !a || u }),
-                      children: (0, n.jsx)(d.PlusSmallIcon, {
+            m
+                ? (0, r.jsx)(c.P3F, {
+                      onClick: v,
+                      className: s()(j.addTags, { [j.disabled]: !l || u }),
+                      children: (0, r.jsx)(c.qJs, {
                           size: 'custom',
-                          'aria-label': p.Z.Messages.FORUM_TAG_CREATE,
+                          'aria-label': x.NW.string(x.t['/jubeH']),
                           color: o.Z.unsafe_rawColors.WHITE_500.css,
                           width: 20,
                           height: 20
                       })
                   })
-                : (0, n.jsx)(d.Button, {
-                      disabled: !a,
-                      onClick: _,
-                      children: p.Z.Messages.FORUM_TAG_CREATE
+                : (0, r.jsx)(c.zxk, {
+                      disabled: !l,
+                      onClick: v,
+                      children: x.NW.string(x.t['/jubeH'])
                   })
         ]
     });
 }
-function S(e) {
-    let { tag: t, availableTags: s, canManageChannels: l, onTagClick: a, onDragComplete: r, onDragStart: o, onDragReset: d } = e,
-        c = s.findIndex((e) => e.id === t.id),
+function y(e) {
+    let { tag: t, availableTags: n, canManageChannels: i, onTagClick: l, onDragComplete: a, onDragStart: o, onDragReset: c } = e,
+        d = n.findIndex((e) => e.id === t.id),
         {
             drag: h,
-            dragSourcePosition: m,
-            drop: E,
-            setIsDraggable: T
+            dragSourcePosition: g,
+            drop: p,
+            setIsDraggable: f
         } = (0, u.Z)({
             type: 'CHANNEL_SETTINGS_FORUM_TAGS',
-            index: c,
+            index: d,
             optionId: t.id,
             onDragStart: o,
-            onDragComplete: r,
-            onDragReset: d
+            onDragComplete: a,
+            onDragReset: c
         });
-    return (0, n.jsx)('div', {
-        className: i()(N.container, {
-            [N.dropIndicatorBefore]: null != m && c < m,
-            [N.dropIndicatorAfter]: null != m && c > m
+    return (0, r.jsx)('div', {
+        className: s()(j.container, {
+            [j.dropIndicatorBefore]: null != g && d < g,
+            [j.dropIndicatorAfter]: null != g && d > g
         }),
-        ref: (e) => h(E(e)),
-        onMouseEnter: () => T(l),
-        onMouseLeave: () => T(!1),
-        children: (0, n.jsx)(g.Z, {
+        ref: (e) => h(p(e)),
+        onMouseEnter: () => f(i),
+        onMouseLeave: () => f(!1),
+        children: (0, r.jsx)(m.Z, {
             tag: t,
-            disabled: !l,
-            ariaLabel: p.Z.Messages.FORUM_TAG_EDIT_LABEL.format({ name: t.name }),
-            onClick: l ? () => a(t) : void 0
+            disabled: !i,
+            ariaLabel: x.NW.formatToPlainString(x.t.jhSvBw, { name: t.name }),
+            onClick: i ? () => l(t) : void 0
         })
     });
 }

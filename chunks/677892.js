@@ -1,136 +1,128 @@
 n.d(t, {
-    $$: function () {
-        return h;
-    },
-    P_: function () {
-        return x;
-    },
-    ap: function () {
-        return C;
-    },
-    ku: function () {
-        return g;
-    }
+    $$: () => x,
+    P_: () => _,
+    ap: () => N,
+    ku: () => j
 }),
+    n(266796),
     n(47120);
-var s = n(735250),
-    a = n(470079),
-    i = n(442837),
-    r = n(481060),
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
     l = n(45966),
     o = n(637853),
     c = n(734893),
-    d = n(621923),
-    u = n(8426),
-    _ = n(969632),
-    I = n(974513),
-    E = n(290511),
-    T = n(689938),
-    m = n(167356);
-function N(e) {
+    d = n(8426),
+    u = n(969632),
+    m = n(974513),
+    g = n(290511),
+    p = n(388032),
+    h = n(271254);
+function f(e) {
     let t,
-        { title: n, description: a, icon: i, hasStarted: l, status: o, onEdit: c, extra: d } = e;
+        { title: n, description: i, icon: s, hasStarted: l, status: o, onEdit: c, extra: d } = e;
     switch (o) {
         case 'good':
-            t = (0, s.jsxs)(s.Fragment, {
+            t = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, s.jsx)(r.CheckmarkLargeIcon, {
+                    (0, r.jsx)(a.dz2, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: m.checkmark
+                        className: h.checkmark
                     }),
-                    (0, s.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-positive',
-                        className: m.statusText,
-                        children: T.Z.Messages.DEFAULT_CHANNELS_GOOD
+                        className: h.statusText,
+                        children: p.NW.string(p.t.rPnzRU)
                     })
                 ]
             });
             break;
         case 'warning':
-            t = (0, s.jsxs)(s.Fragment, {
+            t = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, s.jsx)(r.CircleWarningIcon, {
+                    (0, r.jsx)(a.P4T, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: m.warning
+                        className: h.warning
                     }),
-                    (0, s.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-warning',
-                        className: m.statusText,
-                        children: T.Z.Messages.ONBOARDING_PROMPTS_WARNING
+                        className: h.statusText,
+                        children: p.NW.string(p.t['yTa+dn'])
                     })
                 ]
             });
             break;
         case 'required':
-            t = (0, s.jsxs)(s.Fragment, {
+            t = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, s.jsx)(r.CircleWarningIcon, {
+                    (0, r.jsx)(a.P4T, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: m.danger
+                        className: h.danger
                     }),
-                    (0, s.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-danger',
-                        className: m.statusText,
-                        children: T.Z.Messages.REQUIRED
+                        className: h.statusText,
+                        children: p.NW.string(p.t.EkokLy)
                     })
                 ]
             });
     }
-    return (0, s.jsxs)('div', {
-        className: m.onboardingStepContainer,
+    return (0, r.jsxs)('div', {
+        className: h.onboardingStepContainer,
         children: [
-            (0, s.jsxs)('div', {
-                className: m.leftContainer,
+            (0, r.jsxs)('div', {
+                className: h.leftContainer,
                 children: [
-                    (0, s.jsx)('div', {
-                        className: m.iconContainer,
-                        children: i
+                    (0, r.jsx)('div', {
+                        className: h.iconContainer,
+                        children: s
                     }),
-                    (0, s.jsxs)('div', {
-                        className: m.onboardingStepText,
+                    (0, r.jsxs)('div', {
+                        className: h.onboardingStepText,
                         children: [
-                            (0, s.jsx)(r.Heading, {
+                            (0, r.jsx)(a.X6q, {
                                 variant: 'heading-md/semibold',
                                 children: n
                             }),
-                            (0, s.jsx)(r.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: 'text-xs/normal',
                                 color: l && 'required' === o ? 'status-danger' : 'text-normal',
-                                children: a
+                                children: i
                             })
                         ]
                     })
                 ]
             }),
-            (0, s.jsxs)('div', {
-                className: m.rightContainer,
+            (0, r.jsxs)('div', {
+                className: h.rightContainer,
                 children: [
                     t,
                     d,
                     l
-                        ? (0, s.jsx)(r.Button, {
-                              className: m.cta,
-                              size: r.Button.Sizes.SMALL,
-                              color: r.Button.Colors.PRIMARY,
-                              look: r.Button.Looks.OUTLINED,
+                        ? (0, r.jsx)(a.zxk, {
+                              className: h.cta,
+                              size: a.zxk.Sizes.SMALL,
+                              color: a.zxk.Colors.PRIMARY,
+                              look: a.zxk.Looks.OUTLINED,
                               onClick: c,
-                              children: T.Z.Messages.EDIT
+                              children: p.NW.string(p.t.bt75u7)
                           })
-                        : (0, s.jsxs)(r.Button, {
-                              className: m.cta,
-                              innerClassName: m.ctaInner,
-                              size: r.Button.Sizes.SMALL,
-                              color: r.Button.Colors.PRIMARY,
+                        : (0, r.jsxs)(a.zxk, {
+                              className: h.cta,
+                              innerClassName: h.ctaInner,
+                              size: a.zxk.Sizes.SMALL,
+                              color: a.zxk.Colors.PRIMARY,
                               onClick: c,
                               children: [
-                                  T.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_SET_UP,
-                                  (0, s.jsx)(r.ArrowSmallRightIcon, {
+                                  p.NW.string(p.t['0GWElZ']),
+                                  (0, r.jsx)(a.ZSh, {
                                       size: 'xxs',
                                       color: 'currentColor'
                                   })
@@ -141,135 +133,127 @@ function N(e) {
         ]
     });
 }
-function S(e) {
-    let t = (0, i.e7)([l.Z], () => l.Z.getDefaultChannelIds(e)),
-        n = a.useMemo(() => new Set(t), [t]),
-        [s, r] = (0, o.VF)(e, n);
-    return r.length >= E.md && s.length >= E.X;
+function b(e) {
+    let t = (0, s.e7)([l.Z], () => l.Z.getDefaultChannelIds(e)),
+        n = i.useMemo(() => new Set(t), [t]),
+        [r, a] = (0, o.VF)(e, n);
+    return a.length >= g.md && r.length >= g.X;
 }
-function h(e) {
-    let t = S(e),
-        n = (0, I.O4)(e);
+function x(e) {
+    let t = b(e),
+        n = (0, m.O4)(e);
     return t || n;
 }
-function g(e) {
-    var t, n, c, d;
-    let { guildId: u, onEdit: _, disableGoodStatus: h } = e,
-        g = (0, i.Wu)([l.Z], () => l.Z.getDefaultChannelIds(u)),
-        C = (0, i.e7)([l.Z], () => (0, o.kl)(u, l.Z.getDefaultChannelIds(u), l.Z.getOnboardingPrompts(u)).length),
-        x = a.useMemo(() => new Set(g), [g]),
-        [, p] = (0, o.VF)(u, x),
-        R = p.length,
-        f = S(u),
-        L = (0, I.O4)(u),
-        O = (0, i.e7)([l.Z], () => l.Z.isAdvancedMode(u));
-    let A =
-        ((t = f),
-        (n = O),
-        (c = R),
-        (d = C),
-        n
-            ? T.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS_ADVANCED.format({
-                  numDefaultChannels: c,
-                  numFromQuestions: d - c
+function j(e) {
+    let { guildId: t, onEdit: n, disableGoodStatus: c } = e,
+        d = (0, s.Wu)([l.Z], () => l.Z.getDefaultChannelIds(t)),
+        u = (0, s.e7)([l.Z], () => (0, o.kl)(t, l.Z.getDefaultChannelIds(t), l.Z.getOnboardingPrompts(t)).length),
+        x = i.useMemo(() => new Set(d), [d]),
+        [, j] = (0, o.VF)(t, x),
+        N = j.length,
+        _ = b(t),
+        v = (0, m.O4)(t),
+        C = (0, s.e7)([l.Z], () => l.Z.isAdvancedMode(t)),
+        O = C
+            ? p.NW.formatToPlainString(p.t.nHwnLC, {
+                  numDefaultChannels: N,
+                  numFromQuestions: u - N
               })
-            : t
-              ? T.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS.format({ numDefaultChannels: c })
-              : T.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NOT_ENOUGH_DEFAULT_CHANNELS.format({
-                    numDefaultChannels: E.md,
-                    numChattableChannels: E.X
-                }));
-    return (0, s.jsx)(N, {
-        title: O ? T.Z.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS_ADVANCED : T.Z.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS,
-        description: A,
-        icon: (0, s.jsx)(r.TextIcon, {
+            : _
+              ? p.NW.formatToPlainString(p.t.HxEwSk, { numDefaultChannels: N })
+              : p.NW.formatToPlainString(p.t.ey3uVV, {
+                    numDefaultChannels: g.md,
+                    numChattableChannels: g.X
+                });
+    return (0, r.jsx)(f, {
+        title: C ? p.NW.string(p.t.YZookZ) : p.NW.string(p.t['4GSygo']),
+        description: O,
+        icon: (0, r.jsx)(a.VL1, {
             size: 'md',
             color: 'currentColor',
-            className: m.channelIcon
+            className: h.channelIcon
         }),
-        hasStarted: R > 0 || O,
-        status: f || L ? (h ? 'none' : 'good') : 'required',
-        onEdit: _
+        hasStarted: N > 0 || C,
+        status: _ || v ? (c ? 'none' : 'good') : 'required',
+        onEdit: n
     });
 }
-function C(e) {
-    let { guildId: t, onEdit: n, disableGoodStatus: a } = e,
-        c = (0, i.Wu)([l.Z], () => l.Z.getDefaultChannelIds(t)),
-        d = (0, i.Wu)([l.Z], () => l.Z.getOnboardingPrompts(t)),
+function N(e) {
+    let { guildId: t, onEdit: n, disableGoodStatus: i } = e,
+        c = (0, s.Wu)([l.Z], () => l.Z.getDefaultChannelIds(t)),
+        d = (0, s.Wu)([l.Z], () => l.Z.getOnboardingPrompts(t)),
         u = d.length,
-        [_, I] = (0, o.dF)(t, d, c),
-        E = _.length,
-        S = _.length + I.length,
-        h = (E / S) * 100,
-        g = (0, i.e7)([l.Z], () => l.Z.isAdvancedMode(t)),
-        C = u > 0,
-        x = 'none';
+        [m, g] = (0, o.dF)(t, d, c),
+        b = m.length,
+        x = m.length + g.length,
+        j = (b / x) * 100,
+        N = (0, s.e7)([l.Z], () => l.Z.isAdvancedMode(t)),
+        _ = u > 0,
+        v = 'none';
     return (
-        C && (h >= 85 && !a ? (x = 'good') : h < 85 && (x = 'warning')),
-        (0, s.jsx)(N, {
-            title: g ? T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER,
-            description: T.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE.format({
-                numChannels: E,
-                numTotalChannels: S,
+        _ && (j >= 85 && !i ? (v = 'good') : j < 85 && (v = 'warning')),
+        (0, r.jsx)(f, {
+            title: N ? p.NW.string(p.t.AGjtFh) : p.NW.string(p.t.dqCzoa),
+            description: p.NW.format(p.t.iuNisr, {
+                numChannels: b,
+                numTotalChannels: x,
                 channelsHook: (e, t) =>
-                    (0, s.jsx)(
+                    (0, r.jsx)(
                         'span',
                         {
-                            style: { color: h > 85 ? 'var(--header-primary)' : 'var(--status-warning)' },
+                            style: { color: j > 85 ? 'var(--header-primary)' : 'var(--status-warning)' },
                             children: e
                         },
                         t
                     )
             }),
-            icon: (0, s.jsx)(r.FriendsIcon, {
+            icon: (0, r.jsx)(a.iFz, {
                 size: 'md',
                 color: 'currentColor',
-                className: m.channelIcon
+                className: h.channelIcon
             }),
-            hasStarted: C,
-            status: x,
+            hasStarted: _,
+            status: v,
             onEdit: n
         })
     );
 }
-function x(e) {
+function _(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: o } = e,
-        I = (0, i.e7)([_.Z], () => _.Z.getSettings()),
-        E = (0, i.e7)([l.Z], () => l.Z.getEnabled(t)),
-        { serverGuideOptional: S } = (0, d.hl)(t),
-        h = (0, c.uo)(I),
-        g = I.enabled,
-        C = a.useCallback(() => {
-            (0, u.To)(t, !g);
-        }, [t, g]),
-        x = !(0, c.av)(I),
-        p = 'none';
-    x && (h && !o ? (p = 'good') : !h && (p = 'required'));
-    let R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_DESCRIPTION;
-    h ? !x && (R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_NOT_STARTED_DESCRIPTION) : (R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_INVALID_DESCRIPTION);
-    let f = null;
+        m = (0, s.e7)([u.Z], () => u.Z.getSettings()),
+        g = (0, s.e7)([l.Z], () => l.Z.getEnabled(t)),
+        b = (0, c.uo)(m),
+        x = m.enabled,
+        j = i.useCallback(() => {
+            (0, d.To)(t, !x);
+        }, [t, x]),
+        N = !(0, c.av)(m),
+        _ = 'none';
+    N && (b && !o ? (_ = 'good') : b || (_ = 'required'));
+    let v = p.NW.string(p.t.GMOwOD);
+    b ? N || (v = p.NW.string(p.t.wHOoyM)) : (v = p.NW.string(p.t.wXFbgY));
+    let C = null;
     return (
-        x &&
-            S &&
-            E &&
-            (f = (0, s.jsx)(r.Switch, {
-                className: m.inlineSwitch,
-                checked: g,
-                onChange: C,
-                disabled: !h
+        N &&
+            g &&
+            (C = (0, r.jsx)(a.rsf, {
+                className: h.inlineSwitch,
+                checked: x,
+                onChange: j,
+                disabled: !b
             })),
-        (0, s.jsx)(N, {
-            title: T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_TITLE,
-            description: R,
-            icon: (0, s.jsx)(r.SignPostIcon, {
+        (0, r.jsx)(f, {
+            title: p.NW.string(p.t.mRHqsr),
+            description: v,
+            icon: (0, r.jsx)(a.Vy8, {
                 size: 'md',
                 color: 'currentColor',
-                className: m.channelIcon
+                className: h.channelIcon
             }),
-            hasStarted: x,
-            status: p,
+            hasStarted: N,
+            status: _,
             onEdit: n,
-            extra: f
+            extra: C
         })
     );
 }

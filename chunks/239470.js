@@ -1,34 +1,32 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 var r = n(647162);
 function i(e, t, n, i) {
-    var a, s, o;
+    var o, a, s;
     let l = e.hasConnectedAccount(),
-        u = (0, r.PY)(e),
-        c = e.getTrack(),
+        c = (0, r.PY)(e),
+        u = e.getTrack(),
         d = e.getSyncingWith(),
-        _ = e.getActivity(),
-        E = null !== (o = null !== (s = null == c ? void 0 : c.id) && void 0 !== s ? s : null == _ ? void 0 : _.sync_id) && void 0 !== o ? o : e.getLastPlayedTrackId(),
-        f = n.id === t.getId(),
-        h = l && !u,
-        p = null != E && E === (null == i ? void 0 : i.sync_id),
-        m = (null == _ ? void 0 : _.party) != null && (null == i ? void 0 : null === (a = i.party) || void 0 === a ? void 0 : a.id) === _.party.id,
-        I = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id;
+        f = e.getActivity(),
+        _ = null != (s = null != (a = null == u ? void 0 : u.id) ? a : null == f ? void 0 : f.sync_id) ? s : e.getLastPlayedTrackId(),
+        p = n.id === t.getId(),
+        h = l && !c,
+        m = null != _ && _ === (null == i ? void 0 : i.sync_id),
+        g = (null == f ? void 0 : f.party) != null && (null == i || null == (o = i.party) ? void 0 : o.id) === f.party.id,
+        E = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id,
+        b = p || h || m,
+        y = p || E || g;
     return {
         user: n,
         activity: i,
         hasSpotifyAccount: l,
-        canPlaySpotify: u,
+        canPlaySpotify: c,
         notPlayable: h,
-        syncingWithParty: m,
-        syncingWithUser: I,
-        isCurrentUser: f,
-        currentUserTrackId: E,
-        playingSameTrack: p,
-        playDisabled: f || h || p,
-        syncDisabled: f || I || m
+        syncingWithParty: g,
+        syncingWithUser: E,
+        isCurrentUser: p,
+        currentUserTrackId: _,
+        playingSameTrack: m,
+        playDisabled: b,
+        syncDisabled: y
     };
 }

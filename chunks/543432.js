@@ -1,26 +1,22 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var i = n(735250);
-n(470079);
-var l = n(481060),
-    r = n(14883);
-function a(e) {
+n.d(t, { Z: () => o });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(128304);
+function o(e) {
     let { userCount: t } = e;
-    return (0, i.jsxs)('div', {
-        className: r.container,
+    return (0, r.jsxs)('div', {
+        className: l.container,
         children: [
-            (0, i.jsx)(l.GroupIcon, {
+            (0, r.jsx)(i.BFJ, {
                 size: 'xxs',
                 color: 'currentColor',
-                className: r.peopleIcon
+                className: l.peopleIcon
             }),
-            (0, i.jsx)(l.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                className: r.userCountText,
+                className: l.userCountText,
                 children: t
             })
         ]

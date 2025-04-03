@@ -1,47 +1,48 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(873546),
-    l = n(442837),
-    r = n(481060),
-    o = n(346486),
+n.d(t, { Z: () => d });
+var r = n(200651),
+    i = n(192379),
+    l = n(873546),
+    o = n(442837),
+    a = n(481060),
+    s = n(346486),
     c = n(433355),
-    u = n(841829);
-t.Z = a.memo(function (e) {
-    let { message: t, subtitle: n, countdown: d, buttonText: h, buttonColor: m, buttonSubmitting: p, onButtonClick: _, imageSrc: f, animationSrc: E, secondaryButtonText: g, onSecondaryButtonClick: C, children: I, useReducedMotion: x = !1 } = e,
-        T = (0, l.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
-    if (s.tq && T) return null;
-    if (null == t) return (0, i.jsx)(i.Fragment, { children: a.Children.only(I) });
-    let N = null;
+    u = n(423163);
+let d = function (e) {
+    let { message: t, subtitle: n, countdown: d, buttonText: p, buttonColor: h, buttonSubmitting: f, onButtonClick: m, imageSrc: g, animationSrc: b, secondaryButtonText: _, onSecondaryButtonClick: C, children: y, useReducedMotion: x = !1 } = e,
+        v = (0, o.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
+    if (l.tq && v) return null;
+    if (null == t) return (0, r.jsx)(r.Fragment, { children: i.Children.only(y) });
+    let j = null;
     return (
-        null != f
-            ? (N = (0, i.jsx)('img', {
+        null != g
+            ? (j = (0, r.jsx)('img', {
                   alt: '',
-                  src: f,
+                  src: g,
                   className: u.image
               }))
-            : null != E &&
-              (N = (0, i.jsx)(r.LottieAnimation, {
-                  importData: E,
+            : null != b &&
+              (j = (0, r.jsx)(a.Fmz, {
+                  importData: b,
                   shouldAnimate: !x,
                   className: u.animation
               })),
-        (0, i.jsxs)('div', {
+        (0, r.jsxs)('div', {
             className: u.wrapper,
             children: [
-                (0, i.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     className: u.content,
                     children: [
-                        N,
-                        (0, i.jsxs)('div', {
+                        j,
+                        (0, r.jsxs)('div', {
                             className: u.text,
                             children: [
-                                (0, i.jsx)(r.Heading, {
+                                (0, r.jsx)(a.X6q, {
                                     variant: 'heading-md/semibold',
                                     className: u.title,
                                     children: t
                                 }),
                                 null != n &&
-                                    (0, i.jsx)(r.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         color: 'text-muted',
                                         variant: 'text-xs/normal',
                                         children: n
@@ -50,37 +51,37 @@ t.Z = a.memo(function (e) {
                         })
                     ]
                 }),
-                (0, i.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     className: u.buttonContainer,
                     children: [
-                        null != g &&
-                            (0, i.jsx)(r.Button, {
+                        null != _ &&
+                            (0, r.jsx)(a.zxk, {
                                 className: u.button,
-                                size: r.Button.Sizes.SMALL,
+                                size: a.zxk.Sizes.SMALL,
                                 onClick: C,
-                                look: r.Button.Looks.LINK,
-                                color: r.Button.Colors.PRIMARY,
-                                submitting: p,
-                                children: g
+                                look: a.zxk.Looks.LINK,
+                                color: a.zxk.Colors.PRIMARY,
+                                submitting: f,
+                                children: _
                             }),
-                        null != h &&
-                            (0, i.jsx)(r.Button, {
+                        null != p &&
+                            (0, r.jsx)(a.zxk, {
                                 className: u.button,
                                 innerClassName: u.innerButton,
-                                size: r.Button.Sizes.SMALL,
-                                onClick: _,
-                                submitting: p,
-                                color: null != m ? m : r.Button.Colors.PRIMARY,
-                                children: h
+                                size: a.zxk.Sizes.SMALL,
+                                onClick: m,
+                                submitting: f,
+                                color: null != h ? h : a.zxk.Colors.PRIMARY,
+                                children: p
                             })
                     ]
                 }),
                 null != d &&
-                    (0, i.jsx)(o.Z, {
+                    (0, r.jsx)(s.Z, {
                         className: u.countdown,
                         deadline: d
                     })
             ]
         })
     );
-});
+};

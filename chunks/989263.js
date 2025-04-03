@@ -1,19 +1,15 @@
 n.d(t, {
-    $: function () {
-        return u;
-    },
-    v: function () {
-        return l;
-    }
+    $: () => c,
+    v: () => l
 });
 var r = n(131704),
     i = n(592125),
-    a = n(496675),
-    s = n(981631);
-let o = s.S7T.VIEW_CHANNEL | s.S7T.READ_MESSAGE_HISTORY;
+    o = n(496675),
+    a = n(981631);
+let s = a.S7T.VIEW_CHANNEL | a.S7T.READ_MESSAGE_HISTORY;
 function l(e) {
-    return null != e && (e.type === s.d4z.DM || e.type === s.d4z.GROUP_DM || ((0, r.Qm)(e.type) && a.Z.canBasicChannel(o, e)));
+    return null != e && (e.type === a.d4z.DM || e.type === a.d4z.GROUP_DM || ((0, r.Qm)(e.type) && o.Z.canBasicChannel(s, e)));
 }
-function u(e) {
+function c(e) {
     return null != e && l(i.Z.getBasicChannel(e));
 }

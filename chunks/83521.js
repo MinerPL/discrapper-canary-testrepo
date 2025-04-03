@@ -1,115 +1,109 @@
-l.r(a),
-    l.d(a, {
-        default: function () {
-            return h;
-        }
-    }),
-    l(47120);
-var n = l(735250),
-    s = l(470079),
-    i = l(481060),
-    o = l(442837),
-    t = l(410030),
-    r = l(430824),
-    d = l(594174),
-    c = l(931240),
-    u = l(645896),
-    _ = l(603368),
-    m = l(353093),
-    v = l(114487),
+l.d(n, { default: () => b }), l(47120);
+var t = l(200651),
+    r = l(192379),
+    a = l(481060),
+    i = l(442837),
+    s = l(410030),
+    o = l(430824),
+    c = l(594174),
+    u = l(931240),
+    d = l(645896),
+    m = l(603368),
+    f = l(353093),
+    h = l(114487),
     x = l(380365),
-    C = l(981631),
-    g = l(921944),
-    A = l(689938),
-    N = l(634018);
-function h(e) {
-    var a, l;
-    let { guildId: h, transitionState: S, onClose: T } = e,
-        f = (0, o.e7)([r.Z], () => r.Z.getGuild(h), [h]),
-        L = (0, u.Cc)(null != h ? h : null),
-        M = (0, o.e7)([d.default], () => d.default.getCurrentUser(), []),
-        [E, j] = s.useState(!0),
-        D = (0, t.ZP)(),
-        I = s.useCallback(async () => {
-            E && (await (0, c.nE)(h, !0, C.Sbl.CLAN_ADOPT_IDENTITY_MODAL)), T(g.L.PRIMARY);
-        }, [E, T, h]),
-        p = s.useCallback(() => {
-            T(g.L.DISMISS);
-        }, [T]);
-    s.useEffect(() => ((null == f || null == M) && T(g.L.AUTO_DISMISS), () => {}), [M, f, h, T]);
-    let Z = (0, _.nP)(null == L ? void 0 : null === (a = L.branding) || void 0 === a ? void 0 : a.primaryColor, [i.tokens.colors.BG_BRAND, 0.7]),
-        k = i.tokens.colors.BG_SURFACE_OVERLAY.resolve({
-            theme: D,
+    g = l(981631),
+    v = l(921944),
+    j = l(388032),
+    p = l(736609);
+function b(e) {
+    var n, l;
+    let { guildId: b, transitionState: N, onClose: P } = e,
+        y = (0, i.e7)([o.Z], () => o.Z.getGuild(b), [b]),
+        C = (0, d.Cc)(null != b ? b : null),
+        w = (0, i.e7)([c.default], () => c.default.getCurrentUser(), []),
+        [_, k] = r.useState(!0),
+        S = (0, s.ZP)(),
+        O = r.useCallback(async () => {
+            _ && (await (0, u.nE)(b, !0, g.Sbl.CLAN_ADOPT_IDENTITY_MODAL)), P(v.L.PRIMARY);
+        }, [_, P, b]),
+        T = r.useCallback(() => {
+            P(v.L.DISMISS);
+        }, [P]);
+    r.useEffect(() => ((null == y || null == w) && P(v.L.AUTO_DISMISS), () => {}), [w, y, b, P]);
+    let I = (0, m.nP)(null == C || null == (n = C.branding) ? void 0 : n.primaryColor, [a.TVs.colors.BG_BRAND, 0.7]),
+        Z = a.TVs.colors.BG_SURFACE_OVERLAY.resolve({
+            theme: S,
             saturation: 1
         }).hex(),
-        P = (0, _.nj)(Z, k, 'top center'),
-        b = (0, _.nP)(null == L ? void 0 : null === (l = L.branding) || void 0 === l ? void 0 : l.primaryColor, [i.tokens.colors.BG_BRAND, 1]),
-        O = (0, _.$0)(Z).hex(),
-        R = (0, m.Zp)(f, null == M ? void 0 : M.clan);
-    if (null == f || null == M) return null;
-    let U = R ? A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_HEADING.format({ guildName: f.name }) : A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_HEADING.format({ guildName: f.name }),
-        G = R ? A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_DESCRIPTION.format({ guildName: f.name }) : A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION.format({ guildName: f.name }),
-        w = A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA;
-    return (0, n.jsxs)(i.ModalRoot, {
-        transitionState: S,
-        size: i.ModalSize.SMALL,
-        className: N.modal,
+        D = (0, m.nj)(I, Z, 'top center'),
+        L = (0, m.nP)(null == C || null == (l = C.branding) ? void 0 : l.primaryColor, [a.TVs.colors.BG_BRAND, 1]),
+        M = (0, m.$0)(I).hex(),
+        z = (0, f.Zp)(y, null == w ? void 0 : w.primaryGuild);
+    if (null == y || null == w) return null;
+    let A = z ? j.NW.format(j.t['hyP/19'], { guildName: y.name }) : j.NW.format(j.t.h1CclZ, { guildName: y.name }),
+        E = z ? j.NW.formatToPlainString(j.t['x+B7c3'], { guildName: y.name }) : j.NW.formatToPlainString(j.t.kPJowM, { guildName: y.name }),
+        R = j.NW.string(j.t.re8ZPj);
+    return (0, t.jsxs)(a.Y0X, {
+        transitionState: N,
+        size: a.CgR.SMALL,
+        className: p.modal,
         children: [
-            (0, n.jsx)(i.ModalContent, {
-                style: P,
-                children: (0, n.jsxs)('div', {
-                    className: N.mainContainer,
+            (0, t.jsx)(a.hzk, {
+                style: D,
+                children: (0, t.jsxs)('div', {
+                    className: p.mainContainer,
                     children: [
-                        (0, n.jsxs)('div', {
-                            className: N.infoContainer,
+                        (0, t.jsxs)('div', {
+                            className: p.infoContainer,
                             children: [
-                                (0, n.jsx)(v.Z, {
-                                    guild: f,
+                                (0, t.jsx)(h.Z, {
+                                    guild: y,
                                     iconSize: 64
                                 }),
-                                (0, n.jsxs)('div', {
-                                    className: N.headerTextContainer,
+                                (0, t.jsxs)('div', {
+                                    className: p.headerTextContainer,
                                     children: [
-                                        (0, n.jsx)(i.Heading, {
+                                        (0, t.jsx)(a.X6q, {
                                             variant: 'heading-xl/normal',
                                             color: 'header-primary',
-                                            children: U
+                                            children: A
                                         }),
-                                        (0, n.jsx)(i.Text, {
+                                        (0, t.jsx)(a.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-secondary',
-                                            children: G
+                                            children: E
                                         })
                                     ]
                                 })
                             ]
                         }),
-                        (0, n.jsx)(x.Z, {
-                            guildId: h,
-                            isTagAdopted: E,
-                            onChangeUseTag: j
+                        (0, t.jsx)(x.Z, {
+                            guildId: b,
+                            isTagAdopted: _,
+                            onChangeUseTag: k
                         })
                     ]
                 })
             }),
-            (0, n.jsxs)(i.ModalFooter, {
-                className: N.modalFooter,
+            (0, t.jsxs)(a.mzw, {
+                className: p.modalFooter,
                 children: [
-                    (0, n.jsx)(i.Button, {
-                        onClick: I,
-                        color: i.Button.Colors.CUSTOM,
-                        look: i.Button.Looks.FILLED,
+                    (0, t.jsx)(a.zxk, {
+                        onClick: O,
+                        color: a.zxk.Colors.CUSTOM,
+                        look: a.zxk.Looks.FILLED,
                         style: {
-                            backgroundColor: b,
-                            color: O
+                            backgroundColor: L,
+                            color: M
                         },
-                        children: w
+                        children: R
                     }),
-                    (0, n.jsx)(i.Button, {
-                        onClick: p,
-                        color: i.Button.Colors.PRIMARY,
-                        look: i.Button.Looks.LINK,
-                        children: A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL
+                    (0, t.jsx)(a.zxk, {
+                        onClick: T,
+                        color: a.zxk.Colors.PRIMARY,
+                        look: a.zxk.Looks.LINK,
+                        children: j.NW.string(j.t.QMwUJy)
                     })
                 ]
             })

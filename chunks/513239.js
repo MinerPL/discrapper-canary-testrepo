@@ -1,61 +1,56 @@
-a.r(e),
-    a.d(e, {
-        default: function () {
-            return b;
-        }
-    });
-var o = a(735250);
-a(470079);
-var s = a(780384),
-    n = a(481060),
-    l = a(410030),
-    i = a(313201),
-    c = a(689938),
-    r = a(679932),
-    d = a(167969),
-    u = a(557256);
-function b(t) {
-    let { onClose: e, transitionState: a } = t,
-        b = (0, i.Dt)(),
-        _ = (0, s.wj)((0, l.ZP)());
-    return (0, o.jsxs)(n.ModalRoot, {
-        transitionState: a,
-        'aria-labelledby': b,
-        size: n.ModalSize.SMALL,
+s.d(e, { default: () => h });
+var c = s(200651);
+s(192379);
+var n = s(780384),
+    a = s(481060),
+    i = s(410030),
+    o = s(313201),
+    l = s(388032),
+    r = s(695357),
+    d = s(167969),
+    x = s(557256);
+function h(t) {
+    let { onClose: e, transitionState: s } = t,
+        h = (0, o.Dt)(),
+        m = (0, n.wj)((0, i.ZP)());
+    return (0, c.jsxs)(a.Y0X, {
+        transitionState: s,
+        'aria-labelledby': h,
+        size: a.CgR.SMALL,
         children: [
-            (0, o.jsxs)(n.ModalContent, {
+            (0, c.jsxs)(a.hzk, {
                 className: r.content,
                 children: [
-                    (0, o.jsx)(n.ModalCloseButton, {
+                    (0, c.jsx)(a.olH, {
                         className: r.closeButton,
                         onClick: e
                     }),
-                    (0, o.jsx)('img', {
+                    (0, c.jsx)('img', {
                         className: r.image,
-                        src: _ ? d : u,
+                        src: m ? d : x,
                         alt: ''
                     }),
-                    (0, o.jsx)(n.Text, {
+                    (0, c.jsx)(a.Text, {
                         variant: 'text-lg/semibold',
                         color: 'header-primary',
                         className: r.title,
-                        children: c.Z.Messages.GUILD_PRODUCT_NOT_AVAILABLE_TITLE
+                        children: l.NW.string(l.t.wLrh09)
                     }),
-                    (0, o.jsx)(n.Text, {
+                    (0, c.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         className: r.body,
-                        children: c.Z.Messages.GUILD_PRODUCT_NOT_AVAILABLE_BODY
+                        children: l.NW.string(l.t.DW9yJi)
                     })
                 ]
             }),
-            (0, o.jsx)(n.ModalFooter, {
-                children: (0, o.jsx)(n.Button, {
+            (0, c.jsx)(a.mzw, {
+                children: (0, c.jsx)(a.zxk, {
                     className: r.button,
-                    color: n.Button.Colors.BRAND,
+                    color: a.zxk.Colors.BRAND,
                     onClick: e,
-                    size: n.Button.Sizes.LARGE,
-                    children: c.Z.Messages.OKAY
+                    size: a.zxk.Sizes.LARGE,
+                    children: l.NW.string(l.t.BddRzc)
                 })
             })
         ]

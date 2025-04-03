@@ -1,16 +1,13 @@
-function n(e) {
+function r(e) {
     return ''.concat('*'.repeat(e.length - 4)).concat(e.slice(-4));
 }
-function a(e) {
-    let [s, t] = e.split('@');
-    return ''.concat('*'.repeat(s.length), '@').concat(t);
+function i(e) {
+    let [t, n] = e.split('@');
+    return ''.concat('*'.repeat(t.length), '@').concat(n);
 }
-t.d(s, {
-    E: function () {
-        return a;
-    },
-    n: function () {
-        return n;
-    }
+n.d(t, {
+    E: () => i,
+    n: () => r
 }),
-    t(47120);
+    n(47120),
+    n(301563);

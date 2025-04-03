@@ -1,90 +1,146 @@
-a.r(n),
-    a.d(n, {
-        default: function () {
-            return O;
-        }
-    }),
-    a(47120);
-var t = a(735250),
-    r = a(470079),
-    s = a(512722),
-    i = a.n(s),
-    o = a(399606),
-    l = a(481060),
-    d = a(668781),
-    c = a(430824),
-    _ = a(495437),
-    u = a(240864),
-    E = a(981631),
-    m = a(689938),
-    T = a(314013);
-function D(e) {
-    let { guildProductListing: n, guildId: a } = e,
-        r = (0, o.e7)([c.Z], () => {
+r.d(t, { default: () => O }), r(47120);
+var n = r(200651),
+    o = r(192379),
+    i = r(512722),
+    c = r.n(i),
+    a = r(399606),
+    l = r(481060),
+    s = r(668781),
+    u = r(430824),
+    d = r(495437),
+    f = r(240864),
+    g = r(981631),
+    p = r(388032),
+    b = r(862892);
+function m(e) {
+    let { guildProductListing: t, guildId: r } = e,
+        o = (0, a.e7)([u.Z], () => {
             var e;
-            return c.Z.getRole(a, null !== (e = null == n ? void 0 : n.role_id) && void 0 !== e ? e : E.lds);
+            return u.Z.getRole(r, null != (e = null == t ? void 0 : t.role_id) ? e : g.lds);
         });
-    return null == r
+    return null == o
         ? null
-        : (0, t.jsxs)(t.Fragment, {
+        : (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, t.jsxs)(l.Heading, {
-                      className: T.warningSectionHeader,
+                  (0, n.jsxs)(l.X6q, {
+                      className: b.warningSectionHeader,
                       variant: 'text-md/medium',
                       color: 'text-normal',
                       children: [
-                          (0, t.jsx)(l.CircleWarningIcon, {
+                          (0, n.jsx)(l.P4T, {
                               size: 'sm',
                               color: 'currentColor'
                           }),
-                          (0, t.jsx)(l.Spacer, {
+                          (0, n.jsx)(l.LZC, {
                               horizontal: !0,
                               size: 8
                           }),
-                          m.Z.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING_HEADER
+                          p.NW.string(p.t.bi7buL)
                       ]
                   }),
-                  (0, t.jsx)(l.Text, {
+                  (0, n.jsx)(l.Text, {
                       variant: 'text-md/normal',
-                      children: m.Z.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING.format({ roleName: r.name })
+                      children: p.NW.format(p.t['4kglOT'], { roleName: o.name })
                   })
               ]
           });
 }
 function O(e) {
-    let { guildId: n, productId: a, ...s } = e,
-        [o] = r.useState(() => u.Z.getGuildProduct(a));
-    i()(null != o, 'guildProductListing cannot be null');
-    let [c, E] = r.useState(!1),
-        O = async () => {
+    var t,
+        r,
+        { guildId: i, productId: a } = e,
+        u = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        o = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+            }
+            return o;
+        })(e, ['guildId', 'productId']);
+    let [g] = o.useState(() => f.Z.getGuildProduct(a));
+    c()(null != g, 'guildProductListing cannot be null');
+    let [O, y] = o.useState(!1),
+        j = async () => {
             try {
-                E(!0), await _.mh(n, a);
+                y(!0), await d.mh(i, a);
             } catch (e) {
-                d.Z.show({
-                    title: m.Z.Messages.GUILD_PRODUCTS_DELETE_ERROR_TITLE,
+                s.Z.show({
+                    title: p.NW.string(p.t.OzgkxM),
                     body: e.message
                 });
             } finally {
-                E(!1);
+                y(!1);
             }
         };
-    return (0, t.jsxs)(l.ConfirmModal, {
-        ...s,
-        className: T.modalContainer,
-        header: m.Z.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_HEADER,
-        confirmText: m.Z.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BUTTON,
-        cancelText: m.Z.Messages.CANCEL,
-        loading: c,
-        onConfirm: O,
-        children: [
-            (0, t.jsx)(l.Text, {
-                variant: 'text-md/normal',
-                children: m.Z.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY.format({ productName: o.name })
+    return (0, n.jsxs)(
+        l.ConfirmModal,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, u)),
+        (r = r =
+            {
+                className: b.modalContainer,
+                header: p.NW.string(p.t['/gaTp6']),
+                confirmText: p.NW.string(p.t.E4nVWF),
+                cancelText: p.NW.string(p.t['ETE/oK']),
+                loading: O,
+                onConfirm: j,
+                children: [
+                    (0, n.jsx)(l.Text, {
+                        variant: 'text-md/normal',
+                        children: p.NW.format(p.t.CPQsjo, { productName: g.name })
+                    }),
+                    (0, n.jsx)(m, {
+                        guildProductListing: g,
+                        guildId: i
+                    })
+                ]
             }),
-            (0, t.jsx)(D, {
-                guildProductListing: o,
-                guildId: n
-            })
-        ]
-    });
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t)
+    );
 }

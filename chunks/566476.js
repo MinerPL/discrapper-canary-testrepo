@@ -1,53 +1,49 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    i = n.n(a),
-    r = n(399606),
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(399606),
     l = n(481060),
     o = n(385499),
     c = n(246946),
-    d = n(92714);
+    d = n(790162);
 function u(e) {
-    let { className: t, avatarURL: n, name: a, bot: u, verifiedBot: _, userTag: I } = e,
-        E = (0, r.e7)([c.Z], () => c.Z.hidePersonalInformation);
-    return (0, s.jsxs)('div', {
-        className: i()(d.container, t),
+    let { className: t, avatarURL: n, name: i, bot: u, verifiedBot: m, userTag: g } = e,
+        p = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation);
+    return (0, r.jsxs)('div', {
+        className: s()(d.container, t),
         children: [
-            (0, s.jsx)(l.Avatar, {
+            (0, r.jsx)(l.qEK, {
                 className: d.avatar,
                 src: n,
-                size: l.AvatarSizes.SIZE_24,
-                'aria-label': a
+                size: l.EFr.SIZE_24,
+                'aria-label': i
             }),
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: d.textContainer,
                 children: [
-                    (0, s.jsx)(l.Text, {
+                    (0, r.jsx)(l.Text, {
                         tag: 'span',
                         className: d.name,
                         color: 'header-primary',
                         variant: 'text-sm/semibold',
-                        children: a
+                        children: i
                     }),
                     u
-                        ? (0, s.jsx)(o.Z, {
+                        ? (0, r.jsx)(o.Z, {
                               className: d.botTag,
-                              verified: _
+                              verified: m
                           })
                         : null,
-                    E
+                    p
                         ? null
-                        : (0, s.jsx)(l.Text, {
+                        : (0, r.jsx)(l.Text, {
                               tag: 'span',
                               color: 'interactive-normal',
                               className: d.userTag,
                               variant: 'text-sm/normal',
-                              children: I
+                              children: g
                           })
                 ]
             })

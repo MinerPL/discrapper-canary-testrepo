@@ -1,14 +1,10 @@
-n.d(t, {
-    f: function () {
-        return r;
-    }
-});
-var s = n(63063),
-    a = n(981631),
-    i = n(689938);
-function r() {
-    return i.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_ACCEPT_TERMS_CHECKBOX.format({
-        fullTermsUrl: s.Z.getArticleURL(a.BhN.CREATOR_TERMS),
-        creatorRevenuePolicyUrl: s.Z.getArticleURL(a.BhN.CREATOR_POLICY)
+n.d(t, { f: () => a });
+var r = n(63063),
+    i = n(981631),
+    s = n(388032);
+function a() {
+    return s.NW.format(s.t['+ALa7+'], {
+        fullTermsUrl: r.Z.getArticleURL(i.BhN.CREATOR_TERMS),
+        creatorRevenuePolicyUrl: r.Z.getArticleURL(i.BhN.CREATOR_POLICY)
     });
 }

@@ -1,26 +1,21 @@
 n.r(t),
     n.d(t, {
-        announce: function () {
-            return i;
-        },
-        clearAnnouncer: function () {
-            return a;
-        },
-        destroyAnnouncer: function () {
-            return s;
-        }
+        announce: () => o,
+        clearAnnouncer: () => a,
+        destroyAnnouncer: () => s
     });
-let r = null;
-function i(e, t = 'assertive', n = 7000) {
-    !r && (r = new o()), r.announce(e, t, n);
+let r = 7000,
+    i = null;
+function o(e, t = 'assertive', n = r) {
+    i || (i = new l()), i.announce(e, t, n);
 }
 function a(e) {
-    r && r.clear(e);
+    i && i.clear(e);
 }
 function s() {
-    r && (r.destroy(), (r = null));
+    i && (i.destroy(), (i = null));
 }
-class o {
+class l {
     createLog(e) {
         let t = document.createElement('div');
         return t.setAttribute('role', 'log'), t.setAttribute('aria-live', e), t.setAttribute('aria-relevant', 'additions'), t;
@@ -28,18 +23,18 @@ class o {
     destroy() {
         this.node && (document.body.removeChild(this.node), (this.node = null));
     }
-    announce(e, t = 'assertive', n = 7000) {
+    announce(e, t = 'assertive', n = r) {
         if (!this.node) return;
-        let r = document.createElement('div');
-        (r.textContent = e),
-            'assertive' === t ? this.assertiveLog.appendChild(r) : this.politeLog.appendChild(r),
+        let i = document.createElement('div');
+        (i.textContent = e),
+            'assertive' === t ? this.assertiveLog.appendChild(i) : this.politeLog.appendChild(i),
             '' !== e &&
                 setTimeout(() => {
-                    r.remove();
+                    i.remove();
                 }, n);
     }
     clear(e) {
-        this.node && ((!e || 'assertive' === e) && (this.assertiveLog.innerHTML = ''), (!e || 'polite' === e) && (this.politeLog.innerHTML = ''));
+        this.node && ((e && 'assertive' !== e) || (this.assertiveLog.innerHTML = ''), (e && 'polite' !== e) || (this.politeLog.innerHTML = ''));
     }
     constructor() {
         (this.node = document.createElement('div')),

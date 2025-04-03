@@ -1,47 +1,66 @@
-t.d(A, {
-    V: function () {
-        return i;
-    }
-});
-var a = t(735250);
-t(470079);
-var n = t(952265),
-    r = t(776045),
-    s = t(871388),
-    o = t(981631),
-    l = t(689938);
-function i(e, A, i) {
-    var d, c, u;
+r.d(t, { V: () => s });
+var n = r(200651);
+r(192379);
+var A = r(952265),
+    a = r(776045),
+    o = r(871388),
+    l = r(981631),
+    i = r(388032);
+function s(e, t, s) {
+    var c, d;
     switch (e.code) {
-        case o.evJ.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
-            (0, s.B)(l.Z.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_TITLE, l.Z.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_BODY, r.IconVariant.DANGER);
+        case l.evJ.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
+            (0, o.B)(i.NW.string(i.t['04e8bG']), i.t.uVN1Y2, a.A.DANGER);
             break;
-        case o.evJ.TWO_FA_NOT_ENABLED:
-            (0, s.B)(l.Z.Messages.GUILD_PRODUCT_TWO_FA_NOT_ENABLED_ERROR_TITLE, l.Z.Messages.GUILD_PRODUCT_TWO_FA_NOT_ENABLED_ERROR_BODY, r.IconVariant.WARNING);
+        case l.evJ.TWO_FA_NOT_ENABLED:
+            (0, o.B)(i.NW.string(i.t['/yBjZ2']), i.t.kZ6Tgo, a.A.WARNING);
             break;
-        case o.evJ.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
-            (0, s.B)(l.Z.Messages.GUILD_PRODUCT_MISSING_BENEFITS_ERROR_TITLE, l.Z.Messages.GUILD_PRODUCT_MISSING_BENEFITS_ERROR_BODY, r.IconVariant.WARNING);
+        case l.evJ.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
+            (0, o.B)(i.NW.string(i.t.MeXDxs), i.t['5q146O'], a.A.WARNING);
             break;
-        case o.evJ.MONETIZATION_TERMS_NOT_ACCEPTED:
-            (d = A),
-                (0, n.ZD)(async () => {
-                    let { default: e } = await t.e('31835').then(t.bind(t, 393809));
-                    return (A) =>
-                        (0, a.jsx)(e, {
-                            guildId: d,
-                            ...A
-                        });
-                });
+        case l.evJ.MONETIZATION_TERMS_NOT_ACCEPTED:
+            (0, A.ZD)(async () => {
+                let { default: e } = await r.e('31835').then(r.bind(r, 393809));
+                return (r) =>
+                    (0, n.jsx)(
+                        e,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var r = null != arguments[t] ? arguments[t] : {},
+                                    n = Object.keys(r);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (n = n.concat(
+                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                        })
+                                    )),
+                                    n.forEach(function (t) {
+                                        var n;
+                                        (n = r[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: n,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = n);
+                                    });
+                            }
+                            return e;
+                        })({ guildId: t }, r)
+                    );
+            });
             break;
-        case o.evJ.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
-            (0, s.B)(l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED_TITLE, l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED_BODY, r.IconVariant.WARNING);
+        case l.evJ.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
+            (0, o.B)(i.NW.string(i.t['4hWo0N']), i.t.Zkhwe3, a.A.WARNING);
             break;
-        case o.evJ.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
-            let C, g;
-            null != i ? ((C = l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY_WITH_LINK), (g = { url: o.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i) })) : (C = l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY), (0, s.B)(l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_TITLE, C, r.IconVariant.WARNING, g);
+        case l.evJ.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
+            let u, g;
+            null != s ? ((u = i.t.j2VMk5), (g = { url: l.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s) })) : (u = i.t.ZVV1go), (0, o.B)(i.NW.string(i.t['+CT/gY']), u, a.A.WARNING, g);
             break;
         default:
-            let T = null !== (u = e.getFirstFieldErrorMessage(['published'])) && void 0 !== u ? u : (null === (c = e.hasFieldErrors) || void 0 === c ? void 0 : c.call(e)) ? void 0 : e.message;
-            if (null != T) (0, s.B)(l.Z.Messages.GUILD_PRODUCT_GENERIC_ERROR_TITLE, T, r.IconVariant.WARNING);
+            let f = null != (d = e.getFirstFieldErrorMessage(['published'])) ? d : (null == (c = e.hasFieldErrors) ? void 0 : c.call(e)) ? void 0 : e.message;
+            null != f && (0, o.B)(i.NW.string(i.t.bvWf8f), f, a.A.WARNING);
     }
 }

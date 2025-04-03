@@ -1,19 +1,9 @@
 n.d(t, {
-    Gd: function () {
-        return a;
-    },
-    ME: function () {
-        return s;
-    },
-    Ym: function () {
-        return o;
-    },
-    _g: function () {
-        return i;
-    },
-    hu: function () {
-        return l;
-    }
+    Gd: () => o,
+    ME: () => a,
+    Ym: () => s,
+    _g: () => i,
+    hu: () => l
 });
 var r = n(570140);
 function i(e, t, n) {
@@ -24,20 +14,20 @@ function i(e, t, n) {
         emoji: e
     });
 }
-function a(e, t) {
+function o(e, t) {
     r.Z.dispatch({
         type: 'HIGH_FIVE_REMOVE',
         channelId: t,
         userId: e
     });
 }
-function s(e) {
+function a(e) {
     r.Z.dispatch({
         type: 'HIGH_FIVE_SET_ENABLED',
         enabled: e
     });
 }
-function o(e, t, n, i) {
+function s(e, t, n, i) {
     r.Z.dispatch({
         type: 'HIGH_FIVE_COMPLETE',
         waitingUserId: e,

@@ -1,114 +1,112 @@
-a.d(s, {
-    Z: function () {
-        return C;
-    }
-});
-var n = a(735250),
-    E = a(470079),
-    t = a(120356),
-    _ = a.n(t),
-    l = a(481060),
-    i = a(600164),
-    d = a(539379),
-    T = a(109983),
-    M = a(834891),
-    L = a(689938),
-    r = a(128109);
-function o(e) {
-    let { guildTemplate: s, onClick: a, autoFocus: t } = e,
-        _ = E.useCallback(() => {
-            a(s);
-        }, [s, a]);
-    return (0, n.jsx)(T.Z, {
-        icon: d.M[s.id],
-        message: s.label,
-        onClick: _,
-        autoFocus: t
+n.d(t, { Z: () => L });
+var i = n(200651),
+    s = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    r = n(481060),
+    d = n(600164),
+    c = n(540059),
+    o = n(539379),
+    C = n(109983),
+    m = n(834891),
+    p = n(388032),
+    N = n(867562);
+function u(e) {
+    let { guildTemplate: t, onClick: n, autoFocus: a } = e,
+        l = (0, c.Q3)('GuildTemplatesItem'),
+        r = s.useCallback(() => {
+            n(t);
+        }, [t, n]);
+    return (0, i.jsx)(C.Z, {
+        icon: l ? o.U[t.id] : o.M[t.id],
+        message: t.label,
+        onClick: r,
+        autoFocus: a
     });
 }
-function C(e) {
-    let { className: s, isNewUser: a, onClose: E, onChooseTemplate: t, onJoin: d } = e,
-        T = (0, M.E)();
-    return (0, n.jsxs)(n.Fragment, {
+function L(e) {
+    let { className: t, isNewUser: n, onClose: s, onChooseTemplate: a, onJoin: c } = e,
+        o = (0, m.E)();
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, n.jsxs)(l.ModalHeader, {
-                direction: i.Z.Direction.VERTICAL,
-                className: r.header,
+            (0, i.jsxs)(r.xBx, {
+                direction: d.Z.Direction.VERTICAL,
+                className: N.header,
                 separator: !1,
                 children: [
-                    (0, n.jsx)(l.Heading, {
-                        className: r.title,
+                    (0, i.jsx)(r.X6q, {
+                        className: N.title,
                         variant: 'heading-xl/semibold',
-                        children: a ? L.Z.Messages.NUF_DESKTOP_TEMPLATES_TITLE : L.Z.Messages.GUILD_CREATE_TITLE
+                        children: n ? p.NW.string(p.t['9U0b1t']) : p.NW.string(p.t['5HZu09'])
                     }),
-                    (0, n.jsx)(l.Text, {
-                        className: r.subtitle,
+                    (0, i.jsx)(r.Text, {
+                        className: N.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: L.Z.Messages.NUF_DESKTOP_TEMPLATES_SUBTITLE
+                        children: p.NW.string(p.t['wti/Hx'])
                     }),
-                    null != E &&
-                        (0, n.jsx)(l.ModalCloseButton, {
-                            className: r.closeButton,
-                            onClick: E
+                    null != s &&
+                        (0, i.jsx)(r.olH, {
+                            className: N.closeButton,
+                            onClick: s
                         })
                 ]
             }),
-            (0, n.jsxs)(l.ModalContent, {
-                className: _()(r.templatesList, s),
+            (0, i.jsxs)(r.hzk, {
+                className: l()(N.templatesList, t),
                 paddingFix: !1,
                 children: [
-                    (0, n.jsx)(o, {
-                        guildTemplate: T[M.l.CREATE],
-                        onClick: t,
+                    (0, i.jsx)(u, {
+                        guildTemplate: o[m.l.CREATE],
+                        onClick: a,
                         autoFocus: !0
                     }),
-                    (0, n.jsx)(l.Text, {
-                        className: r.optionHeader,
+                    (0, i.jsx)(r.Text, {
+                        className: N.optionHeader,
                         color: 'header-secondary',
                         variant: 'text-xs/bold',
-                        children: L.Z.Messages.GUILD_TEMPLATE_SELECTOR_OPTION_HEADER
+                        children: p.NW.string(p.t.JGDkfn)
                     }),
-                    (0, n.jsx)(o, {
-                        guildTemplate: T[M.l.GAMING],
-                        onClick: t
+                    (0, i.jsx)(u, {
+                        guildTemplate: o[m.l.GAMING],
+                        onClick: a
                     }),
-                    (0, n.jsx)(o, {
-                        guildTemplate: T[M.l.SCHOOL_CLUB],
-                        onClick: t
+                    (0, i.jsx)(u, {
+                        guildTemplate: o[m.l.FRIENDS],
+                        onClick: a
                     }),
-                    (0, n.jsx)(o, {
-                        guildTemplate: T[M.l.STUDY],
-                        onClick: t
+                    (0, i.jsx)(u, {
+                        guildTemplate: o[m.l.STUDY],
+                        onClick: a
                     }),
-                    (0, n.jsx)(o, {
-                        guildTemplate: T[M.l.FRIENDS],
-                        onClick: t
+                    (0, i.jsx)(u, {
+                        guildTemplate: o[m.l.SCHOOL_CLUB],
+                        onClick: a
                     }),
-                    (0, n.jsx)(o, {
-                        guildTemplate: T[M.l.CREATORS],
-                        onClick: t
+                    (0, i.jsx)(u, {
+                        guildTemplate: o[m.l.LOCAL_COMMUNITY],
+                        onClick: a
                     }),
-                    (0, n.jsx)(o, {
-                        guildTemplate: T[M.l.LOCAL_COMMUNITY],
-                        onClick: t
+                    (0, i.jsx)(u, {
+                        guildTemplate: o[m.l.CREATORS],
+                        onClick: a
                     })
                 ]
             }),
-            null != d &&
-                (0, n.jsxs)(l.ModalFooter, {
-                    className: r.footer,
+            null != c &&
+                (0, i.jsxs)(r.mzw, {
+                    className: N.footer,
                     children: [
-                        (0, n.jsx)(l.Heading, {
+                        (0, i.jsx)(r.X6q, {
                             variant: 'heading-lg/semibold',
-                            className: r.footerTitle,
-                            children: L.Z.Messages.NUF_HAVE_AN_INVITE_ALREADY
+                            className: N.footerTitle,
+                            children: p.NW.string(p.t['N+Mi/f'])
                         }),
-                        (0, n.jsx)(l.Button, {
-                            className: r.footerButton,
-                            color: l.Button.Colors.PRIMARY,
-                            onClick: d,
-                            children: L.Z.Messages.JOIN_SERVER_TITLE
+                        (0, i.jsx)(r.zxk, {
+                            className: N.footerButton,
+                            color: r.zxk.Colors.PRIMARY,
+                            onClick: c,
+                            children: p.NW.string(p.t.riOUtL)
                         })
                     ]
                 })

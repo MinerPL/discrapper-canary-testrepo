@@ -1,32 +1,27 @@
-d.r(o),
-    d.d(o, {
-        default: function () {
-            return r;
-        }
-    });
-var e = d(735250);
-d(470079);
-var l = d(481060),
-    n = d(915312);
-function r() {
+s.r(t), s.d(t, { default: () => o });
+var i = s(200651);
+s(192379);
+var r = s(481060),
+    l = s(915312);
+function o() {
     return (
-        (0, n.bN)(document.body),
-        (0, e.jsx)(l.HiddenVisually, {
-            children: (0, e.jsx)('svg', {
+        (0, l.bN)(document.body),
+        (0, i.jsx)(r.nn4, {
+            children: (0, i.jsx)('svg', {
                 'aria-hidden': !0,
-                children: (0, e.jsxs)('filter', {
+                children: (0, i.jsxs)('filter', {
                     id: 'violation-overlay',
                     x: '0',
                     y: '0',
                     width: '100%',
                     height: '100%',
                     children: [
-                        (0, e.jsx)('feFlood', {
+                        (0, i.jsx)('feFlood', {
                             floodColor: '#ff0000',
                             floodOpacity: '0.3',
                             result: 'floodFill'
                         }),
-                        (0, e.jsx)('feBlend', {
+                        (0, i.jsx)('feBlend', {
                             in: 'SourceGraphic',
                             in2: 'floodFill',
                             mode: 'overlay'
@@ -37,4 +32,4 @@ function r() {
         })
     );
 }
-d(348914);
+s(80643);

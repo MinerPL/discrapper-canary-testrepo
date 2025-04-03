@@ -1,11 +1,10 @@
 n.d(t, {
-    $: function () {
-        return s;
-    }
+    Dj: () => o,
+    i1: () => i
 });
-let s = (0, n(987170).Z)({
+let r = (0, n(987170).Z)({
     kind: 'guild',
-    id: '2024-07_guild_settings_foundation',
+    id: '2025-01_guild_settings_foundation',
     label: 'Guild Settings Foundation Revamp',
     defaultConfig: { enabled: !1 },
     treatments: [
@@ -16,3 +15,25 @@ let s = (0, n(987170).Z)({
         }
     ]
 });
+function i(e) {
+    let { guildId: t, location: n, autoTrackExposure: i = !0 } = e,
+        { enabled: o } = r.getCurrentConfig(
+            {
+                guildId: t,
+                location: n
+            },
+            { autoTrackExposure: i }
+        );
+    return o;
+}
+function o(e) {
+    let { guildId: t, location: n, autoTrackExposure: i = !0 } = e,
+        { enabled: o } = r.useExperiment(
+            {
+                guildId: t,
+                location: n
+            },
+            { autoTrackExposure: i }
+        );
+    return o;
+}

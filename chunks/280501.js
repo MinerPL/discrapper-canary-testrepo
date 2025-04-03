@@ -1,23 +1,14 @@
-var r, i, a, s;
-function o(e) {
+n.d(t, {
+    FF: () => i,
+    gH: () => r,
+    tM: () => o
+});
+var r = (function (e) {
+    return (e[(e.NORMAL = 0)] = 'NORMAL'), (e[(e.LOADING = 1)] = 'LOADING'), (e[(e.DISABLED = 2)] = 'DISABLED'), e;
+})({});
+function i(e) {
     return e;
 }
-n.d(t, {
-    FF: function () {
-        return o;
-    },
-    gH: function () {
-        return r;
-    },
-    tM: function () {
-        return i;
-    }
-}),
-    ((a = r || (r = {}))[(a.NORMAL = 0)] = 'NORMAL'),
-    (a[(a.LOADING = 1)] = 'LOADING'),
-    (a[(a.DISABLED = 2)] = 'DISABLED'),
-    ((s = i || (i = {}))[(s.STRING = 1)] = 'STRING'),
-    (s[(s.USER = 2)] = 'USER'),
-    (s[(s.ROLE = 3)] = 'ROLE'),
-    (s[(s.CHANNEL = 4)] = 'CHANNEL'),
-    (s[(s.GUILD = 5)] = 'GUILD');
+var o = (function (e) {
+    return (e[(e.STRING = 1)] = 'STRING'), (e[(e.USER = 2)] = 'USER'), (e[(e.ROLE = 3)] = 'ROLE'), (e[(e.CHANNEL = 4)] = 'CHANNEL'), (e[(e.GUILD = 5)] = 'GUILD'), e;
+})({});

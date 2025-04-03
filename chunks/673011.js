@@ -11,12 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => i }), n(47120);
 class i {
     has(e) {
         return this.listeners.has(e);

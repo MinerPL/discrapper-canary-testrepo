@@ -1,35 +1,31 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    l = n(479313),
-    r = n(765104),
-    o = n(626135),
+n.d(t, { Z: () => h });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(479313),
+    a = n(765104),
+    s = n(626135),
     c = n(665149),
     u = n(981631),
     d = n(814249),
-    h = n(689938);
-function m(e) {
+    p = n(388032);
+function h(e) {
     let { channel: t } = e,
-        n = (0, a.e7)([r.Z], () => r.Z.shouldShowTopicsBar());
-    return (0, i.jsx)(c.ZP.Icon, {
-        icon: s.TopicsIcon,
+        n = (0, i.e7)([a.Z], () => a.Z.shouldShowTopicsBar());
+    return (0, r.jsx)(c.ZP.Icon, {
+        icon: l.sVe,
         onClick: () => {
-            o.default.track(u.rMx.SUMMARIES_SIDEBAR_TOGGLED, {
+            s.default.track(u.rMx.SUMMARIES_SIDEBAR_TOGGLED, {
                 summaries_sidebar_open: !n,
                 source: d.Dc.TOOLBAR_BUTTON,
                 guild_id: t.guild_id,
                 channel_id: t.id,
                 channel_type: t.type
             }),
-                (0, l.e7)();
+                (0, o.e7)();
         },
-        tooltip: n ? h.Z.Messages.SUMMARIES_SHOWN : h.Z.Messages.SUMMARIES_HIDDEN,
+        tooltip: n ? p.NW.string(p.t.nGs3kJ) : p.NW.string(p.t.bIm2sL),
         selected: n,
         'aria-expanded': n
     });

@@ -1,23 +1,36 @@
-n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var r = n(317770),
     i = n(626135),
-    a = n(358085),
-    s = n(998502),
-    o = n(801814),
+    o = n(358085),
+    a = n(998502),
+    s = n(801814),
     l = n(981631);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 class u extends r.Z {
     _initialize() {
-        if (!!a.isPlatformEmbedded)
-            s.ZP.on('UPDATE_DOWNLOADED', () => this.processModuleEvents()),
-                s.ZP.on('MODULE_INSTALLED', (e, t, n) => this.processModuleEvents()),
-                s.ZP.on('UPDATER_HISTORY_RESPONSE', (e, t) => {
-                    this._handleHistoryResponse(t);
-                }),
-                this.processModuleEvents();
+        o.isPlatformEmbedded &&
+            (a.ZP.on('UPDATE_DOWNLOADED', () => this.processModuleEvents()),
+            a.ZP.on('MODULE_INSTALLED', (e, t, n) => this.processModuleEvents()),
+            a.ZP.on('UPDATER_HISTORY_RESPONSE', (e, t) => {
+                this._handleHistoryResponse(t);
+            }),
+            this.processModuleEvents());
     }
     _terminate() {}
     processModuleEvents() {
-        s.ZP.send('UPDATER_HISTORY_QUERY_AND_TRUNCATE');
+        a.ZP.send('UPDATER_HISTORY_QUERY_AND_TRUNCATE');
     }
     _handleHistoryResponse(e) {
         if (null == e) return;
@@ -28,19 +41,7 @@ class u extends r.Z {
             this._tracker.submissionReady() && (i.default.track(l.rMx.APP_MODULES_UPDATED, this._tracker.getStats()), this._tracker.reset());
     }
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = '_tracker'),
-            (r = new o.Z()),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), c(this, '_tracker', new s.Z());
     }
 }
-t.Z = new u();
+let d = new u();

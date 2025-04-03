@@ -1,38 +1,63 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(153867),
+n.d(t, { Z: () => a });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    o = n(153867),
     l = n(468026),
-    r = n(740492),
-    o = n(689938);
-function c(e) {
+    s = n(740492),
+    c = n(388032);
+function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {},
         n = (t) => {
-            s.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), t(), e();
+            o.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), t(), e();
         };
-    r.ZP.disableEmbeddedActivityPopOutAlert
+    s.ZP.disableEmbeddedActivityPopOutAlert
         ? e()
-        : (0, a.openModal)(
-              (a) =>
-                  (0, i.jsx)(l.default, {
-                      confirmText: o.Z.Messages.EMBEDDED_ACTIVITIES_YEP,
-                      secondaryConfirmText: o.Z.Messages.DONT_ASK_AGAIN,
-                      title: o.Z.Messages.EMBEDDED_ACTIVITIES_CAREFUL,
-                      cancelText: o.Z.Messages.EMBEDDED_ACTIVITIES_NVM,
-                      onConfirm: () => {
-                          a.onClose(), e();
-                      },
-                      onCancel: t,
-                      onConfirmSecondary: () => n(a.onClose),
-                      body: o.Z.Messages.EMBEDDED_ACTIVITIES_POP_IN_WARNING,
-                      ...a
-                  }),
+        : (0, i.h7j)(
+              (i) =>
+                  (0, r.jsx)(
+                      l.default,
+                      (function (e) {
+                          for (var t = 1; t < arguments.length; t++) {
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  r = Object.keys(n);
+                              'function' == typeof Object.getOwnPropertySymbols &&
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                      })
+                                  )),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      (r = n[t]),
+                                          t in e
+                                              ? Object.defineProperty(e, t, {
+                                                    value: r,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0
+                                                })
+                                              : (e[t] = r);
+                                  });
+                          }
+                          return e;
+                      })(
+                          {
+                              confirmText: c.NW.string(c.t.efSOLC),
+                              secondaryConfirmText: c.NW.string(c.t['JdIQ/f']),
+                              title: c.NW.string(c.t.pVr7Cg),
+                              cancelText: c.NW.string(c.t.EwoEOT),
+                              onConfirm: () => {
+                                  i.onClose(), e();
+                              },
+                              onCancel: t,
+                              onConfirmSecondary: () => n(i.onClose),
+                              body: c.NW.string(c.t.ugSbNT)
+                          },
+                          i
+                      )
+                  ),
               {},
-              a.POPOUT_MODAL_CONTEXT
+              i.u1M
           );
 }

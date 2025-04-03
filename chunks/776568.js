@@ -1,111 +1,115 @@
-_.d(E, {
-    ZP: function () {
-        return G;
-    },
-    k: function () {
-        return T;
-    }
+n.d(t, {
+    ZP: () => v,
+    k: () => b,
+    u9: () => _
 }),
-    _(47120);
-var s = _(735250);
-_(470079);
-var t = _(913527),
-    n = _.n(t),
-    a = _(442837),
-    M = _(481060),
-    S = _(211739),
-    r = _(92114),
-    N = _(777861),
-    u = _(9156),
-    A = _(621600),
-    O = _(933557),
-    i = _(981631),
-    l = _(969943),
-    I = _(689938);
-let T = () => [
+    n(47120);
+var i = n(200651);
+n(192379);
+var r = n(913527),
+    a = n.n(r),
+    l = n(442837),
+    o = n(481060),
+    u = n(211739),
+    s = n(87051),
+    c = n(496729),
+    d = n(777861),
+    f = n(9156),
+    g = n(621600),
+    O = n(933557),
+    p = n(981631),
+    E = n(969943),
+    N = n(388032);
+let b = () => [
         {
-            value: l.Oe.MINUTES_15,
-            label: I.Z.Messages.MUTE_DURATION_15_MINUTES
+            value: E.Oe.MINUTES_15,
+            label: N.NW.string(N.t['8ot6go'])
         },
         {
-            value: l.Oe.HOURS_1,
-            label: I.Z.Messages.MUTE_DURATION_1_HOUR
+            value: E.Oe.HOURS_1,
+            label: N.NW.string(N.t.UMWBZm)
         },
         {
-            value: l.Oe.HOURS_3,
-            label: I.Z.Messages.MUTE_DURATION_3_HOURS
+            value: E.Oe.HOURS_3,
+            label: N.NW.string(N.t.QmYWtr)
         },
         {
-            value: l.Oe.HOURS_8,
-            label: I.Z.Messages.MUTE_DURATION_8_HOURS
+            value: E.Oe.HOURS_8,
+            label: N.NW.string(N.t.EpAXPD)
         },
         {
-            value: l.Oe.HOURS_24,
-            label: I.Z.Messages.MUTE_DURATION_24_HOURS
+            value: E.Oe.HOURS_24,
+            label: N.NW.string(N.t['755t4u'])
         },
         {
-            value: l.Oe.ALWAYS,
-            label: I.Z.Messages.MUTE_DURATION_ALWAYS
+            value: E.Oe.ALWAYS,
+            label: N.NW.string(N.t.r3LawM)
         }
     ],
-    L = (e) => {
-        let E = e > 0 ? n()().add(e, 'second').toISOString() : null;
+    _ = (e) => {
+        let t = e > 0 ? a()().add(e, 'second').toISOString() : null;
         return {
             muted: !0,
             mute_config: {
                 selected_time_window: e,
-                end_time: E
+                end_time: t
             }
         };
     };
-function G(e, E) {
-    let [_, t] = (0, a.Wu)([u.ZP], () => [u.ZP.isChannelMuted(e.guild_id, e.id), u.ZP.getChannelMuteConfig(e.guild_id, e.id)]),
-        n = (0, N.U)(t),
-        l = (0, O.ZP)(e, !0);
-    function G(E) {
-        E && e.type === i.d4z.GUILD_CATEGORY && (0, S.c4)(e.id), r.Z.updateChannelOverrideSettings(e.guild_id, e.id, { muted: E }, A.UE.muted(E));
+function v(e, t) {
+    let [n, r] = (0, l.Wu)([f.ZP], () => [f.ZP.isChannelMuted(e.guild_id, e.id), f.ZP.getChannelMuteConfig(e.guild_id, e.id)]),
+        a = (0, d.U)(r),
+        E = (0, O.ZP)(e, !0);
+    function v(t) {
+        t && e.type === p.d4z.GUILD_CATEGORY && (0, u.c4)(e.id), s.Z.updateChannelOverrideSettings(e.guild_id, e.id, { muted: t }, g.UE.muted(t));
     }
-    let R = I.Z.Messages.MUTE_CHANNEL_GENERIC,
-        C = I.Z.Messages.UNMUTE_CHANNEL_GENERIC;
+    let h = N.NW.string(N.t.tbeRRE),
+        y = N.NW.string(N.t.OYefmZ);
     switch (e.type) {
-        case i.d4z.GUILD_CATEGORY:
-            (R = I.Z.Messages.MUTE_CATEGORY), (C = I.Z.Messages.UNMUTE_CATEGORY);
+        case p.d4z.GUILD_CATEGORY:
+            (h = N.NW.string(N.t.pNMCg4)), (y = N.NW.string(N.t.olaBeH));
             break;
-        case i.d4z.GROUP_DM:
-            (R = I.Z.Messages.MUTE_CONVERSATION), (C = I.Z.Messages.UNMUTE_CONVERSATION);
+        case p.d4z.GROUP_DM:
+            (h = N.NW.string(N.t.LO3kaG)), (y = N.NW.string(N.t['s5/5fn']));
             break;
-        case i.d4z.DM:
-            (R = I.Z.Messages.MUTE_CHANNEL.format({ name: l })), (C = I.Z.Messages.UNMUTE_CHANNEL.format({ name: l }));
+        case p.d4z.DM:
+            (h = N.NW.format(N.t.byjuJi, { name: E })), (y = N.NW.format(N.t['eC+9rq'], { name: E }));
             break;
         default:
-            (R = I.Z.Messages.MUTE_CHANNEL_GENERIC), (C = I.Z.Messages.UNMUTE_CHANNEL_GENERIC);
+            (h = N.NW.string(N.t.tbeRRE)), (y = N.NW.string(N.t.OYefmZ));
     }
-    return _
-        ? (0, s.jsx)(M.MenuItem, {
+    return n
+        ? (0, i.jsx)(o.sNh, {
               id: 'unmute-channel',
-              label: C,
-              subtext: n,
-              action: () => G(!1)
+              label: y,
+              subtext: a,
+              action: () => v(!1)
           })
-        : (0, s.jsx)(M.MenuItem, {
+        : (0, i.jsx)(o.sNh, {
               id: 'mute-channel',
-              label: R,
-              action: () => G(!0),
-              children: T().map((_) => {
-                  let { value: t, label: n } = _;
-                  return (0, s.jsx)(
-                      M.MenuItem,
+              label: h,
+              action: () => {
+                  v(!0),
+                      (0, c.s)({
+                          channelId: e.id,
+                          location: 'channel_context_menu'
+                      });
+              },
+              children: b().map((n) => {
+                  let { value: r, label: a } = n;
+                  return (0, i.jsx)(
+                      o.sNh,
                       {
-                          id: ''.concat(t),
-                          label: n,
+                          id: ''.concat(r),
+                          label: a,
                           action: () =>
-                              (function (_) {
-                                  e.type === i.d4z.GUILD_CATEGORY && (0, S.c4)(e.id);
-                                  let s = L(_);
-                                  r.Z.updateChannelOverrideSettings(e.guild_id, e.id, s, A.ZB.Muted, E);
-                              })(t)
+                              (function (n) {
+                                  e.type === p.d4z.GUILD_CATEGORY && (0, u.c4)(e.id);
+                                  let i = _(n);
+                                  s.Z.updateChannelOverrideSettings(e.guild_id, e.id, i, g.ZB.Muted, t);
+                              })(r)
                       },
-                      t
+                      r
                   );
               })
           });

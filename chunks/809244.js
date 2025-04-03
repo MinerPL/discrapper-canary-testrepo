@@ -1,20 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
-var i = n(687516),
-    a = n(5192),
-    s = n(689938);
-function l(e, t, n) {
-    let l = (0, i.Cf)(n),
-        r = a.ZP.getName(e.getGuildId(), e.id, t);
+n.d(t, { Z: () => o });
+var r = n(687516),
+    i = n(5192),
+    l = n(388032);
+function o(e, t, n) {
+    let o = (0, r.Cf)(n),
+        a = i.ZP.getName(e.getGuildId(), e.id, t);
     return null == n
-        ? r
-        : (null == l ? void 0 : l.name) != null
-          ? s.Z.Messages.GO_LIVE_USER_PLAYING.format({
-                applicationName: null == l ? void 0 : l.name,
-                username: r
+        ? a
+        : (null == o ? void 0 : o.name) != null
+          ? l.NW.formatToPlainString(l.t['9jpVOT'], {
+                applicationName: null == o ? void 0 : o.name,
+                username: a
             })
-          : s.Z.Messages.GO_LIVE_TILE_SCREEN.format({ username: r });
+          : l.NW.formatToPlainString(l.t['+h0Z5+'], { username: a });
 }

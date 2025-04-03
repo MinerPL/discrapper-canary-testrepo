@@ -1,51 +1,76 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
-var s = n(735250),
-    a = n(470079),
-    i = n(120356),
-    r = n.n(i),
+n.d(t, { Z: () => f });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(477690),
     o = n(481060),
     c = n(91218),
     d = n(518738),
     u = n(208567),
-    _ = n(624138),
-    I = n(689938),
-    E = n(455658);
-let T = (0, _.Mg)(l.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
-function m(e) {
-    let { role: t, 'aria-label': n = I.Z.Messages.UPLOAD_IMAGE, className: i, onClick: l, disabled: _ = !1 } = e,
-        m = a.useRef(null),
-        N = a.useMemo(() => (null != t ? (0, d.Kz)(t, T) : null), [t]),
-        S =
-            null != N
-                ? (0, s.jsx)(c.Z, {
-                      enableTooltip: !1,
-                      className: E.icon,
-                      ...N
-                  })
-                : (0, s.jsx)(o.ImagePlusIcon, {
+    m = n(624138),
+    g = n(388032),
+    p = n(973217);
+let h = (0, m.Mg)(l.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
+function f(e) {
+    let { role: t, 'aria-label': n = g.NW.string(g.t['MsUY/f']), className: s, onClick: l, disabled: m = !1 } = e,
+        f = i.useRef(null),
+        b = i.useMemo(() => (null != t ? (0, d.Kz)(t, h) : null), [t]),
+        x =
+            null != b
+                ? (0, r.jsx)(
+                      c.Z,
+                      (function (e) {
+                          for (var t = 1; t < arguments.length; t++) {
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  r = Object.keys(n);
+                              'function' == typeof Object.getOwnPropertySymbols &&
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                      })
+                                  )),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      (r = n[t]),
+                                          t in e
+                                              ? Object.defineProperty(e, t, {
+                                                    value: r,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0
+                                                })
+                                              : (e[t] = r);
+                                  });
+                          }
+                          return e;
+                      })(
+                          {
+                              enableTooltip: !1,
+                              className: p.icon
+                          },
+                          b
+                      )
+                  )
+                : (0, r.jsx)(o.FmF, {
                       size: 'md',
                       color: 'currentColor',
-                      className: E.icon
+                      className: p.icon
                   });
-    return (0, s.jsx)(o.FocusRing, {
-        ringTarget: m,
-        children: (0, s.jsxs)(o.Clickable, {
+    return (0, r.jsx)(o.tEY, {
+        ringTarget: f,
+        children: (0, r.jsxs)(o.P3F, {
             'aria-label': n,
-            className: r()(E.container, i, { [E.disabled]: _ }),
-            onClick: _ ? void 0 : l,
-            'aria-disabled': _,
+            className: a()(p.container, s, { [p.disabled]: m }),
+            onClick: m ? void 0 : l,
+            'aria-disabled': m,
             children: [
-                (0, s.jsx)('div', {
-                    ref: m,
-                    className: E.preview,
-                    children: S
+                (0, r.jsx)('div', {
+                    ref: f,
+                    className: p.preview,
+                    children: x
                 }),
-                null != N ? (0, s.jsx)(u.S, { className: E.uploaderIcon }) : null
+                null != b ? (0, r.jsx)(u.S, { className: p.uploaderIcon }) : null
             ]
         })
     });

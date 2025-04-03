@@ -1,48 +1,44 @@
-s.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var T = s(735250);
-s(470079);
-var o = s(120356),
-    n = s.n(o),
-    a = s(481060),
-    l = s(296664);
-function _(e) {
-    let { tips: t, className: s, headerText: o } = e;
-    return (0, T.jsxs)('div', {
-        className: n()(l.tipsSection, s),
+n.d(e, { Z: () => a });
+var r = n(200651);
+n(192379);
+var s = n(120356),
+    i = n.n(s),
+    o = n(481060),
+    l = n(469894);
+function a(t) {
+    let { tips: e, className: n, headerText: s } = t;
+    return (0, r.jsxs)('div', {
+        className: i()(l.tipsSection, n),
         children: [
-            (0, T.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: l.tipsHeader,
-                children: (0, T.jsx)(a.Heading, {
+                children: (0, r.jsx)(o.X6q, {
                     variant: 'heading-lg/bold',
                     className: l.headerText,
-                    children: o
+                    children: s
                 })
             }),
-            (0, T.jsx)('ul', {
+            (0, r.jsx)('ul', {
                 className: l.tipsList,
-                children: t.map((e, t) =>
-                    (0, T.jsxs)(
+                children: e.map((t, e) =>
+                    (0, r.jsxs)(
                         'li',
                         {
                             className: l.tipRow,
                             children: [
-                                (0, T.jsx)(a.Heading, {
+                                (0, r.jsx)(o.X6q, {
                                     variant: 'heading-md/semibold',
                                     color: 'text-brand',
                                     className: l.tipNumber,
-                                    children: t + 1
+                                    children: e + 1
                                 }),
-                                (0, T.jsx)(a.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: 'text-sm/medium',
-                                    children: e
+                                    children: t
                                 })
                             ]
                         },
-                        'safety-tips-'.concat(t)
+                        'safety-tips-'.concat(e)
                     )
                 )
             })

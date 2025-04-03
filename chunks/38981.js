@@ -1,25 +1,26 @@
-var a = t(735250);
-t(470079);
-var l = t(120356),
-    s = t.n(l),
-    i = t(481060),
-    o = t(355430);
-n.Z = function (e) {
-    let { count: n, className: t } = e;
-    return (0, a.jsxs)('div', {
-        className: s()(o.container, t),
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    a = n(481060),
+    o = n(135570);
+let c = function (e) {
+    let { count: t, className: n } = e;
+    return (0, r.jsxs)('div', {
+        className: l()(o.container, n),
         children: [
-            (0, a.jsx)(i.HeadphonesIcon, {
+            (0, r.jsx)(a.VWR, {
                 size: 'custom',
                 color: 'currentColor',
                 width: 12,
                 height: 12,
                 className: o.icon
             }),
-            (0, a.jsx)(i.Text, {
+            (0, r.jsx)(a.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: null != n ? n : 0
+                children: null != t ? t : 0
             })
         ]
     });

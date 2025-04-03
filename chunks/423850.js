@@ -1,82 +1,76 @@
-r.d(t, {
-    D: function () {
-        return d;
-    },
-    N: function () {
-        return A;
-    }
+a.d(e, {
+    D: () => f,
+    N: () => d
 });
-var n = r(263449),
-    a = r(696486),
-    o = r(988097),
-    i = r(152228),
-    _ = r(101284),
-    E = r(467510),
-    s = r(370336),
-    c = r(395848),
-    I = r(501684),
-    u = r(108185);
-let l = [],
+var r = a(263449),
+    n = a(696486),
+    _ = a(988097),
+    o = a(152228),
+    i = a(101284),
+    c = a(467510),
+    s = a(370336),
+    E = a(395848),
+    l = a(501684),
+    u = a(108185);
+let I = [],
     R = new Map();
-function A() {
-    if ((0, u.QV)() && _.Z1) {
-        let e = (function () {
-            return (0, I.YF)(({ metric: e }) => {
-                let t,
-                    r = (0, n.s3)();
-                if (!r || void 0 == e.value) return;
-                let I = e.entries.find((t) => t.duration === e.value && T[t.name]);
-                if (!I) return;
-                let { interactionId: l } = I,
-                    A = T[I.name],
-                    d = r.getOptions(),
-                    N = (0, u.XL)(_.Z1 + I.startTime),
-                    p = (0, u.XL)(e.value),
-                    O = (0, n.nZ)(),
-                    f = (0, a.HN)(),
-                    S = f ? (0, a.Gx)(f) : void 0,
-                    D = (null != l ? R.get(l) : void 0) || S,
-                    L = D ? (0, a.XU)(D).description : O.getScopeData().transactionName,
-                    h = O.getUser(),
-                    C = r.getIntegrationByName('Replay'),
-                    g = C && C.getReplayId(),
-                    M = void 0 !== h ? h.email || h.id || h.ip_address : void 0;
-                try {
-                    t = O.getScopeData().contexts.profile.profile_id;
-                } catch (e) {}
-                let P = (0, E.Rt)(I.target),
-                    m = (0, s.Jr)({
-                        release: d.release,
-                        environment: d.environment,
-                        transaction: L,
-                        [o.JQ]: e.value,
-                        [o.S3]: 'auto.http.browser.inp',
-                        user: M || void 0,
-                        profile_id: t || void 0,
-                        replay_id: g || void 0,
-                        'user_agent.original': c.m.navigator && c.m.navigator.userAgent
-                    }),
-                    U = (0, i.qp)({
-                        name: P,
-                        op: `ui.interaction.${A}`,
-                        attributes: m,
-                        startTime: N,
-                        experimental: { standalone: !0 }
-                    });
-                U.addEvent('inp', {
-                    [o.E1]: 'millisecond',
-                    [o.Wb]: e.value
+function d() {
+    if ((0, u.QV)() && i.Z1) {
+        let t = (0, l.YF)(({ metric: t }) => {
+            let e,
+                a = (0, r.s3)();
+            if (!a || void 0 == t.value) return;
+            let l = t.entries.find((e) => e.duration === t.value && A[e.name]);
+            if (!l) return;
+            let { interactionId: I } = l,
+                d = A[l.name],
+                f = a.getOptions(),
+                p = (0, u.XL)(i.Z1 + l.startTime),
+                N = (0, u.XL)(t.value),
+                T = (0, r.nZ)(),
+                L = (0, n.HN)(),
+                h = L ? (0, n.Gx)(L) : void 0,
+                O = (null != I ? R.get(I) : void 0) || h,
+                D = O ? (0, n.XU)(O).description : T.getScopeData().transactionName,
+                g = T.getUser(),
+                P = a.getIntegrationByName('Replay'),
+                m = P && P.getReplayId(),
+                y = void 0 !== g ? g.email || g.id || g.ip_address : void 0;
+            try {
+                e = T.getScopeData().contexts.profile.profile_id;
+            } catch (t) {}
+            let v = (0, c.Rt)(l.target),
+                C = (0, s.Jr)({
+                    release: f.release,
+                    environment: f.environment,
+                    transaction: D,
+                    [_.JQ]: t.value,
+                    [_.S3]: 'auto.http.browser.inp',
+                    user: y || void 0,
+                    profile_id: e || void 0,
+                    replay_id: m || void 0,
+                    'user_agent.original': E.m.navigator && E.m.navigator.userAgent
                 }),
-                    U.end(N + p);
-            });
-        })();
+                S = (0, o.qp)({
+                    name: v,
+                    op: `ui.interaction.${d}`,
+                    attributes: C,
+                    startTime: p,
+                    experimental: { standalone: !0 }
+                });
+            S.addEvent('inp', {
+                [_.E1]: 'millisecond',
+                [_.Wb]: t.value
+            }),
+                S.end(p + N);
+        });
         return () => {
-            e();
+            t();
         };
     }
     return () => void 0;
 }
-let T = {
+let A = {
     click: 'click',
     pointerdown: 'click',
     pointerup: 'click',
@@ -104,21 +98,21 @@ let T = {
     keypress: 'press',
     input: 'press'
 };
-function d(e) {
-    let t = ({ entries: e }) => {
-        let t = (0, a.HN)(),
-            r = t && (0, a.Gx)(t);
-        e.forEach((e) => {
-            if (!(0, I.cN)(e) || !r) return;
-            let t = e.interactionId;
-            if (!(null == t || R.has(t))) {
-                if (l.length > 10) {
-                    let e = l.shift();
-                    R.delete(e);
+function f(t) {
+    let e = ({ entries: t }) => {
+        let e = (0, n.HN)(),
+            a = e && (0, n.Gx)(e);
+        t.forEach((t) => {
+            if (!(0, l.cN)(t) || !a) return;
+            let e = t.interactionId;
+            if (null != e && !R.has(e)) {
+                if (I.length > 10) {
+                    let t = I.shift();
+                    R.delete(t);
                 }
-                l.push(t), R.set(t, r);
+                I.push(e), R.set(e, a);
             }
         });
     };
-    (0, I._j)('event', t), (0, I._j)('first-input', t);
+    (0, l._j)('event', e), (0, l._j)('first-input', e);
 }

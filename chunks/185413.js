@@ -1,257 +1,310 @@
-n.r(t),
-    n.d(t, {
-        AddMembersBody: function () {
-            return p;
-        },
-        MemberRoleSelector: function () {
-            return N;
-        },
-        default: function () {
-            return v;
+r.d(t, {
+    U: () => C,
+    default: () => M,
+    t: () => L
+}),
+    r(266796),
+    r(47120),
+    r(566702),
+    r(474991),
+    r(398202),
+    r(301563),
+    r(653041);
+var n = r(200651),
+    l = r(192379),
+    i = r(442837),
+    a = r(481060),
+    s = r(741361),
+    o = r(461745),
+    c = r(600164),
+    d = r(313201),
+    u = r(131704),
+    m = r(592125),
+    x = r(271383),
+    h = r(430824),
+    b = r(626135),
+    y = r(934415),
+    f = r(892880),
+    p = r(226951),
+    g = r(605436),
+    j = r(971628),
+    v = r(71080),
+    E = r(981631),
+    S = r(494831),
+    T = r(388032),
+    w = r(208838);
+function R(e) {
+    var t = (function (e, t) {
+        if ('object' !== O(e) || null === e) return e;
+        var r = e[Symbol.toPrimitive];
+        if (void 0 !== r) {
+            var n = r.call(e, t || 'default');
+            if ('object' !== O(n)) return n;
+            throw TypeError('@@toPrimitive must return a primitive value.');
         }
-    }),
-    n(47120),
-    n(653041);
-var s = n(735250),
-    l = n(470079),
-    a = n(442837),
-    r = n(481060),
-    i = n(741361),
-    o = n(461745),
-    c = n(600164),
-    d = n(313201),
-    u = n(131704),
-    m = n(592125),
-    h = n(271383),
-    x = n(430824),
-    E = n(626135),
-    S = n(934415),
-    R = n(892880),
-    T = n(226951),
-    M = n(605436),
-    g = n(971628),
-    b = n(71080),
-    f = n(981631),
-    A = n(689938),
-    L = n(779077);
-let y = (0, d.hQ)();
-function j(e, t) {
+        return ('string' === t ? String : Number)(e);
+    })(e, 'string');
+    return 'symbol' === O(t) ? t : String(t);
+}
+function O(e) {
+    return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
+}
+let N = (0, d.hQ)();
+function k(e, t) {
     return t ? e.slice(1) : e;
 }
-function p(e) {
+function C(e) {
     let t,
-        { guild: n, channel: r, permission: i, pendingAdditions: c, setPendingAdditions: d, isStageChannel: u = null != r && r.isGuildStageVoice(), description: m } = e,
-        [E, S] = l.useState(!1),
-        [f, L] = l.useState(''),
-        y = (0, a.e7)([x.Z], () => x.Z.getRoles(n.id));
-    function p(e) {
-        let t = j(f.trim(), E);
-        return RegExp(''.concat(T.Z.escape(t)), 'i').test(e);
+        { guild: r, channel: a, permission: s, pendingAdditions: c, setPendingAdditions: d, isStageChannel: u = null != a && a.isGuildStageVoice(), description: m } = e,
+        [b, y] = l.useState(!1),
+        [E, S] = l.useState(''),
+        w = (0, i.e7)([h.Z], () => h.Z.getRoles(r.id));
+    function O(e) {
+        let t = k(E.trim(), b);
+        return RegExp(''.concat(p.Z.escape(t)), 'i').test(e);
     }
-    let v = (0, a.Wu)([h.ZP], () => h.ZP.getMemberIds(n.id));
-    E ? (t = []) : u ? (t = M.Wx(n, y, r, i, p)) : 0 === (t = M.ik(n, y, r, i, p)).length && '' === f.trim() && !M.RD(n, y) && (t = M.aq());
-    let C = M.iI(v, r, n, i, p),
+    let N = (0, i.Wu)([x.ZP], () => x.ZP.getMemberIds(r.id));
+    b ? (t = []) : u ? (t = g.Wx(r, w, a, s, O)) : 0 !== (t = g.ik(r, w, a, s, O)).length || '' !== E.trim() || g.RD(r, w) || (t = g.aq());
+    let C = g.iI(N, a, r, s, O),
         {
-            placeholderText: w,
-            hintText: Z,
-            renderEmptyText: _
-        } = (function () {
-            return {
-                placeholderText: A.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_PLACEHOLDER,
-                hintText: A.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_SUBTITLE,
-                renderEmptyText: (e) => A.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_RESULT.format({ query: e })
-            };
-        })();
-    return (0, s.jsx)(N, {
+            placeholderText: M,
+            hintText: P,
+            renderEmptyText: Z
+        } = {
+            placeholderText: T.NW.string(T.t.iezLLi),
+            hintText: T.NW.string(T.t['rwFx8/']),
+            renderEmptyText: (e) => T.NW.format(T.t.ErpIY2, { query: e })
+        };
+    return (0, n.jsx)(L, {
         pendingAdditions: c,
-        query: f,
+        query: E,
         onQueryChange: function (e) {
             let t = e.trim(),
-                s = '@' === t.charAt(0);
-            R.Z.requestMembers(n.id, j(t, s), b.EQ), L(e), S(s);
+                n = '@' === t.charAt(0);
+            f.Z.requestMembers(r.id, k(t, n), v.EQ), S(e), y(n);
         },
         onClickRow: function (e) {
-            let t = (0, g.G)(e);
-            d((n) => {
-                let s = { ...n };
-                if (t in s) delete s[t];
+            let t = (0, j.G)(e);
+            d((r) => {
+                let n = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var r = null != arguments[t] ? arguments[t] : {},
+                            n = Object.keys(r);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                })
+                            )),
+                            n.forEach(function (t) {
+                                var n;
+                                (n = r[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: n,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = n);
+                            });
+                    }
+                    return e;
+                })({}, r);
+                if (t in n) delete n[t];
                 else {
-                    let n;
-                    e.rowType === b.aC.ROLE || e.rowType === b.aC.ADMINISTRATOR
-                        ? (n = {
+                    let r;
+                    e.rowType === v.aC.ROLE || e.rowType === v.aC.ADMINISTRATOR
+                        ? (r = {
                               type: o.Fj.ROLE,
                               label: e.name,
                               color: e.colorString
                           })
-                        : (e.rowType === b.aC.MEMBER || e.rowType === b.aC.OWNER) &&
-                          (n = {
+                        : (e.rowType === v.aC.MEMBER || e.rowType === v.aC.OWNER) &&
+                          (r = {
                               type: o.Fj.MEMBER,
                               label: e.name,
                               avatar: e.avatarURL
                           }),
-                        null != n &&
-                            (s[t] = {
-                                display: n,
+                        null != r &&
+                            (n[t] = {
+                                display: r,
                                 row: e
                             });
                 }
-                return s;
+                return n;
             });
         },
         onRemovePendingAddition: function (e) {
             d((t) => {
-                let { [e]: n, ...s } = t;
-                return s;
+                let { [e]: r } = t;
+                return (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        l = (function (e, t) {
+                            if (null == e) return {};
+                            var r,
+                                n,
+                                l = {},
+                                i = Object.keys(e);
+                            for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                            return l;
+                        })(e, t);
+                    if (Object.getOwnPropertySymbols) {
+                        var i = Object.getOwnPropertySymbols(e);
+                        for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                    }
+                    return l;
+                })(t, [e].map(R));
             });
         },
         roles: t,
         members: C,
-        placeholderText: w,
-        hintText: Z,
-        renderEmptyText: _,
+        placeholderText: M,
+        hintText: P,
+        renderEmptyText: Z,
         isStageChannel: u,
         description: m
     });
 }
-function N(e) {
+function L(e) {
     let t,
-        { listClassName: n, pendingAdditions: l, query: a, onQueryChange: i, onClickRow: o, onRemovePendingAddition: c, roles: d, members: u, placeholderText: m, hintText: h, renderEmptyText: x, isStageChannel: E, focusSearchAfterReady: S, isReady: R, description: T } = e;
-    return (0, s.jsxs)('div', {
-        className: L.content,
+        { listClassName: r, pendingAdditions: l, query: i, onQueryChange: s, onClickRow: o, onRemovePendingAddition: c, roles: d, members: u, placeholderText: m, hintText: x, renderEmptyText: h, isStageChannel: b, focusSearchAfterReady: y, isReady: f, description: p } = e;
+    return (0, n.jsxs)('div', {
+        className: w.content,
         children: [
-            (null == (t = T) && E && (t = A.Z.Messages.CHANNEL_PERMISSIONS_MODERATOR_DESCRIPTION), null == t || '' === t)
+            (null == (t = p) && b && (t = T.NW.string(T.t.f7VbhI)), null == t || '' === t)
                 ? null
-                : (0, s.jsx)(r.Text, {
+                : (0, n.jsx)(a.Text, {
                       color: 'header-secondary',
-                      className: L.description,
+                      className: w.description,
                       variant: 'text-sm/normal',
                       children: t
                   }),
-            (0, s.jsx)(g.Z, {
-                listClassName: n,
+            (0, n.jsx)(j.Z, {
+                listClassName: r,
                 pendingAdditions: l,
-                query: a,
-                onQueryChange: i,
+                query: i,
+                onQueryChange: s,
                 onClickRow: o,
                 onRemovePendingAddition: c,
                 roles: d,
                 members: u,
                 placeholderText: m,
-                hintText: h,
-                renderEmptyText: x,
-                disabledText: E ? A.Z.Messages.CHANNEL_PERMISSIONS_ROLE_ALREADY_HAS_PERMISSIONS : null,
-                focusSearchAfterReady: S,
-                isReady: R
+                hintText: x,
+                renderEmptyText: h,
+                disabledText: b ? T.NW.string(T.t.MVVOCg) : null,
+                focusSearchAfterReady: y,
+                isReady: f,
+                maxCount: S.ey
             })
         ]
     });
 }
-function v(e) {
-    let { transitionState: t, onClose: n, channelId: o, newChannel: d, inSettings: h } = e,
-        [R, T] = l.useState(!1),
-        [M, g] = l.useState({}),
-        j = (0, a.e7)([m.Z], () => m.Z.getChannel(o), [o]),
-        N = (0, a.e7)([x.Z], () => x.Z.getGuild(null == j ? void 0 : j.getGuildId()));
+function M(e) {
+    let { transitionState: t, onClose: r, channelId: o, newChannel: d, inSettings: x } = e,
+        [f, p] = l.useState(!1),
+        [g, j] = l.useState({}),
+        S = (0, i.e7)([m.Z], () => m.Z.getChannel(o), [o]),
+        R = (0, i.e7)([h.Z], () => h.Z.getGuild(null == S ? void 0 : S.getGuildId()));
     if (
         (l.useEffect(() => {
-            E.default.track(f.rMx.OPEN_MODAL, { type: 'Grant Channel Access' });
+            b.default.track(E.rMx.OPEN_MODAL, { type: 'Grant Channel Access' });
         }, []),
-        null == j || null == N)
+        null == S || null == R)
     )
         return null;
-    let v = d && 0 === Object.keys(M).length;
-    async function C() {
-        if (null == j || 0 === Object.keys(M).length) {
-            n();
-            return;
-        }
-        T(!0);
+    let O = d && 0 === Object.keys(g).length;
+    async function k() {
+        if (null == S || 0 === Object.keys(g).length) return void r();
+        p(!0);
         try {
-            await (function (e, t, n) {
-                let s = [];
+            await (function (e, t, r) {
+                let n = [];
                 return (
                     Object.values(t).forEach((t) => {
-                        let { row: n } = t;
-                        null != n.id && '' !== n.id && (n.rowType === b.aC.ROLE ? s.push((0, S.rX)(n.id, e.type)) : n.rowType === b.aC.MEMBER && s.push((0, S.jZ)(n.id, e.type)));
+                        let { row: r } = t;
+                        null != r.id && '' !== r.id && (r.rowType === v.aC.ROLE ? n.push((0, y.rX)(r.id, e.type)) : r.rowType === v.aC.MEMBER && n.push((0, y.jZ)(r.id, e.type)));
                     }),
-                    (0, i.hw)(e.id, s, n)
+                    (0, s.hw)(e.id, n, r)
                 );
-            })(j, M, h),
-                n(),
-                T(!1);
+            })(S, g, x),
+                r(),
+                p(!1);
         } catch (e) {
-            T(!1);
+            p(!1);
         }
     }
-    let w = (0, u.zi)(j.type) ? r.TextLockIcon : r.VoiceLockIcon;
-    return (0, s.jsxs)(r.ModalRoot, {
+    let L = (0, u.zi)(S.type) ? a.W4G : a.gjC;
+    return (0, n.jsxs)(a.Y0X, {
         transitionState: t,
-        size: r.ModalSize.SMALL,
-        'aria-labelledby': y,
-        className: L.modalRoot,
+        size: a.CgR.SMALL,
+        'aria-labelledby': N,
+        className: w.modalRoot,
         children: [
-            (0, s.jsxs)(r.ModalHeader, {
+            (0, n.jsxs)(a.xBx, {
                 separator: !1,
                 direction: c.Z.Direction.VERTICAL,
                 align: c.Z.Align.CENTER,
-                className: L.header,
+                className: w.header,
                 children: [
-                    (0, s.jsx)(r.Heading, {
-                        id: y,
+                    (0, n.jsx)(a.X6q, {
+                        id: N,
                         variant: 'heading-xl/semibold',
-                        children: A.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
+                        children: T.NW.string(T.t.dMJ3Y2)
                     }),
-                    (0, s.jsxs)(r.Text, {
+                    (0, n.jsxs)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: L.headerSubtitle,
+                        className: w.headerSubtitle,
                         children: [
-                            (0, s.jsx)(w, {
+                            (0, n.jsx)(L, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: L.headerSubtitleIcon
+                                className: w.headerSubtitleIcon
                             }),
-                            j.name
+                            S.name
                         ]
                     })
                 ]
             }),
-            (0, s.jsx)(p, {
-                guild: N,
-                channel: j,
-                permission: j.accessPermissions,
-                pendingAdditions: M,
-                setPendingAdditions: g
+            (0, n.jsx)(C, {
+                guild: R,
+                channel: S,
+                permission: S.accessPermissions,
+                pendingAdditions: g,
+                setPendingAdditions: j
             }),
-            (0, s.jsxs)(r.ModalFooter, {
+            (0, n.jsxs)(a.mzw, {
                 children: [
-                    !v &&
-                        (0, s.jsxs)(s.Fragment, {
+                    !O &&
+                        (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, s.jsx)(r.Button, {
-                                    onClick: C,
-                                    look: r.Button.Looks.FILLED,
-                                    size: r.Button.Sizes.SMALL,
-                                    className: L.button,
-                                    submitting: R,
-                                    children: A.Z.Messages.DONE
+                                (0, n.jsx)(a.zxk, {
+                                    onClick: k,
+                                    look: a.zxk.Looks.FILLED,
+                                    size: a.zxk.Sizes.SMALL,
+                                    className: w.button,
+                                    submitting: f,
+                                    children: T.NW.string(T.t.i4jeWV)
                                 }),
-                                (0, s.jsx)(r.Button, {
-                                    look: r.Button.Looks.LINK,
-                                    color: r.Button.Colors.TRANSPARENT,
-                                    onClick: n,
-                                    size: r.Button.Sizes.SMALL,
-                                    children: A.Z.Messages.CANCEL
+                                (0, n.jsx)(a.zxk, {
+                                    look: a.zxk.Looks.LINK,
+                                    color: a.zxk.Colors.TRANSPARENT,
+                                    onClick: r,
+                                    size: a.zxk.Sizes.SMALL,
+                                    children: T.NW.string(T.t['ETE/oK'])
                                 })
                             ]
                         }),
-                    v &&
-                        (0, s.jsx)(r.Button, {
-                            look: r.Button.Looks.FILLED,
-                            color: r.Button.Colors.PRIMARY,
-                            onClick: n,
-                            size: r.Button.Sizes.SMALL,
-                            children: A.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_SKIP
+                    O &&
+                        (0, n.jsx)(a.zxk, {
+                            look: a.zxk.Looks.FILLED,
+                            color: a.zxk.Colors.PRIMARY,
+                            onClick: r,
+                            size: a.zxk.Sizes.SMALL,
+                            children: T.NW.string(T.t.u46sxc)
                         })
                 ]
             })

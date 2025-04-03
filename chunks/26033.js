@@ -1,59 +1,54 @@
 n.d(t, {
-    Cb: function () {
-        return a;
-    },
-    KF: function () {
-        return u;
-    },
-    Mq: function () {
-        return E;
-    },
-    Q0: function () {
-        return s;
-    },
-    aA: function () {
-        return _;
-    },
-    dU: function () {
-        return l;
-    },
-    dX: function () {
-        return o;
-    },
-    kq: function () {
-        return c;
-    },
-    y0: function () {
-        return d;
-    }
+    Cb: () => o,
+    KF: () => u,
+    Mq: () => m,
+    Q0: () => a,
+    Rh: () => g,
+    aA: () => h,
+    dU: () => c,
+    dX: () => s,
+    kq: () => d,
+    m9: () => l,
+    y0: () => f
 });
 var r = n(876215),
     i = n(758713);
-function a(e) {
+function o(e) {
     return (null == e ? void 0 : e.content_type) === r.s.PLAYED_GAME;
 }
-function s(e) {
+function a(e) {
     return (null == e ? void 0 : e.content_type) === r.s.TOP_GAME;
 }
-function o(e) {
-    return a(e) || s(e);
+function s(e) {
+    return o(e) || a(e);
 }
 function l(e) {
+    return (null == e ? void 0 : e.extra) != null && 'application_id' in (null == e ? void 0 : e.extra);
+}
+function c(e) {
     return (null == e ? void 0 : e.content_type) === r.s.LISTENED_SESSION;
 }
 function u(e) {
     return (null == e ? void 0 : e.content_type) === r.s.TOP_ARTIST;
 }
-function c(e) {
-    return l(e) || u(e);
-}
 function d(e) {
+    return c(e) || u(e);
+}
+function f(e) {
     return (null == e ? void 0 : e.content_type) === r.s.WATCHED_MEDIA;
 }
 function _(e) {
-    var t, n;
-    return (!!o((t = e)) && t.extra.platform === i.z.XBOX) || (!!o((n = e)) && n.extra.platform === i.z.PLAYSTATION);
+    return !!s(e) && e.extra.platform === i.z.XBOX;
 }
-function E(e) {
+function p(e) {
+    return !!s(e) && e.extra.platform === i.z.PLAYSTATION;
+}
+function h(e) {
+    return _(e) || p(e);
+}
+function m(e) {
     return (null == e ? void 0 : e.content_type) === r.s.LAUNCHED_ACTIVITY;
+}
+function g(e) {
+    return s(e) || c(e) || f(e) || l(e);
 }

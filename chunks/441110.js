@@ -1,37 +1,40 @@
-var r = n(735250),
-    i = n(470079),
-    a = n(481060),
-    s = n(367907),
-    o = n(524444),
-    l = n(297047),
-    u = n(592125),
-    c = n(944486),
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
+var o = n(481060),
+    a = n(493773),
+    i = n(367907),
+    s = n(524444),
+    c = n(297047),
+    l = n(592125),
+    u = n(944486),
     d = n(626135),
-    _ = n(981631),
-    E = n(689938),
-    f = n(175095);
-t.Z = function (e) {
-    let { guild: t, message: n, onClose: h } = e,
-        p = u.Z.getChannel(c.Z.getChannelId(t.id));
-    return (i.useEffect(() => {
-        d.default.track(_.rMx.OPEN_POPOUT, {
+    p = n(981631),
+    g = n(388032),
+    m = n(400822);
+let f = function (e) {
+    let { guild: t, message: n, onClose: f } = e,
+        _ = l.Z.getChannel(u.Z.getChannelId(t.id));
+    return ((0, a.ZP)(() => {
+        d.default.track(p.rMx.OPEN_POPOUT, {
             type: 'New Member Badge Popout',
             guild_id: t.id,
-            channel_id: null == p ? void 0 : p.id
+            channel_id: null == _ ? void 0 : _.id
         });
-    }, []),
-    null == p)
+    }),
+    null == _)
         ? null
-        : (0, r.jsx)(o.W_, {
+        : (0, r.jsx)(s.W_, {
+              className: m.messagePopoutContent,
               children: (0, r.jsxs)('div', {
-                  className: f.popoutContainer,
+                  className: m.popoutContainer,
                   children: [
                       (0, r.jsxs)('div', {
-                          className: f.mainContent,
+                          className: m.mainContent,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: f.iconContainer,
-                                  children: (0, r.jsx)(a.NewUserIcon, {
+                                  className: m.iconContainer,
+                                  children: (0, r.jsx)(o.hg2, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 40,
@@ -40,29 +43,28 @@ t.Z = function (e) {
                               }),
                               (0, r.jsxs)('div', {
                                   children: [
-                                      (0, r.jsx)(a.Heading, {
+                                      (0, r.jsx)(o.X6q, {
                                           variant: 'heading-md/semibold',
-                                          className: f.header,
-                                          children: E.Z.Messages.NEW_MEMBER_BADGE_TOOLTIP_TEXT
+                                          className: m.header,
+                                          children: g.NW.string(g.t['v/OYd3'])
                                       }),
-                                      (0, r.jsx)(a.Text, {
+                                      (0, r.jsx)(o.Text, {
                                           variant: 'text-sm/normal',
-                                          children: E.Z.Messages.NEW_MEMBER_BADGE_POPOUT_TEXT
+                                          children: g.NW.string(g.t.Z85MlJ)
                                       })
                                   ]
                               })
                           ]
                       }),
-                      (0, r.jsx)(a.Button, {
-                          size: a.Button.Sizes.SMALL,
-                          color: a.Button.Colors.BRAND,
-                          className: f.ctaButton,
-                          innerClassName: f.ctaButtonContent,
+                      (0, r.jsx)(o.zxk, {
+                          size: o.zxk.Sizes.SMALL,
+                          color: o.zxk.Colors.BRAND,
+                          className: m.ctaButton,
                           fullWidth: !0,
                           onClick: () => {
-                              s.ZP.trackWithMetadata(_.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), h(), (0, l.q)(n.author, p.id);
+                              i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, c.q)(n.author, _.id);
                           },
-                          children: E.Z.Messages.MENTION_USER.format({ username: n.author.username })
+                          children: g.NW.format(g.t['+xsVS0'], { username: n.author.username })
                       })
                   ]
               })

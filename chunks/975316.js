@@ -1,50 +1,47 @@
-s.d(t, {
-    B: function () {
-        return h;
-    },
-    Z: function () {
-        return u;
-    }
+n.d(t, {
+    B: () => h,
+    Z: () => u
 });
-var n = s(735250);
-s(470079);
-var l = s(442837),
-    a = s(139387),
-    i = s(852860),
-    r = s(490655),
-    o = s(533947),
-    d = s(388610),
-    c = s(430824);
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(139387),
+    s = n(852860),
+    a = n(490655),
+    o = n(533947),
+    c = n(388610),
+    d = n(430824);
 function u(e) {
     let { refToScroller: t } = e,
-        { channel: s } = (0, l.e7)([d.Z], () => d.Z.getProps(), []),
-        a = (0, l.e7)([c.Z], () => (null != s ? c.Z.getGuild(s.getGuildId()) : null), [s]),
-        { section: i, sectionId: u, webhooks: h, editedWebhook: m, isFetching: g, errors: E } = (0, l.e7)([o.Z], () => o.Z.getProps(), []);
-    return null == a || null == s
+        n = (0, i.e7)([c.Z], () => c.Z.getChannel(), []),
+        l = (0, i.e7)([d.Z], () => (null != n ? d.Z.getGuild(n.getGuildId()) : null), [n]),
+        { section: s, sectionId: u, webhooks: h, editedWebhook: g, isFetching: m, errors: p } = (0, i.cj)([o.Z], () => o.Z.getProps(), []);
+    return null == l || null == n
         ? null
-        : (0, n.jsx)(r.Z, {
-              guild: a,
-              channel: s,
-              section: i,
+        : (0, r.jsx)(a.Z, {
+              guild: l,
+              channel: n,
+              section: s,
               sectionId: u,
               webhooks: h,
-              editedWebhook: m,
-              isFetching: g,
+              editedWebhook: g,
+              isFetchingWebhooks: m,
               hasChanges: o.Z.hasChanges,
-              errors: E,
+              errors: p,
               refToScroller: t
           });
 }
 function h() {
-    let { channel: e, submitting: t } = (0, l.e7)([d.Z], () => d.Z.getProps()),
-        s = (0, l.e7)([c.Z], () => (null != e ? c.Z.getGuild(e.getGuildId()) : null), [e]);
-    return (0, n.jsx)(i.Z, {
+    let { channel: e, submitting: t } = (0, i.cj)([c.Z], () => c.Z.getProps()),
+        n = (0, i.e7)([o.Z], () => o.Z.editedWebhook),
+        a = (0, i.e7)([d.Z], () => (null != e ? d.Z.getGuild(e.getGuildId()) : null), [e]);
+    return (0, r.jsx)(s.Z, {
         submitting: t,
         onReset: () => {
-            a.Z.init();
+            l.Z.init();
         },
         onSave: () => {
-            if (null != s) null != o.Z.editedWebhook && a.Z.saveWebhook(s.id, o.Z.editedWebhook);
+            null != a && null != n && l.Z.saveWebhook(a.id, n);
         }
     });
 }

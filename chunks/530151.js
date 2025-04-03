@@ -1,39 +1,39 @@
-n(411104), n(47120), n(724458), n(653041);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(392711),
-    o = n.n(l),
+n.d(t, { Z: () => $ }), n(411104), n(47120), n(653041);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(392711),
+    s = n.n(o),
     c = n(442837),
-    d = n(692547),
-    u = n(780384),
-    _ = n(481060),
-    E = n(570140),
-    h = n(239091),
-    m = n(51025),
-    I = n(785547),
-    g = n(730749),
-    p = n(112724),
-    T = n(812206),
-    S = n(44315),
-    f = n(600164),
-    C = n(167533),
-    N = n(925329),
-    A = n(707409),
-    v = n(210887),
-    Z = n(283595),
-    L = n(417363),
-    O = n(941128),
-    R = n(451478),
-    x = n(424218),
-    b = n(780570),
-    P = n(353042),
-    M = n(86826),
-    D = n(981631),
-    y = n(689938),
-    j = n(316366);
-function U(e, t, n) {
+    u = n(692547),
+    d = n(780384),
+    p = n(481060),
+    h = n(570140),
+    f = n(239091),
+    g = n(51025),
+    m = n(785547),
+    b = n(730749),
+    _ = n(112724),
+    E = n(812206),
+    O = n(44315),
+    N = n(600164),
+    y = n(167533),
+    I = n(925329),
+    v = n(707409),
+    C = n(210887),
+    S = n(283595),
+    T = n(417363),
+    P = n(941128),
+    j = n(451478),
+    A = n(424218),
+    Z = n(780570),
+    x = n(353042),
+    L = n(86826),
+    w = n(981631),
+    R = n(388032),
+    D = n(292926);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,233 +46,230 @@ function U(e, t, n) {
         e
     );
 }
-let G = (e) => {
-        let { className: t, children: n, onContextMenu: a, item: s } = e;
-        return (0, i.jsx)('div', {
+let M = (e) => {
+        let { className: t, children: n, onContextMenu: i, item: l } = e;
+        return (0, r.jsx)('div', {
             className: t,
-            onContextMenu: (e) => a(e, s),
+            onContextMenu: (e) => i(e, l),
             children: n
         });
     },
-    k = [d.Z.unsafe_rawColors.BLUE_345.css, d.Z.colors.INTERACTIVE_NORMAL.css],
-    w = (e) => {
-        let { tooltip: t, onClick: n, icon: a } = e;
-        return (0, i.jsx)(_.Tooltip, {
+    U = [u.Z.unsafe_rawColors.BLUE_345.css, u.Z.colors.INTERACTIVE_NORMAL.css],
+    G = (e) => {
+        let { tooltip: t, onClick: n, icon: i } = e;
+        return (0, r.jsx)(p.ua7, {
             text: t,
             children: (e) => {
-                let { onMouseEnter: s, onMouseLeave: r } = e;
-                return (0, i.jsx)(_.Button, {
+                let { onMouseEnter: l, onMouseLeave: a } = e;
+                return (0, r.jsx)(p.zxk, {
                     'aria-label': t,
-                    className: j.actionButton,
-                    innerClassName: j.actionButtonContents,
-                    color: _.Button.Colors.PRIMARY,
-                    size: _.Button.Sizes.ICON,
+                    className: D.actionButton,
+                    innerClassName: D.actionButtonContents,
+                    color: p.zxk.Colors.PRIMARY,
+                    size: p.zxk.Sizes.ICON,
                     onClick: n,
-                    onMouseEnter: s,
-                    onMouseLeave: r,
-                    children: (0, i.jsx)(a, { className: j.actionIcon })
+                    onMouseEnter: l,
+                    onMouseLeave: a,
+                    children: (0, r.jsx)(i, { className: D.actionIcon })
                 });
             }
         });
     };
-function B(e, t) {
+function W(e, t) {
     switch (t) {
-        case D.f07.POST_INSTALL_SCRIPTS:
-        case D.f07.PLANNING:
-        case D.f07.FINALIZING:
-        case D.f07.ALLOCATING_DISK:
+        case w.f07.POST_INSTALL_SCRIPTS:
+        case w.f07.PLANNING:
+        case w.f07.FINALIZING:
+        case w.f07.ALLOCATING_DISK:
             return ''.concat(e);
         default:
-            return (0, x.BU)(e, { useKibibytes: !0 });
+            return (0, A.BU)(e, { useKibibytes: !0 });
     }
 }
-let H = {
-    [D.vxO.INSTALLING]: {
-        [A.J6.NONE]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+let V = {
+    [w.vxO.INSTALLING]: {
+        [v.J6.NONE]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t.JfJt9f, {
                 percent: e,
                 progress: t,
                 total: n
             }),
-        [A.J6.SECONDS]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+        [v.J6.SECONDS]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t['1z3c6e'], {
                 percent: e,
                 progress: t,
                 total: n,
-                timeRemaining: i
+                timeRemaining: r
             }),
-        [A.J6.MINUTES]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+        [v.J6.MINUTES]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t.PCX509, {
                 percent: e,
                 progress: t,
                 total: n,
-                timeRemaining: i
+                timeRemaining: r
             }),
-        [A.J6.HOURS]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+        [v.J6.HOURS]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t['3VG9s7'], {
                 percent: e,
                 progress: t,
                 total: n,
-                timeRemaining: i
+                timeRemaining: r
             })
     },
-    [D.vxO.UPDATING]: {
-        [A.J6.NONE]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
+    [w.vxO.UPDATING]: {
+        [v.J6.NONE]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t.JsqXXF, {
                 percent: e,
                 progress: t,
                 total: n
             }),
-        [A.J6.SECONDS]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
+        [v.J6.SECONDS]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t['3BvVeX'], {
                 percent: e,
                 progress: t,
                 total: n,
-                timeRemaining: i
+                timeRemaining: r
             }),
-        [A.J6.MINUTES]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
+        [v.J6.MINUTES]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t.rwULn5, {
                 percent: e,
                 progress: t,
                 total: n,
-                timeRemaining: i
+                timeRemaining: r
             }),
-        [A.J6.HOURS]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
+        [v.J6.HOURS]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t.adcitL, {
                 percent: e,
                 progress: t,
                 total: n,
-                timeRemaining: i
+                timeRemaining: r
             })
     },
-    [D.vxO.REPAIRING]: {
-        [A.J6.NONE]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+    [w.vxO.REPAIRING]: {
+        [v.J6.NONE]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t.JfJt9f, {
                 percent: e,
                 progress: t,
                 total: n
             }),
-        [A.J6.SECONDS]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+        [v.J6.SECONDS]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t['1z3c6e'], {
                 percent: e,
                 progress: t,
                 total: n,
-                timeRemaining: i
+                timeRemaining: r
             }),
-        [A.J6.MINUTES]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+        [v.J6.MINUTES]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t.PCX509, {
                 percent: e,
                 progress: t,
                 total: n,
-                timeRemaining: i
+                timeRemaining: r
             }),
-        [A.J6.HOURS]: (e, t, n, i) =>
-            y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+        [v.J6.HOURS]: (e, t, n, r) =>
+            R.NW.formatToPlainString(R.t['3VG9s7'], {
                 percent: e,
                 progress: t,
                 total: n,
-                timeRemaining: i
+                timeRemaining: r
             })
     }
 };
-function V(e, t, n, i, a) {
-    let s = H[t],
-        r = null != s ? Object.keys(s) : [],
-        { unit: l, time: o } = (0, A.CI)(null != e ? e / 60 : null, r);
-    if (null != s && null != l) {
-        let e = s[l];
-        return null != e ? e(n, i, a, o) : null;
+function B(e, t, n, r, i) {
+    let l = V[t],
+        a = null != l ? Object.keys(l) : [],
+        { unit: o, time: s } = (0, v.CI)(null != e ? e / 60 : null, a);
+    if (null != l && null != o) {
+        let e = l[o];
+        return null != e ? e(n, r, i, s) : null;
     }
     return null;
 }
-function F(e) {
-    let { type: t, stage: n, percent: i, progress: a, total: s, secondsRemaining: r } = e,
-        l = B(s, n),
-        o = B(a, n);
+function H(e) {
+    let { type: t, stage: n, percent: r, progress: i, total: l, secondsRemaining: a } = e,
+        o = W(l, n),
+        s = W(i, n);
     switch (n) {
-        case D.f07.QUEUED:
-            if (0 === a) return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_WAITING_FOR_ANOTHER_NO_TRANSITION;
-            return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_WAITING_FOR_ANOTHER.format({
-                percent: i,
-                progress: o,
-                total: l
+        case w.f07.QUEUED:
+            if (0 === i) return R.NW.string(R.t.RpfBqa);
+            return R.NW.formatToPlainString(R.t.uNjCXV, {
+                percent: r,
+                progress: s,
+                total: o
             });
-        case D.f07.PLANNING:
-            return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PLANNING.format({ percent: i });
-        case D.f07.ALLOCATING_DISK:
-            return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_ALLOCATING_DISK.format({ percent: i });
-        case D.f07.PATCHING:
-            return V(r, t, i, o, l);
-        case D.f07.FINALIZING:
-            return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINALIZING.format({ percent: i });
-        case D.f07.PAUSING:
-            return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSING.format({
-                percent: i,
-                progress: o,
-                total: l
+        case w.f07.PLANNING:
+            return R.NW.formatToPlainString(R.t.sfuCUV, { percent: r });
+        case w.f07.ALLOCATING_DISK:
+            return R.NW.formatToPlainString(R.t.XigoJy, { percent: r });
+        case w.f07.PATCHING:
+            return B(a, t, r, s, o);
+        case w.f07.FINALIZING:
+            return R.NW.formatToPlainString(R.t['6PHDUF'], { percent: r });
+        case w.f07.PAUSING:
+            return R.NW.formatToPlainString(R.t.vjxhWl, {
+                percent: r,
+                progress: s,
+                total: o
             });
-        case D.f07.VERIFYING:
-            return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_VERIFYING.format({
-                percent: i,
-                progress: o,
-                total: l
+        case w.f07.VERIFYING:
+            return R.NW.formatToPlainString(R.t.bbilvr, {
+                percent: r,
+                progress: s,
+                total: o
             });
-        case D.f07.POST_INSTALL_SCRIPTS:
-            return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_POST_INSTALL_SCRIPTS.format({
-                percent: i,
-                progress: o,
-                total: l
+        case w.f07.POST_INSTALL_SCRIPTS:
+            return R.NW.formatToPlainString(R.t.c5vRUl, {
+                percent: r,
+                progress: s,
+                total: o
             });
-        case D.f07.REPAIRING:
-            if (t === D.vxO.REPAIRING) return V(r, t, i, o, l);
-            return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_REPAIRING.format({
-                percent: i,
-                progress: o,
-                total: l
+        case w.f07.REPAIRING:
+            if (t === w.vxO.REPAIRING) return B(a, t, r, s, o);
+            return R.NW.formatToPlainString(R.t.OCzETU, {
+                percent: r,
+                progress: s,
+                total: o
             });
     }
     throw Error('Invalid Dispatch stage');
 }
-let Y = 'name',
-    W = 'progress',
-    z = 'actions';
-class K extends a.PureComponent {
+class F extends i.PureComponent {
     get isFocused() {
         let { cellProps: e } = this.props;
         return null != e && e.isFocused;
     }
     renderBody(e) {
-        let { percent: t, foregroundColor: n, foregroundGradientColor: a, message: s } = e;
-        return (0, i.jsxs)(f.Z, {
-            direction: f.Z.Direction.VERTICAL,
+        let { percent: t, foregroundColor: n, foregroundGradientColor: i, message: l } = e;
+        return (0, r.jsxs)(N.Z, {
+            direction: N.Z.Direction.VERTICAL,
             children: [
-                (0, i.jsx)(_.Progress, {
+                (0, r.jsx)(p.Exd, {
                     percent: t,
-                    size: _.Progress.Sizes.SMALL,
-                    foregroundColor: (0, S.Lq)(n),
-                    foregroundGradientColor: null != a ? [(0, S.Lq)(a[0]), (0, S.Lq)(a[1])] : void 0,
+                    size: p.Exd.Sizes.SMALL,
+                    foregroundColor: (0, O.Lq)(n),
+                    foregroundGradientColor: null != i ? [(0, O.Lq)(i[0]), (0, O.Lq)(i[1])] : void 0,
                     animate: this.isFocused
                 }),
-                (0, i.jsx)('div', {
-                    className: j.progressCellText,
-                    children: null != s ? s : ''
+                (0, r.jsx)('div', {
+                    className: D.progressCellText,
+                    children: null != l ? l : ''
                 })
             ]
         });
     }
     renderStackedProgress(e) {
         let { percents: t, message: n } = e;
-        return (0, i.jsxs)(f.Z, {
-            direction: f.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(N.Z, {
+            direction: N.Z.Direction.VERTICAL,
             children: [
-                (0, i.jsx)(_.StackedProgress, {
+                (0, r.jsx)(p.yGy, {
                     percents: t,
-                    size: _.Progress.Sizes.SMALL,
-                    foregroundColors: k,
+                    size: p.yGy.Sizes.SMALL,
+                    foregroundColors: U,
                     animate: this.isFocused
                 }),
-                (0, i.jsx)('div', {
-                    className: j.progressCellText,
+                (0, r.jsx)('div', {
+                    className: D.progressCellText,
                     children: null != n ? n : ''
                 })
             ]
@@ -281,41 +278,42 @@ class K extends a.PureComponent {
     renderFinished() {
         let { item: e } = this.props;
         return this.renderBody({
-            message: y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({ remove: () => m.wi(e.applicationId, e.branchId) }),
-            foregroundColor: (0, u.ap)(e.theme) ? D.Ilk.PRIMARY_300 : D.Ilk.PRIMARY_500,
+            message: R.NW.format(R.t.z1oxGB, { remove: () => g.wi(e.applicationId, e.branchId) }),
+            foregroundColor: (0, d.ap)(e.theme) ? w.Ilk.PRIMARY_300 : w.Ilk.PRIMARY_500,
             percent: 100
         });
     }
     renderQueued() {
-        let e, t;
-        let {
-            item: { state: n, theme: i }
-        } = this.props;
+        let e,
+            t,
+            {
+                item: { state: n, theme: r }
+            } = this.props;
         if (null != n) {
-            let { progress: i, total: a, stage: s } = n;
-            if (null != i && null != a) {
-                let n = B(a, s),
-                    r = B(i, s),
-                    l = Math.floor((t = b.xI(i, a)));
+            let { progress: r, total: i, stage: l } = n;
+            if (null != r && null != i) {
+                let n = W(i, l),
+                    a = W(r, l),
+                    o = Math.floor((t = Z.xI(r, i)));
                 e =
-                    s === D.f07.PAUSING
-                        ? y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSING.format({
-                              percent: l,
-                              progress: r,
+                    l === w.f07.PAUSING
+                        ? R.NW.formatToPlainString(R.t.vjxhWl, {
+                              percent: o,
+                              progress: a,
                               total: n
                           })
-                        : y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_QUEUED.format({
-                              percent: l,
-                              progress: r,
+                        : R.NW.formatToPlainString(R.t.voT3Bg, {
+                              percent: o,
+                              progress: a,
                               total: n
                           });
             }
         }
         return (
-            (null == t || null == e) && ((t = 0), (e = y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_QUEUED_NO_TRANSITION)),
+            (null == t || null == e) && ((t = 0), (e = R.NW.string(R.t['qS+iKS']))),
             this.renderBody({
                 percent: t,
-                foregroundColor: (0, u.ap)(i) ? D.Ilk.PRIMARY_300 : D.Ilk.PRIMARY_500,
+                foregroundColor: (0, d.ap)(r) ? w.Ilk.PRIMARY_300 : w.Ilk.PRIMARY_500,
                 message: e
             })
         );
@@ -325,27 +323,27 @@ class K extends a.PureComponent {
             item: { state: e, theme: t }
         } = this.props;
         if (null == e) return null;
-        let { progress: n, total: i } = e;
-        if (null == n || null == i) return null;
-        let a = b.xI(n, i),
-            s = Math.floor(a),
-            r =
-                0 === n && 1 === i
-                    ? y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED_NO_TRANSITION
-                    : y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED.format({
-                          percent: s,
-                          progress: (0, x.BU)(n),
-                          total: (0, x.BU)(i)
+        let { progress: n, total: r } = e;
+        if (null == n || null == r) return null;
+        let i = Z.xI(n, r),
+            l = Math.floor(i),
+            a =
+                0 === n && 1 === r
+                    ? R.NW.string(R.t['+pfsFR'])
+                    : R.NW.formatToPlainString(R.t['+feX8f'], {
+                          percent: l,
+                          progress: (0, A.BU)(n),
+                          total: (0, A.BU)(r)
                       });
         return this.renderBody({
-            message: r,
-            foregroundColor: (0, u.ap)(t) ? D.Ilk.PRIMARY_300 : D.Ilk.PRIMARY_500,
-            percent: a
+            message: a,
+            foregroundColor: (0, d.ap)(t) ? w.Ilk.PRIMARY_300 : w.Ilk.PRIMARY_500,
+            percent: i
         });
     }
     renderProgressPatching() {
-        return (0, i.jsx)(P.Z, {
-            getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesWritten,
+        return (0, r.jsx)(x.Z, {
+            getHistoricalTotalBytes: T.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -353,27 +351,27 @@ class K extends a.PureComponent {
     renderProgressDefault() {
         let { state: e } = this.props.item;
         if (null == e) return null;
-        let { total: t, progress: n, stage: i, type: a } = e;
-        if (null == t || null == n || null == i) return null;
-        let s = b.xI(n, t),
-            r = Math.floor(s);
+        let { total: t, progress: n, stage: r, type: i } = e;
+        if (null == t || null == n || null == r) return null;
+        let l = Z.xI(n, t),
+            a = Math.floor(l);
         return this.renderBody({
-            percent: s,
-            message: F({
-                type: a,
-                stage: i,
-                percent: r,
+            percent: l,
+            message: H({
+                type: i,
+                stage: r,
+                percent: a,
                 progress: n,
                 total: t
             }),
-            foregroundColor: D.Ilk.BLUE_345
+            foregroundColor: w.Ilk.BLUE_345
         });
     }
     renderProgress() {
         let { state: e } = this.props.item;
         switch (null != e ? e.stage : null) {
-            case D.f07.PATCHING:
-            case D.f07.REPAIRING:
+            case w.f07.PATCHING:
+            case w.f07.REPAIRING:
                 return this.renderProgressPatching();
             default:
                 return this.renderProgressDefault();
@@ -383,124 +381,126 @@ class K extends a.PureComponent {
         let { item: e, cellProps: t } = this.props;
         if (e.finished) return this.renderFinished();
         if (e.index > 0) return this.renderQueued();
-        if (null != e.state && (e.state.type === D.vxO.UPDATING || e.state.type === D.vxO.REPAIRING || e.state.type === D.vxO.INSTALLING)) return null != t && t.paused ? this.renderPaused() : this.renderProgress();
+        if (null != e.state && (e.state.type === w.vxO.UPDATING || e.state.type === w.vxO.REPAIRING || e.state.type === w.vxO.INSTALLING))
+            if (null != t && t.paused) return this.renderPaused();
+            else return this.renderProgress();
         return null;
     }
     constructor(...e) {
         super(...e),
-            U(this, 'renderProgressPatchingBody', (e, t) => {
+            k(this, 'renderProgressPatchingBody', (e, t) => {
                 let {
                     item: { state: n }
                 } = this.props;
                 if (null == n) return null;
-                let { stage: i, progress: a, total: s, type: r, readerProgress: l } = n;
-                if (null == a || null == s || null == i) return null;
-                let o = b.xI(a, s),
-                    c = b.xI(null != l ? l : 0, s),
-                    d = (e[e.length - 1] / t) * 1000,
-                    u = s - a,
-                    _ = F({
-                        type: r,
-                        stage: i,
-                        percent: Math.floor(o),
-                        progress: a,
-                        total: s,
-                        secondsRemaining: 0 !== d ? Math.max(1, u / d) : null
+                let { stage: r, progress: i, total: l, type: a, readerProgress: o } = n;
+                if (null == i || null == l || null == r) return null;
+                let s = Z.xI(i, l),
+                    c = Z.xI(null != o ? o : 0, l),
+                    u = (e[e.length - 1] / t) * 1000,
+                    d = l - i,
+                    p = H({
+                        type: a,
+                        stage: r,
+                        percent: Math.floor(s),
+                        progress: i,
+                        total: l,
+                        secondsRemaining: 0 !== u ? Math.max(1, d / u) : null
                     });
                 return this.renderStackedProgress({
-                    percents: [o, c],
-                    message: _
+                    percents: [s, c],
+                    message: p
                 });
             });
     }
 }
-let q = () =>
-        (0, i.jsx)(w, {
-            icon: _.PlayIcon,
-            tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
-            onClick: () => m.v4()
+let z = () =>
+        (0, r.jsx)(G, {
+            icon: p.o1U,
+            tooltip: R.NW.string(R.t.YGm6SU),
+            onClick: () => g.v4()
         }),
-    Q = () =>
-        (0, i.jsx)(w, {
-            icon: _.PauseIcon,
-            tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
-            onClick: () => m.wO()
+    Y = () =>
+        (0, r.jsx)(G, {
+            icon: p.fpf,
+            tooltip: R.NW.string(R.t.TVAd5O),
+            onClick: () => g.wO()
         }),
-    X = (e) => {
+    K = (e) => {
         let { item: t } = e;
-        return (0, i.jsx)(w, {
-            icon: _.ArrowSmallUpIcon,
-            tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
-            onClick: () => m.A1(t.applicationId, t.branchId)
+        return (0, r.jsx)(G, {
+            icon: p.wj7,
+            tooltip: R.NW.string(R.t['Eqb+LC']),
+            onClick: () => g.A1(t.applicationId, t.branchId)
         });
     },
-    J = (e) => {
+    q = (e) => {
         let { item: t } = e;
-        return (0, i.jsx)(w, {
-            icon: _.XSmallIcon,
-            tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
-            onClick: () => m.al(t.applicationId, t.branchId)
+        return (0, r.jsx)(G, {
+            icon: p.Dio,
+            tooltip: R.NW.string(R.t['0lFmCw']),
+            onClick: () => g.al(t.applicationId, t.branchId)
         });
     },
-    $ = [
+    Q = [
         {
-            key: Y,
-            cellClassName: j.nameCell,
+            key: 'name',
+            cellClassName: D.nameCell,
             render: (e) =>
-                (0, i.jsxs)(f.Z, {
-                    align: f.Z.Align.CENTER,
+                (0, r.jsxs)(N.Z, {
+                    align: N.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(N.Z, {
+                        (0, r.jsx)(I.Z, {
                             game: e.application,
-                            className: j.__invalid_gameIcon,
-                            size: N.Z.Sizes.SMALL
+                            className: D.__invalid_gameIcon,
+                            size: I.Z.Sizes.SMALL
                         }),
-                        (0, i.jsx)('div', {
-                            className: j.nameCellText,
+                        (0, r.jsx)('div', {
+                            className: D.nameCellText,
                             children: e.application.name
                         })
                     ]
                 })
         },
         {
-            key: W,
-            cellClassName: j.progressCell,
-            headerCellClassName: j.progressCellHeader,
-            bodyCellClassName: j.progressCellBody,
+            key: 'progress',
+            cellClassName: D.progressCell,
+            headerCellClassName: D.progressCellHeader,
+            bodyCellClassName: D.progressCellBody,
             render: (e, t) =>
-                (0, i.jsx)(K, {
+                (0, r.jsx)(F, {
                     item: e,
                     cellProps: t
                 })
         },
         {
-            key: z,
-            cellClassName: j.actionsCell,
+            key: 'actions',
+            cellClassName: D.actionsCell,
             render(e, t) {
-                let n, a;
+                let n, i;
                 return (
                     e.finished
                         ? (n =
                               null != e.libraryApplication
-                                  ? (0, i.jsx)(I.Z, {
+                                  ? (0, r.jsx)(m.Z, {
                                         libraryApplication: e.libraryApplication,
-                                        size: _.Button.Sizes.SMALL,
-                                        className: j.gameActionButton,
-                                        source: D.Sbl.APPLICATION_LIBRARY_UPDATES
+                                        size: p.zxk.Sizes.SMALL,
+                                        className: D.gameActionButton,
+                                        source: w.Sbl.APPLICATION_LIBRARY_UPDATES
                                     })
                                   : null)
                         : null != e.state
-                          ? e.state.type !== D.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, i.jsx)(X, { item: e }) : null != t && t.paused ? (0, i.jsx)(q, {}) : (0, i.jsx)(Q, { item: e })), (a = (0, i.jsx)(J, { item: e })))
-                          : (a = (0, i.jsx)(J, { item: e })),
-                    (0, i.jsxs)(f.Z, {
-                        justify: f.Z.Justify.END,
-                        children: [n, a]
+                          ? e.state.type !== w.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, r.jsx)(K, { item: e }) : null != t && t.paused ? (0, r.jsx)(z, {}) : (0, r.jsx)(Y, { item: e })), (i = (0, r.jsx)(q, { item: e })))
+                          : (i = (0, r.jsx)(q, { item: e })),
+                    (0, r.jsxs)(N.Z, {
+                        justify: N.Z.Justify.END,
+                        children: [n, i]
                     })
                 );
             }
         }
     ];
-class ee extends a.PureComponent {
+class X extends i.PureComponent {
     componentDidMount() {
         window.addEventListener('resize', this.throttledUpdateHeight);
     }
@@ -511,84 +511,112 @@ class ee extends a.PureComponent {
         let { applications: e } = this.props;
         e.forEach((e) => {
             e.finished &&
-                E.Z.wait(() => {
-                    m.wi(e.applicationId, e.branchId);
+                h.Z.wait(() => {
+                    g.wi(e.applicationId, e.branchId);
                 });
         }),
             window.removeEventListener('resize', this.throttledUpdateHeight),
             (this.isUnmounted = !0);
     }
     render() {
-        let { applications: e, paused: t, isFocused: a, theme: s, analyticsContext: l } = this.props;
+        let { applications: e, paused: t, isFocused: i, theme: l, analyticsContext: o } = this.props;
         return 0 === e.length
             ? null
-            : (0, i.jsxs)('div', {
-                  className: j.gameUpdates,
+            : (0, r.jsxs)('div', {
+                  className: D.gameUpdates,
                   children: [
-                      (0, i.jsxs)('div', {
-                          className: j.headerRow,
+                      (0, r.jsxs)('div', {
+                          className: D.headerRow,
                           children: [
-                              (0, i.jsx)(M.Z, {
-                                  className: r()(j.headerCell, j.networkProgress),
-                                  title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
-                                  getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesDownloaded,
-                                  color: D.Ilk.GREEN_360,
-                                  animate: a
+                              (0, r.jsx)(L.Z, {
+                                  className: a()(D.headerCell, D.networkProgress),
+                                  title: R.NW.string(R.t.ytoXKi),
+                                  getHistoricalTotalBytes: T.Z.getHistoricalTotalBytesDownloaded,
+                                  color: w.Ilk.GREEN_360,
+                                  animate: i
                               }),
-                              (0, i.jsx)(M.Z, {
-                                  className: r()(j.headerCell, j.diskProgress),
-                                  title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
-                                  getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesWritten,
-                                  color: D.Ilk.BLUE_345,
-                                  animate: a
+                              (0, r.jsx)(L.Z, {
+                                  className: a()(D.headerCell, D.diskProgress),
+                                  title: R.NW.string(R.t.SjohhI),
+                                  getHistoricalTotalBytes: T.Z.getHistoricalTotalBytesWritten,
+                                  color: w.Ilk.BLUE_345,
+                                  animate: i
                               })
                           ]
                       }),
-                      (0, i.jsx)(C.Z, {
+                      (0, r.jsx)(y.Z, {
                           hasHeader: !1,
-                          columns: $,
+                          columns: Q,
                           data: e,
-                          className: j.table,
-                          rowClassName: j.row,
-                          rowComponent: G,
+                          className: D.table,
+                          rowClassName: D.row,
+                          rowComponent: M,
                           cellProps: {
                               paused: t,
-                              isFocused: a,
-                              theme: s
+                              isFocused: i,
+                              theme: l
                           },
                           rowProps: {
                               onContextMenu: (e, t) => {
-                                  var a, s, r;
-                                  return (
-                                      (a = e),
-                                      (s = t),
-                                      (r = l),
-                                      void h.jW(a, async () => {
-                                          let { default: e } = await n.e('98335').then(n.bind(n, 485292));
-                                          return (t) =>
-                                              (0, i.jsx)(e, {
-                                                  ...t,
-                                                  applicationId: s.applicationId,
-                                                  branchId: s.branchId,
-                                                  analyticsContext: r
-                                              });
-                                      })
-                                  );
+                                  f.jW(e, async () => {
+                                      let { default: e } = await n.e('98335').then(n.bind(n, 485292));
+                                      return (n) => {
+                                          var i, l;
+                                          return (0, r.jsx)(
+                                              e,
+                                              ((i = (function (e) {
+                                                  for (var t = 1; t < arguments.length; t++) {
+                                                      var n = null != arguments[t] ? arguments[t] : {},
+                                                          r = Object.keys(n);
+                                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                                          (r = r.concat(
+                                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                              })
+                                                          )),
+                                                          r.forEach(function (t) {
+                                                              k(e, t, n[t]);
+                                                          });
+                                                  }
+                                                  return e;
+                                              })({}, n)),
+                                              (l = l =
+                                                  {
+                                                      applicationId: t.applicationId,
+                                                      branchId: t.branchId,
+                                                      analyticsContext: o
+                                                  }),
+                                              Object.getOwnPropertyDescriptors
+                                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                                  : (function (e, t) {
+                                                        var n = Object.keys(e);
+                                                        if (Object.getOwnPropertySymbols) {
+                                                            var r = Object.getOwnPropertySymbols(e);
+                                                            n.push.apply(n, r);
+                                                        }
+                                                        return n;
+                                                    })(Object(l)).forEach(function (e) {
+                                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                                    }),
+                                              i)
+                                          );
+                                      };
+                                  });
                               }
                           },
-                          bodyCellClassName: j.cell
+                          bodyCellClassName: D.cell
                       })
                   ]
               });
     }
     constructor(...e) {
         super(...e),
-            U(this, 'isUnmounted', !1),
-            U(this, 'isTallerThanHalfViewport', !1),
-            U(
+            k(this, 'isUnmounted', !1),
+            k(this, 'isTallerThanHalfViewport', !1),
+            k(
                 this,
                 'throttledUpdateHeight',
-                o().throttle(() => {
+                s().throttle(() => {
                     if (this.isUnmounted) return;
                     let { height: e, onHeightTallerThanHalfViewportChange: t } = this.props,
                         n = e > window.innerHeight / 2;
@@ -597,35 +625,32 @@ class ee extends a.PureComponent {
             );
     }
 }
-function et(e, t, n, i) {
-    return e.reduce((e, a, s) => {
-        let { applicationId: r, branchId: l } = a,
-            o = n.getApplication(r),
-            c = i.getState(r, l);
+function J(e, t, n, r) {
+    return e.reduce((e, i, l) => {
+        let { applicationId: a, branchId: o } = i,
+            s = n.getApplication(a),
+            c = r.getState(a, o);
         return (
-            null != o &&
+            null != s &&
                 e.push({
-                    key: ''.concat(r, ':').concat(l),
-                    applicationId: r,
-                    branchId: l,
+                    key: ''.concat(a, ':').concat(o),
+                    applicationId: a,
+                    branchId: o,
                     state: c,
-                    application: o,
-                    libraryApplication: Z.Z.getLibraryApplication(r, l),
+                    application: s,
+                    libraryApplication: S.Z.getLibraryApplication(a, o),
                     finished: t,
-                    index: s
+                    index: l
                 }),
             e
         );
     }, []);
 }
-t.Z = (0, p.Z)(
-    c.ZP.connectStores([T.Z, L.Z, O.Z, v.Z, R.Z], () => {
-        let e = et(O.Z.activeItems, !1, T.Z, L.Z);
-        return {
-            applications: [...e, ...et(O.Z.finishedItems, !0, T.Z, L.Z)],
-            paused: O.Z.paused,
-            isFocused: R.Z.isFocused(),
-            theme: v.Z.theme
-        };
-    })((0, g.Z)(ee))
+let $ = (0, _.Z)(
+    c.ZP.connectStores([E.Z, T.Z, P.Z, C.Z, j.Z], () => ({
+        applications: [...J(P.Z.activeItems, !1, E.Z, T.Z), ...J(P.Z.finishedItems, !0, E.Z, T.Z)],
+        paused: P.Z.paused,
+        isFocused: j.Z.isFocused(),
+        theme: C.Z.theme
+    }))((0, b.Z)(X))
 );

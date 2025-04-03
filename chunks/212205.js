@@ -1,36 +1,75 @@
-t.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(442837),
-    l = t(481060),
-    r = t(914010),
-    u = t(362658),
-    s = t(981631),
-    o = t(689938);
-function d(e) {
-    let n = (0, a.e7)([r.Z], () => r.Z.getGuildId()),
-        d = e.type === s.d4z.GUILD_CATEGORY,
-        { isFavoritesPerk: c } = (0, u.z)('useChannelFavoriteSetNickname');
-    return __OVERLAY__ || n !== s.I_8
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(914010),
+    o = n(362658),
+    c = n(981631),
+    s = n(388032);
+function u(e) {
+    let t = (0, i.e7)([a.Z], () => a.Z.getGuildId()),
+        u = e.type === c.d4z.GUILD_CATEGORY,
+        { isFavoritesPerk: d } = (0, o.z)('useChannelFavoriteSetNickname');
+    return __OVERLAY__ || t !== c.I_8
         ? null
-        : (0, i.jsx)(l.MenuItem, {
+        : (0, r.jsx)(l.sNh, {
               id: 'set-channel-nickname',
-              label: c && d ? o.Z.Messages.FAVORITES_RENAME_CATEGORY : o.Z.Messages.CHANGE_NICKNAME,
+              label: d && u ? s.NW.string(s.t.xXYKiI) : s.NW.string(s.t.dilOFx),
               action: function () {
-                  (0, l.openModalLazy)(async () => {
-                      let { default: n } = await t.e('46161').then(t.bind(t, 238716));
-                      return (t) =>
-                          (0, i.jsx)(n, {
-                              ...t,
-                              channelId: e.id,
-                              heading: c && d ? o.Z.Messages.FAVORITES_RENAME_CATEGORY : o.Z.Messages.CHANGE_NICKNAME,
-                              formTitle: c && d ? o.Z.Messages.CATEGORY_NAME : o.Z.Messages.NICKNAME,
-                              allowReset: !(c && d)
-                          });
+                  (0, l.ZDy)(async () => {
+                      let { default: t } = await n.e('46161').then(n.bind(n, 238716));
+                      return (n) => {
+                          var i, l;
+                          return (0, r.jsx)(
+                              t,
+                              ((i = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(n);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                              })
+                                          )),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: r,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = r);
+                                          });
+                                  }
+                                  return e;
+                              })({}, n)),
+                              (l = l =
+                                  {
+                                      channelId: e.id,
+                                      heading: d && u ? s.NW.string(s.t.xXYKiI) : s.NW.string(s.t.dilOFx),
+                                      formTitle: d && u ? s.NW.string(s.t.OCAkGB) : s.NW.string(s.t['621LJC']),
+                                      allowReset: !(d && u)
+                                  }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                  : (function (e, t) {
+                                        var n = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, r);
+                                        }
+                                        return n;
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                    }),
+                              i)
+                          );
+                      };
                   });
               }
           });

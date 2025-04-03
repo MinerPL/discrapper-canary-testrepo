@@ -1,32 +1,29 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(112831),
-    l = n(435326);
-function u(e) {
+    o = n.n(i),
+    a = n(481060),
+    s = n(118012),
+    l = n(362560);
+function c(e) {
     var t;
-    let { name: n, className: i, state: u, isInline: c, onClick: d } = e,
+    let { name: n, className: i, state: c, isInline: u, onClick: d } = e,
+        f = n + (u ? ':' : ''),
         _ = null,
-        E = o.Z.Colors.HEADER_PRIMARY;
-    (null == u ? void 0 : u.isActive) && !c ? (_ = l.active) : (null == u ? void 0 : null === (t = u.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? (_ = l.error) : (null == u ? void 0 : u.hasValue) && !c && (_ = l.set);
-    let f = (0, r.jsx)(o.Z, {
-        size: c ? o.Z.Sizes.SIZE_16 : o.Z.Sizes.SIZE_14,
-        color: E,
-        className: a()(l.option, { [l.inline]: c }, _, i),
-        children: n + (c ? ':' : '')
+        p = s.Z.Colors.HEADER_PRIMARY;
+    (null == c ? void 0 : c.isActive) && !u ? (_ = l.active) : (null == c || null == (t = c.lastValidationResult) ? void 0 : t.success) === !1 ? (_ = l.error) : (null == c ? void 0 : c.hasValue) && !u && (_ = l.set);
+    let h = (0, r.jsx)(s.Z, {
+        size: u ? s.Z.Sizes.SIZE_16 : s.Z.Sizes.SIZE_14,
+        color: p,
+        className: o()(l.option, { [l.inline]: u }, _, i),
+        children: f
     });
     return null == d
-        ? f
-        : (0, r.jsx)(s.Clickable, {
+        ? h
+        : (0, r.jsx)(a.P3F, {
               className: l.clickable,
               onClick: () => d(n),
-              children: f
+              children: h
           });
 }

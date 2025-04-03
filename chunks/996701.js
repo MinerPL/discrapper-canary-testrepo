@@ -1,53 +1,52 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var r = n(735250);
-n(470079);
-var i = n(481060),
-    a = n(782568),
-    s = n(689938),
-    o = n(491066);
-let l = (e) => {
+n.d(t, { Z: () => m });
+var r = n(200651);
+n(192379);
+var l = n(120356),
+    i = n.n(l),
+    a = n(481060),
+    o = n(782568),
+    s = n(388032),
+    c = n(88309),
+    d = n(735247);
+let u = (e) => {
     let {
-        data: { url: t, link_text: n, link_description: s, is_localized: l }
+        data: { url: t, link_text: n, link_description: l, is_localized: s }
     } = e;
-    return l
-        ? (0, r.jsxs)(i.Clickable, {
+    return s
+        ? (0, r.jsxs)(a.P3F, {
               role: 'link',
-              className: o.linkButton,
+              className: i()(d.linkButton, c.listElement),
               onClick: () => {
-                  (0, a.Z)(t);
+                  (0, o.Z)(t);
               },
               children: [
                   (0, r.jsxs)('div', {
-                      className: o.linkTextContainer,
+                      className: d.linkTextContainer,
                       children: [
-                          (0, r.jsx)(i.Text, {
-                              className: o.__invalid_linkText,
+                          (0, r.jsx)(a.Text, {
+                              className: d.__invalid_linkText,
                               variant: 'text-md/semibold',
                               children: n
                           }),
-                          null != s &&
-                              '' !== s &&
-                              (0, r.jsx)(i.Text, {
+                          null != l &&
+                              '' !== l &&
+                              (0, r.jsx)(a.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
-                                  children: s
+                                  children: l
                               })
                       ]
                   }),
-                  (0, r.jsx)(i.WindowLaunchIcon, {
-                      size: 'md',
+                  (0, r.jsx)(a.Gr1, {
+                      size: 'sm',
                       color: 'currentColor',
-                      className: o.linkIcon
+                      className: d.linkIcon
                   })
               ]
           })
         : null;
 };
-function u(e) {
+function m(e) {
     let { elements: t } = e;
     if (
         null == t ||
@@ -61,21 +60,21 @@ function u(e) {
         return null;
     let n = t.map((e, t) => {
             let { data: n } = e;
-            return (0, r.jsx)(l, { data: n }, 'external-link+'.concat(t));
+            return (0, r.jsx)(u, { data: n }, 'external-link+'.concat(t));
         }),
-        a = t.some((e) => {
+        l = t.some((e) => {
             let { data: t } = e;
             return t.is_header_hidden;
         });
     return (0, r.jsxs)('div', {
-        className: o.linksContainer,
+        className: i()(d.linksContainer, c.listElementWrapper),
         children: [
-            !a &&
-                (0, r.jsx)(i.Heading, {
+            !l &&
+                (0, r.jsx)(a.X6q, {
                     variant: 'heading-sm/semibold',
                     color: 'header-secondary',
-                    className: o.header,
-                    children: s.Z.Messages.LEARN_MORE
+                    className: d.header,
+                    children: s.NW.string(s.t.hvVgAQ)
                 }),
             n
         ]

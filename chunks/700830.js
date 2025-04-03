@@ -1,7 +1,1 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var r = {};
-r = { Empty: `Vac\xedo` };
+e.exports = '/assets/20c50d12234b09ef.svg';

@@ -1,83 +1,74 @@
-E.d(_, {
-    Es: function () {
-        return N;
-    },
-    RM: function () {
-        return t;
-    },
-    VP: function () {
-        return a;
-    },
-    Xb: function () {
-        return A;
-    },
-    sm: function () {
-        return r;
-    },
-    y0: function () {
-        return n;
-    }
-});
-var s = E(544891),
-    T = E(570140),
-    I = E(981631);
-let n = function (e) {
-        let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        T.Z.dispatch({
+n.d(t, {
+    Es: () => u,
+    RM: () => i,
+    VP: () => c,
+    Xb: () => o,
+    sm: () => E,
+    y0: () => s
+}),
+    n(266796);
+var r = n(544891),
+    l = n(570140),
+    a = n(981631);
+let s = function (e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        l.Z.dispatch({
             type: 'WELCOME_SCREEN_VIEW',
             guildId: e,
-            isLurking: _
+            isLurking: t
         });
     },
-    t = async (e) => {
-        T.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_START' });
+    i = async (e) => {
+        l.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_START' });
         try {
-            let _ = await s.tn.get({
-                url: I.ANM.GUILD_WELCOME_SCREEN(e),
-                oldFormErrors: !0
+            let t = await r.tn.get({
+                url: a.ANM.GUILD_WELCOME_SCREEN(e),
+                oldFormErrors: !0,
+                rejectWithError: !0
             });
             return (
-                T.Z.dispatch({
+                l.Z.dispatch({
                     type: 'WELCOME_SCREEN_FETCH_SUCCESS',
                     guildId: e,
-                    welcomeScreen: _.body
+                    welcomeScreen: t.body
                 }),
-                _.body
+                t.body
             );
         } catch (e) {
-            T.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_FAIL' });
+            l.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_FAIL' });
         }
     },
-    A = () => {
-        T.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_RESET' });
+    o = () => {
+        l.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_RESET' });
     },
-    r = () => {
-        T.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_CLEAR' });
+    E = () => {
+        l.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_CLEAR' });
     },
-    a = (e) => {
-        T.Z.dispatch({
+    c = (e) => {
+        l.Z.dispatch({
             type: 'WELCOME_SCREEN_SETTINGS_UPDATE',
             settings: e
         });
     },
-    N = async (e, _) => {
-        T.Z.dispatch({ type: 'WELCOME_SCREEN_SUBMIT' });
+    u = async (e, t) => {
+        l.Z.dispatch({ type: 'WELCOME_SCREEN_SUBMIT' });
         try {
-            let E = await s.tn.patch({
-                url: I.ANM.GUILD_WELCOME_SCREEN(e),
+            let n = await r.tn.patch({
+                url: a.ANM.GUILD_WELCOME_SCREEN(e),
                 body: {
-                    description: _.description,
-                    welcome_channels: _.channels,
-                    enabled: _.enabled
+                    description: t.description,
+                    welcome_channels: t.channels,
+                    enabled: t.enabled
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !0
             });
-            T.Z.dispatch({
+            l.Z.dispatch({
                 type: 'WELCOME_SCREEN_SUBMIT_SUCCESS',
                 guildId: e,
-                welcomeScreen: E.body
+                welcomeScreen: n.body
             });
         } catch (e) {
-            T.Z.dispatch({ type: 'WELCOME_SCREEN_SUBMIT_FAILURE' });
+            l.Z.dispatch({ type: 'WELCOME_SCREEN_SUBMIT_FAILURE' });
         }
     };

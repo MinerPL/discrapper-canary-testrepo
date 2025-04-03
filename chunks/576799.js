@@ -1,74 +1,77 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(442837),
-    r = n(58540),
-    l = n(905405),
-    o = n(937889),
+n.d(t, { Z: () => f });
+var r = n(200651),
+    i = n(192379),
+    a = n(442837),
+    l = n(616780),
+    o = n(905405),
+    s = n(937889),
     c = n(267128),
     u = n(123145),
     d = n(699516),
-    _ = n(217702),
-    E = n(438379);
-function I(e) {
+    p = n(217702),
+    m = n(848697);
+function f(e) {
     let { message: t, channel: n } = e,
-        I = (0, s.e7)([d.Z], () => d.Z.isBlockedForMessage(t)),
-        m = (0, l.p)(),
-        T = a.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
-    (0, r.$)(T);
-    let h = a.useMemo(
+        { isBlocked: f, isIgnored: h } = (0, a.cj)(
+            [d.Z],
+            () => ({
+                isBlocked: d.Z.isBlockedForMessage(t),
+                isIgnored: d.Z.isIgnoredForMessage(t)
+            }),
+            [t]
+        ),
+        g = (0, o.p)(),
+        _ = i.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
+    (0, l.$)(_);
+    let b = i.useMemo(
         () =>
             null != t.content && '' !== t.content
-                ? (0, o.ZP)(t, {
+                ? (0, s.ZP)(t, {
                       formatInline: !0,
-                      shouldFilterKeywords: m
+                      shouldFilterKeywords: g
                   }).content
                 : null,
-        [t, m]
+        [t, g]
     );
-    return (0, i.jsxs)('div', {
-        className: E.threadMessageAccessory,
+    return (0, r.jsxs)('div', {
+        className: m.threadMessageAccessory,
         children: [
-            (0, i.jsx)('img', {
+            (0, r.jsx)('img', {
                 alt: '',
                 src: t.author.getAvatarURL(n.guild_id, 16),
-                className: E.threadMessageAccessoryAvatar
+                className: m.threadMessageAccessoryAvatar
             }),
-            (0, i.jsx)(u.Z, {
+            (0, r.jsx)(u.Z, {
                 message: t,
                 channel: n,
                 compact: !0
             }),
-            (0, i.jsx)('div', {
-                className: E.threadMessageAccessoryPreview,
-                children: (function (e, t, n) {
+            (0, r.jsx)('div', {
+                className: m.threadMessageAccessoryPreview,
+                children: (function (e, t, n, i) {
                     let {
                         contentPlaceholder: a,
-                        renderedContent: s,
-                        leadingIcon: r,
-                        trailingIcon: l
-                    } = (0, c.f)(e, t, n, E.threadMessageAccessoryContent, {
-                        trailingIconClass: E.threadMessageAccessoryContentTrailingIcon,
-                        leadingIconClass: E.threadMessageAccessoryContentLeadingIcon,
-                        iconSize: _.WW
+                        renderedContent: l,
+                        leadingIcon: o,
+                        trailingIcon: s
+                    } = (0, c.f)(e, t, n, i, m.threadMessageAccessoryContent, {
+                        trailingIconClass: m.threadMessageAccessoryContentTrailingIcon,
+                        leadingIconClass: m.threadMessageAccessoryContentLeadingIcon,
+                        iconSize: p.WW
                     });
-                    return (0, i.jsxs)(i.Fragment, {
+                    return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            r,
-                            null != s
-                                ? s
-                                : (0, i.jsx)('span', {
-                                      className: E.threadMessageAccessoryPlaceholder,
+                            o,
+                            null != l
+                                ? l
+                                : (0, r.jsx)('span', {
+                                      className: m.threadMessageAccessoryPlaceholder,
                                       children: a
                                   }),
-                            l
+                            s
                         ]
                     });
-                })(t, h, I)
+                })(t, b, f, h)
             })
         ]
     });

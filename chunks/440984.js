@@ -1,100 +1,98 @@
-t.d(s, {
-    D: function () {
-        return A;
-    }
-}),
-    t(47120);
-var n = t(735250),
-    a = t(470079),
-    i = t(442837),
-    r = t(780384),
-    o = t(481060),
-    l = t(410030),
-    c = t(607070),
-    d = t(530618),
-    _ = t(74538),
-    E = t(937615),
-    u = t(230916),
-    I = t(798769),
-    T = t(474936),
-    S = t(689938),
-    N = t(960699),
-    C = t(982404),
-    m = t(299156);
-function A(e) {
-    let { premiumSubscription: s, premiumType: t, onClose: A, confettiCanvas: O, userWasChurned: g = !1, userDiscountOffer: h } = e,
-        p = (0, l.ZP)(),
-        R = (0, r.wj)(p) ? C : m,
-        x = a.useRef(null),
-        [M, f] = a.useState(!1),
-        D = (0, u._)(s, T.Xh.PREMIUM_MONTH_TIER_2, h),
-        P = (0, _.aS)(T.Xh.PREMIUM_MONTH_TIER_2),
-        L = (0, E.T4)(P.amount, P.currency),
-        b = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
+n.d(t, { D: () => _ }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(780384),
+    l = n(481060),
+    o = n(410030),
+    c = n(607070),
+    d = n(530618),
+    u = n(74538),
+    m = n(937615),
+    g = n(230916),
+    p = n(798769),
+    h = n(474936),
+    f = n(388032),
+    b = n(583532),
+    N = n(982404),
+    x = n(299156);
+function _(e) {
+    let { premiumSubscription: t, premiumType: n, onClose: _, confettiCanvas: E, userWasChurned: j = !1, userDiscountOffer: O } = e,
+        C = (0, o.ZP)(),
+        S = (0, a.wj)(C) ? N : x,
+        v = i.useRef(null),
+        [T, I] = i.useState(!1),
+        y = (0, g._)(t, h.Xh.PREMIUM_MONTH_TIER_2, O),
+        A = (0, u.aS)(h.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+            currency: t.currency,
+            paymentSourceId: t.paymentSourceId
+        }),
+        P = (0, m.T4)(A.amount, A.currency),
+        R = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
-        (a.useEffect(() => {
-            null != x.current && null != D && f(!0);
-        }, [x, M, D]),
-        null == h || null == D)
+        (i.useEffect(() => {
+            null != v.current && null != y && I(!0);
+        }, [v, T, y]),
+        null == O || null == y)
     )
         return null;
-    let Z = S.Z.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
-            numMonths: h.discount.user_usage_limit,
-            discountedPrice: D,
-            regularPrice: L
+    let D = f.NW.format(f.t.gPzMHR, {
+            numMonths: O.discount.user_usage_limit,
+            discountedPrice: y,
+            regularPrice: P
         }),
-        v = (0, n.jsx)('div', {
-            className: N.whatYouLoseButtonContainer,
-            children: (0, n.jsx)(o.Button, {
-                color: o.Button.Colors.BRAND,
-                onClick: A,
-                children: S.Z.Messages.PREMIUM_DISCOUNT_SWEET
+        Z = (0, r.jsx)('div', {
+            className: b.whatYouLoseButtonContainer,
+            children: (0, r.jsx)(l.zxk, {
+                color: l.zxk.Colors.BRAND,
+                onClick: _,
+                children: f.NW.string(f.t['/r8g/v'])
             })
         });
-    return (0, n.jsxs)(n.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(I.Z, {
-                premiumType: t,
-                className: N.cancellationHeader,
-                onClose: A
+            (0, r.jsx)(p.Z, {
+                premiumType: n,
+                className: b.cancellationHeader,
+                onClose: _
             }),
-            (0, n.jsx)('div', {
-                ref: x,
-                children: (0, n.jsx)(o.ModalContent, {
-                    className: N.body,
+            (0, r.jsx)('div', {
+                ref: v,
+                children: (0, r.jsx)(l.hzk, {
+                    className: b.body,
                     children:
-                        null != D
-                            ? (0, n.jsxs)(n.Fragment, {
+                        null != y
+                            ? (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, n.jsxs)('div', {
-                                          className: N.discountAppliedBody,
+                                      (0, r.jsxs)('div', {
+                                          className: b.discountAppliedBody,
                                           children: [
-                                              (0, n.jsx)('img', {
+                                              (0, r.jsx)('img', {
                                                   alt: '',
-                                                  src: R,
-                                                  className: N.nitroIcon
+                                                  src: S,
+                                                  className: b.nitroIcon
                                               }),
-                                              (0, n.jsx)(o.Heading, {
+                                              (0, r.jsx)(l.X6q, {
                                                   variant: 'heading-xl/bold',
-                                                  children: g ? S.Z.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : S.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
+                                                  children: j ? f.NW.string(f.t.gOOPaG) : f.NW.string(f.t.PZSyRk)
                                               })
                                           ]
                                       }),
-                                      (0, n.jsx)('div', {
-                                          className: N.bodyString,
-                                          children: Z
+                                      (0, r.jsx)('div', {
+                                          className: b.bodyString,
+                                          children: D
                                       }),
-                                      v
+                                      Z
                                   ]
                               })
-                            : (0, n.jsx)(o.Spinner, {})
+                            : (0, r.jsx)(l.$jN, {})
                 })
             }),
-            !b &&
-                M &&
-                (0, n.jsx)(d.Z, {
-                    confettiTarget: x.current,
-                    confettiCanvas: O,
+            !R &&
+                T &&
+                (0, r.jsx)(d.Z, {
+                    confettiTarget: v.current,
+                    confettiCanvas: E,
                     confettiVelocityMultiplier: 0.75
                 })
         ]

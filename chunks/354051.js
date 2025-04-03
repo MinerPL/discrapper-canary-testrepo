@@ -1,61 +1,104 @@
-n(47120);
-var s = n(735250);
-n(470079);
-var a = n(442837),
-    i = n(481060),
-    r = n(496675),
+n.d(t, { Z: () => m }), n(47120), n(266796);
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    s = n(481060),
+    a = n(496675),
     l = n(434404),
     o = n(845377),
     c = n(981631),
-    d = n(689938),
-    u = n(850157);
-t.Z = (e) => {
+    d = n(388032),
+    u = n(560253);
+let m = (e) => {
     let { guild: t } = e,
-        n = (0, a.e7)([r.Z], () => r.Z.can(c.Plq.ADMINISTRATOR, t), [t]),
-        _ = t.hasFeature(c.oNc.DISCOVERABLE),
-        I = () => {
+        n = (0, i.e7)([a.Z], () => a.Z.can(c.Plq.ADMINISTRATOR, t), [t]),
+        m = t.hasFeature(c.oNc.DISCOVERABLE),
+        g = () => {
             let e = new Set(t.features);
             t.hasFeature(c.oNc.DISCOVERABLE) && e.delete(c.oNc.DISCOVERABLE), l.Z.updateGuild({ features: e });
         };
-    return (0, s.jsxs)(i.FormSection, {
-        title: d.Z.Messages.DISCOVERY,
+    return (0, r.jsxs)(s.hjN, {
+        title: d.NW.string(d.t.oGaVGx),
         tag: 'h2',
         children: [
-            (0, s.jsx)('div', { className: u.background }),
-            (0, s.jsxs)('div', {
+            (0, r.jsx)('div', { className: u.background }),
+            (0, r.jsxs)('div', {
                 className: u.discoverySettings,
                 children: [
-                    (0, s.jsx)('div', { className: u.image }),
-                    (0, s.jsx)(i.Heading, {
+                    (0, r.jsx)('div', { className: u.image }),
+                    (0, r.jsx)(s.X6q, {
                         className: u.header,
                         variant: 'heading-xl/semibold',
-                        children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_DISQUALIFIED
+                        children: d.NW.string(d.t.rSBQU1)
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, r.jsx)(s.Text, {
                         className: u.description,
                         variant: 'text-md/normal',
-                        children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_DISQUALIFIED_DESCRIPTION.format()
+                        children: d.NW.format(d.t['6+lwSU'], {})
                     }),
-                    (0, s.jsx)(o.Z, {
+                    (0, r.jsx)(o.Z, {
                         className: u.checklist,
                         guild: t,
                         guildId: t.id,
-                        noHeader: !0,
                         failedItemsOnly: !0
                     }),
-                    _ &&
-                        (0, s.jsx)(i.Tooltip, {
-                            text: n ? null : d.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY,
-                            children: (e) =>
-                                (0, s.jsx)(i.Button, {
-                                    size: i.Button.Sizes.SMALL,
-                                    onClick: I,
-                                    color: i.Button.Colors.PRIMARY,
-                                    className: u.disableDiscoveryButton,
-                                    disabled: !n,
-                                    ...e,
-                                    children: d.Z.Messages.GUILD_SETTINGS_DISABLE_DISCOVERABLE_PERMINENTLY
-                                })
+                    m &&
+                        (0, r.jsx)(s.ua7, {
+                            text: n ? null : d.NW.string(d.t['5VbUBw']),
+                            children: (e) => {
+                                var t, i;
+                                return (0, r.jsx)(
+                                    s.zxk,
+                                    ((t = (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                r = Object.keys(n);
+                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                (r = r.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    })
+                                                )),
+                                                r.forEach(function (t) {
+                                                    var r;
+                                                    (r = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: r,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0
+                                                              })
+                                                            : (e[t] = r);
+                                                });
+                                        }
+                                        return e;
+                                    })(
+                                        {
+                                            size: s.zxk.Sizes.SMALL,
+                                            onClick: g,
+                                            color: s.zxk.Colors.PRIMARY,
+                                            className: u.disableDiscoveryButton,
+                                            disabled: !n
+                                        },
+                                        e
+                                    )),
+                                    (i = i = { children: d.NW.string(d.t.RPfFQk) }),
+                                    Object.getOwnPropertyDescriptors
+                                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+                                        : (function (e, t) {
+                                              var n = Object.keys(e);
+                                              if (Object.getOwnPropertySymbols) {
+                                                  var r = Object.getOwnPropertySymbols(e);
+                                                  n.push.apply(n, r);
+                                              }
+                                              return n;
+                                          })(Object(i)).forEach(function (e) {
+                                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
+                                          }),
+                                    t)
+                                );
+                            }
                         })
                 ]
             })

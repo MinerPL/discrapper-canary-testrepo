@@ -1,33 +1,29 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    i = n(293810),
-    r = n(689938),
-    l = n(277427),
+n.d(t, { Z: () => m }), n(266796);
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(293810),
+    a = n(388032),
+    l = n(14920),
     o = n(961618),
     c = n(217684),
     d = n(174618);
 function u(e) {
     let { imageSrc: t, description: n } = e;
-    return (0, s.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: l.howItWorksCard,
         children: [
-            (0, s.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: l.howItWorksImageContainer,
-                children: (0, s.jsx)('img', {
+                children: (0, r.jsx)('img', {
                     className: l.howItWorksImage,
                     src: t,
                     alt: ''
                 })
             }),
-            (0, s.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: l.howItWorksDescription,
-                children: (0, s.jsx)(a.Text, {
+                children: (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-primary',
                     children: n
@@ -36,33 +32,33 @@ function u(e) {
         ]
     });
 }
-function _() {
+function m() {
     let e = [
         {
             imageSrc: d,
-            description: r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_1
+            description: a.NW.string(a.t.lT0ZNT)
         },
         {
             imageSrc: o,
-            description: r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_2
+            description: a.NW.string(a.t.ihN2WV)
         },
         {
             imageSrc: c,
-            description: r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_3
+            description: a.NW.string(a.t.c8krDQ)
         }
     ];
-    return (0, s.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         children: [
-            (0, s.jsx)(a.Heading, {
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                children: r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_TITLE
+                children: a.NW.string(a.t.R9rNIi)
             }),
-            (0, s.jsx)(a.Spacer, { size: 24 }),
-            (0, s.jsx)('div', {
+            (0, r.jsx)(i.LZC, { size: 24 }),
+            (0, r.jsx)('div', {
                 className: l.howItWorksContainer,
                 children: e.map((e) =>
-                    (0, s.jsx)(
+                    (0, r.jsx)(
                         u,
                         {
                             imageSrc: e.imageSrc,
@@ -72,11 +68,11 @@ function _() {
                     )
                 )
             }),
-            (0, s.jsx)(a.Spacer, { size: 24 }),
-            (0, s.jsx)(a.Text, {
+            (0, r.jsx)(i.LZC, { size: 24 }),
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_FOOTER.format({ creatorPortalUrl: i.C5 })
+                children: a.NW.format(a.t.oxW30N, { creatorPortalUrl: s.C5 })
             })
         ]
     });

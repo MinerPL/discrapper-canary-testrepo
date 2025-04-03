@@ -1,45 +1,40 @@
-n.d(t, {
-    f: function () {
-        return l;
-    }
-}),
-    n(47120);
+n.d(t, { f: () => l }), n(47120), n(566702);
 var r = n(456007),
     i = n(895924),
-    a = n(351133),
-    s = n(689079),
-    o = n(689938);
+    o = n(351133),
+    a = n(689079),
+    s = n(388032);
 function l(e) {
-    let { option: t, content: n, guildId: l, channelId: u, allowEmptyValues: c, commandOrigin: d = i.bB.CHAT } = e,
-        _ = null != n ? (0, r.KF)({ content: n }, 'content').trim() : '',
-        E = t.required,
-        f = '' === _;
-    if (!(null != n))
-        return E
+    let { option: t, content: n, guildId: l, channelId: c, allowEmptyValues: u, commandOrigin: d = i.bB.CHAT } = e,
+        f = null != n ? (0, r.KF)({ content: n }, 'content').trim() : '',
+        _ = t.required,
+        p = '' === f;
+    if (null == n)
+        return _
             ? {
                   success: !1,
-                  error: o.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
+                  error: s.NW.string(s.t.JZJQLy)
               }
             : { success: !0 };
-    if (f)
-        return c
+    if (p)
+        return u
             ? { success: !0 }
-            : E
+            : _
               ? {
                     success: !1,
-                    error: o.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
+                    error: s.NW.string(s.t.JZJQLy)
                 }
               : {
                     success: !1,
-                    error: (0, s.al)(t)
+                    error: (0, a.al)(t)
                 };
     let h =
             n.length > 1
                 ? {
                       type: 'text',
-                      text: _
+                      text: f
                   }
                 : n[0],
-        p = a.Z[t.type](h, t, u, l, d);
-    return !p.success && null == p.error && (p.error = (0, s.al)(t)), p;
+        m = o.Z[t.type](h, t, c, l, d);
+    return m.success || null != m.error || (m.error = (0, a.al)(t)), m;
 }

@@ -1,58 +1,102 @@
-var i = n(735250);
-n(470079);
-var a = n(704215),
-    s = n(481060),
-    r = n(570140),
-    l = n(317770),
-    o = n(605236),
+n.d(t, { Z: () => b });
+var r = n(200651);
+n(192379);
+var i = n(704215),
+    l = n(481060),
+    a = n(570140),
+    o = n(317770),
+    s = n(605236),
     c = n(650774),
-    d = n(430824),
-    u = n(496675),
-    _ = n(228392),
-    E = n(981631),
-    h = n(921944);
-let m = (e) => {
+    u = n(430824),
+    d = n(496675),
+    p = n(228392),
+    h = n(981631),
+    f = n(921944);
+let g = (e) => {
     var t;
-    let n = d.Z.getGuild(e),
-        i = !!(null == n ? void 0 : n.hasFeature(E.oNc.COMMUNITY)),
-        s = u.Z.can(E.Plq.MANAGE_CHANNELS, n),
-        r = (0, o.un)(a.z.FORUM_CHANNEL_UPSELL_MODAL),
-        l = null !== (t = c.Z.getMemberCount(e)) && void 0 !== t ? t : 0;
-    return i && s && !r && l >= 200;
+    let n = u.Z.getGuild(e),
+        r = !!(null == n ? void 0 : n.hasFeature(h.oNc.COMMUNITY)),
+        l = d.Z.can(h.Plq.MANAGE_CHANNELS, n),
+        a = (0, s.un)(i.z.FORUM_CHANNEL_UPSELL_MODAL),
+        o = null != (t = c.Z.getMemberCount(e)) ? t : 0;
+    return r && l && !a && o >= 200;
 };
-class I extends l.Z {
+class m extends o.Z {
     _initialize() {
-        r.Z.subscribe('CHANNEL_SELECT', this.handleChannelSelect);
+        a.Z.subscribe('CHANNEL_SELECT', this.handleChannelSelect);
     }
     _terminate() {
-        r.Z.unsubscribe('CHANNEL_SELECT', this.handleChannelSelect);
+        a.Z.unsubscribe('CHANNEL_SELECT', this.handleChannelSelect);
     }
     handleChannelSelect(e) {
         let { guildId: t } = e;
-        if (null == t || !m(t)) return;
-        (0, _.qz)(), (0, o.kk)(a.z.FORUM_CHANNEL_UPSELL_MODAL);
-        let r = function () {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.L.DISMISS;
-            (0, o.EW)(a.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
+        if (null == t || !g(t)) return;
+        (0, p.qz)(), (0, s.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL);
+        let a = function () {
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.L.DISMISS;
+            (0, s.EW)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
         };
-        (0, s.openModalLazy)(
+        (0, l.ZDy)(
             async () => {
                 let { default: e } = await n.e('18417').then(n.bind(n, 740696));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        ...n,
-                        onClose: (e) => {
-                            r(e), n.onClose();
-                        },
-                        guildId: t,
-                        shouldUpsellCreation: !0
-                    });
+                return (n) => {
+                    var i, l;
+                    return (0, r.jsx)(
+                        e,
+                        ((i = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, n)),
+                        (l = l =
+                            {
+                                onClose: (e) => {
+                                    a(e), n.onClose();
+                                },
+                                guildId: t,
+                                shouldUpsellCreation: !0
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(l)).forEach(function (e) {
+                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                              }),
+                        i)
+                    );
+                };
             },
             {
-                onCloseCallback: () => (0, o.EW)(a.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: h.L.DISMISS }),
-                onCloseRequest: E.VqG
+                onCloseCallback: () => (0, s.EW)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: f.L.DISMISS }),
+                onCloseRequest: h.VqG
             }
         );
     }
 }
-t.Z = new I();
+let b = new m();

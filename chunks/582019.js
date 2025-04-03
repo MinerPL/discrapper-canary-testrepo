@@ -1,145 +1,80 @@
-t.d(n, {
-    Xd: function () {
-        return N;
+n.d(t, { j: () => o });
+var r = n(200651),
+    l = n(192379),
+    i = n(709014);
+let a = {
+        all: {
+            name: 'all',
+            start: 0,
+            duration: 66
+        }
     },
-    mv: function () {
-        return T;
-    }
-});
-var s = t(735250);
-t(470079);
-var i = t(442837),
-    r = t(692547),
-    c = t(481060),
-    a = t(239091),
-    o = t(584511),
-    l = t(112831),
-    d = t(51144),
-    u = t(88751),
-    _ = t(930180),
-    E = t(689938),
-    I = t(585866);
-let T = (e) => {
-        let { channelId: n } = e,
-            t = (0, _._d)(n);
-        return 0 === t
-            ? null
-            : (0, s.jsxs)('div', {
-                  className: I.blockedNotice,
-                  children: [
-                      (0, s.jsx)(c.DenyIcon, {
-                          size: 'lg',
-                          className: I.__invalid_blockedIcon,
-                          color: r.Z.unsafe_rawColors.RED_400.css
-                      }),
-                      (0, s.jsx)(c.Text, {
-                          variant: 'text-xs/normal',
-                          color: 'header-secondary',
-                          children: E.Z.Messages.STAGE_BLOCKED_USERS_DESCRIPTION_COUNT.format({ number: t })
-                      }),
-                      (0, s.jsx)(c.Clickable, {
-                          className: I.blockedButton,
-                          onClick: (e) => {
-                              (0, a.vq)(
-                                  e,
-                                  (e) =>
-                                      (0, s.jsx)(h, {
-                                          ...e,
-                                          channelId: n
-                                      }),
-                                  {
-                                      position: 'left',
-                                      align: 'bottom'
-                                  }
-                              );
-                          },
-                          children: E.Z.Messages.VIEW_ALL
-                      })
-                  ]
-              });
-    },
-    N = (e) => {
-        let { user: n, showStatus: t, speaker: r, channelId: a } = e,
-            _ = (0, i.e7)([u.ZP], () => u.ZP.isModerator(n.id, a)),
-            T = null;
-        return (
-            t && (T = r ? E.Z.Messages.STAGE_SPEAKER : _ ? E.Z.Messages.STAGE_MODERATOR_TOOLTIP : E.Z.Messages.STAGE_AUDIENCE),
-            (0, s.jsxs)('div', {
-                className: I.user,
-                children: [
-                    (0, s.jsx)(
-                        o.Z,
+    o = () => {
+        let e = l.useRef(null),
+            t = l.useCallback(() => {
+                null != e.current && e.current.play('all');
+            }, []),
+            o = l.useCallback(() => {
+                null != e.current && e.current.play('all');
+            }, []);
+        return {
+            events: {
+                onClick: t,
+                onMouseEnter: o,
+                onMouseLeave: l.useCallback(() => {
+                    null != e.current && e.current.stopIfPlaying('all');
+                }, [])
+            },
+            play: t,
+            Component: l.useCallback((t) => {
+                var l, o;
+                return (0, r.jsx)(
+                    i.L,
+                    ((l = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, t)),
+                    (o = o =
                         {
-                            src: n.getAvatarURL(null, 32),
-                            size: c.AvatarSizes.SIZE_32,
-                            muted: !1,
-                            deafen: !1,
-                            speaking: !1,
-                            ringing: !1,
-                            renderIcon: r
-                                ? () =>
-                                      (0, s.jsx)(c.MicrophoneIcon, {
-                                          size: 'md',
-                                          color: 'currentColor',
-                                          className: I.icon
-                                      })
-                                : null
-                        },
-                        n.id
-                    ),
-                    (0, s.jsxs)('div', {
-                        className: I.userInfo,
-                        children: [
-                            (0, s.jsxs)('div', {
-                                className: I.username,
-                                children: [
-                                    (0, s.jsx)(l.Z, {
-                                        size: t ? l.Z.Sizes.SIZE_16 : l.Z.Sizes.SIZE_14,
-                                        children: d.ZP.getName(n)
-                                    }),
-                                    (0, s.jsx)(l.Z, {
-                                        size: t ? l.Z.Sizes.SIZE_16 : l.Z.Sizes.SIZE_14,
-                                        color: l.Z.Colors.HEADER_SECONDARY,
-                                        children: '#'.concat(n.discriminator)
-                                    })
-                                ]
-                            }),
-                            (0, s.jsxs)('div', {
-                                className: I.username,
-                                children: [
-                                    (0, s.jsx)(c.Text, {
-                                        variant: 'text-xs/normal',
-                                        color: 'text-danger',
-                                        children: E.Z.Messages.BLOCKED
-                                    }),
-                                    (0, s.jsxs)(c.Text, {
-                                        variant: 'text-xs/normal',
-                                        color: 'text-muted',
-                                        children: [' ', '| ', T]
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                ]
-            })
-        );
-    },
-    h = (e) => {
-        let { channelId: n } = e,
-            t = (0, _.z)(n);
-        return (0, s.jsx)(c.Scroller, {
-            className: I.container,
-            children: t.map((e) => {
-                let { user: t } = e;
-                return (0, s.jsx)(
-                    N,
-                    {
-                        user: t,
-                        channelId: n
-                    },
-                    t.id
+                            src: () => n.e('66944').then(n.t.bind(n, 166174, 19)),
+                            ref: e,
+                            markers: a
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(o)).forEach(function (e) {
+                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                          }),
+                    l)
                 );
-            })
-        });
+            }, [])
+        };
     };

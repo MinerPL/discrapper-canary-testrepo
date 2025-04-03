@@ -1,20 +1,15 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return c;
-        }
-    });
-var a = s(735250);
-s(470079);
-var o = s(481060),
-    n = s(689938),
-    r = s(33923);
-function c(e) {
-    let { transitionState: t, onClose: c } = e;
-    return (0, a.jsxs)(o.ModalRoot, {
+s.d(e, { default: () => i });
+var a = s(200651);
+s(192379);
+var n = s(481060),
+    o = s(388032),
+    r = s(146958);
+function i(t) {
+    let { transitionState: e, onClose: i } = t;
+    return (0, a.jsxs)(n.Y0X, {
         className: r.modal,
-        transitionState: t,
-        size: o.ModalSize.SMALL,
+        transitionState: e,
+        size: n.CgR.SMALL,
         children: [
             (0, a.jsx)('img', {
                 'aria-hidden': !0,
@@ -22,26 +17,26 @@ function c(e) {
                 src: s(762528),
                 className: r.image
             }),
-            (0, a.jsxs)(o.ModalContent, {
+            (0, a.jsxs)(n.hzk, {
                 className: r.content,
                 children: [
-                    (0, a.jsx)(o.Heading, {
+                    (0, a.jsx)(n.X6q, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
                         className: r.text,
-                        children: n.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_CONFIRM_TITLE
+                        children: o.NW.string(o.t.pAzfrq)
                     }),
-                    (0, a.jsx)(o.Text, {
+                    (0, a.jsx)(n.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         className: r.text,
-                        children: n.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_CONFIRM_SUBTITLE
+                        children: o.NW.string(o.t.oxowND)
                     }),
-                    (0, a.jsx)(o.Button, {
-                        onClick: c,
-                        color: o.Button.Colors.BRAND,
-                        look: o.Button.Looks.FILLED,
-                        children: n.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_CONFIRM_CTA
+                    (0, a.jsx)(n.zxk, {
+                        onClick: i,
+                        color: n.zxk.Colors.BRAND,
+                        look: n.zxk.Looks.FILLED,
+                        children: o.NW.string(o.t.o3ZlOD)
                     })
                 ]
             })

@@ -1,89 +1,85 @@
 n.d(t, {
-    C: function () {
-        return S;
-    },
-    Z: function () {
-        return h;
-    }
+    C: () => x,
+    Z: () => j
 });
-var s = n(735250);
-n(470079);
-var a = n(990547),
-    i = n(481060),
-    r = n(213609),
+var r = n(200651);
+n(192379);
+var i = n(990547),
+    s = n(481060),
+    a = n(213609),
     l = n(605288),
     o = n(787051),
     c = n(346163),
     d = n(587431),
     u = n(271267),
-    _ = n(320893),
-    I = n(81509),
-    E = n(662379),
-    T = n(60533),
-    m = n(581050),
-    N = n(465380);
-function S(e) {
+    m = n(320893),
+    g = n(81509),
+    p = n(662379),
+    h = n(60533),
+    f = n(581050),
+    b = n(551131);
+function x(e) {
     let { onboardingMarketing: t, onboardingMarketingError: n } = e,
-        a = (e) => {
+        i = (e) => {
             let { children: t } = e;
-            return (0, s.jsxs)(s.Fragment, {
-                children: [(0, s.jsx)(i.FormDivider, { className: N.sectionDivider }), t]
+            return (0, r.jsxs)(r.Fragment, {
+                children: [(0, r.jsx)(s.$i$, { className: b.sectionDivider }), t]
             });
         },
-        r = (0, s.jsx)(a, { children: (0, s.jsx)(E.Z, {}) }, m.q.HOW_IT_WORKS),
-        l = (0, s.jsx)(a, { children: (0, s.jsx)(_.Z, {}) }, m.q.BENEFITS);
+        a = (0, r.jsx)(i, { children: (0, r.jsx)(p.Z, {}) }, f.q.HOW_IT_WORKS),
+        l = (0, r.jsx)(i, { children: (0, r.jsx)(m.Z, {}) }, f.q.BENEFITS);
     return null != n || (null == t ? void 0 : t.sections) == null
-        ? (0, s.jsxs)(s.Fragment, {
-              children: [r, l]
+        ? (0, r.jsxs)(r.Fragment, {
+              children: [a, l]
           })
-        : (0, s.jsx)(s.Fragment, {
+        : (0, r.jsx)(r.Fragment, {
               children: t.sections.map((e) => {
                   switch (e.type) {
-                      case m.q.HOW_IT_WORKS:
-                          return r;
-                      case m.q.BENEFITS:
+                      case f.q.HOW_IT_WORKS:
+                          return a;
+                      case f.q.BENEFITS:
                           return l;
-                      case m.q.OTHER_CREATORS:
-                          return (0, s.jsx)(a, { children: (0, s.jsx)(I.Z, { highlightedCreators: e.creators }) }, m.q.OTHER_CREATORS);
+                      case f.q.OTHER_CREATORS:
+                          return (0, r.jsx)(i, { children: (0, r.jsx)(g.Z, { highlightedCreators: e.creators }) }, f.q.OTHER_CREATORS);
                   }
               })
           });
 }
-function h(e) {
+function j(e) {
     let { guild: t } = e,
         n = (0, c.Z)(t),
-        { eligibilityLoading: _, eligibilityError: I, eligibility: E } = n,
-        m = (0, l.j)(E),
-        { isLoading: h, error: g, creatorMonetizationOnboardingMarketing: C } = (0, o.Z)(t.id);
-    return ((0, r.Z)(
+        { eligibilityLoading: m, eligibilityError: g, eligibility: p } = n,
+        f = (0, l.j)(p),
+        { isLoading: j, error: N, creatorMonetizationOnboardingMarketing: _ } = (0, o.Z)(t.id);
+    return ((0, a.Z)(
         {
-            type: a.ImpressionTypes.PANE,
-            name: a.ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING,
+            type: i.ImpressionTypes.PANE,
+            name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING,
             properties: {
                 guild_id: t.id,
                 is_owner: n.isGuildOwner,
                 is_eligible: n.eligibleForMonetization,
-                ineligible_reasons: m
+                ineligible_reasons: f
             }
         },
-        { disableTrack: null == t.id || null == E }
+        { disableTrack: null == t.id || null == p }
     ),
-    _ || null == E || h)
-        ? (0, s.jsx)(i.Spinner, {})
-        : E.actionRequired
-          ? (0, s.jsx)(T.Z, { guild: t })
-          : null != I
-            ? (0, s.jsx)(d.Z, { children: I.message })
-            : (0, s.jsxs)('div', {
-                  className: N.container,
+    m || null == p || j)
+        ? (0, r.jsx)(s.$jN, {})
+        : p.actionRequired
+          ? (0, r.jsx)(h.Z, { guild: t })
+          : null != g
+            ? (0, r.jsx)(d.Z, { children: g.message })
+            : (0, r.jsxs)('div', {
+                  className: b.container,
                   children: [
-                      (0, s.jsx)(u.Z, {
+                      (0, r.jsx)(u.Z, {
                           guild: t,
                           monetizationEligibility: n
                       }),
-                      (0, s.jsx)(S, {
-                          onboardingMarketing: C,
-                          onboardingMarketingError: g
+                      (0, r.jsx)(x, {
+                          onboardingMarketing: _,
+                          onboardingMarketingError: N
                       })
                   ]
               });

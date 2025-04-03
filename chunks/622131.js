@@ -1,35 +1,25 @@
-var r, i;
-n.d(t, {
-    P: function () {
-        return l;
-    }
-}),
-    n(47120),
-    n(653041),
-    ((i = r || (r = {}))[(i.Unknown = 0)] = 'Unknown'),
-    (i[(i.Loaded = 1)] = 'Loaded'),
-    (i[(i.NotFound = 2)] = 'NotFound');
-let a = 0,
-    o = null;
+n.d(t, { P: () => l }), n(47120), n(301563), n(653041);
+let r = 0,
+    a = null;
 function l(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     try {
         let n = (function (e) {
-            if (2 === a) return null;
-            0 === a &&
-                !(function (e) {
+            if (2 === r) return null;
+            0 === r &&
+                (function (e) {
                     let t = e;
                     for (; null != t && t !== document.body; ) {
                         for (let t of Object.keys(e))
                             if (t.startsWith('__reactFiber$')) {
-                                (o = t), (a = 1);
+                                (a = t), (r = 1);
                                 return;
                             }
                         t = t.parentElement;
                     }
-                    null == o && (a = 2);
+                    null == a && (r = 2);
                 })(e);
-            let t = o,
+            let t = a,
                 n = e;
             for (; null != n && n !== document.body; ) {
                 if (t in n) return n[t];
@@ -42,11 +32,11 @@ function l(e) {
                 let n = [],
                     r = e;
                 for (; null != r; ) {
-                    var i, a;
-                    let e = null == r ? void 0 : null === (i = r._debugSource) || void 0 === i ? void 0 : i.fileName,
-                        o = null == r ? void 0 : null === (a = r._debugSource) || void 0 === a ? void 0 : a.lineNumber;
-                    if (null != e && null != o) {
-                        let r = ''.concat(e, ':').concat(o);
+                    var a, l;
+                    let e = null == r || null == (a = r._debugSource) ? void 0 : a.fileName,
+                        i = null == r || null == (l = r._debugSource) ? void 0 : l.lineNumber;
+                    if (null != e && null != i) {
+                        let r = ''.concat(e, ':').concat(i);
                         if (t) {
                             let e = r.split('/discord/');
                             0 !== e.length && n.push(e[e.length - 1]);
@@ -57,7 +47,7 @@ function l(e) {
                 return n;
             })(n, t);
         return null;
-    } catch {
+    } catch (e) {
         return null;
     }
 }

@@ -1,31 +1,55 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(82950),
-    r = n(981631),
-    l = n(921944),
-    o = n(689938),
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(324262),
+    a = n(981631),
+    o = n(921944),
+    s = n(388032),
     c = n(524094);
-function d(e) {
-    let { guild: t, markAsDismissed: d } = e;
-    return (0, i.jsx)(s.Z, {
+function u(e) {
+    let { guild: t, markAsDismissed: u } = e;
+    return (0, r.jsx)(l.Z, {
         guild: t,
-        onDismissed: () => d(l.L.UNKNOWN),
+        onDismissed: () => u(o.L.UNKNOWN),
         onClick: function () {
-            (0, a.openModalLazy)(async () => {
+            (0, i.ZDy)(async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
-                return (t) => (0, i.jsx)(e, { ...t });
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, t)
+                    );
             });
         },
-        message: o.Z.Messages.HUB_LINK_CHANNEL_NOTICE_BODY,
-        cta: o.Z.Messages.LEARN_MORE,
-        trackingSource: r.PsQ.HUB_LINK_NOTICE,
-        type: r.vID.HUB_LINK,
+        message: s.NW.string(s.t['1+hiPz']),
+        cta: s.NW.string(s.t.hvVgAQ),
+        trackingSource: a.PsQ.HUB_LINK_NOTICE,
+        type: a.vID.HUB_LINK,
         image: c
     });
 }

@@ -1,21 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var r = n(470079),
+n.d(t, { Z: () => o });
+var r = n(192379),
     i = n(570140);
-function a(e) {
-    let { channel: t, userActivity: n } = e,
-        a = t.id,
-        s = null == n ? void 0 : n.applicationId;
+function o(e) {
+    let { userActivity: t } = e,
+        n = null == t ? void 0 : t.applicationId;
     r.useEffect(() => {
-        null != a &&
-            null != s &&
+        null != t &&
+            null != n &&
             i.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_OPEN',
-                channelId: a,
-                applicationId: s
+                location: t.location,
+                applicationId: n
             });
-    }, [a, s]);
+    }, [n, t]);
 }

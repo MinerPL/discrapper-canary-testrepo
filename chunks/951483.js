@@ -1,149 +1,143 @@
 n.d(t, {
-    Sr: function () {
-        return S;
-    },
-    Xq: function () {
-        return v;
-    },
-    Zg: function () {
-        return Z;
-    }
+    Sr: () => v,
+    Xq: () => N,
+    Zg: () => S
 }),
     n(411104);
-var i = n(186070),
-    l = n(185514),
-    r = n(360038),
-    a = n(175724),
+var r = n(186070),
+    i = n(185514),
+    o = n(360038),
+    l = n(175724),
     s = n(705371),
-    o = n(138976),
+    a = n(138976),
     c = n(167042),
     u = n(239748),
     d = n(337482),
-    h = n(679080),
-    p = n(510761),
-    _ = n(189509),
-    f = n(673553),
-    g = n(280492),
-    m = n(746887),
-    C = n(721383),
-    I = n(743810),
-    E = n(981631),
-    N = n(689938);
-function x() {
+    p = n(679080),
+    _ = n(908552),
+    f = n(189509),
+    h = n(673553),
+    m = n(280492),
+    b = n(746887),
+    g = n(721383),
+    E = n(743810),
+    C = n(981631),
+    O = n(388032);
+function y() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.map((e) => {
-        let t = S[e];
+        let t = v[e];
         if (null == t) throw Error('getBindsFor(...): No bind for '.concat(t));
         return t.binds[0];
     });
 }
-let S = {
-        [E.EkH.SERVER_NEXT]: p.nq,
-        [E.EkH.SERVER_PREV]: p.X3,
-        [E.EkH.CHANNEL_NEXT]: l.tQ,
-        [E.EkH.CHANNEL_PREV]: l.x5,
-        [E.EkH.NAVIGATE_BACK]: l.Nx,
-        [E.EkH.NAVIGATE_FORWARD]: l.On,
-        [E.EkH.UNREAD_NEXT]: I.pd,
-        [E.EkH.UNREAD_PREV]: I.wk,
-        [E.EkH.MENTION_CHANNEL_NEXT]: I.Nv,
-        [E.EkH.MENTION_CHANNEL_PREV]: I.uX,
-        [E.EkH.TOGGLE_PREVIOUS_GUILD]: l.$c,
-        [E.EkH.JUMP_TO_GUILD]: r.u,
-        [E.EkH.SUBMIT]: _.z,
-        [E.EkH.TEXTAREA_FOCUS]: f.U,
-        [E.EkH.MARK_CHANNEL_READ]: a.f,
-        [E.EkH.MARK_SERVER_READ]: s.l,
-        [E.EkH.TOGGLE_MUTE]: g.iN,
-        [E.EkH.TOGGLE_DEAFEN]: g.oV,
-        [E.EkH.TOGGLE_CATEGORY_COLLAPSED]: m.u,
-        [E.EkH.SCROLL_UP]: d.B2,
-        [E.EkH.SCROLL_DOWN]: d.gN,
-        [E.EkH.SEARCH_EMOJIS]: h.S,
-        [E.EkH.TOGGLE_HOTKEYS]: C._,
-        [E.EkH.JUMP_TO_FIRST_UNREAD]: o.O,
-        [E.EkH.RETURN_TO_AUDIO_CHANNEL]: u.F,
-        [E.EkH.CALL_ACCEPT]: i.IL,
-        [E.EkH.CALL_START]: i.FI,
-        [E.EkH.QUICKSWITCHER_SHOW]: c.$
+let v = {
+        [C.EkH.SERVER_NEXT]: _.nq,
+        [C.EkH.SERVER_PREV]: _.X3,
+        [C.EkH.CHANNEL_NEXT]: i.tQ,
+        [C.EkH.CHANNEL_PREV]: i.x5,
+        [C.EkH.NAVIGATE_BACK]: i.Nx,
+        [C.EkH.NAVIGATE_FORWARD]: i.On,
+        [C.EkH.UNREAD_NEXT]: E.pd,
+        [C.EkH.UNREAD_PREV]: E.wk,
+        [C.EkH.MENTION_CHANNEL_NEXT]: E.Nv,
+        [C.EkH.MENTION_CHANNEL_PREV]: E.uX,
+        [C.EkH.TOGGLE_PREVIOUS_GUILD]: i.$c,
+        [C.EkH.JUMP_TO_GUILD]: o.u,
+        [C.EkH.SUBMIT]: f.z,
+        [C.EkH.TEXTAREA_FOCUS]: h.U,
+        [C.EkH.MARK_CHANNEL_READ]: l.f,
+        [C.EkH.MARK_SERVER_READ]: s.l,
+        [C.EkH.TOGGLE_MUTE]: m.iN,
+        [C.EkH.TOGGLE_DEAFEN]: m.oV,
+        [C.EkH.TOGGLE_CATEGORY_COLLAPSED]: b.u,
+        [C.EkH.SCROLL_UP]: d.B2,
+        [C.EkH.SCROLL_DOWN]: d.gN,
+        [C.EkH.SEARCH_EMOJIS]: p.S,
+        [C.EkH.TOGGLE_HOTKEYS]: g._,
+        [C.EkH.JUMP_TO_FIRST_UNREAD]: a.O,
+        [C.EkH.RETURN_TO_AUDIO_CHANNEL]: u.F,
+        [C.EkH.CALL_ACCEPT]: r.IL,
+        [C.EkH.CALL_START]: r.FI,
+        [C.EkH.QUICKSWITCHER_SHOW]: c.$
     },
-    v = { [E.EkH.QUICKSWITCHER_SHOW]: c.$ };
-function Z() {
+    N = { [C.EkH.QUICKSWITCHER_SHOW]: c.$ };
+function S() {
     return [
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,
-            binds: x(E.EkH.SERVER_PREV, E.EkH.SERVER_NEXT)
+            description: O.NW.string(O.t.bx4Uy8),
+            binds: y(C.EkH.SERVER_PREV, C.EkH.SERVER_NEXT)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_CHANNELS,
-            binds: x(E.EkH.CHANNEL_PREV, E.EkH.CHANNEL_NEXT)
+            description: O.NW.string(O.t['+Wem6u']),
+            binds: y(C.EkH.CHANNEL_PREV, C.EkH.CHANNEL_NEXT)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_BACK_FORWARD,
-            binds: x(E.EkH.NAVIGATE_BACK, E.EkH.NAVIGATE_FORWARD)
+            description: O.NW.string(O.t['+2fcd3']),
+            binds: y(C.EkH.NAVIGATE_BACK, C.EkH.NAVIGATE_FORWARD)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_CHANNELS,
-            binds: x(E.EkH.UNREAD_PREV, E.EkH.UNREAD_NEXT)
+            description: O.NW.string(O.t.eVmj1N),
+            binds: y(C.EkH.UNREAD_PREV, C.EkH.UNREAD_NEXT)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_MENTION_CHANNELS,
-            binds: x(E.EkH.MENTION_CHANNEL_PREV, E.EkH.MENTION_CHANNEL_NEXT),
+            description: O.NW.string(O.t.EcqS7e),
+            binds: y(C.EkH.MENTION_CHANNEL_PREV, C.EkH.MENTION_CHANNEL_NEXT),
             groupEnd: !0
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PREVIOUS_GUILD,
-            binds: x(E.EkH.TOGGLE_PREVIOUS_GUILD)
+            description: O.NW.string(O.t['Bqss7+']),
+            binds: y(C.EkH.TOGGLE_PREVIOUS_GUILD)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_SERVER_READ,
-            binds: x(E.EkH.MARK_SERVER_READ)
+            description: O.NW.string(O.t.UaXAPz),
+            binds: y(C.EkH.MARK_SERVER_READ)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_CHANNEL_READ,
-            binds: x(E.EkH.MARK_CHANNEL_READ)
+            description: O.NW.string(O.t['5X9vFh']),
+            binds: y(C.EkH.MARK_CHANNEL_READ)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_EMOJIS,
-            binds: x(E.EkH.SEARCH_EMOJIS),
+            description: O.NW.string(O.t.JoxNnp),
+            binds: y(C.EkH.SEARCH_EMOJIS),
             groupEnd: !0
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_MUTE,
-            binds: x(E.EkH.TOGGLE_MUTE)
+            description: O.NW.string(O.t.tL6eVV),
+            binds: y(C.EkH.TOGGLE_MUTE)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_DEAFEN,
-            binds: x(E.EkH.TOGGLE_DEAFEN)
+            description: O.NW.string(O.t['QXe/7e']),
+            binds: y(C.EkH.TOGGLE_DEAFEN)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_ACCEPT,
-            binds: x(E.EkH.CALL_ACCEPT)
+            description: O.NW.string(O.t.d6UIio),
+            binds: y(C.EkH.CALL_ACCEPT)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_DECLINE,
-            binds: x(E.EkH.MARK_CHANNEL_READ)
+            description: O.NW.string(O.t.IcEW09),
+            binds: y(C.EkH.MARK_CHANNEL_READ)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_START,
-            binds: x(E.EkH.CALL_START),
+            description: O.NW.string(O.t.WN2dsb),
+            binds: y(C.EkH.CALL_START),
             groupEnd: !0
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SCROLL_CHAT,
-            binds: x(E.EkH.SCROLL_UP, E.EkH.SCROLL_DOWN)
+            description: O.NW.string(O.t.L3RYYG),
+            binds: y(C.EkH.SCROLL_UP, C.EkH.SCROLL_DOWN)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_JUMP_TO_FIRST_UNREAD,
-            binds: x(E.EkH.JUMP_TO_FIRST_UNREAD)
+            description: O.NW.string(O.t['3HAurK']),
+            binds: y(C.EkH.JUMP_TO_FIRST_UNREAD)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
-            binds: x(E.EkH.TEXTAREA_FOCUS)
+            description: O.NW.string(O.t.rrYBEh),
+            binds: y(C.EkH.TEXTAREA_FOCUS)
         },
         {
-            description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_QUICKSWITCHER,
-            binds: x(E.EkH.QUICKSWITCHER_SHOW)
+            description: O.NW.string(O.t.yYsRlJ),
+            binds: y(C.EkH.QUICKSWITCHER_SHOW)
         }
     ];
 }

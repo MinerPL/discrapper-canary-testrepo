@@ -1,151 +1,145 @@
-l.r(t),
-    l.d(t, {
-        default: function () {
-            return C;
-        }
-    }),
-    l(47120);
-var i = l(735250),
-    n = l(470079),
-    s = l(442837),
-    a = l(481060),
-    o = l(904245),
-    r = l(166459),
-    d = l(680287),
-    u = l(313201),
-    c = l(163268),
-    _ = l(813197),
-    m = l(592125),
-    f = l(703558),
-    g = l(430824),
-    h = l(375954),
-    E = l(403182),
-    A = l(709054),
-    p = l(127654),
-    M = l(979956),
-    x = l(228392),
-    I = l(404616),
-    T = l(470623),
-    O = l(981631),
-    R = l(231338),
-    v = l(689938),
-    b = l(359351);
-function C(e) {
+n.d(t, { default: () => I }), n(47120), n(266796);
+var a = n(200651),
+    i = n(192379),
+    r = n(442837),
+    o = n(481060),
+    l = n(904245),
+    s = n(166459),
+    c = n(680287),
+    d = n(313201),
+    u = n(247206),
+    m = n(813197),
+    p = n(592125),
+    g = n(703558),
+    h = n(430824),
+    _ = n(375954),
+    f = n(403182),
+    b = n(709054),
+    y = n(127654),
+    x = n(979956),
+    C = n(228392),
+    v = n(404616),
+    O = n(470623),
+    j = n(981631),
+    T = n(231338),
+    P = n(388032),
+    E = n(994436);
+function I(e) {
     var t;
-    let { threadId: l, attachments: C, sendMessage: L, transitionState: j, onClose: P } = e,
-        Z = (0, u.Dt)(),
-        D = (0, s.e7)([m.Z], () => m.Z.getChannel(l), [l]),
-        S = (0, s.e7)([g.Z], () => g.Z.getGuild(null == D ? void 0 : D.getGuildId()), [D]),
-        N = (0, s.e7)([m.Z], () => m.Z.getChannel(null == D ? void 0 : D.parent_id), [D]),
-        U = null === (t = C[0]) || void 0 === t ? void 0 : t.item,
-        [y, z] = n.useState(null);
-    n.useEffect(() => {
-        null != U && (0, _.Fq)(U.file, (e, t) => z(e), R.dG);
-    }, [U]);
-    let w =
-            null != U && null != y
+    let { threadId: n, attachments: I, sendMessage: w, transitionState: S, onClose: M } = e,
+        A = (0, d.Dt)(),
+        D = (0, r.e7)([p.Z], () => p.Z.getChannel(n), [n]),
+        N = (0, r.e7)([h.Z], () => h.Z.getGuild(null == D ? void 0 : D.getGuildId()), [D]),
+        k = (0, r.e7)([p.Z], () => p.Z.getChannel(null == D ? void 0 : D.parent_id), [D]),
+        z = null == (t = I[0]) ? void 0 : t.item,
+        [L, Z] = i.useState(null);
+    i.useEffect(() => {
+        null != z && (0, m.Fq)(z.file, (e, t) => Z(e), T.dG);
+    }, [z]);
+    let R =
+            null != z && null != L
                 ? {
-                      src: y,
-                      width: I.TJ,
-                      height: I.Lp,
-                      spoiler: C[0].spoiler,
-                      alt: C[0].description
+                      src: L,
+                      width: v.TJ,
+                      height: v.Lp,
+                      spoiler: I[0].spoiler,
+                      alt: I[0].description
                   }
                 : null,
-        [G, B] = n.useState(!1),
-        k = n.useCallback(() => {
-            (0, x.xI)({ added: !1 }), L(), P();
-        }, [L, P]),
-        F = n.useCallback(() => {
+        [U, B] = i.useState(!1),
+        W = i.useCallback(() => {
+            (0, C.xI)({ added: !1 }), w(), M();
+        }, [w, M]),
+        G = i.useCallback(() => {
             null != D &&
-                null != S &&
-                ((0, x.xI)({ added: !0 }),
-                !(function (e) {
-                    let { thread: t, attachments: l, setIsUploading: i, guild: n, onClose: s } = e,
-                        a = new d.Z(O.ANM.MESSAGE(t.id, A.default.castChannelIdAsMessageId(t.id)), 'PATCH');
-                    a.on('start', () => {
-                        i(!0);
+                null != N &&
+                ((0, C.xI)({ added: !0 }),
+                (function (e) {
+                    let { thread: t, attachments: n, setIsUploading: a, guild: i, onClose: r } = e,
+                        o = new c.Z(j.ANM.MESSAGE(t.id, b.default.castChannelIdAsMessageId(t.id)), 'PATCH');
+                    o.on('start', () => {
+                        a(!0);
                     }),
-                        a.on('progress', (e) => {
-                            let o = (0, E.dg)(n.id);
-                            e.currentSize > o && (a.cancel(), i(!1), s(), (0, p.G)(t, (0, M.KZ)(l)));
+                        o.on('progress', (e) => {
+                            let l = (0, f.dg)(i.id);
+                            e.currentSize > l && (o.cancel(), a(!1), r(), (0, y.G)(t, (0, x.KZ)(n)));
                         }),
-                        a.on('error', (e, l, n) => {
-                            i(!1), l === O.evJ.EXPLICIT_CONTENT && (s(), o.Z.sendExplicitMediaClydeError(t.id, null == n ? void 0 : n.attachments, c.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), r.Z.clearAll(t.id, f.d.ChannelMessage));
+                        o.on('error', (e, n, i) => {
+                            a(!1), n === j.evJ.EXPLICIT_CONTENT && (r(), l.Z.sendExplicitMediaClydeError(t.id, null == i ? void 0 : i.attachments, u.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), s.Z.clearAll(t.id, g.d.ChannelMessage));
                         }),
-                        a.on('complete', () => {
-                            i(!1), s(), r.Z.clearAll(t.id, f.d.ChannelMessage);
+                        o.on('complete', () => {
+                            a(!1), r(), s.Z.clearAll(t.id, g.d.ChannelMessage);
                         });
-                    let u = h.Z.getMessages(t.id).get(A.default.castChannelIdAsMessageId(t.id)),
-                        _ = null != u ? u.attachments : [];
-                    a.uploadFiles(l, { attachments: [..._] }, { addFilesTo: 'attachments' });
+                    let d = _.Z.getMessages(t.id).get(b.default.castChannelIdAsMessageId(t.id)),
+                        m = null != d ? d.attachments : [];
+                    o.uploadFiles(n, { attachments: [...m] }, { addFilesTo: 'attachments' });
                 })({
                     thread: D,
-                    attachments: C,
+                    attachments: I,
                     setIsUploading: B,
-                    guild: S,
-                    onClose: P
+                    guild: N,
+                    onClose: M
                 }));
-        }, [D, C, B, S, P]);
-    return null == N
+        }, [D, I, B, N, M]);
+    return null == k
         ? null
-        : (0, i.jsxs)(a.ModalRoot, {
-              transitionState: j,
-              size: a.ModalSize.SMALL,
-              className: b.modalRoot,
-              'aria-labelledby': Z,
+        : (0, a.jsxs)(o.Y0X, {
+              transitionState: S,
+              size: o.CgR.SMALL,
+              className: E.modalRoot,
+              'aria-labelledby': A,
               children: [
-                  (0, i.jsxs)(a.ModalContent, {
-                      className: b.modal,
+                  (0, a.jsxs)(o.hzk, {
+                      className: E.modal,
                       children: [
-                          (0, i.jsx)(a.Heading, {
+                          (0, a.jsx)(o.X6q, {
                               variant: 'heading-md/semibold',
-                              className: b.header,
-                              id: Z,
-                              children: v.Z.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_TITLE
+                              className: E.header,
+                              id: A,
+                              children: P.NW.string(P.t.hMWWMT)
                           }),
-                          (0, i.jsx)(a.Text, {
+                          (0, a.jsx)(o.Text, {
                               variant: 'text-md/normal',
-                              className: b.__invalid_body,
-                              children: v.Z.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_DESCRIPTION
+                              className: E.__invalid_body,
+                              children: P.NW.string(P.t.zMsUsr)
                           }),
-                          (0, i.jsx)('div', {
-                              className: b.forumPost,
-                              children: (0, i.jsx)(T.oL, {
-                                  createStore: () => (0, T.NU)(N),
-                                  children: (0, i.jsx)(I.ZP, {
-                                      threadId: l,
-                                      goToThread: R.dG,
-                                      overrideMedia: w
+                          (0, a.jsx)('div', {
+                              className: E.forumPost,
+                              children: (0, a.jsx)(O.oL, {
+                                  channel: k,
+                                  children: (0, a.jsx)(v.ZP, {
+                                      threadId: n,
+                                      goToThread: T.dG,
+                                      overrideMedia: R
                                   })
                               })
                           })
                       ]
                   }),
-                  (0, i.jsxs)(a.ModalFooter, {
-                      className: b.modalFooter,
+                  (0, a.jsxs)(o.mzw, {
+                      className: E.modalFooter,
                       children: [
-                          (0, i.jsx)(a.Button, {
-                              look: a.Button.Looks.BLANK,
-                              className: b.cancelButton,
-                              disabled: G,
-                              onClick: P,
-                              children: v.Z.Messages.CANCEL
+                          (0, a.jsx)(o.zxk, {
+                              look: o.zxk.Looks.BLANK,
+                              className: E.cancelButton,
+                              disabled: U,
+                              onClick: M,
+                              children: P.NW.string(P.t['ETE/oK'])
                           }),
-                          (0, i.jsx)(a.Button, {
-                              color: a.Button.Colors.PRIMARY,
-                              className: b.dontAddButton,
-                              disabled: G,
-                              onClick: k,
-                              children: v.Z.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_DONT_ADD
+                          (0, a.jsx)(o.zxk, {
+                              color: o.zxk.Colors.PRIMARY,
+                              className: E.dontAddButton,
+                              disabled: U,
+                              onClick: W,
+                              children: P.NW.string(P.t['8rKVHB'])
                           }),
-                          (0, i.jsx)(a.Button, {
-                              color: a.Button.Colors.BRAND,
-                              className: b.__invalid_button,
-                              submitting: G,
-                              onClick: F,
+                          (0, a.jsx)(o.zxk, {
+                              color: o.zxk.Colors.BRAND,
+                              className: E.__invalid_button,
+                              submitting: U,
+                              onClick: G,
                               autoFocus: !0,
-                              children: v.Z.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_ADD
+                              children: P.NW.string(P.t.d611xM)
                           })
                       ]
                   })

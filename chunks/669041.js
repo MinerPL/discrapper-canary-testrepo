@@ -1,131 +1,155 @@
-n.r(t),
-    n.d(t, {
-        QuestsRewardModalUnverified: function () {
-            return E;
-        },
-        openRewardModalUnverified: function () {
-            return f;
-        }
-    }),
+n.d(t, {
+    B: () => m,
+    QuestsRewardModalUnverified: () => h
+}),
     n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(442837),
-    s = n(481060),
-    o = n(893776),
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(893776),
     l = n(594174),
-    u = n(918701),
-    c = n(689938),
-    d = n(964120),
-    _ = n(800010);
-function E(e) {
+    c = n(918701),
+    u = n(388032),
+    d = n(719969),
+    f = n(800010);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e) {
     let { transitionState: t, onClose: n } = e,
-        E = (0, a.e7)([l.default], () => {
+        _ = (0, o.e7)([l.default], () => {
             var e;
-            return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
+            return null == (e = l.default.getCurrentUser()) ? void 0 : e.email;
         }),
-        [f, h] = i.useState({ status: 'unknown' });
+        [p, h] = i.useState({ status: 'unknown' });
     i.useEffect(() => {
         h({ status: 'loading' }),
-            o.Z.verifyResend().then(
+            s.Z.verifyResend().then(
                 () => h({ status: 'success' }),
                 (e) => {
-                    h({ status: 'error' }), (0, u.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } });
+                    h({ status: 'error' }), (0, c.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } });
                 }
             );
     }, []);
-    let p = () =>
-        (0, r.jsx)(s.ModalFooter, {
+    let m = () =>
+        (0, r.jsx)(a.mzw, {
             className: d.modalFooter,
-            children: (0, r.jsx)(s.Button, {
-                color: s.Button.Colors.BRAND,
-                size: s.Button.Sizes.MEDIUM,
+            children: (0, r.jsx)(a.zxk, {
+                color: a.zxk.Colors.BRAND,
+                size: a.zxk.Sizes.MEDIUM,
                 onClick: n,
-                children: c.Z.Messages.CLOSE
+                children: u.NW.string(u.t.cpT0Cg)
             })
         });
-    return (0, r.jsxs)(s.ModalRoot, {
+    return (0, r.jsxs)(a.Y0X, {
         transitionState: t,
         disableTrack: !0,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
                 className: d.headerImage,
-                src: _
+                src: f
             }),
-            (0, r.jsxs)(s.ModalHeader, {
+            (0, r.jsxs)(a.xBx, {
                 separator: !1,
                 className: d.header,
                 children: [
-                    (0, r.jsx)(s.Heading, {
+                    (0, r.jsx)(a.X6q, {
                         className: d.title,
                         variant: 'heading-xl/bold',
-                        children: c.Z.Messages.QUESTS_REWARD_VERIFICATION_TITLE
+                        children: u.NW.string(u.t.c8eASE)
                     }),
-                    (0, r.jsx)(s.ModalCloseButton, {
+                    (0, r.jsx)(a.olH, {
                         onClick: n,
                         className: d.modalCloseButton
                     })
                 ]
             }),
-            'loading' === f.status &&
-                (0, r.jsx)(s.ModalContent, {
+            'loading' === p.status &&
+                (0, r.jsx)(a.hzk, {
                     className: d.content,
-                    children: (0, r.jsx)(s.Spinner, {})
+                    children: (0, r.jsx)(a.$jN, {})
                 }),
-            'error' === f.status &&
+            'error' === p.status &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(s.ModalContent, {
+                        (0, r.jsx)(a.hzk, {
                             className: d.content,
-                            children: (0, r.jsx)(s.Text, {
+                            children: (0, r.jsx)(a.Text, {
                                 variant: 'text-md/normal',
-                                children: c.Z.Messages.QUESTS_REWARD_VERIFICATION_ERROR
+                                children: u.NW.string(u.t.vjyinp)
                             })
                         }),
-                        p()
+                        m()
                     ]
                 }),
-            'success' === f.status &&
+            'success' === p.status &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(s.ModalContent, {
+                        (0, r.jsx)(a.hzk, {
                             className: d.content,
-                            children: (0, r.jsx)(s.Text, {
+                            children: (0, r.jsx)(a.Text, {
                                 variant: 'text-md/normal',
-                                children: c.Z.Messages.QUESTS_REWARD_VERIFICATION_BODY.format({
-                                    emailAddress: E,
-                                    emailAddressLink: 'mailto:'.concat(E)
+                                children: u.NW.format(u.t.qP5xYW, {
+                                    emailAddress: _,
+                                    emailAddressLink: 'mailto:'.concat(_)
                                 })
                             })
                         }),
-                        (0, r.jsx)(s.ModalContent, {
+                        (0, r.jsx)(a.hzk, {
                             className: d.content,
                             children: (0, r.jsxs)('div', {
                                 className: d.tooltip,
                                 children: [
-                                    (0, r.jsx)(s.CircleInformationIcon, {
+                                    (0, r.jsx)(a.d3s, {
                                         size: 'xs',
                                         color: 'currentColor',
                                         className: d.infoFilledIcon
                                     }),
-                                    (0, r.jsx)(s.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         className: d.tooltipText,
                                         variant: 'text-sm/normal',
-                                        children: c.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CHECK_SPAM
+                                        children: u.NW.string(u.t.yb7itb)
                                     })
                                 ]
                             })
                         }),
-                        p()
+                        m()
                     ]
                 })
         ]
     });
 }
-function f() {
-    (0, s.openModalLazy)(async () => {
+function m() {
+    (0, a.ZDy)(async () => {
         let { QuestsRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 669041));
-        return (t) => (0, r.jsx)(e, { ...t });
+        return (t) => (0, r.jsx)(e, p({}, t));
     });
 }

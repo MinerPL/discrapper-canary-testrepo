@@ -1,58 +1,57 @@
-n(47120);
-var i,
+n.d(t, { Z: () => g }), n(47120);
+var r,
+    i,
     l,
-    r,
-    a,
-    s = n(442837),
-    o = n(570140),
-    c = n(445507);
-let u = {
-        'valorant-user': c.qJ,
-        'valorant-admin': c.xQ,
-        'genshin-user': c.Zl,
-        'genshin-admin': c.Q3
+    o = n(442837),
+    a = n(570140),
+    s = n(445507);
+let c = {
+        'valorant-user': s.qJ,
+        'valorant-admin': s.xQ,
+        'genshin-user': s.Zl,
+        'genshin-admin': s.Q3
     },
-    d = null,
-    h = {},
+    u = null,
+    d = {},
     p = new Set();
-function _() {
-    for (let e in ((d = null), h)) delete h[e];
+function h() {
+    for (let e in ((u = null), d)) delete d[e];
 }
-class f extends (i = s.ZP.Store) {
+class f extends (r = o.ZP.Store) {
     getActiveUserSignUp() {
-        return d;
+        return u;
     }
     getActiveGuildSignUp(e) {
         var t;
-        return null !== (t = h[e]) && void 0 !== t ? t : null;
+        return null != (t = d[e]) ? t : null;
     }
     hasCompletedTarget(e) {
         return p.has(e);
     }
 }
-(a = 'SignUpStore'),
-    (r = 'displayName') in (l = f)
-        ? Object.defineProperty(l, r, {
-              value: a,
+(l = 'SignUpStore'),
+    (i = 'displayName') in f
+        ? Object.defineProperty(f, i, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
-    (t.Z = new f(o.Z, {
-        ENABLE_USER_SIGN_UP: function (e) {
-            let { key: t } = e,
-                n = u[t];
-            (0, c.u9)(n) && 0 === Object.keys(h).length && (d = n);
-        },
-        ENABLE_GUILD_SIGN_UP: function (e) {
-            let { key: t, guildId: n } = e,
-                i = u[t];
-            (0, c.mC)(i) && ((h[n] = i), (d = null));
-        },
-        COMPLETE_SIGN_UP: function (e) {
-            let { targetKey: t } = e;
-            p.add(t), _();
-        },
-        DISMISS_SIGN_UP: _
-    }));
+        : (f[i] = l);
+let g = new f(a.Z, {
+    ENABLE_USER_SIGN_UP: function (e) {
+        let { key: t } = e,
+            n = c[t];
+        (0, s.u9)(n) && 0 === Object.keys(d).length && (u = n);
+    },
+    ENABLE_GUILD_SIGN_UP: function (e) {
+        let { key: t, guildId: n } = e,
+            r = c[t];
+        (0, s.mC)(r) && ((d[n] = r), (u = null));
+    },
+    COMPLETE_SIGN_UP: function (e) {
+        let { targetKey: t } = e;
+        p.add(t), h();
+    },
+    DISMISS_SIGN_UP: h
+});

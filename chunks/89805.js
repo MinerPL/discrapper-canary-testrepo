@@ -1,23 +1,13 @@
 n.d(t, {
-    NR: function () {
-        return a;
-    },
-    Ob: function () {
-        return l;
-    },
-    ZI: function () {
-        return s;
-    },
-    m1: function () {
-        return u;
-    },
-    uc: function () {
-        return o;
-    }
+    NR: () => o,
+    Ob: () => l,
+    ZI: () => a,
+    m1: () => c,
+    uc: () => s
 });
 var r = n(987170),
     i = n(987338);
-let a = (0, r.Z)({
+let o = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_vanilla',
         label: 'CTP open user settings - A/A test - Vanilla',
@@ -31,7 +21,7 @@ let a = (0, r.Z)({
             }
         ]
     }),
-    s = (0, r.Z)({
+    a = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_filters',
         label: 'CTP open user settings - A/A test - Filters',
@@ -45,7 +35,7 @@ let a = (0, r.Z)({
             }
         ]
     }),
-    o = (0, r.Z)({
+    s = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_multiple_buckets',
         label: 'CTP open user settings - A/A test - Multiple buckets',
@@ -78,7 +68,7 @@ let a = (0, r.Z)({
             }
         ]
     }),
-    u = (0, r.Z)({
+    c = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_uneven_buckets',
         label: 'CTP open user settings - A/A test - Uneven buckets',

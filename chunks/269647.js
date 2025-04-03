@@ -1,77 +1,85 @@
+n.d(t, { Z: () => O });
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(314897),
-    c = n(592125),
-    d = n(131951),
-    _ = n(496675),
-    E = n(19780),
-    f = n(979651),
-    h = n(981631);
+    i = n(442837),
+    o = n(570140),
+    a = n(314897),
+    s = n(592125),
+    l = n(131951),
+    c = n(496675),
+    u = n(19780),
+    d = n(979651),
+    f = n(981631);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 let p = !0,
-    m = !0;
-function I() {
-    let e;
-    let t = E.Z.getChannelId();
+    h = !0;
+function m(e) {
+    return null == e || !!e.suppress || null != e.requestToSpeakTimestamp;
+}
+function g() {
+    let e,
+        t = u.Z.getChannelId();
     if (null == t) e = !0;
     else {
-        var n;
-        let r = c.Z.getChannel(t),
-            i = f.Z.getVoiceState(null == r ? void 0 : r.getGuildId(), u.default.getId());
-        e = d.Z.getMode() !== h.pM4.VOICE_ACTIVITY || null == r || r.isPrivate() || r.isGuildStageVoice() || _.Z.can(h.Plq.USE_VAD, r) || null == (n = i) || !!n.suppress || null != n.requestToSpeakTimestamp || !1;
+        let n = s.Z.getChannel(t),
+            r = d.Z.getVoiceState(null == n ? void 0 : n.getGuildId(), a.default.getId());
+        e = l.Z.getMode() !== f.pM4.VOICE_ACTIVITY || null == n || n.isPrivate() || n.isGuildStageVoice() || c.Z.can(f.Plq.USE_VAD, n) || m(r);
     }
     if (p === e) return !1;
-    (m = e),
+    (h = e),
         (p = e),
-        l.Z.dispatch({
+        o.Z.dispatch({
             type: 'SET_VAD_PERMISSION',
             hasPermission: p
         });
 }
-class T extends (s = o.ZP.Store) {
+function E(e) {
+    let { voiceStates: t } = e;
+    return t.some((e) => {
+        let { userId: t } = e;
+        return t === a.default.getId() && g();
+    });
+}
+function b() {
+    h = !0;
+}
+function y() {
+    h = p;
+}
+class v extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, d.Z, E.Z, f.Z);
+        this.waitFor(c.Z, l.Z, u.Z, d.Z);
     }
     shouldShowWarning() {
-        return !m;
+        return !h;
     }
     canUseVoiceActivity() {
         return p;
     }
 }
-(a = 'PermissionVADStore'),
-    (i = 'displayName') in (r = T)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new T(l.Z, {
-        RTC_CONNECTION_STATE: I,
-        MEDIA_ENGINE_SET_AUDIO_ENABLED: I,
-        AUDIO_SET_MODE: I,
-        CHANNEL_UPDATES: I,
-        THREAD_UPDATE: I,
-        GUILD_ROLE_UPDATE: I,
-        GUILD_MEMBER_UPDATE: I,
-        IMPERSONATE_UPDATE: I,
-        IMPERSONATE_STOP: I,
-        VOICE_STATE_UPDATES: function (e) {
-            let { voiceStates: t } = e;
-            return t.some((e) => {
-                let { userId: t } = e;
-                return t === u.default.getId() && I();
-            });
-        },
-        AUDIO_TOGGLE_SELF_MUTE: function () {
-            m = p;
-        },
-        PERMISSION_CLEAR_VAD_WARNING: function () {
-            m = !0;
-        }
-    }));
+_(v, 'displayName', 'PermissionVADStore');
+let O = new v(o.Z, {
+    RTC_CONNECTION_STATE: g,
+    MEDIA_ENGINE_SET_AUDIO_ENABLED: g,
+    AUDIO_SET_MODE: g,
+    CHANNEL_UPDATES: g,
+    THREAD_UPDATE: g,
+    GUILD_ROLE_UPDATE: g,
+    GUILD_MEMBER_UPDATE: g,
+    IMPERSONATE_UPDATE: g,
+    IMPERSONATE_STOP: g,
+    VOICE_STATE_UPDATES: E,
+    AUDIO_TOGGLE_SELF_MUTE: y,
+    PERMISSION_CLEAR_VAD_WARNING: b
+});

@@ -1,32 +1,25 @@
 n.d(t, {
-    M9: function () {
-        return l;
-    },
-    Zh: function () {
-        return a;
-    },
-    e6: function () {
-        return r;
-    },
-    iq: function () {
-        return i;
-    }
+    M9: () => l,
+    Zh: () => i,
+    e6: () => s,
+    iq: () => a
 }),
-    n(757143);
-var s = n(441729);
-let a = null != window.speechSynthesis;
-function r(e, t) {
+    n(757143),
+    n(301563);
+var r = n(441729);
+let i = null != window.speechSynthesis;
+function s(e, t) {
     let n = e.replace(/(https?:\/\/[^\s]+)/g, (e) => {
         let t = e.match(/^https?:\/\/(?:www\.)?([^/?#]+)(?:[/?#]|$)/i);
         return null != t ? t[1] : '';
     });
     null != t && n.length > t && (n = (n = n.substring(0, t)).substring(0, Math.min(n.length, n.lastIndexOf(' '))));
-    let a = new SpeechSynthesisUtterance(n);
-    return (a.rate = s.Z.speechRate), a;
+    let i = new SpeechSynthesisUtterance(n);
+    return (i.rate = r.Z.speechRate), i;
 }
-function i(e, t) {
-    a && ((e.voice = t), speechSynthesis.speak(e));
+function a(e, t) {
+    i && ((e.voice = t), speechSynthesis.speak(e));
 }
 function l() {
-    a && speechSynthesis.cancel();
+    i && speechSynthesis.cancel();
 }

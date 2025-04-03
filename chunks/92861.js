@@ -1,30 +1,26 @@
-n.d(t, {
-    S: function () {
-        return l;
-    }
-});
+n.d(t, { S: () => u });
 var r = n(573654),
     i = n(778010),
-    a = n(112457),
-    s = n(603565);
-function o(e, t) {
+    o = n(112457),
+    a = n(603565);
+function s(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function l(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-var l = (function () {
-    var e, t, n;
-    function l(e, t) {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, l),
-            (this.store = e),
-            (this.registry = t);
+function c(e, t, n) {
+    return t && l(e.prototype, t), n && l(e, n), e;
+}
+var u = (function () {
+    function e(t, n) {
+        s(this, e), (this.store = t), (this.registry = n);
     }
     return (
-        (e = l),
-        (t = [
+        c(e, [
             {
                 key: 'subscribeToStateChange',
                 value: function (e) {
@@ -32,16 +28,17 @@ var l = (function () {
                         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { handlerIds: void 0 },
                         i = n.handlerIds;
                     (0, r.k)('function' == typeof e, 'listener must be a function.'), (0, r.k)(void 0 === i || Array.isArray(i), 'handlerIds, when specified, must be an array of strings.');
-                    var a = this.store.getState().stateId;
-                    return this.store.subscribe(function () {
-                        var n = t.store.getState(),
-                            r = n.stateId;
-                        try {
-                            !(r === a || (r === a + 1 && !(0, s.co)(n.dirtyHandlerIds, i))) && e();
-                        } finally {
-                            a = r;
-                        }
-                    });
+                    var o = this.store.getState().stateId,
+                        s = function () {
+                            var n = t.store.getState(),
+                                r = n.stateId;
+                            try {
+                                r !== o && (r !== o + 1 || (0, a.co)(n.dirtyHandlerIds, i)) && e();
+                            } finally {
+                                o = r;
+                            }
+                        };
+                    return this.store.subscribe(s);
                 }
             },
             {
@@ -49,11 +46,12 @@ var l = (function () {
                 value: function (e) {
                     var t = this;
                     (0, r.k)('function' == typeof e, 'listener must be a function.');
-                    var n = this.store.getState().dragOffset;
-                    return this.store.subscribe(function () {
-                        var r = t.store.getState().dragOffset;
-                        if (r !== n) (n = r), e();
-                    });
+                    var n = this.store.getState().dragOffset,
+                        i = function () {
+                            var r = t.store.getState().dragOffset;
+                            r !== n && ((n = r), e());
+                        };
+                    return this.store.subscribe(i);
                 }
             },
             {
@@ -71,8 +69,8 @@ var l = (function () {
                     var t = this.registry.getTarget(e);
                     if (((0, r.k)(t, 'Expected to find a valid target. targetId='.concat(e)), !this.isDragging() || this.didDrop())) return !1;
                     var n = this.registry.getTargetType(e),
-                        a = this.getItemType();
-                    return (0, i.s)(n, a) && t.canDrop(this, e);
+                        o = this.getItemType();
+                    return (0, i.s)(n, o) && t.canDrop(this, e);
                 }
             },
             {
@@ -86,7 +84,7 @@ var l = (function () {
                 value: function (e) {
                     if (!e) return !1;
                     var t = this.registry.getSource(e, !0);
-                    return (0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !!(this.isDragging() && this.isSourcePublic()) && this.registry.getSourceType(e) === this.getItemType() && t.isDragging(this, e);
+                    return (0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !!this.isDragging() && !!this.isSourcePublic() && this.registry.getSourceType(e) === this.getItemType() && t.isDragging(this, e);
                 }
             },
             {
@@ -97,12 +95,12 @@ var l = (function () {
                     var n = t.shallow;
                     if (!this.isDragging()) return !1;
                     var r = this.registry.getTargetType(e),
-                        a = this.getItemType();
-                    if (a && !(0, i.s)(r, a)) return !1;
-                    var s = this.getTargetIds();
-                    if (!s.length) return !1;
-                    var o = s.indexOf(e);
-                    return n ? o === s.length - 1 : o > -1;
+                        o = this.getItemType();
+                    if (o && !(0, i.s)(r, o)) return !1;
+                    var a = this.getTargetIds();
+                    if (!a.length) return !1;
+                    var s = a.indexOf(e);
+                    return n ? s === a.length - 1 : s > -1;
                 }
             },
             {
@@ -168,17 +166,16 @@ var l = (function () {
             {
                 key: 'getSourceClientOffset',
                 value: function () {
-                    return (0, a.YY)(this.store.getState().dragOffset);
+                    return (0, o.YY)(this.store.getState().dragOffset);
                 }
             },
             {
                 key: 'getDifferenceFromInitialOffset',
                 value: function () {
-                    return (0, a.ar)(this.store.getState().dragOffset);
+                    return (0, o.ar)(this.store.getState().dragOffset);
                 }
             }
         ]),
-        o(e.prototype, t),
-        l
+        e
     );
 })();

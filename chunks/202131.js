@@ -1,30 +1,24 @@
-n.d(t, {
-    N: function () {
-        return u;
-    }
-}),
-    n(47120),
-    n(724458);
+n.d(t, { N: () => u }), n(47120), n(301563), n(230036);
 var r = n(626135),
     i = n(960048),
-    a = n(592204),
-    s = n(803141),
-    o = n(603158),
-    l = n(981631);
+    o = n(592204),
+    c = n(803141),
+    a = n(603158),
+    s = n(981631);
 function u(e, t) {
-    (0, a.pB)({ location: 'keyword_substituted_content' });
+    (0, o.pB)({ location: 'keyword_substituted_content' });
     try {
         let n = (function (e) {
             var t;
-            let n = s.Z.getKeywordTrie();
+            let n = c.Z.getKeywordTrie();
             if ('' === e) return [];
-            let r = (0, o.F)(e).toLowerCase();
-            return Object.values(null !== (t = null == n ? void 0 : n.search(r)) && void 0 !== t ? t : {});
+            let r = (0, a.F)(e).toLowerCase();
+            return Object.values(null != (t = null == n ? void 0 : n.search(r)) ? t : {});
         })(e);
         if (0 === n.length) return e;
         return (
             n.forEach((e) => {
-                r.default.track(l.rMx.KEYWORD_FILTER_MATCH, {
+                r.default.track(s.rMx.KEYWORD_FILTER_MATCH, {
                     message_id: null == t ? void 0 : t.messageId,
                     channel_id: null == t ? void 0 : t.channelId,
                     author_id: null == t ? void 0 : t.authorId,
@@ -38,13 +32,13 @@ function u(e, t) {
                         (function (e, t, n) {
                             let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
                                 i = Math.max(t, 0),
-                                a = Math.min(n, e.length - 1),
-                                s = r ? '\\*' : '*',
-                                o = [...e.substring(i, a + 1)].map((e) => (' ' === e ? ' ' : s)).join('');
+                                o = Math.min(n, e.length - 1),
+                                c = r ? '\\*' : '*',
+                                a = [...e.substring(i, o + 1)].map((e) => (' ' === e ? ' ' : c)).join('');
                             return ''
                                 .concat(e.substring(0, i))
-                                .concat(o)
-                                .concat(e.substring(a + 1));
+                                .concat(a)
+                                .concat(e.substring(o + 1));
                         })(e, n.start, n.end, null == t ? void 0 : t.escapeReplacement),
                     e
                 )

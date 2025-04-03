@@ -1,14 +1,10 @@
-n.d(t, {
-    K: function () {
-        return i;
-    },
-    N: function () {
-        return a;
-    }
-});
-function i(e) {
+function r(e) {
     return e <= 220;
 }
-function a(e) {
+function l(e) {
     return e <= 124;
 }
+n.d(t, {
+    K: () => r,
+    N: () => l
+});

@@ -1,36 +1,37 @@
-var s = n(735250);
-n(470079);
-var a = n(399606),
-    r = n(481060),
-    i = n(594174),
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(399606),
+    s = n(481060),
+    a = n(594174),
     l = n(51144),
     o = n(546791),
     c = n(198952),
-    d = n(802230);
-t.Z = (e) => {
-    let { userId: t, timestamp: n, timestampFormatter: _ } = e,
-        u = (0, a.e7)([i.default], () => i.default.getUser(t));
-    return void 0 === u
+    d = n(772998);
+let u = (e) => {
+    let { userId: t, timestamp: n, timestampFormatter: u } = e,
+        m = (0, i.e7)([a.default], () => a.default.getUser(t));
+    return void 0 === m
         ? null
-        : (0, s.jsxs)('div', {
+        : (0, r.jsxs)('div', {
               className: d.container,
               children: [
-                  (0, s.jsx)(c.r, {
-                      user: u,
-                      avatarSize: r.AvatarSizes.SIZE_40
+                  (0, r.jsx)(c.r, {
+                      user: m,
+                      avatarSize: s.EFr.SIZE_40
                   }),
-                  (0, s.jsx)('div', {
-                      children: (0, s.jsxs)('div', {
+                  (0, r.jsx)('div', {
+                      children: (0, r.jsxs)('div', {
                           className: d.descriptors,
                           children: [
-                              (0, s.jsx)(r.Text, {
+                              (0, r.jsx)(s.Text, {
                                   variant: 'text-md/semibold',
-                                  children: l.ZP.getName(u)
+                                  children: l.ZP.getName(m)
                               }),
-                              (0, s.jsx)(r.Text, {
+                              (0, r.jsx)(s.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-muted',
-                                  children: (0, o.LI)(new Date(n).getTime(), _)
+                                  children: (0, o.LI)(new Date(n).getTime(), u)
                               })
                           ]
                       })

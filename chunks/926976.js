@@ -1,130 +1,220 @@
-t.d(r, {
-    Z: function () {
-        return E;
-    }
-}),
-    t(47120);
-var a = t(735250),
-    n = t(470079),
-    i = t(120356),
-    o = t.n(i),
-    l = t(913527),
-    c = t.n(l),
-    s = t(442837),
-    d = t(481060),
-    u = t(129861),
-    h = t(665149),
-    m = t(594174),
-    g = t(55935),
-    p = t(120816),
-    b = t(31336),
-    f = t(257785),
-    y = t(484036),
-    x = t(681619),
-    k = t(621060),
-    v = t(689938),
-    _ = t(408126),
-    w = t(535271);
-let j = [
+n.d(t, { Z: () => Z }), n(47120), n(26686);
+var r = n(200651),
+    a = n(192379),
+    l = n(120356),
+    i = n.n(l),
+    o = n(913527),
+    s = n.n(o),
+    c = n(852229),
+    d = n(442837),
+    u = n(481060),
+    m = n(129861),
+    x = n(665149),
+    h = n(886118),
+    p = n(301801),
+    b = n(594174),
+    f = n(55935),
+    _ = n(120816),
+    g = n(31336),
+    v = n(257785),
+    j = n(484036),
+    y = n(681619),
+    C = n(621060),
+    T = n(388032),
+    S = n(459100),
+    N = n(616257);
+let O = [
     {
         key: 'event',
-        cellClassName: _.eventColumn,
+        cellClassName: S.eventColumn,
         render(e) {
-            let { event: r } = e;
-            return r;
+            let { event: t } = e;
+            return t;
         }
     },
     {
         key: 'location',
-        cellClassName: _.locationColumn,
+        cellClassName: S.locationColumn,
         render(e) {
-            let { properties: r } = e;
-            return r.location;
+            let { properties: t } = e;
+            return null == t.location ? null : t.location;
         }
     }
 ];
-function C(e) {
-    let { children: r } = e;
-    return (0, a.jsx)(d.ScrollerThin, {
-        className: _.customPropertiesContainer,
-        children: (0, a.jsx)('dl', { children: r })
+function k(e) {
+    let { children: t } = e;
+    return (0, r.jsx)(u.zJl, {
+        className: S.customPropertiesContainer,
+        children: (0, r.jsx)('dl', { children: t })
     });
 }
-function N(e) {
-    let { name: r, children: t } = e;
-    return (0, a.jsxs)(a.Fragment, {
-        children: [
-            (0, a.jsx)('dt', {
-                className: _.customPropertiesName,
-                children: r
-            }),
-            (0, a.jsx)('dd', {
-                className: _.customPropertiesValue,
-                children: t
-            })
-        ]
-    });
+function E(e) {
+    let { name: t, children: n, copyValue: l } = e,
+        [i, o] = a.useState(!1);
+    return (
+        a.useEffect(() => {
+            if (i) {
+                let e = setTimeout(() => o(!1), 1000);
+                return () => clearTimeout(e);
+            }
+        }, [i]),
+        (0, r.jsxs)('div', {
+            className: S.customProperty,
+            children: [
+                (0, r.jsx)('dt', {
+                    className: S.customPropertiesName,
+                    children: t
+                }),
+                (0, r.jsx)('dd', { children: n }),
+                (0, r.jsx)(u.P3F, {
+                    tag: 'span',
+                    className: S.copyPropertyButton,
+                    onClick: () => {
+                        (0, c.J)(JSON.stringify(l)), o(!0);
+                    },
+                    children: i
+                        ? (0, r.jsx)(u.kmB, {
+                              color: 'currentColor',
+                              size: 'sm'
+                          })
+                        : (0, r.jsx)(u.TIy, {
+                              color: 'currentColor',
+                              size: 'sm'
+                          })
+                })
+            ]
+        })
+    );
 }
-let S = [
+let w = [
         {
             id: 'details',
             name: 'Details',
             render: (e) => {
                 let {
-                        loggedEvent: { event: r, properties: t, timestamp: n, fingerprint: i }
+                        loggedEvent: { event: t, properties: n, timestamp: a, fingerprint: l },
+                        onClose: o
                     } = e,
-                    l = m.default.getUser(i),
-                    s = c()(n);
-                return (0, a.jsxs)(a.Fragment, {
+                    d = b.default.getUser(l),
+                    h = s()(a);
+                return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, a.jsxs)(h.ZP, {
-                            className: o()(w.headerBar, _.subPanelHeaderBar),
+                        (0, r.jsxs)(x.ZP, {
+                            className: i()(N.headerBar, S.subPanelHeaderBar),
                             children: [
-                                (0, a.jsx)(h.ZP.Icon, {
-                                    icon: d.AnalyticsIcon,
-                                    tooltip: r
+                                (0, r.jsx)(x.ZP.Icon, {
+                                    icon: u.IeX,
+                                    tooltip: t
                                 }),
-                                (0, a.jsx)(h.ZP.Title, { children: r })
-                            ]
-                        }),
-                        (0, a.jsxs)(f.E, {
-                            className: _.commonProperties,
-                            children: [
-                                (0, a.jsx)(f.Z9, {
-                                    name: 'Timestamp (local)',
-                                    children: (0, a.jsx)('time', {
-                                        dateTime: n.toISOString(),
-                                        title: (0, g.vc)(s, 'LLLL'),
-                                        children: (0, g.Y4)(s)
-                                    })
+                                (0, r.jsxs)(x.ZP.Title, {
+                                    wrapperClassName: S.headerTitle,
+                                    children: [
+                                        t,
+                                        (0, r.jsx)(u.P3F, {
+                                            tag: 'span',
+                                            className: S.copyEventButton,
+                                            onClick: () => (0, c.J)(t),
+                                            children: (0, r.jsx)(u.TIy, {
+                                                color: 'currentColor',
+                                                size: 'sm'
+                                            })
+                                        })
+                                    ]
                                 }),
-                                null != l &&
-                                    (0, a.jsx)(f.Z9, {
-                                        name: 'User',
-                                        children: (0, a.jsx)(u.Z, { user: l })
-                                    }),
-                                (0, a.jsx)(f.Z9, {
-                                    name: 'Fingerprint',
-                                    children: (0, a.jsx)('code', { children: i })
+                                (0, r.jsx)(x.ZP.Icon, {
+                                    icon: u.TIy,
+                                    tooltip: 'Copy all properties',
+                                    onClick: () => {
+                                        (0, c.J)(
+                                            JSON.stringify(
+                                                (function (e) {
+                                                    for (var t = 1; t < arguments.length; t++) {
+                                                        var n = null != arguments[t] ? arguments[t] : {},
+                                                            r = Object.keys(n);
+                                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                                            (r = r.concat(
+                                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                })
+                                                            )),
+                                                            r.forEach(function (t) {
+                                                                var r;
+                                                                (r = n[t]),
+                                                                    t in e
+                                                                        ? Object.defineProperty(e, t, {
+                                                                              value: r,
+                                                                              enumerable: !0,
+                                                                              configurable: !0,
+                                                                              writable: !0
+                                                                          })
+                                                                        : (e[t] = r);
+                                                            });
+                                                    }
+                                                    return e;
+                                                })(
+                                                    {
+                                                        event: t,
+                                                        timestamp: a,
+                                                        fingerprint: l,
+                                                        user: null == d ? void 0 : d.id
+                                                    },
+                                                    n
+                                                ),
+                                                (e, t) => (void 0 === t ? null : t),
+                                                2
+                                            )
+                                        );
+                                    }
+                                }),
+                                (0, r.jsx)(x.ZP.Icon, {
+                                    icon: u.k$p,
+                                    tooltip: 'Close',
+                                    onClick: o
                                 })
                             ]
                         }),
-                        (0, a.jsx)(C, {
-                            children: Object.entries(t).map((e) => {
-                                let [r, t] = e;
-                                return (0, a.jsx)(
-                                    N,
+                        (0, r.jsxs)(v.E, {
+                            className: S.commonProperties,
+                            children: [
+                                (0, r.jsx)(v.Z9, {
+                                    name: 'Timestamp (local)',
+                                    copyValue: a.toISOString(),
+                                    children: (0, r.jsxs)('time', {
+                                        dateTime: a.toISOString(),
+                                        title: (0, f.vc)(h, 'LLLL'),
+                                        children: ['(', s().locale(), ') ', (0, f.Y4)(h)]
+                                    })
+                                }),
+                                null != d &&
+                                    (0, r.jsx)(v.Z9, {
+                                        name: 'User',
+                                        copyValue: d.id,
+                                        children: (0, r.jsx)(m.Z, { user: d })
+                                    }),
+                                (0, r.jsx)(v.Z9, {
+                                    name: 'Fingerprint',
+                                    copyValue: l,
+                                    children: (0, r.jsx)('code', { children: l })
+                                })
+                            ]
+                        }),
+                        (0, r.jsx)(k, {
+                            children: Object.entries(n).map((e) => {
+                                let [t, n] = e;
+                                return (0, r.jsx)(
+                                    E,
                                     {
-                                        name: ''.concat(r, ':'),
+                                        name: ''.concat(t, ':'),
+                                        copyValue: { [t]: n || null },
                                         children:
-                                            null != t
-                                                ? (0, a.jsx)('code', { children: JSON.stringify(t) })
-                                                : (0, a.jsx)('code', {
-                                                      className: _.emptyProperty,
+                                            null != n
+                                                ? (0, r.jsx)('code', { children: JSON.stringify(n) })
+                                                : (0, r.jsx)('code', {
+                                                      className: S.emptyProperty,
                                                       children: 'null'
                                                   })
                                     },
-                                    r
+                                    t
                                 );
                             })
                         })
@@ -133,18 +223,18 @@ let S = [
             }
         }
     ],
-    T = {
+    P = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(T)
+                Object.entries(P)
                     .filter((e) => {
-                        let [r] = e;
-                        return 'events' !== r;
+                        let [t] = e;
+                        return 'events' !== t;
                     })
-                    .map((r) => {
-                        let [t, { filter: a }] = r;
-                        return !a(e);
+                    .map((t) => {
+                        let [n, { filter: r }] = t;
+                        return !r(e);
                     })
                     .every((e) => e)
         },
@@ -160,75 +250,101 @@ let S = [
             label: 'Network',
             filter: (e) => e.event.startsWith('network_action')
         }
+    },
+    I = {
+        searchType: h.S.REGEX,
+        searchStringGenerator: (e) => {
+            let { event: t, properties: n } = e;
+            return null != n.location ? [t, n.location] : t;
+        },
+        throttleMs: 100
     };
-function E() {
-    let e = n.useRef(null),
-        r = (0, s.e7)([p.Z], () => p.Z.loggedEvents),
-        [t, i] = n.useState(Object.keys(T)),
-        l = r.filter((e) => {
-            for (let r of t) if (T[r].filter(e)) return !0;
+function Z() {
+    let e = a.useRef(null),
+        [t, n] = a.useState(''),
+        l = (0, d.e7)([_.Z], () => _.Z.loggedEventsVersion),
+        [o, s] = a.useState(() => Object.keys(P)),
+        [c, m] = a.useState(_.Z.loggedEvents),
+        x = a.useCallback((e) => {
+            m(e);
+        }, []);
+    (0, p.BO)(t, _.Z.loggedEvents, x, I, [l]);
+    let h = c.filter((e) => {
+            for (let t of o) if (P[t].filter(e)) return !0;
             return !1;
         }),
-        [c, u] = n.useState(void 0),
-        h = l.find((e) => e.key === c),
-        { TabBar: m, renderSelectedTab: g } = (0, k.Z)({ tabs: S }, []);
-    return (0, a.jsxs)('div', {
+        [b, f] = a.useState(void 0),
+        v = h.find((e) => e.key === b),
+        { TabBar: k, renderSelectedTab: E } = (0, C.Z)({ tabs: w }, []);
+    return (0, r.jsxs)('div', {
         ref: e,
-        className: o()(w.panel, _.panel),
+        className: i()(N.panel, S.panel),
         children: [
-            (0, a.jsxs)('div', {
-                className: _.toolbar,
+            (0, r.jsxs)('div', {
+                className: S.toolbar,
                 children: [
-                    (0, a.jsx)(d.Button, {
-                        className: _.toolbarButton,
-                        look: d.Button.Looks.BLANK,
-                        size: d.Button.Sizes.ICON,
-                        onClick: b.Zw,
-                        children: (0, a.jsx)('span', {
-                            title: v.Z.Messages.CLEAR,
-                            children: (0, a.jsx)(d.TrashIcon, {
+                    (0, r.jsx)(u.zxk, {
+                        className: S.toolbarButton,
+                        look: u.zxk.Looks.BLANK,
+                        size: u.zxk.Sizes.ICON,
+                        onClick: g.Zw,
+                        children: (0, r.jsx)('span', {
+                            title: T.NW.string(T.t.VkKicX),
+                            children: (0, r.jsx)(u.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': v.Z.Messages.CLEAR
+                                'aria-label': T.NW.string(T.t.VkKicX)
                             })
                         })
                     }),
-                    (0, a.jsx)('div', { className: _.toolbarDivider }),
-                    (0, a.jsx)('div', {
-                        className: _.filters,
-                        children: Object.entries(T).map((e) => {
-                            let [r, n] = e;
-                            return (0, a.jsx)(
-                                d.Clickable,
+                    (0, r.jsx)('div', { className: S.toolbarDivider }),
+                    (0, r.jsx)('div', {
+                        className: S.filters,
+                        children: Object.entries(P).map((e) => {
+                            let [t, n] = e;
+                            return (0, r.jsx)(
+                                u.P3F,
                                 {
-                                    className: o()(_.filter, t.includes(r) && _.activeFilter),
+                                    className: i()(S.filter, o.includes(t) && S.activeFilter),
                                     onClick: () => {
-                                        var e;
-                                        return (e = r), void i((r) => (r.includes(e) ? r.filter((r) => r !== e) : [...r, e]));
+                                        s((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
                                     children: n.label
                                 },
-                                r
+                                t
                             );
                         })
                     })
                 ]
             }),
-            (0, a.jsx)(d.ScrollerThin, {
-                className: _.tableContainer,
-                children: (0, a.jsx)(x.Z, {
-                    columns: j,
-                    data: l,
-                    selectedRowKey: c,
-                    onClickRow: u
+            (0, r.jsx)('div', {
+                className: S.toolbar,
+                children: (0, r.jsx)(u.E1j, {
+                    className: S.searchBar,
+                    query: t,
+                    onChange: n,
+                    onClear: () => n(''),
+                    placeholder: 'Search by event name'
                 })
             }),
-            null != h &&
-                (0, a.jsxs)(y.Z, {
-                    className: _.subPanel,
+            (0, r.jsx)(y.Z, {
+                columns: O,
+                data: h,
+                selectedRowKey: b,
+                onClickRow: (e) => f(e.key)
+            }),
+            null != v &&
+                (0, r.jsxs)(j.Z, {
+                    className: S.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
-                    children: [(0, a.jsx)(m, {}), g({ loggedEvent: h })]
+                    children: [
+                        (0, r.jsx)(k, {}),
+                        E({
+                            loggedEvent: v,
+                            onClose: () => f(void 0)
+                        })
+                    ]
                 })
         ]
     });

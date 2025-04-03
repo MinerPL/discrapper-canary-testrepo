@@ -1,34 +1,30 @@
-t.d(s, {
-    Z: function () {
-        return _;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(120356),
-    i = t.n(a),
-    r = t(873546),
-    o = t(481060),
-    l = t(993413),
-    c = t(689938),
-    d = t(308152);
-function _(e) {
-    let { children: s, className: t, layoutClassName: a, profilePreview: _, previewTitle: E } = e,
-        u = () =>
-            (0, n.jsx)(l.Z, {
-                title: null != E ? E : c.Z.Messages.PROFILE_CUSTOMIZATION_PREVIEW,
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(873546),
+    l = n(481060),
+    o = n(993413),
+    c = n(388032),
+    d = n(775853);
+function u(e) {
+    let { children: t, className: n, layoutClassName: i, profilePreview: u, previewTitle: m } = e,
+        g = () =>
+            (0, r.jsx)(o.Z, {
+                title: null != m ? m : c.NW.string(c.t.Zb06yM),
                 className: d.preview,
-                children: _
+                children: u
             });
-    return (0, n.jsx)('div', {
-        className: t,
-        children: (0, n.jsxs)(o.FormSection, {
+    return (0, r.jsx)('div', {
+        className: n,
+        children: (0, r.jsxs)(l.hjN, {
             className: d.profileCustomizationSection,
             children: [
-                r.tq && u(),
-                (0, n.jsxs)('div', {
-                    className: i()(d.baseLayout, a),
-                    children: [s, !r.tq && u()]
+                a.tq && g(),
+                (0, r.jsxs)('div', {
+                    className: s()(d.baseLayout, i),
+                    children: [t, !a.tq && g()]
                 })
             ]
         })

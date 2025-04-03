@@ -1,10 +1,6 @@
-n.d(t, {
-    F: function () {
-        return r;
-    },
-    n: function () {
-        return i;
-    }
+i.d(e, {
+    F: () => s,
+    n: () => n
 });
-let r = 12,
-    i = 24;
+let s = 12,
+    n = 24;

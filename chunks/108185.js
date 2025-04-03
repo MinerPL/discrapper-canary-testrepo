@@ -1,39 +1,31 @@
-r.d(t, {
-    QV: function () {
-        return E;
-    },
-    XL: function () {
-        return s;
-    },
-    Y: function () {
-        return _;
-    },
-    nl: function () {
-        return i;
-    }
+a.d(e, {
+    QV: () => c,
+    XL: () => s,
+    Y: () => i,
+    nl: () => o
 });
-var n = r(696486),
-    a = r(152228),
-    o = r(395848);
-function i(e) {
-    return 'number' == typeof e && isFinite(e);
+var r = a(696486),
+    n = a(152228),
+    _ = a(395848);
+function o(t) {
+    return 'number' == typeof t && isFinite(t);
 }
-function _(e, t, r, { ...o }) {
-    let i = (0, n.XU)(e).start_timestamp;
+function i(t, e, a, { ..._ }) {
+    let o = (0, r.XU)(t).start_timestamp;
     return (
-        i && i > t && 'function' == typeof e.updateStartTime && e.updateStartTime(t),
-        (0, a._d)(e, () => {
-            let e = (0, a.qp)({
-                startTime: t,
-                ...o
+        o && o > e && 'function' == typeof t.updateStartTime && t.updateStartTime(e),
+        (0, n._d)(t, () => {
+            let t = (0, n.qp)({
+                startTime: e,
+                ..._
             });
-            return e && e.end(r), e;
+            return t && t.end(a), t;
         })
     );
 }
-function E() {
-    return o.m && o.m.addEventListener && o.m.performance;
+function c() {
+    return _.m && _.m.addEventListener && _.m.performance;
 }
-function s(e) {
-    return e / 1000;
+function s(t) {
+    return t / 1000;
 }

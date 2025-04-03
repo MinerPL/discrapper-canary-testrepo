@@ -1,76 +1,62 @@
 n.d(t, {
-    RB: function () {
-        return x;
-    },
-    VH: function () {
-        return S;
-    },
-    Vi: function () {
-        return O;
-    },
-    Vu: function () {
-        return M;
-    },
-    q7: function () {
-        return R;
-    }
+    RB: () => O,
+    VH: () => y,
+    Vi: () => N,
+    Vu: () => j,
+    q7: () => v
 });
-var i,
-    a,
-    s,
-    r,
-    l = n(692547),
-    o = n(497089),
-    c = n(650473),
-    u = n(389765),
-    d = n(137492),
-    _ = n(387661),
-    E = n(659953),
-    I = n(319707),
-    m = n(584914),
-    T = n(334702),
-    h = n(333722),
-    N = n(549931),
-    f = n(178561),
-    C = n(39863),
-    p = n(130312);
-((i = s || (s = {})).CHECKED = 'CHECKED'), (i.FRIENDS = 'FRIENDS'), (i.SHARE_SCREEN = 'SHARE_SCREEN'), (i.NEW_MESSAGE = 'NEW_MESSAGE');
-let g = {
-    CHECKED: _,
-    FRIENDS: I,
-    SHARE_SCREEN: C,
-    NEW_MESSAGE: N
-};
-((a = r || (r = {})).MISSED_MESSAGES = 'MISSED_MESSAGES'), (a.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER'), (a.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT'), (a.TOP_MESSAGES = 'TOP_MESSAGES'), (a.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER'), (a.UPDATE_PROFILE = 'UPDATE_PROFILE'), (a.FIND_FRIENDS = 'FIND_FRIENDS'), (a.ADD_FRIEND = 'ADD_FRIEND'), (a.FIRST_MESSAGE = 'FIRST_MESSAGE');
-let S = {
-        MISSED_MESSAGES: h,
-        FRIEND_REQUEST_REMINDER: m,
-        SCHEDULED_GUILD_EVENT: E,
-        TOP_MESSAGES: T,
-        NOTIFICATION_CENTER: d,
-        UPDATE_PROFILE: p,
-        FIND_FRIENDS: u,
-        ADD_FRIEND: u,
-        FIRST_MESSAGE: f
+var r = n(692547),
+    i = n(497089),
+    a = n(650473),
+    l = n(389765),
+    o = n(137492),
+    s = n(387661),
+    c = n(659953),
+    u = n(319707),
+    d = n(584914),
+    p = n(962575),
+    m = n(334702),
+    f = n(333722),
+    h = n(549931),
+    g = n(178561),
+    _ = n(39863),
+    b = n(130312);
+let x = {
+        CHECKED: s,
+        FRIENDS: u,
+        SHARE_SCREEN: _,
+        NEW_MESSAGE: h,
+        GAME_RELATIONSHIP: p
     },
-    A = (e) => {
+    y = {
+        MISSED_MESSAGES: f,
+        FRIEND_REQUEST_REMINDER: d,
+        SCHEDULED_GUILD_EVENT: c,
+        TOP_MESSAGES: m,
+        NOTIFICATION_CENTER: o,
+        UPDATE_PROFILE: b,
+        FIND_FRIENDS: l,
+        ADD_FRIEND: l,
+        FIRST_MESSAGE: g
+    },
+    E = (e) => {
         switch (e.item_enum) {
-            case o.AM.ADD_FRIEND:
+            case i.AM.ADD_FRIEND:
                 return 'ADD_FRIEND';
-            case o.AM.FIND_FRIENDS:
+            case i.AM.FIND_FRIENDS:
                 return 'FIND_FRIENDS';
-            case o.AM.FIRST_MESSAGE:
+            case i.AM.FIRST_MESSAGE:
                 return 'FIRST_MESSAGE';
-            case o.AM.UPDATE_PROFILE:
+            case i.AM.UPDATE_PROFILE:
                 return 'UPDATE_PROFILE';
             default:
                 return 'NOTIFICATION_CENTER';
         }
     },
-    R = (e) => {
+    v = (e) => {
         switch (e.type) {
             case 'lifecycle_item':
-                return A(e);
+                return E(e);
             case 'missed_messages':
                 return 'MISSED_MESSAGES';
             case 'friend_request_reminder':
@@ -83,53 +69,57 @@ let S = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    x = (e) => {
-        if ('icHighlight' === e) return 'TOP_MESSAGES';
-        return 'NOTIFICATION_CENTER';
-    },
-    O = (e) => {
+    O = (e) => ('icHighlight' === e ? 'TOP_MESSAGES' : 'NOTIFICATION_CENTER'),
+    N = (e) => {
         switch (e) {
-            case o.DY.GO_LIVE_PUSH:
+            case i.DY.GO_LIVE_PUSH:
                 return {
-                    icon: g.SHARE_SCREEN,
-                    color: l.Z.colors.BACKGROUND_ACCENT
+                    icon: x.SHARE_SCREEN,
+                    color: r.Z.colors.BACKGROUND_ACCENT
                 };
-            case o.DY.FRIEND_REQUEST_ACCEPTED:
+            case i.DY.FRIEND_REQUEST_ACCEPTED:
+            case i.DY.GAME_FRIEND_REQUEST_ACCEPTED:
                 return {
-                    icon: g.CHECKED,
-                    color: l.Z.colors.STATUS_POSITIVE_BACKGROUND
+                    icon: x.CHECKED,
+                    color: r.Z.colors.STATUS_POSITIVE_BACKGROUND
                 };
-            case o.DY.FRIEND_REQUEST_PENDING:
-            case o.DY.FRIEND_SUGGESTION_CREATED:
+            case i.DY.FRIEND_REQUEST_PENDING:
+            case i.DY.FRIEND_SUGGESTION_CREATED:
                 return {
-                    icon: g.FRIENDS,
-                    color: l.Z.colors.BACKGROUND_ACCENT
+                    icon: x.FRIENDS,
+                    color: r.Z.colors.BACKGROUND_ACCENT
                 };
-            case o.DY.DM_FRIEND_NUDGE:
+            case i.DY.DM_FRIEND_NUDGE:
                 return {
-                    icon: g.NEW_MESSAGE,
-                    color: l.Z.colors.BACKGROUND_ACCENT
+                    icon: x.NEW_MESSAGE,
+                    color: r.Z.colors.BACKGROUND_ACCENT
                 };
-            case o.O7.INCOMING_FRIEND_REQUESTS:
-            case o.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
+            case i.O7.INCOMING_FRIEND_REQUESTS:
+            case i.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
                 return {
-                    icon: g.FRIENDS,
-                    color: l.Z.colors.BACKGROUND_ACCENT
+                    icon: x.FRIENDS,
+                    color: r.Z.colors.BACKGROUND_ACCENT
+                };
+            case i.O7.INCOMING_GAME_FRIEND_REQUESTS:
+            case i.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED:
+                return {
+                    icon: x.GAME_RELATIONSHIP,
+                    color: r.Z.colors.BACKGROUND_ACCENT
                 };
             default:
                 return null;
         }
     },
-    M = (e) => {
+    j = (e) => {
         switch (e.item_enum) {
-            case o.AM.UPDATE_PROFILE:
-                return c.Y9;
-            case o.AM.ADD_FRIEND:
-            case o.AM.FIND_FRIENDS:
-                return c.AZ;
-            case o.AM.FIRST_MESSAGE:
-                return c.bj;
+            case i.AM.UPDATE_PROFILE:
+                return a.Y9;
+            case i.AM.ADD_FRIEND:
+            case i.AM.FIND_FRIENDS:
+                return a.AZ;
+            case i.AM.FIRST_MESSAGE:
+                return a.bj;
             default:
-                return l.Z.unsafe_rawColors.BRAND_500.css;
+                return r.Z.unsafe_rawColors.BRAND_500.css;
         }
     };

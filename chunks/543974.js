@@ -1,127 +1,121 @@
-a.r(n),
-    a.d(n, {
-        default: function () {
-            return g;
-        }
-    }),
-    a(47120);
-var t = a(735250),
-    i = a(470079),
-    s = a(512722),
-    o = a.n(s),
-    r = a(990547),
-    d = a(442837),
-    l = a(481060),
-    c = a(668781),
-    m = a(494620),
-    u = a(961842),
-    C = a(254238),
-    N = a(258609),
-    h = a(689938),
-    v = a(300369),
-    x = a(505913);
-function _(e) {
-    let { name: n, subText: a } = e;
-    return (0, t.jsxs)('div', {
+n.d(t, { default: () => b }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    a = n(512722),
+    l = n.n(a),
+    s = n(990547),
+    o = n(442837),
+    c = n(481060),
+    d = n(668781),
+    m = n(494620),
+    u = n(961842),
+    f = n(254238),
+    h = n(258609),
+    p = n(388032),
+    v = n(285990),
+    j = n(505913);
+function x(e) {
+    let { name: t, subText: n } = e;
+    return (0, r.jsxs)('div', {
         className: v.deviceItemName,
         children: [
-            (0, t.jsx)(u.Z, { className: v.deviceItemIcon }),
-            (0, t.jsxs)('div', {
+            (0, r.jsx)(u.Z, { className: v.deviceItemIcon }),
+            (0, r.jsxs)('div', {
                 children: [
-                    (0, t.jsx)(l.Text, {
+                    (0, r.jsx)(c.Text, {
                         variant: 'text-md/semibold',
                         color: 'interactive-active',
-                        children: n
+                        children: t
                     }),
-                    a
+                    n
                 ]
             })
         ]
     });
 }
-function f(e) {
-    let { devices: n, onFinished: a, selectedDeviceId: i, onSelectDeviceId: s, transferring: o } = e,
-        r = n.map((e) => {
-            let { id: n, name: a, platform: i } = e;
+function C(e) {
+    let { devices: t, onFinished: n, selectedDeviceId: i, onSelectDeviceId: a, transferring: l } = e,
+        s = t.map((e) => {
+            let { id: t, name: n, platform: i } = e;
             return {
-                value: n,
-                name: (0, t.jsx)(_, {
-                    name: a,
+                value: t,
+                name: (0, r.jsx)(x, {
+                    name: n,
                     platform: i
                 })
             };
         });
-    return (0, t.jsxs)(t.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, t.jsxs)(l.ModalHeader, {
+            (0, r.jsxs)(c.xBx, {
                 separator: !1,
                 className: v.modalHeaderContainer,
                 children: [
-                    (0, t.jsx)(l.Heading, {
+                    (0, r.jsx)(c.X6q, {
                         className: v.modalHeader,
                         color: 'header-primary',
                         variant: 'heading-xl/bold',
-                        children: h.Z.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE_MODAL_HEADER
+                        children: p.NW.string(p.t['+d9SHx'])
                     }),
-                    (0, t.jsx)(l.Text, {
+                    (0, r.jsx)(c.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: h.Z.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE_MODAL_SUBHEADING
+                        children: p.NW.string(p.t['5DtaWl'])
                     })
                 ]
             }),
-            (0, t.jsxs)(l.ModalContent, {
+            (0, r.jsxs)(c.hzk, {
                 className: v.content,
                 children: [
-                    (0, t.jsx)(l.RadioGroup, {
+                    (0, r.jsx)(c.FXm, {
                         radioPosition: 'right',
                         radioItemClassName: v.deviceItem,
-                        size: l.RadioGroup.Sizes.NOT_SET,
+                        size: c.FXm.Sizes.NOT_SET,
                         value: i,
-                        options: r,
+                        options: s,
                         onChange: (e) => {
-                            let { value: n } = e;
-                            return s(n);
+                            let { value: t } = e;
+                            return a(t);
                         }
                     }),
-                    (0, t.jsx)(m.Z, { children: h.Z.Messages.PLAYSTATION_DEVICES_INFOBOX })
+                    (0, r.jsx)(m.Z, { children: p.NW.string(p.t.dI4HFh) })
                 ]
             }),
-            (0, t.jsx)(l.ModalFooter, {
-                children: (0, t.jsx)(l.Button, {
+            (0, r.jsx)(c.mzw, {
+                children: (0, r.jsx)(c.zxk, {
                     disabled: null == i,
-                    submitting: o,
-                    onClick: a,
-                    children: h.Z.Messages.CONSOLE_TRANSFER_VOICE
+                    submitting: l,
+                    onClick: n,
+                    children: p.NW.string(p.t.FJR4bG)
                 })
             })
         ]
     });
 }
-function I() {
-    return (0, t.jsxs)(t.Fragment, {
+function g() {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, t.jsxs)(l.ModalHeader, {
+            (0, r.jsxs)(c.xBx, {
                 separator: !1,
                 className: v.modalHeaderContainer,
                 children: [
-                    (0, t.jsx)(l.Heading, {
+                    (0, r.jsx)(c.X6q, {
                         className: v.modalHeader,
                         color: 'header-primary',
                         variant: 'heading-xl/bold',
-                        children: h.Z.Messages.PLAYSTATION_DEVICES_NOT_FOUND
+                        children: p.NW.string(p.t.OkJf1d)
                     }),
-                    (0, t.jsx)(l.Text, {
+                    (0, r.jsx)(c.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: h.Z.Messages.PLAYSTATION_DEVICES_NOT_FOUND_BODY
+                        children: p.NW.string(p.t['of/l5e'])
                     })
                 ]
             }),
-            (0, t.jsx)(l.ModalContent, {
+            (0, r.jsx)(c.hzk, {
                 className: v.emptyArt,
-                children: (0, t.jsx)('img', {
-                    src: x,
+                children: (0, r.jsx)('img', {
+                    src: j,
                     width: '189',
                     height: '177',
                     alt: ''
@@ -130,66 +124,66 @@ function I() {
         ]
     });
 }
-function g(e) {
-    let n,
-        { channel: a, platform: s, transitionState: m, onClose: u } = e,
-        x = (0, d.e7)([N.Z], () => N.Z.getDevicesForPlatform(s), [s]),
-        _ = (0, d.e7)([N.Z], () => N.Z.getLastSelectedDeviceByPlatform(s)),
-        g = i.useMemo(() => Object.values(x), [x]),
-        O = (0, d.e7)([N.Z], () => N.Z.getFetchingDevices(s)),
-        p = (0, d.e7)([N.Z], () => {
+function b(e) {
+    let t,
+        { channel: n, platform: a, transitionState: m, onClose: u } = e,
+        j = (0, o.e7)([h.Z], () => h.Z.getDevicesForPlatform(a), [a]),
+        x = (0, o.e7)([h.Z], () => h.Z.getLastSelectedDeviceByPlatform(a)),
+        b = i.useMemo(() => Object.values(j), [j]),
+        y = (0, o.e7)([h.Z], () => h.Z.getFetchingDevices(a)),
+        O = (0, o.e7)([h.Z], () => {
             var e;
-            return null === (e = N.Z.getAwaitingRemoteSessionInfo()) || void 0 === e ? void 0 : e.deviceId;
+            return null == (e = h.Z.getAwaitingRemoteSessionInfo()) ? void 0 : e.deviceId;
         }),
-        [j, E] = i.useState(!1),
-        [S, R] = i.useState(() => {
-            var e, n;
-            return null !== (n = null === (e = x[null != p ? p : '']) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null;
+        [N, _] = i.useState(!1),
+        [I, w] = i.useState(() => {
+            var e, t;
+            return null != (t = null == (e = j[null != O ? O : '']) ? void 0 : e.id) ? t : null;
         });
     i.useEffect(() => {
-        C.LO(s);
-    }, [s]),
+        f.LO(a);
+    }, [a]),
         i.useEffect(() => {
-            1 === g.length ? R(g[0].id) : null != _ && R(_);
-        }, [g, _]);
-    let Z = async () => {
-        let e = x[null != S ? S : ''];
-        o()(null != e, 'Cannot transfer without selected device');
+            1 === b.length ? w(b[0].id) : null != x && w(x);
+        }, [b, x]);
+    let S = async () => {
+        let e = j[null != I ? I : ''];
+        l()(null != e, 'Cannot transfer without selected device');
         try {
-            E(!0), await C.sh(s, e.id, a), u();
-        } catch (n) {
-            E(!1),
-                c.Z.show({
-                    title: h.Z.Messages.CONSOLE_DEVICE_UNKNOWN_ERROR,
-                    body: h.Z.Messages.CONSOLE_DEVICE_UNKNOWN_ERROR_BODY.format({ deviceName: e.name })
+            _(!0), await f.sh(a, e.id, n), u();
+        } catch (t) {
+            _(!1),
+                d.Z.show({
+                    title: p.NW.string(p.t['QL1y9/']),
+                    body: p.NW.formatToPlainString(p.t['6ZyNHx'], { deviceName: e.name })
                 });
         }
     };
     return (
-        (n = O
-            ? (0, t.jsx)('div', {
+        (t = y
+            ? (0, r.jsx)('div', {
                   className: v.spinnerContainer,
-                  children: (0, t.jsx)(l.Spinner, {})
+                  children: (0, r.jsx)(c.$jN, {})
               })
-            : 0 === g.length
-              ? (0, t.jsx)(I, {})
-              : (0, t.jsx)(f, {
-                    devices: g,
-                    onFinished: Z,
-                    selectedDeviceId: S,
-                    transferring: j || null != p,
+            : 0 === b.length
+              ? (0, r.jsx)(g, {})
+              : (0, r.jsx)(C, {
+                    devices: b,
+                    onFinished: S,
+                    selectedDeviceId: I,
+                    transferring: N || null != O,
                     onSelectDeviceId: (e) => {
-                        R(e), (0, C.bp)(s, e);
+                        w(e), (0, f.bp)(a, e);
                     }
                 })),
-        (0, t.jsxs)(l.ModalRoot, {
-            size: l.ModalSize.DYNAMIC,
+        (0, r.jsxs)(c.Y0X, {
+            size: c.CgR.DYNAMIC,
             className: v.modalRoot,
             transitionState: m,
-            impression: { impressionName: r.ImpressionNames.GAME_CONSOLE_DEVICE_LIST },
+            impression: { impressionName: s.ImpressionNames.GAME_CONSOLE_DEVICE_LIST },
             children: [
-                n,
-                (0, t.jsx)(l.ModalCloseButton, {
+                t,
+                (0, r.jsx)(c.olH, {
                     className: v.closeButton,
                     onClick: u
                 })

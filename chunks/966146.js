@@ -1,11 +1,4 @@
-n.d(t, {
-    x: function () {
-        return a;
-    }
-}),
-    n(411104),
-    n(47120),
-    n(653041);
+n.d(t, { x: () => a }), n(411104), n(47120), n(653041), n(230036);
 var r = n(65154);
 function i(e, t, n) {
     return (
@@ -20,15 +13,36 @@ function i(e, t, n) {
         e
     );
 }
+function o(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                i(e, t, n[t]);
+            });
+    }
+    return e;
+}
 class a {
     getMaxSinkValue(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         if (e < 0) throw Error('getMaxSinkValue: Requested ' + e);
-        let t = this.orderedLadder[0].wantValue;
-        for (let { pixelCount: n, wantValue: r } of this.orderedLadder) {
-            if (n * e > this.pixelBudget) break;
-            t = r;
+        let n = this.orderedLadder[0].wantValue;
+        for (let { pixelCount: r, wantValue: i } of this.orderedLadder) {
+            if (t > 0 && t < r) {
+                n = i;
+                break;
+            }
+            if (r * e > this.pixelBudget) break;
+            n = i;
         }
-        return t;
+        return n;
     }
     getResolution(e) {
         let t = null;
@@ -60,27 +74,27 @@ class a {
             }
         }
         let i = {},
-            s = 0,
-            o = 100;
+            o = 0,
+            s = 100;
         for (let t = 1; t <= 25; ++t) {
             let l = 0,
-                u = 0,
-                c = 0;
+                c = 0,
+                u = 0;
             for (let r of n) {
                 if (r.pixelCount * t > e) break;
-                (l = r.width), (u = r.height), (c = r.budgetPortion);
+                (l = r.width), (c = r.height), (u = r.budgetPortion);
             }
-            if (s !== l) {
-                let e = a.getMutedFramerate(o);
-                (i[o] = {
+            if (o !== l) {
+                let e = a.getMutedFramerate(s);
+                (i[s] = {
                     width: l,
-                    height: u,
-                    budgetPortion: c,
+                    height: c,
+                    budgetPortion: u,
                     mutedFramerate: e,
                     framerate: r.Gs
                 }),
-                    (o -= 10),
-                    (s = l);
+                    (s -= 10),
+                    (o = l);
             }
         }
         return i;
@@ -95,11 +109,15 @@ class a {
             .sort((e, t) => e - t)) {
             if (0 === n) continue;
             let r = e[n];
-            t.push({
-                pixelCount: r.width * r.height,
-                wantValue: n,
-                ...r
-            });
+            t.push(
+                o(
+                    {
+                        pixelCount: r.width * r.height,
+                        wantValue: n
+                    },
+                    r
+                )
+            );
         }
         return t;
     }

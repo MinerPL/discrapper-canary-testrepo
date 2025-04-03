@@ -1,12 +1,8 @@
-n.d(t, {
-    s: function () {
-        return l;
-    }
-});
-var i = n(470079),
-    a = n(818083),
-    s = n(981631);
-let r = (0, a.B)({
+n.d(t, { s: () => o });
+var r = n(192379),
+    i = n(818083),
+    l = n(981631);
+let a = (0, i.B)({
         kind: 'guild',
         id: '2021-10_study_group',
         label: 'Student hub study group',
@@ -19,25 +15,25 @@ let r = (0, a.B)({
             }
         ]
     }),
-    l = (e) => {
+    o = (e) => {
         var t;
         return (
-            i.useEffect(() => {
+            r.useEffect(() => {
                 null != e &&
-                    e.hasFeature(s.oNc.HUB) &&
-                    r.trackExposure({
+                    e.hasFeature(l.oNc.HUB) &&
+                    a.trackExposure({
                         guildId: e.id,
                         location: '467c32_1'
                     });
             }, [e]),
-            r.useExperiment(
+            a.useExperiment(
                 {
-                    guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : s.lds,
+                    guildId: null != (t = null == e ? void 0 : e.id) ? t : l.lds,
                     location: '467c32_2'
                 },
                 {
                     autoTrackExposure: !1,
-                    disable: null == e || !e.hasFeature(s.oNc.HUB)
+                    disable: null == e || !e.hasFeature(l.oNc.HUB)
                 }
             )
         );

@@ -1,39 +1,40 @@
 var r = n(762378),
     i = n(481062),
-    a = n(34775),
-    s = n(79568),
-    o = n(221286),
+    o = n(34775),
+    a = n(79568),
+    s = n(221286),
     l = n(903425),
-    u = n(785775),
-    c = '[object Map]',
-    d = '[object Promise]',
+    c = n(785775),
+    u = '[object Map]',
+    d = '[object Object]',
+    f = '[object Promise]',
     _ = '[object Set]',
-    E = '[object WeakMap]',
-    f = '[object DataView]',
-    h = u(r),
-    p = u(i),
-    m = u(a),
-    I = u(s),
-    T = u(o),
-    g = l;
-((r && g(new r(new ArrayBuffer(1))) != f) || (i && g(new i()) != c) || (a && g(a.resolve()) != d) || (s && g(new s()) != _) || (o && g(new o()) != E)) &&
-    (g = function (e) {
+    p = '[object WeakMap]',
+    h = '[object DataView]',
+    m = c(r),
+    g = c(i),
+    E = c(o),
+    b = c(a),
+    y = c(s),
+    v = l;
+((r && v(new r(new ArrayBuffer(1))) != h) || (i && v(new i()) != u) || (o && v(o.resolve()) != f) || (a && v(new a()) != _) || (s && v(new s()) != p)) &&
+    (v = function (e) {
         var t = l(e),
-            n = '[object Object]' == t ? e.constructor : void 0,
-            r = n ? u(n) : '';
+            n = t == d ? e.constructor : void 0,
+            r = n ? c(n) : '';
         if (r)
             switch (r) {
-                case h:
-                    return f;
-                case p:
-                    return c;
                 case m:
-                    return d;
-                case I:
+                    return h;
+                case g:
+                    return u;
+                case E:
+                    return f;
+                case b:
                     return _;
-                case T:
-                    return E;
+                case y:
+                    return p;
             }
         return t;
     }),
-    (e.exports = g);
+    (e.exports = v);

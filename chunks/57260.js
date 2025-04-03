@@ -1,57 +1,53 @@
-n.d(t, {
-    z: function () {
-        return d;
-    }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(338545),
+n.d(t, { z: () => f }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(642128),
     l = n(481060),
-    u = n(393238),
-    c = n(23505);
-function d(e) {
-    let { children: t, className: n, collapsibleContent: a, isExpanded: d } = e,
-        [_, E] = i.useState(!1),
-        [f, h] = i.useState(!0),
-        [p, m] = i.useState(!1),
-        I = null != d ? d : _,
-        { ref: T, height: g = 0 } = (0, u.Z)(),
-        { ref: S, height: A = 0 } = (0, u.Z)(),
-        N = (0, l.useSpring)(
+    c = n(393238),
+    u = n(397974);
+let d = 100;
+function f(e) {
+    let { children: t, className: n, collapsibleContent: o, isExpanded: f } = e,
+        [_, p] = i.useState(!1),
+        [h, m] = i.useState(!0),
+        [g, E] = i.useState(!1),
+        b = null != f ? f : _,
+        { ref: y, height: v = 0 } = (0, c.Z)(),
+        { ref: O, height: I = 0 } = (0, c.Z)(),
+        S = (0, l.q_F)(
             {
-                height: I ? g + A : A,
-                config: o.config.stiff,
-                onRest: () => m(!0)
+                height: b ? v + I : I,
+                config: s.config.stiff,
+                onRest: () => E(!0)
             },
-            f ? 'animate-never' : 'respect-motion-settings'
+            h ? 'animate-never' : 'respect-motion-settings'
         ),
-        v = i.useCallback(() => {
-            E(!_);
-        }, [_, E]);
+        T = i.useCallback(() => {
+            p(!_);
+        }, [_, p]);
     return (
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {
-                h(!1);
-            }, 100);
+                m(!1);
+            }, d);
             return () => clearTimeout(e);
         }, []),
         (0, r.jsx)('div', {
-            className: s()(c.collapseable, { [c.toggled]: I }, n),
-            children: (0, r.jsxs)(o.animated.div, {
-                className: s()(c.contentExpandContainer, { [c.showOverflow]: I && p }),
-                style: N,
+            className: a()(u.collapseable, { [u.toggled]: b }, n),
+            children: (0, r.jsxs)(s.animated.div, {
+                className: a()(u.contentExpandContainer, { [u.showOverflow]: b && g }),
+                style: S,
                 children: [
                     (0, r.jsx)('div', {
-                        ref: S,
-                        className: s()(c.header, { [c.toggled]: I }),
-                        children: t({ onClick: v })
+                        ref: O,
+                        className: a()(u.header, { [u.toggled]: b }),
+                        children: t({ onClick: T })
                     }),
                     (0, r.jsx)('div', {
-                        ref: T,
-                        children: a
+                        ref: y,
+                        children: o
                     })
                 ]
             })

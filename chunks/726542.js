@@ -1,13 +1,14 @@
+n.d(t, { Z: () => d }), n(627494), n(757143), n(301563), n(230036);
 var r = n(392711),
     i = n.n(r),
-    a = n(692547),
-    s = n(591759),
-    o = n(981631);
+    o = n(900089),
+    a = n(591759),
+    s = n(981631);
 let l = [
         {
-            type: o.ABu.TWITCH,
+            type: s.ABu.TWITCH,
             name: 'Twitch',
-            color: a.Z.unsafe_rawColors.TWITCH.css,
+            color: (0, o.Fw)('TWITCH'),
             icon: {
                 lightPNG: n(635643),
                 darkPNG: n(635643),
@@ -24,9 +25,9 @@ let l = [
             domains: ['twitch.tv', 'twitch.com']
         },
         {
-            type: o.ABu.YOUTUBE,
+            type: s.ABu.YOUTUBE,
             name: 'YouTube',
-            color: a.Z.unsafe_rawColors.YOUTUBE.css,
+            color: (0, o.Fw)('YOUTUBE'),
             icon: {
                 lightPNG: n(459862),
                 darkPNG: n(459862),
@@ -43,9 +44,9 @@ let l = [
             domains: ['youtube.com', 'youtu.be']
         },
         {
-            type: o.ABu.BATTLENET,
+            type: s.ABu.BATTLENET,
             name: 'Battle.net',
-            color: a.Z.unsafe_rawColors.BATTLENET.css,
+            color: (0, o.Fw)('BATTLENET'),
             icon: {
                 lightPNG: n(414680),
                 darkPNG: n(414680),
@@ -57,9 +58,28 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.BUNGIE,
+            type: s.ABu.BLUESKY,
+            name: 'Bluesky',
+            icon: {
+                lightPNG: n(618780),
+                darkPNG: n(618780),
+                whitePNG: n(566961),
+                lightSVG: n(387793),
+                darkSVG: n(387793),
+                whiteSVG: n(148052)
+            },
+            enabled: !0,
+            getPlatformUserUrl: (e) => {
+                let { id: t } = e;
+                return 'https://bsky.app/profile/'.concat(encodeURIComponent(t).replaceAll('%3A', ':'));
+            },
+            isFederated: !0,
+            hasMetadata: !0
+        },
+        {
+            type: s.ABu.BUNGIE,
             name: 'Bungie.net',
-            color: a.Z.unsafe_rawColors.BUNGIE.css,
+            color: (0, o.Fw)('BUNGIE'),
             icon: {
                 lightPNG: n(953522),
                 darkPNG: n(706264),
@@ -71,9 +91,9 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.SKYPE,
+            type: s.ABu.SKYPE,
             name: 'Skype',
-            color: a.Z.unsafe_rawColors.SKYPE.css,
+            color: (0, o.Fw)('SKYPE'),
             icon: {
                 lightPNG: n(575439),
                 darkPNG: n(575439),
@@ -89,9 +109,9 @@ let l = [
             }
         },
         {
-            type: o.ABu.LEAGUE_OF_LEGENDS,
+            type: s.ABu.LEAGUE_OF_LEGENDS,
             name: 'League of Legends',
-            color: a.Z.unsafe_rawColors.LOL.css,
+            color: (0, o.Fw)('LOL'),
             icon: {
                 lightPNG: n(275556),
                 darkPNG: n(275556),
@@ -103,9 +123,9 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.STEAM,
+            type: s.ABu.STEAM,
             name: 'Steam',
-            color: a.Z.unsafe_rawColors.STEAM.css,
+            color: (0, o.Fw)('STEAM'),
             icon: {
                 lightPNG: n(929234),
                 darkPNG: n(170131),
@@ -122,9 +142,9 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.REDDIT,
+            type: s.ABu.REDDIT,
             name: 'Reddit',
-            color: a.Z.unsafe_rawColors.REDDIT.css,
+            color: (0, o.Fw)('REDDIT'),
             icon: {
                 lightPNG: n(211434),
                 darkPNG: n(211434),
@@ -134,6 +154,7 @@ let l = [
                 whiteSVG: n(972428)
             },
             enabled: !0,
+            domains: ['reddit.com'],
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
                 return 'https://www.reddit.com/u/'.concat(encodeURIComponent(t));
@@ -141,9 +162,9 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.FACEBOOK,
+            type: s.ABu.FACEBOOK,
             name: 'Facebook',
-            color: a.Z.unsafe_rawColors.FACEBOOK.css,
+            color: (0, o.Fw)('FACEBOOK'),
             icon: {
                 lightPNG: n(762019),
                 darkPNG: n(762019),
@@ -152,12 +173,13 @@ let l = [
                 darkSVG: n(589232),
                 whiteSVG: n(318049)
             },
+            domains: ['facebook.com'],
             enabled: !0
         },
         {
-            type: o.ABu.TWITTER_LEGACY,
+            type: s.ABu.TWITTER_LEGACY,
             name: 'Twitter',
-            color: a.Z.unsafe_rawColors.TWITTER.css,
+            color: (0, o.Fw)('TWITTER'),
             icon: {
                 lightPNG: n(954549),
                 darkPNG: n(954549),
@@ -175,9 +197,9 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.TWITTER,
+            type: s.ABu.TWITTER,
             name: 'X',
-            color: a.Z.unsafe_rawColors.TWITTER.css,
+            color: (0, o.Fw)('TWITTER'),
             icon: {
                 lightPNG: n(327555),
                 darkPNG: n(126776),
@@ -195,9 +217,9 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.SPOTIFY,
+            type: s.ABu.SPOTIFY,
             name: 'Spotify',
-            color: a.Z.unsafe_rawColors.SPOTIFY.css,
+            color: (0, o.Fw)('SPOTIFY'),
             icon: {
                 lightPNG: n(182553),
                 darkPNG: n(182553),
@@ -213,9 +235,9 @@ let l = [
             }
         },
         {
-            type: o.ABu.XBOX,
+            type: s.ABu.XBOX,
             name: 'Xbox',
-            color: a.Z.unsafe_rawColors.XBOX.css,
+            color: (0, o.Fw)('XBOX'),
             icon: {
                 lightPNG: n(979660),
                 darkPNG: n(157981),
@@ -223,14 +245,14 @@ let l = [
                 lightSVG: n(66992),
                 darkSVG: n(158173),
                 whiteSVG: n(158173),
-                customPNG: n(606115)
+                customPNG: n(436740)
             },
             enabled: !0
         },
         {
-            type: o.ABu.SAMSUNG,
+            type: s.ABu.SAMSUNG,
             name: 'Samsung Galaxy',
-            color: a.Z.unsafe_rawColors.SAMSUNG.css,
+            color: (0, o.Fw)('SAMSUNG'),
             icon: {
                 lightPNG: n(664982),
                 darkPNG: n(664982),
@@ -242,9 +264,9 @@ let l = [
             enabled: !1
         },
         {
-            type: o.ABu.GITHUB,
+            type: s.ABu.GITHUB,
             name: 'GitHub',
-            color: a.Z.unsafe_rawColors.GITHUB.css,
+            color: (0, o.Fw)('GITHUB'),
             icon: {
                 lightPNG: n(843605),
                 darkPNG: n(789822),
@@ -261,9 +283,9 @@ let l = [
             domains: ['github.com']
         },
         {
-            type: o.ABu.PLAYSTATION,
+            type: s.ABu.PLAYSTATION,
             name: 'PlayStation Network',
-            color: a.Z.unsafe_rawColors.PLAYSTATION.css,
+            color: (0, o.Fw)('PLAYSTATION'),
             icon: {
                 lightPNG: n(385751),
                 darkPNG: n(399592),
@@ -275,9 +297,9 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.PLAYSTATION_STAGING,
+            type: s.ABu.PLAYSTATION_STAGING,
             name: 'PlayStation Network (Staging)',
-            color: a.Z.unsafe_rawColors.PLAYSTATION.css,
+            color: (0, o.Fw)('PLAYSTATION'),
             icon: {
                 lightPNG: n(399592),
                 darkPNG: n(385751),
@@ -289,7 +311,7 @@ let l = [
             enabled: !1
         },
         {
-            type: o.ABu.EPIC_GAMES,
+            type: s.ABu.EPIC_GAMES,
             name: 'Epic Games',
             icon: {
                 lightPNG: n(707873),
@@ -302,7 +324,7 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.RIOT_GAMES,
+            type: s.ABu.RIOT_GAMES,
             name: 'Riot Games',
             icon: {
                 lightPNG: n(406818),
@@ -315,7 +337,7 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.ROBLOX,
+            type: s.ABu.ROBLOX,
             name: 'Roblox',
             icon: {
                 lightPNG: n(670423),
@@ -332,7 +354,7 @@ let l = [
             }
         },
         {
-            type: o.ABu.PAYPAL,
+            type: s.ABu.PAYPAL,
             name: 'PayPal',
             icon: {
                 lightPNG: n(501001),
@@ -346,7 +368,7 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.EBAY,
+            type: s.ABu.EBAY,
             name: 'eBay',
             icon: {
                 lightPNG: n(215741),
@@ -364,7 +386,7 @@ let l = [
             }
         },
         {
-            type: o.ABu.TIKTOK,
+            type: s.ABu.TIKTOK,
             name: 'TikTok',
             icon: {
                 lightPNG: n(699308),
@@ -376,13 +398,14 @@ let l = [
             },
             enabled: !0,
             hasMetadata: !0,
+            domains: ['tiktok.com'],
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
                 return 'https://www.tiktok.com/@'.concat(encodeURIComponent(t));
             }
         },
         {
-            type: o.ABu.INSTAGRAM,
+            type: s.ABu.INSTAGRAM,
             name: 'Instagram',
             icon: {
                 lightPNG: n(232720),
@@ -393,15 +416,35 @@ let l = [
                 whiteSVG: n(326720)
             },
             enabled: !1,
+            domains: ['instagram.com'],
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
                 return 'https://www.instagram.com/'.concat(encodeURIComponent(t));
             }
         },
         {
-            type: o.ABu.CRUNCHYROLL,
+            type: s.ABu.MASTODON,
+            name: 'Mastodon',
+            icon: {
+                lightPNG: n(913883),
+                darkPNG: n(913883),
+                whitePNG: n(744387),
+                lightSVG: n(692552),
+                darkSVG: n(692552),
+                whiteSVG: n(49722)
+            },
+            enabled: !1,
+            getPlatformUserUrl: (e) => {
+                let { id: t } = e;
+                return t;
+            },
+            isFederated: !0,
+            hasMetadata: !0
+        },
+        {
+            type: s.ABu.CRUNCHYROLL,
             name: 'Crunchyroll',
-            color: a.Z.unsafe_rawColors.CRUNCHYROLL.css,
+            color: (0, o.Fw)('CRUNCHYROLL'),
             icon: {
                 lightPNG: n(469024),
                 darkPNG: n(469024),
@@ -413,7 +456,7 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.DOMAIN,
+            type: s.ABu.DOMAIN,
             name: 'Domain',
             icon: {
                 lightPNG: n(476735),
@@ -430,7 +473,7 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.AMAZON_MUSIC,
+            type: s.ABu.AMAZON_MUSIC,
             name: 'Amazon Music',
             icon: {
                 lightPNG: n(495036),
@@ -440,42 +483,41 @@ let l = [
                 darkSVG: n(605098),
                 whiteSVG: n(605098)
             },
-            enabled: !1
+            enabled: !0
         }
     ],
-    u = i().keyBy(l, 'type'),
-    c = {};
+    c = i().keyBy(l, 'type'),
+    u = {};
 l.forEach((e) => {
     var t;
-    null === (t = e.domains) ||
-        void 0 === t ||
+    null == (t = e.domains) ||
         t.forEach((t) => {
-            c[t] = e;
+            u[t] = e;
         });
-}),
-    (t.Z = {
-        get(e) {
-            var t;
-            return null !== (t = u[e]) && void 0 !== t ? t : null;
-        },
-        getByUrl(e) {
-            let t = s.Z.toURLSafe(e);
-            if (null == t) return;
-            let n = t.hostname;
-            return c[n.startsWith('www.') ? n.slice(4) : n];
-        },
-        isSupported: (e) => Object.prototype.hasOwnProperty.call(u, e),
-        map: (e) => l.map(e),
-        filter(e) {
-            let t = l.filter(e);
-            return (
-                t.sort((e, t) => {
-                    let { name: n } = e,
-                        { name: r } = t;
-                    return n.localeCompare(r);
-                }),
-                t
-            );
-        },
-        find: (e) => l.find(e)
-    });
+});
+let d = {
+    get(e) {
+        var t;
+        return null != (t = c[e]) ? t : null;
+    },
+    getByUrl(e) {
+        let t = a.Z.toURLSafe(e);
+        if (null == t) return;
+        let n = t.hostname;
+        return u[n.startsWith('www.') ? n.slice(4) : n];
+    },
+    isSupported: (e) => Object.prototype.hasOwnProperty.call(c, e),
+    map: (e) => l.map(e),
+    filter(e) {
+        let t = l.filter(e);
+        return (
+            t.sort((e, t) => {
+                let { name: n } = e,
+                    { name: r } = t;
+                return n.localeCompare(r);
+            }),
+            t
+        );
+    },
+    find: (e) => l.find(e)
+};

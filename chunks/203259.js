@@ -1,41 +1,37 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(39604),
-    r = n(176127),
-    l = n(689938),
-    o = n(686624);
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    a = n(39604),
+    l = n(176127),
+    o = n(388032),
+    s = n(442693);
 function c(e) {
     let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: c } = e;
-    return (0, i.jsxs)(a.TooltipLayer, {
-        tooltipClassName: o.reminderTooltip,
-        tooltipContentClassName: o.tooltipContent,
+    return (0, r.jsxs)(i.Cys, {
+        tooltipClassName: s.reminderTooltip,
+        tooltipContentClassName: s.tooltipContent,
         targetElementRef: { current: n },
         position: 'bottom',
-        color: a.TooltipColors.PRIMARY,
+        color: i.FGA.PRIMARY,
         children: [
-            (0, i.jsx)(r.Z, {}),
-            (0, i.jsx)(a.Heading, {
+            (0, r.jsx)(l.Z, {}),
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-md/extrabold',
-                children: l.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: c.newClipIds.length })
+                children: o.NW.format(o.t['+qxkzM'], { count: c.newClipIds.length })
             }),
-            (0, i.jsxs)('div', {
-                className: o.buttonContainer,
+            (0, r.jsxs)('div', {
+                className: s.buttonContainer,
                 children: [
-                    (0, i.jsx)(a.Button, {
-                        color: a.Button.Colors.TRANSPARENT,
-                        onClick: s.eL,
-                        children: l.Z.Messages.DISMISS
+                    (0, r.jsx)(i.zxk, {
+                        color: i.zxk.Colors.TRANSPARENT,
+                        onClick: a.eL,
+                        children: o.NW.string(o.t.WAI6xs)
                     }),
-                    (0, i.jsx)(a.Button, {
-                        color: a.Button.Colors.BRAND,
+                    (0, r.jsx)(i.zxk, {
+                        color: i.zxk.Colors.BRAND,
                         onClick: t,
-                        children: l.Z.Messages.CLIPS_REVIEW_NOW
+                        children: o.NW.string(o.t.tQPBmp)
                     })
                 ]
             })

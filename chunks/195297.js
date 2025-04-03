@@ -1,105 +1,138 @@
-n.r(i),
-    n.d(i, {
-        default: function () {
-            return I;
-        }
-    }),
-    n(47120);
-var o = n(735250),
-    t = n(470079),
+n.d(i, { default: () => E }), n(47120);
+var t = n(200651),
+    o = n(192379),
     r = n(120356),
     a = n.n(r),
     l = n(481060),
-    s = n(100527),
-    c = n(906732),
+    c = n(100527),
+    s = n(906732),
     d = n(313201),
     u = n(455708),
+    g = n(222062),
+    f = n(530329),
     _ = n(626135),
-    g = n(488499),
-    E = n(58384),
-    f = n(981631),
-    T = n(689938),
-    N = n(321393);
-function I(e) {
-    let { transitionState: i, onClose: r, onComplete: I, uploadType: h, showUpsellHeader: p, analyticsPage: R } = e,
-        [m, x] = t.useState(!1),
-        B = (0, l.useModalContext)(),
-        b = (0, d.Dt)(),
-        { analyticsLocations: A } = (0, c.ZP)(s.Z.GIF_PICKER);
-    async function C(e) {
+    b = n(488499),
+    p = n(58384),
+    N = n(981631),
+    m = n(486324),
+    h = n(388032),
+    T = n(922349);
+function E(e) {
+    let { transitionState: i, onClose: r, onComplete: E, uploadType: x, showUpsellHeader: j, analyticsPage: I } = e,
+        [P, C] = o.useState(!1),
+        v = (0, l.vRw)(),
+        O = (0, d.Dt)(),
+        { analyticsLocations: R } = (0, s.ZP)(c.Z.GIF_PICKER);
+    async function B(e) {
         let { gifSrc: i } = e;
-        if (null == i || m) return;
-        x(!0);
-        let t = (0, E.Q)(i),
-            a = await fetch(t),
-            s = await a.blob();
+        if (null == i || P) return;
+        C(!0);
+        let o = (0, p.Q)(i),
+            a = await fetch(o),
+            c = await a.blob();
         r(),
-            (0, l.openModalLazy)(
+            (0, l.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('48017'), n.e('40629')]).then(n.bind(n, 850085));
+                    let { default: e } = await Promise.all([n.e('59732'), n.e('25005'), n.e('11181')]).then(n.bind(n, 73620));
                     return (i) =>
-                        (0, o.jsx)(e, {
-                            imgURI: t,
-                            file: new File([s], 'tenor.gif', { type: 'image/gif' }),
-                            onCrop: I,
-                            uploadType: h,
-                            showUpsellHeader: p,
-                            ...i
-                        });
+                        (0, t.jsx)(
+                            e,
+                            (function (e) {
+                                for (var i = 1; i < arguments.length; i++) {
+                                    var n = null != arguments[i] ? arguments[i] : {},
+                                        t = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (t = t.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        t.forEach(function (i) {
+                                            var t;
+                                            (t = n[i]),
+                                                i in e
+                                                    ? Object.defineProperty(e, i, {
+                                                          value: t,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[i] = t);
+                                        });
+                                }
+                                return e;
+                            })(
+                                {
+                                    imageUri: o,
+                                    file: new File([c], 'tenor.gif', { type: 'image/gif' }),
+                                    onCrop: E,
+                                    uploadType: x,
+                                    showUpsellHeader: j
+                                },
+                                i
+                            )
+                        );
                 },
-                { contextKey: B }
+                { contextKey: v }
             );
     }
-    return (
-        t.useEffect(() => {
-            _.default.track(f.rMx.OPEN_MODAL, {
-                type: f.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-                location: { page: R }
-            });
-        }, [R]),
-        (0, o.jsx)(c.Gt, {
-            value: A,
-            children: (0, o.jsxs)(l.ModalRoot, {
-                className: N.__invalid_gifPickerCroppingModal,
-                'aria-labelledby': b,
-                transitionState: i,
-                size: l.ModalSize.SMALL,
-                children: [
-                    p
-                        ? (0, o.jsx)(g.Z, {
-                              type: h,
-                              analyticsPage: R,
-                              analyticsSection: f.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-                              isGIF: !0
-                          })
-                        : null,
-                    (0, o.jsxs)(l.ModalHeader, {
-                        className: N.modalHeader,
-                        separator: !1,
-                        children: [
-                            (0, o.jsx)(l.FormTitle, {
-                                className: N.titleCase,
-                                tag: l.FormTitleTags.H1,
-                                children: T.Z.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF
-                            }),
-                            (0, o.jsx)(l.ModalCloseButton, {
-                                onClick: r,
-                                className: N.modalCloseButton
-                            })
-                        ]
+    o.useEffect(() => {
+        _.default.track(N.rMx.OPEN_MODAL, {
+            type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+            location: { page: I }
+        });
+    }, [I]);
+    let y = x === m.pC.AVATAR || x === m.pC.BANNER,
+        k = (0, g.M)(!y);
+    return (0, t.jsx)(s.Gt, {
+        value: R,
+        children: (0, t.jsxs)(l.Y0X, {
+            'aria-labelledby': O,
+            transitionState: i,
+            size: l.CgR.SMALL,
+            children: [
+                j &&
+                    !k &&
+                    (0, t.jsx)(b.Z, {
+                        type: x,
+                        analyticsPage: I,
+                        analyticsSection: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+                        isGIF: !0
                     }),
-                    (0, o.jsxs)('div', {
-                        children: [
-                            (0, o.jsx)(u.Z, {
-                                className: a()(N.gifPicker, { [N.loadingOverlay]: m }),
-                                onSelectGIF: C,
-                                hideFavorites: !0
-                            }),
-                            m && (0, o.jsx)(l.Spinner, { className: N.spinner })
-                        ]
+                (0, t.jsxs)(l.xBx, {
+                    className: T.modalHeader,
+                    separator: !1,
+                    children: [
+                        (0, t.jsx)(l.vwX, {
+                            className: T.titleCase,
+                            tag: l.RB0.H1,
+                            children: h.NW.string(h.t['xsC+//'])
+                        }),
+                        (0, t.jsx)(l.olH, {
+                            onClick: r,
+                            className: T.modalCloseButton
+                        })
+                    ]
+                }),
+                (0, t.jsxs)('div', {
+                    children: [
+                        (0, t.jsx)(u.Z, {
+                            contentClassName: a()({ [T.gifPickerContent]: j && k }),
+                            className: a()(T.gifPicker, { [T.loadingOverlay]: P }),
+                            onSelectGIF: B,
+                            hideFavorites: !0
+                        }),
+                        P && (0, t.jsx)(l.$jN, { className: T.spinner })
+                    ]
+                }),
+                j &&
+                    k &&
+                    (0, t.jsx)(f.Z, {
+                        uploadType: x,
+                        showUpsell: !0,
+                        className: T.nitroUpsell
                     })
-                ]
-            })
+            ]
         })
-    );
+    });
 }

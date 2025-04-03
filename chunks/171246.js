@@ -1,38 +1,48 @@
 n.d(t, {
-    AQ: function () {
-        return d;
-    },
-    KK: function () {
-        return u;
-    },
-    KW: function () {
-        return c;
-    },
-    Pw: function () {
-        return l;
-    },
-    bZ: function () {
-        return o;
-    }
-});
-var r = n(512722),
-    i = n.n(r),
-    a = n(630388),
-    s = n(981631);
-function o(e) {
-    let t = e.items;
-    return i()(1 === t.length, 'more than 1 subscription item for application subscription'), t[0].planId;
+    Ej: () => d,
+    Jf: () => c,
+    KK: () => a,
+    KW: () => s,
+    OL: () => l
+}),
+    n(789020),
+    n(230036),
+    n(512722),
+    n(55563);
+var r = n(630388),
+    i = n(74538),
+    o = n(981631);
+function a(e) {
+    return (0, r.yE)(e, o.l4R.APPLICATION_GUILD_SUBSCRIPTION);
+}
+function s(e) {
+    return (0, r.yE)(e, o.l4R.APPLICATION_USER_SUBSCRIPTION);
 }
 function l(e) {
-    var t;
-    return null === (t = e.subscription_listings) || void 0 === t ? void 0 : t.find((e) => e.published && (u(e.sku_flags) || c(e.sku_flags)) && e.subscription_plans[0].price > 0);
+    return !1 === e.available;
 }
-function u(e) {
-    return (0, a.yE)(e, s.l4R.APPLICATION_GUILD_SUBSCRIPTION);
+function c(e, t) {
+    var n;
+    let r = null != (n = null == t ? void 0 : t.deleted) && n,
+        i = null != t && l(t);
+    return e.status === o.O0b.CANCELED || r || i;
 }
-function c(e) {
-    return (0, a.yE)(e, s.l4R.APPLICATION_USER_SUBSCRIPTION);
+function u(e, t) {
+    var n, r;
+    if (e.type === o.epS.SUBSCRIPTION) {
+        let n = t.getForSKU(e.id);
+        if (n.length > 0) {
+            let e = n[0];
+            return (0, i.aS)(e.id).amount;
+        }
+    }
+    return null != (r = null == (n = e.price) ? void 0 : n.amount) ? r : 0;
 }
 function d(e, t, n) {
-    return e.subscription_plans[0].sku_id === t.skuId && (u(e.sku_flags) ? null != n && t.guildId === n && n !== s.ME : !!c(e.sku_flags) && null == t.guildId);
+    return e.slice().sort((e, r) => {
+        let i = t.get(e.skuId),
+            o = null != i ? u(i, n) : 0,
+            a = t.get(r.skuId);
+        return o - (null != a ? u(a, n) : 0);
+    });
 }

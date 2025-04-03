@@ -1,177 +1,265 @@
-n.d(t, {
-    Z: function () {
-        return P;
-    }
-}),
-    n(47120),
-    n(789020);
-var i = n(735250);
-n(470079);
-var a = n(613828),
-    s = n(442837),
-    r = n(477690),
-    l = n(481060),
-    o = n(668781),
-    c = n(2052),
-    u = n(100527),
-    d = n(906732),
-    _ = n(835473),
-    E = n(522474),
-    I = n(523746),
-    m = n(592125),
-    T = n(594174),
-    h = n(630388),
-    N = n(823379),
-    f = n(624138),
-    C = n(317381),
-    p = n(638880),
-    g = n(122613),
-    S = n(147865),
-    A = n(778569),
-    R = n(884338),
-    x = n(403404),
-    O = n(701488),
-    M = n(981631),
-    v = n(689938),
-    L = n(671487);
-let Z = (0, f.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
-function P(e) {
-    var t, n, r, f;
-    let { applicationId: P, message: b } = e,
-        { analyticsLocations: D } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
-        j = (0, c.O)(),
-        U = b.channel_id,
-        y = (0, s.e7)([m.Z], () => m.Z.getChannel(U), [U]),
-        B = null == y ? void 0 : y.guild_id,
-        k = null != y && (y.isGuildVoice() || y.isPrivate()),
-        G = (0, s.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(U)),
-        F = (null == G ? void 0 : G.applicationId) === P,
-        [w] = (0, _.Z)([P, null !== (n = null == G ? void 0 : G.applicationId) && void 0 !== n ? n : '']),
-        V = (0, S.ZP)(null !== (r = null == w ? void 0 : w.maxParticipants) && void 0 !== r ? r : 0),
-        [H] = (0, s.Wu)([C.ZP], () => (k ? C.ZP.getEmbeddedActivitiesForChannel(U).filter((e) => e.applicationId === P) : []), [P, U, k]),
-        Y = Array.from(null !== (f = null == H ? void 0 : H.userIds) && void 0 !== f ? f : []),
-        W = (0, s.Wu)([T.default], () => Y.map((e) => T.default.getUser(e)).filter(N.lm), [Y]),
-        K = (0, A.Z)({
-            applicationId: P,
-            size: Z,
+n.d(t, { Z: () => R }), n(47120), n(266796), n(566702);
+var r = n(200651);
+n(192379);
+var i = n(666572),
+    a = n(373793),
+    l = n(399606),
+    o = n(477690),
+    s = n(481060),
+    c = n(100527),
+    u = n(906732),
+    d = n(915346),
+    p = n(783097),
+    m = n(176412),
+    f = n(213459),
+    h = n(581364),
+    g = n(321231),
+    _ = n(506895),
+    b = n(230171),
+    x = n(835473),
+    y = n(749681),
+    E = n(258971),
+    v = n(914010),
+    O = n(624138),
+    N = n(566620),
+    j = n(365415),
+    C = n(574952),
+    I = n(147865),
+    S = n(778569),
+    T = n(50523),
+    P = n(49898),
+    A = n(388032),
+    w = n(536231);
+function Z() {
+    return (Z =
+        Object.assign ||
+        function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            }
+            return e;
+        }).apply(this, arguments);
+}
+let k = (0, O.Mg)(o.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+function R(e) {
+    var t, n, o, O;
+    let { applicationId: R, customId: D, referrerId: L, embedUrl: M, linkId: W } = e,
+        { analyticsLocations: U } = (0, u.ZP)(c.Z.ACTIVITY_BOOKMARK),
+        [F] = (0, x.Z)([R]),
+        B = (0, l.e7)([v.Z], () => {
+            var e;
+            return null != (e = v.Z.getGuildId()) ? e : void 0;
+        }),
+        G = null == F || null == (t = F.bot) ? void 0 : t.id,
+        H = null != F && (0, p.ye)(F),
+        { currentChannelId: V, instanceId: z, isCurrentlyInInstance: K, canLaunchInChannel: Y } = (0, _.c)(R),
+        X = (0, C.Z)(),
+        q = (0, I.ZP)(null != (o = null == F ? void 0 : F.maxParticipants) ? o : 0),
+        Q = (0, S.Z)({
+            applicationId: R,
+            size: k,
             names: ['embedded_cover']
         }),
-        z = E.Z.getWindowOpen(M.KJ3.CHANNEL_CALL_POPOUT),
-        Q = W.length > 0 ? v.Z.Messages.JOIN : v.Z.Messages.START,
-        q = async () => {
-            if (k) {
-                if (null != H && W.length > 0)
-                    await (0, p.Z)({
-                        applicationId: H.applicationId,
-                        activityChannelId: U,
-                        locationObject: j.location,
-                        analyticsLocations: D
+        J = null != (O = null == F ? void 0 : F.id) ? O : '0',
+        $ = (0, h.TK)(J, (0, f.PL)(!0, !1)),
+        ee = (0, h.TK)(J, (0, f.LD)(B, !1)),
+        et = async () => {
+            if ((null == F ? void 0 : F.id) != null)
+                if (Y)
+                    (0, N.G6)({
+                        channelId: null != V ? V : void 0,
+                        applicationId: F.id,
+                        isStart: null == z,
+                        instanceId: null != z ? z : void 0,
+                        embeddedActivitiesManager: X,
+                        customId: D,
+                        referrerId: L,
+                        analyticsLocations: U
                     });
                 else {
-                    let e = y.isPrivate() && !I.Z.isCallActive(U),
-                        t = async () =>
-                            await (0, g.Z)({
-                                targetApplicationId: P,
-                                channelId: U,
-                                analyticsLocations: D
-                            });
-                    e
-                        ? o.Z.show({
-                              title: v.Z.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
-                              cancelText: v.Z.Messages.CANCEL,
-                              confirmText: v.Z.Messages.CONFIRM,
-                              onConfirm: () => t(),
-                              body: v.Z.Messages.EMBEDDED_ACTIVITIES_DM_START_CONFIRMATION_TEXT
-                          })
-                        : t();
+                    if (null == G) return;
+                    try {
+                        await (0, d.W)({
+                            appId: F.id,
+                            botId: G,
+                            analyticsLocations: U,
+                            customId: D,
+                            referrerId: L
+                        });
+                    } catch (e) {}
                 }
-            } else
-                (0, x.Z)({
-                    guildId: B,
-                    locationObject: j.location,
-                    openInPopout: z,
-                    initialSelectedApplicationId: P,
-                    initialSlide: O.ag.SELECT_CHANNEL,
-                    analyticsLocations: D
-                });
-        };
-    return null != w && (0, h.yE)(w.flags, M.udG.EMBEDDED)
-        ? (0, i.jsx)(d.Gt, {
-              value: D,
-              children: (0, i.jsxs)('div', {
-                  className: L.container,
-                  children: [
-                      (0, i.jsx)('div', {
-                          className: L.imgContainer,
-                          children: (0, i.jsx)('img', {
-                              className: L.img,
-                              alt: w.name,
-                              src: K.url
-                          })
-                      }),
-                      (0, i.jsxs)('div', {
-                          className: L.content,
-                          children: [
-                              (0, i.jsx)(l.Heading, {
-                                  className: L.heading,
-                                  variant: 'heading-xl/semibold',
-                                  children: w.name
-                              }),
-                              (0, i.jsx)(l.Heading, {
-                                  className: L.description,
-                                  variant: 'heading-sm/medium',
-                                  children: null === (t = w.description) || void 0 === t ? void 0 : t.trim()
-                              }),
-                              (0, i.jsx)(l.Heading, {
-                                  className: L.learnMore,
-                                  variant: 'heading-sm/medium',
-                                  children: (0, i.jsx)(a.rU, {
-                                      to: M.Z5c.ACTIVITY_DETAILS(P),
-                                      children: v.Z.Messages.LEARN_MORE
-                                  })
-                              }),
-                              (0, i.jsxs)('div', {
-                                  className: L.cta,
-                                  children: [
-                                      W.length > 0
-                                          ? (0, i.jsx)('div', {
-                                                className: L.avatars,
-                                                children: (0, i.jsx)(R.Z, {
-                                                    guildId: B,
-                                                    users: W,
-                                                    max: 4
-                                                })
-                                            })
-                                          : (0, i.jsxs)('div', {
-                                                className: L.maxParticipants,
-                                                children: [
-                                                    (0, i.jsx)(l.GroupIcon, {
-                                                        size: 'md',
-                                                        color: 'currentColor',
-                                                        className: L.peopleIcon
-                                                    }),
-                                                    (0, i.jsx)(l.Text, {
-                                                        variant: 'text-xs/semibold',
-                                                        children: V
-                                                    })
-                                                ]
-                                            }),
-                                      (0, i.jsx)('div', {
-                                          className: L.buttonWrapper,
-                                          children: (0, i.jsx)(l.Button, {
-                                              onClick: q,
-                                              className: L.button,
-                                              color: l.ButtonColors.GREEN,
-                                              disabled: F,
-                                              children: Q
-                                          })
-                                      })
-                                  ]
-                              })
-                          ]
-                      })
-                  ]
+        },
+        { enabled: en } = g.G.useExperiment({ location: 'ActivityBookmarkEmbed' }),
+        er = (0, i._)(W),
+        { data: ei, error: ea } = (0, j.h)(null == F ? void 0 : F.id, er);
+    if (null == F || !1 === H) return null;
+    if (en)
+        return null != W && null == ea && null != ei
+            ? (0, r.jsx)(T.b, {
+                  application: F,
+                  customId: D,
+                  customLink: ei,
+                  embedUrl: M,
+                  referrerId: L
               })
-          })
-        : null;
+            : (0, r.jsx)(u.Gt, {
+                  value: U,
+                  children: (0, r.jsx)(b.O, {
+                      app: F,
+                      embedUrl: M,
+                      linkType: b.U.ACTIVITY,
+                      activityCustomId: D,
+                      activityReferrerId: L
+                  })
+              });
+    let el = Y ? (null == z ? A.NW.string(A.t.cnBQPD) : A.NW.string(A.t.VJlc0d)) : A.NW.string(A.t.JeK1Wl),
+        eo = K ? A.NW.string(A.t.wJNK8P) : void 0,
+        es = (e) => {
+            var t, n;
+            return (0, r.jsx)(
+                s.zxk,
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })(
+                    {
+                        onClick: et,
+                        className: w.button,
+                        color: s.Ttl.GREEN,
+                        disabled: null != eo
+                    },
+                    e
+                )),
+                (n = n = { children: el }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      }),
+                t)
+            );
+        };
+    return (0, r.jsx)(u.Gt, {
+        value: U,
+        children: (0, r.jsxs)('div', {
+            className: w.container,
+            children: [
+                (0, r.jsx)('div', {
+                    className: w.imgContainer,
+                    children: (0, r.jsx)('img', {
+                        className: w.img,
+                        alt: F.name,
+                        src: Q.url
+                    })
+                }),
+                (0, r.jsxs)('div', {
+                    className: w.content,
+                    children: [
+                        (0, r.jsx)(s.X6q, {
+                            className: w.heading,
+                            variant: 'heading-xl/semibold',
+                            children: F.name
+                        }),
+                        (0, r.jsx)(s.X6q, {
+                            className: w.description,
+                            variant: 'heading-sm/medium',
+                            children: null == (n = F.description) ? void 0 : n.trim()
+                        }),
+                        (0, r.jsxs)('div', {
+                            className: w.cta,
+                            children: [
+                                (0, r.jsxs)('div', {
+                                    className: w.maxParticipants,
+                                    children: [
+                                        (0, r.jsx)(s.BFJ, {
+                                            size: 'md',
+                                            color: 'currentColor',
+                                            className: w.peopleIcon
+                                        }),
+                                        (0, r.jsx)(s.Text, {
+                                            variant: 'text-xs/semibold',
+                                            children: q
+                                        })
+                                    ]
+                                }),
+                                (0, r.jsxs)('div', {
+                                    className: w.buttonWrapper,
+                                    children: [
+                                        null != F &&
+                                            (0, r.jsx)(s.zxk, {
+                                                onClick: () => {
+                                                    var e;
+                                                    null != F &&
+                                                        (a.Y.USER_INSTALL in (null != (e = F.integrationTypesConfig) ? e : {}) || $ || ee
+                                                            ? (0, m.X)(F.id)
+                                                            : (0, y.transitionToGlobalDiscovery)({
+                                                                  tab: P.GlobalDiscoveryTab.APPS,
+                                                                  applicationId: F.id,
+                                                                  newSessionState: {
+                                                                      entrypoint: { name: E.xF.OAUTH2_EMBED },
+                                                                      guildId: B
+                                                                  }
+                                                              }));
+                                                },
+                                                className: w.button,
+                                                color: s.Ttl.PRIMARY,
+                                                children: A.NW.string(A.t.fbcCzc)
+                                            }),
+                                        null != eo
+                                            ? (0, r.jsx)(
+                                                  s.ua7,
+                                                  {
+                                                      text: eo,
+                                                      children: (e) =>
+                                                          es(
+                                                              Z(
+                                                                  {},
+                                                                  (function (e) {
+                                                                      if (null == e) throw TypeError('Cannot destructure ' + e);
+                                                                      return e;
+                                                                  })(e)
+                                                              )
+                                                          )
+                                                  },
+                                                  el
+                                              )
+                                            : es()
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
+    });
 }

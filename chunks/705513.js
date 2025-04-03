@@ -1,60 +1,24 @@
-n.d(t, {
-    $C: function () {
-        return d;
-    },
-    $y: function () {
-        return m;
-    },
-    BU: function () {
-        return g;
-    },
-    Dz: function () {
-        return p;
-    },
-    LR: function () {
-        return f;
-    },
-    P_: function () {
-        return T;
-    },
-    Q6: function () {
-        return r;
-    },
-    QN: function () {
-        return o;
-    },
-    ZE: function () {
-        return E;
-    },
-    bK: function () {
-        return I;
-    },
-    ek: function () {
-        return _;
-    },
-    er: function () {
-        return h;
-    },
-    f7: function () {
-        return u;
-    },
-    iN: function () {
-        return l;
-    },
-    iQ: function () {
-        return i;
-    },
-    jk: function () {
-        return a;
-    },
-    sl: function () {
-        return c;
-    },
-    vq: function () {
-        return s;
-    }
+r.d(t, {
+    $C: () => p,
+    $y: () => g,
+    BU: () => m,
+    Dz: () => v,
+    LR: () => h,
+    P_: () => y,
+    Q6: () => n,
+    QN: () => l,
+    ZE: () => d,
+    bK: () => x,
+    ek: () => f,
+    er: () => b,
+    f7: () => u,
+    iN: () => s,
+    iQ: () => o,
+    jk: () => a,
+    sl: () => c,
+    vq: () => i
 });
-var r = {
+var n = {
         50: '#ffebee',
         100: '#ffcdd2',
         200: '#ef9a9a',
@@ -70,7 +34,7 @@ var r = {
         a400: '#ff1744',
         a700: '#d50000'
     },
-    i = {
+    o = {
         50: '#fce4ec',
         100: '#f8bbd0',
         200: '#f48fb1',
@@ -102,7 +66,7 @@ var r = {
         a400: '#d500f9',
         a700: '#aa00ff'
     },
-    s = {
+    i = {
         50: '#ede7f6',
         100: '#d1c4e9',
         200: '#b39ddb',
@@ -118,7 +82,7 @@ var r = {
         a400: '#651fff',
         a700: '#6200ea'
     },
-    o = {
+    l = {
         50: '#e8eaf6',
         100: '#c5cae9',
         200: '#9fa8da',
@@ -134,7 +98,7 @@ var r = {
         a400: '#3d5afe',
         a700: '#304ffe'
     },
-    l = {
+    s = {
         50: '#e3f2fd',
         100: '#bbdefb',
         200: '#90caf9',
@@ -182,7 +146,7 @@ var r = {
         a400: '#00e5ff',
         a700: '#00b8d4'
     },
-    d = {
+    p = {
         50: '#e0f2f1',
         100: '#b2dfdb',
         200: '#80cbc4',
@@ -198,7 +162,7 @@ var r = {
         a400: '#1de9b6',
         a700: '#00bfa5'
     },
-    _ = {
+    f = {
         50: '#e8f5e9',
         100: '#c8e6c9',
         200: '#a5d6a7',
@@ -214,7 +178,7 @@ var r = {
         a400: '#00e676',
         a700: '#00c853'
     },
-    E = {
+    d = {
         50: '#f1f8e9',
         100: '#dcedc8',
         200: '#c5e1a5',
@@ -230,7 +194,7 @@ var r = {
         a400: '#76ff03',
         a700: '#64dd17'
     },
-    f = {
+    h = {
         50: '#f9fbe7',
         100: '#f0f4c3',
         200: '#e6ee9c',
@@ -246,7 +210,7 @@ var r = {
         a400: '#c6ff00',
         a700: '#aeea00'
     },
-    h = {
+    b = {
         50: '#fffde7',
         100: '#fff9c4',
         200: '#fff59d',
@@ -262,7 +226,7 @@ var r = {
         a400: '#ffea00',
         a700: '#ffd600'
     },
-    p = {
+    v = {
         50: '#fff8e1',
         100: '#ffecb3',
         200: '#ffe082',
@@ -278,7 +242,7 @@ var r = {
         a400: '#ffc400',
         a700: '#ffab00'
     },
-    m = {
+    g = {
         50: '#fff3e0',
         100: '#ffe0b2',
         200: '#ffcc80',
@@ -294,7 +258,7 @@ var r = {
         a400: '#ff9100',
         a700: '#ff6d00'
     },
-    I = {
+    x = {
         50: '#fbe9e7',
         100: '#ffccbc',
         200: '#ffab91',
@@ -310,7 +274,7 @@ var r = {
         a400: '#ff3d00',
         a700: '#dd2c00'
     },
-    T = {
+    y = {
         50: '#efebe9',
         100: '#d7ccc8',
         200: '#bcaaa4',
@@ -322,7 +286,7 @@ var r = {
         800: '#4e342e',
         900: '#3e2723'
     },
-    g = {
+    m = {
         50: '#eceff1',
         100: '#cfd8dc',
         200: '#b0bec5',

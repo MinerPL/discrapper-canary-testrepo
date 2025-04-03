@@ -1,19 +1,14 @@
 n.d(t, {
-    B: function () {
-        return a;
-    },
-    n: function () {
-        return i;
-    }
+    B: () => o,
+    n: () => i
 }),
     n(653041);
-var r = n(470079);
+var r = n(192379);
 function i(e) {
     let t = {};
     if (e) {
         var n;
-        null === (n = r.Children.map(e, (e) => e)) ||
-            void 0 === n ||
+        null == (n = r.Children.map(e, (e) => e)) ||
             n.forEach((e) => {
                 let n = e.key;
                 null != n && (t[n] = e);
@@ -21,7 +16,7 @@ function i(e) {
     }
     return t;
 }
-function a() {
+function o() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -29,17 +24,17 @@ function a() {
         return n.hasOwnProperty(e) ? n[e] : t[e];
     }
     let i = {},
-        a = [];
-    for (let e in t) n.hasOwnProperty(e) ? a.length && ((i[e] = a), (a = [])) : a.push(e);
-    let s = {};
+        o = [];
+    for (let e in t) n.hasOwnProperty(e) ? o.length && ((i[e] = o), (o = [])) : o.push(e);
+    let a = {};
     for (let t in n) {
         if (i.hasOwnProperty(t))
             for (e = 0; e < i[t].length; e++) {
                 let n = i[t][e];
-                s[i[t][e]] = r(n);
+                a[i[t][e]] = r(n);
             }
-        s[t] = r(t);
+        a[t] = r(t);
     }
-    for (e = 0; e < a.length; e++) s[a[e]] = r(a[e]);
-    return s;
+    for (e = 0; e < o.length; e++) a[o[e]] = r(o[e]);
+    return a;
 }

@@ -1,2 +1,1 @@
-var n = r(573401).Symbol;
-e.exports = n;
+t.exports = a(573401).Symbol;

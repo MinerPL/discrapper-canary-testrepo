@@ -1,50 +1,46 @@
-r.d(t, {
-    R: function () {
-        return I;
-    }
-});
-var n = r(448171),
-    a = r(78355),
-    o = r(747677),
-    i = r(622916),
-    _ = r(454463),
-    E = r(878719),
-    s = r(163162),
-    c = r(463461);
-class I extends n.W {
-    constructor(e) {
-        let t = {
+a.d(e, { R: () => l });
+var r = a(448171),
+    n = a(78355),
+    _ = a(747677),
+    o = a(622916),
+    i = a(454463),
+    c = a(878719),
+    s = a(163162),
+    E = a(463461);
+class l extends r.W {
+    constructor(t) {
+        let e = {
                 parentSpanIsAlwaysRootSpan: !0,
-                ...e
+                ...t
             },
-            r = s.m9.SENTRY_SDK_SOURCE || (0, o.S)();
-        (0, a.V)(t, 'browser', ['browser'], r),
-            super(t),
-            t.sendClientReports &&
+            a = s.m9.SENTRY_SDK_SOURCE || (0, _.S)();
+        (0, n.V)(e, 'browser', ['browser'], a),
+            super(e),
+            e.sendClientReports &&
                 s.m9.document &&
                 s.m9.document.addEventListener('visibilitychange', () => {
                     'hidden' === s.m9.document.visibilityState && this._flushOutcomes();
                 });
     }
-    eventFromException(e, t) {
-        return (0, E.dr)(this._options.stackParser, e, t, this._options.attachStacktrace);
+    eventFromException(t, e) {
+        return (0, c.dr)(this._options.stackParser, t, e, this._options.attachStacktrace);
     }
-    eventFromMessage(e, t = 'info', r) {
-        return (0, E.aB)(this._options.stackParser, e, t, r, this._options.attachStacktrace);
+    eventFromMessage(t, e = 'info', a) {
+        return (0, c.aB)(this._options.stackParser, t, e, a, this._options.attachStacktrace);
     }
-    captureUserFeedback(e) {
+    captureUserFeedback(t) {
         if (!this._isEnabled()) {
-            _.X && i.kg.warn('SDK not enabled, will not capture user feedback.');
+            i.X && o.kg.warn('SDK not enabled, will not capture user feedback.');
             return;
         }
-        let t = (0, c.r)(e, {
+        let e = (0, E.r)(t, {
             metadata: this.getSdkMetadata(),
             dsn: this.getDsn(),
             tunnel: this.getOptions().tunnel
         });
-        this.sendEnvelope(t);
+        this.sendEnvelope(e);
     }
-    _prepareEvent(e, t, r) {
-        return (e.platform = e.platform || 'javascript'), super._prepareEvent(e, t, r);
+    _prepareEvent(t, e, a) {
+        return (t.platform = t.platform || 'javascript'), super._prepareEvent(t, e, a);
     }
 }

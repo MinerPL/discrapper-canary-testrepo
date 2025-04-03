@@ -1,7 +1,20 @@
-n(47120);
+n.d(t, { Z: () => s }), n(47120);
 var r = n(442837),
     i = n(570140);
-class a extends r.yh {
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class a extends r.ZP.Store {
     allGuildIds() {
         return this.guildIds;
     }
@@ -24,7 +37,6 @@ class a extends r.yh {
         !0 !== e.guild.unavailable && this.guildIds.delete(e.guild.id);
     }
     constructor() {
-        var e, t, n;
         super(
             i.Z,
             {
@@ -36,17 +48,7 @@ class a extends r.yh {
             },
             i.c.Early
         ),
-            (e = this),
-            (t = 'guildIds'),
-            (n = new Set()),
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+            o(this, 'guildIds', new Set());
     }
 }
-t.Z = new a();
+let s = new a();

@@ -1,23 +1,19 @@
 n.d(t, {
-    Q1: function () {
-        return l;
-    },
-    hV: function () {
-        return u;
-    },
-    ky: function () {
-        return o;
-    }
-});
+    Q1: () => l,
+    hV: () => c,
+    ky: () => s
+}),
+    n(301563),
+    n(878331);
 var r = n(895924),
     i = n(809090),
-    a = n(944877),
-    s = n(689079);
-let o = (e) => (e.type === r.Qi.BUILT_IN ? a.Z : i.Z);
+    o = n(944877),
+    a = n(689079);
+let s = (e) => (e.type === r.Qi.BUILT_IN ? o.Z : i.Z);
 function l(e) {
     return ''.concat(e / 16, 'rem');
 }
-function u(e, t) {
+function c(e, t) {
     let n = t,
         r = !1,
         i = t.indexOf(':');
@@ -25,14 +21,14 @@ function u(e, t) {
         let e = t.lastIndexOf(' ', i);
         e >= 0 ? ((t = t.substring(0, e)), (r = !0)) : (t = t.substring(0, i));
     } else t = t.substring(0, t.length);
-    let a = t.split(' ', s.Vd + 1);
+    let o = t.split(' ', a.Vd + 1);
     return (
-        a.length > s.Vd && ((r = !0), a.pop()),
-        (t = a.join(' ')),
+        o.length > a.Vd && ((r = !0), o.pop()),
+        (t = o.join(' ')),
         (n.length > t.length || t.endsWith(' ')) && ((r = !0), (t = t.trimEnd())),
         {
             text: t,
-            parts: a,
+            parts: o,
             hasSpaceTerminator: r
         }
     );

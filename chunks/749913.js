@@ -1,173 +1,209 @@
-n.d(t, {
-    Z: function () {
-        return er;
-    }
-}),
-    n(47120),
-    n(733860);
-var a = n(735250),
-    s = n(470079),
-    r = n(120356),
-    l = n.n(r),
-    i = n(512722),
-    o = n.n(i),
-    c = n(143927),
+n.d(t, { Z: () => el }), n(47120), n(566702), n(733860);
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    l = n.n(i),
+    s = n(512722),
+    o = n.n(s),
+    c = n(788347),
     d = n(924826),
     u = n(91192),
     m = n(536895),
     h = n(442837),
-    _ = n(481060),
-    g = n(430742),
-    x = n(166459),
-    f = n(541716),
-    C = n(67158),
-    p = n(893718),
-    T = n(472243),
-    I = n(436660),
-    E = n(284182),
-    N = n(795639),
-    b = n(957730),
-    v = n(25015),
-    S = n(252032),
-    M = n(913663),
-    A = n(268350),
-    j = n(456077),
-    R = n(488131),
-    O = n(602034),
-    Z = n(23750),
-    L = n(703558),
-    P = n(496675),
-    w = n(300429),
-    y = n(117530),
-    D = n(594174),
-    F = n(459273),
-    U = n(838440),
-    k = n(127654),
-    H = n(681154),
+    g = n(481060),
+    f = n(430742),
+    p = n(166459),
+    x = n(541716),
+    b = n(67158),
+    j = n(893718),
+    v = n(472243),
+    C = n(436660),
+    _ = n(284182),
+    y = n(795639),
+    N = n(957730),
+    O = n(25015),
+    w = n(252032),
+    S = n(913663),
+    P = n(268350),
+    T = n(456077),
+    I = n(488131),
+    E = n(602034),
+    k = n(23750),
+    R = n(703558),
+    Z = n(496675),
+    M = n(300429),
+    A = n(117530),
+    L = n(594174),
+    W = n(459273),
+    F = n(838440),
+    D = n(127654),
+    z = n(681154),
     B = n(883429),
-    G = n(945141),
-    z = n(456269),
-    V = n(103921),
-    W = n(228392),
-    q = n(259637),
-    K = n(76451),
-    Y = n(470623),
-    X = n(479099),
+    H = n(945141),
+    U = n(456269),
+    V = n(228392),
+    G = n(259637),
+    q = n(76451),
+    X = n(470623),
+    K = n(479099),
     J = n(399894),
-    Q = n(81490),
-    $ = n(710352),
-    ee = n(981631),
-    et = n(176505),
-    en = n(689938),
-    ea = n(605996);
-let es = f.I.CREATE_FORUM_POST;
+    Y = n(81490),
+    Q = n(710352),
+    $ = n(981631),
+    ee = n(176505),
+    et = n(388032),
+    en = n(860128);
 function er(e) {
-    let { parentChannel: t, isSearchLoading: n, onChange: r, canCreatePost: i, inputRef: o } = e,
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function ea(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let ei = x.Ie.CREATE_FORUM_POST;
+function el(e) {
+    let { parentChannel: t, isSearchLoading: n, onChange: i, canCreatePost: s, inputRef: o } = e,
         {
             textAreaState: d,
             formOpen: u,
             previewing: m
-        } = (0, Y.xH)((e) => {
-            let { textAreaState: t, formOpen: n, previewing: a } = e;
+        } = (0, X.xH)((e) => {
+            let { textAreaState: t, formOpen: n, previewing: r } = e;
             return {
                 textAreaState: t,
                 formOpen: n,
-                previewing: a
+                previewing: r
             };
-        }, c.Z),
-        [g, x] = s.useState(null),
-        f = s.useContext(F.oo),
-        C = s.useCallback(() => {
-            f.bumpDispatchPriority();
-        }, [f]),
-        p = (0, h.e7)([P.Z], () => P.Z.can(ee.Plq.ATTACH_FILES, t)),
-        T = (0, h.Wu)([y.Z], () => y.Z.getUploads(t.id, L.d.FirstThreadMessage)),
-        I = u && p && i,
-        v = (null == t ? void 0 : t.isMediaChannel()) === !0,
-        S = (function (e, t) {
-            let n = (0, Y.AF)(),
-                a = (0, z.ql)(e);
-            return s.useCallback(() => {
-                let { formOpen: s, setFormOpenFromUserAction: r, name: l, textAreaState: i, hasClickedForm: o } = n.getState();
-                !s &&
+        }, c.X),
+        [f, p] = a.useState(null),
+        x = a.useContext(W.oo),
+        b = a.useCallback(() => {
+            x.bumpDispatchPriority();
+        }, [x]),
+        j = (0, h.e7)([Z.Z], () => Z.Z.can($.Plq.ATTACH_FILES, t)),
+        v = (0, h.Wu)([A.Z], () => A.Z.getUploads(t.id, R.d.FirstThreadMessage)),
+        C = u && j && s,
+        O = (null == t ? void 0 : t.isMediaChannel()) === !0,
+        w = (function (e, t) {
+            let n = (0, X.AF)(),
+                r = (0, U.ql)(e);
+            return a.useCallback(() => {
+                let { formOpen: a, setFormOpenFromUserAction: i, name: l, textAreaState: s, hasClickedForm: o } = n.getState();
+                !a &&
                     (setTimeout(() => {
-                        if (t.current instanceof _.TextAreaAutosize) {
-                            var e, n, a, s;
-                            null === (n = t.current) || void 0 === n || null === (e = n._textArea) || void 0 === e || e.setSelectionRange(l.length, l.length), null === (s = t.current) || void 0 === s || null === (a = s._textArea) || void 0 === a || a.focus();
+                        if (t.current instanceof g.lcI) {
+                            var e, n, r, a;
+                            null == (n = t.current) || null == (e = n._textArea) || e.setSelectionRange(l.length, l.length), null == (a = t.current) || null == (r = a._textArea) || r.focus();
                         }
                     }, 0),
-                    ((o && l.length > 0) || (i.textValue.trim().length > 0 && i.textValue.trim() !== a) || y.Z.getUploads(e.id, L.d.FirstThreadMessage).length > 0) && r());
-            }, [n, e.id, a, t]);
+                    ((o && l.length > 0) || (s.textValue.trim().length > 0 && s.textValue.trim() !== r) || A.Z.getUploads(e.id, R.d.FirstThreadMessage).length > 0) && i());
+            }, [n, e.id, r, t]);
         })(t, o),
-        j = (function (e) {
-            let { formOpen: t } = (0, Y.xH)((e) => {
+        T = (function (e) {
+            let { formOpen: t } = (0, X.xH)((e) => {
                     let { formOpen: t } = e;
                     return { formOpen: t };
-                }, c.Z),
-                n = (0, Y.AF)(),
-                a = (0, O.r)({ parentChannel: e });
-            s.useEffect(() => {
+                }, c.X),
+                n = (0, X.AF)(),
+                r = (0, E.r)({ parentChannel: e });
+            a.useEffect(() => {
                 let { setNameError: e, setMessageError: t } = n.getState();
                 e(null), t(null);
             }, [t, n]);
-            let r = s.useCallback(
-                (t, a, s) => {
-                    let { name: r, textAreaState: l } = n.getState();
+            let i = a.useCallback(
+                (t, r, a) => {
+                    let { name: i, textAreaState: l } = n.getState();
                     null == t && (t = l.textValue), (t = t.trim());
-                    let { content: i } = b.ZP.parse(e, t);
-                    if (((t = i), null == a || 0 === a.length)) {
+                    let { content: s } = N.ZP.parse(e, t);
+                    if (((t = s), null == r || 0 === r.length)) {
                         var o;
-                        a = null === (o = M.Z.getStickerPreview(e.id, es.drafts.type)) || void 0 === o ? void 0 : o.map((e) => e.id);
+                        r = null == (o = S.Z.getStickerPreview(e.id, ei.drafts.type)) ? void 0 : o.map((e) => e.id);
                     }
-                    if (((null == s || 0 === s.length) && (s = y.Z.getUploads(e.id, L.d.FirstThreadMessage)), null != s && s.length > 0 && e.isMediaChannel())) {
-                        let e = s.findIndex((e) => !0 === e.isThumbnail);
+                    if (((null == a || 0 === a.length) && (a = A.Z.getUploads(e.id, R.d.FirstThreadMessage)), null != a && a.length > 0 && e.isMediaChannel())) {
+                        let e = a.findIndex((e) => !0 === e.isThumbnail);
                         if (e > -1) {
-                            let t = s[e];
-                            s.splice(e, 1), s.unshift(t);
+                            let t = a[e];
+                            a.splice(e, 1), a.unshift(t);
                         }
                     }
-                    let c = 0 === r.length,
-                        d = (null == t || 0 === t.length) && (null == a || 0 === a.length) && 0 === s.length;
+                    let c = 0 === i.length,
+                        d = (null == t || 0 === t.length) && (null == r || 0 === r.length) && 0 === a.length;
                     return {
                         content: t,
-                        stickers: a,
-                        uploads: s,
+                        stickers: r,
+                        uploads: a,
                         hasNameError: c,
                         hasMessageError: d
                     };
                 },
                 [e, n]
             );
-            return s.useCallback(
-                async (t, s, l) => {
-                    let { setNameError: i, setMessageError: o, setSubmitting: c, resetFormState: d, formOpen: u, setFormOpen: m, setPreviewing: h, setFormOpenFromUserAction: _, setGuidelinesOpen: g } = n.getState(),
-                        x = G.Z.hasSeen(e.id);
+            return a.useCallback(
+                async (t, a, l) => {
+                    let { setNameError: s, setMessageError: o, setSubmitting: c, resetFormState: d, formOpen: u, setFormOpen: m, setPreviewing: h, setFormOpenFromUserAction: g, setGuidelinesOpen: f } = n.getState(),
+                        p = H.Z.hasSeen(e.id);
                     if (!u)
                         return (
-                            (0, W.P_)({
+                            (0, V.P_)({
                                 guildId: e.guild_id,
                                 channelId: e.id
                             }),
-                            !x && n.getState().setGuidelinesOpen(!0),
-                            _(),
+                            p || n.getState().setGuidelinesOpen(!0),
+                            g(),
                             {
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             }
                         );
-                    let { content: f, stickers: C, uploads: p, hasNameError: T, hasMessageError: I } = r(t, s, l);
-                    if ((i(T ? (0, H.V_)() : null), o(I ? (0, H.T4)() : null), T || I))
+                    let { content: x, stickers: b, uploads: j, hasNameError: v, hasMessageError: C } = i(t, a, l);
+                    if ((s(v ? (0, z.V_)() : null), o(C ? (0, z.T4)() : null), v || C))
                         return {
                             shouldClear: !1,
                             shouldRefocus: !0
                         };
                     try {
                         c(!0);
-                        let { valid: t } = await (0, U.v)({
-                            content: f,
-                            stickers: C,
-                            uploads: p,
-                            type: es,
+                        let { valid: t } = await (0, F.v)({
+                            content: x,
+                            stickers: b,
+                            uploads: j,
+                            type: ei,
                             channel: e
                         });
                         if (!t)
@@ -175,25 +211,25 @@ function er(e) {
                                 shouldClear: !1,
                                 shouldRefocus: !0
                             };
-                        let n = await a(f, C, p);
+                        let n = await r(x, b, j);
                         return (
-                            (0, R.ok)(n),
+                            (0, I.ok)(n),
                             B.Z.resort(e.id),
-                            (0, A.qB)(e.id, es.drafts.type),
+                            (0, P.qB)(e.id, ei.drafts.type),
                             d(),
                             m(!1),
                             h(!1),
-                            G.Z.markAsSeen(e.id),
-                            g(!1),
+                            H.Z.markAsSeen(e.id),
+                            f(!1),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1
                             }
                         );
                     } catch (t) {
-                        var E, N;
+                        var _, y;
                         return (
-                            (null === (E = t.body) || void 0 === E ? void 0 : E.code) === ee.evJ.AUTOMOD_TITLE_BLOCKED ? i((0, H.Gx)(t.body, e)) : (null === (N = t.body) || void 0 === N ? void 0 : N.code) === ee.evJ.AUTOMOD_MESSAGE_BLOCKED && o((0, H.Gx)(t.body, e)),
+                            (null == (_ = t.body) ? void 0 : _.code) === $.evJ.AUTOMOD_TITLE_BLOCKED ? s((0, z.Gx)(t.body, e)) : (null == (y = t.body) ? void 0 : y.code) === $.evJ.AUTOMOD_MESSAGE_BLOCKED && o((0, z.Gx)(t.body, e)),
                             {
                                 shouldClear: !1,
                                 shouldRefocus: !0
@@ -203,64 +239,64 @@ function er(e) {
                         c(!1);
                     }
                 },
-                [a, r, e, n]
+                [r, i, e, n]
             );
         })(t);
     return (
-        s.useLayoutEffect(r, [u, d, T, r]),
-        (0, a.jsx)(a.Fragment, {
-            children: (0, a.jsx)('div', {
-                'aria-label': i ? en.Z.Messages.NEW_FORUM_POST : en.Z.Messages.SEARCH,
-                className: l()(ea.container, { [ea.collapsed]: !u }),
-                onClick: !u && i ? S : void 0,
-                children: (0, a.jsxs)('form', {
-                    onMouseDown: C,
-                    onFocus: C,
+        a.useLayoutEffect(i, [u, d, v, i]),
+        (0, r.jsx)(r.Fragment, {
+            children: (0, r.jsx)('div', {
+                'aria-label': s ? et.NW.string(et.t.dq7mAQ) : et.NW.string(et.t['5h0QOD']),
+                className: l()(en.container, { [en.collapsed]: !u }),
+                onClick: !u && s ? w : void 0,
+                children: (0, r.jsxs)('form', {
+                    onMouseDown: b,
+                    onFocus: b,
                     onSubmit: (e) => {
-                        if ((e.preventDefault(), !!i)) j();
+                        e.preventDefault(), s && T();
                     },
                     children: [
-                        (0, a.jsxs)('div', {
-                            className: ea.formContainer,
+                        (0, r.jsxs)('div', {
+                            className: en.formContainer,
                             children: [
-                                (0, a.jsx)(el, {
+                                (0, r.jsx)(es, {
                                     parentChannel: t,
                                     isSearchLoading: n,
                                     inputRef: o
                                 }),
-                                (0, a.jsxs)('div', {
-                                    className: m ? ea.previewForm : ea.form,
+                                (0, r.jsxs)('div', {
+                                    className: m ? en.previewForm : en.form,
                                     children: [
-                                        (0, a.jsx)(ei, {
-                                            editorRef: g,
+                                        (0, r.jsx)(eo, {
+                                            editorRef: f,
                                             parentChannel: t,
                                             isSearchLoading: n,
                                             inputRef: o,
-                                            canCreatePost: i
+                                            canCreatePost: s
                                         }),
                                         u &&
-                                            (0, a.jsx)(ed, {
-                                                editorRef: g,
-                                                setEditorRef: x,
+                                            (0, r.jsx)(eu, {
+                                                editorRef: f,
+                                                setEditorRef: p,
                                                 parentChannel: t,
-                                                submit: j,
-                                                disabled: !i
+                                                submit: T,
+                                                disabled: !s
                                             }),
-                                        m && (0, a.jsx)(eu, {})
+                                        m && (0, r.jsx)(em, {})
                                     ]
                                 }),
-                                I && (v ? (0, a.jsx)(N._, { parentChannel: t }) : (0, a.jsx)(K.Z, { channelId: t.id }))
+                                C && (O ? (0, r.jsx)(y._, { parentChannel: t }) : (0, r.jsx)(q.Z, { channelId: t.id }))
                             ]
                         }),
-                        (0, a.jsxs)('div', {
-                            className: ea.form,
+                        (0, r.jsxs)('div', {
+                            className: en.form,
                             children: [
-                                I && v && (0, a.jsx)(E.Z, { parentChannel: t }),
+                                C && O && (0, r.jsx)(_.Z, { parentChannel: t }),
                                 u &&
-                                    (0, a.jsx)(eh, {
-                                        className: ea.horizontalPadding,
+                                    (0, r.jsx)(eg, {
+                                        className: en.horizontalPadding,
                                         parentChannel: t,
-                                        canCreatePost: i
+                                        canCreatePost: s
                                     })
                             ]
                         })
@@ -270,179 +306,183 @@ function er(e) {
         })
     );
 }
-let el = s.memo(function (e) {
-        let { parentChannel: t, isSearchLoading: n, inputRef: r } = e,
+let es = a.memo(function (e) {
+        let { parentChannel: t, isSearchLoading: n, inputRef: i } = e,
             {
                 formOpen: l,
-                name: i,
+                name: s,
                 textAreaState: o,
                 hasClickedForm: d,
                 submitting: u
-            } = (0, Y.xH)((e) => {
-                let { formOpen: t, nameError: n, name: a, previewing: s, textAreaState: r, hasClickedForm: l, submitting: i } = e;
+            } = (0, X.xH)((e) => {
+                let { formOpen: t, nameError: n, name: r, previewing: a, textAreaState: i, hasClickedForm: l, submitting: s } = e;
                 return {
                     formOpen: t,
                     nameError: n,
-                    name: a,
-                    textAreaState: r,
-                    previewing: s,
+                    name: r,
+                    textAreaState: i,
+                    previewing: a,
                     hasClickedForm: l,
-                    submitting: i
+                    submitting: s
                 };
-            }, c.Z),
-            m = (0, Y.AF)(),
-            h = (0, z.ql)(t),
-            f = s.useCallback(() => {
+            }, c.X),
+            m = (0, X.AF)(),
+            h = (0, U.ql)(t),
+            x = a.useCallback(() => {
                 var e;
                 m.getState().resetFormState(),
-                    g.Z.clearDraft(t.id, L.d.ThreadSettings),
-                    g.Z.clearDraft(t.id, L.d.FirstThreadMessage),
-                    x.Z.clearAll(t.id, L.d.FirstThreadMessage),
+                    f.Z.clearDraft(t.id, R.d.ThreadSettings),
+                    f.Z.clearDraft(t.id, R.d.FirstThreadMessage),
+                    p.Z.clearAll(t.id, R.d.FirstThreadMessage),
                     m.getState().setFormOpen(!1),
                     m.getState().setBodyFocused(!1),
                     m.getState().setTitleFocused(!1),
                     m.getState().setHasClickedForm(!1),
                     m.getState().setPreviewing(!1),
-                    null === (e = r.current) || void 0 === e || e.blur(),
-                    (0, W.Oq)({
+                    null == (e = i.current) || e.blur(),
+                    (0, V.Oq)({
                         guildId: t.guild_id,
                         channelId: t.id
                     });
-            }, [m, t.id, t.guild_id, r]),
-            C = s.useMemo(() => {
-                if (n && !l) return (0, a.jsx)(ef, {});
-                if (!n && !l && (0 === o.textValue.trim().length || o.textValue.trim() === h))
-                    return (0, a.jsx)(_.MagnifyingGlassIcon, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: ea.searchIcon
-                    });
-                if (!l && (i.trim().length > 0 || (o.textValue.trim().length > 0 && o.textValue.trim() !== h) || y.Z.getUploads(t.id, L.d.FirstThreadMessage).length > 0) && d)
-                    return (0, a.jsx)(_.PencilIcon, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: ea.pencilIcon
-                    });
-                else
-                    return u
-                        ? (0, a.jsx)(_.CircleXIcon, {
-                              size: 'md',
-                              color: 'currentColor',
-                              className: ea.closeIconDisabled
-                          })
-                        : (0, a.jsx)(_.Tooltip, {
-                              text: en.Z.Messages.FORUM_CLEAR_ALL,
-                              children: (e) =>
-                                  (0, a.jsx)(_.Clickable, {
-                                      ...e,
-                                      onClick: f,
-                                      children: (0, a.jsx)(_.CircleXIcon, {
-                                          size: 'md',
-                                          color: 'currentColor',
-                                          className: ea.closeIcon
-                                      })
+            }, [m, t.id, t.guild_id, i]),
+            b = a.useMemo(
+                () =>
+                    n && !l
+                        ? (0, r.jsx)(eb, {})
+                        : n || l || (0 !== o.textValue.trim().length && o.textValue.trim() !== h)
+                          ? !l && (s.trim().length > 0 || (o.textValue.trim().length > 0 && o.textValue.trim() !== h) || A.Z.getUploads(t.id, R.d.FirstThreadMessage).length > 0) && d
+                              ? (0, r.jsx)(g.vdY, {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: en.pencilIcon
+                                })
+                              : u
+                                ? (0, r.jsx)(g.k$p, {
+                                      size: 'md',
+                                      color: 'currentColor',
+                                      className: en.closeIconDisabled
                                   })
-                          });
-            }, [n, l, d, i, o.textValue, f, t.id, h, u]);
-        return (0, a.jsx)('div', {
-            className: ea.prefixElement,
-            children: C
+                                : (0, r.jsx)(g.ua7, {
+                                      text: et.NW.string(et.t['98EPQE']),
+                                      children: (e) =>
+                                          (0, r.jsx)(
+                                              g.P3F,
+                                              ea(er({}, e), {
+                                                  onClick: x,
+                                                  children: (0, r.jsx)(g.k$p, {
+                                                      size: 'md',
+                                                      color: 'currentColor',
+                                                      className: en.closeIcon
+                                                  })
+                                              })
+                                          )
+                                  })
+                          : (0, r.jsx)(g._Ve, {
+                                size: 'md',
+                                color: 'currentColor',
+                                className: en.searchIcon
+                            }),
+                [n, l, d, s, o.textValue, x, t.id, h, u]
+            );
+        return (0, r.jsx)('div', {
+            className: en.prefixElement,
+            children: b
         });
     }),
-    ei = s.memo(function (e) {
-        let { parentChannel: t, inputRef: n, canCreatePost: r, editorRef: l } = e,
+    eo = a.memo(function (e) {
+        let { parentChannel: t, inputRef: n, canCreatePost: i, editorRef: l } = e,
             {
-                formOpen: i,
+                formOpen: s,
                 nameError: d,
                 name: u,
                 textAreaState: m,
-                previewing: g
-            } = (0, Y.xH)((e) => {
-                let { formOpen: t, nameError: n, name: a, previewing: s, textAreaState: r, hasClickedForm: l, submitting: i } = e;
+                previewing: f
+            } = (0, X.xH)((e) => {
+                let { formOpen: t, nameError: n, name: r, previewing: a, textAreaState: i, hasClickedForm: l, submitting: s } = e;
                 return {
                     formOpen: t,
                     nameError: n,
-                    name: a,
-                    textAreaState: r,
-                    previewing: s,
+                    name: r,
+                    textAreaState: i,
+                    previewing: a,
                     hasClickedForm: l,
-                    submitting: i
+                    submitting: s
                 };
-            }, c.Z),
-            x = (0, Y.AF)(),
-            f = null != t.topic && 0 !== t.topic.length,
-            C = G.Z.hasSeen(t.id),
-            p = (0, z.ql)(t),
-            T = (0, h.e7)([D.default], () => D.default.getCurrentUser());
-        o()(null != T, 'current user cannot be null');
-        (0, F.yp)({
-            event: ee.CkL.FOCUS_COMPOSER_TITLE,
-            handler: () => {
-                var e;
-                let t = n.current instanceof _.TextAreaAutosize ? (null === (e = n.current) || void 0 === e ? void 0 : e._textArea) : n.current;
-                null == t || t.focus(), x.getState().setTitleFocused(!0), x.getState().setFormOpen(!0), x.getState().setHasClickedForm(!0);
-            }
-        });
-        let I = s.useCallback(
+            }, c.X),
+            p = (0, X.AF)(),
+            x = null != t.topic && 0 !== t.topic.length,
+            b = H.Z.hasSeen(t.id),
+            j = (0, U.ql)(t),
+            v = (0, h.e7)([L.default], () => L.default.getCurrentUser());
+        o()(null != v, 'current user cannot be null'),
+            (0, W.yp)({
+                event: $.CkL.FOCUS_COMPOSER_TITLE,
+                handler: () => {
+                    var e;
+                    let t = n.current instanceof g.lcI ? (null == (e = n.current) ? void 0 : e._textArea) : n.current;
+                    null == t || t.focus(), p.getState().setTitleFocused(!0), p.getState().setFormOpen(!0), p.getState().setHasClickedForm(!0);
+                }
+            });
+        let C = a.useCallback(
                 (e) => {
                     let n = e.clipboardData.files[0];
-                    null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, k.d)([n], t, L.d.FirstThreadMessage), x.getState().setFormOpenFromUserAction());
+                    null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, D.d)([n], t, R.d.FirstThreadMessage), p.getState().setFormOpenFromUserAction());
                 },
-                [t, x]
+                [t, p]
             ),
-            E = (0, H.Op)(d, { content: u });
-        return (0, a.jsxs)('div', {
-            className: ea.titleContainer,
-            onPaste: I,
+            _ = (0, z.Op)(d, { content: u });
+        return (0, r.jsxs)('div', {
+            className: en.titleContainer,
+            onPaste: C,
             children: [
-                i && g
-                    ? (0, a.jsx)(_.Heading, {
+                s && f
+                    ? (0, r.jsx)(g.X6q, {
                           variant: 'heading-md/semibold',
-                          className: ea.title,
+                          className: en.title,
                           children: u
                       })
-                    : (0, a.jsx)(_.TextArea, {
+                    : (0, r.jsx)(g.Kx8, {
                           value: u,
-                          placeholder: r ? (i || (m.textValue.length > 0 && m.textValue.trim() !== p) ? en.Z.Messages.FORUM_POST_TITLE_PLACEHOLDER_FOCUSED : en.Z.Messages.FORUM_POST_TITLE_PLACEHOLDER_SEARCH) : en.Z.Messages.SEARCH,
+                          placeholder: i ? (s || (m.textValue.length > 0 && m.textValue.trim() !== j) ? et.NW.string(et.t.lU4dDQ) : et.NW.string(et.t.CjmivL)) : et.NW.string(et.t['5h0QOD']),
                           flex: !0,
-                          autosize: i,
+                          autosize: s,
                           rows: 1,
                           showCharacterCount: !1,
                           showRemainingCharacterCount: !1,
-                          maxLength: ee.HN8,
+                          maxLength: $.HN8,
                           onChange: (e) => {
-                              let n = (0, j.Z)(e, !1);
-                              x.getState().setName(n);
-                              let a = 0 === n.trim().length,
-                                  s = 0 === m.textValue.trim().length,
-                                  r = m.textValue.trim() === p;
-                              a && (s || r) && x.getState().setHasClickedForm(!1), !i && B.Z.updateForumSearchQuery(t.id, n);
+                              let n = (0, T.Z)(e, !1);
+                              p.getState().setName(n);
+                              let r = 0 === n.trim().length,
+                                  a = 0 === m.textValue.trim().length,
+                                  i = m.textValue.trim() === j;
+                              r && (a || i) && p.getState().setHasClickedForm(!1), s || B.Z.updateForumSearchQuery(t.id, n);
                           },
                           onFocus: () => {
-                              x.getState().setTitleFocused(!0), x.getState().setBodyFocused(!1);
+                              p.getState().setTitleFocused(!0), p.getState().setBodyFocused(!1);
                           },
                           onBlur: () => {
-                              x.getState().setTitleFocused(!1);
-                              let e = (0, j.Z)(u, !0);
-                              e !== u && (x.getState().setName(e), !i && B.Z.updateForumSearchQuery(t.id, e));
+                              p.getState().setTitleFocused(!1);
+                              let e = (0, T.Z)(u, !0);
+                              e !== u && (p.getState().setName(e), s || B.Z.updateForumSearchQuery(t.id, e));
                           },
                           onKeyDown: (e) => {
-                              var a, s;
+                              var r, a;
                               'Enter' === e.key &&
                                   (e.preventDefault(),
                                   e.stopPropagation(),
-                                  i && u.length > 0
+                                  s && u.length > 0
                                       ? null == l || l.focus()
-                                      : r &&
+                                      : i &&
                                         e.shiftKey &&
-                                        ((0, W.nH)({
+                                        ((0, V.nH)({
                                             guildId: t.guild_id,
                                             channelId: t.id
                                         }),
-                                        f && !C && x.getState().setGuidelinesOpen(!0),
-                                        x.getState().setFormOpenFromUserAction(),
-                                        u.trim().length > 0 && (x.getState().setBodyFocused(!0), null == l || l.focus())));
-                              let o = n.current instanceof _.TextAreaAutosize ? (null === (a = n.current) || void 0 === a ? void 0 : a._textArea) : n.current;
+                                        x && !b && p.getState().setGuidelinesOpen(!0),
+                                        p.getState().setFormOpenFromUserAction(),
+                                        u.trim().length > 0 && (p.getState().setBodyFocused(!0), null == l || l.focus())));
+                              let o = n.current instanceof g.lcI ? (null == (r = n.current) ? void 0 : r._textArea) : n.current;
                               if ('Home' === e.key || 'End' === e.key) {
                                   if (null == o) return;
                                   if ((e.preventDefault(), e.stopPropagation(), 'Home' === e.key)) o.setSelectionRange(0, 0);
@@ -451,519 +491,567 @@ let el = s.memo(function (e) {
                                       o.setSelectionRange(e, e);
                                   }
                               }
-                              'Escape' === e.key && !x.getState().submitting && (null === (s = n.current) || void 0 === s || s.blur(), x.getState().setFormOpen(!1), x.getState().setTitleFocused(!1), x.getState().setBodyFocused(!1), x.getState().setPreviewing(!1));
+                              'Escape' !== e.key || p.getState().submitting || (null == (a = n.current) || a.blur(), p.getState().setFormOpen(!1), p.getState().setTitleFocused(!1), p.getState().setBodyFocused(!1), p.getState().setPreviewing(!1));
                           },
-                          error: E,
-                          className: ea.title,
+                          error: _,
+                          className: en.title,
                           inputRef: n
                       }),
-                i
+                s
                     ? null
-                    : (0, a.jsxs)(a.Fragment, {
+                    : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, a.jsx)(eo, { parentChannel: t }),
-                              (0, a.jsx)(e_, {
+                              (0, r.jsx)(ec, { parentChannel: t }),
+                              (0, r.jsx)(ef, {
                                   parentChannel: t,
-                                  canCreatePost: r
+                                  canCreatePost: i
                               })
                           ]
                       })
             ]
         });
     });
-function eo(e) {
+function ec(e) {
     let { parentChannel: t } = e,
-        { guidelinesOpen: n } = (0, Y.xH)((e) => {
+        { guidelinesOpen: n } = (0, X.xH)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
-        }),
-        s = (0, Y.AF)(),
-        r = null != t.topic && 0 !== t.topic.length,
-        i = () => {
-            s.getState().setGuidelinesOpen(!n);
+        }, c.X),
+        a = (0, X.AF)(),
+        i = null != t.topic && 0 !== t.topic.length,
+        s = () => {
+            a.getState().setGuidelinesOpen(!n);
         };
-    return r
-        ? (0, a.jsx)(_.Tooltip, {
-              text: en.Z.Messages.FORUM_POST_GUIDELINES_TITLE,
+    return i
+        ? (0, r.jsx)(g.ua7, {
+              text: et.NW.string(et.t['4d4T4u']),
               children: (e) =>
-                  (0, a.jsx)(_.Clickable, {
-                      ...e,
-                      onClick: i,
-                      className: l()(ea.forumPostFormButton, { [ea.forumPostFormButtonActive]: n }),
-                      children: (0, a.jsx)(_.BookCheckIcon, {
-                          size: 'md',
-                          color: 'currentColor',
-                          ...e
+                  (0, r.jsx)(
+                      g.P3F,
+                      ea(er({}, e), {
+                          onClick: s,
+                          className: l()(en.forumPostFormButton, { [en.forumPostFormButtonActive]: n }),
+                          children: (0, r.jsx)(
+                              g.snC,
+                              er(
+                                  {
+                                      size: 'md',
+                                      color: 'currentColor'
+                                  },
+                                  e
+                              )
+                          )
                       })
-                  })
+                  )
           })
         : null;
 }
-let ec = s.memo(function (e) {
+let ed = a.memo(function (e) {
         let { parentChannel: t, textValue: n } = e,
-            s = new Z.ZP({
+            a = new k.ZP({
                 channelId: t.id,
                 content: n
             }),
-            { content: r } = (0, v.Z)(s, {
+            { content: i } = (0, O.Z)(a, {
                 hideSimpleEmbedContent: !0,
                 isInteracting: !1,
                 formatInline: !1,
                 allowList: !0,
                 allowHeading: !0,
-                previewLinkTarget: !0
+                previewLinkTarget: !0,
+                allowLinks: !0
             }),
-            i = (0, S.Z)(
+            s = (0, w.Z)(
                 {
-                    message: s,
+                    message: a,
                     channel: t
                 },
-                r,
+                i,
                 !1
             );
-        return (0, a.jsx)('div', {
-            className: l()(ea.channelTextAreaInner, ea.previewTextArea),
-            children: i
+        return (0, r.jsx)('div', {
+            className: l()(en.channelTextAreaInner, en.previewTextArea),
+            children: s
         });
     }),
-    ed = s.memo(function (e) {
-        let { parentChannel: t, submit: n, disabled: r = !1, editorRef: i, setEditorRef: d } = e,
-            u = (0, h.e7)([D.default], () => D.default.getCurrentUser());
+    eu = a.memo(function (e) {
+        let { parentChannel: t, submit: n, disabled: i = !1, editorRef: s, setEditorRef: d } = e,
+            u = (0, h.e7)([L.default], () => L.default.getCurrentUser());
         o()(null != u, 'current user cannot be null');
         let {
                 messageError: m,
-                previewing: g,
-                textAreaState: x,
-                bodyFocused: f,
-                formOpen: C
-            } = (0, Y.xH)((e) => {
-                let { messageError: t, textAreaState: n, previewing: a, bodyFocused: s, formOpen: r } = e;
+                previewing: f,
+                textAreaState: p,
+                bodyFocused: x,
+                formOpen: b
+            } = (0, X.xH)((e) => {
+                let { messageError: t, textAreaState: n, previewing: r, bodyFocused: a, formOpen: i } = e;
                 return {
                     messageError: t,
                     textAreaState: n,
-                    previewing: a,
-                    bodyFocused: s,
-                    formOpen: r
+                    previewing: r,
+                    bodyFocused: a,
+                    formOpen: i
                 };
-            }, c.Z),
-            T = (0, Y.AF)();
-        s.useEffect(
+            }, c.X),
+            v = (0, X.AF)();
+        a.useEffect(
             () => () =>
-                (0, W.Vn)({
+                (0, V.Vn)({
                     guildId: t.guild_id,
                     channelId: t.id
                 }),
             [t.guild_id, t.id]
         );
-        let E = s.useCallback(() => {
-                T.getState().setBodyFocused(!0);
-            }, [T]),
-            N = s.useCallback(() => {
-                T.getState().setBodyFocused(!1);
-            }, [T]),
-            b = s.useCallback(
+        let _ = a.useCallback(() => {
+                v.getState().setBodyFocused(!0);
+            }, [v]),
+            y = a.useCallback(() => {
+                v.getState().setBodyFocused(!1);
+            }, [v]),
+            N = a.useCallback(
                 (e, t, n) => {
-                    let { setTextAreaState: a } = T.getState();
-                    a({
+                    let { setTextAreaState: r } = v.getState();
+                    r({
                         textValue: t,
                         richValue: n
                     });
                 },
-                [T]
+                [v]
             ),
-            v = s.useCallback(
+            O = a.useCallback(
                 (e) => {
-                    let { value: t, uploads: a, stickers: s } = e;
-                    return n(t, s, a);
+                    let { value: t, uploads: r, stickers: a } = e;
+                    return n(t, a, r);
                 },
                 [n]
             );
-        (0, F.yp)({
-            event: ee.CkL.TEXTAREA_FOCUS,
-            handler: E
+        (0, W.yp)({
+            event: $.CkL.TEXTAREA_FOCUS,
+            handler: _
         }),
-            (0, F.yp)({
-                event: ee.CkL.TEXTAREA_BLUR,
-                handler: N
+            (0, W.yp)({
+                event: $.CkL.TEXTAREA_BLUR,
+                handler: y
             });
-        let S = (0, H.Op)(m, { content: x.textValue });
-        return (0, a.jsx)('div', {
-            className: ea.bodyContainer,
-            children: (0, a.jsxs)('div', {
-                className: ea.contentContainer,
+        let w = (0, z.Op)(m, { content: p.textValue });
+        return (0, r.jsx)('div', {
+            className: en.bodyContainer,
+            children: (0, r.jsxs)('div', {
+                className: en.contentContainer,
                 children: [
-                    g
-                        ? (0, a.jsx)(ec, {
+                    f
+                        ? (0, r.jsx)(ed, {
                               parentChannel: t,
-                              textValue: x.textValue
+                              textValue: p.textValue
                           })
-                        : (0, a.jsx)('div', {
-                              onClick: E,
-                              children: (0, a.jsx)(p.Z, {
-                                  type: es,
+                        : (0, r.jsx)('div', {
+                              onClick: _,
+                              children: (0, r.jsx)(j.Z, {
+                                  type: ei,
                                   setEditorRef: d,
                                   channel: t,
-                                  placeholder: en.Z.Messages.FORUM_POST_MESSAGE_PLACEHOLDER,
-                                  textValue: x.textValue,
-                                  richValue: x.richValue,
-                                  focused: f,
-                                  className: ea.channelTextArea,
-                                  innerClassName: l()(ea.channelTextAreaInner, { [ea.channelTextAreaInnerError]: null != S }),
-                                  onChange: b,
-                                  onSubmit: v,
-                                  promptToUpload: k.d,
-                                  disabled: r,
+                                  placeholder: et.NW.string(et.t['8IPnv7']),
+                                  textValue: p.textValue,
+                                  richValue: p.richValue,
+                                  focused: x,
+                                  className: en.channelTextArea,
+                                  innerClassName: l()(en.channelTextAreaInner, { [en.channelTextAreaInnerError]: null != w }),
+                                  onChange: N,
+                                  onSubmit: O,
+                                  promptToUpload: D.d,
+                                  disabled: i,
                                   onKeyDown: (e) => {
                                       if ((('ArrowUp' === e.key || 'ArrowDown' === e.key) && e.stopPropagation(), 'Home' === e.key || 'End' === e.key)) {
-                                          if (null == i) return;
+                                          if (null == s) return;
                                           e.preventDefault(), e.stopPropagation();
-                                          let t = i.getSlateEditor();
+                                          let t = s.getSlateEditor();
                                           if (null == t) return;
-                                          'Home' === e.key ? I.Q.resetSelectionToStart(t) : I.Q.resetSelectionToEnd(t);
+                                          'Home' === e.key ? C.Q.resetSelectionToStart(t) : C.Q.resetSelectionToEnd(t);
                                       }
-                                      C && 'Escape' === e.key && !T.getState().submitting && (null == i || i.blur(), T.getState().setFormOpen(!1), T.getState().setTitleFocused(!1), T.getState().setBodyFocused(!1), T.getState().setPreviewing(!1));
+                                      b && 'Escape' === e.key && !v.getState().submitting && (null == s || s.blur(), v.getState().setFormOpen(!1), v.getState().setTitleFocused(!1), v.getState().setBodyFocused(!1), v.getState().setPreviewing(!1));
                                   },
                                   autoCompletePosition: 'bottom'
                               })
                           }),
-                    (0, a.jsx)(_.InputError, { error: S })
+                    (0, r.jsx)(g.pdY, { error: w })
                 ]
             })
         });
     });
-function eu() {
-    return (0, a.jsx)('div', {
-        className: ea.previewModeIndicator,
-        children: (0, a.jsx)(_.Text, {
+function em() {
+    return (0, r.jsx)('div', {
+        className: en.previewModeIndicator,
+        children: (0, r.jsx)(g.Text, {
             variant: 'text-sm/normal',
             color: 'interactive-normal',
-            children: en.Z.Messages.PREVIEW_MODE
+            children: et.NW.string(et.t['WE/cYm'])
         })
     });
 }
-function em() {
-    let e = (0, V.C)(),
-        { previewing: t } = (0, Y.xH)((e) => {
+function eh() {
+    let { previewing: e } = (0, X.xH)((e) => {
             let { previewing: t } = e;
             return { previewing: t };
-        }),
-        n = (0, Y.AF)(),
-        r = s.useCallback(() => {
-            n.getState().setPreviewing(!t), (0, W.nE)();
-        }, [t, n]);
-    return e
-        ? (0, a.jsx)(_.Tooltip, {
-              text: t ? en.Z.Messages.EXIT_PREVIEW : en.Z.Messages.PREVIEW,
-              children: (e) =>
-                  (0, a.jsx)(_.Clickable, {
-                      ...e,
-                      onClick: r,
-                      className: l()(ea.forumPostFormButton, { [ea.forumPostFormButtonActive]: t }),
-                      children: t
-                          ? (0, a.jsx)(_.EyeSlashIcon, {
-                                size: 'md',
-                                color: 'currentColor',
-                                ...e
-                            })
-                          : (0, a.jsx)(_.EyeIcon, {
-                                size: 'md',
-                                color: 'currentColor',
-                                ...e
-                            })
-                  })
-          })
-        : null;
+        }, c.X),
+        t = (0, X.AF)(),
+        n = a.useCallback(() => {
+            t.getState().setPreviewing(!e), (0, V.nE)();
+        }, [e, t]);
+    return (0, r.jsx)(g.ua7, {
+        text: e ? et.NW.string(et.t.ojM1xM) : et.NW.string(et.t.SKNnqq),
+        children: (t) =>
+            (0, r.jsx)(
+                g.P3F,
+                ea(er({}, t), {
+                    onClick: n,
+                    className: l()(en.forumPostFormButton, { [en.forumPostFormButtonActive]: e }),
+                    children: e
+                        ? (0, r.jsx)(
+                              g.kZF,
+                              er(
+                                  {
+                                      size: 'md',
+                                      color: 'currentColor'
+                                  },
+                                  t
+                              )
+                          )
+                        : (0, r.jsx)(
+                              g.tEF,
+                              er(
+                                  {
+                                      size: 'md',
+                                      color: 'currentColor'
+                                  },
+                                  t
+                              )
+                          )
+                })
+            )
+    });
 }
-let eh = s.memo(function (e) {
-    let { parentChannel: t, canCreatePost: n, className: r } = e,
+let eg = a.memo(function (e) {
+    let { parentChannel: t, canCreatePost: n, className: i } = e,
         {
             textAreaState: l,
-            appliedTags: i,
+            appliedTags: s,
             name: o
-        } = (0, Y.xH)((e) => {
-            let { textAreaState: t, appliedTags: n, name: a } = e;
+        } = (0, X.xH)((e) => {
+            let { textAreaState: t, appliedTags: n, name: r } = e;
             return {
                 textAreaState: t,
                 appliedTags: n,
-                name: a
+                name: r
             };
-        }),
-        { rateLimitPerUser: c } = t,
-        d = c > 0,
-        u = (0, h.e7)([w.Z], () => w.Z.getSlowmodeCooldownGuess(t.id, w.S.CreateThread)),
-        m = (0, h.e7)([P.Z], () => P.Z.can(ee.Plq.MANAGE_THREADS, t) || P.Z.can(ee.Plq.MANAGE_CHANNELS, t)),
-        g = t.hasFlag(et.zZ.REQUIRE_TAG) && 0 === i.size && o.length > 0 && l.textValue.length > 0,
-        x = (0, Y.AF)(),
-        f = s.useCallback(() => {
+        }, c.X),
+        { rateLimitPerUser: d } = t,
+        u = d > 0,
+        m = (0, h.e7)([M.Z], () => M.Z.getSlowmodeCooldownGuess(t.id, M.S.CreateThread)),
+        f = (0, h.e7)([Z.Z], () => Z.Z.can($.Plq.MANAGE_THREADS, t) || Z.Z.can($.Plq.MANAGE_CHANNELS, t)),
+        p = t.hasFlag(ee.zZ.REQUIRE_TAG) && 0 === s.size && o.length > 0 && l.textValue.length > 0,
+        x = (0, X.AF)(),
+        j = a.useCallback(() => {
             x.getState().setBodyFocused(!1);
         }, [x]),
-        p = s.useMemo(() => '' !== o.trim() && '' !== l.textValue.trim(), [o, l.textValue]);
+        C = a.useMemo(() => '' !== o.trim() && '' !== l.textValue.trim(), [o, l.textValue]);
     return (
-        s.useEffect(() => {
-            !p && x.getState().setPreviewing(!1);
-        }, [p, x]),
-        (0, a.jsxs)('div', {
-            className: r,
+        a.useEffect(() => {
+            C || x.getState().setPreviewing(!1);
+        }, [C, x]),
+        (0, r.jsxs)('div', {
+            className: i,
             children: [
-                (0, a.jsx)(ex, { parentChannel: t }),
-                (0, a.jsx)('div', { className: ea.tagsDivider }),
-                (0, a.jsxs)('div', {
-                    className: ea.controlsContainer,
+                (0, r.jsx)(ex, { parentChannel: t }),
+                (0, r.jsx)('div', { className: en.tagsDivider }),
+                (0, r.jsxs)('div', {
+                    className: en.controlsContainer,
                     children: [
-                        (0, a.jsxs)('div', {
-                            className: ea.controls,
+                        (0, r.jsxs)('div', {
+                            className: en.controls,
                             children: [
-                                (0, a.jsxs)('div', {
-                                    className: ea.wrappedControls,
+                                (0, r.jsxs)('div', {
+                                    className: en.wrappedControls,
                                     children: [
-                                        g &&
-                                            (0, a.jsx)(_.Text, {
-                                                variant: 'text-sm/normal',
-                                                color: 'text-danger',
-                                                children: en.Z.Messages.FORUM_POST_TAG_REQUIRED_ERROR
-                                            }),
-                                        (0, a.jsx)(T.Z, {
-                                            type: es,
+                                        (0, r.jsx)(v.Z, {
+                                            type: ei,
                                             textValue: l.textValue,
-                                            className: ea.characterCount
+                                            className: en.characterCount
                                         }),
-                                        d &&
-                                            (0, a.jsx)(J.Z, {
-                                                rateLimitPerUser: c,
-                                                slowmodeCooldownGuess: u,
-                                                isBypassSlowmode: m,
+                                        u &&
+                                            (0, r.jsx)(J.Z, {
+                                                rateLimitPerUser: d,
+                                                slowmodeCooldownGuess: m,
+                                                isBypassSlowmode: f,
                                                 leadingIcon: !0
                                             })
                                     ]
                                 }),
-                                (0, a.jsx)(eo, { parentChannel: t }),
-                                p && (0, a.jsx)(em, {}),
-                                (0, a.jsx)(e_, {
+                                (0, r.jsx)(ec, { parentChannel: t }),
+                                C && (0, r.jsx)(eh, {}),
+                                (0, r.jsx)(ef, {
                                     parentChannel: t,
                                     disableIfInvalid: !0,
                                     canCreatePost: n,
-                                    disabled: d && !m && u > 0
+                                    disabled: u && !f && m > 0
                                 })
                             ]
                         }),
-                        (0, a.jsx)(
-                            C.Z,
+                        (0, r.jsx)(
+                            b.Z,
                             {
-                                type: es,
-                                className: ea.expressionPicker,
-                                onClick: f
+                                type: ei,
+                                className: en.expressionPicker,
+                                onClick: j
                             },
                             'expression'
                         )
                     ]
-                })
+                }),
+                p &&
+                    (0, r.jsx)(g.Text, {
+                        variant: 'text-sm/normal',
+                        color: 'text-danger',
+                        className: en.requiredError,
+                        children: et.NW.string(et.t.xPfNQk)
+                    })
             ]
         })
     );
 });
-function e_(e) {
-    let { parentChannel: t, canCreatePost: n, disabled: s, disableIfInvalid: r = !1 } = e,
+function ef(e) {
+    let { parentChannel: t, canCreatePost: n, disabled: a, disableIfInvalid: i = !1 } = e,
         {
             submitting: l,
-            textAreaState: i,
+            textAreaState: s,
             name: o,
-            appliedTags: c,
-            formOpen: d
-        } = (0, Y.xH)((e) => {
-            let { submitting: t, textAreaState: n, name: a, appliedTags: s, formOpen: r } = e;
+            appliedTags: d,
+            formOpen: u
+        } = (0, X.xH)((e) => {
+            let { submitting: t, textAreaState: n, name: r, appliedTags: a, formOpen: i } = e;
             return {
                 submitting: t,
                 textAreaState: n,
-                name: a,
-                appliedTags: s,
-                formOpen: r
+                name: r,
+                appliedTags: a,
+                formOpen: i
             };
-        }),
-        u = t.hasFlag(et.zZ.REQUIRE_TAG) && 0 === c.size && o.length > 0 && i.textValue.length > 0,
-        m = (0, h.Wu)([y.Z], () => y.Z.getUploads(t.id, L.d.FirstThreadMessage)),
-        g = i.textValue.trim().length > 0 || m.length > 0,
-        x = !u && g && o.trim().length > 0;
+        }, c.X),
+        m = t.hasFlag(ee.zZ.REQUIRE_TAG) && 0 === d.size && o.length > 0 && s.textValue.length > 0,
+        f = (0, h.Wu)([A.Z], () => A.Z.getUploads(t.id, R.d.FirstThreadMessage)),
+        p = s.textValue.trim().length > 0 || f.length > 0,
+        x = !m && p && o.trim().length > 0;
     if (__OVERLAY__) return null;
-    let f = function () {
+    let b = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return (0, a.jsxs)(_.Button, {
-            ...e,
-            size: _.Button.Sizes.SMALL,
-            className: ea.submitButton,
-            innerClassName: ea.submitButtonInner,
-            type: 'submit',
-            submitting: l,
-            disabled: (r && !x) || s || !n,
-            children: [
-                (0, a.jsx)(_.ChatIcon, {
-                    size: 'xs',
-                    color: 'currentColor',
-                    className: ea.submitIcon
-                }),
-                (0, a.jsx)(_.Text, {
-                    variant: 'text-md/semibold',
-                    color: 'none',
-                    children: d ? en.Z.Messages.SUBMIT_POST : en.Z.Messages.NEW_FORUM_POST_NEW
-                })
-            ]
-        });
+        return (0, r.jsxs)(
+            g.zxk,
+            ea(er({}, e), {
+                size: g.zxk.Sizes.SMALL,
+                className: en.submitButton,
+                innerClassName: en.submitButtonInner,
+                type: 'submit',
+                submitting: l,
+                disabled: (i && !x) || a || !n,
+                children: [
+                    (0, r.jsx)(g.kBi, {
+                        size: 'xs',
+                        color: 'currentColor',
+                        className: en.submitIcon
+                    }),
+                    (0, r.jsx)(g.Text, {
+                        variant: 'text-md/semibold',
+                        color: 'none',
+                        children: u ? et.NW.string(et.t.pIuQIy) : et.NW.string(et.t.TyAuoa)
+                    })
+                ]
+            })
+        );
     };
     return n
-        ? f()
-        : (0, a.jsx)(_.Tooltip, {
-              text: en.Z.Messages.FORUM_NO_POST_PERMISSION_HELP,
-              children: (e) => f(e)
+        ? b()
+        : (0, r.jsx)(g.ua7, {
+              text: et.NW.string(et.t.iyzwnJ),
+              children: (e) => b(e)
           });
 }
-function eg() {
+function ep() {
     return Promise.resolve();
 }
 function ex(e) {
     let { parentChannel: t } = e,
         {
             appliedTags: n,
-            toggleAppliedTag: r,
-            setPopoutOpen: i
-        } = (0, Y.xH)((e) => {
-            let { appliedTags: t, toggleAppliedTag: n, setPopoutOpen: a } = e;
+            toggleAppliedTag: i,
+            setPopoutOpen: s
+        } = (0, X.xH)((e) => {
+            let { appliedTags: t, toggleAppliedTag: n, setPopoutOpen: r } = e;
             return {
                 appliedTags: t,
                 toggleAppliedTag: n,
-                setPopoutOpen: a
+                setPopoutOpen: r
             };
-        }, c.Z),
-        o = n.size >= $.Cn,
+        }, c.X),
+        o = n.size >= Q.Cn,
         h = (0, d.ZP)({
             id: ''.concat(t.id, '-post-form-tags-navigator'),
             isEnabled: !0,
             wrap: !0,
-            scrollToStart: eg,
-            scrollToEnd: eg,
+            scrollToStart: ep,
+            scrollToEnd: ep,
             orientation: m.hy.HORIZONTAL
         }),
-        { containerRef: g, containerWidth: x } = (0, Q.Z)(),
-        f = s.useRef(null),
-        [C, p] = s.useState(!0),
-        T = (0, z.Vm)(t),
-        [I, E] = s.useState(0);
-    return (s.useLayoutEffect(() => {
+        { containerRef: f, containerWidth: p } = (0, Y.Z)(),
+        x = a.useRef(null),
+        [b, j] = a.useState(!0),
+        v = (0, U.Vm)(t),
+        [C, _] = a.useState(0);
+    return (a.useLayoutEffect(() => {
         var e;
-        let t = f.current,
-            n = null == t ? void 0 : null === (e = t.children) || void 0 === e ? void 0 : e[0],
-            a = null == t || null == n || n.clientHeight > t.clientHeight;
-        if ((a !== C && p(a), a && null != g.current && null != n && null != n.children)) {
-            let { left: e, top: t } = g.current.getBoundingClientRect(),
-                a = 0;
-            for (let s of n.children) {
-                let { right: n, top: r, height: l } = s.getBoundingClientRect();
-                if (r - t > l) break;
-                n - e > a && (a = n - e);
+        let t = x.current,
+            n = null == t || null == (e = t.children) ? void 0 : e[0],
+            r = null == t || null == n || n.clientHeight > t.clientHeight;
+        if ((r !== b && j(r), r && null != f.current && null != n && null != n.children)) {
+            let { left: e, top: t } = f.current.getBoundingClientRect(),
+                r = 0;
+            for (let a of n.children) {
+                let { right: n, top: i, height: l } = a.getBoundingClientRect();
+                if (i - t > l) break;
+                n - e > r && (r = n - e);
             }
-            E(a);
+            _(r);
         }
-    }, [T, C, g, x]),
-    0 === T.length)
+    }, [v, b, f, p]),
+    0 === v.length)
         ? null
-        : (0, a.jsx)(a.Fragment, {
-              children: (0, a.jsxs)('div', {
-                  className: ea.tagsContainer,
-                  ref: g,
-                  children: [
-                      (0, a.jsx)(_.TagIcon, {
-                          size: 'xs',
-                          color: 'currentColor',
-                          className: ea.tagsIcon
-                      }),
-                      (0, a.jsx)('div', {
-                          className: ea.tagList,
-                          ref: f,
-                          children: (0, a.jsx)(u.bG, {
-                              navigator: h,
-                              children: (0, a.jsx)(u.SJ, {
-                                  children: (e) => {
-                                      let { ref: t, ...s } = e;
-                                      return (0, a.jsx)('div', {
-                                          className: ea.tagListInner,
-                                          ref: t,
-                                          ...s,
-                                          children: T.map((e) =>
-                                              (0, a.jsx)(
-                                                  X.Z,
-                                                  {
-                                                      ariaLabel: en.Z.Messages.FORUM_TAG_A11Y_ADD_TAG.format({ tagName: e.name }),
-                                                      tag: e,
-                                                      onClick: o && !n.has(e.id) ? void 0 : () => r(e.id),
-                                                      disabled: !n.has(e.id) && n.size >= $.Cn,
-                                                      selected: n.has(e.id),
-                                                      size: X.Z.Sizes.SMALL
-                                                  },
-                                                  e.id
+        : (0, r.jsxs)('div', {
+              className: en.tagsContainer,
+              ref: f,
+              children: [
+                  (0, r.jsx)(g.lO_, {
+                      size: 'xs',
+                      color: 'currentColor',
+                      className: en.tagsIcon
+                  }),
+                  (0, r.jsx)('div', {
+                      className: en.tagList,
+                      ref: x,
+                      children: (0, r.jsx)(u.bG, {
+                          navigator: h,
+                          children: (0, r.jsx)(u.SJ, {
+                              children: (e) => {
+                                  var { ref: t } = e,
+                                      a = (function (e, t) {
+                                          if (null == e) return {};
+                                          var n,
+                                              r,
+                                              a = (function (e, t) {
+                                                  if (null == e) return {};
+                                                  var n,
+                                                      r,
+                                                      a = {},
+                                                      i = Object.keys(e);
+                                                  for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                                                  return a;
+                                              })(e, t);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var i = Object.getOwnPropertySymbols(e);
+                                              for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                                          }
+                                          return a;
+                                      })(e, ['ref']);
+                                  return (0, r.jsx)(
+                                      'div',
+                                      ea(
+                                          er(
+                                              {
+                                                  className: en.tagListInner,
+                                                  ref: t
+                                              },
+                                              a
+                                          ),
+                                          {
+                                              children: v.map((e) =>
+                                                  (0, r.jsx)(
+                                                      K.Z,
+                                                      {
+                                                          ariaLabel: et.NW.formatToPlainString(et.t.FSZVIS, { tagName: e.name }),
+                                                          tag: e,
+                                                          onClick: o && !n.has(e.id) ? void 0 : () => i(e.id),
+                                                          disabled: !n.has(e.id) && n.size >= Q.Cn,
+                                                          selected: n.has(e.id),
+                                                          size: K.Z.Sizes.SMALL
+                                                      },
+                                                      e.id
+                                                  )
                                               )
-                                          )
-                                      });
-                                  }
-                              })
+                                          }
+                                      )
+                                  );
+                              }
                           })
-                      }),
-                      C &&
-                          (0, a.jsx)(_.Popout, {
-                              onRequestOpen: () => i(!0),
-                              onRequestClose: () => i(!1),
-                              renderPopout: (e) => {
-                                  let { closePopout: s } = e;
-                                  return (0, a.jsx)(q.Z, {
-                                      parentChannel: t,
-                                      appliedTags: n,
-                                      maxTagsApplied: o,
-                                      onSelectTag: r,
-                                      onClose: s
-                                  });
-                              },
-                              position: 'bottom',
-                              align: 'center',
-                              children: (e) =>
-                                  (0, a.jsxs)(_.Button, {
-                                      ...e,
-                                      size: _.Button.Sizes.TINY,
-                                      className: ea.tagsButton,
-                                      innerClassName: ea.tagsButtonInner,
-                                      style: { left: I },
-                                      look: _.Button.Looks.LINK,
-                                      'aria-label': en.Z.Messages.ADD_TAG_FORUM_POST,
+                      })
+                  }),
+                  b &&
+                      (0, r.jsx)(g.yRy, {
+                          onRequestOpen: () => s(!0),
+                          onRequestClose: () => s(!1),
+                          renderPopout: (e) => {
+                              let { closePopout: a } = e;
+                              return (0, r.jsx)(G.Z, {
+                                  parentChannel: t,
+                                  appliedTags: n,
+                                  maxTagsApplied: o,
+                                  onSelectTag: i,
+                                  onClose: a
+                              });
+                          },
+                          position: 'bottom',
+                          align: 'center',
+                          children: (e) =>
+                              (0, r.jsxs)(
+                                  g.zxk,
+                                  ea(er({}, e), {
+                                      size: g.zxk.Sizes.TINY,
+                                      className: en.tagsButton,
+                                      innerClassName: en.tagsButtonInner,
+                                      style: { left: C },
+                                      look: g.zxk.Looks.LINK,
+                                      'aria-label': et.NW.string(et.t.N5vP9P),
                                       children: [
-                                          en.Z.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL,
-                                          (0, a.jsx)(_.ChevronSmallDownIcon, {
+                                          et.NW.string(et.t.IkpM1d),
+                                          (0, r.jsx)(g.CJ0, {
                                               size: 'custom',
                                               color: 'currentColor',
                                               width: 16
                                           })
                                       ]
                                   })
-                          }),
-                      (0, a.jsxs)(_.Button, {
-                          size: _.Button.Sizes.TINY,
-                          className: l()(ea.tagsButton, ea.tagsButtonPlaceholder),
-                          innerClassName: ea.tagsButtonInner,
-                          look: _.Button.Looks.LINK,
-                          'aria-label': en.Z.Messages.ADD_TAG_FORUM_POST,
-                          children: [
-                              en.Z.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL,
-                              (0, a.jsx)(_.ChevronSmallDownIcon, {
-                                  size: 'custom',
-                                  color: 'currentColor',
-                                  width: 16
-                              })
-                          ]
-                      })
-                  ]
-              })
+                              )
+                      }),
+                  (0, r.jsxs)(g.zxk, {
+                      size: g.zxk.Sizes.TINY,
+                      className: l()(en.tagsButton, en.tagsButtonPlaceholder),
+                      innerClassName: en.tagsButtonInner,
+                      look: g.zxk.Looks.LINK,
+                      'aria-label': et.NW.string(et.t.N5vP9P),
+                      children: [
+                          et.NW.string(et.t.IkpM1d),
+                          (0, r.jsx)(g.CJ0, {
+                              size: 'custom',
+                              color: 'currentColor',
+                              width: 16
+                          })
+                      ]
+                  })
+              ]
           });
 }
-function ef(e) {
+function eb(e) {
     let { style: t, className: n } = e;
-    return (0, a.jsx)('div', {
+    return (0, r.jsx)('div', {
         className: n,
         style: t,
-        children: (0, a.jsx)('div', { className: ea.loader })
+        children: (0, r.jsx)('div', { className: en.loader })
     });
 }

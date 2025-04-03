@@ -1,39 +1,27 @@
-var t, r;
-l.d(n, {
-    Gy: function () {
-        return s;
-    },
-    Jh: function () {
-        return i;
-    },
-    K7: function () {
-        return o;
-    },
-    bS: function () {
-        return t;
-    },
-    e9: function () {
-        return a;
-    },
-    lv: function () {
-        return c;
-    },
-    t4: function () {
-        return u;
-    },
-    u$: function () {
-        return d;
-    }
-}),
-    ((r = t || (t = {}))[(r.POPULAR = 0)] = 'POPULAR'),
-    (r[(r.ALPHABETICAL = 1)] = 'ALPHABETICAL');
+n.d(t, {
+    Gy: () => c,
+    Id: () => s,
+    Jh: () => i,
+    K7: () => u,
+    NN: () => l,
+    bS: () => r,
+    e9: () => o,
+    lv: () => d,
+    t4: () => a,
+    u$: () => f
+});
+var r = (function (e) {
+    return (e[(e.POPULAR = 0)] = 'POPULAR'), (e[(e.ALPHABETICAL = 1)] = 'ALPHABETICAL'), e;
+})({});
 let i = 'app-launcher-element',
-    a = 'app-launcher-modal',
-    u = 'app-launcher-entrypoint',
-    s = 500,
-    o = 650,
-    c = 'min(100vh, '.concat(o, 'px)'),
-    d = {
-        '--custom-app-launcher-width': ''.concat(s, 'px'),
-        '--custom-app-launcher-height': c
+    o = 'app-launcher-modal',
+    a = 'app-launcher-entrypoint',
+    s = 'app-launcher-app-dm-entrypoint',
+    l = 'app-launcher-app-details-more-menu',
+    c = 500,
+    u = 680,
+    d = 'min(100vh, '.concat(u, 'px)'),
+    f = {
+        '--custom-app-launcher-width': ''.concat(c, 'px'),
+        '--custom-app-launcher-height': d
     };

@@ -1,59 +1,61 @@
-t.d(s, {
-    Z: function () {
-        return C;
-    }
-}),
-    t(47120);
-var n = t(735250),
-    a = t(470079),
-    i = t(120356),
-    r = t.n(i),
-    o = t(442837),
-    l = t(481060),
-    c = t(921801),
-    d = t(131951),
-    _ = t(962100),
-    E = t(445817),
-    u = t(726985),
-    I = t(65154),
-    T = t(689938),
-    S = t(224499);
-function N() {
-    return (0, n.jsx)(l.FormNotice, {
-        type: l.CardTypes.PRIMARY,
-        title: T.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
-        body: T.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
-        button: (0, n.jsx)(l.Button, {
-            size: l.Button.Sizes.SMALL,
-            className: S.marginTop20,
-            onClick: () => (0, _.y)('Video unsupported browser'),
-            children: T.Z.Messages.DOWNLOAD_APP
+n.d(t, { Z: () => N }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
+    o = n(481060),
+    c = n(921801),
+    d = n(131951),
+    u = n(962100),
+    m = n(445817),
+    g = n(726985),
+    p = n(65154),
+    h = n(388032),
+    f = n(20493);
+function b() {
+    return (0, r.jsx)(o.ToO, {
+        type: o.sje.PRIMARY,
+        title: h.NW.string(h.t.XLw6FB),
+        body: h.NW.string(h.t.wVjKGh),
+        button: (0, r.jsx)(o.zxk, {
+            size: o.zxk.Sizes.SMALL,
+            className: f.marginTop20,
+            onClick: () => (0, u.y)('Video unsupported browser'),
+            children: h.NW.string(h.t.BK8LKy)
         })
     });
 }
-function C() {
-    let e = (0, o.e7)([d.Z], () => d.Z.supports(I.AN.VIDEO)),
-        [s, t] = a.useState(!1);
-    return (0, n.jsxs)('div', {
-        children: [
-            (0, n.jsxs)(l.HeadingLevel, {
-                component: (0, n.jsx)(l.FormTitle, {
-                    tag: l.FormTitleTags.H1,
-                    className: S.marginBottom20,
-                    children: T.Z.Messages.VIDEO_SETTINGS
+function N(e) {
+    let { refreshStyles: t = !1 } = e,
+        n = (0, l.e7)([d.Z], () => d.Z.supports(p.AN.VIDEO)),
+        [s, u] = i.useState(!1),
+        N = (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsx)(c.F, {
+                    setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
+                    children: (0, r.jsx)(m.Z, {
+                        previewEnabled: s,
+                        onEnablePreview: () => u(!0),
+                        onCancelPreview: () => u(!1)
+                    })
                 }),
-                children: [
-                    (0, n.jsx)(c.F, {
-                        setting: u.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
-                        children: (0, n.jsx)(E.Z, {
-                            previewEnabled: s,
-                            onEnablePreview: () => t(!0)
-                        })
-                    }),
-                    !e && (0, n.jsx)(N, {})
-                ]
-            }),
-            (0, n.jsx)(l.FormDivider, { className: r()(S.marginBottom40, S.marginTop40) })
-        ]
-    });
+                !n && (0, r.jsx)(b, {})
+            ]
+        });
+    return t
+        ? N
+        : (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)(o.y5t, {
+                      component: (0, r.jsx)(o.vwX, {
+                          tag: o.RB0.H1,
+                          className: f.marginBottom20,
+                          children: h.NW.string(h.t.LKzQSE)
+                      }),
+                      children: N
+                  }),
+                  (0, r.jsx)(o.$i$, { className: a()(f.marginBottom40, f.marginTop40) })
+              ]
+          });
 }

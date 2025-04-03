@@ -1,49 +1,43 @@
-t.d(n, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => u });
 var i,
-    a,
-    l = t(735250),
-    o = t(470079),
-    r = t(481060),
-    s = t(689938),
-    c = t(531951);
-function d(e) {
-    let { title: n, buttonType: t, onClickViewButton: i } = e;
-    return (0, l.jsxs)('div', {
+    r = n(200651),
+    l = n(192379),
+    a = n(481060),
+    o = n(388032),
+    c = n(780775),
+    s = (((i = s || {})[(i.VIEW_MORE = 0)] = 'VIEW_MORE'), (i[(i.VIEW_LESS = 1)] = 'VIEW_LESS'), i);
+function u(e) {
+    let { title: t, buttonType: n, onClickViewButton: i } = e;
+    return (0, r.jsxs)('div', {
         className: c.header,
         children: [
-            (0, l.jsx)(r.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: 'text-md/medium',
                 color: 'header-primary',
-                children: n
+                children: t
             }),
-            null != t &&
+            null != n &&
                 null != i &&
-                (0, l.jsx)(r.Clickable, {
+                (0, r.jsx)(a.P3F, {
                     className: c.viewMore,
                     onClick: i,
-                    'aria-label': s.Z.Messages.APP_LAUNCHER_VIEW_MORE_ROW_ARIA_LABEL.format({ title: n }),
-                    children: (0, l.jsx)(r.Text, {
+                    'aria-label': o.NW.formatToPlainString(o.t['bj/2kZ'], { title: t }),
+                    children: (0, r.jsx)(a.Text, {
                         variant: 'text-md/medium',
                         color: 'text-brand',
-                        children: 0 === t ? s.Z.Messages.APP_LAUNCHER_VIEW_MORE_ROW : s.Z.Messages.APP_LAUNCHER_VIEW_LESS_ROW
+                        children: 0 === n ? o.NW.format(o.t.gVw57u, {}) : o.NW.string(o.t.nPGLFR)
                     })
                 })
         ]
     });
 }
-((i = a || (a = {}))[(i.VIEW_MORE = 0)] = 'VIEW_MORE'),
-    (i[(i.VIEW_LESS = 1)] = 'VIEW_LESS'),
-    (d.buttonTypes = a),
-    (d.Loading = function () {
-        let e = o.useMemo(() => ({ width: ''.concat(10 + 20 * Math.random(), '%') }), []);
-        return (0, l.jsx)('div', {
+(u.buttonTypes = s),
+    (u.Loading = function () {
+        let e = l.useMemo(() => ({ width: ''.concat(10 + 20 * Math.random(), '%') }), []);
+        return (0, r.jsx)('div', {
             className: c.loadingHeader,
             style: e,
-            children: (0, l.jsx)(r.Text, {
+            children: (0, r.jsx)(a.Text, {
                 className: c.hidden,
                 variant: 'text-md/medium',
                 color: 'header-primary',

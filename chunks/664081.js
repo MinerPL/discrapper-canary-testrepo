@@ -1,8 +1,4 @@
-var r, i;
-n.d(t, {
-    P: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {}))[(i.PROD = 0)] = 'PROD'),
-    (i[(i.BETA = 1)] = 'BETA');
+n.d(t, { P: () => r });
+var r = (function (e) {
+    return (e[(e.PROD = 0)] = 'PROD'), (e[(e.BETA = 1)] = 'BETA'), e;
+})({});

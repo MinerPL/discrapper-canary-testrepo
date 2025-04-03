@@ -1,45 +1,41 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    i = n(372444),
-    r = n(267642),
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(372444),
+    a = n(267642),
     l = n(981631),
     o = n(474936),
-    c = n(689938),
-    d = n(991912);
+    c = n(388032),
+    d = n(109626);
 function u(e) {
     let { guild: t, numSounds: n, isOutOfSlots: u } = e,
-        _ = t.premiumTier,
-        I = (0, r.FZ)(_, t.id),
-        E = o._k[_] - 2;
-    if (null == I || _ === l.Eu4.TIER_3 || n < E) return null;
-    let T = u
+        m = t.premiumTier,
+        g = (0, a.FZ)(m),
+        p = o._k[m] - 2;
+    if (null == g || m === l.Eu4.TIER_3 || n < p) return null;
+    let h = u
         ? {
-              color: a.ButtonColors.GREEN,
-              look: a.ButtonLooks.FILLED,
-              text: c.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_CTA
+              color: i.Ttl.GREEN,
+              look: i.iLD.FILLED,
+              text: c.NW.string(c.t.cYzxGh)
           }
         : void 0;
-    return (0, s.jsx)(i.Z, {
-        header: c.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER,
-        text: c.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_UPSELL_BANNER_TEXT.format({
-            level: I,
-            numAdditional: (0, r.Je)(I)
+    return (0, r.jsx)(s.Z, {
+        header: c.NW.string(c.t.zT9Sxc),
+        text: c.NW.formatToPlainString(c.t.OKqEAQ, {
+            level: g,
+            numAdditional: (0, a.Je)(g)
         }),
         headerColor: 'header-primary',
         textColor: 'text-normal',
-        buttonProps: T,
+        buttonProps: h,
         guild: t,
         analyticsLocation: {
             page: l.ZY5.GUILD_SETTINGS,
             section: l.jXE.GUILD_SETTINGS_SOUNDBOARD,
             object: l.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL,
-            objectType: (0, r.ge)(I)
+            objectType: (0, a.ge)(g)
         },
         className: d.container
     });

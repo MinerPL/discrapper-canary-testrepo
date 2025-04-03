@@ -1,69 +1,64 @@
-a.d(t, {
-    Z: function () {
-        return j;
-    }
-}),
-    a(47120);
-var n = a(735250),
-    r = a(470079),
-    s = a(442837),
-    i = a(481060),
-    o = a(430824),
-    l = a(259580),
-    c = a(598952),
-    d = a(392739),
-    u = a(916001),
-    m = a(981631),
-    x = a(689938),
-    _ = a(532236);
+n.d(t, { Z: () => _ }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    i = n(442837),
+    s = n(481060),
+    l = n(430824),
+    o = n(259580),
+    c = n(598952),
+    d = n(392739),
+    u = n(916001),
+    m = n(981631),
+    x = n(388032),
+    f = n(721692);
 let h = 'expanded-area';
-function f(e) {
-    let { attachments: t, role: a, roleLocked: s } = e,
-        [o, m] = r.useState(!1);
-    return (0, n.jsxs)(n.Fragment, {
+function j(e) {
+    let { attachments: t, role: n, roleLocked: i } = e,
+        [l, m] = a.useState(!1);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsxs)(i.Clickable, {
-                className: _.viewContents,
+            (0, r.jsxs)(s.P3F, {
+                className: f.viewContents,
                 onClick: () => {
                     m((e) => !e);
                 },
-                'aria-expanded': o,
+                'aria-expanded': l,
                 'aria-controls': h,
                 children: [
-                    (0, n.jsx)(i.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: o ? x.Z.Messages.GUILD_PRODUCT_INFO_MODAL_COLLAPSE_CONTENTS : x.Z.Messages.GUILD_PRODUCT_INFO_MODAL_VIEW_CONTENTS
+                        children: l ? x.NW.string(x.t.DKNxgI) : x.NW.string(x.t.ESEKub)
                     }),
-                    (0, n.jsx)(l.Z, {
-                        className: _.caretIcon,
-                        direction: o ? l.Z.Directions.UP : l.Z.Directions.DOWN
+                    (0, r.jsx)(o.Z, {
+                        className: f.caretIcon,
+                        direction: l ? o.Z.Directions.UP : o.Z.Directions.DOWN
                     })
                 ]
             }),
-            (0, n.jsx)(i.Spacer, { size: 12 }),
-            o &&
-                (0, n.jsxs)('ul', {
-                    className: _.contentsContainer,
+            (0, r.jsx)(s.LZC, { size: 12 }),
+            l &&
+                (0, r.jsxs)('ul', {
+                    className: f.contentsContainer,
                     id: h,
                     children: [
-                        (0, n.jsx)(d.Z, {
-                            label: x.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE,
-                            children: (0, n.jsx)('ul', {
-                                className: _.attachmentGrid,
-                                children: t.map((e) => (0, n.jsx)(c.Z, { attachment: e }, e.id))
+                        (0, r.jsx)(d.Z, {
+                            label: x.NW.string(x.t.DWYJub),
+                            children: (0, r.jsx)('ul', {
+                                className: f.attachmentGrid,
+                                children: t.map((e) => (0, r.jsx)(c.Z, { attachment: e }, e.id))
                             })
                         }),
-                        null != a &&
-                            (0, n.jsxs)(n.Fragment, {
+                        null != n &&
+                            (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, n.jsx)('div', { className: _.separator }),
-                                    (0, n.jsx)(d.Z, {
-                                        label: x.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE,
-                                        children: (0, n.jsx)(u.Z, {
-                                            role: a,
+                                    (0, r.jsx)('div', { className: f.separator }),
+                                    (0, r.jsx)(d.Z, {
+                                        label: x.NW.string(x.t.o9xphY),
+                                        children: (0, r.jsx)(u.Z, {
+                                            role: n,
                                             textVariant: 'text-md/medium',
-                                            locked: s
+                                            locked: i
                                         })
                                     })
                                 ]
@@ -73,26 +68,26 @@ function f(e) {
         ]
     });
 }
-function j(e) {
+function _(e) {
     var t;
-    let { listing: a } = e,
-        r = null !== (t = a.attachments) && void 0 !== t ? t : [],
-        i = (0, s.e7)([o.Z], () => {
+    let { listing: n } = e,
+        a = null != (t = n.attachments) ? t : [],
+        s = (0, i.e7)([l.Z], () => {
             var e;
-            return o.Z.getRole(a.guild_id, null !== (e = a.role_id) && void 0 !== e ? e : m.lds);
+            return l.Z.getRole(n.guild_id, null != (e = n.role_id) ? e : m.lds);
         }),
-        l = !a.has_entitlement;
-    return 0 === r.length && null == i
+        o = !n.has_entitlement;
+    return 0 === a.length && null == s
         ? null
-        : 0 === r.length && null != i
-          ? (0, n.jsx)(u.Z, {
-                role: i,
+        : 0 === a.length && null != s
+          ? (0, r.jsx)(u.Z, {
+                role: s,
                 textVariant: 'text-md/medium',
-                locked: l
+                locked: o
             })
-          : (0, n.jsx)(f, {
-                attachments: r,
-                role: i,
-                roleLocked: l
+          : (0, r.jsx)(j, {
+                attachments: a,
+                role: s,
+                roleLocked: o
             });
 }

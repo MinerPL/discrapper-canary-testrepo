@@ -1,107 +1,160 @@
 n.d(t, {
-    Pe: function () {
-        return z;
-    },
-    Pr: function () {
-        return F;
-    },
-    Qe: function () {
-        return r;
-    },
-    nB: function () {
-        return q;
-    }
+    Pe: () => en,
+    Pr: () => Y,
+    Qe: () => $,
+    ZP: () => ei,
+    nB: () => er
 }),
     n(47120),
+    n(474991),
+    n(398202),
+    n(301563),
+    n(566702),
+    n(757143),
     n(733860);
-var r,
-    i,
-    a = n(658722),
-    s = n.n(a),
+var r = n(658722),
+    i = n.n(r),
     o = n(392711),
-    l = n.n(o),
-    u = n(913527),
-    c = n.n(u),
-    d = n(346610),
-    _ = n(984933),
-    E = n(699516),
+    a = n.n(o),
+    s = n(913527),
+    l = n.n(s),
+    c = n(346610),
+    u = n(984933),
+    d = n(699516),
     f = n(768119),
-    h = n(944486),
+    _ = n(944486),
     p = n(914010),
-    m = n(246946),
-    I = n(594174),
-    T = n(483360),
-    g = n(226951),
-    S = n(51144),
-    A = n(981631),
-    N = n(689938);
-function v() {
+    h = n(246946),
+    m = n(594174),
+    g = n(483360),
+    E = n(226951),
+    b = n(51144),
+    y = n(981631),
+    v = n(388032);
+function O(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function I(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                O(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function S(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function T(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : S(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function N() {
     return new Set(
-        c()
+        l()
             .months()
             .map((e) => e.toLowerCase())
     );
 }
-function O() {
+function A() {
     return new Set(
-        c()
+        l()
             .weekdays()
             .map((e) => e.toLowerCase())
     );
 }
-function R() {
+function C() {
     let e = new Date().getFullYear();
     return new Set(
-        l()
+        a()
             .range(2015, e + 1)
             .map((e) => e.toString())
     );
 }
-function C(e, t) {
+function R(e, t) {
     return [e, e.clone().add(1, t)];
 }
-function y(e) {
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return C(c()().startOf(e).add(t, e), e);
+    return R(l()().startOf(e).add(t, e), e);
 }
-function D(e, t, n) {
-    return C(c()(e, t).local(), n);
+function w(e, t, n) {
+    return R(l()(e, t).local(), n);
 }
-function L() {
+function D() {
     return {
-        [N.Z.Messages.SEARCH_SHORTCUT_TODAY]: () => y('day'),
-        [N.Z.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => y('day', -1),
-        [N.Z.Messages.SEARCH_SHORTCUT_WEEK]: () => y('week'),
-        [N.Z.Messages.SEARCH_SHORTCUT_MONTH]: () => y('month'),
-        [N.Z.Messages.SEARCH_SHORTCUT_YEAR]: () => y('year')
+        [v.NW.string(v.t.HYiVER)]: () => P('day'),
+        [v.NW.string(v.t.cu86KC)]: () => P('day', -1),
+        [v.NW.string(v.t['FvBj//'])]: () => P('week'),
+        [v.NW.string(v.t['20uWCw'])]: () => P('month'),
+        [v.NW.string(v.t['dXC/ho'])]: () => P('year')
     };
 }
-let b = RegExp('(?:\\s*('.concat('([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})', '|').concat('([0-9]{4})-([0-9]{1,2})', '|').concat('\\d{4}', '|').concat('([^\\d\\s]+)', '))'), 'i'),
-    M = RegExp('\\s*(true|false)', 'i');
-function P(e) {
+let L = '([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})',
+    x = '\\d{4}',
+    M = '([0-9]{4})-([0-9]{1,2})',
+    k = '([^\\d\\s]+)',
+    j = RegExp('(?:\\s*('.concat(L, '|').concat(M, '|').concat(x, '|').concat(k, '))'), 'i'),
+    U = RegExp('\\s*(true|false)', 'i');
+function G(e) {
     return ''.concat(e, ':');
 }
-function U(e) {
-    return RegExp(P(e), 'i');
+function B(e) {
+    return RegExp(G(e), 'i');
 }
-function w(e) {
-    let t;
-    let n = e.getMatch(1),
+function F(e) {
+    let t,
+        n = e.getMatch(1),
         r = (e) => (null != e ? (null == e ? void 0 : e.id) : null);
-    return null != (t = A.Xyh.test(n) ? n : n === A.ME ? r(I.default.getCurrentUser()) : null != e.getMatch(4) ? r(I.default.findByTag(e.getMatch(4))) : r(I.default.findByTag(e.getMatch(2), e.getMatch(3)))) && (e.setData('userId', t), !0);
+    return null != (t = y.Xyh.test(n) ? n : r(n === y.ME ? m.default.getCurrentUser() : null != e.getMatch(4) ? m.default.findByTag(e.getMatch(4)) : m.default.findByTag(e.getMatch(2), e.getMatch(3)))) && (e.setData('userId', t), !0);
 }
-function x(e, t) {
-    let n, r;
-    let i = e.getFullMatch().trim().toLowerCase(),
-        a = L()[i];
-    return null != a ? ([n, r] = a()) : v().has(i) ? ([n, r] = D(i, 'MMMM', 'month')) : O().has(i) ? ([n, r] = D(i, 'dddd', 'day')) : R().has(i) ? ([n, r] = D(i, 'YYYY', 'year')) : ([n, r] = D(i, A.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
+function V(e, t) {
+    let n,
+        r,
+        i = e.getFullMatch().trim().toLowerCase(),
+        o = D()[i];
+    return null != o ? ([n, r] = o()) : N().has(i) ? ([n, r] = w(i, 'MMMM', 'month')) : A().has(i) ? ([n, r] = w(i, 'dddd', 'day')) : C().has(i) ? ([n, r] = w(i, 'YYYY', 'year')) : ([n, r] = w(i, y.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
 }
-function G(e) {
+function Z(e) {
     let t = e.getMatch(1),
         n = p.Z.getGuildId(),
-        r = _.ZP.getChannels(n)[_.sH].concat(_.ZP.getChannels(n)[_.Zb]),
-        i = _.ZP.getTextChannelNameDisambiguations(n),
-        a = l()
+        r = u.ZP.getChannels(n)[u.sH].concat(u.ZP.getChannels(n)[u.Zb]),
+        i = u.ZP.getTextChannelNameDisambiguations(n),
+        o = a()
             .chain(r)
             .map((e) => {
                 let { channel: t } = e;
@@ -109,308 +162,314 @@ function G(e) {
             })
             .find((e) => {
                 var n, r;
-                return t === (null !== (r = null === (n = i[e.id]) || void 0 === n ? void 0 : n.name) && void 0 !== r ? r : e.name);
+                return t === (null != (r = null == (n = i[e.id]) ? void 0 : n.name) ? r : e.name);
             })
             .value();
-    return null != a && (e.setData('channel', a), !0);
+    return null != o && (e.setData('channel', o), !0);
 }
-function k(e) {
+function H(e) {
     let t = {
-        [N.Z.Messages.SEARCH_ANSWER_HAS_LINK]: 'link',
-        [N.Z.Messages.SEARCH_ANSWER_HAS_EMBED]: 'embed',
-        [N.Z.Messages.SEARCH_ANSWER_HAS_POLL]: 'poll',
-        [N.Z.Messages.SEARCH_ANSWER_HAS_SNAPSHOT]: 'snapshot',
-        [N.Z.Messages.SEARCH_ANSWER_HAS_ATTACHMENT]: 'file',
-        [N.Z.Messages.SEARCH_ANSWER_HAS_VIDEO]: 'video',
-        [N.Z.Messages.SEARCH_ANSWER_HAS_IMAGE]: 'image',
-        [N.Z.Messages.SEARCH_ANSWER_HAS_SOUND]: 'sound',
-        [N.Z.Messages.SEARCH_ANSWER_HAS_STICKER]: 'sticker'
+        [v.NW.string(v.t.ZNR2fn)]: 'link',
+        [v.NW.string(v.t['20uQR0'])]: 'embed',
+        [v.NW.string(v.t.L4lxyM)]: 'poll',
+        [v.NW.string(v.t.nrpA5O)]: 'snapshot',
+        [v.NW.string(v.t['AV/v6u'])]: 'file',
+        [v.NW.string(v.t.XM9XGB)]: 'video',
+        [v.NW.string(v.t.TNLcp6)]: 'image',
+        [v.NW.string(v.t.F8Wf0d)]: 'sound',
+        [v.NW.string(v.t.PJgX2t)]: 'sticker'
     }[e.getMatch(1)];
     return null != t && '' !== t && (e.setData('has', t), !0);
 }
-function B() {
-    return [...Array.from(v()), ...Array.from(O()), ...Array.from(R()), ...Object.keys(L())];
+function W() {
+    return [...Array.from(N()), ...Array.from(A()), ...Array.from(C()), ...Object.keys(D())];
 }
-function F() {
-    return l().sample(B());
+function Y() {
+    return a().sample(W());
 }
-function V(e, t, n) {
-    return H(e, t, B()).map((e) => ({
-        ...e,
-        group: n,
-        key: ''.concat(n, '-').concat(e.text)
-    }));
+function K(e, t, n) {
+    return z(e, t, W()).map((e) =>
+        T(I({}, e), {
+            group: n,
+            key: ''.concat(n, '-').concat(e.text)
+        })
+    );
 }
-function H(e, t, n) {
+function z(e, t, n) {
     let r = e.toLocaleLowerCase();
-    return l()(n)
-        .filter((e) => s()(r, e.toLocaleLowerCase()))
+    return a()(n)
+        .filter((e) => i()(r, e.toLocaleLowerCase()))
         .take(t)
         .map((e) => ({ text: e }))
         .value();
 }
-function Z(e, t) {
+function q(e, t) {
     let n,
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        a = f.Z.getSearchType(t),
-        s = {
+        o = f.Z.getSearchType(t),
+        a = {
             query: (e = e.split('#')[0]),
             limit: r,
             request: i
         };
-    switch (a) {
-        case A.aib.GUILD:
-            n = T.ZP.queryGuildUsers({
-                ...s,
-                guildId: t
-            });
+    switch (o) {
+        case y.aib.GUILD:
+            n = g.ZP.queryGuildUsers(T(I({}, a), { guildId: t }));
             break;
-        case A.aib.CHANNEL:
-            n = T.ZP.queryChannelUsers({
-                ...s,
-                channelId: t
-            });
+        case y.aib.CHANNEL:
+            n = g.ZP.queryChannelUsers(T(I({}, a), { channelId: t }));
             break;
-        case A.aib.DMS:
-            n = T.ZP.queryUsers(e, r, !0, i, () => !0);
+        case y.aib.DMS:
+            n = g.ZP.queryUsers(e, r, !0, i, () => !0);
             break;
         default:
             return [];
     }
-    return n
-        .filter((e) => {
-            let { record: t } = e;
-            return !E.Z.isBlocked(t.id);
-        })
-        .map((e) => {
-            let { record: t } = e;
-            return {
-                text: S.ZP.getUserTag(t),
-                user: t
-            };
-        });
+    let s = m.default.getCurrentUser(),
+        l = e.toLowerCase().replace(/^@/, ''),
+        c = null != s && e.length > 0 && (v.NW.string(v.t.Qf3ptr).startsWith(l) || y.ME.substr(1).startsWith(l)),
+        u = n
+            .filter((e) => {
+                let { record: t } = e;
+                return !d.Z.isBlockedOrIgnored(t.id) && (!c || t.id !== (null == s ? void 0 : s.id));
+            })
+            .map((e) => {
+                let { record: t } = e;
+                return {
+                    text: b.ZP.getUserTag(t),
+                    user: t
+                };
+            });
+    return (
+        c &&
+            u.unshift({
+                text: y.ME,
+                user: s
+            }),
+        u
+    );
 }
-function Y() {
-    return f.Z.getSearchType() === A.aib.GUILD;
+function Q() {
+    return f.Z.getSearchType() === y.aib.GUILD;
 }
-function j() {
-    return !m.Z.hidePersonalInformation;
+function X() {
+    return !h.Z.hidePersonalInformation;
 }
-let W = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
-((i = r || (r = {})).FILTER = 'FILTER'), (i.ANSWER = 'ANSWER');
-let K = {};
-function z() {
-    Object.assign(
-        K,
-        (function () {
-            let { canForwardMessages: e } = (0, d.WT)({ location: 'SearchTokens' }, { autoTrackExposure: !1 }),
-                t = e ? [N.Z.Messages.SEARCH_ANSWER_HAS_SNAPSHOT] : [],
-                n = [N.Z.Messages.SEARCH_ANSWER_HAS_LINK, N.Z.Messages.SEARCH_ANSWER_HAS_EMBED, N.Z.Messages.SEARCH_ANSWER_HAS_POLL, N.Z.Messages.SEARCH_ANSWER_HAS_ATTACHMENT, N.Z.Messages.SEARCH_ANSWER_HAS_VIDEO, N.Z.Messages.SEARCH_ANSWER_HAS_IMAGE, N.Z.Messages.SEARCH_ANSWER_HAS_SOUND, N.Z.Messages.SEARCH_ANSWER_HAS_STICKER, ...t];
-            return {
-                [A.dCx.FILTER_FROM]: {
-                    regex: U(N.Z.Messages.SEARCH_FILTER_FROM),
-                    componentType: 'FILTER',
-                    key: P(N.Z.Messages.SEARCH_FILTER_FROM),
-                    plainText: N.Z.Messages.SEARCH_FILTER_FROM,
-                    validator: j,
-                    getAutocompletions: Z
-                },
-                [A.dCx.ANSWER_USERNAME_FROM]: {
-                    follows: [A.dCx.FILTER_FROM],
-                    regex: W,
-                    validator: w,
-                    mutable: !0,
-                    componentType: 'ANSWER',
-                    queryKey: 'author_id'
-                },
-                [A.dCx.FILTER_MENTIONS]: {
-                    regex: U(N.Z.Messages.SEARCH_FILTER_MENTIONS),
-                    componentType: 'FILTER',
-                    key: P(N.Z.Messages.SEARCH_FILTER_MENTIONS),
-                    plainText: N.Z.Messages.SEARCH_FILTER_MENTIONS,
-                    validator: j,
-                    getAutocompletions: Z
-                },
-                [A.dCx.ANSWER_USERNAME_MENTIONS]: {
-                    follows: [A.dCx.FILTER_MENTIONS],
-                    regex: W,
-                    validator: w,
-                    mutable: !0,
-                    componentType: 'ANSWER',
-                    queryKey: 'mentions'
-                },
-                [A.dCx.FILTER_HAS]: {
-                    regex: U(N.Z.Messages.SEARCH_FILTER_HAS),
-                    componentType: 'FILTER',
-                    key: P(N.Z.Messages.SEARCH_FILTER_HAS),
-                    plainText: N.Z.Messages.SEARCH_FILTER_HAS,
-                    getAutocompletions: (e, t, r) => H(e, r, n)
-                },
-                [A.dCx.ANSWER_HAS]: {
-                    regex: RegExp('(?:\\s*-?('.concat(n.map((e) => g.Z.escape(e)).join('|'), '))'), 'i'),
-                    follows: [A.dCx.FILTER_HAS],
-                    validator: k,
-                    componentType: 'ANSWER',
-                    queryKey: 'has'
-                },
-                [A.dCx.FILTER_FILE_TYPE]: {
-                    regex: U(N.Z.Messages.SEARCH_FILTER_FILE_TYPE),
-                    key: P(N.Z.Messages.SEARCH_FILTER_FILE_TYPE),
-                    plainText: N.Z.Messages.SEARCH_FILTER_FILE_TYPE,
-                    componentType: 'FILTER'
-                },
-                [A.dCx.ANSWER_FILE_TYPE]: {
-                    regex: /(?:\s*([^\s]+))/,
-                    follows: [A.dCx.FILTER_FILE_TYPE],
-                    mutable: !0,
-                    componentType: 'ANSWER',
-                    queryKey: 'attachment_extensions'
-                },
-                [A.dCx.FILTER_FILE_NAME]: {
-                    regex: U(N.Z.Messages.SEARCH_FILTER_FILE_NAME),
-                    key: P(N.Z.Messages.SEARCH_FILTER_FILE_NAME),
-                    plainText: N.Z.Messages.SEARCH_FILTER_FILE_NAME,
-                    componentType: 'FILTER'
-                },
-                [A.dCx.ANSWER_FILE_NAME]: {
-                    regex: /(?:\s*([^\s]+)(?=\s))/,
-                    follows: [A.dCx.FILTER_FILE_NAME],
-                    mutable: !0,
-                    componentType: 'ANSWER',
-                    queryKey: 'attachment_filename'
-                },
-                [A.dCx.FILTER_BEFORE]: {
-                    regex: U(N.Z.Messages.SEARCH_FILTER_BEFORE),
-                    componentType: 'FILTER',
-                    key: P(N.Z.Messages.SEARCH_FILTER_BEFORE),
-                    plainText: N.Z.Messages.SEARCH_FILTER_BEFORE,
-                    getAutocompletions: (e, t, n) => V(e, n, A.dCx.FILTER_BEFORE)
-                },
-                [A.dCx.FILTER_ON]: {
-                    regex: U('('.concat(N.Z.Messages.SEARCH_FILTER_ON, '|').concat(N.Z.Messages.SEARCH_FILTER_DURING, ')')),
-                    componentType: 'FILTER',
-                    key: P(N.Z.Messages.SEARCH_FILTER_DURING),
-                    plainText: N.Z.Messages.SEARCH_FILTER_DURING,
-                    getAutocompletions: (e, t, n) => V(e, n, A.dCx.FILTER_ON)
-                },
-                [A.dCx.FILTER_AFTER]: {
-                    regex: U(N.Z.Messages.SEARCH_FILTER_AFTER),
-                    componentType: 'FILTER',
-                    key: P(N.Z.Messages.SEARCH_FILTER_AFTER),
-                    plainText: N.Z.Messages.SEARCH_FILTER_AFTER,
-                    getAutocompletions: (e, t, n) => V(e, n, A.dCx.FILTER_AFTER)
-                },
-                [A.dCx.ANSWER_BEFORE]: {
-                    regex: b,
-                    follows: [A.dCx.FILTER_BEFORE],
-                    componentType: 'ANSWER',
-                    mutable: !0,
-                    validator: (e) => x(e, 'before')
-                },
-                [A.dCx.ANSWER_ON]: {
-                    regex: b,
-                    follows: [A.dCx.FILTER_ON],
-                    componentType: 'ANSWER',
-                    mutable: !0,
-                    validator: (e) => x(e, 'on')
-                },
-                [A.dCx.ANSWER_AFTER]: {
-                    regex: b,
-                    follows: [A.dCx.FILTER_AFTER],
-                    componentType: 'ANSWER',
-                    mutable: !0,
-                    validator: (e) => x(e, 'after')
-                },
-                [A.dCx.FILTER_IN]: {
-                    regex: U(N.Z.Messages.SEARCH_FILTER_IN),
-                    componentType: 'FILTER',
-                    key: P(N.Z.Messages.SEARCH_FILTER_IN),
-                    plainText: N.Z.Messages.SEARCH_FILTER_IN,
-                    validator: Y,
-                    getAutocompletions(e, t, n) {
-                        '#' === e[0] && (e = e.substring(1));
-                        let r = T.ZP.queryChannels({
+let J = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
+var $ = (function (e) {
+    return (e.FILTER = 'FILTER'), (e.ANSWER = 'ANSWER'), e;
+})({});
+function ee() {
+    let { canForwardMessages: e } = (0, c.WT)({ location: 'SearchTokens' }, { autoTrackExposure: !1 }),
+        t = e ? [v.NW.string(v.t.nrpA5O)] : [],
+        n = [v.NW.string(v.t.ZNR2fn), v.NW.string(v.t['20uQR0']), v.NW.string(v.t.L4lxyM), v.NW.string(v.t['AV/v6u']), v.NW.string(v.t.XM9XGB), v.NW.string(v.t.TNLcp6), v.NW.string(v.t.F8Wf0d), v.NW.string(v.t.PJgX2t), ...t];
+    return {
+        [y.dCx.FILTER_FROM]: {
+            regex: B(v.NW.string(v.t['1TUdFh'])),
+            componentType: 'FILTER',
+            key: G(v.NW.string(v.t['1TUdFh'])),
+            plainText: v.NW.string(v.t['1TUdFh']),
+            validator: X,
+            getAutocompletions: q
+        },
+        [y.dCx.ANSWER_USERNAME_FROM]: {
+            follows: [y.dCx.FILTER_FROM],
+            regex: J,
+            validator: F,
+            mutable: !0,
+            componentType: 'ANSWER',
+            queryKey: 'author_id'
+        },
+        [y.dCx.FILTER_MENTIONS]: {
+            regex: B(v.NW.string(v.t.i96lOz)),
+            componentType: 'FILTER',
+            key: G(v.NW.string(v.t.i96lOz)),
+            plainText: v.NW.string(v.t.i96lOz),
+            validator: X,
+            getAutocompletions: q
+        },
+        [y.dCx.ANSWER_USERNAME_MENTIONS]: {
+            follows: [y.dCx.FILTER_MENTIONS],
+            regex: J,
+            validator: F,
+            mutable: !0,
+            componentType: 'ANSWER',
+            queryKey: 'mentions'
+        },
+        [y.dCx.FILTER_HAS]: {
+            regex: B(v.NW.string(v.t.CqCvio)),
+            componentType: 'FILTER',
+            key: G(v.NW.string(v.t.CqCvio)),
+            plainText: v.NW.string(v.t.CqCvio),
+            getAutocompletions: (e, t, r) => z(e, r, n)
+        },
+        [y.dCx.ANSWER_HAS]: {
+            regex: RegExp('(?:\\s*-?('.concat(n.map((e) => E.Z.escape(e)).join('|'), '))'), 'i'),
+            follows: [y.dCx.FILTER_HAS],
+            validator: H,
+            componentType: 'ANSWER',
+            queryKey: 'has'
+        },
+        [y.dCx.FILTER_FILE_TYPE]: {
+            regex: B(v.NW.string(v.t.TMNjFh)),
+            key: G(v.NW.string(v.t.TMNjFh)),
+            plainText: v.NW.string(v.t.TMNjFh),
+            componentType: 'FILTER'
+        },
+        [y.dCx.ANSWER_FILE_TYPE]: {
+            regex: /(?:\s*([^\s]+))/,
+            follows: [y.dCx.FILTER_FILE_TYPE],
+            mutable: !0,
+            componentType: 'ANSWER',
+            queryKey: 'attachment_extensions'
+        },
+        [y.dCx.FILTER_FILE_NAME]: {
+            regex: B(v.NW.string(v.t['5xtLRE'])),
+            key: G(v.NW.string(v.t['5xtLRE'])),
+            plainText: v.NW.string(v.t['5xtLRE']),
+            componentType: 'FILTER'
+        },
+        [y.dCx.ANSWER_FILE_NAME]: {
+            regex: /(?:\s*([^\s]+)(?=\s))/,
+            follows: [y.dCx.FILTER_FILE_NAME],
+            mutable: !0,
+            componentType: 'ANSWER',
+            queryKey: 'attachment_filename'
+        },
+        [y.dCx.FILTER_BEFORE]: {
+            regex: B(v.NW.string(v.t['qZ+7BA'])),
+            componentType: 'FILTER',
+            key: G(v.NW.string(v.t['qZ+7BA'])),
+            plainText: v.NW.string(v.t['qZ+7BA']),
+            getAutocompletions: (e, t, n) => K(e, n, y.dCx.FILTER_BEFORE)
+        },
+        [y.dCx.FILTER_ON]: {
+            regex: B('('.concat(v.NW.string(v.t.tIxkOj), '|').concat(v.NW.string(v.t.h2NzSU), ')')),
+            componentType: 'FILTER',
+            key: G(v.NW.string(v.t.h2NzSU)),
+            plainText: v.NW.string(v.t.h2NzSU),
+            getAutocompletions: (e, t, n) => K(e, n, y.dCx.FILTER_ON)
+        },
+        [y.dCx.FILTER_AFTER]: {
+            regex: B(v.NW.string(v.t.KSDx7O)),
+            componentType: 'FILTER',
+            key: G(v.NW.string(v.t.KSDx7O)),
+            plainText: v.NW.string(v.t.KSDx7O),
+            getAutocompletions: (e, t, n) => K(e, n, y.dCx.FILTER_AFTER)
+        },
+        [y.dCx.ANSWER_BEFORE]: {
+            regex: j,
+            follows: [y.dCx.FILTER_BEFORE],
+            componentType: 'ANSWER',
+            mutable: !0,
+            validator: (e) => V(e, 'before')
+        },
+        [y.dCx.ANSWER_ON]: {
+            regex: j,
+            follows: [y.dCx.FILTER_ON],
+            componentType: 'ANSWER',
+            mutable: !0,
+            validator: (e) => V(e, 'on')
+        },
+        [y.dCx.ANSWER_AFTER]: {
+            regex: j,
+            follows: [y.dCx.FILTER_AFTER],
+            componentType: 'ANSWER',
+            mutable: !0,
+            validator: (e) => V(e, 'after')
+        },
+        [y.dCx.FILTER_IN]: {
+            regex: B(v.NW.string(v.t.WNpFHR)),
+            componentType: 'FILTER',
+            key: G(v.NW.string(v.t.WNpFHR)),
+            plainText: v.NW.string(v.t.WNpFHR),
+            validator: Q,
+            getAutocompletions(e, t, n) {
+                '#' === e[0] && (e = e.substring(1));
+                let r = g.ZP.queryChannels({
+                    query: e,
+                    type: u.sH,
+                    guildId: t,
+                    limit: 1 / 0
+                })
+                    .concat(
+                        g.ZP.queryChannels({
                             query: e,
-                            type: _.sH,
+                            type: u.Zb,
                             guildId: t,
                             limit: 1 / 0
                         })
-                            .concat(
-                                T.ZP.queryChannels({
-                                    query: e,
-                                    type: _.Zb,
-                                    guildId: t,
-                                    limit: 1 / 0
-                                })
-                            )
-                            .map((e) => {
-                                let { record: t } = e;
-                                return t;
-                            })
-                            .filter((e) => !e.isThread());
-                        if ('' === e.trim()) {
-                            let e = h.Z.getChannelId(t),
-                                n = r.find((t) => t.id === e);
-                            null != n && (r.splice(r.indexOf(n), 1), r.unshift(n));
-                        }
-                        let i = _.ZP.getTextChannelNameDisambiguations(t);
-                        return l()(r)
-                            .take(n)
-                            .map((e) => {
-                                var t, n;
-                                return {
-                                    text: ''.concat(null !== (n = null === (t = i[e.id]) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : e.name),
-                                    channel: e
-                                };
-                            })
-                            .value();
-                    }
-                },
-                [A.dCx.ANSWER_IN]: {
-                    regex: /(?:\s*#?([^ ]+))/i,
-                    mutable: !0,
-                    follows: [A.dCx.FILTER_IN],
-                    componentType: 'ANSWER',
-                    validator: G,
-                    queryKey: 'channel_id'
-                },
-                [A.dCx.FILTER_PINNED]: {
-                    regex: U(N.Z.Messages.SEARCH_FILTER_PINNED),
-                    componentType: 'FILTER',
-                    key: P(N.Z.Messages.SEARCH_FILTER_PINNED),
-                    plainText: N.Z.Messages.SEARCH_FILTER_PINNED,
-                    getAutocompletions: () => [{ text: 'true' }, { text: 'false' }]
-                },
-                [A.dCx.ANSWER_PINNED]: {
-                    regex: M,
-                    componentType: 'ANSWER',
-                    follows: [A.dCx.FILTER_PINNED],
-                    queryKey: 'pinned',
-                    validator: (e) => {
-                        let t = e.getMatch(1);
-                        return 'true' === t ? (e.setData('pinned', !0), !0) : 'false' === t && (e.setData('pinned', !1), !0);
-                    }
+                    )
+                    .map((e) => {
+                        let { record: t } = e;
+                        return t;
+                    })
+                    .filter((e) => !e.isThread());
+                if ('' === e.trim()) {
+                    let e = _.Z.getChannelId(t),
+                        n = r.find((t) => t.id === e);
+                    null != n && (r.splice(r.indexOf(n), 1), r.unshift(n));
                 }
-            };
-        })()
-    );
+                let i = u.ZP.getTextChannelNameDisambiguations(t);
+                return a()(r)
+                    .take(n)
+                    .map((e) => {
+                        var t, n;
+                        return {
+                            text: ''.concat(null != (n = null == (t = i[e.id]) ? void 0 : t.name) ? n : e.name),
+                            channel: e
+                        };
+                    })
+                    .value();
+            }
+        },
+        [y.dCx.ANSWER_IN]: {
+            regex: /(?:\s*#?([^ ]+))/i,
+            mutable: !0,
+            follows: [y.dCx.FILTER_IN],
+            componentType: 'ANSWER',
+            validator: Z,
+            queryKey: 'channel_id'
+        },
+        [y.dCx.FILTER_PINNED]: {
+            regex: B(v.NW.string(v.t['0B74eX'])),
+            componentType: 'FILTER',
+            key: G(v.NW.string(v.t['0B74eX'])),
+            plainText: v.NW.string(v.t['0B74eX']),
+            getAutocompletions: () => [{ text: 'true' }, { text: 'false' }]
+        },
+        [y.dCx.ANSWER_PINNED]: {
+            regex: U,
+            componentType: 'ANSWER',
+            follows: [y.dCx.FILTER_PINNED],
+            queryKey: 'pinned',
+            validator: (e) => {
+                let t = e.getMatch(1);
+                return 'true' === t ? (e.setData('pinned', !0), !0) : 'false' === t && (e.setData('pinned', !1), !0);
+            }
+        }
+    };
 }
-function q(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(K).length;
-    return l()(K)
+let et = {};
+function en() {
+    Object.assign(et, ee());
+}
+function er(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(et).length;
+    return a()(et)
         .keys()
-        .filter((e) => A.TNx.test(e))
-        .filter((e) => null != K[e].key)
+        .filter((e) => y.TNx.test(e))
+        .filter((e) => null != et[e].key)
         .map((e) => ({
             token: e,
-            text: K[e].key
+            text: et[e].key
         }))
         .filter((t) => {
             let { text: n } = t;
-            return s()(e.toLowerCase(), n);
+            return i()(e.toLowerCase(), n);
         })
         .take(t)
         .value();
 }
-t.ZP = K;
+let ei = et;

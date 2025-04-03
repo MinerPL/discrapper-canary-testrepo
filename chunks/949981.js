@@ -1,84 +1,85 @@
-n.d(t, {
-    Z: function () {
-        return T;
-    }
-}),
-    n(724458),
-    n(653041);
-var i = n(735250);
-n(470079);
-var a = n(512722),
-    s = n.n(a),
-    r = n(442837),
-    l = n(955415),
-    o = n(131704),
-    c = n(592125),
-    u = n(594174),
-    d = n(823379),
-    _ = n(358595),
-    E = n(981631),
-    I = n(689938),
-    m = n(29062);
-function T(e) {
+n.d(t, { Z: () => y }), n(653041);
+var r = n(200651),
+    i = n(192379),
+    a = n(512722),
+    l = n.n(a),
+    o = n(442837),
+    s = n(447543),
+    c = n(100527),
+    u = n(906732),
+    d = n(955415),
+    p = n(131704),
+    m = n(592125),
+    f = n(594174),
+    h = n(823379),
+    g = n(358595),
+    _ = n(981631),
+    b = n(388032),
+    x = n(273254);
+function y(e) {
     let t,
-        { invite: n, author: a, currentUserId: T, onTransitionToInviteChannel: h, onAcceptInstantInvite: N } = e,
-        f = T === a.id,
-        C = n.state === E.r2o.ACCEPTING,
-        p = (0, r.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
-    s()(null == p || p.isPrivate(), 'must be a private channel');
-    let g = null != p;
-    if (null == p) {
-        if (null == n.channel) return (0, i.jsx)(_.Z, {});
-        (p = (0, o.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
+        { invite: n, author: a, currentUserId: y, onTransitionToInviteChannel: E, onAcceptInstantInvite: v } = e,
+        O = y === a.id,
+        N = n.state === _.r2o.ACCEPTING,
+        j = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
+    l()(null == j || j.isPrivate(), 'must be a private channel');
+    let { analyticsLocations: C } = (0, u.ZP)(c.Z.INVITE_EMBED),
+        I = null != j,
+        S = i.useCallback(() => {
+            let e = 'noop';
+            I ? (E(), (e = 'transition')) : (v(), (e = 'accept')), (0, s.r$)(n, e, C);
+        }, [n, C, I, E, v]);
+    if (null == j) {
+        if (null == n.channel) return (0, r.jsx)(g.Z, {});
+        (j = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
     } else {
-        t = p.recipients.reduce((e, t) => {
-            let n = u.default.getUser(t);
+        t = j.recipients.reduce((e, t) => {
+            let n = f.default.getUser(t);
             return null != n && e.push(n), e;
         }, []);
-        let e = u.default.getCurrentUser();
-        g && null != e && t.push(e);
+        let e = f.default.getCurrentUser();
+        I && null != e && t.push(e);
     }
-    let S = p.name;
-    (null == S || '' === S) &&
-        (S =
+    let T = j.name;
+    (null == T || '' === T) &&
+        (T =
             t.length > 0
                 ? t
-                      .filter(d.lm)
+                      .filter(h.lm)
                       .map((e) => e.username)
                       .join(', ')
-                : I.Z.Messages.UNNAMED);
-    let A = g ? h : N,
-        R = I.Z.Messages.JOIN_GUILD,
-        x = l.Z.Button.Colors.GREEN;
-    g && ((R = I.Z.Messages.JOINED_GUILD), (x = l.Z.Button.Colors.PRIMARY));
-    let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+                : b.NW.string(b.t.LJpTRE));
+    let P = b.NW.string(b.t.XpeFYm),
+        A = d.Z.Button.Colors.GREEN;
+    I && ((P = b.NW.string(b.t.cEnaW1)), (A = d.Z.Button.Colors.PRIMARY));
+    let w = b.NW.string(b.t['3p3/BA']);
     return (
-        f && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM),
-        (0, i.jsxs)(l.Z, {
+        O && (w = b.NW.string(b.t.qmtuXF)),
+        (0, r.jsxs)(d.Z, {
             children: [
-                (0, i.jsx)(l.Z.Header, { text: O }),
-                (0, i.jsxs)(l.Z.Body, {
+                (0, r.jsx)(d.Z.Header, { text: w }),
+                (0, r.jsxs)(d.Z.Body, {
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: m.headerLine,
+                        (0, r.jsxs)('div', {
+                            className: x.headerLine,
                             children: [
-                                (0, i.jsx)(l.Z.Icon, {
-                                    channel: p,
-                                    onClick: g ? A : void 0
+                                (0, r.jsx)(d.Z.Icon, {
+                                    channel: j,
+                                    onClick: I ? S : void 0
                                 }),
-                                (0, i.jsx)(l.Z.Info, {
-                                    title: S,
-                                    onClick: g ? A : void 0,
-                                    children: (0, i.jsx)(l.Z.Data, { members: t.length })
+                                (0, r.jsx)(d.Z.Info, {
+                                    title: T,
+                                    onClick: I ? S : void 0,
+                                    children: (0, r.jsx)(d.Z.Data, { members: t.length })
                                 })
                             ]
                         }),
-                        (0, i.jsx)(l.Z.Button, {
-                            onClick: A,
-                            submitting: C,
-                            isDisabled: g,
-                            color: x,
-                            children: R
+                        (0, r.jsx)(d.Z.Button, {
+                            onClick: S,
+                            submitting: N,
+                            isDisabled: I,
+                            color: A,
+                            children: P
                         })
                     ]
                 })

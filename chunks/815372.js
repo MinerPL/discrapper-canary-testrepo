@@ -1,16 +1,10 @@
 n.d(t, {
-    FL: function () {
-        return l;
-    },
-    Ky: function () {
-        return r;
-    }
+    FL: () => s,
+    Ky: () => a
 }),
     n(411104);
-var r,
-    i,
-    a = n(81825),
-    s = n(981631);
+var r = n(81825),
+    i = n(981631);
 function o(e, t, n) {
     return (
         t in e
@@ -24,25 +18,43 @@ function o(e, t, n) {
         e
     );
 }
-((i = r || (r = {})).SHOP = 'SHOP'), (i.NITRO_HOME = 'NITRO_HOME');
-class l extends a.Z {
-    static fromType(e) {
+var a = (function (e) {
+    return (e.SHOP = 'SHOP'), (e.NITRO_HOME = 'NITRO_HOME'), (e.QUEST_HOME = 'QUEST_HOME'), (e.APPS_HOME = 'APPS_HOME'), (e.SETTINGS = 'SETTINGS'), e;
+})(a || {});
+class s extends r.Z {
+    static fromType(e, t, n) {
         switch (e) {
             case 'SHOP':
-                return new l({
-                    path: s.Z5c.COLLECTIBLES_SHOP,
+                return new s({
+                    path: i.Z5c.COLLECTIBLES_SHOP,
                     type: 'SHOP'
                 });
             case 'NITRO_HOME':
-                return new l({
-                    path: s.Z5c.NITRO_HOME,
+                return new s({
+                    path: i.Z5c.NITRO_HOME,
                     type: 'NITRO_HOME'
+                });
+            case 'QUEST_HOME':
+                return new s({
+                    path: i.Z5c.QUEST_HOME,
+                    type: 'QUEST_HOME'
+                });
+            case 'APPS_HOME':
+                return new s({
+                    path: i.Z5c.GLOBAL_DISCOVERY_APPS,
+                    type: 'APPS_HOME'
+                });
+            case 'SETTINGS':
+                return new s({
+                    path: null != t ? t : i.Z5c.SETTINGS('account'),
+                    label: n,
+                    type: 'SETTINGS'
                 });
             default:
                 throw Error('Unhandled InAppNavigationType');
         }
     }
     constructor(e) {
-        super(), o(this, 'id', void 0), o(this, 'path', void 0), o(this, 'type', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type);
+        super(), o(this, 'id', void 0), o(this, 'path', void 0), o(this, 'type', void 0), o(this, 'label', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type), (this.label = e.label);
     }
 }

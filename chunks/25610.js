@@ -1,32 +1,24 @@
 n.d(t, {
-    V: function () {
-        return c;
-    },
-    m: function () {
-        return d;
-    }
+    V: () => c,
+    m: () => u
 });
 var r = n(399606),
     i = n(592125),
-    a = n(699516),
-    s = n(594174),
-    o = n(651530),
-    l = n(163268),
-    u = n(294602);
+    o = n(699516),
+    a = n(594174),
+    s = n(247206),
+    l = n(294602);
 let c = (e, t) => {
-        let n = (0, o.yh)(),
-            { explicitContentGuilds: c, explicitContentFriendDm: d, explicitContentNonFriendDm: _ } = (0, u.B)(),
-            E = (0, r.e7)([a.Z], () => a.Z.getFriendIDs().includes(t)),
-            f = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
-            h = (0, r.e7)([i.Z], () => {
+        let { explicitContentGuilds: n, explicitContentFriendDm: c, explicitContentNonFriendDm: u } = (0, l.B)(),
+            d = (0, r.e7)([o.Z], () => o.Z.getFriendIDs().includes(t)),
+            f = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
+            _ = (0, r.e7)([i.Z], () => {
                 let t = i.Z.getChannel(e);
                 return null != t && t.isPrivate();
             });
-        return !!n && null != f && f.id !== t && (h && E ? (0, l.vx)(d) : h ? (0, l.vx)(_) : (0, l.vx)(c));
+        return null != f && f.id !== t && (_ && d ? (0, s.vx)(c) : _ ? (0, s.vx)(u) : (0, s.vx)(n));
     },
-    d = () => {
-        let e = (0, o.yh)(),
-            { explicitContentGuilds: t } = (0, u.B)(),
-            n = (0, r.e7)([s.default], () => s.default.getCurrentUser());
-        return !!e && null != n && (0, l.vx)(t);
+    u = () => {
+        let { explicitContentGuilds: e } = (0, l.B)();
+        return null != (0, r.e7)([a.default], () => a.default.getCurrentUser()) && (0, s.vx)(e);
     };

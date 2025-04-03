@@ -1,19 +1,16 @@
-t.d(s, {
-    c: function () {
-        return o;
-    }
-});
-var n = t(570140),
-    a = t(626135),
-    i = t(474873),
-    r = t(981631);
-function o(e) {
-    a.default.track(r.rMx.SOUNDPACK_UPDATED, {
+n.d(t, { c: () => s });
+var r = n(570140),
+    i = n(626135),
+    o = n(474873),
+    a = n(981631);
+function s(e, t) {
+    i.default.track(a.rMx.SOUNDPACK_UPDATED, {
         soundpack: e,
-        previous_soundpack: i.Z.getSoundpack()
+        previous_soundpack: o.Z.getSoundpack()
     }),
-        n.Z.dispatch({
+        r.Z.dispatch({
             type: 'SET_SOUNDPACK',
-            soundpack: e
+            soundpack: e,
+            forExperimentId: t
         });
 }

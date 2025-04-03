@@ -1,67 +1,61 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(442837),
-    o = n(481060),
-    c = n(543882),
-    u = n(592125),
-    d = n(496675),
-    h = n(981631),
-    m = n(689938),
-    p = n(375387);
-function _(e) {
-    let { isLoading: t, noText: n, previewText: a, className: s } = e;
-    return (0, i.jsx)('div', {
-        className: l()(p.emptyPreviewContainer, s),
+r.d(t, { Z: () => b });
+var n = r(200651),
+    a = r(192379),
+    o = r(120356),
+    i = r.n(o),
+    l = r(442837),
+    s = r(481060),
+    c = r(592125),
+    u = r(496675),
+    d = r(449605),
+    p = r(981631),
+    f = r(388032),
+    m = r(269363);
+function g(e) {
+    let { isLoading: t, noText: r, noImage: a, previewText: o, className: l } = e;
+    return (0, n.jsx)('div', {
+        className: i()(m.emptyPreviewContainer, l),
         children: t
-            ? (0, i.jsx)(o.Spinner, {})
-            : (0, i.jsxs)(i.Fragment, {
+            ? (0, n.jsx)(s.$jN, {})
+            : (0, n.jsxs)(n.Fragment, {
                   children: [
-                      (0, i.jsx)('div', { className: p.emptyPreviewImage }),
-                      n
+                      (0, n.jsx)('div', { className: i()(m.emptyPreviewImage, { [m.noImage]: a }) }),
+                      r
                           ? null
-                          : (0, i.jsx)(o.Text, {
+                          : (0, n.jsx)(s.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'none',
-                                className: p.emptyPreviewText,
-                                children: null != a ? a : m.Z.Messages.STREAM_NO_PREVIEW
+                                className: m.emptyPreviewText,
+                                children: null != o ? o : f.NW.string(f.t.uQZTBQ)
                             })
                   ]
               })
     });
 }
-function f(e) {
-    let { stream: t, className: n, noText: s = !1 } = e,
-        o = (0, r.e7)([u.Z], () => u.Z.getBasicChannel(t.channelId)),
-        f = (0, r.e7)([d.Z], () => null != o && d.Z.canBasicChannel(h.S7T.CONNECT, o)),
-        { url: E, isLoading: g } = (0, r.cj)([c.Z], () => ({
-            url: f ? c.Z.getPreviewURL(t.guildId, t.channelId, t.ownerId) : null,
-            isLoading: f && c.Z.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
-        })),
-        C = a.useRef(g ? null : E);
+function b(e) {
+    let { stream: t, className: r, noText: o = !1, noImage: i = !1 } = e,
+        s = (0, l.e7)([c.Z], () => c.Z.getBasicChannel(t.channelId)),
+        b = (0, l.e7)([u.Z], () => null != s && u.Z.canBasicChannel(p.S7T.CONNECT, s)),
+        { previewUrl: _, isLoading: h } = (0, d.Z)(t.guildId, t.channelId, t.ownerId),
+        O = a.useRef(h ? null : _);
     a.useEffect(() => {
-        !g && (C.current = E);
-    }, [E, g]);
-    let I = null == E || g ? C.current : E;
-    return null == I
-        ? (0, i.jsx)(_, {
-              className: n,
-              isLoading: g,
-              noText: s,
-              previewText: f ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
+        h || (O.current = _);
+    }, [_, h]);
+    let y = null == _ || h ? O.current : _;
+    return null == y
+        ? (0, n.jsx)(g, {
+              className: r,
+              isLoading: h,
+              noText: o,
+              noImage: i,
+              previewText: b ? void 0 : f.NW.string(f.t.pgUTZG)
           })
-        : (0, i.jsx)('div', {
-              className: l()(n, p.root),
-              children: (0, i.jsx)('img', {
-                  src: I,
+        : (0, n.jsx)('div', {
+              className: r,
+              children: (0, n.jsx)('img', {
+                  src: y,
                   alt: '',
-                  className: p.image
+                  className: m.image
               })
           });
 }

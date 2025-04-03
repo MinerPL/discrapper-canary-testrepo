@@ -1,2 +1,1 @@
-var n = 'object' == typeof r.g && r.g && r.g.Object === Object && r.g;
-e.exports = n;
+t.exports = 'object' == typeof a.g && a.g && a.g.Object === Object && a.g;

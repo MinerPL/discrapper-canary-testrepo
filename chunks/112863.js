@@ -1,47 +1,43 @@
-t.d(s, {
-    Z: function () {
-        return _;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(481060),
-    i = t(37234),
-    r = t(703656),
-    o = t(981631),
-    l = t(689938),
-    c = t(591559),
-    d = t(286359);
-function _() {
-    return (0, n.jsxs)('div', {
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(37234),
+    a = n(703656),
+    l = n(981631),
+    o = n(388032),
+    c = n(791119),
+    d = n(286359);
+function u() {
+    return (0, r.jsxs)('div', {
         className: c.wrapper,
         children: [
-            (0, n.jsx)('img', {
+            (0, r.jsx)('img', {
                 className: c.icon,
                 alt: '',
                 src: d
             }),
-            (0, n.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: c.info,
                 children: [
-                    (0, n.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-lg/bold',
-                        children: l.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PUBLIC_SERVER_TITLE
+                        children: o.NW.string(o.t.ZHNSYW)
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
-                        children: l.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PUBLIC_SERVER_SUBTITLE
+                        children: o.NW.string(o.t.kCj5pq)
                     })
                 ]
             }),
-            (0, n.jsx)(a.Button, {
-                color: a.Button.Colors.PRIMARY,
+            (0, r.jsx)(i.zxk, {
+                color: i.zxk.Colors.PRIMARY,
                 onClick: () => {
-                    (0, r.uL)(o.Z5c.GUILD_DISCOVERY), (0, i.xf)();
+                    (0, a.uL)(l.Z5c.GUILD_DISCOVERY), (0, s.xf)();
                 },
-                size: a.Button.Sizes.LARGE,
-                children: l.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PUBLIC_SERVER_CTA
+                size: i.zxk.Sizes.LARGE,
+                children: o.NW.string(o.t.JFlifn)
             })
         ]
     });

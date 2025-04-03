@@ -1,70 +1,71 @@
-t.r(n);
-var o = t(735250),
-    r = t(470079),
-    i = t(442837),
-    a = t(215569),
-    s = t(481060),
-    l = t(852860),
-    c = t(313201),
-    u = t(944163),
-    d = t(266395),
-    m = t(200305),
-    f = t(592286),
-    _ = t(689938),
-    b = t(807907);
-let h = () =>
-    (0, o.jsx)(l.Z, {
-        submitting: !1,
-        message: _.Z.Messages.MEMBER_VERIFICATION_PROGRESS_LOST_TITLE,
-        onReset: () => {
-            (0, d.PE)(!1);
-        },
-        onResetText: _.Z.Messages.CANCEL,
-        onSave: () => {
-            (0, d.PE)(!1), (0, s.closeModal)(f.Pn);
-        },
-        onSaveText: _.Z.Messages.MEMBER_VERIFICATION_PROGRESS_LOST_CONTINUE,
-        onSaveButtonColor: s.ButtonColors.RED
-    });
-n.default = (e) => {
-    let { guildId: n, transitionState: t, onClose: l, onComplete: f, isPreview: _ = !1 } = e,
-        p = (0, d.rb)((e) => e.shouldShowWarning),
-        E = (0, i.e7)([u.Z], () => u.Z.get(n)),
-        C = (0, c.Dt)();
-    return (r.useEffect(() => {
-        E === u.t && l();
-    }, [l, E]),
-    E === u.t)
-        ? null
-        : (0, o.jsxs)(o.Fragment, {
-              children: [
-                  (0, o.jsxs)(s.ModalRoot, {
-                      size: s.ModalSize.MEDIUM,
-                      className: b.container,
-                      transitionState: t,
-                      'aria-labelledby': C,
-                      children: [
-                          (0, o.jsx)(s.ModalCloseButton, {
-                              onClick: () => l(!1),
-                              className: b.closeButton
-                          }),
-                          (0, o.jsx)(m.Z, {
-                              headerId: C,
-                              guildId: n,
-                              onClose: l,
-                              onComplete: f,
-                              isPreview: _
-                          })
-                      ]
-                  }),
-                  (0, o.jsx)(a.W, {
-                      children:
-                          !0 === p &&
-                          (0, o.jsx)(s.SlideIn, {
-                              className: b.notice,
-                              children: (0, o.jsx)(h, {})
-                          })
-                  })
-              ]
-          });
-};
+t.r(i), t.d(i, { default: () => g });
+var n = t(200651),
+    r = t(192379),
+    l = t(215569),
+    u = t(481060),
+    o = t(852860),
+    a = t(313201),
+    s = t(944163),
+    E = t(266395),
+    c = t(187565),
+    d = t(200305),
+    I = t(592286),
+    f = t(388032),
+    _ = t(916199);
+let S = () =>
+        (0, n.jsx)(o.Z, {
+            submitting: !1,
+            message: f.NW.string(f.t['8g514e']),
+            onReset: () => {
+                (0, E.PE)(!1);
+            },
+            onResetText: f.NW.string(f.t['ETE/oK']),
+            onSave: () => {
+                (0, E.PE)(!1), (0, u.Mr3)(I.Pn);
+            },
+            onSaveText: f.NW.string(f.t['Xt+UaW']),
+            onSaveButtonColor: u.Ttl.RED
+        }),
+    g = (e) => {
+        let { guildId: i, transitionState: t, onClose: o, onComplete: I, inviteKey: f, isPreview: g = !1 } = e,
+            A = (0, E.rb)((e) => e.shouldShowWarning),
+            { hasFetched: T, verificationForm: D } = (0, c.ng)(i, g, f),
+            h = (0, a.Dt)();
+        return (r.useEffect(() => {
+            T && D === s.t && o();
+        }, [T, o, D]),
+        D === s.t)
+            ? null
+            : (0, n.jsxs)(n.Fragment, {
+                  children: [
+                      (0, n.jsxs)(u.Y0X, {
+                          size: u.CgR.MEDIUM,
+                          className: _.container,
+                          transitionState: t,
+                          'aria-labelledby': h,
+                          children: [
+                              (0, n.jsx)(u.olH, {
+                                  onClick: () => o(!1),
+                                  className: _.closeButton
+                              }),
+                              (0, n.jsx)(d.Z, {
+                                  verificationForm: D,
+                                  headerId: h,
+                                  guildId: i,
+                                  onClose: o,
+                                  onComplete: I,
+                                  isPreview: g
+                              })
+                          ]
+                      }),
+                      (0, n.jsx)(l.W, {
+                          children:
+                              !0 === A &&
+                              (0, n.jsx)(u.oXn, {
+                                  className: _.notice,
+                                  children: (0, n.jsx)(S, {})
+                              })
+                      })
+                  ]
+              });
+    };

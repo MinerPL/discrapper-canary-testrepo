@@ -1,10 +1,11 @@
-var s = n(735250),
+n.d(t, { Z: () => l });
+var r = n(200651),
     o = n(481060),
-    r = n(689938),
-    a = n(173074);
-function l(e) {
+    s = n(388032),
+    a = n(374578);
+function i(e) {
     let { onClick: t, children: n } = e;
-    return (0, s.jsx)(o.Button, {
+    return (0, r.jsx)(o.zxk, {
         onClick: t,
         className: a.button,
         innerClassName: a.buttonInner,
@@ -12,18 +13,18 @@ function l(e) {
         children: n
     });
 }
-t.Z = function (e) {
+let l = function (e) {
     let { onDesktop: t, onConsole: n } = e;
-    return (0, s.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: a.buttons,
         children: [
-            (0, s.jsxs)(l, {
+            (0, r.jsxs)(i, {
                 onClick: t,
-                children: [r.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP, (0, s.jsx)(o.ScreenIcon, {})]
+                children: [s.NW.string(s.t.QXc019), (0, r.jsx)(o.pzj, { size: 'sm' })]
             }),
-            (0, s.jsxs)(l, {
+            (0, r.jsxs)(i, {
                 onClick: n,
-                children: [r.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE, (0, s.jsx)(o.GameControllerIcon, {})]
+                children: [s.NW.string(s.t['8lAfuL']), (0, r.jsx)(o.iWm, { size: 'sm' })]
             })
         ]
     });

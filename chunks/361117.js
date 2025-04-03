@@ -1,40 +1,33 @@
-a.d(t, {
-    G: function () {
-        return l;
-    }
-}),
-    a(47120),
-    a(773603);
-var n = a(470079),
-    s = a(399606),
-    i = a(570140),
-    r = a(986197),
-    o = a(135200);
+r.d(t, { G: () => l }), r(47120), r(773603);
+var n = r(399606),
+    i = r(570140),
+    s = r(493773),
+    o = r(986197),
+    a = r(135200);
 let l = (e) => {
-    let [t, a] = (0, s.Wu)([o.Z], () => [o.Z.usernameSuggestion(), o.Z.usernameSuggestionLoading()]);
+    let [t, r] = (0, n.Wu)([a.Z], () => [a.Z.usernameSuggestion(), a.Z.usernameSuggestionLoading()]);
     return (
-        n.useEffect(
+        (0, s.ZP)(
             () => (
-                o.Z.wasSuggestionsFetched()
+                a.Z.wasSuggestionsFetched()
                     ? i.Z.dispatch({
                           type: 'POMELO_SUGGESTIONS_FETCH',
                           usernameSuggestionLoading: !1
                       })
-                    : r.Z.fetchSuggestions(e).finally(() => {
+                    : o.Z.fetchSuggestions(e).finally(() => {
                           i.Z.dispatch({
                               type: 'POMELO_SUGGESTIONS_FETCH',
                               usernameSuggestionLoading: !1
                           });
                       }),
                 () => {
-                    r.Z.resetSuggestions();
+                    o.Z.resetSuggestions();
                 }
-            ),
-            []
+            )
         ),
         {
             usernameSuggestion: t,
-            usernameSuggestionLoading: a
+            usernameSuggestionLoading: r
         }
     );
 };

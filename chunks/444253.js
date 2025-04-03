@@ -1,33 +1,39 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    l = n(358221),
-    r = n(441061),
-    o = n(431368),
-    c = n(167675),
-    u = n(418469),
-    d = n(673539),
-    h = n(354459),
-    m = n(689938);
-function p(e) {
-    let { channelId: t, onClose: n, appContext: p, exitFullScreen: _, onSelect: f } = e,
-        E = (0, a.e7)([l.Z], () => l.Z.getSelectedParticipant(t)),
-        g = (null == E ? void 0 : E.type) === h.fO.STREAM ? E.stream : null,
-        C = (0, r.Z)(t),
-        I = (0, c.Z)(),
-        x = (0, o.Z)(t),
-        T = (0, d.Z)(t);
-    return (0, i.jsxs)(s.Menu, {
+n.d(t, { Z: () => b });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(812206),
+    a = n(299206),
+    s = n(358221),
+    c = n(441061),
+    u = n(431368),
+    d = n(167675),
+    p = n(811423),
+    h = n(418469),
+    f = n(673539),
+    m = n(354459),
+    g = n(388032);
+function b(e) {
+    let { channelId: t, onClose: n, appContext: b, exitFullScreen: _, onSelect: C, onInteraction: y } = e,
+        x = (0, i.e7)([s.Z], () => s.Z.getSelectedParticipant(t)),
+        v = (null == x ? void 0 : x.type) === m.fO.STREAM ? x.stream : null,
+        j = (0, i.e7)([o.Z], () => ((null == x ? void 0 : x.type) === m.fO.ACTIVITY ? o.Z.getApplication(x.applicationId) : void 0)),
+        O = (0, c.Z)(t),
+        E = (0, d.Z)(),
+        N = (0, u.Z)(t),
+        I = (0, f.Z)(t),
+        P = (0, p.Z)(j, t),
+        S = (0, a.Z)({
+            id: null == j ? void 0 : j.id,
+            label: g.NW.string(g.t['+NP/b2'])
+        });
+    return (0, r.jsxs)(l.v2r, {
         navId: 'channel-call-overflow-popout',
         onClose: n,
-        'aria-label': m.Z.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
-        onSelect: f,
-        children: [C, I, x, T, (0, u.Z)(g, p, _)]
+        'aria-label': g.NW.string(g.t.pkYeAw),
+        onSelect: C,
+        onInteraction: y,
+        children: [O, E, N, I, (0, h.Z)(v, b, _), P, (0, r.jsx)(l.kSQ, { children: S })]
     });
 }

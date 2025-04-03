@@ -1,39 +1,54 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
+n.d(t, { Z: () => d });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(442837),
     l = n(481060),
-    u = n(607070),
-    c = n(971865);
+    c = n(607070),
+    u = n(729894);
 function d(e) {
-    let { children: t, heading: n, className: a, scrollIntoView: d = !1, headingColor: _ = 'header-secondary' } = e,
-        E = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        f = i.useRef(null);
+    let { children: t, heading: n, headingIcon: o, subheading: d, className: f, scrollIntoView: _ = !1, headingColor: p = 'header-secondary' } = e,
+        h = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+        m = i.useRef(null);
     return (
         i.useEffect(() => {
-            let e = f.current;
+            let e = m.current;
             if (null == e) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: E ? 'auto' : 'smooth' });
+                e.scrollIntoView({ behavior: h ? 'auto' : 'smooth' });
             });
             return () => cancelAnimationFrame(t);
-        }, [E]),
+        }, [h]),
         (0, r.jsxs)('section', {
-            ref: d ? f : void 0,
-            className: s()(c.section, a),
+            ref: _ ? m : void 0,
+            className: a()(u.section, f),
             children: [
                 null != n &&
-                    (0, r.jsx)(l.Heading, {
-                        variant: 'text-xs/semibold',
-                        color: _,
-                        className: c.heading,
-                        children: n
+                    (0, r.jsxs)('div', {
+                        className: u.headings,
+                        children: [
+                            (0, r.jsxs)('div', {
+                                className: u.header,
+                                children: [
+                                    (0, r.jsx)(l.X6q, {
+                                        variant: 'text-xs/semibold',
+                                        color: p,
+                                        children: n
+                                    }),
+                                    null != o &&
+                                        (0, r.jsx)(o, {
+                                            size: 'xxs',
+                                            color: l.TVs.colors.HEADER_SECONDARY
+                                        })
+                                ]
+                            }),
+                            null != d &&
+                                (0, r.jsx)(l.Text, {
+                                    variant: 'text-xs/normal',
+                                    children: d
+                                })
+                        ]
                     }),
                 t
             ]

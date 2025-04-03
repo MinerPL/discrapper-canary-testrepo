@@ -1,142 +1,188 @@
 let r, i;
 n.d(t, {
-    c: function () {
-        return s;
-    }
+    Z: () => H,
+    c: () => _
 }),
     n(47120);
-var u,
-    l,
-    o,
-    E,
+var o,
     a = n(442837),
-    _ = n(570140),
-    S = n(981631);
-let s = 'no_payment_source',
-    A = null,
-    c = null,
-    T = null,
-    I = null,
-    d = null,
-    R = {},
-    C = null,
-    N = !1,
-    M = null,
-    P = !1,
-    U = !1,
-    f = !1,
-    L = !1,
-    O = null,
-    h = new Set();
-function p(e) {
-    null != r && null != C ? r(C) : null != i && i(e), (r = null), (i = null);
+    s = n(570140),
+    l = n(981631);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-class m extends (u = a.ZP.Store) {
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let _ = 'no_payment_source',
+    p = null,
+    h = null,
+    m = null,
+    g = null,
+    E = null,
+    b = {},
+    y = null,
+    v = !1,
+    O = null,
+    I = !1,
+    S = !1,
+    T = !1,
+    N = !1,
+    A = null,
+    C = new Set();
+function R(e) {
+    null != r && null != y ? r(y) : null != i && i(e), (r = null), (i = null);
+}
+function P(e) {
+    R(), (p = e.skuId), (m = e.applicationId), (S = e.isIAP), (g = e.analyticsLocation), (A = e.context), (N = e.isGift), (T = !0), (I = !1), (r = e.resolve), (i = e.reject), (O = null), (y = null), (E = e.promotionId);
+}
+function w(e) {
+    let { error: t } = e;
+    (T = !1), (A = null), R(t);
+}
+function D(e) {
+    let { skuId: t } = e;
+    C.add(t);
+}
+function L(e) {
+    let { skuId: t, paymentSourceId: n, price: r } = e;
+    (b = f(u({}, b), { [t]: f(u({}, b[t]), { [null != n ? n : _]: r }) })), C.delete(t);
+}
+function x(e) {
+    let { skuId: t } = e;
+    C.delete(t);
+}
+function M() {
+    v = !0;
+}
+function k(e) {
+    let { entitlements: t, giftCode: n } = e;
+    (v = !1), (y = t), (h = n);
+}
+function j(e) {
+    let { giftCode: t } = e;
+    if (0 !== t.uses || t.sku_id !== p) return !1;
+    h = t.code;
+}
+function U(e) {
+    let { error: t } = e;
+    (v = !1), (O = t);
+}
+function G() {
+    I = !0;
+}
+function B() {
+    O = null;
+}
+function F(e) {
+    N = e.isGift;
+}
+function V(e) {
+    let { locked: t } = e;
+    if (!t || null == A) return !1;
+    (T = !1), (A = null), R();
+}
+class Z extends (o = a.ZP.Store) {
     getPricesForSku(e) {
-        return R[e];
+        return b[e];
     }
     isOpen() {
-        let e = __OVERLAY__ ? S.IlC.OVERLAY : S.IlC.APP;
-        return O === e && f;
+        let e = __OVERLAY__ ? l.IlC.OVERLAY : l.IlC.APP;
+        return A === e && T;
     }
     get isPurchasingSKU() {
-        return N;
+        return v;
     }
     get forceConfirmationStepOnMount() {
-        return P;
-    }
-    get error() {
-        return M;
-    }
-    get skuId() {
-        return A;
-    }
-    get applicationId() {
-        return T;
-    }
-    get analyticsLocation() {
         return I;
     }
+    get error() {
+        return O;
+    }
+    get skuId() {
+        return p;
+    }
+    get applicationId() {
+        return m;
+    }
+    get analyticsLocation() {
+        return g;
+    }
     get promotionId() {
-        return d;
+        return E;
     }
     get isIAP() {
-        return U;
+        return S;
     }
     get giftCode() {
-        return c;
+        return h;
     }
     get isGift() {
-        return L;
+        return N;
     }
     isFetchingSKU(e) {
-        return h.has(e);
+        return C.has(e);
     }
 }
-(E = 'SKUPaymentModalStore'),
-    (o = 'displayName') in (l = m)
-        ? Object.defineProperty(l, o, {
-              value: E,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (l[o] = E),
-    (t.Z = new m(_.Z, {
-        SKU_PURCHASE_MODAL_OPEN: function (e) {
-            p(), (A = e.skuId), (T = e.applicationId), (U = e.isIAP), (I = e.analyticsLocation), (O = e.context), (L = e.isGift), (f = !0), (P = !1), (r = e.resolve), (i = e.reject), (M = null), (C = null), (d = e.promotionId);
-        },
-        SKU_PURCHASE_MODAL_CLOSE: function (e) {
-            let { error: t } = e;
-            (f = !1), (O = null), p(t);
-        },
-        SKU_PURCHASE_PREVIEW_FETCH: function (e) {
-            let { skuId: t } = e;
-            h.add(t);
-        },
-        SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: function (e) {
-            let { skuId: t, paymentSourceId: n, price: r } = e;
-            (R = {
-                ...R,
-                [t]: {
-                    ...R[t],
-                    [null != n ? n : s]: r
-                }
-            }),
-                h.delete(t);
-        },
-        SKU_PURCHASE_PREVIEW_FETCH_FAILURE: function (e) {
-            let { skuId: t } = e;
-            h.delete(t);
-        },
-        SKU_PURCHASE_START: function () {
-            N = !0;
-        },
-        SKU_PURCHASE_SUCCESS: function (e) {
-            let { entitlements: t, giftCode: n } = e;
-            (N = !1), (C = t), (c = n);
-        },
-        SKU_PURCHASE_FAIL: function (e) {
-            let { error: t } = e;
-            (N = !1), (M = t);
-        },
-        SKU_PURCHASE_SHOW_CONFIRMATION_STEP: function () {
-            P = !0;
-        },
-        SKU_PURCHASE_CLEAR_ERROR: function () {
-            M = null;
-        },
-        SKU_PURCHASE_UPDATE_IS_GIFT: function (e) {
-            L = e.isGift;
-        },
-        OVERLAY_SET_INPUT_LOCKED: function (e) {
-            let { locked: t } = e;
-            if (!t || null == O) return !1;
-            (f = !1), (O = null), p();
-        },
-        GIFT_CODE_CREATE: function (e) {
-            let { giftCode: t } = e;
-            if (0 !== t.uses || t.sku_id !== A) return !1;
-            c = t.code;
-        }
-    }));
+c(Z, 'displayName', 'SKUPaymentModalStore');
+let H = new Z(s.Z, {
+    SKU_PURCHASE_MODAL_OPEN: P,
+    SKU_PURCHASE_MODAL_CLOSE: w,
+    SKU_PURCHASE_PREVIEW_FETCH: D,
+    SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: L,
+    SKU_PURCHASE_PREVIEW_FETCH_FAILURE: x,
+    SKU_PURCHASE_START: M,
+    SKU_PURCHASE_SUCCESS: k,
+    SKU_PURCHASE_FAIL: U,
+    SKU_PURCHASE_SHOW_CONFIRMATION_STEP: G,
+    SKU_PURCHASE_CLEAR_ERROR: B,
+    SKU_PURCHASE_UPDATE_IS_GIFT: F,
+    OVERLAY_SET_INPUT_LOCKED: V,
+    GIFT_CODE_CREATE: j
+});

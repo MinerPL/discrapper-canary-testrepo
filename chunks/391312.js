@@ -1,45 +1,81 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return d;
-        }
-    }),
-    n(47120);
-var o = n(735250),
-    r = n(470079),
-    s = n(433517),
-    a = n(481060),
-    c = n(818634),
-    i = n(689938),
-    u = n(600038);
-function d(e) {
-    let [t, n] = r.useState(!1);
-    return (0, o.jsxs)(a.ConfirmModal, {
-        ...e,
-        header: i.Z.Messages.GUILD_SIDEBAR_REORDER_DIALOG_TITLE,
-        confirmText: i.Z.Messages.GUILD_SIDEBAR_REORDER_CONFIRM,
-        cancelText: i.Z.Messages.CANCEL,
-        onConfirm: () => {
-            (0, c.l)(!0);
-        },
-        confirmButtonColor: a.Button.Colors.BRAND,
-        children: [
-            (0, o.jsx)(a.Text, {
-                variant: 'text-md/normal',
-                children: i.Z.Messages.GUILD_SIDEBAR_REORDER_DESCRIPTION.format()
-            }),
-            (0, o.jsx)(a.Checkbox, {
-                className: u.checkboxMargin,
-                type: a.Checkbox.Types.INVERTED,
-                value: t,
-                onChange: () => {
-                    s.K.set('doNotShowReorderModal', JSON.stringify(!0)), n(!0);
+r.d(t, { default: () => p }), r(47120), r(26686);
+var n = r(200651),
+    o = r(192379),
+    c = r(433517),
+    i = r(481060),
+    a = r(818634),
+    s = r(388032),
+    l = r(301403);
+function p(e) {
+    var t, r;
+    let [p, u] = o.useState(!1);
+    return (0, n.jsxs)(
+        i.ConfirmModal,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, e)),
+        (r = r =
+            {
+                header: s.NW.string(s.t.pjYu09),
+                confirmText: s.NW.string(s.t.zVZXRU),
+                cancelText: s.NW.string(s.t['ETE/oK']),
+                onConfirm: () => {
+                    (0, a.l)(!0);
                 },
-                children: (0, o.jsx)(a.Text, {
-                    variant: 'text-md/normal',
-                    children: i.Z.Messages.GUILD_SIDEBAR_DO_NOT_SHOW_AGAIN
-                })
-            })
-        ]
-    });
+                confirmButtonColor: i.zxk.Colors.BRAND,
+                children: [
+                    (0, n.jsx)(i.Text, {
+                        variant: 'text-md/normal',
+                        children: s.NW.format(s.t['0eydys'], {})
+                    }),
+                    (0, n.jsx)(i.XZJ, {
+                        className: l.checkboxMargin,
+                        type: i.XZJ.Types.INVERTED,
+                        value: p,
+                        onChange: () => {
+                            c.K.set('doNotShowReorderModal', JSON.stringify(!0)), u(!0);
+                        },
+                        children: (0, n.jsx)(i.Text, {
+                            variant: 'text-md/normal',
+                            children: s.NW.string(s.t['50TyjY'])
+                        })
+                    })
+                ]
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t)
+    );
 }

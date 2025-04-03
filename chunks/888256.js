@@ -1,50 +1,46 @@
-t.d(s, {
-    Z: function () {
-        return c;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(481060),
-    i = t(921801),
-    r = t(726985),
-    o = t(689938),
-    l = t(105756);
+n.d(t, { Z: () => c }), n(266796);
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(921801),
+    a = n(726985),
+    l = n(388032),
+    o = n(843120);
 function c(e) {
-    let { className: s, currentUser: t, handleDisableAccount: c, handleDeleteAccount: d } = e,
-        _ = t.isClaimed();
-    return (0, n.jsx)(i.F, {
-        setting: r.s6.ACCOUNT_DISABLE_ACCOUNT,
-        children: (0, n.jsxs)(a.FormSection, {
-            className: s,
-            title: o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_SECTION,
+    let { className: t, currentUser: n, handleDisableAccount: c, handleDeleteAccount: d } = e,
+        u = n.isClaimed();
+    return (0, r.jsx)(s.F, {
+        setting: a.s6.ACCOUNT_DISABLE_ACCOUNT,
+        children: (0, r.jsxs)(i.hjN, {
+            className: t,
+            title: l.NW.string(l.t.ZKsIkp),
             children: [
-                (0, n.jsx)(a.FormText, {
-                    className: l.description,
-                    type: a.FormText.Types.DESCRIPTION,
-                    children: _ ? o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_DESCRIPTION : o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_DESCRIPTION_UNCLAIMED
+                (0, r.jsx)(i.R94, {
+                    className: o.description,
+                    type: i.R94.Types.DESCRIPTION,
+                    children: u ? l.NW.string(l.t.TIh3Ym) : l.NW.string(l.t.czsGAw)
                 }),
-                (0, n.jsxs)('div', {
-                    className: l.buttonContainer,
+                (0, r.jsxs)('div', {
+                    className: o.buttonContainer,
                     children: [
-                        _
-                            ? (0, n.jsx)(a.Button, {
-                                  className: l.disableButton,
-                                  look: a.ButtonLooks.FILLED,
-                                  color: a.ButtonColors.RED,
-                                  size: a.ButtonSizes.SMALL,
+                        u
+                            ? (0, r.jsx)(i.zxk, {
+                                  className: o.disableButton,
+                                  look: i.iLD.FILLED,
+                                  color: i.Ttl.RED,
+                                  size: i.PhG.SMALL,
                                   onClick: c,
-                                  children: o.Z.Messages.DISABLE_ACCOUNT
+                                  children: l.NW.string(l.t.jf5GGR)
                               })
                             : null,
-                        (0, n.jsx)(i.F, {
-                            setting: r.s6.ACCOUNT_DELETE_ACCOUNT,
-                            children: (0, n.jsx)(a.Button, {
-                                look: a.ButtonLooks.OUTLINED,
-                                color: a.ButtonColors.RED,
-                                size: a.ButtonSizes.SMALL,
+                        (0, r.jsx)(s.F, {
+                            setting: a.s6.ACCOUNT_DELETE_ACCOUNT,
+                            children: (0, r.jsx)(i.zxk, {
+                                look: i.iLD.OUTLINED,
+                                color: i.Ttl.RED,
+                                size: i.PhG.SMALL,
                                 onClick: d,
-                                children: o.Z.Messages.DELETE_ACCOUNT
+                                children: l.NW.string(l.t['8lQ2ra'])
                             })
                         })
                     ]

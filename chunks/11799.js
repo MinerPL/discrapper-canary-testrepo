@@ -1,31 +1,26 @@
-n.d(t, {
-    y6: function () {
-        return E;
-    }
-}),
-    n(47120);
-var i = n(470079),
-    a = n(442837),
-    s = n(45114),
-    r = n(733427),
-    l = n(455199),
-    o = n(833592),
+n.d(t, { y6: () => m }), n(47120);
+var r = n(192379),
+    i = n(442837),
+    a = n(45114),
+    l = n(733427),
+    o = n(455199),
+    s = n(833592),
     c = n(140155),
     u = n(774807),
     d = n(490897);
-let _ = (e) => {
-        let { isFocused: t, navigatedAway: n, isDesktop: _, withMentions: E = !1, initialPageSize: I } = e,
-            m = (0, a.e7)([u.Z], () => u.Z.shouldReload()),
-            T = i.useRef(!1),
-            [h, N] = i.useState(!1),
+let p = (e) => {
+        let { isFocused: t, navigatedAway: n, isDesktop: p, withMentions: m = !1, initialPageSize: f } = e,
+            h = (0, i.e7)([u.Z], () => u.Z.shouldReload()),
+            g = r.useRef(!1),
+            [_, b] = r.useState(!1),
             {
-                initialized: f,
-                loading: C,
-                items: p,
-                hasMore: g,
-                cursor: S,
-                errored: A
-            } = (0, a.cj)([c.Z], () => ({
+                initialized: x,
+                loading: y,
+                items: E,
+                hasMore: v,
+                cursor: O,
+                errored: N
+            } = (0, i.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
                 loading: c.Z.loading,
                 items: c.Z.items,
@@ -33,77 +28,77 @@ let _ = (e) => {
                 cursor: c.Z.cursor,
                 errored: c.Z.errored
             })),
-            { roleFilter: R, everyoneFilter: x } = (0, a.cj)([l.Z], () => ({
-                everyoneFilter: l.Z.everyoneFilter,
-                roleFilter: l.Z.roleFilter
+            { roleFilter: j, everyoneFilter: C } = (0, i.cj)([o.Z], () => ({
+                everyoneFilter: o.Z.everyoneFilter,
+                roleFilter: o.Z.roleFilter
             }));
-        i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []),
-            i.useEffect(() => {
-                f && t && (0, s.FT)(d.W.NOTIFICATION_CENTER);
-            }, [t, f]);
-        let O = (0, r.Z)();
-        i.useEffect(
+        r.useEffect(() => ((0, s.Vk)(!0), () => (0, s.Vk)(!1)), []),
+            r.useEffect(() => {
+                x && t && (0, a.FT)(d.W.NOTIFICATION_CENTER);
+            }, [t, x]);
+        let I = (0, l.Z)();
+        r.useEffect(
             () => () => {
-                _ ? !O() && (A || p.length > 100) && (0, o.jF)() : n && p.length > 100 && (0, o.jF)();
+                p ? !I() && (N || E.length > 100) && (0, s.jF)() : n && E.length > 100 && (0, s.jF)();
             },
-            [n, p, _, O, A]
+            [n, E, p, I, N]
         ),
-            i.useEffect(() => {
-                let e = m && t;
-                (!f || e) &&
-                    (0, o.jk)({
-                        limit: null != I ? I : E ? 8 : 20,
-                        with_mentions: E,
-                        roles_filter: R,
-                        everyone_filter: x
+            r.useEffect(() => {
+                let e = h && t;
+                (!x || e) &&
+                    (0, s.jk)({
+                        limit: null != f ? f : m ? 8 : 20,
+                        with_mentions: m,
+                        roles_filter: j,
+                        everyone_filter: C
                     });
-            }, [f, m, t, E, R, x, I]);
-        let M = i.useCallback(
+            }, [x, h, t, m, j, C, f]);
+        let S = r.useCallback(
             async (e) => {
-                !T.current &&
-                    f &&
-                    g &&
-                    null != S &&
-                    (e || !A) &&
-                    ((T.current = !0),
-                    N(!0),
-                    await (0, o.jk)(
+                !g.current &&
+                    x &&
+                    v &&
+                    null != O &&
+                    (e || !N) &&
+                    ((g.current = !0),
+                    b(!0),
+                    await (0, s.jk)(
                         {
-                            after: S,
-                            with_mentions: E,
-                            roles_filter: R,
-                            everyone_filter: x,
-                            limit: E ? 8 : 20
+                            after: O,
+                            with_mentions: m,
+                            roles_filter: j,
+                            everyone_filter: C,
+                            limit: m ? 8 : 20
                         },
                         () => {
-                            T.current = !1;
+                            g.current = !1;
                         }
                     ),
-                    N(!1));
+                    b(!1));
             },
-            [f, g, S, A, E, R, x]
+            [x, v, O, N, m, j, C]
         );
         return {
-            initialized: f,
-            loading: C,
-            items: p,
-            hasMore: g,
-            loadMore: M,
-            loadingMore: h,
+            initialized: x,
+            loading: y,
+            items: E,
+            hasMore: v,
+            loadMore: S,
+            loadingMore: _,
             setReadNotifItemToAcked: (e) => {
-                !e.acked && (e.acked = !0);
+                e.acked || (e.acked = !0);
             },
-            errored: A
+            errored: N
         };
     },
-    E = () => {
+    m = () => {
         let {
             initialized: e,
             loading: t,
             items: n,
-            hasMore: i,
-            loadMore: a
-        } = _({
+            hasMore: r,
+            loadMore: i
+        } = p({
             isFocused: !0,
             isDesktop: !0
         });
@@ -111,7 +106,7 @@ let _ = (e) => {
             initialized: e,
             loading: t,
             items: n.filter((e) => 'notification-center-item' === e.kind),
-            hasMore: i,
-            loadMore: a
+            hasMore: r,
+            loadMore: i
         };
     };

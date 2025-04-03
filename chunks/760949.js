@@ -1,62 +1,57 @@
-a.r(e),
-    a.d(e, {
-        default: function () {
-            return x;
-        }
-    }),
-    a(47120);
-var n = a(735250),
-    s = a(470079),
-    o = a(120356),
-    r = a.n(o),
-    i = a(481060),
-    l = a(37234),
-    d = a(479531),
-    c = a(703656),
-    u = a(695346),
-    E = a(981631),
-    _ = a(689938),
-    h = a(550172),
-    T = a(224499);
-function x(t) {
-    let { transitionState: e, onClose: a } = t,
-        [o, x] = s.useState(!1),
-        [A, g] = s.useState(null),
-        m = async () => {
-            g(null), x(!0);
+n.d(e, { default: () => k }), n(47120);
+var s = n(200651),
+    r = n(192379),
+    a = n(120356),
+    i = n.n(a),
+    o = n(481060),
+    l = n(37234),
+    c = n(479531),
+    d = n(703656),
+    x = n(695346),
+    u = n(981631),
+    h = n(332495),
+    b = n(388032),
+    m = n(381528),
+    g = n(20493);
+function k(t) {
+    let { transitionState: e, onClose: n } = t,
+        [a, k] = r.useState(!1),
+        [p, N] = r.useState(null),
+        C = async () => {
+            N(null), k(!0);
             try {
-                await u.Ex.updateSetting(!1), (0, c.uL)(E.Z5c.FRIENDS), (0, l.xf)(), a();
+                await x.Ex.updateSetting(!1), (0, d.uL)(u.Z5c.FRIENDS), (0, l.xf)(), n();
             } catch (t) {
-                g(new d.Z(t).getAnyErrorMessage());
+                N(new c.Z(t).getAnyErrorMessage());
             } finally {
-                x(!1);
+                k(!1);
             }
         },
-        b = () => {
-            (0, c.uL)(E.Z5c.SETTINGS('family-center')), a();
+        j = () => {
+            (0, d.uL)(u.Z5c.SETTINGS('family-center')), n();
         };
-    return (0, n.jsxs)(i.ModalRoot, {
-        className: h.root,
+    return (0, s.jsxs)(o.Y0X, {
+        className: m.root,
         transitionState: e,
         children: [
-            (0, n.jsxs)(i.ModalHeader, {
+            (0, s.jsxs)(o.xBx, {
                 separator: !1,
-                className: h.header,
+                className: m.header,
                 children: [
-                    (0, n.jsx)(i.Heading, {
+                    (0, s.jsx)(o.X6q, {
                         variant: 'heading-lg/semibold',
-                        className: h.title,
-                        children: _.Z.Messages.FAMILY_CENTER_DISABLE_FEATURE_MODAL_HEADER_TEXT
+                        className: m.title,
+                        children: b.NW.string(h.Z.VGB30N)
                     }),
-                    (0, n.jsx)(i.Text, {
+                    (0, s.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        className: h.subtitle,
-                        children: _.Z.Messages.FAMILY_CENTER_DISABLE_FEATURE_MODAL_SUBTITLE_TEXT.format({
+                        className: m.subtitle,
+                        children: b.NW.format(h.Z['CrZZ+v'], {
                             openSettingsHook: (t, e) =>
-                                (0, n.jsx)(
-                                    i.Anchor,
+                                (0, s.jsx)(
+                                    o.eee,
                                     {
-                                        onClick: b,
+                                        onClick: j,
                                         children: t
                                     },
                                     e
@@ -65,32 +60,32 @@ function x(t) {
                     })
                 ]
             }),
-            (0, n.jsxs)(i.ModalContent, {
+            (0, s.jsxs)(o.hzk, {
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: r()(h.buttonContainer, T.marginTop20),
+                    (0, s.jsxs)('div', {
+                        className: i()(m.buttonContainer, g.marginTop20),
                         children: [
-                            (0, n.jsx)(i.Button, {
+                            (0, s.jsx)(o.zxk, {
                                 type: 'submit',
-                                className: T.marginBottom8,
+                                className: g.marginBottom8,
                                 grow: !0,
-                                color: i.Button.Colors.RED,
-                                onClick: m,
-                                submitting: o,
-                                children: _.Z.Messages.FAMILY_CENTER_DISABLE_FEATURE_MODAL_DISABLE_BUTTON_TEXT
+                                color: o.zxk.Colors.RED,
+                                onClick: C,
+                                submitting: a,
+                                children: b.NW.string(h.Z.cSb7U1)
                             }),
-                            (0, n.jsx)(i.Button, {
+                            (0, s.jsx)(o.zxk, {
                                 grow: !0,
-                                color: i.Button.Colors.PRIMARY,
-                                onClick: a,
-                                children: _.Z.Messages.CANCEL
+                                color: o.zxk.Colors.PRIMARY,
+                                onClick: n,
+                                children: b.NW.string(b.t['ETE/oK'])
                             })
                         ]
                     }),
-                    (0, n.jsx)(i.Text, {
+                    (0, s.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-danger',
-                        children: A
+                        children: p
                     })
                 ]
             })

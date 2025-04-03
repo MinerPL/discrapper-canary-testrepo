@@ -1,49 +1,50 @@
-n(627341);
-var s = n(735250),
-    a = n(470079),
-    r = n(120356),
-    i = n.n(r),
+n.d(t, { Z: () => W }), n(266796), n(627341);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(278074),
     o = n(91192),
     c = n(481060),
     d = n(209613),
-    _ = n(82295),
-    u = n(863653),
-    E = n(785681),
-    T = n(485664),
-    I = n(880257),
-    R = n(631885),
-    C = n(895328),
-    g = n(568671),
-    p = n(419821),
-    N = n(367515),
-    A = n(250285),
-    m = n(292352),
-    f = n(134612),
-    S = n(689938),
-    h = n(548902),
-    M = n(224499),
-    x = n(926895);
-function O(e) {
-    let { header: t, description: n, stepNumber: a } = e;
-    return (0, s.jsxs)('div', {
-        className: h.step,
+    u = n(82295),
+    m = n(785681),
+    g = n(485664),
+    p = n(880257),
+    h = n(631885),
+    f = n(895328),
+    b = n(568671),
+    N = n(419821),
+    x = n(367515),
+    _ = n(250285),
+    E = n(292352),
+    j = n(134612),
+    O = n(332495),
+    C = n(388032),
+    S = n(589608),
+    v = n(34997),
+    T = n(20493),
+    I = n(926895);
+function y(e) {
+    let { header: t, description: n, stepNumber: i } = e;
+    return (0, r.jsxs)('div', {
+        className: v.step,
         children: [
-            (0, s.jsx)('div', {
-                className: h.stepNumber,
-                children: (0, s.jsx)(c.Heading, {
+            (0, r.jsx)('div', {
+                className: v.stepNumber,
+                children: (0, r.jsx)(c.X6q, {
                     variant: 'heading-md/semibold',
                     color: 'text-brand',
-                    children: (0, s.jsx)(c.HeadingLevel, { children: a })
+                    children: (0, r.jsx)(c.y5t, { children: i })
                 })
             }),
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 children: [
-                    (0, s.jsx)(c.Heading, {
+                    (0, r.jsx)(c.X6q, {
                         variant: 'heading-sm/bold',
-                        children: (0, s.jsx)(c.HeadingLevel, { children: t })
+                        children: (0, r.jsx)(c.y5t, { children: t })
                     }),
-                    (0, s.jsx)(c.Text, {
+                    (0, r.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
                         children: n
@@ -53,52 +54,51 @@ function O(e) {
         ]
     });
 }
-function b() {
-    return (0, s.jsxs)('div', {
-        className: i()(h.box, h.linkingBanner, h.linkingBannerParent),
+function A() {
+    return (0, r.jsxs)('div', {
+        className: a()(v.box, S.box, v.linkingBanner, v.linkingBannerParent),
         children: [
-            (0, s.jsxs)('div', {
-                className: i()(h.linkingBannerUpper),
+            (0, r.jsxs)('div', {
+                className: v.linkingBannerUpper,
                 children: [
-                    (0, s.jsxs)('div', {
-                        className: h.__invalid_header,
+                    (0, r.jsxs)('div', {
                         children: [
-                            (0, s.jsx)(c.Heading, {
-                                className: M.marginBottom8,
+                            (0, r.jsx)(c.X6q, {
+                                className: T.marginBottom8,
                                 variant: 'heading-xl/medium',
-                                children: (0, s.jsx)(c.HeadingLevel, { children: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_PARENT })
+                                children: (0, r.jsx)(c.y5t, { children: C.NW.string(O.Z.pHEnV1) })
                             }),
-                            (0, s.jsx)(c.Text, {
+                            (0, r.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-muted',
-                                className: M.marginBottom20,
-                                children: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_PARENT
+                                className: T.marginBottom20,
+                                children: C.NW.string(O.Z['1J/gZ2'])
                             })
                         ]
                     }),
-                    (0, s.jsx)('img', {
-                        className: h.bannerArt,
-                        src: x,
-                        alt: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
+                    (0, r.jsx)('img', {
+                        className: v.bannerArt,
+                        src: I,
+                        alt: C.NW.string(O.Z['r+PDmp'])
                     })
                 ]
             }),
-            (0, s.jsxs)('div', {
-                className: h.steps,
+            (0, r.jsxs)('div', {
+                className: v.steps,
                 children: [
-                    (0, s.jsx)(O, {
-                        header: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
-                        description: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
+                    (0, r.jsx)(y, {
+                        header: C.NW.string(O.Z['7xxAnp']),
+                        description: C.NW.string(O.Z['1M9So6']),
                         stepNumber: 1
                     }),
-                    (0, s.jsx)(O, {
-                        header: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
-                        description: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
+                    (0, r.jsx)(y, {
+                        header: C.NW.string(O.Z['AXgx+f']),
+                        description: C.NW.string(O.Z.GzMFnZ),
                         stepNumber: 2
                     }),
-                    (0, s.jsx)(O, {
-                        header: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
-                        description: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
+                    (0, r.jsx)(y, {
+                        header: C.NW.string(O.Z.MZn1tL),
+                        description: C.NW.string(O.Z['8rLBxM']),
                         stepNumber: 3
                     })
                 ]
@@ -107,66 +107,65 @@ function b() {
     });
 }
 function P() {
-    let e = (0, R.VM)();
-    return (0, s.jsxs)('div', {
-        className: i()(h.box, h.linkingBanner),
+    let e = (0, h.VM)();
+    return (0, r.jsxs)('div', {
+        className: a()(v.box, S.box, v.linkingBanner),
         children: [
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 children: [
-                    (0, s.jsx)(c.Heading, {
-                        className: M.marginBottom8,
+                    (0, r.jsx)(c.X6q, {
+                        className: T.marginBottom8,
                         variant: 'heading-xl/medium',
-                        children: (0, s.jsx)(c.HeadingLevel, { children: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN })
+                        children: (0, r.jsx)(c.y5t, { children: C.NW.string(O.Z.zUCWEB) })
                     }),
-                    (0, s.jsx)(c.Text, {
+                    (0, r.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
-                        className: M.marginBottom20,
-                        children: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({ link: 'https://support.discord.com/hc/articles/14155060633623' })
+                        className: T.marginBottom20,
+                        children: C.NW.format(O.Z.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
-                    e ? null : (0, s.jsx)(g.Z, {})
+                    e ? null : (0, r.jsx)(b.Z, {})
                 ]
             }),
-            (0, s.jsx)('img', {
-                className: h.bannerArt,
-                src: x,
-                alt: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
+            (0, r.jsx)('img', {
+                className: v.bannerArt,
+                src: I,
+                alt: C.NW.string(O.Z['r+PDmp'])
             })
         ]
     });
 }
-function v(e) {
-    let { sectionType: t, sectionTitle: n, requests: r } = e,
-        i = a.useRef(null),
+function R(e) {
+    let { sectionType: t, sectionTitle: n, requests: s } = e,
+        a = i.useRef(null),
         l = ''.concat(t, '-list'),
-        u = (0, d.Z)(l),
-        E = a.useCallback(
+        m = (0, d.Z)(l),
+        g = i.useCallback(
             (e) => {
-                let { row: n, listIndex: a } = e,
-                    i = r[n],
-                    l = a === r.length;
-                return null == i
+                let { row: n, listIndex: i } = e,
+                    a = s[n],
+                    l = i === s.length;
+                return null == a
                     ? null
-                    : (0, s.jsx)(
-                          A.Z,
+                    : (0, r.jsx)(
+                          _.Z,
                           {
-                              userId: i.id,
+                              userId: a.id,
                               isLast: l,
-                              children: () => (t === m.ne.ACTIVE ? (0, s.jsx)(p.u, { user: i }) : (0, s.jsx)(N.B, { user: i }))
+                              children: () => (t === E.ne.ACTIVE ? (0, r.jsx)(N.u, { user: a }) : (0, r.jsx)(x.B, { user: a }))
                           },
-                          i.id
+                          a.id
                       );
             },
-            [r, t]
+            [s, t]
         ),
-        T = a.useCallback(
+        p = i.useCallback(
             () =>
-                (0, s.jsx)(
-                    _.Z,
+                (0, r.jsx)(
+                    u.Z,
                     {
-                        className: h.__invalid_sectionTitle,
-                        children: (0, s.jsx)(c.Text, {
-                            className: M.marginBottom8,
+                        children: (0, r.jsx)(c.Text, {
+                            className: T.marginBottom8,
                             variant: 'eyebrow',
                             color: 'header-secondary',
                             children: n
@@ -176,32 +175,76 @@ function v(e) {
                 ),
             [n]
         );
-    return (0, s.jsx)('div', {
-        className: h.section,
-        children: (0, s.jsx)(o.bG, {
-            navigator: u,
-            children: (0, s.jsx)(o.SJ, {
+    return (0, r.jsx)('div', {
+        className: v.section,
+        children: (0, r.jsx)(o.bG, {
+            navigator: m,
+            children: (0, r.jsx)(o.SJ, {
                 children: (e) => {
-                    let { ref: t, role: a, ...o } = e;
-                    return (0, s.jsx)(
-                        c.List,
-                        {
-                            className: h.__invalid_list,
-                            innerRole: a,
-                            innerAriaLabel: n,
-                            ref: (e) => {
-                                var n;
-                                (i.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+                    var { ref: t, role: i } = e,
+                        o = (function (e, t) {
+                            if (null == e) return {};
+                            var n,
+                                r,
+                                i = (function (e, t) {
+                                    if (null == e) return {};
+                                    var n,
+                                        r,
+                                        i = {},
+                                        s = Object.keys(e);
+                                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                    return i;
+                                })(e, t);
+                            if (Object.getOwnPropertySymbols) {
+                                var s = Object.getOwnPropertySymbols(e);
+                                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                            }
+                            return i;
+                        })(e, ['ref', 'role']);
+                    return (0, r.jsx)(
+                        c.aVo,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })(
+                            {
+                                innerRole: i,
+                                innerAriaLabel: n,
+                                ref: (e) => {
+                                    var n;
+                                    (a.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
+                                },
+                                sectionHeight: E.zE,
+                                rowHeight: E.ip,
+                                renderSection: p,
+                                renderRow: g,
+                                sections: [s.length],
+                                chunkSize: 30,
+                                fade: !0
                             },
-                            sectionHeight: m.zE,
-                            rowHeight: m.ip,
-                            renderSection: T,
-                            renderRow: E,
-                            sections: [r.length],
-                            chunkSize: 30,
-                            fade: !0,
-                            ...o
-                        },
+                            o
+                        ),
                         l
                     );
                 }
@@ -209,48 +252,45 @@ function v(e) {
         })
     });
 }
-let L = () => {
-        let e = (0, I.Z)(),
-            t = (0, R.mq)(m.ne.ACTIVE),
-            n = e ? m.AG : m.i0,
-            a = {
+let D = () => {
+        let e = (0, p.Z)(),
+            t = (0, h.mq)(E.ne.ACTIVE),
+            n = e ? E.AG : E.i0,
+            i = {
                 count: t.length,
                 max: n
             },
-            r = (0, E.o)(S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(a), S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(a));
-        return (0, s.jsx)(s.Fragment, {
-            children:
-                t.length > 0
-                    ? (0, s.jsx)(v, {
-                          sectionType: m.ne.ACTIVE,
-                          sectionTitle: r,
-                          requests: t
+            s = (0, m.o)(C.NW.formatToPlainString(O.Z['+tnO39'], i), C.NW.formatToPlainString(O.Z['pu6/U1'], i));
+        return t.length > 0
+            ? (0, r.jsx)(R, {
+                  sectionType: E.ne.ACTIVE,
+                  sectionTitle: s,
+                  requests: t
+              })
+            : (0, r.jsxs)('div', {
+                  className: v.section,
+                  children: [
+                      (0, r.jsx)(c.Text, {
+                          className: T.marginBottom8,
+                          variant: 'eyebrow',
+                          color: 'header-secondary',
+                          children: s
+                      }),
+                      (0, r.jsx)('div', {
+                          className: v.box,
+                          children: (0, r.jsx)(f.Z, { text: C.NW.string(O.Z.C4ScLC) })
                       })
-                    : (0, s.jsxs)('div', {
-                          className: h.section,
-                          children: [
-                              (0, s.jsx)(c.Text, {
-                                  className: M.marginBottom8,
-                                  variant: 'eyebrow',
-                                  color: 'header-secondary',
-                                  children: r
-                              }),
-                              (0, s.jsx)('div', {
-                                  className: h.box,
-                                  children: (0, s.jsx)(C.Z, { text: S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_EMPTY_DESCRIPTION })
-                              })
-                          ]
-                      })
-        });
+                  ]
+              });
     },
     Z = () => {
-        let e = (0, R.VM)(),
-            t = (0, I.Z)() ? m.AG : m.i0,
-            n = (0, E.o)(S.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({ maxConnections: t }), S.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({ maxConnections: t }));
+        let e = (0, h.VM)(),
+            t = (0, p.Z)() ? E.AG : E.i0,
+            n = (0, m.o)(C.NW.formatToPlainString(O.Z['1/PzIi'], { maxConnections: t }), C.NW.formatToPlainString(O.Z.RcTgiI, { maxConnections: t }));
         return e
-            ? (0, s.jsx)('div', {
-                  className: h.maxConnectionInfo,
-                  children: (0, s.jsx)(c.Text, {
+            ? (0, r.jsx)('div', {
+                  className: v.maxConnectionInfo,
+                  children: (0, r.jsx)(c.Text, {
                       variant: 'text-xxs/medium',
                       color: 'text-muted',
                       children: n
@@ -258,27 +298,27 @@ let L = () => {
               })
             : null;
     },
-    D = () => {
-        let e = (0, T.o)(),
-            t = (0, u.zF)('family-center-requests-page-desktop'),
+    w = () => {
+        let e = (0, g.o)(),
+            t = (0, g.Q)(),
             n = (0, l.EQ)({
                 helpline: e,
                 throughline: t
             })
-                .with({ helpline: !0 }, () => S.Z.Messages.FAMILY_CENTER_HELP_LINE_CONTENT.format({ helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
-                .with({ throughline: !0 }, () => S.Z.Messages.FAMILY_CENTER_THROUGHLINE_CONTENT.format({ helpLink: f.$l }))
+                .with({ helpline: !0 }, () => C.NW.format(O.Z.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
+                .with({ throughline: !0 }, () => C.NW.format(O.Z['6tsC8v'], { helpLink: j.$l }))
                 .otherwise(() => null);
         return null == n
             ? null
-            : (0, s.jsxs)('div', {
-                  className: i()(h.__invalid_helpLineInfo, M.marginTop20),
+            : (0, r.jsxs)('div', {
+                  className: a()(v.__invalid_helpLineInfo, T.marginTop20),
                   children: [
-                      (0, s.jsx)(c.Heading, {
-                          className: h.supportHeader,
+                      (0, r.jsx)(c.X6q, {
+                          className: v.supportHeader,
                           variant: 'heading-sm/semibold',
-                          children: (0, s.jsx)(c.HeadingLevel, { children: S.Z.Messages.FAMILY_CENTER_HELP_LINE_HEADER })
+                          children: (0, r.jsx)(c.y5t, { children: C.NW.string(O.Z['7/tVho']) })
                       }),
-                      (0, s.jsx)(c.Text, {
+                      (0, r.jsx)(c.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-muted',
                           children: n
@@ -286,21 +326,21 @@ let L = () => {
                   ]
               });
     },
-    B = () => {
-        let e = (0, R.mq)(m.ne.PENDING),
-            t = (0, E.o)(S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({ count: e.length }), S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({ count: e.length }));
+    k = () => {
+        let e = (0, h.mq)(E.ne.PENDING),
+            t = (0, m.o)(C.NW.formatToPlainString(O.Z.IkAgkJ, { count: e.length }), C.NW.formatToPlainString(O.Z.Q8XnAQ, { count: e.length }));
         return 0 === e.length
             ? null
-            : (0, s.jsx)(v, {
-                  sectionType: m.ne.PENDING,
+            : (0, r.jsx)(R, {
+                  sectionType: E.ne.PENDING,
                   sectionTitle: t,
                   requests: e
               });
+    },
+    W = () => {
+        let e = (0, p.Z)();
+        return (0, r.jsxs)('div', {
+            className: v.container,
+            children: [e ? (0, r.jsx)(A, {}) : (0, r.jsx)(P, {}), (0, r.jsx)(D, {}), (0, r.jsx)(k, {}), (0, r.jsx)(Z, {}), (0, r.jsx)(w, {})]
+        });
     };
-t.Z = () => {
-    let e = (0, I.Z)();
-    return (0, s.jsxs)('div', {
-        className: h.container,
-        children: [e ? (0, s.jsx)(b, {}) : (0, s.jsx)(P, {}), (0, s.jsx)(L, {}), (0, s.jsx)(B, {}), (0, s.jsx)(Z, {}), (0, s.jsx)(D, {})]
-    });
-};

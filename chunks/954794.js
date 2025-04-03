@@ -1,119 +1,115 @@
-t.d(s, {
-    Z: function () {
-        return T;
-    }
-});
-var n = t(735250),
-    a = t(470079),
-    i = t(442837),
-    r = t(692547),
-    o = t(481060),
-    l = t(768762),
-    c = t(823379),
-    d = t(882029),
-    _ = t(955204),
-    E = t(248998),
-    u = t(689938),
-    I = t(914480);
-function T(e) {
-    let { onBackClick: s } = e,
-        t = (0, i.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
-        T = a.useMemo(() => Object.values(t).sort((e, s) => s.dateUnlocked - e.dateUnlocked), [t]),
-        S = a.useMemo(
+n.d(t, { Z: () => h }), n(230036);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(692547),
+    l = n(481060),
+    o = n(768762),
+    c = n(823379),
+    d = n(882029),
+    u = n(955204),
+    m = n(248998),
+    g = n(388032),
+    p = n(167407);
+function h(e) {
+    let { onBackClick: t } = e,
+        n = (0, s.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
+        h = i.useMemo(() => Object.values(n).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [n]),
+        f = i.useMemo(
             () =>
-                Object.values(_.LG)
+                Object.values(u.LG)
                     .filter(c.lm)
-                    .filter((e) => null == t[e.id])
-                    .sort((e, s) => e.rarity - s.rarity),
-            [t]
+                    .filter((e) => null == n[e.id])
+                    .sort((e, t) => e.rarity - t.rarity),
+            [n]
         );
-    return (0, n.jsxs)(n.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(o.FormSection, {
-                children: (0, n.jsxs)(o.Clickable, {
-                    onClick: s,
-                    className: I.backContainer,
+            (0, r.jsx)(l.hjN, {
+                children: (0, r.jsxs)(l.P3F, {
+                    onClick: t,
+                    className: p.backContainer,
                     children: [
-                        (0, n.jsx)(l.Z, {
-                            direction: l.Z.Directions.LEFT,
-                            className: I.icon
+                        (0, r.jsx)(o.Z, {
+                            direction: o.Z.Directions.LEFT,
+                            className: p.icon
                         }),
-                        (0, n.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-lg/normal',
                             color: 'text-normal',
-                            children: u.Z.Messages.BACK
+                            children: g.NW.string(g.t['13/7kZ'])
                         })
                     ]
                 })
             }),
-            (0, n.jsxs)('div', {
-                className: I.headerContainer,
+            (0, r.jsxs)('div', {
+                className: p.headerContainer,
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: I.headerTextContainer,
+                    (0, r.jsxs)('div', {
+                        className: p.headerTextContainer,
                         children: [
-                            (0, n.jsx)(o.Heading, {
+                            (0, r.jsx)(l.X6q, {
                                 variant: 'heading-lg/extrabold',
                                 color: 'header-primary',
-                                children: u.Z.Messages.POGGERMODE_ACHIEVEMENT_TITLE
+                                children: g.NW.string(g.t['6jI0hY'])
                             }),
-                            (0, n.jsx)(o.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
-                                children: u.Z.Messages.POGGERMODE_ACHIEVEMENT_DESCRIPTION
+                                children: g.NW.string(g.t.GuUItb)
                             })
                         ]
                     }),
-                    (0, n.jsx)('div', {
-                        className: I.headerIcon,
-                        children: (0, n.jsx)(o.TrophyIcon, {
+                    (0, r.jsx)('div', {
+                        className: p.headerIcon,
+                        children: (0, r.jsx)(l.rm8, {
                             size: 'custom',
-                            color: r.Z.unsafe_rawColors.ORANGE_345.css,
+                            color: a.Z.unsafe_rawColors.ORANGE_345.css,
                             width: 40,
                             height: 40
                         })
                     })
                 ]
             }),
-            T.length > 0 &&
-                (0, n.jsx)(o.FormSection, {
-                    className: I.divider,
-                    children: (0, n.jsx)('div', {
-                        className: I.achievementGrid,
-                        children: T.map((e) => {
-                            let { achievementId: s, dateUnlocked: t } = e;
-                            return (0, n.jsx)(
-                                E.Z,
+            h.length > 0 &&
+                (0, r.jsx)(l.hjN, {
+                    className: p.divider,
+                    children: (0, r.jsx)('div', {
+                        className: p.achievementGrid,
+                        children: h.map((e) => {
+                            let { achievementId: t, dateUnlocked: n } = e;
+                            return (0, r.jsx)(
+                                m.Z,
                                 {
-                                    achievementId: s,
-                                    dateUnlocked: t
+                                    achievementId: t,
+                                    dateUnlocked: n
                                 },
-                                s
+                                t
                             );
                         })
                     })
                 }),
-            S.length > 0 &&
-                (0, n.jsxs)(o.FormSection, {
-                    className: I.divider,
+            f.length > 0 &&
+                (0, r.jsxs)(l.hjN, {
+                    className: p.divider,
                     children: [
-                        (0, n.jsx)('div', {
-                            className: I.headerTextContainer,
-                            children: (0, n.jsx)(o.Text, {
+                        (0, r.jsx)('div', {
+                            className: p.headerTextContainer,
+                            children: (0, r.jsx)(l.Text, {
                                 variant: 'text-md/bold',
                                 color: 'header-secondary',
-                                children: u.Z.Messages.POGGERMODE_ACHIEVEMENT_LOCKED_TITLE
+                                children: g.NW.string(g.t.GFyMg4)
                             })
                         }),
-                        (0, n.jsx)('div', {
-                            className: I.achievementGrid,
-                            children: S.map((e) => (0, n.jsx)(E.Z, { achievementId: e.id }, e.id))
+                        (0, r.jsx)('div', {
+                            className: p.achievementGrid,
+                            children: f.map((e) => (0, r.jsx)(m.Z, { achievementId: e.id }, e.id))
                         })
                     ]
                 }),
-            (0, n.jsx)(o.FormSection, {
-                className: I.divider,
-                children: (0, n.jsx)('div', { className: I.bottomPadding })
+            (0, r.jsx)(l.hjN, {
+                className: p.divider,
+                children: (0, r.jsx)('div', { className: p.bottomPadding })
             })
         ]
     });

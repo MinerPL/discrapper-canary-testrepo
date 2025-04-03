@@ -1,96 +1,92 @@
 n.d(t, {
-    C: function () {
-        return W;
-    },
-    K: function () {
-        return k;
-    }
+    C: () => z,
+    K: () => M
 }),
     n(47120),
+    n(266796),
+    n(13667),
     n(390547);
-var s,
-    a,
-    i = n(735250),
-    r = n(470079),
-    l = n(120356),
-    o = n.n(l),
-    c = n(77866),
-    d = n(149765),
-    u = n(866442),
-    _ = n(442837),
-    I = n(902704),
-    E = n(477690),
-    T = n(481060),
-    m = n(596454),
-    N = n(471445),
-    S = n(605436),
-    h = n(91218),
-    g = n(313201),
-    C = n(339085),
-    x = n(518738),
-    p = n(131704),
-    R = n(324067),
-    f = n(430824),
-    L = n(259580),
-    O = n(624138),
-    A = n(817460),
-    M = n(166803),
-    D = n(629262),
-    v = n(686807),
-    j = n(981631),
-    Z = n(689938),
-    b = n(898414);
-let U = (0, g.hQ)(),
-    G = (0, g.hQ)(),
-    P = (0, O.Mg)(E.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
-function B(e) {
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(149765),
+    o = n(866442),
+    c = n(442837),
+    d = n(902704),
+    u = n(477690),
+    m = n(481060),
+    g = n(596454),
+    p = n(211266),
+    h = n(471445),
+    f = n(605436),
+    b = n(91218),
+    x = n(313201),
+    j = n(339085),
+    N = n(518738),
+    _ = n(131704),
+    v = n(324067),
+    C = n(430824),
+    O = n(259580),
+    y = n(624138),
+    I = n(817460),
+    E = n(166803),
+    S = n(629262),
+    T = n(686807),
+    P = n(981631),
+    w = n(388032),
+    R = n(818771);
+let Z = (0, x.hQ)(),
+    D = (0, x.hQ)(),
+    A = (0, y.Mg)(u.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+function k(e) {
     var t;
-    let { emojiId: n, emojiName: s, className: a } = e,
-        r = (0, _.e7)([C.ZP], () => (null != n ? C.ZP.getCustomEmojiById(n) : void 0));
-    return (0, i.jsx)(m.Z, {
+    let { emojiId: n, emojiName: i, className: s } = e,
+        a = (0, c.e7)([j.ZP], () => (null != n ? j.ZP.getCustomEmojiById(n) : void 0));
+    return (0, r.jsx)(g.Z, {
         emojiId: n,
-        emojiName: s,
-        animated: null !== (t = null == r ? void 0 : r.animated) && void 0 !== t && t,
-        className: a
+        emojiName: i,
+        animated: null != (t = null == a ? void 0 : a.animated) && t,
+        className: s
     });
 }
-function y(e) {
-    let { icon: t, children: n, checked: s, disabled: a = !1, onChange: r } = e,
-        l = s || a;
-    return (0, i.jsxs)('label', {
-        className: o()(b.row, {
-            [b.checked]: l,
-            [b.disabled]: a
+function W(e) {
+    let { icon: t, children: n, checked: i, disabled: s = !1, onChange: l } = e,
+        o = i || s;
+    return (0, r.jsxs)('label', {
+        className: a()(R.row, {
+            [R.checked]: o,
+            [R.disabled]: s
         }),
         children: [
-            (0, i.jsx)('div', {
-                className: b.rowIconWrapper,
+            (0, r.jsx)('div', {
+                className: R.rowIconWrapper,
                 children: t
             }),
-            (0, i.jsx)('div', {
-                className: b.rowText,
+            (0, r.jsx)('div', {
+                className: R.rowText,
                 children: n
             }),
-            (0, i.jsxs)('div', {
-                className: b.rowCheckbox,
+            (0, r.jsxs)('div', {
+                className: R.rowCheckbox,
                 children: [
-                    (0, i.jsx)(T.FocusRing, {
-                        children: (0, i.jsx)('input', {
+                    (0, r.jsx)(m.tEY, {
+                        children: (0, r.jsx)('input', {
                             type: 'checkbox',
-                            checked: l,
-                            disabled: a,
-                            className: b.checkboxInput,
+                            checked: o,
+                            disabled: s,
+                            className: R.checkboxInput,
                             onChange: function (e) {
-                                r(e.target.checked);
+                                l(e.target.checked);
                             }
                         })
                     }),
-                    (0, i.jsx)('div', {
-                        className: b.checkboxDisplay,
-                        children: (0, i.jsx)(T.CheckmarkLargeIcon, {
+                    (0, r.jsx)('div', {
+                        className: R.checkboxDisplay,
+                        children: (0, r.jsx)(m.dz2, {
                             size: 'md',
                             color: 'currentColor',
-                            className: b.checkboxIcon,
+                            className: R.checkboxIcon,
                             'aria-hidden': !0
                         })
                     })
@@ -99,62 +95,62 @@ function y(e) {
         ]
     });
 }
-function F(e) {
-    let { title: t, selectAllText: n, benefits: s, dupeBenefits: a, selectedBenefits: r, onToggleBenefit: l } = e,
-        o = s.every((e) => r.has(e));
-    return s.length > 0
-        ? (0, i.jsxs)(T.FormSection, {
+function L(e) {
+    let { title: t, selectAllText: n, benefits: i, dupeBenefits: s, selectedBenefits: a, onToggleBenefit: l } = e,
+        o = i.every((e) => a.has(e));
+    return i.length > 0
+        ? (0, r.jsxs)(m.hjN, {
               title: t,
-              className: b.section,
+              className: R.section,
               children: [
-                  s.length - a.size > 1 &&
-                      (0, i.jsx)('div', {
-                          className: b.list,
-                          children: (0, i.jsx)(y, {
-                              icon: (0, i.jsx)(T.ChannelListPlusIcon, {
+                  i.length - s.size > 1 &&
+                      (0, r.jsx)('div', {
+                          className: R.list,
+                          children: (0, r.jsx)(W, {
+                              icon: (0, r.jsx)(m.avL, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: b.rowIcon
+                                  className: R.rowIcon
                               }),
                               checked: o,
                               onChange: function (e) {
-                                  for (let t of s) !a.has(t) && l(t, e);
+                                  for (let t of i) s.has(t) || l(t, e);
                               },
-                              children: (0, i.jsx)(T.Text, {
+                              children: (0, r.jsx)(m.Text, {
                                   color: 'header-primary',
                                   variant: 'text-md/normal',
                                   children: n
                               })
                           })
                       }),
-                  (0, i.jsx)('div', {
-                      className: b.list,
-                      children: s.map((e) =>
-                          (0, i.jsxs)(
-                              y,
+                  (0, r.jsx)('div', {
+                      className: R.list,
+                      children: i.map((e) =>
+                          (0, r.jsxs)(
+                              W,
                               {
-                                  icon: (0, i.jsx)(B, {
+                                  icon: (0, r.jsx)(k, {
                                       emojiId: e.emoji_id,
                                       emojiName: e.emoji_name,
-                                      className: b.rowIcon
+                                      className: R.rowIcon
                                   }),
-                                  checked: r.has(e),
-                                  disabled: a.has(e),
+                                  checked: a.has(e),
+                                  disabled: s.has(e),
                                   onChange: (t) => l(e, t),
                                   children: [
-                                      (0, i.jsx)(T.Text, {
+                                      (0, r.jsx)(m.Text, {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
-                                          children: (0, v.Z)(e)
+                                          children: (0, T.Z)(e)
                                       }),
-                                      (0, i.jsx)(T.Text, {
+                                      (0, r.jsx)(m.Text, {
                                           color: 'interactive-normal',
                                           variant: 'text-sm/normal',
                                           children: e.description
                                       })
                                   ]
                               },
-                              (0, A.ab)(e)
+                              (0, I.ab)(e)
                           )
                       )
                   })
@@ -162,82 +158,81 @@ function F(e) {
           })
         : null;
 }
-function k(e) {
+function M(e) {
     let { transitionState: t, fromSubscriptionListing: n, existingChannelBenefits: s, existingIntangibleBenefits: a, onSubmit: l, onClose: o } = e,
         c = n.role_benefits.benefits,
-        [d, u] = r.useState(() => new Set(c)),
-        _ = r.useMemo(() => c.filter(A.rC), [c]),
-        E = (0, D.Z)(_),
-        m = r.useMemo(() => c.filter(A.lL), [c]),
-        N = r.useMemo(() => new Set(E.filter((e) => s.some((t) => t.ref_id === e.ref_id))), [E, s]),
-        S = r.useMemo(() => new Set(m.filter((e) => a.some((t) => (0, I.Z)(e, t)))), [a, m]),
-        h = (0, g.Dt)();
-    function C(e, t) {
-        u((n) => {
-            let s = new Set(n);
-            return t ? s.add(e) : s.delete(e), s;
+        [u, g] = i.useState(() => new Set(c)),
+        p = i.useMemo(() => c.filter(I.rC), [c]),
+        h = (0, S.Z)(p),
+        f = i.useMemo(() => c.filter(I.lL), [c]),
+        b = i.useMemo(() => new Set(h.filter((e) => s.some((t) => t.ref_id === e.ref_id))), [h, s]),
+        j = i.useMemo(() => new Set(f.filter((e) => a.some((t) => (0, d.Z)(e, t)))), [a, f]),
+        N = (0, x.Dt)();
+    function _(e, t) {
+        g((n) => {
+            let r = new Set(n);
+            return t ? r.add(e) : r.delete(e), r;
         });
     }
-    return (0, i.jsx)('form', {
+    return (0, r.jsx)('form', {
         onSubmit: function (e) {
             e.preventDefault();
-            let t = c.filter((e) => d.has(e)),
-                n = t.filter(A.rC).filter((e) => !N.has(e));
+            let t = c.filter((e) => u.has(e));
             l(
-                n,
-                t.filter(A.lL).filter((e) => !S.has(e))
+                t.filter(I.rC).filter((e) => !b.has(e)),
+                t.filter(I.lL).filter((e) => !j.has(e))
             ),
                 o();
         },
-        children: (0, i.jsxs)(T.ModalRoot, {
+        children: (0, r.jsxs)(m.Y0X, {
             transitionState: t,
-            'aria-labelledby': h,
+            'aria-labelledby': N,
             children: [
-                (0, i.jsxs)(T.ModalHeader, {
+                (0, r.jsxs)(m.xBx, {
                     children: [
-                        (0, i.jsx)(T.Heading, {
-                            id: h,
+                        (0, r.jsx)(m.X6q, {
+                            id: N,
                             variant: 'heading-md/semibold',
-                            children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_MODAL_HEADER.format({ tierName: n.name })
+                            children: w.NW.format(w.t['7zpiYG'], { tierName: n.name })
                         }),
-                        (0, i.jsx)(T.ModalCloseButton, {
-                            className: b.modalCloseButton,
+                        (0, r.jsx)(m.olH, {
+                            className: R.modalCloseButton,
                             onClick: o
                         })
                     ]
                 }),
-                (0, i.jsxs)(T.ModalContent, {
-                    className: b.modalContent,
+                (0, r.jsxs)(m.hzk, {
+                    className: R.modalContent,
                     children: [
-                        (0, i.jsx)(F, {
-                            title: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_TITLE,
-                            selectAllText: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_CHANNEL_BENEFITS,
-                            benefits: E,
-                            dupeBenefits: N,
-                            selectedBenefits: d,
-                            onToggleBenefit: C
+                        (0, r.jsx)(L, {
+                            title: w.NW.string(w.t.S2kKzM),
+                            selectAllText: w.NW.string(w.t['5Q/fLC']),
+                            benefits: h,
+                            dupeBenefits: b,
+                            selectedBenefits: u,
+                            onToggleBenefit: _
                         }),
-                        (0, i.jsx)(F, {
-                            title: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
-                            selectAllText: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_INTANGIBLE_BENEFITS,
-                            benefits: m,
-                            dupeBenefits: S,
-                            selectedBenefits: d,
-                            onToggleBenefit: C
+                        (0, r.jsx)(L, {
+                            title: w.NW.string(w.t.RdwKw8),
+                            selectAllText: w.NW.string(w.t.aJPLVF),
+                            benefits: f,
+                            dupeBenefits: j,
+                            selectedBenefits: u,
+                            onToggleBenefit: _
                         })
                     ]
                 }),
-                (0, i.jsxs)(T.ModalFooter, {
+                (0, r.jsxs)(m.mzw, {
                     children: [
-                        (0, i.jsx)(T.Button, {
+                        (0, r.jsx)(m.zxk, {
                             type: 'submit',
-                            children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_CONFIRM_BUTTON
+                            children: w.NW.string(w.t['27a219'])
                         }),
-                        (0, i.jsx)(T.Button, {
-                            look: T.Button.Looks.LINK,
-                            color: T.Button.Colors.PRIMARY,
+                        (0, r.jsx)(m.zxk, {
+                            look: m.zxk.Looks.LINK,
+                            color: m.zxk.Colors.PRIMARY,
                             onClick: o,
-                            children: Z.Z.Messages.CANCEL
+                            children: w.NW.string(w.t['ETE/oK'])
                         })
                     ]
                 })
@@ -245,65 +240,92 @@ function k(e) {
         })
     });
 }
-function w(e) {
+function G(e) {
     var t;
-    let { guildId: n, role: s, channelCount: a, onSelect: r } = e,
-        l = (0, x.p9)({
+    let { guildId: n, role: i, channelCount: s, onSelect: a } = e,
+        l = (0, N.p9)({
             guildId: n,
-            roleId: s.id,
-            size: P
+            roleId: i.id,
+            size: A
         });
-    return (0, i.jsxs)(T.Clickable, {
-        className: b.roleRow,
-        onClick: r,
+    return (0, r.jsxs)(m.P3F, {
+        className: R.roleRow,
+        onClick: a,
         children: [
-            (0, i.jsx)('div', {
-                className: b.rowIconWrapper,
+            (0, r.jsx)('div', {
+                className: R.rowIconWrapper,
                 children:
                     null != l
-                        ? (0, i.jsx)(h.Z, { ...l })
-                        : (0, i.jsx)(T.ShieldUserIcon, {
+                        ? (0, r.jsx)(
+                              b.Z,
+                              (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(n);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                              })
+                                          )),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: r,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = r);
+                                          });
+                                  }
+                                  return e;
+                              })({}, l)
+                          )
+                        : (0, r.jsx)(m.lZ8, {
                               size: 'custom',
                               width: 23,
                               height: 23,
-                              color: null !== (t = s.colorString) && void 0 !== t ? t : (0, u.Rf)(j.p6O),
-                              className: b.roleRowIconDefault
+                              color: null != (t = i.colorString) ? t : (0, o.Rf)(P.p6O),
+                              className: R.roleRowIconDefault
                           })
             }),
-            (0, i.jsxs)('div', {
-                className: b.rowText,
+            (0, r.jsxs)('div', {
+                className: R.rowText,
                 children: [
-                    (0, i.jsx)(T.Text, {
+                    (0, r.jsx)(m.Text, {
                         color: 'header-primary',
                         variant: 'text-md/normal',
-                        className: b.__invalid_benefitTitle,
-                        children: s.name
+                        className: R.__invalid_benefitTitle,
+                        children: i.name
                     }),
-                    (0, i.jsx)(T.Text, {
+                    (0, r.jsx)(m.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: Z.Z.Messages.NUM_CHANNELS.format({ num: a })
+                        children: w.NW.format(w.t['2KzH8/'], { num: s })
                     })
                 ]
             }),
-            (0, i.jsx)('div', {
-                className: b.rowCheckbox,
-                children: (0, i.jsx)(L.Z, { direction: L.Z.Directions.RIGHT })
+            (0, r.jsx)('div', {
+                className: R.rowCheckbox,
+                children: (0, r.jsx)(O.Z, { direction: O.Z.Directions.RIGHT })
             })
         ]
     });
 }
-function H(e) {
+function U(e) {
     let { guild: t, onSelect: n } = e,
-        s = (0, _.e7)([f.Z], () => f.Z.getRoles(t.id)),
-        a = (0, _.e7)([R.Z], () => R.Z.getCategories(t.id)),
-        l = r.useMemo(
+        s = (0, c.e7)([C.Z], () => C.Z.getRoles(t.id)),
+        a = (0, c.e7)([v.Z], () => v.Z.getCategories(t.id)),
+        o = i.useMemo(
             () =>
                 a._categories.flatMap((e) =>
                     a[e.channel.id]
                         .filter((e) => {
                             let { channel: t } = e;
-                            return p.zS.has(t.type);
+                            return _.zS.has(t.type);
                         })
                         .map((e) => {
                             let { channel: t } = e;
@@ -312,27 +334,27 @@ function H(e) {
                 ),
             [a]
         ),
-        o = r.useMemo(
+        d = i.useMemo(
             () =>
                 Object.values(s).flatMap((e) => {
                     var n;
-                    if ((0, S.pM)(t.id, e.id) || (null === (n = e.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null || d.Db(e.permissions, j.TC2)) return [];
-                    let s = (0, M.Z)(l, e).length;
-                    return s > 0
+                    if ((0, f.pM)(t.id, e.id) || (null == (n = e.tags) ? void 0 : n.subscription_listing_id) != null || l.Db(e.permissions, P.TC2)) return [];
+                    let r = (0, E.Z)(o, e).length;
+                    return r > 0
                         ? {
                               role: e,
-                              channelCount: s
+                              channelCount: r
                           }
                         : [];
                 }),
-            [t, s, l]
+            [t, s, o]
         );
-    return o.length > 0
-        ? (0, i.jsx)('div', {
-              className: b.list,
-              children: o.map((e) =>
-                  (0, i.jsx)(
-                      w,
+    return d.length > 0
+        ? (0, r.jsx)('div', {
+              className: R.list,
+              children: d.map((e) =>
+                  (0, r.jsx)(
+                      G,
                       {
                           guildId: t.id,
                           role: e.role,
@@ -343,53 +365,53 @@ function H(e) {
                   )
               )
           })
-        : (0, i.jsx)(T.Text, {
+        : (0, r.jsx)(m.Text, {
               variant: 'text-md/normal',
-              children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_SELECT_ROLE_EMPTY
+              children: w.NW.string(w.t.u09gKi)
           });
 }
-function V(e) {
-    let { onClose: t, guildId: n, onSelect: s } = e,
-        a = (0, _.e7)([f.Z], () => f.Z.getGuild(n));
-    return null == a
+function B(e) {
+    let { onClose: t, guildId: n, onSelect: i } = e,
+        s = (0, c.e7)([C.Z], () => C.Z.getGuild(n));
+    return null == s
         ? null
-        : (0, i.jsxs)(i.Fragment, {
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, i.jsxs)(T.ModalHeader, {
+                  (0, r.jsxs)(m.xBx, {
                       children: [
-                          (0, i.jsx)(T.Heading, {
-                              id: U,
+                          (0, r.jsx)(m.X6q, {
+                              id: Z,
                               variant: 'heading-md/semibold',
-                              children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_FROM_ROLE_MODAL_HEADER_1
+                              children: w.NW.string(w.t['3JrZ/P'])
                           }),
-                          (0, i.jsx)(T.ModalCloseButton, {
-                              className: b.modalCloseButton,
+                          (0, r.jsx)(m.olH, {
+                              className: R.modalCloseButton,
                               onClick: t
                           })
                       ]
                   }),
-                  (0, i.jsx)(T.ModalContent, {
-                      className: b.modalContent,
-                      children: (0, i.jsx)(H, {
-                          guild: a,
-                          onSelect: s
+                  (0, r.jsx)(m.hzk, {
+                      className: R.modalContent,
+                      children: (0, r.jsx)(U, {
+                          guild: s,
+                          onSelect: i
                       })
                   })
               ]
           });
 }
-function Y(e) {
+function F(e) {
     let { onClose: t, guildId: n, role: s, onCancel: a, onImport: l } = e,
-        o = r.useRef(s);
+        o = i.useRef(s);
     null != s && (o.current = s);
-    let d = null != s ? s : o.current,
-        u = (0, c.Z)(() => {
-            let e = R.Z.getCategories(n);
+    let c = null != s ? s : o.current,
+        d = (0, p.Z)(() => {
+            let e = v.Z.getCategories(n);
             return e._categories.flatMap((t) =>
                 e[t.channel.id]
                     .filter((e) => {
                         let { channel: t } = e;
-                        return p.zS.has(t.type);
+                        return _.zS.has(t.type);
                     })
                     .map((e) => {
                         let { channel: t } = e;
@@ -397,78 +419,78 @@ function Y(e) {
                     })
             );
         }),
-        _ = r.useMemo(() => (0, M.Z)(u, d), [u, d]),
-        [I, E] = r.useState(() => new Set(_.map((e) => e.id)));
-    function m(e, t) {
-        E((n) => {
-            let s = new Set(n);
-            return t ? s.add(e) : s.delete(e), s;
+        u = i.useMemo(() => (0, E.Z)(d, c), [d, c]),
+        [g, f] = i.useState(() => new Set(u.map((e) => e.id)));
+    function b(e, t) {
+        f((n) => {
+            let r = new Set(n);
+            return t ? r.add(e) : r.delete(e), r;
         });
     }
-    return (0, i.jsxs)('form', {
+    return (0, r.jsxs)('form', {
         onSubmit: function (e) {
-            e.preventDefault(), l(_.map((e) => e.id).filter((e) => I.has(e))), t();
+            e.preventDefault(), l(u.map((e) => e.id).filter((e) => g.has(e))), t();
         },
-        className: b.slideForm,
+        className: R.slideForm,
         children: [
-            (0, i.jsxs)(T.ModalHeader, {
+            (0, r.jsxs)(m.xBx, {
                 children: [
-                    (0, i.jsx)(T.Heading, {
-                        id: G,
+                    (0, r.jsx)(m.X6q, {
+                        id: D,
                         variant: 'heading-md/semibold',
-                        children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_FROM_ROLE_MODAL_HEADER_2.format({ roleName: d.name })
+                        children: w.NW.format(w.t.iuPodH, { roleName: c.name })
                     }),
-                    (0, i.jsx)(T.ModalCloseButton, {
-                        className: b.modalCloseButton,
+                    (0, r.jsx)(m.olH, {
+                        className: R.modalCloseButton,
                         onClick: t
                     })
                 ]
             }),
-            (0, i.jsxs)(T.ModalContent, {
-                className: b.modalContent,
+            (0, r.jsxs)(m.hzk, {
+                className: R.modalContent,
                 children: [
-                    _.length > 1 &&
-                        (0, i.jsx)('div', {
-                            className: b.list,
-                            children: (0, i.jsx)(y, {
-                                icon: (0, i.jsx)(T.ChannelListPlusIcon, {
+                    u.length > 1 &&
+                        (0, r.jsx)('div', {
+                            className: R.list,
+                            children: (0, r.jsx)(W, {
+                                icon: (0, r.jsx)(m.avL, {
                                     size: 'md',
                                     color: 'currentColor'
                                 }),
-                                checked: I.size === _.length,
+                                checked: g.size === u.length,
                                 onChange: function (e) {
-                                    for (let t of _) m(t.id, e);
+                                    for (let t of u) b(t.id, e);
                                 },
-                                children: (0, i.jsx)(T.Text, {
+                                children: (0, r.jsx)(m.Text, {
                                     color: 'header-primary',
                                     variant: 'text-md/normal',
-                                    children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_CHANNEL_BENEFITS
+                                    children: w.NW.string(w.t['5Q/fLC'])
                                 })
                             })
                         }),
-                    (0, i.jsx)('div', {
-                        className: b.list,
-                        children: _.map((e) => {
+                    (0, r.jsx)('div', {
+                        className: R.list,
+                        children: u.map((e) => {
                             var t;
-                            let n = null !== (t = (0, N.Th)(e.type)) && void 0 !== t ? t : T.TextIcon;
-                            return (0, i.jsx)(
-                                y,
+                            let n = null != (t = (0, h.Th)(e.type)) ? t : m.VL1;
+                            return (0, r.jsx)(
+                                W,
                                 {
-                                    icon: (0, i.jsx)('div', {
-                                        className: b.rowIcon,
-                                        children: (0, i.jsx)(n, {
+                                    icon: (0, r.jsx)('div', {
+                                        className: R.rowIcon,
+                                        children: (0, r.jsx)(n, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             width: '100%',
                                             height: '100%'
                                         })
                                     }),
-                                    checked: I.has(e.id),
-                                    onChange: (t) => m(e.id, t),
-                                    children: (0, i.jsx)(T.Text, {
+                                    checked: g.has(e.id),
+                                    onChange: (t) => b(e.id, t),
+                                    children: (0, r.jsx)(m.Text, {
                                         color: 'header-primary',
                                         variant: 'text-md/normal',
-                                        className: b.__invalid_benefitTitle,
+                                        className: R.__invalid_benefitTitle,
                                         children: e.name
                                     })
                                 },
@@ -478,45 +500,45 @@ function Y(e) {
                     })
                 ]
             }),
-            (0, i.jsxs)(T.ModalFooter, {
+            (0, r.jsxs)(m.mzw, {
                 children: [
-                    (0, i.jsx)(T.Button, {
+                    (0, r.jsx)(m.zxk, {
                         type: 'submit',
-                        children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_FROM_ROLE_CONFIRM_BUTTON
+                        children: w.NW.string(w.t['1j8So6'])
                     }),
-                    (0, i.jsx)(T.Button, {
-                        look: T.Button.Looks.LINK,
-                        color: T.Button.Colors.PRIMARY,
+                    (0, r.jsx)(m.zxk, {
+                        look: m.zxk.Looks.LINK,
+                        color: m.zxk.Colors.PRIMARY,
                         onClick: a,
-                        children: Z.Z.Messages.CANCEL
+                        children: w.NW.string(w.t['ETE/oK'])
                     })
                 ]
             })
         ]
     });
 }
-function W(e) {
+function z(e) {
     let { transitionState: t, guildId: n, onClose: s, onImport: a } = e,
-        [l, o] = r.useState();
-    return (0, i.jsx)(T.ModalRoot, {
+        [l, o] = i.useState();
+    return (0, r.jsx)(m.Y0X, {
         transitionState: t,
-        'aria-labelledby': null == l ? U : G,
-        children: (0, i.jsxs)(T.Slides, {
+        'aria-labelledby': null == l ? Z : D,
+        children: (0, r.jsxs)(m.MyZ, {
             contentDisplay: 'flex',
-            activeSlide: null == l ? 0 : 1,
+            activeSlide: +(null != l),
             width: 440,
             children: [
-                (0, i.jsx)(T.Slide, {
+                (0, r.jsx)(m.Mi4, {
                     id: 0,
-                    children: (0, i.jsx)(V, {
+                    children: (0, r.jsx)(B, {
                         onClose: s,
                         guildId: n,
                         onSelect: o
                     })
                 }),
-                (0, i.jsx)(T.Slide, {
+                (0, r.jsx)(m.Mi4, {
                     id: 1,
-                    children: (0, i.jsx)(Y, {
+                    children: (0, r.jsx)(F, {
                         onClose: s,
                         guildId: n,
                         role: l,
@@ -528,4 +550,3 @@ function W(e) {
         })
     });
 }
-((a = s || (s = {}))[(a.SELECT_ROLE = 0)] = 'SELECT_ROLE'), (a[(a.SELECT_CHANNELS = 1)] = 'SELECT_CHANNELS');

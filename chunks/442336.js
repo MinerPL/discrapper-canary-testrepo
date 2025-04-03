@@ -1,65 +1,105 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(442837),
-    l = n(481060),
-    r = n(92114),
-    o = n(9156),
+n.d(t, { Z: () => b }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(87051),
+    s = n(9156),
     c = n(585483),
     u = n(621600),
     d = n(665149),
-    h = n(110255),
-    m = n(981631),
-    p = n(689938),
-    _ = n(299834);
-function f(e) {
+    p = n(110255),
+    h = n(981631),
+    f = n(388032);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function b(e) {
     let { channel: t } = e,
-        n = (0, l.useRedesignIconContext)().enabled,
-        [f, E] = (0, s.Wu)([o.ZP], () => [o.ZP.isChannelMuted(t.getGuildId(), t.id), o.ZP.resolvedMessageNotifications(t)], [t]),
-        [g, C] = a.useState(!1);
-    a.useEffect(() => {
+        [n, b] = (0, l.Wu)([s.ZP], () => [s.ZP.isChannelMuted(t.getGuildId(), t.id), s.ZP.resolvedMessageNotifications(t)], [t]),
+        [_, C] = i.useState(!1);
+    i.useEffect(() => {
         let e = () => C(!0);
         return (
-            c.S.subscribe(m.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
+            c.S.subscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
-                c.S.unsubscribe(m.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+                c.S.unsubscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
             }
         );
     }, []);
-    let I = (e) => {
-            e.shiftKey ? r.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !f }, u.UE.muted(!f)) : C((e) => !e);
+    let y = (e) => {
+            e.shiftKey ? a.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !n }, u.UE.muted(!n)) : C((e) => !e);
         },
-        x = p.Z.Messages.NOTIFICATION_SETTINGS;
-    return (0, i.jsx)(l.Popout, {
-        shouldShow: g,
-        animation: l.Popout.Animation.NONE,
+        x = f.NW.string(f.t.h850Sk);
+    return (0, r.jsx)(o.yRy, {
+        shouldShow: _,
+        animation: o.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
         onRequestClose: () => C(!1),
         renderPopout: (e) =>
-            (0, i.jsx)(h.Z, {
-                ...e,
-                channel: t,
-                navId: 'channel-context',
-                label: p.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL
-            }),
+            (0, r.jsx)(
+                p.Z,
+                g(m({}, e), {
+                    channel: t,
+                    navId: 'channel-context',
+                    label: f.NW.string(f.t.Xm41aW)
+                })
+            ),
+        clickTrap: !0,
         children: (e, t) => {
-            let { isShown: a } = t;
-            return (0, i.jsx)(d.ZP.Icon, {
-                ...e,
-                onClick: I,
-                tooltip: a ? null : x,
-                icon: f || E !== m.bL.ALL_MESSAGES ? l.BellSlashIcon : l.BellIcon,
-                foreground: f && !n ? _.strikethrough : null,
-                'aria-label': x,
-                selected: a
-            });
+            let { isShown: i } = t;
+            return (0, r.jsx)(
+                d.ZP.Icon,
+                g(m({}, e), {
+                    onClick: y,
+                    tooltip: i ? null : x,
+                    icon: n || b !== h.bL.ALL_MESSAGES ? o.owu : o.Dkj,
+                    'aria-label': x,
+                    selected: i
+                })
+            );
         }
     });
 }

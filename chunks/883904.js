@@ -1,16 +1,9 @@
 n.d(t, {
-    EG: function () {
-        return s;
-    },
-    Nj: function () {
-        return o;
-    },
-    Vr: function () {
-        return a;
-    },
-    cm: function () {
-        return i;
-    }
+    EG: () => a,
+    KC: () => l,
+    Nj: () => s,
+    Vr: () => o,
+    cm: () => i
 });
 var r = n(570140);
 let i = (e) => {
@@ -19,18 +12,24 @@ let i = (e) => {
             dismissibleContent: e
         });
     },
-    a = (e) => {
+    o = (e) => {
         r.Z.dispatch({
             type: 'DCF_HANDLE_DC_DISMISSED',
             dismissibleContent: e
         });
     },
-    s = () => {
+    a = () => {
         r.Z.dispatch({ type: 'DCF_RESET' });
     },
-    o = (e) => {
+    s = (e) => {
         r.Z.dispatch({
             type: 'DCF_DAILY_CAP_OVERRIDE',
+            value: e
+        });
+    },
+    l = (e) => {
+        r.Z.dispatch({
+            type: 'DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE',
             value: e
         });
     };

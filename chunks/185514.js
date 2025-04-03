@@ -1,58 +1,48 @@
-t.d(n, {
-    $c: function () {
-        return c;
-    },
-    Nx: function () {
-        return C;
-    },
-    On: function () {
-        return I;
-    },
-    tQ: function () {
-        return d;
-    },
-    x5: function () {
-        return _;
-    }
+n.d(t, {
+    $c: () => g,
+    Nx: () => p,
+    On: () => h,
+    tQ: () => u,
+    x5: () => m
 });
-var i = t(140492),
-    l = t(475468),
-    o = t(703656),
-    r = t(769654),
-    E = t(944486),
-    a = t(914010),
-    u = t(358085),
-    s = t(981631);
-let d = {
+var r = n(140492),
+    i = n(475468),
+    s = n(703656),
+    a = n(769654),
+    l = n(944486),
+    o = n(914010),
+    c = n(358085),
+    d = n(981631);
+let u = {
         binds: ['alt+down'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, i.Z)(), !1)
+        action: () => ((0, r.Z)(), !1)
     },
-    _ = {
+    m = {
         binds: ['alt+up'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, i.Z)(-1), !1)
+        action: () => ((0, r.Z)(-1), !1)
     },
-    c = {
+    g = {
         binds: ['mod+alt+right'],
         comboKeysBindGlobal: !0,
         action() {
             let e;
-            if (null != a.Z.getGuildId()) e = s.ME;
+            if (null != o.Z.getGuildId()) e = d.ME;
             else {
-                let n = a.Z.getLastSelectedGuildId();
-                null != n && ((e = n), (0, l.K)(n, E.Z.getChannelId(n)));
+                let t = o.Z.getLastSelectedGuildId();
+                null != t && ((e = t), (0, i.K)(t, l.Z.getChannelId(t)));
             }
-            return null != e && (0, r.X)(e), !1;
+            return null != e && (0, a.X)(e), !1;
         }
     },
-    C = {
-        binds: (0, u.isMac)() ? ['mod+['] : ['alt+left'],
+    p = {
+        binds: (0, c.isMac)() ? ['mod+['] : ['alt+left'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, o.op)(), !1)
+        action: () => ((0, s.op)(), !1)
     },
-    I = {
-        binds: (0, u.isMac)() ? ['mod+]'] : ['alt+right'],
+    h = {
+        binds: (0, c.isMac)() ? ['mod+]'] : ['alt+right'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, o.eH)(), !1)
+        action: () => ((0, s.eH)(), !1)
     };

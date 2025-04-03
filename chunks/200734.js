@@ -1,34 +1,30 @@
 n.d(t, {
-    B: function () {
-        return l;
-    },
-    o: function () {
-        return u;
-    }
+    B: () => l,
+    o: () => c
 });
 var r = n(146150),
     i = n(707908),
-    a = n(713267),
-    s = n(695170),
-    o = n(812975);
+    o = n(713267),
+    a = n(695170),
+    s = n(812975);
 function l(e) {
     var t = e
         .split('\n')
-        .map(c)
+        .map(u)
         .filter(function (e) {
             return null !== e;
         });
     return (0, r.pi)((0, r.pi)({}, t[0]), t[1]);
 }
-function u(e) {
+function c(e) {
     var t = {},
         n = /DTSTART(?:;TZID=([^:=]+?))?(?::|=)([^;\s]+)/i.exec(e);
     if (!n) return t;
     var r = n[1],
         i = n[2];
-    return r && (t.tzid = r), (t.dtstart = (0, s.gE)(i)), t;
+    return r && (t.tzid = r), (t.dtstart = (0, a.gE)(i)), t;
 }
-function c(e) {
+function u(e) {
     if (!(e = e.replace(/^\s+|\s+$/, '')).length) return null;
     var t = /^([A-Z]+?)[:;]/.exec(e.toUpperCase());
     if (!t) return d(e);
@@ -38,27 +34,27 @@ function c(e) {
         case 'EXRULE':
             return d(e);
         case 'DTSTART':
-            return u(e);
+            return c(e);
         default:
             throw Error('Unsupported RFC prop '.concat(n, ' in ').concat(e));
     }
 }
 function d(e) {
-    var t = u(e.replace(/^RRULE:/i, ''));
+    var t = c(e.replace(/^RRULE:/i, ''));
     return (
         e
             .replace(/^(?:RRULE|EXRULE):/i, '')
             .split(';')
             .forEach(function (n) {
                 var r = n.split('='),
-                    l = r[0],
-                    c = r[1];
-                switch (l.toUpperCase()) {
+                    o = r[0],
+                    l = r[1];
+                switch (o.toUpperCase()) {
                     case 'FREQ':
-                        t.freq = i.D[c.toUpperCase()];
+                        t.freq = i.D[l.toUpperCase()];
                         break;
                     case 'WKST':
-                        t.wkst = o.hn[c.toUpperCase()];
+                        t.wkst = s.hn[l.toUpperCase()];
                         break;
                     case 'COUNT':
                     case 'INTERVAL':
@@ -70,43 +66,45 @@ function d(e) {
                     case 'BYHOUR':
                     case 'BYMINUTE':
                     case 'BYSECOND':
-                        var d = (function (e) {
-                            return -1 !== e.indexOf(',') ? e.split(',').map(_) : _(e);
-                        })(c);
-                        t[l.toLowerCase()] = d;
+                        var u = f(l);
+                        t[o.toLowerCase()] = u;
                         break;
                     case 'BYWEEKDAY':
                     case 'BYDAY':
-                        t.byweekday = (function (e) {
-                            return e.split(',').map(function (e) {
-                                if (2 === e.length) return o.hn[e];
-                                var t = e.match(/^([+-]?\d{1,2})([A-Z]{2})$/);
-                                if (!t || t.length < 3) throw SyntaxError('Invalid weekday string: '.concat(e));
-                                var n = Number(t[1]),
-                                    r = t[2],
-                                    i = o.hn[r].weekday;
-                                return new a.O(i, n);
-                            });
-                        })(c);
+                        t.byweekday = p(l);
                         break;
                     case 'DTSTART':
                     case 'TZID':
-                        var E = u(e);
-                        (t.tzid = E.tzid), (t.dtstart = E.dtstart);
+                        var d = c(e);
+                        (t.tzid = d.tzid), (t.dtstart = d.dtstart);
                         break;
                     case 'UNTIL':
-                        t.until = (0, s.gE)(c);
+                        t.until = (0, a.gE)(l);
                         break;
                     case 'BYEASTER':
-                        t.byeaster = Number(c);
+                        t.byeaster = Number(l);
                         break;
                     default:
-                        throw Error("Unknown RRULE property '" + l + "'");
+                        throw Error("Unknown RRULE property '" + o + "'");
                 }
             }),
         t
     );
 }
+function f(e) {
+    return -1 !== e.indexOf(',') ? e.split(',').map(_) : _(e);
+}
 function _(e) {
     return /^[+-]?\d+$/.test(e) ? Number(e) : e;
+}
+function p(e) {
+    return e.split(',').map(function (e) {
+        if (2 === e.length) return s.hn[e];
+        var t = e.match(/^([+-]?\d{1,2})([A-Z]{2})$/);
+        if (!t || t.length < 3) throw SyntaxError('Invalid weekday string: '.concat(e));
+        var n = Number(t[1]),
+            r = t[2],
+            i = s.hn[r].weekday;
+        return new o.O(i, n);
+    });
 }

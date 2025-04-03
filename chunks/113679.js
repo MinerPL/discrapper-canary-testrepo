@@ -1,60 +1,57 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-}),
-    n(47120);
-var s = n(735250),
-    a = n(470079),
-    i = n(399606),
-    r = n(481060),
+n.d(t, { Z: () => g }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(399606),
+    a = n(481060),
     l = n(279542),
     o = n(496675),
     c = n(140031),
     d = n(981631),
-    u = n(689938),
-    _ = n(416486);
-function I(e) {
+    u = n(388032),
+    m = n(177024);
+function g(e) {
     let { guild: t } = e,
-        n = a.useId(),
-        I = (0, i.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
-        E = t.hasFeature(d.oNc.COMMUNITY),
-        [T, m] = a.useState(t.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        N = a.useCallback(
+        n = i.useId(),
+        g = (0, s.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
+        p = t.hasFeature(d.oNc.COMMUNITY),
+        [h, f] = i.useState(t.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        b = i.useCallback(
             async (e) => {
-                m(e), await (0, l.fp)(t, e);
+                f(e), await (0, l.fp)(t, e);
             },
             [t]
         );
-    return E
+    return p
         ? null
-        : (0, s.jsxs)('div', {
-              className: _.bannerContainer,
+        : (0, r.jsxs)('div', {
+              className: m.bannerContainer,
               children: [
-                  (0, s.jsx)(c.Z, {
+                  (0, r.jsx)(c.Z, {
                       width: 64,
                       height: 64
                   }),
-                  (0, s.jsxs)('div', {
-                      className: _.headingContainer,
+                  (0, r.jsxs)('div', {
+                      className: m.headingContainer,
                       children: [
-                          (0, s.jsx)(r.Heading, {
+                          (0, r.jsx)(a.X6q, {
                               variant: 'heading-lg/semibold',
-                              children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE
+                              color: 'always-white',
+                              children: u.NW.string(u.t.jDarm5)
                           }),
-                          (0, s.jsx)(r.Text, {
+                          (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
-                              children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION
+                              color: 'always-white',
+                              children: u.NW.string(u.t['/ee7yM'])
                           })
                       ]
                   }),
-                  (0, s.jsx)('div', {
-                      className: _.buttonContainer,
-                      children: (0, s.jsx)(r.Switch, {
+                  (0, r.jsx)('div', {
+                      className: m.buttonContainer,
+                      children: (0, r.jsx)(a.rsf, {
                           id: n,
-                          checked: T,
-                          onChange: N,
-                          disabled: !I
+                          checked: h,
+                          onChange: b,
+                          disabled: !g
                       })
                   })
               ]

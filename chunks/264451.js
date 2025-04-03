@@ -1,25 +1,21 @@
 n.d(t, {
-    Zo: function () {
-        return r;
-    },
-    m5: function () {
-        return i;
-    }
+    Zo: () => a,
+    m5: () => s
 });
-var s = n(913527),
-    a = n.n(s);
-function i(e, t) {
+var r = n(913527),
+    i = n.n(r);
+function s(e, t) {
     let n = '',
-        s = e >= 0;
+        r = e >= 0;
     return (
-        s && (n += '+'),
+        r && (n += '+'),
         t ? (n += ''.concat(Math.floor(100 * e), '%')) : (n += e),
         {
             formattedValue: n,
-            isPositive: s
+            isPositive: r
         }
     );
 }
-function r(e, t) {
-    return null != e ? a()(e).format(t) : '-';
+function a(e, t) {
+    return null != e ? i()(e).format(t) : '-';
 }

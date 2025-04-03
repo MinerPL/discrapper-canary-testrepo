@@ -1,146 +1,134 @@
-E.d(_, {
-    Fo: function () {
-        return g;
-    },
-    KY: function () {
-        return f;
-    },
-    Uo: function () {
-        return Z;
-    },
-    fU: function () {
-        return H;
-    },
-    qw: function () {
-        return p;
-    },
-    tn: function () {
-        return P;
-    }
+n.d(t, {
+    Fo: () => L,
+    KY: () => C,
+    Uo: () => m,
+    fU: () => b,
+    qw: () => v,
+    tn: () => M
 }),
-    E(733860);
-var s = E(470079),
-    T = E(658722),
-    I = E.n(T),
-    n = E(913527),
-    t = E.n(n),
-    A = E(442837),
-    r = E(704215),
-    a = E(45114),
-    N = E(740504),
-    l = E(605236),
-    L = E(931261),
-    S = E(540126),
-    D = E(671098),
-    U = E(703656),
-    G = E(592125),
-    O = E(324067),
-    o = E(306680),
-    i = E(709054),
-    M = E(981631),
-    u = E(176505),
-    R = E(443063),
-    c = E(490897),
-    C = E(689938);
-function d(e, _) {
-    e.index = _;
+    n(733860);
+var r = n(192379),
+    l = n(658722),
+    a = n.n(l),
+    s = n(913527),
+    i = n.n(s),
+    o = n(442837),
+    E = n(704215),
+    c = n(45114),
+    u = n(740504),
+    _ = n(605236),
+    d = n(931261),
+    A = n(540126),
+    T = n(671098),
+    N = n(703656),
+    I = n(592125),
+    O = n(324067),
+    g = n(306680),
+    f = n(709054),
+    R = n(981631),
+    p = n(176505),
+    S = n(443063),
+    h = n(490897),
+    U = n(388032);
+function D(e, t) {
+    e.index = t;
 }
-function g(e, _, E, T) {
-    T = T.toLowerCase();
-    let n = (0, L.g)(e),
-        t = s.useCallback((e, _) => !(n && e.channel.hasFlag(u.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== M.d4z.GUILD_DIRECTORY && (0 === _.length || I()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [n]);
-    return s.useMemo(() => {
+function L(e, t, n, l) {
+    l = l.toLowerCase();
+    let s = (0, d.g)(e),
+        i = r.useCallback((e, t) => !(s && e.channel.hasFlag(p.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== R.d4z.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [s]);
+    return r.useMemo(() => {
         let e = {
             null: [],
             _categories: []
         };
         return (
-            E[M.d4z.GUILD_CATEGORY].forEach((E) => {
-                let { channel: s } = E;
-                'null' === s.id && (e.null = _.null.filter((e) => t(e, T))), (e[s.id] = _[s.id].filter((e) => t(e, T)));
+            n[R.d4z.GUILD_CATEGORY].forEach((n) => {
+                let { channel: r } = n;
+                'null' === r.id && (e.null = t.null.filter((e) => i(e, l))), (e[r.id] = t[r.id].filter((e) => i(e, l)));
             }),
-            (e._categories = _._categories.filter((_) => 'null' === _.channel.id || 0 === T.length || e[_.channel.id].length > 0)),
-            (0, N.Z)(e._categories, e).forEach(d),
+            (e._categories = t._categories.filter((t) => 'null' === t.channel.id || 0 === l.length || e[t.channel.id].length > 0)),
+            (0, u.Z)(e._categories, e).forEach(D),
             e
         );
-    }, [_, E, t, T]);
+    }, [t, n, i, l]);
 }
-function f(e) {
-    let _ = e.getSections(!1);
-    if (_[S.wZ] > 0)
+function C(e) {
+    let t = e.getSections(!1);
+    if (t[A.wZ] > 0)
         switch (e.getGuildActionSection().getRow(0)) {
-            case R.z.GUILD_HOME:
-                return u.oC.GUILD_HOME;
-            case R.z.GUILD_ROLE_SUBSCRIPTIONS:
-                return u.oC.ROLE_SUBSCRIPTIONS;
-            case R.z.GUILD_MEMBER_APPLICATIONS:
-                return u.oC.MEMBER_APPLICATIONS;
+            case S.z.GUILD_HOME:
+                return p.oC.GUILD_HOME;
+            case S.z.GUILD_ROLE_SUBSCRIPTIONS:
+                return p.oC.ROLE_SUBSCRIPTIONS;
+            case S.z.GUILD_MEMBER_APPLICATIONS:
+                return p.oC.MEMBER_APPLICATIONS;
         }
-    for (let s = S.wd; s < e.voiceChannelsSectionNumber; s++)
-        if (_[s] > 0) {
-            var E;
-            let _ = null === (E = e.getChannelFromSectionRow(s, 0)) || void 0 === E ? void 0 : E.channel;
-            if (null != _) return _.id;
+    for (let r = A.wd; r < e.voiceChannelsSectionNumber; r++)
+        if (t[r] > 0) {
+            var n;
+            let t = null == (n = e.getChannelFromSectionRow(r, 0)) ? void 0 : n.channel;
+            if (null != t) return t.id;
         }
     return null;
 }
-function Z(e, _) {
-    let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    (0, D.n)(e, _),
-        (0, a.y5)(
-            _.map((e) => ({
+function m(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+    (0, T.n)(e, t),
+        (0, c.y5)(
+            t.map((e) => ({
                 channelId: e,
-                readStateType: c.W.CHANNEL,
-                messageId: o.ZP.lastMessageId(e)
+                readStateType: h.W.CHANNEL,
+                messageId: g.ZP.lastMessageId(e)
             }))
         ),
-        null != E && (0, U.uL)(M.Z5c.CHANNEL(e, E));
+        null != n && (0, N.uL)(R.Z5c.CHANNEL(e, n));
 }
-function P(e, _, E, s) {
-    let T = (0, l.wE)(r.z.CHANNEL_BROWSER_NUX),
-        I = (0, A.cj)(
-            [G.Z],
+function M(e, t, n, r) {
+    let l = (0, _.wE)(E.z.CHANNEL_BROWSER_NUX),
+        a = (0, o.cj)(
+            [I.Z],
             () => {
-                let _ = {},
-                    E = G.Z.getMutableGuildChannelsForGuild(e);
-                for (let e in E) {
-                    let { parent_id: T } = E[e];
-                    if (null != T) {
-                        var s;
-                        _[T] = (null !== (s = _[T]) && void 0 !== s ? s : 0) + 1;
+                let t = {},
+                    n = I.Z.getMutableGuildChannelsForGuild(e);
+                for (let e in n) {
+                    let { parent_id: l } = n[e];
+                    if (null != l) {
+                        var r;
+                        t[l] = (null != (r = t[l]) ? r : 0) + 1;
                     }
                 }
-                return _;
+                return t;
             },
             [e]
         ),
-        n = _._categories.map((e) => {
-            let s = _[e.channel.id];
+        s = t._categories.map((e) => {
+            let r = t[e.channel.id];
             return {
-                rowCount: 'null' !== e.channel.id && 0 === I[e.channel.id] ? 1 : s.length,
-                rowHeight: 0 === s.length ? 0 : E
+                rowCount: 'null' !== e.channel.id && 0 === a[e.channel.id] ? 1 : r.length,
+                rowHeight: 0 === r.length ? 0 : n
             };
         });
     return (
-        !T &&
-            null != s &&
-            n.unshift({
+        l ||
+            null == r ||
+            s.unshift({
                 rowCount: 1,
-                rowHeight: s
+                rowHeight: r
             }),
-        n
+        s
     );
 }
-function H(e) {
-    var _, E;
-    let s = (0, A.e7)([O.Z], () => O.Z.getCategories(e)),
-        T = s._categories.length,
-        I = s._categories[s._categories.length - 1];
-    if (null == I) return 0;
-    let n = s[null !== (E = null === (_ = I.channel) || void 0 === _ ? void 0 : _.id) && void 0 !== E ? E : 'null'];
-    return null == n ? 0 : 0 === n.length ? I.index + 2 - T : n[n.length - 1].index + 2 - T;
+function b(e) {
+    var t, n;
+    let r = (0, o.e7)([O.Z], () => O.Z.getCategories(e)),
+        l = r._categories.length,
+        a = r._categories[r._categories.length - 1];
+    if (null == a) return 0;
+    let s = r[null != (n = null == (t = a.channel) ? void 0 : t.id) ? n : 'null'];
+    return null == s ? 0 : 0 === s.length ? a.index + 2 - l : s[s.length - 1].index + 2 - l;
 }
-function p(e) {
-    var _;
-    return C.Z.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({ timeAgo: t()(i.default.extractTimestamp(null !== (_ = o.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow() });
+function v(e) {
+    var t;
+    return U.NW.formatToPlainString(U.t['8N0BHR'], { timeAgo: i()(f.default.extractTimestamp(null != (t = g.ZP.lastMessageId(e)) ? t : e)).fromNow() });
 }

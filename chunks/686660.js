@@ -1,36 +1,30 @@
 n.d(t, {
-    gs: function () {
-        return u;
-    },
-    p1: function () {
-        return c;
-    },
-    s8: function () {
-        return r;
-    }
+    gs: () => l,
+    p1: () => c,
+    s8: () => s
 }),
     n(627341);
-var r,
-    i,
-    a = n(278074),
-    s = n(981631),
+var r = n(278074),
+    i = n(981631),
     o = n(490897),
-    l = n(689938);
-function u(e, t) {
-    return (0, a.EQ)([t, e])
-        .with([s.bL.ALL_MESSAGES, o.i.ALL_MESSAGES], () => 'all_messages')
-        .with([s.bL.ONLY_MENTIONS, o.i.UNSET], () => 'mentions')
-        .with([s.bL.ONLY_MENTIONS, o.i.ONLY_MENTIONS], () => 'mentions')
-        .with([s.bL.NO_MESSAGES, o.i.UNSET], () => 'nothing')
-        .with([s.bL.NO_MESSAGES, o.i.ONLY_MENTIONS], () => 'nothing')
+    a = n(388032),
+    s = (function (e) {
+        return (e.ALL_MESSAGES = 'all_messages'), (e.MENTIONS = 'mentions'), (e.NOTHING = 'nothing'), (e.CUSTOM = 'custom'), e;
+    })({});
+function l(e, t) {
+    return (0, r.EQ)([t, e])
+        .with([i.bL.ALL_MESSAGES, o.i.ALL_MESSAGES], () => 'all_messages')
+        .with([i.bL.ONLY_MENTIONS, o.i.UNSET], () => 'mentions')
+        .with([i.bL.ONLY_MENTIONS, o.i.ONLY_MENTIONS], () => 'mentions')
+        .with([i.bL.NO_MESSAGES, o.i.UNSET], () => 'nothing')
+        .with([i.bL.NO_MESSAGES, o.i.ONLY_MENTIONS], () => 'nothing')
         .otherwise(() => 'custom');
 }
 function c(e) {
-    return (0, a.EQ)(e)
-        .with('all_messages', () => l.Z.Messages.NOTIFICATION_PRESET_1)
-        .with('mentions', () => l.Z.Messages.NOTIFICATION_PRESET_2)
-        .with('nothing', () => l.Z.Messages.NOTIFICATION_PRESET_3)
-        .with('custom', () => l.Z.Messages.NOTIFICATION_PRESET_CUSTOM)
+    return (0, r.EQ)(e)
+        .with('all_messages', () => a.NW.string(a.t.hZrr6u))
+        .with('mentions', () => a.NW.string(a.t.y59NJi))
+        .with('nothing', () => a.NW.string(a.t['pGn/bG']))
+        .with('custom', () => a.NW.string(a.t['32yow8']))
         .exhaustive();
 }
-((i = r || (r = {})).ALL_MESSAGES = 'all_messages'), (i.MENTIONS = 'mentions'), (i.NOTHING = 'nothing'), (i.CUSTOM = 'custom');

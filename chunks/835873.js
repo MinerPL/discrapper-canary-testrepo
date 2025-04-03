@@ -1,14 +1,10 @@
-n.d(t, {
-    w: function () {
-        return a;
-    }
-});
+n.d(t, { w: () => o });
 var r = n(668781),
-    i = n(689938);
-let a = () => {
+    i = n(388032);
+let o = () => {
     r.Z.show({
-        title: i.Z.Messages.NO_EMBEDDED_ACTIVITY_PERMISSION_DIALOG_TITLE,
-        body: i.Z.Messages.NO_EMBEDDED_ACTIVITY_PERMISSION_DIALOG_BODY,
+        title: i.NW.string(i.t.otsg2d),
+        body: i.NW.string(i.t['/Yx5qa']),
         hideActionSheet: !1
     });
 };

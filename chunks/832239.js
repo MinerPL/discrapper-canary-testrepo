@@ -1,38 +1,32 @@
-e.d(n, {
-    JO: function () {
-        return a;
-    },
-    KK: function () {
-        return _;
-    },
-    Vp: function () {
-        return u;
-    },
-    hW: function () {
-        return c;
-    },
-    zu: function () {
-        return s;
-    }
+n.d(e, {
+    JO: () => c,
+    KK: () => u,
+    Vp: () => l,
+    hW: () => s,
+    zu: () => a
 });
-var o = e(544891),
-    i = e(570140),
-    r = e(981631);
-function a() {
+var r = n(544891),
+    i = n(570140),
+    o = n(981631);
+function c() {
     i.Z.dispatch({ type: 'VIBING_WUMPUS_PLAY_MUSIC' });
 }
-function s() {
+function a() {
     i.Z.dispatch({ type: 'VIBING_WUMPUS_STOP_MUSIC' });
 }
-function c() {
+function s() {
     i.Z.dispatch({ type: 'VIBING_WUMPUS_PAUSE_MUSIC' });
 }
-function u(t) {
-    return o.tn.del({ url: r.ANM.DELETE_SAFETY_WARNINGS(t) });
+function l(t) {
+    return r.tn.del({
+        url: o.ANM.DELETE_SAFETY_WARNINGS(t),
+        rejectWithError: !1
+    });
 }
-function _(t, n) {
-    return o.tn.post({
-        url: r.ANM.ADD_SAFETY_WARNING(t),
-        body: { safety_warning_type: n }
+function u(t, e) {
+    return r.tn.post({
+        url: o.ANM.ADD_SAFETY_WARNING(t),
+        body: { safety_warning_type: e },
+        rejectWithError: !1
     });
 }

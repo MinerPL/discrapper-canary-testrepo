@@ -1,49 +1,42 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return E;
-        }
-    });
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    l = t(522664),
-    r = t(651530),
-    s = t(163268),
-    o = t(668058),
-    u = t(112554),
-    d = t(160877),
-    c = t(689938);
-function E(e) {
-    let { channelId: n, messageId: t, mediaItemUrl: E, embedId: M, transitionState: I, onClose: m } = e,
-        _ = (0, r.yh)(),
-        g = (0, u.K)(n, t, E),
-        f = (0, u.b)(n, t, M),
-        { reportFalsePositive: Z, isReportFalsePositiveLoading: S } = (0, o.$)({
-            onSuccess: () => (0, d.s)(m),
+n.r(t), n.d(t, { default: () => d });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(522664),
+    a = n(247206),
+    o = n(668058),
+    s = n(112554),
+    c = n(160877),
+    u = n(388032);
+function d(e) {
+    let { channelId: t, messageId: n, mediaItemUrl: d, embedId: f, transitionState: g, onClose: m } = e,
+        b = (0, s.K)(t, n, d),
+        p = (0, s.b)(t, n, f),
+        { reportFalsePositive: h, isReportFalsePositiveLoading: y } = (0, o.$)({
+            onSuccess: () => (0, c.s)(m),
             onError: () => {
-                (0, a.showToast)((0, a.createToast)(c.Z.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE));
+                (0, i.showToast)((0, i.createToast)(u.NW.string(u.t.R0RpRU), i.ToastType.FAILURE));
             },
             report: () => {
                 (0, l.Uj)(
-                    n,
                     t,
-                    g.map((e) => e.id),
-                    f.map((e) => e.id)
+                    n,
+                    b.map((e) => e.id),
+                    p.map((e) => e.id)
                 );
             }
         });
     return (
-        !(_ && (g.length > 0 || f.length > 0)) && m(),
-        (0, i.jsx)(d.$, {
-            messageId: t,
-            channelId: n,
-            isReportFalsePositiveLoading: S,
-            analyticsContext: s.UU.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
-            onConfirmPress: Z,
-            attachmentPreview: 1 === g.length && 0 === f.length ? g[0] : void 0,
-            embedPreview: 1 === f.length && 0 === g.length ? f[0] : void 0,
-            transitionState: I,
+        b.length > 0 || p.length > 0 || m(),
+        (0, r.jsx)(c.$, {
+            messageId: n,
+            channelId: t,
+            isReportFalsePositiveLoading: y,
+            analyticsContext: a.UU.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
+            onConfirmPress: h,
+            attachmentPreview: 1 === b.length && 0 === p.length ? b[0] : void 0,
+            embedPreview: 1 === p.length && 0 === b.length ? p[0] : void 0,
+            transitionState: g,
             onClose: m
         })
     );

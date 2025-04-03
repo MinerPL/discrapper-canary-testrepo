@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var s = n(2070);
-function a() {
-    let { createGuildApplication: e, submitting: t, error: n } = (0, s.Z)();
+n.d(t, { Z: () => i });
+var r = n(2070);
+function i() {
+    let { createGuildApplication: e, submitting: t, error: n } = (0, r.Z)();
     return {
-        enableGuildMonetizationForTeam: (t, n, s) => e(t, n, s, 'guildcr'.concat(t.id)),
+        enableGuildMonetizationForTeam: (t, n, r) => e(t, n, r, 'guildcr'.concat(t.id)),
         submitting: t,
         error: n
     };

@@ -1,51 +1,92 @@
-n.d(t, {
-    z: function () {
-        return u;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(772848),
-    s = n(481060),
-    r = n(976255),
-    l = n(667),
-    o = n(626135),
+n.d(t, { z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(772848),
+    a = n(481060),
+    l = n(159351),
+    o = n(667),
+    s = n(626135),
     c = n(981631);
 function u(e) {
     let { guildProductListing: t, guildId: u, sourceAnalyticsLocations: d } = e,
-        _ = !1,
-        E = (0, a.Z)(),
-        I = () => {
-            _ = !0;
+        p = !1,
+        m = (0, i.Z)(),
+        f = t.id,
+        h = () => {
+            p = !0;
         };
-    (0, s.openModalLazy)(
+    (0, a.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('96427'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('47006'), n.e('32776'), n.e('18209'), n.e('82394')]).then(n.bind(n, 578780));
-            return (n) =>
-                (0, i.jsx)(e, {
-                    ...n,
-                    applicationId: t.application_id,
-                    skuId: t.id,
-                    sourceAnalyticsLocations: d,
-                    guildProductContext: {
-                        guildProductListingId: t.id,
-                        guildId: u
-                    },
-                    loadId: E,
-                    onComplete: I
-                });
+            let { default: e } = await n.e('88806').then(n.bind(n, 578780));
+            return (n) => {
+                var i, a;
+                return (0, r.jsx)(
+                    e,
+                    ((i = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, n)),
+                    (a = a =
+                        {
+                            applicationId: t.application_id,
+                            skuId: f,
+                            sourceAnalyticsLocations: d,
+                            guildProductContext: {
+                                guildProductListingId: t.id,
+                                guildId: u
+                            },
+                            loadId: m,
+                            onComplete: h
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                          }),
+                    i)
+                );
+            };
         },
         {
             onCloseCallback: () => {
-                !_ &&
-                    o.default.track(c.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: E,
+                p ||
+                    s.default.track(c.rMx.PAYMENT_FLOW_CANCELED, {
+                        load_id: m,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
                         is_gift: !1,
+                        sku_id: f,
                         location_stack: Array.isArray(d) ? d : [d]
                     }),
-                    (0, r.fw)(),
-                    (0, l.p)();
+                    (0, l.fw)(),
+                    (0, o.p)();
             },
             onCloseRequest: c.dG4
         }

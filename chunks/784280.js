@@ -1,99 +1,90 @@
-o.r(a),
-    o.d(a, {
-        default: function () {
-            return b;
-        }
-    }),
-    o(47120);
-var t = o(735250),
-    n = o(470079),
-    r = o(442837),
-    s = o(481060),
-    i = o(881052),
-    l = o(607070),
-    d = o(745510),
-    c = o(600164),
-    u = o(781792),
-    f = o(430824),
-    m = o(645792),
-    _ = o(981631),
-    h = o(689938),
-    E = o(248932);
-function b(e) {
+t.d(a, { default: () => g }), t(47120);
+var r = t(200651),
+    o = t(192379),
+    n = t(442837),
+    i = t(481060),
+    l = t(881052),
+    s = t(607070),
+    d = t(745510),
+    c = t(600164),
+    m = t(781792),
+    u = t(430824),
+    f = t(645792),
+    b = t(981631),
+    h = t(388032),
+    x = t(539813);
+function g(e) {
     let { guildId: a } = e,
-        o = (0, r.e7)([f.Z], () => f.Z.getGuild(a)),
-        [b, A] = n.useState(null),
-        [g, H] = n.useState(''),
-        { createMultipleConfettiAt: M } = n.useContext(d.h),
-        x = (0, r.e7)([l.Z], () => l.Z.useReducedMotion, []),
-        C = async (a) => {
-            let { onClose: o, guildId: t } = e;
-            a.preventDefault(), A(null);
+        t = (0, n.e7)([u.Z], () => u.Z.getGuild(a)),
+        [g, _] = o.useState(null),
+        [N, k] = o.useState(''),
+        { createMultipleConfettiAt: p } = o.useContext(d.h),
+        C = (0, n.e7)([s.Z], () => s.Z.useReducedMotion, []),
+        v = async (a) => {
+            let { onClose: t, guildId: r } = e;
+            a.preventDefault(), _(null);
             try {
-                await (0, u.e)(t, { nick: g }), null == o || o();
+                await (0, m.e)(r, { nick: N }), null == t || t();
             } catch (e) {
-                A(new i.Hx(e));
+                _(new l.Hx(e));
             }
         },
-        { transitionState: R } = e,
-        N = Object.values(f.Z.getGuilds()).filter((e) => e.id !== a && e.hasFeature(_.oNc.HUB)).length > 0,
-        L = !x && !N && (null == o ? void 0 : o.hasFeature(_.oNc.HUB)) && (0, m.b)();
+        { transitionState: H } = e,
+        j = Object.values(u.Z.getGuilds()).filter((e) => e.id !== a && e.hasFeature(b.oNc.HUB)).length > 0,
+        S = !C && !j && (null == t ? void 0 : t.hasFeature(b.oNc.HUB)) && (0, f.b)();
     return (
-        n.useEffect(() => {
-            if (L) {
-                let e = window.innerWidth / 2;
-                M(e, window.innerHeight / 2);
-            }
-        }, [M, L]),
-        (0, t.jsxs)(s.ModalRoot, {
-            className: E.__invalid_modalRoot,
-            transitionState: R,
-            'aria-label': h.Z.Messages.HUB_REAL_NAME_MODAL_HEADER.format({ guildName: null == o ? void 0 : o.name }),
+        o.useEffect(() => {
+            S && p(window.innerWidth / 2, window.innerHeight / 2);
+        }, [p, S]),
+        (0, r.jsxs)(i.Y0X, {
+            className: x.__invalid_modalRoot,
+            transitionState: H,
+            'aria-label': h.NW.formatToPlainString(h.t['d+6kzs'], { guildName: null == t ? void 0 : t.name }),
             children: [
-                (0, t.jsxs)(s.ModalHeader, {
+                (0, r.jsxs)(i.xBx, {
                     separator: !1,
-                    className: E.formHeaderContainer,
+                    className: x.formHeaderContainer,
                     direction: c.Z.Direction.VERTICAL,
                     children: [
-                        (0, t.jsx)('div', { className: E.formImage }),
-                        (0, t.jsx)(s.Heading, {
+                        (0, r.jsx)('div', { className: x.formImage }),
+                        (0, r.jsx)(i.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: E.formHeader,
-                            children: h.Z.Messages.HUB_REAL_NAME_MODAL_HEADER.format({ guildName: null == o ? void 0 : o.name })
+                            className: x.formHeader,
+                            children: h.NW.format(h.t['d+6kzs'], { guildName: null == t ? void 0 : t.name })
                         }),
-                        (0, t.jsx)(s.Text, {
+                        (0, r.jsx)(i.Text, {
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            className: E.formSubHeader,
-                            children: h.Z.Messages.HUB_REAL_NAME_MODAL_SUBHEADER
+                            className: x.formSubHeader,
+                            children: h.NW.string(h.t.b3L8y8)
                         })
                     ]
                 }),
-                (0, t.jsxs)('form', {
-                    className: E.formContent,
-                    onSubmit: C,
+                (0, r.jsxs)('form', {
+                    className: x.formContent,
+                    onSubmit: v,
                     children: [
-                        (0, t.jsx)(s.ModalContent, {
-                            children: (0, t.jsx)(s.FormItem, {
-                                title: h.Z.Messages.HUB_REAL_NAME_MODAL_FORM_TITLE,
-                                children: (0, t.jsx)(s.TextInput, {
-                                    placeholder: h.Z.Messages.HUB_REAL_NAME_MODAL_FORM_PLACEHOLDER,
+                        (0, r.jsx)(i.hzk, {
+                            children: (0, r.jsx)(i.xJW, {
+                                title: h.NW.string(h.t.ilDlmZ),
+                                children: (0, r.jsx)(i.oil, {
+                                    placeholder: h.NW.string(h.t.RfWvWF),
                                     onChange: (e) => {
-                                        H(e);
+                                        k(e);
                                     },
-                                    error: null == b ? void 0 : b.getFirstFieldErrorMessage('name'),
-                                    value: g
+                                    error: null == g ? void 0 : g.getFirstFieldErrorMessage('name'),
+                                    value: N
                                 })
                             })
                         }),
-                        (0, t.jsx)(s.ModalFooter, {
-                            className: E.formFooter,
+                        (0, r.jsx)(i.mzw, {
+                            className: x.formFooter,
                             direction: c.Z.Direction.VERTICAL,
-                            children: (0, t.jsx)(s.Button, {
+                            children: (0, r.jsx)(i.zxk, {
                                 type: 'submit',
-                                size: s.Button.Sizes.LARGE,
-                                color: s.Button.Colors.BRAND,
-                                children: h.Z.Messages.HUB_REAL_NAME_CTA
+                                size: i.zxk.Sizes.LARGE,
+                                color: i.zxk.Colors.BRAND,
+                                children: h.NW.string(h.t.Np4yXV)
                             })
                         })
                     ]

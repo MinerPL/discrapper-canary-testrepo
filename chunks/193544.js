@@ -1,70 +1,66 @@
-n.d(t, {
-    Z: function () {
-        return T;
-    }
-}),
-    n(47120);
-var s = n(735250),
-    a = n(470079),
-    i = n(120356),
-    r = n.n(i),
+n.d(t, { Z: () => h }), n(47120), n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(481060),
     o = n(186523),
     c = n(553826),
     d = n(2150),
     u = n(992249),
-    _ = n(717251),
-    I = n(689938),
-    E = n(392206);
-function T(e) {
-    var t, n, i;
-    let { changeTitle: T, value: m, options: N, className: S, onChange: h } = e,
-        [g, C] = a.useState(m),
-        [x, p] = a.useState(!1),
-        [R, f] = a.useState(!1),
-        L = a.useRef(null);
-    a.useEffect(() => {
-        C(m);
-    }, [m]),
-        a.useEffect(
+    m = n(717251),
+    g = n(388032),
+    p = n(184520);
+function h(e) {
+    var t, n, s;
+    let { changeTitle: h, value: f, options: b, className: x, onChange: j } = e,
+        [N, _] = i.useState(f),
+        [v, C] = i.useState(!1),
+        [O, y] = i.useState(!1),
+        I = i.useRef(null);
+    i.useEffect(() => {
+        _(f);
+    }, [f]),
+        i.useEffect(
             () => () => {
-                clearTimeout(L.current);
+                clearTimeout(I.current);
             },
             []
         );
-    let O = N.find((e) => e.value === g),
-        A = (e) => {
-            if (!e.disabled && e.value !== g)
-                f(!0),
-                    null == h || h(e),
-                    C(e.value),
-                    (L.current = setTimeout(() => {
-                        f(!1), p(!1);
-                    }, 1000));
+    let E = b.find((e) => e.value === N),
+        S = (e) => {
+            e.disabled ||
+                e.value === N ||
+                (y(!0),
+                null == j || j(e),
+                _(e.value),
+                (I.current = setTimeout(() => {
+                    y(!1), C(!1);
+                }, 1000)));
         };
-    return (0, s.jsx)(u.Z, {
-        title: x ? T : null !== (t = null == O ? void 0 : O.title) && void 0 !== t ? t : T,
-        description: x ? '('.concat(null !== (n = null == O ? void 0 : O.title) && void 0 !== n ? n : I.Z.Messages.NONE, ')') : null !== (i = null == O ? void 0 : O.description) && void 0 !== i ? i : '',
-        highlightColor: x ? d.q.NONE : null == O ? void 0 : O.highlightColor,
-        action: (0, s.jsx)(l.Button, {
-            look: l.Button.Looks.LINK,
-            size: l.Button.Sizes.MIN,
-            color: l.Button.Colors.LINK,
-            children: I.Z.Messages.CHANGE
+    return (0, r.jsx)(u.Z, {
+        title: v ? h : null != (t = null == E ? void 0 : E.title) ? t : h,
+        description: v ? '('.concat(null != (n = null == E ? void 0 : E.title) ? n : g.NW.string(g.t.PoWNfX), ')') : null != (s = null == E ? void 0 : E.description) ? s : '',
+        highlightColor: v ? d.q.NONE : null == E ? void 0 : E.highlightColor,
+        action: (0, r.jsx)(l.zxk, {
+            look: l.zxk.Looks.LINK,
+            size: l.zxk.Sizes.MIN,
+            color: l.zxk.Colors.LINK,
+            children: g.NW.string(g.t.GEgsAw)
         }),
-        loading: R,
-        className: S,
-        children: N.map((e, t) =>
-            (0, s.jsx)(
-                _.Z,
+        loading: O,
+        className: x,
+        children: b.map((e, t) =>
+            (0, r.jsx)(
+                m.Z,
                 {
                     title: e.title,
                     description: e.description,
                     highlightColor: e.highlightColor,
-                    className: r()(E.groupCollapsedRow, g === e.value && E.selected),
-                    selected: g === e.value,
-                    action: g === e.value ? (0, s.jsx)(c.Z, { className: E.radioItem }) : (0, s.jsx)(o.Z, { className: E.radioItem }),
-                    onClick: () => A(e),
+                    className: a()(p.groupCollapsedRow, N === e.value && p.selected),
+                    selected: N === e.value,
+                    action: N === e.value ? (0, r.jsx)(c.Z, { className: p.radioItem }) : (0, r.jsx)(o.Z, { className: p.radioItem }),
+                    onClick: () => S(e),
                     disabled: e.disabled
                 },
                 ''.concat(e.title, '-').concat(t)

@@ -1,127 +1,122 @@
-a.r(t),
-    a.d(t, {
-        default: function () {
-            return m;
-        }
-    }),
-    a(47120);
-var s = a(735250),
-    n = a(470079),
-    l = a(442837),
-    o = a(481060),
-    i = a(91176),
-    r = a(906732),
-    c = a(346486),
-    u = a(313201),
-    d = a(594174),
-    _ = a(626135),
-    h = a(71619),
-    N = a(590433),
-    C = a(981631),
-    I = a(689938),
-    M = a(737282);
-function m(e) {
-    var t, a;
-    let { guildId: m, userId: E, anaylticsLocations: f, transitionState: p, onClose: T } = e,
-        O = (0, u.Dt)(),
-        { analyticsLocations: U } = (0, r.ZP)(),
-        S = null !== (a = null !== (t = null == f ? void 0 : f[0]) && void 0 !== t ? t : null == U ? void 0 : U[0]) && void 0 !== a ? a : null,
-        v = (0, l.e7)([d.default], () => d.default.getUser(E), [E]),
-        [D, x] = (0, h.ZP)(E, m),
-        [A, g] = n.useState(!1),
-        b = n.useCallback(async () => {
-            if (null != v) {
-                g(!0);
+e.d(n, { default: () => v }), e(47120);
+var l = e(200651),
+    s = e(192379),
+    a = e(442837),
+    i = e(481060),
+    o = e(91176),
+    r = e(493773),
+    c = e(906732),
+    u = e(346486),
+    d = e(313201),
+    h = e(594174),
+    m = e(626135),
+    p = e(71619),
+    x = e(590433),
+    f = e(981631),
+    b = e(388032),
+    N = e(209564);
+function v(t) {
+    var n, e;
+    let { guildId: v, userId: k, anaylticsLocations: g, transitionState: _, onClose: C } = t,
+        w = (0, d.Dt)(),
+        { analyticsLocations: y } = (0, c.ZP)(),
+        j = null != (e = null != (n = null == g ? void 0 : g[0]) ? n : null == y ? void 0 : y[0]) ? e : null,
+        D = (0, a.e7)([h.default], () => h.default.getUser(k), [k]),
+        [T, W] = (0, p.ZP)(k, v),
+        [I, P] = s.useState(!1),
+        z = s.useCallback(async () => {
+            if (null != D) {
+                P(!0);
                 try {
-                    await i.Z.setCommunicationDisabledDuration(m, E, null, null, S), (0, o.showToast)((0, o.createToast)(I.Z.Messages.GUILD_ENABLE_COMMUNICATION_SUCCESS, o.ToastType.SUCCESS)), T();
-                } catch (e) {
-                    (0, o.showToast)((0, o.createToast)(I.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, o.ToastType.FAILURE));
+                    await o.Z.setCommunicationDisabledDuration(v, k, null, null, j), (0, i.showToast)((0, i.createToast)(b.NW.string(b.t['/Mmbfn']), i.ToastType.SUCCESS)), C();
+                } catch (t) {
+                    (0, i.showToast)((0, i.createToast)(b.NW.string(b.t.epyCur), i.ToastType.FAILURE));
                 } finally {
-                    g(!1);
+                    P(!1);
                 }
             }
-        }, [m, v, E, T, S]),
-        Z = n.useCallback(() => {
-            !x && T();
-        }, [x, T]);
-    return (n.useEffect(() => {
-        if (null != v)
-            _.default.track(C.rMx.OPEN_MODAL, {
-                type: N.av,
-                guild_id: m,
-                other_user_id: v.id
+        }, [v, D, k, C, j]),
+        E = s.useCallback(() => {
+            W || C();
+        }, [W, C]);
+    return ((0, r.ZP)(() => {
+        null != D &&
+            m.default.track(f.rMx.OPEN_MODAL, {
+                type: x.av,
+                guild_id: v,
+                other_user_id: D.id
             });
-    }, []),
-    n.useEffect(() => {
-        (null == v || null == m) && T();
     }),
-    null == v || null == m)
+    s.useEffect(() => {
+        (null == D || null == v) && C();
+    }),
+    null == D || null == v)
         ? null
-        : (0, s.jsxs)(o.ModalRoot, {
-              transitionState: p,
-              'aria-labelledby': O,
+        : (0, l.jsxs)(i.Y0X, {
+              transitionState: _,
+              'aria-labelledby': w,
               children: [
-                  (0, s.jsxs)(o.ModalHeader, {
-                      className: M.header,
+                  (0, l.jsxs)(i.xBx, {
+                      className: N.header,
                       separator: !1,
                       children: [
-                          (0, s.jsx)(o.Heading, {
+                          (0, l.jsx)(i.X6q, {
                               variant: 'heading-lg/semibold',
-                              children: I.Z.Messages.GUILD_ENABLE_COMMUNICATION_HEADER
+                              children: b.NW.string(b.t['+ZD3oq'])
                           }),
-                          (0, s.jsx)(o.Clickable, {
-                              onClick: T,
-                              className: M.closeButton,
-                              'aria-label': I.Z.Messages.CLOSE,
-                              children: (0, s.jsx)(o.XSmallIcon, {
+                          (0, l.jsx)(i.P3F, {
+                              onClick: C,
+                              className: N.closeButton,
+                              'aria-label': b.NW.string(b.t.cpT0Cg),
+                              children: (0, l.jsx)(i.Dio, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: M.closeIcon
+                                  className: N.closeIcon
                               })
                           })
                       ]
                   }),
-                  (0, s.jsxs)(o.ModalContent, {
+                  (0, l.jsxs)(i.hzk, {
                       children: [
-                          (0, s.jsx)(o.Text, {
+                          (0, l.jsx)(i.Text, {
                               variant: 'text-md/normal',
                               color: 'interactive-normal',
-                              children: I.Z.Messages.GUILD_ENABLE_COMMUNICATION_TIME_REMAINING.format({
-                                  username: v.username,
-                                  countdown: (e) =>
-                                      null == D
+                              children: b.NW.format(b.t['t+abNT'], {
+                                  username: D.username,
+                                  countdown: (t) =>
+                                      null == T
                                           ? null
-                                          : (0, s.jsx)(c.Z, {
-                                                className: M.countdown,
-                                                deadline: new Date(D),
-                                                onInterval: Z,
+                                          : (0, l.jsx)(u.Z, {
+                                                className: N.countdown,
+                                                deadline: new Date(T),
+                                                onInterval: E,
                                                 showUnits: !0,
                                                 stopAtOneSec: !0
                                             })
                               })
                           }),
-                          (0, s.jsx)(o.Text, {
-                              className: M.cta,
+                          (0, l.jsx)(i.Text, {
+                              className: N.cta,
                               variant: 'text-md/normal',
                               color: 'interactive-normal',
-                              children: I.Z.Messages.GUILD_ENABLE_COMMUNICATION_CTA.format({ link: N.cu })
+                              children: b.NW.format(b.t.KtENkJ, { link: x.cu })
                           })
                       ]
                   }),
-                  (0, s.jsxs)(o.ModalFooter, {
+                  (0, l.jsxs)(i.mzw, {
                       children: [
-                          (0, s.jsx)(o.Button, {
-                              color: o.Button.Colors.RED,
-                              onClick: b,
-                              submitting: A,
-                              children: I.Z.Messages.REMOVE_TIME_OUT
+                          (0, l.jsx)(i.zxk, {
+                              color: i.zxk.Colors.RED,
+                              onClick: z,
+                              submitting: I,
+                              children: b.NW.string(b.t.qXtNtb)
                           }),
-                          (0, s.jsx)(o.Button, {
+                          (0, l.jsx)(i.zxk, {
                               type: 'button',
-                              look: o.Button.Looks.LINK,
-                              color: o.Button.Colors.PRIMARY,
-                              onClick: T,
-                              children: I.Z.Messages.CANCEL
+                              look: i.zxk.Looks.LINK,
+                              color: i.zxk.Colors.PRIMARY,
+                              onClick: C,
+                              children: b.NW.string(b.t['ETE/oK'])
                           })
                       ]
                   })

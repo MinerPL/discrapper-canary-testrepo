@@ -1,28 +1,24 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var i = n(470079),
-    l = n(442837),
-    r = n(592125),
+n.d(t, { Z: () => c });
+var r = n(192379),
+    i = n(442837),
+    l = n(592125),
     a = n(594174),
-    s = n(355298),
-    o = n(900255);
+    o = n(355298),
+    s = n(900255);
 function c() {
-    let e = (0, l.e7)([r.Z], () => r.Z.getPrivateChannelsVersion()),
-        t = (0, l.Wu)(
-            [r.Z, s.Z],
+    let e = (0, i.e7)([l.Z], () => l.Z.getPrivateChannelsVersion()),
+        t = (0, i.Wu)(
+            [l.Z, o.Z],
             () => {
-                let e = r.Z.getMutablePrivateChannels(),
-                    t = Array.from(s.Z.getMessageRequestChannelIds())
+                let e = l.Z.getMutablePrivateChannels(),
+                    t = Array.from(o.Z.getMessageRequestChannelIds())
                         .map((t) => e[t])
                         .filter((e) => null != e);
-                return (0, o.x)(t);
+                return (0, s.x)(t);
             },
             [e]
         ),
-        n = (0, l.cj)(
+        n = (0, i.cj)(
             [a.default],
             () => {
                 let e = {};
@@ -36,7 +32,7 @@ function c() {
             },
             [t]
         );
-    return i.useMemo(
+    return r.useMemo(
         () =>
             t.map((e) => ({
                 channel: e,

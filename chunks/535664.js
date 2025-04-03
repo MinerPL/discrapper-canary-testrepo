@@ -1,24 +1,20 @@
-t.d(s, {
-    C: function () {
-        return a;
-    },
-    u: function () {
-        return i;
-    }
+n.d(t, {
+    C: () => i,
+    u: () => s
 });
-var n = t(570140);
-let a = (e, s) => {
-        n.Z.dispatch({
+var r = n(570140);
+let i = (e, t) => {
+        r.Z.dispatch({
             type: 'SET_PREMIUM_TYPE_OVERRIDE',
             premiumType: e
         }),
-            n.Z.dispatch({
+            r.Z.dispatch({
                 type: 'UPDATE_CLIENT_PREMIUM_TYPE',
-                user: s
+                user: t
             });
     },
-    i = (e) => {
-        n.Z.dispatch({
+    s = (e) => {
+        r.Z.dispatch({
             type: 'SET_CREATED_AT_OVERRIDE',
             createdAt: e
         });

@@ -1,22 +1,18 @@
-t.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = t(735250);
-t(470079);
-var s = t(481060),
-    l = t(280845),
-    a = t(996861),
-    r = t(689938);
-function o(e, n) {
-    return (0, l.U)(n, e)
-        ? (0, i.jsx)(s.MenuItem, {
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(280845),
+    a = n(996861),
+    o = n(388032);
+function s(e, t) {
+    return (0, l.U)(t, e)
+        ? (0, r.jsx)(i.sNh, {
               id: 'reply',
-              label: r.Z.Messages.MESSAGE_ACTION_REPLY,
-              icon: s.ArrowAngleLeftUpIcon,
-              action: (t) => {
-                  (0, a.HH)(n, e, t);
+              label: o.NW.string(o.t['5IEsGx']),
+              icon: i.n$P,
+              action: (n) => {
+                  (0, a.HH)(t, e, n);
               }
           })
         : null;

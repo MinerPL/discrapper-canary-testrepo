@@ -1,25 +1,106 @@
+n.d(t, { Z: () => y });
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
 let u = { enabled: !1 },
-    c = {},
     d = {},
+    f = {},
     _ = !1;
-class E extends (s = o.ZP.DeviceSettingsStore) {
+function p(e) {
+    let { userId: t, channelId: n, emoji: r } = e;
+    d[n] = c(s({}, d[n]), { [t]: r });
+}
+function h(e) {
+    let { userId: t, channelId: n } = e,
+        r = d[n];
+    if (null == r) return !1;
+    delete r[t];
+}
+function m(e) {
+    let { enabled: t } = e;
+    _ = t;
+}
+function g(e) {
+    var t;
+    let { completingEmoji: n, completingUserId: r, waitingUserId: i, channelId: o } = e,
+        a = null != (t = d[o]) ? t : {},
+        l = a[i];
+    if ((delete a[i], null == l)) return !1;
+    f[o] = c(s({}, f[o]), {
+        [i]: [l, n],
+        [r]: [n, l]
+    });
+}
+function E(e) {
+    var t;
+    let { firstUserId: n, secondUserId: r, channelId: i } = e,
+        o = null != (t = f[i]) ? t : {};
+    delete o[n], delete o[r];
+}
+class b extends (r = i.ZP.DeviceSettingsStore) {
     initialize() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
         _ = e.enabled;
     }
     getWaitingHighFive(e, t) {
         var n;
-        return null === (n = c[e]) || void 0 === n ? void 0 : n[t];
+        return null == (n = d[e]) ? void 0 : n[t];
     }
     getCompletedHighFive(e, t) {
         var n;
-        return null === (n = d[e]) || void 0 === n ? void 0 : n[t];
+        return null == (n = f[e]) ? void 0 : n[t];
     }
     getEnabled() {
         return _;
@@ -28,49 +109,11 @@ class E extends (s = o.ZP.DeviceSettingsStore) {
         return { enabled: _ };
     }
 }
-(a = 'HighFiveStore'),
-    (i = 'persistKey') in (r = E)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new E(l.Z, {
-        HIGH_FIVE_QUEUE: function (e) {
-            let { userId: t, channelId: n, emoji: r } = e;
-            c[n] = {
-                ...c[n],
-                [t]: r
-            };
-        },
-        HIGH_FIVE_REMOVE: function (e) {
-            let { userId: t, channelId: n } = e,
-                r = c[n];
-            if (null == r) return !1;
-            delete r[t];
-        },
-        HIGH_FIVE_SET_ENABLED: function (e) {
-            let { enabled: t } = e;
-            _ = t;
-        },
-        HIGH_FIVE_COMPLETE: function (e) {
-            var t;
-            let { completingEmoji: n, completingUserId: r, waitingUserId: i, channelId: a } = e,
-                s = null !== (t = c[a]) && void 0 !== t ? t : {},
-                o = s[i];
-            if ((delete s[i], null == o)) return !1;
-            d[a] = {
-                ...d[a],
-                [i]: [o, n],
-                [r]: [n, o]
-            };
-        },
-        HIGH_FIVE_COMPLETE_CLEAR: function (e) {
-            var t;
-            let { firstUserId: n, secondUserId: r, channelId: i } = e,
-                a = null !== (t = d[i]) && void 0 !== t ? t : {};
-            delete a[n], delete a[r];
-        }
-    }));
+a(b, 'persistKey', 'HighFiveStore');
+let y = new b(o.Z, {
+    HIGH_FIVE_QUEUE: p,
+    HIGH_FIVE_REMOVE: h,
+    HIGH_FIVE_SET_ENABLED: m,
+    HIGH_FIVE_COMPLETE: g,
+    HIGH_FIVE_COMPLETE_CLEAR: E
+});

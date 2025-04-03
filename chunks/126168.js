@@ -3,14 +3,9 @@ function r(e, t) {
     let n = [],
         r = e[0];
     for (let i = 1; i < e.length; i++) {
-        let a = e[i];
-        n.push(t(r, a)), (r = a);
+        let o = e[i];
+        n.push(t(r, o)), (r = o);
     }
     return n;
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    n(653041);
+n.d(t, { Z: () => r }), n(653041);

@@ -1,4 +1,4 @@
-n(47120);
+n.d(t, { Z: () => o }), n(47120);
 var i,
     s = n(442837),
     l = n(570140);
@@ -27,11 +27,10 @@ class d extends (i = s.ZP.PersistedStore) {
         return { guilds: a };
     }
 }
-r(d, 'displayName', 'RecentlyActiveCollapseStore'),
-    r(d, 'persistKey', 'RecentlyActiveCollapseStore'),
-    (t.Z = new d(l.Z, {
-        SET_RECENTLY_ACTIVE_COLLAPSED: function (e) {
-            let { guildId: t, collapsed: n } = e;
-            n ? a.add(t) : a.delete(t);
-        }
-    }));
+r(d, 'displayName', 'RecentlyActiveCollapseStore'), r(d, 'persistKey', 'RecentlyActiveCollapseStore');
+let o = new d(l.Z, {
+    SET_RECENTLY_ACTIVE_COLLAPSED: function (e) {
+        let { guildId: t, collapsed: n } = e;
+        n ? a.add(t) : a.delete(t);
+    }
+});

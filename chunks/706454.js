@@ -1,42 +1,44 @@
-n.r(t);
+n.r(t), n.d(t, { default: () => _ });
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(209185),
-    c = n(581883),
-    d = n(689938);
-let _ = d.Z.getDefaultLocale();
-function E() {
-    var e, t;
-    let n = null === (t = c.Z.settings.localization) || void 0 === t ? void 0 : null === (e = t.locale) || void 0 === e ? void 0 : e.value;
-    return null != n && '' !== n && n !== _ && ((_ = n), u.i(_), !0);
+    i = n(442837),
+    o = n(570140),
+    a = n(241601),
+    s = n(581883);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-class f extends (s = o.ZP.Store) {
+let c = n(388032).NW.currentLocale;
+function u() {
+    var e, t;
+    let n = null == (t = s.Z.settings.localization) || null == (e = t.locale) ? void 0 : e.value;
+    return null != n && '' !== n && n !== c && ((c = n), (0, a._2)(c), !0);
+}
+function d(e) {
+    (c = e.locale), (0, a._2)(c);
+}
+class f extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z), E(), u.i(_);
+        this.waitFor(s.Z), u(), (0, a._2)(c);
     }
     get locale() {
-        return _;
+        return c;
     }
 }
-(a = 'LocaleStore'),
-    (i = 'displayName') in (r = f)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.default = new f(l.Z, {
-        OVERLAY_INITIALIZE: E,
-        CACHE_LOADED: E,
-        CONNECTION_OPEN: E,
-        USER_SETTINGS_PROTO_UPDATE: E,
-        USER_SETTINGS_LOCALE_OVERRIDE: function (e) {
-            (_ = e.locale), u.i(_);
-        }
-    }));
+l(f, 'displayName', 'LocaleStore');
+let _ = new f(o.Z, {
+    OVERLAY_INITIALIZE: u,
+    CACHE_LOADED: u,
+    CONNECTION_OPEN: u,
+    USER_SETTINGS_PROTO_UPDATE: u,
+    USER_SETTINGS_LOCALE_OVERRIDE: d
+});

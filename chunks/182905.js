@@ -1,38 +1,39 @@
-var n = s(735250);
-s(470079);
-var l = s(120356),
-    a = s.n(l),
-    i = s(692547),
-    r = s(481060),
-    o = s(600164),
-    d = s(13735);
-t.Z = (e) => {
-    let { className: t, icon: s, noticeText: l, buttonText: c, onClick: u, canSync: h } = e;
-    return (0, n.jsx)(r.Card, {
-        className: a()(t, d.card),
-        children: (0, n.jsxs)(o.Z, {
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    s = n(692547),
+    a = n(481060),
+    o = n(600164),
+    c = n(427256);
+let d = (e) => {
+    let { className: t, icon: n, noticeText: i, buttonText: d, onClick: u, canSync: h } = e;
+    return (0, r.jsx)(a.Zbd, {
+        className: l()(t, c.card),
+        children: (0, r.jsxs)(o.Z, {
             justify: o.Z.Justify.BETWEEN,
             align: o.Z.Align.CENTER,
             children: [
-                (0, n.jsx)(s, {
+                (0, r.jsx)(n, {
                     width: 20,
                     height: 20,
                     size: 'custom',
-                    color: i.Z.unsafe_rawColors.YELLOW_300.css
+                    color: s.Z.unsafe_rawColors.YELLOW_300.css
                 }),
-                (0, n.jsx)('div', {
-                    className: d.label,
-                    children: (0, n.jsx)(r.Text, {
+                (0, r.jsx)('div', {
+                    className: c.label,
+                    children: (0, r.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: l
+                        children: i
                     })
                 }),
                 h &&
-                    (0, n.jsx)(r.Button, {
-                        size: r.Button.Sizes.SMALL,
-                        color: r.Button.Colors.PRIMARY,
+                    (0, r.jsx)(a.zxk, {
+                        size: a.zxk.Sizes.SMALL,
+                        color: a.zxk.Colors.PRIMARY,
                         onClick: u,
-                        children: c
+                        children: d
                     })
             ]
         })

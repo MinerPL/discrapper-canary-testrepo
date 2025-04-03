@@ -1,28 +1,34 @@
-var n = t(735250);
-t(470079);
-var a = t(481060),
-    i = t(230711),
-    r = t(528084),
-    o = t(313482);
-s.Z = (e) => {
-    let { tabs: s, settingsSection: t, parentSetting: l } = e,
-        { viewableTabs: c, selectedTab: d } = (0, r.a)(s, l);
-    return (0, n.jsxs)(n.Fragment, {
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(230711),
+    o = n(528084),
+    c = n(44380);
+let d = (e) => {
+    var t;
+    let { tabs: n, settingsSection: i, parentSetting: d, panelClassName: u, defaultTabIndex: m, onTabChange: g } = e,
+        { viewableTabs: p, filteredTab: h } = (0, o.a)(n, d),
+        f = null != m ? n[m] : null,
+        b = null != (t = null != f ? f : h) ? t : p[0];
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(a.TabBar, {
-                className: o.tabBar,
-                selectedItem: d.setting,
+            (0, r.jsx)(a.njP, {
+                className: c.tabBar,
+                selectedItem: b.setting,
                 onItemSelect: (e) => {
-                    i.Z.setSection(t, e);
+                    l.Z.setSection(i, e), null == g || g(e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
                 look: 'brand',
-                children: c.map((e) =>
-                    (0, n.jsx)(
-                        a.TabBar.Item,
+                children: p.map((e) =>
+                    (0, r.jsx)(
+                        a.njP.Item,
                         {
-                            className: o.tab,
+                            className: c.tab,
                             id: e.setting,
                             'aria-label': e.title,
                             children: e.title
@@ -31,14 +37,14 @@ s.Z = (e) => {
                     )
                 )
             }),
-            (0, n.jsx)(a.TabBar.Panel, {
-                id: d.setting,
-                'aria-labelledby': d.title,
-                className: o.tabBarPanel,
+            (0, r.jsx)(a.njP.Panel, {
+                id: b.setting,
+                'aria-labelledby': b.title,
+                className: s()(c.tabBarPanel, u),
                 children: ((e) => {
-                    let s = e.component;
-                    return 'function' == typeof s ? (0, n.jsx)(s, {}) : s;
-                })(d)
+                    let t = e.component;
+                    return 'function' == typeof t ? (0, r.jsx)(t, {}) : t;
+                })(b)
             })
         ]
     });

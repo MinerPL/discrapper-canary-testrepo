@@ -1,81 +1,175 @@
-t.d(n, {
-    Z: function () {
-        return b;
-    }
-});
-var o = t(735250);
-t(470079);
-var r = t(442837),
-    a = t(481060),
-    i = t(153867),
-    c = t(857595),
-    l = t(607070),
-    u = t(906732),
-    s = t(705262),
-    d = t(540059),
-    _ = t(210887),
-    S = t(740492),
-    g = t(695346),
-    E = t(874893),
-    m = t(981631),
-    I = t(689938);
-function b() {
-    let e = g.jU.useSetting(),
-        { analyticsLocations: n } = (0, u.ZP)(),
+r.d(t, { Z: () => h }), r(653041);
+var n = r(200651);
+r(192379);
+var i = r(442837),
+    o = r(524437),
+    c = r(481060),
+    a = r(153867),
+    l = r(857595),
+    s = r(607070),
+    u = r(906732),
+    d = r(705262),
+    p = r(540059),
+    b = r(210887),
+    g = r(740492),
+    f = r(695346),
+    j = r(874893),
+    O = r(981631),
+    y = r(388032);
+function h() {
+    let e = f.jU.useSetting(),
+        { analyticsLocations: t } = (0, u.ZP)(),
         {
-            theme: t,
-            useSystemTheme: b,
-            useForcedColors: T
-        } = (0, r.cj)([_.Z, S.ZP, l.Z], () => ({
-            theme: _.Z.theme,
-            useSystemTheme: S.ZP.useSystemTheme,
-            useForcedColors: l.Z.useForcedColors
+            theme: r,
+            useSystemTheme: h,
+            useForcedColors: m
+        } = (0, i.cj)([b.Z, g.ZP, s.Z], () => ({
+            theme: b.Z.theme,
+            useSystemTheme: g.ZP.useSystemTheme,
+            useForcedColors: s.Z.useForcedColors
         })),
-        f = (0, d.Q)('appearance_settings'),
-        M = (e, r) =>
-            (0, o.jsx)(a.MenuRadioItem, {
+        S = f.YC.useSetting(),
+        v = (0, p.Q3)('appearance_settings'),
+        P = (0, p.o9)('appearance_settings'),
+        x = (0, p.nm)('appearance_settings'),
+        Z = (e, i) =>
+            (0, n.jsx)(c.k5B, {
                 id: e,
                 group: 'input-modes',
-                label: r,
-                disabled: T,
-                checked: b === E.K.ON ? 'system' === e : e === t,
+                label: i,
+                disabled: m,
+                checked: h === j.KW.ON ? 'system' === e : e === r,
                 action: () => {
-                    (0, s.Yk)({
+                    (0, d.Yk)({
                         isPersisted: !0,
-                        analyticsLocations: n,
+                        analyticsLocations: t,
                         themeName: 'default '.concat(e)
                     }),
-                        (0, i.ZI)({ theme: e });
+                        (0, a.ZI)({ theme: e });
                 }
-            });
-    return [
-        (0, o.jsxs)(
-            a.MenuGroup,
-            {
-                children: [
-                    M(m.BRd.DARK, I.Z.Messages.THEME_DARK),
-                    M(m.BRd.LIGHT, I.Z.Messages.THEME_LIGHT),
-                    f &&
-                        (0, o.jsxs)(o.Fragment, {
-                            children: [M(m.BRd.DARKER, 'Darker'), M(m.BRd.MIDNIGHT, I.Z.Messages.THEME_MIDNIGHT)]
-                        }),
-                    M('system', I.Z.Messages.THEME_SYSTEM)
-                ]
-            },
-            'theme-items'
-        ),
-        (0, o.jsx)(
-            a.MenuGroup,
-            {
-                children: (0, o.jsx)(a.MenuItem, {
-                    id: 'compact-mode',
-                    label: e ? I.Z.Messages.SWITCH_TO_COZY_MODE : I.Z.Messages.SWITCH_TO_COMPACT_MODE,
-                    action: () => {
-                        g.jU.updateSetting(!e), (0, c.ZZ)();
-                    }
-                })
-            },
-            'compact-mode'
-        )
-    ];
+            }),
+        w = Z(O.BRd.DARK, v ? y.NW.string(y.t.SMPT1t) : y.NW.string(y.t.b8Cei4)),
+        k = Z(O.BRd.LIGHT, y.NW.string(y.t.K2sFfn)),
+        E = [
+            (0, n.jsxs)(
+                c.kSQ,
+                {
+                    children: [
+                        v
+                            ? (0, n.jsxs)(n.Fragment, {
+                                  children: [k, w, Z(O.BRd.DARKER, y.NW.string(y.t.b8Cei4)), Z(O.BRd.MIDNIGHT, y.NW.string(y.t.Do4ZJy))]
+                              })
+                            : (0, n.jsxs)(n.Fragment, {
+                                  children: [w, k]
+                              }),
+                        Z('system', y.NW.string(y.t['7rOU6u']))
+                    ]
+                },
+                'theme-items'
+            ),
+            ,
+        ];
+    return (
+        P
+            ? (E.push(
+                  (0, n.jsxs)(
+                      c.kSQ,
+                      {
+                          label: 'UI Density',
+                          children: [
+                              (0, n.jsx)(c.k5B, {
+                                  id: 'compact-ui',
+                                  group: 'list-density',
+                                  label: y.NW.string(y.t['7iegX1']),
+                                  checked: S === o.Pi.COMPACT,
+                                  action: () => {
+                                      f.YC.updateSetting(o.Pi.COMPACT);
+                                  }
+                              }),
+                              (0, n.jsx)(c.k5B, {
+                                  id: 'default-ui',
+                                  group: 'list-density',
+                                  label: y.NW.string(y.t.bBvAEB),
+                                  checked: S === o.Pi.DEFAULT,
+                                  action: () => {
+                                      f.YC.updateSetting(o.Pi.DEFAULT);
+                                  }
+                              }),
+                              (0, n.jsx)(c.k5B, {
+                                  id: 'cozy-ui',
+                                  group: 'list-density',
+                                  label: y.NW.string(y.t['4cuYHx']),
+                                  checked: S === o.Pi.COZY,
+                                  action: () => {
+                                      f.YC.updateSetting(o.Pi.COZY);
+                                  }
+                              })
+                          ]
+                      },
+                      'list-density'
+                  )
+              ),
+              E.push(
+                  (0, n.jsxs)(
+                      c.kSQ,
+                      {
+                          label: 'Message Display',
+                          children: [
+                              (0, n.jsx)(c.k5B, {
+                                  id: 'cozy-chat',
+                                  group: 'chat-density',
+                                  label: y.NW.string(y.t.Jqj4cX),
+                                  checked: !e,
+                                  action: () => {
+                                      f.jU.updateSetting(!1), (0, l.ZZ)();
+                                  }
+                              }),
+                              (0, n.jsx)(c.k5B, {
+                                  id: 'compact-chat',
+                                  group: 'chat-density',
+                                  label: y.NW.string(y.t['1JNcPT']),
+                                  checked: e,
+                                  action: () => {
+                                      f.jU.updateSetting(!0), (0, l.ZZ)();
+                                  }
+                              })
+                          ]
+                      },
+                      'chat-density'
+                  )
+              ),
+              x &&
+                  E.push(
+                      (0, n.jsx)(
+                          c.kSQ,
+                          {
+                              children: (0, n.jsx)(c.S89, {
+                                  id: 'desktop-refresh-override',
+                                  label: 'Enable Desktop Refresh',
+                                  action: () => {
+                                      a.ZP.updatedUnsyncedSettings({ disableVisualRefresh: v });
+                                  },
+                                  checked: v
+                              })
+                          },
+                          'refresh-experiment'
+                      )
+                  ))
+            : E.push(
+                  (0, n.jsx)(
+                      c.kSQ,
+                      {
+                          children: (0, n.jsx)(c.sNh, {
+                              id: 'compact-mode',
+                              label: e ? y.NW.string(y.t.CTpwDw) : y.NW.string(y.t['J/FISU']),
+                              action: () => {
+                                  f.jU.updateSetting(!e), (0, l.ZZ)();
+                              }
+                          })
+                      },
+                      'compact-mode'
+                  )
+              ),
+        E
+    );
 }

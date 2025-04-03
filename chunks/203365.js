@@ -1,8 +1,4 @@
-n.d(t, {
-    H: function () {
-        return i;
-    }
-});
+n.d(t, { H: () => i });
 var r = n(304329),
     i = function () {
         return r.C.some(function (e) {

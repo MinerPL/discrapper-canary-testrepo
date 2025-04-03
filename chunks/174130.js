@@ -1,34 +1,30 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    l = n(665149),
-    r = n(853856),
-    o = n(117984),
+n.d(t, { Z: () => h });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(665149),
+    a = n(853856),
+    s = n(117984),
     c = n(593214),
     u = n(362658),
     d = n(916069),
-    h = n(689938);
-function m(e) {
+    p = n(388032);
+function h(e) {
     let { channel: t } = e,
         { isFavoritesPerk: n } = (0, u.z)('ChannelFavoritesHeaderButton'),
-        m = (0, d.Z)(),
-        { notifyFavoriteAdded: p } = (0, c.up)(),
-        _ = (0, a.e7)([r.Z], () => r.Z.isFavorite(t.id));
-    if (!n || m) return null;
-    let f = _ ? s.StarIcon : s.StarOutlineIcon,
-        E = _ ? h.Z.Messages.UNFAVORITE_CHANNEL : h.Z.Messages.FAVORITE_CHANNEL;
-    return (0, i.jsx)(l.ZP.Icon, {
-        icon: f,
-        tooltip: E,
-        'aria-label': E,
+        h = (0, d.Z)(),
+        { notifyFavoriteAdded: f } = (0, c.up)(),
+        m = (0, i.e7)([a.Z], () => a.Z.isFavorite(t.id));
+    if (!n || h) return null;
+    let g = m ? l.r7p : l.vxU,
+        b = m ? p.NW.string(p.t.Bou7lZ) : p.NW.string(p.t['4wcdEx']);
+    return (0, r.jsx)(o.ZP.Icon, {
+        icon: g,
+        tooltip: b,
+        'aria-label': b,
         onClick: () => {
-            _ ? (0, o.oC)(t.id) : (p(), (0, o.kj)(t.id));
+            m ? (0, s.oC)(t.id) : (f(), (0, s.kj)(t.id));
         }
     });
 }

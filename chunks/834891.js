@@ -1,65 +1,61 @@
-a.d(s, {
-    E: function () {
-        return d;
-    },
-    l: function () {
-        return E;
-    }
+n.d(t, {
+    E: () => c,
+    l: () => d
 });
-var n,
-    E,
-    t = a(149765),
-    _ = a(700785),
-    l = a(981631),
-    i = a(689938);
-function d() {
+var i,
+    s = n(149765),
+    a = n(700785),
+    l = n(981631),
+    r = n(388032),
+    d = (((i = {}).CREATE = 'CREATE'), (i.GAMING = 'GAMING'), (i.FRIENDS = 'FRIENDS'), (i.STUDY = 'STUDY'), (i.CLUBS = 'CLUBS'), (i.CREATORS = 'CREATORS'), (i.LOCAL_COMMUNITY = 'LOCAL_COMMUNITY'), (i.SCHOOL_CLUB = 'SCHOOL_CLUB'), i);
+function c() {
     return {
         CREATE: {
             id: 'CREATE',
             code: '2TffvPucqHkN',
-            label: i.Z.Messages.GUILD_TEMPLATE_HEADER_CREATE,
+            label: r.NW.string(r.t['H3+6BA']),
             channels: [],
             system_channel_id: null
         },
         GAMING: {
             id: 'GAMING',
             code: 'hvtBQMfw6uSJ',
-            label: i.Z.Messages.GUILD_TEMPLATE_HEADER_GAMING,
+            label: r.NW.string(r.t.wdOb3N),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                    name: r.NW.string(r.t.mobYpK),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                    name: r.NW.string(r.t.ao2wxs),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CLIPS_AND_HIGHLIGHTS,
+                    name: r.NW.string(r.t['C3TN9/']),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                    name: r.NW.string(r.t.vcKDMj),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_LOBBY,
+                    name: r.NW.string(r.t.a7GzDw),
                     type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_GAMING,
+                    name: r.NW.string(r.t['2COskZ']),
                     type: l.d4z.GUILD_VOICE
                 }
             ],
@@ -68,48 +64,48 @@ function d() {
         FRIENDS: {
             id: 'FRIENDS',
             code: 'hgM48av5Q69A',
-            label: i.Z.Messages.GUILD_TEMPLATE_HEADER_FRIEND,
+            label: r.NW.string(r.t.OVHBtb),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                    name: r.NW.string(r.t.mobYpK),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                    name: r.NW.string(r.t.ao2wxs),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_GAME,
+                    name: r.NW.string(r.t.cd5smJ),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '03',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_MUSIC,
+                    name: r.NW.string(r.t['OcnR8/']),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                    name: r.NW.string(r.t.vcKDMj),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                    name: r.NW.string(r.t.XS6gcH),
                     type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_STREAM_ROOM,
+                    name: r.NW.string(r.t['5aYFRk']),
                     type: l.d4z.GUILD_VOICE
                 }
             ],
@@ -118,78 +114,78 @@ function d() {
         STUDY: {
             id: 'STUDY',
             code: 'FbwUwRp4j8Es',
-            label: i.Z.Messages.GUILD_TEMPLATE_HEADER_STUDY,
+            label: r.NW.string(r.t.fYwSi4),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
+                    name: r.NW.string(r.t['VCAA/f']),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+                    name: r.NW.string(r.t.GHQoER),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_NOTES_RESOURCES,
+                    name: r.NW.string(r.t['3eM+Li']),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                    name: r.NW.string(r.t.mobYpK),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                    name: r.NW.string(r.t.ao2wxs),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_HOMEWORK_HELP,
+                    name: r.NW.string(r.t.YjGYMD),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '13',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_SESSION_PLANNING,
+                    name: r.NW.string(r.t.MBCSqa),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '14',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
+                    name: r.NW.string(r.t.AIszv7),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '20',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                    name: r.NW.string(r.t.vcKDMj),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '21',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                    name: r.NW.string(r.t.XS6gcH),
                     type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_STUDY_ROOM.format({ number: 1 }),
+                    name: r.NW.formatToPlainString(r.t.LuNsNT, { number: 1 }),
                     type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '23',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_STUDY_ROOM.format({ number: 2 }),
+                    name: r.NW.formatToPlainString(r.t.LuNsNT, { number: 2 }),
                     type: l.d4z.GUILD_VOICE
                 }
             ],
@@ -198,60 +194,60 @@ function d() {
         CLUBS: {
             id: 'CLUBS',
             code: 's4WNnBxTDPsY',
-            label: i.Z.Messages.GUILD_TEMPLATE_HEADER_CLUBS,
+            label: r.NW.string(r.t.ZRpilp),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
+                    name: r.NW.string(r.t['VCAA/f']),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+                    name: r.NW.string(r.t.GHQoER),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+                    name: r.NW.string(r.t.nSsoSE),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                    name: r.NW.string(r.t.mobYpK),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                    name: r.NW.string(r.t.ao2wxs),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
+                    name: r.NW.string(r.t.z3KWvr),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '20',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                    name: r.NW.string(r.t.vcKDMj),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '21',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                    name: r.NW.string(r.t.XS6gcH),
                     type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM,
+                    name: r.NW.string(r.t['3xFaKi']),
                     type: l.d4z.GUILD_VOICE
                 }
             ],
@@ -260,72 +256,72 @@ function d() {
         CREATORS: {
             id: 'CREATORS',
             code: '6exdzMgjZgah',
-            label: i.Z.Messages.GUILD_TEMPLATE_HEADER_CREATOR,
+            label: r.NW.string(r.t['+HJio6']),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
+                    name: r.NW.string(r.t['VCAA/f']),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+                    name: r.NW.string(r.t.GHQoER),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+                    name: r.NW.string(r.t.nSsoSE),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                    name: r.NW.string(r.t.mobYpK),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                    name: r.NW.string(r.t.ao2wxs),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_EVENTS,
+                    name: r.NW.string(r.t.FvD6y8),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '13',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_IDEAS_AND_FEEDBACK,
+                    name: r.NW.string(r.t.DmviYW),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '20',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                    name: r.NW.string(r.t.vcKDMj),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '21',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                    name: r.NW.string(r.t.XS6gcH),
                     type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_COMMUNITY_HANGOUT,
+                    name: r.NW.string(r.t['g/Jx6e']),
                     type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '23',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_STREAM_ROOM,
+                    name: r.NW.string(r.t['5aYFRk']),
                     type: l.d4z.GUILD_VOICE
                 }
             ],
@@ -334,72 +330,72 @@ function d() {
         LOCAL_COMMUNITY: {
             id: 'LOCAL_COMMUNITY',
             code: '64UDvRNCC52Y',
-            label: i.Z.Messages.GUILD_TEMPLATE_HEADER_COMMUNITY,
+            label: r.NW.string(r.t['8EUbzs']),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
+                    name: r.NW.string(r.t['VCAA/f']),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+                    name: r.NW.string(r.t.GHQoER),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+                    name: r.NW.string(r.t.nSsoSE),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '03',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_RESOURCES,
+                    name: r.NW.string(r.t.yZCzMT),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                    name: r.NW.string(r.t.mobYpK),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                    name: r.NW.string(r.t.ao2wxs),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
+                    name: r.NW.string(r.t.z3KWvr),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '13',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
+                    name: r.NW.string(r.t.AIszv7),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '20',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                    name: r.NW.string(r.t.vcKDMj),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '21',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                    name: r.NW.string(r.t.XS6gcH),
                     type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM,
+                    name: r.NW.string(r.t['3xFaKi']),
                     type: l.d4z.GUILD_VOICE
                 }
             ],
@@ -408,78 +404,78 @@ function d() {
         SCHOOL_CLUB: {
             id: 'SCHOOL_CLUB',
             code: 'Ctg7PUHcQmZu',
-            label: i.Z.Messages.GUILD_TEMPLATE_HEADER_SCHOOL_CLUB,
+            label: r.NW.string(r.t['mmFA5+']),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
+                    name: r.NW.string(r.t['VCAA/f']),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+                    name: r.NW.string(r.t.GHQoER),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+                    name: r.NW.string(r.t.nSsoSE),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '03',
                     parent_id: '00',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_RESOURCES,
+                    name: r.NW.string(r.t.yZCzMT),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                    name: r.NW.string(r.t.mobYpK),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                    name: r.NW.string(r.t.ao2wxs),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
+                    name: r.NW.string(r.t.z3KWvr),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '13',
                     parent_id: '10',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
+                    name: r.NW.string(r.t.AIszv7),
                     type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '20',
                     parent_id: null,
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                    name: r.NW.string(r.t.vcKDMj),
                     type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '21',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                    name: r.NW.string(r.t.XS6gcH),
                     type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM_1,
+                    name: r.NW.string(r.t.hi1Ykp),
                     type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: i.Z.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM_2,
+                    name: r.NW.string(r.t.vw8oaW),
                     type: l.d4z.GUILD_VOICE
                 }
             ],
@@ -487,14 +483,14 @@ function d() {
                 {
                     id: '00',
                     name: '@everyone',
-                    permissions: _.TP
+                    permissions: a.TP
                 },
                 {
                     id: '01',
                     name: 'officers (example)',
                     mentionable: !0,
                     hoist: !0,
-                    permissions: t.$e(_.TP, l.Plq.MANAGE_ROLES, l.Plq.MANAGE_CHANNELS, l.Plq.KICK_MEMBERS, l.Plq.BAN_MEMBERS, l.Plq.MANAGE_NICKNAMES, l.Plq.MANAGE_GUILD_EXPRESSIONS, l.Plq.MANAGE_MESSAGES, l.Plq.SEND_TTS_MESSAGES),
+                    permissions: s.$e(a.TP, l.Plq.MANAGE_ROLES, l.Plq.MANAGE_CHANNELS, l.Plq.KICK_MEMBERS, l.Plq.BAN_MEMBERS, l.Plq.MANAGE_NICKNAMES, l.Plq.MANAGE_GUILD_EXPRESSIONS, l.Plq.MANAGE_MESSAGES, l.Plq.SEND_TTS_MESSAGES),
                     color: 3066993
                 }
             ],
@@ -502,4 +498,3 @@ function d() {
         }
     };
 }
-((n = E || (E = {})).CREATE = 'CREATE'), (n.GAMING = 'GAMING'), (n.FRIENDS = 'FRIENDS'), (n.STUDY = 'STUDY'), (n.CLUBS = 'CLUBS'), (n.CREATORS = 'CREATORS'), (n.LOCAL_COMMUNITY = 'LOCAL_COMMUNITY'), (n.SCHOOL_CLUB = 'SCHOOL_CLUB');

@@ -1,28 +1,53 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    r = n(626135),
-    i = n(413875),
+n.d(t, { Z: () => m });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(626135),
+    a = n(503899),
     l = n(292352),
     o = n(981631),
-    c = n(689938),
-    d = n(774167);
-function _() {
-    return (0, s.jsxs)(a.Button, {
-        innerClassName: d.qrCodeButtonContent,
-        size: a.Button.Sizes.LARGE,
+    c = n(332495),
+    d = n(388032),
+    u = n(289581);
+function m() {
+    return (0, r.jsxs)(i.zxk, {
+        innerClassName: u.qrCodeButtonContent,
+        size: i.zxk.Sizes.LARGE,
         onClick: () => {
-            (0, a.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('32873'), n.e('90688')]).then(n.bind(n, 978305));
-                return (t) => (0, s.jsx)(e, { ...t });
+            (0, i.ZDy)(async () => {
+                let { default: e } = await Promise.all([n.e('53419'), n.e('90688')]).then(n.bind(n, 978305));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, t)
+                    );
             }),
-                r.default.track(o.rMx.FAMILY_CENTER_ACTION, { action: l.YC.ShowQRCodeModal });
+                s.default.track(o.rMx.FAMILY_CENTER_ACTION, { action: l.YC.ShowQRCodeModal });
         },
-        children: [(0, s.jsx)(i.Z, {}), c.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_BUTTON]
+        children: [(0, r.jsx)(a.Z, {}), d.NW.string(c.Z.Ta9byc)]
     });
 }

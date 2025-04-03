@@ -1,40 +1,36 @@
-t.d(n, {
-    r: function () {
-        return C;
-    }
-});
-var i = t(106351),
-    l = t(475179),
-    o = t(816782),
-    r = t(358221),
-    E = t(221292),
-    a = t(318661),
-    u = t(433355),
-    s = t(592125),
-    d = t(944486),
-    _ = t(914010),
-    c = t(981631);
-let C = {
+n.d(t, { r: () => p });
+var r = n(106351),
+    i = n(475179),
+    s = n(816782),
+    a = n(358221),
+    l = n(221292),
+    o = n(687158),
+    c = n(433355),
+    d = n(592125),
+    u = n(944486),
+    m = n(914010),
+    g = n(981631);
+let p = {
     binds: ['mod+u'],
     comboKeysBindGlobal: !0,
     action() {
-        let e = _.Z.getGuildId(),
-            n = d.Z.getChannelId(e),
-            t = s.Z.getChannel(n);
-        if (null != n && null != t && t.type === i.d.GUILD_VOICE) return l.Z.updateChatOpen(n, !r.Z.getChatOpen(n)), !1;
-        if (null != n && null != t && t.type === i.d.DM) {
-            let e = u.ZP.getSection(n, null == t ? void 0 : t.isDM()),
-                i = (0, a.Of)(t.getRecipientId()),
-                l = e === c.ULH.PROFILE;
+        let e = m.Z.getGuildId(),
+            t = u.Z.getChannelId(e),
+            n = d.Z.getChannel(t);
+        if (null != t && null != n && n.type === r.d.GUILD_VOICE) return i.Z.updateChatOpen(t, !a.Z.getChatOpen(t)), !1;
+        if (null != t && null != n && n.type === r.d.DM) {
+            let e = c.ZP.getSection(t, null == n ? void 0 : n.isDM()),
+                r = (0, o.Of)(n.getRecipientId()),
+                i = e === g.ULH.PROFILE;
             return (
-                (0, E.TY)({
-                    displayProfile: i,
-                    isProfileOpen: !l
+                (0, l.TY)({
+                    displayProfile: r,
+                    isProfileOpen: !i
                 }),
-                o.Z.toggleProfilePanelSection(),
+                s.Z.toggleProfilePanelSection(),
                 !1
             );
         }
-        return o.Z.toggleMembersSection(), !1;
+        return s.Z.toggleMembersSection(), !1;
     }
 };

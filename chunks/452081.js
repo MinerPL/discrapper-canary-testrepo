@@ -1,32 +1,29 @@
-n.d(t, {
-    z: function () {
-        return r;
-    }
-}),
-    n(47120);
-var i = n(470079),
-    a = n(113434),
-    s = n(689938);
-function r() {
-    let [e, t] = i.useState(a.e5.UNCLAIMED),
-        n = i.useMemo(
+n.d(t, { z: () => s });
+var r = n(192379),
+    i = n(703656),
+    l = n(113434),
+    a = n(220068),
+    o = n(388032);
+function s() {
+    let e = a.Z.useField('tab'),
+        t = r.useCallback((e) => {
+            (0, i.dL)('#'), a.Z.setState({ tab: e });
+        }, []);
+    return {
+        tabs: r.useMemo(
             () => [
                 {
-                    id: a.e5.UNCLAIMED,
-                    label: s.Z.Messages.QUESTS_ALL
+                    id: l.e5.ALL,
+                    label: o.NW.string(o.t['0SzXmp'])
                 },
                 {
-                    id: a.e5.CLAIMED,
-                    label: s.Z.Messages.QUESTS_CLAIMED
+                    id: l.e5.CLAIMED,
+                    label: o.NW.string(o.t.zyNYND)
                 }
             ],
             []
-        );
-    return {
-        tabs: n,
+        ),
         selectedTab: e,
-        onSelectTab: i.useCallback((e) => {
-            t(e);
-        }, [])
+        onSelectTab: t
     };
 }

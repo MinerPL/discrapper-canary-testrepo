@@ -1,12 +1,8 @@
-n.d(t, {
-    e: function () {
-        return o;
-    }
-});
+n.d(t, { e: () => s });
 var r = n(96280),
     i = n(240481);
-let a = new r.W(),
-    s = new i.g(a.registerPendingError);
-function o(e) {
-    a.enqueueTask(s.create(e));
+let o = new r.W(),
+    a = new i.g(o.registerPendingError);
+function s(e) {
+    o.enqueueTask(a.create(e));
 }

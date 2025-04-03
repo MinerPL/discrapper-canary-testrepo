@@ -1,46 +1,33 @@
 n.d(t, {
-    $q: function () {
-        return c;
-    },
-    U8: function () {
-        return u;
-    },
-    V6: function () {
-        return o;
-    },
-    uF: function () {
-        return d;
-    },
-    uS: function () {
-        return l;
-    }
+    $q: () => u,
+    U8: () => c,
+    V6: () => s,
+    uF: () => f,
+    uS: () => l
 }),
     n(411104),
     n(47120);
 var r = n(673750),
     i = n(592125),
-    a = n(981631),
-    s = n(689938);
-class o extends Error {}
+    o = n(981631),
+    a = n(388032);
+class s extends Error {}
 class l extends Error {}
-let u = new Set([a.evJ.AUTOMOD_MESSAGE_BLOCKED, a.evJ.AUTOMOD_TITLE_BLOCKED, a.evJ.AUTOMOD_INVALID_RUST_SERVICE_RESPONSE]);
-function c(e, t) {
+let c = new Set([o.evJ.AUTOMOD_MESSAGE_BLOCKED, o.evJ.AUTOMOD_TITLE_BLOCKED, o.evJ.AUTOMOD_INVALID_RUST_SERVICE_RESPONSE]);
+function u(e, t) {
     if (null == e) return null;
     let { code: n, message: r } = e;
-    if (!u.has(n)) return null;
+    if (!c.has(n)) return null;
     if (null != r) return r;
     if (null == t) return null;
-    let o = i.Z.getChannel(t);
-    return (null == o ? void 0 : o.isThread()) ? s.Z.Messages.THREAD_AUTOMOD_ERROR : ((null == o ? void 0 : o.isForumPost()) || (null == o ? void 0 : o.isForumLikeChannel())) && (n === a.evJ.AUTOMOD_TITLE_BLOCKED || n === a.evJ.AUTOMOD_MESSAGE_BLOCKED) ? s.Z.Messages.FORUM_POST_AUTOMOD_ERROR : null;
+    let s = i.Z.getChannel(t);
+    return (null == s ? void 0 : s.isThread()) ? a.NW.string(a.t.DVdG9P) : ((null == s ? void 0 : s.isForumPost()) || (null == s ? void 0 : s.isForumLikeChannel())) && (n === o.evJ.AUTOMOD_TITLE_BLOCKED || n === o.evJ.AUTOMOD_MESSAGE_BLOCKED) ? a.NW.string(a.t.ipgKDg) : null;
 }
-function d(e, t) {
-    let n = c(t);
-    return null != n
-        ? n
-        : null == e
-          ? s.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE
-          : (function (e) {
-                let t = i.Z.getChannel(e.message.channelId);
-                return (0, r.Bz)(e) ? s.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_NOTICE : (null == t ? void 0 : t.isThread()) ? s.Z.Messages.THREAD_AUTOMOD_ERROR : (null == t ? void 0 : t.isForumPost()) || (null == t ? void 0 : t.isForumLikeChannel()) ? s.Z.Messages.FORUM_POST_AUTOMOD_ERROR : s.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE;
-            })(e);
+function d(e) {
+    let t = i.Z.getChannel(e.message.channelId);
+    return (0, r.Bz)(e) ? a.NW.string(a.t.bU6o09) : (null == t ? void 0 : t.isThread()) ? a.NW.string(a.t.DVdG9P) : (null == t ? void 0 : t.isForumPost()) || (null == t ? void 0 : t.isForumLikeChannel()) ? a.NW.string(a.t.ipgKDg) : a.NW.string(a.t.zQ69pq);
+}
+function f(e, t) {
+    let n = u(t);
+    return null != n ? n : null == e ? a.NW.string(a.t.zQ69pq) : d(e);
 }

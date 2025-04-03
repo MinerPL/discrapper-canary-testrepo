@@ -1,37 +1,33 @@
-t.d(n, {
-    Z: function () {
-        return E;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(442837),
-    l = t(481060),
-    r = t(332148),
-    s = t(257559),
-    o = t(496675),
-    u = t(151007),
-    d = t(981631),
-    c = t(689938);
-function E(e, n) {
-    let t = (0, a.e7)([o.Z], () => o.Z.can(d.Plq.MANAGE_MESSAGES, n), [n]);
-    return e.state !== d.yb.SEND_FAILED && (0, u.Z)(e, n, t)
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(332148),
+    o = n(257559),
+    s = n(496675),
+    c = n(151007),
+    u = n(981631),
+    d = n(388032);
+function f(e, t) {
+    let n = (0, i.e7)([s.Z], () => s.Z.can(u.Plq.MANAGE_MESSAGES, t), [t]);
+    return e.state !== u.yb.SEND_FAILED && (0, c.Z)(e, t, n)
         ? !1 === e.pinned
-            ? (0, i.jsx)(l.MenuItem, {
+            ? (0, r.jsx)(l.sNh, {
                   id: 'pin',
-                  action: function (t) {
-                      t.shiftKey ? r.Z.pinMessage(n, e.id) : s.Z.confirmPin(n, e);
+                  action: function (n) {
+                      n.shiftKey ? a.Z.pinMessage(t, e.id) : o.Z.confirmPin(t, e);
                   },
-                  label: c.Z.Messages.PIN_MESSAGE,
-                  icon: l.PinIcon
+                  label: d.NW.string(d.t['CvQ18/']),
+                  icon: l.qQX
               })
-            : (0, i.jsx)(l.MenuItem, {
+            : (0, r.jsx)(l.sNh, {
                   id: 'unpin',
-                  action: function (t) {
-                      t.shiftKey ? r.Z.unpinMessage(n, e.id) : s.Z.confirmUnpin(n, e);
+                  action: function (n) {
+                      n.shiftKey ? a.Z.unpinMessage(t, e.id) : o.Z.confirmUnpin(t, e);
                   },
-                  label: c.Z.Messages.UNPIN_MESSAGE,
-                  icon: l.PinIcon
+                  label: d.NW.string(d.t['Bse+Fx']),
+                  icon: l.qQX
               })
         : null;
 }

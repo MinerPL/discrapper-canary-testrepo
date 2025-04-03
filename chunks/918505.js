@@ -1,13 +1,7 @@
 n.d(t, {
-    JH: function () {
-        return a;
-    },
-    o9: function () {
-        return i;
-    },
-    w8: function () {
-        return r;
-    }
+    JH: () => o,
+    o9: () => i,
+    w8: () => r
 });
 let r = (0, n(818083).B)({
         kind: 'user',
@@ -26,7 +20,7 @@ let r = (0, n(818083).B)({
         let { enabled: e } = r.useExperiment({ location: 'faf26d_1' }, { autoTrackExposure: !1 });
         return e;
     },
-    a = () => {
+    o = () => {
         let { enabled: e } = r.getCurrentConfig({ location: 'faf26d_2' }, { autoTrackExposure: !1 });
         return e;
     };

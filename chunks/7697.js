@@ -1,49 +1,44 @@
-t.d(n, {
-    Z: function () {
-        return _;
-    }
-}),
-    t(47120);
-var l = t(470079),
-    s = t(392711),
-    o = t.n(s),
-    i = t(442837),
-    r = t(699682),
-    u = t(70956),
-    a = t(709054),
-    c = t(897285),
-    d = t(924301),
-    E = t(854698);
-function _(e, n, t) {
-    let s = (0, i.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(e)),
-        _ = (0, r.Z)(t),
-        [C, N] = l.useState(null != t && null != s ? (0, E.PJ)(4, (0, E.Ho)(t), new Date(s.scheduled_start_time)) : []);
-    l.useEffect(() => {
-        if (null == _ || null == t || null == s || o().isEqual(_, t)) return;
-        let e = (0, E.Ho)(t);
-        N((0, E.PJ)(C.length, e, new Date(s.scheduled_start_time)));
-    }, [t, C.length, s, _]),
-        l.useEffect(() => {
-            if (null == n) return;
-            let t = C.map((e) => a.default.fromTimestamp(Math.floor(e.getTime() / u.Z.Millis.SECOND) * u.Z.Millis.SECOND));
-            c.Z.getGuildEventUserCounts(n, e, t);
-        }, [e, n, C]);
-    let h = l.useMemo(() => {
-        if (null == t || 0 === C.length || (null == s ? void 0 : s.scheduled_start_time) == null) return !1;
+n.d(t, { Z: () => b }), n(47120);
+var r = n(192379),
+    l = n(392711),
+    i = n.n(l),
+    s = n(442837),
+    o = n(699682),
+    c = n(70956),
+    u = n(709054),
+    a = n(897285),
+    d = n(924301),
+    p = n(854698);
+function b(e, t, n) {
+    let l = (0, s.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(e)),
+        b = (0, o.Z)(n),
+        [g, x] = r.useState(null != n && null != l ? (0, p.PJ)(4, (0, p.Ho)(n), new Date(l.scheduled_start_time)) : []);
+    r.useEffect(() => {
+        if (null == b || null == n || null == l || i().isEqual(b, n)) return;
+        let e = (0, p.Ho)(n);
+        x((0, p.PJ)(g.length, e, new Date(l.scheduled_start_time)));
+    }, [n, g.length, l, b]),
+        r.useEffect(() => {
+            if (null == t) return;
+            let n = g.map((e) => u.default.fromTimestamp(Math.floor(e.getTime() / c.Z.Millis.SECOND) * c.Z.Millis.SECOND));
+            a.Z.getGuildEventUserCounts(t, e, n);
+        }, [e, t, g]);
+    let f = r.useMemo(() => {
+        if (null == n || 0 === g.length || (null == l ? void 0 : l.scheduled_start_time) == null) return !1;
         let e = new Date();
-        e.setFullYear(e.getFullYear() + E.hn);
-        let n = C[C.length - 1],
-            l = (0, E.Ho)(t).after(n);
-        return null != l && l <= e;
-    }, [t, C, null == s ? void 0 : s.scheduled_start_time]);
+        e.setFullYear(e.getFullYear() + p.hn);
+        let t = g[g.length - 1],
+            r = (0, p.Ho)(n).after(t);
+        return null != r && r <= e;
+    }, [n, g, null == l ? void 0 : l.scheduled_start_time]);
     return {
-        recurrenceStartTimes: C,
-        canViewMoreRecurrences: h,
+        recurrenceStartTimes: g,
+        canViewMoreRecurrences: f,
         updateRecurrenceStartTimes: () => {
-            if (null == t || null == s) return;
-            let e = (0, E.Ho)(t),
-                n = C[C.length - 1];
-            N([...C, ...(0, E.PJ)(4, e, n, !0)]);
+            if (null == n || null == l) return;
+            let e = (0, p.Ho)(n),
+                t = g[g.length - 1];
+            x([...g, ...(0, p.PJ)(4, e, t, !0)]);
         }
     };
 }

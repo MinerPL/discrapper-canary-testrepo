@@ -1,67 +1,63 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(990547),
-    l = n(481060),
-    r = n(213609),
-    o = n(536442),
+n.d(t, { Z: () => h });
+var r = n(200651),
+    i = n(192379),
+    l = n(990547),
+    o = n(481060),
+    a = n(213609),
+    s = n(536442),
     c = n(39604),
     u = n(176127),
-    d = n(689938),
-    h = n(823472);
-function m(e) {
-    let { onOpenClips: t, lastClipsSession: n, closePopout: m } = e;
-    return (a.useEffect(
+    d = n(388032),
+    p = n(235966);
+function h(e) {
+    let { onOpenClips: t, lastClipsSession: n, closePopout: h } = e;
+    return (i.useEffect(
         () => () => {
             (0, c.eL)();
         },
         []
     ),
-    (0, r.Z)({
-        type: s.ImpressionTypes.VIEW,
-        name: s.ImpressionNames.HOTSPOT,
-        properties: { hotspot_location: o.v6.CLIPS_CHANNEL_ATTACH_REMINDER }
+    (0, a.Z)({
+        type: l.ImpressionTypes.VIEW,
+        name: l.ImpressionNames.HOTSPOT,
+        properties: { hotspot_location: s.v6.CLIPS_CHANNEL_ATTACH_REMINDER }
     }),
     null == n)
-        ? (0, i.jsx)(i.Fragment, {})
-        : (0, i.jsxs)('div', {
-              className: h.recentClipsPopout,
+        ? null
+        : (0, r.jsxs)('div', {
+              className: p.recentClipsPopout,
               children: [
-                  (0, i.jsx)('div', {
-                      className: h.thumbnailStackContainer,
-                      children: (0, i.jsx)(u.Z, {})
+                  (0, r.jsx)('div', {
+                      className: p.thumbnailStackContainer,
+                      children: (0, r.jsx)(u.Z, {})
                   }),
-                  (0, i.jsx)(l.Heading, {
-                      className: h.header,
+                  (0, r.jsx)(o.X6q, {
+                      className: p.header,
                       color: 'header-primary',
                       variant: 'heading-md/extrabold',
-                      children: d.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: n.newClipIds.length })
+                      children: d.NW.format(d.t['+qxkzM'], { count: n.newClipIds.length })
                   }),
-                  (0, i.jsx)(l.Text, {
+                  (0, r.jsx)(o.Text, {
                       color: 'text-normal',
-                      className: h.__invalid_content,
+                      className: p.__invalid_content,
                       variant: 'text-sm/medium',
-                      children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_BODY.format({ applicationName: n.applicationName })
+                      children: d.NW.format(d.t['7XX0/f'], { applicationName: n.applicationName })
                   }),
-                  (0, i.jsxs)('div', {
-                      className: h.buttonsContainer,
+                  (0, r.jsxs)('div', {
+                      className: p.buttonsContainer,
                       children: [
-                          (0, i.jsx)(l.Button, {
-                              color: l.Button.Colors.PRIMARY,
-                              look: l.Button.Looks.LINK,
+                          (0, r.jsx)(o.zxk, {
+                              color: o.zxk.Colors.PRIMARY,
+                              look: o.zxk.Looks.LINK,
                               onClick: function () {
-                                  (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), m();
+                                  (0, s.Kw)(s.v6.CLIPS_CHANNEL_ATTACH_REMINDER), h();
                               },
-                              children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_SECONDARY_CTA
+                              children: d.NW.string(d.t['7r5Z19'])
                           }),
-                          (0, i.jsx)(l.Button, {
-                              color: l.Button.Colors.BRAND,
+                          (0, r.jsx)(o.zxk, {
+                              color: o.zxk.Colors.BRAND,
                               onClick: t,
-                              children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA
+                              children: d.NW.string(d.t.md4qKy)
                           })
                       ]
                   })

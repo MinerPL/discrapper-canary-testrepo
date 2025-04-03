@@ -1,21 +1,14 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return _;
-        }
-    });
-var a,
-    s,
-    i = n(735250),
-    o = n(470079),
-    r = n(481060),
-    E = n(841613),
-    d = n(600164),
+n.d(t, { default: () => h });
+var a = n(200651),
+    i = n(192379),
+    s = n(481060),
+    r = n(841613),
+    o = n(600164),
     l = n(626135),
     c = n(981631),
-    D = n(689938),
-    T = n(530158);
-function N(e, t, n) {
+    d = n(388032),
+    N = n(589061);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,8 +21,7 @@ function N(e, t, n) {
         e
     );
 }
-((a = s || (s = {})).CERTIFIED = 'New Audio Device Detected - Certified'), (a.NOT_CERTIFIED = 'New Audio Device Detected - Not Certified');
-class _ extends o.Component {
+class h extends i.Component {
     track() {
         let { certifiedDeviceMetadata: e, device: t } = this.props;
         l.default.track(c.rMx.OPEN_MODAL, {
@@ -45,52 +37,52 @@ class _ extends o.Component {
         t.displayName !== e.device.displayName && this.track();
     }
     renderBody() {
-        let e;
-        let { device: t, certifiedDeviceMetadata: n } = this.props,
-            { devicePreference: a } = this.state;
+        let e,
+            { device: t, certifiedDeviceMetadata: n } = this.props,
+            { devicePreference: r } = this.state;
         switch (t.type) {
             case c.QyF.INPUT:
                 e =
                     null != n
-                        ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_AUDIO_INPUT_BODY.format({
+                        ? d.NW.format(d.t.NqNqy8, {
                               vendorName: n.vendor.name,
                               modelName: n.model.name
                           })
-                        : D.Z.Messages.CONNECTED_DEVICE_DETECTED_INPUT_BODY.format({ name: t.displayName });
+                        : d.NW.format(d.t.stSaRk, { name: t.displayName });
                 break;
             case c.QyF.OUTPUT:
                 e =
                     null != n
-                        ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_AUDIO_OUTPUT_BODY.format({
+                        ? d.NW.format(d.t.uPgqIC, {
                               vendorName: n.vendor.name,
                               modelName: n.model.name
                           })
-                        : D.Z.Messages.CONNECTED_DEVICE_DETECTED_OUTPUT_BODY.format({ name: t.displayName });
+                        : d.NW.format(d.t.jyhYp6, { name: t.displayName });
                 break;
             default:
-                e = (0, i.jsxs)(o.Fragment, {
+                e = (0, a.jsxs)(i.Fragment, {
                     children: [
                         null != n
-                            ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_AUDIO_INPUT_AND_OUTPUT_BODY.format({
+                            ? d.NW.format(d.t['4Xyzx8'], {
                                   vendorName: n.vendor.name,
                                   modelName: n.model.name
                               })
-                            : D.Z.Messages.CONNECTED_DEVICE_DETECTED_INPUT_AND_OUTPUT_BODY.format({ name: t.displayName }),
-                        (0, i.jsx)(r.RadioGroup, {
-                            value: a,
-                            className: T.options,
+                            : d.NW.format(d.t.Z7XQcn, { name: t.displayName }),
+                        (0, a.jsx)(s.FXm, {
+                            value: r,
+                            className: N.options,
                             onChange: this.handleConnectedDeviceType,
                             options: [
                                 {
-                                    name: D.Z.Messages.CONNECTED_DEVICE_DETECTED_OPTION_INPUT_AND_OUTPUT,
+                                    name: d.NW.string(d.t.vhxqwc),
                                     value: c.QyF.INPUT_AND_OUTPUT
                                 },
                                 {
-                                    name: D.Z.Messages.CONNECTED_DEVICE_DETECTED_OPTION_INPUT,
+                                    name: d.NW.string(d.t['Kqs9+P']),
                                     value: c.QyF.INPUT
                                 },
                                 {
-                                    name: D.Z.Messages.CONNECTED_DEVICE_DETECTED_OPTION_OUTPUT,
+                                    name: d.NW.string(d.t.GGlM3d),
                                     value: c.QyF.OUTPUT
                                 }
                             ]
@@ -98,17 +90,17 @@ class _ extends o.Component {
                     ]
                 });
         }
-        return (0, i.jsxs)(
-            o.Fragment,
+        return (0, a.jsxs)(
+            i.Fragment,
             {
                 children: [
                     e,
-                    (0, i.jsx)(r.Button, {
-                        className: T.neverShow,
-                        look: r.Button.Looks.LINK,
-                        color: r.Button.Colors.LINK,
+                    (0, a.jsx)(s.zxk, {
+                        className: N.neverShow,
+                        look: s.zxk.Looks.LINK,
+                        color: s.zxk.Colors.LINK,
                         onClick: this.neverShow,
-                        children: D.Z.Messages.DONT_SHOW_AGAIN
+                        children: d.NW.string(d.t['5E9SBw'])
                     })
                 ]
             },
@@ -117,37 +109,37 @@ class _ extends o.Component {
     }
     render() {
         let { certifiedDeviceMetadata: e, transitionState: t } = this.props,
-            n = null != e ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_TITLE : D.Z.Messages.CONNECTED_DEVICE_DETECTED_TITLE;
-        return (0, i.jsxs)(r.ModalRoot, {
+            n = null != e ? d.NW.string(d.t.kiqvHR) : d.NW.string(d.t.AbnGIy);
+        return (0, a.jsxs)(s.Y0X, {
             transitionState: t,
             'aria-label': n,
             children: [
-                (0, i.jsx)(r.ModalHeader, {
+                (0, a.jsx)(s.xBx, {
                     separator: !1,
-                    children: (0, i.jsx)(r.Heading, {
+                    children: (0, a.jsx)(s.X6q, {
                         variant: 'heading-lg/semibold',
                         children: n
                     })
                 }),
-                (0, i.jsx)(r.ModalContent, {
-                    children: (0, i.jsx)(r.Text, {
+                (0, a.jsx)(s.hzk, {
+                    children: (0, a.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         children: this.renderBody()
                     })
                 }),
-                (0, i.jsx)(r.ModalFooter, {
-                    children: (0, i.jsxs)(d.Z, {
-                        justify: d.Z.Justify.END,
+                (0, a.jsx)(s.mzw, {
+                    children: (0, a.jsxs)(o.Z, {
+                        justify: o.Z.Justify.END,
                         children: [
-                            (0, i.jsx)(r.Button, {
-                                color: r.Button.Colors.PRIMARY,
+                            (0, a.jsx)(s.zxk, {
+                                color: s.zxk.Colors.PRIMARY,
                                 onClick: this.cancel,
-                                className: T.cancelButton,
-                                children: D.Z.Messages.CONNECTED_DEVICE_DETECTED_CANCEL_BUTTON
+                                className: N.cancelButton,
+                                children: d.NW.string(d.t.vPBgq6)
                             }),
-                            (0, i.jsx)(r.Button, {
+                            (0, a.jsx)(s.zxk, {
                                 onClick: this.confirm,
-                                children: D.Z.Messages.CONNECTED_DEVICE_DETECTED_CONFIRM_BUTTON
+                                children: d.NW.string(d.t.ydkoDQ)
                             })
                         ]
                     })
@@ -157,25 +149,25 @@ class _ extends o.Component {
     }
     constructor(e) {
         super(e),
-            N(this, 'confirm', () => {
+            m(this, 'confirm', () => {
                 let { device: e, onClose: t } = this.props,
                     { devicePreference: n } = this.state;
-                null != n && (E.hG(e.displayName, n, 'New Audio Device Detected Modal'), t());
+                null != n && (r.hG(e.displayName, n, 'New Audio Device Detected Modal'), t());
             }),
-            N(this, 'cancel', () => {
+            m(this, 'cancel', () => {
                 let { device: e, onClose: t } = this.props;
-                E.Gl(e.displayName), t();
+                r.Gl(e.displayName), t();
             }),
-            N(this, 'neverShow', () => {
+            m(this, 'neverShow', () => {
                 let { certifiedDeviceMetadata: e, onClose: t } = this.props;
-                E.oI(),
+                r.oI(),
                     t(),
                     l.default.track(c.rMx.MODAL_DISMISSED, {
                         type: null != e ? 'New Audio Device Detected - Certified' : 'New Audio Device Detected - Not Certified',
                         dismiss_type: 'permanent'
                     });
             }),
-            N(this, 'handleConnectedDeviceType', (e) => {
+            m(this, 'handleConnectedDeviceType', (e) => {
                 let { value: t } = e;
                 this.setState({ devicePreference: t });
             }),

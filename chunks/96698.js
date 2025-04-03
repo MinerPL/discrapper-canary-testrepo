@@ -1,31 +1,27 @@
-l.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var s = l(735250);
-l(470079);
-var a = l(120356),
-    t = l.n(a),
-    i = l(481060),
-    r = l(112831),
-    o = l(633818);
-function d(e) {
-    let { steps: n, stepIndex: l, onClick: a } = e;
-    return (0, s.jsx)('div', {
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var l = n(120356),
+    a = n.n(l),
+    i = n(481060),
+    s = n(118012),
+    o = n(734829);
+function c(e) {
+    let { steps: t, stepIndex: n, onClick: l } = e;
+    return (0, r.jsx)('div', {
         className: o.container,
-        children: n.map((e, n) => {
-            let d = l === n;
-            return (0, s.jsxs)(
-                i.Clickable,
+        children: t.map((e, t) => {
+            let c = n === t;
+            return (0, r.jsxs)(
+                i.P3F,
                 {
-                    onClick: () => a(n),
+                    onClick: () => l(t),
                     className: o.stepContainer,
                     children: [
-                        (0, s.jsx)('div', { className: t()(o.progressBar, { [o.selectedProgressBar]: d }) }),
-                        (0, s.jsx)(r.Z, {
-                            color: d ? r.Z.Colors.BRAND : r.Z.Colors.MUTED,
-                            size: r.Z.Sizes.SIZE_12,
+                        (0, r.jsx)('div', { className: a()(o.progressBar, { [o.selectedProgressBar]: c }) }),
+                        (0, r.jsx)(s.Z, {
+                            color: c ? s.Z.Colors.BRAND : s.Z.Colors.MUTED,
+                            size: s.Z.Sizes.SIZE_12,
                             children: e
                         })
                     ]

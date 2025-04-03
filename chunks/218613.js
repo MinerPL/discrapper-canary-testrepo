@@ -1,129 +1,158 @@
-s.r(t),
-    s.d(t, {
-        AddMembers: function () {
-            return ee;
-        },
-        ChannelTypeBadge: function () {
-            return J;
-        }
-    }),
-    s(653041),
-    s(47120),
-    s(411104);
-var n,
-    a,
-    r = s(735250),
-    l = s(470079),
-    i = s(120356),
-    o = s.n(i),
-    d = s(512722),
-    c = s.n(d),
-    h = s(392711),
-    u = s.n(h),
-    E = s(990547),
-    N = s(831209),
-    C = s(442837),
-    p = s(481060),
-    m = s(333848),
-    _ = s(749210),
-    g = s(332063),
-    A = s(620123),
-    I = s(911969),
-    T = s(367907),
-    M = s(812206),
-    L = s(933557),
-    S = s(605436),
-    O = s(185413),
-    R = s(313201),
-    x = s(688465),
-    D = s(456269),
-    Z = s(312146),
-    j = s(703656),
-    v = s(146085),
-    b = s(60222),
-    P = s(388131),
-    G = s(777036),
-    f = s(131704),
-    H = s(592125),
-    U = s(271383),
-    y = s(430824),
-    B = s(496675),
-    z = s(699516),
-    F = s(594174),
-    w = s(934415),
-    k = s(823379),
-    Y = s(63063),
-    V = s(981631),
-    K = s(71080),
-    W = s(710352),
-    X = s(231338),
-    q = s(689938),
-    Q = s(866957);
-function $(e, t, s) {
+n.d(t, {
+    default: () => es,
+    p: () => ee
+}),
+    n(653041),
+    n(266796),
+    n(47120),
+    n(566702),
+    n(411104);
+var s = n(200651),
+    r = n(192379),
+    i = n(120356),
+    l = n.n(i),
+    a = n(512722),
+    o = n.n(a),
+    d = n(392711),
+    c = n.n(d),
+    h = n(990547),
+    u = n(831209),
+    p = n(442837),
+    N = n(481060),
+    m = n(333848),
+    g = n(749210),
+    C = n(332063),
+    x = n(620123),
+    I = n(911969),
+    E = n(367907),
+    j = n(812206),
+    b = n(933557),
+    O = n(636816),
+    f = n(605436),
+    S = n(185413),
+    v = n(313201),
+    A = n(540059),
+    T = n(688465),
+    D = n(456269),
+    L = n(312146),
+    y = n(703656),
+    _ = n(146085),
+    U = n(60222),
+    W = n(388131),
+    z = n(131704),
+    G = n(592125),
+    P = n(271383),
+    M = n(430824),
+    R = n(496675),
+    w = n(699516),
+    Z = n(594174),
+    k = n(934415),
+    B = n(823379),
+    F = n(63063),
+    V = n(981631),
+    H = n(71080),
+    Y = n(710352),
+    X = n(231338),
+    q = n(388032),
+    K = n(37448);
+function J(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = n),
         e
     );
 }
-function J(e) {
-    let { isNew: t, isBeta: s } = e,
-        n = null;
+function Q(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            s = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (s = s.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            s.forEach(function (t) {
+                J(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function $(e, t) {
     return (
-        !0 === t
-            ? (n = (0, r.jsx)(p.TextBadge, {
-                  text: q.Z.Messages.CHANNEL_TYPE_NEW,
-                  className: Q.newBadge,
-                  color: N.Z.BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER
-              }))
-            : !0 === s && (n = (0, r.jsx)(x.Z, { className: Q.newBadge })),
-        n
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var s = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, s);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
     );
 }
 function ee(e) {
-    let { onChange: t, guildId: s, channelType: n, description: a } = e,
-        [i, o] = l.useState({}),
-        d = (0, C.e7)([y.Z], () => y.Z.getGuild(s)),
-        c = n === V.d4z.GUILD_STAGE_VOICE;
-    return (l.useEffect(() => {
-        t(i);
-    }, [i, t]),
+    let { isNew: t, isBeta: n } = e,
+        r = null;
+    return (
+        !0 === t
+            ? (r = (0, s.jsx)(N.IGR, {
+                  text: q.NW.string(q.t.psHMa2),
+                  className: K.newBadge,
+                  color: u.Z.BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER
+              }))
+            : !0 === n && (r = (0, s.jsx)(T.Z, { className: K.newBadge })),
+        r
+    );
+}
+function et(e) {
+    let { onChange: t, guildId: n, channelType: i, description: l } = e,
+        [a, o] = r.useState({}),
+        d = (0, p.e7)([M.Z], () => M.Z.getGuild(n)),
+        c = i === V.d4z.GUILD_STAGE_VOICE;
+    return (r.useEffect(() => {
+        t(a);
+    }, [a, t]),
     null == d)
         ? null
-        : (0, r.jsx)(p.ModalContent, {
-              className: Q.addMembersContainer,
-              children: (0, r.jsx)(O.AddMembersBody, {
+        : (0, s.jsx)(N.hzk, {
+              className: K.addMembersContainer,
+              children: (0, s.jsx)(S.U, {
                   guild: d,
                   channel: null,
-                  permission: c ? v.yP : (0, f.CG)(n),
-                  pendingAdditions: i,
+                  permission: c ? _.yP : (0, z.CG)(i),
+                  pendingAdditions: a,
                   setPendingAdditions: o,
                   isStageChannel: c,
-                  description: a
+                  description: l
               })
           });
 }
-((a = n || (n = {})).CHANNEL_INFO = 'CHANNEL_INFO'), (a.ADD_MEMBERS = 'ADD_MEMBERS');
-class et extends l.PureComponent {
+class en extends r.PureComponent {
     componentDidMount() {
         let { _input: e } = this;
         null != e && e.select();
-        let { guildId: t, applications: s, canCreateStoreChannel: n } = this.props;
-        n && null == s && _.Z.fetchApplications(t),
-            T.ZP.trackWithMetadata(V.rMx.OPEN_MODAL, { type: 'Create Channel' }),
+        let { guildId: t, applications: n, canCreateStoreChannel: s } = this.props;
+        s && null == n && g.Z.fetchApplications(t),
+            E.ZP.trackWithMetadata(V.rMx.OPEN_MODAL, { type: 'Create Channel' }),
             D.O2.trackExposure({
                 guildId: t,
                 location: '45d324_1'
             });
     }
     componentDidUpdate(e, t) {
-        !t.isPrivate && this.state.isPrivate && this.state.channelType === V.d4z.GUILD_ANNOUNCEMENT && this.setState({ channelType: V.d4z.GUILD_TEXT }), !t.isPrivate && this.state.isPrivate && T.ZP.trackWithMetadata(V.rMx.OPEN_MODAL, { type: 'Create Private Channel' });
+        !t.isPrivate && this.state.isPrivate && this.state.channelType === V.d4z.GUILD_ANNOUNCEMENT && this.setState({ channelType: V.d4z.GUILD_TEXT }), !t.isPrivate && this.state.isPrivate && E.ZP.trackWithMetadata(V.rMx.OPEN_MODAL, { type: 'Create Private Channel' });
     }
     getGuildId() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
@@ -131,104 +160,100 @@ class et extends l.PureComponent {
     }
     canSubmit() {
         let { canViewChannels: e, canConnect: t } = this.props,
-            { isPrivate: s, channelType: n, skuId: a, name: r } = this.state;
-        return '' !== r && '' !== r.trim() && (!s || !!(0, S.nT)(n, e, t)) && (n !== V.d4z.GUILD_STORE || null != a) && !0;
+            { isPrivate: n, channelType: s, skuId: r, name: i } = this.state;
+        return '' !== i && '' !== i.trim() && (!n || !!(0, f.nT)(s, e, t)) && (s !== V.d4z.GUILD_STORE || null != r);
     }
     getIconComponent() {
         let { isPrivate: e, channelType: t } = this.state;
         switch (t) {
             case V.d4z.GUILD_TEXT:
-                return e ? p.TextLockIcon : p.TextIcon;
+                return e ? N.W4G : N.VL1;
             case V.d4z.GUILD_FORUM:
-                return p.ForumIcon;
+                return N.Mmi;
             case V.d4z.GUILD_MEDIA:
-                return p.ImageIcon;
+                return N.XBm;
             case V.d4z.GUILD_VOICE:
-                return e ? p.VoiceLockIcon : p.VoiceNormalIcon;
+                return e ? N.gjC : N.gj8;
             case V.d4z.GUILD_STORE:
-                return p.TagIcon;
+                return N.lO_;
             case V.d4z.GUILD_ANNOUNCEMENT:
-                return p.AnnouncementsIcon;
+                return N.MqZ;
             case V.d4z.GUILD_STAGE_VOICE:
-                return p.StageIcon;
+                return N.ewx;
             default:
-                return (0, f.zi)(t) ? p.TextIcon : X.Vq;
+                return (0, z.zi)(t) ? N.VL1 : X.Vq;
         }
     }
     renderHeader() {
-        var e, t, s;
-        let n;
-        let { cloneChannel: a, categoryId: l, onClose: i } = this.props,
-            { channelType: o } = this.state;
-        let d = ((e = a), (t = o), null != e ? q.Z.Messages.CLONE_CHANNEL : t === V.d4z.GUILD_CATEGORY ? q.Z.Messages.CREATE_CATEGORY : q.Z.Messages.CREATE_CHANNEL);
-        if (null != l) {
-            let e = H.Z.getChannel(l);
-            n = (0, r.jsx)(p.Text, {
+        var e;
+        let t,
+            { cloneChannel: n, categoryId: r, onClose: i } = this.props,
+            { channelType: l } = this.state,
+            a = null != n ? q.NW.string(q.t.dEaPc3) : l === V.d4z.GUILD_CATEGORY ? q.NW.string(q.t['ISN+ND']) : q.NW.string(q.t['fUYU+v']);
+        if (null != r) {
+            let n = G.Z.getChannel(r);
+            t = (0, s.jsx)(N.Text, {
                 variant: 'text-xs/normal',
                 color: 'header-secondary',
-                className: Q.subtitle,
-                children: q.Z.Messages.IN_CATEGORY.format({ categoryName: null !== (s = null == e ? void 0 : e.name) && void 0 !== s ? s : '' })
+                className: K.subtitle,
+                children: q.NW.format(q.t.L1zJgY, { categoryName: null != (e = null == n ? void 0 : n.name) ? e : '' })
             });
         }
-        return (0, r.jsxs)(p.ModalHeader, {
+        return (0, s.jsxs)(N.xBx, {
             separator: !1,
             children: [
-                (0, r.jsxs)('div', {
-                    className: Q.header,
+                (0, s.jsxs)('div', {
+                    className: K.header,
                     children: [
-                        (0, r.jsx)(p.Heading, {
+                        (0, s.jsx)(N.X6q, {
                             id: this.headerId,
                             variant: 'heading-lg/semibold',
-                            className: Q.title,
-                            children: d
+                            className: K.title,
+                            children: a
                         }),
-                        n
+                        t
                     ]
                 }),
-                (0, r.jsx)(p.ModalCloseButton, {
+                (0, s.jsx)(N.olH, {
                     onClick: i,
-                    className: Q.closeButton
+                    className: K.closeButton
                 })
             ]
         });
     }
     renderName() {
-        let e;
-        let { cloneChannel: t, guildId: n } = this.props,
-            { errors: a, channelType: l } = this.state;
-        (null == a ? void 0 : a.name) != null &&
-            (e = (0, r.jsx)(p.Text, {
+        let e,
+            { cloneChannel: t, guildId: r } = this.props,
+            { errors: i, channelType: l } = this.state;
+        (null == i ? void 0 : i.name) != null &&
+            (e = (0, s.jsx)(N.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-danger',
-                className: Q.error,
-                children: a.name
+                className: K.error,
+                children: i.name
             }));
-        let i = l === V.d4z.GUILD_CATEGORY,
-            o = i ? q.Z.Messages.CATEGORY_NAME : q.Z.Messages.FORM_LABEL_CHANNEL_NAME,
+        let a = l === V.d4z.GUILD_CATEGORY,
+            o = a ? q.NW.string(q.t.OCAkGB) : q.NW.string(q.t.PVbHDg),
             d =
                 null != t
-                    ? (0, r.jsx)(p.FormText, {
-                          className: Q.channelNameNote,
-                          type: p.FormText.Types.DESCRIPTION,
-                          children: q.Z.Messages.CLONE_CHANNEL_HELP.format({ name: (0, L.F6)(t, F.default, z.Z, !0) })
+                    ? (0, s.jsx)(N.R94, {
+                          className: K.channelNameNote,
+                          type: N.R94.Types.DESCRIPTION,
+                          children: q.NW.format(q.t.s2ZzZW, { name: (0, b.F6)(t, Z.default, w.Z, !0) })
                       })
                     : l === V.d4z.GUILD_FORUM
-                      ? (0, r.jsx)(p.FormText, {
-                            className: Q.channelNameNote,
-                            type: p.FormText.Types.DESCRIPTION,
-                            children: q.Z.Messages.FORUM_CHANNEL_NAME_NOTE.format({
+                      ? (0, s.jsx)(N.R94, {
+                            className: K.channelNameNote,
+                            type: N.R94.Types.DESCRIPTION,
+                            children: q.NW.format(q.t.tbVWyc, {
                                 forumUpsellHook: (e, t) =>
-                                    (0, r.jsx)(
-                                        p.Anchor,
+                                    (0, s.jsx)(
+                                        N.eee,
                                         {
                                             onClick: () =>
-                                                (0, p.openModalLazy)(async () => {
-                                                    let { default: e } = await s.e('18417').then(s.bind(s, 740696));
-                                                    return (t) =>
-                                                        (0, r.jsx)(e, {
-                                                            ...t,
-                                                            guildId: n
-                                                        });
+                                                (0, N.ZDy)(async () => {
+                                                    let { default: e } = await n.e('18417').then(n.bind(n, 740696));
+                                                    return (t) => (0, s.jsx)(e, $(Q({}, t), { guildId: r }));
                                                 }),
                                             children: e
                                         },
@@ -238,16 +263,16 @@ class et extends l.PureComponent {
                         })
                       : null,
             c = this.getIconComponent();
-        return (0, r.jsx)(R.FG, {
+        return (0, s.jsx)(v.FG, {
             children: (t) =>
-                (0, r.jsxs)(p.FormItem, {
+                (0, s.jsxs)(N.xJW, {
                     title: o,
                     tag: 'label',
                     htmlFor: t,
-                    titleClassName: Q.sectionTitle,
-                    className: Q.name,
+                    titleClassName: K.sectionTitle,
+                    className: K.name,
                     children: [
-                        (0, r.jsx)(p.TextInput, {
+                        (0, s.jsx)(N.oil, {
                             value: this.state.name,
                             onChange: this.handleNameChange,
                             id: t,
@@ -256,19 +281,19 @@ class et extends l.PureComponent {
                             placeholder: (function (e) {
                                 switch (e) {
                                     case V.d4z.GUILD_CATEGORY:
-                                        return q.Z.Messages.CATEGORY_NAME_PLACEHOLDER;
+                                        return q.NW.string(q.t.eTVbt7);
                                     case V.d4z.GUILD_FORUM:
-                                        return q.Z.Messages.FORUM_CHANNEL_NAME_PLACEHOLDER;
+                                        return q.NW.string(q.t['5z1Xam']);
                                     default:
-                                        return q.Z.Messages.CHANNEL_NAME_PLACEHOLDER;
+                                        return q.NW.string(q.t['bw/b8P']);
                                 }
                             })(l),
-                            className: Q.inputWrapper,
-                            inputClassName: i ? void 0 : Q.inputInner,
-                            prefixElement: i
+                            className: K.inputWrapper,
+                            inputClassName: a ? void 0 : K.inputInner,
+                            prefixElement: a
                                 ? null
-                                : (0, r.jsx)(c, {
-                                      className: Q.inputPrefix,
+                                : (0, s.jsx)(c, {
+                                      className: K.inputPrefix,
                                       size: 'xs',
                                       color: 'currentColor'
                                   }),
@@ -281,132 +306,140 @@ class et extends l.PureComponent {
         });
     }
     renderType() {
-        let { cloneChannel: e, applications: t, canCreateStoreChannel: s, canCreateAnnouncementChannel: n, canCreateStageChannel: a, canCreateForumChannel: l, canCreateMediaChannel: i } = this.props,
+        let { cloneChannel: e, applications: t, canCreateStoreChannel: n, canCreateAnnouncementChannel: r, canCreateStageChannel: i, canCreateForumChannel: l, canCreateMediaChannel: a } = this.props,
             { channelType: o, isPrivate: d } = this.state;
         if (null != e || o === V.d4z.GUILD_CATEGORY) return;
         let c = null != t && t.length > 0;
-        return (0, r.jsx)(p.FormItem, {
-            className: Q.type,
-            title: q.Z.Messages.CHANNEL_TYPE,
-            children: (0, r.jsx)(p.RadioGroup, {
+        return (0, s.jsx)(N.xJW, {
+            className: K.type,
+            title: q.NW.string(q.t['7ZcXGx']),
+            children: (0, s.jsx)(N.FXm, {
                 options: (function (e) {
-                    let { isPrivate: t, showStoreChannelOption: s, showAnnouncementChannelOption: n, canCreateStageChannel: a, canCreateForumChannel: l, canCreateMediaChannel: i } = e,
+                    let { isPrivate: t, showStoreChannelOption: n, showAnnouncementChannelOption: r, canCreateStageChannel: i, canCreateForumChannel: l, canCreateMediaChannel: a } = e,
                         o = [
                             {
-                                icon: t ? p.TextLockIcon : p.TextIcon,
-                                label: q.Z.Messages.TEXT_CHANNEL_TYPE,
+                                icon: t ? N.W4G : N.VL1,
+                                label: q.NW.string(q.t.pnuRXF),
                                 value: V.d4z.GUILD_TEXT,
-                                description: q.Z.Messages.CREATE_TEXT_CHANNEL_DESCRIPTION
+                                description: q.NW.string(q.t.Hf5Lb2)
                             }
                         ];
                     return (
                         o.push({
-                            icon: t ? p.VoiceLockIcon : p.VoiceNormalIcon,
-                            label: q.Z.Messages.VOICE_CHANNEL_TYPE,
+                            icon: t ? N.gjC : N.gj8,
+                            label: q.NW.string(q.t.Sx55Oj),
                             value: V.d4z.GUILD_VOICE,
-                            description: q.Z.Messages.CREATE_VOICE_CHANNEL_DESCRIPTION
+                            description: q.NW.string(q.t.pqfkoK)
                         }),
                         l &&
                             o.push({
-                                icon: t ? p.ForumLockIcon : p.ForumIcon,
-                                label: q.Z.Messages.FORUM_CHANNEL_TYPE,
+                                icon: t ? N.BUe : N.Mmi,
+                                label: q.NW.string(q.t.eAVIDw),
                                 value: V.d4z.GUILD_FORUM,
-                                description: (0, r.jsxs)(p.Text, {
+                                description: (0, s.jsxs)(N.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    className: Q.radioLabelDescription,
+                                    className: K.radioLabelDescription,
                                     children: [
-                                        q.Z.Messages.FORUM_CHANNEL_DESCRIPTION,
-                                        (0, r.jsx)('br', {}),
-                                        q.Z.Messages.LEARN_MORE_CLICK.format({
+                                        q.NW.string(q.t.iZ5pgo),
+                                        (0, s.jsx)('br', {}),
+                                        q.NW.format(q.t.fjSvsL, {
                                             onClick: () => {
-                                                open(W.V8);
+                                                open(Y.V8);
                                             }
                                         })
                                     ]
                                 })
                             }),
-                        i &&
+                        a &&
                             o.push({
-                                icon: t ? p.ImageLockIcon : p.ImageIcon,
-                                label: q.Z.Messages.MEDIA_CHANNEL_TYPE,
+                                icon: t ? N.D7T : N.XBm,
+                                label: q.NW.string(q.t['6x6fVl']),
                                 value: V.d4z.GUILD_MEDIA,
-                                description: (0, r.jsxs)(p.Text, {
+                                description: (0, s.jsxs)(N.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    className: Q.radioLabelDescription,
+                                    className: K.radioLabelDescription,
                                     children: [
-                                        q.Z.Messages.CREATE_MEDIA_CHANNEL_DESCRIPTION,
-                                        (0, r.jsx)('br', {}),
-                                        q.Z.Messages.LEARN_MORE_CLICK.format({
+                                        q.NW.string(q.t.JyCrwc),
+                                        (0, s.jsx)('br', {}),
+                                        q.NW.format(q.t.fjSvsL, {
                                             onClick: () => {
-                                                open(Y.Z.getCreatorSupportArticleURL(V.BhN.MEDIA_CHANNEL));
+                                                open(F.Z.getCreatorSupportArticleURL(V.BhN.MEDIA_CHANNEL));
                                             }
                                         })
                                     ]
                                 }),
                                 isBeta: !0
                             }),
+                        r &&
+                            o.push({
+                                icon: N.MqZ,
+                                iconSize: 24,
+                                label: q.NW.string(q.t.qr9dEB),
+                                value: V.d4z.GUILD_ANNOUNCEMENT,
+                                description: q.NW.string(q.t.gBkfzs)
+                            }),
                         n &&
                             o.push({
-                                icon: p.AnnouncementsIcon,
+                                icon: N.lO_,
                                 iconSize: 24,
-                                label: q.Z.Messages.NEWS_CHANNEL_TYPE,
-                                value: V.d4z.GUILD_ANNOUNCEMENT,
-                                description: q.Z.Messages.CREATE_NEWS_CHANNEL_DESCRIPTION
-                            }),
-                        s &&
-                            o.push({
-                                icon: p.TagIcon,
-                                iconSize: 24,
-                                label: q.Z.Messages.STORE_CHANNEL_TYPE,
+                                label: q.NW.string(q.t.SxjkXV),
                                 value: V.d4z.GUILD_STORE,
-                                description: q.Z.Messages.CREATE_STORE_CHANNEL_DESCRIPTION
+                                description: q.NW.string(q.t.nmCPMD)
                             }),
-                        a &&
+                        i &&
                             o.push({
-                                icon: p.StageIcon,
+                                icon: N.ewx,
                                 iconSize: 24,
-                                label: q.Z.Messages.STAGE_VOICE_CHANNEL_TYPE,
+                                label: q.NW.string(q.t.pNWst7),
                                 value: V.d4z.GUILD_STAGE_VOICE,
-                                description: q.Z.Messages.CREATE_STAGE_CHANNEL_DESCRIPTION
+                                description: q.NW.string(q.t.VPAwgo)
                             }),
                         o.map((e) => {
-                            let { icon: t, iconSize: s, label: n, value: a, description: l, isNew: i, isBeta: o } = e;
+                            let { icon: t, iconSize: n, label: r, value: i, description: l, isNew: a, isBeta: o } = e;
                             return {
-                                name: (0, r.jsxs)('div', {
-                                    className: Q.radioItemName,
+                                name: (0, s.jsxs)('div', {
+                                    className: K.radioItemName,
                                     children: [
-                                        (0, r.jsx)(t, {
-                                            ...(null != s
-                                                ? {
-                                                      width: s,
-                                                      height: s,
-                                                      size: 'custom'
-                                                  }
-                                                : { size: 'md' }),
-                                            color: 'currentColor',
-                                            className: Q.icon,
-                                            colorClass: Q.foreground
-                                        }),
-                                        (0, r.jsxs)('div', {
+                                        (0, s.jsx)(
+                                            t,
+                                            $(
+                                                Q(
+                                                    {},
+                                                    null != n
+                                                        ? {
+                                                              width: n,
+                                                              height: n,
+                                                              size: 'custom'
+                                                          }
+                                                        : { size: 'md' }
+                                                ),
+                                                {
+                                                    color: 'currentColor',
+                                                    className: K.icon,
+                                                    colorClass: K.foreground
+                                                }
+                                            )
+                                        ),
+                                        (0, s.jsxs)('div', {
                                             children: [
-                                                (0, r.jsxs)(p.Text, {
+                                                (0, s.jsxs)(N.Text, {
                                                     variant: 'text-md/medium',
-                                                    className: Q.radioLabelName,
+                                                    className: K.radioLabelName,
                                                     children: [
-                                                        n,
-                                                        (0, r.jsx)(J, {
-                                                            isNew: i,
+                                                        r,
+                                                        (0, s.jsx)(ee, {
+                                                            isNew: a,
                                                             isBeta: o
                                                         })
                                                     ]
                                                 }),
                                                 'string' == typeof l
-                                                    ? (0, r.jsx)(p.Text, {
+                                                    ? (0, s.jsx)(N.Text, {
                                                           variant: 'text-sm/normal',
                                                           color: 'header-secondary',
-                                                          className: Q.radioLabelDescription,
+                                                          className: K.radioLabelDescription,
                                                           children: l
                                                       })
                                                     : l
@@ -414,111 +447,101 @@ class et extends l.PureComponent {
                                         })
                                     ]
                                 }),
-                                value: a,
-                                radioBarClassName: Q.radioBar,
-                                radioItemIconClassName: Q.radioBarIcon
+                                value: i,
+                                radioBarClassName: K.radioBar,
+                                radioItemIconClassName: K.radioBarIcon
                             };
                         })
                     );
                 })({
                     isPrivate: d,
-                    showStoreChannelOption: s && c,
-                    showAnnouncementChannelOption: n,
-                    canCreateStageChannel: a,
+                    showStoreChannelOption: n && c,
+                    showAnnouncementChannelOption: r,
+                    canCreateStageChannel: i,
                     canCreateForumChannel: l,
-                    canCreateMediaChannel: i
+                    canCreateMediaChannel: a
                 }),
                 value: o,
-                size: p.RadioGroup.Sizes.NOT_SET,
+                size: N.FXm.Sizes.NOT_SET,
                 onChange: this.handleTypeChange,
-                itemInfoClassName: Q.radioBarLabel
+                itemInfoClassName: K.radioBarLabel
             })
         });
     }
-    renderChannelTypeDescription(e) {
-        let t;
-        return (e === V.d4z.GUILD_ANNOUNCEMENT && (t = q.Z.Messages.FORM_HELP_NEWS.format({ documentationLink: Y.Z.getArticleURL(V.BhN.ANNOUNCEMENT_CHANNELS) })), null == t)
-            ? null
-            : (0, r.jsx)(p.FormText, {
-                  className: Q.channelTypeDescription,
-                  type: p.FormText.Types.DESCRIPTION,
-                  children: t
-              });
-    }
     renderStoreOptions() {
         let { applications: e } = this.props,
-            { applicationId: t, skuId: s, branchId: n, showBranches: a, hasBranches: i } = this.state;
+            { applicationId: t, skuId: n, branchId: i, showBranches: l, hasBranches: a } = this.state;
         if (null == e || 0 === e.length) throw Error('Unexpected empty applications');
-        return (0, r.jsxs)('div', {
+        return (0, s.jsxs)('div', {
             children: [
-                (0, r.jsx)(p.FormTitle, {
+                (0, s.jsx)(N.vwX, {
                     tag: 'h5',
-                    children: q.Z.Messages.CREATE_STORE_CHANNEL_APPLICATION
+                    children: q.NW.string(q.t.vPIW2N)
                 }),
-                (0, r.jsx)(p.SingleSelect, {
+                (0, s.jsx)(N.q4e, {
                     options: e.map((e) => ({
                         label: e.name,
                         value: e.id
                     })),
-                    placeholder: q.Z.Messages.CREATE_STORE_CHANNEL_SELECT_APPLICATION,
+                    placeholder: q.NW.string(q.t['3XfCPT']),
                     value: t,
                     onChange: this.handleApplicationChange,
-                    className: Q.storeChannelOptionSelector
+                    className: K.storeChannelOptionSelector
                 }),
                 null != t
-                    ? (0, r.jsxs)(l.Fragment, {
+                    ? (0, s.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(p.FormTitle, {
+                              (0, s.jsx)(N.vwX, {
                                   tag: 'h5',
-                                  children: q.Z.Messages.CREATE_STORE_CHANNEL_SKU
+                                  children: q.NW.string(q.t.XNIWFh)
                               }),
-                              (0, r.jsx)(
-                                  A.Z,
+                              (0, s.jsx)(
+                                  x.Z,
                                   {
                                       applicationId: t,
                                       onChange: this.handleSKUChange,
-                                      selectedSkuId: s,
-                                      className: Q.storeChannelOptionSelector
+                                      selectedSkuId: n,
+                                      className: K.storeChannelOptionSelector
                                   },
                                   t
                               )
                           ]
                       })
                     : null,
-                null != t && i
-                    ? (0, r.jsxs)(p.FormSwitch, {
+                null != t && a
+                    ? (0, s.jsxs)(N.j7V, {
                           hideBorder: !0,
                           onChange: this.handleShowBranchesToggle,
-                          value: a,
-                          note: q.Z.Messages.CREATE_STORE_CHANNEL_BETA_NOTE.format({ devPortalUrl: V.EYA.API_DOCS_GAME_AND_SERVER_MANAGEMENT }),
+                          value: l,
+                          note: q.NW.format(q.t.UVXL1d, { devPortalUrl: V.EYA.API_DOCS_GAME_AND_SERVER_MANAGEMENT }),
                           children: [
-                              (0, r.jsx)(p.KeyIcon, {
+                              (0, s.jsx)(N._m8, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: Q.switchIcon
+                                  className: K.switchIcon
                               }),
-                              q.Z.Messages.CREATE_STORE_CHANNEL_BETA_TITLE
+                              q.NW.string(q.t['3e9mHx'])
                           ]
                       })
                     : null,
                 null != t
-                    ? (0, r.jsxs)(l.Fragment, {
+                    ? (0, s.jsxs)(r.Fragment, {
                           children: [
-                              a
-                                  ? (0, r.jsx)(p.FormTitle, {
+                              l
+                                  ? (0, s.jsx)(N.vwX, {
                                         tag: 'h5',
-                                        children: q.Z.Messages.CREATE_STORE_CHANNEL_BRANCH
+                                        children: q.NW.string(q.t.o7DqFx)
                                     })
                                   : null,
-                              (0, r.jsx)(
-                                  g.Z,
+                              (0, s.jsx)(
+                                  C.Z,
                                   {
                                       applicationId: t,
                                       onChange: this.handleBranchChange,
-                                      selectedBranchId: n,
-                                      hide: !a,
+                                      selectedBranchId: i,
+                                      hide: !l,
                                       onHasBranchesChange: this.handleHasBranchesChange,
-                                      className: Q.storeChannelOptionSelector
+                                      className: K.storeChannelOptionSelector
                                   },
                                   t
                               )
@@ -530,25 +553,25 @@ class et extends l.PureComponent {
     }
     renderPrivacyOptions() {
         let { cloneChannel: e } = this.props,
-            { channelType: t, isPrivate: s } = this.state;
+            { channelType: t, isPrivate: n } = this.state;
         if (null != e || t === V.d4z.GUILD_ANNOUNCEMENT) return null;
-        let n = t === V.d4z.GUILD_CATEGORY ? q.Z.Messages.PRIVATE_CATEGORY : q.Z.Messages.PRIVATE_CHANNEL,
-            a = t === V.d4z.GUILD_CATEGORY ? q.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION : q.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_NEW;
-        return (0, r.jsx)(
-            p.FormItem,
+        let r = t === V.d4z.GUILD_CATEGORY ? q.NW.string(q.t.lEPAZ2) : q.NW.string(q.t.aUI70t),
+            i = t === V.d4z.GUILD_CATEGORY ? q.NW.string(q.t['RQUk6+']) : q.NW.string(q.t.YguuKi);
+        return (0, s.jsx)(
+            N.xJW,
             {
-                children: (0, r.jsxs)(p.FormSwitch, {
+                children: (0, s.jsxs)(N.j7V, {
                     hideBorder: !0,
                     onChange: this.handlePrivacyChange,
-                    value: s,
-                    note: a,
+                    value: n,
+                    note: i,
                     children: [
-                        (0, r.jsx)(p.LockIcon, {
+                        (0, s.jsx)(N.mBM, {
                             size: 'md',
                             color: 'currentColor',
-                            className: Q.switchIcon
+                            className: K.switchIcon
                         }),
-                        n
+                        r
                     ]
                 })
             },
@@ -556,37 +579,37 @@ class et extends l.PureComponent {
         );
     }
     renderError(e) {
-        let t;
-        let { channelType: s, isPrivate: n, errors: a } = this.state,
-            { canConnect: l, canViewChannels: i } = this.props;
-        if (Object.values(a).length > 0) {
-            if (null != a.message && '' !== a.message) t = a.message;
-            else if (e || null == a.name) {
-                let e = Object.values(a)[0];
+        let t,
+            { channelType: n, isPrivate: r, errors: i } = this.state,
+            { canConnect: a, canViewChannels: o } = this.props;
+        if (Object.values(i).length > 0) {
+            if (null != i.message && '' !== i.message) t = i.message;
+            else if (e || null == i.name) {
+                let e = Object.values(i)[0];
                 e.length > 0 && (t = e);
             }
-        } else n && !(0, S.nT)(s, i, l) && (t = (0, S.$7)(s));
+        } else r && !(0, f.nT)(n, o, a) && (t = (0, f.$7)(n));
         if (null != t)
-            return (0, r.jsx)('div', {
-                className: o()(Q.createError, { [Q.addMemberError]: e }),
-                children: (0, r.jsx)(G.Z, {
-                    messageType: G.Q.ERROR,
+            return (0, s.jsx)('div', {
+                className: l()(K.createError, { [K.addMemberError]: e }),
+                children: (0, s.jsx)(N.Wn, {
+                    messageType: N.QYI.ERROR,
                     children: t
                 })
             });
     }
     renderFooter() {
-        let e;
-        let { channelType: t, onClose: s } = this.props,
-            { channelType: n } = this.state,
-            { isPrivate: a } = this.state;
-        e = t === V.d4z.GUILD_CATEGORY ? q.Z.Messages.CREATE_CATEGORY : q.Z.Messages.CREATE_CHANNEL;
-        let l = a || n === V.d4z.GUILD_STAGE_VOICE;
-        return (0, r.jsxs)(p.ModalFooter, {
-            className: Q.modalFooter,
+        let e,
+            { channelType: t, onClose: n } = this.props,
+            { channelType: r } = this.state,
+            { isPrivate: i } = this.state;
+        e = t === V.d4z.GUILD_CATEGORY ? q.NW.string(q.t['ISN+ND']) : q.NW.string(q.t['fUYU+v']);
+        let l = i || r === V.d4z.GUILD_STAGE_VOICE;
+        return (0, s.jsxs)(N.mzw, {
+            className: K.modalFooter,
             children: [
                 l
-                    ? (0, r.jsx)(p.Button, {
+                    ? (0, s.jsx)(N.zxk, {
                           type: 'button',
                           onClick: () => {
                               this.setState({
@@ -595,42 +618,42 @@ class et extends l.PureComponent {
                               });
                           },
                           disabled: !this.canSubmit(),
-                          children: q.Z.Messages.NEXT
+                          children: q.NW.string(q.t.PDTjLC)
                       })
-                    : (0, r.jsx)(p.Button, {
+                    : (0, s.jsx)(N.zxk, {
                           type: 'submit',
                           disabled: !this.canSubmit(),
                           children: e
                       }),
-                (0, r.jsx)(p.Button, {
-                    onClick: s,
-                    look: p.Button.Looks.LINK,
-                    color: p.Button.Colors.PRIMARY,
-                    children: q.Z.Messages.CANCEL
+                (0, s.jsx)(N.zxk, {
+                    onClick: n,
+                    look: N.zxk.Looks.LINK,
+                    color: N.zxk.Colors.PRIMARY,
+                    children: q.NW.string(q.t['ETE/oK'])
                 })
             ]
         });
     }
     renderAddMemberFooter() {
-        let e;
-        let { channelType: t } = this.props,
-            { pendingPermissionOverwrites: s } = this.state;
+        let e,
+            { channelType: t } = this.props,
+            { pendingPermissionOverwrites: n } = this.state;
         return (
-            (e = 0 === Object.keys(s).length ? q.Z.Messages.SKIP : t === V.d4z.GUILD_CATEGORY ? q.Z.Messages.CREATE_CATEGORY : q.Z.Messages.CREATE_CHANNEL),
-            (0, r.jsxs)(p.ModalFooter, {
+            (e = 0 === Object.keys(n).length ? q.NW.string(q.t['5WxrcX']) : t === V.d4z.GUILD_CATEGORY ? q.NW.string(q.t['ISN+ND']) : q.NW.string(q.t['fUYU+v'])),
+            (0, s.jsxs)(N.mzw, {
                 children: [
-                    (0, r.jsx)(p.Button, {
+                    (0, s.jsx)(N.zxk, {
                         type: 'submit',
                         disabled: !this.canSubmit(),
                         children: e
                     }),
-                    (0, r.jsx)(p.Button, {
+                    (0, s.jsx)(N.zxk, {
                         onClick: () => {
                             this.setState({ slide: 'CHANNEL_INFO' });
                         },
-                        look: p.Button.Looks.LINK,
-                        color: p.Button.Colors.PRIMARY,
-                        children: q.Z.Messages.BACK
+                        look: N.zxk.Looks.LINK,
+                        color: N.zxk.Colors.PRIMARY,
+                        children: q.NW.string(q.t['13/7kZ'])
                     })
                 ]
             })
@@ -640,13 +663,24 @@ class et extends l.PureComponent {
         this.setState({ pendingPermissionOverwrites: e });
     }
     renderCreateChannelContent() {
-        let { channelType: e } = this.state;
-        return (0, r.jsxs)(r.Fragment, {
+        let { channelType: e } = this.state,
+            { guildId: t } = this.props;
+        return (0, s.jsxs)(s.Fragment, {
             children: [
                 this.renderHeader(),
-                (0, r.jsxs)(p.ModalContent, {
-                    className: Q.modalContent,
-                    children: [this.renderType(), this.renderName(), e === V.d4z.GUILD_STORE ? this.renderStoreOptions() : null, this.renderChannelTypeDescription(e), e === V.d4z.GUILD_STAGE_VOICE ? null : this.renderPrivacyOptions()]
+                (0, s.jsxs)(N.hzk, {
+                    className: K.modalContent,
+                    children: [
+                        this.renderType(),
+                        this.renderName(),
+                        e === V.d4z.GUILD_STORE ? this.renderStoreOptions() : null,
+                        (0, s.jsx)(O.Z, {
+                            guildId: t,
+                            channelType: e,
+                            className: K.channelTypeDescription
+                        }),
+                        e === V.d4z.GUILD_STAGE_VOICE ? null : this.renderPrivacyOptions()
+                    ]
                 }),
                 this.renderError(),
                 this.renderFooter()
@@ -655,47 +689,48 @@ class et extends l.PureComponent {
     }
     renderAddMemberSlideContent() {
         let { name: e, channelType: t } = this.state,
-            { guildId: s, onClose: n } = this.props,
-            a = this.getIconComponent(),
+            { guildId: n, onClose: r } = this.props,
+            i = this.getIconComponent(),
             l = t === V.d4z.GUILD_STAGE_VOICE;
-        return (0, r.jsxs)(r.Fragment, {
+        return (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, r.jsxs)(p.ModalHeader, {
+                (0, s.jsxs)(N.xBx, {
                     separator: !1,
                     children: [
-                        (0, r.jsxs)('div', {
-                            className: Q.header,
+                        (0, s.jsxs)(N.Kqy, {
+                            gap: 4,
+                            className: K.header,
                             children: [
-                                (0, r.jsx)(p.Heading, {
+                                (0, s.jsx)(N.X6q, {
                                     variant: 'heading-lg/semibold',
-                                    className: Q.title,
-                                    children: l ? q.Z.Messages.CHANNEL_PERMISSIONS_ADD_MODERATOR_TITLE : q.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
+                                    className: K.title,
+                                    children: l ? q.NW.string(q.t['S/6zHB']) : q.NW.string(q.t.dMJ3Y2)
                                 }),
-                                (0, r.jsxs)(p.Text, {
+                                (0, s.jsxs)(N.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-secondary',
-                                    className: Q.subtitle,
+                                    className: K.subtitle,
                                     children: [
-                                        (0, r.jsx)(a, {
+                                        (0, s.jsx)(i, {
                                             size: 'xs',
                                             color: 'currentColor',
-                                            className: Q.subtitleIcon
+                                            className: K.subtitleIcon
                                         }),
                                         e
                                     ]
                                 })
                             ]
                         }),
-                        (0, r.jsx)(p.ModalCloseButton, {
-                            onClick: n,
-                            className: Q.closeButton
+                        (0, s.jsx)(N.olH, {
+                            onClick: r,
+                            className: K.closeButton
                         })
                     ]
                 }),
                 this.renderError(!0),
-                (0, r.jsx)(ee, {
+                (0, s.jsx)(et, {
                     onChange: this.handlePermissionOverwriteChange,
-                    guildId: s,
+                    guildId: n,
                     channelType: t
                 }),
                 this.renderAddMemberFooter()
@@ -704,22 +739,23 @@ class et extends l.PureComponent {
     }
     renderSlides() {
         let { slide: e } = this.state,
-            t = { impression_group: E.ImpressionGroups.CHANNEL_ADD_FLOW };
-        return (0, r.jsx)('div', {
-            children: (0, r.jsxs)(p.Slides, {
+            { width: t } = this.props,
+            n = { impression_group: h.ImpressionGroups.CHANNEL_ADD_FLOW };
+        return (0, s.jsx)('div', {
+            children: (0, s.jsxs)(N.MyZ, {
                 activeSlide: e,
-                width: 460,
+                width: t,
                 children: [
-                    (0, r.jsx)(p.Slide, {
+                    (0, s.jsx)(N.Mi4, {
                         id: 'CHANNEL_INFO',
-                        impressionName: E.ImpressionNames.CHANNEL_ADD_INFO,
-                        impressionProperties: t,
+                        impressionName: h.ImpressionNames.CHANNEL_ADD_INFO,
+                        impressionProperties: n,
                         children: this.renderCreateChannelContent()
                     }),
-                    (0, r.jsx)(p.Slide, {
+                    (0, s.jsx)(N.Mi4, {
                         id: 'ADD_MEMBERS',
-                        impressionName: E.ImpressionNames.CHANNEL_ADD_MEMBERS,
-                        impressionProperties: t,
+                        impressionName: h.ImpressionNames.CHANNEL_ADD_MEMBERS,
+                        impressionProperties: n,
                         children: this.renderAddMemberSlideContent()
                     })
                 ]
@@ -728,12 +764,12 @@ class et extends l.PureComponent {
     }
     render() {
         let { transitionState: e } = this.props;
-        return (0, r.jsx)(p.ModalRoot, {
+        return (0, s.jsx)(N.Y0X, {
             transitionState: e,
-            className: Q.modal,
+            className: K.modal,
             'aria-labelledby': this.headerId,
-            size: p.ModalSize.DYNAMIC,
-            children: (0, r.jsx)('form', {
+            size: N.CgR.DYNAMIC,
+            children: (0, s.jsx)('form', {
                 onSubmit: this.handleSubmit,
                 children: this.renderSlides()
             })
@@ -741,95 +777,95 @@ class et extends l.PureComponent {
     }
     constructor(e) {
         super(e),
-            $(this, 'headerId', (0, R.hQ)()),
-            $(this, '_input', void 0),
-            $(this, 'setInputRef', (e) => {
+            J(this, 'headerId', (0, v.hQ)()),
+            J(this, '_input', void 0),
+            J(this, 'setInputRef', (e) => {
                 this._input = e;
             }),
-            $(this, 'handleNameChange', (e) => {
+            J(this, 'handleNameChange', (e) => {
                 let { channelType: t } = this.state;
-                f.xL.has(t) && (e = (0, w.Nj)(e)), this.setState({ name: e });
+                z.xL.has(t) && (e = (0, k.Nj)(e)), this.setState({ name: e });
             }),
-            $(this, 'handleTypeChange', (e) => {
+            J(this, 'handleTypeChange', (e) => {
                 let { value: t } = e,
-                    { name: s } = this.state;
-                f.xL.has(t) && (s = (0, w.Nj)(s)),
+                    { name: n } = this.state;
+                z.xL.has(t) && (n = (0, k.Nj)(n)),
                     t === V.d4z.GUILD_STAGE_VOICE && this.setState({ isPrivate: !1 }),
                     this.setState({
                         channelType: t,
-                        name: s
+                        name: n
                     });
             }),
-            $(this, 'handlePrivacyChange', (e) => {
+            J(this, 'handlePrivacyChange', (e) => {
                 this.setState({ isPrivate: e });
             }),
-            $(this, 'handleApplicationChange', (e) => {
+            J(this, 'handleApplicationChange', (e) => {
                 this.setState({ applicationId: e });
             }),
-            $(this, 'handleSKUChange', (e) => {
+            J(this, 'handleSKUChange', (e) => {
                 this.setState({ skuId: e });
             }),
-            $(this, 'handleShowBranchesToggle', (e) => {
+            J(this, 'handleShowBranchesToggle', (e) => {
                 this.setState({
                     showBranches: e,
                     branchId: null
                 });
             }),
-            $(this, 'handleBranchChange', (e) => {
+            J(this, 'handleBranchChange', (e) => {
                 this.setState({ branchId: e });
             }),
-            $(this, 'handleHasBranchesChange', (e) => {
+            J(this, 'handleHasBranchesChange', (e) => {
                 this.setState({ hasBranches: e });
             }),
-            $(this, 'handleSubmit', async (e) => {
-                let t, s, n;
+            J(this, 'handleSubmit', async (e) => {
+                let t, n, s;
                 e.preventDefault();
-                let { cloneChannel: a, categoryId: r, user: l, memberRoleIds: i, isAdmin: o, onClose: d, owner: c } = this.props,
-                    { name: h, pendingPermissionOverwrites: E, channelType: N, skuId: C, branchId: p, isPrivate: _ } = this.state,
-                    g = this.getGuildId();
-                if (null != g) {
-                    if (null != a) (t = u().values(a.permissionOverwrites)), (s = a.bitrate), (n = a.userLimit);
-                    else if (N === V.d4z.GUILD_ANNOUNCEMENT) t = (0, w.rt)(g);
+                let { cloneChannel: r, categoryId: i, user: l, memberRoleIds: a, isAdmin: o, onClose: d, owner: h } = this.props,
+                    { name: u, pendingPermissionOverwrites: p, channelType: N, skuId: g, branchId: C, isPrivate: x } = this.state,
+                    E = this.getGuildId();
+                if (null != E) {
+                    if (null != r) (t = c().values(r.permissionOverwrites)), (n = r.bitrate), (s = r.userLimit);
+                    else if (N === V.d4z.GUILD_ANNOUNCEMENT) t = (0, k.rt)(E);
                     else {
-                        if (_) {
-                            t = (0, w.oQ)(g, N, [], !0);
-                            let e = (0, S.Tj)(E, N);
+                        if (x) {
+                            t = (0, k.oQ)(E, N, [], !0);
+                            let e = (0, f.Tj)(p, N);
                             e.length > 0 && (t = t.concat(e));
-                            let s = null != c && l.id === c.id;
-                            !(t.some((e) => i.has(e.id)) || o || s) && t.push((0, w.jZ)(l.id, N));
+                            let n = null != h && l.id === h.id;
+                            t.some((e) => a.has(e.id)) || o || n || t.push((0, k.jZ)(l.id, N));
                         }
                         N === V.d4z.GUILD_STAGE_VOICE &&
                             ((t = []),
-                            Object.values(E).forEach((e) => {
-                                let { row: s } = e;
-                                null != s.id && '' !== s.id && (s.rowType === K.aC.ROLE ? t.push((0, P.createModeratorOverwrite)(s.id, I.BN.ROLE)) : s.rowType === K.aC.MEMBER && t.push((0, P.createModeratorOverwrite)(s.id, I.BN.MEMBER)));
+                            Object.values(p).forEach((e) => {
+                                let { row: n } = e;
+                                null != n.id && '' !== n.id && (n.rowType === H.aC.ROLE ? t.push((0, W.A)(n.id, I.BN.ROLE)) : n.rowType === H.aC.MEMBER && t.push((0, W.A)(n.id, I.BN.MEMBER)));
                             }));
                     }
                     this.setState({ errors: {} });
                     try {
                         let e = await m.Z.createChannel({
-                            guildId: g,
+                            guildId: E,
                             type: N,
-                            name: h,
+                            name: u,
                             permissionOverwrites: t,
-                            bitrate: s,
-                            userLimit: n,
-                            parentId: N !== V.d4z.GUILD_CATEGORY ? r : null,
-                            skuId: C,
-                            branchId: p
+                            bitrate: n,
+                            userLimit: s,
+                            parentId: N !== V.d4z.GUILD_CATEGORY ? i : null,
+                            skuId: g,
+                            branchId: C
                         });
                         if (null == e || 201 !== e.status) return;
-                        let a = e.body;
-                        f.xL.has(N) && (0, j.XU)(a.guild_id, a.id), d();
+                        let r = e.body;
+                        z.xL.has(N) && (0, y.XU)(r.guild_id, r.id), d();
                     } catch (e) {
-                        null != e.body && 'object' == typeof e.body ? this.setState({ errors: e.body }) : this.setState({ errors: { message: q.Z.Messages.ERROR_OCCURRED_TRY_AGAIN } });
+                        null != e.body && 'object' == typeof e.body ? this.setState({ errors: e.body }) : this.setState({ errors: { message: q.NW.string(q.t.fEptJC) } });
                     }
                 }
             });
-        let { channelType: t, cloneChannel: s, prefillChannelName: n } = e;
+        let { channelType: t, cloneChannel: n, prefillChannelName: s } = e;
         (this.state = {
             channelType: null != t ? t : V.d4z.GUILD_TEXT,
-            name: null != s ? (0, L.F6)(s, F.default, z.Z) : null != n ? n : '',
+            name: null != n ? (0, b.F6)(n, Z.default, w.Z) : null != s ? s : '',
             pendingPermissionOverwrites: {},
             isPrivate: !1,
             prevGuildId: e.guildId,
@@ -844,46 +880,53 @@ class et extends l.PureComponent {
             (this.handlePermissionOverwriteChange = this.handlePermissionOverwriteChange.bind(this));
     }
 }
-t.default = l.forwardRef(function (e, t) {
-    let { channelType: s, guildId: n, cloneChannelId: a } = e,
-        l = (0, C.cj)([y.Z, F.default, B.Z, H.Z, M.Z, U.ZP], () => {
-            var e, t, r;
-            let l = y.Z.getGuild(n),
-                i = F.default.getCurrentUser();
-            c()(null != i, 'CreateChannel: user cannot be undefined');
-            let o = null != l && null != l.ownerId ? F.default.getUser(l.ownerId) : null,
-                d = new Set(null !== (t = null === (e = U.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : []),
-                h = B.Z.can(V.Plq.ADMINISTRATOR, l),
-                u = H.Z.getChannel(a);
+let es = r.forwardRef(function (e, t) {
+    let { channelType: n, guildId: r, cloneChannelId: i } = e,
+        l = (0, p.cj)([M.Z, Z.default, R.Z, G.Z, P.ZP], () => {
+            var e, t, s;
+            let l = M.Z.getGuild(r),
+                a = Z.default.getCurrentUser();
+            o()(null != a, 'CreateChannel: user cannot be undefined');
+            let d = null != l && null != l.ownerId ? Z.default.getUser(l.ownerId) : null,
+                c = R.Z.can(V.Plq.ADMINISTRATOR, l),
+                h = G.Z.getChannel(i);
             return {
                 guild: l,
-                applications: M.Z.getGuildApplicationIds(n)
-                    .map((e) => M.Z.getApplication(e))
-                    .filter(k.lm),
                 canCreateStoreChannel: null != l && l.hasFeature(V.oNc.COMMERCE),
                 canCreateAnnouncementChannel: null != l && l.hasFeature(V.oNc.NEWS),
-                user: i,
-                owner: o,
-                memberRoleIds: d,
-                canViewChannels: B.Z.can(V.Plq.VIEW_CHANNEL, l),
-                canConnect: B.Z.can(V.Plq.CONNECT, l),
-                isAdmin: h,
-                cloneChannel: u,
-                channelType: null !== (r = null == u ? void 0 : u.type) && void 0 !== r ? r : s,
-                canManageRoles: B.Z.can(V.Plq.MANAGE_ROLES, l),
-                canManageChannels: B.Z.can(V.Plq.MANAGE_CHANNELS, l)
+                user: a,
+                owner: d,
+                memberRoles: null != (t = null == (e = P.ZP.getMember(r, a.id)) ? void 0 : e.roles) ? t : [],
+                canViewChannels: R.Z.can(V.Plq.VIEW_CHANNEL, l),
+                canConnect: R.Z.can(V.Plq.CONNECT, l),
+                isAdmin: c,
+                cloneChannel: h,
+                channelType: null != (s = null == h ? void 0 : h.type) ? s : n,
+                canManageRoles: R.Z.can(V.Plq.MANAGE_ROLES, l),
+                canManageChannels: R.Z.can(V.Plq.MANAGE_CHANNELS, l)
             };
         }),
-        { canManageRoles: i, canManageChannels: o } = l,
-        d = (0, b.m)(n) && i && o,
-        h = (0, D.W3)(n),
-        u = (0, Z.Ui)(null == l ? void 0 : l.guild);
-    return (0, r.jsx)(et, {
-        ...e,
-        ...l,
-        canCreateStageChannel: d,
-        canCreateForumChannel: h,
-        canCreateMediaChannel: u,
-        ref: t
-    });
+        a = (0, p.Wu)([j.Z], () =>
+            j.Z.getGuildApplicationIds(r)
+                .map((e) => j.Z.getApplication(e))
+                .filter(B.lm)
+        ),
+        d = new Set(l.memberRoles),
+        { canManageRoles: c, canManageChannels: h } = l,
+        u = (0, U.m)(r) && c && h,
+        N = (0, D.W3)(r),
+        m = (0, L.Ui)(null == l ? void 0 : l.guild),
+        g = (0, A.Q3)('CreateChannel');
+    return (0, s.jsx)(
+        en,
+        $(Q({}, e, l), {
+            memberRoleIds: d,
+            applications: a,
+            canCreateStageChannel: u,
+            canCreateForumChannel: N,
+            canCreateMediaChannel: m,
+            ref: t,
+            width: g ? 496 : 460
+        })
+    );
 });

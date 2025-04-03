@@ -1,20 +1,12 @@
-t.d(n, {
-    Z: function () {
-        return m;
-    }
-});
-var l = t(553813),
-    s = t.n(l),
-    a = t(375964),
-    r = t(579806),
-    i = t(131951),
-    o = t(358085),
-    c = t(70722),
-    u = t(65154),
-    d = t(689938);
-function m() {
-    if (!i.Z.supports(u.AN.SOUNDSHARE)) return a.GO_LIVE_SCREENSHARE_NO_SOUND;
-    if ((0, o.isWindows)() && !s().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, c.I9)) return d.Z.Messages.GO_LIVE_SCREENSHARE_UPDATE_WINDOWS_FOR_SOUNDSHARE;
-    if ((0, o.isMac)() && !s().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, c.Ec)) return d.Z.Messages.GO_LIVE_SCREENSHARE_UPDATE_MACOS_FOR_SOUNDSHARE;
-    return null;
+n.d(t, { Z: () => u });
+var r = n(209739),
+    l = n.n(r),
+    i = n(579806),
+    s = n(131951),
+    o = n(358085),
+    a = n(70722),
+    c = n(65154),
+    d = n(388032);
+function u() {
+    return s.Z.supports(c.AN.SOUNDSHARE) ? ((0, o.isWindows)() && !l().satisfies(null === i.Z || void 0 === i.Z ? void 0 : i.Z.os.release, a.I9) ? d.NW.string(d.t.voRPTE) : (0, o.isMac)() && !l().satisfies(null === i.Z || void 0 === i.Z ? void 0 : i.Z.os.release, a.Ec) ? d.NW.string(d.t.v2y9PT) : null) : d.NW.string(d.t['1b0Gm5']);
 }

@@ -1,69 +1,65 @@
-r.d(t, {
-    W: function () {
-        return S;
-    }
-});
-var n = r(967752),
-    a = r(622916),
-    o = r(394798),
-    i = r(573736),
-    _ = r(928541),
-    E = r(617726),
-    s = r(370336),
-    c = r(116698),
-    I = r(538022),
-    u = r(510529),
-    l = r(263449),
-    R = r(255768),
-    A = r(380132),
-    T = r(151122),
-    d = r(112797),
-    N = r(305625),
-    p = r(820754),
-    O = r(822578);
-let f = "Not capturing exception because it's already been captured.";
-class S {
-    constructor(e) {
-        if (((this._options = e), (this._integrations = {}), (this._numProcessing = 0), (this._outcomes = {}), (this._hooks = {}), (this._eventProcessors = []), e.dsn ? (this._dsn = (0, n.vK)(e.dsn)) : R.X && a.kg.warn('No DSN provided, client will not send events.'), this._dsn)) {
-            let t = (0, u.U)(this._dsn, e.tunnel, e._metadata ? e._metadata.sdk : void 0);
-            this._transport = e.transport({
+a.d(e, { W: () => h });
+var r = a(967752),
+    n = a(622916),
+    _ = a(394798),
+    o = a(573736),
+    i = a(928541),
+    c = a(617726),
+    s = a(370336),
+    E = a(116698),
+    l = a(538022),
+    u = a(510529),
+    I = a(263449),
+    R = a(255768),
+    d = a(380132),
+    A = a(151122),
+    f = a(112797),
+    p = a(305625),
+    N = a(820754),
+    T = a(822578);
+let L = "Not capturing exception because it's already been captured.";
+class h {
+    constructor(t) {
+        if (((this._options = t), (this._integrations = {}), (this._numProcessing = 0), (this._outcomes = {}), (this._hooks = {}), (this._eventProcessors = []), t.dsn ? (this._dsn = (0, r.vK)(t.dsn)) : R.X && n.kg.warn('No DSN provided, client will not send events.'), this._dsn)) {
+            let e = (0, u.U)(this._dsn, t.tunnel, t._metadata ? t._metadata.sdk : void 0);
+            this._transport = t.transport({
                 tunnel: this._options.tunnel,
                 recordDroppedEvent: this.recordDroppedEvent.bind(this),
-                ...e.transportOptions,
-                url: t
+                ...t.transportOptions,
+                url: e
             });
         }
     }
-    captureException(e, t, r) {
-        let n = (0, o.DM)();
-        if ((0, o.YO)(e)) return R.X && a.kg.log(f), n;
-        let i = {
-            event_id: n,
-            ...t
+    captureException(t, e, a) {
+        let r = (0, _.DM)();
+        if ((0, _.YO)(t)) return R.X && n.kg.log(L), r;
+        let o = {
+            event_id: r,
+            ...e
         };
-        return this._process(this.eventFromException(e, i).then((e) => this._captureEvent(e, i, r))), i.event_id;
+        return this._process(this.eventFromException(t, o).then((t) => this._captureEvent(t, o, a))), o.event_id;
     }
-    captureMessage(e, t, r, n) {
-        let a = {
-                event_id: (0, o.DM)(),
-                ...r
+    captureMessage(t, e, a, r) {
+        let n = {
+                event_id: (0, _.DM)(),
+                ...a
             },
-            _ = (0, i.Le)(e) ? e : String(e),
-            E = (0, i.pt)(e) ? this.eventFromMessage(_, t, a) : this.eventFromException(e, a);
-        return this._process(E.then((e) => this._captureEvent(e, a, n))), a.event_id;
+            i = (0, o.Le)(t) ? t : String(t),
+            c = (0, o.pt)(t) ? this.eventFromMessage(i, e, n) : this.eventFromException(t, n);
+        return this._process(c.then((t) => this._captureEvent(t, n, r))), n.event_id;
     }
-    captureEvent(e, t, r) {
-        let n = (0, o.DM)();
-        if (t && t.originalException && (0, o.YO)(t.originalException)) return R.X && a.kg.log(f), n;
-        let i = {
-                event_id: n,
-                ...t
+    captureEvent(t, e, a) {
+        let r = (0, _.DM)();
+        if (e && e.originalException && (0, _.YO)(e.originalException)) return R.X && n.kg.log(L), r;
+        let o = {
+                event_id: r,
+                ...e
             },
-            _ = (e.sdkProcessingMetadata || {}).capturedSpanScope;
-        return this._process(this._captureEvent(e, i, _ || r)), i.event_id;
+            i = (t.sdkProcessingMetadata || {}).capturedSpanScope;
+        return this._process(this._captureEvent(t, o, i || a)), o.event_id;
     }
-    captureSession(e) {
-        'string' != typeof e.release ? R.X && a.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(e), (0, d.CT)(e, { init: !1 }));
+    captureSession(t) {
+        'string' != typeof t.release ? R.X && n.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, f.CT)(t, { init: !1 }));
     }
     getDsn() {
         return this._dsn;
@@ -77,278 +73,276 @@ class S {
     getTransport() {
         return this._transport;
     }
-    flush(e) {
-        let t = this._transport;
-        return t ? (this.emit('flush'), this._isClientDoneProcessing(e).then((r) => t.flush(e).then((e) => r && e))) : (0, _.WD)(!0);
+    flush(t) {
+        let e = this._transport;
+        return e ? (this.emit('flush'), this._isClientDoneProcessing(t).then((a) => e.flush(t).then((t) => a && t))) : (0, i.WD)(!0);
     }
-    close(e) {
-        return this.flush(e).then((e) => ((this.getOptions().enabled = !1), this.emit('close'), e));
+    close(t) {
+        return this.flush(t).then((t) => ((this.getOptions().enabled = !1), this.emit('close'), t));
     }
     getEventProcessors() {
         return this._eventProcessors;
     }
-    addEventProcessor(e) {
-        this._eventProcessors.push(e);
+    addEventProcessor(t) {
+        this._eventProcessors.push(t);
     }
     init() {
         this._isEnabled() && this._setupIntegrations();
     }
-    getIntegrationByName(e) {
-        return this._integrations[e];
+    getIntegrationByName(t) {
+        return this._integrations[t];
     }
-    addIntegration(e) {
-        let t = this._integrations[e.name];
-        (0, T.m7)(this, e, this._integrations), !t && (0, T.uf)(this, [e]);
+    addIntegration(t) {
+        let e = this._integrations[t.name];
+        (0, A.m7)(this, t, this._integrations), e || (0, A.uf)(this, [t]);
     }
-    sendEvent(e, t = {}) {
-        this.emit('beforeSendEvent', e, t);
-        let r = (0, A.Mq)(e, this._dsn, this._options._metadata, this._options.tunnel);
-        for (let e of t.attachments || []) r = (0, E.BO)(r, (0, E.zQ)(e));
-        let n = this.sendEnvelope(r);
-        n && n.then((t) => this.emit('afterSendEvent', e, t), null);
+    sendEvent(t, e = {}) {
+        this.emit('beforeSendEvent', t, e);
+        let a = (0, d.Mq)(t, this._dsn, this._options._metadata, this._options.tunnel);
+        for (let t of e.attachments || []) a = (0, c.BO)(a, (0, c.zQ)(t));
+        let r = this.sendEnvelope(a);
+        r && r.then((e) => this.emit('afterSendEvent', t, e), null);
     }
-    sendSession(e) {
-        let t = (0, A.Q3)(e, this._dsn, this._options._metadata, this._options.tunnel);
-        this.sendEnvelope(t);
+    sendSession(t) {
+        let e = (0, d.Q3)(t, this._dsn, this._options._metadata, this._options.tunnel);
+        this.sendEnvelope(e);
     }
-    recordDroppedEvent(e, t, r) {
+    recordDroppedEvent(t, e, a) {
         if (this._options.sendClientReports) {
-            let n = 'number' == typeof r ? r : 1,
-                o = `${e}:${t}`;
-            R.X && a.kg.log(`Recording outcome: "${o}"${n > 1 ? ` (${n} times)` : ''}`), (this._outcomes[o] = (this._outcomes[o] || 0) + n);
+            let r = 'number' == typeof a ? a : 1,
+                _ = `${t}:${e}`;
+            R.X && n.kg.log(`Recording outcome: "${_}"${r > 1 ? ` (${r} times)` : ''}`), (this._outcomes[_] = (this._outcomes[_] || 0) + r);
         }
     }
-    on(e, t) {
-        let r = (this._hooks[e] = this._hooks[e] || []);
+    on(t, e) {
+        let a = (this._hooks[t] = this._hooks[t] || []);
         return (
-            r.push(t),
+            a.push(e),
             () => {
-                let e = r.indexOf(t);
-                e > -1 && r.splice(e, 1);
+                let t = a.indexOf(e);
+                t > -1 && a.splice(t, 1);
             }
         );
     }
-    emit(e, ...t) {
-        let r = this._hooks[e];
-        r && r.forEach((e) => e(...t));
+    emit(t, ...e) {
+        let a = this._hooks[t];
+        a && a.forEach((t) => t(...e));
     }
-    sendEnvelope(e) {
-        return (this.emit('beforeEnvelope', e), this._isEnabled() && this._transport) ? this._transport.send(e).then(null, (e) => (R.X && a.kg.error('Error while sending event:', e), e)) : (R.X && a.kg.error('Transport disabled'), (0, _.WD)({}));
+    sendEnvelope(t) {
+        return (this.emit('beforeEnvelope', t), this._isEnabled() && this._transport) ? this._transport.send(t).then(null, (t) => (R.X && n.kg.error('Error while sending event:', t), t)) : (R.X && n.kg.error('Transport disabled'), (0, i.WD)({}));
     }
     _setupIntegrations() {
-        let { integrations: e } = this._options;
-        (this._integrations = (0, T.q4)(this, e)), (0, T.uf)(this, e);
+        let { integrations: t } = this._options;
+        (this._integrations = (0, A.q4)(this, t)), (0, A.uf)(this, t);
     }
-    _updateSessionFromEvent(e, t) {
-        let r = !1,
-            n = !1,
-            a = t.exception && t.exception.values;
-        if (a)
-            for (let e of ((n = !0), a)) {
-                let t = e.mechanism;
-                if (t && !1 === t.handled) {
-                    r = !0;
+    _updateSessionFromEvent(t, e) {
+        let a = !1,
+            r = !1,
+            n = e.exception && e.exception.values;
+        if (n)
+            for (let t of ((r = !0), n)) {
+                let e = t.mechanism;
+                if (e && !1 === e.handled) {
+                    a = !0;
                     break;
                 }
             }
-        let o = 'ok' === e.status;
-        ((o && 0 === e.errors) || (o && r)) &&
-            ((0, d.CT)(e, {
-                ...(r && { status: 'crashed' }),
-                errors: e.errors || Number(n || r)
+        let _ = 'ok' === t.status;
+        ((_ && 0 === t.errors) || (_ && a)) &&
+            ((0, f.CT)(t, {
+                ...(a && { status: 'crashed' }),
+                errors: t.errors || Number(r || a)
             }),
-            this.captureSession(e));
+            this.captureSession(t));
     }
-    _isClientDoneProcessing(e) {
-        return new _.cW((t) => {
-            let r = 0,
-                n = setInterval(() => {
-                    0 == this._numProcessing ? (clearInterval(n), t(!0)) : ((r += 1), e && r >= e && (clearInterval(n), t(!1)));
+    _isClientDoneProcessing(t) {
+        return new i.cW((e) => {
+            let a = 0,
+                r = setInterval(() => {
+                    0 == this._numProcessing ? (clearInterval(r), e(!0)) : ((a += 1), t && a >= t && (clearInterval(r), e(!1)));
                 }, 1);
         });
     }
     _isEnabled() {
         return !1 !== this.getOptions().enabled && void 0 !== this._transport;
     }
-    _prepareEvent(e, t, r, n = (0, l.aF)()) {
-        let a = this.getOptions(),
-            o = Object.keys(this._integrations);
+    _prepareEvent(t, e, a, r = (0, I.aF)()) {
+        let n = this.getOptions(),
+            _ = Object.keys(this._integrations);
         return (
-            !t.integrations && o.length > 0 && (t.integrations = o),
-            this.emit('preprocessEvent', e, t),
-            !e.type && n.setLastEventId(e.event_id || t.event_id),
-            (0, O.R)(a, e, t, r, this, n).then((e) => {
-                if (null === e) return e;
-                let t = {
-                    ...n.getPropagationContext(),
-                    ...(r ? r.getPropagationContext() : void 0)
+            !e.integrations && _.length > 0 && (e.integrations = _),
+            this.emit('preprocessEvent', t, e),
+            t.type || r.setLastEventId(t.event_id || e.event_id),
+            (0, T.R)(n, t, e, a, this, r).then((t) => {
+                if (null === t) return t;
+                let e = {
+                    ...r.getPropagationContext(),
+                    ...(a ? a.getPropagationContext() : void 0)
                 };
-                if (!(e.contexts && e.contexts.trace) && t) {
-                    let { traceId: r, spanId: n, parentSpanId: a, dsc: o } = t;
-                    e.contexts = {
+                if (!(t.contexts && t.contexts.trace) && e) {
+                    let { traceId: a, spanId: r, parentSpanId: n, dsc: _ } = e;
+                    (t.contexts = {
                         trace: (0, s.Jr)({
-                            trace_id: r,
-                            span_id: n,
-                            parent_span_id: a
+                            trace_id: a,
+                            span_id: r,
+                            parent_span_id: n
                         }),
-                        ...e.contexts
-                    };
-                    let i = o || (0, N._l)(r, this);
-                    e.sdkProcessingMetadata = {
-                        dynamicSamplingContext: i,
-                        ...e.sdkProcessingMetadata
-                    };
+                        ...t.contexts
+                    }),
+                        (t.sdkProcessingMetadata = {
+                            dynamicSamplingContext: _ || (0, p._l)(a, this),
+                            ...t.sdkProcessingMetadata
+                        });
                 }
-                return e;
+                return t;
             })
         );
     }
-    _captureEvent(e, t = {}, r) {
-        return this._processEvent(e, t, r).then(
-            (e) => e.event_id,
-            (e) => {
-                R.X && ('log' === e.logLevel ? a.kg.log(e.message) : a.kg.warn(e));
+    _captureEvent(t, e = {}, a) {
+        return this._processEvent(t, e, a).then(
+            (t) => t.event_id,
+            (t) => {
+                R.X && ('log' === t.logLevel ? n.kg.log(t.message) : n.kg.warn(t));
             }
         );
     }
-    _processEvent(e, t, r) {
-        let n = this.getOptions(),
-            { sampleRate: a } = n,
-            o = L(e),
-            E = D(e),
-            s = e.type || 'error',
-            I = `before send for type \`${s}\``,
-            u = void 0 === a ? void 0 : (0, p.o)(a);
-        if (E && 'number' == typeof u && Math.random() > u) return this.recordDroppedEvent('sample_rate', 'error', e), (0, _.$2)(new c.b(`Discarding event because it's not included in the random sample (sampling rate = ${a})`, 'log'));
-        let l = 'replay_event' === s ? 'replay' : s,
-            R = (e.sdkProcessingMetadata || {}).capturedSpanIsolationScope;
-        return this._prepareEvent(e, t, r, R)
-            .then((r) => {
-                if (null === r) throw (this.recordDroppedEvent('event_processor', l, e), new c.b('An event processor returned `null`, will not send event.', 'log'));
-                return t.data && !0 === t.data.__sentry__
-                    ? r
-                    : (function (e, t) {
-                          let r = `${t} must return \`null\` or a valid event.`;
-                          if ((0, i.J8)(e))
-                              return e.then(
-                                  (e) => {
-                                      if (!(0, i.PO)(e) && null !== e) throw new c.b(r);
-                                      return e;
+    _processEvent(t, e, a) {
+        let r = this.getOptions(),
+            { sampleRate: n } = r,
+            _ = D(t),
+            c = O(t),
+            s = t.type || 'error',
+            l = `before send for type \`${s}\``,
+            u = void 0 === n ? void 0 : (0, N.o)(n);
+        if (c && 'number' == typeof u && Math.random() > u) return this.recordDroppedEvent('sample_rate', 'error', t), (0, i.$2)(new E.b(`Discarding event because it's not included in the random sample (sampling rate = ${n})`, 'log'));
+        let I = 'replay_event' === s ? 'replay' : s,
+            R = (t.sdkProcessingMetadata || {}).capturedSpanIsolationScope;
+        return this._prepareEvent(t, e, a, R)
+            .then((a) => {
+                if (null === a) throw (this.recordDroppedEvent('event_processor', I, t), new E.b('An event processor returned `null`, will not send event.', 'log'));
+                return e.data && !0 === e.data.__sentry__
+                    ? a
+                    : (function (t, e) {
+                          let a = `${e} must return \`null\` or a valid event.`;
+                          if ((0, o.J8)(t))
+                              return t.then(
+                                  (t) => {
+                                      if (!(0, o.PO)(t) && null !== t) throw new E.b(a);
+                                      return t;
                                   },
-                                  (e) => {
-                                      throw new c.b(`${t} rejected with ${e}`);
+                                  (t) => {
+                                      throw new E.b(`${e} rejected with ${t}`);
                                   }
                               );
-                          if (!(0, i.PO)(e) && null !== e) throw new c.b(r);
-                          return e;
+                          if (!(0, o.PO)(t) && null !== t) throw new E.b(a);
+                          return t;
                       })(
-                          (function (e, t, r, n) {
-                              let { beforeSend: a, beforeSendTransaction: o, beforeSendSpan: i } = t;
-                              if (D(r) && a) return a(r, n);
-                              if (L(r)) {
-                                  if (r.spans && i) {
-                                      let t = [];
-                                      for (let n of r.spans) {
-                                          let r = i(n);
-                                          r ? t.push(r) : e.recordDroppedEvent('before_send', 'span');
+                          (function (t, e, a, r) {
+                              let { beforeSend: n, beforeSendTransaction: _, beforeSendSpan: o } = e;
+                              if (O(a) && n) return n(a, r);
+                              if (D(a)) {
+                                  if (a.spans && o) {
+                                      let e = [];
+                                      for (let r of a.spans) {
+                                          let a = o(r);
+                                          a ? e.push(a) : t.recordDroppedEvent('before_send', 'span');
                                       }
-                                      r.spans = t;
+                                      a.spans = e;
                                   }
-                                  if (o) {
-                                      if (r.spans) {
-                                          let e = r.spans.length;
-                                          r.sdkProcessingMetadata = {
-                                              ...r.sdkProcessingMetadata,
-                                              spanCountBeforeProcessing: e
+                                  if (_) {
+                                      if (a.spans) {
+                                          let t = a.spans.length;
+                                          a.sdkProcessingMetadata = {
+                                              ...a.sdkProcessingMetadata,
+                                              spanCountBeforeProcessing: t
                                           };
                                       }
-                                      return o(r, n);
+                                      return _(a, r);
                                   }
                               }
-                              return r;
-                          })(this, n, r, t),
-                          I
+                              return a;
+                          })(this, r, a, e),
+                          l
                       );
             })
-            .then((n) => {
-                if (null === n) {
-                    if ((this.recordDroppedEvent('before_send', l, e), o)) {
-                        let t = 1 + (e.spans || []).length;
-                        this.recordDroppedEvent('before_send', 'span', t);
+            .then((r) => {
+                if (null === r) {
+                    if ((this.recordDroppedEvent('before_send', I, t), _)) {
+                        let e = 1 + (t.spans || []).length;
+                        this.recordDroppedEvent('before_send', 'span', e);
                     }
-                    throw new c.b(`${I} returned \`null\`, will not send event.`, 'log');
+                    throw new E.b(`${l} returned \`null\`, will not send event.`, 'log');
                 }
-                let a = r && r.getSession();
-                if ((!o && a && this._updateSessionFromEvent(a, n), o)) {
-                    let e = (n.sdkProcessingMetadata && n.sdkProcessingMetadata.spanCountBeforeProcessing) || 0,
-                        t = e - (n.spans ? n.spans.length : 0);
+                let n = a && a.getSession();
+                if ((!_ && n && this._updateSessionFromEvent(n, r), _)) {
+                    let t = ((r.sdkProcessingMetadata && r.sdkProcessingMetadata.spanCountBeforeProcessing) || 0) - (r.spans ? r.spans.length : 0);
                     t > 0 && this.recordDroppedEvent('before_send', 'span', t);
                 }
-                let i = n.transaction_info;
+                let o = r.transaction_info;
                 return (
-                    o &&
-                        i &&
-                        n.transaction !== e.transaction &&
-                        (n.transaction_info = {
-                            ...i,
+                    _ &&
+                        o &&
+                        r.transaction !== t.transaction &&
+                        (r.transaction_info = {
+                            ...o,
                             source: 'custom'
                         }),
-                    this.sendEvent(n, t),
-                    n
+                    this.sendEvent(r, e),
+                    r
                 );
             })
-            .then(null, (e) => {
-                if (e instanceof c.b) throw e;
+            .then(null, (t) => {
+                if (t instanceof E.b) throw t;
                 throw (
-                    (this.captureException(e, {
+                    (this.captureException(t, {
                         data: { __sentry__: !0 },
-                        originalException: e
+                        originalException: t
                     }),
-                    new c.b(`Event processing pipeline threw an error, original event will not be sent. Details have been sent as a new event.
-Reason: ${e}`))
+                    new E.b(`Event processing pipeline threw an error, original event will not be sent. Details have been sent as a new event.
+Reason: ${t}`))
                 );
             });
     }
-    _process(e) {
+    _process(t) {
         this._numProcessing++,
-            e.then(
-                (e) => (this._numProcessing--, e),
-                (e) => (this._numProcessing--, e)
+            t.then(
+                (t) => (this._numProcessing--, t),
+                (t) => (this._numProcessing--, t)
             );
     }
     _clearOutcomes() {
-        let e = this._outcomes;
+        let t = this._outcomes;
         return (
             (this._outcomes = {}),
-            Object.entries(e).map(([e, t]) => {
-                let [r, n] = e.split(':');
+            Object.entries(t).map(([t, e]) => {
+                let [a, r] = t.split(':');
                 return {
-                    reason: r,
-                    category: n,
-                    quantity: t
+                    reason: a,
+                    category: r,
+                    quantity: e
                 };
             })
         );
     }
     _flushOutcomes() {
-        R.X && a.kg.log('Flushing outcomes...');
-        let e = this._clearOutcomes();
-        if (0 === e.length) {
-            R.X && a.kg.log('No outcomes to send');
+        R.X && n.kg.log('Flushing outcomes...');
+        let t = this._clearOutcomes();
+        if (0 === t.length) {
+            R.X && n.kg.log('No outcomes to send');
             return;
         }
         if (!this._dsn) {
-            R.X && a.kg.log('No dsn provided, will not send outcomes');
+            R.X && n.kg.log('No dsn provided, will not send outcomes');
             return;
         }
-        R.X && a.kg.log('Sending outcomes:', e);
-        let t = (0, I.y)(e, this._options.tunnel && (0, n.RA)(this._dsn));
-        this.sendEnvelope(t);
+        R.X && n.kg.log('Sending outcomes:', t);
+        let e = (0, l.y)(t, this._options.tunnel && (0, r.RA)(this._dsn));
+        this.sendEnvelope(e);
     }
 }
-function D(e) {
-    return void 0 === e.type;
+function O(t) {
+    return void 0 === t.type;
 }
-function L(e) {
-    return 'transaction' === e.type;
+function D(t) {
+    return 'transaction' === t.type;
 }

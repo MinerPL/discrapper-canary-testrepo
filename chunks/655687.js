@@ -1,42 +1,43 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
-var i = n(933557),
-    a = n(981631),
-    s = n(689938);
-function l(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, i.ZP)(e, !0),
-        l = (0, i.ZP)(e, !1);
-    if (null == e || null == n)
-        return {
-            placeholder: '',
-            accessibilityLabel: ''
-        };
-    if (t)
-        return {
-            placeholder: s.Z.Messages.READ_ONLY_CHANNEL,
-            accessibilityLabel: s.Z.Messages.READ_ONLY_CHANNEL
-        };
-    if (e.isForumPost())
-        return {
-            placeholder: s.Z.Messages.FORUM_POST_TEXTAREA_PLACEHOLDER.format({ channel: n }),
-            accessibilityLabel: s.Z.Messages.TEXTAREA_FORUM_POST_A11Y_LABEL.format({ channel: l })
-        };
-    if (a.TPd.THREADS.has(e.type))
-        return {
-            placeholder: s.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: n }),
-            accessibilityLabel: s.Z.Messages.TEXTAREA_THREAD_A11Y_LABEL.format({ channel: l })
-        };
-    if (e.type === a.d4z.DM)
-        return {
-            placeholder: s.Z.Messages.DM_TEXTAREA_PLACEHOLDER.format({ channel: n }),
-            accessibilityLabel: s.Z.Messages.TEXTAREA_TEXT_DM_A11Y_LABEL.format({ channel: l })
-        };
-    return {
-        placeholder: s.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: n }),
-        accessibilityLabel: s.Z.Messages.TEXTAREA_TEXT_CHANNEL_A11Y_LABEL.format({ channel: l })
-    };
+n.d(t, { Z: () => a });
+var r = n(933557),
+    l = n(981631),
+    i = n(388032);
+function a(e) {
+    let { channel: t, isReadonly: n = !1, isCreatingThread: a = !1 } = e,
+        o = (0, r.ZP)(t, !0),
+        s = (0, r.ZP)(t, !1);
+    return null == t || null == o
+        ? {
+              placeholder: i.NW.string(i.t.MKDeyM),
+              accessibilityLabel: i.NW.string(i.t.MKDeyM)
+          }
+        : a
+          ? {
+                placeholder: i.NW.string(i.t.YzpScX),
+                accessibilityLabel: i.NW.string(i.t.YzpScX)
+            }
+          : n
+            ? {
+                  placeholder: i.NW.string(i.t.RRvRp6),
+                  accessibilityLabel: i.NW.string(i.t.RRvRp6)
+              }
+            : t.isForumPost()
+              ? {
+                    placeholder: i.NW.formatToPlainString(i.t.Y6qWLS, { channel: o }),
+                    accessibilityLabel: i.NW.formatToPlainString(i.t.KffKoa, { channel: s })
+                }
+              : l.TPd.THREADS.has(t.type)
+                ? {
+                      placeholder: i.NW.formatToPlainString(i.t['8lzR/f'], { channel: o }),
+                      accessibilityLabel: i.NW.formatToPlainString(i.t.UZIMWV, { channel: s })
+                  }
+                : t.type === l.d4z.DM
+                  ? {
+                        placeholder: i.NW.formatToPlainString(i.t['4c+CAw'], { channel: o }),
+                        accessibilityLabel: i.NW.formatToPlainString(i.t.fqOxbW, { channel: s })
+                    }
+                  : {
+                        placeholder: i.NW.formatToPlainString(i.t['8lzR/f'], { channel: o }),
+                        accessibilityLabel: i.NW.formatToPlainString(i.t.ih7ZSE, { channel: s })
+                    };
 }

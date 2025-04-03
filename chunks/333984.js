@@ -1,7 +1,7 @@
-n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var r = n(592125),
     i = n(412788);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,69 +14,66 @@ function a(e, t, n) {
         e
     );
 }
-let s = new Set(),
-    o = new Set(),
+let a = new Set(),
+    s = new Set(),
     l = !1;
-function u(e) {
+function c(e) {
     return e.isSpam;
 }
-function c(e) {
+function u(e) {
     let t = !1;
-    if (e.isSpam && !s.has(e.id)) s.add(e.id), (t = !0);
-    if (!e.isSpam && s.has(e.id)) s.delete(e.id), (t = !0);
-    if (!e.isSpam && o.has(e.id)) o.delete(e.id), (t = !0);
-    return t;
+    return c(e) && !a.has(e.id) && (a.add(e.id), (t = !0)), !c(e) && a.has(e.id) && (a.delete(e.id), (t = !0)), !c(e) && s.has(e.id) && (s.delete(e.id), (t = !0)), t;
 }
 function d() {
-    s.clear(),
-        o.clear(),
+    a.clear(),
+        s.clear(),
         Object.values(r.Z.getMutablePrivateChannels()).forEach((e) => {
-            c(e);
+            u(e);
         }),
         (l = !0);
 }
-function _(e) {
-    let { channelId: t } = e;
-    o.add(t);
-}
-function E(e) {
-    let { channel: t } = e;
-    return c(t);
-}
 function f(e) {
+    let { channelId: t } = e;
+    s.add(t);
+}
+function _(e) {
+    let { channel: t } = e;
+    return u(t);
+}
+function p(e) {
     let { channels: t } = e;
-    for (let e of t) c(e);
+    for (let e of t) u(e);
 }
 function h(e) {
     let { channel: t } = e,
         n = !1;
-    return s.has(t.id) && (s.delete(t.id), (n = !0)), n;
+    return a.has(t.id) && (a.delete(t.id), (n = !0)), n;
 }
-class p extends i.Z {
+class m extends i.Z {
     initialize() {
         this.waitFor(r.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(p.LATEST_SNAPSHOT_VERSION);
-        null != e && (s = new Set(e));
+        let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+        null != e && (a = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: p.LATEST_SNAPSHOT_VERSION,
-            data: Array.from(s)
+            version: m.LATEST_SNAPSHOT_VERSION,
+            data: Array.from(a)
         };
     }
     getSpamChannelIds() {
-        return s;
+        return a;
     }
     getSpamChannelsCount() {
-        return s.size;
+        return a.size;
     }
     isSpam(e) {
-        return s.has(e);
+        return a.has(e);
     }
     isAcceptedOptimistic(e) {
-        return o.has(e);
+        return s.has(e);
     }
     isReady() {
         return l;
@@ -86,11 +83,12 @@ class p extends i.Z {
             CONNECTION_OPEN: d,
             CONNECTION_OPEN_SUPPLEMENTAL: d,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_CREATE: E,
-            CHANNEL_UPDATES: f,
+            CHANNEL_CREATE: _,
+            CHANNEL_UPDATES: p,
             CHANNEL_DELETE: h,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: _
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
         });
     }
 }
-a(p, 'displayName', 'SpamMessageRequestStore'), a(p, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new p());
+o(m, 'displayName', 'SpamMessageRequestStore'), o(m, 'LATEST_SNAPSHOT_VERSION', 1);
+let g = new m();

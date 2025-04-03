@@ -1,13 +1,7 @@
 n.d(t, {
-    GI: function () {
-        return r.GI;
-    },
-    Un: function () {
-        return r.Un;
-    },
-    wE: function () {
-        return r.wE;
-    }
+    GI: () => r.GI,
+    Un: () => r.Un,
+    wE: () => r.wE
 });
 var r = n(608787),
     i = n(931619);

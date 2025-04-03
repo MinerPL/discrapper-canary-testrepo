@@ -1,70 +1,71 @@
-var s = n(735250),
-    o = n(470079),
-    r = n(113434),
+n.d(t, { Z: () => p });
+var r = n(200651),
+    o = n(192379),
+    s = n(113434),
     a = n(308069),
-    l = n(613087),
-    i = n(457153),
-    c = n(254197),
+    i = n(613087),
+    l = n(457153),
+    c = n(495722),
     d = n(321025),
-    u = n(657213);
-t.Z = function (e) {
+    u = n(62753);
+let p = function (e) {
     var t;
-    let { expandedContentRef: n, expansionSpring: p, isExpanded: x, isExpansionAnimationComplete: m, onCtxMenuOpened: g, onCtxMenuClosed: _, onCtxMenuSelection: C, quest: f, useReducedMotion: h, collapsedHeight: E } = e,
-        T = o.useRef(null),
-        S = o.useRef(null),
-        v = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        A = (0, r.Rf)(f);
-    return (0, s.jsxs)(l.p, {
+    let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: f, onCtxMenuOpened: g, onCtxMenuClosed: x, onCtxMenuSelection: h, quest: b, useReducedMotion: j, collapsedHeight: v } = e,
+        y = o.useRef(null),
+        _ = o.useRef(null),
+        C = (null == (t = b.userStatus) ? void 0 : t.enrolledAt) != null,
+        O = (0, s.Rf)(b);
+    return (0, r.jsxs)(i.p, {
         expandedContentRef: n,
-        collapsedContentRef: T,
+        collapsedContentRef: y,
         expansionSpring: p,
         children: [
-            (0, s.jsx)(i.Z, {
-                ref: T,
+            (0, r.jsx)(l.Z, {
+                ref: y,
                 className: u.content,
                 expansionSpring: p,
-                isExpanded: x,
-                isExpansionAnimationComplete: m,
-                quest: f,
-                useReducedMotion: h,
-                taskDetails: A
+                isExpanded: m,
+                isExpansionAnimationComplete: f,
+                quest: b,
+                useReducedMotion: j,
+                taskDetails: O
             }),
-            (0, s.jsx)(c.Z, {
+            (0, r.jsx)(c.Z, {
                 expansionSpring: p,
                 className: u.content,
-                collapsedHeight: E,
+                collapsedHeight: v,
                 onCtxMenuOpen: g,
-                onCtxMenuClose: _,
-                onCtxMenuSelect: C,
-                overlayRef: S,
-                isExpanded: x,
-                isExpansionAnimationComplete: m,
-                quest: f,
-                useReducedMotion: h,
+                onCtxMenuClose: x,
+                onCtxMenuSelect: h,
+                overlayRef: _,
+                isExpanded: m,
+                isExpansionAnimationComplete: f,
+                quest: b,
+                useReducedMotion: j,
                 ref: n,
-                taskDetails: A,
-                children: (0, s.jsxs)(s.Fragment, {
+                taskDetails: O,
+                children: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, s.jsx)(d.Z, {
+                        (0, r.jsx)(d.Z, {
                             expansionSpring: p,
-                            isExpanded: x
+                            isExpanded: m
                         }),
-                        !v &&
-                            (0, s.jsx)(a.Z, {
-                                quest: f,
+                        !C &&
+                            (0, r.jsx)(a.Z, {
+                                quest: b,
                                 expansionSpring: p,
-                                useReducedMotion: h,
-                                isExpanded: x,
-                                isExpansionAnimationComplete: m,
+                                useReducedMotion: j,
+                                isExpanded: m,
+                                isExpansionAnimationComplete: f,
                                 onCtxMenuOpen: g,
-                                onCtxMenuClose: _,
-                                onCtxMenuSelect: C
+                                onCtxMenuClose: x,
+                                onCtxMenuSelect: h
                             })
                     ]
                 })
             }),
-            (0, s.jsx)('div', {
-                ref: S,
+            (0, r.jsx)('div', {
+                ref: _,
                 className: u.overlay
             })
         ]

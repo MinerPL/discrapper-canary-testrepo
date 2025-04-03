@@ -1,24 +1,21 @@
-t.d(n, {
-    C: function () {
-        return function e(n) {
-            return null == n
-                ? n
-                : Object.keys(n).reduce((t, i) => {
-                      let o = (0, r.camelCase)(i);
-                      return 'object' != typeof n[i] || Array.isArray(n[i]) ? (t[o] = n[i]) : (t[o] = e(n[i])), t;
+n.d(t, {
+    C: () =>
+        function e(t) {
+            return null == t
+                ? t
+                : Object.keys(t).reduce((n, i) => {
+                      let l = (0, r.camelCase)(i);
+                      return 'object' != typeof t[i] || Array.isArray(t[i]) ? (n[l] = t[i]) : (n[l] = e(t[i])), n;
                   }, {});
-        };
-    },
-    X: function () {
-        return function e(n) {
-            return null == n
-                ? n
-                : Object.keys(n).reduce((t, i) => {
-                      let o = (0, r.snakeCase)(i);
-                      return 'object' != typeof n[i] || Array.isArray(n[i]) ? (t[o] = n[i]) : (t[o] = e(n[i])), (t[o] = n[i]), t;
+        },
+    X: () =>
+        function e(t) {
+            return null == t
+                ? t
+                : Object.keys(t).reduce((n, i) => {
+                      let l = (0, r.snakeCase)(i);
+                      return 'object' != typeof t[i] || Array.isArray(t[i]) ? (n[l] = t[i]) : (n[l] = e(t[i])), (n[l] = t[i]), n;
                   }, {});
-        };
-    }
-}),
-    t(724458);
-var r = t(392711);
+        }
+});
+var r = n(392711);

@@ -1,234 +1,259 @@
-t.d(r, {
-    Z: function () {
-        return I;
-    }
-}),
-    t(47120);
-var a = t(735250),
-    n = t(470079),
-    i = t(120356),
-    o = t.n(i),
-    l = t(392711),
-    c = t.n(l),
-    s = t(876215),
-    d = t(442837),
-    u = t(433517),
-    h = t(481060),
-    m = t(570140),
-    g = t(812206),
-    p = t(835473),
-    b = t(681619),
-    f = t(810568),
-    y = t(168524),
-    x = t(77498),
-    k = t(823379),
-    v = t(71585),
-    _ = t(146282),
-    w = t(650613),
-    j = t(789086),
-    C = t(206583),
-    N = t(787524),
-    S = t(535271);
-let T = [
+n.d(t, { Z: () => R }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    l = n(120356),
+    i = n.n(l),
+    o = n(392711),
+    s = n.n(o),
+    c = n(876215),
+    d = n(126313),
+    u = n(442837),
+    m = n(433517),
+    x = n(481060),
+    h = n(570140),
+    p = n(812206),
+    b = n(835473),
+    f = n(246992),
+    _ = n(681619),
+    g = n(810568),
+    v = n(168524),
+    j = n(77498),
+    y = n(823379),
+    C = n(550532),
+    T = n(71585),
+    S = n(146282),
+    N = n(780106),
+    O = n(650613),
+    k = n(789086),
+    E = n(206583),
+    w = n(403542),
+    P = n(616257);
+let I = [
     {
         key: 'type',
-        cellClassName: o()(N.cell, N.cellType),
+        cellClassName: i()(w.cell, w.cellType),
         render(e) {
-            let { type: r } = e;
-            return (0, a.jsx)(h.Text, {
+            let { type: t } = e;
+            return (0, r.jsx)(x.Text, {
                 variant: 'text-md/semibold',
-                children: s.s[r]
+                children: c.s[t]
             });
         }
     },
     {
         key: 'count',
-        cellClassName: o()(N.cell, N.cellCount),
+        cellClassName: i()(w.cell, w.cellCount),
         render(e) {
-            let { entries: r } = e;
-            return (0, a.jsx)('div', {
-                children: (0, a.jsx)(h.Text, {
+            let { entries: t } = e;
+            return (0, r.jsx)('div', {
+                children: (0, r.jsx)(x.Text, {
                     variant: 'text-md/normal',
-                    children: r.length
+                    children: t.length
                 })
             });
         }
     },
     {
         key: 'only?',
-        cellClassName: N.cell,
+        cellClassName: w.cell,
         render(e) {
-            let { type: r } = e;
-            return (0, a.jsx)(E, { type: r });
+            let { type: t } = e;
+            return (0, r.jsx)(Z, { type: t });
         }
     }
 ];
-function E(e) {
-    var r, t;
-    let { type: n } = e,
-        i = (0, d.e7)([_.Z], () => _.Z.getFilters()),
-        o = null !== (t = null == i ? void 0 : null === (r = i.types) || void 0 === r ? void 0 : r.has(n)) && void 0 !== t && t;
-    return (0, a.jsx)(h.Checkbox, {
-        value: o,
+function Z(e) {
+    var t, n;
+    let { type: a } = e,
+        l = (0, u.e7)([S.Z], () => S.Z.getFilters()),
+        i = null != (n = null == l || null == (t = l.types) ? void 0 : t.has(a)) && n;
+    return (0, r.jsx)(x.XZJ, {
+        value: i,
         onClick: function () {
-            o
-                ? m.Z.dispatch({
+            i
+                ? h.Z.dispatch({
                       type: 'CONTENT_INVENTORY_SET_FILTERS',
                       filters: void 0
                   })
-                : m.Z.dispatch({
+                : h.Z.dispatch({
                       type: 'CONTENT_INVENTORY_SET_FILTERS',
-                      filters: { types: new Set([n]) }
+                      filters: { types: new Set([a]) }
                   });
         }
     });
 }
-function I() {
-    var e, r;
-    let t = (0, d.e7)([_.Z], () => _.Z.getFeed(C.YN.GLOBAL_FEED)),
-        i = (0, d.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
-        l = (0, d.e7)([v.Z], () => v.Z.getDebugFastImpressionCappingEnabled()),
-        s = (function (e) {
-            let r = c().groupBy(e, (e) => e.content_type);
-            return Object.keys(r).map((e) => {
-                let t = r[e];
+function R() {
+    var e, t;
+    let n = (0, u.e7)([S.Z], () => S.Z.getFeed(E.YN.GLOBAL_FEED)),
+        l = (0, u.e7)([S.Z], () => S.Z.getDebugImpressionCappingDisabled()),
+        i = (0, u.e7)([T.Z], () => T.Z.getDebugFastImpressionCappingEnabled()),
+        o = (function (e) {
+            let t = s().groupBy(e, (e) => e.content_type);
+            return Object.keys(t).map((e) => {
+                let n = t[e];
                 return {
                     key: ''.concat(e),
-                    type: t[0].content_type,
-                    entries: t
+                    type: n[0].content_type,
+                    entries: n
                 };
             });
-        })(null == t ? void 0 : null === (e = t.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
-        E = (0, d.e7)([_.Z], () => {
+        })(null == n || null == (e = n.entries) ? void 0 : e.map((e) => e.content)),
+        c = (0, u.e7)([S.Z], () => {
             var e;
-            return (null === (e = _.Z.getFeedState(C.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null == (e = S.Z.getFeedState(E.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [I, R] = n.useState(''),
-        O = (0, d.e7)(
-            [x.Z, g.Z],
+        [Z, R] = a.useState(''),
+        D = (0, u.e7)(
+            [j.Z, p.Z],
             () => {
-                var e, r, t;
-                return parseInt(I) > 0 ? I : null !== (t = null === (e = x.Z.getGameByName(I)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = g.Z.getApplicationByName(I)) || void 0 === r ? void 0 : r.id;
+                var e, t, n;
+                return parseInt(Z) > 0 ? Z : null != (n = null == (e = j.Z.getGameByName(Z)) ? void 0 : e.id) ? n : null == (t = p.Z.getApplicationByName(Z)) ? void 0 : t.id;
             },
-            [I]
+            [Z]
         ),
-        A = (0, y.Z)({
-            applicationId: O,
+        A = (0, v.Z)({
+            applicationId: D,
             location: 'DevToolsContentInventory',
-            source: f.m1.DevTools
+            source: g.m1.DevTools
         }),
-        L = Object.entries(null !== (r = u.K.get('GameProfileModal')) && void 0 !== r ? r : {})
+        B = Object.entries(null != (t = m.K.get('GameProfileModal')) ? t : {})
             .filter((e) => {
-                let [r, t] = e;
-                return t;
+                let [t, n] = e;
+                return n;
             })
             .map((e) => {
-                let [r] = e;
-                return r;
+                let [t] = e;
+                return t;
             }),
-        B = (0, p.Z)(L).filter(k.lm);
-    return (0, a.jsx)('div', {
-        className: o()(S.panel),
-        children: (0, a.jsxs)(h.ScrollerThin, {
-            className: N.content,
+        z = (0, b.Z)(B).filter(y.lm),
+        M = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
+    return (0, r.jsx)('div', {
+        className: P.panel,
+        children: (0, r.jsxs)(x.zJl, {
+            className: w.content,
             children: [
-                (0, a.jsxs)(h.FormSection, {
+                (0, r.jsxs)(x.hjN, {
                     children: [
-                        (0, a.jsx)(h.FormTitle, { children: 'Inventory' }),
-                        s.length > 0 &&
-                            (0, a.jsx)(b.Z, {
-                                columns: T,
-                                data: s
+                        (0, r.jsx)(x.vwX, { children: 'Inventory' }),
+                        o.length > 0 &&
+                            (0, r.jsx)(_.Z, {
+                                columns: I,
+                                data: o
                             }),
-                        (0, a.jsx)(h.Spacer, { size: 8 }),
-                        (0, a.jsx)(j.Z, {}),
-                        (0, a.jsx)(h.Button, {
+                        (0, r.jsx)(x.LZC, { size: 8 }),
+                        (0, r.jsx)(k.Z, {}),
+                        (0, r.jsx)(x.zxk, {
                             fullWidth: !0,
                             onClick: function () {
-                                m.Z.dispatch({
+                                h.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: C.YN.GLOBAL_FEED
+                                    feedId: E.YN.GLOBAL_FEED,
+                                    feature: d.L.INBOX
                                 });
                             },
-                            submitting: E,
+                            submitting: c,
                             children: 'Refresh Now'
                         })
                     ]
                 }),
-                (0, a.jsxs)(h.FormSection, {
+                (0, r.jsxs)(x.hjN, {
                     children: [
-                        (0, a.jsx)(h.FormTitle, { children: 'Impression Capping' }),
-                        (0, a.jsx)(h.Button, {
+                        (0, r.jsx)(x.vwX, { children: 'Impression Capping' }),
+                        (0, r.jsx)(x.zxk, {
                             fullWidth: !0,
                             onClick: function () {
-                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS' });
+                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS' });
                             },
                             children: 'Clear Impressions'
                         }),
-                        (0, a.jsx)(h.Spacer, { size: 8 }),
-                        (0, a.jsx)(h.Button, {
+                        (0, r.jsx)(x.LZC, { size: 8 }),
+                        (0, r.jsx)(x.zxk, {
                             fullWidth: !0,
                             onClick: function () {
-                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS' });
+                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS' });
                             },
                             children: 'Log Impressions'
                         }),
-                        (0, a.jsx)(h.Spacer, { size: 8 }),
-                        (0, a.jsx)(h.Button, {
+                        (0, r.jsx)(x.LZC, { size: 8 }),
+                        (0, r.jsx)(x.zxk, {
                             fullWidth: !0,
                             onClick: function () {
-                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING' });
+                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING' });
                             },
-                            children: i ? 'Enable Impression Capping' : 'Disable Impression Capping'
+                            children: l ? 'Enable Impression Capping' : 'Disable Impression Capping'
                         }),
-                        (0, a.jsx)(h.Spacer, { size: 8 }),
-                        (0, a.jsx)(h.Button, {
+                        (0, r.jsx)(x.LZC, { size: 8 }),
+                        (0, r.jsx)(x.zxk, {
                             fullWidth: !0,
                             onClick: function () {
-                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING' });
+                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING' });
                             },
-                            children: l ? 'Disable Fast Impression Capping' : 'Enable Fast Impression Capping'
+                            children: i ? 'Disable Fast Impression Capping' : 'Enable Fast Impression Capping'
                         })
                     ]
                 }),
-                false,
-                (0, a.jsx)(w.Z, {}),
-                (0, a.jsxs)(h.FormSection, {
+                !1,
+                (0, r.jsx)(O.Z, {}),
+                (0, r.jsxs)(x.hjN, {
                     children: [
-                        (0, a.jsx)(h.FormTitle, { children: 'Game Profile' }),
-                        (0, a.jsx)(h.TextInput, {
+                        (0, r.jsx)(x.vwX, { children: 'Game Profile' }),
+                        (0, r.jsx)(x.oil, {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (I === e.currentTarget.value ? null == A || A() : R(e.currentTarget.value));
+                                'Enter' === e.key && (Z === e.currentTarget.value ? null == A || A(e) : R(e.currentTarget.value));
                             },
-                            error: I.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : I + ' - try by id', '.') : void 0,
+                            error: Z.length > 0 && null == A ? 'No game profile for '.concat(null != D ? D : Z + ' - try by id', '.') : void 0,
                             style: null != A ? { border: '1px solid green' } : {}
                         }),
-                        (0, a.jsx)('ul', { children: B.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, r.jsx)('ul', { children: z.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(L, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                    ]
+                }),
+                (0, r.jsxs)(x.hjN, {
+                    children: [
+                        (0, r.jsx)(x.vwX, { children: 'Activity Sharing' }),
+                        (0, r.jsx)(x.Text, {
+                            variant: 'text-md/normal',
+                            children: 'Force show game:'
+                        }),
+                        (0, r.jsx)(x.PhF, {
+                            options: N.h.map((e) => ({
+                                label: e,
+                                value: e
+                            })),
+                            isSelected: (e) => e === M,
+                            select: function (e) {
+                                h.Z.dispatch({
+                                    type: 'CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING',
+                                    gameToShow: e
+                                });
+                            },
+                            serialize: (e) => e,
+                            popoutLayerContext: f.O$
+                        })
                     ]
                 })
             ]
         })
     });
 }
-let Z = (e) => {
-    let { application: r } = e,
-        t = (0, y.Z)({
-            applicationId: r.id,
+let L = (e) => {
+    let { application: t } = e,
+        n = (0, v.Z)({
+            applicationId: t.id,
             location: 'DevToolsContentInventory',
-            source: f.m1.DevTools
+            source: g.m1.DevTools
         });
-    return (0, a.jsx)(h.Clickable, {
-        onClick: t,
+    return (0, r.jsx)(x.P3F, {
+        onClick: n,
         style: {
             margin: '2px',
             cursor: 'pointer'
         },
-        children: (0, a.jsx)(h.Text, {
+        children: (0, r.jsx)(x.Text, {
             variant: 'text-xs/normal',
             color: 'text-muted',
-            children: r.name
+            children: t.name
         })
     });
 };

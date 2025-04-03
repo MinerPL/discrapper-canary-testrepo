@@ -1,66 +1,51 @@
-var n = t(544891),
-    a = t(570140),
-    i = t(325067),
-    r = t(981631);
-function o(e, s) {
+n.d(t, { Z: () => o });
+var r = n(544891),
+    i = n(570140),
+    s = n(325067),
+    a = n(981631);
+function l(e, t) {
     return (
-        a.Z.dispatch({ type: 'MFA_SMS_TOGGLE' }),
-        n.tn
+        i.Z.dispatch({ type: 'MFA_SMS_TOGGLE' }),
+        r.tn
             .post({
                 url: e,
-                body: { password: s },
-                oldFormErrors: !0
+                body: { password: t },
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
-                (e) => (a.Z.dispatch({ type: 'MFA_SMS_TOGGLE_COMPLETE' }), e),
+                (e) => (i.Z.dispatch({ type: 'MFA_SMS_TOGGLE_COMPLETE' }), e),
                 (e) => {
-                    throw (a.Z.dispatch({ type: 'MFA_SMS_TOGGLE_COMPLETE' }), e);
+                    throw (i.Z.dispatch({ type: 'MFA_SMS_TOGGLE_COMPLETE' }), e);
                 }
             )
     );
 }
-s.Z = {
+let o = {
     enableMFAStart: async (e) =>
         (
-            await n.tn.post({
-                url: r.ANM.MFA_TOTP_ENABLE,
+            await r.tn.post({
+                url: a.ANM.MFA_TOTP_ENABLE,
                 body: { password: e },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
         ).body,
-    verifyEmailCode: async (e) =>
-        (
-            await n.tn.post({
-                url: r.ANM.MFA_TOTP_ENABLE_VERIFY,
-                body: { code: e }
-            })
-        ).body,
-    resendEmailCode: (e) =>
-        n.tn.post({
-            url: r.ANM.MFA_TOTP_ENABLE_RESEND,
-            body: { password: e }
-        }),
-    setEmailToken(e) {
-        a.Z.dispatch({
-            type: 'MFA_ENABLE_EMAIL_TOKEN',
-            token: e
-        });
-    },
     enable(e) {
-        let { password: s, code: t, secret: i, emailToken: o } = e;
-        return n.tn
+        let { password: t, code: n, secret: s } = e;
+        return r.tn
             .post({
-                url: r.ANM.MFA_TOTP_ENABLE,
+                url: a.ANM.MFA_TOTP_ENABLE,
                 body: {
-                    code: t,
-                    secret: i,
-                    password: s,
-                    email_token: o
+                    code: n,
+                    secret: s,
+                    password: t
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) =>
-                a.Z.dispatch({
+                i.Z.dispatch({
                     type: 'MFA_ENABLE_SUCCESS',
                     token: e.body.token,
                     codes: e.body.backup_codes
@@ -68,33 +53,35 @@ s.Z = {
             );
     },
     disable() {
-        n.tn
+        r.tn
             .post({
-                url: r.ANM.MFA_TOTP_DISABLE,
-                oldFormErrors: !0
+                url: a.ANM.MFA_TOTP_DISABLE,
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 let {
-                    body: { token: s }
+                    body: { token: t }
                 } = e;
-                return a.Z.dispatch({
+                return i.Z.dispatch({
                     type: 'MFA_DISABLE_SUCCESS',
-                    token: s
+                    token: t
                 });
             });
     },
-    enableSMS: (e) => o(r.ANM.MFA_SMS_ENABLE, e),
-    disableSMS: (e) => o(r.ANM.MFA_SMS_DISABLE, e),
+    enableSMS: (e) => l(a.ANM.MFA_SMS_ENABLE, e),
+    disableSMS: (e) => l(a.ANM.MFA_SMS_DISABLE, e),
     sendMFABackupCodesVerificationKeyEmail: (e) =>
-        n.tn
+        r.tn
             .post({
-                url: r.ANM.MFA_SEND_VERIFICATION_KEY,
+                url: a.ANM.MFA_SEND_VERIFICATION_KEY,
                 body: { password: e },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) =>
-                    a.Z.dispatch({
+                    i.Z.dispatch({
                         type: 'MFA_SEND_VERIFICATION_KEY',
                         nonces: {
                             viewNonce: e.body.nonce,
@@ -105,23 +92,24 @@ s.Z = {
                     throw e;
                 }
             ),
-    confirmViewBackupCodes(e, s) {
-        let { viewNonce: t, regenerateNonce: o } = i.Z.getNonces();
-        return n.tn
+    confirmViewBackupCodes(e, t) {
+        let { viewNonce: n, regenerateNonce: l } = s.Z.getNonces();
+        return r.tn
             .post({
-                url: r.ANM.MFA_CODES_VERIFICATION,
+                url: a.ANM.MFA_CODES_VERIFICATION,
                 body: {
                     key: e,
-                    nonce: s ? o : t,
-                    regenerate: s
+                    nonce: t ? l : n,
+                    regenerate: t
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
-                (s) =>
-                    a.Z.dispatch({
+                (t) =>
+                    i.Z.dispatch({
                         type: 'MFA_VIEW_BACKUP_CODES',
-                        codes: s.body.backup_codes,
+                        codes: t.body.backup_codes,
                         key: e
                     }),
                 (e) => {
@@ -130,6 +118,6 @@ s.Z = {
             );
     },
     clearBackupCodes() {
-        a.Z.dispatch({ type: 'MFA_CLEAR_BACKUP_CODES' });
+        i.Z.dispatch({ type: 'MFA_CLEAR_BACKUP_CODES' });
     }
 };

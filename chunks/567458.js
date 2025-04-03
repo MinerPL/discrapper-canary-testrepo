@@ -1,32 +1,28 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(921944),
-    r = n(689938),
-    l = n(660415);
-function o(e) {
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(921944),
+    a = n(388032),
+    o = n(253563);
+function s(e) {
     let { markAsDismissed: t } = e;
-    return (0, i.jsxs)('div', {
-        className: l.container,
+    return (0, r.jsxs)('div', {
+        className: o.container,
         children: [
-            (0, i.jsx)('div', { className: l.pointer }),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)('div', { className: o.pointer }),
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
-                className: l.content,
-                children: r.Z.Messages.HUB_PRIVACY_SETTINGS_TOOLTIP
+                className: o.content,
+                children: a.NW.string(a.t.rdzeVF)
             }),
-            (0, i.jsx)(a.Button, {
-                color: a.Button.Colors.BRAND_INVERTED,
+            (0, r.jsx)(i.zxk, {
+                color: i.zxk.Colors.BRAND_INVERTED,
                 fullWidth: !0,
                 onClick: () => {
-                    t(s.L.AUTO);
+                    t(l.L.AUTO);
                 },
-                children: r.Z.Messages.GOT_IT
+                children: a.NW.string(a.t['NX+WJC'])
             })
         ]
     });

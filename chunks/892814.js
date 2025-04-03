@@ -1,9 +1,2 @@
-var i, a;
-n.d(t, {
-    I: function () {
-        return i;
-    }
-}),
-    ((a = i || (i = {})).APP_LAUNCHER_TEXT = 'app_launcher_text'),
-    (a.APP_LAUNCHER_VOICE = 'app_launcher_voice'),
-    (a.CONTEXTUAL_IMAGE = 'contextual_image');
+n.d(t, { Z: () => r });
+let r = 'https://cdn.discordapp.com/assets/content/7e2098e376c104d5f03837013e243a21338970801c723fff9b2d5e2247afb411.gif';

@@ -1,47 +1,25 @@
-var r, i, a, s;
 n.d(t, {
-    D4: function () {
-        return _;
-    },
-    Eo: function () {
-        return E;
-    },
-    R4: function () {
-        return f;
-    },
-    Y1: function () {
-        return m;
-    },
-    _j: function () {
-        return p;
-    },
-    c8: function () {
-        return u;
-    },
-    d$: function () {
-        return c;
-    },
-    fP: function () {
-        return o;
-    },
-    j1: function () {
-        return h;
-    },
-    kQ: function () {
-        return d;
-    },
-    pq: function () {
-        return l;
-    },
-    xi: function () {
-        return r;
-    }
-}),
-    n(981631);
+    D4: () => u,
+    Eo: () => d,
+    R4: () => f,
+    Y1: () => m,
+    _j: () => p,
+    c8: () => s,
+    d$: () => l,
+    fP: () => o,
+    hs: () => g,
+    j1: () => _,
+    kQ: () => c,
+    pq: () => a,
+    xi: () => h
+});
+var r = n(261470),
+    i = n(70956);
+n(981631);
 let o = [0, 4, 8, 16, 24],
-    l = 16,
-    u = 0,
-    c = Object.freeze({
+    a = 16,
+    s = 0,
+    l = Object.freeze({
         referencedAvatarProfile: !1,
         referencedUsernameProfile: !1,
         interactionAvatarProfile: !1,
@@ -54,11 +32,18 @@ let o = [0, 4, 8, 16, 24],
         moreUtilities: !1,
         contextMenu: !1
     }),
-    d = 16,
-    _ = 16,
-    E = 32,
+    c = 16,
+    u = 16,
+    d = 32,
     f = 64,
-    h = '---new-messages-bar',
+    _ = '---new-messages-bar',
     p = 'SPOILER_';
-((a = r || (r = {})).ERROR_SOURCE_UNKNOWN = 'ERROR_SOURCE_UNKNOWN'), (a.PRECOMPRESSION_SUM_TOO_LARGE = 'PRECOMPRESSION_SUM_TOO_LARGE'), (a.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (a.POSTCOMPRESSION_SUM_TOO_LARGE = 'POSTCOMPRESSION_SUM_TOO_LARGE'), (a.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (a.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = 'UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR'), (a.EXPLICIT_CONTENT = 'EXPLICIT_CONTENT'), ((s = i || (i = {})).SYSTEM_DM_TAG_SYSTEM_TYPE = 'a'), (s.BOT_TAG_SERVER_TYPE = 'b'), (s.AI_TAG_TYPE = 'c'), (s.BOT_TAG_BOT_TYPE = 'd'), (s.REMIXING_TYPE = 'e'), (s.POLL_TYPE = 'g');
-let m = 209715200;
+var h = (function (e) {
+    return (e.ERROR_SOURCE_UNKNOWN = 'ERROR_SOURCE_UNKNOWN'), (e.PRECOMPRESSION_SUM_TOO_LARGE = 'PRECOMPRESSION_SUM_TOO_LARGE'), (e.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (e.POSTCOMPRESSION_SUM_TOO_LARGE = 'POSTCOMPRESSION_SUM_TOO_LARGE'), (e.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (e.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = 'UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR'), (e.EXPLICIT_CONTENT = 'EXPLICIT_CONTENT'), e;
+})({});
+let m = 209715200,
+    g = {
+        timeout: 60 * i.Z.Millis.SECOND,
+        retries: 3,
+        backoff: new r.Z()
+    };

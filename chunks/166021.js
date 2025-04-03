@@ -1,22 +1,21 @@
-n(47120);
-var s = n(735250),
-    a = n(470079),
-    r = n(120356),
-    i = n.n(r),
-    l = n(338545),
+n.d(t, { Z: () => u }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(642128),
     o = n(481060),
     c = n(320319),
-    d = n(732282);
-t.Z = (e) => {
-    let { cards: t, className: n, cardType: r } = e,
-        _ = () => (window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3),
-        [u, E] = a.useState(0),
-        [T, I] = a.useState(_()),
-        [R, C] = a.useState(!1),
-        g = t.length;
-    a.useEffect(() => {
+    d = n(687588);
+let u = (e) => {
+    let { cards: t, className: n, cardType: s } = e,
+        u = () => (window.innerWidth < 910 ? 1 : window.innerWidth < 1400 ? 2 : 3),
+        [m, g] = i.useState(0),
+        [p, h] = i.useState(u()),
+        f = t.length;
+    i.useEffect(() => {
         let e = () => {
-            I(_());
+            h(u());
         };
         return (
             window.addEventListener('resize', e),
@@ -25,51 +24,88 @@ t.Z = (e) => {
             }
         );
     }, []),
-        a.useEffect(() => {
-            g > T && u > g - T ? E(g - T) : g <= T && E(0);
-        }, [g, T]);
-    let p = a.useCallback((e) => ({ x: (e - u) * 100 }), [u]),
-        [N, A] = (0, o.useSprings)(t.length, p);
+        i.useEffect(() => {
+            g((e) => (f > p && e > f - p ? f - p : f <= p ? 0 : e));
+        }, [f, p]);
+    let b = m > 0,
+        N = i.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
+        [x, _] = (0, o.bYB)(t.length, N);
     return (
-        a.useEffect(() => {
-            A(p);
-        }, [A, p]),
-        (0, s.jsx)('div', {
+        i.useEffect(() => {
+            _(N);
+        }, [_, N]),
+        (0, r.jsx)('div', {
             className: n,
-            children: (0, s.jsxs)('div', {
+            children: (0, r.jsxs)('div', {
                 className: d.cardContainer,
                 children: [
-                    g > T &&
-                        (0, s.jsx)(o.Clickable, {
-                            onClick: R
+                    f > p &&
+                        (0, r.jsx)(o.P3F, {
+                            onClick: b
                                 ? () => {
-                                      E((e) => (0 === e ? g - T : e - 1));
+                                      g((e) => (0 === e ? f - p : e - 1));
                                   }
                                 : void 0,
-                            className: i()({
-                                [d.leftArrow]: R,
-                                [d.inactiveArrow]: !R
+                            className: a()({
+                                [d.leftArrow]: b,
+                                [d.inactiveArrow]: !b
                             }),
-                            children: (0, s.jsx)(o.ArrowSmallLeftIcon, {
+                            children: (0, r.jsx)(o.whL, {
                                 className: d.arrowIcon,
                                 colorClass: d.arrowIcon
                             })
                         }),
-                    (0, s.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: d.cardInnerContainer,
-                        children: N.map((e, n) => {
-                            let { x: a } = e;
-                            return (0, s.jsx)(
+                        children: x.map((e, n) => {
+                            var i, a;
+                            let { x: o } = e;
+                            return (0, r.jsx)(
                                 l.animated.div,
                                 {
                                     className: d.card,
-                                    style: { transform: null == a ? void 0 : a.to((e) => 'translate3d('.concat(e, '%,0,0)')) },
-                                    children: (0, s.jsx)(
+                                    style: { transform: null == o ? void 0 : o.to((e) => 'translate3d('.concat(e, '%,0,0)')) },
+                                    children: (0, r.jsx)(
                                         c.Z,
-                                        {
-                                            ...t[n],
-                                            cardType: r
-                                        },
+                                        ((i = (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var n = null != arguments[t] ? arguments[t] : {},
+                                                    r = Object.keys(n);
+                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                    (r = r.concat(
+                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                        })
+                                                    )),
+                                                    r.forEach(function (t) {
+                                                        var r;
+                                                        (r = n[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: r,
+                                                                      enumerable: !0,
+                                                                      configurable: !0,
+                                                                      writable: !0
+                                                                  })
+                                                                : (e[t] = r);
+                                                    });
+                                            }
+                                            return e;
+                                        })({}, t[n])),
+                                        (a = a = { cardType: s }),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                            : (function (e, t) {
+                                                  var n = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, r);
+                                                  }
+                                                  return n;
+                                              })(Object(a)).forEach(function (e) {
+                                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                              }),
+                                        i),
                                         ''.concat(t[n].name, '_').concat(n, '_perks_card')
                                     )
                                 },
@@ -77,22 +113,22 @@ t.Z = (e) => {
                             );
                         })
                     }),
-                    g > T &&
-                        (0, s.jsx)(o.Clickable, {
+                    f > p &&
+                        (0, r.jsx)(o.P3F, {
                             onClick: () => {
-                                E((e) => (e >= g - T ? (C(!0), 0) : e + 1));
+                                g((e) => (e >= f - p ? 0 : e + 1));
                             },
                             className: d.rightArrow,
-                            children: (0, s.jsx)(o.ArrowSmallRightIcon, {
+                            children: (0, r.jsx)(o.ZSh, {
                                 className: d.arrowIcon,
                                 colorClass: d.arrowIcon
                             })
                         }),
-                    g > T &&
-                        (0, s.jsx)('div', {
+                    f > p &&
+                        (0, r.jsx)('div', {
                             className: d.cardProgressBar,
                             children: t.map((e, t) => {
-                                if (!(t > g - T)) return (0, s.jsx)('div', { className: t === u ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
+                                if (!(t > f - p)) return (0, r.jsx)('div', { className: t === m ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
                             })
                         })
                 ]

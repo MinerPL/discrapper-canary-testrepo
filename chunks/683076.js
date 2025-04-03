@@ -1,27 +1,4 @@
-var r, i;
-n.d(t, {
-    i: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {}))[(i.THRILLER = 0)] = 'THRILLER'),
-    (i[(i.SCIENCE_FICTION = 1)] = 'SCIENCE_FICTION'),
-    (i[(i.ACTION = 2)] = 'ACTION'),
-    (i[(i.HORROR = 3)] = 'HORROR'),
-    (i[(i.SURVIVAL = 4)] = 'SURVIVAL'),
-    (i[(i.FANTASY = 5)] = 'FANTASY'),
-    (i[(i.HISTORICAL = 6)] = 'HISTORICAL'),
-    (i[(i.STEALTH = 7)] = 'STEALTH'),
-    (i[(i.COMEDY = 8)] = 'COMEDY'),
-    (i[(i.BUSINESS = 9)] = 'BUSINESS'),
-    (i[(i.DRAMA = 10)] = 'DRAMA'),
-    (i[(i.NON_FICTION = 11)] = 'NON_FICTION'),
-    (i[(i.KIDS = 12)] = 'KIDS'),
-    (i[(i.SANDBOX = 13)] = 'SANDBOX'),
-    (i[(i.OPEN_WORLD = 14)] = 'OPEN_WORLD'),
-    (i[(i.WARFARE = 15)] = 'WARFARE'),
-    (i[(i.EDUCATIONAL = 16)] = 'EDUCATIONAL'),
-    (i[(i.MYSTERY = 17)] = 'MYSTERY'),
-    (i[(i.PARTY = 18)] = 'PARTY'),
-    (i[(i.ROMANCE = 19)] = 'ROMANCE'),
-    (i[(i.EROTIC = 20)] = 'EROTIC');
+n.d(t, { i: () => r });
+var r = (function (e) {
+    return (e[(e.THRILLER = 0)] = 'THRILLER'), (e[(e.SCIENCE_FICTION = 1)] = 'SCIENCE_FICTION'), (e[(e.ACTION = 2)] = 'ACTION'), (e[(e.HORROR = 3)] = 'HORROR'), (e[(e.SURVIVAL = 4)] = 'SURVIVAL'), (e[(e.FANTASY = 5)] = 'FANTASY'), (e[(e.HISTORICAL = 6)] = 'HISTORICAL'), (e[(e.STEALTH = 7)] = 'STEALTH'), (e[(e.COMEDY = 8)] = 'COMEDY'), (e[(e.BUSINESS = 9)] = 'BUSINESS'), (e[(e.DRAMA = 10)] = 'DRAMA'), (e[(e.NON_FICTION = 11)] = 'NON_FICTION'), (e[(e.KIDS = 12)] = 'KIDS'), (e[(e.SANDBOX = 13)] = 'SANDBOX'), (e[(e.OPEN_WORLD = 14)] = 'OPEN_WORLD'), (e[(e.WARFARE = 15)] = 'WARFARE'), (e[(e.EDUCATIONAL = 16)] = 'EDUCATIONAL'), (e[(e.MYSTERY = 17)] = 'MYSTERY'), (e[(e.PARTY = 18)] = 'PARTY'), (e[(e.ROMANCE = 19)] = 'ROMANCE'), (e[(e.EROTIC = 20)] = 'EROTIC'), e;
+})({});

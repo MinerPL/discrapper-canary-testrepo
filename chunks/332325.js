@@ -1,10 +1,4 @@
-var r, i;
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {})).MY_GAMES = 'MY_GAMES'),
-    (i.CLIPS = 'CLIPS'),
-    (i.OVERLAY = 'OVERLAY'),
-    (i.ACTIVITY_PRIVACY = 'ACTIVITY_PRIVACY');
+n.d(t, { Z: () => r });
+var r = (function (e) {
+    return (e.MY_GAMES = 'MY_GAMES'), (e.CLIPS = 'CLIPS'), (e.OVERLAY = 'OVERLAY'), (e.ACTIVITY_PRIVACY = 'ACTIVITY_PRIVACY'), e;
+})({});

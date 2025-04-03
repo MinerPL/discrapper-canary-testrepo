@@ -1,58 +1,53 @@
-t.d(n, {
-    Z: function () {
-        return _;
-    }
-}),
-    t(653041);
-var i = t(735250);
-t(470079);
-var a = t(442837),
-    s = t(481060),
-    l = t(749210),
-    r = t(240872),
-    o = t(605436),
-    d = t(228643),
-    c = t(299206),
-    u = t(496675),
-    I = t(867108),
-    m = t(689938);
-function _(e, n) {
-    var t;
-    let _ = (0, a.e7)([u.Z], () => {
-            let t = u.Z.getHighestRole(e);
-            return !u.Z.isRoleHigher(e, t, n);
+n.d(t, { Z: () => b }), n(653041);
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(749210),
+    a = n(240872),
+    s = n(605436),
+    c = n(228643),
+    d = n(299206),
+    u = n(496675),
+    p = n(867108),
+    m = n(388032);
+function b(e, t) {
+    var n;
+    let b = (0, i.e7)([u.Z], () => {
+            let n = u.Z.getHighestRole(e);
+            return !u.Z.isRoleHigher(e, n, t);
         }),
-        N = [],
-        E = (0, I.Z)(e, n);
-    null != E && N.push(E);
-    let T = (0, c.Z)({
-        id: n.id,
-        label: m.Z.Messages.COPY_ID_ROLE
+        g = [],
+        f = (0, p.Z)(e, t);
+    null != f && g.push(f);
+    let h = (0, d.Z)({
+        id: t.id,
+        label: m.NW.string(m.t.sMsaLi)
     });
-    null != T && N.push(T);
-    let h = (null === (t = n.tags) || void 0 === t ? void 0 : t.guild_connections) === null,
-        g = n.managed && !h,
-        p = null != n && (0, o.pM)(e.id, n.id);
+    null != h && g.push(h);
+    let x = (null == (n = t.tags) ? void 0 : n.guild_connections) === null,
+        j = t.managed && !x,
+        N = null != t && (0, s.pM)(e.id, t.id);
     return (
-        !_ &&
-            !g &&
-            !p &&
-            N.push(
-                (0, i.jsx)(
-                    s.MenuGroup,
+        b ||
+            j ||
+            N ||
+            g.push(
+                (0, r.jsx)(
+                    l.kSQ,
                     {
-                        children: (0, i.jsx)(s.MenuItem, {
+                        children: (0, r.jsx)(l.sNh, {
                             id: 'delete-role',
-                            label: m.Z.Messages.DELETE,
+                            label: m.NW.string(m.t.oyYWHB),
                             color: 'danger',
-                            icon: s.TrashIcon,
+                            icon: l.XHJ,
                             action: () => {
-                                r.Z.show({
-                                    title: m.Z.Messages.SETTINGS_ROLES_DELETE_TITLE,
-                                    body: m.Z.Messages.SETTINGS_ROLES_DELETE_BODY.format({ name: n.name }),
-                                    cancelText: m.Z.Messages.CANCEL,
+                                a.Z.show({
+                                    title: m.NW.string(m.t.YWISbW),
+                                    body: m.NW.format(m.t['9+nrUV'], { name: t.name }),
+                                    cancelText: m.NW.string(m.t['ETE/oK']),
                                     onConfirm: async () => {
-                                        h && (await (0, d.L_)(e.id, n.id, [])), l.Z.deleteRole(e.id, n.id);
+                                        x && (await (0, c.L_)(e.id, t.id, [])), o.Z.deleteRole(e.id, t.id);
                                     }
                                 });
                             }
@@ -61,6 +56,6 @@ function _(e, n) {
                     'delete-role'
                 )
             ),
-        N
+        g
     );
 }

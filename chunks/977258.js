@@ -1,13 +1,14 @@
-n.d(t, {
-    s: function () {
-        return o;
-    }
-}),
-    n(442837);
-var r = n(430198),
-    i = n(592125),
+n.d(t, { s: () => c });
+var r = n(149765);
+n(442837);
+var i = n(430198),
+    o = n(592125),
     a = n(700785),
     s = n(981631);
-function o(e, t) {
-    return r.Z.isChannelGated(e, t) || a.Uu(s.Plq.VIEW_CHANNEL, i.Z.getChannel(t));
+function l(e) {
+    return null != e && s.TPd.GUILD_VOCAL.has(e.type) ? r.$e(s.Plq.VIEW_CHANNEL, s.Plq.CONNECT) : s.Plq.VIEW_CHANNEL;
+}
+function c(e, t) {
+    let n = l(o.Z.getChannel(t));
+    return i.Z.isChannelGated(e, t) || a.Uu(n, o.Z.getChannel(t));
 }

@@ -1,86 +1,84 @@
-n.d(t, {
-    k: function () {
-        return h;
-    }
-}),
-    n(757143);
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    l = n(430824),
-    r = n(914010),
-    o = n(689938),
-    c = n(569234);
+n.d(t, { k: () => p }), n(757143), n(301563);
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(430824),
+    a = n(914010),
+    s = n(388032),
+    c = n(502764);
 let u = () =>
-        (0, i.jsx)(i.Fragment, {
-            children: o.Z.Messages.TIP_INSTANT_INVITE_BODY3.format({
-                shareIcon: o.Z.Messages.INSTANT_INVITE,
-                shareIconHook: () => (0, i.jsx)(s.GroupPlusIcon, { className: c.icon }, 'icon')
+        (0, r.jsx)(r.Fragment, {
+            children: s.NW.format(s.t.ymkBtr, {
+                shareIcon: s.NW.string(s.t.VINpSE),
+                shareIconHook: () => (0, r.jsx)(l.ejJ, { className: c.icon }, 'icon')
             })
         }),
     d = () => {
-        let e = (0, a.e7)([l.Z, r.Z], () => l.Z.getGuild(r.Z.getGuildId()), []),
+        let e = (0, i.e7)([o.Z, a.Z], () => o.Z.getGuild(a.Z.getGuildId()), []),
             t = null == e ? void 0 : e.name;
-        return (0, i.jsx)(i.Fragment, { children: o.Z.Messages.TIP_WRITING_MESSAGES_BODY3.format({ serverName: t }) });
+        return (0, r.jsx)(r.Fragment, { children: s.NW.format(s.t.oQuG3N, { serverName: t }) });
     },
-    h = (e) => {
+    p = (e) => {
         var t, n;
-        let a = {
+        let i =
+            null !=
+            (t = {
                 VOICE_CONVERSATIONS: {
-                    title: (0, i.jsx)('div', {
+                    title: (0, r.jsx)('div', {
                         className: c.voiceChannelsTitle,
-                        children: o.Z.Messages.NUF_VOICE_CHANNELS_TITLE
+                        children: s.NW.string(s.t.w5HAlp)
                     }),
-                    body: o.Z.Messages.NUF_VOICE_CHANNELS_DESCRIPTION
+                    body: s.NW.string(s.t.Ww4hho)
                 },
                 WRITING_MESSAGES: {
-                    title: (0, i.jsx)('div', {
+                    title: (0, r.jsx)('div', {
                         className: c.writingMessagesTitle,
-                        children: o.Z.Messages.TIP_WRITING_MESSAGES_TITLE3
+                        children: s.NW.string(s.t.nkP0l5)
                     }),
-                    body: (0, i.jsx)(d, {})
+                    body: (0, r.jsx)(d, {})
                 },
                 ORGANIZE_BY_TOPIC: {
-                    title: (0, i.jsx)('div', {
+                    title: (0, r.jsx)('div', {
                         className: c.channelsTitle,
-                        children: o.Z.Messages.NUF_CHANNELS_TITLE
+                        children: s.NW.string(s.t['j/5+IS'])
                     }),
-                    body: o.Z.Messages.NUF_CHANNELS_DESCRIPTION
+                    body: s.NW.string(s.t.mufH2N)
                 },
                 WHOS_ONLINE: {
-                    title: o.Z.Messages.TIP_WHOS_ONLINE_TITLE3,
-                    body: o.Z.Messages.TIP_WHOS_ONLINE_BODY3.format()
+                    title: s.NW.string(s.t.l2nSoK),
+                    body: s.NW.format(s.t.y6tbBA, {})
                 },
                 INSTANT_INVITE: {
-                    title: o.Z.Messages.TIP_INSTANT_INVITE_TITLE3,
-                    body: (0, i.jsx)(u, {})
+                    title: s.NW.string(s.t.XcehY2),
+                    body: (0, r.jsx)(u, {})
                 },
                 SERVER_SETTINGS: {
-                    title: o.Z.Messages.TIP_SERVER_SETTINGS_TITLE3,
-                    body: o.Z.Messages.TIP_SERVER_SETTINGS_BODY3.format()
+                    title: s.NW.string(s.t.wc8wi4),
+                    body: s.NW.format(s.t.mIfDhY, {})
                 },
                 DIRECT_MESSAGES: {
-                    title: o.Z.Messages.TIP_DIRECT_MESSAGES_TITLE3,
-                    body: o.Z.Messages.TIP_DIRECT_MESSAGES_BODY3.format()
+                    title: s.NW.string(s.t['V07x5+']),
+                    body: s.NW.format(s.t.GEBBe3, {})
                 },
                 CREATE_MORE_SERVERS: {
-                    title: o.Z.Messages.TIP_CREATE_MORE_SERVERS_TITLE3,
-                    body: o.Z.Messages.TIP_CREATE_MORE_SERVERS_BODY3.format()
+                    title: s.NW.string(s.t['50FORk']),
+                    body: s.NW.format(s.t.zVL4qa, {})
                 },
                 CREATE_FIRST_SERVER: {
-                    title: o.Z.Messages.TIP_CREATE_FIRST_SERVER_TITLE3,
-                    body: o.Z.Messages.TIP_CREATE_FIRST_SERVER_BODY3.format()
+                    title: s.NW.string(s.t.CtOX9f),
+                    body: s.NW.format(s.t.TflqTU, {})
                 },
                 FRIENDS_LIST: {
-                    title: o.Z.Messages.TIP_FRIENDS_LIST_TITLE3,
-                    body: o.Z.Messages.TIP_FRIENDS_LIST_BODY3.format()
+                    title: s.NW.string(s.t.Fnk9Ly),
+                    body: s.NW.format(s.t.NTq0AQ, {})
                 }
-            },
-            s = null !== (t = a[e.replace(/-/g, '_').toUpperCase()]) && void 0 !== t ? t : {};
+            }[e.replace(/-/g, '_').toUpperCase()])
+                ? t
+                : {};
         return {
-            title: s.title,
-            body: s.body,
-            isLongText: null !== (n = s.isLongText) && void 0 !== n && n
+            title: i.title,
+            body: i.body,
+            isLongText: null != (n = i.isLongText) && n
         };
     };

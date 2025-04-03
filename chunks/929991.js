@@ -1,13 +1,7 @@
 n.d(t, {
-    FL: function () {
-        return a;
-    },
-    a8: function () {
-        return i;
-    },
-    rS: function () {
-        return s;
-    }
+    FL: () => o,
+    a8: () => i,
+    rS: () => a
 });
 var r = n(570140);
 function i(e, t, n) {
@@ -18,7 +12,7 @@ function i(e, t, n) {
         timestampMillis: n
     });
 }
-function a(e, t, n) {
+function o(e, t, n) {
     r.Z.dispatch({
         type: 'ANALYTICS_FEED_ITEM_UNSEEN',
         id: e,
@@ -26,7 +20,7 @@ function a(e, t, n) {
         timestampMillis: n
     });
 }
-function s(e, t) {
+function a(e, t) {
     r.Z.dispatch({
         type: 'ANALYTICS_FEED_FLUSH',
         id: e,

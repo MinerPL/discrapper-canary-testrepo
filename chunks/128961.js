@@ -1,4 +1,5 @@
-var n = function (e, t) {
+n.d(t, { Z: () => a });
+var r = function (e, t) {
         switch (e) {
             case 'P':
                 return t.date({ width: 'short' });
@@ -10,7 +11,7 @@ var n = function (e, t) {
                 return t.date({ width: 'full' });
         }
     },
-    r = function (e, t) {
+    i = function (e, t) {
         switch (e) {
             case 'p':
                 return t.time({ width: 'short' });
@@ -21,28 +22,29 @@ var n = function (e, t) {
             default:
                 return t.time({ width: 'full' });
         }
-    };
-t.Z = {
-    p: r,
-    P: function (e, t) {
-        var i,
-            a = e.match(/(P+)(p+)?/) || [],
-            s = a[1],
-            o = a[2];
-        if (!o) return n(e, t);
-        switch (s) {
+    },
+    o = function (e, t) {
+        var n,
+            o = e.match(/(P+)(p+)?/) || [],
+            a = o[1],
+            s = o[2];
+        if (!s) return r(e, t);
+        switch (a) {
             case 'P':
-                i = t.dateTime({ width: 'short' });
+                n = t.dateTime({ width: 'short' });
                 break;
             case 'PP':
-                i = t.dateTime({ width: 'medium' });
+                n = t.dateTime({ width: 'medium' });
                 break;
             case 'PPP':
-                i = t.dateTime({ width: 'long' });
+                n = t.dateTime({ width: 'long' });
                 break;
             default:
-                i = t.dateTime({ width: 'full' });
+                n = t.dateTime({ width: 'full' });
         }
-        return i.replace('{{date}}', n(s, t)).replace('{{time}}', r(o, t));
-    }
+        return n.replace('{{date}}', r(a, t)).replace('{{time}}', i(s, t));
+    };
+let a = {
+    p: i,
+    P: o
 };

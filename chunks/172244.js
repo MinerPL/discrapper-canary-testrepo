@@ -1,39 +1,4 @@
-var r, i;
-n.d(t, {
-    b: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {})).TEXT = 'text'),
-    (i.STRIKETHROUGH = 's'),
-    (i.UNDERLINE = 'u'),
-    (i.STRONG = 'strong'),
-    (i.ITALICS = 'em'),
-    (i.IMAGE = 'image'),
-    (i.EMOJI = 'emoji'),
-    (i.CUSTOM_EMOJI = 'customEmoji'),
-    (i.LINK = 'link'),
-    (i.URL = 'url'),
-    (i.AUTOLINK = 'autolink'),
-    (i.HIGHLIGHT = 'highlight'),
-    (i.PARAGRAPH = 'paragraph'),
-    (i.LINE_BREAK = 'br'),
-    (i.NEWLINE = 'newline'),
-    (i.ESCAPE = 'escape'),
-    (i.SPOILER = 'spoiler'),
-    (i.BLOCK_QUOTE = 'blockQuote'),
-    (i.INLINE_CODE = 'inlineCode'),
-    (i.CODE_BLOCK = 'codeBlock'),
-    (i.MENTION = 'mention'),
-    (i.CHANNEL_MENTION = 'channelMention'),
-    (i.CHANNEL = 'channel'),
-    (i.GUILD = 'guild'),
-    (i.ATTACHMENT_LINK = 'attachmentLink'),
-    (i.SOUNDBOARD = 'soundboard'),
-    (i.STATIC_ROUTE_LINK = 'staticRouteLink'),
-    (i.ROLE_MENTION = 'roleMention'),
-    (i.COMMAND_MENTION = 'commandMention'),
-    (i.TIMESTAMP = 'timestamp'),
-    (i.LIST = 'list'),
-    (i.HEADING = 'heading'),
-    (i.SUBTEXT = 'subtext');
+n.d(t, { b: () => r });
+var r = (function (e) {
+    return (e.TEXT = 'text'), (e.STRIKETHROUGH = 's'), (e.UNDERLINE = 'u'), (e.STRONG = 'strong'), (e.ITALICS = 'em'), (e.IMAGE = 'image'), (e.EMOJI = 'emoji'), (e.CUSTOM_EMOJI = 'customEmoji'), (e.LINK = 'link'), (e.URL = 'url'), (e.AUTOLINK = 'autolink'), (e.HIGHLIGHT = 'highlight'), (e.PARAGRAPH = 'paragraph'), (e.LINE_BREAK = 'br'), (e.NEWLINE = 'newline'), (e.ESCAPE = 'escape'), (e.SPOILER = 'spoiler'), (e.BLOCK_QUOTE = 'blockQuote'), (e.INLINE_CODE = 'inlineCode'), (e.CODE_BLOCK = 'codeBlock'), (e.MENTION = 'mention'), (e.CHANNEL_MENTION = 'channelMention'), (e.CHANNEL = 'channel'), (e.GUILD = 'guild'), (e.ATTACHMENT_LINK = 'attachmentLink'), (e.SHOP_LINK = 'shopLink'), (e.SOUNDBOARD = 'soundboard'), (e.STATIC_ROUTE_LINK = 'staticRouteLink'), (e.ROLE_MENTION = 'roleMention'), (e.COMMAND_MENTION = 'commandMention'), (e.TIMESTAMP = 'timestamp'), (e.LIST = 'list'), (e.HEADING = 'heading'), (e.SUBTEXT = 'subtext'), (e.SILENT_PREFIX = 'silentPrefix'), e;
+})({});

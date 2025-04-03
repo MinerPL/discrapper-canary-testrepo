@@ -1,49 +1,16 @@
-var r, i;
 n.d(t, {
-    ME: function () {
-        return u;
-    },
-    Nh: function () {
-        return s;
-    },
-    ZD: function () {
-        return r;
-    },
-    lP: function () {
-        return c;
-    },
-    sg: function () {
-        return a;
-    },
-    vY: function () {
-        return o;
-    },
-    yf: function () {
-        return l;
-    }
-}),
-    ((i = r || (r = {}))[(i.SWORD = 0)] = 'SWORD'),
-    (i[(i.WATER_DROP = 1)] = 'WATER_DROP'),
-    (i[(i.SKULL = 2)] = 'SKULL'),
-    (i[(i.TOADSTOOL = 3)] = 'TOADSTOOL'),
-    (i[(i.MOON = 4)] = 'MOON'),
-    (i[(i.LIGHTNING = 5)] = 'LIGHTNING'),
-    (i[(i.LEAF = 6)] = 'LEAF'),
-    (i[(i.HEART = 7)] = 'HEART'),
-    (i[(i.FIRE = 8)] = 'FIRE'),
-    (i[(i.COMPASS = 9)] = 'COMPASS'),
-    (i[(i.CROSSHAIRS = 10)] = 'CROSSHAIRS'),
-    (i[(i.FLOWER = 11)] = 'FLOWER'),
-    (i[(i.FORCE = 12)] = 'FORCE'),
-    (i[(i.GEM = 13)] = 'GEM'),
-    (i[(i.LAVA = 14)] = 'LAVA'),
-    (i[(i.PSYCHIC = 15)] = 'PSYCHIC'),
-    (i[(i.SMOKE = 16)] = 'SMOKE'),
-    (i[(i.SNOW = 17)] = 'SNOW'),
-    (i[(i.SOUND = 18)] = 'SOUND'),
-    (i[(i.SUN = 19)] = 'SUN'),
-    (i[(i.WIND = 20)] = 'WIND');
-let a = [
+    ME: () => l,
+    Nh: () => o,
+    ZD: () => r,
+    lP: () => c,
+    sg: () => i,
+    vY: () => a,
+    yf: () => s
+});
+var r = (function (e) {
+    return (e[(e.SWORD = 0)] = 'SWORD'), (e[(e.WATER_DROP = 1)] = 'WATER_DROP'), (e[(e.SKULL = 2)] = 'SKULL'), (e[(e.TOADSTOOL = 3)] = 'TOADSTOOL'), (e[(e.MOON = 4)] = 'MOON'), (e[(e.LIGHTNING = 5)] = 'LIGHTNING'), (e[(e.LEAF = 6)] = 'LEAF'), (e[(e.HEART = 7)] = 'HEART'), (e[(e.FIRE = 8)] = 'FIRE'), (e[(e.COMPASS = 9)] = 'COMPASS'), (e[(e.CROSSHAIRS = 10)] = 'CROSSHAIRS'), (e[(e.FLOWER = 11)] = 'FLOWER'), (e[(e.FORCE = 12)] = 'FORCE'), (e[(e.GEM = 13)] = 'GEM'), (e[(e.LAVA = 14)] = 'LAVA'), (e[(e.PSYCHIC = 15)] = 'PSYCHIC'), (e[(e.SMOKE = 16)] = 'SMOKE'), (e[(e.SNOW = 17)] = 'SNOW'), (e[(e.SOUND = 18)] = 'SOUND'), (e[(e.SUN = 19)] = 'SUN'), (e[(e.WIND = 20)] = 'WIND'), e;
+})({});
+let i = [
         {
             primary: '#ff1c90',
             secondary: '#ff7fc0'
@@ -97,12 +64,12 @@ let a = [
             secondary: '#cccccc'
         }
     ],
-    s = a[0].primary,
-    o = a[0].secondary;
-function l() {
-    return a[Math.floor(Math.random() * a.length)];
+    o = i[0].primary,
+    a = i[0].secondary;
+function s() {
+    return i[Math.floor(Math.random() * i.length)];
 }
-let u = {
+let l = {
     0: 2,
     1: 1,
     2: 1,

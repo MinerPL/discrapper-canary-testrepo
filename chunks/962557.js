@@ -1,5 +1,4 @@
-var e = r(936940);
-t.exports = !e(function () {
+t.exports = !a(936940)(function () {
     var t = function () {}.bind();
     return 'function' != typeof t || t.hasOwnProperty('prototype');
 });

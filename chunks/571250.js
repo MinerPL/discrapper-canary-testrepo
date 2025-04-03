@@ -1,9 +1,5 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var i = n(689938);
-function a(e, t, n) {
-    return n ? i.Z.Messages.CONSOLE_CONNECTING_DISABLED : t ? i.Z.Messages.SERVER_DEAFENED_DIALOG_TITLE : e ? i.Z.Messages.UNDEAFEN : i.Z.Messages.DEAFEN;
+n.d(t, { Z: () => i });
+var r = n(388032);
+function i(e, t, n) {
+    return n ? r.NW.string(r.t['2Ne/Y2']) : t ? r.NW.string(r.t.QZ7WSU) : e ? r.NW.string(r.t['2US87+']) : r.NW.string(r.t.wjcRFR);
 }

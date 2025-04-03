@@ -1,27 +1,15 @@
 n.d(t, {
-    Br: function () {
-        return a;
-    },
-    CA: function () {
-        return s;
-    },
-    Ko: function () {
-        return o;
-    },
-    We: function () {
-        return l;
-    },
-    rq: function () {
-        return u;
-    },
-    vv: function () {
-        return i;
-    }
+    Br: () => o,
+    CA: () => a,
+    Ko: () => s,
+    We: () => l,
+    rq: () => c,
+    vv: () => i
 });
-var r = n(887024);
+var r = n(48026);
 let i = n(177351),
-    a = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
-    s = [
+    o = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
+    a = [
         n(294521),
         i,
         n(817812),
@@ -34,7 +22,7 @@ let i = n(177351),
             colorize: !1
         }
     ],
-    o = 28,
+    s = 28,
     l = {
         velocity: {
             type: 'static-random',
@@ -60,4 +48,4 @@ let i = n(177351),
             maxValue: 28
         }
     },
-    u = new r.qA();
+    c = new r.qA();

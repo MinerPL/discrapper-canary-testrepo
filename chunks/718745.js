@@ -1,60 +1,66 @@
+n.d(t, { Z: () => p });
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(981631);
-let c = {},
-    d = {
+    i = n(442837),
+    o = n(570140),
+    a = n(981631);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = {},
+    c = {
         integration: '',
         query: ''
     };
-class _ extends (s = o.ZP.Store) {
+function u(e) {
+    var t;
+    let { integration: n, query: r } = e;
+    (l[n] = null != (t = l[n]) ? t : {}),
+        (l[n][r] = {
+            loading: !0,
+            results: []
+        });
+}
+function d(e) {
+    let { integration: t, query: n, results: r } = e;
+    (l[t][n] = {
+        loading: !1,
+        results: r.map((e) => ({
+            type: a.nkL[t].type,
+            meta: e
+        }))
+    }),
+        (c = {
+            query: n,
+            integration: t
+        });
+}
+function f(e) {
+    let { integration: t, query: n } = e;
+    delete l[t][n];
+}
+class _ extends (r = i.ZP.Store) {
     getResults(e, t) {
         if (null == e || null == t) return null;
-        let n = c[e];
+        let n = l[e];
         return null != n && null != n[t] ? n[t] : null;
     }
     getQuery() {
-        return d;
+        return c;
     }
 }
-(a = 'IntegrationQueryStore'),
-    (i = 'displayName') in (r = _)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new _(l.Z, {
-        INTEGRATION_QUERY: function (e) {
-            var t;
-            let { integration: n, query: r } = e;
-            (c[n] = null !== (t = c[n]) && void 0 !== t ? t : {}),
-                (c[n][r] = {
-                    loading: !0,
-                    results: []
-                });
-        },
-        INTEGRATION_QUERY_SUCCESS: function (e) {
-            let { integration: t, query: n, results: r } = e;
-            (c[t][n] = {
-                loading: !1,
-                results: r.map((e) => ({
-                    type: u.nkL[t].type,
-                    meta: e
-                }))
-            }),
-                (d = {
-                    query: n,
-                    integration: t
-                });
-        },
-        INTEGRATION_QUERY_FAILURE: function (e) {
-            let { integration: t, query: n } = e;
-            delete c[t][n];
-        }
-    }));
+s(_, 'displayName', 'IntegrationQueryStore');
+let p = new _(o.Z, {
+    INTEGRATION_QUERY: u,
+    INTEGRATION_QUERY_SUCCESS: d,
+    INTEGRATION_QUERY_FAILURE: f
+});

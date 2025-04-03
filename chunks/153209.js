@@ -1,74 +1,75 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(442837),
-    r = n(524437),
-    l = n(481060),
-    o = n(140155),
-    c = n(497089),
-    u = n(178480),
-    d = n(11799),
-    _ = n(632523),
-    E = n(695346),
-    I = n(626135),
-    m = n(709054),
-    T = n(791914),
-    h = n(981631),
-    N = n(689938),
-    f = n(601566);
-function C(e) {
+n.d(t, { Z: () => j }), n(47120), n(230036);
+var r = n(200651),
+    i = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    o = n(442837),
+    s = n(524437),
+    c = n(481060),
+    u = n(140155),
+    d = n(497089),
+    p = n(178480),
+    m = n(11799),
+    f = n(616032),
+    h = n(216789),
+    g = n(695346),
+    _ = n(626135),
+    b = n(709054),
+    x = n(791914),
+    y = n(981631),
+    E = n(388032),
+    v = n(929968),
+    O = n(413813);
+function N(e) {
     let { onClick: t } = e;
-    return (0, i.jsx)(l.CircleIconButton, {
-        tooltip: N.Z.Messages.MARK_ALL_AS_READ,
-        color: l.CircleIconButtonColors.SECONDARY,
-        icon: (0, i.jsx)(l.DoubleCheckmarkIcon, {
+    return (0, r.jsx)(c.M0o, {
+        tooltip: E.NW.string(E.t['8k+6QU']),
+        color: c.YX$.TERTIARY,
+        icon: (0, r.jsx)(c.W6s, {
             size: 'xs',
             color: 'currentColor'
         }),
+        className: O.controlButton,
         onClick: t
     });
 }
-function p(e) {
-    let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: N, items: p, loading: g, loadMore: S } = (0, d.y6)(),
-        A = (0, s.e7)([o.Z], () => o.Z.localItems),
-        R = a.useMemo(() => [...[...p, ...A].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [p, A]),
-        x = p.length > 0 ? p[0] : null,
-        O = E.d$.useSetting(),
-        M = a.useMemo(() => {
-            if (null != x && 0 >= m.default.compare(x.id, O)) return !1;
-            for (let e of R) {
-                if (0 >= m.default.compare(e.id, O)) break;
-                if (!(0, u.r)(e, O)) return !0;
+function j(e) {
+    let { setTab: t, badgeState: n, closePopout: a } = e,
+        { initialized: c, items: E, loading: O, loadMore: j } = (0, m.y6)(),
+        C = (0, o.e7)([u.Z], () => u.Z.localItems),
+        I = (0, h.Us)({ location: 'ForYou' }),
+        S = i.useMemo(() => [...[...E, ...C].sort((e, t) => -1 * b.default.compare(e.id, t.id))], [E, C]),
+        T = E.length > 0 ? E[0] : null,
+        P = g.d$.useSetting(),
+        A = i.useMemo(() => {
+            if (null != T && 0 >= b.default.compare(T.id, P)) return !1;
+            for (let e of S) {
+                if (0 >= b.default.compare(e.id, P)) break;
+                if (!(0, p.r)(e, P)) return !0;
             }
             return !1;
-        }, [x, O, R]);
-    return (0, i.jsxs)('div', {
-        className: f.container,
+        }, [T, P, S]);
+    return (0, r.jsxs)('div', {
+        className: l()(v.container, { [v.widerInbox]: I }),
         children: [
-            (0, i.jsx)(T.Z, {
-                tab: r.X.FOR_YOU,
+            (0, r.jsx)(x.Z, {
+                tab: s.X.FOR_YOU,
                 setTab: t,
                 badgeState: n,
-                closePopout: l,
-                children: M
-                    ? (0, i.jsx)(C, {
+                closePopout: a,
+                children: A
+                    ? (0, r.jsx)(N, {
                           onClick: () => {
-                              null != x && (E.d$.updateSetting(x.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+                              null != T && (g.d$.updateSetting(T.id), _.default.track(y.rMx.NOTIFICATION_CENTER_ACTION, { action_type: d.ud.MARK_ALL_READ }));
                           }
                       })
                     : null
             }),
-            (0, i.jsx)(_.Z, {
-                initialized: N,
-                items: R,
-                loading: g,
-                loadMore: S
+            (0, r.jsx)(f.Z, {
+                initialized: c,
+                items: S,
+                loading: O,
+                loadMore: j
             })
         ]
     });

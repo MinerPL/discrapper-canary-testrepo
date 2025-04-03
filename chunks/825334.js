@@ -1,11 +1,7 @@
-l.d(n, {
-    Z: function () {
-        return t;
-    }
-});
-var a = l(399606),
+l.d(n, { Z: () => i });
+var t = l(399606),
     r = l(592125),
-    i = l(563534);
-function t(e) {
-    return (0, a.Wu)([i.Z, r.Z], () => i.Z.getResourceChannels(e).filter((e) => null != r.Z.getChannel(e.channelId)));
+    a = l(563534);
+function i(e) {
+    return (0, t.Wu)([a.Z, r.Z], () => a.Z.getResourceChannels(e).filter((e) => null != r.Z.getChannel(e.channelId)));
 }

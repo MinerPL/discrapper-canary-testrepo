@@ -1,32 +1,28 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    r = n(210887),
-    l = n(687683),
-    o = n(689938),
-    c = n(163868),
-    d = n(138715),
-    u = n(979770);
-function _(e) {
+n.d(t, { Z: () => p });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(210887),
+    o = n(687683),
+    s = n(388032),
+    c = n(96532),
+    u = n(138715),
+    d = n(979770);
+function p(e) {
     let { section: t } = e,
-        n = (0, a.e7)([r.Z], () => r.Z.theme);
-    return (0, i.jsxs)(s.EmptyState, {
+        n = (0, i.e7)([a.Z], () => a.Z.theme);
+    return (0, r.jsxs)(l.ubH, {
         theme: n,
         className: c.emptyStateContainer,
         children: [
-            (0, i.jsx)(s.EmptyStateImage, {
+            (0, r.jsx)(l.oxh, {
                 width: 415,
                 height: 200,
-                lightSrc: u,
-                darkSrc: d
+                lightSrc: d,
+                darkSrc: u
             }),
-            (0, i.jsx)(s.EmptyStateText, { note: t === l.pS.SPAM ? o.Z.Messages.MESSAGE_REQUESTS_SPAM_EMPTY_STATE_BODY : o.Z.Messages.MESSAGE_REQUESTS_EMPTY_STATE_BODY })
+            (0, r.jsx)(l.OZU, { note: t === o.pS.SPAM ? s.NW.string(s.t.hasFPT) : s.NW.string(s.t.SXrqTU) })
         ]
     });
 }

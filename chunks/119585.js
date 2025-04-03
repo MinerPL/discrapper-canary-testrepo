@@ -7,8 +7,4 @@ function r(e) {
     }
     return n.join('');
 }
-n.d(t, {
-    c: function () {
-        return r;
-    }
-});
+n.d(t, { c: () => r });

@@ -1,3 +1,1 @@
-n(453406);
-var r = n(387992);
-e.exports = r('Array', 'indexOf');
+n(453406), (e.exports = n(387992)('Array', 'indexOf'));

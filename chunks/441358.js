@@ -1,29 +1,25 @@
-n.d(t, {
-    v: function () {
-        return l;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(689938),
-    s = n(783255),
-    r = n(652430);
-let l = () =>
-    (0, i.jsxs)('div', {
-        className: s.container,
+n.d(t, { v: () => o });
+var r = n(200651);
+n(192379);
+var i = n(388032),
+    a = n(263212),
+    l = n(652430);
+let o = () =>
+    (0, r.jsxs)('div', {
+        className: a.container,
         children: [
-            (0, i.jsx)('img', {
-                className: s.image,
+            (0, r.jsx)('img', {
+                className: a.image,
                 alt: '',
-                src: r
+                src: l
             }),
-            (0, i.jsx)('div', {
-                className: s.title,
-                children: a.Z.Messages.FOR_YOU_EMPTY_TITLE
+            (0, r.jsx)('div', {
+                className: a.title,
+                children: i.NW.string(i.t.MwjTvr)
             }),
-            (0, i.jsx)('div', {
-                className: s.body,
-                children: a.Z.Messages.FOR_YOU_EMPTY_BODY
+            (0, r.jsx)('div', {
+                className: a.body,
+                children: i.NW.string(i.t.AKBgPz)
             })
         ]
     });

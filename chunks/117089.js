@@ -1,31 +1,26 @@
-n.d(t, {
-    D: function () {
-        return a;
-    }
-});
+n.d(t, { D: () => o });
 var r = n(812975),
     i = n(686942);
-function a(e, t, n, a, s, o) {
+function o(e, t, n, o, a, s) {
     var l = {
             lastyear: e,
             lastmonth: t,
             nwdaymask: []
         },
-        u = [];
-    if (o.freq === r.Ci.YEARLY) {
-        if ((0, i.cS)(o.bymonth)) u = [[0, n]];
-        else for (var c = 0; c < o.bymonth.length; c++) (t = o.bymonth[c]), u.push(a.slice(t - 1, t + 1));
-    } else o.freq === r.Ci.MONTHLY && (u = [a.slice(t - 1, t + 1)]);
-    if ((0, i.cS)(u)) return l;
+        c = [];
+    if (s.freq === r.Ci.YEARLY)
+        if ((0, i.cS)(s.bymonth)) c = [[0, n]];
+        else for (var u = 0; u < s.bymonth.length; u++) (t = s.bymonth[u]), c.push(o.slice(t - 1, t + 1));
+    else s.freq === r.Ci.MONTHLY && (c = [o.slice(t - 1, t + 1)]);
+    if ((0, i.cS)(c)) return l;
     l.nwdaymask = (0, i.rx)(0, n);
-    for (var c = 0; c < u.length; c++) {
-        for (var d = u[c], _ = d[0], E = d[1] - 1, f = 0; f < o.bynweekday.length; f++) {
+    for (var u = 0; u < c.length; u++)
+        for (var d = c[u], f = d[0], _ = d[1] - 1, p = 0; p < s.bynweekday.length; p++) {
             var h = void 0,
-                p = o.bynweekday[f],
-                m = p[0],
-                I = p[1];
-            I < 0 ? ((h = E + (I + 1) * 7), (h -= (0, i.Vy)(s[h] - m, 7))) : ((h = _ + (I - 1) * 7), (h += (0, i.Vy)(7 - s[h] + m, 7))), _ <= h && h <= E && (l.nwdaymask[h] = 1);
+                m = s.bynweekday[p],
+                g = m[0],
+                E = m[1];
+            E < 0 ? ((h = _ + (E + 1) * 7), (h -= (0, i.Vy)(a[h] - g, 7))) : ((h = f + (E - 1) * 7), (h += (0, i.Vy)(7 - a[h] + g, 7))), f <= h && h <= _ && (l.nwdaymask[h] = 1);
         }
-    }
     return l;
 }

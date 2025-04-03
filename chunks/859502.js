@@ -1,28 +1,24 @@
-r.d(t, {
-    a: function () {
-        return c;
-    }
-});
-var n = r(824851),
-    a = r(753642),
-    o = r(622916),
-    i = r(255768),
-    _ = r(696486),
-    E = r(793373);
+a.d(e, { a: () => E });
+var r = a(824851),
+    n = a(753642),
+    _ = a(622916),
+    o = a(255768),
+    i = a(696486),
+    c = a(793373);
 let s = !1;
-function c() {
-    if (!s) (s = !0), (0, n.V)(I), (0, a.h)(I);
+function E() {
+    s || ((s = !0), (0, r.V)(l), (0, n.h)(l));
 }
-function I() {
-    let e = (0, _.HN)(),
-        t = e && (0, _.Gx)(e);
-    if (t) {
-        let e = 'internal_error';
-        i.X && o.kg.log(`[Tracing] Root span: ${e} -> Global error occured`),
-            t.setStatus({
-                code: E.jt,
-                message: e
+function l() {
+    let t = (0, i.HN)(),
+        e = t && (0, i.Gx)(t);
+    if (e) {
+        let t = 'internal_error';
+        o.X && _.kg.log(`[Tracing] Root span: ${t} -> Global error occured`),
+            e.setStatus({
+                code: c.jt,
+                message: t
             });
     }
 }
-I.tag = 'sentry_tracingErrorCallback';
+l.tag = 'sentry_tracingErrorCallback';

@@ -1,10 +1,6 @@
 n.d(t, {
-    O: function () {
-        return i;
-    },
-    Z: function () {
-        return r;
-    }
+    O: () => i,
+    Z: () => r
 });
 var r = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'],
     i = (function () {

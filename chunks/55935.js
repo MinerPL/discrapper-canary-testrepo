@@ -1,88 +1,86 @@
 n.d(t, {
-    Hg: function () {
-        return I;
-    },
-    KC: function () {
-        return d;
-    },
-    QX: function () {
-        return S;
-    },
-    TD: function () {
-        return g;
-    },
-    Xf: function () {
-        return h;
-    },
-    Y4: function () {
-        return f;
-    },
-    _w: function () {
-        return _;
-    },
-    vc: function () {
-        return E;
-    }
+    Hg: () => I,
+    KC: () => m,
+    QX: () => N,
+    TD: () => T,
+    Xf: () => y,
+    Y4: () => b,
+    _w: () => g,
+    vc: () => E,
+    wY: () => h
 });
 var r = n(913527),
     i = n.n(r),
-    a = n(232551),
-    s = n(706454);
-let o = 86400000,
-    l = Object.create(null);
-function u(e) {
+    o = n(232551),
+    a = n(710845),
+    s = n(706454),
+    l = n(695346),
+    c = n(388032);
+let u = new a.Z('DateUtils'),
+    d = 60000,
+    f = 86400000,
+    _ = Object.create(null);
+function p(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = e.getTime();
-    return !t && (n -= 60000 * e.getTimezoneOffset()), Math.floor(n / o) * o;
+        n = e;
+    'string' == typeof e || 'number' == typeof e || e instanceof Date || (u.error('Invalid date given to startOfDay', { d: e }), (n = new Date()));
+    let r = new Date(n),
+        i = r.getTime();
+    return t || (i -= r.getTimezoneOffset() * d), Math.floor(i / f) * f;
 }
-function c(e, t) {
-    return Math.floor((u(e, !1) - u(t, !1)) / o);
+function h(e, t) {
+    return Math.floor((p(e, !1) - p(t, !1)) / f);
 }
-function d(e, t) {
-    return Math.abs(+e - +t) <= o && e.getDate() === t.getDate();
+function m(e, t) {
+    return Math.abs(+e - +t) <= f && e.getDate() === t.getDate();
 }
-function _(e, t, n) {
+function g(e, t, n) {
     return Math.abs(e.valueOf() - t.valueOf()) < n;
 }
 function E(e, t) {
-    let n = p(e).locale(),
-        r = ''.concat(n, ':').concat(t),
-        i = l[r];
-    return null == i && (i = l[r] = (0, a.Z)(t)), i(m(e));
+    let n = v(e).locale(),
+        r = l.hg.getSetting(),
+        i = ''.concat(n, ':').concat(t, ':').concat(r),
+        a = _[i];
+    return null == a && (a = _[i] = (0, o.Z)(t)), a(O(e));
 }
-function f(e) {
-    let t;
-    let n = i().localeData(),
-        r = i()(),
-        a = c(m(e), r.toDate());
-    return a < -1 ? E(e, 'L LT') : ((t = a < 0 ? 'lastDay' : a < 1 ? 'sameDay' : a < 2 ? 'nextDay' : 'sameElse'), E(e, n.calendar(t, p(e), r)));
+function b(e) {
+    let t,
+        n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        r = i().localeData(),
+        o = i()(),
+        a = h(O(e), o.toDate());
+    if (a < -1) return E(e, 'L LT');
+    if (a < 0) t = 'lastDay';
+    else if (a < 1) {
+        if (n) return E(e, 'LT');
+        t = 'sameDay';
+    } else t = a < 2 ? 'nextDay' : 'sameElse';
+    return E(e, r.calendar(t, v(e), o));
 }
-function h(e) {
+function y(e) {
     let t = i().localeData(),
         n = i()(),
-        r = c(m(e), n.toDate());
-    if (0 === r) return E(e, t.longDateFormat('LT'));
-    if (-1 === r) return E(e, t.calendar('lastDay', p(e), n));
-    if (r > -7) return E(e, 'dddd');
-    return E(e, t.longDateFormat('l'));
+        r = h(O(e), n.toDate());
+    return 0 === r ? E(e, 'LT') : -1 === r ? E(e, t.calendar('lastDay', v(e), n)) : r > -7 ? E(e, 'dddd') : E(e, 'L');
 }
-function p(e) {
+function v(e) {
     return i().isMoment(e) ? e : i()(e);
 }
-function m(e) {
+function O(e) {
     return i().isMoment(e) ? e.toDate() : e;
 }
 function I(e) {
-    let t;
-    let n = i().localeData(),
+    let t,
+        n = i().localeData(),
         r = new Date(),
-        a = c(e, r);
-    return 'sameElse' == (t = a < -1 ? 'sameElse' : a < 0 ? 'lastDay' : a < 1 ? 'sameDay' : a < 2 ? 'nextDay' : 'sameElse') ? E(e, 'LLL') : E(e, n.calendar(t, i()(e), i()(r)));
+        o = h(e, r);
+    return 'sameElse' == (t = o < -1 ? 'sameElse' : o < 0 ? 'lastDay' : o < 1 ? 'sameDay' : o < 2 ? 'nextDay' : 'sameElse') ? E(e, 'LLL') : E(e, n.calendar(t, i()(e), i()(r)));
 }
 s.default.addChangeListener(() => {
-    l = Object.create(null);
+    _ = Object.create(null);
 });
-let T = [
+let S = [
     {
         key: 'days',
         millisecondsInUnit: 86400000
@@ -100,34 +98,34 @@ let T = [
         millisecondsInUnit: 1000
     }
 ];
-function g(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = {
             days: 0,
             hours: 0,
             minutes: 0,
-            seconds: n ? 1 : 0
+            seconds: +!!n
         };
     if (e > t || (n && Number(e) + 1200 > Number(t))) return r;
     let i = Number(t) - Number(e);
     return (
-        T.forEach((e) => {
+        S.forEach((e) => {
             let { key: t, millisecondsInUnit: n } = e;
             (r[t] = Math.floor(i / n)), (i -= r[t] * n);
         }),
         r
     );
 }
-function S(e, t) {
+function N(e, t) {
     return e.days > 0
-        ? t.days.format({
+        ? c.NW.formatToPlainString(t.days, {
               days: e.days,
               hours: e.hours
           })
         : e.hours > 0
-          ? t.hours.format({
+          ? c.NW.formatToPlainString(t.hours, {
                 hours: e.hours,
                 minutes: e.minutes
             })
-          : t.minutes.format({ minutes: Math.max(1, e.minutes) });
+          : c.NW.formatToPlainString(t.minutes, { minutes: Math.max(1, e.minutes) });
 }

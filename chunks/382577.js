@@ -1,16 +1,12 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var s = n(470079),
+n.d(t, { Z: () => o });
+var r = n(192379),
     i = n(570140);
-function r(e) {
-    let t = (0, s.useRef)(e);
-    (0, s.useEffect)(() => {
+function o(e) {
+    let t = (0, r.useRef)(e);
+    (0, r.useEffect)(() => {
         t.current = e;
     }, [e]),
-        (0, s.useEffect)(() => {
+        (0, r.useEffect)(() => {
             if (__OVERLAY__) {
                 function e(e) {
                     e.locked && t.current();

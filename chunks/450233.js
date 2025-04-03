@@ -1,58 +1,55 @@
 n.d(t, {
-    G: function () {
-        return l;
-    }
+    G: () => f,
+    Z: () => m
 });
-var i,
-    a,
-    s,
-    r,
+var r,
+    i,
     l,
-    o,
-    c = n(735250),
-    d = n(470079),
-    u = n(442837),
-    _ = n(570140),
-    E = n(16084),
-    h = n(855775),
-    m = n(689938);
-((i = l || (l = {})).SHORT = 'SHORT'), (i.LONG = 'LONG');
-class I extends (o = d.PureComponent) {
+    a,
+    o = n(200651),
+    s = n(192379),
+    c = n(442837),
+    u = n(570140),
+    d = n(16084),
+    p = n(855775),
+    h = n(388032),
+    f = (((r = {}).SHORT = 'SHORT'), (r.LONG = 'LONG'), r);
+class g extends (a = s.PureComponent) {
     getText(e, t) {
         if (429 === e.status)
             switch (t) {
                 case 'SHORT':
-                    return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT;
+                    return h.NW.string(h.t.T15lqq);
                 case 'LONG':
-                    return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR;
+                    return h.NW.string(h.t.XFShdH);
             }
         switch (t) {
             case 'SHORT':
-                return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR_SHORT;
+                return h.NW.string(h.t['+XstBw']);
             case 'LONG':
-                return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR;
+                return h.NW.string(h.t.epyCur);
         }
     }
     componentWillUnmount() {
-        null != this.props.purchaseError && _.Z.wait(() => E.pB());
+        null != this.props.purchaseError && u.Z.wait(() => d.pB());
     }
     render() {
         let { className: e, purchaseError: t, messageStyle: n } = this.props;
         return null == t
             ? null
-            : (0, c.jsx)('div', {
+            : (0, o.jsx)('div', {
                   className: e,
                   children: this.getText(t, n)
               });
     }
 }
-(r = { messageStyle: 'LONG' }),
-    (s = 'defaultProps') in (a = I)
-        ? Object.defineProperty(a, s, {
-              value: r,
+(l = { messageStyle: 'LONG' }),
+    (i = 'defaultProps') in g
+        ? Object.defineProperty(g, i, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = r),
-    (t.Z = u.ZP.connectStores([h.Z], () => ({ purchaseError: h.Z.error }))(I));
+        : (g[i] = l);
+let m = c.ZP.connectStores([p.Z], () => ({ purchaseError: p.Z.error }))(g);

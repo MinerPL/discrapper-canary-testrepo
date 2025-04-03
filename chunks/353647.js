@@ -1,89 +1,135 @@
-n(47120);
+n.d(t, { Z: () => A }), n(47120);
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(180335);
-let c = new Map(),
-    d = new Set(),
-    _ = null,
-    E = !1;
-function f() {
-    (c = new Map()), (d = new Set()), (_ = null), (E = !1);
+    i = n(442837),
+    o = n(570140),
+    a = n(180335);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-class h extends (r = o.ZP.Store) {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = new Map(),
+    f = new Set(),
+    _ = null,
+    p = !1,
+    h = !1;
+function m(e) {
+    let { userId: t } = e;
+    f.add(t);
+}
+function g(e) {
+    let { outbox: t, userId: n } = e;
+    d.set(n, u(l({}, t), { lastFetched: Date.now() })), f.delete(n);
+}
+function E(e) {
+    let { userId: t } = e;
+    f.delete(t);
+}
+function b() {
+    (_ = null), (p = !0);
+}
+function y(e) {
+    let { entry: t, userId: n } = e;
+    _ = null;
+    let r = d.get(n);
+    if (null == r) return !1;
+    let i = r.entries.filter((e) => e.id !== t.id);
+    d.set(n, u(l({}, r), { entries: i })), (p = !1);
+}
+function v(e) {
+    let { error: t } = e;
+    (_ = t), (p = !1);
+}
+function O() {
+    (_ = null), (p = !1);
+}
+function I() {
+    (d = new Map()), (f = new Set()), (_ = null), (p = !1);
+}
+function S() {
+    I(), (h = !0);
+}
+function T() {
+    I();
+}
+class N extends (r = i.ZP.Store) {
     getMatchingOutboxEntry(e) {
         let { activity: t, userId: n } = e,
-            r = c.get(n);
-        if (null != r && null != t) return (0, u.vu)(r.entries, t);
+            r = d.get(n);
+        if (null != r && null != t) return (0, a.vu)(r.entries, t);
     }
     getUserOutbox(e) {
-        return c.get(e);
+        return d.get(e);
     }
     isFetchingUserOutbox(e) {
-        return d.has(e);
+        return f.has(e);
     }
     get deleteOutboxEntryError() {
         return _;
     }
     get isDeletingEntryHistory() {
-        return E;
+        return p;
+    }
+    get hasInitialized() {
+        return h;
     }
 }
-(s = 'ContentInventoryOutboxStore'),
-    (a = 'displayName') in (i = h)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new h(l.Z, {
-        CONNECTION_OPEN: function () {
-            f();
-        },
-        LOGOUT: function () {
-            f();
-        },
-        CONTENT_INVENTORY_FETCH_OUTBOX_START: function (e) {
-            let { userId: t } = e;
-            d.add(t);
-        },
-        CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: function (e) {
-            let { outbox: t, userId: n } = e;
-            c.set(n, {
-                ...t,
-                lastFetched: Date.now()
-            }),
-                d.delete(n);
-        },
-        CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: function (e) {
-            let { userId: t } = e;
-            d.delete(t);
-        },
-        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: function () {
-            (_ = null), (E = !0);
-        },
-        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: function (e) {
-            let { entry: t, userId: n } = e;
-            _ = null;
-            let r = c.get(n);
-            if (null == r) return !1;
-            let i = r.entries.filter((e) => e.id !== t.id);
-            c.set(n, {
-                ...r,
-                entries: i
-            }),
-                (E = !1);
-        },
-        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: function (e) {
-            let { error: t } = e;
-            (_ = t), (E = !1);
-        },
-        CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: function () {
-            (_ = null), (E = !1);
-        }
-    }));
+s(N, 'displayName', 'ContentInventoryOutboxStore');
+let A = new N(o.Z, {
+    CONNECTION_OPEN: S,
+    LOGOUT: T,
+    CONTENT_INVENTORY_FETCH_OUTBOX_START: m,
+    CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: g,
+    CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: E,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: b,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: y,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: v,
+    CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: O
+});

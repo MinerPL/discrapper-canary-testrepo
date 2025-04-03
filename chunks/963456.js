@@ -1,92 +1,117 @@
 n.d(t, {
-    a: function () {
-        return l;
-    },
-    j: function () {
-        return u;
-    }
-});
+    a: () => p,
+    j: () => m
+}),
+    n(653041);
 var r = n(544891),
     i = n(570140),
-    a = n(626135),
-    s = n(70956),
-    o = n(981631);
-async function l(e, t, n) {
-    let l,
-        u = 0;
+    o = n(626135),
+    a = n(70956),
+    s = n(823379),
+    l = n(981631);
+let c = 5000,
+    u = 3,
+    d = 1000,
+    f = 1001,
+    _ = 1002;
+async function p(e, t) {
+    let n,
+        s = performance.now(),
+        p = 0,
+        m = [];
     switch (e.type) {
         case 'channel':
-            l = o.ANM.APPLICATION_COMMAND_INDEX_CHANNEL(e.channelId);
+            n = l.ANM.APPLICATION_COMMAND_INDEX_CHANNEL(e.channelId);
             break;
         case 'guild':
-            l = o.ANM.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
+            n = l.ANM.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
             break;
         case 'user':
-            l = o.ANM.APPLICATION_COMMAND_INDEX_USER;
+            n = l.ANM.APPLICATION_COMMAND_INDEX_USER;
             break;
         case 'application':
-            l = o.ANM.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId);
+            n = l.ANM.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId);
     }
-    let c = async (t) =>
-            u >= 3
-                ? (_(!0),
+    let g = async (t) =>
+            p >= u
+                ? (m.push(_),
+                  b({ error: !0 }),
                   i.Z.dispatch({
                       type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
                       target: e
                   }))
-                : (await new Promise((e) => setTimeout(e, t)), d()),
-        d = () =>
+                : (await new Promise((e) => setTimeout(e, t)), E()),
+        E = () =>
             r.tn
                 .get({
-                    url: l,
-                    retries: 3 - u - 1,
-                    signal: n.signal,
-                    onRequestCreated: () => u++
+                    url: n,
+                    retries: u - p - 1,
+                    signal: t.signal,
+                    onRequestCreated: () => p++,
+                    rejectWithError: !1
                 })
                 .then(
                     (t) =>
                         202 === t.status
-                            ? c(5000)
-                            : (_(!1),
+                            ? (m.push(202), g(c))
+                            : (b({ error: !1 }),
                               i.Z.dispatch({
                                   type: 'APPLICATION_COMMAND_INDEX_FETCH_SUCCESS',
                                   target: e,
                                   index: t.body
                               })),
-                    (t) => {
-                        if (n.signal.aborted) {
-                            _(!0);
+                    (n) => {
+                        var r;
+                        if (t.signal.aborted) {
+                            m.push(f), b({ error: !0 });
                             return;
                         }
-                        return 429 === t.status
-                            ? c(t.body.retry_after * s.Z.Millis.SECOND)
-                            : (_(!0),
+                        return 429 === n.status
+                            ? (m.push(429), g(n.body.retry_after * a.Z.Millis.SECOND))
+                            : (m.push(null != (r = n.status) ? r : d),
+                              b({ error: !0 }),
                               i.Z.dispatch({
                                   type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
                                   target: e
                               }));
                     }
                 ),
-        _ = (e) => {
-            let r = performance.now() - t;
-            a.default.track(o.rMx.APPLICATION_COMMAND_PERFORMANCE, {
-                duration_ms: r,
-                error: e,
-                aborted: n.signal.aborted,
+        b = (r) => {
+            let { error: i } = r,
+                a = performance.now() - s;
+            o.default.track(l.rMx.APPLICATION_COMMAND_PERFORMANCE, {
+                duration_ms: a,
+                error: i,
+                aborted: t.signal.aborted,
                 include_applications: !0,
-                retries: Math.max(u - 1, 0),
+                retries: Math.max(p - 1, 0),
                 kind: null,
-                command_type: null
+                command_type: null,
+                url: n,
+                target_type: e.type,
+                target_id: h(e),
+                failure_statuses: m
             });
         };
-    await d();
+    await E();
 }
-function u(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+function h(e) {
+    switch (e.type) {
+        case 'channel':
+            return e.channelId;
+        case 'guild':
+            return e.guildId;
+        case 'user':
+            return null;
+        case 'application':
+            return e.applicationId;
+        default:
+            (0, s.vE)(e);
+    }
+}
+function m(e) {
     i.Z.dispatch({
         type: 'APPLICATION_COMMAND_INDEX_FETCH_REQUEST',
-        start: performance.now(),
-        target: e,
-        canFetch: t
+        target: e
     });
 }

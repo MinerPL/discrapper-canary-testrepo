@@ -1,106 +1,100 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return G;
-        }
-    }),
-    n(47120);
-var l = n(735250),
-    a = n(470079),
-    r = n(990547),
-    s = n(442837),
-    u = n(481060),
-    i = n(390885),
-    o = n(594174),
-    c = n(626135),
-    _ = n(63063),
-    d = n(771308),
-    A = n(13430),
-    E = n(723359),
-    f = n(981631),
-    p = n(630724),
-    m = n(689938),
-    T = n(386912);
-function G(e) {
-    let { transitionState: t, onClose: n } = e,
-        [G, N] = a.useState(null),
-        [h, M] = a.useState(null),
-        [g, y] = a.useState(!1),
-        S = a.createRef(),
-        v = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
-        O = a.createRef();
-    a.useEffect(() => {
-        i.Z.flowStep(p.MK.ANY, p.FF.AGE_GATE), c.default.track(f.rMx.OPEN_MODAL, { type: 'Claim Age Gate' });
+r.d(t, { default: () => N }), r(47120), r(266796);
+var n = r(200651),
+    l = r(192379),
+    o = r(990547),
+    a = r(442837),
+    i = r(481060),
+    c = r(390885),
+    u = r(594174),
+    s = r(626135),
+    f = r(63063),
+    p = r(771308),
+    m = r(13430),
+    d = r(723359),
+    _ = r(981631),
+    b = r(630724),
+    g = r(388032),
+    y = r(465556);
+function N(e) {
+    let { transitionState: t, onClose: r } = e,
+        [N, S] = l.useState(null),
+        [A, E] = l.useState(null),
+        [O, v] = l.useState(!1),
+        w = l.createRef(),
+        T = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        h = l.createRef();
+    l.useEffect(() => {
+        c.Z.flowStep(b.MK.ANY, b.FF.AGE_GATE), s.default.track(_.rMx.OPEN_MODAL, { type: 'Claim Age Gate' });
     }, []),
-        a.useEffect(() => {
-            (null == v ? void 0 : v.nsfwAllowed) != null && n();
-        }, [v, n]);
+        l.useEffect(() => {
+            (null == T ? void 0 : T.nsfwAllowed) != null && r();
+        }, [T, r]);
     let C = async (e) => {
-            if ((e.preventDefault(), null != G)) {
-                y(!0);
+            if ((e.preventDefault(), null != N)) {
+                v(!0);
                 try {
-                    await d.Av(G, f.jXE.CLAIM_ACCOUNT_MODAL);
+                    await p.Av(N, _.jXE.CLAIM_ACCOUNT_MODAL);
                 } catch (e) {
-                    if (null != e.body && null != e.body.date_of_birth) i.Z.flowStep(p.MK.ANY, p.FF.AGE_GATE_UNDERAGE), d.wE(E.L0.CLAIM_ACCOUNT), d.hp(E.L0.CLAIM_ACCOUNT), n();
+                    if (null != e.body && null != e.body.date_of_birth) c.Z.flowStep(b.MK.ANY, b.FF.AGE_GATE_UNDERAGE), p.wE(d.L0.CLAIM_ACCOUNT), p.hp(d.L0.CLAIM_ACCOUNT), r();
                     else {
                         var t;
-                        (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.username) != null ? M(m.Z.Messages.USER_SETTINGS_UPDATE_FAILURE) : M(null == e ? void 0 : e.body.message);
+                        (null == e || null == (t = e.body) ? void 0 : t.username) != null ? E(g.NW.string(g.t['TGg/2t'])) : E(null == e ? void 0 : e.body.message);
                     }
                 }
-                y(!1);
+                v(!1);
             }
         },
-        D = a.useCallback(() => {
+        j = l.useCallback(() => {
             var e;
-            null === (e = O.current) || void 0 === e || e.focus();
-        }, [O]);
-    return (0, l.jsx)(u.ModalRoot, {
+            null == (e = h.current) || e.focus();
+        }, [h]);
+    return (0, n.jsx)(i.Y0X, {
         transitionState: t,
-        size: u.ModalSize.DYNAMIC,
-        'aria-label': m.Z.Messages.AGE_GATE_HEADER,
-        className: T.modal,
+        size: i.CgR.DYNAMIC,
+        'aria-label': g.NW.string(g.t.QpSKo6),
+        className: y.modal,
         impression: {
-            impressionName: r.ImpressionNames.USER_AGE_GATE,
+            impressionName: o.ImpressionNames.USER_AGE_GATE,
             impressionProperties: { existing_user: !1 }
         },
-        children: (0, l.jsxs)(u.ModalContent, {
-            className: T.content,
+        children: (0, n.jsxs)(i.hzk, {
+            className: y.content,
             children: [
-                (0, l.jsx)('div', { className: T.image }),
-                (0, l.jsxs)('form', {
+                (0, n.jsx)('div', { className: y.image }),
+                (0, n.jsxs)('form', {
                     onSubmit: C,
                     children: [
-                        (0, l.jsx)(u.Heading, {
-                            className: T.title,
+                        (0, n.jsx)(i.X6q, {
+                            className: y.title,
                             variant: 'heading-xl/semibold',
-                            children: m.Z.Messages.AGE_GATE_HEADER
+                            children: g.NW.string(g.t.QpSKo6)
                         }),
-                        (0, l.jsx)(u.Text, {
+                        (0, n.jsx)(i.Text, {
                             color: 'header-secondary',
-                            className: T.description,
+                            className: y.description,
                             variant: 'text-md/normal',
-                            children: m.Z.Messages.AGE_GATE_BODY.format({ helpURL: _.Z.getArticleURL(f.BhN.AGE_GATE) })
+                            children: g.NW.format(g.t.EcJBEB, { helpURL: f.Z.getArticleURL(_.BhN.AGE_GATE) })
                         }),
-                        (0, l.jsx)(A.Z, {
+                        (0, n.jsx)(m.Z, {
                             required: !0,
                             autoFocus: !0,
-                            wrapperClassName: T.formItem,
-                            label: m.Z.Messages.AGE_GATE_YOUR_BIRTHDAY,
+                            wrapperClassName: y.formItem,
+                            label: g.NW.string(g.t.rhBeKS),
                             name: 'birthday',
-                            onChange: (e) => N(e),
-                            onPopulated: D,
-                            error: h,
-                            value: G,
-                            ref: S
+                            onChange: (e) => S(e),
+                            onPopulated: j,
+                            error: A,
+                            value: N,
+                            ref: w
                         }),
-                        (0, l.jsx)(u.Button, {
-                            buttonRef: O,
+                        (0, n.jsx)(i.zxk, {
+                            buttonRef: h,
                             type: 'submit',
-                            size: u.Button.Sizes.LARGE,
-                            submitting: g,
-                            disabled: null == G,
+                            size: i.zxk.Sizes.LARGE,
+                            submitting: O,
+                            disabled: null == N,
                             fullWidth: !0,
-                            children: m.Z.Messages.DONE
+                            children: g.NW.string(g.t.i4jeWV)
                         })
                     ]
                 })

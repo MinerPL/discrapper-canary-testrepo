@@ -6,8 +6,4 @@ function r(e, t) {
     }
     return null;
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });

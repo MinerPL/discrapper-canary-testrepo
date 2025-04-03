@@ -1,17 +1,60 @@
-n.d(t, {
-    Z: function () {
-        return l;
+n.d(t, { Z: () => d });
+var r = n(200651),
+    l = n(192379),
+    i = n(846519),
+    o = n(388032);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
     }
-});
-var r = n(735250),
-    i = n(470079),
-    a = n(846519),
-    s = n(689938);
-function o(e) {
+    return e;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function u(e) {
     return ''.concat(e).length < 13 ? 1000 * e : e;
 }
-function l(e) {
-    return class extends i.PureComponent {
+function d(e) {
+    return class extends l.PureComponent {
         componentDidMount() {
             this._interval.start(1000, () => this.setState(this.getUpdatedTime()));
         }
@@ -25,9 +68,9 @@ function l(e) {
             let { timestamps: e } = this.props,
                 t = Date.now() / 1000;
             return null != e.end
-                ? this.getDiff(t, o(e.end) / 1000)
+                ? this.getDiff(t, u(e.end) / 1000)
                 : null != e.start
-                  ? this.getDiff(o(e.start) / 1000, t)
+                  ? this.getDiff(u(e.start) / 1000, t)
                   : {
                         hours: 0,
                         minutes: 0,
@@ -41,48 +84,45 @@ function l(e) {
         getDiff(e, t) {
             let n = Math.max(t - e, 0),
                 r = Math.floor(n) % 60,
-                i = Math.floor(n / 60) % 60;
+                l = Math.floor(n / 60) % 60;
             return {
                 hours: Math.floor(n / 3600) % 24,
-                minutes: i,
+                minutes: l,
                 seconds: r
             };
         }
         render() {
-            let { timestamps: t, ...n } = this.props,
-                { hours: i, minutes: a, seconds: o } = this.state,
-                l = {
+            let t = this.props,
+                { timestamps: n } = t,
+                l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        l = (function (e, t) {
+                            if (null == e) return {};
+                            var n,
+                                r,
+                                l = {},
+                                i = Object.keys(e);
+                            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                            return l;
+                        })(e, t);
+                    if (Object.getOwnPropertySymbols) {
+                        var i = Object.getOwnPropertySymbols(e);
+                        for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                    }
+                    return l;
+                })(t, ['timestamps']),
+                { hours: i, minutes: a, seconds: u } = this.state,
+                d = {
                     hours: this.renderTime(i, !0),
                     minutes: this.renderTime(a),
-                    seconds: this.renderTime(o)
+                    seconds: this.renderTime(u)
                 };
-            return null != t.end
-                ? (0, r.jsx)(e, {
-                      ...n,
-                      message: s.Z.Messages.USER_ACTIVITY_TIMESTAMP_END.format(l)
-                  })
-                : null != t.start
-                  ? (0, r.jsx)(e, {
-                        ...n,
-                        message: s.Z.Messages.USER_ACTIVITY_TIMESTAMP_START.format(l)
-                    })
-                  : null;
+            return null != n.end ? (0, r.jsx)(e, c(s({}, l), { message: o.NW.formatToPlainString(o.t['I/J7vL'], d) })) : null != n.start ? (0, r.jsx)(e, c(s({}, l), { message: o.NW.formatToPlainString(o.t.M9Fexc, d) })) : null;
         }
         constructor(e) {
-            var t, n, r;
-            super(e),
-                (t = this),
-                (r = void 0),
-                (n = '_interval') in t
-                    ? Object.defineProperty(t, n, {
-                          value: r,
-                          enumerable: !0,
-                          configurable: !0,
-                          writable: !0
-                      })
-                    : (t[n] = r),
-                (this._interval = new a.Xp()),
-                (this.state = { ...this.getUpdatedTime() });
+            super(e), a(this, '_interval', void 0), (this._interval = new i.Xp()), (this.state = s({}, this.getUpdatedTime()));
         }
     };
 }

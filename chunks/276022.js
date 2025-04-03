@@ -1,81 +1,86 @@
-i.d(n, {
-    Z: function () {
-        return _;
-    }
-}),
-    i(653041);
-var l = i(735250),
-    t = i(470079),
-    s = i(442837),
-    a = i(481060),
-    o = i(139387),
-    u = i(230711),
-    d = i(213459),
-    r = i(434404),
-    c = i(430824),
-    Z = i(496675),
-    M = i(981631),
-    E = i(689938);
-function _(e) {
-    let { user: n, guildId: i, channel: _, context: f } = e,
-        N = c.Z.getGuild(i),
-        A = (0, s.e7)([Z.Z], () => (null != N ? Z.Z.can(M.Plq.MANAGE_GUILD, N) : null)),
-        I = (0, d.em)(_, !0, !0),
-        g = (0, d.PL)(!0, !0),
-        { isUserApp: v, isGuildApp: b } = t.useMemo(() => {
-            var e, i, l, t;
-            if ((null == n ? void 0 : n.id) == null)
+n.d(t, { Z: () => m }), n(653041);
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(139387),
+    l = n(230711),
+    c = n(213459),
+    u = n(434404),
+    d = n(795594),
+    f = n(430824),
+    _ = n(496675),
+    p = n(981631),
+    h = n(388032);
+function m(e) {
+    var t;
+    let { user: m, application: g, guildId: E, context: b, onItemClick: y } = e,
+        v = null != (t = null == g ? void 0 : g.id) ? t : null == m ? void 0 : m.id,
+        O = f.Z.getGuild(E),
+        I = (0, o.e7)([_.Z], () => (null != O ? _.Z.can(p.Plq.MANAGE_GUILD, O) : null)),
+        S = !0,
+        T = !0,
+        N = (0, c.LD)(E, T),
+        A = (0, c.PL)(S, T),
+        { isUserApp: C, isGuildApp: R } = i.useMemo(() => {
+            var e, t, n, r;
+            if (null == v)
                 return {
                     isGuildApp: !1,
                     isUserApp: !1
                 };
-            let s = Object.values(null !== (l = null === (e = I.result) || void 0 === e ? void 0 : e.sections) && void 0 !== l ? l : {}),
-                a = Object.values(null !== (t = null === (i = g.result) || void 0 === i ? void 0 : i.sections) && void 0 !== t ? t : {});
+            let i = Object.values(null != (n = null == (e = N.result) ? void 0 : e.sections) ? n : {}),
+                o = Object.values(null != (r = null == (t = A.result) ? void 0 : t.sections) ? r : {});
             return {
-                isGuildApp: s.some((e) => {
-                    var i;
-                    return (null === (i = e.descriptor.application) || void 0 === i ? void 0 : i.id) === (null == n ? void 0 : n.id);
+                isGuildApp: i.some((e) => {
+                    var t;
+                    return (null == (t = e.descriptor.application) ? void 0 : t.id) === v;
                 }),
-                isUserApp: a.some((e) => {
-                    var i;
-                    return (null === (i = e.descriptor.application) || void 0 === i ? void 0 : i.id) === (null == n ? void 0 : n.id);
+                isUserApp: o.some((e) => {
+                    var t;
+                    return (null == (t = e.descriptor.application) ? void 0 : t.id) === v;
                 })
             };
-        }, [I, g, null == n ? void 0 : n.id]),
-        m = t.useCallback(() => {
-            if ((null == N ? void 0 : N.id) != null) r.Z.open(N.id, M.pNK.INTEGRATIONS), o.Z.setSection(M.b4C.APPLICATION, null == n ? void 0 : n.id);
-        }, [null == n ? void 0 : n.id, null == N ? void 0 : N.id]),
-        p = t.useCallback(() => {
-            u.Z.open(M.oAB.AUTHORIZED_APPS);
-        }, []),
-        D = f === M.IlC.POPOUT;
-    if (!(null == n ? void 0 : n.bot) || !A || D || (!b && !v)) return null;
-    let T = [];
+        }, [N, A, v]);
+    i.useEffect(() => {
+        n(360606);
+    }, []);
+    let P = i.useCallback(() => {
+            (null == O ? void 0 : O.id) != null && (u.Z.open(O.id, p.pNK.INTEGRATIONS), s.Z.setSection(p.b4C.APPLICATION, v), null == y || y());
+        }, [v, null == O ? void 0 : O.id, y]),
+        w = i.useCallback(() => {
+            l.Z.open(p.oAB.AUTHORIZED_APPS);
+            let e = '';
+            null != g ? (e = g.name) : null != m && (e = m.username), '' !== e && d.J.setState({ searchQuery: e }), null == y || y();
+        }, [g, y, m]);
+    if (b === p.IlC.POPOUT) return null;
+    let D = [];
     return (
-        b &&
-            T.push(
-                (0, l.jsx)(
-                    a.MenuItem,
+        R &&
+            I &&
+            D.push(
+                (0, r.jsx)(
+                    a.sNh,
                     {
-                        id: 'manage-integration',
-                        label: E.Z.Messages.MANAGE_INTEGRATION,
-                        action: m
+                        id: 'manage-server-integration',
+                        label: h.NW.string(h.t.IuSJT0),
+                        action: P
                     },
-                    'manage-integration'
+                    'manage-server-integration'
                 )
             ),
-        v &&
-            T.push(
-                (0, l.jsx)(
-                    a.MenuItem,
+        C &&
+            D.push(
+                (0, r.jsx)(
+                    a.sNh,
                     {
                         id: 'manage-authorized-app',
-                        label: E.Z.Messages.MANAGE_AUTHORIZED_APP,
-                        action: p
+                        label: h.NW.string(h.t.V8ruv7),
+                        action: w
                     },
                     'manage-authorized-app'
                 )
             ),
-        T
+        D
     );
 }

@@ -1,8 +1,4 @@
-n.d(t, {
-    jZ: function () {
-        return i;
-    }
-});
+n.d(t, { jZ: () => i });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-03_valorant_user_signup',

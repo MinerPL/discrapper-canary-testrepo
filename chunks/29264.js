@@ -1,94 +1,79 @@
-t.d(n, {
-    Z: function () {
-        return R;
+n.d(t, { Z: () => p });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(378409),
+    a = n(976853),
+    o = n(626135),
+    s = n(358085),
+    c = n(960048),
+    u = n(998502),
+    d = n(36998),
+    f = n(981631),
+    g = n(388032);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-}),
-    t(47120);
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    l = t(668781),
-    r = t(829883),
-    s = t(976853),
-    o = t(626135),
-    u = t(358085),
-    d = t(960048),
-    c = t(591759),
-    E = t(998502),
-    M = t(36998),
-    I = t(981631),
-    m = t(689938);
-let _ = 'https://media.discordapp.net',
-    g = /^.*\.discordapp\.net$/,
-    f = 'cdn.discordapp.com',
-    Z = ''.concat(_, '/stickers'),
-    S = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'tiff', 'bmp']),
-    T = new Set(['jpg', 'jpeg', 'png']),
-    v = (e) => {
-        var n, t, i, a;
-        return null === (a = c.Z.toURLSafe(e)) || void 0 === a ? void 0 : null === (i = a.pathname) || void 0 === i ? void 0 : null === (t = i.split('.')) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase();
-    };
-function A(e, n) {
-    l.Z.show({
-        title: m.Z.Messages.ERROR,
-        body: e
-    }),
-        d.Z.captureException(n);
+    return e;
 }
-function R(e, n, t) {
-    if (
-        (0, s.Z)(null == n ? void 0 : n.getChannelId()) ||
-        (null == t ? void 0 : t.shouldHideMediaOptions) === !0 ||
-        !u.isPlatformEmbedded ||
-        null == e ||
-        !(function (e) {
-            let n = c.Z.toURLSafe(e);
-            if (null == n) return !1;
-            let t = v(e);
-            return (g.test(n.hostname) || n.host === f) && !e.startsWith(Z) && !(0, r.zt)(e) && null != t && S.has(t);
-        })(e)
-    )
-        return null;
-    let l = (function (e) {
-            let n = c.Z.toURLSafe(e);
-            return null == n || n.host === f ? e : n.origin === _ ? ((n.host = f), n.searchParams.delete('size'), n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.delete('quality'), n.searchParams.delete('format'), n.toString()) : (n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.set('quality', 'lossless'), n.toString());
-        })(e),
-        d = async () => {
+function b(e, t) {
+    (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE)), c.Z.captureException(t);
+}
+function p(e, t, n) {
+    if ((0, a.Z)(null == t ? void 0 : t.getChannelId()) || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !s.isPlatformEmbedded || null == e || !(0, l.gS)(e)) return null;
+    let c = (0, l.s$)(e),
+        p = async () => {
             try {
-                await E.ZP.saveImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, M.v)() });
+                await u.ZP.saveImage(c), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVED, m({}, (0, d.v)())), (0, i.showToast)((0, i.createToast)(g.NW.string(g.t.cqpdJS), i.ToastType.SUCCESS));
             } catch (e) {
-                o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, M.v)() }), A(m.Z.Messages.ERROR_SAVING_IMAGE, e);
+                o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, m({}, (0, d.v)())), b(g.NW.string(g.t['8Ve/S0']), e);
             }
         },
-        R = async () => {
+        h = async () => {
             try {
-                await E.ZP.copyImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, M.v)() });
+                await u.ZP.copyImage(c), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPIED, m({}, (0, d.v)())), (0, i.showToast)((0, i.createToast)(g.NW.string(g.t.bhUpvL), i.ToastType.SUCCESS));
             } catch (e) {
-                A(m.Z.Messages.ERROR_COPYING_IMAGE, e), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, M.v)() });
+                b(g.NW.string(g.t.PTPbj4), e), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, m({}, (0, d.v)()));
             }
         };
     return [
-        E.ZP.canCopyImage() &&
-        (function (e) {
-            let n = v(e);
-            return null != n && T.has(n);
-        })(e)
-            ? (0, i.jsx)(
-                  a.MenuItem,
+        u.ZP.canCopyImage() && (0, l.Lz)(e)
+            ? (0, r.jsx)(
+                  i.sNh,
                   {
                       id: 'copy-image',
-                      label: m.Z.Messages.COPY_IMAGE_MENU_ITEM,
-                      action: R
+                      label: g.NW.string(g.t.tvUqWl),
+                      action: h
                   },
                   'copy-image'
               )
             : null,
-        (0, i.jsx)(
-            a.MenuItem,
+        (0, r.jsx)(
+            i.sNh,
             {
                 id: 'save-image',
-                label: m.Z.Messages.SAVE_IMAGE_MENU_ITEM,
-                action: d
+                label: g.NW.string(g.t.PeXhgI),
+                action: p
             },
             'save-image'
         )

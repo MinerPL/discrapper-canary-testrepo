@@ -1,29 +1,50 @@
 n.d(t, {
-    KM: function () {
-        return c;
-    },
-    R2: function () {
-        return d;
-    },
-    Zc: function () {
-        return u;
-    }
+    KM: () => f,
+    R2: () => _,
+    TG: () => p,
+    Zc: () => d
 });
 var r = n(442837),
     i = n(570140),
-    a = n(238514),
-    s = n(675478),
-    o = n(581883),
+    o = n(238514),
+    a = n(675478),
+    s = n(581883),
     l = n(526761);
-function u(e, t, n, i) {
-    let a = () => {
-        var r;
-        return n(null === (r = o.Z.settings[e]) || void 0 === r ? void 0 : r[t]);
-    };
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t, n, i) {
+    let o = () => {
+            var r;
+            return n(null == (r = s.Z.settings[e]) ? void 0 : r[t]);
+        },
+        c = () => (0, r.e7)([s.Z], o);
     return {
-        getSetting: a,
-        updateSetting: _(a, (n) =>
-            s.hW.updateAsync(
+        getSetting: o,
+        updateSetting: h(o, (n) =>
+            a.hW.updateAsync(
                 e,
                 (e) => {
                     e[t] = i(n, e[t]);
@@ -31,27 +52,27 @@ function u(e, t, n, i) {
                 l.fy.INFREQUENT_USER_ACTION
             )
         ),
-        useSetting: () => (0, r.e7)([o.Z], a)
+        useSetting: c
     };
 }
-function c(e, t, n) {
-    let s = () => {
+function f(e, t, n) {
+    let a = () => {
         var r;
-        let i = a.Z.getState()[t];
-        return null !== (r = null == i ? void 0 : i.settings[n]) && void 0 !== r ? r : e.getSetting();
+        let i = o.Z.getState()[t];
+        return null != (r = null == i ? void 0 : i.settings[n]) ? r : e.getSetting();
     };
     return {
-        getSetting: s,
+        getSetting: a,
         useSetting: () => {
             let i = e.useSetting(),
-                s = (0, r.e7)([a.Z], () => {
-                    let e = a.Z.getState()[t];
+                a = (0, r.e7)([o.Z], () => {
+                    let e = o.Z.getState()[t];
                     return null == e ? void 0 : e.settings[n];
                 });
-            return null != s ? s : i;
+            return null != a ? a : i;
         },
-        updateSetting: _(s, (r) =>
-            a.Z.shouldSync(t)
+        updateSetting: h(a, (r) =>
+            o.Z.shouldSync(t)
                 ? e.updateSetting(r)
                 : (i.Z.dispatch({
                       type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
@@ -61,20 +82,20 @@ function c(e, t, n) {
         )
     };
 }
-function d(e, t, n, r) {
-    let a = () => {
+function _(e, t, n, r) {
+    let o = () => {
         var t;
-        return null !== (t = n()) && void 0 !== t ? t : e.getSetting();
+        return null != (t = n()) ? t : e.getSetting();
     };
     return {
-        getSetting: a,
+        getSetting: o,
         useSetting: () => {
             let t = e.useSetting(),
                 n = r();
             return null != n ? n : t;
         },
-        updateSetting: _(
-            a,
+        updateSetting: h(
+            o,
             (n) => (
                 i.Z.dispatch({
                     type: 'USER_SETTINGS_OVERRIDE_CLEAR',
@@ -85,7 +106,22 @@ function d(e, t, n, r) {
         )
     };
 }
-function _(e, t) {
+function p(e) {
+    let { baseSetting: t, isEligible: n, useIsEligible: r, eligibleDefault: i, ineligibleDefault: o, onUseDefault: a } = e;
+    return {
+        getSetting: () => {
+            let e = t.getSetting();
+            return null != e ? e : (null == a || a(), n() ? i() : o);
+        },
+        useSetting: () => {
+            let e = t.useSetting(),
+                n = r();
+            return null != e ? e : (null == a || a(), n ? i() : o);
+        },
+        updateSetting: (e) => t.updateSetting(e)
+    };
+}
+function h(e, t) {
     return function (n) {
         return 'function' == typeof n ? t(n(e())) : t(n);
     };

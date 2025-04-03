@@ -1,13 +1,9 @@
 n.d(t, {
-    U5: function () {
-        return i;
-    },
-    qR: function () {
-        return a;
-    }
+    U5: () => i,
+    qR: () => l
 });
 var r = n(273504);
-function a(e) {
+function l(e) {
     let t = i();
     return Array.from(e.defaultActionTypes).map((e) => t[e]);
 }

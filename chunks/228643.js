@@ -1,21 +1,18 @@
 t.d(n, {
-    L_: function () {
-        return i;
-    },
-    nj: function () {
-        return r;
-    },
-    sE: function () {
-        return s;
-    }
+    L_: () => r,
+    nj: () => s,
+    sE: () => i
 });
 var c = t(544891),
     o = t(570140),
     a = t(480608),
     l = t(981631);
-function s(e, n) {
+function i(e, n) {
     c.tn
-        .get({ url: l.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, n) })
+        .get({
+            url: l.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, n),
+            rejectWithError: !0
+        })
         .then((e) => {
             let t = [];
             e.body.length > 0 &&
@@ -36,8 +33,8 @@ function s(e, n) {
         })
         .catch(() => {});
 }
-async function i(e, n, t) {
-    let s = t.map((e) =>
+async function r(e, n, t) {
+    let i = t.map((e) =>
             e.map((e) => ({
                 connection_type: e.connectionType,
                 connection_metadata_field: e.connectionMetadataField,
@@ -46,11 +43,12 @@ async function i(e, n, t) {
                 value: e.value
             }))
         ),
-        i = await c.tn
+        r = await c.tn
             .put({
                 url: l.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, n),
-                body: 0 === s.length ? [] : s,
-                oldFormErrors: !0
+                body: 0 === i.length ? [] : i,
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 let n = [];
@@ -68,20 +66,25 @@ async function i(e, n, t) {
                     n
                 );
             }),
-        r = await (0, a.H)(e, n, !1);
-    null != r &&
+        s = await (0, a.H)(e, n, !1);
+    null != s &&
         o.Z.dispatch({
             type: 'GUILD_ROLE_MEMBER_COUNT_UPDATE',
             guildId: e,
             roleId: n,
-            count: r
+            count: s
         }),
         o.Z.dispatch({
             type: 'GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS',
             roleId: n,
-            roleConnectionConfigurations: i
+            roleConnectionConfigurations: r
         });
 }
-async function r() {
-    return (await c.tn.get({ url: l.ANM.APPLICATION_USER_ROLE_CONNECTIONS })).body;
+async function s() {
+    return (
+        await c.tn.get({
+            url: l.ANM.APPLICATION_USER_ROLE_CONNECTIONS,
+            rejectWithError: !1
+        })
+    ).body;
 }

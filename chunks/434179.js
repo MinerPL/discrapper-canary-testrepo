@@ -1,8 +1,4 @@
-var r;
-n.d(t, {
-    n: function () {
-        return r;
-    }
-}),
-    n(47120),
-    ((r || (r = {})).CONNECT_VOICE = 'connect_voice');
+n.d(t, { n: () => r }), n(47120);
+var r = (function (e) {
+    return (e.CONNECT_VOICE = 'connect_voice'), e;
+})({});

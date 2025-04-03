@@ -1,31 +1,37 @@
-t.d(a, {
-    Z: function () {
-        return d;
+n.d(t, { Z: () => _ });
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
+    a = n(881052),
+    s = n(128069),
+    l = n(63063),
+    c = n(563132),
+    u = n(409813),
+    d = n(981631),
+    f = n(388032);
+function _(e) {
+    let { planError: t, purchaseErrorBlockRef: n, className: _ } = e,
+        { currencies: p, paymentError: h, purchaseError: m, purchasePreviewError: g, setSelectedPlanNotification: E } = (0, c.JL)(),
+        b = null;
+    null != g ? (b = g) : null != h && null == (0, u.ly)(h) ? (b = h) : null != m ? (b = m) : null != t && (b = t);
+    let y = p.length > 1,
+        v = null != b ? b.message : '';
+    if (null != b && b instanceof a.HF && (b.code === s.SM.CARD_DECLINED && y && (v += ' '.concat(f.NW.string(f.t.iWvwQU))), b.code === s.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (v = f.NW.string(f.t.ypuSd3)), b.code === d.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (v = f.NW.string(f.t.mXMmWF)), b.code === s.SM.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (v = f.NW.string(f.t.mC1Fj4)), b.code === s.SM.INVALID_BILLING_ADDRESS)) {
+        let e = f.NW.format(f.t.BPDKoK, { helpdeskArticle: l.Z.getArticleURL(d.BhN.BILLING).concat(d.Bjg.INVALID_BILLING_ADDRESS) });
+        v = (0, r.jsxs)(r.Fragment, {
+            children: [f.NW.string(f.t['yVIm/P']), ' ', e]
+        });
     }
-});
-var s = t(735250);
-t(470079);
-var n = t(481060),
-    l = t(881052),
-    r = t(128069),
-    o = t(598),
-    i = t(409813),
-    c = t(981631),
-    u = t(689938);
-function d(e) {
-    let { planError: a, purchaseErrorBlockRef: t, className: d } = e,
-        { currencies: E, paymentError: A, purchaseError: N, purchasePreviewError: m } = (0, o.usePaymentContext)(),
-        _ = null;
-    null != m ? (_ = m) : null != A && null == (0, i.ly)(A) ? (_ = A) : null != N ? (_ = N) : null != a && (_ = a);
-    let p = E.length > 1,
-        h = null != _ ? _.message : '';
-    return (null != _ && _ instanceof l.HF && (_.code === r.SM.CARD_DECLINED && p && (h += ' '.concat(u.Z.Messages.BILLING_ERROR_TRY_ANOTHER)), _.code === r.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (h = u.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), _.code === c.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (h = u.Z.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID)), null == _)
+    return (i.useEffect(() => {
+        null != b && E(null);
+    }, [b, E]),
+    null == b)
         ? null
-        : (0, s.jsx)('div', {
-              className: d,
-              children: (0, s.jsx)(n.FormErrorBlock, {
-                  ref: t,
-                  children: h
+        : (0, r.jsx)('div', {
+              className: _,
+              children: (0, r.jsx)(o.kzN, {
+                  ref: n,
+                  children: v
               })
           });
 }

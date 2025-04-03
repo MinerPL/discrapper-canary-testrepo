@@ -1,5 +1,4 @@
-var r, i, a, s;
-function o(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -12,7 +11,7 @@ function o(e, t, n) {
         e
     );
 }
-function l() {
+function i() {
     return {
         num_failed: 0,
         num_delta_installed: 0,
@@ -25,50 +24,14 @@ function l() {
         background_install_ms_total: 0
     };
 }
-function u(e) {
+function o(e) {
     return 'host' === e;
 }
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-}),
-    ((a = r || (r = {})).CHECKING_FOR_UPDATES = 'checking-for-updates'),
-    (a.INSTALLED_MODULE = 'installed-module'),
-    (a.UPDATE_CHECK_FINISHED = 'update-check-finished'),
-    (a.DOWNLOADING_MODULE = 'downloading-module'),
-    (a.DOWNLOADING_MODULE_PROGRESS = 'downloading-module-progress'),
-    (a.DOWNLOADING_MODULES_FINISHED = 'downloading-modules-finished'),
-    (a.UPDATE_MANUALLY = 'update-manually'),
-    (a.DOWNLOADED_MODULE = 'downloaded-module'),
-    (a.INSTALLING_MODULES_FINISHED = 'installing-modules-finished'),
-    (a.INSTALLING_MODULE = 'installing-module'),
-    (a.INSTALLING_MODULE_PROGRESS = 'installing-module-progress'),
-    (a.NO_PENDING_UPDATES = 'no-pending-updates'),
-    ((s = i || (i = {})).CLOUD_SYNC = 'discord_cloudsync'),
-    (s.DESKTOP_CORE = 'discord_desktop_core'),
-    (s.DISPATCH = 'discord_dispatch'),
-    (s.ERLPACK = 'discord_erlpack'),
-    (s.GAME_UTILS = 'discord_game_utils'),
-    (s.HOOK = 'discord_hook'),
-    (s.KRISP = 'discord_krisp'),
-    (s.MEDIA = 'discord_media'),
-    (s.MODULES = 'discord_modules'),
-    (s.OVERLAY2 = 'discord_overlay2'),
-    (s.RPC = 'discord_rpc'),
-    (s.SPELLCHECK = 'discord_spellcheck'),
-    (s.UPDATER_BOOTSTRAP = 'discord_updater_bootstrap'),
-    (s.UTILS = 'discord_utils'),
-    (s.VIGILANTE = 'discord_vigilante'),
-    (s.VOICE = 'discord_voice'),
-    (s.ZSTD = 'discord_zstd');
-class c {
+n.d(t, { Z: () => a });
+class a {
     handleDownloadingModule(e) {
-        if (!u(e.name)) {
-            if (null != this._downloadingModules[e.name]) {
-                console.warn('Duplicate downloading-module event for module ', e.name);
-                return;
-            }
+        if (!o(e.name)) {
+            if (null != this._downloadingModules[e.name]) return void console.warn('Duplicate downloading-module event for module ', e.name);
             this._downloadingModules[e.name] = {
                 startTime: BigInt(e.now),
                 foreground: e.foreground
@@ -89,12 +52,9 @@ class c {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (u(e.name)) return;
+        if (o(e.name)) return;
         let t = this._downloadingModules[e.name];
-        if (null == t) {
-            console.warn('Downloaded complete without corresponding downloading event for module ', e.name);
-            return;
-        }
+        if (null == t) return void console.warn('Downloaded complete without corresponding downloading event for module ', e.name);
         let n = t.foreground ? 'foreground' : 'background',
             r = ''.concat(n, '_download_ms_').concat(e.name),
             i = ''.concat(n, '_bytes_').concat(e.name),
@@ -103,11 +63,8 @@ class c {
         t.foreground ? ((this._report.foreground_download_ms_total += a), (this._report.foreground_bytes_total += s)) : ((this._report.background_download_ms_total += a), (this._report.background_bytes_total += s)), this.incrementReportField(r, a), this.incrementReportField(i, s), delete this._downloadingModules[e.name];
     }
     handleInstallingModule(e) {
-        if (!u(e.name)) {
-            if (null != this._installingModules[e.name]) {
-                console.warn('Duplicate installing-module event for module ', e.name);
-                return;
-            }
+        if (!o(e.name)) {
+            if (null != this._installingModules[e.name]) return void console.warn('Duplicate installing-module event for module ', e.name);
             this._installingModules[e.name] = {
                 startTime: BigInt(e.now),
                 foreground: e.foreground,
@@ -117,7 +74,7 @@ class c {
         }
     }
     handleInstalledModule(e) {
-        if (u(e.name)) return;
+        if (o(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? 'foreground' : 'background',
@@ -146,12 +103,12 @@ class c {
         return this._report;
     }
     reset() {
-        this._report = l();
+        this._report = i();
     }
     submissionReady() {
-        return this._report.num_full_installed + this._report.num_failed + this._report.num_delta_installed + this._report.foreground_bytes_total + this._report.background_bytes_total !== 0 && !(Object.keys(this._installingModules).length > 0) && !(Object.keys(this._downloadingModules).length > 0) && !0;
+        return this._report.num_full_installed + this._report.num_failed + this._report.num_delta_installed + this._report.foreground_bytes_total + this._report.background_bytes_total !== 0 && !(Object.keys(this._installingModules).length > 0) && !(Object.keys(this._downloadingModules).length > 0);
     }
     constructor() {
-        o(this, '_installingModules', {}), o(this, '_downloadingModules', {}), o(this, '_report', void 0), (this._report = l());
+        r(this, '_installingModules', {}), r(this, '_downloadingModules', {}), r(this, '_report', void 0), (this._report = i());
     }
 }

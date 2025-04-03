@@ -1,54 +1,50 @@
-r.d(t, {
-    t: function () {
-        return E;
-    }
-});
-var n = r(151122),
-    a = r(370336),
-    o = r(688838),
-    i = r(163162);
-let _ = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 'BroadcastChannel', 'ChannelMergerNode', 'CryptoOperation', 'EventSource', 'FileReader', 'HTMLUnknownElement', 'IDBDatabase', 'IDBRequest', 'IDBTransaction', 'KeyOperation', 'MediaController', 'MessagePort', 'ModalWindow', 'Notification', 'SVGElementInstance', 'Screen', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebSocket', 'WebSocketWorker', 'Worker', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'],
-    E = (0, n._I)((e = {}) => {
-        let t = {
+a.d(e, { t: () => c });
+var r = a(151122),
+    n = a(370336),
+    _ = a(688838),
+    o = a(163162);
+let i = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 'BroadcastChannel', 'ChannelMergerNode', 'CryptoOperation', 'EventSource', 'FileReader', 'HTMLUnknownElement', 'IDBDatabase', 'IDBRequest', 'IDBTransaction', 'KeyOperation', 'MediaController', 'MessagePort', 'ModalWindow', 'Notification', 'SVGElementInstance', 'Screen', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebSocket', 'WebSocketWorker', 'Worker', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'],
+    c = (0, r._I)((t = {}) => {
+        let e = {
             XMLHttpRequest: !0,
             eventTarget: !0,
             requestAnimationFrame: !0,
             setInterval: !0,
             setTimeout: !0,
-            ...e
+            ...t
         };
         return {
             name: 'BrowserApiErrors',
             setupOnce() {
-                t.setTimeout && (0, a.hl)(i.m9, 'setTimeout', s), t.setInterval && (0, a.hl)(i.m9, 'setInterval', s), t.requestAnimationFrame && (0, a.hl)(i.m9, 'requestAnimationFrame', c), t.XMLHttpRequest && 'XMLHttpRequest' in i.m9 && (0, a.hl)(XMLHttpRequest.prototype, 'send', I);
-                let e = t.eventTarget;
-                e && (Array.isArray(e) ? e : _).forEach(u);
+                e.setTimeout && (0, n.hl)(o.m9, 'setTimeout', s), e.setInterval && (0, n.hl)(o.m9, 'setInterval', s), e.requestAnimationFrame && (0, n.hl)(o.m9, 'requestAnimationFrame', E), e.XMLHttpRequest && 'XMLHttpRequest' in o.m9 && (0, n.hl)(XMLHttpRequest.prototype, 'send', l);
+                let t = e.eventTarget;
+                t && (Array.isArray(t) ? t : i).forEach(u);
             }
         };
     });
-function s(e) {
-    return function (...t) {
-        let r = t[0];
+function s(t) {
+    return function (...e) {
+        let a = e[0];
         return (
-            (t[0] = (0, i.re)(r, {
+            (e[0] = (0, o.re)(a, {
                 mechanism: {
-                    data: { function: (0, o.$P)(e) },
+                    data: { function: (0, _.$P)(t) },
                     handled: !1,
                     type: 'instrument'
                 }
             })),
-            e.apply(this, t)
+            t.apply(this, e)
         );
     };
 }
-function c(e) {
-    return function (t) {
-        return e.apply(this, [
-            (0, i.re)(t, {
+function E(t) {
+    return function (e) {
+        return t.apply(this, [
+            (0, o.re)(e, {
                 mechanism: {
                     data: {
                         function: 'requestAnimationFrame',
-                        handler: (0, o.$P)(e)
+                        handler: (0, _.$P)(t)
                     },
                     handled: !1,
                     type: 'instrument'
@@ -57,76 +53,78 @@ function c(e) {
         ]);
     };
 }
-function I(e) {
-    return function (...t) {
-        let r = this;
+function l(t) {
+    return function (...e) {
+        let a = this;
         return (
-            ['onload', 'onerror', 'onprogress', 'onreadystatechange'].forEach((e) => {
-                e in r &&
-                    'function' == typeof r[e] &&
-                    (0, a.hl)(r, e, function (t) {
-                        let r = {
+            ['onload', 'onerror', 'onprogress', 'onreadystatechange'].forEach((t) => {
+                t in a &&
+                    'function' == typeof a[t] &&
+                    (0, n.hl)(a, t, function (e) {
+                        let a = {
                                 mechanism: {
                                     data: {
-                                        function: e,
-                                        handler: (0, o.$P)(t)
+                                        function: t,
+                                        handler: (0, _.$P)(e)
                                     },
                                     handled: !1,
                                     type: 'instrument'
                                 }
                             },
-                            n = (0, a.HK)(t);
-                        return n && (r.mechanism.data.handler = (0, o.$P)(n)), (0, i.re)(t, r);
+                            r = (0, n.HK)(e);
+                        return r && (a.mechanism.data.handler = (0, _.$P)(r)), (0, o.re)(e, a);
                     });
             }),
-            e.apply(this, t)
+            t.apply(this, e)
         );
     };
 }
-function u(e) {
-    let t = i.m9,
-        r = t[e] && t[e].prototype;
-    if (!!r && !!r.hasOwnProperty && !!r.hasOwnProperty('addEventListener'))
-        (0, a.hl)(r, 'addEventListener', function (t) {
-            return function (r, n, a) {
+function u(t) {
+    let e = o.m9,
+        a = e[t] && e[t].prototype;
+    a &&
+        a.hasOwnProperty &&
+        a.hasOwnProperty('addEventListener') &&
+        ((0, n.hl)(a, 'addEventListener', function (e) {
+            return function (a, r, n) {
                 try {
-                    'function' == typeof n.handleEvent &&
-                        (n.handleEvent = (0, i.re)(n.handleEvent, {
+                    'function' == typeof r.handleEvent &&
+                        (r.handleEvent = (0, o.re)(r.handleEvent, {
                             mechanism: {
                                 data: {
                                     function: 'handleEvent',
-                                    handler: (0, o.$P)(n),
-                                    target: e
+                                    handler: (0, _.$P)(r),
+                                    target: t
                                 },
                                 handled: !1,
                                 type: 'instrument'
                             }
                         }));
-                } catch (e) {}
-                return t.apply(this, [
-                    r,
-                    (0, i.re)(n, {
+                } catch (t) {}
+                return e.apply(this, [
+                    a,
+                    (0, o.re)(r, {
                         mechanism: {
                             data: {
                                 function: 'addEventListener',
-                                handler: (0, o.$P)(n),
-                                target: e
+                                handler: (0, _.$P)(r),
+                                target: t
                             },
                             handled: !1,
                             type: 'instrument'
                         }
                     }),
-                    a
+                    n
                 ]);
             };
         }),
-            (0, a.hl)(r, 'removeEventListener', function (e) {
-                return function (t, r, n) {
-                    try {
-                        let a = r && r.__sentry_wrapped__;
-                        a && e.call(this, t, a, n);
-                    } catch (e) {}
-                    return e.call(this, t, r, n);
-                };
-            });
+        (0, n.hl)(a, 'removeEventListener', function (t) {
+            return function (e, a, r) {
+                try {
+                    let n = a && a.__sentry_wrapped__;
+                    n && t.call(this, e, n, r);
+                } catch (t) {}
+                return t.call(this, e, a, r);
+            };
+        }));
 }

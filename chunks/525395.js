@@ -1,45 +1,44 @@
-let i, a, s;
-n(47120);
-var r,
-    l,
+let r, i, l;
+n.d(t, { Z: () => h }), n(47120);
+var a,
     o,
-    c,
-    d = n(442837),
+    s,
+    c = n(442837),
     u = n(570140);
-function _() {
-    (a = {}), (i = {}), (s = new Set());
+function d() {
+    (i = {}), (r = {}), (l = new Set());
 }
-_();
-class E extends (r = d.ZP.Store) {
+d();
+class p extends (a = c.ZP.Store) {
     getStatisticsForApplication(e) {
-        return i[e];
+        return r[e];
     }
     shouldFetchStatisticsForApplication(e) {
-        let t = a[e];
-        return !s.has(e) && (null == t || Date.now() - t > 3600000);
+        let t = i[e];
+        return !l.has(e) && (null == t || Date.now() - t > 3600000);
     }
 }
-(c = 'ApplicationStatisticsStore'),
-    (o = 'displayName') in (l = E)
-        ? Object.defineProperty(l, o, {
-              value: c,
+(s = 'ApplicationStatisticsStore'),
+    (o = 'displayName') in p
+        ? Object.defineProperty(p, o, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[o] = c),
-    (t.Z = new E(u.Z, {
-        APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function (e) {
-            let { applicationId: t } = e;
-            s.add(t);
-        },
-        APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL: function (e) {
-            let { applicationId: t } = e;
-            s.delete(t);
-        },
-        APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS: function (e) {
-            let { statistics: t, applicationId: n } = e;
-            (a[n] = Date.now()), s.delete(n), (i[n] = t);
-        },
-        LOGOUT: _
-    }));
+        : (p[o] = s);
+let h = new p(u.Z, {
+    APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function (e) {
+        let { applicationId: t } = e;
+        l.add(t);
+    },
+    APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL: function (e) {
+        let { applicationId: t } = e;
+        l.delete(t);
+    },
+    APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS: function (e) {
+        let { statistics: t, applicationId: n } = e;
+        (i[n] = Date.now()), l.delete(n), (r[n] = t);
+    },
+    LOGOUT: d
+});

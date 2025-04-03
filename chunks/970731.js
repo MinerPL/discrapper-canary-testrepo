@@ -1,99 +1,172 @@
 n.d(t, {
-    DF: function () {
-        return a;
-    },
-    ZP: function () {
-        return f;
-    },
-    _F: function () {
-        return s;
-    }
+    BD: () => m,
+    DF: () => p,
+    ZP: () => y,
+    _F: () => h
 });
-var r,
-    i,
-    a,
-    s,
-    o = n(735250),
-    l = n(470079),
-    u = n(120356),
-    c = n.n(u),
-    d = n(481060),
-    _ = n(921944),
-    E = n(928874);
-function f(e) {
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(493773),
+    l = n(921944),
+    c = n(519254);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var p = (function (e) {
+        return (e.TOP_CENTER = 'caretTopCenter'), (e.TOP_RIGHT = 'caretTopRight'), (e.TOP_LEFT = 'caretTopLeft'), (e.BOTTOM_CENTER = 'caretBottomCenter'), (e.BOTTOM_LEFT = 'caretBottomLeft'), (e.BOTTOM_RIGHT = 'caretBottomRight'), (e.LEFT_CENTER = 'caretLeftCenter'), (e.LEFT_TOP = 'caretLeftTop'), (e.RIGHT_CENTER = 'caretRightCenter'), (e.RIGHT_TOP = 'caretRightTop'), e;
+    })({}),
+    h = (function (e) {
+        return (e[(e.ADJACENT = 0)] = 'ADJACENT'), (e[(e.STACKED = 1)] = 'STACKED'), e;
+    })({}),
+    m = (function (e) {
+        return (e.BRAND = 'brand'), (e.PRIMARY = 'primary'), e;
+    })({});
+let g = Object.freeze({
+        brand: c.colorBrand,
+        primary: c.colorPrimary
+    }),
+    E = Object.freeze({
+        brand: 'always-white',
+        primary: 'header-primary'
+    }),
+    b = Object.freeze({
+        brand: 'always-white',
+        primary: 'text-normal'
+    });
+function y(e) {
     let {
-        className: t,
-        header: n,
-        headerClassName: r,
-        content: i,
-        contentClassName: a,
-        buttonCTA: s,
-        secondaryButtonCTA: u,
-        onClick: f,
-        onSecondaryClick: h,
-        buttonProps: p = {
-            color: d.Button.Colors.BRAND,
-            look: d.Button.Looks.FILLED
+        color: t = 'brand',
+        className: n,
+        header: i,
+        headerClassName: u,
+        content: f,
+        contentClassName: p,
+        buttonCTA: h,
+        secondaryButtonCTA: m,
+        onClick: y,
+        onSecondaryClick: v,
+        buttonProps: O = {
+            color: a.zxk.Colors.BRAND,
+            look: a.zxk.Looks.FILLED
         },
-        secondaryButtonProps: m = { color: d.Button.Colors.BRAND_INVERTED },
-        onComponentMount: I,
+        secondaryButtonProps: I = { color: a.zxk.Colors.BRAND_INVERTED },
+        onComponentMount: S,
         asset: T,
-        markAsDismissed: g,
-        caretPosition: S = 'caretTopCenter',
-        buttonLayout: A = 0
+        markAsDismissed: N,
+        caretPosition: A = 'caretTopCenter',
+        buttonLayout: C = 0
     } = e;
-    l.useEffect(() => {
-        null == I || I();
-    }, []);
-    let N = null != u;
-    return (0, o.jsxs)('div', {
-        className: c()(t, E.upsellTooltipWrapper, E[S]),
+    (0, s.ZP)(() => {
+        null == S || S();
+    });
+    let R = null != m,
+        P = (e) => {
+            y(e), null == N || N(l.L.PRIMARY);
+        },
+        w = () => {
+            null == v || v(), null == N || N(l.L.SECONDARY);
+        };
+    return (0, r.jsxs)('div', {
+        className: o()(n, g[t], c.upsellTooltipWrapper, c[A]),
         children: [
             T,
-            null == n
+            null == i
                 ? null
-                : (0, o.jsx)(d.Heading, {
-                      className: c()(r, E.upsellTooltipHeader),
+                : (0, r.jsx)(a.X6q, {
+                      color: E[t],
+                      className: o()(u, c.upsellTooltipHeader),
                       variant: 'heading-md/semibold',
-                      children: n
+                      children: i
                   }),
-            (0, o.jsx)(d.Text, {
-                color: 'always-white',
-                className: c()(a, E.content),
+            (0, r.jsx)(a.Text, {
+                color: b[t],
+                className: o()(p, c.content),
                 variant: 'text-sm/normal',
-                children: i
+                children: f
             }),
-            null != s || N
-                ? (0, o.jsxs)('div', {
-                      className: c()(E.upsellButtonsContainer, {
-                          [E.upsellButtonsAdjacent]: 0 === A,
-                          [E.upsellButtonsStacked]: 1 === A
+            null != h || R
+                ? (0, r.jsxs)('div', {
+                      className: o()(c.upsellButtonsContainer, {
+                          [c.upsellButtonsAdjacent]: 0 === C,
+                          [c.upsellButtonsStacked]: 1 === C
                       }),
                       children: [
-                          N
-                              ? (0, o.jsx)(d.Button, {
-                                    ...m,
-                                    fullWidth: 1 === A,
-                                    onClick: () => {
-                                        null == h || h(), null == g || g(_.L.SECONDARY);
-                                    },
-                                    children: u
-                                })
+                          R
+                              ? (0, r.jsx)(
+                                    a.zxk,
+                                    _(d({}, I), {
+                                        fullWidth: 1 === C,
+                                        onClick: w,
+                                        children: m
+                                    })
+                                )
                               : null,
-                          null == s
+                          null == h
                               ? null
-                              : (0, o.jsx)(d.Button, {
-                                    ...p,
-                                    fullWidth: !N || 1 === A,
-                                    onClick: (e) => {
-                                        f(e), null == g || g(_.L.PRIMARY);
-                                    },
-                                    children: s
-                                })
+                              : (0, r.jsx)(
+                                    a.zxk,
+                                    _(d({}, O), {
+                                        fullWidth: !R || 1 === C,
+                                        onClick: P,
+                                        children: h
+                                    })
+                                )
                       ]
                   })
                 : null
         ]
     });
 }
-((r = a || (a = {})).TOP_CENTER = 'caretTopCenter'), (r.TOP_RIGHT = 'caretTopRight'), (r.TOP_LEFT = 'caretTopLeft'), (r.BOTTOM_CENTER = 'caretBottomCenter'), (r.BOTTOM_LEFT = 'caretBottomLeft'), (r.LEFT_CENTER = 'caretLeftCenter'), (r.LEFT_TOP = 'caretLeftTop'), (r.RIGHT_CENTER = 'caretRightCenter'), (r.RIGHT_TOP = 'caretRightTop'), ((i = s || (s = {}))[(i.ADJACENT = 0)] = 'ADJACENT'), (i[(i.STACKED = 1)] = 'STACKED'), (f.CaretPosition = a), (f.ButtonLayout = s);
+(y.CaretPosition = p), (y.ButtonLayout = h);

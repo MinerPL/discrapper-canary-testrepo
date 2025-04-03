@@ -1,63 +1,98 @@
-var l,
-    s,
-    i,
-    a,
-    r,
-    d,
-    u = t(442837),
-    c = t(570140),
-    o = t(314897),
-    h = t(900849);
-((l = r || (r = {})).UNSET = 'unset'), (l.FETCHING = 'fetching'), (l.FAILED = 'failed'), (l.SUCCEEDED = 'succeeded');
-let _ = {};
-class m extends (d = u.ZP.Store) {
+n.d(t, { Z: () => g });
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(314897),
+    s = n(900849);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let f = {};
+function _(e) {
+    let { guildId: t } = e;
+    f[t] = d(c({}, f[t]), { fetchState: 'fetching' });
+}
+function p(e) {
+    let { guildId: t, guild: n } = e,
+        r = (0, s.PP)(n);
+    f[t] = d(c({}, f[t]), {
+        guild: r,
+        fetchState: 'succeeded'
+    });
+}
+function h(e) {
+    let { guildId: t } = e;
+    f[t] = d(c({}, f[t]), { fetchState: 'failed' });
+}
+class m extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(o.default);
+        this.waitFor(a.default);
     }
     isFetchingGuild(e) {
-        let n = _[e];
-        return null != n && 'fetching' === n.fetchState;
+        let t = f[e];
+        return null != t && 'fetching' === t.fetchState;
     }
     getGuild(e) {
-        let n = _[e];
-        return null != n ? n.guild : null;
+        let t = f[e];
+        return null != t ? t.guild : null;
     }
     hasFetchFailed(e) {
-        let n = _[e];
-        return null != n && 'failed' === n.fetchState;
+        let t = f[e];
+        return null != t && 'failed' === t.fetchState;
     }
 }
-(a = 'GuildPopoutStore'),
-    (i = 'displayName') in (s = m)
-        ? Object.defineProperty(s, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (s[i] = a),
-    (n.Z = new m(c.Z, {
-        GUILD_POPOUT_FETCH_START: function (e) {
-            let { guildId: n } = e;
-            _[n] = {
-                ..._[n],
-                fetchState: 'fetching'
-            };
-        },
-        GUILD_POPOUT_FETCH_SUCCESS: function (e) {
-            let { guildId: n, guild: t } = e,
-                l = (0, h.PP)(t);
-            _[n] = {
-                ..._[n],
-                guild: l,
-                fetchState: 'succeeded'
-            };
-        },
-        GUILD_POPOUT_FETCH_FAILURE: function (e) {
-            let { guildId: n } = e;
-            _[n] = {
-                ..._[n],
-                fetchState: 'failed'
-            };
-        }
-    }));
+l(m, 'displayName', 'GuildPopoutStore');
+let g = new m(o.Z, {
+    GUILD_POPOUT_FETCH_START: _,
+    GUILD_POPOUT_FETCH_SUCCESS: p,
+    GUILD_POPOUT_FETCH_FAILURE: h
+});

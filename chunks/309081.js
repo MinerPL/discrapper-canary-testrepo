@@ -1,35 +1,79 @@
-n.d(a, {
-    I: function () {
-        return v;
-    }
+n.d(t, {
+    I: () => I,
+    Z: () => W
 }),
-    n(47120);
-var t = n(735250),
-    r = n(470079),
-    l = n(120356),
-    s = n.n(l),
-    o = n(263568),
-    i = n(442837),
+    n(47120),
+    n(266796);
+var r = n(200651),
+    a = n(192379),
+    o = n(120356),
+    l = n.n(o),
+    i = n(263568),
+    s = n(442837),
     c = n(481060),
     u = n(166459),
     d = n(596454),
-    _ = n(273031),
+    f = n(273031),
     m = n(313201),
-    E = n(907040),
-    A = n(906411),
-    f = n(592125),
-    C = n(703558),
-    L = n(117530),
-    h = n(358085),
-    R = n(79390),
-    I = n(885001),
-    x = n(35463),
-    p = n(489887),
-    O = n(185923),
-    g = n(957825),
-    T = n(689938),
-    N = n(754118);
-let P = {
+    p = n(907040),
+    b = n(906411),
+    g = n(592125),
+    h = n(703558),
+    O = n(117530),
+    j = n(358085),
+    y = n(79390),
+    x = n(885001),
+    w = n(35463),
+    v = n(489887),
+    _ = n(185923),
+    P = n(957825),
+    C = n(388032),
+    N = n(687852);
+function A(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        a = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                a = {},
+                o = Object.keys(e);
+            for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+            return a;
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+    }
+    return a;
+}
+let k = {
     offset: {
         top: -4,
         bottom: -4,
@@ -37,43 +81,43 @@ let P = {
         right: -8
     }
 };
-function v(e) {
-    let { hasUpload: a, mediaUrl: n, mediaFilename: r, imageClassName: l, emoji: s, emojiClassName: o, fallback: i } = e;
-    return a
-        ? (0, t.jsx)('img', {
+function I(e) {
+    let { hasUpload: t, mediaUrl: n, mediaFilename: a, imageClassName: o, emoji: l, emojiClassName: i, fallback: s } = e;
+    return t
+        ? (0, r.jsx)('img', {
               src: n,
-              alt: r,
-              className: l
+              alt: a,
+              className: o
           })
-        : null != s
-          ? (0, t.jsx)(d.Z, {
-                className: o,
-                emojiId: s.id,
-                emojiName: s.type === A.B.UNICODE ? s.optionallyDiverseSequence : s.name,
-                animated: s.animated
+        : null != l
+          ? (0, r.jsx)(d.Z, {
+                className: i,
+                emojiId: l.id,
+                emojiName: l.type === b.B.UNICODE ? l.optionallyDiverseSequence : l.name,
+                animated: l.animated
             })
-          : (0, t.jsx)(t.Fragment, { children: i });
+          : s;
 }
-function j(e) {
-    let { onSelect: a, onEditMedia: n, onDeleteMedia: r, closePopout: l } = e;
-    return (0, t.jsx)('div', {
+function S(e) {
+    let { onSelect: t, onEditMedia: n, onDeleteMedia: a, closePopout: o } = e;
+    return (0, r.jsx)('div', {
         className: N.menuContainer,
-        children: (0, t.jsx)(c.Menu, {
+        children: (0, r.jsx)(c.v2r, {
             navId: 'poll-media-edit-menu',
-            onClose: l,
-            'aria-label': T.Z.Messages.CREATE_POLL_UPDATE_EMOJI_MENU_ARIA,
-            onSelect: a,
-            children: (0, t.jsxs)(c.MenuGroup, {
+            onClose: o,
+            'aria-label': C.NW.string(C.t['cV+h7O']),
+            onSelect: t,
+            children: (0, r.jsxs)(c.kSQ, {
                 children: [
-                    (0, t.jsx)(c.MenuItem, {
+                    (0, r.jsx)(c.sNh, {
                         id: 'poll-media-replace',
-                        label: T.Z.Messages.CREATE_POLL_REPLACE_EMOJI,
+                        label: C.NW.string(C.t.CZeRhY),
                         action: n
                     }),
-                    (0, t.jsx)(c.MenuItem, {
+                    (0, r.jsx)(c.sNh, {
                         id: 'poll-media-delete',
-                        label: T.Z.Messages.CREATE_POLL_REMOVE_EMOJI,
-                        action: r,
+                        label: C.NW.string(C.t.IhMxgo),
+                        action: a,
                         color: 'danger'
                     })
                 ]
@@ -82,313 +126,338 @@ function j(e) {
     });
 }
 function D(e) {
-    let { channelId: a, localCreationAnswerId: n, buttonImage: l, layout: u, onEmojiSelect: d, onEmojiRemove: _, answerIndex: m, shouldShowEmojiPicker: A, toggleEmojiPicker: C } = e,
-        L = (0, i.e7)([f.Z], () => f.Z.getChannel(a)),
+    let { channelId: t, localCreationAnswerId: n, buttonImage: o, layout: u, onEmojiSelect: d, onEmojiRemove: f, answerIndex: m, shouldShowEmojiPicker: b, toggleEmojiPicker: h } = e,
+        O = (0, s.e7)([g.Z], () => g.Z.getChannel(t)),
         {
-            emoji: h,
-            isLoadingMedia: I,
-            hasUpload: p,
-            mediaUrl: P,
+            emoji: j,
+            isLoadingMedia: x,
+            hasUpload: v,
+            mediaUrl: k,
             mediaFilename: D
-        } = (0, x.Z)({
-            channelId: a,
+        } = (0, w.Z)({
+            channelId: t,
             localCreationAnswerId: n,
-            image: l
+            image: o
         }),
-        M = u === o.C.DEFAULT,
-        w = p || null != h,
-        S = r.useCallback(() => {
-            _(m);
-        }, [_, m]),
-        b = r.useMemo(
+        R = u === i.C.DEFAULT,
+        W = v || null != j,
+        T = a.useCallback(() => {
+            f(m);
+        }, [f, m]),
+        L = a.useMemo(
             () =>
-                p
-                    ? T.Z.Messages.CREATE_POLL_EDIT_IMAGE_ARIA.format({
-                          imageName: (0, R.fw)(D),
+                v
+                    ? C.NW.formatToPlainString(C.t.vcC7Qk, {
+                          imageName: (0, y.fw)(D),
                           answerNumber: m + 1
                       })
-                    : null != h
-                      ? T.Z.Messages.CREATE_POLL_EDIT_EMOJI_ARIA.format({
-                            emojiName: h.name,
+                    : null != j
+                      ? C.NW.formatToPlainString(C.t.ncOAhY, {
+                            emojiName: j.name,
                             answerNumber: m + 1
                         })
-                      : T.Z.Messages.CREATE_POLL_ADD_EMOJI_ARIA.format({ answerNumber: m + 1 }),
-            [p, h, m, D]
+                      : C.NW.formatToPlainString(C.t.emdpNj, { answerNumber: m + 1 }),
+            [v, j, m, D]
         ),
-        k = r.useCallback(
+        B = a.useCallback(
             (e) => {
-                let { closePopout: a } = e;
-                return (0, t.jsx)('div', {
+                let { closePopout: t } = e;
+                return (0, r.jsx)('div', {
                     className: N.emojiPicker,
-                    children: (0, t.jsx)(E.Z, {
-                        channel: L,
-                        pickerIntention: O.Hz.POLLS,
-                        closePopout: a,
-                        onNavigateAway: a,
+                    children: (0, r.jsx)(p.Z, {
+                        channel: O,
+                        pickerIntention: _.Hz.POLLS,
+                        closePopout: t,
+                        onNavigateAway: t,
                         onSelectEmoji: (e, n) => {
-                            null != e && d(e, m), n && a();
+                            null != e && d(e, m), n && t();
                         }
                     })
                 });
             },
-            [L, d, m]
+            [O, d, m]
         ),
-        Z = r.useCallback(
+        Z = a.useCallback(
             (e) => {
-                let { closePopout: a } = e;
-                return (0, t.jsx)(j, {
-                    onSelect: a,
-                    onEditMedia: C,
-                    onDeleteMedia: S,
-                    closePopout: a
+                let { closePopout: t } = e;
+                return (0, r.jsx)(S, {
+                    onSelect: t,
+                    onEditMedia: h,
+                    onDeleteMedia: T,
+                    closePopout: t
                 });
             },
-            [S, C]
+            [T, h]
         ),
-        y = I
-            ? (0, t.jsx)(c.Spinner, { className: M ? N.spinnerWrapperDefault : N.spinnerWrapperImageOnly })
-            : (0, t.jsx)(v, {
-                  hasUpload: p,
-                  mediaUrl: P,
+        U = x
+            ? (0, r.jsx)(c.$jN, { className: R ? N.spinnerWrapperDefault : N.spinnerWrapperImageOnly })
+            : (0, r.jsx)(I, {
+                  hasUpload: v,
+                  mediaUrl: k,
                   mediaFilename: D,
-                  imageClassName: s()(N.media, M ? N.gifDefault : N.gifJumbo),
-                  emoji: h,
-                  emojiClassName: s()(N.media, M ? N.emojiDefault : N.emojiJumbo),
-                  fallback: (0, t.jsx)(c.ReactionIcon, {
+                  imageClassName: l()(N.media, R ? N.gifDefault : N.gifJumbo),
+                  emoji: j,
+                  emojiClassName: l()(N.media, R ? N.emojiDefault : N.emojiJumbo),
+                  fallback: (0, r.jsx)(c.EO4, {
                       size: 'md',
                       color: 'currentColor',
-                      className: M ? N.expressionPickerIconDefault : N.expressionPickerIconImageOnly
+                      className: R ? N.expressionPickerIconDefault : N.expressionPickerIconImageOnly
                   })
               }),
-        B = s()(g.CT, u === o.C.IMAGE_ONLY_ANSWERS ? N.expressionPickerButtonImageOnly : N.expressionPickerButtonDefault, { [N.canEditMedia]: w });
-    return (0, t.jsx)(c.Popout, {
-        renderPopout: k,
-        shouldShow: A,
-        onRequestClose: C,
-        animation: c.Popout.Animation.NONE,
+        M = l()(P.CT, u === i.C.IMAGE_ONLY_ANSWERS ? N.expressionPickerButtonImageOnly : N.expressionPickerButtonDefault, { [N.canEditMedia]: W });
+    return (0, r.jsx)(c.yRy, {
+        renderPopout: B,
+        shouldShow: b,
+        onRequestClose: h,
+        animation: c.yRy.Animation.NONE,
         position: 'bottom',
         spacing: 2,
         children: (e) => {
-            let { 'aria-controls': a, 'aria-expanded': n, ...r } = e;
-            return (0, t.jsx)(c.Popout, {
-                animation: c.Popout.Animation.NONE,
-                position: 'bottom',
-                renderPopout: Z,
-                children: (e) => {
-                    let { onClick: r, 'aria-controls': l, 'aria-expanded': s, ...o } = e;
-                    return (0, t.jsxs)(c.Clickable, {
-                        ...o,
-                        className: B,
-                        onClick: w && !A ? r : C,
-                        'aria-label': b,
-                        'aria-controls': null != a ? a : l,
-                        'aria-expanded': n || s,
-                        children: [
-                            y,
-                            w &&
-                                (0, t.jsx)(c.PencilIcon, {
-                                    size: 'md',
-                                    color: 'currentColor',
-                                    className: N.editIcon,
-                                    'aria-hidden': !0
-                                })
-                        ]
-                    });
-                }
-            });
+            var { 'aria-controls': t, 'aria-expanded': n } = e;
+            return (
+                E(e, ['aria-controls', 'aria-expanded']),
+                (0, r.jsx)(c.yRy, {
+                    animation: c.yRy.Animation.NONE,
+                    position: 'bottom',
+                    renderPopout: Z,
+                    children: (e) => {
+                        var a,
+                            o,
+                            { onClick: l, 'aria-controls': i, 'aria-expanded': s } = e,
+                            u = E(e, ['onClick', 'aria-controls', 'aria-expanded']);
+                        return (0, r.jsxs)(
+                            c.P3F,
+                            ((a = A({}, u)),
+                            (o = o =
+                                {
+                                    className: M,
+                                    onClick: W && !b ? l : h,
+                                    'aria-label': L,
+                                    'aria-controls': null != t ? t : i,
+                                    'aria-expanded': n || s,
+                                    children: [
+                                        U,
+                                        W &&
+                                            (0, r.jsx)(c.vdY, {
+                                                size: 'md',
+                                                color: 'currentColor',
+                                                className: N.editIcon,
+                                                'aria-hidden': !0
+                                            })
+                                    ]
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(o)).forEach(function (e) {
+                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(o, e));
+                                  }),
+                            a)
+                        );
+                    }
+                })
+            );
         }
     });
 }
-function M(e) {
-    var a;
-    let { value: n, id: r } = e,
-        l = (() => {
+function R(e) {
+    var t;
+    let { value: n, id: a } = e,
+        o = (() => {
             var e;
-            let a = null !== (e = null == n ? void 0 : n.length) && void 0 !== e ? e : 0;
-            return p.WA - a;
+            let t = null != (e = null == n ? void 0 : n.length) ? e : 0;
+            return v.WA - t;
         })();
-    return (0, t.jsxs)(t.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, t.jsxs)('div', {
-                className: s()(N.characterCount),
+            (0, r.jsxs)('div', {
+                className: N.characterCount,
                 'aria-hidden': 'true',
-                children: [null !== (a = null == n ? void 0 : n.length) && void 0 !== a ? a : 0, ' / ', p.WA]
+                children: [null != (t = null == n ? void 0 : n.length) ? t : 0, ' / ', v.WA]
             }),
-            (0, t.jsxs)(c.HiddenVisually, {
-                id: r,
-                children: [T.Z.Messages.CHARACTER_COUNT_A11Y_LABEL.format({ remainingCharacters: l }), ' ', T.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: p.WA })]
+            (0, r.jsxs)(c.nn4, {
+                id: a,
+                children: [C.NW.format(C.t.fR1coa, { remainingCharacters: o }), ' ', C.NW.format(C.t['+DFxLS'], { maxLength: v.WA })]
             })
         ]
     });
 }
-a.Z = r.forwardRef(function (e, a) {
-    let { channelId: l, answer: d, index: E, layout: A, isLastAnswer: f, onAnswerTextChange: x, onEmojiSelect: O, onEmojiRemove: g, canRemoveAnswer: v, onRemoveAnswer: j, addAnswer: w, submitPoll: S, answerTextInputRefs: b, error: k, inputRef: Z, deleteButtonRef: y } = e,
-        B = (0, m.Dt)(),
+let W = a.forwardRef(function (e, t) {
+    let { channelId: o, answer: d, index: p, layout: b, isLastAnswer: g, onAnswerTextChange: w, onEmojiSelect: _, onEmojiRemove: P, canRemoveAnswer: E, onRemoveAnswer: I, addAnswer: S, submitPoll: W, answerTextInputRefs: T, error: L, inputRef: B, deleteButtonRef: Z } = e,
         U = (0, m.Dt)(),
-        W = null != k && k.length > 0,
-        H = (0, i.e7)([L.Z], () => L.Z.getUpload(l, d.localCreationAnswerId, C.d.Poll)),
-        [Y, F] = r.useState(!1),
-        G = () => {
+        M = (0, m.Dt)(),
+        z = null != L && L.length > 0,
+        H = (0, s.e7)([O.Z], () => O.Z.getUpload(o, d.localCreationAnswerId, h.d.Poll)),
+        [Y, K] = a.useState(!1),
+        F = () => {
             function e(e) {
-                u.Z.update(l, d.localCreationAnswerId, C.d.Poll, { description: e });
+                u.Z.update(o, d.localCreationAnswerId, h.d.Poll, { description: e });
             }
-            (0, c.openModalLazy)(async () => {
-                let { default: a } = await n.e('2538').then(n.bind(n, 92254));
+            (0, c.ZDy)(async () => {
+                let { default: t } = await n.e('2538').then(n.bind(n, 89619));
                 return (n) =>
-                    (0, t.jsx)(a, {
-                        channelId: l,
-                        answer: d,
-                        onSave: e,
-                        ...n
-                    });
+                    (0, r.jsx)(
+                        t,
+                        A(
+                            {
+                                channelId: o,
+                                answer: d,
+                                onSave: e
+                            },
+                            n
+                        )
+                    );
             });
         },
-        z = r.useCallback(() => {
-            F((e) => !e);
+        q = a.useCallback(() => {
+            K((e) => !e);
         }, []),
-        K = r.useCallback(
+        X = a.useCallback(
             (e) => {
-                let a = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
+                let t = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
                     n = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey);
                 switch (e.key.toLowerCase()) {
                     case 'enter':
-                        var t;
-                        f && (e.preventDefault(), ((0, R.cS)(d, A) || 'macos' !== (0, h.getOS)() ? a : n) ? (e.stopPropagation(), S()) : w()), null === (t = b.current[E + 1]) || void 0 === t || t.focus();
+                        var r;
+                        g && (e.preventDefault(), ((0, y.cS)(d, b) || 'macos' !== (0, j.getOS)() ? t : n) ? (e.stopPropagation(), W()) : S()), null == (r = T.current[p + 1]) || r.focus();
                         break;
                     case 'e':
-                        ('macos' === (0, h.getOS)() ? n : a) && (e.preventDefault(), e.stopPropagation(), z());
+                        ('macos' === (0, j.getOS)() ? n : t) && (e.preventDefault(), e.stopPropagation(), q());
                 }
             },
-            [w, d, b, E, f, A, S, z]
+            [S, d, T, p, g, b, W, q]
         ),
-        V = (0, t.jsx)(D, {
-            channelId: l,
+        J = (0, r.jsx)(D, {
+            channelId: o,
             buttonImage: d.image,
-            layout: A,
-            onEmojiSelect: O,
-            onEmojiRemove: g,
+            layout: b,
+            onEmojiSelect: _,
+            onEmojiRemove: P,
             localCreationAnswerId: d.localCreationAnswerId,
-            answerIndex: E,
+            answerIndex: p,
             shouldShowEmojiPicker: Y,
-            toggleEmojiPicker: z
+            toggleEmojiPicker: q
         }),
-        J = null != H && null != H.description && H.description.length > 0;
-    return (0, t.jsx)(t.Fragment, {
-        children:
-            A === o.C.DEFAULT
-                ? (0, t.jsxs)('div', {
-                      className: s()(N.answerRow, { [N.hasDeleteButton]: v }),
+        G = null != H && null != H.description && H.description.length > 0;
+    return b === i.C.DEFAULT
+        ? (0, r.jsxs)('div', {
+              className: l()(N.answerRow, { [N.hasDeleteButton]: E }),
+              children: [
+                  (0, r.jsxs)('div', {
+                      className: l()(N.defaultTextInputWrapper, { [N.hasError]: z }),
+                      ref: t,
                       children: [
-                          (0, t.jsxs)('div', {
-                              className: s()(N.defaultTextInputWrapper, { [N.hasError]: W }),
-                              ref: a,
-                              children: [
-                                  V,
-                                  (0, t.jsx)(c.TextInput, {
-                                      'aria-label': T.Z.Messages.CREATE_POLL_ANSWER_INPUT_LABEL.format({ answerNumber: E + 1 }),
-                                      placeholder: T.Z.Messages.CREATE_POLL_ANSWER_PLACEHOLDER,
-                                      value: d.text,
-                                      className: N.defaultTextInput,
-                                      inputClassName: N.defaultTextInput,
-                                      onChange: (e) =>
-                                          x({
-                                              text: e,
-                                              index: E,
-                                              localCreationAnswerId: d.localCreationAnswerId
-                                          }),
-                                      onKeyDown: K,
-                                      maxLength: p.WA,
-                                      'aria-invalid': W,
-                                      'aria-describedby': W ? B : U,
-                                      focusProps: P,
-                                      inputRef: Z
+                          J,
+                          (0, r.jsx)(c.oil, {
+                              'aria-label': C.NW.formatToPlainString(C.t['3+V8Gx'], { answerNumber: p + 1 }),
+                              placeholder: C.NW.string(C.t.NNHVlp),
+                              value: d.text,
+                              className: N.defaultTextInput,
+                              inputClassName: N.defaultTextInput,
+                              onChange: (e) =>
+                                  w({
+                                      text: e,
+                                      index: p,
+                                      localCreationAnswerId: d.localCreationAnswerId
                                   }),
-                                  (0, t.jsx)(M, {
-                                      value: d.text,
-                                      id: U
-                                  })
-                              ]
+                              onKeyDown: X,
+                              maxLength: v.WA,
+                              'aria-invalid': z,
+                              'aria-describedby': z ? U : M,
+                              focusProps: k,
+                              inputRef: B
                           }),
-                          v &&
-                              (0, t.jsx)(c.Clickable, {
-                                  onClick: () => j(E),
-                                  className: N.removeAnswerButtonDefault,
-                                  'aria-label': T.Z.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format({ answerNumber: E + 1 }),
-                                  ref: y,
-                                  children: (0, t.jsx)(c.TrashIcon, {
-                                      size: 'md',
-                                      color: 'currentColor',
-                                      className: N.trashIcon,
-                                      'aria-hidden': !0
-                                  })
-                              }),
-                          W &&
-                              (0, t.jsx)(c.Text, {
-                                  id: B,
-                                  variant: 'text-xs/medium',
-                                  color: 'text-danger',
-                                  className: N.__invalid_errorText,
-                                  children: k
-                              })
+                          (0, r.jsx)(R, {
+                              value: d.text,
+                              id: M
+                          })
                       ]
-                  })
-                : (0, t.jsxs)('div', {
-                      className: N.imageOnlyContainer,
-                      ref: a,
+                  }),
+                  E &&
+                      (0, r.jsx)(c.P3F, {
+                          onClick: () => I(p),
+                          className: N.removeAnswerButtonDefault,
+                          'aria-label': C.NW.formatToPlainString(C.t['22fjER'], { answerNumber: p + 1 }),
+                          ref: Z,
+                          children: (0, r.jsx)(c.XHJ, {
+                              size: 'md',
+                              color: 'currentColor',
+                              className: N.trashIcon,
+                              'aria-hidden': !0
+                          })
+                      }),
+                  z &&
+                      (0, r.jsx)(c.Text, {
+                          id: U,
+                          variant: 'text-xs/medium',
+                          color: 'text-danger',
+                          className: N.__invalid_errorText,
+                          children: L
+                      })
+              ]
+          })
+        : (0, r.jsxs)('div', {
+              className: N.imageOnlyContainer,
+              ref: t,
+              children: [
+                  (0, r.jsxs)('div', {
+                      className: N.imagePreviewContainer,
                       children: [
-                          (0, t.jsxs)('div', {
-                              className: N.imagePreviewContainer,
-                              children: [
-                                  V,
-                                  J &&
-                                      (0, t.jsxs)(t.Fragment, {
+                          J,
+                          G &&
+                              (0, r.jsxs)(r.Fragment, {
+                                  children: [
+                                      (0, r.jsx)(c.Text, {
+                                          variant: 'text-xs/semibold',
+                                          className: N.altBadge,
+                                          'aria-hidden': !0,
+                                          children: C.NW.string(C.t.QEW819)
+                                      }),
+                                      (0, r.jsxs)('div', {
+                                          onClick: F,
                                           children: [
-                                              (0, t.jsx)(c.Text, {
-                                                  variant: 'text-xs/semibold',
-                                                  className: N.altBadge,
-                                                  'aria-hidden': !0,
-                                                  children: T.Z.Messages.IMAGE_ALT
-                                              }),
-                                              (0, t.jsxs)('div', {
-                                                  onClick: G,
-                                                  children: [
-                                                      (0, t.jsx)(c.HiddenVisually, { children: T.Z.Messages.CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT }),
-                                                      (0, t.jsx)(c.Text, {
-                                                          variant: 'text-xxs/medium',
-                                                          className: N.altTextPreview,
-                                                          children: H.description
-                                                      })
-                                                  ]
+                                              (0, r.jsx)(c.nn4, { children: C.NW.string(C.t.piH89v) }),
+                                              (0, r.jsx)(c.Text, {
+                                                  variant: 'text-xxs/medium',
+                                                  className: N.altTextPreview,
+                                                  children: H.description
                                               })
                                           ]
                                       })
-                              ]
-                          }),
-                          (0, t.jsxs)('div', {
-                              className: N.imageOnlyAnswerActionBar,
-                              children: [
-                                  null != H
-                                      ? (0, t.jsx)(_.Z, {
-                                            tooltip: T.Z.Messages.CREATE_POLL_EDIT_IMAGE_DESCRIPTION,
-                                            'aria-label': J ? T.Z.Messages.CREATE_POLL_EDIT_ALT_ARIA_LABEL.format({ answerNumber: E + 1 }) : T.Z.Messages.CREATE_POLL_ADD_ALT_ARIA_LABEL.format({ answerNumber: E + 1 }),
-                                            onClick: G,
-                                            children: (0, t.jsx)(I.N, { 'aria-hidden': !0 })
-                                        })
-                                      : null,
-                                  (0, t.jsx)(_.Z, {
-                                      tooltip: T.Z.Messages.CREATE_POLL_REMOVE_ANSWER,
-                                      'aria-label': T.Z.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format({ answerNumber: E + 1 }),
-                                      onClick: () => j(E),
-                                      dangerous: !0,
-                                      children: (0, t.jsx)(c.TrashIcon, {
-                                          size: 'md',
-                                          color: 'currentColor',
-                                          'aria-hidden': !0
-                                      })
-                                  })
-                              ]
+                                  ]
+                              })
+                      ]
+                  }),
+                  (0, r.jsxs)('div', {
+                      className: N.imageOnlyAnswerActionBar,
+                      children: [
+                          null != H
+                              ? (0, r.jsx)(f.Z, {
+                                    tooltip: C.NW.string(C.t.QbhHBQ),
+                                    'aria-label': G ? C.NW.formatToPlainString(C.t.d04UhI, { answerNumber: p + 1 }) : C.NW.formatToPlainString(C.t.mULZgY, { answerNumber: p + 1 }),
+                                    onClick: F,
+                                    children: (0, r.jsx)(x.N, { 'aria-hidden': !0 })
+                                })
+                              : null,
+                          (0, r.jsx)(f.Z, {
+                              tooltip: C.NW.string(C.t.x7DOr6),
+                              'aria-label': C.NW.formatToPlainString(C.t['22fjER'], { answerNumber: p + 1 }),
+                              onClick: () => I(p),
+                              dangerous: !0,
+                              children: (0, r.jsx)(c.XHJ, {
+                                  size: 'md',
+                                  color: 'currentColor',
+                                  'aria-hidden': !0
+                              })
                           })
                       ]
                   })
-    });
+              ]
+          });
 });

@@ -1,15 +1,16 @@
-n(653041);
+n.d(t, { Z: () => A }), n(653041);
 var r,
     i = n(392711),
-    a = n.n(i),
-    s = n(442837),
-    o = n(570140),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140),
     l = n(911969),
-    u = n(704907),
-    c = n(581883),
-    d = n(674563),
+    c = n(704907),
+    u = n(317381),
+    d = n(581883),
+    f = n(674563),
     _ = n(526761);
-function E(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,73 +23,112 @@ function E(e, t, n) {
         e
     );
 }
-let f = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
-    h = { pendingUsages: [] },
-    p = new u.Z({
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : m(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let E = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
+    b = { pendingUsages: [] },
+    y = new c.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => (e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 1),
         lookupKey: (e) => e,
         afterCompute: () => {},
-        numFrequentlyItems: d.yP
+        numFrequentlyItems: f.yP
     });
-function m(e) {
-    h.pendingUsages.push({
+function v(e) {
+    let {
+        settings: { type: t },
+        wasSaved: n
+    } = e;
+    if (t !== _.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    b.pendingUsages = [];
+}
+function O(e) {
+    var t;
+    let { command: n } = e;
+    if (!E.includes(n.type) || (null == (t = u.ZP.getLaunchState(n.applicationId)) ? void 0 : t.isLaunching)) return !1;
+    S(n.applicationId);
+}
+function I(e) {
+    let { applicationId: t } = e;
+    S(t);
+}
+function S(e) {
+    b.pendingUsages.push({
         key: e,
         timestamp: Date.now()
     }),
-        p.track(e),
-        p.compute();
+        y.track(e),
+        y.compute();
 }
-function I() {
+function T() {
     var e, t;
-    let n = null !== (t = null === (e = c.Z.frecencyWithoutFetchingLatest.applicationFrecency) || void 0 === e ? void 0 : e.applications) && void 0 !== t ? t : {};
-    p.overwriteHistory(
-        a().mapValues(n, (e) => ({
-            ...e,
-            recentUses: e.recentUses.map(Number).filter((e) => e > 0)
-        })),
-        h.pendingUsages
+    let n = null != (t = null == (e = d.Z.frecencyWithoutFetchingLatest.applicationFrecency) ? void 0 : e.applications) ? t : {};
+    y.overwriteHistory(
+        o().mapValues(n, (e) => g(h({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        b.pendingUsages
     );
 }
-class T extends (r = s.ZP.PersistedStore) {
+class N extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (h = e), this.syncWith([c.Z], I);
+        null != e && (b = e), this.waitFor(u.ZP), this.syncWith([d.Z], T);
     }
     getState() {
-        return h;
+        return b;
     }
     hasPendingUsage() {
-        return h.pendingUsages.length > 0;
+        return b.pendingUsages.length > 0;
     }
     getApplicationFrecencyWithoutLoadingLatest() {
-        return p;
+        return y;
     }
     getScoreWithoutLoadingLatest(e) {
         var t;
-        return null !== (t = p.getScore(e)) && void 0 !== t ? t : 0;
+        return null != (t = y.getScore(e)) ? t : 0;
     }
     getTopApplicationsWithoutLoadingLatest() {
-        return p.frequently;
+        return y.frequently;
     }
 }
-E(T, 'displayName', 'ApplicationFrecencyStore'),
-    E(T, 'persistKey', 'ApplicationFrecency'),
-    (t.Z = new T(o.Z, {
-        APPLICATION_COMMAND_USED: function (e) {
-            let { command: t } = e;
-            if (!f.includes(t.type)) return !1;
-            m(t.applicationId);
-        },
-        EMBEDDED_ACTIVITY_OPEN: function (e) {
-            let { applicationId: t } = e;
-            m(t);
-        },
-        USER_SETTINGS_PROTO_UPDATE: function (e) {
-            let {
-                settings: { type: t },
-                wasSaved: n
-            } = e;
-            if (t !== _.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-            h.pendingUsages = [];
-        }
-    }));
+p(N, 'displayName', 'ApplicationFrecencyStore'), p(N, 'persistKey', 'ApplicationFrecency');
+let A = new N(s.Z, {
+    APPLICATION_COMMAND_USED: O,
+    EMBEDDED_ACTIVITY_OPEN: I,
+    USER_SETTINGS_PROTO_UPDATE: v
+});

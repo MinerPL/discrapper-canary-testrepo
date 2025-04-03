@@ -1,37 +1,32 @@
 n.d(t, {
-    D6: function () {
-        return c;
-    },
-    bp: function () {
-        return A;
-    },
-    wr: function () {
-        return i;
-    }
+    D6: () => p,
+    bp: () => f,
+    wr: () => d
 });
-var r,
-    i,
-    u = n(470079),
-    l = n(442837),
+var r = n(192379),
+    i = n(442837),
     o = n(846519),
-    E = n(355467),
-    a = n(38618),
-    _ = n(409813),
-    S = n(45572),
-    s = n(505649);
-function A(e, t, n, r) {
-    let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        l = arguments.length > 5 ? arguments[5] : void 0;
-    u.useEffect(() => {
-        if (null != e) 1 === t && e !== _.h8.AWAITING_AUTHENTICATION ? n(_.h8.AWAITING_AUTHENTICATION) : e === _.h8.AWAITING_AUTHENTICATION && (2 === t ? n(_.h8.REVIEW) : 3 === t && (i ? (null != l ? l() : n(_.h8.REVIEW)) : (r(S.A.COMPLETED), n(_.h8.CONFIRM))));
-    }, [e, t, n, r, i, l]);
+    a = n(355467),
+    s = n(38618),
+    l = n(409813),
+    c = n(45572),
+    u = n(505649),
+    d = (function (e) {
+        return (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.ERROR = 2)] = 'ERROR'), (e[(e.NONE = 3)] = 'NONE'), e;
+    })({});
+function f(e, t, n, i) {
+    let o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        a = arguments.length > 5 ? arguments[5] : void 0;
+    r.useEffect(() => {
+        null != e && (1 === t && e !== l.h8.AWAITING_AUTHENTICATION ? n(l.h8.AWAITING_AUTHENTICATION) : e === l.h8.AWAITING_AUTHENTICATION && (2 === t ? n(l.h8.REVIEW) : 3 === t && (o ? (null != a ? a() : n(l.h8.REVIEW)) : (i(c.A.COMPLETED), n(l.h8.CONFIRM)))));
+    }, [e, t, n, i, o, a]);
 }
-((r = i || (i = {}))[(r.PENDING = 1)] = 'PENDING'), (r[(r.ERROR = 2)] = 'ERROR'), (r[(r.NONE = 3)] = 'NONE');
-function c(e) {
-    let t = (0, l.e7)([s.Z], () => s.Z.awaitingPaymentId),
-        n = (0, l.e7)([a.Z], () => a.Z.isConnected()),
-        r = u.useRef(new o.Xp());
-    u.useEffect(() => {
-        n || null == t || 1 !== e ? r.current.stop() : r.current.start(5000, () => (0, E.O1)(t));
+let _ = 5000;
+function p(e) {
+    let t = (0, i.e7)([u.Z], () => u.Z.awaitingPaymentId),
+        n = (0, i.e7)([s.Z], () => s.Z.isConnected()),
+        l = r.useRef(new o.Xp());
+    r.useEffect(() => {
+        n || null == t || 1 !== e ? l.current.stop() : l.current.start(_, () => (0, a.O1)(t));
     }, [t, e, n]);
 }

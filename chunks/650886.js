@@ -1,11 +1,6 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var r = n(718798),
-    i = n(558065);
-function a(e) {
-    return a.useDirectVideo ? (0, i.Z)(e) : (0, r.Z)(e);
+n.d(t, { Z: () => i });
+var r = n(558065);
+function i(e) {
+    return (0, r.Z)(e, i.onContainerResized);
 }
-(a.defaultProps = r.Z.defaultProps), (a.useDirectVideo = !1);
+i.onContainerResized = (e, t, n) => {};

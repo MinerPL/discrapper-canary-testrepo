@@ -1,54 +1,72 @@
-var n = t(735250);
-t(470079);
-var a = t(442837),
-    i = t(481060),
-    r = t(78839),
-    o = t(270144),
-    l = t(238847),
-    c = t(689938),
-    d = t(784528);
-s.Z = (e) => {
-    let { onGoBack: s } = e,
-        t = (0, a.e7)([r.ZP], () => {
-            var e;
-            return null !== (e = r.ZP.getActiveApplicationSubscriptions()) && void 0 !== e ? e : [];
+n.d(t, { Z: () => u }), n(230036), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(78839),
+    o = n(851718),
+    c = n(388032),
+    d = n(179867);
+function u(e) {
+    let { onGoBack: t } = e,
+        n = (0, s.Wu)([l.ZP], () => {
+            var e, t;
+            return null !=
+                (t =
+                    null == (e = l.ZP.getActiveApplicationSubscriptions())
+                        ? void 0
+                        : e.slice().sort((e, t) => {
+                              var n, r, i, s;
+                              return (null != (i = null == (n = e.createdAt) ? void 0 : n.getTime()) ? i : e.currentPeriodStart.getTime()) - (null != (s = null == (r = t.createdAt) ? void 0 : r.getTime()) ? s : t.currentPeriodStart.getTime());
+                          }))
+                ? t
+                : [];
         }),
-        { loading: _ } = (0, o.sp)(t),
-        { loadState: E } = (0, o.qz)();
-    return _ || E !== o.jd.LOADED
-        ? (0, n.jsx)(i.Spinner, {})
-        : 0 === t.length
-          ? null
-          : (0, n.jsxs)('div', {
-                className: d.__invalid_container,
-                children: [
-                    (0, n.jsxs)(i.Button, {
-                        look: i.Button.Looks.BLANK,
-                        innerClassName: d.backButtonContents,
-                        onClick: s,
-                        children: [
-                            (0, n.jsx)(i.ArrowSmallRightIcon, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: d.arrowIcon
-                            }),
-                            c.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAGE_BACK_CTA
-                        ]
-                    }),
-                    (0, n.jsx)(i.Spacer, { size: 10 }),
-                    (0, n.jsx)(i.FormTitle, {
-                        tag: 'h1',
-                        children: c.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAGE_TITLE
-                    }),
-                    (0, n.jsx)(i.Text, {
-                        variant: 'text-sm/normal',
-                        className: d.pageDescription,
-                        children: c.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAGE_DESCRIPTION
-                    }),
-                    (0, n.jsx)('div', {
-                        className: d.subscriptionsContainer,
-                        children: t.map((e) => (0, n.jsx)(l.Z, { subscription: e }, e.id))
+        [a, u] = i.useState();
+    return (
+        null == a &&
+            (a = (0, r.jsx)(m, {
+                onBack: t,
+                title: c.NW.string(c.t['DB/m9f'])
+            })),
+        (0, r.jsxs)('div', {
+            children: [
+                a,
+                (0, r.jsx)('div', {
+                    className: d.subscriptionsContainer,
+                    children: (0, r.jsx)(o.Z, {
+                        subscriptions: n,
+                        updateHeader: (e, t) => {
+                            u(
+                                (0, r.jsx)(m, {
+                                    title: e,
+                                    onBack: () => {
+                                        t(), u(void 0);
+                                    }
+                                })
+                            );
+                        }
                     })
-                ]
-            });
-};
+                })
+            ]
+        })
+    );
+}
+function m(e) {
+    let { onBack: t, title: n } = e;
+    return (0, r.jsxs)('div', {
+        className: d.title,
+        children: [
+            (0, r.jsx)(a.zxk, {
+                look: a.zxk.Looks.BLANK,
+                onClick: t,
+                size: a.zxk.Sizes.ICON,
+                children: (0, r.jsx)(a.j9r, { size: 'sm' })
+            }),
+            (0, r.jsx)(a.X6q, {
+                variant: 'heading-lg/semibold',
+                children: n
+            })
+        ]
+    });
+}

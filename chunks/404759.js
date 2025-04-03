@@ -1,14 +1,15 @@
-var r = n(660326);
-function i(e, t) {
-    if ('function' != typeof e || (null != t && 'function' != typeof t)) throw TypeError('Expected a function');
+var r = n(660326),
+    i = 'Expected a function';
+function o(e, t) {
+    if ('function' != typeof e || (null != t && 'function' != typeof t)) throw TypeError(i);
     var n = function () {
         var r = arguments,
             i = t ? t.apply(this, r) : r[0],
-            a = n.cache;
-        if (a.has(i)) return a.get(i);
-        var s = e.apply(this, r);
-        return (n.cache = a.set(i, s) || a), s;
+            o = n.cache;
+        if (o.has(i)) return o.get(i);
+        var a = e.apply(this, r);
+        return (n.cache = o.set(i, a) || o), a;
     };
-    return (n.cache = new (i.Cache || r)()), n;
+    return (n.cache = new (o.Cache || r)()), n;
 }
-(i.Cache = r), (e.exports = i);
+(o.Cache = r), (e.exports = o);

@@ -1,196 +1,253 @@
-n.d(t, {
-    Z: function () {
-        return R;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(913527),
-    o = n.n(r),
-    c = n(442837),
-    u = n(481060),
-    d = n(410030),
-    h = n(313201),
-    m = n(271383),
-    p = n(430824),
-    _ = n(594174),
-    f = n(709054),
-    E = n(931240),
-    g = n(645896),
-    C = n(603368),
-    I = n(532490),
-    x = n(380365),
-    T = n(979264),
-    N = n(620929),
-    v = n(284019),
-    S = n(308083),
-    Z = n(981631),
-    A = n(689938),
-    M = n(319410);
-function b(e) {
+r.d(t, { default: () => D }), r(47120);
+var n = r(200651),
+    l = r(192379),
+    i = r(120356),
+    a = r.n(i),
+    s = r(913527),
+    o = r.n(s),
+    c = r(442837),
+    u = r(481060),
+    d = r(410030),
+    f = r(313201),
+    m = r(271383),
+    p = r(430824),
+    h = r(594174),
+    g = r(709054),
+    x = r(931240),
+    j = r(645896),
+    b = r(603368),
+    y = r(532490),
+    v = r(380365),
+    O = r(979264),
+    C = r(620929),
+    w = r(284019),
+    N = r(308083),
+    P = r(981631),
+    S = r(388032),
+    Z = r(343574);
+function T(e) {
     var t;
-    let { guildId: n, clanInfo: s, signed: r, onSignCharter: c } = e,
-        d = a.useMemo(() => {
-            let e = f.default.extractTimestamp(n);
+    let { guildId: r, clanInfo: i, signed: s, onSignCharter: c } = e,
+        d = l.useMemo(() => {
+            let e = g.default.extractTimestamp(r);
             return o()(new Date(e)).format('MMMM YYYY');
-        }, [n]),
-        h = a.useMemo(() => new Set(s.games), [s.games]);
-    return (0, i.jsx)(I.Z, {
-        guildId: n,
-        signHintPosition: I.p.LEFT,
-        primaryColor: null === (t = s.branding) || void 0 === t ? void 0 : t.primaryColor,
-        signed: r,
+        }, [r]),
+        f = l.useMemo(() => new Set(i.games), [i.games]);
+    return (0, n.jsx)(y.Z, {
+        guildId: r,
+        signHintPosition: y.p.LEFT,
+        primaryColor: null == (t = i.branding) ? void 0 : t.primaryColor,
+        signed: s,
         onSignCharter: c,
-        children: (0, i.jsxs)('div', {
-            className: M.scrollContentsContainer,
+        children: (0, n.jsxs)('div', {
+            className: Z.scrollContentsContainer,
             children: [
-                (0, i.jsx)(T.aG, {
-                    guildId: n,
-                    clanBadge: s.badge.imageHash,
-                    clanTag: s.tag,
+                (0, n.jsx)(O.aG, {
+                    guildId: r,
+                    clanBadge: i.badge.imageHash,
+                    clanTag: i.tag,
                     textVariant: 'heading-lg/semibold',
-                    badgeSize: S.NC.SIZE_24,
-                    className: M.clanTagChiplet
+                    badgeSize: N.NC.SIZE_24,
+                    className: Z.clanTagChiplet
                 }),
-                (0, i.jsxs)('div', {
+                (0, n.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(u.Heading, {
+                        (0, n.jsx)(u.X6q, {
                             variant: 'heading-xxl/normal',
                             color: 'text-muted',
-                            className: M.charterHeaderText,
-                            children: A.Z.Messages.CLAN_SETUP_OVERVIEW_TITLE
+                            className: Z.charterHeaderText,
+                            children: S.NW.string(S.t['85S0//'])
                         }),
-                        (0, i.jsx)(u.Heading, {
+                        (0, n.jsx)(u.X6q, {
                             variant: 'heading-xxl/bold',
                             color: 'interactive-active',
-                            className: M.charterHeaderText,
-                            children: s.name
+                            className: Z.charterHeaderText,
+                            children: i.name
                         }),
-                        (0, i.jsx)(u.Text, {
+                        (0, n.jsx)(u.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
-                            className: M.establishedDate,
-                            children: A.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({ date: d })
+                            className: Z.establishedDate,
+                            children: S.NW.format(S.t['7RpSYW'], { date: d })
                         })
                     ]
                 }),
-                (0, i.jsx)(N.p, {
-                    applicationIds: h,
-                    playstyle: s.playstyle,
-                    className: l()(M.charterBodyText, M.gameSection)
+                (0, n.jsx)(C.p, {
+                    applicationIds: f,
+                    playstyle: i.playstyle,
+                    className: a()(Z.charterBodyText, Z.gameSection)
                 }),
-                (0, i.jsx)(u.Text, {
+                (0, n.jsx)(u.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-muted',
-                    className: M.charterBodyText,
-                    children: A.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
+                    className: Z.charterBodyText,
+                    children: S.NW.string(S.t['YDTd9/'])
                 })
             ]
         })
     });
 }
-function R(e) {
-    var t;
-    let { guildId: n, onClose: s, onAccept: r, ...o } = e,
-        f = (0, h.Dt)(),
-        I = (0, g.Cc)(n),
-        T = (0, g.E8)(n),
-        [N, S] = a.useState(!0),
-        [R, j] = a.useState(!1),
-        L = a.useCallback(() => {
-            r(), s();
-        }, [r, s]);
-    a.useEffect(() => {
-        null == I && !T && L();
-    }, [I, L, T]);
-    let P = a.useCallback(() => {
-            N && (0, E.nE)(n, N, Z.Sbl.CREATE_JOIN_GUILD_MODAL), L();
-        }, [n, L, N]),
-        O = (0, c.e7)([p.Z], () => p.Z.getGuild(n)),
-        y = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
-        D = (0, c.e7)([m.ZP], () => (null != y ? m.ZP.getMember(n, y.id) : null)),
-        k = (0, d.ZP)(),
-        U = (0, C.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [u.tokens.colors.BG_BRAND, 0.7]),
-        w = u.tokens.colors.BG_SURFACE_OVERLAY.resolve({
-            theme: k,
+function D(e) {
+    var t,
+        r,
+        i,
+        { guildId: s, onClose: o, onAccept: g } = e,
+        y = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                l = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        l = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                    return l;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+            }
+            return l;
+        })(e, ['guildId', 'onClose', 'onAccept']);
+    let O = (0, f.Dt)(),
+        C = (0, j.Cc)(s),
+        N = (0, j.E8)(s),
+        [D, E] = l.useState(!0),
+        [H, k] = l.useState(!1),
+        _ = l.useCallback(() => {
+            g(), o();
+        }, [g, o]);
+    l.useEffect(() => {
+        null != C || N || _();
+    }, [C, _, N]);
+    let M = l.useCallback(() => {
+            D && (0, x.nE)(s, D, P.Sbl.CREATE_JOIN_GUILD_MODAL), _();
+        }, [s, _, D]),
+        A = (0, c.e7)([p.Z], () => p.Z.getGuild(s)),
+        B = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
+        R = (0, c.e7)([m.ZP], () => (null != B ? m.ZP.getMember(s, B.id) : null)),
+        I = (0, d.ZP)(),
+        F = (0, b.nP)(null == C || null == (i = C.branding) ? void 0 : i.primaryColor, [u.TVs.colors.BG_BRAND, 0.7]),
+        V = u.TVs.colors.BG_SURFACE_OVERLAY.resolve({
+            theme: I,
             saturation: 1
         }).hex(),
-        B = (0, C.nj)(U, w, 'top center');
-    return null == O || null == y || null == D || null == I
+        W = (0, b.nj)(F, V, 'top center');
+    return null == A || null == B || null == R || null == C
         ? null
-        : (0, i.jsx)(u.ModalRoot, {
-              ...o,
-              transitionState: o.transitionState,
-              'aria-labelledby': f,
-              className: M.modal,
-              size: u.ModalSize.DYNAMIC,
-              children: (0, i.jsxs)(u.ModalContent, {
-                  className: M.content,
-                  style: B,
-                  children: [
-                      (0, i.jsxs)('div', {
-                          className: M.infoSide,
+        : (0, n.jsx)(
+              u.Y0X,
+              ((t = (function (e) {
+                  for (var t = 1; t < arguments.length; t++) {
+                      var r = null != arguments[t] ? arguments[t] : {},
+                          n = Object.keys(r);
+                      'function' == typeof Object.getOwnPropertySymbols &&
+                          (n = n.concat(
+                              Object.getOwnPropertySymbols(r).filter(function (e) {
+                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                              })
+                          )),
+                          n.forEach(function (t) {
+                              var n;
+                              (n = r[t]),
+                                  t in e
+                                      ? Object.defineProperty(e, t, {
+                                            value: n,
+                                            enumerable: !0,
+                                            configurable: !0,
+                                            writable: !0
+                                        })
+                                      : (e[t] = n);
+                          });
+                  }
+                  return e;
+              })({}, y)),
+              (r = r =
+                  {
+                      transitionState: y.transitionState,
+                      'aria-labelledby': O,
+                      className: Z.modal,
+                      size: u.CgR.DYNAMIC,
+                      children: (0, n.jsxs)(u.hzk, {
+                          className: Z.content,
+                          style: W,
                           children: [
-                              (0, i.jsxs)('div', {
-                                  className: M.titlesContainer,
+                              (0, n.jsxs)('div', {
+                                  className: Z.infoSide,
                                   children: [
-                                      (0, i.jsx)('div', {
-                                          className: M.title,
-                                          children: (0, i.jsx)(u.Heading, {
-                                              variant: 'heading-xxl/medium',
-                                              children: A.Z.Messages.CLAN_JOIN_SUCCESS_TITLE.format({ name: O.name })
-                                          })
+                                      (0, n.jsxs)('div', {
+                                          className: Z.titlesContainer,
+                                          children: [
+                                              (0, n.jsx)('div', {
+                                                  className: Z.title,
+                                                  children: (0, n.jsx)(u.X6q, {
+                                                      variant: 'heading-xxl/medium',
+                                                      children: S.NW.format(S.t.orbR8f, { name: A.name })
+                                                  })
+                                              }),
+                                              (0, n.jsx)(u.Text, {
+                                                  className: Z.subtitle,
+                                                  variant: 'text-md/normal',
+                                                  children: S.NW.string(S.t.sZHbAQ)
+                                              })
+                                          ]
                                       }),
-                                      (0, i.jsx)(u.Text, {
-                                          className: M.subtitle,
-                                          variant: 'text-md/normal',
-                                          children: A.Z.Messages.CLAN_JOIN_SUCCESS_SUBTITLE
+                                      (0, n.jsx)(v.Z, {
+                                          guildId: s,
+                                          isTagAdopted: D,
+                                          onChangeUseTag: E
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(x.Z, {
-                                  guildId: n,
-                                  isTagAdopted: N,
-                                  onChangeUseTag: S
+                              (0, n.jsx)('div', {
+                                  className: Z.scrollMainContainer,
+                                  children: (0, n.jsx)(T, {
+                                      guildId: s,
+                                      clanInfo: C,
+                                      signed: H,
+                                      onSignCharter: k
+                                  })
+                              }),
+                              (0, n.jsx)(w.Z, {
+                                  onClick: M,
+                                  color: u.zxk.Colors.BRAND,
+                                  themeColor: F,
+                                  fullWidth: !1,
+                                  className: a()(Z.ctaButton, H ? Z.ctaButtonSigned : null),
+                                  children: (0, n.jsxs)('div', {
+                                      className: Z.ctaButtonInner,
+                                      children: [
+                                          (0, n.jsx)(u.Text, {
+                                              color: 'currentColor',
+                                              variant: 'text-md/medium',
+                                              children: S.NW.string(S.t.aYmu19)
+                                          }),
+                                          (0, n.jsx)(u.d4D, {
+                                              size: 'custom',
+                                              width: 20,
+                                              height: 20,
+                                              color: 'currentColor'
+                                          })
+                                      ]
+                                  })
                               })
                           ]
-                      }),
-                      (0, i.jsx)('div', {
-                          className: M.scrollMainContainer,
-                          children: (0, i.jsx)(b, {
-                              guildId: n,
-                              clanInfo: I,
-                              signed: R,
-                              onSignCharter: j
-                          })
-                      }),
-                      (0, i.jsx)(v.Z, {
-                          onClick: P,
-                          color: u.Button.Colors.BRAND,
-                          themeColor: U,
-                          fullWidth: !1,
-                          className: l()(M.ctaButton, R ? M.ctaButtonSigned : null),
-                          children: (0, i.jsxs)('div', {
-                              className: M.ctaButtonInner,
-                              children: [
-                                  (0, i.jsx)(u.Text, {
-                                      color: 'currentColor',
-                                      variant: 'text-md/medium',
-                                      children: A.Z.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
-                                  }),
-                                  (0, i.jsx)(u.ArrowLargeRightIcon, {
-                                      size: 'custom',
-                                      width: 20,
-                                      height: 20,
-                                      color: null == U ? void 0 : (0, C.$0)(U).hex()
-                                  })
-                              ]
-                          })
                       })
-                  ]
-              })
-          });
+                  }),
+              Object.getOwnPropertyDescriptors
+                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                  : (function (e, t) {
+                        var r = Object.keys(e);
+                        if (Object.getOwnPropertySymbols) {
+                            var n = Object.getOwnPropertySymbols(e);
+                            r.push.apply(r, n);
+                        }
+                        return r;
+                    })(Object(r)).forEach(function (e) {
+                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                    }),
+              t)
+          );
 }

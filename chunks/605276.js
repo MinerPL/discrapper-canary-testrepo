@@ -1,131 +1,152 @@
-var a = l(735250),
-    r = l(470079),
-    i = l(399606),
-    t = l(481060),
+l.d(n, { Z: () => w }), l(266796);
+var t = l(200651),
+    r = l(192379),
+    a = l(399606),
+    i = l(481060),
     s = l(904245),
-    d = l(368844),
+    c = l(368844),
     o = l(249842),
-    c = l(838367),
-    u = l(6025),
-    h = l(592125),
-    m = l(375954),
-    g = l(496675),
-    C = l(768581),
-    x = l(526120),
-    f = l(825334),
-    I = l(981631),
-    Z = l(689938),
-    _ = l(523460);
-let v = r.memo(function (e) {
-        let { guild: n } = e,
-            l = (0, i.e7)([c.Z], () => c.Z.getGuild(n.id), [n]);
-        return (
-            r.useEffect(() => {
-                null == l && (0, o.P)(n.id);
-            }, [n.id, l]),
-            (0, a.jsx)('div', {
-                className: _.sidebarCardWrapper,
-                children: (0, a.jsxs)('div', {
-                    className: _.sidebarCard,
-                    children: [
-                        (0, a.jsx)(t.Heading, {
-                            className: _.sidebarCardHeader,
-                            variant: 'heading-md/bold',
-                            color: 'header-primary',
-                            children: Z.Z.Messages.GUILD_HOME_ABOUT
-                        }),
-                        (0, a.jsx)(t.Text, {
-                            className: _.guildDescription,
-                            variant: 'text-md/normal',
-                            color: 'text-normal',
-                            children: n.description
-                        }),
-                        (0, a.jsx)('div', {
-                            className: _.guildInfo,
-                            children:
-                                (null == l ? void 0 : l.memberCount) != null &&
-                                (null == l ? void 0 : l.presenceCount) != null &&
-                                (0, a.jsxs)(a.Fragment, {
-                                    children: [
-                                        (0, a.jsx)('div', { className: _.dotOnline }),
-                                        (0, a.jsx)(t.Text, {
-                                            className: _.guildInfoText,
-                                            variant: 'text-xs/normal',
-                                            color: 'text-muted',
-                                            children: Z.Z.Messages.GUILD_ONBOARDING_HOME_GUILD_MEMBERS_RATIO.format({
-                                                online: null == l ? void 0 : l.presenceCount,
-                                                total: null == l ? void 0 : l.memberCount
-                                            })
-                                        })
-                                    ]
-                                })
-                        })
-                    ]
-                })
-            })
-        );
-    }),
-    p = (e) => {
-        let { channelId: n, title: l, icon: o } = e,
-            c = (0, i.e7)([h.Z], () => h.Z.getChannel(n)),
-            f = (0, i.e7)([m.Z], () => m.Z.getMessages(n)),
-            Z = (0, i.e7)([g.Z], () => g.Z.can(I.Plq.VIEW_CHANNEL, c)),
-            v = f.first(),
-            p = (0, d.zy)(v, !1),
-            N = (null == p ? void 0 : p.length) > 0 ? p[0] : null,
-            j = null != c && null == v && !f.loadingMore && !f.ready && !f.hasFetched && Z;
+    d = l(838367),
+    u = l(576306),
+    m = l(65361),
+    h = l(910200),
+    g = l(6025),
+    f = l(592125),
+    x = l(375954),
+    p = l(496675),
+    b = l(768581),
+    j = l(526120),
+    C = l(825334),
+    _ = l(981631),
+    v = l(388032),
+    I = l(617449);
+function Z(e) {
+    let { guild: n } = e,
+        l = (0, a.e7)([d.Z], () => d.Z.getGuild(n.id), [n]);
+    return (
         r.useEffect(() => {
-            j &&
+            null == l && (0, o.P)(n.id);
+        }, [n.id, l]),
+        (0, t.jsx)(i.Zbd, {
+            className: I.sidebarCardWrapper,
+            children: (0, t.jsxs)('div', {
+                className: I.sidebarCard,
+                children: [
+                    (0, t.jsx)(i.X6q, {
+                        className: I.sidebarCardHeader,
+                        variant: 'heading-md/bold',
+                        color: 'header-primary',
+                        children: v.NW.string(v.t['6YriCA'])
+                    }),
+                    (0, t.jsx)(i.Text, {
+                        className: I.guildDescription,
+                        variant: 'text-md/normal',
+                        color: 'text-normal',
+                        children: n.description
+                    }),
+                    (0, t.jsx)('div', {
+                        className: I.guildInfo,
+                        children:
+                            (null == l ? void 0 : l.memberCount) != null &&
+                            (null == l ? void 0 : l.presenceCount) != null &&
+                            (0, t.jsxs)(t.Fragment, {
+                                children: [
+                                    (0, t.jsx)('div', { className: I.dotOnline }),
+                                    (0, t.jsx)(i.Text, {
+                                        className: I.guildInfoText,
+                                        variant: 'text-xs/normal',
+                                        color: 'text-muted',
+                                        children: v.NW.format(v.t.QAdRCw, {
+                                            online: null == l ? void 0 : l.presenceCount,
+                                            total: null == l ? void 0 : l.memberCount
+                                        })
+                                    })
+                                ]
+                            })
+                    })
+                ]
+            })
+        })
+    );
+}
+function N(e) {
+    let { guild: n } = e,
+        { guildProfile: l, fetchGuildProfile: a } = (0, m.u)(n.id);
+    return (r.useEffect(() => {
+        a();
+    }, [a]),
+    null == l)
+        ? null
+        : (0, t.jsx)(h.ZP, {
+              profile: l,
+              disableCTA: !0
+          });
+}
+let y = r.memo(function (e) {
+        let { guild: n } = e;
+        return (0, u.h)() ? (0, t.jsx)(N, { guild: n }) : (0, t.jsx)(Z, { guild: n });
+    }),
+    O = (e) => {
+        let { channelId: n, title: l, icon: o } = e,
+            d = (0, a.e7)([f.Z], () => f.Z.getChannel(n)),
+            u = (0, a.e7)([x.Z], () => x.Z.getMessages(n)),
+            m = (0, a.e7)([p.Z], () => p.Z.can(_.Plq.VIEW_CHANNEL, d)),
+            h = u.first(),
+            C = (0, c.zy)(h, !1),
+            v = (null == C ? void 0 : C.length) > 0 ? C[0] : null,
+            Z = null != d && null == h && !u.loadingMore && !u.ready && !u.hasFetched && m;
+        r.useEffect(() => {
+            Z &&
                 s.Z.fetchMessages({
                     channelId: n,
                     after: n,
                     limit: 5
                 });
-        }, [n, j]);
-        let b = (e) => {
-            null != c &&
+        }, [n, Z]);
+        let N = (e) => {
+            null != d &&
                 (e.shiftKey
-                    ? (0, x.C3)(c.guild_id, c.id)
-                    : u.Z.openResourceChannelAsSidebar({
-                          guildId: c.guild_id,
-                          channelId: c.id
+                    ? (0, j.C3)(d.guild_id, d.id)
+                    : g.Z.openResourceChannelAsSidebar({
+                          guildId: d.guild_id,
+                          channelId: d.id
                       }));
         };
-        return (0, a.jsx)(
-            t.Clickable,
+        return (0, t.jsx)(
+            i.P3F,
             {
-                className: _.resourceChannel,
-                onClick: (e) => b(e),
-                children: (0, a.jsxs)(a.Fragment, {
+                className: I.resourceChannel,
+                onClick: (e) => N(e),
+                children: (0, t.jsxs)(t.Fragment, {
                     children: [
                         (() => {
-                            let e = C.ZP.getResourceChannelIconURL({
+                            let e = b.ZP.getResourceChannelIconURL({
                                 channelId: n,
                                 icon: o
                             });
                             return null != o && null != e
-                                ? (0, a.jsx)('img', {
+                                ? (0, t.jsx)('img', {
                                       src: e,
-                                      className: _.resourceImage,
+                                      className: I.resourceImage,
                                       alt: '',
                                       'aria-hidden': !0
                                   })
-                                : null != N
-                                  ? (0, a.jsx)('img', {
-                                        className: _.resourceImage,
-                                        src: N.src,
-                                        alt: N.alt
+                                : null != v
+                                  ? (0, t.jsx)('img', {
+                                        className: I.resourceImage,
+                                        src: v.src,
+                                        alt: v.alt
                                     })
-                                  : (0, a.jsx)('div', {
-                                        className: _.placeholderImage,
-                                        children: (0, a.jsx)(t.PaperIcon, {
+                                  : (0, t.jsx)('div', {
+                                        className: I.placeholderImage,
+                                        children: (0, t.jsx)(i.hH0, {
                                             size: 'xs',
                                             color: 'currentColor'
                                         })
                                     });
                         })(),
-                        (0, a.jsx)(t.Text, {
-                            className: _.guildInfoText,
+                        (0, t.jsx)(i.Text, {
+                            className: I.guildInfoText,
                             variant: 'text-sm/semibold',
                             color: 'none',
                             children: l
@@ -136,27 +157,27 @@ let v = r.memo(function (e) {
             n
         );
     },
-    N = r.memo(function (e) {
+    P = r.memo(function (e) {
         let { guild: n } = e,
-            l = (0, f.Z)(n.id);
+            l = (0, C.Z)(n.id);
         return 0 === l.length
             ? null
-            : (0, a.jsx)('div', {
-                  className: _.sidebarCardWrapper,
-                  children: (0, a.jsxs)('div', {
-                      className: _.sidebarCard,
+            : (0, t.jsx)(i.Zbd, {
+                  className: I.sidebarCardWrapper,
+                  children: (0, t.jsxs)('div', {
+                      className: I.sidebarCard,
                       children: [
-                          (0, a.jsx)(t.Heading, {
-                              className: _.sidebarCardHeader,
+                          (0, t.jsx)(i.X6q, {
+                              className: I.sidebarCardHeader,
                               variant: 'heading-md/bold',
                               color: 'header-primary',
-                              children: Z.Z.Messages.GUILD_HOME_RESOURCES
+                              children: v.NW.string(v.t.xwY4LS)
                           }),
-                          (0, a.jsx)('div', {
-                              className: _.resourceChannelsList,
+                          (0, t.jsx)('div', {
+                              className: I.resourceChannelsList,
                               children: l.map((e) =>
-                                  (0, a.jsx)(
-                                      p,
+                                  (0, t.jsx)(
+                                      O,
                                       {
                                           channelId: e.channelId,
                                           title: e.title,
@@ -170,11 +191,10 @@ let v = r.memo(function (e) {
                   })
               });
     }),
-    j = r.memo(function (e) {
+    w = r.memo(function (e) {
         let { guild: n, isNewMember: l } = e;
-        return (0, a.jsxs)('aside', {
-            className: _.sidebar,
-            children: [(0, a.jsx)(v, { guild: n }), l && (0, a.jsx)(N, { guild: n })]
+        return (0, t.jsxs)('aside', {
+            className: I.sidebar,
+            children: [(0, t.jsx)(y, { guild: n }), l && (0, t.jsx)(P, { guild: n })]
         });
     });
-n.Z = j;

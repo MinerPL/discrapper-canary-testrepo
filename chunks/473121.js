@@ -1,42 +1,81 @@
-var r = n(735250),
-    i = n(470079),
-    a = n(481060),
-    s = n(454585),
+n.d(t, { Z: () => d });
+var r = n(200651),
+    l = n(192379),
+    i = n(481060),
+    a = n(454585),
     o = n(273744),
-    l = n(689938),
-    u = n(79026);
-t.Z = (e) => {
+    s = n(388032),
+    c = n(21330);
+let d = (e) => {
+    var t, n;
     let {
-            node: { header: t, subheader: n, button: c }
+            node: { header: d, subheader: u, button: m }
         } = e,
-        d = (null == c ? void 0 : c.type) === 'submit',
-        _ = i.useRef(
-            s.Z.reactParserFor({
-                ...s.Z.defaultRules,
-                link: o.s
-            })
+        x = (null == m ? void 0 : m.type) === 'submit',
+        p = l.useRef(
+            a.Z.reactParserFor(
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, a.Z.defaultRules)),
+                (n = n = { link: o.s }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      }),
+                t)
+            )
         );
     return (0, r.jsxs)('div', {
-        className: u.headerContainer,
+        className: c.headerContainer,
         children: [
-            null != t && '' !== t
-                ? (0, r.jsx)(a.Heading, {
+            null != d && '' !== d
+                ? (0, r.jsx)(i.X6q, {
                       variant: 'heading-xl/semibold',
                       color: 'header-primary',
-                      children: t
+                      children: d
                   })
                 : null,
-            null != n && '' !== t
-                ? (0, r.jsx)(a.Text, {
+            null != u && '' !== d
+                ? (0, r.jsx)(i.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: _.current(n)
+                      children: p.current(u)
                   })
                 : null,
-            d &&
-                (0, r.jsx)(a.Text, {
+            x &&
+                (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
-                    children: l.Z.Messages.MOBILE_REPORTS_SUBMIT_INFO_TEXT.format()
+                    children: s.NW.format(s.t.Q0tSKS, {})
                 })
         ]
     });

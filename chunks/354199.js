@@ -1,37 +1,57 @@
 var r = n(754675),
     i = n(39493),
-    a = n(855543),
-    s = n(143866),
-    o = n(142670);
+    o = n(855543),
+    a = n(143866),
+    s = n(142670),
+    l = '[object Boolean]',
+    c = '[object Date]',
+    u = '[object Map]',
+    d = '[object Number]',
+    f = '[object RegExp]',
+    _ = '[object Set]',
+    p = '[object String]',
+    h = '[object Symbol]',
+    m = '[object ArrayBuffer]',
+    g = '[object DataView]',
+    E = '[object Float32Array]',
+    b = '[object Float64Array]',
+    y = '[object Int8Array]',
+    v = '[object Int16Array]',
+    O = '[object Int32Array]',
+    I = '[object Uint8Array]',
+    S = '[object Uint8ClampedArray]',
+    T = '[object Uint16Array]',
+    N = '[object Uint32Array]';
 e.exports = function (e, t, n) {
-    var l = e.constructor;
+    var A = e.constructor;
     switch (t) {
-        case '[object ArrayBuffer]':
+        case m:
             return r(e);
-        case '[object Boolean]':
-        case '[object Date]':
-            return new l(+e);
-        case '[object DataView]':
+        case l:
+        case c:
+            return new A(+e);
+        case g:
             return i(e, n);
-        case '[object Float32Array]':
-        case '[object Float64Array]':
-        case '[object Int8Array]':
-        case '[object Int16Array]':
-        case '[object Int32Array]':
-        case '[object Uint8Array]':
-        case '[object Uint8ClampedArray]':
-        case '[object Uint16Array]':
-        case '[object Uint32Array]':
-            return o(e, n);
-        case '[object Map]':
-        case '[object Set]':
-            return new l();
-        case '[object Number]':
-        case '[object String]':
-            return new l(e);
-        case '[object RegExp]':
+        case E:
+        case b:
+        case y:
+        case v:
+        case O:
+        case I:
+        case S:
+        case T:
+        case N:
+            return s(e, n);
+        case u:
+            return new A();
+        case d:
+        case p:
+            return new A(e);
+        case f:
+            return o(e);
+        case _:
+            return new A();
+        case h:
             return a(e);
-        case '[object Symbol]':
-            return s(e);
     }
 };

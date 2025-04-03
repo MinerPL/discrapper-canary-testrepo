@@ -1,90 +1,141 @@
-n(47120);
+n.d(t, { Z: () => P }), n(47120);
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(457330),
-    c = n(726542),
-    d = n(368111),
-    _ = n(601964),
-    E = n(981631);
-let f = new Set([E.ABu.CONTACTS]),
+    i = n(442837),
+    o = n(570140),
+    a = n(457330),
+    s = n(726542),
+    l = n(368111),
+    c = n(601964);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let p = new Set([n(981631).ABu.CONTACTS]),
     h = !0,
-    p = [],
     m = [],
-    I = {},
-    T = {},
-    g = {},
-    S = (e) => {
-        (p = e.filter((e) => !f.has(e.type) && c.Z.isSupported(e.type))), (m = e.filter((e) => f.has(e.type))), (h = !1);
+    g = [],
+    E = {},
+    b = new Set(),
+    y = {},
+    v = {},
+    O = (e) => {
+        (m = e.filter((e) => !p.has(e.type) && s.Z.isSupported(e.type))), (g = e.filter((e) => p.has(e.type))), (h = !1);
     };
-class A extends (r = o.ZP.Store) {
+function I(e) {
+    O(e.connectedAccounts.map((e) => new l.Z(e)));
+}
+function S(e) {
+    e.local && null != e.accounts ? O(e.accounts.map((e) => new l.Z(_(d({}, e), { integrations: e.integrations.map((e) => _(d({}, e), { guild: new c.ZP(e.guild) })) })))) : a.Z.fetch();
+}
+function T(e) {
+    E[e.integrationId] = e.joining;
+}
+function N(e) {
+    v[e.integrationId] = void 0 !== e.error ? e.error : '';
+}
+function A(e) {
+    let { platformType: t, id: n, revoked: r, accessToken: i } = e,
+        o = m.find((e) => e.id === n && e.type === t);
+    if (null == o) return !1;
+    null != r && (o.revoked = r), null != i && (o.accessToken = i);
+}
+function C(e) {
+    let { code: t, state: n, openid_params: r, provider: i } = e;
+    a.Z.callback(i, {
+        code: t,
+        state: n,
+        openid_params: r
+    });
+}
+class R extends (r = i.ZP.Store) {
     isJoining(e) {
-        return I[e] || !1;
+        return E[e] || !1;
     }
     joinErrorMessage(e) {
-        return g[e];
+        return v[e];
     }
     isFetching() {
         return h;
     }
     getAccounts() {
-        return p;
-    }
-    getLocalAccounts() {
         return m;
     }
+    getLocalAccounts() {
+        return g;
+    }
     getAccount(e, t) {
-        return p.find((n) => (null == e || n.id === e) && n.type === t);
+        return m.find((n) => (null == e || n.id === e) && n.type === t);
     }
     getLocalAccount(e) {
-        return m.find((t) => t.type === e);
+        return g.find((t) => t.type === e);
     }
     isSuggestedAccountType(e) {
-        return T[e] || !1;
+        return y[e] || !1;
+    }
+    addPendingAuthorizedState(e) {
+        b.add(e);
+    }
+    deletePendingAuthorizedState(e) {
+        b.delete(e);
+    }
+    hasPendingAuthorizedState(e) {
+        return b.has(e);
     }
 }
-(s = 'ConnectedAccountsStore'),
-    (a = 'displayName') in (i = A)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new A(l.Z, {
-        CONNECTION_OPEN: function (e) {
-            S(e.connectedAccounts.map((e) => new d.Z(e)));
-        },
-        USER_CONNECTIONS_UPDATE: function (e) {
-            e.local && null != e.accounts
-                ? S(
-                      e.accounts.map(
-                          (e) =>
-                              new d.Z({
-                                  ...e,
-                                  integrations: e.integrations.map((e) => ({
-                                      ...e,
-                                      guild: new _.ZP(e.guild)
-                                  }))
-                              })
-                      )
-                  )
-                : u.Z.fetch();
-        },
-        USER_CONNECTIONS_INTEGRATION_JOINING: function (e) {
-            I[e.integrationId] = e.joining;
-        },
-        USER_CONNECTION_UPDATE: function (e) {
-            let { platformType: t, id: n, revoked: r, accessToken: i } = e,
-                a = p.find((e) => e.id === n && e.type === t);
-            if (null == a) return !1;
-            null != r && (a.revoked = r), null != i && (a.accessToken = i);
-        },
-        USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function (e) {
-            g[e.integrationId] = void 0 !== e.error ? e.error : '';
-        }
-    }));
+u(R, 'displayName', 'ConnectedAccountsStore');
+let P = new R(o.Z, {
+    CONNECTION_OPEN: I,
+    USER_CONNECTIONS_UPDATE: S,
+    USER_CONNECTIONS_INTEGRATION_JOINING: T,
+    USER_CONNECTION_UPDATE: A,
+    USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: N,
+    USER_CONNECTIONS_CALLBACK: C
+});

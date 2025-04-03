@@ -1,59 +1,92 @@
-s.d(t, {
-    i: function () {
-        return C;
-    }
+n.d(t, {
+    Z: () => y,
+    i: () => x
 }),
-    s(47120);
-var n = s(735250),
-    i = s(470079),
-    a = s(120356),
-    r = s.n(a),
-    l = s(302454),
-    o = s.n(l),
-    h = s(481060),
-    d = s(770146),
-    u = s(241209),
-    c = s(73346),
-    p = s(689938),
-    m = s(897189);
-function g(e, t, s) {
+    n(301563),
+    n(47120),
+    n(266796);
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    l = n.n(i),
+    o = n(477660),
+    s = n.n(o),
+    c = n(481060),
+    d = n(770146),
+    u = n(241209),
+    p = n(73346),
+    m = n(388032),
+    h = n(455660);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = n),
         e
     );
 }
-let I = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
-    C = {
-        ...u.Z.rules,
-        heading: {
-            ...u.Z.rules.heading,
-            react(e, t, s) {
-                let i = 'h'.concat(Math.min(Math.max(2, e.level + 1), 4));
-                return (0, n.jsx)(
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                g(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let b = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
+    x = _(f({}, u.Z.rules), {
+        heading: _(f({}, u.Z.rules.heading), {
+            react(e, t, n) {
+                let a = 'h'.concat(Math.min(Math.max(2, e.level + 1), 4));
+                return (0, r.jsx)(
                     d.Z,
                     {
-                        tag: i,
-                        children: t(e.content, s)
+                        tag: a,
+                        children: t(e.content, n)
                     },
-                    s.key
+                    n.key
                 );
             }
-        },
+        }),
         assetImage: {
             order: 5,
             match(e, t) {
-                let s = e.match(I);
-                if (null != s) {
-                    let e = s[2],
-                        n = t.assets.find((t) => t.id === e);
-                    return null != n && [...s, n, t.applicationId];
+                let n = e.match(b);
+                if (null != n) {
+                    let e = n[2],
+                        r = t.assets.find((t) => t.id === e);
+                    return null != r && [...n, r, t.applicationId];
                 }
                 return !1;
             },
@@ -62,24 +95,24 @@ let I = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 alt: e[1],
                 applicationId: e[4]
             }),
-            react: (e, t, s) =>
-                (0, n.jsx)(
+            react: (e, t, n) =>
+                (0, r.jsx)(
                     'div',
                     {
-                        className: m.assetWrapper,
-                        children: (0, n.jsx)('img', {
+                        className: h.assetWrapper,
+                        children: (0, r.jsx)('img', {
                             alt: e.alt,
-                            src: (0, c._W)(e.applicationId, e.asset, 800),
-                            className: m.asset
+                            src: (0, p._W)(e.applicationId, e.asset, 800),
+                            className: h.asset
                         })
                     },
-                    s.key
+                    n.key
                 )
         }
-    },
-    x = o().parserFor(C),
-    f = o().reactFor(o().ruleOutput(C, 'react'));
-class N extends i.PureComponent {
+    }),
+    v = s().parserFor(x),
+    C = s().reactFor(s().ruleOutput(x, 'react'));
+class j extends a.PureComponent {
     componentDidMount() {
         if (null != this._container) {
             let { height: e } = this._container.getBoundingClientRect();
@@ -87,26 +120,26 @@ class N extends i.PureComponent {
         }
     }
     render() {
-        let { applicationId: e, description: t, blurb: s, className: i, assets: a } = this.props,
-            { collapsed: l, collapsable: o } = this.state;
-        return (0, n.jsxs)('div', {
-            className: i,
+        let { applicationId: e, description: t, blurb: n, className: a, assets: i } = this.props,
+            { collapsed: o, collapsable: s } = this.state;
+        return (0, r.jsxs)('div', {
+            className: a,
             children: [
-                (0, n.jsx)('div', {
-                    className: r()({ [m.collapsed]: o && l }),
-                    children: (0, n.jsxs)('div', {
+                (0, r.jsx)('div', {
+                    className: l()({ [h.collapsed]: s && o }),
+                    children: (0, r.jsxs)('div', {
                         ref: this.setContentContainerRef,
                         children: [
-                            (0, n.jsx)('div', {
-                                className: m.blurb,
-                                children: s
+                            (0, r.jsx)('div', {
+                                className: h.blurb,
+                                children: n
                             }),
-                            (0, n.jsx)(u.Z, {
-                                className: m.description,
-                                parser: x,
-                                output: f,
+                            (0, r.jsx)(u.Z, {
+                                className: h.description,
+                                parser: v,
+                                output: C,
                                 state: {
-                                    assets: a,
+                                    assets: i,
                                     applicationId: e
                                 },
                                 children: t
@@ -114,12 +147,12 @@ class N extends i.PureComponent {
                         ]
                     })
                 }),
-                o
-                    ? (0, n.jsx)(h.Button, {
-                          className: m.toggleCollapseButton,
+                s
+                    ? (0, r.jsx)(c.zxk, {
+                          className: h.toggleCollapseButton,
                           onClick: this.handleToggleCollapse,
-                          color: h.Button.Colors.PRIMARY,
-                          children: l ? p.Z.Messages.APPLICATION_STORE_DESCRIPTION_READ_MORE : p.Z.Messages.APPLICATION_STORE_DESCRIPTION_READ_LESS
+                          color: c.zxk.Colors.PRIMARY,
+                          children: o ? m.NW.string(m.t.DxcOXF) : m.NW.string(m.t.rD6EaG)
                       })
                     : null
             ]
@@ -140,4 +173,4 @@ class N extends i.PureComponent {
             });
     }
 }
-t.Z = N;
+let y = j;

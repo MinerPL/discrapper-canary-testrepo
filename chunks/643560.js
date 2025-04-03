@@ -1,99 +1,140 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return h;
-        }
-    });
-var i = n(735250),
-    a = n(470079),
-    s = n(481060),
-    l = n(239091),
-    r = n(299206),
-    o = n(726521),
+n.d(t, { default: () => f });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(239091),
+    a = n(299206),
+    s = n(726521),
     c = n(99325),
     u = n(683818),
-    d = n(689938);
-function h(e) {
-    let { entry: t, onSelect: h, closePopout: m, hideEditButton: p = !1 } = e,
-        { isEntryAdmin: _, canEdit: f, canRemove: E } = (0, u.Z)(t),
-        g = (0, r.Z)({
+    d = n(388032);
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function f(e) {
+    let { entry: t, onSelect: f, closePopout: m, hideEditButton: g = !1 } = e,
+        { isEntryAdmin: b, canEdit: _, canRemove: C } = (0, u.Z)(t),
+        y = (0, a.Z)({
             id: t.guildId,
-            label: d.Z.Messages.COPY_ID_GUILD,
+            label: d.NW.string(d.t['94lLDw']),
             onSuccess: m
         });
-    a.useEffect(() => {
-        !f && !E && null == g && (0, l.Zy)();
+    i.useEffect(() => {
+        _ || C || null != y || (0, o.Zy)();
     });
-    let C = () => {
+    let x = () => {
         c.kx(t.channelId, t.guildId);
     };
-    function I() {
-        (0, l.Zy)(), null == m || m();
+    function v() {
+        (0, o.Zy)(), null == m || m();
     }
-    return (0, i.jsxs)(s.Menu, {
+    return (0, r.jsxs)(l.v2r, {
         navId: 'guild-entry-context',
-        onClose: I,
-        'aria-label': d.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
-        onSelect: h,
+        onClose: v,
+        'aria-label': d.NW.string(d.t.HpQykZ),
+        onSelect: f,
         children: [
-            (0, i.jsxs)(s.MenuGroup, {
+            (0, r.jsxs)(l.kSQ, {
                 children: [
-                    f && !p
-                        ? (0, i.jsx)(s.MenuItem, {
+                    _ && !g
+                        ? (0, r.jsx)(l.sNh, {
                               id: 'update-entry',
-                              label: d.Z.Messages.HUB_ENTRY_UPDATE,
+                              label: d.NW.string(d.t.XnuOvL),
                               action: function () {
-                                  (0, s.openModalLazy)(async () => {
+                                  (0, l.ZDy)(async () => {
                                       let { default: e } = await n.e('34191').then(n.bind(n, 303647));
-                                      return (n) =>
-                                          (0, i.jsx)(e, {
-                                              ...n,
-                                              entry: t
-                                          });
+                                      return (n) => (0, r.jsx)(e, h(p({}, n), { entry: t }));
                                   }),
-                                      I();
+                                      v();
                               }
                           })
                         : null,
-                    E
-                        ? (0, i.jsx)(s.MenuItem, {
+                    C
+                        ? (0, r.jsx)(l.sNh, {
                               id: 'remove-from-hub',
-                              label: d.Z.Messages.HUB_ENTRY_REMOVE,
+                              label: d.NW.string(d.t.KUxYWF),
                               action: function () {
-                                  (0, s.openModal)((e) =>
-                                      (0, i.jsx)(s.ConfirmModal, {
-                                          header: d.Z.Messages.HUB_ENTRY_REMOVE,
-                                          confirmText: d.Z.Messages.REMOVE,
-                                          cancelText: d.Z.Messages.CANCEL,
-                                          onConfirm: C,
-                                          ...e,
-                                          children: (0, i.jsx)(s.Text, {
-                                              variant: 'text-md/normal',
-                                              children: d.Z.Messages.HUB_ENTRY_REMOVE_BODY.format({ guildName: t.name })
-                                          })
-                                      })
+                                  (0, l.h7j)((e) =>
+                                      (0, r.jsx)(
+                                          l.ConfirmModal,
+                                          h(
+                                              p(
+                                                  {
+                                                      header: d.NW.string(d.t.KUxYWF),
+                                                      confirmText: d.NW.string(d.t.N86XcH),
+                                                      cancelText: d.NW.string(d.t['ETE/oK']),
+                                                      onConfirm: x
+                                                  },
+                                                  e
+                                              ),
+                                              {
+                                                  children: (0, r.jsx)(l.Text, {
+                                                      variant: 'text-md/normal',
+                                                      children: d.NW.format(d.t['/5y0ub'], { guildName: t.name })
+                                                  })
+                                              }
+                                          )
+                                      )
                                   ),
-                                      I();
+                                      v();
                               },
                               color: 'danger'
                           })
                         : null,
-                    _
+                    b
                         ? null
-                        : (0, i.jsx)(i.Fragment, {
-                              children: (0, i.jsx)(s.MenuItem, {
-                                  id: 'report-server-listing',
-                                  label: d.Z.Messages.REPORT_SERVER_NO_NAME,
-                                  action: function () {
-                                      null != t && ((0, o.sq)(t), I());
-                                  },
-                                  icon: s.FlagIcon,
-                                  color: 'danger'
-                              })
+                        : (0, r.jsx)(l.sNh, {
+                              id: 'report-server-listing',
+                              label: d.NW.string(d.t.Aen9en),
+                              action: function () {
+                                  null != t && ((0, s.sq)(t), v());
+                              },
+                              icon: l.U65,
+                              color: 'danger'
                           })
                 ]
             }),
-            (0, i.jsx)(s.MenuGroup, { children: g })
+            (0, r.jsx)(l.kSQ, { children: y })
         ]
     });
 }

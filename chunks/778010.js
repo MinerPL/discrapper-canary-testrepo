@@ -7,8 +7,4 @@ function r(e, t) {
             })
           : e === t;
 }
-n.d(t, {
-    s: function () {
-        return r;
-    }
-});
+n.d(t, { s: () => r });

@@ -1,15 +1,11 @@
 n.d(t, {
-    ZP: function () {
-        return a;
-    },
-    lY: function () {
-        return s;
-    }
+    ZP: () => r,
+    lY: () => o
 });
-var i = n(689938);
-function a(e) {
-    return e > 0 ? i.Z.Messages.EMBEDDED_ACTIVITIES_MAX_PARTICIPANTS.format({ count: e }) : i.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS;
+var i = n(388032);
+function r(e) {
+    return e > 0 ? i.NW.formatToPlainString(i.t['p/YmkZ'], { count: e }) : i.NW.string(i.t.s1vQIC);
 }
-function s(e) {
-    return e > 0 ? '1-'.concat(e) : i.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS_SHORT;
+function o(e) {
+    return e > 0 ? '1-'.concat(e) : i.NW.string(i.t.zMNEiI);
 }

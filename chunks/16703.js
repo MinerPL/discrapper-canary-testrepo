@@ -1,9 +1,10 @@
-var s = n(442837),
-    a = n(430824),
-    r = n(914010),
-    i = n(771845);
-t.Z = () => {
-    let e = (0, s.e7)([i.ZP], () => i.ZP.getFlattenedGuildIds()),
-        t = (0, s.e7)([r.Z], () => r.Z.getGuildId());
-    return (0, s.e7)([a.Z], () => a.Z.getGuild(null != t ? t : e[0]));
+n.d(t, { Z: () => l });
+var r = n(442837),
+    i = n(430824),
+    s = n(914010),
+    a = n(771845);
+let l = () => {
+    let e = (0, r.e7)([a.ZP], () => a.ZP.getFlattenedGuildIds()),
+        t = (0, r.e7)([s.Z], () => s.Z.getGuildId());
+    return (0, r.e7)([i.Z], () => i.Z.getGuild(null != t ? t : e[0]));
 };

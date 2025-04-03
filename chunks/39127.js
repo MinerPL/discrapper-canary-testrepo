@@ -1,35 +1,31 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(392711),
-    l = n(500923),
-    r = n.n(l),
-    o = n(963838),
+n.d(t, { Z: () => f }), n(26686);
+var r = n(200651),
+    i = n(192379),
+    o = n(392711),
+    a = n(500923),
+    s = n.n(a),
+    l = n(963838),
     c = n(353368),
-    u = n(949534);
+    u = n(910410);
 let d = async (e) => {
     var t;
-    let { animationType: n, animationId: i, url: a, shouldResize: l } = e,
-        r = null !== (t = o.Jw[n]) && void 0 !== t ? t : o.Jw[c.q.BASIC],
-        u = JSON.parse(JSON.stringify(null != i && i < r.length ? r[i] : (0, s.sample)(r)));
-    return (u.assets[0].p = l ? await (0, o.lv)(a) : a), u;
+    let { animationType: n, animationId: r, url: i, shouldResize: a } = e,
+        s = null != (t = l.Jw[n]) ? t : l.Jw[c.q.BASIC],
+        u = JSON.parse(JSON.stringify(null != r && r < s.length ? s[r] : (0, o.sample)(s)));
+    return (u.assets[0].p = a ? await (0, l.lv)(i) : i), u;
 };
-function h(e) {
-    let { containerDimensions: t, effect: n, onComplete: s } = e,
-        l = a.useRef(null);
+function f(e) {
+    let { containerDimensions: t, effect: n, onComplete: o } = e,
+        a = i.useRef(null);
     return (
-        a.useEffect(() => {
+        i.useEffect(() => {
             let e;
             return (
                 !(async function () {
-                    if (null != l.current) {
+                    if (null != a.current) {
                         let t = await d(n);
-                        (e = r().loadAnimation({
-                            container: l.current,
+                        (e = s().loadAnimation({
+                            container: a.current,
                             renderer: 'svg',
                             loop: !1,
                             autoplay: !0,
@@ -37,21 +33,21 @@ function h(e) {
                             rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
                         })),
                             n.animationType === c.q.PREMIUM && e.setSpeed(0.8),
-                            e.addEventListener('complete', () => (null == s ? void 0 : s(n.id)));
+                            e.addEventListener('complete', () => (null == o ? void 0 : o(n.id)));
                     }
                 })(),
                 () => {
                     null == e || e.destroy();
                 }
             );
-        }, [s, n]),
-        (0, i.jsx)('div', {
+        }, [o, n]),
+        (0, r.jsx)('div', {
             className: u.effect,
             style: {
                 height: t.height,
                 width: t.width
             },
-            ref: l
+            ref: a
         })
     );
 }

@@ -1,45 +1,39 @@
-t.d(s, {
-    Ae: function () {
-        return d;
-    },
-    Qe: function () {
-        return E;
-    },
-    U0: function () {
-        return u;
-    },
-    bV: function () {
-        return _;
-    },
-    uZ: function () {
-        return c;
-    }
+n.d(t, {
+    Ae: () => d,
+    Qe: () => m,
+    U0: () => g,
+    bV: () => u,
+    uZ: () => c
 }),
-    t(518263),
-    t(970173),
-    t(520712),
-    t(268111),
-    t(941497),
-    t(32026),
-    t(480839),
-    t(744285),
-    t(492257),
-    t(873817),
-    t(757143);
-var n,
-    a,
+    n(518263),
+    n(970173),
+    n(520712),
+    n(268111),
+    n(941497),
+    n(32026),
+    n(480839),
+    n(744285),
+    n(492257),
+    n(873817),
+    n(610885),
+    n(126298),
+    n(757143),
+    n(301563),
+    n(566702);
+var r,
     i,
-    r = t(943418);
-let o = null !== (i = null === (n = window) || void 0 === n ? void 0 : n.crypto) && void 0 !== i ? i : null === (a = window) || void 0 === a ? void 0 : a.msCrypto,
-    l = 'Uint8Array' in window,
-    c = null != o && 'getRandomValues' in o && l,
-    d = 'PublicKeyCredential' in window && l;
-function _() {
-    var e, s;
+    s,
+    a = n(943418);
+let l = null != (s = null == (r = window) ? void 0 : r.crypto) ? s : null == (i = window) ? void 0 : i.msCrypto,
+    o = 'Uint8Array' in window,
+    c = null != l && 'getRandomValues' in l && o,
+    d = 'PublicKeyCredential' in window && o;
+function u() {
+    var e;
     return (
-        (s = ((e = 20), o.getRandomValues(new Uint8Array(20)))),
-        r
-            .encode(s)
+        (e = l.getRandomValues(new Uint8Array(20))),
+        a
+            .encode(e)
             .toString('utf8')
             .replace(/=/g, '')
             .toLowerCase()
@@ -47,10 +41,10 @@ function _() {
             .trim()
     );
 }
-function E(e) {
+function m(e) {
     return e.replace(/[\s._-]+/g, '').toUpperCase();
 }
-function u(e, s) {
-    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'Discord';
-    return 'otpauth://totp/'.concat(encodeURI(t), ':').concat(encodeURI(e), '?secret=').concat(E(s), '&issuer=').concat(encodeURIComponent(t));
+function g(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'Discord';
+    return 'otpauth://totp/'.concat(encodeURI(n), ':').concat(encodeURI(e), '?secret=').concat(m(t), '&issuer=').concat(encodeURIComponent(n));
 }

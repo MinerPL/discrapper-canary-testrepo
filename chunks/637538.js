@@ -1,29 +1,23 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var a = n(470079),
-    r = n(626135),
-    i = n(353250),
-    o = n(981631);
-function c(e) {
-    let t = a.useRef(!0);
+r.d(t, { Z: () => s });
+var n = r(192379),
+    a = r(493773),
+    i = r(626135),
+    c = r(353250),
+    o = r(981631);
+function s(e) {
+    let t = n.useRef(!0);
     return (
-        a.useEffect(
-            () => () => {
-                t.current && (null == e || e(i.CaptchaError.CANCEL));
-            },
-            []
-        ),
-        a.useEffect(
+        (0, a.ZP)(() => () => {
+            t.current && (null == e || e(c.CaptchaError.CANCEL));
+        }),
+        n.useEffect(
             () => (
-                r.default.track(o.rMx.OPEN_MODAL, { type: 'Guild Join Captcha' }),
+                i.default.track(o.rMx.OPEN_MODAL, { type: 'Guild Join Captcha' }),
                 () => {
-                    t.current && r.default.track(o.rMx.MODAL_DISMISSED, { type: 'Guild Join Captcha' });
+                    t.current && i.default.track(o.rMx.MODAL_DISMISSED, { type: 'Guild Join Captcha' });
                 }
             ),
-            [t]
+            []
         ),
         () => {
             t.current = !1;

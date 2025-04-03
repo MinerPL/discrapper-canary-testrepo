@@ -1,10 +1,6 @@
 n.d(t, {
-    M: function () {
-        return o;
-    },
-    z: function () {
-        return r;
-    }
+    M: () => r,
+    z: () => i
 });
-let o = 'PHONE_VERIFICATION_MODAL_KEY',
-    r = 6;
+let r = 'PHONE_VERIFICATION_MODAL_KEY',
+    i = 6;

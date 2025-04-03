@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });
 let r = (0, n(818083).B)({
     kind: 'guild',
     id: '2023-08_deadchat_simple_prompt_guild',

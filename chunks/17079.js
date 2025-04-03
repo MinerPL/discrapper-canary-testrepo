@@ -1,29 +1,25 @@
-t.d(n, {
-    T: function () {
-        return o;
-    }
-});
-var r = t(570140),
-    i = t(155414);
-async function o(e, n) {
+n.d(t, { T: () => l });
+var r = n(570140),
+    i = n(155414);
+async function l(e, t) {
     r.Z.dispatch({
         type: 'CREATOR_MONETIZATION_PRICE_TIERS_FETCH',
         guildId: e,
-        priceTierType: n
+        priceTierType: t
     });
     try {
-        let t = await i.X(e, n);
+        let n = await i.X(e, t);
         r.Z.dispatch({
             type: 'CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS',
             guildId: e,
-            priceTierType: n,
-            priceTiers: t
+            priceTierType: t,
+            priceTiers: n
         });
-    } catch (t) {
+    } catch (n) {
         r.Z.dispatch({
             type: 'CREATOR_MONETIZATION_PRICE_TIERS_FETCH_FAILURE',
             guildId: e,
-            priceTierType: n
+            priceTierType: t
         });
     }
 }

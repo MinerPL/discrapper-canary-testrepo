@@ -1,3 +1,1 @@
-n(742372), n(118391);
-var e = n(974802);
-t.exports = e.Array.from;
+n(742372), n(118391), (t.exports = n(974802).Array.from);

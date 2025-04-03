@@ -1,30 +1,26 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(297821),
-    l = n(481060),
-    o = n(839963),
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    a = n.n(i),
+    l = n(867824),
+    o = n(481060),
+    s = n(839963),
     c = n(139256),
-    u = n(689938),
-    d = n(35928);
-function _(e) {
-    let { didSelfVote: t, label: n, percentage: a } = e;
-    return (0, i.jsxs)('div', {
+    u = n(388032),
+    d = n(241127);
+function p(e) {
+    let { didSelfVote: t, label: n, percentage: i } = e;
+    return (0, r.jsxs)('div', {
         className: d.votesData,
         children: [
-            t && (0, i.jsx)(r.T, { children: u.Z.Messages.POLL_ANSWER_VOTED_ARIA }),
-            (0, i.jsxs)(l.Text, {
+            t && (0, r.jsx)(l.T, { children: u.NW.string(u.t['8DAM+/']) }),
+            (0, r.jsxs)(o.Text, {
                 variant: 'text-md/semibold',
                 color: 'none',
-                children: [a, '%']
+                children: [i, '%']
             }),
-            (0, i.jsx)(l.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-xs/semibold',
                 color: 'none',
                 children: n
@@ -32,37 +28,37 @@ function _(e) {
         ]
     });
 }
-function E(e) {
-    let { answer: t, isExpired: n, myAvatarUrl: a, canShowVoteCounts: r } = e,
-        l = !0 === t.isSelected,
-        o = !0 === t.didSelfVote,
+function m(e) {
+    let { answer: t, isExpired: n, myAvatarUrl: i, canShowVoteCounts: l } = e,
+        o = !0 === t.isSelected,
+        s = !0 === t.didSelfVote,
         u = !0 === t.isVictor;
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(c.$w, {
-                attachmentClassName: s()(d.attachment, { [d.attachmentWithResults]: r }),
+            (0, r.jsx)(c.$w, {
+                attachmentClassName: a()(d.attachment, { [d.attachmentWithResults]: l }),
                 emojiClassName: d.emoji,
                 media: t.pollMedia,
-                fallback: (0, i.jsx)('div', { className: s()(d.attachment, d.mediaMissing) })
+                fallback: (0, r.jsx)('div', { className: a()(d.attachment, d.mediaMissing) })
             }),
-            l &&
-                (0, i.jsx)(c.ZY, {
+            o &&
+                (0, r.jsx)(c.ZY, {
                     size: 40,
                     isVictor: u,
                     isExpired: n,
                     className: d.selectedIcon
                 }),
-            r &&
-                (0, i.jsxs)(i.Fragment, {
+            l &&
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(_, {
-                            didSelfVote: o,
+                        (0, r.jsx)(p, {
+                            didSelfVote: s,
                             percentage: t.votesPercentage,
                             label: t.votes,
-                            myAvatarUrl: o ? a : void 0
+                            myAvatarUrl: s ? i : void 0
                         }),
-                        ((!n && o) || u) &&
-                            (0, i.jsx)(c.ZY, {
+                        ((!n && s) || u) &&
+                            (0, r.jsx)(c.ZY, {
                                 size: 18,
                                 isVictor: u,
                                 isExpired: n,
@@ -73,21 +69,69 @@ function E(e) {
         ]
     });
 }
-function I(e) {
-    let { isExpired: t, myAvatarUrl: n, answersInteraction: a, canShowVoteCounts: r, ...l } = e;
-    return (0, i.jsx)(c.$e, {
-        className: d.answersContainer,
-        answerClassName: s()(d.answer, { [d.currentlyVoting]: a !== o.Y7.LIST }),
-        myAvatarUrl: n,
-        answersInteraction: a,
-        renderAnswerContent: (e) =>
-            (0, i.jsx)(E, {
-                answer: e,
-                isExpired: t,
+function f(e) {
+    var { isExpired: t, myAvatarUrl: n, answersInteraction: i, canShowVoteCounts: l } = e,
+        o = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['isExpired', 'myAvatarUrl', 'answersInteraction', 'canShowVoteCounts']);
+    return (0, r.jsx)(
+        c.$e,
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                className: d.answersContainer,
+                answerClassName: a()(d.answer, { [d.currentlyVoting]: i !== s.Y7.LIST }),
                 myAvatarUrl: n,
-                answersInteraction: a,
-                canShowVoteCounts: r
-            }),
-        ...l
-    });
+                answersInteraction: i,
+                renderAnswerContent: (e) =>
+                    (0, r.jsx)(m, {
+                        answer: e,
+                        isExpired: t,
+                        myAvatarUrl: n,
+                        answersInteraction: i,
+                        canShowVoteCounts: l
+                    })
+            },
+            o
+        )
+    );
 }

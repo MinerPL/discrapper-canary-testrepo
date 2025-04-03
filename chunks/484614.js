@@ -1,80 +1,91 @@
-var s,
-    o = t(735250),
-    r = t(470079),
-    a = t(120356),
-    l = t.n(a),
-    i = t(846519),
-    c = t(481060),
-    u = t(572004),
-    d = t(689938),
-    E = t(375294);
-function _(e, n, t) {
+n.d(t, { Z: () => l });
+var o,
+    r = n(200651),
+    i = n(192379),
+    a = n(846519),
+    _ = n(481060),
+    d = n(572004),
+    s = n(388032);
+function b(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = t),
+            : (e[t] = n),
         e
     );
 }
-class I extends (s = r.PureComponent) {
+class c extends (o = i.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
     render() {
-        let { isVertical: e, value: n, text: t, className: s, inputClassName: r } = this.props,
-            { mode: a } = this.state,
-            i = a === c.CopyInput.Modes.SUCCESS ? d.Z.Messages.COPIED : t;
-        return e
-            ? (0, o.jsxs)('div', {
-                  className: l()(s, a),
-                  children: [
-                      (0, o.jsx)(c.TextInput, {
-                          value: n,
-                          inputClassName: r
-                      }),
-                      (0, o.jsx)(c.Button, {
-                          className: E.button,
-                          onClick: this.handleCopy,
-                          size: c.Button.Sizes.MIN,
-                          color: this.getVerticalButtonColor(a),
-                          look: c.Button.Looks.FILLED,
-                          children: i
-                      })
-                  ]
-              })
-            : (0, o.jsx)(c.CopyInput, {
-                  ...this.props,
-                  onCopy: this.handleCopy,
-                  mode: a,
-                  text: i
-              });
+        var e, t;
+        let { text: n } = this.props,
+            { mode: o } = this.state,
+            i = o === _.kO8.Modes.SUCCESS ? s.NW.string(s.t['t5VZ8/']) : n;
+        return (0, r.jsx)(
+            _.kO8,
+            ((e = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        o = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (o = o.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        o.forEach(function (t) {
+                            b(e, t, n[t]);
+                        });
+                }
+                return e;
+            })({}, this.props)),
+            (t = t =
+                {
+                    onCopy: this.handleCopy,
+                    mode: o,
+                    text: i,
+                    supportsCopy: d.wS
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var o = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, o);
+                      }
+                      return n;
+                  })(Object(t)).forEach(function (n) {
+                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  }),
+            e)
+        );
     }
-    handleCopy() {
-        let { onCopy: e, value: n, delay: t } = this.props,
-            s = (0, u.JG)(n);
-        this.setState({ mode: s ? c.CopyInput.Modes.SUCCESS : c.CopyInput.Modes.ERROR }), this._timeout.start(t, () => this.setState({ mode: c.CopyInput.Modes.DEFAULT })), null == e || e();
+    handleCopy(e) {
+        let { onCopy: t, delay: n = 1000 } = this.props,
+            o = (0, d.JG)(e);
+        this.setState({ mode: o ? _.kO8.Modes.SUCCESS : _.kO8.Modes.ERROR }), this._timeout.start(n, () => this.setState({ mode: _.kO8.Modes.DEFAULT })), null == t || t(e);
     }
     getVerticalButtonColor(e) {
         switch (e) {
-            case c.CopyInput.Modes.SUCCESS:
-                return c.Button.Colors.GREEN;
-            case c.CopyInput.Modes.ERROR:
-                return c.Button.Colors.RED;
+            case _.kO8.Modes.SUCCESS:
+                return _.zxk.Colors.GREEN;
+            case _.kO8.Modes.ERROR:
+                return _.zxk.Colors.RED;
             default:
-                return c.Button.Colors.BRAND;
+                return _.zxk.Colors.BRAND;
         }
     }
     constructor(e) {
-        super(e), _(this, '_timeout', void 0), (this.state = { mode: c.CopyInput.Modes.DEFAULT }), (this._timeout = new i.V7()), (this.handleCopy = this.handleCopy.bind(this));
+        super(e), b(this, '_timeout', void 0), (this.state = { mode: _.kO8.Modes.DEFAULT }), (this._timeout = new a.V7()), (this.handleCopy = this.handleCopy.bind(this));
     }
 }
-_(I, 'defaultProps', {
-    isVertical: !1,
-    delay: 300
-}),
-    (n.Z = I);
+b(c, 'defaultProps', { delay: 1000 });
+let l = c;

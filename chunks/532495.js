@@ -1,174 +1,215 @@
-t.d(s, {
-    Z: function () {
-        return b;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(512722),
-    i = t.n(a),
-    r = t(442837),
-    o = t(809206),
-    l = t(634894),
-    c = t(954138),
-    d = t(891728),
-    _ = t(328783),
-    E = t(295474),
-    u = t(150039),
-    I = t(126631),
-    T = t(433411),
-    S = t(532432),
-    N = t(349177),
-    C = t(872736),
-    m = t(134795),
-    A = t(610966),
-    O = t(513901),
-    g = t(451392),
-    h = t(906364),
-    p = t(350327),
-    R = t(621853),
-    x = t(318661),
-    M = t(25990),
-    f = t(594174),
-    D = t(74538),
-    P = t(689938),
-    L = t(55481);
-function b() {
-    var e, s, t, a, b, Z, v, j;
-    let B = (0, r.e7)([f.default], () => {
-            let e = f.default.getCurrentUser();
-            return i()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
+n.d(t, { Z: () => Z });
+var r = n(200651);
+n(192379);
+var i = n(512722),
+    s = n.n(i),
+    a = n(442837),
+    l = n(809206),
+    o = n(634894),
+    c = n(97992),
+    d = n(328783),
+    u = n(295474),
+    m = n(442933),
+    g = n(150039),
+    p = n(126631),
+    h = n(433411),
+    f = n(532432),
+    b = n(349177),
+    N = n(872736),
+    x = n(818420),
+    _ = n(134795),
+    E = n(610966),
+    j = n(513901),
+    O = n(451392),
+    C = n(906364),
+    S = n(643879),
+    v = n(350327),
+    T = n(621853),
+    I = n(687158),
+    y = n(25990),
+    A = n(594174),
+    P = n(74538),
+    R = n(388032),
+    D = n(596677);
+function Z() {
+    var e, t, n, i, Z, w, k, W;
+    let L = (0, a.e7)([A.default], () => {
+            let e = A.default.getCurrentUser();
+            return s()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
         }),
-        U = (0, r.e7)([R.Z], () => R.Z.getUserProfile(B.id)),
+        B = (0, a.e7)([T.Z], () => T.Z.getUserProfile(L.id)),
         {
-            pendingAvatar: G,
-            pendingGlobalName: F,
-            pendingBanner: y,
-            pendingBio: V,
-            pendingPronouns: Y,
-            pendingAccentColor: w,
-            pendingThemeColors: k,
-            errors: H
-        } = (0, r.cj)([M.Z], () => {
-            let e = M.Z.getAllPending(),
-                s = M.Z.getErrors();
-            return {
-                ...e,
-                errors: s
-            };
+            pendingAvatar: M,
+            pendingGlobalName: U,
+            pendingBanner: V,
+            pendingBio: G,
+            pendingPronouns: F,
+            pendingAccentColor: H,
+            pendingThemeColors: z,
+            errors: Y
+        } = (0, a.cj)([y.Z], () => {
+            var e, t;
+            let n = y.Z.getAllPending(),
+                r = y.Z.getErrors();
+            return (
+                (e = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, n)),
+                (t = t = { errors: r }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(t)).forEach(function (n) {
+                          Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                      }),
+                e
+            );
         }),
-        W = (0, E.gS)(),
-        K = D.ZP.canUsePremiumProfileCustomization(B),
-        z = (0, u.gd)(G, B.avatar),
-        Q = (0, u.f$)(y, null == U ? void 0 : U.banner),
-        X = 'DefaultCustomizationSections';
-    (0, l.j)({
-        location: X + ' auto on',
+        K = (0, S.SD)({
+            userId: L.id,
+            image: M
+        }),
+        q = (0, u.gS)(),
+        X = P.ZP.canUsePremiumProfileCustomization(L),
+        J = (0, g.gd)(M, L.avatar),
+        Q = (0, g.f$)(V, null == B ? void 0 : B.banner),
+        $ = 'DefaultCustomizationSections';
+    (0, o.j)({
+        location: $ + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, l.j)({
-            location: X + ' auto off',
+        (0, o.j)({
+            location: $ + ' auto off',
             autoTrackExposure: !1
         });
-    let q = (0, x.ZP)(B.id),
-        J = null == q ? void 0 : q.getLegacyUsername(),
-        $ = (null !== (t = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0) > 0 ? H.global_name : null !== (a = null == W ? void 0 : W.nick) && void 0 !== a ? a : [],
-        ee = (null !== (b = null === (s = H.bio) || void 0 === s ? void 0 : s.length) && void 0 !== b ? b : 0) > 0 ? H.bio : null !== (Z = null == W ? void 0 : W.bio) && void 0 !== Z ? Z : [],
-        es = (0, c.Z)('user_profile'),
-        et = (0, d.V)();
-    return (0, n.jsxs)('div', {
-        className: L.sectionsContainer,
+    let ee = (0, I.ZP)(L.id),
+        et = null == ee ? void 0 : ee.getLegacyUsername(),
+        en = (null != (n = null == (e = Y.global_name) ? void 0 : e.length) ? n : 0) > 0 ? Y.global_name : null != (i = null == q ? void 0 : q.nick) ? i : [],
+        er = (null != (Z = null == (t = Y.bio) ? void 0 : t.length) ? Z : 0) > 0 ? Y.bio : null != (w = null == q ? void 0 : q.bio) ? w : [],
+        ei = (0, c.w)(),
+        es = (0, m.H)('DefaultCustomizationSections');
+    return (0, r.jsxs)('div', {
+        className: D.sectionsContainer,
         children: [
-            (0, n.jsx)(N.Z, {
-                placeholder: B.username,
-                errors: $,
-                currentGlobalName: B.globalName,
-                pendingGlobalName: F,
-                onGlobalNameChange: o.UZ
+            (0, r.jsx)(b.Z, {
+                placeholder: L.username,
+                errors: en,
+                currentGlobalName: L.globalName,
+                pendingGlobalName: U,
+                onGlobalNameChange: l.W0
             }),
-            (0, n.jsx)(
-                h.Z,
+            (0, r.jsx)(
+                C.Z,
                 {
-                    sectionTitle: P.Z.Messages.USER_SETTINGS_PRONOUNS,
-                    errors: H.pronouns,
-                    onPronounsChange: p.ID,
-                    pendingPronouns: Y,
-                    currentPronouns: null !== (v = null == U ? void 0 : U.pronouns) && void 0 !== v ? v : ''
+                    sectionTitle: R.NW.string(R.t['+T3RIy']),
+                    errors: Y.pronouns,
+                    onPronounsChange: v.ID,
+                    pendingPronouns: F,
+                    currentPronouns: null != (k = null == B ? void 0 : B.pronouns) ? k : ''
                 },
                 'pronouns'
             ),
-            (0, n.jsx)(
-                S.Z,
+            (0, r.jsx)(
+                f.Z,
                 {
-                    onAvatarChange: o.I5,
-                    showRemoveAvatarButton: z,
-                    errors: H.avatar,
-                    sectionTitle: P.Z.Messages.USER_SETTINGS_AVATAR,
+                    onAvatarChange: l.I5,
+                    showRemoveAvatarButton: J,
+                    errors: Y.avatar,
+                    sectionTitle: R.NW.string(R.t.lqaIxM),
                     forcedDivider: !0
                 },
                 'avatar'
             ),
-            (0, n.jsx)(
-                T.Z,
+            (0, r.jsx)(
+                h.Z,
                 {
-                    user: B,
-                    sectionTitle: P.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
+                    user: L,
+                    sectionTitle: R.NW.string(R.t['7v0T9P'])
                 },
                 'decoration'
             ),
-            (0, n.jsx)(
-                O.Z,
+            es && (0, r.jsx)(x.Z, { user: L }),
+            (0, r.jsx)(
+                j.Z,
                 {
-                    user: B,
-                    sectionTitle: P.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
+                    user: L,
+                    sectionTitle: R.NW.string(R.t.wR5wOj)
                 },
                 'effect'
             ),
-            K
-                ? (0, n.jsxs)(n.Fragment, {
+            X
+                ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, n.jsx)(
-                              m.Z,
+                          (0, r.jsx)(
+                              _.Z,
                               {
                                   showRemoveBannerButton: Q,
-                                  errors: H.banner,
-                                  onBannerChange: p.g_,
+                                  errors: Y.banner,
+                                  onBannerChange: v.g_,
                                   forcedDivider: !0
                               },
                               'banner'
                           ),
-                          (0, n.jsx)(g.Z, {
-                              user: B,
-                              pendingAvatar: G,
-                              pendingColors: k,
-                              onThemeColorsChange: p.z5,
+                          (0, r.jsx)(O.Z, {
+                              user: L,
+                              pendingAvatarSrc: K,
+                              pendingColors: z,
+                              onThemeColorsChange: v.z5,
                               forcedDivider: !0
                           })
                       ]
                   })
-                : (0, n.jsx)(
-                      A.Z,
+                : (0, r.jsx)(
+                      E.Z,
                       {
-                          user: B,
-                          savedUserColor: null == U ? void 0 : U.accentColor,
-                          pendingColor: w,
-                          setPendingAccentColor: p.CM
+                          user: L,
+                          savedUserColor: null == B ? void 0 : B.accentColor,
+                          pendingColor: H,
+                          setPendingAccentColor: v.CM
                       },
                       'color'
                   ),
-            (0, n.jsx)(
-                I.Z,
+            (0, r.jsx)(
+                p.Z,
                 {
-                    sectionTitle: P.Z.Messages.USER_SETTINGS_ABOUT_ME,
-                    errors: ee,
-                    onBioChange: (e) => (0, u.xQ)(e, null == U ? void 0 : U.bio),
-                    pendingBio: V,
-                    currentBio: null !== (j = null == U ? void 0 : U.bio) && void 0 !== j ? j : ''
+                    sectionTitle: R.NW.string(R.t.NepzEx),
+                    errors: er,
+                    onBioChange: (e) => (0, g.xQ)(e, null == B ? void 0 : B.bio),
+                    pendingBio: G,
+                    currentBio: null != (W = null == B ? void 0 : B.bio) ? W : ''
                 },
                 'bio'
             ),
-            es && et.length > 0 && (0, n.jsx)(_.Z, { availableClans: et }),
-            null != J && (0, n.jsx)(C.Z, { legacyUsername: J }, 'legacy_username')
+            ei.length > 0 && (0, r.jsx)(d.Z, { availableClans: ei }),
+            null != et && (0, r.jsx)(N.Z, { legacyUsername: et }, 'legacy_username')
         ]
     });
 }

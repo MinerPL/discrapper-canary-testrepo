@@ -1,12 +1,8 @@
-t.d(s, {
-    Z: function () {
-        return i;
-    }
-});
-var n = t(470079);
-function i(e, s) {
-    let t = n.useRef(e);
-    n.useEffect(() => {
-        e.length > t.current.length && s(), (t.current = e);
-    }, [e, s]);
+n.d(t, { Z: () => s });
+var i = n(192379);
+function s(e, t) {
+    let n = i.useRef(e);
+    i.useEffect(() => {
+        e.length > n.current.length && t(), (n.current = e);
+    }, [e, t]);
 }

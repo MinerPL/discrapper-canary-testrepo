@@ -1,138 +1,172 @@
-t.d(n, {
-    Z: function () {
-        return E;
-    }
-}),
-    t(653041);
-var i = t(735250),
-    a = t(470079),
-    s = t(481060),
-    l = t(668781),
-    r = t(139387),
-    o = t(308063),
-    d = t(600164),
-    c = t(259580),
-    u = t(768581),
-    I = t(486199),
-    m = t(981631),
-    _ = t(689938),
-    N = t(707692);
-function E(e) {
-    let { webhook: n, editedWebhook: t, channelOptions: E, isExpanded: T, errors: h, onToggleExpand: g } = e,
-        p = a.useMemo(() => {
-            var e, t;
-            return (
-                (e = n),
-                null != (t = n.avatar) && /^data:/.test(t)
-                    ? t
-                    : (0, u.ov)({
-                          id: e.id,
-                          avatar: t,
-                          discriminator: m.fo$
-                      })
-            );
-        }, [n]),
-        f = a.useCallback(() => {
-            (0, s.openModal)((e) =>
-                (0, i.jsx)(s.ConfirmModal, {
-                    ...e,
-                    header: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE_TITLE.format({ name: n.name }),
-                    confirmText: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE,
-                    cancelText: _.Z.Messages.CANCEL,
-                    onConfirm: () => {
-                        o.Z.delete(n.guild_id, n.id).catch(() => {
-                            l.Z.show({
-                                title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_ERROR_DELETING,
-                                body: _.Z.Messages.WEBHOOK_ERROR_INTERNAL_SERVER_ERROR
-                            });
-                        });
-                    },
-                    children: (0, i.jsx)(s.Text, {
-                        variant: 'text-md/normal',
-                        children: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE_BODY
-                    })
-                })
-            );
-        }, [n.guild_id, n.id, n.name]),
-        C = [];
-    null != n.source_channel &&
-        null != n.source_guild &&
-        (C.push({
-            icon: s.AnnouncementsIcon,
-            text: n.source_channel.name
+n.d(t, { Z: () => f }), n(301563), n(653041);
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(668781),
+    a = n(139387),
+    s = n(308063),
+    c = n(600164),
+    d = n(259580),
+    u = n(768581),
+    p = n(486199),
+    m = n(981631),
+    b = n(388032),
+    g = n(405920);
+function f(e) {
+    let { webhook: t, editedWebhook: n, channelOptions: f, isExpanded: h, errors: x, onToggleExpand: j } = e,
+        N = i.useMemo(() => {
+            var e;
+            return null != (e = t.avatar) && /^data:/.test(e)
+                ? e
+                : (0, u.ov)({
+                      id: t.id,
+                      avatar: e,
+                      discriminator: m.fo$
+                  });
+        }, [t]),
+        O = i.useCallback(() => {
+            (0, l.h7j)((e) => {
+                var n, i;
+                return (0, r.jsx)(
+                    l.ConfirmModal,
+                    ((n = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, e)),
+                    (i = i =
+                        {
+                            header: b.NW.formatToPlainString(b.t.gBKqZ2, { name: t.name }),
+                            confirmText: b.NW.string(b.t.CMy0Cg),
+                            cancelText: b.NW.string(b.t['ETE/oK']),
+                            onConfirm: () => {
+                                s.Z.delete(t.guild_id, t.id).catch(() => {
+                                    o.Z.show({
+                                        title: b.NW.string(b.t.LpbaFR),
+                                        body: b.NW.string(b.t['/4TwKS'])
+                                    });
+                                });
+                            },
+                            children: (0, r.jsx)(l.Text, {
+                                variant: 'text-md/normal',
+                                children: b.NW.string(b.t.zO9jrK)
+                            })
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(i)).forEach(function (e) {
+                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                          }),
+                    n)
+                );
+            });
+        }, [t.guild_id, t.id, t.name]),
+        v = [];
+    null != t.source_channel &&
+        null != t.source_guild &&
+        (v.push({
+            icon: l.MqZ,
+            text: t.source_channel.name
         }),
-        C.push({
-            text: (0, i.jsx)(
+        v.push({
+            text: (0, r.jsx)(
                 'span',
                 {
-                    className: N.guildSource,
-                    children: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_GUILD_SOURCE.format({
+                    className: g.guildSource,
+                    children: b.NW.format(b.t['H/jJ6e'], {
                         guildHook: () =>
-                            (0, i.jsx)(
+                            (0, r.jsx)(
                                 'span',
                                 {
-                                    className: N.sourceName,
-                                    children: n.source_guild.name
+                                    className: g.sourceName,
+                                    children: t.source_guild.name
                                 },
-                                n.id
+                                t.id
                             )
                     })
                 },
                 'guild-source'
             )
         }));
-    let O = null;
+    let y = null;
     return (
-        T &&
-            null != t &&
-            (O = (0, i.jsxs)('div', {
-                className: N.body,
+        h &&
+            null != n &&
+            (y = (0, r.jsxs)('div', {
+                className: g.body,
                 children: [
-                    (0, i.jsx)(s.FormDivider, { className: N.topDivider }),
-                    (0, i.jsx)(d.Z, {
-                        children: (0, i.jsxs)(d.Z, {
-                            direction: d.Z.Direction.VERTICAL,
+                    (0, r.jsx)(l.$i$, { className: g.topDivider }),
+                    (0, r.jsx)(c.Z, {
+                        children: (0, r.jsxs)(c.Z, {
+                            direction: c.Z.Direction.VERTICAL,
                             children: [
-                                (0, i.jsxs)(d.Z, {
+                                (0, r.jsxs)(c.Z, {
                                     children: [
-                                        (0, i.jsx)(d.Z.Child, {
+                                        (0, r.jsx)(c.Z.Child, {
                                             basis: '50%',
-                                            children: (0, i.jsx)(s.FormItem, {
-                                                title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_NAME,
-                                                children: (0, i.jsx)(s.TextInput, {
-                                                    value: t.name,
+                                            children: (0, r.jsx)(l.xJW, {
+                                                title: b.NW.string(b.t.I1o5gY),
+                                                children: (0, r.jsx)(l.oil, {
+                                                    value: n.name,
                                                     onChange: (e) => {
-                                                        r.Z.updateWebhook({ name: e });
+                                                        a.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
-                                                    error: h.name
+                                                    error: x.name
                                                 })
                                             })
                                         }),
-                                        (0, i.jsx)(d.Z.Child, {
+                                        (0, r.jsx)(c.Z.Child, {
                                             basis: '50%',
-                                            children: (0, i.jsx)(s.FormItem, {
-                                                title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DEST_CHANNEL,
-                                                children: (0, i.jsx)(s.SingleSelect, {
-                                                    value: t.channel_id,
-                                                    options: E,
+                                            children: (0, r.jsx)(l.xJW, {
+                                                title: b.NW.string(b.t['4TuWfX']),
+                                                children: (0, r.jsx)(l.q4e, {
+                                                    value: n.channel_id,
+                                                    options: f,
                                                     onChange: (e) => {
-                                                        r.Z.updateWebhook({ channelId: e });
+                                                        a.Z.updateWebhook({ channelId: e });
                                                     }
                                                 })
                                             })
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(s.FormDivider, { className: N.bottomDivider }),
-                                (0, i.jsx)(d.Z, {
-                                    children: (0, i.jsx)(s.Button, {
-                                        onClick: f,
-                                        size: s.Button.Sizes.SMALL,
-                                        color: s.Button.Colors.RED,
-                                        look: s.Button.Looks.LINK,
-                                        className: N.removeButton,
-                                        children: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE
+                                (0, r.jsx)(l.$i$, { className: g.bottomDivider }),
+                                (0, r.jsx)(c.Z, {
+                                    children: (0, r.jsx)(l.zxk, {
+                                        onClick: O,
+                                        size: l.zxk.Sizes.SMALL,
+                                        color: l.zxk.Colors.RED,
+                                        look: l.zxk.Looks.LINK,
+                                        className: g.removeButton,
+                                        children: b.NW.string(b.t.CMy0Cg)
                                     })
                                 })
                             ]
@@ -140,34 +174,34 @@ function E(e) {
                     })
                 ]
             })),
-        (0, i.jsx)(s.Card, {
+        (0, r.jsx)(l.Zbd, {
             editable: !0,
-            className: N.card,
-            children: (0, i.jsxs)(d.Z, {
-                direction: d.Z.Direction.VERTICAL,
+            className: g.card,
+            children: (0, r.jsxs)(c.Z, {
+                direction: c.Z.Direction.VERTICAL,
                 children: [
-                    (0, i.jsx)(s.Clickable, {
-                        className: N.header,
-                        'aria-expanded': T,
-                        onClick: g,
-                        children: (0, i.jsxs)(d.Z, {
-                            align: d.Z.Align.CENTER,
+                    (0, r.jsx)(l.P3F, {
+                        className: g.header,
+                        'aria-expanded': h,
+                        onClick: j,
+                        children: (0, r.jsxs)(c.Z, {
+                            align: c.Z.Align.CENTER,
                             children: [
-                                (0, i.jsx)(I.Z, {
-                                    name: n.name,
-                                    imageSrc: p,
-                                    detailsClassName: N.__invalid_description,
-                                    details: C
+                                (0, r.jsx)(p.Z, {
+                                    name: t.name,
+                                    imageSrc: N,
+                                    detailsClassName: g.__invalid_description,
+                                    details: v
                                 }),
-                                (0, i.jsx)(c.Z, {
-                                    className: N.expandIcon,
-                                    expanded: T,
+                                (0, r.jsx)(d.Z, {
+                                    className: g.expandIcon,
+                                    expanded: h,
                                     'aria-hidden': !0
                                 })
                             ]
                         })
                     }),
-                    O
+                    y
                 ]
             })
         })

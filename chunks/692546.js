@@ -1,22 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return v;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => S }), n(47120);
 var i,
-    s = n(470079),
-    a = n(392711),
-    o = n.n(a),
-    r = n(699581),
+    r = n(192379),
+    s = n(392711),
+    o = n.n(s),
     l = n(374470),
-    c = n(902704),
-    d = n(846519),
+    a = n(902704),
+    c = n(846519),
     u = n(13245),
-    h = n(671999),
-    p = n(358085),
-    f = n(998502),
-    _ = n(145597);
+    d = n(808506),
+    h = n(372679),
+    p = n(671999),
+    f = n(358085);
 function g(e, t, n) {
     return (
         t in e
@@ -34,94 +28,97 @@ let m = {
         x: 0,
         y: 0
     },
-    E = !1;
-function Z(e) {
+    y = !1;
+function O(e) {
     let { clientX: t, clientY: n } = e;
-    (E = !0), (m.x = t), (m.y = n);
+    (y = !0), (m.x = t), (m.y = n);
 }
-let I = new Map();
-function S(e, t) {
-    if (null == t) I.delete(e), 0 === I.size && (window.removeEventListener('mousemove', Z), (E = !1));
+let v = new Map();
+function x(e, t) {
+    if (null == t) v.delete(e), 0 === v.size && (window.removeEventListener('mousemove', O), (y = !1));
     else {
-        let n = I.get(e);
-        if (null != n && (0, c.Z)(n.zone, t.zone)) return;
-        0 === I.size && window.addEventListener('mousemove', Z), I.set(e, t);
+        let n = v.get(e);
+        if (null != n && (0, a.Z)(n.zone, t.zone)) return;
+        0 === v.size && window.addEventListener('mousemove', O), v.set(e, t);
     }
-    p.isPlatformEmbedded &&
-        ((0, _.W2)()
-            ? u.Z.setClickZones(
-                  Array.from(I.values()).map((e) => {
-                      let { zone: t } = e;
-                      return {
-                          name: t.name,
-                          left: t.left / window.innerWidth,
-                          top: t.top / window.innerHeight,
-                          right: t.right / window.innerWidth,
-                          bottom: t.bottom / window.innerHeight
-                      };
-                  })
-              )
-            : (f.ZP.requireModule('discord_overlay2').broadcastCommand({
-                  message: 'set_click_zones',
-                  zones: Array.from(I.values()).map((e) => {
-                      let { zone: t } = e;
-                      return t;
-                  })
-              }),
-              (function () {
-                  if (!C)
-                      f.ZP.requireModule('discord_overlay2').setClickZoneCallback((e, t, n) => {
-                          let i = I.get(e);
-                          null != i && (!E && ((m.x = t), (m.y = n)), i.instance.click());
-                      }),
-                          (C = !0);
-              })()));
+    if (f.isPlatformEmbedded)
+        if (d.default.isCurrentPidOutOfProcess()) {
+            let e = Array.from(v.values()).map((e) => {
+                let { zone: t } = e;
+                return {
+                    name: t.name,
+                    left: t.left / window.innerWidth,
+                    top: t.top / window.innerHeight,
+                    right: t.right / window.innerWidth,
+                    bottom: (t.bottom / window.innerHeight) * 1.5
+                };
+            });
+            u.Z.setClickZones(e);
+        } else {
+            var n;
+            let e = (0, h.M)();
+            if (null == e) return;
+            e.broadcastCommand({
+                message: 'set_click_zones',
+                zones: Array.from(v.values()).map((e) => {
+                    let { zone: t } = e;
+                    return t;
+                })
+            }),
+                (n = e),
+                b ||
+                    (n.setClickZoneCallback((e, t, n) => {
+                        let i = v.get(e);
+                        null != i && (y || ((m.x = t), (m.y = n)), i.instance.click());
+                    }),
+                    (b = !0));
+        }
 }
-let C = !1;
-class v extends (i = s.PureComponent) {
+let b = !1;
+class S extends (i = r.PureComponent) {
     componentDidMount() {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
     componentWillUnmount() {
-        this.interval.stop(), S(this.zone, null);
+        this.interval.stop(), x(this.zone, null);
     }
     componentDidUpdate(e) {
         let { observe: t } = this.props;
         t !== e.observe && (t ? this.observeZone() : this.interval.stop());
     }
     render() {
-        return s.Children.only(this.props.children);
+        return r.Children.only(this.props.children);
     }
     observeZone() {
         this.updateZone(), this.interval.start(this.props.observeInterval, this.updateZone);
     }
     click() {
-        let e = (0, h.B)('click', m.x, m.y);
-        (0, h.J)(e, m.x, m.y);
+        let e = (0, p.B)('click', m.x, m.y);
+        (0, p.J)(e, m.x, m.y);
     }
     constructor(...e) {
         super(...e),
             g(this, 'zone', o().uniqueId('ClickArea')),
-            g(this, 'interval', new d.Xp()),
+            g(this, 'interval', new c.Xp()),
             g(this, 'updateZone', () => {
-                let e = (0, r.findDOMNode)(this);
+                let e = this.props.contentDomRef.current;
                 if ((0, l.k)(e)) {
-                    let { left: t, top: n, right: i, bottom: s } = e.getBoundingClientRect();
-                    S(this.zone, {
+                    let { left: t, top: n, right: i, bottom: r } = e.getBoundingClientRect();
+                    x(this.zone, {
                         instance: this,
                         zone: {
                             name: this.zone,
-                            left: Math.ceil(t),
-                            top: Math.ceil(n),
+                            left: Math.floor(t),
+                            top: Math.floor(n),
                             right: Math.ceil(i),
-                            bottom: Math.ceil(s)
+                            bottom: Math.ceil(r)
                         }
                     });
                 }
             });
     }
 }
-g(v, 'defaultProps', {
+g(S, 'defaultProps', {
     observe: !0,
     observeInterval: 1000
 });

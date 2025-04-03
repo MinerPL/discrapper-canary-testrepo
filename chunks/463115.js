@@ -1,40 +1,41 @@
-var t = a(735250);
-a(470079);
-var n = a(120356),
-    l = a.n(n),
-    i = a(481060),
-    r = a(888592),
-    o = a(689938),
-    c = a(202113);
-s.Z = (e) => {
-    let { school: s, setStep: a } = e;
-    return (0, t.jsxs)('div', {
+n.d(t, { Z: () => d });
+var l = n(200651);
+n(192379);
+var r = n(120356),
+    i = n.n(r),
+    s = n(481060),
+    a = n(888592),
+    o = n(388032),
+    c = n(167150);
+let d = (e) => {
+    let { school: t, setStep: n } = e;
+    return (0, l.jsxs)('div', {
         className: c.container,
         children: [
-            (0, t.jsx)('div', { className: c.topImage }),
-            (0, t.jsx)(i.Heading, {
-                className: l()(c.centerText, c.header),
+            (0, l.jsx)('div', { className: c.topImage }),
+            (0, l.jsx)(s.X6q, {
+                className: i()(c.centerText, c.header),
                 variant: 'heading-xl/semibold',
-                children: o.Z.Messages.HUB_WAITLIST_MODAL_JOINED_HEADER
+                children: o.NW.string(o.t.OaloU1)
             }),
-            (0, t.jsx)('div', {
+            (0, l.jsx)('div', {
                 className: c.descriptionWidth,
-                children: (0, t.jsx)(i.Text, {
+                children: (0, l.jsx)(s.Text, {
                     className: c.centerText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: o.Z.Messages.HUB_WAITLIST_MODAL_JOINED_DESCRIPTION.format({ school: s })
+                    children: o.NW.format(o.t.Rs7MXF, { school: t })
                 })
             }),
-            (0, t.jsx)(i.Button, {
-                look: i.Button.Looks.LINK,
-                size: i.Button.Sizes.SMALL,
-                color: i.Button.Colors.LINK,
+            (0, l.jsx)(s.zxk, {
+                look: s.zxk.Looks.LINK,
+                size: s.zxk.Sizes.SMALL,
+                color: s.zxk.Colors.LINK,
                 onClick: () => {
-                    a(r.tF.VERIFY_EMAIL);
+                    n(a.tF.VERIFY_EMAIL);
                 },
                 className: c.__invalid_resendLink,
-                children: o.Z.Messages.HUB_EMAIL_CONFIRMATION_DIFFERENT_EMAIL
+                children: o.NW.string(o.t.Zg63h4)
             })
         ]
     });

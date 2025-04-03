@@ -1,12 +1,8 @@
-t.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var l = t(481060),
-    i = t(374129),
-    u = t(639351),
-    r = t(927923);
-function a(e) {
-    return null != e ? (0, l.makeIconCompat)(e === r.YE.XBOX ? u.Z : i.Z) : l.MobilePhoneControllerIcon;
+n.d(t, { Z: () => l });
+var i = n(481060),
+    r = n(374129),
+    d = n(639351),
+    a = n(927923);
+function l(e) {
+    return null != e ? (0, i.GSL)(e === a.YE.XBOX ? d.Z : r.Z) : i.U5H;
 }

@@ -1,62 +1,51 @@
-t.d(s, {
-    Z: function () {
-        return T;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(442837),
-    i = t(481060),
-    r = t(846027),
-    o = t(600164),
-    l = t(313201),
-    c = t(131951),
-    d = t(36703),
-    _ = t(689938),
-    E = t(224499);
-let u = (0, l.hQ)(),
-    I = (0, l.hQ)();
-function T() {
-    let { inputVolume: e, outputVolume: s } = (0, a.cj)([c.Z], () => ({
-        inputVolume: c.Z.getInputVolume(),
-        outputVolume: c.Z.getOutputVolume()
-    }));
-    return (0, n.jsxs)(o.Z, {
-        className: 'volume',
+n.d(t, { Z: () => h });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    s = n(481060),
+    a = n(846027),
+    l = n(906732),
+    o = n(313201),
+    c = n(131951),
+    d = n(36703),
+    u = n(388032),
+    m = n(245095);
+let g = (0, o.hQ)(),
+    p = (0, o.hQ)();
+function h() {
+    let { analyticsLocations: e } = (0, l.ZP)(),
+        { inputVolume: t, outputVolume: n } = (0, i.cj)([c.Z], () => ({
+            inputVolume: c.Z.getInputVolume(),
+            outputVolume: c.Z.getOutputVolume()
+        }));
+    return (0, r.jsxs)('div', {
+        className: m.volumes,
         children: [
-            (0, n.jsxs)(o.Z.Child, {
-                basis: '50%',
-                children: [
-                    (0, n.jsx)(i.FormTitle, {
-                        id: u,
-                        tag: i.FormTitleTags.H5,
-                        className: E.marginBottom4,
-                        children: _.Z.Messages.FORM_LABEL_INPUT_VOLUME
-                    }),
-                    (0, n.jsx)(i.Slider, {
-                        initialValue: (0, d.P)(e),
-                        asValueChanges: (e) => r.Z.setInputVolume((0, d.A)(e)),
-                        'aria-labelledby': u
+            (0, r.jsx)('div', {
+                className: m.column,
+                children: (0, r.jsx)(s.xJW, {
+                    title: u.NW.string(u.t.OX2Bnp),
+                    titleId: g,
+                    children: (0, r.jsx)(s.iRW, {
+                        initialValue: (0, d.P)(t),
+                        asValueChanges: (t) => a.Z.setInputVolume((0, d.A)(t), { analyticsLocations: e }),
+                        'aria-labelledby': g
                     })
-                ]
+                })
             }),
-            (0, n.jsxs)(o.Z.Child, {
-                basis: '50%',
-                children: [
-                    (0, n.jsx)(i.FormTitle, {
-                        id: I,
-                        tag: i.FormTitleTags.H5,
-                        className: E.marginBottom4,
-                        children: _.Z.Messages.FORM_LABEL_OUTPUT_VOLUME
-                    }),
-                    (0, n.jsx)(i.Slider, {
-                        initialValue: (0, d.P)(s),
+            (0, r.jsx)('div', {
+                className: m.column,
+                children: (0, r.jsx)(s.xJW, {
+                    title: u.NW.string(u.t.eATD2N),
+                    titleId: p,
+                    children: (0, r.jsx)(s.iRW, {
+                        initialValue: (0, d.P)(n),
                         maxValue: 200,
                         onValueRender: (e) => ''.concat(e.toFixed(0), '%'),
-                        asValueChanges: (e) => r.Z.setOutputVolume((0, d.A)(e)),
-                        'aria-labelledby': I
+                        asValueChanges: (t) => a.Z.setOutputVolume((0, d.A)(t), { analyticsLocations: e }),
+                        'aria-labelledby': p
                     })
-                ]
+                })
             })
         ]
     });

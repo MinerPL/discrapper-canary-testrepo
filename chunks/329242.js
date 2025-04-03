@@ -1,24 +1,25 @@
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
     l = n(51144),
-    o = n(425747);
-t.Z = (e) => {
+    o = n(261182);
+let c = (e) => {
     let { user: t, fill: n } = e,
-        a = '\xA0(@'.concat(l.ZP.getUserTag(t, { decoration: 'never' }), ')');
-    return (0, s.jsxs)(i.Text, {
-        className: r()([o.text, { [o.fill]: n }]),
+        i = '\xA0(@'.concat(l.ZP.getUserTag(t, { decoration: 'never' }), ')');
+    return (0, r.jsxs)(a.Text, {
+        className: s()([{ [o.fill]: n }]),
         variant: 'text-md/medium',
         children: [
-            (0, s.jsx)('span', {
+            (0, r.jsx)('span', {
                 className: o.username,
                 children: l.ZP.getName(t)
             }),
-            (0, s.jsx)('span', {
+            (0, r.jsx)('span', {
                 className: o.discriminator,
-                children: a
+                children: i
             })
         ]
     });

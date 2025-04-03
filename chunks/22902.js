@@ -1,25 +1,21 @@
-t.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var r = t(470079),
-    i = t(817460),
-    o = t(293810),
-    l = t(474936),
-    u = t(689938);
-function a(e) {
-    return r.useMemo(() => {
-        var n;
-        let t = o.DN.map((e) => ({
+r.d(t, { Z: () => o });
+var n = r(192379),
+    h = r(817460),
+    v = r(293810),
+    i = r(474936),
+    l = r(388032);
+function o(e) {
+    return n.useMemo(() => {
+        var t;
+        let r = v.DN.map((e) => ({
                 value: e,
-                label: e.interval === l.rV.DAY && 7 === e.interval_count ? u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_TRIAL_TIME_LIMIT_DEFAULT_OPTION.format({ defaultLimit: (0, i.iG)(e) }) : (0, i.iG)(e),
-                isDefault: e.interval === l.rV.DAY && 7 === e.interval_count
+                label: e.interval === i.rV.DAY && 7 === e.interval_count ? l.NW.formatToPlainString(l.t.XfSsr6, { defaultLimit: (0, h.iG)(e) }) : (0, h.iG)(e),
+                isDefault: e.interval === i.rV.DAY && 7 === e.interval_count
             })),
-            r = null != e ? (null === (n = t.find((n) => null != n.value && n.value.interval === e.interval && n.value.interval_count === e.interval_count)) || void 0 === n ? void 0 : n.value) : e;
+            n = null != e ? (null == (t = r.find((t) => null != t.value && t.value.interval === e.interval && t.value.interval_count === e.interval_count)) ? void 0 : t.value) : e;
         return {
-            options: t,
-            selectedOption: r
+            options: r,
+            selectedOption: n
         };
     }, [e]);
 }

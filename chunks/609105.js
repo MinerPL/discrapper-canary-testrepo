@@ -1,28 +1,18 @@
 n.d(t, {
-    NR: function () {
-        return r;
-    },
-    Ob: function () {
-        return o;
-    },
-    ZI: function () {
-        return i;
-    },
-    m1: function () {
-        return c;
-    },
-    uc: function () {
-        return l;
-    }
+    NR: () => s,
+    Ob: () => o,
+    ZI: () => a,
+    m1: () => c,
+    uc: () => l
 });
-var s = n(987170),
-    a = n(987338);
-let r = (0, s.Z)({
+var r = n(987170),
+    i = n(987338);
+let s = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_nitro_vanilla',
         label: 'CTP open nitro - A/A test - Vanilla',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: a.$P.OPEN_NITRO,
+        commonTriggerPoint: i.$P.OPEN_NITRO,
         treatments: [
             {
                 id: 1,
@@ -31,12 +21,12 @@ let r = (0, s.Z)({
             }
         ]
     }),
-    i = (0, s.Z)({
+    a = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_nitro_filters',
         label: 'CTP open nitro - A/A test - Filters',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: a.$P.OPEN_NITRO,
+        commonTriggerPoint: i.$P.OPEN_NITRO,
         treatments: [
             {
                 id: 1,
@@ -45,12 +35,12 @@ let r = (0, s.Z)({
             }
         ]
     }),
-    l = (0, s.Z)({
+    l = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_nitro_multiple_buckets',
         label: 'CTP open nitro - A/A test - Multiple buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: a.$P.OPEN_NITRO,
+        commonTriggerPoint: i.$P.OPEN_NITRO,
         treatments: [
             {
                 id: 1,
@@ -64,12 +54,12 @@ let r = (0, s.Z)({
             }
         ]
     }),
-    o = (0, s.Z)({
+    o = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_nitro_everyone',
         label: 'CTP open nitro - A/A test - Everyone',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: a.$P.OPEN_NITRO,
+        commonTriggerPoint: i.$P.OPEN_NITRO,
         treatments: [
             {
                 id: 1,
@@ -78,12 +68,12 @@ let r = (0, s.Z)({
             }
         ]
     }),
-    c = (0, s.Z)({
+    c = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_nitro_uneven_buckets',
         label: 'CTP open nitro - A/A test - Uneven buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: a.$P.OPEN_NITRO,
+        commonTriggerPoint: i.$P.OPEN_NITRO,
         treatments: [
             {
                 id: 1,

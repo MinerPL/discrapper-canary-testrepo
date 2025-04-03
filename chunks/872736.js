@@ -1,20 +1,16 @@
-t.d(s, {
-    Z: function () {
-        return o;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(481060),
-    i = t(695346),
-    r = t(689938);
-function o(e) {
-    let s = i.R_.useSetting();
-    return (0, n.jsx)(a.FormSwitch, {
+n.d(t, { Z: () => l });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(695346),
+    a = n(388032);
+function l(e) {
+    let t = s.R_.useSetting();
+    return (0, r.jsx)(i.j7V, {
         hideBorder: !0,
-        value: !s,
-        onChange: () => i.R_.updateSetting(!s),
-        note: s ? null : r.Z.Messages.UNIQUE_USERNAME_TOGGLE_SUBTITLE.format({ username: e.legacyUsername }),
-        children: r.Z.Messages.UNIQUE_USERNAME_TOGGLE_TITLE
+        value: !t,
+        onChange: () => s.R_.updateSetting(!t),
+        note: t ? null : a.NW.formatToPlainString(a.t.aYhclZ, { username: e.legacyUsername }),
+        children: a.NW.string(a.t['3cWDuL'])
     });
 }

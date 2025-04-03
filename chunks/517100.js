@@ -1,131 +1,144 @@
+n.d(t, { Z: () => D });
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(287734),
-    c = n(579806),
-    d = n(695346),
-    _ = n(70956),
-    E = n(358085),
-    f = n(314897),
-    h = n(981631),
-    p = n(65154);
-let m = Date.now(),
-    I = !1,
-    T = !1,
-    g = !1,
-    S = !1,
-    A = !1;
-function N() {
-    return g || S || ((0, E.isAndroid)() && A);
+    i = n(442837),
+    o = n(570140),
+    a = n(287734),
+    s = n(579806),
+    l = n(695346),
+    c = n(70956),
+    u = n(358085),
+    d = n(314897),
+    f = n(981631),
+    _ = n(65154);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
+let h = Date.now(),
+    m = !1,
+    g = !1,
+    E = !1,
+    b = !1,
+    y = !1;
 function v() {
-    Date.now() - m > h.OSm || N()
-        ? I ||
-          l.Z.dispatch({
+    return E || b || ((0, u.isAndroid)() && y);
+}
+function O() {
+    Date.now() - h > Math.min(l.CM.getSetting() * c.Z.Millis.SECOND, f.OSm) || v()
+        ? g ||
+          o.Z.dispatch({
+              type: 'AFK',
+              afk: !0
+          })
+        : g &&
+          o.Z.dispatch({
+              type: 'AFK',
+              afk: !1
+          });
+}
+function I() {
+    Date.now() - h > f.OSm || v()
+        ? m ||
+          o.Z.dispatch({
               type: 'IDLE',
               idle: !0,
-              idleSince: m
+              idleSince: h
           })
-        : I &&
-          l.Z.dispatch({
+        : m &&
+          o.Z.dispatch({
               type: 'IDLE',
               idle: !1
-          }),
-        Date.now() - m > Math.min(d.CM.getSetting() * _.Z.Millis.SECOND, h.OSm) || N()
-            ? T ||
-              l.Z.dispatch({
-                  type: 'AFK',
-                  afk: !0
-              })
-            : T &&
-              l.Z.dispatch({
-                  type: 'AFK',
-                  afk: !1
-              });
+          });
 }
-!__OVERLAY__ &&
-    (E.isPlatformEmbedded && (null === c.Z || void 0 === c.Z ? void 0 : c.Z.remotePowerMonitor) != null
-        ? (!(function e() {
-              var t;
-              let n = (t) => {
-                  (m = Math.max(Date.now() - t, m)), v(), setTimeout(e, 10 * _.Z.Millis.SECOND);
-              };
-              if ((null === c.Z || void 0 === c.Z ? void 0 : null === (t = c.Z.remotePowerMonitor) || void 0 === t ? void 0 : t.getSystemIdleTimeMs) != null) {
-                  let e = c.Z.remotePowerMonitor.getSystemIdleTimeMs();
-                  e instanceof Promise ? e.then(n) : n(e);
-              }
-          })(),
-          c.Z.remotePowerMonitor.on('resume', () => {
-              (g = !1), O({});
-          }),
-          c.Z.remotePowerMonitor.on('suspend', () => {
-              (g = !0), O({}), u.default.disconnect();
-          }),
-          c.Z.remotePowerMonitor.on('lock-screen', () => {
-              (S = !0), O({});
-          }),
-          c.Z.remotePowerMonitor.on('unlock-screen', () => {
-              (S = !1), O({});
-          }))
-        : setInterval(v, 0.25 * h.OSm));
-function O(e) {
+function S() {
+    I(), O();
+}
+function T() {
+    var e;
+    let t = (e) => {
+        (h = Math.max(Date.now() - e, h)), S(), setTimeout(T, 10 * c.Z.Millis.SECOND);
+    };
+    if ((null === s.Z || void 0 === s.Z || null == (e = s.Z.remotePowerMonitor) ? void 0 : e.getSystemIdleTimeMs) != null) {
+        let e = s.Z.remotePowerMonitor.getSystemIdleTimeMs();
+        e instanceof Promise ? e.then(t) : t(e);
+    }
+}
+function N(e) {
+    m = e.idle;
+}
+function A(e) {
+    g = e.afk;
+}
+function C(e) {
+    let { userId: t, speakingFlags: n } = e;
+    return n !== _.Dg.NONE && t === d.default.getId() && P({}), !1;
+}
+function R(e) {
+    let { state: t } = e;
+    return (y = t === f.$7l.BACKGROUND), (h = Date.now()), S(), !1;
+}
+function P(e) {
     let { timestamp: t, type: n } = e,
         r = 'OVERLAY_SET_NOT_IDLE' === n && null != t;
     return (
-        (!r || !(t <= m)) &&
-        ((m = r ? t : Date.now()),
+        (!r || !(t <= h)) &&
+        ((h = r ? t : Date.now()),
         __OVERLAY__
-            ? l.Z.dispatch({
+            ? o.Z.dispatch({
                   type: 'OVERLAY_SET_NOT_IDLE',
-                  timestamp: m
+                  timestamp: h
               })
-            : v(),
+            : S(),
         !1)
     );
 }
-class R extends (s = o.ZP.Store) {
+__OVERLAY__ ||
+    (u.isPlatformEmbedded && (null === s.Z || void 0 === s.Z ? void 0 : s.Z.remotePowerMonitor) != null
+        ? (T(),
+          s.Z.remotePowerMonitor.on('resume', () => {
+              (E = !1), P({});
+          }),
+          s.Z.remotePowerMonitor.on('suspend', () => {
+              (E = !0), P({}), a.default.disconnect();
+          }),
+          s.Z.remotePowerMonitor.on('lock-screen', () => {
+              (b = !0), P({});
+          }),
+          s.Z.remotePowerMonitor.on('unlock-screen', () => {
+              (b = !1), P({});
+          }))
+        : setInterval(S, 30 * c.Z.Millis.SECOND));
+class w extends (r = i.ZP.Store) {
     isIdle() {
-        return I;
+        return m;
     }
     isAFK() {
-        return T;
+        return g;
     }
     getIdleSince() {
-        return I ? m : null;
+        return m ? h : null;
     }
 }
-(a = 'IdleStore'),
-    (i = 'displayName') in (r = R)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new R(l.Z, {
-        IDLE: function (e) {
-            I = e.idle;
-        },
-        AFK: function (e) {
-            T = e.afk;
-        },
-        SPEAKING: function (e) {
-            let { userId: t, speakingFlags: n } = e;
-            return n !== p.Dg.NONE && t === f.default.getId() && O({}), !1;
-        },
-        APP_STATE_UPDATE: function (e) {
-            let { state: t } = e;
-            return (A = t === h.$7l.BACKGROUND), (m = Date.now()), v(), !1;
-        },
-        OVERLAY_SET_NOT_IDLE: O,
-        CHANNEL_SELECT: O,
-        VOICE_CHANNEL_SELECT: O,
-        WINDOW_FOCUS: O,
-        OVERLAY_INITIALIZE: O,
-        OVERLAY_SET_INPUT_LOCKED: O,
-        USER_SETTINGS_PROTO_UPDATE: O
-    }));
+p(w, 'displayName', 'IdleStore');
+let D = new w(o.Z, {
+    IDLE: N,
+    AFK: A,
+    SPEAKING: C,
+    APP_STATE_UPDATE: R,
+    OVERLAY_SET_NOT_IDLE: P,
+    CHANNEL_SELECT: P,
+    VOICE_CHANNEL_SELECT: P,
+    WINDOW_FOCUS: P,
+    OVERLAY_INITIALIZE: P,
+    OVERLAY_SET_INPUT_LOCKED: P,
+    USER_SETTINGS_PROTO_UPDATE: P
+});

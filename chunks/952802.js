@@ -1,65 +1,60 @@
-s.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    s(47120);
-var n = s(735250),
-    r = s(470079),
-    i = s(120356),
-    a = s.n(i),
-    o = s(481060),
-    l = s(313201),
-    c = s(742458),
-    u = s(766650),
-    d = s(354324),
-    h = s(787223);
+r.d(t, { Z: () => p }), r(47120);
+var n = r(200651),
+    s = r(192379),
+    i = r(120356),
+    a = r.n(i),
+    l = r(481060),
+    o = r(313201),
+    c = r(742458),
+    u = r(766650),
+    d = r(553846),
+    h = r(953100);
 function p(e) {
-    let { alpha2: t, countryCode: s, forceMode: i, label: p, error: m, className: f, required: C, value: g, setRef: x, placeholder: N, autoFocus: v, maxLength: E, spellCheck: S, autoComplete: A, autoCapitalize: j, autoCorrect: y, onChange: T, inputClassName: I } = e,
-        _ = (0, l.Dt)(),
-        [Z, O] = r.useState(!1),
-        k = (0, c.o9)(i, g);
-    return (0, n.jsx)(o.FormItem, {
+    let { alpha2: t, countryCode: r, forceMode: i, label: p, error: m, className: f, required: x, value: g, setRef: N, placeholder: j, autoFocus: v, maxLength: C, spellCheck: O, autoComplete: b, autoCapitalize: y, autoCorrect: E, onChange: S, inputClassName: P } = e,
+        T = (0, o.Dt)(),
+        [k, w] = s.useState(!1),
+        A = (0, c.o9)(i, g);
+    return (0, n.jsx)(l.xJW, {
         title: p,
         error: m,
         className: f,
-        required: C,
+        required: x,
         tag: 'label',
-        htmlFor: _,
+        htmlFor: T,
         children: (0, n.jsxs)('div', {
-            className: a()(h.input, d.input, I, {
+            className: a()(h.input, d.input, P, {
                 [h.error]: null != m,
-                [h.focused]: Z
+                [h.focused]: k
             }),
             children: [
                 (0, n.jsx)(u.Z, {
-                    show: k,
+                    show: A,
                     alpha2: t,
-                    countryCode: s
+                    countryCode: r
                 }),
-                (0, n.jsx)(o.TextInput, {
-                    id: _,
+                (0, n.jsx)(l.oil, {
+                    id: T,
                     name: 'email',
                     type: i === c.Nz.EMAIL ? 'email' : 'text',
                     value: g,
-                    inputRef: x,
-                    placeholder: N,
+                    inputRef: N,
+                    placeholder: j,
                     'aria-label': p,
-                    required: C,
+                    required: x,
                     onChange: function (e) {
-                        let t = (0, c.o9)(i, e) ? s : '';
-                        T(e, t);
+                        let t = (0, c.o9)(i, e) ? r : '';
+                        S(e, t);
                     },
-                    autoComplete: A,
-                    autoCapitalize: j,
-                    autoCorrect: y,
+                    autoComplete: b,
+                    autoCapitalize: y,
+                    autoCorrect: E,
                     autoFocus: v,
-                    maxLength: E,
-                    spellCheck: S,
+                    maxLength: C,
+                    spellCheck: O,
                     className: d.inputWrapper,
                     inputClassName: d.inputField,
-                    onFocus: () => O(!0),
-                    onBlur: () => O(!1)
+                    onFocus: () => w(!0),
+                    onBlur: () => w(!1)
                 })
             ]
         })

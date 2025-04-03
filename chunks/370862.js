@@ -1,11 +1,4 @@
-var r, i;
-n.d(t, {
-    d: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {})).LAUNCHER = 'LAUNCHER'),
-    (i.LIBRARY_APPLICATION = 'LIBRARY_APPLICATION'),
-    (i.USER_OVERRIDE = 'USER_OVERRIDE'),
-    (i.DATABASE = 'DATABASE'),
-    (i.DEFAULT = 'DEFAULT');
+n.d(t, { d: () => r });
+var r = (function (e) {
+    return (e.LAUNCHER = 'LAUNCHER'), (e.LIBRARY_APPLICATION = 'LIBRARY_APPLICATION'), (e.USER_OVERRIDE = 'USER_OVERRIDE'), (e.DATABASE = 'DATABASE'), (e.DEFAULT = 'DEFAULT'), (e.DEV_OVERRIDE = 'DEV_OVERRIDE'), (e.LEGACY_ENABLED = 'LEGACY_ENABLED'), (e.NO_OUT_OF_PROCESS_SUPPORT = 'NO_OUT_OF_PROCESS_SUPPORT'), (e.FULL_SCREEN_TYPE = 'FULL_SCREEN_TYPE'), (e.NO_TRACKED_GAME = 'NO_TRACKED_GAME'), (e.GLOBAL_OVERLAY_LOCK_FAILED = 'GLOBAL_OVERLAY_LOCK_FAILED'), (e.UNKNOWN = 'UNKNOWN'), e;
+})({});

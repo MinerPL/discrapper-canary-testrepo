@@ -1,37 +1,33 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    l = n(816782),
-    r = n(221292),
-    o = n(318661),
-    c = n(87728),
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(816782),
+    a = n(221292),
+    s = n(687158),
+    c = n(646915),
     u = n(433355),
     d = n(665149),
-    h = n(981631),
-    m = n(689938);
-function p(e) {
+    p = n(981631),
+    h = n(388032);
+function f(e) {
     let { channel: t, showCallOrActivityPanel: n } = e,
-        p = (0, a.e7)([u.ZP], () => u.ZP.getSection(t.id, null == t ? void 0 : t.isDM())),
-        _ = (0, o.ZP)(t.getRecipientId()),
-        E = (0, c.Z)(),
-        f = p === h.ULH.PROFILE && !E;
-    return (0, i.jsx)(d.JO, {
-        disabled: E || n,
-        tooltip: E || n ? m.Z.Messages.SHOW_USER_PROFILE_UNAVAILABLE : f ? m.Z.Messages.HIDE_USER_PROFILE : m.Z.Messages.SHOW_USER_PROFILE,
-        icon: s.UserCircleStatusIcon,
+        f = (0, i.e7)([u.ZP], () => u.ZP.getSection(t.id, null == t ? void 0 : t.isDM())),
+        m = (0, s.ZP)(t.getRecipientId()),
+        g = (0, c.Z)(),
+        b = f === p.ULH.PROFILE && !g;
+    return (0, r.jsx)(d.JO, {
+        disabled: g || n,
+        tooltip: g || n ? h.NW.string(h.t.YneDgI) : b ? h.NW.string(h.t.niD64e) : h.NW.string(h.t['+FAsHh']),
+        icon: l.z65,
         onClick: () => {
-            (0, r.TY)({
-                displayProfile: _,
-                isProfileOpen: !f
+            (0, a.TY)({
+                displayProfile: m,
+                isProfileOpen: !b
             }),
-                l.Z.toggleProfilePanelSection();
+                o.Z.toggleProfilePanelSection();
         },
-        selected: f && !E && !n
+        selected: b && !g && !n
     });
 }

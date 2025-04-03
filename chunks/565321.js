@@ -1,58 +1,59 @@
-t(47120);
-var a = t(735250),
-    r = t(470079),
-    i = t(481060),
-    s = t(881052),
-    o = t(484455),
-    l = t(592286),
-    c = t(689938),
-    d = t(944309);
-n.Z = function (e) {
-    let { guildId: n, onSave: t, formDescription: u } = e,
-        [m, _] = r.useState(null),
-        [f, C] = r.useState(u),
-        h = r.useRef(!1),
-        x = r.useRef(!1);
-    r.useEffect(
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
+    c = n(881052),
+    s = n(484455),
+    a = n(592286),
+    l = n(388032),
+    u = n(664305);
+let d = function (e) {
+    let { guildId: t, onSave: n, formDescription: d, disable: f } = e,
+        [p, b] = i.useState(null),
+        [j, y] = i.useState(d),
+        m = i.useRef(!1),
+        g = i.useRef(!1);
+    i.useEffect(
         () => () => {
-            x.current = !0;
+            g.current = !0;
         },
         []
     );
-    let p = r.useCallback(async () => {
-        if (!h.current) {
-            _(null);
+    let O = i.useCallback(async () => {
+        if (!m.current) {
+            b(null);
             try {
-                await t(n, f);
+                await n(t, j);
             } catch (e) {
-                if (x.current) return;
-                _(new s.Hx(e).getAnyErrorMessage());
+                if (g.current) return;
+                b(new c.Hx(e).getAnyErrorMessage());
             } finally {
-                if (x.current) return;
-                h.current = !1;
+                if (g.current) return;
+                m.current = !1;
             }
         }
-    }, [f, n, t]);
-    return (0, a.jsxs)(o.Z, {
-        title: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
+    }, [j, t, n]);
+    return (0, r.jsxs)(s.Z, {
+        title: l.NW.string(l.t.aDJAfn),
         children: [
-            (0, a.jsx)(i.TextArea, {
-                className: d.fieldBackground,
-                maxLength: l.Us,
-                value: null != f ? f : '',
-                placeholder: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
+            (0, r.jsx)(o.Kx8, {
+                className: u.fieldBackground,
+                maxLength: a.Us,
+                value: null != j ? j : '',
+                placeholder: l.NW.string(l.t.AJfv3d),
                 onChange: (e) => {
-                    C(e);
+                    y(e);
                 },
-                onBlur: p,
-                autosize: !0
+                onBlur: O,
+                autosize: !0,
+                disabled: f
             }),
-            null != m && '' !== m
-                ? (0, a.jsx)(i.Text, {
-                      className: d.errorText,
+            null != p && '' !== p
+                ? (0, r.jsx)(o.Text, {
+                      className: u.errorText,
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: m
+                      children: p
                   })
                 : null
         ]

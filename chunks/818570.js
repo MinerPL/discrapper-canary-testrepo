@@ -1,60 +1,56 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(197115),
-    r = n(834129),
-    l = n(981631),
-    o = n(474936),
-    c = n(689938),
-    u = n(364497);
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    a = n(197115),
+    l = n(834129),
+    o = n(981631),
+    s = n(474936),
+    c = n(388032),
+    u = n(806725);
 function d(e) {
     let { message: t, channel: n } = e,
-        d = null != n.guild_id ? l.jXE.TEXT_IN_VOICE : l.jXE.CHANNEL_TEXT_AREA;
-    return (0, i.jsx)(r.Z, {
+        d = null != n.guild_id ? o.jXE.TEXT_IN_VOICE : o.jXE.CHANNEL_TEXT_AREA;
+    return (0, r.jsx)(l.Z, {
         contentClassName: u.messageContentContainer,
         iconContainerClassName: u.iconContainer,
-        iconNode: (0, i.jsx)(a.BellIcon, { colorClass: u.icon }),
-        children: (0, i.jsxs)('div', {
+        iconNode: (0, r.jsx)(i.Dkj, { colorClass: u.icon }),
+        children: (0, r.jsxs)('div', {
             className: u.container,
             children: [
-                (0, i.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(a.Text, {
+                        (0, r.jsx)(i.Text, {
                             variant: 'text-sm/medium',
                             children: t.content
                         }),
-                        (0, i.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             className: u.nitroBadge,
                             children: [
-                                (0, i.jsx)(a.NitroWheelIcon, {
+                                (0, r.jsx)(i.SrA, {
                                     size: 'xs',
                                     colorClass: u.nitroBadgeIcon
                                 }),
-                                (0, i.jsx)(a.Text, {
+                                (0, r.jsx)(i.Text, {
                                     variant: 'text-xs/medium',
                                     className: u.nitroBadgeText,
-                                    children: c.Z.Messages.POWERED_BY_NITRO
+                                    children: c.NW.string(c.t['BMw+7O'])
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: u.buttonContainer,
-                    children: (0, i.jsx)(s.Z, {
+                    children: (0, r.jsx)(a.Z, {
                         showGradient: !0,
                         iconClassName: u.premiumIcon,
-                        subscriptionTier: o.Si.TIER_2,
-                        buttonText: c.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
-                        size: a.Button.Sizes.SMALL,
+                        subscriptionTier: s.Si.TIER_2,
+                        buttonText: c.NW.string(c.t.Y2WKTk),
+                        size: i.zxk.Sizes.SMALL,
                         premiumModalAnalyticsLocation: {
                             section: d,
-                            object: l.qAy.MESSAGE
+                            object: o.qAy.MESSAGE
                         }
                     })
                 })

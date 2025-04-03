@@ -1,4 +1,5 @@
-var a = {
+a.d(t, { Z: () => n });
+var i = {
     lessThanXSeconds: {
         one: 'λιγότερο από ένα δευτερόλεπτο',
         other: 'λιγότερο από {{count}} δευτερόλεπτα'
@@ -61,9 +62,11 @@ var a = {
         other: 'περίπου {{count}} χρόνια'
     }
 };
-t.Z = function (e, t, i) {
+let n = function (e, t, a) {
     var n,
-        r = a[e];
-    if (((n = 'string' == typeof r ? r : 1 === t ? r.one : r.other.replace('{{count}}', String(t))), null != i && i.addSuffix)) return i.comparison && i.comparison > 0 ? 'σε ' + n : n + ' πριν';
+        r = i[e];
+    if (((n = 'string' == typeof r ? r : 1 === t ? r.one : r.other.replace('{{count}}', String(t))), null != a && a.addSuffix))
+        if (a.comparison && a.comparison > 0) return 'σε ' + n;
+        else return n + ' πριν';
     return n;
 };

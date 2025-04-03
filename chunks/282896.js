@@ -1,58 +1,103 @@
-var t = n(735250),
-    l = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    i = n(481060),
-    a = n(378233),
-    c = n(689938),
-    d = n(120437);
-let u = (e) => {
-    let { stickerPack: r } = e;
-    return (0, t.jsx)('div', {
-        className: d.features,
-        children: (0, a.X_)(r)
-            ? (0, t.jsx)(i.Tooltip, {
-                  tooltipClassName: d.featuresTooltip,
-                  position: 'top',
-                  text: c.Z.Messages.STICKER_PICKER_PACK_DETAILS_ANIMATED,
-                  children: (e) =>
-                      (0, t.jsx)(i.PlayIcon, {
-                          size: 'xs',
-                          color: 'currentColor',
-                          ...e,
-                          className: d.featureIcon
-                      })
-              })
-            : null
-    });
-};
-r.Z = l.memo((e) => {
-    let { className: r, stickerPack: n, withDescription: l = !1 } = e;
-    return (0, t.jsxs)('div', {
-        className: s()(d.header, r),
-        children: [
-            (0, t.jsxs)('div', {
-                className: d.title,
-                children: [
-                    (0, t.jsx)(i.Heading, {
-                        className: d.heading,
-                        variant: 'heading-sm/semibold',
-                        children: n.name
-                    }),
-                    (0, t.jsx)(u, { stickerPack: n })
-                ]
-            }),
-            l &&
-                null != n.description &&
-                (0, t.jsx)(i.Text, {
-                    className: d.description,
-                    variant: 'text-sm/normal',
-                    children: n.description
+r.d(t, { Z: () => d }), r(266796);
+var n = r(200651),
+    o = r(192379),
+    i = r(120356),
+    s = r.n(i),
+    c = r(481060),
+    a = r(378233),
+    l = r(388032),
+    u = r(717996);
+let f = (e) => {
+        let { stickerPack: t } = e;
+        return (0, n.jsx)('div', {
+            className: u.features,
+            children: (0, a.X_)(t)
+                ? (0, n.jsx)(c.ua7, {
+                      tooltipClassName: u.featuresTooltip,
+                      position: 'top',
+                      text: l.NW.string(l.t.W11rMT),
+                      children: (e) => {
+                          var t, r;
+                          return (0, n.jsx)(
+                              c.o1U,
+                              ((t = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var r = null != arguments[t] ? arguments[t] : {},
+                                          n = Object.keys(r);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (n = n.concat(
+                                              Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                              })
+                                          )),
+                                          n.forEach(function (t) {
+                                              var n;
+                                              (n = r[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: n,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = n);
+                                          });
+                                  }
+                                  return e;
+                              })(
+                                  {
+                                      size: 'xs',
+                                      color: 'currentColor'
+                                  },
+                                  e
+                              )),
+                              (r = r = { className: u.featureIcon }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                  : (function (e, t) {
+                                        var r = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var n = Object.getOwnPropertySymbols(e);
+                                            r.push.apply(r, n);
+                                        }
+                                        return r;
+                                    })(Object(r)).forEach(function (e) {
+                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                    }),
+                              t)
+                          );
+                      }
+                  })
+                : null
+        });
+    },
+    d = o.memo((e) => {
+        let { className: t, stickerPack: r, withDescription: o = !1 } = e;
+        return (0, n.jsxs)('div', {
+            className: s()(u.header, t),
+            children: [
+                (0, n.jsxs)('div', {
+                    className: u.title,
+                    children: [
+                        (0, n.jsx)(c.X6q, {
+                            className: u.heading,
+                            variant: 'heading-sm/semibold',
+                            children: r.name
+                        }),
+                        (0, n.jsx)(f, { stickerPack: r })
+                    ]
                 }),
-            (0, t.jsx)('div', {
-                className: d.count,
-                children: c.Z.Messages.STICKER_PACK_STICKER_COUNT.format({ numStickers: n.stickers.length })
-            })
-        ]
+                o &&
+                    null != r.description &&
+                    (0, n.jsx)(c.Text, {
+                        className: u.description,
+                        variant: 'text-sm/normal',
+                        children: r.description
+                    }),
+                (0, n.jsx)('div', {
+                    className: u.count,
+                    children: l.NW.format(l.t['0S3JpK'], { numStickers: r.stickers.length })
+                })
+            ]
+        });
     });
-});

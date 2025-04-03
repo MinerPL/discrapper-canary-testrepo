@@ -1,31 +1,51 @@
-t.d(e, {
-    Z: function () {
-        return c;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    l = t(58642),
-    r = t(626135),
-    d = t(630388),
-    s = t(981631),
-    u = t(689938);
-function c(n) {
-    return null == n
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(58642),
+    a = n(626135),
+    c = n(630388),
+    o = n(981631),
+    u = n(388032);
+function s(e) {
+    return null == e
         ? null
-        : (0, i.jsx)(a.MenuCheckboxItem, {
+        : (0, r.jsx)(i.S89, {
               id: 'on-overlay',
-              label: u.Z.Messages.APPLICATION_CONTEXT_MENU_TOGGLE_OVERLAY_DISABLE,
+              label: u.NW.string(u.t.rgZKg4),
               action: function () {
-                  if (null == n) return;
-                  let e = (0, d.x9)(n.getFlags(), s.eHb.OVERLAY_DISABLED);
-                  l.h(n.id, n.branchId, e),
-                      r.default.track(s.rMx.APPLICATION_SETTINGS_UPDATED, {
-                          overlay_disabled: (0, d.yE)(e, s.eHb.OVERLAY_DISABLED),
-                          ...n.getAnalyticsData()
-                      });
+                  if (null == e) return;
+                  let t = (0, c.x9)(e.getFlags(), o.eHb.OVERLAY_DISABLED);
+                  l.h(e.id, e.branchId, t),
+                      a.default.track(
+                          o.rMx.APPLICATION_SETTINGS_UPDATED,
+                          (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var n = null != arguments[t] ? arguments[t] : {},
+                                      r = Object.keys(n);
+                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                      (r = r.concat(
+                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          })
+                                      )),
+                                      r.forEach(function (t) {
+                                          var r;
+                                          (r = n[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
+                                                        value: r,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0
+                                                    })
+                                                  : (e[t] = r);
+                                      });
+                              }
+                              return e;
+                          })({ overlay_disabled: (0, c.yE)(t, o.eHb.OVERLAY_DISABLED) }, e.getAnalyticsData())
+                      );
               },
-              checked: n.hasFlag(s.eHb.OVERLAY_DISABLED)
+              checked: e.hasFlag(o.eHb.OVERLAY_DISABLED)
           });
 }

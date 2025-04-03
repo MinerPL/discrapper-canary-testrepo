@@ -1,60 +1,55 @@
-a.r(e),
-    a.d(e, {
-        default: function () {
-            return i;
-        }
-    });
-var n = a(735250);
-a(470079);
-var s = a(481060),
+a.d(s, { default: () => r });
+var i = a(200651);
+a(192379);
+var o = a(481060),
     t = a(174767),
-    l = a(689938),
-    d = a(887525);
-function i(o) {
-    let { transitionState: e, onClose: a, onDelete: i } = o;
-    async function r() {
-        await (0, t.TG)(), i();
+    e = a(388032),
+    l = a(105195);
+function r(n) {
+    let { transitionState: s, onClose: a, onDelete: r } = n;
+    async function d() {
+        await (0, t.TG)(), r();
     }
-    return (0, n.jsxs)(s.ModalRoot, {
-        size: s.ModalSize.SMALL,
-        transitionState: e,
-        className: d.__invalid_modal,
+    return (0, i.jsxs)(o.Y0X, {
+        size: o.CgR.SMALL,
+        transitionState: s,
+        className: l.__invalid_modal,
         children: [
-            (0, n.jsxs)(s.ModalContent, {
-                className: d.modalContent,
+            (0, i.jsxs)(o.hzk, {
+                className: l.modalContent,
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: d.header,
+                    (0, i.jsxs)('div', {
+                        className: l.header,
                         children: [
-                            (0, n.jsx)(s.Heading, {
-                                className: d.__invalid_title,
+                            (0, i.jsx)(o.X6q, {
+                                className: l.__invalid_title,
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                children: l.Z.Messages.GAME_INVITES_DELETE_MODAL_TITLE
+                                children: e.NW.string(e.t.P8nDIC)
                             }),
-                            (0, n.jsx)(s.ModalCloseButton, { onClick: a })
+                            (0, i.jsx)(o.olH, { onClick: a })
                         ]
                     }),
-                    (0, n.jsx)(s.Text, {
+                    (0, i.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         color: 'text-normal',
-                        className: d.__invalid_body,
-                        children: l.Z.Messages.GAME_INVITES_DELETE_MODAL_SUBTITLE
+                        className: l.__invalid_body,
+                        children: e.NW.string(e.t.fwFcj4)
                     })
                 ]
             }),
-            (0, n.jsxs)(s.ModalFooter, {
+            (0, i.jsxs)(o.mzw, {
                 children: [
-                    (0, n.jsx)(s.Button, {
-                        color: s.Button.Colors.RED,
-                        onClick: r,
-                        children: l.Z.Messages.GAME_INVITES_DELETE_INVITES
+                    (0, i.jsx)(o.zxk, {
+                        color: o.zxk.Colors.RED,
+                        onClick: d,
+                        children: e.NW.string(e.t['5I4fSk'])
                     }),
-                    (0, n.jsx)(s.Button, {
-                        look: s.Button.Looks.LINK,
-                        color: s.Button.Colors.PRIMARY,
+                    (0, i.jsx)(o.zxk, {
+                        look: o.zxk.Looks.LINK,
+                        color: o.zxk.Colors.PRIMARY,
                         onClick: a,
-                        children: l.Z.Messages.CANCEL
+                        children: e.NW.string(e.t['ETE/oK'])
                     })
                 ]
             })

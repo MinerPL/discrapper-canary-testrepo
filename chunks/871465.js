@@ -1,95 +1,73 @@
 n.d(t, {
-    CZ: function () {
-        return o;
-    },
-    LB: function () {
-        return u;
-    },
-    O5: function () {
-        return l;
-    },
-    QI: function () {
-        return c;
-    },
-    YC: function () {
-        return r;
-    }
+    CZ: () => a,
+    LB: () => l,
+    O5: () => s,
+    YC: () => o
 }),
     n(47120),
     n(653041);
-var r,
-    i,
-    a = n(433517),
-    s = n(689938);
-((i = r || (r = {})).CLASSIC = 'classic'), (i.DETUNE = 'detune'), (i.RETRO = 'retro'), (i.BUBBLE = 'bop'), (i.DUCKY = 'ducky'), (i.LOFI = 'lofi'), (i.ASMR = 'asmr'), (i.DISCODO = 'discodo');
-let o = 'custom_notification_sounds_asmr',
-    l = 'custom_notification_sounds_discodo';
-function u() {
+var r = n(433517),
+    i = n(388032),
+    o = (function (e) {
+        return (e.CLASSIC = 'classic'), (e.RETRO = 'retro'), (e.BUBBLE = 'bop'), (e.DUCKY = 'ducky'), (e.LOFI = 'lofi'), (e.ASMR = 'asmr'), (e.DISCODO = 'discodo'), (e.HALLOWEEN = 'halloween'), (e.WINTER_HOLIDAY = 'winter_holiday'), e;
+    })({});
+let a = 'custom_notification_sounds_asmr',
+    s = 'custom_notification_sounds_discodo';
+function l() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        t = (function (e) {
-            if (!e) return [];
-            let t = [];
-            return (
-                a.K.get(l, !1) &&
-                    t.push({
-                        value: 'discodo',
-                        label: 'DISCODO',
-                        description: '๑(\u25D5‿\u25D5)๑',
-                        requirePremium: !0
-                    }),
-                a.K.get(o, !1) &&
-                    t.push({
-                        value: 'asmr',
-                        label: s.Z.Messages.SOUNDPACK_ASMR_LABEL,
-                        description: s.Z.Messages.SOUNDPACK_ASMR_DESCRIPTION,
-                        requirePremium: !0
-                    }),
-                t
-            );
-        })(e);
+        t = c(e);
     return [
         {
             value: 'classic',
-            label: s.Z.Messages.SOUNDPACK_DEFAULT_LABEL,
-            description: s.Z.Messages.SOUNDPACK_DEFAULT_DESCRIPTION,
+            label: i.NW.string(i.t.p3Hg5e),
+            description: i.NW.string(i.t['4iA55u']),
             requirePremium: !1
         },
         {
             value: 'retro',
-            label: s.Z.Messages.SOUNDPACK_RETRO_LABEL,
-            description: s.Z.Messages.SOUNDPACK_RETRO_DESCRIPTION,
+            label: i.NW.string(i.t.Rrwrnp),
+            description: i.NW.string(i.t['zKG+ur']),
             requirePremium: !0
         },
         {
             value: 'lofi',
-            label: s.Z.Messages.SOUNDPACK_LOFI_LABEL,
-            description: s.Z.Messages.SOUNDPACK_LOFI_DESCRIPTION,
+            label: i.NW.string(i.t.aEsrnp),
+            description: i.NW.string(i.t.fMUEj4),
             requirePremium: !0
         },
         {
             value: 'ducky',
-            label: s.Z.Messages.SOUNDPACK_DUCKY_LABEL,
-            description: s.Z.Messages.SOUNDPACK_DUCKY_DESCRIPTION,
+            label: i.NW.string(i.t['4TOv0t']),
+            description: i.NW.string(i.t['1kbe6e']),
             requirePremium: !0
         },
         {
             value: 'bop',
-            label: s.Z.Messages.SOUNDPACK_BUBBLE_LABEL,
-            description: s.Z.Messages.SOUNDPACK_BUBBLE_DESCRIPTION,
+            label: i.NW.string(i.t.s5Qo8P),
+            description: i.NW.string(i.t.I39onp),
             requirePremium: !0
         },
         ...t
     ];
 }
-function c() {
-    return [
-        {
-            value: 'classic',
-            label: s.Z.Messages.SOUNDPACK_CLASSIC_LABEL
-        },
-        {
-            value: 'detune',
-            label: s.Z.Messages.SOUNDPACK_DETUNE_LABEL
-        }
-    ];
+function c(e) {
+    if (!e) return [];
+    let t = [];
+    return (
+        r.K.get(s, !1) &&
+            t.push({
+                value: 'discodo',
+                label: 'DISCODO',
+                description: '๑(\u25D5‿\u25D5)๑',
+                requirePremium: !0
+            }),
+        r.K.get(a, !1) &&
+            t.push({
+                value: 'asmr',
+                label: i.NW.string(i.t['3SJZKC']),
+                description: i.NW.formatToMarkdownString(i.t.MZlgQE, {}),
+                requirePremium: !0
+            }),
+        t
+    );
 }

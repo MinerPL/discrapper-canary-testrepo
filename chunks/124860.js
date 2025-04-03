@@ -1,112 +1,144 @@
-s.d(t, {
-    Cd: function () {
-        return f;
-    },
-    YR: function () {
-        return S;
-    }
+r.d(t, {
+    Cd: () => p,
+    YR: () => b
 }),
-    s(47120),
-    s(411104);
-var n = s(735250),
-    l = s(470079),
-    i = s(481060),
-    r = s(447097),
-    o = s(873124),
-    a = s(248902),
-    d = s(160511),
-    u = s(51693),
-    c = s(973810),
-    h = s(689938);
-function f(e) {
-    var t, s;
-    let { mfaChallenge: h, mfaFinish: f, onEarlyClose: m, onClose: S, width: _ = 440 } = e,
-        [g, x] = l.useState(null !== (s = null === (t = h.methods[0]) || void 0 === t ? void 0 : t.type) && void 0 !== s ? s : 'select'),
-        [E, C] = l.useState(g),
-        p = async (e) => {
-            let { mfaType: t, data: s } = e;
-            await f({
+    r(47120),
+    r(411104);
+var n = r(200651),
+    l = r(192379),
+    s = r(481060),
+    i = r(447097),
+    o = r(873124),
+    a = r(248902),
+    c = r(160511),
+    u = r(51693),
+    d = r(973810),
+    f = r(388032);
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+function p(e) {
+    var t, r;
+    let { mfaChallenge: f, mfaFinish: p, onEarlyClose: g, onClose: b, width: j = 440 } = e,
+        [y, x] = l.useState(null != (r = null == (t = f.methods[0]) ? void 0 : t.type) ? r : 'select'),
+        [S, v] = l.useState(y),
+        O = async (e) => {
+            let { mfaType: t, data: r } = e;
+            await p({
                 mfaType: t,
-                data: s,
-                ticket: h.ticket
+                data: r,
+                ticket: f.ticket
             }),
-                null != S && S();
+                null != b && b();
         },
-        v = {
-            mfaChallenge: h,
-            finish: p,
+        C = {
+            mfaChallenge: f,
+            finish: O,
             setSlide: x,
-            onClose: m
+            onClose: g
         };
-    return (0, n.jsxs)(i.Slides, {
-        activeSlide: g,
-        width: _,
-        onSlideReady: C,
+    return (0, n.jsxs)(s.MyZ, {
+        activeSlide: y,
+        width: j,
+        onSlideReady: v,
         children: [
-            (0, n.jsx)(i.Slide, {
+            (0, n.jsx)(s.Mi4, {
                 id: 'select',
-                children: (0, n.jsx)(a.Z, { ...v })
+                children: (0, n.jsx)(a.Z, h({}, C))
             }),
-            (0, n.jsx)(i.Slide, {
+            (0, n.jsx)(s.Mi4, {
                 id: 'webauthn',
-                children: (0, n.jsx)(c.Z, { ...v })
+                children: (0, n.jsx)(d.Z, h({}, C))
             }),
-            (0, n.jsx)(i.Slide, {
+            (0, n.jsx)(s.Mi4, {
                 id: 'totp',
-                children: (0, n.jsx)(u.Z, {
-                    ...v,
-                    isSlideReady: 'totp' === E
-                })
+                children: (0, n.jsx)(u.Z, m(h({}, C), { isSlideReady: 'totp' === S }))
             }),
-            (0, n.jsx)(i.Slide, {
+            (0, n.jsx)(s.Mi4, {
                 id: 'sms',
-                children: (0, n.jsx)(d.Z, {
-                    ...v,
-                    isSlideReady: 'sms' === E
-                })
+                children: (0, n.jsx)(c.Z, m(h({}, C), { isSlideReady: 'sms' === S }))
             }),
-            (0, n.jsx)(i.Slide, {
+            (0, n.jsx)(s.Mi4, {
                 id: 'backup',
-                children: (0, n.jsx)(r.Z, {
-                    ...v,
-                    isSlideReady: 'backup' === E
-                })
+                children: (0, n.jsx)(i.Z, m(h({}, C), { isSlideReady: 'backup' === S }))
             }),
-            (0, n.jsx)(i.Slide, {
+            (0, n.jsx)(s.Mi4, {
                 id: 'password',
-                children: (0, n.jsx)(o.Z, {
-                    ...v,
-                    isSlideReady: 'password' === E
-                })
+                children: (0, n.jsx)(o.Z, m(h({}, C), { isSlideReady: 'password' === S }))
             })
         ]
     });
 }
-function m(e) {
-    let { mfaChallenge: t, finish: s, transitionState: l, onClose: r } = e;
-    return (0, n.jsx)(i.ModalRoot, {
+function g(e) {
+    let { mfaChallenge: t, finish: r, transitionState: l, onClose: i } = e;
+    return (0, n.jsx)(s.Y0X, {
         transitionState: l,
-        size: i.ModalSize.SMALL,
-        'aria-label': h.Z.Messages.MFA_V2_HEADER,
-        children: (0, n.jsx)(f, {
+        size: s.CgR.SMALL,
+        'aria-label': f.NW.string(f.t.saHocH),
+        children: (0, n.jsx)(p, {
             mfaChallenge: t,
-            mfaFinish: s,
-            onClose: r,
-            onEarlyClose: r
+            mfaFinish: r,
+            onClose: i,
+            onEarlyClose: i
         })
     });
 }
-function S(e, t, s) {
-    (0, i.openModal)(
-        (s) =>
-            (0, n.jsx)(m, {
-                finish: t,
-                mfaChallenge: e,
-                ...s
-            }),
+function b(e, t, r) {
+    (0, s.h7j)(
+        (r) =>
+            (0, n.jsx)(
+                g,
+                h(
+                    {
+                        finish: t,
+                        mfaChallenge: e
+                    },
+                    r
+                )
+            ),
         {
             onCloseCallback: () => {
-                s(Error(h.Z.Messages.MFA_V2_CANCELED));
+                r(Error(f.NW.string(f.t.N2yb9f)));
             }
         }
     );

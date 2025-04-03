@@ -1,31 +1,26 @@
-t.d(n, {
-    Z: function () {
-        return o;
-    }
-}),
-    t(47120);
-var l = t(735250);
-t(470079);
-var i = t(442837),
-    u = t(481060),
-    s = t(889161),
-    r = t(924301),
-    a = t(495279),
-    d = t(894017),
-    E = t(689938);
-function o(e) {
-    let { guildEventId: n, recurrenceId: t, guild: o, channel: c } = e,
-        _ = null != t,
-        { canManageGuildEvent: T } = (0, s.XJ)(null != c ? c : o),
-        [N, I] = (0, i.Wu)([r.ZP], () => [r.ZP.isActive(n), r.ZP.getGuildScheduledEvent(n)]),
-        Z = (0, d.Z)(t, null == I ? void 0 : I.id),
-        f = null != I && T(I);
-    return _ && (null == Z ? void 0 : Z.is_canceled) && f && (!N || _)
-        ? (0, l.jsx)(u.MenuItem, {
-              id: E.Z.Messages.RESTORE_EVENT,
-              label: E.Z.Messages.RESTORE_EVENT,
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651);
+n(192379);
+var l = n(442837),
+    i = n(481060),
+    o = n(357156),
+    c = n(924301),
+    a = n(495279),
+    u = n(894017),
+    s = n(388032);
+function d(e) {
+    let { guildEventId: t, recurrenceId: n, guild: d, channel: g } = e,
+        f = null != n,
+        { canManageGuildEvent: b } = (0, o.XJ)(null != g ? g : d),
+        [p, v] = (0, l.Wu)([c.ZP], () => [c.ZP.isActive(t), c.ZP.getGuildScheduledEvent(t)]),
+        h = (0, u.Z)(n, null == v ? void 0 : v.id),
+        y = null != v && b(v);
+    return f && (null == h ? void 0 : h.is_canceled) && y && (!p || f)
+        ? (0, r.jsx)(i.sNh, {
+              id: s.NW.string(s.t.b8606O),
+              label: s.NW.string(s.t.b8606O),
               action: () => {
-                  null != t && null != Z && (0, a.Z)(Z, o.id, n, t);
+                  null != n && null != h && (0, a.Z)(h, d.id, t, n);
               }
           })
         : null;

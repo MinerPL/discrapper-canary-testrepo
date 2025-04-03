@@ -1,31 +1,26 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return l;
-        }
-    });
-var u = t(735250);
-t(470079);
-var s = t(481060),
-    r = t(239091),
-    c = t(410575),
-    i = t(416977),
-    a = t(778123),
-    d = t(981631),
-    o = t(689938);
-function l(e) {
-    let { guildId: n, analyticsContext: t, onSelect: l } = e,
-        E = (0, i.Z)(n),
-        _ = (0, a.Z)(n);
-    return (0, u.jsx)(c.Z, {
-        context: t,
-        object: d.qAy.CONTEXT_MENU,
-        children: (0, u.jsxs)(s.Menu, {
+n.d(t, { default: () => o });
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    d = n(239091),
+    r = n(410575),
+    c = n(416977),
+    a = n(778123),
+    u = n(981631),
+    l = n(388032);
+function o(e) {
+    let { guildId: t, analyticsContext: n, onSelect: o } = e,
+        v = (0, c.Z)(t),
+        h = (0, a.Z)(t);
+    return (0, i.jsx)(r.Z, {
+        context: n,
+        object: u.qAy.CONTEXT_MENU,
+        children: (0, i.jsxs)(s.v2r, {
             navId: 'user-context',
-            onClose: r.Zy,
-            'aria-label': o.Z.Messages.USER_ACTIONS_MENU_LABEL,
-            onSelect: l,
-            children: [(0, u.jsx)(s.MenuGroup, { children: E }), (0, u.jsx)(s.MenuGroup, { children: _ })]
+            onClose: d.Zy,
+            'aria-label': l.NW.string(l.t.liqwPD),
+            onSelect: o,
+            children: [(0, i.jsx)(s.kSQ, { children: v }), (0, i.jsx)(s.kSQ, { children: h })]
         })
     });
 }

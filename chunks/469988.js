@@ -1,46 +1,75 @@
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(689938),
-    r = n(590656);
-t.Z = (e) => {
+n.d(t, { Z: () => o });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(388032),
+    a = n(333182);
+let o = (e) => {
     let { hasHub: t } = e;
-    return (0, i.jsxs)('div', {
-        className: r.container,
+    return (0, r.jsxs)('div', {
+        className: a.container,
         children: [
-            (0, i.jsx)('div', {
-                className: r.iconContainer,
-                children: (0, i.jsx)(a.HubIcon, {
+            (0, r.jsx)('div', {
+                className: a.iconContainer,
+                children: (0, r.jsx)(i.aVH, {
                     size: 'md',
-                    color: a.tokens.colors.WHITE.css
+                    color: i.TVs.colors.WHITE.css
                 })
             }),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 color: 'header-primary',
                 variant: 'text-lg/semibold',
-                className: r.header,
-                children: t ? s.Z.Messages.HUB_EMAIL_CONNECTION_ADD_HEADER : s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_HEADER
+                className: a.header,
+                children: t ? l.NW.string(l.t.hsSHh4) : l.NW.string(l.t.Wf6iio)
             }),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                className: r.__invalid_description,
-                children: t ? s.Z.Messages.HUB_EMAIL_CONNECTION_ADD_DESCRIPTION : s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_CARD_DESCRIPTION
+                className: a.__invalid_description,
+                children: t ? l.NW.string(l.t.FZ2J3d) : l.NW.string(l.t.TvHcv7)
             }),
-            (0, i.jsx)('div', { className: r.gap }),
-            (0, i.jsx)(a.Button, {
-                size: a.Button.Sizes.LARGE,
-                color: t ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
+            (0, r.jsx)('div', { className: a.gap }),
+            (0, r.jsx)(i.zxk, {
+                size: i.zxk.Sizes.LARGE,
+                color: t ? i.zxk.Colors.PRIMARY : i.zxk.Colors.GREEN,
                 onClick: () =>
-                    (0, a.openModalLazy)(async () => {
+                    (0, i.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
-                        return (t) => (0, i.jsx)(e, { ...t });
+                        return (t) =>
+                            (0, r.jsx)(
+                                e,
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                })
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({}, t)
+                            );
                     }),
-                children: (0, i.jsx)(a.Text, {
+                children: (0, r.jsx)(i.Text, {
                     variant: 'text-sm/semibold',
-                    className: r.addButton,
+                    className: a.addButton,
                     color: 'none',
-                    children: t ? s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_ANOTHER : s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_MY_SCHOOOL
+                    children: t ? l.NW.string(l.t.IyjHDw) : l.NW.string(l.t['KU/aNz'])
                 })
             })
         ]

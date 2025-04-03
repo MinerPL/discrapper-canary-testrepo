@@ -1,41 +1,44 @@
-var i = n(544891),
-    a = n(570140),
-    s = n(981631);
-t.Z = {
+n.d(t, { Z: () => l });
+var r = n(544891),
+    i = n(570140),
+    a = n(981631);
+let l = {
     createChannelFollower: (e, t) =>
-        i.tn.post({
-            url: s.ANM.CHANNEL_FOLLOWERS(t),
+        r.tn.post({
+            url: a.ANM.CHANNEL_FOLLOWERS(t),
             body: { webhook_channel_id: e },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     async fetchChannelFollowerStats(e) {
-        a.Z.dispatch({ type: 'CHANNEL_FOLLOWER_STATS_FETCH_START' });
+        i.Z.dispatch({ type: 'CHANNEL_FOLLOWER_STATS_FETCH_START' });
         try {
-            let t = await i.tn.get({
-                url: s.ANM.CHANNEL_FOLLOWER_STATS(e),
+            let t = await r.tn.get({
+                url: a.ANM.CHANNEL_FOLLOWER_STATS(e),
                 body: { channel_id: e },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !0
             });
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS',
                 stats: t.body,
                 channelId: e
             });
         } catch (t) {
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'CHANNEL_FOLLOWER_STATS_FETCH_FAILURE',
                 channelId: e
             });
         }
     },
     dismissPublishBump(e) {
-        a.Z.dispatch({
+        i.Z.dispatch({
             type: 'CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED',
             messageId: e
         });
     },
     permanentlyHidePublishBump(e) {
-        a.Z.dispatch({
+        i.Z.dispatch({
             type: 'CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY',
             channelId: e
         });

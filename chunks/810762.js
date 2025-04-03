@@ -1,50 +1,51 @@
-var n = t(735250);
-t(470079);
-var a = t(873546),
-    i = t(481060),
-    r = t(270237),
-    o = t(584825),
-    l = t(892729),
-    c = t(949914),
-    d = t(689938),
-    _ = t(24503);
-s.Z = (e) => {
-    let { onGoBack: s } = e,
-        t = (0, l.Z)(),
-        { loading: E } = (0, o.sp)(t);
-    return ((0, r.Z)(a.tq ? 'role-subscriptions-user-setting' : void 0), E)
-        ? (0, n.jsx)(i.Spinner, {})
-        : 0 === t.length
+n.d(t, { Z: () => m });
+var r = n(200651);
+n(192379);
+var i = n(873546),
+    s = n(481060),
+    a = n(270237),
+    l = n(584825),
+    o = n(892729),
+    c = n(949914),
+    d = n(388032),
+    u = n(477108);
+let m = (e) => {
+    let { onGoBack: t } = e,
+        n = (0, o.Z)(),
+        { loading: m } = (0, l.sp)(n);
+    return ((0, a.Z)(i.tq ? 'role-subscriptions-user-setting' : void 0), m)
+        ? (0, r.jsx)(s.$jN, {})
+        : 0 === n.length
           ? null
-          : (0, n.jsxs)('div', {
-                className: _.__invalid_container,
+          : (0, r.jsxs)('div', {
+                className: u.__invalid_container,
                 children: [
-                    (0, n.jsxs)(i.Button, {
-                        look: i.Button.Looks.BLANK,
-                        innerClassName: _.backButtonContents,
-                        onClick: s,
+                    (0, r.jsxs)(s.zxk, {
+                        look: s.zxk.Looks.BLANK,
+                        innerClassName: u.backButtonContents,
+                        onClick: t,
                         children: [
-                            (0, n.jsx)(i.ArrowSmallRightIcon, {
+                            (0, r.jsx)(s.ZSh, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: _.arrowIcon
+                                className: u.arrowIcon
                             }),
-                            d.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_SUBSCRIPTIONS_PAGE_BACK_BUTTON_CTA
+                            d.NW.string(d.t.hqyhKS)
                         ]
                     }),
-                    (0, n.jsx)(i.Spacer, { size: 10 }),
-                    (0, n.jsx)(i.FormTitle, {
+                    (0, r.jsx)(s.LZC, { size: 10 }),
+                    (0, r.jsx)(s.vwX, {
                         tag: 'h1',
-                        children: d.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+                        children: d.NW.string(d.t['KzCF//'])
                     }),
-                    (0, n.jsx)(i.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-sm/normal',
-                        className: _.pageDescription,
-                        children: d.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_PAGE_DESCRIPTION
+                        className: u.pageDescription,
+                        children: d.NW.string(d.t['Y+ucR0'])
                     }),
-                    (0, n.jsx)('div', {
-                        className: _.subscriptionsContainer,
-                        children: t.map((e) => (0, n.jsx)(c.Z, { subscription: e }, e.id))
+                    (0, r.jsx)('div', {
+                        className: u.subscriptionsContainer,
+                        children: n.map((e) => (0, r.jsx)(c.Z, { subscription: e }, e.id))
                     })
                 ]
             });

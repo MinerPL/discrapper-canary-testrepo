@@ -1,23 +1,18 @@
-r.d(t, {
-    r: function () {
-        return o;
-    }
-});
-var n = r(101284),
-    a = r(151122);
-let o = (0, a._I)(() => {
-    let e = 1000 * (0, n.ph)();
+a.d(e, { r: () => n });
+var r = a(101284);
+let n = (0, a(151122)._I)(() => {
+    let t = 1000 * (0, r.ph)();
     return {
         name: 'SessionTiming',
-        processEvent(t) {
-            let r = 1000 * (0, n.ph)();
+        processEvent(e) {
+            let a = 1000 * (0, r.ph)();
             return {
-                ...t,
+                ...e,
                 extra: {
-                    ...t.extra,
-                    'session:start': e,
-                    'session:duration': r - e,
-                    'session:end': r
+                    ...e.extra,
+                    'session:start': t,
+                    'session:duration': a - t,
+                    'session:end': a
                 }
             };
         }

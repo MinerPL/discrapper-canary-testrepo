@@ -1,14 +1,12 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(376398),
-    s = n(825040);
-async function o(e) {
+n.d(t, { Z: () => c }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(376398),
+    a = n(825040);
+function s(e) {
+    null != e && e.getTracks().forEach((e) => e.stop());
+}
+async function l(e) {
     let { deviceId: t, width: n, height: r, disabled: i } = e;
     if (i) return null;
     try {
@@ -25,20 +23,20 @@ async function o(e) {
         return null;
     }
 }
-function l(e) {
-    let { deviceId: t, width: n, height: l, disabled: u } = e,
-        [c, d] = i.useState();
+function c(e) {
+    let { deviceId: t, width: n, height: c, disabled: u } = e,
+        [d, f] = i.useState();
     return (
         i.useEffect(() => {
-            let e = o({
+            let e = l({
                 deviceId: t,
                 width: n,
-                height: l,
+                height: c,
                 disabled: u
             }).then((e) => {
-                let t = null != e ? (0, a.N7)(e) : null;
+                let t = null != e ? (0, o.N7)(e) : null;
                 return (
-                    d(t),
+                    f(t),
                     {
                         stream: e,
                         streamId: t
@@ -47,30 +45,29 @@ function l(e) {
             });
             return () => {
                 e.then((e) => {
-                    var t;
-                    let { stream: n, streamId: r } = e;
-                    null != (t = n) && t.getTracks().forEach((e) => e.stop()), null != r && (0, a.jC)(r);
+                    let { stream: t, streamId: n } = e;
+                    s(t), null != n && (0, o.jC)(n);
                 });
             };
-        }, [t, n, l, u]),
-        null == c
+        }, [t, n, c, u]),
+        null == d
             ? (0, r.jsx)('div', {
                   className: 'media-engine-video',
                   style: {
                       width: n,
-                      height: l
+                      height: c
                   }
               })
-            : (0, r.jsx)(s.Z, {
-                  streamId: c,
+            : (0, r.jsx)(a.Z, {
+                  streamId: d,
                   style: {
                       width: n,
-                      height: l
+                      height: c
                   }
               })
     );
 }
-l.defaultProps = {
+c.defaultProps = {
     disabled: !1,
     width: 320,
     height: 180

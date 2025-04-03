@@ -1,48 +1,43 @@
-t.d(s, {
-    Z: function () {
-        return p;
-    }
-}),
-    t(47120);
-var n = t(735250),
-    a = t(470079),
-    c = t(593473),
-    o = t(266067),
-    r = t(489863),
-    u = t(787025),
-    i = t(397394),
-    h = t(689938);
-function p() {
-    let e;
-    let s = (0, o.TH)(),
-        [t, p] = a.useState(!1),
-        [T, Z] = a.useState(!1);
+n.d(t, { Z: () => d }), n(47120), n(301563);
+var r = n(200651),
+    o = n(192379),
+    i = n(593473),
+    c = n(512969),
+    l = n(489863),
+    s = n(787025),
+    a = n(397394),
+    u = n(388032);
+function d() {
+    let e,
+        t = (0, c.TH)(),
+        [n, d] = o.useState(!1),
+        [h, p] = o.useState(!1);
     return (
-        a.useEffect(() => {
-            (async function e() {
-                let e = (0, c.parse)(s.search);
+        o.useEffect(() => {
+            !(async function () {
+                let e = (0, i.parse)(t.search);
                 try {
-                    var t;
-                    await (0, r.g)(null !== (t = e.token) && void 0 !== t ? t : ''), p(!0);
-                } catch {
-                    Z(!0);
+                    var n;
+                    await (0, l.g)(null != (n = e.token) ? n : ''), d(!0);
+                } catch (e) {
+                    p(!0);
                 }
             })();
-        }, [s.search]),
-        (e = t
-            ? (0, n.jsx)(i.c7, {
-                  message: h.Z.Messages.WHITELISTED,
+        }, [t.search]),
+        (e = n
+            ? (0, r.jsx)(a.c7, {
+                  message: u.NW.string(u.t.Tqu3OT),
                   showsCloseWindowText: !0
               })
-            : T
-              ? (0, n.jsx)(i.Lk, {
-                    message: h.Z.Messages.WHITELIST_FAILED,
+            : h
+              ? (0, r.jsx)(a.Lk, {
+                    message: u.NW.string(u.t.J8LsCg),
                     showsCloseWindowText: !0
                 })
-              : (0, n.jsx)(i.ZP, {
-                    message: h.Z.Messages.WHITELISTING,
+              : (0, r.jsx)(a.ZP, {
+                    message: u.NW.string(u.t.BAcf6e),
                     spinner: !0
                 })),
-        (0, n.jsx)(u.G, { children: e })
+        (0, r.jsx)(s.G, { children: e })
     );
 }

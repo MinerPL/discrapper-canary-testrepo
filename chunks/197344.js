@@ -1,68 +1,39 @@
-n(653041);
-var r = n(442837),
-    i = n(292556),
-    a = n(695346),
-    s = n(292959),
-    o = n(626135),
-    l = n(378364),
-    u = n(981631),
-    c = n(689938);
-function d() {
-    return f() && l.Z.experiment.getCurrentConfig({ location: 'holiday_events_is_eligible' }, { autoTrackExposure: !1 }).enabled;
+n.d(t, { Z: () => l });
+var r = n(378364);
+function i() {
+    return a() && r.Z.experiment.getCurrentConfig({ location: 'holiday_events_is_eligible' }, { autoTrackExposure: !1 }).enabled;
 }
-function _() {
-    let { enabled: e } = l.Z.experiment.useExperiment({ location: 'holiday_events_use_eligible' }, { autoTrackExposure: !1 });
-    return f() && e;
+function o() {
+    let { enabled: e } = r.Z.experiment.useExperiment({ location: 'holiday_events_use_eligible' }, { autoTrackExposure: !1 });
+    return a() && e;
 }
-function E() {
-    return null != l.Z.ringtone && null != l.Z.getRingtoneSettingsLabel;
-}
-function f() {
+function a() {
     let e = Date.now();
-    return e >= l.Z.startTimeMs && e <= l.Z.endTimeMs;
+    return e >= r.Z.startTimeMs && e <= r.Z.endTimeMs;
 }
-t.Z = {
+function s() {
+    return i() && r.Z.soundpack ? r.Z.soundpack : null;
+}
+let l = {
     subscribe: function (e) {
-        return l.Z.experiment.subscribe({ location: 'holiday_events_subscribe' }, e);
+        return r.Z.experiment.subscribe({ location: 'holiday_events_subscribe' }, e);
     },
-    isEligible: d,
-    isRingtoneDisabled: function () {
-        return null == l.Z.ringtone || s.Z.isSoundDisabled(l.Z.ringtone);
+    isEligible: i,
+    useHolidaySoundpack: function () {
+        return o() && r.Z.soundpack && null != r.Z.soundpackLabel
+            ? {
+                  soundpack: r.Z.soundpack,
+                  soundpackLabel: r.Z.soundpackLabel
+              }
+            : null;
     },
-    isRingtoneEligible: function () {
-        return d() && E();
-    },
-    onRingtoneSettingValueChange: function (e) {
-        let t = s.Z.getDisabledSounds();
-        if (null == l.Z.ringtone) return;
-        let n = t.filter((e) => e !== l.Z.ringtone);
-        !e && n.push(l.Z.ringtone),
-            i.default.setDisabledSounds(n),
-            o.default.track(u.rMx.EVENT_RINGTONE_TOGGLED, {
-                toggled_on: e,
-                sound_name: l.Z.ringtone
-            });
-    },
-    useIsEligible: _,
-    useIsRingtoneDisabled: function () {
-        return (0, r.e7)([s.Z], () => null == l.Z.ringtone || s.Z.isSoundDisabled(l.Z.ringtone));
-    },
-    useIsRingtoneEligible: function () {
-        return _() && E();
-    },
-    useRingtoneSettingDescription: function () {
-        return a.D3.useSetting() ? void 0 : c.Z.Messages.ENABLE_PHONE_INTEGRATION;
-    },
-    useRingtoneSettingValue: function () {
-        let e = (0, r.e7)([s.Z], () => s.Z.getDisabledSounds()),
-            t = a.D3.useSetting();
-        return null != l.Z.ringtone && t && !e.includes(l.Z.ringtone);
-    },
+    useIsEligible: o,
     getAppSpinnerSources: function () {
-        return f() ? l.Z.appSpinnerSources : null;
+        return a() ? r.Z.appSpinnerSources : null;
     },
     getLoadingTips: function () {
         var e;
-        return f() ? (null === (e = l.Z.getLoadingTips) || void 0 === e ? void 0 : e.call(l.Z)) : null;
-    }
+        return a() ? (null == (e = r.Z.getLoadingTips) ? void 0 : e.call(r.Z)) : null;
+    },
+    getHolidaySoundpack: s
 };

@@ -1,38 +1,20 @@
-r.d(t, {
-    $J: function () {
-        return o;
-    },
-    E1: function () {
-        return E;
-    },
-    JQ: function () {
-        return I;
-    },
-    S3: function () {
-        return i;
-    },
-    TE: function () {
-        return a;
-    },
-    Wb: function () {
-        return s;
-    },
-    Zj: function () {
-        return n;
-    },
-    ju: function () {
-        return _;
-    },
-    p6: function () {
-        return c;
-    }
+a.d(e, {
+    $J: () => _,
+    E1: () => c,
+    JQ: () => l,
+    S3: () => o,
+    TE: () => n,
+    Wb: () => s,
+    Zj: () => r,
+    ju: () => i,
+    p6: () => E
 });
-let n = 'sentry.source',
-    a = 'sentry.sample_rate',
-    o = 'sentry.op',
-    i = 'sentry.origin',
-    _ = 'sentry.idle_span_finish_reason',
-    E = 'sentry.measurement_unit',
+let r = 'sentry.source',
+    n = 'sentry.sample_rate',
+    _ = 'sentry.op',
+    o = 'sentry.origin',
+    i = 'sentry.idle_span_finish_reason',
+    c = 'sentry.measurement_unit',
     s = 'sentry.measurement_value',
-    c = 'sentry.profile_id',
-    I = 'sentry.exclusive_time';
+    E = 'sentry.profile_id',
+    l = 'sentry.exclusive_time';

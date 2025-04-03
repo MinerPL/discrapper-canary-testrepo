@@ -1,20 +1,16 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    l = t(203143),
-    r = t(615669),
-    s = t(689938);
-let o = {
-    [r.z.END_EARLY]: (e) =>
-        (0, i.jsx)(a.MenuItem, {
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(203143),
+    a = n(615669),
+    o = n(388032);
+let s = {
+    [a.z.END_EARLY]: (e) =>
+        (0, r.jsx)(i.sNh, {
             id: 'end-poll-early',
-            label: s.Z.Messages.POLL_END_EARLY,
-            icon: a.ClockXIcon,
+            label: o.NW.string(o.t.grdwws),
+            icon: i.e0C,
             action: () => {
                 l.Z.endPollEarly({
                     channelId: e.channel_id,
@@ -24,7 +20,7 @@ let o = {
             iconProps: { color: 'currentColor' }
         })
 };
-function u(e) {
-    let n = (0, r.Z)(e);
-    return 0 === n.length ? null : (0, i.jsx)(i.Fragment, { children: n.map((n) => o[n](e)) });
+function c(e) {
+    let t = (0, a.Z)(e);
+    return 0 === t.length ? null : (0, r.jsx)(r.Fragment, { children: t.map((t) => s[t](e)) });
 }

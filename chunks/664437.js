@@ -1,26 +1,22 @@
 n.d(t, {
-    Zg: function () {
-        return l;
-    },
-    pj: function () {
-        return s;
-    },
-    pr: function () {
-        return o;
-    }
-});
+    Zg: () => l,
+    pj: () => a,
+    pr: () => s
+}),
+    n(230036);
 var r = n(544891),
     i = n(570140),
-    a = n(981631);
-function s(e) {
+    o = n(981631);
+function a(e) {
     i.Z.dispatch({
         type: 'TOP_EMOJIS_FETCH',
         guildId: e
     }),
         r.tn
             .get({
-                url: a.ANM.TOP_EMOJIS_FOR_GUILD(e),
-                oldFormErrors: !0
+                url: o.ANM.TOP_EMOJIS_FOR_GUILD(e),
+                oldFormErrors: !0,
+                rejectWithError: !0
             })
             .then(
                 (t) =>
@@ -41,7 +37,7 @@ function s(e) {
                     })
             );
 }
-function o(e, t) {
+function s(e, t) {
     i.Z.dispatch({ type: 'NEWLY_ADDED_EMOJI_SEEN_UPDATED' }),
         null != e &&
             null != t &&

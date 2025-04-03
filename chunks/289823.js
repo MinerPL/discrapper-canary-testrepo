@@ -1,188 +1,234 @@
-var a = t(735250),
-    n = t(470079),
-    l = t(120356),
-    s = t.n(l),
-    r = t(974674),
-    c = t(438784),
-    d = t(481060),
-    o = t(686546),
-    u = t(3682),
-    A = t(350580);
-let I = {},
-    _ = 1 / 4;
-function S(e) {
-    let { height: i, fillColor: t } = e;
-    return (0, a.jsx)('div', {
+n.d(t, { Z: () => y });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    s = n(974674),
+    c = n(438784),
+    o = n(481060),
+    u = n(686546),
+    d = n(3682),
+    f = n(630403);
+let p = {},
+    b = 1 / 4;
+function I(e) {
+    let { height: t, fillColor: n } = e;
+    return (0, i.jsx)('div', {
         style: {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            borderRadius: i / 2,
-            backgroundColor: t,
-            height: i,
-            width: i * u.jR
+            borderRadius: t / 2,
+            backgroundColor: n,
+            height: t,
+            width: t * d.jR
         },
-        children: (0, a.jsx)(c.b, {
-            className: A.dots,
-            dotRadius: i * _
+        children: (0, i.jsx)(c.b, {
+            className: f.dots,
+            dotRadius: t * b
         })
     });
 }
 function E(e) {
-    let { isTyping: i, statusCoords: t, status: n } = e,
-        l = (0, d.useStatusFillColor)(d.StatusTypes.ONLINE);
-    return i
-        ? (0, a.jsx)('div', {
+    let { isTyping: t, statusCoords: n, status: r } = e,
+        a = (0, o.vjg)(o.Skl.ONLINE);
+    return t
+        ? (0, i.jsx)('div', {
               style: {
                   position: 'absolute',
-                  top: t.y,
-                  left: t.x
+                  top: n.y,
+                  left: n.x
               },
-              children: (0, a.jsx)(S, {
-                  height: t.height,
-                  fillColor: l
+              children: (0, i.jsx)(I, {
+                  height: n.height,
+                  fillColor: a
               })
           })
-        : null != n
-          ? (0, a.jsx)(d.Status, {
-                size: t.height,
-                status: n,
+        : null != r
+          ? (0, i.jsx)(o.qbd, {
+                size: n.height,
+                status: r,
                 style: {
                     position: 'absolute',
-                    top: t.y,
-                    left: t.x
+                    top: n.y,
+                    left: n.x
                 }
             })
           : null;
 }
-function f(e) {
-    let { src: i, size: t } = e;
-    return (0, a.jsx)('img', {
-        className: A.circularImage,
-        src: i,
+function _(e) {
+    let { src: t, size: n } = e;
+    return (0, i.jsx)('img', {
+        className: f.circularImage,
+        src: t,
         alt: '',
-        width: t,
-        height: t
+        width: n,
+        height: n
     });
 }
-let h = {
-    [d.AvatarSizes.SIZE_16]: {
-        default: o.QS.DIAGONAL_FACEPILE_16,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_16,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_16
-    },
-    [d.AvatarSizes.SIZE_20]: {
-        default: o.QS.DIAGONAL_FACEPILE_20,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_20,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_20
-    },
-    [d.AvatarSizes.SIZE_24]: {
-        default: o.QS.DIAGONAL_FACEPILE_24,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_24,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_24
-    },
-    [d.AvatarSizes.SIZE_32]: {
-        default: o.QS.DIAGONAL_FACEPILE_32,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_32,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_32
-    },
-    [d.AvatarSizes.SIZE_40]: {
-        default: o.QS.DIAGONAL_FACEPILE_32,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_32,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_32
-    },
-    [d.AvatarSizes.SIZE_48]: {
-        default: o.QS.DIAGONAL_FACEPILE_40,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_40,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_40
-    },
-    [d.AvatarSizes.SIZE_56]: {
-        default: o.QS.DIAGONAL_FACEPILE_56,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_56,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_56
-    },
-    [d.AvatarSizes.SIZE_80]: {
-        default: o.QS.DIAGONAL_FACEPILE_80,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_80,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_80
-    },
-    [d.AvatarSizes.SIZE_120]: {
-        default: o.QS.DIAGONAL_FACEPILE_120,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_120,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_120
-    }
-};
-i.Z = function (e) {
-    var i, t, l;
-    let { backSrc: c, frontSrc: _, size: S, isTyping: g, status: p, style: L, className: N, ...b } = e,
-        { size: x } = d.AvatarSizeSpecs[S],
-        {
-            statusCoords: T,
-            frontAvatarOffsetPx: m,
-            frontAvatarSizePx: C,
-            backAvatarSizePx: G
-        } = n.useMemo(() => {
-            var e;
-            let i = ''.concat(x, '-').concat(g);
-            return null !== (e = I[i]) && void 0 !== e
-                ? e
-                : (function (e, i, t) {
-                      let a = d.AvatarSizeSpecs[e],
-                          n = a.size / (u.z3 + u.o),
-                          l = n * u.z3,
-                          s = n * u.o,
-                          c = {
-                              statusCoords: (0, r.Vq)(a, d.StatusTypes.ONLINE, !1, i),
-                              frontAvatarSizePx: l,
-                              backAvatarSizePx: n,
-                              frontAvatarOffsetPx: s,
-                              frontAvatarCenter: s + l / 2
-                          };
-                      return (I[t] = c), c;
-                  })(S, g, i);
-        }, [x, g, S]);
-    let y = ((i = null != p), (t = g), (l = S), t ? h[l].typing : i ? h[l].status : h[l].default);
-    return (0, a.jsxs)('div', {
-        style: {
-            width: x,
-            height: x,
-            ...L
+let g = {
+        [o.EFr.SIZE_16]: {
+            default: u.QS.DIAGONAL_FACEPILE_16,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_16,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_16
         },
-        'aria-label': b['aria-label'],
-        'aria-hidden': b['aria-hidden'],
-        className: s()(A.container, N),
-        children: [
-            (0, a.jsxs)(o.ZP, {
-                mask: y,
-                height: x,
-                width: x,
-                children: [
-                    (0, a.jsx)('img', {
-                        src: c,
-                        alt: '',
-                        width: G,
-                        height: G
-                    }),
-                    (0, a.jsx)('div', {
-                        style: {
-                            position: 'absolute',
-                            top: m,
-                            left: m
-                        },
-                        children: (0, a.jsx)(f, {
-                            src: _,
-                            size: C,
-                            isTyping: g,
-                            status: p
+        [o.EFr.SIZE_20]: {
+            default: u.QS.DIAGONAL_FACEPILE_20,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_20,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_20
+        },
+        [o.EFr.SIZE_24]: {
+            default: u.QS.DIAGONAL_FACEPILE_24,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_24,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_24
+        },
+        [o.EFr.SIZE_32]: {
+            default: u.QS.DIAGONAL_FACEPILE_32,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_32
+        },
+        [o.EFr.SIZE_40]: {
+            default: u.QS.DIAGONAL_FACEPILE_32,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_32
+        },
+        [o.EFr.SIZE_48]: {
+            default: u.QS.DIAGONAL_FACEPILE_40,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_40,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_40
+        },
+        [o.EFr.SIZE_56]: {
+            default: u.QS.DIAGONAL_FACEPILE_56,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_56,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_56
+        },
+        [o.EFr.SIZE_80]: {
+            default: u.QS.DIAGONAL_FACEPILE_80,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_80,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_80
+        },
+        [o.EFr.SIZE_120]: {
+            default: u.QS.DIAGONAL_FACEPILE_120,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_120,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_120
+        }
+    },
+    y = function (e) {
+        var t,
+            { backSrc: n, frontSrc: a, size: c, isTyping: b, status: I, style: y, className: S } = e,
+            A = (function (e, t) {
+                if (null == e) return {};
+                var n,
+                    i,
+                    r = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            i,
+                            r = {},
+                            a = Object.keys(e);
+                        for (i = 0; i < a.length; i++) (n = a[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        return r;
+                    })(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var a = Object.getOwnPropertySymbols(e);
+                    for (i = 0; i < a.length; i++) (n = a[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                }
+                return r;
+            })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
+        let { size: O } = o.ny6[c],
+            {
+                statusCoords: h,
+                frontAvatarOffsetPx: m,
+                frontAvatarSizePx: j,
+                backAvatarSizePx: L
+            } = r.useMemo(() => {
+                var e;
+                let t = ''.concat(O, '-').concat(b);
+                return null != (e = p[t])
+                    ? e
+                    : (function (e, t, n) {
+                          let i = o.ny6[e],
+                              r = i.size / (d.z3 + d.o),
+                              a = r * d.z3,
+                              l = r * d.o,
+                              c = {
+                                  statusCoords: (0, s.Vq)(i, o.Skl.ONLINE, !1, t),
+                                  frontAvatarSizePx: a,
+                                  backAvatarSizePx: r,
+                                  frontAvatarOffsetPx: l,
+                                  frontAvatarCenter: l + a / 2
+                              };
+                          return (p[n] = c), c;
+                      })(c, b, t);
+            }, [O, b, c]),
+            P = ((t = null != I), b ? g[c].typing : t ? g[c].status : g[c].default);
+        return (0, i.jsxs)('div', {
+            style: (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        i = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (i = i.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: i,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = i);
+                        });
+                }
+                return e;
+            })(
+                {
+                    width: O,
+                    height: O
+                },
+                y
+            ),
+            'aria-label': A['aria-label'],
+            'aria-hidden': A['aria-hidden'],
+            className: l()(f.container, S),
+            children: [
+                (0, i.jsxs)(u.ZP, {
+                    mask: P,
+                    height: O,
+                    width: O,
+                    children: [
+                        (0, i.jsx)('img', {
+                            src: n,
+                            alt: '',
+                            width: L,
+                            height: L
+                        }),
+                        (0, i.jsx)('div', {
+                            style: {
+                                position: 'absolute',
+                                top: m,
+                                left: m
+                            },
+                            children: (0, i.jsx)(_, {
+                                src: a,
+                                size: j,
+                                isTyping: b,
+                                status: I
+                            })
                         })
-                    })
-                ]
-            }),
-            (0, a.jsx)(E, {
-                statusCoords: T,
-                status: p,
-                isTyping: g
-            })
-        ]
-    });
-};
+                    ]
+                }),
+                (0, i.jsx)(E, {
+                    statusCoords: h,
+                    status: I,
+                    isTyping: b
+                })
+            ]
+        });
+    };

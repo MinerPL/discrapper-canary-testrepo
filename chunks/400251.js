@@ -1,113 +1,180 @@
 n.d(t, {
-    m: function () {
-        return Z;
-    }
+    Z: () => T,
+    m: () => S
 }),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(442837),
-    o = n(481060),
+    n(47120),
+    n(266796);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
     c = n(239091),
     u = n(749210),
     d = n(686546),
-    h = n(951394),
-    m = n(565138),
-    p = n(372769),
-    _ = n(134432),
-    f = n(769654),
-    E = n(601964),
-    g = n(430824),
+    p = n(951394),
+    h = n(565138),
+    f = n(372769),
+    m = n(134432),
+    g = n(769654),
+    b = n(601964),
+    _ = n(430824),
     C = n(768581),
-    I = n(683818),
+    y = n(683818),
     x = n(16853),
-    T = n(981631),
-    N = n(689938),
-    v = n(184307),
-    S = n(883760);
-let Z = (e) => {
+    v = n(981631),
+    j = n(388032),
+    O = n(901593),
+    E = n(883760);
+function N(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function I(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function P(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = {},
+                l = Object.keys(e);
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            return i;
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var l = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+let S = (e) => {
     let { onClick: t } = e;
-    return (0, i.jsxs)(o.Clickable, {
+    return (0, r.jsxs)(s.P3F, {
         onClick: t,
-        className: v.addEntryCard,
+        className: O.addEntryCard,
         children: [
-            (0, i.jsx)('img', {
+            (0, r.jsx)('img', {
                 alt: '',
-                src: S
+                src: E
             }),
-            (0, i.jsx)(o.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: 'text-sm/semibold',
                 color: 'header-primary',
-                className: v.addServerText,
-                children: N.Z.Messages.HUB_ADD_SERVER_CTA
+                className: O.addServerText,
+                children: j.NW.string(j.t.H9jxS0)
             })
         ]
     });
 };
-function A(e) {
+function Z(e) {
     let { entry: t } = e,
-        [s, r] = a.useState(!1),
-        { canEdit: c } = (0, I.Z)(t);
-    return (0, i.jsx)('div', {
-        className: l()(v.actionButtonsContainer, { [v.forceButtonsShow]: s }),
-        children: (0, i.jsxs)(h.ZP, {
+        [l, a] = i.useState(!1),
+        c = i.useRef(null),
+        { canEdit: u } = (0, y.Z)(t);
+    return (0, r.jsx)('div', {
+        className: o()(O.actionButtonsContainer, { [O.forceButtonsShow]: l }),
+        children: (0, r.jsxs)(p.ZP, {
             children: [
-                c
-                    ? (0, i.jsx)(o.Tooltip, {
-                          text: N.Z.Messages.HUB_ENTRY_UPDATE,
+                u
+                    ? (0, r.jsx)(s.ua7, {
+                          text: j.NW.string(j.t.XnuOvL),
                           hideOnClick: !0,
                           children: (e) => {
-                              let { onClick: a, ...s } = e;
-                              return (0, i.jsx)(h.zx, {
-                                  ...s,
-                                  onClick: () => {
-                                      null == a || a(),
-                                          (0, o.openModalLazy)(async () => {
-                                              let { default: e } = await n.e('34191').then(n.bind(n, 303647));
-                                              return (n) =>
-                                                  (0, i.jsx)(e, {
-                                                      ...n,
-                                                      entry: t
-                                                  });
-                                          });
-                                  },
-                                  'aria-label': N.Z.Messages.HUB_ENTRY_UPDATE,
-                                  children: (0, i.jsx)(o.PencilIcon, {
-                                      size: 'xs',
-                                      color: 'currentColor',
-                                      className: v.overflowIcon
+                              var { onClick: i } = e,
+                                  l = P(e, ['onClick']);
+                              return (0, r.jsx)(
+                                  p.zx,
+                                  I(N({}, l), {
+                                      onClick: () => {
+                                          null == i || i(),
+                                              (0, s.ZDy)(async () => {
+                                                  let { default: e } = await n.e('34191').then(n.bind(n, 303647));
+                                                  return (n) => (0, r.jsx)(e, I(N({}, n), { entry: t }));
+                                              });
+                                      },
+                                      'aria-label': j.NW.string(j.t.XnuOvL),
+                                      children: (0, r.jsx)(s.vdY, {
+                                          size: 'xs',
+                                          color: 'currentColor',
+                                          className: O.overflowIcon
+                                      })
                                   })
-                              });
+                              );
                           }
                       })
                     : null,
-                (0, i.jsx)(x.Z, {
-                    onRequestOpen: () => r(!0),
-                    onRequestClose: () => r(!1),
+                (0, r.jsx)(x.Z, {
+                    targetElementRef: c,
+                    onRequestOpen: () => a(!0),
+                    onRequestClose: () => a(!1),
                     entry: t,
                     hideEditButton: !0,
                     children: (e) => {
-                        let { onClick: t, ...n } = e;
-                        return (0, i.jsx)(o.Tooltip, {
-                            text: N.Z.Messages.MORE,
+                        var { onClick: t } = e,
+                            n = P(e, ['onClick']);
+                        return (0, r.jsx)(s.ua7, {
+                            text: j.NW.string(j.t.UKOtz8),
                             hideOnClick: !0,
                             children: (e) => {
-                                let { onClick: a, ...s } = e;
-                                return (0, i.jsx)(h.zx, {
-                                    ...n,
-                                    ...s,
-                                    onClick: (e) => {
-                                        null == a || a(), t(e);
-                                    },
-                                    'aria-label': N.Z.Messages.MORE,
-                                    children: (0, i.jsx)(o.MoreHorizontalIcon, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: v.overflowIcon
+                                var { onClick: i } = e,
+                                    l = P(e, ['onClick']);
+                                return (0, r.jsx)(
+                                    p.zx,
+                                    I(N({}, n, l), {
+                                        ref: c,
+                                        onClick: (e) => {
+                                            null == i || i(), t(e);
+                                        },
+                                        'aria-label': j.NW.string(j.t.UKOtz8),
+                                        children: (0, r.jsx)(s.xhG, {
+                                            size: 'md',
+                                            color: 'currentColor',
+                                            className: O.overflowIcon
+                                        })
                                     })
-                                });
+                                );
                             }
                         });
                     }
@@ -116,75 +183,71 @@ function A(e) {
         })
     });
 }
-t.Z = (e) => {
+let T = (e) => {
     var t;
-    let { entry: s } = e,
-        [l, h] = a.useState(!1),
-        I = null != (0, r.e7)([g.Z], () => g.Z.getGuild(s.guildId)),
+    let { entry: l } = e,
+        [o, p] = i.useState(!1),
+        y = null != (0, a.e7)([_.Z], () => _.Z.getGuild(l.guildId)),
         x = async () => {
-            h(!0);
+            p(!0);
             try {
-                I ? (0, f.X)(s.guildId) : await u.Z.joinGuild(s.guildId, { source: T.vtS.DIRECTORY_ENTRY });
+                y ? (0, g.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
             } finally {
-                h(!1);
+                p(!1);
             }
         },
-        S = C.ZP.getGuildSplashURL({
-            id: s.guildId,
-            splash: s.splash,
-            size: 300 * (0, _.x_)()
+        E = C.ZP.getGuildSplashURL({
+            id: l.guildId,
+            splash: l.splash,
+            size: 300 * (0, m.x_)()
         }),
-        Z =
-            null !==
-                (t = C.ZP.getGuildIconURL({
-                    id: s.guildId,
-                    icon: s.icon,
-                    size: 40
-                })) && void 0 !== t
+        P =
+            null !=
+            (t = C.ZP.getGuildIconURL({
+                id: l.guildId,
+                icon: l.icon,
+                size: 40
+            }))
                 ? t
                 : void 0,
-        M = N.Z.Messages.JOIN;
+        S = j.NW.string(j.t.VJlc0d);
     return (
-        I && (M = N.Z.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON),
-        (0, i.jsxs)('div', {
-            className: v.card,
+        y && (S = j.NW.string(j.t.cqWE2d)),
+        (0, r.jsxs)('div', {
+            className: O.card,
             onContextMenu: (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
-                    return (t) =>
-                        (0, i.jsx)(e, {
-                            ...t,
-                            entry: s
-                        });
+                    return (t) => (0, r.jsx)(e, I(N({}, t), { entry: l }));
                 });
             },
             children: [
-                (0, i.jsxs)('div', {
-                    className: v.cardHeader,
+                (0, r.jsxs)('div', {
+                    className: O.cardHeader,
                     children: [
-                        (0, i.jsx)('div', {
-                            className: v.splash,
+                        (0, r.jsx)('div', {
+                            className: O.splash,
                             children:
-                                null != S &&
-                                (0, i.jsx)('img', {
-                                    src: S,
+                                null != E &&
+                                (0, r.jsx)('img', {
+                                    src: E,
                                     alt: '',
-                                    className: v.splashImage
+                                    className: O.splashImage
                                 })
                         }),
-                        (0, i.jsx)('div', {
-                            className: v.guildIcon,
-                            children: (0, i.jsx)(d.ZP, {
+                        (0, r.jsx)('div', {
+                            className: O.guildIcon,
+                            children: (0, r.jsx)(d.ZP, {
                                 mask: d.ZP.Masks.SQUIRCLE,
                                 width: 48,
                                 height: 48,
-                                children: (0, i.jsx)('div', {
-                                    className: v.iconMask,
-                                    children: (0, i.jsx)(m.Z, {
-                                        className: v.icon,
-                                        iconSrc: Z,
-                                        guild: new E.ZP(s),
-                                        size: m.Z.Sizes.MEDIUM,
+                                children: (0, r.jsx)('div', {
+                                    className: O.iconMask,
+                                    children: (0, r.jsx)(h.Z, {
+                                        className: O.icon,
+                                        iconSrc: P,
+                                        guild: new b.ZP(l),
+                                        size: h.Z.Sizes.MEDIUM,
                                         active: !0
                                     })
                                 })
@@ -192,70 +255,70 @@ t.Z = (e) => {
                         })
                     ]
                 }),
-                (0, i.jsxs)('div', {
-                    className: v.guildInfo,
+                (0, r.jsxs)('div', {
+                    className: O.guildInfo,
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: v.title,
+                        (0, r.jsxs)('div', {
+                            className: O.title,
                             children: [
-                                (0, i.jsx)(p.Z, {
-                                    className: v.guildBadge,
-                                    guild: s,
-                                    tooltipColor: o.Tooltip.Colors.PRIMARY
+                                (0, r.jsx)(f.Z, {
+                                    className: O.guildBadge,
+                                    guild: l,
+                                    tooltipColor: s.ua7.Colors.PRIMARY
                                 }),
-                                (0, i.jsx)(o.Text, {
-                                    className: v.guildName,
+                                (0, r.jsx)(s.Text, {
+                                    className: O.guildName,
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
-                                    children: s.name
+                                    children: l.name
                                 })
                             ]
                         }),
-                        (0, i.jsx)(o.Text, {
-                            className: v.description,
+                        (0, r.jsx)(s.Text, {
+                            className: O.description,
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            children: s.description
+                            children: l.description
                         }),
-                        (0, i.jsxs)('div', {
-                            className: v.memberInfo,
+                        (0, r.jsxs)('div', {
+                            className: O.memberInfo,
                             children: [
-                                null != s.approximatePresenceCount &&
-                                    (0, i.jsxs)('div', {
-                                        className: v.memberCount,
+                                null != l.approximatePresenceCount &&
+                                    (0, r.jsxs)('div', {
+                                        className: O.memberCount,
                                         children: [
-                                            (0, i.jsx)('div', { className: v.dotOnline }),
-                                            (0, i.jsx)(o.Text, {
+                                            (0, r.jsx)('div', { className: O.dotOnline }),
+                                            (0, r.jsx)(s.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'header-secondary',
-                                                children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: s.approximatePresenceCount })
+                                                children: j.NW.format(j.t['LC+S+v'], { membersOnline: l.approximatePresenceCount })
                                             })
                                         ]
                                     }),
-                                null != s.approximateMemberCount &&
-                                    (0, i.jsxs)('div', {
-                                        className: v.memberCount,
+                                null != l.approximateMemberCount &&
+                                    (0, r.jsxs)('div', {
+                                        className: O.memberCount,
                                         children: [
-                                            (0, i.jsx)('div', { className: v.dotOffline }),
-                                            (0, i.jsx)(o.Text, {
+                                            (0, r.jsx)('div', { className: O.dotOffline }),
+                                            (0, r.jsx)(s.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'header-secondary',
-                                                children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: s.approximateMemberCount })
+                                                children: j.NW.format(j.t.zRl6XV, { count: l.approximateMemberCount })
                                             })
                                         ]
                                     })
                             ]
                         }),
-                        (0, i.jsx)(o.Button, {
-                            submitting: l,
-                            className: v.joinButton,
-                            color: I ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
+                        (0, r.jsx)(s.zxk, {
+                            submitting: o,
+                            className: O.joinButton,
+                            color: y ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN,
                             onClick: x,
-                            children: M
+                            children: S
                         })
                     ]
                 }),
-                (0, i.jsx)(A, { entry: s })
+                (0, r.jsx)(Z, { entry: l })
             ]
         })
     );

@@ -1,40 +1,36 @@
-t.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(120356),
-    r = t.n(a),
-    s = t(481060),
-    l = t(96247);
-function o(e) {
-    let { className: n, copy: t, bannerImage: a, textColor: o = 'always-white', hideGiftIcon: c = !1 } = e;
-    return (0, i.jsxs)('div', {
-        className: r()(l.bannerContainer, n),
+n.d(t, { Z: () => l });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(314943);
+function l(e) {
+    let { className: t, copy: n, bannerImage: i, textColor: l = 'always-white', hideGiftIcon: c = !1 } = e;
+    return (0, r.jsxs)('div', {
+        className: o()(s.bannerContainer, t),
         children: [
-            null == a
+            null == i
                 ? null
-                : (0, i.jsx)('img', {
+                : (0, r.jsx)('img', {
                       alt: '',
-                      className: l.banner,
-                      src: a
+                      className: s.banner,
+                      src: i
                   }),
-            (0, i.jsxs)('div', {
-                className: l.textContainer,
+            (0, r.jsxs)('div', {
+                className: s.textContainer,
                 children: [
                     !1 === c &&
-                        (0, i.jsx)(s.GiftIcon, {
+                        (0, r.jsx)(a.OgN, {
                             size: 'md',
                             color: 'currentColor',
-                            className: l.giftIcon
+                            className: s.giftIcon
                         }),
-                    (0, i.jsx)(s.Heading, {
-                        className: r()(l.textHeader, { [l.textHeaderWithGiftIcon]: !c }),
-                        color: o,
+                    (0, r.jsx)(a.X6q, {
+                        className: o()(s.textHeader, { [s.textHeaderWithGiftIcon]: !c }),
+                        color: l,
                         variant: 'eyebrow',
-                        children: t
+                        children: n
                     })
                 ]
             })

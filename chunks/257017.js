@@ -1,19 +1,15 @@
-s.d(t, {
-    X: function () {
-        return r;
-    }
-});
-var n = s(668781),
-    l = s(63063),
-    a = s(981631),
-    i = s(689938);
-function r(e) {
-    n.Z.show({
-        title: i.Z.Messages.SELF_DENY_PERMISSION_TITLE,
-        body: i.Z.Messages.SELF_DENY_PERMISSION_BODY.format({ name: e }),
-        cancelText: i.Z.Messages.HELP_DESK,
+n.d(t, { X: () => a });
+var r = n(668781),
+    i = n(63063),
+    l = n(981631),
+    s = n(388032);
+function a(e) {
+    r.Z.show({
+        title: s.NW.string(s.t.vElC9f),
+        body: s.NW.format(s.t.yslqFB, { name: e }),
+        cancelText: s.NW.string(s.t.psXQHB),
         onCancel() {
-            window.open(l.Z.getArticleURL(a.BhN.PERMISSIONS_LOCKOUT));
+            window.open(i.Z.getArticleURL(l.BhN.PERMISSIONS_LOCKOUT));
         }
     });
 }

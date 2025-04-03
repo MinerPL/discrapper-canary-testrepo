@@ -1,23 +1,26 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var a = t(735250);
-t(470079);
-var i = t(481060),
-    l = t(132871),
-    s = t(147890),
-    o = t(689938);
-function u(e) {
-    return (0, a.jsx)(i.MenuItem, {
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(456100),
+    l = n(749681),
+    o = n(258971),
+    c = n(49898),
+    s = n(388032);
+function d(e) {
+    let { enabled: t } = a.c.useExperiment({ location: 'useApplicationDirectoryItem' }, { autoTrackExposure: !0 }),
+        n = t ? r.iWm : r.jje;
+    return (0, i.jsx)(r.sNh, {
         id: 'application-directory',
-        label: (0, a.jsx)(a.Fragment, { children: o.Z.Messages.APP_DIRECTORY }),
-        icon: i.RobotIcon,
+        label: (0, i.jsx)(i.Fragment, { children: s.NW.string(s.t.AKcFUl) }),
+        icon: n,
         action: () => {
-            (0, s.goToAppDirectory)({
-                guildId: e.id,
-                entrypoint: { name: l.ApplicationDirectoryEntrypointNames.GUILD_HEADER_POPOUT }
+            (0, l.transitionToGlobalDiscovery)({
+                tab: c.GlobalDiscoveryTab.APPS,
+                newSessionState: {
+                    entrypoint: { name: o.xF.GUILD_HEADER_POPOUT },
+                    guildId: e.id
+                }
             });
         }
     });

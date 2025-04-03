@@ -1,72 +1,86 @@
-a.r(n),
-    a.d(n, {
-        default: function () {
-            return E;
-        }
-    });
-var s = a(735250);
-a(470079);
-var t = a(481060),
-    o = a(701488),
-    r = a(689938),
-    i = a(531508),
-    c = a(221886);
-function E(e) {
-    let { application: n, onCancel: a, onClose: E, onConfirm: l, ...d } = e;
-    return (0, s.jsxs)(t.ModalRoot, {
+t.d(n, { default: () => l });
+var a = t(200651);
+t(192379);
+var r = t(481060),
+    o = t(701488),
+    i = t(388032),
+    s = t(661682),
+    c = t(221886);
+function l(e) {
+    var { application: n, onCancel: t, onClose: l, onConfirm: d } = e,
+        b = (function (e, n) {
+            if (null == e) return {};
+            var t,
+                a,
+                r = (function (e, n) {
+                    if (null == e) return {};
+                    var t,
+                        a,
+                        r = {},
+                        o = Object.keys(e);
+                    for (a = 0; a < o.length; a++) (t = o[a]), n.indexOf(t) >= 0 || (r[t] = e[t]);
+                    return r;
+                })(e, n);
+            if (Object.getOwnPropertySymbols) {
+                var o = Object.getOwnPropertySymbols(e);
+                for (a = 0; a < o.length; a++) (t = o[a]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+            }
+            return r;
+        })(e, ['application', 'onCancel', 'onClose', 'onConfirm']);
+    return (0, a.jsxs)(r.Y0X, {
         role: 'alertdialog',
-        transitionState: d.transitionState,
-        className: i.modalRoot,
+        transitionState: b.transitionState,
+        className: s.modalRoot,
         children: [
-            (0, s.jsx)('div', {
-                className: i.birbContainer,
-                children: (0, s.jsx)('img', {
+            (0, a.jsx)('div', {
+                className: s.birbContainer,
+                children: (0, a.jsx)('img', {
                     src: c,
-                    className: i.announcementBirb,
-                    alt: r.Z.Messages.EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL
+                    className: s.announcementBirb,
+                    alt: i.NW.string(i.t.ElsOBA)
                 })
             }),
-            (0, s.jsxs)(t.ModalContent, {
-                className: i.modalContent,
+            (0, a.jsxs)(r.hzk, {
+                className: s.modalContent,
                 children: [
-                    (0, s.jsx)(t.Text, {
+                    (0, a.jsx)(r.Text, {
                         variant: 'eyebrow',
-                        className: i.eyebrow,
-                        children: r.Z.Messages.EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP
+                        className: s.eyebrow,
+                        children: i.NW.string(i.t['06YebG'])
                     }),
-                    (0, s.jsx)(t.Heading, {
+                    (0, a.jsx)(r.X6q, {
                         variant: 'heading-lg/bold',
-                        className: i.header,
-                        children: r.Z.Messages.EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE.format({ activityName: n.name })
+                        className: s.header,
+                        children: i.NW.format(i.t['Z/eMDQ'], { activityName: n.name })
                     }),
-                    (0, s.jsx)(t.Text, {
+                    (0, a.jsx)(r.Text, {
                         variant: 'text-sm/normal',
-                        className: i.subHeader,
-                        children: r.Z.Messages.EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE
+                        className: s.subHeader,
+                        children: i.NW.string(i.t.z81WwM)
                     }),
-                    (0, s.jsxs)('div', {
-                        className: i.buttonContainer,
+                    (0, a.jsxs)('div', {
+                        className: s.buttonContainer,
                         children: [
-                            (0, s.jsx)(t.Button, {
-                                size: t.Button.Sizes.LARGE,
+                            (0, a.jsx)(r.zxk, {
+                                size: r.zxk.Sizes.LARGE,
                                 onClick: () => {
-                                    l(), E();
+                                    d(), l();
                                 },
-                                children: r.Z.Messages.CONTINUE
+                                children: i.NW.string(i.t['3PatS0'])
                             }),
-                            (0, s.jsx)(t.Button, {
-                                size: t.Button.Sizes.LARGE,
+                            (0, a.jsx)(r.zxk, {
+                                size: r.zxk.Sizes.LARGE,
                                 onClick: () => {
-                                    a(), E();
+                                    t(), l();
                                 },
-                                color: t.Button.Colors.PRIMARY,
-                                children: r.Z.Messages.CANCEL
+                                color: r.zxk.Colors.PRIMARY,
+                                children: i.NW.string(i.t['ETE/oK'])
                             }),
-                            (0, s.jsx)(t.Text, {
+                            (0, a.jsx)(r.Text, {
                                 variant: 'text-xs/normal',
-                                children: (0, s.jsx)(t.Anchor, {
+                                children: (0, a.jsx)(r.eee, {
                                     href: o.OF,
-                                    children: r.Z.Messages.EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE
+                                    children: i.NW.string(i.t.E0gf5u)
                                 })
                             })
                         ]

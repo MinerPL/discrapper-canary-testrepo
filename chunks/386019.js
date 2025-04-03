@@ -1,0 +1,57 @@
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
+    a = n(100527),
+    s = n(906732),
+    l = n(960870),
+    c = n(848966),
+    u = n(388032);
+function d(e) {
+    let { children: t, user: n, activity: d, entry: f, display: _, onSelect: p, onClose: h, appContext: m } = e,
+        [g, E] = i.useState(!1),
+        { analyticsLocations: b } = (0, s.ZP)(a.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        y = (0, l.Z)({
+            display: _,
+            user: n,
+            activity: d,
+            entry: f,
+            analyticsLocations: b
+        }),
+        v = (0, c.Z)({
+            entry: f,
+            activity: d,
+            user: n,
+            display: _,
+            onClose: h,
+            onAction: y,
+            isMenuOpen: g,
+            appContext: m
+        });
+    return 0 === v.length || n.bot
+        ? null
+        : (0, r.jsx)(o.yRy, {
+              align: 'top',
+              position: 'right',
+              disablePointerEvents: !1,
+              onRequestOpen: () => {
+                  y({ action: 'OPEN_MENU' }), E(!0);
+              },
+              renderPopout: (e) => {
+                  let { closePopout: t } = e;
+                  return (0, r.jsx)('div', {
+                      onClick: (e) => e.stopPropagation(),
+                      children: (0, r.jsx)(o.v2r, {
+                          navId: 'content-inventory-context',
+                          onClose: () => {
+                              t(), E(!1);
+                          },
+                          'aria-label': u.NW.string(u.t.PlAQz8),
+                          onSelect: p,
+                          children: (0, r.jsx)(o.kSQ, { children: v })
+                      })
+                  });
+              },
+              children: t
+          });
+}

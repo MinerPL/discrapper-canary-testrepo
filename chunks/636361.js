@@ -1,116 +1,106 @@
-r.d(t, {
-    S: function () {
-        return s;
-    }
-});
-var n = r(622916),
-    a = r(394798),
-    o = r(886115),
-    i = r(255768),
-    _ = r(151122);
-let E = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, "undefined is not an object (evaluating 'a.L')", 'can\'t redefine non-configurable property "solana"', "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler"],
-    s = (0, _._I)((e = {}) => ({
+a.d(e, { S: () => s });
+var r = a(622916),
+    n = a(394798),
+    _ = a(886115),
+    o = a(255768),
+    i = a(151122);
+let c = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, "undefined is not an object (evaluating 'a.L')", 'can\'t redefine non-configurable property "solana"', "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler"],
+    s = (0, i._I)((t = {}) => ({
         name: 'InboundFilters',
-        processEvent: (t, r, _) =>
-            (function (e, t) {
-                return t.ignoreInternal &&
-                    (function (e) {
-                        try {
-                            return 'SentryError' === e.exception.values[0].type;
-                        } catch (e) {}
-                        return !1;
-                    })(e)
-                    ? (i.X &&
-                          n.kg.warn(`Event dropped due to being internal Sentry Error.
-Event: ${(0, a.jH)(e)}`),
-                      !0)
-                    : (function (e, t) {
-                            return (
-                                !e.type &&
-                                !!t &&
-                                !!t.length &&
-                                (function (e) {
-                                    let t;
-                                    let r = [];
-                                    e.message && r.push(e.message);
-                                    try {
-                                        t = e.exception.values[e.exception.values.length - 1];
-                                    } catch (e) {}
-                                    return t && t.value && (r.push(t.value), t.type && r.push(`${t.type}: ${t.value}`)), r;
-                                })(e).some((e) => (0, o.U0)(e, t))
-                            );
-                        })(e, t.ignoreErrors)
-                      ? (i.X &&
-                            n.kg.warn(`Event dropped due to being matched by \`ignoreErrors\` option.
-Event: ${(0, a.jH)(e)}`),
-                        !0)
-                      : (function (e) {
-                              return !e.type && !!e.exception && !!e.exception.values && 0 !== e.exception.values.length && !e.message && !e.exception.values.some((e) => e.stacktrace || (e.type && 'Error' !== e.type) || e.value);
-                          })(e)
-                        ? (i.X &&
-                              n.kg.warn(`Event dropped due to not having an error message, error type or stacktrace.
-Event: ${(0, a.jH)(e)}`),
-                          !0)
-                        : (function (e, t) {
-                                if ('transaction' !== e.type || !t || !t.length) return !1;
-                                let r = e.transaction;
-                                return !!r && (0, o.U0)(r, t);
-                            })(e, t.ignoreTransactions)
-                          ? (i.X &&
-                                n.kg.warn(`Event dropped due to being matched by \`ignoreTransactions\` option.
-Event: ${(0, a.jH)(e)}`),
-                            !0)
-                          : (function (e, t) {
-                                  if (!t || !t.length) return !1;
-                                  let r = c(e);
-                                  return !!r && (0, o.U0)(r, t);
-                              })(e, t.denyUrls)
-                            ? (i.X &&
-                                  n.kg.warn(`Event dropped due to being matched by \`denyUrls\` option.
-Event: ${(0, a.jH)(e)}.
-Url: ${c(e)}`),
-                              !0)
-                            : !(function (e, t) {
-                                  if (!t || !t.length) return !0;
-                                  let r = c(e);
-                                  return !r || (0, o.U0)(r, t);
-                              })(e, t.allowUrls) &&
-                              (i.X &&
-                                  n.kg.warn(`Event dropped due to not being matched by \`allowUrls\` option.
-Event: ${(0, a.jH)(e)}.
-Url: ${c(e)}`),
-                              !0);
-            })(
-                t,
-                (function (e = {}, t = {}) {
-                    return {
-                        allowUrls: [...(e.allowUrls || []), ...(t.allowUrls || [])],
-                        denyUrls: [...(e.denyUrls || []), ...(t.denyUrls || [])],
-                        ignoreErrors: [...(e.ignoreErrors || []), ...(t.ignoreErrors || []), ...(e.disableErrorDefaults ? [] : E)],
-                        ignoreTransactions: [...(e.ignoreTransactions || []), ...(t.ignoreTransactions || [])],
-                        ignoreInternal: void 0 === e.ignoreInternal || e.ignoreInternal
-                    };
-                })(e, _.getOptions())
-            )
-                ? null
-                : t
+        processEvent: (e, a, i) => {
+            var s, l, u, I, R;
+            return ((s = e),
+            (l = (function (t = {}, e = {}) {
+                return {
+                    allowUrls: [...(t.allowUrls || []), ...(e.allowUrls || [])],
+                    denyUrls: [...(t.denyUrls || []), ...(e.denyUrls || [])],
+                    ignoreErrors: [...(t.ignoreErrors || []), ...(e.ignoreErrors || []), ...(t.disableErrorDefaults ? [] : c)],
+                    ignoreTransactions: [...(t.ignoreTransactions || []), ...(e.ignoreTransactions || [])],
+                    ignoreInternal: void 0 === t.ignoreInternal || t.ignoreInternal
+                };
+            })(t, i.getOptions())).ignoreInternal &&
+            (function (t) {
+                try {
+                    return 'SentryError' === t.exception.values[0].type;
+                } catch (t) {}
+                return !1;
+            })(s)
+                ? (o.X &&
+                      r.kg.warn(`Event dropped due to being internal Sentry Error.
+Event: ${(0, n.jH)(s)}`),
+                  0)
+                : ((u = s),
+                    (I = l.ignoreErrors),
+                    !u.type &&
+                        I &&
+                        I.length &&
+                        (function (t) {
+                            let e,
+                                a = [];
+                            t.message && a.push(t.message);
+                            try {
+                                e = t.exception.values[t.exception.values.length - 1];
+                            } catch (t) {}
+                            return e && e.value && (a.push(e.value), e.type && a.push(`${e.type}: ${e.value}`)), a;
+                        })(u).some((t) => (0, _.U0)(t, I)))
+                  ? (o.X &&
+                        r.kg.warn(`Event dropped due to being matched by \`ignoreErrors\` option.
+Event: ${(0, n.jH)(s)}`),
+                    0)
+                  : (R = s).type || !R.exception || !R.exception.values || 0 === R.exception.values.length || R.message || R.exception.values.some((t) => t.stacktrace || (t.type && 'Error' !== t.type) || t.value)
+                    ? !(function (t, e) {
+                          if ('transaction' !== t.type || !e || !e.length) return !1;
+                          let a = t.transaction;
+                          return !!a && (0, _.U0)(a, e);
+                      })(s, l.ignoreTransactions)
+                        ? !(function (t, e) {
+                              if (!e || !e.length) return !1;
+                              let a = E(t);
+                              return !!a && (0, _.U0)(a, e);
+                          })(s, l.denyUrls)
+                            ? (function (t, e) {
+                                  if (!e || !e.length) return !0;
+                                  let a = E(t);
+                                  return !a || (0, _.U0)(a, e);
+                              })(s, l.allowUrls) ||
+                              (o.X &&
+                                  r.kg.warn(`Event dropped due to not being matched by \`allowUrls\` option.
+Event: ${(0, n.jH)(s)}.
+Url: ${E(s)}`),
+                              0)
+                            : (o.X &&
+                                  r.kg.warn(`Event dropped due to being matched by \`denyUrls\` option.
+Event: ${(0, n.jH)(s)}.
+Url: ${E(s)}`),
+                              0)
+                        : (o.X &&
+                              r.kg.warn(`Event dropped due to being matched by \`ignoreTransactions\` option.
+Event: ${(0, n.jH)(s)}`),
+                          0)
+                    : (o.X &&
+                          r.kg.warn(`Event dropped due to not having an error message, error type or stacktrace.
+Event: ${(0, n.jH)(s)}`),
+                      0))
+                ? e
+                : null;
+        }
     }));
-function c(e) {
+function E(t) {
     try {
-        let t;
+        let e;
         try {
-            t = e.exception.values[0].stacktrace.frames;
-        } catch (e) {}
-        return t
-            ? (function (e = []) {
-                  for (let t = e.length - 1; t >= 0; t--) {
-                      let r = e[t];
-                      if (r && '<anonymous>' !== r.filename && '[native code]' !== r.filename) return r.filename || null;
+            e = t.exception.values[0].stacktrace.frames;
+        } catch (t) {}
+        return e
+            ? (function (t = []) {
+                  for (let e = t.length - 1; e >= 0; e--) {
+                      let a = t[e];
+                      if (a && '<anonymous>' !== a.filename && '[native code]' !== a.filename) return a.filename || null;
                   }
                   return null;
-              })(t)
+              })(e)
             : null;
-    } catch (t) {
-        return i.X && n.kg.error(`Cannot extract url for event ${(0, a.jH)(e)}`), null;
+    } catch (e) {
+        return o.X && r.kg.error(`Cannot extract url for event ${(0, n.jH)(t)}`), null;
     }
 }

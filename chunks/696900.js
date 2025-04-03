@@ -1,8 +1,9 @@
 let r;
+n.d(t, { Z: () => d });
 var i,
-    a = n(442837),
-    s = n(570140),
-    o = n(353368);
+    o = n(442837),
+    a = n(570140),
+    s = n(353368);
 function l(e, t, n) {
     return (
         t in e
@@ -16,19 +17,17 @@ function l(e, t, n) {
         e
     );
 }
-class u extends (i = a.ZP.PersistedStore) {
+let c = () => {
+    r = r === s.q.BASIC ? s.q.PREMIUM : s.q.BASIC;
+};
+class u extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        r = null !== (t = null == e ? void 0 : e.animationType) && void 0 !== t ? t : o.q.PREMIUM;
+        r = null != (t = null == e ? void 0 : e.animationType) ? t : s.q.PREMIUM;
     }
     getState() {
         return { animationType: r };
     }
 }
-l(u, 'displayName', 'VoiceChannelEffectsPersistedStore'),
-    l(u, 'persistKey', 'VoiceChannelEffectsPersistedStore'),
-    (t.Z = new u(s.Z, {
-        VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: () => {
-            r = r === o.q.BASIC ? o.q.PREMIUM : o.q.BASIC;
-        }
-    }));
+l(u, 'displayName', 'VoiceChannelEffectsPersistedStore'), l(u, 'persistKey', 'VoiceChannelEffectsPersistedStore');
+let d = new u(a.Z, { VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: c });

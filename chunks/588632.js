@@ -1,181 +1,102 @@
-t.d(n, {
-    Z: function () {
-        return p;
-    }
-}),
-    t(47120);
-var r = t(735250),
-    o = t(470079),
-    a = t(658722),
-    l = t.n(a),
-    i = t(692547),
-    s = t(481060),
-    c = t(596454),
-    u = t(285888),
-    d = t(689938),
-    m = t(636720);
-function h(e) {
+t.d(n, { Z: () => u }), t(47120), t(653041);
+var r = t(200651),
+    l = t(192379),
+    a = t(692547),
+    i = t(481060),
+    o = t(596454),
+    s = t(388032),
+    c = t(141475);
+function d(e) {
     return null != e && (null != e.id || null != e.name);
 }
-let v = {
-    ...u.v,
-    control: (e, n) => {
-        let { isDisabled: t, menuIsOpen: r } = n;
-        return {
-            ...e,
-            backgroundColor: 'var(--input-background)',
-            borderColor: 'var(--input-background)',
-            opacity: t ? 0.6 : 1,
-            boxShadow: void 0,
-            borderRadius: r ? '8px 8px 0 0' : '8px',
-            minHeight: 40,
-            transition: 'border 0.15s ease',
-            cursor: t ? 'not-allowed' : void 0,
-            pointerEvents: t ? 'none' : void 0,
-            '&:hover': { borderColor: 'var(--input-background)' }
-        };
-    },
-    valueContainer: (e) => ({
-        ...e,
-        padding: '8px',
-        display: 'flex',
-        flexDirection: 'row',
-        gap: '8px',
-        cursor: 'text'
-    }),
-    indicatorsContainer: (e) => ({
-        ...e,
-        alignItems: 'flex-start',
-        paddingTop: 4
-    }),
-    option: (e, n) => {
-        let { isSelected: t, isFocused: r } = n;
-        return {
-            ...e,
-            ...(t
-                ? {
-                      backgroundColor: 'var(--background-modifier-selected)',
-                      color: 'var(--interactive-active)'
-                  }
-                : r
-                  ? {
-                        backgroundColor: 'var(--background-modifier-hover)',
-                        color: 'var(--interactive-hover)'
-                    }
-                  : {
-                        backgroundColor: 'transparent',
-                        color: 'var(--interactive-normal)'
-                    }),
-            cursor: 'pointer',
-            display: 'flex',
-            padding: 12,
-            alignItems: 'center',
-            minHeight: 40,
-            '&:active': {
-                backgroundColor: 'var(--background-modifier-selected)',
-                color: 'var(--interactive-active)'
-            },
-            '&:hover [data-hover=true]': { opacity: 1 }
-        };
-    }
-};
-function p(e) {
-    let { options: n, value: t, onChange: a, canBeNew: p, memberCounts: g } = e,
-        x = (e) => {
-            e.preventDefault(), e.stopPropagation();
-        },
-        f = o.useCallback(
+function u(e) {
+    let { options: n, value: t, onChange: u, canBeNew: m, memberCounts: h } = e,
+        p = l.useMemo(() => {
+            let e = new Map();
+            return (
+                n.forEach((n) => {
+                    e.set(n.id, n);
+                }),
+                e
+            );
+        }, [n]),
+        f = l.useMemo(() => {
+            let e = [];
+            return (
+                n.forEach((n) => {
+                    e.push({
+                        value: n.id,
+                        label: n.title,
+                        key: n.id
+                    });
+                }),
+                e
+            );
+        }, [n]),
+        g = l.useCallback(
             (e) => {
-                var o, l, i, u;
-                return (0, r.jsxs)('div', {
-                    className: m.selectValuePill,
-                    onMouseDown: x,
-                    children: [
-                        h(e.emoji) &&
-                            (0, r.jsx)(c.Z, {
-                                emojiId: null === (o = e.emoji) || void 0 === o ? void 0 : o.id,
-                                emojiName: null === (l = e.emoji) || void 0 === l ? void 0 : l.name,
-                                animated: null !== (u = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== u && u
-                            }),
-                        (0, r.jsx)(s.Text, {
-                            variant: 'text-sm/normal',
-                            children: e.title
-                        }),
-                        (0, r.jsx)(s.Clickable, {
-                            className: m.selectValuePillClose,
-                            onClick: () => {
-                                a(n.filter((n) => t.includes(n.id) && n.id !== e.id));
-                            },
-                            children: (0, r.jsx)(s.XSmallIcon, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: m.selectValuePillCloseIcon
-                            })
-                        })
-                    ]
-                });
+                var n, t, l, a;
+                if (null == e) return;
+                let i = p.get(e.value);
+                if (null != i && d(i.emoji))
+                    return (0, r.jsx)(o.Z, {
+                        emojiId: null == (n = i.emoji) ? void 0 : n.id,
+                        emojiName: null == (t = i.emoji) ? void 0 : t.name,
+                        animated: null != (a = null == (l = i.emoji) ? void 0 : l.animated) && a
+                    });
             },
-            [a, n, t]
+            [p]
         ),
-        C = o.useCallback(
-            (e) => {
-                var n, t, o, a;
-                let l = null == g || null == e.roleIds ? 0 : Math.max(...e.roleIds.map((e) => g[e])),
-                    u = null != g && l > 0;
+        x = l.useCallback(
+            (e, n) => {
+                if (null == e || n.inPill) return;
+                let t = p.get(e.value);
+                if (null == t || !d(t.emoji)) return;
+                let l = null == h || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => h[e])),
+                    o = null != h && l > 0;
                 return (0, r.jsxs)('div', {
-                    className: m.selectOption,
+                    className: c.suffix,
                     children: [
-                        (0, r.jsxs)('div', {
-                            className: m.selectOptionTitle,
-                            children: [
-                                h(e.emoji) &&
-                                    (0, r.jsx)(c.Z, {
-                                        emojiId: null === (n = e.emoji) || void 0 === n ? void 0 : n.id,
-                                        emojiName: null === (t = e.emoji) || void 0 === t ? void 0 : t.name,
-                                        animated: null !== (a = null === (o = e.emoji) || void 0 === o ? void 0 : o.animated) && void 0 !== a && a
-                                    }),
-                                (0, r.jsx)(s.Text, {
-                                    variant: 'text-sm/normal',
-                                    children: e.title
-                                })
-                            ]
-                        }),
-                        p &&
-                            e.isUnseen &&
-                            (0, r.jsx)(s.TextBadge, {
-                                color: i.Z.unsafe_rawColors.BRAND_260.css,
-                                text: d.Z.Messages.NEW,
-                                className: m.optionNewBadge
+                        m &&
+                            t.isUnseen &&
+                            (0, r.jsx)(i.IGR, {
+                                color: a.Z.unsafe_rawColors.BRAND_260.css,
+                                text: s.NW.string(s.t.y2b7CA),
+                                className: c.newBadge
                             }),
-                        u &&
+                        o &&
                             (0, r.jsx)('div', {
-                                className: m.selectOptionMemberCount,
+                                className: c.memberCount,
                                 'data-hover': !0,
-                                children: (0, r.jsx)(s.Text, {
+                                children: (0, r.jsx)(i.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'always-white',
-                                    children: d.Z.Messages.ONBOARDING_OPTION_ROLE_COUNTS.format({ memberCount: l })
+                                    children: s.NW.format(s.t.EgKsZG, { memberCount: l })
                                 })
                             })
                     ]
                 });
             },
-            [p, g]
+            [m, h, p]
         ),
-        b = o.useCallback((e, n) => {
-            let { data: t } = e;
-            return 0 === n.length || l()(n.toLowerCase(), t.title.toLowerCase());
-        }, []);
-    return (0, r.jsx)(u.Z, {
-        styleOverrides: v,
-        clearable: !1,
-        isMulti: !0,
-        options: n,
-        onChange: a,
+        _ = l.useCallback(
+            (e) => {
+                let n = [];
+                e.forEach((e) => {
+                    let t = p.get(e);
+                    null != t && n.push(t);
+                }),
+                    u(n);
+            },
+            [u, p]
+        );
+    return (0, r.jsx)(i.VcW, {
+        multi: !0,
+        options: f,
+        onChange: _,
         value: t,
-        closeMenuOnSelect: !1,
-        multiValueRenderer: f,
-        optionRenderer: C,
-        filterOption: b
+        closeOnSelect: !1,
+        renderOptionSuffix: x,
+        renderOptionPrefix: g
     });
 }

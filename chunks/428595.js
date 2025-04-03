@@ -1,36 +1,92 @@
-n(757143), n(653041), n(47120);
+n.d(t, { Z: () => er }), n(301563), n(757143), n(653041), n(627494), n(47120), n(566702), n(474991), n(398202);
 var r = n(392711),
     i = n.n(r),
-    a = n(302454),
-    s = n.n(a),
-    o = n(797610),
+    o = n(477660),
+    a = n.n(o),
+    s = n(927723),
     l = n(633302),
-    u = n(763296),
-    c = n(592125),
-    d = n(430824),
+    c = n(181918),
+    u = n(11637),
+    d = n(592125),
+    f = n(430824),
     _ = n(594174),
-    E = n(5192),
-    f = n(51144),
-    h = n(298552),
-    p = n(444758),
-    m = n(723454),
-    I = n(772096),
-    T = n(800927),
-    g = n(945884),
-    S = n(594199),
-    A = n(97734),
+    p = n(5192),
+    h = n(51144),
+    m = n(298552),
+    g = n(444758),
+    E = n(723454),
+    b = n(772096),
+    y = n(800927),
+    v = n(143223),
+    O = n(945884),
+    I = n(594199),
+    S = n(97734),
+    T = n(303694),
     N = n(660199),
-    v = n(364458),
-    O = n(981631),
+    A = n(364458),
+    C = n(981631),
     R = n(689079),
-    C = n(377668),
-    y = n(689938);
-let D = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
-    L = /^$|\n *$/,
-    b = /^ *>>> ?/,
-    M = /^ *> ?/gm;
-function P(e) {
-    let t = (0, I.yw)(e[1]);
+    P = n(377668),
+    w = n(388032);
+function D(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function L(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                D(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function x(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function M(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : x(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let k = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
+    j = /^$|\n *$/,
+    U = /^ *>>> ?/,
+    G = /^ *> ?/gm,
+    B = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
+function F(e) {
+    let t = (0, b.yw)(e[1]);
     if (null == t)
         return {
             type: 'text',
@@ -49,63 +105,77 @@ function P(e) {
         title: void 0
     };
 }
-let U = (e) => {
-        let t = c.Z.getChannel(e);
+let V = (e) => {
+        let t = d.Z.getChannel(e);
         return null == t ? void 0 : t.getGuildId();
     },
-    w = (e) => (null != e.guildId ? d.Z.getGuild(e.guildId) : null != e.channelId ? d.Z.getGuild(U(e.channelId)) : null),
-    x = {
-        newline: s().defaultRules.newline,
-        paragraph: s().defaultRules.paragraph,
-        escape: {
-            ...s().defaultRules.escape,
-            match: (e, t, n) => (!1 === t.allowEscape ? null : s().defaultRules.escape.match(e, t, n))
-        },
-        blockQuote: {
-            ...s().defaultRules.blockQuote,
+    Z = (e) => (null != e.guildId ? f.Z.getGuild(e.guildId) : null != e.channelId ? f.Z.getGuild(V(e.channelId)) : null),
+    H = {
+        newline: a().defaultRules.newline,
+        paragraph: a().defaultRules.paragraph,
+        escape: M(L({}, a().defaultRules.escape), { match: (e, t, n) => (!1 === t.allowEscape ? null : a().defaultRules.escape.match(e, t, n)) }),
+        blockQuote: M(L({}, a().defaultRules.blockQuote), {
             requiredFirstCharacters: [' ', '>'],
             match(e, t) {
                 let { prevCapture: n, inQuote: r, nested: i } = t;
                 if (r || i) return null;
-                if (null == n) return D.exec(e);
-                let a = n[0];
-                return L.test(a) ? D.exec(e) : null;
+                if (null == n) return k.exec(e);
+                let o = n[0];
+                return j.test(o) ? k.exec(e) : null;
             },
             parse(e, t, n) {
                 let r = e[0],
-                    i = !!b.exec(r),
-                    a = i ? b : M,
-                    s = r.replace(a, ''),
-                    o = n.inQuote || !1,
+                    i = !!U.exec(r),
+                    o = i ? U : G,
+                    a = r.replace(o, ''),
+                    s = n.inQuote || !1,
                     l = n.inline || !1;
-                (n.inQuote = !0), !i && (n.inline = !0);
-                let u = t(s, n);
+                (n.inQuote = !0), i || (n.inline = !0);
+                let c = t(a, n);
                 return (
-                    (n.inQuote = o),
+                    (n.inQuote = s),
                     (n.inline = l),
-                    0 === u.length &&
-                        u.push({
+                    0 === c.length &&
+                        c.push({
                             type: 'text',
                             content: ' '
                         }),
                     {
-                        content: u,
+                        content: c,
                         type: 'blockQuote'
                     }
                 );
             }
-        },
-        link: I.ZP,
-        autolink: {
-            ...s().defaultRules.autolink,
-            parse: P
-        },
-        url: {
-            ...s().defaultRules.url,
+        }),
+        link: b.ZP,
+        autolink: M(L({}, a().defaultRules.autolink), { parse: F }),
+        mailto: M(L({}, a().defaultRules.mailto), { requiredFirstCharacters: ['<'] }),
+        tel: M(L({}, a().defaultRules.mailto), {
+            requiredFirstCharacters: ['<'],
+            match: a().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:([0-9]+|\([0-9]+\)))(?:[- .\/]?([0-9]+|\([0-9]+\)))+)>/),
+            parse(e) {
+                let t = e[1],
+                    n = e[1].replaceAll(/[ \/]+/g, '-');
+                return (
+                    n.startsWith('tel:') || n.startsWith('sms:') || (n = 'tel:' + n),
+                    {
+                        type: 'link',
+                        content: [
+                            {
+                                type: 'text',
+                                content: t
+                            }
+                        ],
+                        target: n
+                    }
+                );
+            }
+        }),
+        url: M(L({}, a().defaultRules.url), {
             requiredFirstCharacters: ['h', 's'],
             match(e, t) {
                 if (!t.inline) return null;
-                let n = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/.exec(e);
+                let n = B.exec(e);
                 if (null != n) {
                     let e = 0,
                         t = n[0];
@@ -121,27 +191,21 @@ let U = (e) => {
                 }
                 return n;
             },
-            parse: P
-        },
-        strong: s().defaultRules.strong,
-        em: s().defaultRules.em,
-        u: s().defaultRules.u,
-        br: s().defaultRules.br,
-        text: S.ZP,
-        inlineCode: {
-            ...s().defaultRules.inlineCode,
+            parse: F
+        }),
+        strong: a().defaultRules.strong,
+        em: a().defaultRules.em,
+        u: a().defaultRules.u,
+        br: a().defaultRules.br,
+        text: I.ZP,
+        inlineCode: M(L({}, a().defaultRules.inlineCode), {
             parse(e, t, n) {
-                let r = s().defaultRules.inlineCode.parse(e, t, n);
-                return !0 === n.parseInlineCodeChildContent
-                    ? {
-                          ...r,
-                          validationChildContent: t(r.content, n)
-                      }
-                    : r;
+                let r = a().defaultRules.inlineCode.parse(e, t, n);
+                return !0 === n.parseInlineCodeChildContent ? M(L({}, r), { validationChildContent: t(r.content, n) }) : r;
             }
-        },
+        }),
         emoticon: {
-            order: S.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['\xAF'],
             match: (e) => /^(¯\\_\(ツ\)_\/¯)/.exec(e),
             parse: (e) => ({
@@ -150,60 +214,69 @@ let U = (e) => {
             })
         },
         codeBlock: {
-            order: s().defaultRules.codeBlock.order,
+            order: a().defaultRules.codeBlock.order,
             requiredFirstCharacters: ['`'],
             match: (e) => /^```(?:([a-z0-9_+\-.#]+?)\n)?\n*([^\n][^]*?)\n*```/i.exec(e),
             parse(e, t, n) {
                 var r, i;
                 return {
-                    lang: null !== (r = e[1]) && void 0 !== r ? r : '',
-                    content: null !== (i = e[2]) && void 0 !== i ? i : '',
+                    lang: null != (r = e[1]) ? r : '',
+                    content: null != (i = e[2]) ? i : '',
                     inQuote: n.inQuote || n.formatInline || !1
                 };
             }
         },
         roleMention: {
-            order: S.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => /^<@&(\d+)>/.exec(e),
             parse(e, t, n) {
-                let [r, i] = e;
+                var r, i, o;
+                let [a, s] = e;
                 if (n.returnMentionIds)
                     return {
                         type: 'roleMention',
-                        id: i
+                        id: s
                     };
-                let a = w(n),
-                    s = null != a ? d.Z.getRole(a.id, i) : null;
-                return null == s
-                    ? {
-                          type: 'text',
-                          content: '@'.concat(y.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER)
-                      }
-                    : {
-                          type: 'mention',
-                          channelId: n.channelId,
-                          guildId: null != a ? a.id : null,
-                          roleId: i,
-                          roleColor: s.color,
-                          roleName: '@'.concat(s.name),
-                          color: s.color,
-                          colorString: s.colorString,
-                          content: [
-                              {
-                                  type: 'text',
-                                  content: '@'.concat(s.name)
-                              }
-                          ]
-                      };
+                let l = Z(n),
+                    u = null != l ? f.Z.getRole(l.id, s) : null;
+                if (null == u)
+                    return {
+                        type: 'text',
+                        content: '@'.concat(w.NW.string(w.t['YV4F/v']))
+                    };
+                let d = (0, c.OC)(null == l ? void 0 : l.id, 'parse');
+                return {
+                    type: 'mention',
+                    channelId: n.channelId,
+                    guildId: null != l ? l.id : null,
+                    roleId: s,
+                    roleColor: u.color,
+                    roleColors: d
+                        ? {
+                              primaryColor: null == (r = u.colors) ? void 0 : r.primary_color,
+                              secondaryColor: null == (i = u.colors) ? void 0 : i.secondary_color,
+                              tertiaryColor: null == (o = u.colors) ? void 0 : o.tertiary_color
+                          }
+                        : null,
+                    roleName: '@'.concat(u.name),
+                    color: u.color,
+                    colorString: u.colorString,
+                    content: [
+                        {
+                            type: 'text',
+                            content: '@'.concat(u.name)
+                        }
+                    ]
+                };
             }
         },
         mention: {
-            order: S.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['<', '@'],
             match(e, t) {
                 let n = /^<@!?(\d+)>|^(@(?:everyone|here|Clyde))/.exec(e);
-                return null != n && ('@Clyde' !== n[0] || (0, o.gJ)(w(t), c.Z.getChannel(t.channelId))) ? n : null;
+                return null != n && ('@Clyde' !== n[0] || (0, s.gJ)(Z(t), d.Z.getChannel(t.channelId))) ? n : null;
             },
             parse(e, t, n) {
                 let r, i;
@@ -217,40 +290,52 @@ let U = (e) => {
                               type: 'mention',
                               id: e[1]
                           };
-                let a = _.default.getUser(e[1]),
-                    s = c.Z.getChannel(n.channelId);
-                if (null != a && ((i = a.id), (r = a.toString()), null != s)) {
+                let o = _.default.getUser(e[1]),
+                    a = d.Z.getChannel(n.channelId);
+                if (null != o && ((i = o.id), (r = o.toString()), null != a)) {
                     var l;
-                    r = null !== (l = E.ZP.getNickname(s.getGuildId(), n.channelId, a)) && void 0 !== l ? l : f.ZP.getName(a);
+                    r = null != (l = p.ZP.getNickname(a.getGuildId(), n.channelId, o)) ? l : h.ZP.getName(o);
                 }
-                null == a && '@Clyde' === e[0] && (0, o.gJ)(w(n), s) && (i = C.fL);
-                let u = e[1],
-                    d = null != u && O.Xyh.test(u.trim()),
-                    h = d && n.unknownUserMentionPlaceholder ? '@'.concat(y.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
+                null == o && '@Clyde' === e[0] && (0, s.gJ)(Z(n), a) && (i = P.fL);
+                let c = e[1],
+                    u = null != c && C.Xyh.test(c.trim()),
+                    f = u && n.unknownUserMentionPlaceholder ? '@'.concat(w.NW.string(w.t.sKdZ6e)) : e[0];
                 return {
                     userId: i,
                     channelId: n.channelId,
                     viewingChannelId: n.viewingChannelId,
-                    guildId: null == s ? void 0 : s.getGuildId(),
-                    parsedUserId: d ? u : null,
+                    guildId: null == a ? void 0 : a.getGuildId(),
+                    parsedUserId: u ? c : null,
                     roleName: e[2],
                     content: [
                         {
                             type: 'text',
-                            content: null != r ? '@'.concat(r) : h
+                            content: null != r ? '@'.concat(r) : f
                         }
                     ]
                 };
             }
         },
-        channelMention: p.Z.channelMention,
-        channelOrMessageUrl: p.Z.channelOrMessageUrl,
-        mediaPostLink: p.Z.mediaPostLink,
-        attachmentLink: h.Z.attachmentLink,
+        silentPrefix: {
+            order: I.ZP.order,
+            requiredFirstCharacters: ['@'],
+            match: (e, t, n) => (null == n || '' === n ? /^(@silent(?![^\s]))/.exec(e) : null),
+            parse: function (e) {
+                return {
+                    type: 'silentPrefix',
+                    content: e[0]
+                };
+            }
+        },
+        channelMention: g.Z.channelMention,
+        channelOrMessageUrl: g.Z.channelOrMessageUrl,
+        mediaPostLink: g.Z.mediaPostLink,
+        attachmentLink: m.Z.attachmentLink,
+        shopLink: v.Z.shopLink,
         commandMention: {
-            order: s().defaultRules.text.order,
+            order: a().defaultRules.text.order,
             requiredFirstCharacters: ['<'],
-            match: (e) => /^<\/((?:[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?):(\d+)>/u.exec(e),
+            match: (e) => RegExp('^<\\/((?:[-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})(?: [-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})?(?: [-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})?):(\\d+)>', 'u').exec(e),
             parse(e, t, n) {
                 if (n.returnMentionIds)
                     return {
@@ -274,7 +359,7 @@ let U = (e) => {
             }
         },
         emoji: {
-            order: S.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: [':'],
             match(e) {
                 let t = l.ZP.EMOJI_NAME_RE.exec(e);
@@ -289,25 +374,13 @@ let U = (e) => {
             }
         },
         soundboard: {
-            order: S.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['<'],
-            match: (e) => /^<sound:(\d+)>/.exec(e),
-            parse(e, t, n) {
-                var r;
-                let i = e[1],
-                    a = u.Z.getSoundById(i),
-                    s = null !== (r = null == a ? void 0 : a.name) && void 0 !== r ? r : i;
-                return {
-                    type: 'soundboard',
-                    id: i,
-                    soundId: i,
-                    channelId: n.channelId,
-                    content: s
-                };
-            }
+            match: (e) => u.hf.exec(e),
+            parse: (e, t, n) => (0, u.ZP)(e, n)
         },
         customEmoji: {
-            order: S.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => /^<a?:(\w+):(\d+)>/.exec(e),
             parse: (e) => ({
@@ -316,7 +389,7 @@ let U = (e) => {
             })
         },
         timestamp: {
-            order: S.ZP.order - 1,
+            order: I.ZP.order - 1,
             requiredFirstCharacters: ['<'],
             match: (e) => N.Ay.exec(e),
             parse(e) {
@@ -327,62 +400,71 @@ let U = (e) => {
                           type: 'text',
                           content: t
                       }
-                    : i;
+                    : ((i.type = 'timestamp'), i);
             }
         },
         s: {
-            order: s().defaultRules.u.order,
+            order: a().defaultRules.u.order,
             requiredFirstCharacters: ['~'],
-            match: s().inlineRegex(/^~~([\s\S]+?)~~(?!_)/),
-            parse: s().defaultRules.u.parse
+            match: a().inlineRegex(/^~~([\s\S]+?)~~(?!_)/),
+            parse: a().defaultRules.u.parse
         },
         spoiler: {
-            order: S.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['|'],
-            match: (e) => O.$92.exec(e),
+            match: (e) => C.$92.exec(e),
             parse: (e, t, n) => ({
                 content: t(e[1], n),
                 channelId: n.channelId
             })
         },
         staticRouteLink: {
-            order: S.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['<'],
-            match: (e) => O.PEY.exec(e),
-            parse: (e, t, n) => ({
-                content: [
-                    {
-                        type: 'text',
-                        content: {
-                            home: y.Z.Messages.SERVER_GUIDE,
-                            guide: y.Z.Messages.SERVER_GUIDE,
-                            browse: y.Z.Messages.CHANNEL_BROWSER_TITLE,
-                            customize: y.Z.Messages.CHANNELS_AND_ROLES
-                        }[e[1]]
-                    }
-                ],
-                channelId: e[1],
-                guildId: U(n.channelId),
-                id: e[1]
-            })
+            match: (e) => C.PEY.exec(e),
+            parse(e, t, n) {
+                var r;
+                let [, i, o] = e,
+                    a = (0, T.l)(i),
+                    s = (0, T.W)(i, o, null == (r = Z(n)) ? void 0 : r.id);
+                function l(e) {
+                    return null == e
+                        ? null
+                        : [
+                              {
+                                  type: 'text',
+                                  content: e
+                              }
+                          ];
+                }
+                return {
+                    content: l(a + (null != s ? ' \u203A '.concat(s) : '')),
+                    mainContent: l(a),
+                    itemContent: l(s),
+                    itemId: o,
+                    id: i,
+                    guildId: V(n.channelId),
+                    channelId: i
+                };
+            }
         },
-        heading: m.Z,
-        list: T.Z,
-        subtext: g.Z
+        heading: E.Z,
+        list: y.Z,
+        subtext: O.Z
     },
-    G = (0, v.Z)([x, A.Z]),
-    k = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
-    B = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
-    F = i().omit(G, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),
-    V = i().omit(
-        (0, v.Z)([
-            G,
+    W = (0, A.Z)([H, S.Z]),
+    Y = i().omit(W, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext', 'soundboard']),
+    K = i().omit(W, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext', 'soundboard']),
+    z = i().omit(W, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext', 'soundboard']),
+    q = i().omit(
+        (0, A.Z)([
+            W,
             {
                 inlineCode: {
                     match(e, t, n) {
-                        let r = G.codeBlock.match(e, t, n);
+                        let r = W.codeBlock.match(e, t, n);
                         if (null != r) return r;
-                        let i = G.inlineCode.match(e, t, n);
+                        let i = W.inlineCode.match(e, t, n);
                         if (null != i) return i;
                     }
                 }
@@ -390,61 +472,59 @@ let U = (e) => {
         ]),
         ['blockQuote', 'codeBlock', 'br']
     ),
-    H = i().omit(G, ['codeBlock', 'br', 'blockQuote']),
-    Z = i().omit(G, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext']),
-    Y = i().omit(G, ['codeBlock', 'blockQuote', 'br']),
-    j = i().omit(G, ['codeBlock', 'br', 'inlineCode']);
-function W(e, t) {
+    Q = i().omit(W, ['codeBlock', 'br', 'blockQuote']),
+    X = i().omit(W, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext', 'soundboard']),
+    J = i().omit(W, ['codeBlock', 'blockQuote', 'br']),
+    $ = i().omit(W, ['codeBlock', 'br', 'inlineCode']);
+function ee(e, t) {
     return 0 === e.length || 0 === t || '' === e.charAt(t - 1).trim();
 }
-let K = (0, v.Z)([
-    {
-        highlightWord: {
-            order: -1,
-            match(e, t) {
-                if ((null != t.parseDepth && t.parseDepth > 10) || null == t.highlightWord || 0 === t.highlightWord.length) return null;
-                let n = e.indexOf(t.highlightWord);
-                if (-1 === n) return null;
-                let r = !W(e, n);
-                if (r)
-                    do (n = e.indexOf(t.highlightWord, n + 1)), (r = !W(e, n));
-                    while (r && -1 !== n);
-                if (-1 === n) return null;
-                let i = e.substring(0, n),
-                    a = e.substring(n + t.highlightWord.length);
-                return [e, t.highlightWord, i, a];
-            },
-            parse(e, t, n) {
-                var r;
-                let i = null !== (r = n.parseDepth) && void 0 !== r ? r : 0,
-                    a = {
-                        ...n,
-                        parseDepth: i + 1
-                    },
-                    s = t(e[2], a),
-                    o = t(e[3], a);
-                return [
-                    ...s,
-                    {
-                        type: 'highlight',
-                        content: e[1]
-                    },
-                    ...o
-                ];
+let et = 10,
+    en = (0, A.Z)([
+        {
+            highlightWord: {
+                order: -1,
+                match(e, t) {
+                    if ((null != t.parseDepth && t.parseDepth > et) || null == t.highlightWord || 0 === t.highlightWord.length) return null;
+                    let n = e.indexOf(t.highlightWord);
+                    if (-1 === n) return null;
+                    let r = !ee(e, n);
+                    if (r)
+                        do (n = e.indexOf(t.highlightWord, n + 1)), (r = !ee(e, n));
+                        while (r && -1 !== n);
+                    if (-1 === n) return null;
+                    let i = e.substring(0, n),
+                        o = e.substring(n + t.highlightWord.length);
+                    return [e, t.highlightWord, i, o];
+                },
+                parse(e, t, n) {
+                    var r;
+                    let i = null != (r = n.parseDepth) ? r : 0,
+                        o = M(L({}, n), { parseDepth: i + 1 }),
+                        a = t(e[2], o),
+                        s = t(e[3], o);
+                    return [
+                        ...a,
+                        {
+                            type: 'highlight',
+                            content: e[1]
+                        },
+                        ...s
+                    ];
+                }
             }
-        }
-    },
-    i().omit(G, ['url'])
-]);
-t.Z = {
-    RULES: G,
-    CHANNEL_TOPIC_RULES: k,
-    VOICE_CHANNEL_STATUS_RULES: B,
-    EMBED_TITLE_RULES: F,
-    INLINE_REPLY_RULES: V,
-    GUILD_VERIFICATION_FORM_RULES: H,
-    GUILD_EVENT_RULES: Y,
-    PROFILE_BIO_RULES: Z,
-    AUTO_MODERATION_SYSTEM_MESSAGE_RULES: K,
-    NATIVE_SEARCH_RESULT_LINK_RULES: j
-};
+        },
+        i().omit(W, ['url'])
+    ]),
+    er = {
+        RULES: W,
+        CHANNEL_TOPIC_RULES: Y,
+        VOICE_CHANNEL_STATUS_RULES: K,
+        EMBED_TITLE_RULES: z,
+        INLINE_REPLY_RULES: q,
+        GUILD_VERIFICATION_FORM_RULES: Q,
+        GUILD_EVENT_RULES: J,
+        PROFILE_BIO_RULES: X,
+        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: en,
+        NATIVE_SEARCH_RESULT_LINK_RULES: $
+    };

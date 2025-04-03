@@ -1,15 +1,11 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(931252);
-function i(e) {
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(613977);
+function s(e) {
     let { children: t } = e;
-    return (0, s.jsx)('div', {
-        className: a.paymentSections,
+    return (0, r.jsx)('div', {
+        className: i.paymentSections,
         children: t
     });
 }

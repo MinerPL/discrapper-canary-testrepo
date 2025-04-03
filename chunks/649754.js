@@ -1,14 +1,27 @@
-n(47120);
+n.d(t, { Z: () => a }), n(47120);
 var r = n(992774);
-t.Z = new (class e {
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class o {
     addSink(e, t, n) {
         let i = this.streams,
-            a = i[e];
-        if ((null == a && (a = i[e] = new Map()), 0 === a.size)) {
+            o = i[e];
+        if ((null == o && (o = i[e] = new Map()), 0 === o.size)) {
             let t = (0, r.zS)();
-            t.setVideoOutputSink(e, this.handleImageData.bind(this, t.signalVideoOutputSinkReady.bind(t, e), a), !0);
+            t.setVideoOutputSink(e, this.handleImageData.bind(this, t.signalVideoOutputSinkReady.bind(t, e), o), !0);
         }
-        a.set(t, n);
+        o.set(t, n);
     }
     removeSink(e, t) {
         let n = this.streams,
@@ -20,16 +33,7 @@ t.Z = new (class e {
         e();
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (n = {}),
-            (t = 'streams') in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        i(this, 'streams', {});
     }
-})();
+}
+let a = new o();

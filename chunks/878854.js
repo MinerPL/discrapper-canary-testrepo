@@ -1,12 +1,8 @@
-function r(e, t, n) {
-    if (t.set) t.set.call(e, n);
+function n(t, e, r) {
+    if (e.set) e.set.call(t, r);
     else {
-        if (!t.writable) throw TypeError('attempted to set read only private field');
-        t.value = n;
+        if (!e.writable) throw TypeError('attempted to set read only private field');
+        e.value = r;
     }
 }
-n.d(t, {
-    y: function () {
-        return r;
-    }
-});
+r.d(e, { y: () => n });

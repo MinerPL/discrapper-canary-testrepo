@@ -1,29 +1,25 @@
-t.d(n, {
-    Z: function () {
-        return E;
-    }
-});
-var a = t(735250);
-t(470079);
-var i = t(442837),
-    l = t(481060),
-    s = t(430824),
-    o = t(594174),
-    u = t(724213),
-    r = t(398758),
-    d = t(981631),
-    c = t(689938);
-function E(e) {
-    let n = (0, r.DM)(e),
-        t = (0, i.e7)([s.Z], () => s.Z.getGuild(e)),
-        E = (0, i.e7)([o.default], () => o.default.getCurrentUser());
-    return null != E && null != t && (t.hasFeature(d.oNc.COMMUNITY) || E.isStaff())
-        ? (0, a.jsx)(l.MenuCheckboxItem, {
+r.d(t, { Z: () => O });
+var n = r(200651);
+r(192379);
+var i = r(442837),
+    o = r(481060),
+    l = r(430824),
+    c = r(594174),
+    a = r(724213),
+    u = r(398758),
+    s = r(981631),
+    b = r(388032);
+function O(e) {
+    let t = (0, u.DM)(e),
+        r = (0, i.e7)([l.Z], () => l.Z.getGuild(e)),
+        O = (0, i.e7)([c.default], () => c.default.getCurrentUser());
+    return null != O && null != r && (r.hasFeature(s.oNc.COMMUNITY) || O.isStaff())
+        ? (0, n.jsx)(o.S89, {
               id: 'opt-in',
-              label: c.Z.Messages.GUILD_CHANNEL_OPT_IN,
-              checked: !n,
+              label: b.NW.string(b.t.FB2ZZW),
+              checked: !t,
               action: () => {
-                  (0, u.kH)(e);
+                  (0, a.kH)(e);
               }
           })
         : null;

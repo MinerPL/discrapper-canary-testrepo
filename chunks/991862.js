@@ -1,59 +1,55 @@
-t.d(n, {
-    T: function () {
-        return a;
-    }
-});
-var i = t(689938);
-function a(e) {
+n.d(t, { T: () => i });
+var r = n(388032);
+function i(e) {
     switch (e) {
         case 'brl':
-            return i.Z.Messages.BRL_NAME;
+            return r.NW.string(r.t.qEyr9v);
         case 'pln':
-            return i.Z.Messages.PLN_NAME;
+            return r.NW.string(r.t.eAdNmZ);
         case 'try':
-            return i.Z.Messages.TRY_NAME;
+            return r.NW.string(r.t.J05KNT);
         case 'usd':
-            return i.Z.Messages.USD_NAME;
+            return r.NW.string(r.t.kJGVtL);
         case 'aud':
-            return i.Z.Messages.AUD_NAME;
+            return r.NW.string(r.t.ylmkMz);
         case 'pen':
-            return i.Z.Messages.PEN_NAME;
+            return r.NW.string(r.t['sKR+OD']);
         case 'php':
-            return i.Z.Messages.PHP_NAME;
+            return r.NW.string(r.t['0p6FTk']);
         case 'ars':
-            return i.Z.Messages.ARS_NAME;
+            return r.NW.string(r.t.GTI3Bw);
         case 'cop':
-            return i.Z.Messages.COP_NAME;
+            return r.NW.string(r.t['/FnP7O']);
         case 'clr':
-            return i.Z.Messages.CLR_NAME;
+            return r.NW.string(r.t['BK/Vam']);
         case 'jpy':
-            return i.Z.Messages.JPY_NAME;
+            return r.NW.string(r.t.QKSoIi);
         case 'idr':
-            return i.Z.Messages.IDR_NAME;
+            return r.NW.string(r.t.UBrRGh);
         case 'vnd':
-            return i.Z.Messages.VND_NAME;
+            return r.NW.string(r.t.mEwykp);
         case 'thb':
-            return i.Z.Messages.THB_NAME;
+            return r.NW.string(r.t['9W3Gub']);
         case 'myr':
-            return i.Z.Messages.MYR_NAME;
+            return r.NW.string(r.t.MOaho6);
         case 'krw':
-            return i.Z.Messages.KRW_NAME;
+            return r.NW.string(r.t['20VnAw']);
         case 'mxn':
-            return i.Z.Messages.MXN_NAME;
+            return r.NW.string(r.t.t2RLnp);
         case 'bgn':
-            return i.Z.Messages.BGN_NAME;
+            return r.NW.string(r.t.EhetGB);
         case 'czk':
-            return i.Z.Messages.CZK_NAME;
+            return r.NW.string(r.t.dWTAXV);
         case 'dkk':
-            return i.Z.Messages.DKK_NAME;
+            return r.NW.string(r.t.a9hHzs);
         case 'huf':
-            return i.Z.Messages.HUF_NAME;
+            return r.NW.string(r.t.abWUUF);
         case 'ron':
-            return i.Z.Messages.RON_NAME;
+            return r.NW.string(r.t.C7WDXF);
         case 'sek':
-            return i.Z.Messages.SEK_NAME;
+            return r.NW.string(r.t.Z0oztb);
         case 'eur':
-            return i.Z.Messages.EUR_NAME;
+            return r.NW.string(r.t['uhxR+f']);
         default:
             return '';
     }

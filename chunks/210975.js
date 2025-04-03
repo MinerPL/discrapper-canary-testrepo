@@ -1,79 +1,38 @@
 n.d(t, {
-    m$: function () {
-        return g;
-    },
-    wV: function () {
-        return E;
-    }
-}),
-    n(47120),
-    n(518263),
-    n(970173),
-    n(520712),
-    n(268111),
-    n(941497),
-    n(32026),
-    n(480839),
-    n(744285),
-    n(492257),
-    n(873817);
-var r = n(470079),
-    l = n(442837),
-    u = n(470956),
+    m$: () => f,
+    wV: () => c,
+    zU: () => d
+});
+var r = n(442837),
+    l = n(569545),
     i = n(314897),
     a = n(19780),
-    c = n(979651),
-    o = n(709054),
-    s = n(729303),
-    d = n(651941),
-    f = n(441894);
-function Z(e) {
-    let { voiceStates: t, version: n } = (0, l.cj)([c.Z], () => ({
-            voiceStates: c.Z.getVoiceStatesForChannel(e),
-            version: c.Z.getVoiceStateVersion()
-        })),
-        i = r.useMemo(() => o.default.keys(t), [t, n]);
-    return (0, u.Yp)(e, i);
+    o = n(98369),
+    s = n(277642),
+    u = n(441894);
+function c(e) {
+    let { userId: t, channelId: n } = e,
+        l = (0, u.J)({ channelId: n });
+    return (0, r.e7)([o.Z, i.default, a.Z], () => null != t && l && a.Z.isUserConnected(t) && i.default.getId() !== t && o.Z.isUserVerified(t), [l, t]);
 }
-function C(e) {
-    let [t, n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, d.Z, s.Z];
-    if (null == e) return !1;
-    let l = t.getSecureFramesRosterMapEntry(e);
-    if (null == l) return !1;
-    let u = new Uint8Array(l);
-    return n.isKeyVerified(e, u) || r.isKeyVerified(e, u);
-}
-function E(e) {
-    let { userId: t, channelId: n, location: r } = e,
-        u = Z(n),
-        c = (0, f.J)({
-            channelId: n,
-            location: r
-        }),
-        o = (0, l.e7)([i.default], () => i.default.getId()),
-        E = (0, l.e7)([a.Z, d.Z, s.Z], () => C(t, [a.Z, d.Z, s.Z])),
-        g = o !== t;
-    return c && g && E && u.has(o) && null != t && u.has(t);
-}
-function g(e) {
-    let { channelId: t, location: n } = e,
-        r = (0, f.J)({
-            channelId: t,
-            location: n
-        }),
-        u = Z(t),
-        c = (0, l.e7)([i.default], () => i.default.getId());
-    return (0, l.e7)(
-        [a.Z, d.Z, s.Z],
+function d(e) {
+    let { streamKey: t, channelId: n } = e,
+        a = (0, u.J)({ channelId: n }),
+        c = (0, s.t)(t);
+    return (0, r.e7)(
+        [o.Z, i.default],
         () => {
-            if (!r) return !1;
-            for (let e of u) {
-                if (e !== c) {
-                    if (!C(e, [a.Z, d.Z, s.Z])) return !1;
-                }
-            }
-            return !0;
+            if (!a || c || null == t) return !1;
+            let e = i.default.getId(),
+                { ownerId: n } = (0, l.my)(t);
+            return n !== e && o.Z.isStreamVerified(t);
         },
-        [c, r, u]
+        [c, a, t]
     );
+}
+function f(e) {
+    let { channelId: t } = e,
+        n = (0, u.J)({ channelId: t }),
+        l = (0, s.r)();
+    return (0, r.e7)([o.Z], () => !!n && !l && o.Z.isCallVerified(), [l, n]);
 }

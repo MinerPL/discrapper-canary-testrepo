@@ -1,12 +1,7 @@
-n.d(t, {
-    b: function () {
-        return s;
-    }
-}),
-    n(47120);
+n.d(t, { b: () => a }), n(47120);
 var r = n(689320),
     i = n(143806);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-class s {
+class a {
     get totalLength() {
         return this.primary.length + this.extended.length;
     }
@@ -51,7 +46,7 @@ class s {
         return this.upstreamItems(), t || n;
     }
     upstreamItems() {
-        if (!!this.canUpstreamItems()) {
+        if (this.canUpstreamItems()) {
             for (let [e, t] of this.extended.entries()) if ((this.primary.put(e, t), this.extended.delete(e), !this.canUpstreamItems())) break;
         }
     }
@@ -77,6 +72,6 @@ class s {
         return r.t(this.extended.values(), this.primary.values());
     }
     constructor(e, t) {
-        a(this, 'primary', void 0), a(this, 'extended', void 0), (this.primary = new i.S(e)), (this.extended = new i.S(t));
+        o(this, 'primary', void 0), o(this, 'extended', void 0), (this.primary = new i.S(e)), (this.extended = new i.S(t));
     }
 }

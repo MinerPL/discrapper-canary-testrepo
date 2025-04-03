@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => o });
 var r = n(81825);
 function i(e, t, n) {
     return (
@@ -17,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class a extends r.Z {
+class o extends r.Z {
     toString() {
         return this.name;
     }

@@ -1,59 +1,54 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return l;
-        }
-    });
-var a = t(735250);
-t(470079);
-var n = t(481060),
-    i = t(600164),
-    o = t(313201),
-    d = t(952164),
-    r = t(689938),
-    c = t(689488);
+i.d(t, { default: () => l });
+var e = i(200651);
+i(192379);
+var n = i(481060),
+    a = i(600164),
+    r = i(313201),
+    c = i(952164),
+    o = i(388032),
+    x = i(532819);
 function l(s) {
-    let { transitionState: e, onClose: t } = s,
-        l = (0, o.Dt)();
-    return (0, a.jsxs)(n.ModalRoot, {
+    let { transitionState: t, onClose: i } = s,
+        l = (0, r.Dt)();
+    return (0, e.jsxs)(n.Y0X, {
         'aria-labelledby': l,
-        transitionState: e,
-        size: n.ModalSize.SMALL,
+        transitionState: t,
+        size: n.CgR.SMALL,
         children: [
-            (0, a.jsx)(n.ModalHeader, {
+            (0, e.jsx)(n.xBx, {
                 separator: !1,
-                children: (0, a.jsx)(n.Heading, {
+                children: (0, e.jsx)(n.X6q, {
                     id: l,
                     variant: 'heading-lg/semibold',
-                    children: r.Z.Messages.SPOTIFY_PREMIUM_UPGRADE_HEADER
+                    children: o.NW.formatToMarkdownString(o.t.DQsSGh, {})
                 })
             }),
-            (0, a.jsxs)(n.ModalContent, {
+            (0, e.jsxs)(n.hzk, {
                 children: [
-                    (0, a.jsx)(i.Z, {
-                        justify: i.Z.Justify.CENTER,
-                        children: (0, a.jsx)('div', { className: c.image })
+                    (0, e.jsx)(a.Z, {
+                        justify: a.Z.Justify.CENTER,
+                        children: (0, e.jsx)('div', { className: x.image })
                     }),
-                    (0, a.jsx)(n.Text, {
-                        className: c.text,
+                    (0, e.jsx)(n.Text, {
+                        className: x.text,
                         variant: 'text-sm/normal',
-                        children: r.Z.Messages.SPOTIFY_PREMIUM_UPGRADE_BODY
+                        children: o.NW.string(o.t.xGMwi4)
                     })
                 ]
             }),
-            (0, a.jsxs)(n.ModalFooter, {
+            (0, e.jsxs)(n.mzw, {
                 children: [
-                    (0, a.jsx)(n.Button, {
+                    (0, e.jsx)(n.zxk, {
                         onClick: function () {
-                            (0, d.KK)(), t();
+                            (0, c.KK)(), i();
                         },
-                        children: r.Z.Messages.SPOTIFY_PREMIUM_UPGRADE_BUTTON
+                        children: o.NW.string(o.t.n8U5jY)
                     }),
-                    (0, a.jsx)(n.Button, {
-                        look: n.Button.Looks.LINK,
-                        color: n.Button.Colors.PRIMARY,
-                        onClick: t,
-                        children: r.Z.Messages.CANCEL
+                    (0, e.jsx)(n.zxk, {
+                        look: n.zxk.Looks.LINK,
+                        color: n.zxk.Colors.PRIMARY,
+                        onClick: i,
+                        children: o.NW.string(o.t['ETE/oK'])
                     })
                 ]
             })

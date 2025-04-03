@@ -1,61 +1,52 @@
 n.d(t, {
-    PQ: function () {
-        return c;
-    },
-    e3: function () {
-        return d;
-    }
+    PQ: () => c,
+    ZP: () => f,
+    e3: () => u
 }),
     n(47120);
-var r = n(470079),
+var r = n(192379),
     i = n(691324),
-    a = n(442837),
-    s = n(780384),
-    o = n(813852),
-    l = n(514361),
-    u = n(629935);
+    o = n(442837),
+    a = n(780384),
+    s = n(514361),
+    l = n(629935);
 let c = 'data-client-themes',
-    d = 'custom-theme-background',
-    _ = () => {
-        let e = (0, a.e7)([l.Z], () => l.Z.gradientPreset),
-            { enabled: t } = o.U.useExperiment({ location: 'useBackgroundGradientCSS' });
+    u = 'custom-theme-background',
+    d = () => {
+        let e = (0, o.e7)([s.Z], () => s.Z.gradientPreset);
         return (0, r.useMemo)(() => {
             if (null == e) return null;
-            let n = l.Z.getLinearGradient();
-            if (null == n) return null;
-            let [r, a] = [...e.colors]
-                    .sort((e, t) => t.stop - e.stop)
-                    .slice(0, 2)
-                    .map((e) => i.b[e.token].hex),
-                o = (0, u.W4)({
-                    enabled: t,
-                    primaryColor: r,
-                    secondaryColor: a,
-                    isDarkTheme: (0, s.wj)(e.theme)
+            let t = s.Z.getLinearGradient();
+            if (null == t) return null;
+            let n = i.b[e.colors[0].token].hex,
+                r = i.b[e.colors[e.colors.length - 1].token].hex,
+                o = (0, l.W4)({
+                    enabled: !0,
+                    primaryColor: n,
+                    secondaryColor: r,
+                    isDarkTheme: (0, a.wj)(e.theme)
                 }),
-                c = t
-                    ? '\n      '.concat(
-                          Object.entries(o)
-                              .map((e) => {
-                                  let [t, n] = e;
-                                  return ''.concat(t, ': ').concat(n, ';');
-                              })
-                              .join('\n'),
-                          '\n    '
-                      )
-                    : '';
-            return '.'.concat(d, ' {\n      --custom-theme-background: ').concat(n, ';\n      ').concat(c, '\n    }');
-        }, [t, e]);
+                c = '\n      '.concat(
+                    Object.entries(o)
+                        .map((e) => {
+                            let [t, n] = e;
+                            return ''.concat(t, ': ').concat(n, ';');
+                        })
+                        .join('\n'),
+                    '\n    '
+                );
+            return '.'.concat(u, ' {\n      --custom-theme-background: ').concat(t, ';\n      --custom-theme-primary-color: ').concat(n, ';\n      --custom-theme-secondary-color: ').concat(r, ';\n      ').concat(c, '\n    }');
+        }, [e]);
+    },
+    f = () => {
+        let e = d();
+        return null === e
+            ? {
+                  clientThemesCSS: '',
+                  clientThemesClassName: ''
+              }
+            : {
+                  clientThemesCSS: e,
+                  clientThemesClassName: u
+              };
     };
-t.ZP = () => {
-    let e = _();
-    return null === e
-        ? {
-              clientThemesCSS: '',
-              clientThemesClassName: ''
-          }
-        : {
-              clientThemesCSS: e,
-              clientThemesClassName: d
-          };
-};

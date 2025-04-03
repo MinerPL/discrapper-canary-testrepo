@@ -1,189 +1,197 @@
 n.d(t, {
-    JO: function () {
-        return E;
-    },
-    iz: function () {
-        return f;
-    }
+    JO: () => g,
+    ZP: () => v,
+    iz: () => E
 });
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(608863),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(608863),
     l = n(873546),
-    u = n(481060),
-    c = n(290297),
+    c = n(481060),
+    u = n(290297),
     d = n(686546),
-    _ = n(648914);
-let E = (e) => {
-        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: E, foreground: f, background: h, icon: p, onClick: m, onContextMenu: I, tooltip: T = null, tooltipColor: g, tooltipPosition: S = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: v, 'aria-label': O, 'aria-hidden': R, 'aria-checked': C, 'aria-expanded': y, 'aria-haspopup': D } = e,
-            L = (0, r.jsx)(p, {
+    f = n(540059),
+    _ = n(79712),
+    p = n(658672);
+let h = 24,
+    m = (e) => {
+        let { className: t, wrapperClassName: n, children: i, onContextMenu: o, onClick: s, id: l, muted: u = !1, level: d = 1 } = e,
+            _ = (0, f.Q3)('BaseHeaderBar'),
+            h = (0, r.jsx)(c.y5t, {
+                forceLevel: d,
+                children: (0, r.jsx)(c.X6q, {
+                    variant: _ ? 'text-md/medium' : 'heading-md/semibold',
+                    color: u ? 'header-secondary' : void 0,
+                    className: a()(t, p.title),
+                    id: l,
+                    children: i
+                })
+            });
+        return null != s
+            ? (0, r.jsx)(c.P3F, {
+                  onClick: s,
+                  onContextMenu: o,
+                  className: a()(n, p.titleWrapper),
+                  children: h
+              })
+            : (0, r.jsx)('div', {
+                  className: a()(n, p.titleWrapper),
+                  onContextMenu: o,
+                  children: h
+              });
+    },
+    g = i.forwardRef(function (e, t) {
+        let { className: n, iconClassName: i, children: o, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: _ = 'bottom', color: m, foreground: g, background: E, icon: b, iconSize: y = h, onClick: v, onContextMenu: O, tooltip: I = null, tooltipColor: S, tooltipPosition: T = 'bottom', tooltipDisabled: N, tooltipSpacing: A, hideOnClick: C = !0, role: R, 'aria-label': P, 'aria-hidden': w, 'aria-checked': D, 'aria-expanded': L, 'aria-haspopup': x, 'data-jump-section': M } = e,
+            k = (0, f.Q3)('BaseHeaderBar'),
+            j = (0, r.jsx)(b, {
                 x: 0,
                 y: 0,
-                width: 24,
-                height: 24,
+                width: y,
+                height: y,
                 size: 'custom',
-                className: s()(n, _.icon),
-                colorClass: null != f ? f : void 0,
-                secondaryColorClass: null != h ? h : void 0,
-                color: null != E ? E : 'currentColor'
+                className: a()(i, p.icon),
+                colorClass: null != g ? g : void 0,
+                secondaryColorClass: null != E ? E : void 0,
+                color: null != m ? m : 'currentColor'
             }),
-            b = O;
+            U = P;
         return (
-            null == b && 'string' == typeof T && (b = T),
-            (0, r.jsx)(u.Tooltip, {
-                text: T,
-                color: g,
-                position: S,
-                hideOnClick: N,
-                shouldShow: !A,
+            null == U && 'string' == typeof I && (U = I),
+            (0, r.jsx)(c.ua7, {
+                text: I,
+                color: S,
+                position: T,
+                hideOnClick: C,
+                shouldShow: !N,
+                spacing: A,
                 children: (e) => {
-                    let { onMouseEnter: T, onMouseLeave: g, onFocus: S, onBlur: A } = e;
-                    return null == m
+                    let { onMouseEnter: f, onMouseLeave: h, onFocus: I, onBlur: S } = e;
+                    return null == v
                         ? (0, r.jsx)('div', {
-                              className: s()(t, [_.iconWrapper]),
-                              children: (0, r.jsx)(p, {
+                              ref: t,
+                              className: a()(n, p.iconWrapper, { [p.iconDisabled]: l }),
+                              children: (0, r.jsx)(b, {
                                   x: 0,
                                   y: 0,
-                                  width: 24,
-                                  height: 24,
+                                  width: y,
+                                  height: y,
                                   size: 'custom',
-                                  className: s()(n, _.icon),
-                                  colorClass: null != f ? f : void 0,
-                                  secondaryColorClass: null != h ? h : void 0,
-                                  color: null != E ? E : 'currentColor',
-                                  'aria-hidden': R,
-                                  onMouseEnter: T,
-                                  onMouseLeave: g,
-                                  onFocus: S,
-                                  onBlur: A
+                                  className: a()(i, p.icon),
+                                  colorClass: null != g ? g : void 0,
+                                  secondaryColorClass: null != E ? E : void 0,
+                                  color: null != m ? m : 'currentColor',
+                                  'aria-hidden': w,
+                                  onMouseEnter: f,
+                                  onMouseLeave: h,
+                                  onFocus: I,
+                                  onBlur: S
                               })
                           })
-                        : (0, r.jsxs)(u.Clickable, {
+                        : (0, r.jsxs)(c.P3F, {
+                              innerRef: t,
                               tag: 'div',
-                              onClick: o ? void 0 : m,
-                              onContextMenu: o ? void 0 : I,
-                              onMouseEnter: T,
-                              onMouseLeave: g,
-                              onFocus: S,
-                              onBlur: A,
-                              className: s()(t, {
-                                  [_.iconWrapper]: !0,
-                                  [_.clickable]: !o && null != m,
-                                  [_.selected]: a
+                              onClick: l ? void 0 : v,
+                              onContextMenu: l ? void 0 : O,
+                              onMouseEnter: f,
+                              onMouseLeave: h,
+                              onFocus: I,
+                              onBlur: S,
+                              className: a()(n, {
+                                  [p.iconWrapper]: !0,
+                                  [p.clickable]: !l && null != v,
+                                  [p.selected]: s,
+                                  [p.iconDisabled]: l
                               }),
-                              role: v,
-                              'aria-label': b,
-                              'aria-hidden': R,
-                              'aria-checked': C,
-                              'aria-haspopup': D,
-                              'aria-expanded': y,
-                              tabIndex: o || null == m ? -1 : 0,
+                              role: R,
+                              'aria-label': U,
+                              'aria-hidden': w,
+                              'aria-checked': D,
+                              'aria-haspopup': x,
+                              'aria-expanded': L,
+                              tabIndex: l || null == v ? -1 : 0,
+                              'data-jump-section': M,
                               children: [
-                                  l
+                                  u
                                       ? (0, r.jsx)(d.ZP, {
-                                            mask: 'top' === c ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                            children: L
+                                            mask: 'top' === _ ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
+                                            height: k ? y : void 0,
+                                            width: k ? y : void 0,
+                                            children: j
                                         })
-                                      : L,
-                                  l ? (0, r.jsx)('span', { className: s()(_.iconBadge, 'top' === c ? _.iconBadgeTop : _.iconBadgeBottom) }) : null,
-                                  i
+                                      : j,
+                                  u ? (0, r.jsx)('span', { className: a()(p.iconBadge, 'top' === _ ? p.iconBadgeTop : p.iconBadgeBottom) }) : null,
+                                  o
                               ]
                           });
                 }
             })
         );
-    },
-    f = (e) => {
+    }),
+    E = (e) => {
         let { className: t } = e;
-        return (0, r.jsx)('div', { className: s()(_.divider, t) });
-    },
-    h = (e) => {
-        let { className: t, innerClassName: n, children: a, childrenBottom: d, toolbar: E, onDoubleClick: f, 'aria-label': h, 'aria-labelledby': p, role: m, scrollable: I, transparent: T = !1 } = e,
-            g = i.useRef(null),
-            S = i.useContext(c.Z);
-        return (0, r.jsx)('section', {
-            className: s()(t, _.container, {
-                [_.themed]: !T,
-                [_.transparent]: T,
-                [_.themedMobile]: l.tq
-            }),
-            'aria-label': h,
-            'aria-labelledby': p,
-            role: m,
-            ref: g,
-            children: (0, r.jsxs)(u.FocusRingScope, {
-                containerRef: g,
-                children: [
-                    (0, r.jsxs)('div', {
-                        className: _.upperContainer,
-                        children: [
-                            (0, r.jsxs)('div', {
-                                className: s()(_.children, n, { [_.scrollable]: I }),
-                                onDoubleClick: f,
-                                children: [
-                                    l.tq && null != S
-                                        ? (0, r.jsx)(o.r, {
-                                              onClick: S,
-                                              className: _.hamburger
-                                          })
-                                        : null,
-                                    a
-                                ]
-                            }),
-                            null != E
-                                ? (0, r.jsx)('div', {
-                                      className: _.toolbar,
-                                      children: E
-                                  })
-                                : null
-                        ]
-                    }),
-                    d
-                ]
-            })
-        });
+        return (0, f.Q3)('BaseHeaderBar.Divider') ? (0, r.jsx)(_.Z, { className: a()(p.dot, t) }) : (0, r.jsx)('div', { className: a()(p.divider, t) });
     };
-(h.Icon = E),
-    (h.Title = (e) => {
-        let { className: t, wrapperClassName: n, children: i, onContextMenu: a, onClick: o, id: l, muted: c = !1, level: d = 1 } = e,
-            E = (0, r.jsx)(u.HeadingLevel, {
-                forceLevel: d,
-                children: (0, r.jsx)(u.Heading, {
-                    variant: 'heading-md/semibold',
-                    color: c ? 'header-secondary' : void 0,
-                    className: s()(t, _.title),
-                    id: l,
-                    children: i
-                })
-            });
-        return null != o
-            ? (0, r.jsx)(u.Clickable, {
-                  onClick: o,
-                  onContextMenu: a,
-                  className: s()(n, _.titleWrapper),
-                  children: E
-              })
-            : (0, r.jsx)('div', {
-                  className: s()(n, _.titleWrapper),
-                  onContextMenu: a,
-                  children: E
-              });
-    }),
-    (h.Divider = f),
-    (h.Caret = function (e) {
-        let { direction: t = 'right' } = e;
-        return 'right' === t
-            ? (0, r.jsx)(u.ChevronSmallRightIcon, {
-                  size: 'md',
-                  color: 'currentColor',
-                  className: _.caret
-              })
-            : (0, r.jsx)(u.ChevronSmallLeftIcon, {
-                  size: 'md',
-                  color: 'currentColor',
-                  className: _.caret
-              });
-    }),
-    (t.ZP = h);
+function b(e) {
+    let { direction: t = 'right' } = e;
+    return 'right' === t
+        ? (0, r.jsx)(c.Fbu, {
+              size: 'md',
+              color: 'currentColor',
+              className: p.caret
+          })
+        : (0, r.jsx)(c.V7D, {
+              size: 'md',
+              color: 'currentColor',
+              className: p.caret
+          });
+}
+let y = (e) => {
+    let { className: t, innerClassName: n, children: o, childrenBottom: d, toolbar: f, onDoubleClick: _, 'aria-label': h, 'aria-labelledby': m, role: g, scrollable: E, transparent: b = !1 } = e,
+        y = i.useRef(null),
+        v = i.useContext(u.Z);
+    return (0, r.jsx)('section', {
+        className: a()(t, p.container, {
+            [p.themed]: !b,
+            [p.transparent]: b,
+            [p.themedMobile]: l.tq
+        }),
+        'aria-label': h,
+        'aria-labelledby': m,
+        role: g,
+        ref: y,
+        children: (0, r.jsxs)(c.JcV, {
+            containerRef: y,
+            children: [
+                (0, r.jsxs)('div', {
+                    className: p.upperContainer,
+                    children: [
+                        (0, r.jsxs)('div', {
+                            className: a()(p.children, n, { [p.scrollable]: E }),
+                            onDoubleClick: _,
+                            children: [
+                                l.tq && null != v
+                                    ? (0, r.jsx)(s.r, {
+                                          onClick: v,
+                                          className: p.hamburger
+                                      })
+                                    : null,
+                                o
+                            ]
+                        }),
+                        null != f
+                            ? (0, r.jsx)('div', {
+                                  className: p.toolbar,
+                                  children: f
+                              })
+                            : null
+                    ]
+                }),
+                d
+            ]
+        })
+    });
+};
+(y.Icon = g), (y.Title = m), (y.Divider = E), (y.Caret = b);
+let v = y;

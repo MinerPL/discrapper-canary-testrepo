@@ -1,48 +1,57 @@
-t.r(s),
-    t.d(s, {
-        default: function () {
-            return r;
-        }
-    });
-var a = t(735250);
-t(470079);
-var o = t(481060),
-    l = t(600164),
-    n = t(689938),
-    d = t(34868);
-function r(e) {
-    let { onClose: s, transitionState: t } = e;
-    return (0, a.jsxs)(o.ModalRoot, {
-        size: o.ModalSize.SMALL,
-        transitionState: t,
+r.d(t, { default: () => c });
+var s = r(200651);
+r(192379);
+var a = r(481060),
+    i = r(600164),
+    n = r(785141),
+    d = r(272395),
+    l = r(388032),
+    o = r(463672);
+function c(e) {
+    var t;
+    let { onClose: r, transitionState: c } = e,
+        { avErrorUIEnabled: u } = (0, d.JN)({ location: 'StreamWarning' }),
+        x = null == (t = (0, n.hp)(n.u.STREAM_FULL)) ? void 0 : t.errorCode,
+        h = l.NW.formatToPlainString(l.t['ejOT9/'], { errorCode: x });
+    return (0, s.jsxs)(a.Y0X, {
+        size: a.CgR.SMALL,
+        transitionState: c,
         children: [
-            (0, a.jsxs)(o.ModalHeader, {
-                justify: l.Z.Justify.BETWEEN,
+            (0, s.jsxs)(a.xBx, {
+                justify: i.Z.Justify.BETWEEN,
                 children: [
-                    (0, a.jsx)(o.FormTitle, {
+                    (0, s.jsx)(a.vwX, {
                         tag: 'h2',
-                        className: d.header,
-                        children: n.Z.Messages.STREAM_FULL_MODAL_HEADER
+                        className: o.header,
+                        children: l.NW.string(l.t.GzjdOz)
                     }),
-                    (0, a.jsx)(o.ModalCloseButton, {
-                        onClick: s,
-                        className: d.modalCloseButton
+                    (0, s.jsx)(a.olH, {
+                        onClick: r,
+                        className: o.modalCloseButton
                     })
                 ]
             }),
-            (0, a.jsxs)(o.ModalContent, {
+            (0, s.jsxs)(a.hzk, {
                 children: [
-                    (0, a.jsx)(o.Text, {
+                    (0, s.jsx)(a.Text, {
                         variant: 'text-md/medium',
-                        children: n.Z.Messages.STREAM_FULL_MODAL_BODY
+                        children: l.NW.string(l.t.VVZDBA)
                     }),
-                    (0, a.jsx)('div', { className: d.fullArt })
+                    u &&
+                        (0, s.jsx)(a.Text, {
+                            variant: 'text-md/medium',
+                            selectable: !0,
+                            color: 'text-muted',
+                            className: o.errorCode,
+                            children: h
+                        }),
+                    (0, s.jsx)('div', { className: o.fullArt })
                 ]
             }),
-            (0, a.jsx)(o.ModalFooter, {
-                children: (0, a.jsx)(o.Button, {
-                    onClick: s,
-                    children: n.Z.Messages.OKAY
+            (0, s.jsx)(a.mzw, {
+                children: (0, s.jsx)(a.zxk, {
+                    onClick: r,
+                    children: l.NW.string(l.t.BddRzc)
                 })
             })
         ]

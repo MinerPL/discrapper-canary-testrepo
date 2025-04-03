@@ -1,66 +1,61 @@
-s.r(o),
-    s.d(o, {
-        default: function () {
-            return h;
-        }
-    });
-var n = s(735250),
-    t = s(470079),
-    a = s(481060),
-    r = s(367907),
-    d = s(313889),
-    i = s(177862),
-    c = s(36459),
-    l = s(981631),
-    u = s(689938),
-    _ = s(680221);
+n.d(s, { default: () => h });
+var o = n(200651),
+    t = n(192379),
+    i = n(481060),
+    r = n(367907),
+    d = n(313889),
+    c = n(177862),
+    a = n(36459),
+    l = n(981631),
+    x = n(388032),
+    k = n(141758);
 function h(e) {
-    let { automodDecision: o, transitionState: s, onClose: h } = e,
-        M = t.useCallback(() => {
+    let { automodDecision: s, transitionState: n, onClose: h } = e,
+        u = t.useCallback(() => {
             (0, r.yw)(l.rMx.GUILD_AUTOMOD_FEEDBACK, {
-                feedback_type: i.x2.BUG,
-                decision_id: o.decisionId,
-                message_id: o.messageId,
-                content: o.messageContent
+                feedback_type: c.x2.BUG,
+                decision_id: s.decisionId,
+                message_id: s.messageId,
+                content: s.messageContent
             }),
-                (0, c.Xx)(o.messageId, o.channel, d.d.SUBMIT_FEEDBACK),
+                (0, a.Xx)(s.messageId, s.channel, d.d.SUBMIT_FEEDBACK),
                 h();
-        }, [o, h]);
-    return (0, n.jsxs)(a.ModalRoot, {
-        transitionState: s,
-        size: a.ModalSize.SMALL,
+        }, [s, h]);
+    return (0, o.jsxs)(i.Y0X, {
+        transitionState: n,
+        size: i.CgR.SMALL,
         children: [
-            (0, n.jsx)(a.ModalHeader, {
+            (0, o.jsx)(i.xBx, {
                 separator: !1,
-                children: (0, n.jsx)(a.Heading, {
+                children: (0, o.jsx)(i.X6q, {
                     color: 'header-primary',
                     variant: 'heading-md/semibold',
-                    children: u.Z.Messages.GUILD_AUTOMOD_REPORT_FEEDBACK_MODAL_TITLE
+                    children: x.NW.string(x.t['7bdzNj'])
                 })
             }),
-            (0, n.jsx)(a.ModalContent, {
-                children: (0, n.jsx)(a.Text, {
+            (0, o.jsx)(i.hzk, {
+                children: (0, o.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: u.Z.Messages.GUILD_AUTOMOD_REPORT_FEEDBACK_MODAL_SUBTITLE
+                    children: x.NW.string(x.t.Lbpk6u)
                 })
             }),
-            (0, n.jsxs)(a.ModalFooter, {
+            (0, o.jsxs)(i.mzw, {
                 children: [
-                    (0, n.jsx)('div', {
-                        className: _.button,
-                        children: (0, n.jsx)(a.Button, {
-                            onClick: M,
-                            color: a.Button.Colors.BRAND,
-                            look: a.Button.Looks.FILLED,
-                            children: u.Z.Messages.YES_TEXT
+                    (0, o.jsx)('div', {
+                        className: k.button,
+                        children: (0, o.jsx)(i.zxk, {
+                            onClick: u,
+                            color: i.zxk.Colors.BRAND,
+                            look: i.zxk.Looks.FILLED,
+                            children: x.NW.string(x.t.p89ACg)
                         })
                     }),
-                    (0, n.jsx)(a.Button, {
+                    (0, o.jsx)(i.zxk, {
                         onClick: h,
-                        color: a.Button.Colors.PRIMARY,
-                        look: a.Button.Looks.LINK,
-                        children: u.Z.Messages.CANCEL
+                        color: i.zxk.Colors.PRIMARY,
+                        look: i.zxk.Looks.LINK,
+                        children: x.NW.string(x.t['ETE/oK'])
                     })
                 ]
             })

@@ -12,7 +12,7 @@ var r = n(165566),
         propTypes: !0,
         type: !0
     },
-    a = {
+    o = {
         name: !0,
         length: !0,
         prototype: !0,
@@ -20,6 +20,13 @@ var r = n(165566),
         callee: !0,
         arguments: !0,
         arity: !0
+    },
+    a = {
+        $$typeof: !0,
+        render: !0,
+        defaultProps: !0,
+        displayName: !0,
+        propTypes: !0
     },
     s = {
         $$typeof: !0,
@@ -29,41 +36,35 @@ var r = n(165566),
         propTypes: !0,
         type: !0
     },
-    o = {};
-function l(e) {
-    return r.isMemo(e) ? s : o[e.$$typeof] || i;
+    l = {};
+function c(e) {
+    return r.isMemo(e) ? s : l[e.$$typeof] || i;
 }
-(o[r.ForwardRef] = {
-    $$typeof: !0,
-    render: !0,
-    defaultProps: !0,
-    displayName: !0,
-    propTypes: !0
-}),
-    (o[r.Memo] = s);
+(l[r.ForwardRef] = a), (l[r.Memo] = s);
 var u = Object.defineProperty,
-    c = Object.getOwnPropertyNames,
-    d = Object.getOwnPropertySymbols,
+    d = Object.getOwnPropertyNames,
+    f = Object.getOwnPropertySymbols,
     _ = Object.getOwnPropertyDescriptor,
-    E = Object.getPrototypeOf,
-    f = Object.prototype;
-e.exports = function e(t, n, r) {
-    if ('string' != typeof n) {
-        if (f) {
-            var i = E(n);
-            i && i !== f && e(t, i, r);
+    p = Object.getPrototypeOf,
+    h = Object.prototype;
+function m(e, t, n) {
+    if ('string' != typeof t) {
+        if (h) {
+            var r = p(t);
+            r && r !== h && m(e, r, n);
         }
-        var s = c(n);
-        d && (s = s.concat(d(n)));
-        for (var o = l(t), h = l(n), p = 0; p < s.length; ++p) {
-            var m = s[p];
-            if (!a[m] && !(r && r[m]) && !(h && h[m]) && !(o && o[m])) {
-                var I = _(n, m);
+        var i = d(t);
+        f && (i = i.concat(f(t)));
+        for (var a = c(e), s = c(t), l = 0; l < i.length; ++l) {
+            var g = i[l];
+            if (!o[g] && !(n && n[g]) && !(s && s[g]) && !(a && a[g])) {
+                var E = _(t, g);
                 try {
-                    u(t, m, I);
+                    u(e, g, E);
                 } catch (e) {}
             }
         }
     }
-    return t;
-};
+    return e;
+}
+e.exports = m;

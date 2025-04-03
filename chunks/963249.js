@@ -1,89 +1,175 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => N });
+var r = n(200651);
+n(192379);
 var i = n(97613),
-    a = n.n(i),
-    s = n(772848),
-    o = n(481060),
-    l = n(976255),
-    u = n(667),
-    c = n(138464),
-    d = n(594174),
-    _ = n(626135),
-    E = n(585483),
-    f = n(74538),
-    h = n(981631),
-    p = n(474936);
-function m(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: m, onComplete: I, onSubscriptionConfirmation: T, analyticsLocations: g, analyticsObject: S, analyticsLocation: A, analyticsSourceLocation: N, isGift: v = !1, giftMessage: O, giftStyle: R, subscriptionTier: C, trialId: y, postSuccessGuild: D, openInvoiceId: L, applicationId: b, referralTrialOfferId: M, giftRecipient: P, returnRef: U, subscription: w, skipConfirm: x, repeatPurchase: G } = null != e ? e : {},
-        k = !1,
-        B = (0, s.Z)(),
-        F = d.default.getCurrentUser(),
-        V = (0, f.M5)(F, p.p9.TIER_2),
-        H = a()('payment-modal');
-    return (0, o.openModalLazy)(
+    o = n.n(i),
+    a = n(772848),
+    s = n(481060),
+    l = n(570140),
+    c = n(159351),
+    u = n(366939),
+    d = n(667),
+    f = n(138464),
+    _ = n(619067),
+    p = n(594174),
+    h = n(626135),
+    m = n(585483),
+    g = n(74538),
+    E = n(981631),
+    b = n(474936);
+function y(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                y(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function O(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function I(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : O(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function S(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = T(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function T(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function N(e) {
+    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: O, onSubscriptionConfirmation: T, analyticsLocations: N, analyticsObject: A, analyticsLocation: C, analyticsSourceLocation: R, confirmationFooter: P, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: M, subscriptionTier: k, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: F, giftRecipient: V, returnRef: Z, subscription: H, skipConfirm: W, repeatPurchase: Y } = null != e ? e : {},
+        K = !1,
+        z = (0, a.Z)(),
+        q = p.default.getCurrentUser(),
+        Q = (0, g.M5)(q, b.p9.TIER_2),
+        X = o()('payment-modal'),
+        J = (0, g.Wz)(k);
+    return (0, s.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('96427'), n.e('77298'), n.e('23357'), n.e('52249'), n.e('29549'), n.e('54803'), n.e('15685'), n.e('47006'), n.e('32776'), n.e('18209'), n.e('8016'), n.e('31605'), n.e('30671'), n.e('68136'), n.e('51199'), n.e('12886')]).then(n.bind(n, 7305));
+            let { default: e } = await Promise.all([n.e('17938'), n.e('8854')]).then(n.bind(n, 7305));
             return (n) => {
-                let { onClose: a, ...s } = n;
-                return (0, r.jsx)(e, {
-                    ...s,
-                    loadId: B,
-                    subscriptionTier: C,
-                    skuId: (0, f.Wz)(C),
-                    isGift: v,
-                    giftMessage: O,
-                    giftStyle: R,
-                    giftRecipient: P,
-                    initialPlanId: t,
-                    followupSKUInfo: i,
-                    onClose: (e, t) => {
-                        a(), null == m || m(e), e && (null == T || T(), !v && null != t && t === p.Si.TIER_2 && !V && E.S.dispatch(h.CkL.PREMIUM_SUBSCRIPTION_CREATED));
-                    },
-                    onComplete: () => {
-                        (k = !0), null == I || I(), !v && (0, c.H)(!0);
-                    },
-                    onSubscriptionConfirmation: T,
-                    analyticsLocations: g,
-                    analyticsObject: S,
-                    analyticsLocation: A,
-                    analyticsSourceLocation: N,
-                    trialId: y,
-                    postSuccessGuild: D,
-                    planGroup: p.Y1,
-                    openInvoiceId: L,
-                    applicationId: b,
-                    referralTrialOfferId: M,
-                    returnRef: U,
-                    subscription: w,
-                    skipConfirm: !!x,
-                    repeatPurchase: G
-                });
+                var { onClose: o } = n,
+                    a = S(n, ['onClose']);
+                return (0, r.jsx)(
+                    e,
+                    I(v({}, a), {
+                        loadId: z,
+                        subscriptionTier: k,
+                        skuId: J,
+                        isGift: D,
+                        giftMessage: L,
+                        giftStyle: x,
+                        giftingOrigin: M,
+                        giftRecipient: V,
+                        initialPlanId: t,
+                        followupSKUInfo: i,
+                        onClose: (e, t) => {
+                            o(),
+                                null == y || y(e),
+                                e && (null == T || T(), (0, _.I)(D, Q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
+                                l.Z.dispatch({
+                                    type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
+                                    didSucceed: e
+                                });
+                        },
+                        onComplete: (e) => {
+                            (K = !0), null == O || O(), (0, _.I)(D, Q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0);
+                        },
+                        onSubscriptionConfirmation: T,
+                        analyticsLocations: N,
+                        analyticsObject: A,
+                        analyticsLocation: C,
+                        analyticsSourceLocation: R,
+                        confirmationFooter: P,
+                        paymentModalBanner: w,
+                        trialId: j,
+                        postSuccessGuild: U,
+                        planGroup: b.Y1,
+                        openInvoiceId: G,
+                        applicationId: B,
+                        referralTrialOfferId: F,
+                        returnRef: Z,
+                        subscription: H,
+                        skipConfirm: !!W,
+                        repeatPurchase: Y
+                    })
+                );
             };
         },
         {
-            modalKey: H,
+            modalKey: X,
             onCloseCallback: () => {
-                !k &&
-                    _.default.track(h.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: B,
-                        payment_type: h.Zuq[h.GZQ.SUBSCRIPTION],
-                        location: null != A ? A : S,
-                        source: N,
-                        subscription_type: h.NYc.PREMIUM,
-                        is_gift: v,
-                        eligible_for_trial: null != y,
-                        application_id: b,
-                        location_stack: g
+                K ||
+                    h.default.track(E.rMx.PAYMENT_FLOW_CANCELED, {
+                        load_id: z,
+                        payment_type: E.Zuq[E.GZQ.SUBSCRIPTION],
+                        location: null != C ? C : A,
+                        source: R,
+                        subscription_type: E.NYc.PREMIUM,
+                        is_gift: D,
+                        sku_id: J,
+                        eligible_for_trial: null != j,
+                        application_id: B,
+                        location_stack: N
                     }),
-                    (0, l.fw)(),
-                    (0, u.p)(),
-                    null == m || m(k),
-                    k && (null == T || T());
+                    (0, u.fw)(),
+                    (0, c.fw)(),
+                    (0, d.p)(),
+                    null == y || y(K),
+                    K && (null == T || T());
             }
         }
     );

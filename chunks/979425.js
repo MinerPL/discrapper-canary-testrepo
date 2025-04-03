@@ -1,44 +1,40 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    l = n(481060),
-    r = n(871118),
-    o = n(689938),
-    c = n(149050);
-function u(e) {
-    let { stream: t, isSmall: n, selected: a, isSelfStream: u } = e;
-    return (0, i.jsxs)(i.Fragment, {
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var l = n(120356),
+    i = n.n(l),
+    a = n(481060),
+    o = n(871118),
+    s = n(388032),
+    u = n(519417);
+function c(e) {
+    let { stream: t, isSmall: n, selected: l, isSelfStream: c } = e;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(r.Z, {
-                className: s()(c.absoluteFill, c.streamPreviewOpacity),
+            (0, r.jsx)(o.Z, {
+                className: i()(u.absoluteFill, u.streamPreviewOpacity),
                 stream: t,
                 noText: !0
             }),
-            !a &&
-                (0, i.jsxs)('div', {
-                    className: s()(c.content, c.streamUnavailable, { [c.small]: n }),
+            !l &&
+                (0, r.jsxs)('div', {
+                    className: i()(u.content, u.streamUnavailable, { [u.small]: n }),
                     children: [
-                        (0, i.jsx)(l.Text, {
-                            className: c.streamUnavailableText,
+                        (0, r.jsx)(a.Text, {
+                            className: u.streamUnavailableText,
                             color: 'always-white',
                             variant: n ? 'text-sm/semibold' : 'text-md/semibold',
-                            children: u ? o.Z.Messages.CONSOLE_STREAMING : o.Z.Messages.CONSOLE_STREAM_UNAVAILABLE
+                            children: c ? s.NW.string(s.t.UeEwj4) : s.NW.string(s.t['1i3tSU'])
                         }),
-                        (0, i.jsx)(l.TooltipContainer, {
-                            text: u ? o.Z.Messages.CONSOLE_STREAMING_TOOLTIP : o.Z.Messages.CONSOLE_STREAM_UNAVAILABLE_TOOLTIP,
-                            className: c.darkCircle,
-                            children: (0, i.jsx)('div', {
-                                children: (0, i.jsx)(l.ScreenSlashIcon, {
+                        (0, r.jsx)(a.DY3, {
+                            text: c ? s.NW.string(s.t['ro/HNz']) : s.NW.string(s.t.UPf6ZG),
+                            className: u.darkCircle,
+                            children: (0, r.jsx)('div', {
+                                children: (0, r.jsx)(a.o8v, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: c.stopStreamIcon,
-                                    colorClass: c.stopStreamForeground
+                                    className: u.stopStreamIcon,
+                                    colorClass: u.stopStreamForeground
                                 })
                             })
                         })

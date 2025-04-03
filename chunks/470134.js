@@ -1,60 +1,55 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(481060),
-    o = n(923726),
-    c = n(689938),
-    u = n(592043);
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(481060),
+    s = n(923726),
+    c = n(388032),
+    u = n(542503);
 function d(e) {
     let { text: t, hasScrolled: n } = e;
-    return (0, i.jsxs)('div', {
-        className: l()(u.container, { [u.containerHide]: n }),
+    return (0, r.jsxs)('div', {
+        className: o()(u.container, { [u.containerHide]: n }),
         children: [
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: u.notice,
-                children: (0, i.jsx)(r.Text, {
+                children: (0, r.jsx)(a.Text, {
                     className: u.__invalid_label,
                     variant: 'text-md/medium',
                     color: 'header-primary',
                     children: t
                 })
             }),
-            (0, i.jsx)('div', { className: u.noticeArrow })
+            (0, r.jsx)('div', { className: u.noticeArrow })
         ]
     });
 }
-function h(e) {
-    let [t, n] = a.useState(),
-        [s, l] = a.useState(),
-        [r, u] = a.useState(!1),
-        [h, m] = a.useState(!1),
-        { enabled: p } = (0, o.s1)(e);
+function p(e) {
+    let [t, n] = i.useState(),
+        [l, o] = i.useState(),
+        [a, u] = i.useState(!1),
+        [p, h] = i.useState(!1),
+        { enabled: f } = (0, s.s1)(e);
     return (
-        a.useEffect(() => {
-            p && null != t && null != s ? u(t < s) : u(!1);
-        }, [p, t, s]),
+        i.useEffect(() => {
+            f && null != t && null != l ? u(t < l) : u(!1);
+        }, [f, t, l]),
         {
-            horizontalScrollNotice: a.useMemo(
+            horizontalScrollNotice: i.useMemo(
                 () =>
-                    r
-                        ? (0, i.jsx)(d, {
-                              text: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_LISTINGS_SCROLLABLE_NOTICE,
-                              hasScrolled: h
+                    a
+                        ? (0, r.jsx)(d, {
+                              text: c.NW.string(c.t.RfAAHx),
+                              hasScrolled: p
                           })
                         : null,
-                [r, h]
+                [a, p]
             ),
-            handleScroll: () => m(!0),
+            handleScroll: () => h(!0),
             handleSetScrollerRef: (e) => {
                 var t;
-                return l(null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollWidth);
+                return o(null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollWidth);
             },
             handleSetContainerRef: (e) => n(null == e ? void 0 : e.clientWidth)
         }

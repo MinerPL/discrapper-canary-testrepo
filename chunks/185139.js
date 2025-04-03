@@ -1,117 +1,111 @@
-n.d(r, {
-    Z: function () {
-        return S;
-    }
-}),
-    n(47120),
-    n(411104);
-var l = n(735250),
-    o = n(470079),
-    s = n(160612),
-    t = n(120356),
-    a = n.n(t),
-    c = n(846519),
-    i = n(481060),
-    d = n(609194),
-    u = n(881052),
-    p = n(128069),
-    _ = n(598),
-    m = n(409813);
+n.d(t, { Z: () => v }), n(47120), n(411104);
+var r = n(200651),
+    i = n(192379),
+    o = n(734530),
+    a = n(120356),
+    s = n.n(a),
+    l = n(846519),
+    c = n(481060),
+    u = n(609194),
+    d = n(881052),
+    f = n(128069),
+    _ = n(563132),
+    p = n(409813);
 n(51499), n(614277);
-var f = n(122289),
-    N = n(70956),
-    h = n(981631),
-    E = n(689938),
-    x = n(83644);
-let I = new Set([m.h8.SKU_SELECT, m.h8.AWAITING_AUTHENTICATION, m.h8.AWAITING_PURCHASE_TOKEN_AUTH, m.h8.CONFIRM]);
-function S(e) {
-    let { steps: r, currentStep: n, body: t, paymentError: S, header: C, footer: T, isGift: b = !1, giftMessage: j = E.Z.Messages.PREMIUM_PAYMENT_IS_GIFT, hideBreadcrumbs: v = !1, isLoading: g = !1, purchaseError: P, purchaseErrorBlockRef: M, planError: y, onScroll: A, scrollerClassName: R, hasCurrencies: L = !1 } = e,
-        k = null;
-    null != S && null == (0, m.ly)(S) ? (k = S) : null != P ? (k = P) : null != y && (k = y);
-    let D = null != k ? k.message : '';
-    null != k && k instanceof u.HF && (k.code === p.SM.CARD_DECLINED && L && (D += ' '.concat(E.Z.Messages.BILLING_ERROR_TRY_ANOTHER)), k.code === p.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (D = E.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), k.code === h.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (D = E.Z.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
-    let { stripe: B } = (0, _.usePaymentContext)();
-    g = g || null == B;
-    let O = o.useRef(new c.V7());
-    o.useEffect(() => {
-        let e = O.current;
+var h = n(122289),
+    m = n(70956),
+    g = n(981631),
+    E = n(388032),
+    b = n(106194);
+let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
+function v(e) {
+    let { steps: t, currentStep: n, body: a, paymentError: v, header: O, footer: I, isGift: S = !1, giftMessage: T = E.NW.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: A = !1, purchaseError: C, purchaseErrorBlockRef: R, planError: P, onScroll: w, scrollerClassName: D, hasCurrencies: L = !1 } = e,
+        x = null;
+    null != v && null == (0, p.ly)(v) ? (x = v) : null != C ? (x = C) : null != P && (x = P);
+    let M = null != x ? x.message : '';
+    null != x && x instanceof d.HF && (x.code === f.SM.CARD_DECLINED && L && (M += ' '.concat(E.NW.string(E.t.iWvwQU))), x.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.NW.string(E.t.ypuSd3)), x.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.NW.string(E.t.mXMmWF)));
+    let { stripe: k } = (0, _.JL)();
+    A = A || null == k;
+    let j = i.useRef(new l.V7());
+    i.useEffect(() => {
+        let e = j.current;
         return (
-            null != B || e.isStarted()
-                ? null != B && e.stop()
-                : e.start(10 * N.Z.Millis.SECOND, () => {
+            null != k || e.isStarted()
+                ? null != k && e.stop()
+                : e.start(10 * m.Z.Millis.SECOND, () => {
                       let e = Error('Stripe took too long to load');
-                      (0, f.q2)(e);
+                      (0, h.q2)(e);
                   }),
             () => {
                 e.stop();
             }
         );
-    }, [B]);
-    let U = r.includes(m.h8.PAYMENT_TYPE) ? m.h8.PAYMENT_TYPE : m.h8.ADD_PAYMENT_STEPS;
-    return (0, l.jsxs)(s.Elements, {
-        options: h.OBo,
-        stripe: B,
+    }, [k]);
+    let U = t.includes(p.h8.PAYMENT_TYPE) ? p.h8.PAYMENT_TYPE : p.h8.ADD_PAYMENT_STEPS;
+    return (0, r.jsxs)(o.Elements, {
+        options: g.OBo,
+        stripe: k,
         children: [
-            C,
-            (0, l.jsxs)('div', {
-                className: a()('paymentModalContent', x.content),
+            O,
+            (0, r.jsxs)('div', {
+                className: s()('paymentModalContent', b.content),
                 children: [
-                    b && n !== m.h8.CONFIRM
-                        ? (0, l.jsx)(d.Z, {
-                              className: x.paymentNote,
-                              iconSize: d.Z.Sizes.SMALL,
-                              icon: i.GiftIcon,
-                              color: null == j ? d.Z.Colors.PRIMARY : d.Z.Colors.SECONDARY,
-                              children: j
+                    S && n !== p.h8.CONFIRM
+                        ? (0, r.jsx)(u.Z, {
+                              className: b.paymentNote,
+                              iconSize: u.Z.Sizes.SMALL,
+                              icon: c.OgN,
+                              color: null == T ? u.Z.Colors.PRIMARY : u.Z.Colors.SECONDARY,
+                              children: T
                           })
                         : null,
-                    v
+                    N
                         ? null
-                        : (0, l.jsx)('div', {
-                              className: x.breadcrumbsWrapper,
-                              children: (0, l.jsx)(i.Breadcrumbs, {
-                                  activeId: m.Ck.has(n) ? U : n,
-                                  breadcrumbs: r
-                                      .filter((e) => !m.Ck.has(e) && !I.has(e))
+                        : (0, r.jsx)('div', {
+                              className: b.breadcrumbsWrapper,
+                              children: (0, r.jsx)(c.OoM, {
+                                  activeId: p.Ck.has(n) ? U : n,
+                                  breadcrumbs: t
+                                      .filter((e) => !p.Ck.has(e) && !y.has(e))
                                       .map((e) => ({
                                           id: e,
-                                          label: (0, m.DJ)(e)
+                                          label: (0, p.DJ)(e)
                                       }))
                               })
                           }),
-                    (0, l.jsxs)('div', {
-                        className: x.bodyWrapper,
+                    (0, r.jsxs)('div', {
+                        className: b.bodyWrapper,
                         children: [
-                            null == k
+                            null == x
                                 ? null
-                                : (0, l.jsx)('div', {
-                                      className: x.errorBlockWrapper,
-                                      children: (0, l.jsx)(i.FormErrorBlock, {
-                                          ref: M,
-                                          children: D
+                                : (0, r.jsx)('div', {
+                                      className: b.errorBlockWrapper,
+                                      children: (0, r.jsx)(c.kzN, {
+                                          ref: R,
+                                          children: M
                                       })
                                   }),
-                            g
-                                ? (0, l.jsx)(i.Spinner, { className: x.loadingBlock })
-                                : (0, l.jsx)(i.Sequencer, {
-                                      className: x.sequencer,
-                                      staticClassName: x.sequencerStatic,
-                                      animatedNodeClassName: x.sequencerAnimatedNode,
+                            A
+                                ? (0, r.jsx)(c.$jN, { className: b.loadingBlock })
+                                : (0, r.jsx)(c.qBt, {
+                                      className: b.sequencer,
+                                      staticClassName: b.sequencerStatic,
+                                      animatedNodeClassName: b.sequencerAnimatedNode,
                                       fillParent: !0,
                                       step: n,
-                                      steps: r,
+                                      steps: t,
                                       sideMargin: 20,
-                                      children: (0, l.jsx)(i.AdvancedScrollerThin, {
-                                          onScroll: A,
-                                          className: a()(x.scroller, R),
-                                          children: t
+                                      children: (0, r.jsx)(c.h21, {
+                                          onScroll: w,
+                                          className: s()(b.scroller, D),
+                                          children: a
                                       })
                                   })
                         ]
                     })
                 ]
             }),
-            T
+            I
         ]
     });
 }

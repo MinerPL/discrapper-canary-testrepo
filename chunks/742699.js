@@ -1,44 +1,37 @@
-o.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var t = o(735250);
-o(470079);
-var i = o(481060),
-    r = o(63063),
-    s = o(921869),
-    c = o(514161),
-    l = o(981631),
-    a = o(689938),
-    C = o(233820);
-function u() {
-    return (0, t.jsx)(c.yC, {
-        children: (0, t.jsx)(c.Ux, {
-            text: a.Z.Messages.CONNECT_CRUNCHYROLL_DISPLAY_SHOW_VALUE_PROP,
-            children: (0, t.jsx)(i.TvIcon, {
-                size: 'md',
-                color: 'currentColor'
-            })
-        })
-    });
-}
-function d(e) {
-    let { onContinue: n, onClose: o } = e,
-        i = r.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION);
-    return (0, t.jsx)(s.m, {
+t.d(n, { Z: () => u });
+var o = t(200651),
+    i = t(192379),
+    r = t(481060),
+    s = t(63063),
+    a = t(921869),
+    l = t(981631),
+    c = t(388032),
+    d = t(233820);
+function u(e) {
+    let { onContinue: n, onClose: t } = e,
+        u = s.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION),
+        C = i.useMemo(
+            () => [
+                {
+                    label: c.NW.string(c.t['2TXHQU']),
+                    icon: r.ARS
+                }
+            ],
+            []
+        );
+    return (0, o.jsx)(a.m, {
         platformType: l.ABu.CRUNCHYROLL,
-        headerConnect: a.Z.Messages.CONNECT_CRUNCHYROLL_LANDING_TITLE,
-        body: a.Z.Messages.CONNECT_CRUNCHYROLL_LANDING_BODY,
-        learnMoreLink: i,
-        onClose: o,
+        headerConnect: c.NW.string(c.t['Da+3ND']),
+        body: c.NW.string(c.t.MaPpPD),
+        learnMoreLink: u,
+        onClose: t,
         onContinue: n,
-        img: (0, t.jsx)('img', {
-            src: C,
+        img: (0, o.jsx)('img', {
+            src: d,
             width: 234,
             height: 152,
             alt: ''
         }),
-        valueProps: (0, t.jsx)(u, {})
+        valueProps: C
     });
 }

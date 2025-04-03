@@ -1,23 +1,19 @@
-t.d(s, {
-    Z: function () {
-        return o;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(481060),
-    i = t(689938),
-    r = t(795899);
-function o(e) {
-    let { count: s } = e;
-    return (0, n.jsxs)('div', {
-        className: r.countContainer,
+n.d(t, { Z: () => l });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(388032),
+    a = n(291226);
+function l(e) {
+    let { count: t } = e;
+    return (0, r.jsxs)('div', {
+        className: a.countContainer,
         children: [
-            (0, n.jsx)('div', { className: r.dot }),
-            (0, n.jsx)(a.Text, {
+            (0, r.jsx)('div', { className: a.dot }),
+            (0, r.jsx)(i.Text, {
                 variant: 'text-xs/medium',
                 color: 'header-secondary',
-                children: i.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({ count: s })
+                children: s.NW.format(s.t['0WHArK'], { count: t })
             })
         ]
     });

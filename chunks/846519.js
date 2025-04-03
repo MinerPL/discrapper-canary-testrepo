@@ -12,27 +12,19 @@ function r(e, t, n) {
     );
 }
 n.d(t, {
-    GR: function () {
-        return o;
-    },
-    V7: function () {
-        return i;
-    },
-    Xp: function () {
-        return s;
-    },
-    sW: function () {
-        return a;
-    }
+    GR: () => s,
+    V7: () => i,
+    Xp: () => a,
+    sW: () => o
 });
 class i {
     start(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        if (!this.isStarted() || !!n)
-            this.stop(),
-                (this._ref = window.setTimeout(() => {
-                    (this._ref = null), t();
-                }, e));
+        (!this.isStarted() || n) &&
+            (this.stop(),
+            (this._ref = window.setTimeout(() => {
+                (this._ref = null), t();
+            }, e)));
     }
     stop() {
         null != this._ref && (clearTimeout(this._ref), (this._ref = null));
@@ -44,7 +36,7 @@ class i {
         r(this, '_ref', void 0);
     }
 }
-class a {
+class o {
     set(e) {
         return (this._delay = e), this;
     }
@@ -62,7 +54,7 @@ class a {
         r(this, '_timeout', void 0), r(this, '_delay', void 0), r(this, '_handler', void 0), (this._delay = e), (this._handler = t), (this._timeout = new i());
     }
 }
-class s {
+class a {
     start(e, t) {
         this.stop(), (this._ref = window.setInterval(t, e));
     }
@@ -76,7 +68,7 @@ class s {
         r(this, '_ref', void 0);
     }
 }
-function o(e) {
+function s(e) {
     return new Promise((t) => {
         setTimeout(() => t(), e);
     });

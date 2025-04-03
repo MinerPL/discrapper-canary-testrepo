@@ -1,103 +1,122 @@
 n.d(t, {
-    FJ: function () {
-        return X;
-    },
-    RE: function () {
-        return j;
-    },
-    S5: function () {
-        return Y;
-    },
-    T5: function () {
-        return G;
-    },
-    Xb: function () {
-        return k;
-    },
-    YK: function () {
-        return q;
-    },
-    _f: function () {
-        return $;
-    },
-    aE: function () {
-        return w;
-    },
-    bu: function () {
-        return J;
-    },
-    cD: function () {
-        return B;
-    },
-    fy: function () {
-        return z;
-    },
-    s9: function () {
-        return H;
-    },
-    t9: function () {
-        return W;
-    },
-    tr: function () {
-        return Q;
-    },
-    vv: function () {
-        return K;
-    },
-    zM: function () {
-        return V;
-    },
-    zy: function () {
-        return F;
-    }
+    FJ: () => el,
+    RE: () => V,
+    S5: () => J,
+    T5: () => H,
+    Xb: () => F,
+    YK: () => er,
+    YS: () => et,
+    _J: () => Y,
+    _f: () => eo,
+    aE: () => z,
+    bu: () => ea,
+    kb: () => K,
+    s9: () => q,
+    t9: () => $,
+    tr: () => ei,
+    vv: () => en,
+    zM: () => Q,
+    zy: () => X
 }),
+    n(301563),
+    n(474991),
+    n(398202),
     n(47120),
     n(653041),
     n(411104),
     n(757143),
+    n(789020),
+    n(230036),
     n(392711);
-var i,
-    a = n(729594),
-    s = n(243814),
-    r = n(544891),
-    l = n(63023),
-    o = n(433517),
-    c = n(904245),
+var r,
+    i,
+    l = n(729594),
+    a = n(243814),
+    o = n(544891),
+    s = n(63023),
+    c = n(433517),
+    u = n(904245),
     d = n(155268),
-    u = n(454585),
-    _ = n(739566),
-    E = n(695346),
-    h = n(131704),
-    m = n(598077),
-    I = n(592125),
-    g = n(430824),
-    p = n(131951),
-    T = n(375954),
-    S = n(158776),
-    f = n(594174),
+    p = n(812206),
+    h = n(454585),
+    f = n(739566),
+    g = n(695346),
+    m = n(973616),
+    b = n(131704),
+    _ = n(598077),
+    E = n(592125),
+    O = n(430824),
+    N = n(131951),
+    y = n(375954),
+    I = n(158776),
+    v = n(594174),
     C = n(979651),
-    N = n(70956),
-    A = n(5192),
-    v = n(226951),
-    Z = n(996106),
-    L = n(863141),
-    O = n(186901),
-    R = n(981631);
-let x = null !== (i = a.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
-    b = (function () {
-        let e = x.split(':')[0];
+    S = n(70956),
+    T = n(5192),
+    P = n(226951),
+    j = n(591759),
+    A = n(996106),
+    Z = n(863141),
+    x = n(186901),
+    L = n(981631);
+function w(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function R(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let D = null != (i = null == (r = j.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) ? void 0 : r.host) ? i : 'localhost',
+    k = (function () {
+        let e = D.split(':')[0];
         if (!e.includes('.')) return e;
         let t = e.split('.'),
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    P = new RegExp('^'.concat(v.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(v.Z.escape(b), '|discordapp.com|discord.com)$')),
-    M = 1 * N.Z.Millis.MINUTE,
-    D = {};
-function y(e) {
-    return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = j(e.src)), Array.isArray(e.content) && (e.content = e.content.map(y)), e;
+    M = new RegExp('^'.concat(P.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(P.Z.escape(k), '|discordapp.com|discord.com)$')),
+    U = +S.Z.Millis.MINUTE,
+    G = {};
+function W(e) {
+    return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = V(e.src)), Array.isArray(e.content) && (e.content = e.content.map(W)), e;
 }
-function j(e) {
+function V(e) {
     return /^http/.test(e)
         ? e
         : ''
@@ -106,28 +125,28 @@ function j(e) {
               .concat('/' === e.charAt(0) ? '' : '/')
               .concat(e);
 }
-function U(e) {
+function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
     return t.indexOf(e) > -1;
 }
-function G(e, t) {
+function H(e, t) {
     let n = [],
-        i = e.getGuildId();
+        r = e.getGuildId();
     return (
-        ![R.d4z.GUILD_CATEGORY, ...h.tx].includes(e.type) &&
+        [L.d4z.GUILD_CATEGORY, ...b.tx].includes(e.type) ||
             n.push(
                 new Promise((t) => {
-                    T.Z.whenReady(e.id, () => t()),
-                        c.Z.fetchMessages({
+                    y.Z.whenReady(e.id, () => t()),
+                        u.Z.fetchMessages({
                             channelId: e.id,
-                            limit: R.AQB
+                            limit: L.AQB
                         });
                 })
             ),
         Promise.all(n).then(() => {
             var n;
-            let a = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [],
-                s = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map((t) => w(i, e.id, t));
+            let i = (!e.isNSFW() || (null == (n = v.default.getCurrentUser()) ? void 0 : n.nsfwAllowed) === !0) && t ? y.Z.getMessages(e.id).toArray().map(F) : [],
+                l = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map((t) => z(r, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -135,18 +154,19 @@ function G(e, t) {
                 topic: e.topic,
                 bitrate: e.bitrate,
                 user_limit: e.userLimit,
-                guild_id: i,
+                guild_id: r,
                 position: e.position,
-                messages: a,
-                voice_states: s
+                messages: i,
+                voice_states: l
             };
         })
     );
 }
-function k(e) {
-    let t = u.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(y),
-        n = I.Z.getChannel(e.channel_id),
-        i = null != e.author ? (0, _.ij)(new m.Z(e.author), n) : void 0;
+function F(e) {
+    let t = h.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(W),
+        n = E.Z.getChannel(e.channel_id),
+        r = null != e.author ? new _.Z(e.author) : void 0,
+        i = null != e.author ? (0, f.ij)(r, n) : void 0;
     return {
         id: e.id,
         blocked: e.blocked,
@@ -163,117 +183,129 @@ function k(e) {
         mention_roles: e.mention_roles || e.mentionRoles,
         embeds: e.embeds,
         attachments: e.attachments,
-        author: e.author,
+        author: null != r ? (0, Z.Z)(r) : void 0,
         pinned: e.pinned,
         type: e.type
     };
 }
-function w(e, t, n) {
-    let { mute: i, deaf: a, selfMute: s, selfDeaf: r, suppress: l, userId: o } = n,
-        c = f.default.getUser(o);
-    if (null == c) throw Error('Invalid user id: '.concat(o));
+function z(e, t, n) {
+    let { mute: r, deaf: i, selfMute: l, selfDeaf: a, suppress: o, userId: s } = n,
+        c = v.default.getUser(s);
+    if (null == c) throw Error('Invalid user id: '.concat(s));
     return {
-        nick: A.ZP.getName(e, t, c),
-        mute: p.Z.isLocalMute(c.id),
-        volume: p.Z.getLocalVolume(c.id),
-        pan: p.Z.getLocalPan(c.id),
+        nick: T.ZP.getName(e, t, c),
+        mute: N.Z.isLocalMute(c.id),
+        volume: N.Z.getLocalVolume(c.id),
+        pan: N.Z.getLocalPan(c.id),
         voice_state: {
-            mute: i,
-            deaf: a,
-            self_mute: s,
-            self_deaf: r,
-            suppress: l
+            mute: r,
+            deaf: i,
+            self_mute: l,
+            self_deaf: a,
+            suppress: o
         },
-        user: (0, L.Z)(c)
+        user: (0, Z.Z)(c)
     };
 }
-function B(e, t, n) {
-    let i = f.default.getUser(t);
+function Y(e, t) {
     return {
         type: e,
-        user: null != i ? (0, L.Z)(i) : null,
+        user: (0, Z.Z)(t),
         presence: {
-            status: S.Z.getStatus(t),
-            activity: null != n ? S.Z.getApplicationActivity(t, n) : S.Z.getPrimaryActivity(t)
+            status: I.Z.getStatus(t.id, null),
+            activity: null
         }
     };
 }
-function H(e) {
+function K(e, t) {
+    var n;
+    return null == t ? e : R(w({}, e), { presence: R(w({}, e.presence), { activity: null != (n = I.Z.getApplicationActivity(e.user.id, t)) ? n : null }) });
+}
+function q(e) {
     let t;
     if (null == e) return !1;
     let n = window.location.origin;
     if (e === n) return !0;
     try {
-        t = a.parse(e).hostname;
+        t = l.parse(e).hostname;
     } catch (e) {
         return !1;
     }
-    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(P.test(e) && P.test(n)) || !1));
+    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && !!(M.test(e) && M.test(n)));
 }
-function V(e, t, n) {
-    let i = g.Z.getGuild(e.getGuildId());
-    return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(s.x.MESSAGES_READ) > -1;
+function Q(e, t, n) {
+    let r = O.Z.getGuild(e.getGuildId());
+    return (null != r ? r.getApplicationId() : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }
-function F(e) {
+function X(e) {
     switch (e) {
-        case R.hes.RTC_CONNECTED:
-        case R.hes.RTC_CONNECTING:
-        case R.hes.RTC_DISCONNECTED:
+        case L.hes.RTC_CONNECTED:
+        case L.hes.RTC_CONNECTING:
+        case L.hes.RTC_DISCONNECTED:
             return e.replace(/^RTC_/, 'VOICE_');
         default:
             return e;
     }
 }
-function Y(e) {
+function J(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { instance: n, secrets: i, party: a } = e,
-        s = 0;
-    return (n && (s |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (s |= R.xjy.JOIN), t) ? ((s |= R.xjy.EMBEDDED), (s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == a ? void 0 : a.privacy) === R.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (E.cP.getSetting() && (s |= R.xjy.PARTY_PRIVACY_FRIENDS), E.Ou.getSetting() && (s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), s);
+        { instance: n, secrets: r, party: i } = e,
+        l = 0;
+    n && (l |= L.xjy.INSTANCE), (null == r ? void 0 : r.join) != null && (l |= L.xjy.JOIN);
+    let a = g.cP.getSetting(),
+        o = g.Ou.getSetting();
+    return t ? ((l |= L.xjy.EMBEDDED), a && (l |= L.xjy.PARTY_PRIVACY_FRIENDS), o && (l |= L.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : ((null == i ? void 0 : i.privacy) === L.RYY.PUBLIC || c.K.get('ACTIVITIES_FORCE_PUBLIC')) && (a && (l |= L.xjy.PARTY_PRIVACY_FRIENDS), o && (l |= L.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), l;
 }
-function W(e, t, n) {
-    if (e === R.mFx.JOIN) return null != t && null != t.id && null != n.join;
-    return !1;
+function $(e, t, n) {
+    return e === L.mFx.JOIN && null != t && null != t.id && null != n.join;
 }
-function z(e, t, n) {
-    return r.tn
+function ee(e) {
+    return o.tn
         .get({
-            url: R.ANM.APPLICATION_RPC(t),
+            url: L.ANM.APPLICATION_RPC(e),
             oldFormErrors: !0,
-            retries: 3
+            retries: 3,
+            rejectWithError: !0
         })
         .then(
-            (i) => {
-                let {
-                    body: { rpc_origins: a, id: s, name: r, icon: l, cover_image: o, flags: c }
-                } = i;
-                if ('string' == typeof n) {
-                    if (e.transport === O.He.POST_MESSAGE) {
-                        let e = (0, d.Z)(t);
-                        if (null == e || !U(n, [e])) throw new Z.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
-                    } else if (!U(n, a)) throw new Z.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
-                }
-                e.application = {
-                    id: s,
-                    name: r,
-                    icon: l,
-                    coverImage: o,
-                    flags: c
-                };
+            (e) => {
+                let { body: t } = e;
+                return t;
             },
             () => {
-                throw new Z.Z({ closeCode: R.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+                throw new A.Z({ closeCode: L.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
             }
         );
 }
-async function K(e, t) {
-    let n = D[e];
-    null == n && ((n = new l.Z(t ? 2 : 60, M)), (D[e] = n)), await n.process();
+async function et(e, t, n) {
+    let r = p.Z.getApplication(t);
+    if ('string' == typeof n)
+        if (e.transport === x.He.POST_MESSAGE) {
+            let e = (0, d.ZP)(t);
+            if (null == e || !B(n, [e])) throw new A.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+        } else {
+            let e = await ee(t);
+            if (((r = m.ZP.createFromServer(e)), !B(n, e.rpc_origins))) throw new A.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+        }
+    null == r && (r = m.ZP.createFromServer(await ee(t)));
+    let { id: i, name: l, icon: a, coverImage: o, flags: s } = r;
+    e.application = {
+        id: i,
+        name: l,
+        icon: a,
+        coverImage: o,
+        flags: s
+    };
 }
-function q(e, t) {
-    null == t && (e.authorization.scopes = [O.lH]);
+async function en(e, t) {
+    let n = G[e];
+    null == n && ((n = new s.Z(t ? 2 : 60, U)), (G[e] = n)), await n.process();
 }
-function Q(e) {
-    let t = p.Z.getSettings(),
+function er(e, t) {
+    null == t && (e.authorization.scopes = [x.lH]);
+}
+function ei(e) {
+    let t = N.Z.getSettings(),
         n = (e) =>
             Object.values(e)
                 .sort((e, t) => e.index - t.index)
@@ -281,15 +313,15 @@ function Q(e) {
                     id: e.id,
                     name: e.name
                 })),
-        i = e(t);
+        r = e(t);
     return {
         input: {
-            available_devices: n(p.Z.getInputDevices()),
+            available_devices: n(N.Z.getInputDevices()),
             device_id: t.inputDeviceId,
             volume: t.inputVolume
         },
         output: {
-            available_devices: n(p.Z.getOutputDevices()),
+            available_devices: n(N.Z.getOutputDevices()),
             device_id: t.outputDeviceId,
             volume: t.outputVolume
         },
@@ -297,7 +329,7 @@ function Q(e) {
             type: t.mode,
             auto_threshold: t.modeOptions.autoThreshold,
             threshold: t.modeOptions.threshold,
-            shortcut: i,
+            shortcut: r,
             delay: t.modeOptions.delay
         },
         automatic_gain_control: t.automaticGainControl,
@@ -309,13 +341,13 @@ function Q(e) {
         mute: t.mute
     };
 }
-function X(e, t) {
-    let n = p.Z.getSettings(e),
-        i = t(n);
+function el(e, t) {
+    let n = N.Z.getSettings(e),
+        r = t(n);
     return {
         input_mode: {
             type: n.mode,
-            shortcut: i
+            shortcut: r
         },
         local_mutes: Object.keys(n.localMutes),
         local_volumes: n.localVolumes,
@@ -323,10 +355,10 @@ function X(e, t) {
         self_deaf: n.deaf
     };
 }
-function J(e) {
-    if (e !== O.He.POST_MESSAGE) throw new Z.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+function ea(e) {
+    if (e !== x.He.POST_MESSAGE) throw new A.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
-function $(e) {
-    if (null == e.id) throw new Z.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'Invalid application');
+function eo(e) {
+    if (null == e.id) throw new A.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

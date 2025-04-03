@@ -1,29 +1,25 @@
 n.d(t, {
-    O: function () {
-        return u;
-    },
-    Z: function () {
-        return d;
-    }
+    O: () => u,
+    Z: () => d
 });
-var i = n(735250);
-n(470079);
-var l = n(120356),
-    r = n.n(l),
-    a = n(377171),
-    s = n(549631),
-    o = n(514823),
-    c = n(391463);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    o = n(377171),
+    a = n(549631),
+    s = n(734143),
+    c = n(915887);
 function u(e) {
     return e;
 }
 function d(e) {
     let { locked: t } = e;
-    return (0, i.jsx)('div', {
-        className: r()(c.iconItem, o.premiumChannelIcon),
-        children: (0, i.jsx)(s.Z, {
+    return (0, r.jsx)('div', {
+        className: l()(c.iconItem, s.premiumChannelIcon),
+        children: (0, r.jsx)(a.Z, {
             className: c.actionIcon,
-            color: t ? a.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON : void 0
+            color: t ? o.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON : void 0
         })
     });
 }

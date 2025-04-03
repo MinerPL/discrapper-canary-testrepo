@@ -1,56 +1,55 @@
-var r, i, a, s, o, l;
-function u(e) {
-    return !((null == e ? void 0 : e.type) !== 0 && (null == e ? void 0 : e.type) !== 1);
+n.d(t, {
+    $i: () => _,
+    A5: () => s,
+    I: () => u,
+    Io: () => c,
+    Rv: () => p,
+    TH: () => i,
+    _5: () => l,
+    cL: () => d,
+    dF: () => o,
+    e5: () => h,
+    fO: () => r,
+    l8: () => f,
+    wR: () => a
+});
+var r = (function (e) {
+        return (e[(e.STREAM = 0)] = 'STREAM'), (e[(e.HIDDEN_STREAM = 1)] = 'HIDDEN_STREAM'), (e[(e.USER = 2)] = 'USER'), (e[(e.ACTIVITY = 3)] = 'ACTIVITY'), (e[(e.PRESENCE_EMBEDDED_ACTIVITY = 4)] = 'PRESENCE_EMBEDDED_ACTIVITY'), e;
+    })({}),
+    i = (function (e) {
+        return (e.STREAM = 'STREAM'), (e.USER = 'USER'), (e.ACTIVITY = 'ACTIVITY'), e;
+    })({}),
+    o = (function (e) {
+        return (e.NONE = 'NONE'), (e.AUTO = 'AUTO'), e;
+    })({}),
+    a = (function (e) {
+        return (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE'), (e[(e.XBOX = 2)] = 'XBOX'), (e[(e.PLAYSTATION = 3)] = 'PLAYSTATION'), e;
+    })({}),
+    s = (function (e) {
+        return (e.CONTEXT_MENU = 'Context Menu'), (e.THREE_DOT = 'Three-Dot'), (e.CARET = 'Caret'), (e.OTHER_BUTTON = 'Other Button'), e;
+    })({});
+function l(e) {
+    return (null == e ? void 0 : e.type) === 0 || (null == e ? void 0 : e.type) === 1;
 }
 function c(e) {
     return (null == e ? void 0 : e.type) === 2;
 }
-function d(e) {
+function u(e) {
     return (null == e ? void 0 : e.type) === 3;
 }
-n.d(t, {
-    $i: function () {
-        return E;
+var d = (function (e) {
+    return (e[(e.VIDEO = 0)] = 'VIDEO'), (e[(e.CAMERA_PREVIEW = 1)] = 'CAMERA_PREVIEW'), e;
+})({});
+let f = {
+        0: 320,
+        1: 160
     },
-    I: function () {
-        return d;
+    _ = {
+        0: 960,
+        1: 480
     },
-    Io: function () {
-        return c;
+    p = {
+        0: 200,
+        1: 160
     },
-    Rv: function () {
-        return f;
-    },
-    _5: function () {
-        return u;
-    },
-    dF: function () {
-        return i;
-    },
-    e5: function () {
-        return h;
-    },
-    fO: function () {
-        return r;
-    },
-    l8: function () {
-        return _;
-    },
-    wR: function () {
-        return a;
-    }
-}),
-    ((s = r || (r = {}))[(s.STREAM = 0)] = 'STREAM'),
-    (s[(s.HIDDEN_STREAM = 1)] = 'HIDDEN_STREAM'),
-    (s[(s.USER = 2)] = 'USER'),
-    (s[(s.ACTIVITY = 3)] = 'ACTIVITY'),
-    ((o = i || (i = {})).NONE = 'NONE'),
-    (o.AUTO = 'AUTO'),
-    ((l = a || (a = {}))[(l.DESKTOP = 0)] = 'DESKTOP'),
-    (l[(l.MOBILE = 1)] = 'MOBILE'),
-    (l[(l.XBOX = 2)] = 'XBOX'),
-    (l[(l.PLAYSTATION = 3)] = 'PLAYSTATION');
-let _ = 320,
-    E = 960,
-    f = 200,
     h = 8;

@@ -1,56 +1,58 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(26151),
-    s = n(13245),
-    a = n(43267),
-    o = n(933557),
-    r = n(593481),
-    l = n(699516),
-    c = n(594174),
-    d = n(312839),
-    u = n(981631),
-    h = n(987650),
-    p = n(689938);
-function f(e) {
-    let t = (0, o.F6)(e, c.default, l.Z),
-        n = p.Z.Messages.OVERLAY_NOTIFICATION_INCOMING_CALL,
-        f = (0, a.x)(e),
-        { trackView: _, trackClick: g } = (0, d.R)(h.n0.IncomingCall, {
-            notif_type: h.n0.IncomingCall,
-            notif_user_id: 1 === e.recipients.length ? e.recipients[0] : null,
+    r = n(13245),
+    s = n(287734),
+    o = n(43267),
+    l = n(933557),
+    a = n(593481),
+    c = n(614554),
+    u = n(699516),
+    d = n(594174),
+    h = n(312839),
+    p = n(981631),
+    f = n(987650),
+    g = n(388032);
+function m(e) {
+    let t = (0, l.F6)(e, d.default, u.Z),
+        n = g.NW.string(g.t.ssrVzM),
+        m = (0, o.x)(e),
+        y = (0, c.Z)(e),
+        { trackView: O, trackClick: v } = (0, h.R)(f.n0.IncomingCall, {
+            notif_type: f.n0.IncomingCall,
+            notif_user_id: y,
             guild_id: e.guild_id,
             channel_id: e.id,
             channel_type: e.type
         });
     return {
-        colorScheme: r.ZP.ColorSchemes.PRIMARY,
-        icon: f,
+        icon: m,
         title: t,
         body: n,
-        hint: (e) => (0, r.QR)(e, (0, d.P)(), p.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
-        confirmText: p.Z.Messages.JOIN_CALL,
-        cancelText: p.Z.Messages.DECLINE,
+        hint: (e) => (0, a.QR)(e, (0, h.P)(), g.t['Odi54+']),
+        confirmText: g.NW.string(g.t['0D/6R0']),
+        cancelText: g.NW.string(g.t.BVN4pK),
         onNotificationShow: () => {
-            _();
+            O();
         },
         onConfirmClick: () => {
-            s.Z.callPrivateChannel(e.id),
-                g('join'),
-                s.Z.track(u.rMx.VOICE_CHANNEL_SELECTED, {
+            if (p.TPd.CALLABLE.has(e.type)) r.Z.callPrivateChannel(e.id);
+            else {
+                if (e.type !== p.d4z.GUILD_VOICE) return;
+                s.default.selectVoiceChannel(e.id);
+            }
+            v('join'),
+                r.Z.track(p.rMx.VOICE_CHANNEL_SELECTED, {
                     location: 'Overlay Notificaiton',
-                    guild_id: null,
+                    guild_id: e.guild_id,
                     channel_id: e.id,
                     video_enabled: !1
                 });
         },
         onCancelClick: () => {
-            i.Z.stopRinging(e.id), g('decline');
+            i.Z.stopRinging(e.id), v('decline');
         },
         onDismissClick: () => {
-            g('dismiss');
+            v('dismiss');
         }
     };
 }

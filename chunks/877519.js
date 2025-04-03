@@ -1,10 +1,11 @@
-n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var r = n(147913),
     i = n(70956),
-    a = n(272008),
-    s = n(569984),
-    o = n(977156),
-    l = n(46140);
+    o = n(272008),
+    a = n(569984),
+    s = n(497505),
+    l = n(977156),
+    c = n(46140);
 function u(e, t, n) {
     return (
         t in e
@@ -18,14 +19,14 @@ function u(e, t, n) {
         e
     );
 }
-let c = i.Z.Millis.DAY,
-    d = 30 * i.Z.Millis.MINUTE,
+let d = i.Z.Millis.DAY,
+    f = 30 * i.Z.Millis.MINUTE,
     _ = 5 * i.Z.Millis.SECOND,
-    E = 5 * i.Z.Millis.MINUTE,
-    f = 12 * i.Z.Millis.HOUR;
-class h extends r.Z {
+    p = 5 * i.Z.Millis.MINUTE,
+    h = 12 * i.Z.Millis.HOUR;
+class m extends r.Z {
     _fetch() {
-        if (!!(0, o.cB)({ location: l.dr.QUESTS_MANAGER }) && !s.Z.isFetchingCurrentQuests) (0, a.xw)();
+        (0, l.cB)({ location: c.dr.QUESTS_MANAGER }) && !a.Z.isFetchingCurrentQuests && ((0, o.xw)(), (0, o.w)(s.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
     }
     constructor(...e) {
         super(...e),
@@ -41,21 +42,21 @@ class h extends r.Z {
                 window.clearTimeout(this.initialFetchTimerId),
                     window.clearTimeout(this.recurringFetchTimerId),
                     (this.recurringFetchTimerId = window.setInterval(() => {
-                        Date.now() - this.lastFetchAttemptedAt > c && ((this.lastFetchAttemptedAt = Date.now()), this._fetch());
-                    }, d)),
+                        Date.now() - this.lastFetchAttemptedAt > d && ((this.lastFetchAttemptedAt = Date.now()), this._fetch());
+                    }, f)),
                     (this.initialFetchTimerId = window.setTimeout(
                         () => {
-                            0 === s.Z.lastFetchedCurrentQuests && this._fetch();
+                            0 === a.Z.lastFetchedCurrentQuests && this._fetch();
                         },
                         Math.floor(Math.random() * _)
                     ));
             }),
             u(this, 'handleRunningGamesChange', () => {
-                if (!(this.instantiatedAt + f > Date.now() || s.Z.lastFetchedCurrentQuests + f > Date.now())) this._fetch();
+                this.instantiatedAt + h > Date.now() || a.Z.lastFetchedCurrentQuests + h > Date.now() || this._fetch();
             }),
             u(this, 'handleUserSettingsProtoUpdate', (e) => {
                 let { partial: t, settings: n, wasSaved: r } = e;
-                if (!(!('localization' in n.proto) || !t || r || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= E)) (this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch();
+                !('localization' in n.proto) || !t || r || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= p || ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch());
             }),
             u(this, 'handleLogout', () => {
                 window.clearTimeout(this.initialFetchTimerId), window.clearTimeout(this.recurringFetchTimerId), (this.lastFetchAttemptedAt = 0), (this.lastFetchedQuestForLocaleChangeAt = 0);
@@ -69,4 +70,4 @@ class h extends r.Z {
             });
     }
 }
-t.Z = new h();
+let g = new m();

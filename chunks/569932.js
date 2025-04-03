@@ -1,56 +1,43 @@
-t.d(n, {
-    A: function () {
-        return _;
-    }
-});
-var o = t(735250);
-t(470079);
-var i = t(362470),
-    s = t(961842),
-    r = t(63063),
-    l = t(921869),
-    c = t(514161),
-    a = t(981631),
-    C = t(689938),
-    d = t(913045);
-function u() {
-    let e = [C.Z.Messages.PS_VALUE_PROP_VOICE, C.Z.Messages.PS_VALUE_PROP_GAME],
-        n = [C.Z.Messages.PS_VALUE_PROP_GAME];
-    return (0, o.jsxs)(o.Fragment, {
-        children: [
-            (0, o.jsx)(c.yC, {
-                children: (0, o.jsx)(c.pT, {
-                    icon: (0, o.jsx)(s.Z, {}),
-                    title: C.Z.Messages.PS5,
-                    bulletPoints: e
-                })
-            }),
-            (0, o.jsx)(c.yC, {
-                children: (0, o.jsx)(c.pT, {
-                    icon: (0, o.jsx)(i.Z, {}),
-                    title: C.Z.Messages.PS4,
-                    bulletPoints: n
-                })
-            })
-        ]
-    });
-}
-function _(e) {
-    let { platformType: n, onContinue: t, onClose: i } = e;
-    return (0, o.jsx)(l.m, {
-        platformType: n,
-        headerConnect: C.Z.Messages.CONNECT_PS_LANDING_TITLE,
-        headerReconnect: C.Z.Messages.RECONNECT_PS_LANDING_TITLE,
-        body: C.Z.Messages.CONNECT_PS_LANDING_BODY,
-        onClose: i,
-        onContinue: t,
+n.d(e, { A: () => u });
+var o = n(200651),
+    i = n(192379),
+    r = n(481060),
+    s = n(63063),
+    c = n(921869),
+    a = n(981631),
+    d = n(388032),
+    l = n(660025);
+function u(t) {
+    let { platformType: e, onContinue: n, onClose: u } = t,
+        p = i.useMemo(
+            () => [
+                {
+                    label: d.NW.string(d.t['+eJP7u']),
+                    subLabel: d.NW.string(d.t['+0VIUl']),
+                    icon: r.gj8
+                },
+                {
+                    label: d.NW.string(d.t.ZH4QFR),
+                    icon: r.iWm
+                }
+            ],
+            []
+        ),
+        _ = s.Z.getArticleURL(a.BhN.PS_CONNECTION),
+        b = d.NW.format(d.t.kqZQNT, { helpdeskArticleUrl: _ });
+    return (0, o.jsx)(c.m, {
+        platformType: e,
+        headerConnect: d.NW.string(d.t.xAWHOz),
+        headerReconnect: d.NW.string(d.t['ZJ/vBg']),
+        body: b,
+        onClose: u,
+        onContinue: n,
         img: (0, o.jsx)('img', {
-            src: d,
+            src: l.Z,
             width: 230,
-            height: 138,
+            height: 160,
             alt: ''
         }),
-        valueProps: (0, o.jsx)(u, {}),
-        learnMoreLink: r.Z.getArticleURL(a.BhN.PS_CONNECTION)
+        valueProps: p
     });
 }

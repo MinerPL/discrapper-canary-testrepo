@@ -1,49 +1,48 @@
 n.d(t, {
-    $: function () {
-        return T;
-    },
-    Z: function () {
-        return m;
-    }
+    $: () => f,
+    Z: () => b
 });
-var s = n(735250);
-n(470079);
-var a = n(392711),
-    i = n(442837),
-    r = n(481060),
-    l = n(241559),
-    o = n(527379),
-    c = n(313364),
-    d = n(434404),
-    u = n(999382),
-    _ = n(981631),
-    I = n(689938),
-    E = n(232802);
-function T() {
-    var e;
-    let t = (0, i.e7)([u.Z], () => u.Z.getProps().guild, []),
-        n = null !== (e = null == t ? void 0 : t.isCommunity()) && void 0 !== e && e;
-    return (0, s.jsxs)(r.Clickable, {
+var r = n(200651);
+n(192379);
+var i = n(392711),
+    s = n(442837),
+    a = n(481060),
+    l = n(63568),
+    o = n(241559),
+    c = n(527379),
+    d = n(313364),
+    u = n(434404),
+    m = n(999382),
+    g = n(981631),
+    p = n(388032),
+    h = n(953592);
+function f() {
+    var e, t;
+    let n = (0, s.e7)([m.Z], () => m.Z.getProps().guild, []),
+        i = null != (e = null == n ? void 0 : n.isCommunity()) && e,
+        o = (0, l.K2)(null != (t = null == n ? void 0 : n.id) ? t : g.lds, 'GuildSettingsMembersRow') && (null == n ? void 0 : n.hasFeature(g.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)),
+        d = i || o;
+    return (0, r.jsxs)(a.P3F, {
         onClick: (e) => {
-            if (null != t) n ? (e.preventDefault(), d.Z.close(), (0, o._X)(t.id)) : d.Z.open(t.id, _.pNK.MEMBERS);
+            null != n && (d ? (e.preventDefault(), u.Z.close(), (0, c._X)(n.id)) : u.Z.open(n.id, g.pNK.MEMBERS));
         },
-        className: E.rowContainer,
+        className: h.rowContainer,
         children: [
-            (0, s.jsx)('div', { children: I.Z.Messages.MEMBERS }),
-            n &&
-                (0, s.jsx)(r.WindowLaunchIcon, {
+            (0, r.jsx)('div', { children: p.NW.string(p.t['9Oq93t']) }),
+            d &&
+                (0, r.jsx)(a.rgF, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: E.linkIcon,
+                    className: h.linkIcon,
                     width: 16,
                     height: 16
                 })
         ]
     });
 }
-function m() {
+function b() {
     var e;
-    let { guild: t } = (0, i.e7)([u.Z], () => u.Z.getProps(), [], a.isEqual),
-        n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : _.lds;
-    return (0, l.n2)(n) ? (0, s.jsx)(c.Z, { guildId: n }) : null;
+    let { guild: t } = (0, s.e7)([m.Z], () => m.Z.getProps(), [], i.isEqual),
+        n = null != (e = null == t ? void 0 : t.id) ? e : g.lds;
+    return (0, o.n2)(n) ? (0, r.jsx)(d.Z, { guildId: n }) : null;
 }

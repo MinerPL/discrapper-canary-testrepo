@@ -11,14 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
-    t: function () {
-        return s;
-    }
-}),
-    n(47120);
+n.d(t, { t: () => a }), n(266796), n(47120);
 let i = Symbol.iterator;
-class a {
+class o {
     [i]() {
         return this;
     }
@@ -37,7 +32,7 @@ class a {
         r(this, 'index', void 0), r(this, 'items', void 0), (this.index = 0), (this.items = e);
     }
 }
-function s() {
+function a() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    return new a(t);
+    return new o(t);
 }

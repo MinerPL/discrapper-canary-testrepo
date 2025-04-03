@@ -1,33 +1,29 @@
 n.d(t, {
-    Z: function () {
-        return d;
-    },
-    r: function () {
-        return c;
-    }
+    Z: () => d,
+    r: () => c
 }),
     n(47120),
     n(653041),
-    n(724458);
-var s = n(735250);
-n(470079);
-var a = n(442837),
-    i = n(447003),
-    r = n(984933),
+    n(230036);
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    s = n(447003),
+    a = n(984933),
     l = n(512508),
     o = n(981631);
 function c(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    return (0, a.Wu)(
-        [r.ZP],
+        r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    return (0, i.Wu)(
+        [a.ZP],
         () => {
-            let a = r.ZP.getChannels(e)[o.d4z.GUILD_CATEGORY],
-                c = [...r.ZP.getChannels(e)[r.sH], ...r.ZP.getChannels(e)[r.Zb]],
+            let i = a.ZP.getChannels(e)[o.d4z.GUILD_CATEGORY],
+                c = [...a.ZP.getChannels(e)[a.sH], ...a.ZP.getChannels(e)[a.Zb]],
                 d = [],
                 u = {};
             return (
-                a.forEach((e) => {
+                i.forEach((e) => {
                     let { channel: t, comparator: n } = e;
                     'null' !== t.id &&
                         ((u[t.id] = []),
@@ -37,34 +33,35 @@ function c(e, t) {
                         }));
                 }),
                 c.forEach((e) => {
-                    let { channel: a, comparator: r } = e;
-                    if (!(a.isThread() || t.has(a.id) || (a.isGuildStageVoice() && !s) || (!n && (0, i.Z)(a))))
-                        null == a.parent_id
-                            ? d.push({
-                                  channel: a,
-                                  comparator: r
-                              })
-                            : (null == u[a.parent_id] && (u[a.parent_id] = []),
-                              u[a.parent_id].push({
-                                  channel: a,
-                                  comparator: r
-                              }));
+                    let { channel: i, comparator: a } = e;
+                    !(i.isThread() || t.has(i.id) || (i.isGuildStageVoice() && !r)) &&
+                        ((!n && (0, s.Z)(i)) ||
+                            (null == i.parent_id
+                                ? d.push({
+                                      channel: i,
+                                      comparator: a
+                                  })
+                                : (null == u[i.parent_id] && (u[i.parent_id] = []),
+                                  u[i.parent_id].push({
+                                      channel: i,
+                                      comparator: a
+                                  }))));
                 }),
                 d
                     .sort((e, t) => {
-                        let { comparator: n, channel: s } = e,
-                            { comparator: a, channel: i } = t;
-                        return s.isCategory() && !i.isCategory() ? 1 : !s.isCategory() && i.isCategory() ? -1 : a - n;
+                        let { comparator: n, channel: r } = e,
+                            { comparator: i, channel: s } = t;
+                        return r.isCategory() && !s.isCategory() ? 1 : !r.isCategory() && s.isCategory() ? -1 : i - n;
                     })
                     .reduce((e, n) => {
-                        let { channel: s } = n;
-                        if (s.isGuildStageVoice() || s.isThread() || t.has(s.id)) return e;
-                        e.push((0, l.PM)(s).row);
-                        let a = u[s.id];
+                        let { channel: r } = n;
+                        if (r.isGuildStageVoice() || r.isThread() || t.has(r.id)) return e;
+                        e.push((0, l.PM)(r).row);
+                        let i = u[r.id];
                         return (
-                            null != a &&
-                                a.length > 0 &&
-                                a.forEach((t) => {
+                            null != i &&
+                                i.length > 0 &&
+                                i.forEach((t) => {
                                     let { channel: n } = t;
                                     e.push((0, l.PM)(n).row);
                                 }),
@@ -73,18 +70,18 @@ function c(e, t) {
                     }, [])
             );
         },
-        [e, n, s, t]
+        [e, n, r, t]
     );
 }
 function d(e) {
-    let { guildId: t, selectedChannelIds: n, onChange: a, placeholder: i, includeRoleRestrictedPrivateChannels: r = !1, includeStageVoiceChannels: o = !1, helperText: d, className: u } = e,
-        _ = c(t, n, r, o);
-    return (0, s.jsx)(l.ZP, {
-        channelRows: _,
+    let { guildId: t, selectedChannelIds: n, onChange: i, placeholder: s, includeRoleRestrictedPrivateChannels: a = !1, includeStageVoiceChannels: o = !1, helperText: d, className: u } = e,
+        m = c(t, n, a, o);
+    return (0, r.jsx)(l.ZP, {
+        channelRows: m,
         guildId: t,
         selectedChannelIds: n,
-        onChange: (e, t) => a(e),
-        placeholder: i,
+        onChange: (e, t) => i(e),
+        placeholder: s,
         helperText: d,
         className: u
     });

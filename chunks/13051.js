@@ -1,261 +1,306 @@
-t.d(n, {
-    Z: function () {
-        return b;
+n.d(t, { Z: () => w }), n(47120), n(230036), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(266796);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(913527),
+    s = n.n(a),
+    c = n(951284),
+    d = n(442837),
+    u = n(481060),
+    p = n(139387),
+    m = n(726542),
+    b = n(600164),
+    g = n(339085),
+    f = n(434404),
+    h = n(598077),
+    x = n(430824),
+    j = n(246946),
+    N = n(259580),
+    O = n(531087),
+    v = n(768581),
+    y = n(709054),
+    _ = n(486199),
+    C = n(981631),
+    I = n(388032),
+    S = n(796920),
+    E = n(20493);
+function P(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-}),
-    t(47120),
-    t(315314),
-    t(610138),
-    t(216116),
-    t(78328),
-    t(815648);
-var i = t(735250),
-    a = t(470079),
-    s = t(120356),
-    l = t.n(s),
-    r = t(913527),
-    o = t.n(r),
-    d = t(442837),
-    c = t(481060),
-    u = t(139387),
-    I = t(726542),
-    m = t(600164),
-    _ = t(339085),
-    N = t(434404),
-    E = t(598077),
-    T = t(430824),
-    h = t(246946),
-    g = t(259580),
-    p = t(531087),
-    f = t(768581),
-    C = t(709054),
-    O = t(486199),
-    x = t(981631),
-    S = t(689938),
-    A = t(436911),
-    R = t(224499);
-function b(e) {
-    let n,
-        { guild: t, integration: s, editedIntegration: r, isExpanded: b, onToggleExpand: Z, onDisable: v, onEnable: M } = e,
-        L = (0, d.e7)([T.Z], () => T.Z.getRoles(t.id)),
-        [j, D] = a.useState(!1),
-        P = (0, d.e7)([h.Z], () => h.Z.hidePersonalInformation),
-        B = a.useCallback(() => {
-            D(!0), M(s);
-        }, [s, M]),
-        y = a.useCallback(() => {
-            !s.syncing &&
-                (0, c.openModal)((e) => {
-                    let n = 0 === s.expire_behavior ? S.Z.Messages.REMOVE_SYNCED_ROLE : S.Z.Messages.KICK_FROM_SERVER;
-                    return (0, i.jsx)(c.ConfirmModal, {
-                        ...e,
-                        header: S.Z.Messages.DISABLE_INTEGRATION_TITLE,
-                        confirmText: n,
-                        cancelText: S.Z.Messages.CANCEL,
-                        onConfirm: () => v(s),
-                        children: (0, i.jsx)(c.Text, {
-                            variant: 'text-md/normal',
-                            children: s.type === x.ABu.YOUTUBE ? S.Z.Messages.DISABLE_INTEGRATION_YOUTUBE_BODY : S.Z.Messages.DISABLE_INTEGRATION_TWITCH_BODY
-                        })
-                    });
+    return e;
+}
+function w(e) {
+    let t,
+        { guild: n, integration: l, editedIntegration: a, isExpanded: w, onToggleExpand: T, onDisable: Z, onEnable: W } = e,
+        k = (0, d.e7)([x.Z], () => x.Z.getRoles(n.id)),
+        [A, D] = i.useState(!1),
+        R = (0, d.e7)([j.Z], () => j.Z.hidePersonalInformation),
+        L = i.useCallback(() => {
+            D(!0), W(l);
+        }, [l, W]),
+        M = i.useCallback(() => {
+            l.syncing ||
+                (0, u.h7j)((e) => {
+                    var t, n;
+                    let i = 0 === l.expire_behavior ? I.NW.string(I.t['6kpw4u']) : I.NW.string(I.t.fQUQIC);
+                    return (0, r.jsx)(
+                        u.ConfirmModal,
+                        ((t = P({}, e)),
+                        (n = n =
+                            {
+                                header: I.NW.string(I.t.emx3lJ),
+                                confirmText: i,
+                                cancelText: I.NW.string(I.t['ETE/oK']),
+                                onConfirm: () => Z(l),
+                                children: (0, r.jsx)(u.Text, {
+                                    variant: 'text-md/normal',
+                                    children: l.type === c.b.YOUTUBE ? I.NW.string(I.t.anKQWV) : I.NW.string(I.t['BW/xtr'])
+                                })
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(n)).forEach(function (e) {
+                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                              }),
+                        t)
+                    );
                 });
-        }, [s, v]),
-        G = a.useCallback(() => {
-            N.Z.syncIntegration(t.id, s.id);
-        }, [t.id, s.id]),
-        k = a.useCallback(() => {
-            null != s.role_id && (N.Z.setSection(x.pNK.ROLES), N.Z.selectRole(s.role_id));
-        }, [s.role_id]),
+        }, [l, Z]),
+        B = i.useCallback(() => {
+            f.Z.syncIntegration(n.id, l.id);
+        }, [n.id, l.id]),
+        U = i.useCallback(() => {
+            null != l.role_id && (f.Z.setSection(C.pNK.ROLES), f.Z.selectRole(l.role_id));
+        }, [l.role_id]),
         {
-            serviceName: U,
+            serviceName: z,
             channelURL: H,
-            expireBehaviorLabel: w,
-            syncLabel: W,
-            subscribersText: F
-        } = a.useMemo(() => {
-            var e, n, t, i, a;
-            let l = null !== (t = null === (n = I.Z.get(s.type)) || void 0 === n ? void 0 : null === (e = n.getPlatformUserUrl) || void 0 === e ? void 0 : e.call(n, s.account)) && void 0 !== t ? t : '';
-            switch (s.type) {
-                case x.ABu.YOUTUBE:
+            expireBehaviorLabel: G,
+            syncLabel: F,
+            subscribersText: V
+        } = i.useMemo(() => {
+            var e, t, n, r, i;
+            let o =
+                null !=
+                (n =
+                    null == (t = m.Z.get(l.type)) || null == (e = t.getPlatformUserUrl)
+                        ? void 0
+                        : e.call(t, {
+                              id: l.account.id,
+                              name: l.account.name
+                          }))
+                    ? n
+                    : '';
+            switch (l.type) {
+                case c.b.YOUTUBE:
                     return {
-                        serviceName: S.Z.Messages.INTEGRATIONS_YOUTUBE,
-                        expireBehaviorLabel: S.Z.Messages.FORM_LABEL_MEMBERSHIP_EXPIRE_BEHAVIOR,
-                        syncLabel: S.Z.Messages.FORM_LABEL_SYNCED_MEMBERS,
-                        subscribersText: S.Z.Messages.NUM_MEMBERS.format({ subscribers: null !== (i = s.subscriber_count) && void 0 !== i ? i : 0 }),
-                        channelURL: l
+                        serviceName: I.NW.string(I.t.aS6cKy),
+                        expireBehaviorLabel: I.NW.string(I.t.A5MiqK),
+                        syncLabel: I.NW.string(I.t['7vHKVV']),
+                        subscribersText: I.NW.formatToPlainString(I.t['7lNtcX'], { subscribers: null != (r = l.subscriber_count) ? r : 0 }),
+                        channelURL: o
                     };
-                case x.ABu.TWITCH:
+                case c.b.TWITCH:
                 default:
                     return {
-                        serviceName: S.Z.Messages.INTEGRATIONS_TWITCH,
-                        expireBehaviorLabel: S.Z.Messages.FORM_LABEL_SUB_EXPIRE_BEHAVIOR,
-                        syncLabel: S.Z.Messages.FORM_LABEL_SYNCED_SUBS,
-                        subscribersText: S.Z.Messages.NUM_SUBSCRIBERS.format({ subscribers: null !== (a = s.subscriber_count) && void 0 !== a ? a : 0 }),
-                        channelURL: l
+                        serviceName: I.NW.string(I.t.q4pBGx),
+                        expireBehaviorLabel: I.NW.string(I.t['S/WCrK']),
+                        syncLabel: I.NW.string(I.t['0jbPKy']),
+                        subscribersText: I.NW.formatToPlainString(I.t.RdUTrq, { subscribers: null != (i = l.subscriber_count) ? i : 0 }),
+                        channelURL: o
                     };
             }
-        }, [s.account, s.subscriber_count, s.type]),
-        { roleLink: V, syncDescriptionText: K } = a.useMemo(() => {
-            let e, n;
-            let t = null != s.role_id ? L[s.role_id] : null;
+        }, [l.account, l.subscriber_count, l.type]),
+        { roleLink: K, syncDescriptionText: q } = i.useMemo(() => {
+            let e,
+                t,
+                n = null != l.role_id ? k[l.role_id] : null;
             e =
-                null != t
-                    ? (0, i.jsx)(c.Anchor, {
-                          onClick: k,
-                          children: t.name
+                null != n
+                    ? (0, r.jsx)(u.eee, {
+                          onClick: U,
+                          children: n.name
                       })
-                    : S.Z.Messages.NONE;
-            let a = I.Z.get(s.type);
+                    : I.NW.string(I.t.PoWNfX);
+            let i = m.Z.get(l.type);
             return {
                 roleLink: e,
-                syncDescriptionText: (n =
-                    s.revoked && null != a
-                        ? S.Z.Messages.SYNC_REVOKED.format({
-                              user: s.user,
-                              platformName: a.name
+                syncDescriptionText:
+                    l.revoked && null != i
+                        ? I.NW.formatToPlainString(I.t.G16Wjo, {
+                              user: l.user,
+                              platformName: i.name
                           })
-                        : S.Z.Messages.INTEGRATIONS_LAST_SYNC.format({ datetime: o()(s.synced_at).calendar() }))
+                        : I.NW.formatToPlainString(I.t.unl3AA, { datetime: s()(l.synced_at).calendar() })
             };
-        }, [L, k, s.revoked, s.role_id, s.synced_at, s.type, s.user]),
-        Y = a.useMemo(() => {
-            let e = _.ZP.getGuildEmoji(t.id),
-                n = Object.values(L)
-                    .filter((e) => null != e.tags && e.tags.integration_id === s.id)
+        }, [k, U, l.revoked, l.role_id, l.synced_at, l.type, l.user]),
+        Y = i.useMemo(() => {
+            let e = g.ZP.getGuildEmoji(n.id),
+                t = Object.values(k)
+                    .filter((e) => null != e.tags && e.tags.integration_id === l.id)
                     .map((e) => e.id);
-            return s.enable_emoticons ? e.sort((e, n) => e.name.localeCompare(n.name)).filter((e) => null != s.role_id && (null == e ? void 0 : e.roles.some((e) => n.includes(e)))) : [];
-        }, [t.id, L, s.enable_emoticons, s.id, s.role_id]);
+            return l.enable_emoticons ? e.sort((e, t) => e.name.localeCompare(t.name)).filter((e) => null != l.role_id && (null == e ? void 0 : e.roles.some((e) => t.includes(e)))) : [];
+        }, [n.id, k, l.enable_emoticons, l.id, l.role_id]);
     if (
-        (a.useEffect(() => {
-            (null == r ? void 0 : r.id) === s.id && (null == r ? void 0 : r.enabled) === !0 && D(!1);
-        }, [r, s.id]),
-        s.enabled && null != s.user)
+        (i.useEffect(() => {
+            (null == a ? void 0 : a.id) === l.id && (null == a ? void 0 : a.enabled) === !0 && D(!1);
+        }, [a, l.id]),
+        l.enabled && null != l.user)
     )
-        n = [
+        t = [
             {
-                icon: c.ClockIcon,
-                text: P
-                    ? S.Z.Messages.INTEGRATION_ADDED_DATE.format({ timestamp: C.default.extractTimestamp(s.id) })
-                    : S.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
-                          user: null != s.user ? new E.Z(s.user).tag : null,
-                          timestamp: C.default.extractTimestamp(s.id)
+                icon: u.T39,
+                text: R
+                    ? I.NW.formatToPlainString(I.t.gcdJ8P, { timestamp: y.default.extractTimestamp(l.id) })
+                    : I.NW.formatToPlainString(I.t.Nu9sam, {
+                          user: null != l.user ? new h.Z(l.user).tag : null,
+                          timestamp: y.default.extractTimestamp(l.id)
                       })
             }
         ];
     else {
         let e = new URL(H);
-        n = [
+        t = [
             {
-                text: S.Z.Messages.INTEGRATIONS_ACCOUNT_DESCRIPTION.format({
-                    serviceName: U,
+                text: I.NW.format(I.t.BegylZ, {
+                    serviceName: z,
                     accountUrl: H,
                     accountUrlText: e.hostname + e.pathname
                 })
             }
         ];
     }
-    let z = (0, i.jsxs)(m.Z, {
-            className: A.header,
-            align: m.Z.Align.CENTER,
+    let X = (0, r.jsxs)(b.Z, {
+            className: S.header,
+            align: b.Z.Align.CENTER,
             children: [
-                (0, i.jsx)(O.Z, {
-                    name: ''.concat(s.name),
-                    detailsClassName: A.description,
-                    details: n
+                (0, r.jsx)(_.Z, {
+                    name: ''.concat(l.name),
+                    detailsClassName: S.description,
+                    details: t
                 }),
-                s.enabled
-                    ? (0, i.jsx)(m.Z.Child, {
+                l.enabled
+                    ? (0, r.jsx)(b.Z.Child, {
                           shrink: 0,
                           grow: 0,
-                          children: (0, i.jsx)(g.Z, {
-                              className: A.expandIcon,
-                              expanded: b && !j,
+                          children: (0, r.jsx)(N.Z, {
+                              className: S.expandIcon,
+                              expanded: w && !A,
                               'aria-hidden': !0
                           })
                       })
-                    : (0, i.jsx)(m.Z.Child, {
+                    : (0, r.jsx)(b.Z.Child, {
                           shrink: 0,
                           grow: 0,
-                          children: (0, i.jsx)(c.Button, {
-                              size: c.Button.Sizes.SMALL,
-                              color: c.Button.Colors.PRIMARY,
-                              onClick: B,
-                              disabled: j,
-                              children: j
-                                  ? (0, i.jsx)(p.Z, {
+                          children: (0, r.jsx)(u.zxk, {
+                              size: u.zxk.Sizes.SMALL,
+                              color: u.zxk.Colors.PRIMARY,
+                              onClick: L,
+                              disabled: A,
+                              children: A
+                                  ? (0, r.jsx)(O.Z, {
                                         width: 24,
                                         height: 24
                                     })
-                                  : (0, i.jsx)(i.Fragment, { children: S.Z.Messages.INTEGRATIONS_ENABLE })
+                                  : (0, r.jsx)(r.Fragment, { children: I.NW.string(I.t['7sCN8v']) })
                           })
                       })
             ]
         }),
-        q = null;
+        $ = null;
     return (
-        b &&
-            !j &&
-            null != r &&
-            (q = (0, i.jsxs)(m.Z, {
-                className: A.body,
-                direction: m.Z.Direction.VERTICAL,
+        w &&
+            !A &&
+            null != a &&
+            ($ = (0, r.jsxs)(b.Z, {
+                className: S.body,
+                direction: b.Z.Direction.VERTICAL,
                 children: [
-                    (0, i.jsx)(c.FormDivider, { className: A.topDivider }),
+                    (0, r.jsx)(u.$i$, { className: S.topDivider }),
                     (function (e) {
-                        let { integration: n, labelText: t, subscribersText: a, descriptionText: s, roleLink: l, onSync: r } = e;
-                        return (0, i.jsxs)(m.Z, {
+                        let { integration: t, labelText: n, subscribersText: i, descriptionText: l, roleLink: o, onSync: a } = e;
+                        return (0, r.jsxs)(b.Z, {
                             children: [
-                                (0, i.jsxs)(m.Z.Child, {
+                                (0, r.jsxs)(b.Z.Child, {
                                     basis: '50%',
                                     children: [
-                                        (0, i.jsx)(c.FormTitle, {
-                                            className: R.marginBottom8,
-                                            children: S.Z.Messages.FORM_LABEL_SYNCED_ROLE
+                                        (0, r.jsx)(u.vwX, {
+                                            className: E.marginBottom8,
+                                            children: I.NW.string(I.t.eBtNBQ)
                                         }),
-                                        (0, i.jsx)(c.Text, {
-                                            className: A.syncedRole,
+                                        (0, r.jsx)(u.Text, {
+                                            className: S.syncedRole,
                                             color: 'header-primary',
                                             variant: 'text-sm/normal',
-                                            children: l
+                                            children: o
                                         })
                                     ]
                                 }),
-                                (0, i.jsxs)(m.Z.Child, {
+                                (0, r.jsxs)(b.Z.Child, {
                                     basis: '50%',
                                     children: [
-                                        (0, i.jsx)(c.FormTitle, {
-                                            className: R.marginBottom8,
-                                            children: t
+                                        (0, r.jsx)(u.vwX, {
+                                            className: E.marginBottom8,
+                                            children: n
                                         }),
-                                        (0, i.jsxs)(m.Z, {
-                                            justify: m.Z.Justify.BETWEEN,
+                                        (0, r.jsxs)(b.Z, {
+                                            justify: b.Z.Justify.BETWEEN,
                                             children: [
-                                                (0, i.jsxs)(m.Z, {
-                                                    direction: m.Z.Direction.VERTICAL,
+                                                (0, r.jsxs)(b.Z, {
+                                                    direction: b.Z.Direction.VERTICAL,
                                                     children: [
-                                                        (0, i.jsx)(c.Text, {
+                                                        (0, r.jsx)(u.Text, {
                                                             color: 'header-primary',
                                                             variant: 'text-sm/normal',
-                                                            children: a
+                                                            children: i
                                                         }),
-                                                        (0, i.jsx)(c.Text, {
+                                                        (0, r.jsx)(u.Text, {
                                                             color: 'header-secondary',
                                                             variant: 'text-xs/normal',
-                                                            children: s
+                                                            children: l
                                                         })
                                                     ]
                                                 }),
-                                                (0, i.jsx)(c.Button, {
-                                                    size: c.Button.Sizes.SMALL,
-                                                    look: c.Button.Looks.FILLED,
-                                                    color: c.Button.Colors.PRIMARY,
-                                                    disabled: n.syncing || n.revoked,
-                                                    onClick: r,
-                                                    children: n.syncing
-                                                        ? (0, i.jsx)(p.Z, {
+                                                (0, r.jsx)(u.zxk, {
+                                                    size: u.zxk.Sizes.SMALL,
+                                                    look: u.zxk.Looks.FILLED,
+                                                    color: u.zxk.Colors.PRIMARY,
+                                                    disabled: t.syncing || t.revoked,
+                                                    onClick: a,
+                                                    children: t.syncing
+                                                        ? (0, r.jsx)(O.Z, {
                                                               width: 24,
                                                               height: 24
                                                           })
-                                                        : (0, i.jsx)(i.Fragment, { children: S.Z.Messages.SYNC })
+                                                        : (0, r.jsx)(r.Fragment, { children: I.NW.string(I.t.BkuOOz) })
                                                 })
                                             ]
                                         })
@@ -264,159 +309,161 @@ function b(e) {
                             ]
                         });
                     })({
-                        integration: r,
-                        labelText: W,
-                        subscribersText: F,
-                        descriptionText: K,
-                        roleLink: V,
-                        onSync: G
+                        integration: a,
+                        labelText: F,
+                        subscribersText: V,
+                        descriptionText: q,
+                        roleLink: K,
+                        onSync: B
                     }),
-                    (0, i.jsx)(c.FormDivider, { className: A.midDivider }),
+                    (0, r.jsx)(u.$i$, { className: S.midDivider }),
                     (function (e) {
-                        let { integration: n, labelText: t, onBehaviorChange: a, onGracePeriodChange: s } = e;
-                        return (0, i.jsxs)(m.Z, {
+                        let { integration: t, labelText: n, onBehaviorChange: i, onGracePeriodChange: l } = e;
+                        return (0, r.jsxs)(b.Z, {
                             children: [
-                                (0, i.jsxs)(m.Z.Child, {
+                                (0, r.jsxs)(b.Z.Child, {
                                     basis: '50%',
                                     children: [
-                                        (0, i.jsx)(c.FormTitle, {
-                                            className: R.marginBottom8,
-                                            children: t
+                                        (0, r.jsx)(u.vwX, {
+                                            className: E.marginBottom8,
+                                            children: n
                                         }),
-                                        (0, i.jsx)(c.SingleSelect, {
-                                            placeholder: t,
-                                            value: ''.concat(n.expire_behavior),
+                                        (0, r.jsx)(u.q4e, {
+                                            placeholder: n,
+                                            value: ''.concat(t.expire_behavior),
                                             options: [
                                                 {
                                                     value: '0',
-                                                    label: S.Z.Messages.REMOVE_SYNCED_ROLE
+                                                    label: I.NW.string(I.t['6kpw4u'])
                                                 },
                                                 {
                                                     value: '1',
-                                                    label: S.Z.Messages.KICK_FROM_SERVER
+                                                    label: I.NW.string(I.t.fQUQIC)
                                                 }
                                             ],
-                                            isDisabled: n.syncing,
-                                            onChange: (e) => a(parseInt(e))
+                                            isDisabled: t.syncing,
+                                            onChange: (e) => i(parseInt(e))
                                         })
                                     ]
                                 }),
-                                (0, i.jsxs)(m.Z.Child, {
+                                (0, r.jsxs)(b.Z.Child, {
                                     basis: '50%',
                                     children: [
-                                        (0, i.jsx)(c.FormTitle, {
-                                            className: R.marginBottom8,
-                                            children: S.Z.Messages.FORM_LABEL_EXPIRE_GRACE_PERIOD
+                                        (0, r.jsx)(u.vwX, {
+                                            className: E.marginBottom8,
+                                            children: I.NW.string(I.t.uiXMo6)
                                         }),
-                                        (0, i.jsx)(c.SingleSelect, {
-                                            placeholder: S.Z.Messages.FORM_LABEL_EXPIRE_GRACE_PERIOD,
+                                        (0, r.jsx)(u.q4e, {
+                                            placeholder: I.NW.string(I.t.uiXMo6),
                                             maxVisibleItems: 5,
-                                            value: ''.concat(n.expire_grace_period),
+                                            value: ''.concat(t.expire_grace_period),
                                             options: [1, 3, 7, 14, 30].map((e) => ({
                                                 value: ''.concat(e),
-                                                label: S.Z.Messages.N_DAYS.format({ days: e })
+                                                label: I.NW.formatToPlainString(I.t.eGjmy8, { days: e })
                                             })),
-                                            onChange: (e) => s(parseInt(e)),
-                                            isDisabled: n.syncing
+                                            onChange: (e) => l(parseInt(e)),
+                                            isDisabled: t.syncing
                                         })
                                     ]
                                 })
                             ]
                         });
                     })({
-                        integration: r,
-                        labelText: w,
+                        integration: a,
+                        labelText: G,
                         onBehaviorChange: function (e) {
-                            u.Z.updateIntegration({ expireBehavior: e });
+                            p.Z.updateIntegration({ expireBehavior: e });
                         },
                         onGracePeriodChange: function (e) {
-                            u.Z.updateIntegration({ expireGracePeriod: e });
+                            p.Z.updateIntegration({ expireGracePeriod: e });
                         }
                     }),
-                    s.type === x.ABu.TWITCH
+                    l.type === c.b.TWITCH
                         ? (function (e) {
-                              let { integration: n, emojis: t, onToggle: a } = e;
-                              return (0, i.jsxs)(m.Z, {
-                                  direction: m.Z.Direction.VERTICAL,
+                              let { integration: t, emojis: n, onToggle: i } = e;
+                              return (0, r.jsxs)(b.Z, {
+                                  direction: b.Z.Direction.VERTICAL,
                                   children: [
-                                      (0, i.jsx)(c.Checkbox, {
-                                          type: c.Checkbox.Types.INVERTED,
-                                          className: l()(R.marginTop20, R.marginBottom8),
-                                          value: n.enable_emoticons,
-                                          disabled: n.syncing,
+                                      (0, r.jsx)(u.XZJ, {
+                                          type: u.XZJ.Types.INVERTED,
+                                          className: o()(E.marginTop20, E.marginBottom8),
+                                          value: t.enable_emoticons,
+                                          disabled: t.syncing,
                                           onChange: (e) => {
-                                              let { currentTarget: n } = e;
-                                              return a(n.checked);
+                                              let { currentTarget: t } = e;
+                                              return i(t.checked);
                                           },
-                                          children: (0, i.jsx)(c.FormText, { children: S.Z.Messages.ENABLE_TWITCH_EMOJI_SYNC })
+                                          children: (0, r.jsx)(u.R94, { children: I.NW.string(I.t['7r4OKi']) })
                                       }),
-                                      (0, i.jsx)(m.Z, {
-                                          wrap: m.Z.Wrap.WRAP,
-                                          className: A.__invalid_twitchEmojis,
-                                          children: t.map((e, n) =>
-                                              (0, i.jsx)(
-                                                  c.Tooltip,
+                                      (0, r.jsx)(b.Z, {
+                                          wrap: b.Z.Wrap.WRAP,
+                                          className: S.__invalid_twitchEmojis,
+                                          children: n.map((e, t) =>
+                                              (0, r.jsx)(
+                                                  u.ua7,
                                                   {
                                                       text: e.name,
-                                                      children: (n) =>
-                                                          (0, i.jsx)(
+                                                      children: (t) =>
+                                                          (0, r.jsx)(
                                                               'img',
-                                                              {
-                                                                  alt: S.Z.Messages.IMG_ALT_EMOJI.format({ name: e.name }),
-                                                                  draggable: !1,
-                                                                  className: l()(A.emoji, 'emoji', 'jumboable'),
-                                                                  src: f.ZP.getEmojiURL({
-                                                                      id: e.id,
-                                                                      animated: e.animated,
-                                                                      size: 28
-                                                                  }),
-                                                                  ...n
-                                                              },
+                                                              P(
+                                                                  {
+                                                                      alt: I.NW.formatToPlainString(I.t.n6ZZn5, { name: e.name }),
+                                                                      draggable: !1,
+                                                                      className: o()(S.emoji, 'emoji', 'jumboable'),
+                                                                      src: v.ZP.getEmojiURL({
+                                                                          id: e.id,
+                                                                          animated: e.animated,
+                                                                          size: 28
+                                                                      })
+                                                                  },
+                                                                  t
+                                                              ),
                                                               e.name
                                                           )
                                                   },
-                                                  n
+                                                  t
                                               )
                                           )
                                       })
                                   ]
                               });
                           })({
-                              integration: r,
+                              integration: a,
                               emojis: Y,
                               onToggle: function (e) {
-                                  u.Z.updateIntegration({ enableEmoticons: e });
+                                  p.Z.updateIntegration({ enableEmoticons: e });
                               }
                           })
                         : null,
-                    (0, i.jsx)(c.FormDivider, { className: A.bottomDivider }),
-                    (0, i.jsx)(m.Z, {
-                        children: (0, i.jsx)(c.Button, {
-                            className: A.disableButton,
-                            size: c.Button.Sizes.SMALL,
-                            color: c.Button.Colors.RED,
-                            look: c.Button.Looks.LINK,
-                            onClick: y,
-                            children: S.Z.Messages.INTEGRATIONS_DISABLE
+                    (0, r.jsx)(u.$i$, { className: S.bottomDivider }),
+                    (0, r.jsx)(b.Z, {
+                        children: (0, r.jsx)(u.zxk, {
+                            className: S.disableButton,
+                            size: u.zxk.Sizes.SMALL,
+                            color: u.zxk.Colors.RED,
+                            look: u.zxk.Looks.LINK,
+                            onClick: M,
+                            children: I.NW.string(I.t.M6q6eX)
                         })
                     })
                 ]
             })),
-        (0, i.jsx)(c.Card, {
+        (0, r.jsx)(u.Zbd, {
             editable: !0,
-            className: A.card,
-            children: (0, i.jsxs)(m.Z, {
-                direction: m.Z.Direction.VERTICAL,
+            className: S.card,
+            children: (0, r.jsxs)(b.Z, {
+                direction: b.Z.Direction.VERTICAL,
                 children: [
-                    s.enabled
-                        ? (0, i.jsx)(c.Clickable, {
-                              className: A.expandableHeader,
-                              'aria-expanded': b && !j,
-                              onClick: Z,
-                              children: z
+                    l.enabled
+                        ? (0, r.jsx)(u.P3F, {
+                              className: S.expandableHeader,
+                              'aria-expanded': w && !A,
+                              onClick: T,
+                              children: X
                           })
-                        : z,
-                    q
+                        : X,
+                    $
                 ]
             })
         })

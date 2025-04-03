@@ -1,31 +1,26 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(347469),
-    l = n(975481);
-function r(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: r, minHeight: o, maxHeight: c } = e,
-        [u, d] = a.useState(null);
-    a.useEffect(() => {
+n.d(t, { Z: () => a }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(347469),
+    o = n(955229);
+function a(e) {
+    let { resizableNode: t, onResize: n, onResizeEnd: a, minHeight: s, maxHeight: c } = e,
+        [u, d] = i.useState(null);
+    i.useEffect(() => {
         var e, n;
-        d(null !== (n = null === (e = t.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== n ? n : null);
+        d(null != (n = null == (e = t.current) ? void 0 : e.offsetHeight) ? n : null);
     }, [t]);
-    let h = (0, s.Z)({
+    let p = (0, l.Z)({
         initialElementDimension: u,
-        minDimension: o,
+        minDimension: s,
         maxDimension: c,
         resizableDomNodeRef: t,
         onElementResize: n,
-        onElementResizeEnd: r,
-        orientation: s.y.VERTICAL_BOTTOM
+        onElementResizeEnd: a,
+        orientation: l.y.VERTICAL_BOTTOM
     });
-    return (0, i.jsx)('div', {
-        onMouseDown: h,
-        className: l.resizeHandle
+    return (0, r.jsx)('div', {
+        onMouseDown: p,
+        className: o.resizeHandle
     });
 }

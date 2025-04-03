@@ -1,34 +1,20 @@
 n.d(t, {
-    Q3: function () {
-        return u;
-    },
-    Zl: function () {
-        return c;
-    },
-    mC: function () {
-        return r;
-    },
-    mU: function () {
-        return a;
-    },
-    qJ: function () {
-        return s;
-    },
-    u9: function () {
-        return l;
-    },
-    xQ: function () {
-        return o;
-    },
-    z5: function () {
-        return d;
-    }
-});
-var i = n(704215);
+    Q3: () => d,
+    Zl: () => u,
+    mC: () => o,
+    mU: () => a,
+    qJ: () => s,
+    u9: () => l,
+    xQ: () => c,
+    z5: () => p
+}),
+    n(26686);
+var r = n(704215),
+    i = n(388032);
 function l(e) {
     return 'user' === e.type;
 }
-function r(e) {
+function o(e) {
     return 'guild' === e.type;
 }
 function a(e) {
@@ -47,7 +33,7 @@ let s = {
         question: 'Which feature are you interested in the most?',
         questionMargin: 150,
         backgroundAssetUrl: 'https://cdn.discordapp.com/assets/signups/Valorant_Background.png',
-        dismissibleContent: i.z.GAME_ONE_USER_SIGNUPS,
+        dismissibleContent: r.z.GAME_ONE_USER_SIGNUPS,
         options: [
             {
                 key: 'clan',
@@ -72,7 +58,7 @@ let s = {
             }
         ]
     },
-    o = {
+    c = {
         key: 'valorant-admin',
         type: 'guild',
         title: 'Want to recruit more Valorant players for your server?',
@@ -81,7 +67,7 @@ let s = {
         question: 'Interested? Pick one to sign up for updates and early access:',
         questionMargin: 110,
         backgroundAssetUrl: 'https://cdn.discordapp.com/assets/signups/Valorant_Background.png',
-        dismissibleContent: i.z.GAME_ONE_USER_SIGNUPS,
+        dismissibleContent: r.z.GAME_ONE_USER_SIGNUPS,
         options: [
             {
                 key: 'clan',
@@ -106,7 +92,7 @@ let s = {
             }
         ]
     },
-    c = {
+    u = {
         key: 'genshin-user',
         type: 'user',
         title: 'Preview new features for Genshin Impact players on Discord',
@@ -115,7 +101,7 @@ let s = {
         question: 'Which feature are you interested in the most?',
         questionMargin: 150,
         backgroundAssetUrl: 'https://cdn.discordapp.com/assets/signups/Genshin_Background.png',
-        dismissibleContent: i.z.GENSHIN_USER_SIGNUPS,
+        dismissibleContent: r.z.GENSHIN_USER_SIGNUPS,
         options: [
             {
                 key: 'clan',
@@ -140,7 +126,7 @@ let s = {
             }
         ]
     },
-    u = {
+    d = {
         key: 'genshin-admin',
         type: 'guild',
         title: 'Interested in recruiting more Genshin Impact players for your server?',
@@ -149,7 +135,7 @@ let s = {
         question: 'Interested? Pick one to sign up for updates and early access:',
         questionMargin: 80,
         backgroundAssetUrl: 'https://cdn.discordapp.com/assets/signups/Genshin_Background.png',
-        dismissibleContent: i.z.GENSHIN_USER_SIGNUPS,
+        dismissibleContent: r.z.GENSHIN_USER_SIGNUPS,
         options: [
             {
                 key: 'clan',
@@ -174,27 +160,27 @@ let s = {
             }
         ]
     };
-function d(e) {
+function p() {
     return [
         {
             value: 'very-casual',
-            title: e.Messages.SIGNUP_CLAN_OPTION_VERY_CASUAL_TITLE,
-            description: e.Messages.SIGNUP_CLAN_OPTION_VERY_CASUAL_DESCRIPTION
+            title: i.NW.string(i.t['4g8/9/']),
+            description: i.NW.string(i.t['0qVVu7'])
         },
         {
             value: 'casual',
-            title: e.Messages.SIGNUP_CLAN_OPTION_CASUAL_TITLE,
-            description: e.Messages.SIGNUP_CLAN_OPTION_CASUAL_DESCRIPTION
+            title: i.NW.string(i.t.gfRcc3),
+            description: i.NW.string(i.t.zbh9nJ)
         },
         {
             value: 'hardcore',
-            title: e.Messages.SIGNUP_CLAN_OPTION_HARDCORE_TITLE,
-            description: e.Messages.SIGNUP_CLAN_OPTION_HARDCORE_DESCRIPTION
+            title: i.NW.string(i.t['lj/ol5']),
+            description: i.NW.string(i.t.U2ICp6)
         },
         {
             value: 'very-hardcore',
-            title: e.Messages.SIGNUP_CLAN_OPTION_VERY_HARDCORE_TITLE,
-            description: e.Messages.SIGNUP_CLAN_OPTION_VERY_HARDCORE_DESCRIPTION
+            title: i.NW.string(i.t.kQaews),
+            description: i.NW.string(i.t.y4zY3t)
         }
     ];
 }

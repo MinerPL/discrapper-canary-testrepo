@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => p });
 var r = n(979590),
     i = n.n(r),
-    a = n(866442),
-    s = n(81825);
-function o(e, t, n) {
+    o = n(866442),
+    a = n(81825);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,27 +16,89 @@ function o(e, t, n) {
         e
     );
 }
-let l = (e) =>
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let _ = (e) =>
     null == e
         ? e
         : {
-              backgroundColors: e.background_colors.map((e) => i()((0, a.Rf)(e))),
-              buttonColors: e.button_colors.map((e) => i()((0, a.Rf)(e))),
-              confettiColors: e.confetti_colors.map((e) => i()((0, a.Rf)(e)))
+              backgroundColors: e.background_colors.map((e) => i()((0, o.Rf)(e))),
+              buttonColors: e.button_colors.map((e) => i()((0, o.Rf)(e))),
+              confettiColors: e.confetti_colors.map((e) => i()((0, o.Rf)(e)))
           };
-class u extends s.Z {
+class p extends a.Z {
     static fromServer(e) {
-        let { store_listing_id: t, sku_id: n, unpublished_at: r, styles: i, ...a } = e,
-            s = null != r ? new Date(r) : null;
-        return new u({
-            ...a,
-            storeListingId: t,
-            skuId: n,
-            unpublishedAt: s,
-            styles: l(i)
-        });
+        var { store_listing_id: t, sku_id: n, unpublished_at: r, banner_asset: i, styles: o } = e,
+            a = d(e, ['store_listing_id', 'sku_id', 'unpublished_at', 'banner_asset', 'styles']);
+        let s = null != r ? new Date(r) : null;
+        return new p(
+            u(l({}, a), {
+                storeListingId: t,
+                skuId: n,
+                unpublishedAt: s,
+                bannerAsset: i,
+                styles: _(o)
+            })
+        );
     }
     constructor(e) {
-        super(), o(this, 'storeListingId', void 0), o(this, 'skuId', void 0), o(this, 'name', void 0), o(this, 'summary', void 0), o(this, 'banner', void 0), o(this, 'unpublishedAt', void 0), o(this, 'styles', void 0), (this.storeListingId = e.storeListingId), (this.skuId = e.skuId), (this.name = e.name), (this.summary = e.summary), (this.banner = e.banner), (this.unpublishedAt = e.unpublishedAt), (this.styles = e.styles);
+        super(), s(this, 'storeListingId', void 0), s(this, 'skuId', void 0), s(this, 'name', void 0), s(this, 'summary', void 0), s(this, 'banner', void 0), s(this, 'bannerAsset', void 0), s(this, 'unpublishedAt', void 0), s(this, 'styles', void 0), (this.storeListingId = e.storeListingId), (this.skuId = e.skuId), (this.name = e.name), (this.summary = e.summary), (this.banner = e.banner), (this.unpublishedAt = e.unpublishedAt), (this.styles = e.styles), (this.bannerAsset = e.bannerAsset);
     }
 }

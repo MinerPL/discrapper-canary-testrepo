@@ -1,69 +1,84 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(77866),
-    s = n(622535),
-    o = n(481060),
-    l = n(425493),
-    u = n(906732),
-    c = n(626135),
-    d = n(724884),
-    _ = n(355045),
-    E = n(290799),
-    f = n(394769),
-    h = n(555932),
-    p = n(808189),
-    m = n(362948),
-    I = n(245004),
-    T = n(383881),
-    g = n(981631),
-    S = n(689938),
-    A = n(827842);
-t.Z = function (e) {
+n.d(t, { Z: () => N }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(622535),
+    a = n(481060),
+    s = n(425493),
+    l = n(211266),
+    c = n(906732),
+    u = n(50101),
+    d = n(174604),
+    f = n(302175),
+    _ = n(626135),
+    p = n(724884),
+    h = n(355045),
+    m = n(290799),
+    g = n(394769),
+    E = n(555932),
+    b = n(808189),
+    y = n(362948),
+    v = n(245004),
+    O = n(383881),
+    I = n(981631),
+    S = n(388032),
+    T = n(871146);
+let N = function (e) {
     let { analyticsLocation: t, guild: n, onClose: N } = e,
-        [v, O] = i.useState(!0),
+        [A, C] = i.useState(!0),
         R = i.useRef(!1),
-        C = (0, a.Z)(() => Date.now()),
-        { analyticsLocations: y } = (0, u.ZP)(),
-        D = i.useCallback(() => {
-            N(),
-                c.default.track(g.rMx.MODAL_DISMISSED, {
-                    type: g.ZY5.PREMIUM_GUILD_USER_MODAL,
-                    location_stack: y,
+        P = (0, l.Z)(() => Date.now()),
+        { analyticsLocations: w } = (0, c.ZP)(),
+        D = i.useRef(null),
+        L = i.useRef(null),
+        x = i.useRef(null),
+        M = i.useCallback(() => {
+            null != x.current &&
+                null != L.current &&
+                L.current.scrollTo({
+                    to: x.current.offsetTop,
+                    animate: !0
+                });
+        }, []),
+        k = (0, u.Ek)(n.id, 'GuildBoostingMarketing'),
+        j = i.useCallback(() => {
+            null == N || N(),
+                _.default.track(I.rMx.MODAL_DISMISSED, {
+                    type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+                    location_stack: w,
                     location_section: t.section,
                     location_object: t.object,
                     guild_id: n.id,
-                    duration_open_ms: Date.now() - C
+                    duration_open_ms: Date.now() - P
                 });
-        }, [N, t, y, C, n.id]),
-        L = i.useCallback(
+        }, [N, t, w, P, n.id]),
+        U = i.useCallback(
             (e) => {
                 e &&
                     !R.current &&
-                    (c.default.track(g.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                        type: g.ZY5.PREMIUM_GUILD_USER_MODAL,
-                        location_stack: y,
+                    (_.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                        type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+                        location_stack: w,
                         location_section: t.section,
                         location_object: t.object,
                         guild_id: n.id
                     }),
                     (R.current = !0));
             },
-            [t, y, n.id]
+            [t, w, n.id]
         );
     return (
         i.useEffect(() => {
-            c.default.track(g.rMx.OPEN_MODAL, {
-                type: g.ZY5.PREMIUM_GUILD_USER_MODAL,
-                location_stack: y,
+            _.default.track(I.rMx.OPEN_MODAL, {
+                type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+                location_stack: w,
                 location_section: t.section,
                 location_object: t.object,
                 guild_id: n.id
             });
-        }, [n.id, t, y]),
+        }, [n.id, t, w]),
         i.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && D();
+                'Escape' === e.key && j();
             }
             return (
                 window.addEventListener('keydown', e),
@@ -71,77 +86,99 @@ t.Z = function (e) {
                     window.removeEventListener('keydown', e);
                 }
             );
-        }, [D]),
+        }, [j]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)('div', {
-                    className: A.closeIconWrapper,
-                    children: (0, r.jsx)(l.Z, {
-                        className: A.closeIcon,
-                        closeAction: D,
-                        keybind: 'ESC',
-                        variant: l.Z.Variants.SOLID
-                    })
-                }),
-                (0, r.jsxs)(o.AdvancedScrollerAuto, {
-                    className: A.scroller,
+                null != N &&
+                    (0, r.jsx)(a.P3F, {
+                        'aria-label': S.NW.string(S.t.cpT0Cg),
+                        onClick: j,
+                        className: T.closeIconWrapper,
+                        children: (0, r.jsx)(s.Z, {
+                            className: T.closeIcon,
+                            closeAction: j,
+                            keybind: 'ESC',
+                            variant: s.Z.Variants.SOLID
+                        })
+                    }),
+                (0, r.jsxs)(a.yWw, {
+                    ref: L,
+                    className: T.scroller,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: A.header,
+                            className: T.header,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: A.headerContentWrapper,
+                                    className: T.headerContentWrapper,
                                     children: [
-                                        (0, r.jsx)(o.Heading, {
-                                            className: A.heading,
+                                        k &&
+                                            (0, r.jsx)(d.Z, {
+                                                guild: e.guild,
+                                                themeResponsive: !1,
+                                                onButtonClick: M
+                                            }),
+                                        (0, r.jsx)(a.X6q, {
+                                            className: T.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
-                                            children: S.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_HEADING
+                                            children: S.NW.string(S.t.N4sqzM)
                                         }),
-                                        (0, r.jsx)(_.Z, {
+                                        (0, r.jsx)(h.Z, {
                                             guild: n,
-                                            closeLayer: D,
-                                            onCtaVisibilityChange: O
+                                            closeLayer: j,
+                                            onCtaVisibilityChange: C
                                         }),
-                                        (0, r.jsx)(h.Z, { guild: n }),
-                                        (0, r.jsx)(p.Z, { guild: n })
+                                        (0, r.jsx)(E.Z, { guild: n }),
+                                        (0, r.jsx)(b.Z, { guild: n })
                                     ]
                                 }),
-                                (0, r.jsx)(T.O, {})
+                                (0, r.jsx)(O.O, {})
                             ]
-                        }),
-                        (0, r.jsx)('div', {
-                            className: A.middleBodyContentWrapper,
-                            children: (0, r.jsx)(I.Z, {})
                         }),
                         (0, r.jsxs)('div', {
-                            className: A.lowerBody,
+                            className: T.middleBodyContentWrapper,
                             children: [
-                                (0, r.jsxs)('div', {
-                                    className: A.lowerBodyContentWrapper,
-                                    children: [
-                                        (0, r.jsx)(m.Z, {
-                                            className: A.tierComparisonTable,
-                                            guild: n
-                                        }),
-                                        (0, r.jsx)(d.Z, {}),
-                                        (0, r.jsx)(E.Z, {})
-                                    ]
-                                }),
-                                (0, r.jsx)(T.A, {}),
-                                (0, r.jsx)('div', { className: A.lowerBodyBackgroundImage })
+                                (0, r.jsx)(v.ZP, { guild: e.guild }),
+                                k &&
+                                    (0, r.jsx)(f.Z, {
+                                        ref: x,
+                                        guild: e.guild,
+                                        onClose: j
+                                    })
                             ]
                         }),
-                        (0, r.jsx)(s.$, {
-                            onChange: L,
-                            children: (0, r.jsx)('div', { className: A.persistentCtaSpacer })
+                        (0, r.jsxs)('div', {
+                            className: T.lowerBody,
+                            children: [
+                                (0, r.jsxs)('div', {
+                                    className: T.lowerBodyContentWrapper,
+                                    children: [
+                                        (0, r.jsx)(y.Z, {
+                                            className: T.tierComparisonTable,
+                                            guild: n
+                                        }),
+                                        (0, r.jsx)(p.Z, {}),
+                                        (0, r.jsx)(m.Z, {})
+                                    ]
+                                }),
+                                (0, r.jsx)(O.A, {}),
+                                (0, r.jsx)('div', { className: T.lowerBodyBackgroundImage })
+                            ]
+                        }),
+                        (0, r.jsx)(o.$, {
+                            innerRef: D,
+                            onChange: U,
+                            children: (0, r.jsx)('div', {
+                                ref: D,
+                                className: T.persistentCtaSpacer
+                            })
                         })
                     ]
                 }),
-                (0, r.jsx)(f.Z, {
+                (0, r.jsx)(g.Z, {
                     guild: n,
-                    isVisible: !v,
-                    closeLayer: D
+                    isVisible: !A,
+                    closeLayer: j
                 })
             ]
         })

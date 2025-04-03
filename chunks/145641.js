@@ -1,45 +1,52 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(924826),
-    r = n(91192),
-    l = n(442837),
-    o = n(481060),
+n.d(t, { Z: () => p });
+var r = n(200651),
+    i = n(192379),
+    l = n(924826),
+    a = n(91192),
+    o = n(442837),
+    s = n(481060),
     c = n(607070),
-    d = n(617015),
-    u = n(49175);
-t.Z = function (e) {
-    let { statusSections: t, renderRow: n, searchQuery: _ } = e,
-        E = (e) => (0 === t[e].length ? 0 : d.De + 16),
-        h = (e) => {
-            let { section: i, row: a } = e,
-                s = t[i];
-            if (null == s || null == a) return null;
-            let r = s[a];
-            return null == r ? null : n(r);
+    u = n(617015),
+    d = n(222001);
+let p = function (e) {
+    let { rows: t, renderRow: n, renderSection: p, footer: h } = e,
+        f = (e) => {
+            let { section: r, row: i } = e,
+                l = t[r];
+            if (null == l || null == i) return null;
+            let a = l[i];
+            return null == a ? null : n(a);
         },
-        m = (0, l.e7)([c.Z], () => c.Z.keyboardModeEnabled),
-        I = a.useRef(null),
-        g = a.useCallback(
+        g = i.useCallback(
+            (e) => {
+                let { section: t } = e;
+                return p(t);
+            },
+            [p]
+        ),
+        m = (0, o.e7)([c.Z], () => c.Z.keyboardModeEnabled),
+        b = i.useRef(null),
+        _ = i.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = I.current;
+                    let t = b.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
-        p = a.useCallback(
+        E = i.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = I.current;
+                    let t = b.current;
                     if (null == t) return e();
                     t.scrollToBottom({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
-        T = a.useCallback((e) => {
+        O = i.useCallback((e) => {
             let t = document.querySelector(e),
-                n = I.current;
+                n = b.current;
             null != t &&
                 null != n &&
                 n.scrollIntoViewNode({
@@ -48,29 +55,84 @@ t.Z = function (e) {
                     callback: () => (null == t ? void 0 : t.focus())
                 });
         }, []),
-        S = (0, s.ZP)({
+        N = (0, l.ZP)({
             id: 'people-list',
             isEnabled: m,
-            scrollToStart: g,
-            scrollToEnd: p,
-            setFocus: T
-        });
-    return (0, i.jsx)(r.bG, {
-        navigator: S,
-        children: (0, i.jsx)(r.SJ, {
+            scrollToStart: _,
+            scrollToEnd: E,
+            setFocus: O
+        }),
+        y = i.useMemo(() => t.map((e) => e.length), [t]);
+    return (0, r.jsx)(a.bG, {
+        navigator: N,
+        children: (0, r.jsx)(a.SJ, {
             children: (e) => {
-                let { ref: n, ...a } = e;
-                return (0, i.jsx)(o.ListAuto, {
-                    ref: (e) => {
-                        var t;
-                        (I.current = e), (n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
-                    },
-                    sectionHeight: E,
-                    renderRow: h,
-                    rowHeight: d.NV,
-                    sections: t.map((e) => ('' !== _ && 0 === e.length ? e.length + 1 : e.length)),
-                    className: u.peopleList,
-                    ...a
+                var { ref: t } = e,
+                    n = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            i = (function (e, t) {
+                                if (null == e) return {};
+                                var n,
+                                    r,
+                                    i = {},
+                                    l = Object.keys(e);
+                                for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                return i;
+                            })(e, t);
+                        if (Object.getOwnPropertySymbols) {
+                            var l = Object.getOwnPropertySymbols(e);
+                            for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                        }
+                        return i;
+                    })(e, ['ref']);
+                return (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        (0, r.jsx)(
+                            s._2F,
+                            (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })(
+                                {
+                                    ref: (e) => {
+                                        var n;
+                                        (b.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
+                                    },
+                                    renderRow: f,
+                                    rowHeight: u.NV,
+                                    renderSection: g,
+                                    sectionHeight: u.aS,
+                                    sections: y,
+                                    className: d.peopleList
+                                },
+                                n
+                            )
+                        ),
+                        h
+                    ]
                 });
             }
         })

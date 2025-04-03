@@ -1,27 +1,23 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return o;
-        }
-    });
+n.r(t), n.d(t, { default: () => s });
 var r = n(528734),
     i = n(217224),
-    a = n(951516),
-    s = n(633605);
-function o(e, t) {
-    (0, a.Z)(1, arguments);
+    o = n(951516),
+    a = n(633605);
+function s(e, t) {
+    (0, o.Z)(1, arguments);
     var n,
-        o,
+        s,
         l,
-        u,
         c,
+        u,
         d,
+        f,
         _,
-        E,
-        f = (0, s.j)(),
-        h = (0, i.Z)(null !== (n = null !== (o = null !== (l = null !== (u = null == t ? void 0 : t.weekStartsOn) && void 0 !== u ? u : null == t ? void 0 : null === (c = t.locale) || void 0 === c ? void 0 : null === (d = c.options) || void 0 === d ? void 0 : d.weekStartsOn) && void 0 !== l ? l : f.weekStartsOn) && void 0 !== o ? o : null === (_ = f.locale) || void 0 === _ ? void 0 : null === (E = _.options) || void 0 === E ? void 0 : E.weekStartsOn) && void 0 !== n ? n : 0);
+        p = (0, a.j)(),
+        h = (0, i.Z)(null != (n = null != (s = null != (l = null != (c = null == t ? void 0 : t.weekStartsOn) ? c : null == t || null == (u = t.locale) || null == (d = u.options) ? void 0 : d.weekStartsOn) ? l : p.weekStartsOn) ? s : null == (f = p.locale) || null == (_ = f.options) ? void 0 : _.weekStartsOn) ? n : 0);
     if (!(h >= 0 && h <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
-    var p = (0, r.default)(e),
-        m = p.getDay();
-    return p.setDate(p.getDate() - ((m < h ? 7 : 0) + m - h)), p.setHours(0, 0, 0, 0), p;
+    var m = (0, r.default)(e),
+        g = m.getDay(),
+        E = 7 * (g < h) + g - h;
+    return m.setDate(m.getDate() - E), m.setHours(0, 0, 0, 0), m;
 }

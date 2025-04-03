@@ -1,24 +1,12 @@
 n.d(t, {
-    Dw: function () {
-        return _;
-    },
-    I: function () {
-        return o;
-    },
-    UG: function () {
-        return l;
-    },
-    fv: function () {
-        return d;
-    },
-    jq: function () {
-        return i;
-    }
+    Dw: () => f,
+    I: () => o,
+    UG: () => a,
+    fv: () => d,
+    jq: () => s
 });
-var r,
-    i,
-    a = n(814391),
-    s = n(689938);
+var r = n(814391),
+    i = n(388032);
 let o = {
         month: 'short',
         day: 'numeric',
@@ -26,31 +14,35 @@ let o = {
         hour: 'numeric',
         minute: '2-digit'
     },
-    l = {
+    a = {
         month: 'short',
         day: 'numeric',
         year: 'numeric',
         hour: 'numeric',
         minute: '2-digit'
     };
-((r = i || (i = {}))[(r.JOINED_AT = 0)] = 'JOINED_AT'), (r[(r.ACCOUNT_AGE = 1)] = 'ACCOUNT_AGE');
-let u = () => ({
-        seconds: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS,
-        minutes: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES,
-        hours: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS,
-        days: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS,
-        months: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH,
-        years: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_YEAR
+var s = (function (e) {
+    return (e[(e.JOINED_AT = 0)] = 'JOINED_AT'), (e[(e.ACCOUNT_AGE = 1)] = 'ACCOUNT_AGE'), e;
+})({});
+let l = () => ({
+        seconds: i.t.FsBhl5,
+        minutes: i.t['4d1mgY'],
+        hours: i.t['2wkczM'],
+        days: i.t['ocdS+f'],
+        months: i.t['az14+v'],
+        years: i.t['5Gk1np']
     }),
     c = () => ({
-        hours: s.Z.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_HOURS,
-        days: s.Z.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_DAYS,
-        months: s.Z.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_MORE_THAN_MONTH,
-        years: s.Z.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_MORE_THAN_YEAR
-    }),
-    d = (e, t) => {
-        var n;
-        let r = 0 === (n = t) ? u : 1 === n ? c : void 0;
-        return (0, a.Z)(e, r, !1);
+        hours: i.t.JZP2Rk,
+        days: i.t['3moSHR'],
+        months: i.t['0Ddwr6'],
+        years: i.t.cR7lcn
+    });
+function u(e) {
+    return 0 === e ? l : 1 === e ? c : void 0;
+}
+let d = (e, t) => {
+        let n = u(t);
+        return (0, r.Z)(e, n, !1);
     },
-    _ = (e) => (null != e ? new Date(e) : new Date()).getTime();
+    f = (e) => (null != e ? new Date(e) : new Date()).getTime();

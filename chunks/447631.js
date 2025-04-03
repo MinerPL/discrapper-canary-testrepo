@@ -1,5 +1,4 @@
-var e = n(821819);
-t.exports = !e(function () {
+t.exports = !n(821819)(function () {
     return (
         7 !==
         Object.defineProperty({}, 1, {

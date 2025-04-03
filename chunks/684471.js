@@ -1,51 +1,47 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var s = n(735250);
-n(470079);
-var o = n(481060),
-    r = n(442837),
-    a = n(594174),
-    i = n(51144),
-    c = n(473092),
-    E = n(955708),
-    N = n(850165),
-    u = n(689938),
-    T = n(917475),
-    I = n(282668);
-function _(e) {
-    let { senderId: t, trackAnalyticsEvent: n, onNavigate: _ } = e,
-        l = (0, r.e7)([a.default], () => {
-            let e = a.default.getUser(t);
-            return i.ZP.getName(e);
+n.d(e, { Z: () => h });
+var r = n(200651);
+n(192379);
+var s = n(481060),
+    o = n(442837),
+    i = n(594174),
+    c = n(51144),
+    a = n(473092),
+    l = n(955708),
+    u = n(850165),
+    d = n(388032),
+    N = n(948582),
+    E = n(282668);
+function h(t) {
+    let { senderId: e, trackAnalyticsEvent: n, onNavigate: h } = t,
+        _ = (0, o.e7)([i.default], () => {
+            let t = i.default.getUser(e);
+            return c.ZP.getName(t);
         });
-    return (0, s.jsx)(N.Z, {
-        header: u.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_HEADER,
-        description: u.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_DESCRIPTION.format({ username: l }),
-        heroImageSrc: I,
-        heroImageAlt: u.Z.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_EXCLAMATION_ALT,
-        children: (0, s.jsxs)('div', {
-            className: T.buttonContainer,
+    return (0, r.jsx)(u.Z, {
+        header: d.NW.string(d.t.sSMgCw),
+        description: d.NW.formatToPlainString(d.t.q2QrTU, { username: _ }),
+        heroImageSrc: E,
+        heroImageAlt: d.NW.string(d.t['3QhxXF']),
+        children: (0, r.jsxs)('div', {
+            className: N.buttonContainer,
             children: [
-                (0, s.jsx)(o.Button, {
-                    color: o.Button.Colors.BRAND,
-                    size: o.Button.Sizes.LARGE,
-                    className: T.button,
+                (0, r.jsx)(s.zxk, {
+                    color: s.zxk.Colors.BRAND,
+                    size: s.zxk.Sizes.LARGE,
+                    className: N.button,
                     onClick: () => {
-                        _(E.InappropriateConversationModalSlideKeys.TAKE_ACTION), n(c.NM.USER_TAKEOVER_MODAL_TAKE_ACTION);
+                        h(l.x.TAKE_ACTION), n(a.NM.USER_TAKEOVER_MODAL_TAKE_ACTION);
                     },
-                    children: u.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION
+                    children: d.NW.string(d.t['+o4Q7e'])
                 }),
-                (0, s.jsx)(o.Button, {
-                    color: o.Button.Colors.PRIMARY,
-                    size: o.Button.Sizes.LARGE,
-                    className: T.button,
+                (0, r.jsx)(s.zxk, {
+                    color: s.zxk.Colors.PRIMARY,
+                    size: s.zxk.Sizes.LARGE,
+                    className: N.button,
                     onClick: () => {
-                        _(E.InappropriateConversationModalSlideKeys.SAFETY_TIPS), n(c.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS);
+                        h(l.x.SAFETY_TIPS), n(a.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS);
                     },
-                    children: u.Z.Messages.INAPPROPRIATE_CONVERSATION_READ_SAFETY_TIPS
+                    children: d.NW.string(d.t.xLkGzM)
                 })
             ]
         })

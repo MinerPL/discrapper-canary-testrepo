@@ -1,57 +1,71 @@
-n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
+n.d(t, { Z: () => N }), n(474991), n(398202), n(301563), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
 var r = n(628735),
     i = n.n(r),
-    a = n(392711),
-    s = n.n(a),
-    o = n(729594),
-    l = n(981631);
-let u = /(?:^|\.)(?:discordapp|discord)\.com$/i,
-    c = i().v4().source,
-    d = RegExp('(?:'.concat('(?:(?:[a-z]+:)?//)', '|www\\.)').concat('(?:\\S+(?::\\S*)?@)?', '(?:localhost|').concat(c, '|').concat('(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+').concat('(?:(?:[a-z\\u00a1-\\uffff]{2,}))', ')').concat('(?::\\d{2,5})?').concat('(?:[/?#][^\\s"]*)?'), 'ig'),
-    _ = new Set([window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST]);
-function E(e) {
-    var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (null == e) return !1;
-    return u.test(e) || (n && ((t = e), _.has(t.toLowerCase())));
+    o = n(392711),
+    a = n.n(o),
+    s = n(729594),
+    l = n(591759),
+    c = n(981631);
+let u = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
+    d = '(?:(?:[a-z]+:)?//)',
+    f = '(?:\\S+(?::\\S*)?@)?',
+    _ = i().v4().source,
+    p = '(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+',
+    h = '(?:(?:[a-z\\u00a1-\\uffff]{2,}))',
+    m = '(?::\\d{2,5})?',
+    g = '(?:[/?#][^\\s"]*)?',
+    E = RegExp('(?:'.concat(d, '|www\\.)').concat(f, '(?:localhost|').concat(_, '|').concat(p).concat(h, ')').concat(m).concat(g), 'ig'),
+    b = new Set([window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST]),
+    y = !1;
+function v(e) {
+    return b.has(e.toLowerCase());
 }
-function f(e) {
+function O(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return null != e && (u.test(e) || (t && v(e)));
+}
+function I(e) {
     return null != e && 'discord:' === e;
 }
-function h(e) {
+function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return null != e && E(o.parse(e).hostname, t);
+    if (null != e) {
+        var n;
+        let r = null == (n = l.Z.toURLSafe(e)) ? void 0 : n.hostname;
+        if (null != r && O(r, t)) return !0;
+    }
+    return !1;
 }
-function p(e) {
-    return null != e && f(o.parse(e).protocol);
+function T(e) {
+    return null != e && I(s.parse(e).protocol);
 }
-t.Z = {
-    URL_REGEX: d,
-    isDiscordHostname: E,
+let N = {
+    URL_REGEX: E,
+    isDiscordHostname: O,
     isDiscordLocalhost: function (e, t) {
-        return null != e && null != t && (window.location.host === e || !1);
+        return null != e && null != t && window.location.host === e;
     },
-    isDiscordProtocol: f,
-    isDiscordUrl: h,
-    isDiscordUri: p,
+    isDiscordProtocol: I,
+    isDiscordUrl: S,
+    isDiscordUri: T,
     isDiscordCdnUrl: function (e) {
-        return null != e && o.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
+        return null != e && s.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
     },
-    isDiscordUrlOrUri: (e) => h(e) || p(e),
+    isDiscordUrlOrUri: (e) => S(e) || T(e),
     isAppRoute: (e) => {
         let t = e.toLowerCase();
-        return t.startsWith('/channels/') || t.startsWith(l.Z5c.APPLICATION_STORE) || t.startsWith(l.Z5c.APPLICATION_LIBRARY) || t.startsWith(l.Z5c.MESSAGE_REQUESTS) || t.startsWith(l.Z5c.FAMILY_CENTER) || t.startsWith(l.Z5c.ACTIVITIES) || t.startsWith(l.Z5c.COLLECTIBLES_SHOP) || t.startsWith(l.Z5c.ACTIVITY);
+        return t.startsWith('/channels/') || t.startsWith(c.Z5c.APPLICATION_STORE) || t.startsWith(c.Z5c.APPLICATION_LIBRARY) || t.startsWith(c.Z5c.MESSAGE_REQUESTS) || t.startsWith(c.Z5c.FAMILY_CENTER) || t.startsWith(c.Z5c.ACTIVITIES) || t.startsWith(c.Z5c.COLLECTIBLES_SHOP) || t.startsWith(c.Z5c.ACTIVITY);
     },
-    format: (e) => o.format(e),
+    format: (e) => s.format(e),
     formatPathWithQuery: (e, t) =>
-        o.format({
+        s.format({
             pathname: e,
-            query: s().pickBy(t)
+            query: a().pickBy(t)
         }),
-    formatSearch: (e) => o.format({ query: s().pickBy(e) }),
+    formatSearch: (e) => s.format({ query: a().pickBy(e) }),
     safeParseWithQuery(e) {
         try {
-            return o.parse(e, !0);
+            return s.parse(e, !0);
         } catch (e) {
             return null;
         }
@@ -64,7 +78,7 @@ t.Z = {
         }
     },
     makeUrl: function (e) {
-        let t = (0, location.host);
+        let t = y ? window.GLOBAL_ENV.INVITE_HOST : location.host;
         return ''.concat(location.protocol, '//').concat(t).concat(e);
     }
 };

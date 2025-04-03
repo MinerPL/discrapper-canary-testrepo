@@ -1,38 +1,71 @@
 let r;
-n(47120), n(724458);
+n.d(t, { Z: () => v }), n(47120);
 var i,
-    a,
-    s,
-    o,
-    l = n(442837),
-    u = n(570140),
-    c = n(180335);
-let d = new Map(),
-    _ = new Map(),
-    E = new Map(),
-    f = !1;
-function h(e) {
-    e(d), (d = new Map(d));
+    o = n(442837),
+    a = n(570140),
+    s = n(180335);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-class p extends (i = l.ZP.Store) {
+let c = new Map(),
+    u = new Map(),
+    d = new Map(),
+    f = !1;
+function _(e) {
+    e(c), (c = new Map(c));
+}
+function p(e) {
+    let { feedId: t, feed: n } = e;
+    _((e) => e.set(t, n)), d.set(t, new Date());
+}
+function h(e) {
+    let { feedId: t, state: n } = e;
+    u.set(t, n);
+}
+function m() {
+    c = new Map();
+}
+function g(e) {
+    let { feedId: t } = e;
+    if (!c.has(t)) return !1;
+    _((e) => e.delete(t));
+}
+function E(e) {
+    let { filters: t } = e;
+    r = t;
+}
+function b() {
+    f = !f;
+}
+class y extends (i = o.ZP.Store) {
     getFeeds() {
-        return d;
+        return c;
     }
     getFeed(e) {
-        return d.get(e);
+        return c.get(e);
     }
     getFeedState(e) {
-        return _.get(e);
+        return u.get(e);
     }
     getLastFeedFetchDate(e) {
-        return E.get(e);
+        return d.get(e);
     }
     getFilters() {
         return r;
     }
     getFeedRequestId(e) {
         var t;
-        return null === (t = this.getFeed(e)) || void 0 === t ? void 0 : t.request_id;
+        return null == (t = this.getFeed(e)) ? void 0 : t.request_id;
     }
     getDebugImpressionCappingDisabled() {
         return f;
@@ -41,41 +74,16 @@ class p extends (i = l.ZP.Store) {
         let { activity: t, userId: n, feedId: r } = e,
             i = this.getFeed(r);
         if (null == i || null == t) return;
-        let a = i.entries.reduce((e, t) => (t.content.author_id === n ? [...e, t.content] : [...e]), []);
-        return (0, c.vu)(a, t);
+        let o = i.entries.reduce((e, t) => (t.content.author_id === n ? [...e, t.content] : [...e]), []);
+        return (0, s.vu)(o, t);
     }
 }
-(o = 'ContentInventoryStore'),
-    (s = 'displayName') in (a = p)
-        ? Object.defineProperty(a, s, {
-              value: o,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (a[s] = o),
-    (t.Z = new p(u.Z, {
-        CONNECTION_OPEN: function () {
-            d = new Map();
-        },
-        CONTENT_INVENTORY_SET_FEED: function (e) {
-            let { feedId: t, feed: n } = e;
-            h((e) => e.set(t, n)), E.set(t, new Date());
-        },
-        CONTENT_INVENTORY_SET_FEED_STATE: function (e) {
-            let { feedId: t, state: n } = e;
-            _.set(t, n);
-        },
-        CONTENT_INVENTORY_SET_FILTERS: function (e) {
-            let { filters: t } = e;
-            r = t;
-        },
-        CONTENT_INVENTORY_CLEAR_FEED: function (e) {
-            let { feedId: t } = e;
-            if (!d.has(t)) return !1;
-            h((e) => e.delete(t));
-        },
-        CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: function () {
-            f = !f;
-        }
-    }));
+l(y, 'displayName', 'ContentInventoryStore');
+let v = new y(a.Z, {
+    CONNECTION_OPEN: m,
+    CONTENT_INVENTORY_SET_FEED: p,
+    CONTENT_INVENTORY_SET_FEED_STATE: h,
+    CONTENT_INVENTORY_SET_FILTERS: E,
+    CONTENT_INVENTORY_CLEAR_FEED: g,
+    CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: b
+});

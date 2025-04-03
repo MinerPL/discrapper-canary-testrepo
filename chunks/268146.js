@@ -1,25 +1,14 @@
-var r, i, a, s, o, l;
 n.d(t, {
-    X4: function () {
-        return r;
-    },
-    Xo: function () {
-        return i;
-    },
-    vA: function () {
-        return a;
-    }
-}),
-    ((s = r || (r = {}))[(s.HasRTCConnection = 0)] = 'HasRTCConnection'),
-    (s[(s.IsSendingVideo = 1)] = 'IsSendingVideo'),
-    (s[(s.IsSendingStream = 2)] = 'IsSendingStream'),
-    (s[(s.IsReceivingVideo = 3)] = 'IsReceivingVideo'),
-    (s[(s.IsReceivingStream = 4)] = 'IsReceivingStream'),
-    (s[(s.VideoMediaSessionId = 5)] = 'VideoMediaSessionId'),
-    (s[(s.StreamMediaSessionId = 6)] = 'StreamMediaSessionId'),
-    ((o = i || (i = {}))[(o.RendererProcessDelayed = 0)] = 'RendererProcessDelayed'),
-    (o[(o.RendererProcess = 1)] = 'RendererProcess'),
-    (o[(o.MainProcess = 2)] = 'MainProcess'),
-    ((l = a || (a = {})).WINDOW = 'window'),
-    (l.SCREEN = 'screen'),
-    (l.CAMERA = 'camera');
+    X4: () => r,
+    Xo: () => i,
+    vA: () => o
+});
+var r = (function (e) {
+        return (e[(e.HasRTCConnection = 0)] = 'HasRTCConnection'), (e[(e.IsSendingVideo = 1)] = 'IsSendingVideo'), (e[(e.IsSendingStream = 2)] = 'IsSendingStream'), (e[(e.IsReceivingVideo = 3)] = 'IsReceivingVideo'), (e[(e.IsReceivingStream = 4)] = 'IsReceivingStream'), (e[(e.VideoMediaSessionId = 5)] = 'VideoMediaSessionId'), (e[(e.StreamMediaSessionId = 6)] = 'StreamMediaSessionId'), e;
+    })({}),
+    i = (function (e) {
+        return (e[(e.RendererProcessDelayed = 0)] = 'RendererProcessDelayed'), (e[(e.RendererProcess = 1)] = 'RendererProcess'), (e[(e.MainProcess = 2)] = 'MainProcess'), e;
+    })({}),
+    o = (function (e) {
+        return (e.WINDOW = 'window'), (e.SCREEN = 'screen'), (e.CAMERA = 'camera'), e;
+    })({});

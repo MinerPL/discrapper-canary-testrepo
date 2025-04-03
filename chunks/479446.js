@@ -1,30 +1,28 @@
-t.d(n, {
-    S: function () {
-        return r;
-    },
-    Y: function () {
-        return m;
-    }
+n.d(t, {
+    Ou: () => f,
+    SR: () => u,
+    YD: () => d
 }),
-    t(411104);
-var r,
-    i,
-    l = t(512722),
-    a = t.n(l),
-    s = t(493683),
-    o = t(904245),
-    c = t(957730),
-    u = t(592125),
-    d = t(669079);
-((i = r || (r = {})).ACTION = 'action'), (i.LOOP = 'loop'), (i.IDLE = 'idle');
-let m = async (e, n) => {
-    if (null == n) throw Error('giftCode must be defined');
-    if (null == e) throw Error('Recipient must be defined');
-    let t = await s.Z.openPrivateChannel(e.id).then((e) => {
-            let n = u.Z.getChannel(e);
-            if ((a()(null != n, 'PrivateChannel is null'), null == n)) throw Error('Channel must be defined');
-            return n;
-        }),
-        r = (0, d.Nz)(n);
-    return o.Z.sendMessage(t.id, c.ZP.parse(t, r), void 0, { isGiftLinkSentOnBehalfOfUser: !0 });
-};
+    n(411104);
+var r = n(512722),
+    i = n.n(r),
+    o = n(493683),
+    a = n(904245),
+    s = n(957730),
+    l = n(592125),
+    c = n(669079),
+    u = (function (e) {
+        return (e.ACTION = 'action'), (e.LOOP = 'loop'), (e.IDLE = 'idle'), e;
+    })({});
+let d = async (e, t) => {
+        if (null == t) throw Error('giftCode must be defined');
+        if (null == e) throw Error('Recipient must be defined');
+        let n = await o.Z.openPrivateChannel(e.id).then((e) => {
+                let t = l.Z.getChannel(e);
+                if ((i()(null != t, 'PrivateChannel is null'), null == t)) throw Error('Channel must be defined');
+                return t;
+            }),
+            r = (0, c.Nz)(t);
+        return a.Z.sendMessage(n.id, s.ZP.parse(n, r), void 0, { isGiftLinkSentOnBehalfOfUser: !0 });
+    },
+    f = (e) => {};

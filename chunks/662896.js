@@ -1,6 +1,19 @@
-n(47120);
+n.d(t, { Z: () => a }), n(47120);
 var r = n(287328);
-t.Z = new (class e {
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class o {
     async getAll() {
         let e = r.Z.guildsRequiringDeletedIdsSync();
         return null == e ? new Set() : new Set((await e.getMany()).map((e) => e.id));
@@ -24,22 +37,12 @@ t.Z = new (class e {
     }
     resetInMemoryState() {}
     constructor() {
-        var e, t, n;
-        (e = this),
-            (t = 'actions'),
-            (n = {
-                BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
-                CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
-                GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
-                DELETED_ENTITY_IDS: (e, t) => this.handleDeletedEntityIds(e, t)
-            }),
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        i(this, 'actions', {
+            BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
+            CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
+            GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
+            DELETED_ENTITY_IDS: (e, t) => this.handleDeletedEntityIds(e, t)
+        });
     }
-})();
+}
+let a = new o();

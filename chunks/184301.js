@@ -1,44 +1,57 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-}),
-    n(47120),
-    n(411104);
-var r = n(259443),
-    i = n(911284),
-    a = n(598077),
-    s = n(27144),
+n.d(t, { Z: () => l }), n(411104);
+var r = n(598077),
+    i = n(830181),
     o = n(484459);
-let l = new r.Y('preloadUserProfileForPopout'),
-    u = async (e) => {
-        let { mostRecentActivityEnabled: t } = (0, s.L)({
-            location: 'preloadUserProfileForPopout',
-            autoTrackExposure: !1
-        });
-        if (!!t)
-            try {
-                await Promise.race([(0, i.Z)(e), new Promise((e) => setTimeout(e, 300))]);
-            } catch (t) {
-                l.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
-            }
-    };
-async function c() {
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+async function l() {
     let e, t, n;
-    for (var r = arguments.length, i = Array(r), s = 0; s < r; s++) i[s] = arguments[s];
-    let l = i[0],
-        c = i[1];
-    if ('string' == typeof l && ('string' == typeof c || null == c)) (e = l), (t = c), (n = i[2]);
-    else if (l instanceof a.Z && ('object' == typeof c || null == c)) (e = l.id), (t = l.getAvatarURL(void 0, 80)), (n = c);
+    for (var a = arguments.length, l = Array(a), c = 0; c < a; c++) l[c] = arguments[c];
+    let u = l[0],
+        d = l[1];
+    if ('string' == typeof u && ('string' == typeof d || null == d)) (e = u), (t = d), (n = l[2]);
+    else if (u instanceof r.Z && ('object' == typeof d || null == d)) (e = u.id), (t = u.getAvatarURL(void 0, 80)), (n = d);
     else throw Error('Invalid arguments');
     if (null == e) return Promise.resolve();
-    let [d] = await Promise.all([
-        (0, o.Z)(e, t, {
-            withMutualFriends: !0,
-            withMutualGuilds: !0,
-            ...n
-        }),
-        u(e)
-    ]);
-    return d;
+    let { waitForRefetch: f } = (0, i.x)({ location: 'preloadUserProfileForPopout' });
+    await (0, o.Z)(
+        e,
+        t,
+        s(
+            {
+                type: 'popout',
+                withMutualFriends: !0,
+                withMutualGuilds: !0,
+                waitForRefetch: f
+            },
+            n
+        )
+    );
 }

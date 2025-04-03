@@ -1,5 +1,4 @@
-var r, i;
-function a(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -12,13 +11,8 @@ function a(e, t, n) {
         e
     );
 }
-n.d(t, {
-    r: function () {
-        return s;
-    }
-}),
-    n(47120);
-class s {
+n.d(t, { r: () => i }), n(47120);
+class i {
     update(e) {
         for (let t in e.rtp.inbound)
             for (let n of e.rtp.inbound[t])
@@ -36,27 +30,29 @@ class s {
     }
     static getCalculatorOrCreate(e, t, n, r) {
         let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-            a = e[t.ssrc];
-        return null == a && ((a = new l(n, r, i)), (e[t.ssrc] = a)), a;
+            o = e[t.ssrc];
+        return null == o && ((o = new s(n, r, i)), (e[t.ssrc] = o)), o;
     }
     getInboundBytesRecevierCalculator(e) {
-        return s.getCalculatorOrCreate(this.inboundVideoBitrate, e, 'bytesReceived', 'timestamp', 3);
+        return i.getCalculatorOrCreate(this.inboundVideoBitrate, e, 'bytesReceived', 'timestamp', 3);
     }
     getInboundFrameDecodeRateCalculator(e) {
-        return s.getCalculatorOrCreate(this.inboundDecodeFps, e, 'framesDecoded', 'timestamp', 5);
+        return i.getCalculatorOrCreate(this.inboundDecodeFps, e, 'framesDecoded', 'timestamp', 5);
     }
     getOutboundBytesSentCalculator(e) {
-        return s.getCalculatorOrCreate(this.outboundVideoBitrate, e, 'bytesSent', 'timestamp', 3);
+        return i.getCalculatorOrCreate(this.outboundVideoBitrate, e, 'bytesSent', 'timestamp', 3);
     }
     getOutboundEncodeRateCalculator(e) {
-        return s.getCalculatorOrCreate(this.outboundEncodeFps, e, 'framesEncoded', 'timestamp', 5);
+        return i.getCalculatorOrCreate(this.outboundEncodeFps, e, 'framesEncoded', 'timestamp', 5);
     }
     constructor() {
-        a(this, 'inboundVideoBitrate', {}), a(this, 'inboundDecodeFps', {}), a(this, 'outboundVideoBitrate', {}), a(this, 'outboundEncodeFps', {});
+        r(this, 'inboundVideoBitrate', {}), r(this, 'inboundDecodeFps', {}), r(this, 'outboundVideoBitrate', {}), r(this, 'outboundEncodeFps', {});
     }
 }
-((i = r || (r = {}))[(i.NONE = 0)] = 'NONE'), (i[(i.MILLISECONDS_FROM_SECONDS = 1)] = 'MILLISECONDS_FROM_SECONDS'), (i[(i.BYTES_TO_BITS = 2)] = 'BYTES_TO_BITS'), (i[(i.ROUND = 4)] = 'ROUND');
-let o = {
+var o = (function (e) {
+    return (e[(e.NONE = 0)] = 'NONE'), (e[(e.MILLISECONDS_FROM_SECONDS = 1)] = 'MILLISECONDS_FROM_SECONDS'), (e[(e.BYTES_TO_BITS = 2)] = 'BYTES_TO_BITS'), (e[(e.ROUND = 4)] = 'ROUND'), e;
+})(o || {});
+let a = {
     0: { multiplier: 1 },
     1: {
         postfix: '_in_ms',
@@ -68,7 +64,7 @@ let o = {
         multiplier: 8
     }
 };
-class l {
+class s {
     calculate(e) {
         let t = this.previous;
         if (((this.previous = e), null == t)) return;
@@ -77,17 +73,17 @@ class l {
         let r = t[this.accumulativeMetricKey],
             i = e[this.accumulativeMetricKey];
         if ('number' != typeof r || 'number' != typeof i) return;
-        let a = t[this.samplesMetricKey],
-            s = e[this.samplesMetricKey];
-        if ('number' != typeof a || 'number' != typeof s) return;
-        let o = ((i - r) / (s - a)) * this.multiplier;
-        return this.round ? Math.round(o) : o;
+        let o = t[this.samplesMetricKey],
+            a = e[this.samplesMetricKey];
+        if ('number' != typeof o || 'number' != typeof a) return;
+        let s = ((i - r) / (a - o)) * this.multiplier;
+        return this.round ? Math.round(s) : s;
     }
     constructor(e, t, n = 0) {
-        for (let l in (a(this, 'accumulativeMetricKey', void 0), a(this, 'samplesMetricKey', void 0), a(this, 'previous', void 0), a(this, 'multiplier', void 0), a(this, 'round', void 0), (this.accumulativeMetricKey = e), (this.samplesMetricKey = t), (this.multiplier = 1), (this.round = !1), r)) {
+        for (let l in (r(this, 'accumulativeMetricKey', void 0), r(this, 'samplesMetricKey', void 0), r(this, 'previous', void 0), r(this, 'multiplier', void 0), r(this, 'round', void 0), (this.accumulativeMetricKey = e), (this.samplesMetricKey = t), (this.multiplier = 1), (this.round = !1), o)) {
             var i, s;
             let e = Number(l);
-            if (!isNaN(e) && (n & e) != 0 && l in o) this.multiplier *= null !== (s = null === (i = o[l]) || void 0 === i ? void 0 : i.multiplier) && void 0 !== s ? s : 1;
+            !isNaN(e) && (n & e) != 0 && l in a && (this.multiplier *= null != (s = null == (i = a[l]) ? void 0 : i.multiplier) ? s : 1);
         }
         this.round = (4 & n) != 0;
     }

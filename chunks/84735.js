@@ -1,9 +1,5 @@
 n.d(t, {
-    J: function () {
-        return r.Jc;
-    },
-    t: function () {
-        return r.tE;
-    }
+    J: () => r.Jc,
+    t: () => r.tE
 });
-var r = n(789978);
+var r = n(928873);

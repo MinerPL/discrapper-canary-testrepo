@@ -1,15 +1,16 @@
-n.d(t, {
-    r: function () {
-        return a;
-    }
-});
 function r(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function i(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function i(e, t, n) {
+function o(e, t, n) {
+    return t && i(e.prototype, t), n && i(e, n), e;
+}
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,21 +23,13 @@ function i(e, t, n) {
         e
     );
 }
-var a = (function () {
-    var e, t, n;
-    function a(e, t) {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, a),
-            i(this, 'ownerDocument', null),
-            i(this, 'globalContext', void 0),
-            i(this, 'optionsArgs', void 0),
-            (this.globalContext = e),
-            (this.optionsArgs = t);
+n.d(t, { r: () => s });
+var s = (function () {
+    function e(t, n) {
+        r(this, e), a(this, 'ownerDocument', null), a(this, 'globalContext', void 0), a(this, 'optionsArgs', void 0), (this.globalContext = t), (this.optionsArgs = n);
     }
     return (
-        (e = a),
-        (t = [
+        o(e, [
             {
                 key: 'window',
                 get: function () {
@@ -47,18 +40,17 @@ var a = (function () {
                 key: 'document',
                 get: function () {
                     var e;
-                    return null !== (e = this.globalContext) && void 0 !== e && e.document ? this.globalContext.document : this.window ? this.window.document : void 0;
+                    return null != (e = this.globalContext) && e.document ? this.globalContext.document : this.window ? this.window.document : void 0;
                 }
             },
             {
                 key: 'rootElement',
                 get: function () {
                     var e;
-                    return (null === (e = this.optionsArgs) || void 0 === e ? void 0 : e.rootElement) || this.window;
+                    return (null == (e = this.optionsArgs) ? void 0 : e.rootElement) || this.window;
                 }
             }
         ]),
-        r(e.prototype, t),
-        a
+        e
     );
 })();

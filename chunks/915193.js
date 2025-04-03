@@ -1,23 +1,19 @@
-a.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var r = a(735250);
-a(470079);
-var s = a(442837),
-    i = a(692547),
-    d = a(481060),
-    t = a(493683),
-    o = a(129861),
-    l = a(700582),
-    u = a(594174),
-    c = a(689938),
-    m = a(725458);
-function Z(e) {
-    let { color: n, className: a } = e;
+t.d(n, { Z: () => g });
+var r = t(200651);
+t(192379);
+var i = t(442837),
+    l = t(692547),
+    o = t(481060),
+    a = t(493683),
+    s = t(129861),
+    c = t(700582),
+    u = t(594174),
+    d = t(388032),
+    f = t(837014);
+function p(e) {
+    let { color: n, className: t } = e;
     return (0, r.jsx)('svg', {
-        className: a,
+        className: t,
         height: '16',
         width: '80',
         viewBox: '0 0 80 16',
@@ -47,73 +43,115 @@ function Z(e) {
         })
     });
 }
-function f(e, n) {
-    let a = (0, s.e7)([u.default], () => u.default.getCurrentUser());
-    return null == a || n.ownerId !== a.id || e.id === a.id || (null == n ? void 0 : n.isBroadcastChannel())
+function g(e, n) {
+    let t = (0, i.e7)([u.default], () => u.default.getCurrentUser());
+    return null == t || n.ownerId !== t.id || e.id === t.id
         ? null
-        : (0, r.jsx)(d.MenuItem, {
+        : (0, r.jsx)(o.sNh, {
               id: 'make-dm-owner',
               color: 'danger',
-              label: c.Z.Messages.CHANGE_DM_OWNER,
+              label: d.NW.string(d.t['6t3CyM']),
               action: () => {
-                  var s;
-                  return (
-                      (s = a),
-                      void (0, d.openModal)((a) =>
-                          (0, r.jsxs)(d.ConfirmModal, {
-                              bodyClassName: m.confirmModal,
-                              header: c.Z.Messages.TRANSFER_GROUP_OWNERSHIP,
-                              confirmText: c.Z.Messages.CONFIRM,
-                              cancelText: c.Z.Messages.CANCEL,
-                              onConfirm: () => t.Z.setDMOwner(n.id, e.id),
-                              ...a,
-                              children: [
-                                  (0, r.jsx)(Z, { color: i.Z.unsafe_rawColors.PRIMARY_300.css }),
-                                  (0, r.jsxs)('div', {
-                                      className: m.fromToWrapper,
-                                      children: [
-                                          (0, r.jsx)('div', {
-                                              className: m.from,
-                                              children: (0, r.jsx)(l.Z, {
-                                                  user: s,
-                                                  size: d.AvatarSizes.SIZE_80
-                                              })
-                                          }),
-                                          (0, r.jsx)('div', {
-                                              className: m.to,
-                                              children: (0, r.jsx)(l.Z, {
-                                                  user: e,
-                                                  size: d.AvatarSizes.SIZE_80
-                                              })
+                  (0, o.h7j)((i) => {
+                      var u, g;
+                      return (0, r.jsxs)(
+                          o.ConfirmModal,
+                          ((u = (function (e) {
+                              for (var n = 1; n < arguments.length; n++) {
+                                  var t = null != arguments[n] ? arguments[n] : {},
+                                      r = Object.keys(t);
+                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                      (r = r.concat(
+                                          Object.getOwnPropertySymbols(t).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                           })
-                                      ]
-                                  }),
-                                  (0, r.jsx)(d.Text, {
-                                      variant: 'text-md/normal',
-                                      children: c.Z.Messages.CONFIRM_CHANGE_DM_OWNER.format({
-                                          usernameHook: (n, a) =>
-                                              (0, r.jsx)(
-                                                  o.Z,
-                                                  {
-                                                      usernameIcon: (0, r.jsx)(d.Avatar, {
-                                                          className: m.avatarIcon,
-                                                          src: e.getAvatarURL(void 0, 16),
-                                                          size: d.AvatarSizes.SIZE_16,
-                                                          'aria-hidden': !0
-                                                      }),
-                                                      className: m.discordTag,
-                                                      usernameClass: m.username,
-                                                      discriminatorClass: m.discriminator,
-                                                      user: e
-                                                  },
-                                                  a
-                                              )
+                                      )),
+                                      r.forEach(function (n) {
+                                          var r;
+                                          (r = t[n]),
+                                              n in e
+                                                  ? Object.defineProperty(e, n, {
+                                                        value: r,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0
+                                                    })
+                                                  : (e[n] = r);
+                                      });
+                              }
+                              return e;
+                          })(
+                              {
+                                  bodyClassName: f.confirmModal,
+                                  header: d.NW.string(d.t.WZoUsr),
+                                  confirmText: d.NW.string(d.t['cY+Ooa']),
+                                  cancelText: d.NW.string(d.t['ETE/oK']),
+                                  onConfirm: () => a.Z.setDMOwner(n.id, e.id)
+                              },
+                              i
+                          )),
+                          (g = g =
+                              {
+                                  children: [
+                                      (0, r.jsx)(p, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                      (0, r.jsxs)('div', {
+                                          className: f.fromToWrapper,
+                                          children: [
+                                              (0, r.jsx)('div', {
+                                                  className: f.from,
+                                                  children: (0, r.jsx)(c.Z, {
+                                                      user: t,
+                                                      size: o.EFr.SIZE_80
+                                                  })
+                                              }),
+                                              (0, r.jsx)('div', {
+                                                  className: f.to,
+                                                  children: (0, r.jsx)(c.Z, {
+                                                      user: e,
+                                                      size: o.EFr.SIZE_80
+                                                  })
+                                              })
+                                          ]
+                                      }),
+                                      (0, r.jsx)(o.Text, {
+                                          variant: 'text-md/normal',
+                                          children: d.NW.format(d.t.gsBb3N, {
+                                              usernameHook: (n, t) =>
+                                                  (0, r.jsx)(
+                                                      s.Z,
+                                                      {
+                                                          usernameIcon: (0, r.jsx)(o.qEK, {
+                                                              className: f.avatarIcon,
+                                                              src: e.getAvatarURL(void 0, 16),
+                                                              size: o.EFr.SIZE_16,
+                                                              'aria-hidden': !0
+                                                          }),
+                                                          className: f.discordTag,
+                                                          usernameClass: f.username,
+                                                          discriminatorClass: f.discriminator,
+                                                          user: e
+                                                      },
+                                                      t
+                                                  )
+                                          })
                                       })
-                                  })
-                              ]
-                          })
-                      )
-                  );
+                                  ]
+                              }),
+                          Object.getOwnPropertyDescriptors
+                              ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(g))
+                              : (function (e, n) {
+                                    var t = Object.keys(e);
+                                    if (Object.getOwnPropertySymbols) {
+                                        var r = Object.getOwnPropertySymbols(e);
+                                        t.push.apply(t, r);
+                                    }
+                                    return t;
+                                })(Object(g)).forEach(function (e) {
+                                    Object.defineProperty(u, e, Object.getOwnPropertyDescriptor(g, e));
+                                }),
+                          u)
+                      );
+                  });
               }
           });
 }

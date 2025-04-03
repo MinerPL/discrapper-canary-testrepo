@@ -1,39 +1,8 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = e.COMMENT(/;/, /$/),
-        r = {
-            scope: 'attribute',
-            match: t.concat(/^[a-zA-Z][a-zA-Z0-9-]*/, /(?=\s*=)/)
-        };
-    return {
-        name: 'Augmented Backus-Naur Form',
-        illegal: /[!@#$^&',?+~`|:]/,
-        keywords: ['ALPHA', 'BIT', 'CHAR', 'CR', 'CRLF', 'CTL', 'DIGIT', 'DQUOTE', 'HEXDIG', 'HTAB', 'LF', 'LWSP', 'OCTET', 'SP', 'VCHAR', 'WSP'],
-        contains: [
-            {
-                scope: 'operator',
-                match: /=\/?/
-            },
-            r,
-            n,
-            {
-                scope: 'symbol',
-                match: /%b[0-1]+(-[0-1]+|(\.[0-1]+)+)?/
-            },
-            {
-                scope: 'symbol',
-                match: /%d[0-9]+(-[0-9]+|(\.[0-9]+)+)?/
-            },
-            {
-                scope: 'symbol',
-                match: /%x[0-9A-F]+(-[0-9A-F]+|(\.[0-9A-F]+)+)?/
-            },
-            {
-                scope: 'symbol',
-                match: /%[si](?=".*")/
-            },
-            e.QUOTE_STRING_MODE,
-            e.NUMBER_MODE
-        ]
-    };
-};
+n.d(e, { q: () => i });
+var r = n(442837),
+    s = n(375954);
+let i = (t) =>
+    (0, r.e7)([s.Z], () => {
+        var e;
+        return null != (e = s.Z.getLastNonCurrentUserMessage(t)) ? e : s.Z.getLastMessage(t);
+    });

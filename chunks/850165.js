@@ -1,42 +1,38 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var s = n(735250);
-n(470079);
-var o = n(481060),
-    r = n(917475);
-function a(e) {
-    let { heroImageSrc: t, heroImageAlt: n, children: a, header: i, description: c } = e;
-    return (0, s.jsxs)(s.Fragment, {
+n.d(e, { Z: () => i }), n(266796);
+var r = n(200651);
+n(192379);
+var s = n(481060),
+    o = n(948582);
+function i(t) {
+    let { heroImageSrc: e, heroImageAlt: n, children: i, header: c, description: a } = t;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, s.jsx)('img', {
-                src: t,
+            (0, r.jsx)('img', {
+                src: e,
                 alt: n,
-                className: r.heroImage
+                className: o.heroImage
             }),
-            (0, s.jsxs)(o.ModalContent, {
-                className: r.body,
+            (0, r.jsxs)(s.hzk, {
+                className: o.body,
                 children: [
-                    (0, s.jsxs)('div', {
-                        className: r.textContainer,
+                    (0, r.jsxs)('div', {
+                        className: o.textContainer,
                         children: [
-                            (0, s.jsx)(o.Heading, {
+                            (0, r.jsx)(s.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: i
+                                children: c
                             }),
-                            null != c &&
-                                (0, s.jsx)(o.Text, {
+                            null != a &&
+                                (0, r.jsx)(s.Text, {
                                     variant: 'text-md/medium',
                                     color: 'header-secondary',
-                                    className: r.description,
-                                    children: c
+                                    className: o.description,
+                                    children: a
                                 })
                         ]
                     }),
-                    a
+                    i
                 ]
             })
         ]

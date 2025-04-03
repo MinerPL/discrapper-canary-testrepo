@@ -1,64 +1,100 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(904245),
-    r = n(739566),
-    l = n(834129),
-    o = n(689938);
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    a = n(904245),
+    l = n(739566),
+    o = n(834129),
+    s = n(388032);
 function c(e) {
-    let { message: t, usernameHook: c, onClickPins: u, compact: d } = e,
-        _ = (0, r.ZP)(t),
-        E = _.nick,
-        I = c(_),
-        m = () => {
-            if (null == t.messageReference) return;
-            let { channel_id: e, message_id: n } = t.messageReference;
-            s.Z.jumpToMessage({
+    var t, n;
+    let { message: c, usernameHook: u, onClickPins: d, compact: p } = e,
+        m = (0, l.ZP)(c),
+        f = m.nick,
+        h = u(m),
+        g = () => {
+            if (null == c.messageReference) return;
+            let { channel_id: e, message_id: t } = c.messageReference;
+            a.Z.jumpToMessage({
                 channelId: e,
-                messageId: n,
+                messageId: t,
                 flash: !0
             });
         },
-        T = (0, a.useRedesignIconContext)().enabled
-            ? {
-                  iconNode: (0, i.jsx)(a.PinIcon, {
-                      size: 'sm',
-                      color: 'currentColor'
-                  })
-              }
-            : { icon: n(879066) };
-    return (0, i.jsx)(l.Z, {
-        ...T,
-        timestamp: t.timestamp,
-        compact: d,
-        children:
-            null != t.messageReference
-                ? null == u
-                    ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({
-                          usernameHook: I,
-                          username: E,
-                          messageOnClick: m
-                      })
-                    : o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_WITH_MESSAGE.format({
-                          usernameHook: I,
-                          username: E,
-                          pinsActionOnClick: u,
-                          messageOnClick: m
-                      })
-                : null == u
-                  ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_HOOK.format({
-                        usernameHook: I,
-                        username: E
-                    })
-                  : o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE.format({
-                        usernameHook: I,
-                        username: E,
-                        pinsActionOnClick: u
-                    })
-    });
+        _ = {
+            iconNode: (0, r.jsx)(i.qQX, {
+                size: 'sm',
+                color: 'currentColor'
+            })
+        };
+    return (0, r.jsx)(
+        o.Z,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({}, _)),
+        (n = n =
+            {
+                timestamp: c.timestamp,
+                compact: p,
+                children:
+                    null != c.messageReference
+                        ? null == d
+                            ? s.NW.format(s.t.lD5tur, {
+                                  usernameHook: h,
+                                  username: f,
+                                  messageOnClick: g
+                              })
+                            : s.NW.format(s.t.yIDvPD, {
+                                  usernameHook: h,
+                                  username: f,
+                                  pinsActionOnClick: d,
+                                  messageOnClick: g
+                              })
+                        : null == d
+                          ? s.NW.format(s.t.vfkjq6, {
+                                usernameHook: h,
+                                username: f
+                            })
+                          : s.NW.format(s.t.R7vZGR, {
+                                usernameHook: h,
+                                username: f,
+                                pinsActionOnClick: d
+                            })
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t)
+    );
 }

@@ -1,19 +1,15 @@
 n.d(t, {
-    I: function () {
-        return a;
-    },
-    T: function () {
-        return s;
-    }
+    I: () => l,
+    T: () => i
 });
-var i = n(673125);
-function a(e, t, n, i, a) {
-    e.save(), e.beginPath(), (e.fillStyle = i), e.arc(t, n, Math.round(20 * window.devicePixelRatio) / 2 + a, 0, 2 * Math.PI), e.fill(), e.restore();
+var r = n(673125);
+function l(e, t, n, r, l) {
+    e.save(), e.beginPath(), (e.fillStyle = r), e.arc(t, n, Math.round(20 * window.devicePixelRatio) / 2 + l, 0, 2 * Math.PI), e.fill(), e.restore();
 }
-function s(e, t, n, a) {
+function i(e, t, n, l) {
     e.save();
-    let s = i.Z.getAvatarImage(a);
-    if (null == s) return;
-    let l = 20 * window.devicePixelRatio;
-    e.beginPath(), e.arc(t, n, l / 2, 0, 2 * Math.PI), e.clip(), e.drawImage(s, t - l / 2, n - l / 2, l, l), e.restore();
+    let i = r.Z.getAvatarImage(l);
+    if (null == i) return;
+    let a = 20 * window.devicePixelRatio;
+    e.beginPath(), e.arc(t, n, a / 2, 0, 2 * Math.PI), e.clip(), e.drawImage(i, t - a / 2, n - a / 2, a, a), e.restore();
 }

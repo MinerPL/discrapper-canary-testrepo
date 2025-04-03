@@ -1,61 +1,116 @@
-var t = n(735250),
-    r = n(470079),
-    l = n(120356),
-    s = n.n(l),
-    o = n(263568),
-    i = n(481060),
-    c = n(689938),
-    u = n(785440);
+n.d(t, { Z: () => p });
+var r = n(200651),
+    a = n(192379),
+    o = n(120356),
+    l = n.n(o),
+    i = n(263568),
+    s = n(481060),
+    c = n(388032),
+    u = n(564755);
 function d(e) {
-    let { label: a, isSelected: n, onClick: r, children: l } = e,
-        o = (0, i.useRadioItem)({
-            isSelected: n,
-            label: a
-        });
-    return (0, t.jsx)(i.Clickable, {
-        ...o,
-        onClick: r,
-        className: s()(u.option, n && u.optionSelected),
-        children: l
-    });
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
 }
-a.Z = function (e) {
-    let { selectedLayoutType: a, onSelectedLayoutType: n } = e,
-        l = (0, i.useRadioGroup)({ orientation: 'horizontal' }),
-        s = r.useMemo(
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e) {
+    let { label: t, isSelected: n, onClick: a, children: o } = e,
+        i = (0, s.xUy)({
+            isSelected: n,
+            label: t
+        });
+    return (0, r.jsx)(
+        s.P3F,
+        f(d({}, i), {
+            onClick: a,
+            className: l()(u.option, n && u.optionSelected),
+            children: o
+        })
+    );
+}
+let p = function (e) {
+    let { selectedLayoutType: t, onSelectedLayoutType: n } = e,
+        o = (0, s.arW)({ orientation: 'horizontal' }),
+        l = a.useMemo(
             () => [
                 {
-                    name: o.C.DEFAULT,
-                    label: c.Z.Messages.CREATE_POLL_LAYOUT_DEFAULT,
-                    icon: i.ListBulletsIcon
+                    name: i.C.DEFAULT,
+                    label: c.NW.string(c.t.GhK6X1),
+                    icon: s.jE$
                 },
                 {
-                    name: o.C.IMAGE_ONLY_ANSWERS,
-                    label: c.Z.Messages.CREATE_POLL_LAYOUT_IMAGE,
-                    icon: i.ImageIcon
+                    name: i.C.IMAGE_ONLY_ANSWERS,
+                    label: c.NW.string(c.t.an4GKS),
+                    icon: s.XBm
                 }
             ],
             []
         ),
-        _ = (e) => {
+        p = (e) => {
             n(e);
         };
-    return (0, t.jsx)('div', {
-        className: u.container,
-        'aria-label': c.Z.Messages.CREATE_POLL_LAYOUTS_RADIOGROUP_ARIA_LABEL,
-        ...l,
-        children: s.map((e) => {
-            let n = e.icon;
-            return (0, t.jsx)(
-                d,
+    return (0, r.jsx)(
+        'div',
+        f(
+            d(
                 {
-                    label: e.label,
-                    isSelected: e.name === a,
-                    onClick: () => _(e.name),
-                    children: (0, t.jsx)(n, { className: u.icon })
+                    className: u.container,
+                    'aria-label': c.NW.string(c.t.e9hWx8)
                 },
-                e.name
-            );
-        })
-    });
+                o
+            ),
+            {
+                children: l.map((e) => {
+                    let n = e.icon;
+                    return (0, r.jsx)(
+                        m,
+                        {
+                            label: e.label,
+                            isSelected: e.name === t,
+                            onClick: () => p(e.name),
+                            children: (0, r.jsx)(n, { className: u.icon })
+                        },
+                        e.name
+                    );
+                })
+            }
+        )
+    );
 };

@@ -1,149 +1,137 @@
-let s, a;
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-}),
-    n(47120);
-var o = n(735250),
-    r = n(470079),
-    l = n(120356),
-    i = n.n(l),
-    c = n(481060),
-    d = n(447543),
-    u = n(230711),
-    _ = n(881052),
-    f = n(600164),
-    p = n(112831),
-    m = n(782605),
-    h = n(981631),
-    E = n(689938),
-    N = n(264123);
-let T = ((s = window.GLOBAL_ENV.INVITE_HOST), (a = ''), null == s && ((s = location.host), (a = h.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(s).concat(a, '/'));
-function x(e) {
-    let { onBack: t, onComplete: n, onConnect: s, isSlideReady: a } = e,
-        [l, x] = r.useState(''),
-        [A, v] = r.useState(!1),
-        [b, C] = r.useState(null),
-        I = r.useRef(null);
+let n, o;
+s.d(t, { Z: () => E }), s(47120), s(566702), s(301563);
+var a = s(200651),
+    r = s(192379),
+    i = s(120356),
+    l = s.n(i),
+    c = s(481060),
+    d = s(447543),
+    _ = s(230711),
+    u = s(881052),
+    p = s(600164),
+    f = s(118012),
+    m = s(782605),
+    b = s(981631),
+    N = s(388032),
+    h = s(145575);
+let x = ((n = window.GLOBAL_ENV.INVITE_HOST), (o = ''), null == n && ((n = location.host), (o = b.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(n).concat(o, '/'));
+function E(e) {
+    let { onBack: t, onComplete: s, onConnect: n, isSlideReady: o } = e,
+        [i, E] = r.useState(''),
+        [C, j] = r.useState(!1),
+        [T, I] = r.useState(null),
+        g = r.useRef(null);
     r.useEffect(() => {
         var e;
-        a && (null === (e = I.current) || void 0 === e || e.focus());
-    }, [a]);
-    let g = r.useCallback(
-            (e) => {
-                e.preventDefault();
-                let t = l.trim();
-                if ('' === t) {
-                    C(E.Z.Messages.INVALID_INVITE_LINK_ERROR);
-                    return;
-                }
-                C(null), v(!0);
-                let s = t.split('/'),
-                    a = s[s.length - 1];
-                d.Z.resolveInvite(a, 'Join Guild', { inputValue: t }).then(
-                    (e) => {
-                        let { invite: t } = e;
-                        if ((v(!1), null == t)) {
-                            C(E.Z.Messages.INSTANT_INVITE_EXPIRED);
-                            return;
-                        }
-                        if (null != t.channel) {
-                            let e = d.Z.getInviteContext('Join Guild', t);
-                            d.Z.acceptInvite({
-                                inviteKey: t.code,
-                                context: e,
-                                callback: (e) => {
-                                    n(), d.Z.transitionToInvite(e);
-                                }
-                            }).catch((e) => {
-                                e instanceof _.yZ || e instanceof _.Hx ? C((0, m.O)(e.code)) : C(E.Z.Messages.INVITE_MODAL_ERROR_DEFAULT);
-                            });
-                        }
-                    },
-                    (e) => {
-                        v(!1);
-                        let t = new _.yZ(e);
-                        C((0, m.O)(t.code));
+        o && (null == (e = g.current) || e.focus());
+    }, [o]);
+    let v = r.useCallback(
+        (e) => {
+            e.preventDefault();
+            let t = i.trim();
+            if ('' === t) return void I(N.NW.string(N.t.IRq5am));
+            I(null), j(!0);
+            let n = t.split('/'),
+                o = n[n.length - 1];
+            d.ZP.resolveInvite(o, 'Join Guild', { inputValue: t }).then(
+                (e) => {
+                    let { invite: t } = e;
+                    if ((j(!1), null == t)) return void I(N.NW.string(N.t['GEYI+f']));
+                    if (null != t.channel) {
+                        let e = d.ZP.getInviteContext('Join Guild', t);
+                        d.ZP.acceptInvite({
+                            inviteKey: t.code,
+                            context: e,
+                            callback: (e) => {
+                                s(), d.ZP.transitionToInvite(e);
+                            }
+                        }).catch((e) => {
+                            e instanceof u.yZ || e instanceof u.Hx ? I((0, m.O)(e.code)) : I(N.NW.string(N.t.dDZRd3));
+                        });
                     }
-                );
-            },
-            [l, v, C, n]
-        ),
-        M = (0, o.jsxs)(o.Fragment, {
+                },
+                (e) => {
+                    j(!1);
+                    let t = new u.yZ(e);
+                    I((0, m.O)(t.code));
+                }
+            );
+        },
+        [i, j, I, s]
+    );
+    return {
+        content: (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, o.jsxs)(c.ModalHeader, {
-                    className: N.header,
-                    direction: f.Z.Direction.VERTICAL,
+                (0, a.jsxs)(c.xBx, {
+                    className: h.header,
+                    direction: p.Z.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        (0, o.jsx)(p.Z, {
-                            className: N.title,
-                            size: p.Z.Sizes.SIZE_24,
-                            color: p.Z.Colors.HEADER_PRIMARY,
-                            children: E.Z.Messages.JOIN_SERVER_TITLE
+                        (0, a.jsx)(f.Z, {
+                            className: h.title,
+                            size: f.Z.Sizes.SIZE_24,
+                            color: f.Z.Colors.HEADER_PRIMARY,
+                            children: N.NW.string(N.t.riOUtL)
                         }),
-                        (0, o.jsx)(c.Text, {
+                        (0, a.jsx)(c.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: E.Z.Messages.JOIN_SERVER_DESCRIPTION_NUF
+                            children: N.NW.string(N.t['7jub2t'])
                         })
                     ]
                 }),
-                (0, o.jsxs)(c.ModalContent, {
+                (0, a.jsxs)(c.hzk, {
                     children: [
-                        (0, o.jsx)('form', {
-                            onSubmit: g,
-                            className: N.inputForm,
-                            children: (0, o.jsx)(c.FormItem, {
-                                title: E.Z.Messages.FORM_LABEL_INVITE_LINK,
-                                error: b,
-                                titleClassName: i()(N.formTitle, { [N.error]: null != b }),
-                                children: (0, o.jsx)(c.TextInput, {
-                                    value: l,
-                                    onChange: x,
-                                    className: N.input,
-                                    inputClassName: N.inputInner,
-                                    inputRef: I
+                        (0, a.jsx)('form', {
+                            onSubmit: v,
+                            className: h.inputForm,
+                            children: (0, a.jsx)(c.xJW, {
+                                title: N.NW.string(N.t.qreV29),
+                                error: T,
+                                titleClassName: l()(h.formTitle, { [h.error]: null != T }),
+                                children: (0, a.jsx)(c.oil, {
+                                    value: i,
+                                    onChange: E,
+                                    className: h.input,
+                                    inputClassName: h.inputInner,
+                                    inputRef: g
                                 })
                             })
                         }),
-                        (0, o.jsx)(c.Text, {
+                        (0, a.jsx)(c.Text, {
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
-                            children: E.Z.Messages.JOIN_SERVER_EXAMPLES.format({ examples: ''.concat(T).concat('cool-people', ', ').concat('hTKzmak') })
+                            children: N.NW.format(N.t.lHTZl5, { examples: ''.concat(x).concat('wumpus-friends', ', ').concat('hTKzmak') })
                         }),
-                        (0, o.jsx)(c.Text, {
+                        (0, a.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            className: N.connectCTA,
-                            children: E.Z.Messages.JOIN_GUILD_CONNECT.format({
+                            className: h.connectCTA,
+                            children: N.NW.format(N.t['8F/who'], {
                                 onClick: () => {
-                                    s(), u.Z.open(h.oAB.CONNECTIONS);
+                                    n(), _.Z.open(b.oAB.CONNECTIONS);
                                 }
                             })
                         })
                     ]
                 })
             ]
-        });
-    return {
-        content: M,
-        footer: (0, o.jsxs)(o.Fragment, {
+        }),
+        footer: (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, o.jsx)(c.Button, {
-                    color: c.Button.Colors.BRAND,
-                    onClick: g,
-                    disabled: 0 === l.length,
-                    submitting: A,
-                    children: E.Z.Messages.JOIN
+                (0, a.jsx)(c.zxk, {
+                    color: c.zxk.Colors.BRAND,
+                    onClick: v,
+                    disabled: 0 === i.length,
+                    submitting: C,
+                    children: N.NW.string(N.t.VJlc0d)
                 }),
-                (0, o.jsx)(c.Button, {
-                    className: N.__invalid_skipButton,
-                    look: c.Button.Looks.BLANK,
-                    size: c.Button.Sizes.MIN,
+                (0, a.jsx)(c.zxk, {
+                    className: h.__invalid_skipButton,
+                    look: c.zxk.Looks.BLANK,
+                    size: c.zxk.Sizes.MIN,
                     onClick: t,
-                    children: E.Z.Messages.BACK
+                    children: N.NW.string(N.t['13/7kZ'])
                 })
             ]
         })

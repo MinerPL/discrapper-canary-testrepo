@@ -1,213 +1,265 @@
-n.d(t, {
-    m: function () {
-        return y;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(613828),
-    o = n(772848),
-    c = n(442837),
-    u = n(481060),
-    d = n(2052),
+n.d(t, { m: () => D }), n(789020), n(266796);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(772848),
+    s = n(535655),
+    c = n(973693),
+    u = n(912370),
+    d = n(442837),
+    p = n(481060),
     h = n(40851),
-    m = n(607070),
-    p = n(100527),
-    _ = n(906732),
-    f = n(703656),
-    E = n(210887),
-    g = n(390322),
-    C = n(626135),
-    I = n(348600),
-    x = n(566620),
-    T = n(520599),
-    N = n(127255),
-    v = n(5200),
-    S = n(558317),
-    Z = n(403404),
-    A = n(701488),
-    M = n(981631),
-    b = n(689938),
-    R = n(57241),
-    j = n(587952),
-    L = n(736733),
-    P = n(932463);
-let O = 'vc-activities-'.concat((0, o.Z)()),
-    y = a.forwardRef(function (e, t) {
-        let { channel: n, isHovered: s, closePopout: o, onMouseEnter: y, onMouseLeave: D, onClick: k, className: U } = e,
-            { enabled: w } = I.Z.useExperiment({ location: '8009ca_3' }),
-            { enableAmazonMusicShelfPoster: B } = T.p.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
-            H = (0, c.e7)([E.Z], () => E.Z.getState().theme),
-            G = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-            { id: V, guild_id: F } = n;
-        a.useEffect(() => {
-            C.default.track(M.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
-                channel_id: V,
-                guild_id: F
-            });
-        }, [V, F]),
-            a.useEffect(() => {
-                !s && o();
-            }, [o, s]);
-        let W = (0, h.bp)(),
-            { analyticsLocations: z } = (0, _.ZP)(p.Z.ACTIVITIES_MINI_SHELF),
-            { analyticsLocations: Y } = (0, _.ZP)([...z, p.Z.ACTIVITIES_MINI_SHELF_BANNER]),
-            K = W === M.IlC.POPOUT,
-            q = (0, d.O)(),
-            X = (function (e) {
-                return (0, N.Z)({ guildId: e }).slice(0, 5);
-            })(n.getGuildId());
-        a.useEffect(() => {
-            let e = setTimeout(() => x.ux(), 1000);
-            return () => clearTimeout(e);
-        }, []);
-        let Q = a.useCallback(() => {
-                var e;
-                (0, Z.Z)({
-                    channel: n,
-                    guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
-                    locationObject: q.location,
-                    openInPopout: K,
-                    analyticsLocations: z,
-                    opensAppLauncherModal: !0
-                }),
-                    D(),
-                    k();
-            }, [q, z, n, k, D, K]),
-            J = a.useCallback(
-                (e) => {
-                    y(),
-                        C.default.track(M.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
-                            channel_id: n.id,
-                            guild_id: n.getGuildId()
-                        });
-                },
-                [y, n]
-            ),
-            $ = w
-                ? (0, i.jsxs)(r.rU, {
-                      to: M.Z5c.ACTIVITIES,
-                      children: [
-                          (0, i.jsx)('img', {
-                              alt: b.Z.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
-                              src: 'light' === H ? j : L,
-                              className: R.poster
-                          }),
-                          (0, i.jsx)('div', { className: R.posterDivider })
-                      ]
-                  })
-                : B
-                  ? (0, i.jsxs)(u.Clickable, {
-                        className: l()(R.clickableBanner),
-                        onClick: () => {
-                            k(), o(), (0, f.uL)(M.Z5c.ACTIVITY_DETAILS(A.Fu), { sourceLocationStack: Y });
-                        },
+    f = n(607070),
+    m = n(100527),
+    g = n(906732),
+    b = n(226026),
+    _ = n(397698),
+    C = n(895924),
+    y = n(471518),
+    x = n(425986),
+    v = n(216780),
+    j = n(390322),
+    O = n(857192),
+    E = n(626135),
+    N = n(456100),
+    I = n(566620),
+    P = n(127255),
+    S = n(5200),
+    Z = n(558317),
+    T = n(403404),
+    A = n(981631),
+    w = n(388032),
+    R = n(210408);
+let M = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
+    k = 'vc-activities-'.concat((0, a.Z)());
+function L(e) {
+    var t;
+    let n,
+        { channel: l, openInPopout: o, onClick: a } = e,
+        { fetchState: c, voiceBannerCollection: h } = (function () {
+            let e = (0, d.e7)([O.default], () => O.default.onlyShowPreviewAppCollections) ? s.E.PREVIEW : s.E.ACTIVE;
+            return (
+                i.useEffect(() => {
+                    (0, y.XK)({
+                        surface: M,
+                        activeState: e
+                    });
+                }, [e]),
+                {
+                    fetchState: (0, d.e7)([x.Z], () =>
+                        x.Z.getFetchState({
+                            surface: M,
+                            activeState: e
+                        })
+                    ),
+                    voiceBannerCollection: (0, d.e7)([x.Z], () =>
+                        x.Z.getCollections({
+                            surface: M,
+                            activeState: e
+                        })
+                    )[0]
+                }
+            );
+        })(),
+        f = c === x.M.FETCHING,
+        g = i.useMemo(() => {
+            let e = null == h ? void 0 : h.application_directory_collection_items[0];
+            return null == e ? null : e.type === u.C.APPLICATION_BANNER ? e : null;
+        }, [null == h ? void 0 : h.application_directory_collection_items]),
+        { trackItemImpressionRef: C } = (0, b.Z)({
+            applicationId: null != (t = null == g ? void 0 : g.application.id) ? t : '',
+            applicationFlags: null == g ? void 0 : g.application.flags,
+            sectionName: 'app_launcher_in_voice_banner',
+            sectionPosition: null == g ? void 0 : g.position,
+            sectionOverallPosition: 0
+        });
+    return null == g || null == h || f
+        ? null
+        : (null != g.id &&
+              null != g.image_hash &&
+              (n = (0, v.$_)({
+                  itemId: g.id,
+                  hash: g.image_hash,
+                  containerWidth: 584
+              })),
+          (0, r.jsxs)(p.P3F, {
+              className: R.clickableBanner,
+              innerRef: C,
+              onClick: () => {
+                  a(),
+                      (0, _.Z)({
+                          context: {
+                              type: 'channel',
+                              channel: l
+                          },
+                          openInPopout: o,
+                          analyticsLocation: m.Z.APP_LAUNCHER_IN_VOICE_BANNER,
+                          initialState: { applicationId: g.application.id }
+                      });
+              },
+              children: [
+                  (0, r.jsx)('img', {
+                      alt: g.description,
+                      src: n,
+                      className: R.poster
+                  }),
+                  (0, r.jsx)('div', { className: R.posterDivider })
+              ]
+          }));
+}
+let D = i.forwardRef(function (e, t) {
+    var n, l;
+    let { channel: a, isHovered: s, closePopout: c, onMouseEnter: u, onMouseLeave: b, onClick: _, className: y } = e,
+        x = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
+        { id: v, guild_id: O } = a;
+    i.useEffect(() => {
+        E.default.track(A.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+            channel_id: v,
+            guild_id: O
+        });
+    }, [v, O]),
+        i.useEffect(() => {
+            s || c();
+        }, [c, s]);
+    let M = (0, h.bp)(),
+        { analyticsLocations: D } = (0, g.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
+        W = M === A.IlC.POPOUT,
+        U =
+            ((n = a.getGuildId()),
+            (l = a),
+            (0, P.Z)({
+                guildId: n,
+                context: {
+                    channel: l,
+                    type: 'channel'
+                }
+            }).slice(0, 5));
+    i.useEffect(() => {
+        let e = setTimeout(() => I.ux(), 1000);
+        return () => clearTimeout(e);
+    }, []);
+    let { enabled: B } = N.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
+        H = i.useCallback(() => {
+            (0, T.Z)({
+                channel: a,
+                openInPopout: W,
+                analyticsLocations: D
+            }),
+                b(),
+                _();
+        }, [D, a, _, b, W]),
+        F = i.useCallback(
+            (e) => {
+                u(),
+                    E.default.track(A.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+                        channel_id: a.id,
+                        guild_id: a.getGuildId()
+                    });
+            },
+            [u, a]
+        ),
+        G = B ? p.iWm : p.nG3;
+    return (0, r.jsx)(g.Gt, {
+        value: D,
+        children: (0, r.jsx)(j.Z, {
+            children: (0, r.jsxs)(p.VqE, {
+                ref: t,
+                'aria-labelledby': k,
+                className: y,
+                children: [
+                    (0, r.jsx)(p.y5t, {
+                        forceLevel: 2,
+                        children: (0, r.jsx)(p.nn4, {
+                            children: (0, r.jsx)(p.H, {
+                                id: k,
+                                children: w.NW.string(w.t['2lnYtL'])
+                            })
+                        })
+                    }),
+                    (0, r.jsxs)('div', {
+                        className: R.container,
+                        onMouseEnter: F,
+                        onMouseLeave: b,
                         children: [
-                            (0, i.jsx)('img', {
-                                alt: b.Z.Messages.EMBEDDED_ACTIVITIES_AMAZON_MUSIC_PROMO_BANNER_ALT,
-                                src: P,
-                                className: R.poster
+                            (0, r.jsxs)('div', {
+                                className: R.titleContainer,
+                                children: [
+                                    (0, r.jsxs)('div', {
+                                        className: R.titleLeft,
+                                        children: [
+                                            (0, r.jsx)(G, {
+                                                size: 'md',
+                                                className: R.titleLeftIcon,
+                                                color: 'var(--interactive-active)'
+                                            }),
+                                            (0, r.jsx)(p.Text, {
+                                                variant: 'eyebrow',
+                                                children: w.NW.string(w.t.f3Cz29)
+                                            })
+                                        ]
+                                    }),
+                                    (0, r.jsxs)(p.P3F, {
+                                        className: R.titleRight,
+                                        onClick: H,
+                                        children: [
+                                            (0, r.jsx)(p.Text, {
+                                                variant: 'eyebrow',
+                                                children: w.NW.string(w.t['K8+z4e'])
+                                            }),
+                                            (0, r.jsx)(p.Fbu, {
+                                                size: 'custom',
+                                                width: 12,
+                                                height: 12,
+                                                color: 'var(--interactive-active)',
+                                                className: R.titleRightIcon
+                                            })
+                                        ]
+                                    })
+                                ]
                             }),
-                            (0, i.jsx)('div', { className: R.posterDivider })
+                            (0, r.jsx)(L, {
+                                openInPopout: W,
+                                channel: a,
+                                onClick: () => {
+                                    _(), c();
+                                }
+                            }),
+                            (0, r.jsxs)('div', {
+                                className: R.activityContainer,
+                                children: [
+                                    U.map((e) =>
+                                        (0, r.jsx)(
+                                            S.Y,
+                                            {
+                                                context: {
+                                                    channel: a,
+                                                    type: 'channel'
+                                                },
+                                                activityItem: e,
+                                                onClick: () => {
+                                                    c(), _();
+                                                },
+                                                aspectRatio: S.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                animatedDivClass: R.activitySuggestion,
+                                                commandOrigin: C.bB.MINI_SHELF
+                                            },
+                                            e.application.id
+                                        )
+                                    ),
+                                    (0, r.jsx)('div', {
+                                        className: o()(R.wumpusRocketOuterContainer, { [R.wumpusReducedMotion]: x }),
+                                        children: (0, r.jsx)('div', {
+                                            className: R.wumpusRocketInnerContainer,
+                                            children: (0, r.jsx)(Z.Z, { className: R.wumpusRocket })
+                                        })
+                                    })
+                                ]
+                            })
                         ]
                     })
-                  : null;
-        return (0, i.jsx)(_.Gt, {
-            value: z,
-            children: (0, i.jsx)(g.Z, {
-                children: (0, i.jsxs)(u.Dialog, {
-                    ref: t,
-                    'aria-labelledby': O,
-                    className: U,
-                    children: [
-                        (0, i.jsx)(u.HeadingLevel, {
-                            forceLevel: 2,
-                            children: (0, i.jsx)(u.HiddenVisually, {
-                                children: (0, i.jsx)(u.H, {
-                                    id: O,
-                                    children: b.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
-                                })
-                            })
-                        }),
-                        (0, i.jsxs)('div', {
-                            className: R.container,
-                            onMouseEnter: J,
-                            onMouseLeave: D,
-                            children: [
-                                (0, i.jsxs)('div', {
-                                    className: R.titleContainer,
-                                    children: [
-                                        (0, i.jsxs)('div', {
-                                            className: R.titleLeft,
-                                            children: [
-                                                (0, i.jsx)(u.ActivitiesIcon, {
-                                                    size: 'md',
-                                                    className: R.titleLeftIcon,
-                                                    color: 'var(--interactive-active)'
-                                                }),
-                                                (0, i.jsx)(u.Text, {
-                                                    variant: 'eyebrow',
-                                                    children: b.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
-                                                })
-                                            ]
-                                        }),
-                                        (0, i.jsxs)(u.Clickable, {
-                                            className: R.titleRight,
-                                            onClick: Q,
-                                            children: [
-                                                (0, i.jsx)(u.Text, {
-                                                    variant: 'eyebrow',
-                                                    children: b.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
-                                                }),
-                                                (0, i.jsx)(u.ChevronSmallRightIcon, {
-                                                    size: 'custom',
-                                                    width: 12,
-                                                    height: 12,
-                                                    color: 'var(--interactive-active)',
-                                                    className: R.titleRightIcon
-                                                })
-                                            ]
-                                        })
-                                    ]
-                                }),
-                                (0, i.jsx)(_.Gt, {
-                                    value: Y,
-                                    children: $
-                                }),
-                                (0, i.jsxs)('div', {
-                                    className: R.activityContainer,
-                                    children: [
-                                        X.map((e) =>
-                                            (0, i.jsx)(
-                                                v.Y,
-                                                {
-                                                    channel: n,
-                                                    activityItem: e,
-                                                    onClick: () => {
-                                                        o(), k();
-                                                    },
-                                                    aspectRatio: v.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
-                                                    animatedDivClass: R.activitySuggestion
-                                                },
-                                                e.application.id
-                                            )
-                                        ),
-                                        (0, i.jsx)('div', {
-                                            className: l()(R.wumpusRocketOuterContainer, { [R.wumpusReducedMotion]: G }),
-                                            children: (0, i.jsx)('div', {
-                                                className: R.wumpusRocketInnerContainer,
-                                                children: (0, i.jsx)(S.Z, { className: R.wumpusRocket })
-                                            })
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
-                    ]
-                })
+                ]
             })
-        });
+        })
     });
+});

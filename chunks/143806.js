@@ -11,14 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
-    S: function () {
-        return a;
-    }
-}),
-    n(47120);
+n.d(t, { S: () => o }), n(266796), n(47120), n(978209);
 let i = Symbol.iterator;
-class a {
+class o {
     get length() {
         return this.items.size;
     }
@@ -50,7 +45,7 @@ class a {
         return this.items.get(e);
     }
     put(e, t) {
-        if ((this.items.delete(e), this.items.set(e, t), !!(this.items.size > this.limit))) {
+        if ((this.items.delete(e), this.items.set(e, t), this.items.size > this.limit)) {
             let e = this.oldestKey(),
                 t = this.items.get(e);
             return this.items.delete(e), [e, t];

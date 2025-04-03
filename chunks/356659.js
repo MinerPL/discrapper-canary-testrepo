@@ -1,133 +1,72 @@
 n.d(t, {
-    A5: function () {
-        return B;
-    },
-    B2: function () {
-        return S;
-    },
-    Bg: function () {
-        return m;
-    },
-    D5: function () {
-        return c;
-    },
-    D_: function () {
-        return E;
-    },
-    EF: function () {
-        return p;
-    },
-    G$: function () {
-        return f;
-    },
-    HW: function () {
-        return N;
-    },
-    Hp: function () {
-        return A;
-    },
-    JO: function () {
-        return L;
-    },
-    Kw: function () {
-        return M;
-    },
-    MG: function () {
-        return O;
-    },
-    OT: function () {
-        return o;
-    },
-    Qr: function () {
-        return C;
-    },
-    Ut: function () {
-        return R;
-    },
-    WM: function () {
-        return I;
-    },
-    X9: function () {
-        return u;
-    },
-    XH: function () {
-        return v;
-    },
-    _U: function () {
-        return G;
-    },
-    dJ: function () {
-        return l;
-    },
-    f_: function () {
-        return y;
-    },
-    i$: function () {
-        return w;
-    },
-    jF: function () {
-        return h;
-    },
-    ji: function () {
-        return U;
-    },
-    jp: function () {
-        return P;
-    },
-    mg: function () {
-        return g;
-    },
-    nU: function () {
-        return T;
-    },
-    wD: function () {
-        return D;
-    },
-    xd: function () {
-        return k;
-    },
-    xx: function () {
-        return x;
-    },
-    yl: function () {
-        return b;
-    }
+    A5: () => x,
+    Bg: () => _,
+    D5: () => l,
+    D_: () => c,
+    EF: () => f,
+    G$: () => u,
+    HW: () => E,
+    Hp: () => g,
+    JO: () => T,
+    Kw: () => A,
+    MG: () => y,
+    OT: () => o,
+    Qr: () => O,
+    Ut: () => v,
+    WM: () => p,
+    X9: () => s,
+    XH: () => b,
+    _U: () => D,
+    dJ: () => a,
+    f_: () => I,
+    i$: () => P,
+    jF: () => d,
+    ji: () => R,
+    jp: () => C,
+    mg: () => m,
+    nU: () => h,
+    wD: () => S,
+    xd: () => L,
+    xx: () => w,
+    yl: () => N
 });
-var r,
-    i,
-    a,
-    s,
-    o,
-    l,
-    u,
-    c,
-    d = n(710845),
-    _ = n(70956);
-((r = o || (o = {}))[(r.SECONDS_30 = 30 * _.Z.Millis.SECOND)] = 'SECONDS_30'), (r[(r.MINUTES_1 = _.Z.Millis.MINUTE)] = 'MINUTES_1'), (r[(r.MINUTES_2 = 2 * _.Z.Millis.MINUTE)] = 'MINUTES_2'), ((i = l || (l = {}))[(i.ALL = 0)] = 'ALL'), (i[(i.FRIENDS = 1)] = 'FRIENDS'), ((a = u || (u = {})).DECOUPLED = 'decoupled'), (a.VIEWER = 'viewer'), (a.STREAMER = 'streamer'), ((s = c || (c = {}))[(s.Error = 0)] = 'Error'), (s[(s.Disabled = 1)] = 'Disabled'), (s[(s.Enabled = 2)] = 'Enabled');
-let E = 'alt+c',
-    f = 6 * _.Z.Millis.SECOND,
-    h = new d.Z('Clips'),
-    p = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
-    m = 3,
-    I = 1,
-    T = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-    g = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
-    S = /(Apple M[12].*)/,
-    A = 0.1,
-    N = 25,
-    v = 0,
-    O = 200,
-    R = 'clips-edit',
-    C = 'clips-gallery',
-    y = 640,
-    D = 360,
-    L = 100,
-    b = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
-    M = 15,
-    P = 30000,
-    U = 30,
-    w = 10,
-    x = 14 * _.Z.Millis.DAY,
-    G = 5,
-    k = 5,
-    B = 1;
+var r = n(710845),
+    i = n(70956),
+    o = (function (e) {
+        return (e[(e.SECONDS_30 = 30 * i.Z.Millis.SECOND)] = 'SECONDS_30'), (e[(e.MINUTES_1 = i.Z.Millis.MINUTE)] = 'MINUTES_1'), (e[(e.MINUTES_2 = 2 * i.Z.Millis.MINUTE)] = 'MINUTES_2'), e;
+    })({}),
+    a = (function (e) {
+        return (e[(e.ALL = 0)] = 'ALL'), (e[(e.FRIENDS = 1)] = 'FRIENDS'), e;
+    })({}),
+    s = (function (e) {
+        return (e.DECOUPLED = 'decoupled'), (e.VIEWER = 'viewer'), (e.STREAMER = 'streamer'), e;
+    })({}),
+    l = (function (e) {
+        return (e[(e.Error = 0)] = 'Error'), (e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled'), e;
+    })({});
+let c = 'alt+c',
+    u = 6 * i.Z.Millis.SECOND,
+    d = new r.Z('Clips'),
+    f = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
+    _ = 3,
+    p = 1,
+    h = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+    m = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
+    g = 0.1,
+    E = 25,
+    b = 0,
+    y = 200,
+    v = 'clips-edit',
+    O = 'clips-gallery',
+    I = 640,
+    S = 360,
+    T = 100,
+    N = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
+    A = 15,
+    C = 30000,
+    R = 30,
+    P = 10,
+    w = 14 * i.Z.Millis.DAY,
+    D = 5,
+    L = 5,
+    x = 1;

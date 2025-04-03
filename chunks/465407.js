@@ -1,5 +1,6 @@
-var r = n(176338),
-    i = n(370873);
-t.Z = function (e) {
-    return (0, i.Z)(e) && '[object Arguments]' == (0, r.Z)(e);
+r.d(t, { Z: () => a });
+var n = r(176338),
+    o = r(370873);
+let a = function (e) {
+    return (0, o.Z)(e) && '[object Arguments]' == (0, n.Z)(e);
 };

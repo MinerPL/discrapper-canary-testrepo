@@ -1,40 +1,41 @@
-var s = n(735250);
-n(470079);
-var a = n(442837),
-    r = n(481060),
-    i = n(706454),
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    s = n(481060),
+    a = n(706454),
     l = n(78839),
     o = n(985754),
     c = n(222727),
     d = n(474494),
-    _ = n(981631),
-    u = n(538313);
-t.Z = function (e) {
+    u = n(981631),
+    m = n(599944);
+let g = function (e) {
     let { localizedPricingPromo: t } = e,
         n = t.countryCode,
-        E = (0, a.e7)([i.default], () => i.default.locale);
-    (0, c.U)(_.jXE.SETTINGS_PREMIUM_BANNER, n);
-    let T = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
-        { localizedPricingBannerBody: I } = (0, o.vB)({
+        g = (0, i.e7)([a.default], () => a.default.locale);
+    (0, c.U)(u.jXE.SETTINGS_PREMIUM_BANNER, n);
+    let p = (0, i.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
+        { localizedPricingBannerBody: h } = (0, o.vB)({
             localizedPricingPromo: t,
-            subscription: T,
+            subscription: p,
             forceSingleLine: !0,
-            userLocale: E
+            userLocale: g
         });
-    return (0, s.jsxs)('div', {
-        className: u.bannerContainer,
+    return (0, r.jsxs)('div', {
+        className: m.bannerContainer,
         children: [
-            (0, s.jsx)(d.Z, {
-                className: u.badge,
+            (0, r.jsx)(d.Z, {
+                className: m.badge,
                 countryCode: n
             }),
-            (0, s.jsx)('div', {
-                className: u.bannerBodyContainer,
-                children: (0, s.jsx)(r.Text, {
+            (0, r.jsx)('div', {
+                className: m.bannerBodyContainer,
+                children: (0, r.jsx)(s.Text, {
                     color: 'none',
                     variant: 'text-md/normal',
-                    className: u.bannerBody,
-                    children: I
+                    className: m.bannerBody,
+                    children: h
                 })
             })
         ]

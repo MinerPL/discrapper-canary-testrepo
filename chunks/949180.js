@@ -1,9 +1,5 @@
-r.d(t, {
-    w: function () {
-        return n;
-    }
-});
-let n = {
+a.d(e, { w: () => r });
+let r = {
     none: 0,
     xs: 4,
     sm: 8,

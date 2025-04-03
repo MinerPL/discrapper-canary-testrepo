@@ -11,11 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 class i {
     createDragPreview(e) {
         if (null == this.container || null == this.svg || null == this.foreignObject) return;
@@ -28,7 +24,7 @@ class i {
         let t = this.container;
         if (null == t) return;
         let n = e.getSourceClientOffset();
-        if (null != n) e.isDragging() && ((t.style.position = 'fixed'), (t.style.left = ''.concat(n.x + 30, 'px')), (t.style.top = ''.concat(n.y + 15, 'px')));
+        null != n && e.isDragging() && ((t.style.position = 'fixed'), (t.style.left = ''.concat(n.x + 30, 'px')), (t.style.top = ''.concat(n.y + 15, 'px')));
     }
     clear() {
         null != this.foreignObject && (this.foreignObject.innerHTML = '');

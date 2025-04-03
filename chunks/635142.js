@@ -1,9 +1,5 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var s = n(689938);
-function a(e) {
-    return e > 0 && e % 7 == 0 ? s.Z.Messages.DURATION_WEEKS.format({ weeks: e / 7 }) : s.Z.Messages.DURATION_DAYS.format({ days: e });
+n.d(t, { Z: () => i });
+var r = n(388032);
+function i(e) {
+    return e > 0 && e % 7 == 0 ? r.NW.formatToPlainString(r.t.EmoBDw, { weeks: e / 7 }) : r.NW.formatToPlainString(r.t.k2UNz8, { days: e });
 }

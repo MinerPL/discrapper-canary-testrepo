@@ -1,156 +1,151 @@
-t.d(A, {
-    s: function () {
-        return f;
-    }
-}),
-    t(47120);
-var a = t(735250),
-    n = t(470079),
-    r = t(120356),
-    s = t.n(r),
-    o = t(481060),
-    l = t(205822),
-    i = t(476326),
-    d = t(377171),
-    c = t(313201),
-    u = t(374794),
-    C = t(587123),
-    g = t(863663),
-    T = t(731994),
-    p = t(629481),
-    h = t(689938),
-    m = t(14394);
-let I = (0, c.hQ)();
-function U(e) {
-    var A;
-    let { upload: t, progress: r = 0, onDeleteAttachment: l } = e,
-        i = n.useCallback(() => {
-            null == l || l(t.id);
-        }, [l, t.id]),
-        c = r >= 1,
-        u = r < 0,
-        C = c || u,
-        T = null !== (A = t.filename) && void 0 !== A ? A : t.id,
-        p = (0, g.kg)(r);
-    return (0, a.jsx)(o.TooltipContainer, {
-        text: p,
-        children: (0, a.jsxs)('div', {
-            className: s()(m.attachedFileCard, {
-                [m.attachedFileCardError]: u,
-                [m.attachedFileCardUploading]: !C
+r.d(t, { s: () => q }), r(47120);
+var n = r(200651),
+    A = r(192379),
+    a = r(120356),
+    o = r.n(a),
+    l = r(481060),
+    i = r(205822),
+    s = r(476326),
+    c = r(377171),
+    d = r(313201),
+    u = r(374794),
+    g = r(587123),
+    f = r(863663),
+    p = r(731994),
+    h = r(629481),
+    m = r(388032),
+    b = r(48635);
+let v = (0, d.hQ)();
+function C(e) {
+    var t;
+    let { upload: r, progress: a = 0, onDeleteAttachment: i } = e,
+        s = A.useCallback(() => {
+            null == i || i(r.id);
+        }, [i, r.id]),
+        d = a >= 1,
+        u = a < 0,
+        g = d || u,
+        p = null != (t = r.filename) ? t : r.id,
+        h = (0, f.kg)(a);
+    return (0, n.jsx)(l.DY3, {
+        text: h,
+        children: (0, n.jsxs)('div', {
+            className: o()(b.attachedFileCard, {
+                [b.attachedFileCardError]: u,
+                [b.attachedFileCardUploading]: !g
             }),
             children: [
-                (0, a.jsx)(o.ImageFileIcon, {
+                (0, n.jsx)(l.ZKT, {
                     size: 'xs',
-                    color: d.Z.INTERACTIVE_MUTED
+                    color: c.Z.INTERACTIVE_MUTED
                 }),
-                (0, a.jsx)(o.Spacer, {
+                (0, n.jsx)(l.LZC, {
                     size: 10,
                     horizontal: !0
                 }),
-                (0, a.jsx)(o.Text, {
+                (0, n.jsx)(l.Text, {
                     variant: 'text-sm/normal',
-                    children: T
+                    children: p
                 }),
-                !C &&
-                    (0, a.jsx)(o.Spinner, {
-                        className: m.attachedFileCardSpinner,
-                        type: o.Spinner.Type.SPINNING_CIRCLE
+                !g &&
+                    (0, n.jsx)(l.$jN, {
+                        className: b.attachedFileCardSpinner,
+                        type: l.$jN.Type.SPINNING_CIRCLE
                     }),
-                C &&
-                    null != l &&
-                    (0, a.jsx)(o.Button, {
-                        'aria-label': h.Z.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({ attachment: T }),
-                        className: m.deleteButton,
-                        innerClassName: m.deleteButtonInner,
-                        look: o.Button.Looks.BLANK,
-                        size: o.Button.Sizes.NONE,
-                        onClick: i,
-                        children: (0, a.jsx)(o.XSmallIcon, {
+                g &&
+                    null != i &&
+                    (0, n.jsx)(l.zxk, {
+                        'aria-label': m.NW.formatToPlainString(m.t['1o5hyc'], { attachment: p }),
+                        className: b.deleteButton,
+                        innerClassName: b.deleteButtonInner,
+                        look: l.zxk.Looks.BLANK,
+                        size: l.zxk.Sizes.NONE,
+                        onClick: s,
+                        children: (0, n.jsx)(l.Dio, {
                             size: 'xxs',
                             color: 'currentColor',
-                            className: m.__invalid_deleteIcon
+                            className: b.__invalid_deleteIcon
                         })
                     })
             ]
         })
     });
 }
-function f(e) {
-    let { onFileAdded: A } = e,
-        { uploads: t, canAttachFiles: r, canAttachArchives: s, addAttachment: d, deleteAttachment: c, fileUploadProgresses: g } = (0, C.P)(),
-        f = n.useRef(!1);
-    function v(e) {
+function q(e) {
+    let { onFileAdded: t } = e,
+        { uploads: r, canAttachFiles: a, canAttachArchives: o, addAttachment: c, deleteAttachment: d, fileUploadProgresses: f } = (0, g.P)(),
+        q = A.useRef(!1);
+    function x(e) {
         try {
-            for (let A of e)
-                d({
-                    platform: i.ow.WEB,
-                    file: A
+            for (let t of e)
+                c({
+                    platform: s.ow.WEB,
+                    file: t
                 });
-            f.current = !0;
-        } catch {}
+            q.current = !0;
+        } catch (e) {}
     }
     return (
-        n.useEffect(() => {
-            f.current && (A(), (f.current = !1));
-        }, [A]),
-        (0, a.jsxs)('div', {
-            className: m.container,
+        A.useEffect(() => {
+            q.current && (t(), (q.current = !1));
+        }, [t]),
+        (0, n.jsxs)('div', {
+            className: b.container,
             children: [
-                (0, a.jsx)(l.Z, {
-                    className: m.uploadArea,
-                    title: h.Z.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
-                    description: h.Z.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
-                    icons: T.J6,
-                    onDrop: v
+                (0, n.jsx)(i.Z, {
+                    className: b.uploadArea,
+                    title: m.NW.string(m.t['5eTk2t']),
+                    description: m.NW.string(m.t.Ecxoxs),
+                    icons: p.J6,
+                    onDrop: x
                 }),
-                (0, a.jsxs)(u.Z, {
-                    className: m.addFileButtonLook,
-                    innerClassName: m.addFileButton,
-                    color: o.Button.Colors.CUSTOM,
-                    disabled: !r,
-                    'aria-label': h.Z.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON,
-                    'aria-describedby': I,
+                (0, n.jsxs)(u.Z, {
+                    className: b.addFileButtonLook,
+                    innerClassName: b.addFileButton,
+                    color: l.zxk.Colors.CUSTOM,
+                    disabled: !a,
+                    'aria-label': m.NW.string(m.t['23LeCA']),
+                    'aria-describedby': v,
                     multiple: !0,
                     onChange: function (e) {
-                        null != e.currentTarget.files && v(e.currentTarget.files);
+                        null != e.currentTarget.files && x(e.currentTarget.files);
                     },
                     children: [
-                        (0, a.jsx)(o.ImageFileUpIcon, {
+                        (0, n.jsx)(l.dZu, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: m.addFileButtonIcon,
+                            className: b.addFileButtonIcon,
                             'aria-hidden': !0
                         }),
-                        (0, a.jsx)(o.Text, {
+                        (0, n.jsx)(l.Text, {
                             variant: 'text-sm/medium',
                             color: 'always-white',
-                            children: h.Z.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
+                            children: m.NW.string(m.t['23LeCA'])
                         })
                     ]
                 }),
-                (0, a.jsx)(o.Spacer, { size: 12 }),
-                (0, a.jsx)(o.Text, {
-                    id: I,
+                (0, n.jsx)(l.LZC, { size: 12 }),
+                (0, n.jsx)(l.Text, {
+                    id: v,
                     color: 'text-muted',
                     variant: 'text-xs/normal',
-                    children: s ? h.Z.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({ fileUploadLimit: p.TR }) : h.Z.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({ fileUploadLimit: p.TR })
+                    children: o ? m.NW.formatToPlainString(m.t.lvU6sr, { fileUploadLimit: h.TR }) : m.NW.formatToPlainString(m.t.DOXzIS, { fileUploadLimit: h.TR })
                 }),
-                t.length > 0 &&
-                    (0, a.jsxs)(a.Fragment, {
+                r.length > 0 &&
+                    (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, a.jsx)('div', { className: m.separator }),
-                            (0, a.jsx)('ul', {
-                                className: m.attachedFilesContainer,
-                                'aria-label': h.Z.Messages.GUILD_PRODUCT_ATTACHED_FILES_SECTION_LABEL,
-                                children: t.map((e) =>
-                                    (0, a.jsx)(
+                            (0, n.jsx)('div', { className: b.separator }),
+                            (0, n.jsx)('ul', {
+                                className: b.attachedFilesContainer,
+                                'aria-label': m.NW.string(m.t.YZ6cTU),
+                                children: r.map((e) =>
+                                    (0, n.jsx)(
                                         'li',
                                         {
-                                            children: (0, a.jsx)(U, {
+                                            children: (0, n.jsx)(C, {
                                                 upload: e,
-                                                onDeleteAttachment: c,
-                                                progress: g[e.id]
+                                                onDeleteAttachment: d,
+                                                progress: f[e.id]
                                             })
                                         },
                                         e.id

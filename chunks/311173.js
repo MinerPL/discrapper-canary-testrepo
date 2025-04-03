@@ -1,108 +1,103 @@
-n.d(t, {
-    Z: function () {
-        return N;
-    }
-}),
-    n(47120),
-    n(724458);
-var s = n(735250),
-    a = n(470079),
-    i = n(120356),
-    r = n.n(i),
+n.d(t, { Z: () => b }), n(47120), n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(481060),
     o = n(63063),
     c = n(256569),
     d = n(858457),
     u = n(273504),
-    _ = n(981631),
-    I = n(689938),
-    E = n(717820);
-let T = o.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_REGEX);
-function m(e) {
-    let { hasErrors: t, text: n, errorText: a } = e;
+    m = n(981631),
+    g = n(388032),
+    p = n(409866);
+let h = o.Z.getArticleURL(m.BhN.GUILD_AUTOMOD_REGEX);
+function f(e) {
+    let { hasErrors: t, text: n, errorText: i } = e;
     return t
-        ? (0, s.jsx)('div', {
-              className: r()(E.subtext),
-              children: (0, s.jsx)(l.Text, {
-                  className: r()(E.errorSpan),
+        ? (0, r.jsx)('div', {
+              className: p.subtext,
+              children: (0, r.jsx)(l.Text, {
+                  className: p.errorSpan,
                   variant: 'text-xs/medium',
                   color: 'text-danger',
-                  children: null != a ? a : I.Z.Messages.GUILD_AUTOMOD_REGEX_ERROR_HELP.format({ helpArticle: T })
+                  children: null != i ? i : g.NW.format(g.t.jKYAPj, { helpArticle: h })
               })
           })
-        : (0, s.jsx)(l.Text, {
-              className: E.subtext,
+        : (0, r.jsx)(l.Text, {
+              className: p.subtext,
               variant: 'text-xs/medium',
               color: 'text-muted',
               children: n
           });
 }
-function N(e) {
+function b(e) {
     var t, n;
-    let { rule: i, onChangeText: l, className: o } = e,
-        { patterns: _, valueError: N, errors: S, validatePatternsChanged: h, validateEditingValueChanged: g } = (0, d.Z)(i, l),
-        [C] = a.useState(() => ({
-            tags: _,
+    let { rule: s, onChangeText: l, className: o } = e,
+        { patterns: m, valueError: b, errors: x, validatePatternsChanged: j, validateEditingValueChanged: N } = (0, d.Z)(s, l),
+        [_] = i.useState(() => ({
+            tags: m,
             value: '',
             selections: [],
             isSelecting: !1
         })),
-        x = a.useMemo(
+        v = i.useMemo(
             () =>
-                S.reduce((e, t) => {
-                    let { pattern: n, message: s, description: a, erroringCharacterLength: i = n.length, erroringCharacterOffset: r = 0 } = t;
-                    return null == _.find((e) => e === n)
-                        ? e
-                        : ((e[n] = {
-                              value: n,
-                              message: null != a ? a : s,
-                              erroringCharacterLength: i,
-                              erroringCharacterOffset: r
-                          }),
-                          e);
+                x.reduce((e, t) => {
+                    let { pattern: n, message: r, description: i, erroringCharacterLength: s = n.length, erroringCharacterOffset: a = 0 } = t;
+                    return (
+                        null == m.find((e) => e === n) ||
+                            (e[n] = {
+                                value: n,
+                                message: null != i ? i : r,
+                                erroringCharacterLength: s,
+                                erroringCharacterOffset: a
+                            }),
+                        e
+                    );
                 }, {}),
-            [S, _]
+            [x, m]
         ),
-        p = a.useCallback(
+        C = i.useCallback(
             (e) => {
-                h(e, _);
+                j(e, m);
             },
-            [h, _]
+            [j, m]
         ),
-        R = a.useCallback(
+        O = i.useCallback(
             (e) => {
-                g(e);
+                N(e);
             },
-            [g]
+            [N]
         );
-    return (0, s.jsxs)('div', {
-        className: r()(E.keywordsContainer, o),
+    return (0, r.jsxs)('div', {
+        className: a()(p.keywordsContainer, o),
         children: [
-            (0, s.jsx)(c.Z, {
+            (0, r.jsx)(c.Z, {
                 placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
-                initialValue: C,
-                onChangeTags: p,
-                onChangeNewTagValue: R,
-                tagErrors: x,
+                initialValue: _,
+                onChangeTags: C,
+                onChangeNewTagValue: O,
+                tagErrors: v,
                 maxTags: u.VW
             }),
-            (0, s.jsx)(m, {
-                text: I.Z.Messages.GUILD_AUTOMOD_REGEX_SUBTEXT.format({ helpArticle: T }),
-                hasErrors: S.length > 0 || null != N,
+            (0, r.jsx)(f, {
+                text: g.NW.format(g.t['PGC/AA'], { helpArticle: h }),
+                hasErrors: x.length > 0 || null != b,
                 errorText:
-                    null !==
-                        (n =
-                            null ===
-                                (t = S.find((e) => {
-                                    let { pattern: t } = e;
-                                    return t === d.r;
-                                })) || void 0 === t
-                                ? void 0
-                                : t.message) && void 0 !== n
+                    null !=
+                    (n =
+                        null ==
+                        (t = x.find((e) => {
+                            let { pattern: t } = e;
+                            return t === d.r;
+                        }))
+                            ? void 0
+                            : t.message)
                         ? n
-                        : null == N
+                        : null == b
                           ? void 0
-                          : N.message
+                          : b.message
             })
         ]
     });

@@ -1,60 +1,75 @@
-let r;
-n(47120);
-var i,
-    a,
-    s,
-    o,
-    l = n(442837),
-    u = n(433517),
+let r, i;
+n.d(t, { Z: () => v });
+var o,
+    a = n(442837),
+    s = n(668757),
+    l = n(433517),
     c = n(570140),
+    u = n(185996),
     d = n(902676),
-    _ = n(626135),
-    E = n(358085),
-    f = n(704133),
+    f = n(626135),
+    _ = n(358085),
+    p = n(704133),
     h = n(981631);
-let p = 'BlockedDomainStore',
-    m = 'BlockedDomainRevision',
-    I = null;
-class T extends (i = l.ZP.Store) {
+function m(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let g = 'BlockedDomainStore',
+    E = 'BlockedDomainRevision';
+function b(e) {
+    let { list: t, revision: n } = e;
+    if (!(0, u.U)()) {
+        (i = null), (r = {});
+        for (let e = 0; e < t.length; e++) r[t[e]] = !0;
+        p.Z.saveBlockedDomains(t), l.K.set('BlockedDomainRevision', n);
+    }
+}
+class y extends (o = a.ZP.Store) {
     initialize() {
-        (r = null), u.K.get(p) && (u.K.remove(m), u.K.remove(p));
+        (i = null), l.K.get(g) && (l.K.remove(E), l.K.remove(g));
     }
     getCurrentRevision() {
-        if (!(0, E.isDesktop)()) return null;
-        if (null == r) {
+        if (!(0, _.isDesktop)()) return null;
+        if (null == i) {
             var e;
-            r = null !== (e = u.K.get(m)) && void 0 !== e ? e : null;
+            i = null != (e = l.K.get(E)) ? e : null;
+        }
+        return i;
+    }
+    async getBlockedDomainList() {
+        if (null == r) {
+            let e = await p.Z.getBlockedDomains();
+            r = {};
+            for (let t = 0; t < e.length; t++) r[e[t]] = !0;
         }
         return r;
     }
-    async getBlockedDomainList() {
-        return null == I && (I = new Set(await f.Z.getBlockedDomains())), I;
+    _isBlockedDomain(e) {
+        let t = n(647229);
+        if (null == r) return this.getBlockedDomainList(), null;
+        let i = (0, d.F)(e),
+            o = new t.hash.sha256(),
+            a = t.codec.hex.fromBits(o.update(i).finalize()),
+            s = '';
+        r[a] && (s = i);
+        let l = i.indexOf('.');
+        for (; -1 !== l && '' === s; ) (i = i.substring(l + 1)), o.reset(), r[(a = t.codec.hex.fromBits(o.update(i).finalize()))] && (s = i), (l = i.indexOf('.'));
+        return s;
     }
     isBlockedDomain(e) {
-        let t = n(647229);
-        if (null == I) return this.getBlockedDomainList(), null;
-        let r = (0, d.F)(e),
-            i = new t.hash.sha256(),
-            a = t.codec.hex.fromBits(i.update(r).finalize()),
-            s = '';
-        I.has(a) && (s = r);
-        let o = r.indexOf('.');
-        for (; -1 !== o && '' === s; ) (r = r.substring(o + 1)), i.reset(), (a = t.codec.hex.fromBits(i.update(r).finalize())), I.has(a) && (s = r), (o = r.indexOf('.'));
-        return '' !== s ? (_.default.track(h.rMx.LINK_SECURITY_CHECK_BLOCKED, { blocked_domain: s }), s) : null;
+        let t = (0, u.U)() ? (0, s.PJ)(e) : this._isBlockedDomain(e);
+        return '' !== t && null !== t ? (f.default.track(h.rMx.LINK_SECURITY_CHECK_BLOCKED, { blocked_domain: t }), t) : null;
     }
 }
-(o = 'BlockedDomainStore'),
-    (s = 'displayName') in (a = T)
-        ? Object.defineProperty(a, s, {
-              value: o,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (a[s] = o),
-    (t.Z = new T(c.Z, {
-        BLOCKED_DOMAIN_LIST_FETCHED: function (e) {
-            let { list: t, revision: n } = e;
-            (r = null), (I = new Set(t)), f.Z.saveBlockedDomains(t), u.K.set('BlockedDomainRevision', n);
-        }
-    }));
+m(y, 'displayName', 'BlockedDomainStore');
+let v = new y(c.Z, { BLOCKED_DOMAIN_LIST_FETCHED: b });

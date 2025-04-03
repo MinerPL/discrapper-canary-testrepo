@@ -1,48 +1,41 @@
 n.d(t, {
-    PM: function () {
-        return u;
-    },
-    ZC: function () {
-        return i.u$;
-    },
-    de: function () {
-        return o;
-    },
-    x9: function () {
-        return l;
-    }
+    PM: () => c,
+    ZC: () => i.u$,
+    de: () => s,
+    x9: () => l
 });
 var r = n(544891),
     i = n(921072),
-    a = n(981631),
-    s = n(689938);
-async function o(e) {
-    let t = a.ANM.APPLICATION_DISCLOSURES(e),
+    o = n(981631),
+    a = n(388032);
+async function s(e) {
+    let t = o.ANM.APPLICATION_DISCLOSURES(e),
         n = await r.tn.get({
             url: t,
-            retries: 3
+            retries: 3,
+            rejectWithError: !1
         }),
-        i = n.body.disclosures,
-        s = n.body.acked_disclosures;
+        i = n.body.disclosures;
     return {
         disclosures: i,
-        ackedDisclosures: s,
+        ackedDisclosures: n.body.acked_disclosures,
         allAcked: n.body.all_acked
     };
 }
 async function l(e, t) {
-    let n = a.ANM.APPLICATION_DISCLOSURES(e);
+    let n = o.ANM.APPLICATION_DISCLOSURES(e);
     await r.tn.post({
         url: n,
-        body: { disclosures: t }
+        body: { disclosures: t },
+        rejectWithError: !1
     });
 }
-function u(e) {
+function c(e) {
     switch (e) {
         case i.u$.IP_LOCATION:
-            return s.Z.Messages.OAUTH2_IP_LOCATION_DISCLOSURE;
+            return a.NW.string(a.t['6wPmjo']);
         case i.u$.DISPLAYS_ADVERTISEMENTS:
-            return s.Z.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE;
+            return a.NW.string(a.t['/uOMKS']);
         default:
             return null;
     }

@@ -1,92 +1,108 @@
-n.r(t);
-var r = n(735250);
-n(470079);
+n.d(t, { default: () => m });
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    s = n(693789),
-    o = n(1561),
+    o = n.n(i),
+    a = n(693789),
+    s = n(1561),
     l = n(512983),
-    u = n(466377),
-    c = n(993365),
-    d = n(600164),
-    _ = n(689938),
-    E = n(361228);
-t.default = (e) => {
+    c = n(466377),
+    u = n(993365),
+    d = n(481060),
+    f = n(600164),
+    _ = n(540059),
+    p = n(388032),
+    h = n(551988);
+let m = (e) => {
     let t,
         n,
         i,
-        { body: f, cancelText: h, className: p, confirmColor: m, confirmText: I = _.Z.Messages.OKAY, secondaryConfirmText: T, onCancel: g, onClose: S, onConfirm: A, onConfirmSecondary: N, title: v, transitionState: O, titleClassName: R } = e;
+        { body: m, cancelText: g, className: E, confirmColor: b, confirmText: y = p.NW.string(p.t.BddRzc), secondaryConfirmText: v, onCancel: O, onClose: I, onConfirm: S, onConfirmSecondary: T, title: N, transitionState: A, titleClassName: C } = e,
+        R = (0, _.Q3)('ConfirmModal'),
+        P = R ? a.zx.Sizes.MEDIUM : a.zx.Sizes.LARGE,
+        w = () => {
+            null == I || I(), null == O || O();
+        },
+        D = (e) => {
+            null != e && e.preventDefault(), null == I || I(), null == S || S();
+        },
+        L = () => {
+            null == I || I(), null == T || T();
+        };
     return (
-        null != h &&
-            '' !== h &&
-            (t = (0, r.jsx)(s.zx, {
+        null != g &&
+            '' !== g &&
+            (t = (0, r.jsx)(a.zx, {
                 type: 'button',
-                size: s.zx.Sizes.LARGE,
-                color: s.zx.Colors.PRIMARY,
-                onClick: () => {
-                    null == S || S(), null == g || g();
-                },
-                className: E.secondaryButton,
-                children: h
+                size: P,
+                color: a.zx.Colors.PRIMARY,
+                onClick: w,
+                className: h.secondaryButton,
+                children: g
             })),
-        null != I &&
-            '' !== I &&
-            (n = (0, r.jsx)(s.zx, {
+        null != y &&
+            '' !== y &&
+            (n = (0, r.jsx)(a.zx, {
                 type: 'submit',
-                color: m,
-                size: s.zx.Sizes.LARGE,
-                className: a()(E.primaryButton, null != t ? E.gutter : null),
+                color: b,
+                size: P,
+                className: o()(h.primaryButton, null != t ? h.gutter : null),
                 autoFocus: !0,
-                children: I
+                children: y
             })),
-        null != T &&
-            '' !== T &&
-            (i = (0, r.jsx)(o.P, {
-                onClick: () => {
-                    null == S || S(), null == N || N();
-                },
-                className: E.minorContainer,
-                children: (0, r.jsx)(c.x, {
-                    className: E.secondaryAction,
+        null != v &&
+            '' !== v &&
+            (i = (0, r.jsx)(s.P, {
+                onClick: L,
+                className: h.minorContainer,
+                children: (0, r.jsx)(u.x, {
+                    className: h.secondaryAction,
                     variant: 'text-xs/normal',
-                    children: T
+                    children: v
                 })
             })),
-        (0, r.jsx)(u.Y0, {
-            transitionState: O,
-            className: a()(p, E.container),
-            'aria-label': v,
+        (0, r.jsx)(c.Y0, {
+            transitionState: A,
+            size: c.Cg.DYNAMIC,
+            className: o()(E, h.container),
+            'aria-label': N,
             children: (0, r.jsxs)('form', {
-                onSubmit: (e) => {
-                    null != e && e.preventDefault(), null == S || S(), null == A || A();
-                },
-                className: E.form,
+                onSubmit: D,
+                className: h.form,
                 children: [
-                    (0, r.jsx)(u.hz, {
-                        className: E.modalContent,
-                        children: (0, r.jsxs)(d.Z, {
-                            direction: d.Z.Direction.VERTICAL,
-                            justify: d.Z.Justify.CENTER,
-                            className: E.content,
-                            children: [
-                                null != v &&
-                                    (0, r.jsx)(l.v, {
-                                        tag: 'h2',
-                                        className: a()(E.title, R),
-                                        children: v
-                                    }),
-                                null != f &&
-                                    (0, r.jsx)(c.x, {
-                                        variant: 'text-md/normal',
-                                        className: E.body,
-                                        children: f
-                                    })
-                            ]
+                    (0, r.jsx)(c.xB, {
+                        children:
+                            null != N && R
+                                ? (0, r.jsx)(d.X6q, {
+                                      variant: 'heading-lg/semibold',
+                                      className: o()(h.title, C),
+                                      children: N
+                                  })
+                                : (0, r.jsx)(l.v, {
+                                      tag: 'h2',
+                                      className: o()(h.title, C),
+                                      children: N
+                                  })
+                    }),
+                    (0, r.jsx)(c.hz, {
+                        className: h.modalContent,
+                        children: (0, r.jsx)(f.Z, {
+                            direction: f.Z.Direction.VERTICAL,
+                            justify: R ? f.Z.Justify.START : f.Z.Justify.CENTER,
+                            className: h.content,
+                            children:
+                                null != m &&
+                                (0, r.jsx)(u.x, {
+                                    variant: 'text-md/normal',
+                                    className: h.body,
+                                    color: R ? 'header-secondary' : 'text-normal',
+                                    children: m
+                                })
                         })
                     }),
-                    (0, r.jsxs)(u.mz, {
-                        justify: d.Z.Justify.BETWEEN,
-                        wrap: d.Z.Wrap.WRAP,
+                    (0, r.jsxs)(c.mz, {
+                        justify: R ? void 0 : f.Z.Justify.BETWEEN,
+                        wrap: f.Z.Wrap.WRAP,
                         children: [n, t, i]
                     })
                 ]

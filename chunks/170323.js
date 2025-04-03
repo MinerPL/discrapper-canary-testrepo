@@ -1,77 +1,124 @@
-l.d(t, {
-    Z: function () {
-        return m;
-    }
-});
-var n = l(735250);
-l(470079);
-var a = l(498607),
-    o = l.n(a),
-    s = l(913527),
-    i = l.n(s),
-    r = l(399606),
-    C = l(893966),
-    c = l(527379),
-    d = l(932039),
-    u = l(689938);
+n.d(t, { Z: () => p });
+var r = n(200651);
+n(192379);
+var l = n(498607),
+    o = n.n(l),
+    a = n(913527),
+    i = n.n(a),
+    s = n(399606),
+    c = n(893966),
+    u = n(527379),
+    d = n(932039),
+    C = n(388032);
 function m(e) {
-    let { guildId: t, onClose: l } = e,
-        a = (0, r.e7)([C.Z], () => C.Z.getSearchStateByGuildId(t), [t], o()),
-        { selectedAccountAgeOption: s } = a,
-        { afterDate: m, beforeDate: _, optionId: E } = s,
-        h = E === d.Ol.CUSTOM,
-        M = h && null != m ? i()(m).format(d.N2) : null,
-        x = h && null != _ ? i()(_).format(d.N2) : null;
-    return (0, n.jsx)(d.ZP, {
-        startDateLabel: M,
-        endDateLabel: x,
-        afterDate: m,
-        beforeDate: _,
-        selectedOption: E,
-        isCustomDateRange: h,
-        menuName: 'account-age',
-        accessibilityLabel: u.Z.Messages.MEMBER_SAFETY_ACCOUNT_AGE_LABEL,
-        onClose: l,
-        onSelectDateOption: function (e, l) {
-            let n = null != l ? i()().subtract(l.input, l.unit).valueOf() : null;
-            (0, c.Dr)(t, {
-                ...a,
-                selectedAccountAgeOption: {
-                    optionId: e,
-                    afterDate: n,
-                    beforeDate: null
-                }
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
             });
+    }
+    return e;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function p(e) {
+    let { guildId: t, onClose: n } = e,
+        l = (0, s.e7)([c.Z], () => c.Z.getSearchStateByGuildId(t), [t], o()),
+        { selectedAccountAgeOption: a } = l,
+        { afterDate: p, beforeDate: f, optionId: h } = a,
+        j = h === d.Ol.CUSTOM,
+        g = j && null != p ? i()(p).format(d.N2) : null,
+        x = j && null != f ? i()(f).format(d.N2) : null;
+    return (0, r.jsx)(d.ZP, {
+        startDateLabel: g,
+        endDateLabel: x,
+        afterDate: p,
+        beforeDate: f,
+        selectedOption: h,
+        isCustomDateRange: j,
+        menuName: 'account-age',
+        accessibilityLabel: C.NW.string(C.t['D++TgY']),
+        onClose: n,
+        onSelectDateOption: function (e, n) {
+            let r = null != n ? i()().subtract(n.input, n.unit).valueOf() : null;
+            (0, u.Dr)(
+                t,
+                b(m({}, l), {
+                    selectedAccountAgeOption: {
+                        optionId: e,
+                        afterDate: r,
+                        beforeDate: null
+                    }
+                })
+            );
         },
         onToggleCustomDateRange: function () {
-            (0, c.Dr)(t, {
-                ...a,
-                selectedAccountAgeOption: {
-                    optionId: d.Ol.CUSTOM,
-                    afterDate: h ? m : null,
-                    beforeDate: h ? _ : null
-                }
-            });
+            (0, u.Dr)(
+                t,
+                b(m({}, l), {
+                    selectedAccountAgeOption: {
+                        optionId: d.Ol.CUSTOM,
+                        afterDate: j ? p : null,
+                        beforeDate: j ? f : null
+                    }
+                })
+            );
         },
         onSelectStartDate: function (e) {
-            (0, c.Dr)(t, {
-                ...a,
-                selectedAccountAgeOption: {
-                    optionId: d.Ol.CUSTOM,
-                    afterDate: e.valueOf(),
-                    beforeDate: _
-                }
-            });
+            (0, u.Dr)(
+                t,
+                b(m({}, l), {
+                    selectedAccountAgeOption: {
+                        optionId: d.Ol.CUSTOM,
+                        afterDate: e.valueOf(),
+                        beforeDate: f
+                    }
+                })
+            );
         },
         onSelectEndDate: function (e) {
-            (0, c.Dr)(t, {
-                ...a,
-                selectedAccountAgeOption: {
-                    optionId: d.Ol.CUSTOM,
-                    afterDate: m,
-                    beforeDate: e.valueOf()
-                }
-            });
+            (0, u.Dr)(
+                t,
+                b(m({}, l), {
+                    selectedAccountAgeOption: {
+                        optionId: d.Ol.CUSTOM,
+                        afterDate: p,
+                        beforeDate: e.valueOf()
+                    }
+                })
+            );
         }
     });
 }

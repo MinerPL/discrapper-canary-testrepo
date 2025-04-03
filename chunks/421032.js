@@ -1,97 +1,142 @@
-t.d(n, {
-    Z: function () {
-        return I;
+n.d(t, { Z: () => h });
+var r = n(200651);
+n(192379);
+var l = n(120356),
+    i = n.n(l),
+    s = n(442837),
+    o = n(481060),
+    c = n(239091),
+    u = n(592125),
+    a = n(430824),
+    d = n(924301),
+    p = n(894017),
+    b = n(854698),
+    g = n(390966),
+    x = n(765305),
+    f = n(388032),
+    j = n(909846);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-});
-var l = t(735250);
-t(470079);
-var s = t(120356),
-    o = t.n(s),
-    i = t(442837),
-    r = t(481060),
-    u = t(239091),
-    a = t(592125),
-    c = t(430824),
-    d = t(924301),
-    E = t(894017),
-    _ = t(854698),
-    C = t(390966),
-    N = t(765305),
-    h = t(689938),
-    m = t(285747);
-function I(e) {
-    let { recurrenceId: n, originalScheduledStartTime: s, guildEventId: I, onClick: g, isActive: L } = e,
-        x = (0, i.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(I)),
-        M = (0, E.Z)(n, null == x ? void 0 : x.id),
-        T = (0, i.e7)([c.Z], () => c.Z.getGuild(null == x ? void 0 : x.guild_id)),
-        S = (0, i.e7)([a.Z], () => a.Z.getChannel(null == x ? void 0 : x.channel_id));
-    if (null == x) return null;
-    let { is_canceled: v = !1 } = null != M ? M : {},
-        Z = (null == M ? void 0 : M.scheduled_start_time) != null ? new Date(null == M ? void 0 : M.scheduled_start_time) : s,
-        p = (0, _.DK)(x),
-        f = v ? N.p1.CANCELED : N.p1.SCHEDULED;
-    p === n && (f = x.status);
-    let k = (null == x ? void 0 : x.scheduled_start_time) != null ? (0, _.lh)(M, Z, new Date(null == x ? void 0 : x.scheduled_start_time)) : null,
-        B = (e) => {
+    return e;
+}
+function h(e) {
+    let { recurrenceId: t, originalScheduledStartTime: l, guildEventId: h, onClick: O, isActive: k } = e,
+        v = (0, s.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(h)),
+        N = (0, p.Z)(t, null == v ? void 0 : v.id),
+        y = (0, s.e7)([a.Z], () => a.Z.getGuild(null == v ? void 0 : v.guild_id)),
+        z = (0, s.e7)([u.Z], () => u.Z.getChannel(null == v ? void 0 : v.channel_id));
+    if (null == v) return null;
+    let { is_canceled: C = !1 } = null != N ? N : {},
+        P = (null == N ? void 0 : N.scheduled_start_time) != null ? new Date(null == N ? void 0 : N.scheduled_start_time) : l,
+        S = (0, b.DK)(v),
+        E = C ? x.p1.CANCELED : x.p1.SCHEDULED;
+    S === t && (E = v.status);
+    let w = (null == v ? void 0 : v.scheduled_start_time) != null ? (0, b.lh)(N, P, new Date(null == v ? void 0 : v.scheduled_start_time)) : null,
+        L = (e) => {
             e.stopPropagation(),
-                null != T &&
-                    (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([t.e('15450'), t.e('37133'), t.e('62318')]).then(t.bind(t, 215269));
-                        return (t) =>
-                            (0, l.jsx)(e, {
-                                guildEventId: x.id,
-                                recurrenceId: n,
-                                channel: S,
-                                guild: T,
-                                isRecurrenceItem: !0,
-                                ...t
-                            });
+                null != y &&
+                    (0, c.jW)(e, async () => {
+                        let { default: e } = await Promise.all([n.e('99272'), n.e('42743'), n.e('10472'), n.e('62318')]).then(n.bind(n, 215269));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                m(
+                                    {
+                                        guildEventId: v.id,
+                                        recurrenceId: t,
+                                        channel: z,
+                                        guild: y,
+                                        isRecurrenceItem: !0
+                                    },
+                                    n
+                                )
+                            );
                     });
         };
-    return (0, l.jsxs)(r.ClickableContainer, {
-        className: o()(m.container, {
-            [m.canceled]: v,
-            [m.clickable]: null != g,
-            [m.active]: L
+    return (0, r.jsxs)(o.kL8, {
+        className: i()(j.container, {
+            [j.canceled]: C,
+            [j.clickable]: null != O,
+            [j.active]: k
         }),
         onClick: (e) => {
-            e.stopPropagation(), !v && (null == g || g(n));
+            e.stopPropagation(), C || null == O || O(t);
         },
-        onContextMenu: B,
+        onContextMenu: L,
         'aria-label': '',
         children: [
-            (0, l.jsx)(C.z, {
-                startTime: Z.toISOString(),
-                status: null != k ? k : f,
-                eventType: x.entity_type,
-                guildEventId: x.id,
-                recurrenceId: n,
-                className: m.timeStatus
+            (0, r.jsx)(g.z, {
+                startTime: P.toISOString(),
+                status: null != w ? w : E,
+                eventType: v.entity_type,
+                guildEventId: v.id,
+                recurrenceId: t,
+                className: j.timeStatus
             }),
-            v &&
-                (0, l.jsx)(r.Text, {
+            C &&
+                (0, r.jsx)(o.Text, {
                     variant: 'text-sm/semibold',
                     color: 'text-danger',
-                    className: m.canceledStatus,
-                    children: h.Z.Messages.EVENT_CANCELED
+                    className: j.canceledStatus,
+                    children: f.NW.string(f.t.fyBVRk)
                 }),
-            (0, l.jsx)(r.Tooltip, {
-                text: h.Z.Messages.MORE,
+            (0, r.jsx)(o.ua7, {
+                text: f.NW.string(f.t.UKOtz8),
                 position: 'top',
-                'aria-label': h.Z.Messages.EDIT,
-                children: (e) =>
-                    (0, l.jsx)(r.Clickable, {
-                        ...e,
-                        onClick: B,
-                        className: m.iconButton,
-                        children: (0, l.jsx)(r.MoreHorizontalIcon, {
-                            size: 'custom',
-                            color: 'currentColor',
-                            width: 20,
-                            height: 20,
-                            className: m.icon
-                        })
-                    })
+                'aria-label': f.NW.string(f.t.bt75u7),
+                children: (e) => {
+                    var t, n;
+                    return (0, r.jsx)(
+                        o.P3F,
+                        ((t = m({}, e)),
+                        (n = n =
+                            {
+                                onClick: L,
+                                className: j.iconButton,
+                                children: (0, r.jsx)(o.xhG, {
+                                    size: 'custom',
+                                    color: 'currentColor',
+                                    width: 20,
+                                    height: 20,
+                                    className: j.icon
+                                })
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(n)).forEach(function (e) {
+                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                              }),
+                        t)
+                    );
+                }
             })
         ]
     });

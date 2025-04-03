@@ -1,29 +1,25 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = t(735250),
-    a = t(470079),
-    l = t(120356),
-    o = t.n(l),
-    r = t(481060),
-    s = t(695676),
-    c = t(689938),
-    d = t(895357);
-function u(e) {
-    let { className: n } = e,
-        { goBack: t } = (0, s.hH)(),
-        l = a.useCallback(() => {
-            t();
-        }, [t]);
-    return (0, i.jsx)(r.Clickable, {
+n.d(t, { Z: () => d });
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(481060),
+    c = n(695676),
+    s = n(388032),
+    u = n(672425);
+function d(e) {
+    let { className: t } = e,
+        { goBack: n } = (0, c.hH)(),
+        l = r.useCallback(() => {
+            n();
+        }, [n]);
+    return (0, i.jsx)(o.P3F, {
         onClick: l,
-        className: o()(d.clickable, n),
-        'aria-label': c.Z.Messages.BACK_ACCESSIBILITY_HINT,
-        children: (0, i.jsx)(r.ArrowLargeLeftIcon, {
+        className: a()(u.clickable, t),
+        'aria-label': s.NW.string(s.t.ybUZqq),
+        children: (0, i.jsx)(o.j9r, {
             size: 'sm',
-            color: r.tokens.colors.INTERACTIVE_ACTIVE
+            color: o.TVs.colors.INTERACTIVE_ACTIVE
         })
     });
 }

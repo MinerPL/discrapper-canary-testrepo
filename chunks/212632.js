@@ -1,68 +1,68 @@
-n(47120);
-var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    o = n.n(a),
-    r = n(481060),
-    l = n(981631),
-    c = n(689938),
-    d = n(526201),
-    u = n(224499);
-let h = 0,
-    p = () => 'notification-position-selector-'.concat(h++),
-    f = (e) => {
+n.d(t, { Z: () => _ }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(981631),
+    c = n(388032),
+    u = n(937848),
+    d = n(20493);
+let E = 0,
+    f = () => 'notification-position-selector-'.concat(E++),
+    p = (e) => {
         switch (e) {
-            case l._vf.TOP_LEFT:
-                return c.Z.Messages.OVERLAY_NOTIFICATIONS_TOP_LEFT;
-            case l._vf.TOP_RIGHT:
-                return c.Z.Messages.OVERLAY_NOTIFICATIONS_TOP_RIGHT;
-            case l._vf.BOTTOM_LEFT:
-                return c.Z.Messages.OVERLAY_NOTIFICATIONS_BOTTOM_LEFT;
-            case l._vf.BOTTOM_RIGHT:
-                return c.Z.Messages.OVERLAY_NOTIFICATIONS_BOTTOM_RIGHT;
+            case s._vf.TOP_LEFT:
+                return c.NW.string(c.t.xlchpa);
+            case s._vf.TOP_RIGHT:
+                return c.NW.string(c.t['4uHRHB']);
+            case s._vf.BOTTOM_LEFT:
+                return c.NW.string(c.t.ovWFnJ);
+            case s._vf.BOTTOM_RIGHT:
+                return c.NW.string(c.t['M/9V7+']);
             default:
-                return c.Z.Messages.OVERLAY_NOTIFICATIONS_DISABLED;
+                return c.NW.string(c.t.AlY4ZW);
         }
     },
-    _ = [l._vf.DISABLED, l._vf.TOP_LEFT, l._vf.TOP_RIGHT, l._vf.BOTTOM_LEFT, l._vf.BOTTOM_RIGHT];
-function g(e) {
+    h = [s._vf.DISABLED, s._vf.TOP_LEFT, s._vf.TOP_RIGHT, s._vf.BOTTOM_LEFT, s._vf.BOTTOM_RIGHT];
+function C(e) {
     let { position: t, onChange: n } = e,
-        [a] = s.useState(() => p()),
-        h = t === l._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({ position: f(t) });
-    return (0, i.jsxs)('div', {
+        [i] = l.useState(() => f()),
+        E = t === s._vf.DISABLED ? c.NW.string(c.t.R6LxVV) : c.NW.formatToPlainString(c.t.XXHDMz, { position: p(t) });
+    return (0, r.jsxs)('div', {
         children: [
-            (0, i.jsx)(r.FocusRing, {
+            (0, r.jsx)(a.tEY, {
                 within: !0,
                 offset: -2,
-                children: (0, i.jsx)('div', {
-                    className: o()(d.wrapper, { [d.disabledSelected]: t === l._vf.DISABLED }),
-                    children: _.map((e) =>
-                        (0, i.jsxs)(
+                children: (0, r.jsx)('div', {
+                    className: o()(u.wrapper, { [u.disabledSelected]: t === s._vf.DISABLED }),
+                    children: h.map((e) =>
+                        (0, r.jsxs)(
                             'label',
                             {
                                 className: o()({
-                                    [d.selected]: e === t,
-                                    [d.disabled]: e === l._vf.DISABLED,
-                                    [d.topRight]: e === l._vf.TOP_RIGHT,
-                                    [d.topLeft]: e === l._vf.TOP_LEFT,
-                                    [d.bottomRight]: e === l._vf.BOTTOM_RIGHT,
-                                    [d.bottomLeft]: e === l._vf.BOTTOM_LEFT
+                                    [u.selected]: e === t,
+                                    [u.disabled]: e === s._vf.DISABLED,
+                                    [u.topRight]: e === s._vf.TOP_RIGHT,
+                                    [u.topLeft]: e === s._vf.TOP_LEFT,
+                                    [u.bottomRight]: e === s._vf.BOTTOM_RIGHT,
+                                    [u.bottomLeft]: e === s._vf.BOTTOM_LEFT
                                 }),
                                 children: [
-                                    f(e),
-                                    e === l._vf.DISABLED
-                                        ? (0, i.jsx)(r.DenyIcon, {
+                                    p(e),
+                                    e === s._vf.DISABLED
+                                        ? (0, r.jsx)(a.t6m, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: d.disabledIcon
+                                              className: u.disabledIcon
                                           })
                                         : null,
-                                    (0, i.jsx)('input', {
+                                    (0, r.jsx)('input', {
                                         type: 'radio',
-                                        name: a,
+                                        name: i,
                                         value: e,
                                         onChange: (t) => n(t, e),
-                                        className: d.hiddenInput
+                                        className: u.hiddenInput
                                     })
                                 ]
                             },
@@ -71,12 +71,13 @@ function g(e) {
                     )
                 })
             }),
-            (0, i.jsx)(r.FormText, {
-                type: r.FormTextTypes.DESCRIPTION,
-                className: u.marginTop8,
-                children: h
+            (0, r.jsx)(a.R94, {
+                type: a.geA.DESCRIPTION,
+                className: d.marginTop8,
+                children: E
             })
         ]
     });
 }
-(g.Positions = l._vf), (t.Z = g);
+C.Positions = s._vf;
+let _ = C;

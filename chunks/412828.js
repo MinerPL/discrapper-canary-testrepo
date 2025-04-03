@@ -1,26 +1,22 @@
-let n;
-r.d(t, {
-    U: function () {
-        return s;
-    },
-    Y: function () {
-        return c;
-    }
+let r;
+a.d(e, {
+    U: () => s,
+    Y: () => E
 });
-var a = r(622574);
-let o = 0,
-    i = 1 / 0,
-    _ = 0,
-    E = (e) => {
-        e.forEach((e) => {
-            e.interactionId && ((i = Math.min(i, e.interactionId)), (o = (_ = Math.max(_, e.interactionId)) ? (_ - i) / 7 + 1 : 0));
+var n = a(622574);
+let _ = 0,
+    o = 1 / 0,
+    i = 0,
+    c = (t) => {
+        t.forEach((t) => {
+            t.interactionId && ((o = Math.min(o, t.interactionId)), (_ = (i = Math.max(i, t.interactionId)) ? (i - o) / 7 + 1 : 0));
         });
     },
-    s = () => (n ? o : performance.interactionCount || 0),
-    c = () => {
-        !('interactionCount' in performance) &&
-            !n &&
-            (n = (0, a.N)('event', E, {
+    s = () => (r ? _ : performance.interactionCount || 0),
+    E = () => {
+        'interactionCount' in performance ||
+            r ||
+            (r = (0, n.N)('event', c, {
                 type: 'event',
                 buffered: !0,
                 durationThreshold: 0

@@ -1,9 +1,3 @@
-var i, a;
-n.d(t, {
-    $: function () {
-        return i;
-    }
-}),
-    ((a = i || (i = {})).JOIN_RAID = 'JOIN_RAID'),
-    (a.DM_RAID = 'DM_RAID'),
-    (a.MENTION_RAID = 'MENTION_RAID');
+n.d(t, { $: () => i });
+var r,
+    i = (((r = {}).JOIN_RAID = 'JOIN_RAID'), (r.DM_RAID = 'DM_RAID'), (r.MENTION_RAID = 'MENTION_RAID'), r);

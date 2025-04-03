@@ -1,49 +1,92 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => p });
+var r = n(200651);
+n(192379);
 var i = n(442837),
-    a = n(481060),
-    s = n(569545),
-    o = n(687516),
-    l = n(314897),
+    o = n(481060),
+    a = n(569545),
+    s = n(687516),
+    l = n(221241),
+    c = n(314897),
     u = n(959457),
-    c = n(689938);
-function d(e, t, d) {
-    var _;
-    let E = (0, o.Cf)(e),
-        f = (0, i.e7)([l.default], () => l.default.getId()),
-        h = null != e ? (0, s.V9)(e) : u.Z.getActiveStreamKey(),
-        p = null !== (_ = u.Z.getVideoStats(h)) && void 0 !== _ ? _ : {},
-        m = {
-            media_session_id: u.Z.getMediaSessionId(h),
-            rtc_connection_id: u.Z.getRtcConnectionId(h),
-            stream_region: u.Z.getRegion(h),
-            max_viewers: u.Z.getMaxViewers(h),
-            ...p
+    d = n(388032);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e, t, f) {
+    var p;
+    let { simplifiedSettingsEnabled: h } = (0, l.Z)({ location: 'ReportProblemItem' }),
+        m = (0, s.Cf)(e),
+        g = (0, i.e7)([c.default], () => c.default.getId()),
+        E = null != e ? (0, a.V9)(e) : u.Z.getActiveStreamKey(),
+        b = null != (p = u.Z.getVideoStats(E)) ? p : {},
+        y = _(
+            {
+                media_session_id: u.Z.getMediaSessionId(E),
+                rtc_connection_id: u.Z.getRtcConnectionId(E),
+                stream_region: u.Z.getRegion(E),
+                max_viewers: u.Z.getMaxViewers(E)
+            },
+            b
+        ),
+        v = () => {
+            null == f || f(),
+                null != e &&
+                    (0, o.ZDy)(async () => {
+                        let { default: t } = await n.e('18912').then(n.bind(n, 340140));
+                        return (n) =>
+                            (0, r.jsx)(
+                                t,
+                                _(
+                                    {
+                                        stream: e,
+                                        streamApplication: m,
+                                        isStreamer: g === (null == e ? void 0 : e.ownerId),
+                                        analyticsData: y
+                                    },
+                                    n
+                                )
+                            );
+                    });
         };
     return null == e
         ? null
-        : (0, r.jsx)(a.MenuItem, {
-              id: 'report-stream-problem',
-              label: c.Z.Messages.STREAM_REPORT_PROBLEM_MENU_ITEM,
-              action: () => {
-                  null == d || d(),
-                      null != e &&
-                          (0, a.openModalLazy)(async () => {
-                              let { default: t } = await n.e('18912').then(n.bind(n, 340140));
-                              return (n) =>
-                                  (0, r.jsx)(t, {
-                                      stream: e,
-                                      streamApplication: E,
-                                      isStreamer: f === (null == e ? void 0 : e.ownerId),
-                                      analyticsData: m,
-                                      ...n
-                                  });
-                          });
-              }
-          });
+        : h
+          ? (0, r.jsx)(o.sNh, {
+                id: 'report-stream-problem',
+                color: 'danger',
+                label: d.NW.string(d.t.sdnCxc),
+                action: v,
+                icon: o.P4T
+            })
+          : (0, r.jsx)(o.sNh, {
+                id: 'report-stream-problem',
+                label: d.NW.string(d.t.sdnCxc),
+                action: v
+            });
 }

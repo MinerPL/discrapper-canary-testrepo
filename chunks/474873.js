@@ -1,9 +1,9 @@
+n.d(t, { Z: () => d });
 var r,
     i = n(442837),
-    a = n(570140),
-    s = n(657254),
-    o = n(871465);
-function l(e, t, n) {
+    o = n(570140),
+    a = n(871465);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,25 +16,30 @@ function l(e, t, n) {
         e
     );
 }
-let u = { soundpack: o.YC.CLASSIC };
-class c extends (r = i.ZP.PersistedStore) {
+let l = {
+    soundpack: a.YC.CLASSIC,
+    lastSoundpackExperimentId: null
+};
+function c(e) {
+    let { soundpack: t, forExperimentId: n } = e;
+    l = {
+        soundpack: t,
+        lastSoundpackExperimentId: void 0 !== n ? n : l.lastSoundpackExperimentId
+    };
+}
+class u extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        s.Z.subscribe({ location: '1' }, () => this.emitChange()), null != e && (u = e);
+        null != e && ((l = e), Object.values(a.YC).includes(l.soundpack) || (l.soundpack = a.YC.CLASSIC));
     }
     getState() {
-        return u;
+        return l;
     }
     getSoundpack() {
-        var e;
-        let { allowAprilFoolsSoundpack: t } = s.Z.getCurrentConfig({ location: '37bac2_1' }, { autoTrackExposure: !1 });
-        return t && ((e = u.soundpack), Object.values(o.YC).includes(e)) ? u.soundpack : o.YC.CLASSIC;
+        return l.soundpack;
+    }
+    getLastSoundpackExperimentId() {
+        return l.lastSoundpackExperimentId;
     }
 }
-l(c, 'displayName', 'SoundpackStore'),
-    l(c, 'persistKey', 'SoundpackStore'),
-    (t.Z = new c(a.Z, {
-        SET_SOUNDPACK: function (e) {
-            let { soundpack: t } = e;
-            u = { soundpack: t };
-        }
-    }));
+s(u, 'displayName', 'SoundpackStore'), s(u, 'persistKey', 'SoundpackStore');
+let d = new u(o.Z, { SET_SOUNDPACK: c });

@@ -1,46 +1,41 @@
-n.d(t, {
-    m: function () {
-        return o;
-    }
-}),
-    n(653041);
-var r = n(735250);
-n(470079);
+n.d(t, { m: () => a }), n(653041);
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(185625),
-    s = n(186023);
-async function o(e, t, n, o) {
-    let l = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
-        u = !(arguments.length > 5) || void 0 === arguments[5] || arguments[5],
-        c = arguments.length > 6 ? arguments[6] : void 0,
-        d = (0, i.getInteractingModalContext)();
+    o = n(185625);
+async function a(e, t, a) {
+    let { onSubmit: s, onClose: l, isEligibleForFeedback: c = !0, isAuthenticated: u = !0, emailToken: d, appContext: f } = a,
+        _ = (0, i.Gwq)();
     try {
-        let _,
-            E = u ? await (0, a.Nt)(e, t) : await (0, a.B0)(e, t),
-            f = [];
-        let h = (e) => {
-                f.push(e);
+        let a,
+            p = u ? await (0, o.Nt)(e, t) : await (0, o.B0)(e, t),
+            h = [],
+            m = (e) => {
+                h.push(e);
             },
-            p = (e) => {
-                (_ = e), null == n || n();
+            g = (e) => {
+                (a = e), null == s || s();
             };
-        (0, i.openModal)(
-            (t) =>
-                (0, r.jsx)(s.Z, {
-                    menu: E,
-                    reportType: e,
-                    modalProps: t,
-                    onNavigate: h,
-                    onSubmit: p,
-                    isAuthenticated: u,
-                    emailToken: c
-                }),
+        (0, i.ZDy)(
+            async () => {
+                let { default: t } = await Promise.all([n.e('25292'), n.e('95477'), n.e('11212'), n.e('35397'), n.e('28467'), n.e('92457')]).then(n.bind(n, 186023));
+                return (n) =>
+                    (0, r.jsx)(t, {
+                        menu: p,
+                        reportType: e,
+                        modalProps: n,
+                        onNavigate: m,
+                        onSubmit: g,
+                        isAuthenticated: u,
+                        emailToken: d
+                    });
+            },
             {
                 onCloseCallback: () => {
-                    (0, a.k8)(e, f, _), null == o || o(), l && (0, a.X)(e, null != _ ? _ : null);
-                }
-            },
-            d
+                    (0, o.k8)(e, h, a), null == l || l(), c && (0, o.X)(e, null != a ? a : null);
+                },
+                contextKey: null != f ? (0, i.VnL)(f) : _
+            }
         );
-    } catch {}
+    } catch (e) {}
 }

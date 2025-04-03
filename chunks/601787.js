@@ -1,27 +1,84 @@
-a.r(s),
-    a.d(s, {
-        default: function () {
-            return t;
-        }
-    });
-var _ = a(735250);
-a(470079);
-var r = a(481060),
-    n = a(689938);
-function t(e) {
-    let { ruleName: s, keyword: a, ...t } = e,
-        O = null != s ? s : n.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME;
-    return (0, _.jsx)(r.ConfirmModal, {
-        ...t,
-        header: n.Z.Messages.GUILD_AUTOMOD_ADD_KEYWORD_TO_RULE_CONFIRM_TITLE,
-        cancelText: n.Z.Messages.CANCEL,
-        confirmText: n.Z.Messages.CONFIRM,
-        children: (0, _.jsx)(r.Text, {
-            variant: 'text-md/normal',
-            children: n.Z.Messages.GUILD_AUTOMOD_ADD_KEYWORD_TO_RULE_CONFIRM_DESCRIPTION.format({
-                ruleName: O,
-                keyword: a
-            })
-        })
-    });
+r.d(t, { default: () => i });
+var n = r(200651);
+r(192379);
+var o = r(481060),
+    c = r(388032);
+function i(e) {
+    var t,
+        r,
+        { ruleName: i, keyword: a } = e,
+        l = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        o = {},
+                        c = Object.keys(e);
+                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var c = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < c.length; n++) (r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+            }
+            return o;
+        })(e, ['ruleName', 'keyword']);
+    let u = null != i ? i : c.NW.string(c.t.ffR2cH);
+    return (0, n.jsx)(
+        o.ConfirmModal,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, l)),
+        (r = r =
+            {
+                header: c.NW.string(c.t['zib/xM']),
+                cancelText: c.NW.string(c.t['ETE/oK']),
+                confirmText: c.NW.string(c.t['cY+Ooa']),
+                children: (0, n.jsx)(o.Text, {
+                    variant: 'text-md/normal',
+                    children: c.NW.format(c.t.AxSYKC, {
+                        ruleName: u,
+                        keyword: a
+                    })
+                })
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t)
+    );
 }

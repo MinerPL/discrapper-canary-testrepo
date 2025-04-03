@@ -1,15 +1,14 @@
-var n = r(475227),
-    a = r(389109),
-    o = Object.prototype,
-    i = o.hasOwnProperty,
-    _ = o.propertyIsEnumerable,
-    E = n(
-        (function () {
-            return arguments;
-        })()
-    )
-        ? n
-        : function (e) {
-              return a(e) && i.call(e, 'callee') && !_.call(e, 'callee');
-          };
-e.exports = E;
+var r = a(475227),
+    n = a(389109),
+    _ = Object.prototype,
+    o = _.hasOwnProperty,
+    i = _.propertyIsEnumerable;
+t.exports = r(
+    (function () {
+        return arguments;
+    })()
+)
+    ? r
+    : function (t) {
+          return n(t) && o.call(t, 'callee') && !i.call(t, 'callee');
+      };

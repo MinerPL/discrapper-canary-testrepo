@@ -1,22 +1,18 @@
-t.d(e, {
-    Z: function () {
-        return r;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(852229),
-    o = t(481060),
-    s = t(109764),
-    c = t(689938);
-function r(n, e, t) {
+e.d(t, { Z: () => s });
+var i = e(200651);
+e(192379);
+var a = e(852229),
+    l = e(481060),
+    r = e(109764),
+    c = e(388032);
+function s(n, t, e) {
     return null != n
-        ? (0, s.Z)(n, t, e)
-        : (0, i.jsx)(o.MenuItem, {
+        ? (0, r.Z)(n, e, t)
+        : (0, i.jsx)(l.sNh, {
               id: 'channel-copy-link',
-              label: c.Z.Messages.COPY_LINK,
+              label: c.NW.string(c.t.WqhZsr),
               action: () => {
-                  (0, a.J)(null != e ? e : '');
+                  (0, a.J)(null != t ? t : '');
               }
           });
 }

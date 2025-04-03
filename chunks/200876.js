@@ -1,20 +1,16 @@
 n.d(t, {
-    Z: function () {
-        return o;
-    },
-    l: function () {
-        return s;
-    }
+    Z: () => s,
+    l: () => a
 });
 var r = n(442837),
     i = n(430824),
-    a = n(981631);
-function s(e) {
-    return !e.hasFeature(a.oNc.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(a.oNc.CREATOR_MONETIZABLE) || e.hasFeature(a.oNc.CREATOR_MONETIZABLE_PROVISIONAL));
+    o = n(981631);
+function a(e) {
+    return !e.hasFeature(o.oNc.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(o.oNc.CREATOR_MONETIZABLE) || e.hasFeature(o.oNc.CREATOR_MONETIZABLE_PROVISIONAL));
 }
-function o(e) {
+function s(e) {
     return (0, r.e7)([i.Z], () => {
         let t = i.Z.getGuild(e);
-        return null != t && s(t);
+        return null != t && a(t);
     });
 }

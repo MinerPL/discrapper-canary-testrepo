@@ -1,144 +1,132 @@
-r.d(t, {
-    Eg: function () {
-        return M;
-    },
-    Jd: function () {
-        return m;
-    },
-    S1: function () {
-        return C;
-    },
-    jp: function () {
-        return g;
-    },
-    lA: function () {
-        return P;
-    },
-    nV: function () {
-        return h;
-    }
+a.d(e, {
+    Eg: () => y,
+    Jd: () => C,
+    S1: () => P,
+    jp: () => m,
+    lA: () => v,
+    nV: () => g
 });
-var n = r(636361),
-    a = r(502990),
-    o = r(907765),
-    i = r(151122),
-    _ = r(511906),
-    E = r(263449),
-    s = r(233517),
-    c = r(510529),
-    I = r(622916),
-    u = r(694043),
-    l = r(688838),
-    R = r(393523),
-    A = r(833772),
-    T = r(454463),
-    d = r(163162),
-    N = r(408720),
-    p = r(515737),
-    O = r(804410),
-    f = r(376457),
-    S = r(42367),
-    D = r(297117),
-    L = r(387486);
-function h(e) {
-    return [(0, n.S)(), (0, a.C)(), (0, p.t)(), (0, N.f)(), (0, O.k)(), (0, S.O)(), (0, o.R)(), (0, f.s)()];
+var r = a(636361),
+    n = a(502990),
+    _ = a(907765),
+    o = a(151122),
+    i = a(511906),
+    c = a(263449),
+    s = a(233517),
+    E = a(510529),
+    l = a(622916),
+    u = a(694043),
+    I = a(688838),
+    R = a(393523),
+    d = a(833772),
+    A = a(454463),
+    f = a(163162),
+    p = a(408720),
+    N = a(515737),
+    T = a(804410),
+    L = a(376457),
+    h = a(42367),
+    O = a(297117),
+    D = a(387486);
+function g(t) {
+    return [(0, r.S)(), (0, n.C)(), (0, N.t)(), (0, p.f)(), (0, T.k)(), (0, h.O)(), (0, _.R)(), (0, L.s)()];
 }
-function C(e = {}) {
-    let t = (function (e = {}) {
+function P(t = {}) {
+    let e = (function (t = {}) {
         return {
-            defaultIntegrations: h(),
-            release: 'string' == typeof __SENTRY_RELEASE__ ? __SENTRY_RELEASE__ : d.m9.SENTRY_RELEASE && d.m9.SENTRY_RELEASE.id ? d.m9.SENTRY_RELEASE.id : void 0,
-            autoSessionTracking: !0,
-            sendClientReports: !0,
-            ...e
+            ...{
+                defaultIntegrations: g(),
+                release: 'string' == typeof __SENTRY_RELEASE__ ? __SENTRY_RELEASE__ : f.m9.SENTRY_RELEASE && f.m9.SENTRY_RELEASE.id ? f.m9.SENTRY_RELEASE.id : void 0,
+                autoSessionTracking: !0,
+                sendClientReports: !0
+            },
+            ...t
         };
-    })(e);
+    })(t);
     if (
         (function () {
-            let e = d.m9,
-                t = e.chrome ? 'chrome' : 'browser',
-                r = e[t],
-                n = r && r.runtime && r.runtime.id,
-                a = (d.m9.location && d.m9.location.href) || '',
-                o = !!n && d.m9 === d.m9.top && ['chrome-extension:', 'moz-extension:', 'ms-browser-extension:'].some((e) => a.startsWith(`${e}//`)),
-                i = void 0 !== e.nw;
-            return !!n && !o && !i;
+            let t = f.m9,
+                e = t.chrome ? 'chrome' : 'browser',
+                a = t[e],
+                r = a && a.runtime && a.runtime.id,
+                n = (f.m9.location && f.m9.location.href) || '',
+                _ = !!r && f.m9 === f.m9.top && ['chrome-extension:', 'moz-extension:', 'ms-browser-extension:'].some((t) => n.startsWith(`${t}//`)),
+                o = void 0 !== t.nw;
+            return !!r && !_ && !o;
         })()
-    ) {
-        (0, I.Cf)(() => {
+    )
+        return void (0, l.Cf)(() => {
             console.error('[Sentry] You cannot run Sentry this way in a browser extension, check: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/');
         });
-        return;
-    }
-    T.X && !(0, u.Ak)() && I.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
-    let r = {
-            ...t,
-            stackParser: (0, l.Sq)(t.stackParser || D.Dt),
-            integrations: (0, i.m8)(t),
-            transport: t.transport || L.f
+    A.X && !(0, u.Ak)() && l.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
+    let a = {
+            ...e,
+            stackParser: (0, I.Sq)(e.stackParser || O.Dt),
+            integrations: (0, o.m8)(e),
+            transport: e.transport || D.f
         },
-        n = (0, _.M)(A.R, r);
+        r = (0, i.M)(d.R, a);
     return (
-        t.autoSessionTracking &&
+        e.autoSessionTracking &&
             (function () {
-                if (void 0 === d.m9.document) {
-                    T.X && I.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
+                if (void 0 === f.m9.document) {
+                    A.X && l.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
                     return;
                 }
                 (0, s.yj)({ ignoreDuration: !0 }),
                     (0, s.cg)(),
-                    (0, R.a)(({ from: e, to: t }) => {
-                        void 0 !== e && e !== t && ((0, s.yj)({ ignoreDuration: !0 }), (0, s.cg)());
+                    (0, R.a)(({ from: t, to: e }) => {
+                        void 0 !== t && t !== e && ((0, s.yj)({ ignoreDuration: !0 }), (0, s.cg)());
                     });
             })(),
-        n
+        r
     );
 }
-function g(e = {}) {
-    if (!d.m9.document) {
-        T.X && I.kg.error('Global document not defined in showReportDialog call');
+function m(t = {}) {
+    if (!f.m9.document) {
+        A.X && l.kg.error('Global document not defined in showReportDialog call');
         return;
     }
-    let t = (0, E.nZ)(),
-        r = t.getClient(),
-        n = r && r.getDsn();
-    if (!n) {
-        T.X && I.kg.error('DSN not configured for showReportDialog call');
+    let e = (0, c.nZ)(),
+        a = e.getClient(),
+        r = a && a.getDsn();
+    if (!r) {
+        A.X && l.kg.error('DSN not configured for showReportDialog call');
         return;
     }
     if (
-        (t &&
-            (e.user = {
-                ...t.getUser(),
-                ...e.user
+        (e &&
+            (t.user = {
+                ...e.getUser(),
+                ...t.user
             }),
-        !e.eventId)
+        !t.eventId)
     ) {
-        let t = (0, s.eW)();
-        t && (e.eventId = t);
+        let e = (0, s.eW)();
+        e && (t.eventId = e);
     }
-    let a = d.m9.document.createElement('script');
-    (a.async = !0), (a.crossOrigin = 'anonymous'), (a.src = (0, c.h)(n, e)), e.onLoad && (a.onload = e.onLoad);
-    let { onClose: o } = e;
-    if (o) {
-        let e = (t) => {
-            if ('__sentry_reportdialog_closed__' === t.data)
+    let n = f.m9.document.createElement('script');
+    (n.async = !0), (n.crossOrigin = 'anonymous'), (n.src = (0, E.h)(r, t)), t.onLoad && (n.onload = t.onLoad);
+    let { onClose: _ } = t;
+    if (_) {
+        let t = (e) => {
+            if ('__sentry_reportdialog_closed__' === e.data)
                 try {
-                    o();
+                    _();
                 } finally {
-                    d.m9.removeEventListener('message', e);
+                    f.m9.removeEventListener('message', t);
                 }
         };
-        d.m9.addEventListener('message', e);
+        f.m9.addEventListener('message', t);
     }
-    let i = d.m9.document.head || d.m9.document.body;
-    i ? i.appendChild(a) : T.X && I.kg.error('Not injecting report dialog. No injection point found in HTML');
+    let o = f.m9.document.head || f.m9.document.body;
+    o ? o.appendChild(n) : A.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
 }
-function M() {}
-function P(e) {
-    e();
+function y() {}
+function v(t) {
+    t();
 }
-function m(e) {
-    let t = (0, E.s3)();
-    t && t.captureUserFeedback(e);
+function C(t) {
+    let e = (0, c.s3)();
+    e && e.captureUserFeedback(t);
 }

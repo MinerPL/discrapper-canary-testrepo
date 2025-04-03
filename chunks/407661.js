@@ -1,41 +1,61 @@
-n.d(t, {
-    Z: function () {
-        return S;
-    }
-});
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
+n.d(t, { Z: () => S });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(442837),
     l = n(481060),
-    u = n(367907),
-    c = n(739566),
+    c = n(367907),
+    u = n(739566),
     d = n(623292),
-    _ = n(703656),
-    E = n(665906),
-    f = n(488131),
+    f = n(703656),
+    _ = n(665906),
+    p = n(488131),
     h = n(375954),
-    p = n(962293),
-    m = n(981631),
-    I = n(689938),
-    T = n(325379);
-function g(e) {
-    let { channel: t, message: n, replyChainLength: a } = e;
+    m = n(962293),
+    g = n(981631),
+    E = n(388032),
+    b = n(453091);
+let y = 2,
+    v = 10;
+function O(e, t) {
+    let n = e.id,
+        r = t.id;
+    return (0, s.e7)(
+        [h.Z],
+        () => {
+            let e = r;
+            for (let t = 0; t < v; t++) {
+                let r = h.Z.getMessage(n, e);
+                if ((null == r ? void 0 : r.type) !== g.uaV.REPLY || null == r.messageReference) return t;
+                e = r.messageReference.message_id;
+            }
+            return v;
+        },
+        [n, r]
+    );
+}
+function I(e) {
+    let { channel: t, message: n, replyChainLength: o } = e;
+    function a() {
+        (0, d.A6)(t.id), (0, p.R6)(t, n, 'Reply Chain Nudge');
+    }
+    let s = i.useRef(o);
     return (
         i.useEffect(() => {
-            (0, u.yw)(m.rMx.THREAD_NUDGE_SHOWN, {
-                type: 'Reply Chain ('.concat(3, ')'),
-                reply_chain_length: a + 1,
+            s.current = o;
+        }),
+        i.useEffect(() => {
+            (0, c.yw)(g.rMx.THREAD_NUDGE_SHOWN, {
+                type: 'Reply Chain ('.concat(y + 1, ')'),
+                reply_chain_length: s.current + 1,
                 channel_id: t.id,
                 guild_id: t.guild_id
             });
         }, [t]),
-        (0, r.jsxs)(l.Clickable, {
-            onClick: function () {
-                (0, d.A6)(t.id), (0, f.R6)(t, n, 'Reply Chain Nudge');
-            },
-            className: T.threadSuggestionBar,
+        (0, r.jsxs)(l.P3F, {
+            onClick: a,
+            className: b.threadSuggestionBar,
             focusProps: {
                 offset: {
                     right: -4,
@@ -45,15 +65,15 @@ function g(e) {
             children: [
                 (0, r.jsx)(l.Text, {
                     color: 'header-secondary',
-                    className: T.text,
+                    className: b.text,
                     variant: 'text-sm/normal',
-                    children: I.Z.Messages.THREAD_REPLY_SUGGESTION.format({ count: Math.min(10, a + 1) })
+                    children: E.NW.format(E.t.B3V0FB, { count: Math.min(v, o + 1) })
                 }),
                 (0, r.jsx)(l.Text, {
                     color: 'text-link',
-                    className: T.createThreadButton,
+                    className: b.createThreadButton,
                     variant: 'text-sm/semibold',
-                    children: I.Z.Messages.CREATE_THREAD
+                    children: E.NW.string(E.t.rBIGBA)
                 })
             ]
         })
@@ -61,40 +81,28 @@ function g(e) {
 }
 function S(e) {
     let { reply: t, chatInputType: n } = e,
-        { channel: i, message: a, shouldMention: u, showMentionToggle: f } = t,
-        { nick: S, colorString: A, colorRoleName: N } = (0, c.ZP)(a),
-        v = (function (e, t) {
-            let n = e.id,
-                r = t.id;
-            return (0, o.e7)(
-                [h.Z],
-                () => {
-                    let e = r;
-                    for (let t = 0; t < 10; t++) {
-                        let r = h.Z.getMessage(n, e);
-                        if ((null == r ? void 0 : r.type) !== m.uaV.REPLY || null == r.messageReference) return t;
-                        e = r.messageReference.message_id;
-                    }
-                    return 10;
-                },
-                [n, r]
-            );
-        })(i, a),
-        O = (0, E.NE)(i, a),
-        R = n.showThreadPromptOnReply && v >= 2 && O;
+        { channel: i, message: o, shouldMention: s, showMentionToggle: c } = t,
+        { nick: p, colorString: h, colorRoleName: v } = (0, u.ZP)(o),
+        S = O(i, o),
+        T = (0, _.NE)(i, o),
+        N = n.showThreadPromptOnReply && S >= y && T,
+        A = () => (0, f.uL)(g.Z5c.CHANNEL(i.getGuildId(), i.id, o.id));
     function C(e) {
-        e.stopPropagation(), (0, d.qx)(i.id, !u);
+        e.stopPropagation(), (0, d.qx)(i.id, !s);
+    }
+    function R(e) {
+        e.stopPropagation(), (0, d.A6)(i.id);
     }
     return (0, r.jsx)('div', {
-        className: T.clipContainer,
+        className: b.clipContainer,
         children: (0, r.jsxs)('div', {
-            className: T.container,
+            className: b.container,
             children: [
                 (0, r.jsxs)('div', {
-                    className: T.replyBar,
+                    className: b.replyBar,
                     children: [
-                        (0, r.jsx)(l.Clickable, {
-                            onClick: () => (0, _.uL)(m.Z5c.CHANNEL(i.getGuildId(), i.id, a.id)),
+                        (0, r.jsx)(l.P3F, {
+                            onClick: A,
                             focusProps: {
                                 offset: {
                                     top: -8,
@@ -105,17 +113,17 @@ function S(e) {
                             },
                             children: (0, r.jsx)(l.Text, {
                                 color: 'header-secondary',
-                                className: s()(T.text, T.replyLabel),
+                                className: a()(b.text, b.replyLabel),
                                 variant: 'text-sm/normal',
-                                children: I.Z.Messages.REPLYING_TO.format({
+                                children: E.NW.format(E.t['8E4Gxc'], {
                                     userHook: (e, t) =>
                                         (0, r.jsx)(
-                                            l.NameWithRole,
+                                            l.PUh,
                                             {
-                                                className: T.name,
-                                                name: S,
-                                                color: A,
-                                                roleName: N
+                                                className: b.name,
+                                                name: p,
+                                                color: h,
+                                                roleName: v
                                             },
                                             t
                                         )
@@ -123,60 +131,56 @@ function S(e) {
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: T.actions,
+                            className: b.actions,
                             children: [
-                                f &&
+                                c &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, r.jsx)(l.Tooltip, {
-                                                text: u ? I.Z.Messages.REPLY_MENTION_ON_TOOLTIP : I.Z.Messages.REPLY_MENTION_OFF_TOOLTIP,
+                                            (0, r.jsx)(l.ua7, {
+                                                text: s ? E.NW.string(E.t.DH2o6e) : E.NW.string(E.t.utGGIS),
                                                 children: (e) => {
-                                                    let { onMouseEnter: t, onMouseLeave: n, onFocus: i, onBlur: a } = e;
-                                                    return (0, r.jsx)(l.Clickable, {
+                                                    let { onMouseEnter: t, onMouseLeave: n, onFocus: i, onBlur: o } = e;
+                                                    return (0, r.jsx)(l.P3F, {
                                                         role: 'switch',
-                                                        'aria-checked': u,
+                                                        'aria-checked': s,
                                                         onClick: C,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         onFocus: i,
-                                                        onBlur: a,
+                                                        onBlur: o,
                                                         children: (0, r.jsxs)(l.Text, {
                                                             variant: 'text-sm/bold',
-                                                            color: u ? 'text-link' : 'text-muted',
-                                                            className: T.mentionButton,
+                                                            color: s ? 'text-link' : 'text-muted',
+                                                            className: b.mentionButton,
                                                             children: [
-                                                                (0, r.jsx)(l.AtIcon, {
+                                                                (0, r.jsx)(l.lOy, {
                                                                     size: 'md',
                                                                     color: 'currentColor',
-                                                                    'aria-label': I.Z.Messages.MENTION,
-                                                                    className: T.mentionIcon
+                                                                    'aria-label': E.NW.string(E.t.P8tvKC),
+                                                                    className: b.mentionIcon
                                                                 }),
-                                                                u ? I.Z.Messages.REPLY_MENTION_ON : I.Z.Messages.REPLY_MENTION_OFF
+                                                                s ? E.NW.string(E.t.p9jC2t) : E.NW.string(E.t.U7f3bG)
                                                             ]
                                                         })
                                                     });
                                                 }
                                             }),
                                             (0, r.jsx)('div', {
-                                                className: T.separator,
+                                                className: b.separator,
                                                 'aria-hidden': !0
                                             })
                                         ]
                                     }),
-                                (0, r.jsx)(p.B, {
-                                    onClick: function (e) {
-                                        e.stopPropagation(), (0, d.A6)(i.id);
-                                    }
-                                })
+                                (0, r.jsx)(m.B, { onClick: R })
                             ]
                         })
                     ]
                 }),
-                R &&
-                    (0, r.jsx)(g, {
+                N &&
+                    (0, r.jsx)(I, {
                         channel: i,
-                        message: a,
-                        replyChainLength: v
+                        message: o,
+                        replyChainLength: S
                     })
             ]
         })

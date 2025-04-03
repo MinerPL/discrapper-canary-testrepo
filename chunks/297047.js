@@ -1,51 +1,47 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    },
-    q: function () {
-        return f;
-    }
+t.d(n, {
+    Z: () => h,
+    q: () => g
 }),
-    n(47120);
-var r = n(735250);
-n(470079);
-var i = n(442837),
-    a = n(481060),
-    s = n(144144),
-    o = n(592125),
-    l = n(496675),
-    u = n(944486),
-    c = n(585483),
-    d = n(51144),
-    _ = n(981631),
-    E = n(689938);
-function f(e, t) {
-    let { id: n } = e,
+    t(47120);
+var r = t(200651);
+t(192379);
+var i = t(442837),
+    l = t(481060),
+    o = t(144144),
+    a = t(592125),
+    s = t(496675),
+    c = t(944486),
+    u = t(585483),
+    d = t(51144),
+    f = t(981631),
+    p = t(388032);
+function g(e, n) {
+    let { id: t } = e,
         r = '@'.concat(d.ZP.getUserTag(e, { decoration: 'never' }));
-    c.S.dispatchToLastSubscribed(_.CkL.INSERT_TEXT, {
+    u.S.dispatchToLastSubscribed(f.CkL.INSERT_TEXT, {
         plainText: r,
-        rawText: '<@'.concat(n, '>')
+        rawText: '<@'.concat(t, '>')
     }),
-        null != t && s.Z.startTyping(t);
+        null != n && o.Z.startTyping(n);
 }
-function h(e, t, n) {
-    let [s, c] = (0, i.Wu)(
-            [u.Z, o.Z, l.Z],
+function h(e, n, t) {
+    let [o, u] = (0, i.Wu)(
+            [c.Z, a.Z, s.Z],
             () => {
-                let e = u.Z.getChannelId(t),
-                    n = o.Z.getChannel(e);
-                return [e, null != n && (n.isMultiUserDM() || l.Z.can(_.Plq.SEND_MESSAGES, n))];
+                let e = c.Z.getChannelId(n),
+                    t = a.Z.getChannel(e);
+                return [e, null != t && (t.isMultiUserDM() || s.Z.can(f.Plq.SEND_MESSAGES, t))];
             },
-            [t]
+            [n]
         ),
-        d = n === _.IlC.POPOUT;
-    return !c || d
+        d = t === f.IlC.POPOUT;
+    return !u || d
         ? null
-        : (0, r.jsx)(a.MenuItem, {
+        : (0, r.jsx)(l.sNh, {
               id: 'mention',
-              label: E.Z.Messages.MENTION,
+              label: p.NW.string(p.t.P8tvKC),
               action: function () {
-                  f(e, s);
+                  g(e, o);
               }
           });
 }

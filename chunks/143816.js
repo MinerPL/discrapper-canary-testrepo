@@ -1,10 +1,11 @@
 n.d(t, {
-    H: function () {
-        return a;
-    }
+    H: () => a,
+    Z: () => o
 }),
     n(47120);
-var r,
-    i = n(124368);
-((r || (r = {})).INVITE_ACCEPT = 'invite_accept'), (t.Z = r);
-let a = new Set([i.on.EMBED, i.on.FORUM]);
+var r = n(124368),
+    i = (function (e) {
+        return (e.INVITE_ACCEPT = 'invite_accept'), e;
+    })(i || {});
+let o = i,
+    a = new Set([r.on.EMBED, r.on.FORUM]);

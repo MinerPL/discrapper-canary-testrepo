@@ -1,194 +1,238 @@
-l.d(t, {
-    Z: function () {
-        return N;
+n.d(t, { Z: () => D }), n(47120), n(566702);
+var r = n(200651),
+    l = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    i = n(954955),
+    s = n.n(i),
+    c = n(498607),
+    u = n.n(c),
+    d = n(399606),
+    C = n(481060),
+    m = n(430824),
+    b = n(246946),
+    p = n(785195),
+    f = n(553826),
+    h = n(893966),
+    j = n(527379),
+    g = n(327999),
+    x = n(734557),
+    y = n(981631),
+    v = n(388032),
+    O = n(23),
+    N = n(906944);
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-}),
-    l(47120);
-var n = l(735250),
-    a = l(470079),
-    o = l(120356),
-    s = l.n(o),
-    i = l(954955),
-    r = l.n(i),
-    C = l(498607),
-    c = l.n(C),
-    d = l(399606),
-    u = l(481060),
-    m = l(430824),
-    _ = l(246946),
-    E = l(669405),
-    h = l(553826),
-    M = l(893966),
-    x = l(527379),
-    b = l(327999),
-    T = l(734557),
-    L = l(981631),
-    g = l(689938),
-    I = l(727328),
-    p = l(837244);
-let H = [b.gq.DISCOVERY, b.gq.VANITY_URL, b.gq.BOT, b.gq.HUB, b.gq.MANUAL_MEMBER_VERIFICATION];
-function f(e) {
-    let { type: t, text: l, size: a, vanityUrl: o, isFocused: i } = e,
-        r = null != a ? a : 16,
-        C = (function (e, t) {
+    return e;
+}
+function H(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let w = [g.gq.DISCOVERY, g.gq.VANITY_URL, g.gq.BOT, g.gq.HUB, g.gq.MANUAL_MEMBER_VERIFICATION];
+function S(e) {
+    let { type: t, text: n, size: l, vanityUrl: o, isFocused: i } = e,
+        s = null != l ? l : 16,
+        c = (function (e, t) {
             switch (e) {
-                case b.gq.BOT:
-                    return (0, n.jsx)(u.RobotIcon, {
+                case g.gq.BOT:
+                    return (0, r.jsx)(C.wGt, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: I.icon,
+                        className: O.icon,
                         height: t,
                         width: t
                     });
-                case b.gq.INTEGRATION:
-                    return (0, n.jsx)(u.WebhookIcon, {
+                case g.gq.INTEGRATION:
+                    return (0, r.jsx)(C.tYf, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: I.icon,
+                        className: O.icon,
                         height: t,
                         width: t
                     });
-                case b.gq.DISCOVERY:
-                    return (0, n.jsx)(u.CompassIcon, {
+                case g.gq.DISCOVERY:
+                    return (0, r.jsx)(C.Jmo, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: I.icon,
+                        className: O.icon,
                         height: t,
                         width: t
                     });
-                case b.gq.HUB:
-                    return (0, n.jsx)(u.HubIcon, {
+                case g.gq.HUB:
+                    return (0, r.jsx)(C.aVH, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: I.icon,
+                        className: O.icon,
                         height: t,
                         width: t
                     });
-                case b.gq.INVITE:
-                case b.gq.VANITY_URL:
-                    return (0, n.jsx)(u.LinkIcon, {
+                case g.gq.INVITE:
+                case g.gq.VANITY_URL:
+                    return (0, r.jsx)(C.xPt, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: I.icon,
+                        className: O.icon,
                         height: t,
                         width: t
                     });
-                case b.gq.MANUAL_MEMBER_VERIFICATION:
-                    return (0, n.jsx)(E.Z, {
-                        className: I.icon,
+                case g.gq.MANUAL_MEMBER_VERIFICATION:
+                    return (0, r.jsx)(p.Z, {
+                        className: O.icon,
                         height: t,
                         width: t
                     });
                 default:
                     return null;
             }
-        })(t, r),
-        c = (0, b.bE)(t, o);
-    return (0, n.jsxs)('div', {
-        className: s()(I.labelWithIconContainer),
-        'aria-label': c,
+        })(t, s),
+        u = (0, g.bE)(t, o);
+    return (0, r.jsxs)('div', {
+        className: O.labelWithIconContainer,
+        'aria-label': u,
         children: [
-            null != C ? C : null,
-            (0, n.jsx)(u.Text, {
-                variant: 12 === r ? 'text-xs/medium' : 'text-sm/medium',
-                className: s()(I.labelText, { [I.focused]: i }),
-                children: l
+            null != c ? c : null,
+            (0, r.jsx)(C.Text, {
+                variant: 12 === s ? 'text-xs/medium' : 'text-sm/medium',
+                className: a()(O.labelText, { [O.focused]: i }),
+                children: n
             })
         ]
     });
 }
-function N(e) {
-    let { guildId: t, onClose: l } = e,
-        o = (0, d.e7)([M.Z], () => M.Z.getSearchStateByGuildId(t), [t], c()),
-        { inviteCodes: i } = (0, T.s)(t),
-        C = (0, d.e7)([m.Z], () => m.Z.getGuild(t)),
-        E = null == C ? void 0 : C.vanityURLCode,
-        [N, R] = a.useState(!1),
-        { selectedSourceInviteCode: A, selectedJoinSourceType: S } = o,
-        Z = null != S && S !== b.gq.UNSPECIFIED,
-        j = (0, d.e7)([_.Z], () => _.Z.hideInstantInvites, []);
-    j && (i = []);
-    let v = a.useCallback(
+function D(e) {
+    let { guildId: t, onClose: n } = e,
+        o = (0, d.e7)([h.Z], () => h.Z.getSearchStateByGuildId(t), [t], u()),
+        { inviteCodes: i } = (0, x.s)(t),
+        c = (0, d.e7)([m.Z], () => m.Z.getGuild(t)),
+        p = null == c ? void 0 : c.vanityURLCode,
+        [D, Z] = l.useState(!1),
+        { selectedSourceInviteCode: R, selectedJoinSourceType: L } = o,
+        I = null != L && L !== g.gq.UNSPECIFIED,
+        P = (0, d.e7)([b.Z], () => b.Z.hideInstantInvites, []);
+    P && (i = []);
+    let M = l.useCallback(
             (e) => {
-                let l = e.trim();
-                (0, x.Dr)(t, {
-                    ...o,
-                    selectedSourceInviteCode: '' !== l ? l : void 0,
-                    selectedJoinSourceType: void 0
-                });
+                let n = e.trim();
+                (0, j.Dr)(
+                    t,
+                    H(_({}, o), {
+                        selectedSourceInviteCode: '' !== n ? n : void 0,
+                        selectedJoinSourceType: void 0
+                    })
+                );
             },
             [t, o]
         ),
-        D = a.useCallback(
+        V = l.useCallback(
             (e) => {
-                e === S
-                    ? (0, x.Dr)(t, {
+                e === L
+                    ? (0, j.Dr)(t, {
                           selectedSourceInviteCode: void 0,
                           selectedJoinSourceType: void 0
                       })
-                    : (0, x.Dr)(t, {
+                    : (0, j.Dr)(t, {
                           selectedSourceInviteCode: null,
                           selectedJoinSourceType: e
                       }),
-                    R(!1);
+                    Z(!1);
             },
-            [t, S]
+            [t, L]
         ),
-        O = a.useCallback(r()(v, 300), [v]),
-        B = a.useCallback(
+        E = l.useMemo(() => s()(M, 300), [M]),
+        T = l.useCallback(
             (e) => {
-                O(e);
+                E(e);
             },
-            [O]
+            [E]
         );
-    return (0, n.jsx)(u.Menu, {
+    return (0, r.jsx)(C.v2r, {
         navId: 'members-table-join-method-menu',
         onClose: () => {
-            l();
+            n();
         },
-        'aria-label': g.Z.Messages.MEMBER_SAFETY_JOIN_METHOD_LABEL,
-        onSelect: L.dG4,
-        children: N
-            ? (0, n.jsxs)(u.MenuGroup, {
+        'aria-label': v.NW.string(v.t['u/7RdX']),
+        onSelect: y.dG4,
+        children: D
+            ? (0, r.jsxs)(C.kSQ, {
                   children: [
-                      (0, n.jsx)(u.MenuItem, {
+                      (0, r.jsx)(C.sNh, {
                           id: 'back',
-                          action: () => R(!1),
+                          action: () => Z(!1),
                           render: (e) =>
-                              (0, n.jsxs)('span', {
-                                  ...e,
-                                  className: I.customLabelContainer,
-                                  children: [
-                                      (0, n.jsx)(u.ChevronSmallLeftIcon, {
-                                          size: 'custom',
-                                          color: 'currentColor',
-                                          width: 16,
-                                          height: 16,
-                                          className: I.__invalid_caret
-                                      }),
-                                      (0, n.jsx)(u.Text, {
-                                          variant: 'eyebrow',
-                                          color: 'header-primary',
-                                          children: g.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
-                                      })
-                                  ]
-                              })
+                              (0, r.jsxs)(
+                                  'span',
+                                  H(_({}, e), {
+                                      className: O.customLabelContainer,
+                                      children: [
+                                          (0, r.jsx)(C.V7D, {
+                                              size: 'custom',
+                                              color: 'currentColor',
+                                              width: 16,
+                                              height: 16,
+                                              className: O.__invalid_caret
+                                          }),
+                                          (0, r.jsx)(C.Text, {
+                                              variant: 'eyebrow',
+                                              color: 'header-primary',
+                                              children: v.NW.string(v.t['Kz/cho'])
+                                          })
+                                      ]
+                                  })
+                              )
                       }),
-                      H.map((e) =>
-                          (0, n.jsx)(
-                              u.MenuRadioItem,
+                      w.map((e) =>
+                          (0, r.jsx)(
+                              C.k5B,
                               {
                                   id: 'join-source-type-option-'.concat(e),
                                   label: (t) =>
-                                      (0, n.jsx)(f, {
-                                          ...t,
-                                          type: e,
-                                          vanityUrl: E,
-                                          text: (0, b.bE)(e, E, j)
-                                      }),
-                                  checked: S === e,
+                                      (0, r.jsx)(
+                                          S,
+                                          H(_({}, t), {
+                                              type: e,
+                                              vanityUrl: p,
+                                              text: (0, g.bE)(e, p, P)
+                                          })
+                                      ),
+                                  checked: L === e,
                                   disabled: !1,
-                                  action: () => D(e),
+                                  action: () => V(e),
                                   group: 'join-source-type-options'
                               },
                               'join-source-type-option-'.concat(e)
@@ -196,101 +240,107 @@ function N(e) {
                       )
                   ]
               })
-            : (0, n.jsxs)(u.MenuGroup, {
+            : (0, r.jsxs)(C.kSQ, {
                   children: [
-                      (0, n.jsx)(
-                          u.MenuControlItem,
+                      (0, r.jsx)(
+                          C.II_,
                           {
                               id: 'members-table-invite-code-search',
                               control: (e, t) =>
-                                  (0, n.jsx)(u.MenuSearchControl, {
-                                      ...e,
-                                      query: null != A ? A : '',
-                                      onChange: B,
-                                      ref: t,
-                                      placeholder: g.Z.Messages.MEMBER_SAFETY_INVITE_CODE_SEARCH_PLACEHOLDER
-                                  })
+                                  (0, r.jsx)(
+                                      C.ne,
+                                      H(_({}, e), {
+                                          query: null != R ? R : '',
+                                          onChange: T,
+                                          ref: t,
+                                          placeholder: v.NW.string(v.t.YwJnGx)
+                                      })
+                                  )
                           },
                           'invite-code-filter-search'
                       ),
-                      (0, n.jsx)(u.MenuSeparator, {}),
-                      (0, n.jsx)(
-                          u.MenuRadioItem,
+                      (0, r.jsx)(C.Clw, {}),
+                      (0, r.jsx)(
+                          C.k5B,
                           {
                               id: 'join-source-type-option-all',
-                              label: g.Z.Messages.GUILD_SETTINGS_FILTER_ALL,
-                              checked: null == A && null == S,
+                              label: v.NW.string(v.t.an9Ry8),
+                              checked: null == R && null == L,
                               disabled: !1,
-                              action: () => D(null),
+                              action: () => V(null),
                               group: 'join-source-type-options'
                           },
                           'join-source-type-option-all'
                       ),
                       i.map((e) =>
-                          (0, n.jsx)(
-                              u.MenuRadioItem,
+                          (0, r.jsx)(
+                              C.k5B,
                               {
                                   id: 'join-source-type-option-'.concat(e),
                                   label: (t) =>
-                                      (0, n.jsx)(f, {
-                                          ...t,
-                                          type: b.gq.INVITE,
-                                          vanityUrl: E,
-                                          text: e
-                                      }),
-                                  checked: A === e,
+                                      (0, r.jsx)(
+                                          S,
+                                          H(_({}, t), {
+                                              type: g.gq.INVITE,
+                                              vanityUrl: p,
+                                              text: e
+                                          })
+                                      ),
+                                  checked: R === e,
                                   disabled: !1,
-                                  action: () => v(e),
+                                  action: () => M(e),
                                   group: 'join-source-type-options'
                               },
                               'join-source-type-option-'.concat(e)
                           )
                       ),
-                      (0, n.jsx)(u.MenuSeparator, {}),
-                      (0, n.jsx)(
-                          u.MenuItem,
+                      (0, r.jsx)(C.Clw, {}),
+                      (0, r.jsx)(
+                          C.sNh,
                           {
                               id: 'other-join-methods',
-                              action: () => R(!0),
+                              action: () => Z(!0),
                               render: (e) =>
-                                  (0, n.jsxs)('div', {
-                                      className: s()(I.containerWithRightCaret, I.customLabelContainer),
+                                  (0, r.jsxs)('div', {
+                                      className: a()(O.containerWithRightCaret, O.customLabelContainer),
                                       children: [
-                                          (0, n.jsxs)('div', {
-                                              className: s()(p.label),
+                                          (0, r.jsxs)('div', {
+                                              className: N.label,
                                               children: [
-                                                  (0, n.jsx)(u.Text, {
+                                                  (0, r.jsx)(C.Text, {
                                                       variant: 'text-sm/medium',
-                                                      className: s()(I.__invalid_selectedRadio, I.labelText, { [I.focused]: e.isFocused }),
-                                                      children: g.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
+                                                      className: a()(O.__invalid_selectedRadio, O.labelText, { [O.focused]: e.isFocused }),
+                                                      children: v.NW.string(v.t['Kz/cho'])
                                                   }),
-                                                  Z
-                                                      ? (0, n.jsx)('div', {
-                                                            className: I.selectedOption,
-                                                            children: (0, n.jsx)(f, {
-                                                                ...e,
-                                                                size: 12,
-                                                                text: (0, b.bE)(S, E, j),
-                                                                type: S,
-                                                                vanityUrl: E
-                                                            })
+                                                  I
+                                                      ? (0, r.jsx)('div', {
+                                                            className: O.selectedOption,
+                                                            children: (0, r.jsx)(
+                                                                S,
+                                                                H(_({}, e), {
+                                                                    size: 12,
+                                                                    text: (0, g.bE)(L, p, P),
+                                                                    type: L,
+                                                                    vanityUrl: p
+                                                                })
+                                                            )
                                                         })
                                                       : null
                                               ]
                                           }),
-                                          Z
-                                              ? (0, n.jsx)(h.Z, {
-                                                    background: I.__invalid_radio,
-                                                    foreground: I.radioSelection,
+                                          I
+                                              ? (0, r.jsx)(f.Z, {
+                                                    background: O.__invalid_radio,
+                                                    foreground: O.radioSelection,
                                                     width: 16,
                                                     height: 16
                                                 })
-                                              : (0, n.jsx)(u.ChevronSmallRightIcon, {
+                                              : (0, r.jsx)(C.Fbu, {
                                                     size: 'custom',
                                                     color: 'currentColor',
                                                     width: 16,
                                                     height: 16,
-                                                    className: I.__invalid_caret
+                                                    className: O.__invalid_caret
                                                 })
                                       ]
                                   })

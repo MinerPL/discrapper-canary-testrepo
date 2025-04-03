@@ -1,25 +1,21 @@
-t.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var u = t(735250);
-t(470079);
-var s = t(442837),
-    r = t(481060),
-    c = t(92114),
-    i = t(9156),
-    a = t(621600),
-    d = t(689938);
-function o(e) {
-    let n = (0, s.e7)([i.ZP], () => i.ZP.isMuteScheduledEventsEnabled(e), [e]);
-    return (0, u.jsx)(r.MenuCheckboxItem, {
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var s = n(442837),
+    d = n(481060),
+    r = n(87051),
+    c = n(9156),
+    a = n(621600),
+    u = n(388032);
+function l(e) {
+    let t = (0, s.e7)([c.ZP], () => c.ZP.isMuteScheduledEventsEnabled(e), [e]);
+    return (0, i.jsx)(d.S89, {
         id: 'mute-events',
-        label: d.Z.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS,
+        label: u.NW.string(u.t.ONG3Y2),
         action: () => {
-            var t;
-            return (t = { mute_scheduled_events: !n }), void c.Z.updateGuildNotificationSettings(e, t, a.UE.mutedEvents(t.mute_scheduled_events));
+            var n;
+            return (n = { mute_scheduled_events: !t }), void r.Z.updateGuildNotificationSettings(e, n, a.UE.mutedEvents(n.mute_scheduled_events));
         },
-        checked: n
+        checked: t
     });
 }

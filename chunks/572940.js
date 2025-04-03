@@ -1,26 +1,27 @@
-var a = n(735250),
-    t = n(470079),
-    r = n(481060),
-    l = n(246364),
-    i = n(689938);
-s.Z = function (e) {
-    let { className: s, sortOrder: n, onSortChange: o } = e,
-        c = t.useMemo(
+n.d(t, { Z: () => s });
+var r = n(200651),
+    a = n(192379),
+    i = n(481060),
+    o = n(246364),
+    l = n(388032);
+let s = function (e) {
+    let { className: t, sortOrder: n, onSortChange: s } = e,
+        c = a.useMemo(
             () => [
                 {
-                    value: l.Nw.TIMESTAMP_DESC,
-                    label: i.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_SORT_NEWEST
+                    value: o.Nw.TIMESTAMP_DESC,
+                    label: l.NW.string(l.t.eoXe0t)
                 },
                 {
-                    value: l.Nw.TIMESTAMP_ASC,
-                    label: i.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_SORT_OLDEST
+                    value: o.Nw.TIMESTAMP_ASC,
+                    label: l.NW.string(l.t.mmeWUF)
                 }
             ],
             []
         );
-    return (0, a.jsx)(r.SingleSelect, {
-        className: s,
-        onChange: o,
+    return (0, r.jsx)(i.q4e, {
+        className: t,
+        onChange: s,
         value: n,
         options: c
     });

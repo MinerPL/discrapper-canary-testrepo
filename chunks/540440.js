@@ -1,51 +1,75 @@
 n.d(t, {
-    B: function () {
-        return _;
-    },
-    y: function () {
-        return d;
-    }
+    B: () => _,
+    y: () => f
 });
-var r = n(735250);
-n(470079);
-var i = n(278074),
-    a = n(442837),
-    s = n(481060),
-    o = n(26033),
-    l = n(594174),
-    u = n(324745),
-    c = n(689938);
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    o = n(481060),
+    a = n(26033),
+    s = n(594174),
+    l = n(324745),
+    c = n(388032);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function d(e) {
-    return (0, i.EQ)(e)
-        .when(o.dX, () => c.Z.Messages.USER_ACTIVITY_CLEAR_GAME_HISTORY)
-        .when(o.y0, () => c.Z.Messages.USER_ACTIVITY_CLEAR_WATCH_HISTORY)
-        .when(o.dU, () => c.Z.Messages.USER_ACTIVITY_CLEAR_LISTENING_HISTORY)
-        .otherwise(() => null);
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e) {
+    return (0, a.dX)(e) ? c.NW.string(c.t['4f8iur']) : (0, a.y0)(e) ? c.NW.string(c.t.yX2hNz) : (0, a.kq)(e) ? c.NW.string(c.t.oSs8en) : c.NW.string(c.t.bK9GT0);
 }
 function _(e) {
-    let { user: t, entry: i, display: o, onAction: c, onClose: _ } = e,
-        E = (0, u.Z)({ onClose: _ }),
-        f = (0, a.e7)([l.default], () => l.default.getCurrentUser());
-    if (t.id !== (null == f ? void 0 : f.id) || 'live' === o || null == i) return null;
-    let h = () => {
-        (0, s.openModalLazy)(async () => {
-            let { default: e } = await n.e('26545').then(n.bind(n, 81596));
+    let { user: t, entry: c, display: u, onAction: _, onClose: p } = e,
+        h = (0, l.Z)({ onClose: p }),
+        m = (0, i.e7)([s.default], () => s.default.getCurrentUser());
+    if (t.id !== (null == m ? void 0 : m.id) || 'recent' !== u || !(0, a.Rh)(c)) return null;
+    let g = () => {
+        (0, o.ZDy)(async () => {
+            let { default: e } = await Promise.all([n.e('62880'), n.e('66229')]).then(n.bind(n, 81596));
             return (n) =>
-                (0, r.jsx)(e, {
-                    entry: i,
-                    user: t,
-                    onAction: c,
-                    onOpenGameSettings: E,
-                    ...n
-                });
-        }),
-            null == _ || _();
+                (0, r.jsx)(
+                    e,
+                    d(
+                        {
+                            entry: c,
+                            user: t,
+                            onAction: _,
+                            onOpenGameSettings: h
+                        },
+                        n
+                    )
+                );
+        });
     };
-    return (0, r.jsx)(s.MenuItem, {
+    return (0, r.jsx)(o.sNh, {
         id: 'delete-entry-history',
-        label: d(i),
+        label: f(c),
         action: () => {
-            null == c || c({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), h();
+            null == _ || _({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), g();
         },
         color: 'danger'
     });

@@ -1,4 +1,5 @@
-var r = n(965537);
-t.Z = function (e) {
-    return 'function' == typeof e ? e : r.Z;
+r.d(t, { Z: () => o });
+var n = r(965537);
+let o = function (e) {
+    return 'function' == typeof e ? e : n.Z;
 };

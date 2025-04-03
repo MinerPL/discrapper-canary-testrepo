@@ -1,21 +1,17 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    l = n(979696),
-    r = n(963876),
-    o = n(689938);
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(979696),
+    a = n(963876),
+    s = n(388032);
 function c(e) {
-    let t = (0, a.e7)([l.Z], () => l.Z.getToastsEnabled(e));
-    return (0, i.jsx)(s.MenuCheckboxItem, {
+    let t = (0, i.e7)([o.Z], () => o.Z.getToastsEnabled(e));
+    return (0, r.jsx)(l.S89, {
         id: 'show-call-chat-toasts',
-        label: o.Z.Messages.SHOW_NEW_MESSAGE_PREVIEWS,
+        label: s.NW.string(s.t['5NL5vb']),
         checked: t,
-        action: () => r.Z.setCallChatToastsEnabled(e, !t)
+        action: () => a.Z.setCallChatToastsEnabled(e, !t)
     });
 }

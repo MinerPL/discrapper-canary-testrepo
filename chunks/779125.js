@@ -1,66 +1,59 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    r = n(475179),
-    l = n(287734),
-    o = n(933557),
+n.d(t, { Z: () => x });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    a = n(481060),
+    l = n(475179),
+    o = n(287734),
+    s = n(933557),
     c = n(124072),
     u = n(703656),
     d = n(131704),
-    _ = n(592125),
-    E = n(430824),
-    I = n(699516),
-    m = n(594174),
-    T = n(934415),
-    h = n(900849),
-    N = n(981631);
-function f(e) {
-    let { channel: t, onClick: n, beforeTransition: f, className: C, openChatWithoutConnecting: p } = e,
-        g = (0, a.e7)([m.default, I.Z], () => (null == t ? '' : (0, o.F6)(t, m.default, I.Z)), [t]);
-    return (0, i.jsx)(s.Tooltip, {
-        text: g,
+    p = n(592125),
+    m = n(430824),
+    f = n(699516),
+    h = n(594174),
+    g = n(934415),
+    _ = n(900849),
+    b = n(981631);
+function x(e) {
+    let { channel: t, onClick: n, beforeTransition: x, className: y, openChatWithoutConnecting: E } = e,
+        v = (0, i.e7)([h.default, f.Z], () => (null == t ? '' : (0, s.F6)(t, h.default, f.Z)), [t]);
+    return (0, r.jsx)(a.ua7, {
+        text: v,
         position: 'top',
         children: (e) => {
-            let { onMouseEnter: a, onMouseLeave: o } = e;
-            return (0, i.jsx)(c.Z, {
+            let { onMouseEnter: i, onMouseLeave: s } = e;
+            return (0, r.jsx)(c.Z, {
                 role: 'link',
-                className: C,
+                className: y,
                 onClick: (e) => {
                     e.stopPropagation(),
                         null != n
                             ? n()
-                            : (null != f && f(),
-                              (0, s.closeAllModals)(),
-                              !(function (e, t) {
+                            : (null != x && x(),
+                              (0, a.pTH)(),
+                              (function (e, t) {
                                   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                                   if (null == e || null == t) return;
-                                  let i = E.Z.getGuild(e);
-                                  if ((null == i ? void 0 : i.joinedAt) == null) {
-                                      h.Ub(e, {}, { channelId: t });
-                                      return;
-                                  }
-                                  let a = _.Z.getChannel(t);
-                                  if (null != a && (0, d.bw)(a.type)) {
+                                  let r = m.Z.getGuild(e);
+                                  if ((null == r ? void 0 : r.joinedAt) == null) return _.Ub(e, {}, { channelId: t });
+                                  let i = p.Z.getChannel(t);
+                                  if (null != i && (0, d.bw)(i.type)) {
                                       if (n) {
-                                          r.Z.updateChatOpen(a.id, !0), (0, u.uL)(N.Z5c.CHANNEL(e, t));
+                                          l.Z.updateChatOpen(i.id, !0), (0, u.uL)(b.Z5c.CHANNEL(e, t));
                                           return;
                                       }
-                                      l.default.selectVoiceChannel(a.id);
+                                      o.default.selectVoiceChannel(i.id);
                                       return;
                                   }
-                                  (0, u.uL)(N.Z5c.CHANNEL(e, t));
-                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, p));
+                                  (0, u.uL)(b.Z5c.CHANNEL(e, t));
+                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, E));
                 },
-                onMouseEnter: a,
-                onMouseLeave: o,
-                iconType: (0, T.wl)(t),
-                children: g
+                onMouseEnter: i,
+                onMouseLeave: s,
+                iconType: (0, g.wl)(t),
+                children: v
             });
         }
     });

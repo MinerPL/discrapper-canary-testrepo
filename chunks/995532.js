@@ -1,84 +1,82 @@
-E.d(_, {
-    a: function () {
-        return r;
-    }
+n.d(t, {
+    Z: () => I,
+    a: () => o
 });
-var s,
-    T,
-    I,
-    n,
-    t = E(442837),
-    A = E(570140);
-let r = {},
-    a = {},
-    N = {},
-    l = !1,
-    L = !1,
-    S = !1;
-function D(e) {
-    let { guild: _ } = e.invite;
-    return (null == _ ? void 0 : _.welcome_screen) != null && ((a[_.id] = _.welcome_screen), !0);
+var r,
+    l,
+    a,
+    s = n(442837),
+    i = n(570140);
+let o = {},
+    E = {},
+    c = {},
+    u = !1,
+    _ = !1,
+    d = !1;
+function A(e) {
+    let { guild: t } = e.invite;
+    return (null == t ? void 0 : t.welcome_screen) != null && ((E[t.id] = t.welcome_screen), !0);
 }
-function U(e) {
-    let { welcomeScreen: _, guildId: E } = e;
-    a[E] = null != _ ? _ : r;
+function T(e) {
+    let { welcomeScreen: t, guildId: n } = e;
+    E[n] = null != t ? t : o;
 }
-class G extends (n = t.ZP.Store) {
+class N extends (a = s.ZP.Store) {
     get(e) {
-        if (null != e) return a[e];
+        if (null != e) return E[e];
     }
     isFetching() {
-        return L;
+        return _;
     }
     hasError() {
-        return S;
+        return d;
     }
     hasSeen(e) {
-        let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return null != e && (_ ? l : N[e] || !1);
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return null != e && (t ? u : c[e] || !1);
     }
     isEmpty(e) {
         if (null == e) return !0;
-        let _ = a[e];
-        return null == _ || 0 === _.welcome_channels.length;
+        let t = E[e];
+        return null == t || 0 === t.welcome_channels.length;
     }
 }
-(I = 'WelcomeScreenStore'),
-    (T = 'displayName') in (s = G)
-        ? Object.defineProperty(s, T, {
-              value: I,
+(l = 'WelcomeScreenStore'),
+    (r = 'displayName') in N
+        ? Object.defineProperty(N, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[T] = I),
-    (_.Z = new G(A.Z, {
-        INVITE_RESOLVE_SUCCESS: D,
-        INVITE_ACCEPT_SUCCESS: D,
-        WELCOME_SCREEN_SUBMIT_SUCCESS: U,
-        WELCOME_SCREEN_UPDATE: U,
-        WELCOME_SCREEN_VIEW: function (e) {
-            let { guildId: _, isLurking: E } = e;
-            (N[_] = !0), E && (l = !0);
-        },
-        GUILD_STOP_LURKING: function () {
-            l = !1;
-        },
-        GUILD_DELETE: function (e) {
-            let {
-                guild: { id: _ }
-            } = e;
-            N[_] = !1;
-        },
-        WELCOME_SCREEN_FETCH_START: function () {
-            (L = !0), (S = !1);
-        },
-        WELCOME_SCREEN_FETCH_SUCCESS: function (e) {
-            (L = !1), (S = !1);
-            let { welcomeScreen: _, guildId: E } = e;
-            a[E] = null != _ ? _ : r;
-        },
-        WELCOME_SCREEN_FETCH_FAIL: function () {
-            (L = !1), (S = !0);
-        }
-    }));
+        : (N[r] = l);
+let I = new N(i.Z, {
+    INVITE_RESOLVE_SUCCESS: A,
+    INVITE_ACCEPT_SUCCESS: A,
+    WELCOME_SCREEN_SUBMIT_SUCCESS: T,
+    WELCOME_SCREEN_UPDATE: T,
+    WELCOME_SCREEN_VIEW: function (e) {
+        let { guildId: t, isLurking: n } = e;
+        (c[t] = !0), n && (u = !0);
+    },
+    GUILD_STOP_LURKING: function () {
+        u = !1;
+    },
+    GUILD_DELETE: function (e) {
+        let {
+            guild: { id: t }
+        } = e;
+        c[t] = !1;
+    },
+    WELCOME_SCREEN_FETCH_START: function () {
+        (_ = !0), (d = !1);
+    },
+    WELCOME_SCREEN_FETCH_SUCCESS: function (e) {
+        (_ = !1), (d = !1);
+        let { welcomeScreen: t, guildId: n } = e;
+        E[n] = null != t ? t : o;
+    },
+    WELCOME_SCREEN_FETCH_FAIL: function () {
+        (_ = !1), (d = !0);
+    }
+});

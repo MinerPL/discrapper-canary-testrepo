@@ -1,29 +1,13 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var i = n(442837),
-    a = n(199902),
-    s = n(314897),
-    l = n(858340),
-    r = n(959457),
-    o = n(557457),
-    c = n(614963),
-    u = n(981631);
-function d(e) {
-    let t = (0, o.Wc)(e),
-        n = e.stream.guildId,
-        d = e.stream.ownerId;
-    return (0, i.e7)(
-        [r.Z, l.Z, s.default, a.Z],
+n.d(t, { Z: () => i }), n(47120);
+var r = n(442837),
+    l = n(674503);
+function i(e) {
+    let t = e.id;
+    return (0, r.e7)(
+        [l.Z],
         () => {
-            if (null == d) return null;
-            let e = d === s.default.getId();
-            if (!e && null == a.Z.getActiveStreamForUser(d, n)) return null;
-            let i = e && null != l.Z.getHookError(u.K3D.SOUND);
-            return (0, c.Z)(r.Z.getQuality(), r.Z.getStatsHistory(n, d, e), i, t);
+            for (let e of l.Z.getActiveErrors().values()) if ('streamKey' in e && 'streamError' in e && e.streamKey === t) return e.streamError;
         },
-        [t, n, d]
+        [t]
     );
 }

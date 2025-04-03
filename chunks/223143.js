@@ -1,66 +1,112 @@
 n.d(t, {
-    Z: function () {
-        return d;
-    },
-    c: function () {
-        return c;
-    }
+    ZP: () => _,
+    c7: () => f
 }),
     n(47120);
-var r = n(470079),
+var r = n(192379),
     i = n(399606),
-    a = n(634894),
-    s = n(335131),
-    o = n(337679),
-    l = n(1870),
-    u = n(267097);
-function c() {
-    let e = 'useFetchPurchases';
-    (0, a.j)({
-        location: e + ' auto on',
+    o = n(634894),
+    a = n(335131),
+    s = n(1870),
+    l = n(228624),
+    c = n(267097);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        t = arguments.length > 1 ? arguments[1] : void 0,
+        n = 'useFetchPurchases';
+    (0, o.j)({
+        location: n + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, a.j)({
-            location: e + ' auto off',
+        (0, o.j)({
+            location: n + ' auto off',
             autoTrackExposure: !1
         });
-    let [t, n, u, c, d] = (0, i.Wu)([l.Z], () => [l.Z.isFetching, l.Z.isClaiming, l.Z.fetchError, l.Z.claimError, l.Z.purchases]),
-        { shouldFakePurchaseSuccessFlowLocally: _ } = (0, o.Z)({ location: 'useFetchPurchases' });
+    let c = (0, l.hv)('useFetchPurchases'),
+        [u, d, f, _, p, h] = (0, i.Wu)([s.Z], () => [s.Z.isFetching, s.Z.isClaiming, s.Z.fetchError, s.Z.claimError, s.Z.purchases, s.Z.hasPreviouslyFetched]),
+        m = (0, r.useRef)(s.Z.hasPreviouslyFetched);
+    (0, r.useEffect)(() => {
+        m.current = h;
+    }, [h]);
+    let g = (0, r.useRef)(s.Z.fetchError);
     return (
         (0, r.useEffect)(() => {
-            if (!_ || !(d.size > 0)) (0, s.qg)();
-        }, [_]),
+            g.current = f;
+        }, [f]),
+        (0, r.useEffect)(() => {
+            (!0 === e && m.current && null == g.current) ||
+                (0, a.qg)({
+                    variantsReturnStyle: c,
+                    location: t
+                });
+        }, [t, e, c]),
         {
-            isClaiming: n,
-            fetchError: u,
-            claimError: c,
-            isFetching: t,
-            purchases: d
+            isClaiming: d,
+            fetchPurchasesError: f,
+            claimError: _,
+            isFetching: u,
+            purchases: p,
+            hasPreviouslyFetched: h
         }
     );
 }
-function d(e) {
-    var t;
-    let n = null == e ? void 0 : e.paymentGateway,
-        r = 'useFetchCollectiblesCategoriesAndPurchases';
-    (0, a.j)({
-        location: r + ' auto on',
+function _(e) {
+    let t = null == e ? void 0 : e.paymentGateway,
+        n = 'useFetchCollectiblesCategoriesAndPurchases';
+    (0, o.j)({
+        location: n + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, a.j)({
-            location: r + ' auto off',
+        (0, o.j)({
+            location: n + ' auto off',
             autoTrackExposure: !1
         });
-    let { isFetching: i, categories: s, error: o, refreshCategories: l } = (0, u.Z)({ paymentGateway: n }),
-        { isClaiming: d, fetchError: _, claimError: E, isFetching: f, purchases: h } = c();
+    let {
+            isFetching: r,
+            categories: i,
+            fetchCategoriesError: a,
+            refreshCategories: s
+        } = (0, c.Z)({
+            paymentGateway: t,
+            noOp: null == e ? void 0 : e.noOp
+        }),
+        { isClaiming: l, fetchPurchasesError: u, claimError: d, isFetching: _, purchases: p, hasPreviouslyFetched: h } = f(null == e ? void 0 : e.stalePurchasesOK, null == e ? void 0 : e.location);
     return {
-        isFetching: i || f,
-        isFetchingCategories: i,
-        isFetchingPurchases: f,
-        isClaiming: d,
-        categories: s,
-        purchases: h,
-        error: null !== (t = null != o ? o : _) && void 0 !== t ? t : E,
-        refreshCategories: l
+        isFetching: r || _,
+        isFetchingCategories: r,
+        isFetchingPurchases: _,
+        isClaiming: l,
+        categories: i,
+        purchases: p,
+        fetchCategoriesError: a,
+        fetchPurchasesError: u,
+        claimError: d,
+        refreshCategories: s,
+        hasPreviouslyFetched: h
     };
 }

@@ -1,19 +1,14 @@
-a.d(t, {
-    p: function () {
-        return m;
-    }
-}),
-    a(47120);
-var n = a(735250),
-    i = a(470079),
+a.d(t, { p: () => _ }), a(230036), a(47120);
+var n = a(200651),
+    s = a(192379),
     r = a(557533),
     l = a.n(r),
-    o = a(435935),
-    s = a(982905),
+    i = a(435935),
+    o = a(982905),
     c = a(431138),
     d = a(330711),
-    u = a(211426);
-function h(e, t, a) {
+    u = a(795177);
+function p(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,18 +21,18 @@ function h(e, t, a) {
         e
     );
 }
-class m extends i.PureComponent {
+class _ extends s.PureComponent {
     componentDidMount() {
         this.callChangeLocale(d.Z.getLocale());
     }
     render() {
-        let { isOpen: e, languages: t, current: i } = this.state,
+        let { isOpen: e, languages: t, current: s } = this.state,
             { className: r } = this.props,
             d = null;
         return (
             null != t &&
                 (d = t
-                    .sort((e, t) => (e.code < t.code ? -1 : e.code > t.code ? 1 : 0))
+                    .sort((e, t) => (e.code < t.code ? -1 : +(e.code > t.code)))
                     .map((e) => {
                         let t = (function (e) {
                             try {
@@ -51,7 +46,7 @@ class m extends i.PureComponent {
                             : (0, n.jsxs)(
                                   'li',
                                   {
-                                      className: (0, s.l)(u, 'locale', null != i && e.code === i.code ? 'Current' : null),
+                                      className: (0, o.l)(u, 'locale', null != s && e.code === s.code ? 'Current' : null),
                                       onClick: () => this.setLocale(e.code),
                                       children: [
                                           (0, n.jsx)('img', {
@@ -71,9 +66,9 @@ class m extends i.PureComponent {
                 onMouseLeave: this.close,
                 onClick: this.toggle,
                 children: [
-                    (0, n.jsxs)(o.k, {
-                        align: o.k.Align.CENTER,
-                        className: (0, s.l)(u, 'opener', e ? 'Open' : null),
+                    (0, n.jsxs)(i.k, {
+                        align: i.k.Align.CENTER,
+                        className: (0, o.l)(u, 'opener', e ? 'Open' : null),
                         children: [
                             (0, n.jsx)('span', { className: u.line }),
                             (0, n.jsx)('img', {
@@ -89,7 +84,7 @@ class m extends i.PureComponent {
                         ]
                     }),
                     (0, n.jsx)('ul', {
-                        className: (0, s.l)(u, 'localeList', e ? 'Open' : 'Closed'),
+                        className: (0, o.l)(u, 'localeList', e ? 'Open' : 'Closed'),
                         children: d
                     })
                 ]
@@ -98,25 +93,25 @@ class m extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            h(this, 'state', {
+            p(this, 'state', {
                 languages: d.Z.getLanguages().filter((e) => e.enabled),
                 current: d.Z.getLocaleInfo(),
                 isOpen: !1
             }),
-            h(this, 'setLocale', (e) => {
+            p(this, 'setLocale', (e) => {
                 null != d.Z && (d.Z.setLocale(e), this.callChangeLocale(e));
             }),
-            h(this, 'callChangeLocale', (e) => {
+            p(this, 'callChangeLocale', (e) => {
                 let { onChange: t } = this.props;
                 null != t && t(e);
             }),
-            h(this, 'open', () => {
+            p(this, 'open', () => {
                 this.setState({ isOpen: !0 });
             }),
-            h(this, 'close', () => {
+            p(this, 'close', () => {
                 this.setState({ isOpen: !1 });
             }),
-            h(this, 'toggle', () => {
+            p(this, 'toggle', () => {
                 let { isOpen: e } = this.state;
                 this.setState({ isOpen: !e });
             });

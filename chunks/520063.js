@@ -1,73 +1,117 @@
-l.d(n, {
-    Z: function () {
-        return g;
+t.d(n, { Z: () => h });
+var l = t(200651),
+    r = t(192379),
+    i = t(442837),
+    a = t(481060),
+    o = t(616780),
+    u = t(438536),
+    s = t(946273),
+    c = t(346479),
+    d = t(665906),
+    g = t(592125),
+    Z = t(430824),
+    b = t(496675),
+    f = t(594174),
+    p = t(981631),
+    O = t(388032);
+function m(e) {
+    for (var n = 1; n < arguments.length; n++) {
+        var t = null != arguments[n] ? arguments[n] : {},
+            l = Object.keys(t);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (l = l.concat(
+                Object.getOwnPropertySymbols(t).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                })
+            )),
+            l.forEach(function (n) {
+                var l;
+                (l = t[n]),
+                    n in e
+                        ? Object.defineProperty(e, n, {
+                              value: l,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[n] = l);
+            });
     }
-});
-var t = l(735250),
-    r = l(470079),
-    i = l(442837),
-    a = l(481060),
-    s = l(58540),
-    u = l(438536),
-    d = l(346479),
-    o = l(665906),
-    c = l(592125),
-    Z = l(430824),
-    E = l(496675),
-    M = l(594174),
-    _ = l(981631),
-    f = l(689938);
-function g(e, n, g) {
-    let I = r.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    (0, s.$)(I), (0, i.e7)([E.Z], () => E.Z.getGuildVersion(n), [n]);
-    let m = (0, i.e7)([c.Z], () => c.Z.getChannel(g)),
-        R = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
-        N = (0, i.e7)([M.default], () => M.default.getCurrentUser()),
-        A = (0, u.Z)(m, 'Context Menu'),
-        C = (0, o.Xb)(m);
-    if ((null == N ? void 0 : N.id) === e.id) return [A];
-    if (null == R || null == m || null == N) return [];
-    let O = C || (m.ownerId === N.id && m.type === _.d4z.PRIVATE_THREAD);
+    return e;
+}
+function N(e, n) {
+    return (
+        (n = null != n ? n : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+            : (function (e, n) {
+                  var t = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var l = Object.getOwnPropertySymbols(e);
+                      t.push.apply(t, l);
+                  }
+                  return t;
+              })(Object(n)).forEach(function (t) {
+                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+              }),
+        e
+    );
+}
+function h(e, n, h) {
+    let j = r.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
+    (0, o.$)(j), (0, i.e7)([b.Z], () => b.Z.getGuildVersion(n), [n]);
+    let P = (0, i.e7)([g.Z], () => g.Z.getChannel(h)),
+        x = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
+        v = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
+        y = (0, u.Z)(P, 'Context Menu'),
+        _ = (0, d.Xb)(P);
+    if ((null == v ? void 0 : v.id) === e.id) return [y];
+    if (null == x || null == P || null == v) return [];
+    let E = _ || (P.ownerId === v.id && P.type === p.d4z.PRIVATE_THREAD);
     return [
-        O
-            ? (0, t.jsx)(a.MenuItem, {
+        E
+            ? (0, l.jsx)(a.sNh, {
                   id: 'remove',
-                  label: m.isForumPost() ? f.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({ user: e.username }) : f.Z.Messages.REMOVE_USER_FROM_THREAD.format({ user: e.username }),
+                  label: P.isForumPost() ? O.NW.formatToPlainString(O.t.v2KNNz, { user: e.username }) : O.NW.formatToPlainString(O.t['27xWaW'], { user: e.username }),
                   color: 'danger',
-                  action: () => d.Z.removeMember(m, e.id, 'Context Menu')
+                  action: () => c.Z.removeMember(P, e.id, 'Context Menu')
               })
             : null,
-        E.Z.canManageUser(_.Plq.KICK_MEMBERS, e, R)
-            ? (0, t.jsx)(a.MenuItem, {
+        (0, s.BK)(e, x)
+            ? (0, l.jsx)(a.sNh, {
                   id: 'kick',
-                  label: O ? f.Z.Messages.KICK_USER_FROM_SERVER.format({ user: e.username }) : f.Z.Messages.KICK_USER.format({ user: e.username }),
+                  label: E ? O.NW.formatToPlainString(O.t['1Ie87u'], { user: e.username }) : O.NW.formatToPlainString(O.t['9l/iTU'], { user: e.username }),
                   color: 'danger',
                   action: () =>
-                      (0, a.openModalLazy)(async () => {
-                          let { default: n } = await l.e('5454').then(l.bind(l, 854360));
-                          return (l) =>
-                              (0, t.jsx)(n, {
-                                  ...l,
-                                  guildId: R.id,
-                                  user: e
-                              });
+                      (0, a.ZDy)(async () => {
+                          let { default: n } = await t.e('5454').then(t.bind(t, 854360));
+                          return (t) =>
+                              (0, l.jsx)(
+                                  n,
+                                  N(m({}, t), {
+                                      guildId: x.id,
+                                      user: e
+                                  })
+                              );
                       })
               })
             : null,
-        E.Z.canManageUser(_.Plq.BAN_MEMBERS, e, R)
-            ? (0, t.jsx)(a.MenuItem, {
+        (0, s.mm)(e, x)
+            ? (0, l.jsx)(a.sNh, {
                   id: 'ban',
-                  label: O ? f.Z.Messages.BAN_USER_FROM_SERVER.format({ user: e.username }) : f.Z.Messages.BAN_USER.format({ user: e.username }),
+                  label: E ? O.NW.formatToPlainString(O.t.i62APT, { user: e.username }) : O.NW.formatToPlainString(O.t.WnpUBg, { user: e.username }),
                   color: 'danger',
                   action: () =>
-                      (0, a.openModalLazy)(async () => {
-                          let { default: n } = await l.e('43350').then(l.bind(l, 98746));
-                          return (l) =>
-                              (0, t.jsx)(n, {
-                                  ...l,
-                                  guildId: R.id,
-                                  user: e
-                              });
+                      (0, a.ZDy)(async () => {
+                          let { default: n } = await t.e('43350').then(t.bind(t, 98746));
+                          return (t) =>
+                              (0, l.jsx)(
+                                  n,
+                                  N(m({}, t), {
+                                      guildId: x.id,
+                                      user: e
+                                  })
+                              );
                       })
               })
             : null

@@ -1,219 +1,261 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return C;
-        }
-    }),
-    n(47120);
-var a,
-    r,
-    o = n(735250),
-    l = n(470079),
-    s = n(512722),
-    i = n.n(s),
-    c = n(913527),
-    u = n.n(c),
+n.d(t, { default: () => v }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    a = n(512722),
+    s = n.n(a),
+    l = n(913527),
+    o = n.n(l),
+    c = n(990547),
     d = n(442837),
-    _ = n(481060),
-    h = n(749210),
-    E = n(600164),
-    f = n(313201),
-    A = n(592125),
-    p = n(944486),
-    m = n(594174),
-    b = n(626135),
-    v = n(63063),
-    g = n(771308),
-    T = n(758119),
-    M = n(13430),
-    x = n(723359),
-    G = n(981631),
-    y = n(689938),
-    R = n(953847);
-function C(e) {
+    u = n(481060),
+    f = n(749210),
+    h = n(168107),
+    m = n(480916),
+    x = n(600164),
+    _ = n(313201),
+    N = n(592125),
+    b = n(944486),
+    E = n(594174),
+    k = n(626135),
+    g = n(63063),
+    A = n(771308),
+    y = n(758119),
+    z = n(622822),
+    C = n(13430),
+    j = n(723359),
+    L = n(981631),
+    R = n(388032),
+    T = n(951408);
+function v(e) {
     let { transitionState: t, source: a } = e,
-        r = (0, d.e7)([m.default], () => m.default.getCurrentUser()),
-        s = (0, d.e7)([p.Z, A.Z], () => A.Z.getChannel(p.Z.getChannelId())),
-        [c, C] = l.useState(null),
-        [N, O] = l.useState(null),
-        [k, S] = l.useState(!1),
-        [D, Z] = l.useState(0),
-        I = l.createRef(),
-        B = l.createRef(),
-        j = (0, f.Dt)(),
-        w = null != c ? u()().diff(c, 'years') : null;
-    function F() {
-        let e = null == s ? void 0 : s.getGuildId();
-        h.Z.nsfwReturnToSafety(e), (0, T.qV)(a);
+        l = (0, d.e7)([E.default], () => E.default.getCurrentUser()),
+        v = (0, d.e7)([b.Z, N.Z], () => N.Z.getChannel(b.Z.getChannelId())),
+        [S, p] = i.useState(null),
+        [M, G] = i.useState(null),
+        [W, w] = i.useState(!1),
+        [I, Z] = i.useState(0),
+        Y = i.createRef(),
+        D = i.createRef(),
+        F = (0, _.Dt)(),
+        P = (0, z.Kt)(),
+        { verifyAgreementButtonText: U, verifyGateDescription: B } = (0, z.a1)(),
+        q = null != S ? o()().diff(S, 'years') : null;
+    function K() {
+        if (a === j.L0.NSFW_SERVER_INVITE_EMBED) return void (0, y.qV)(a);
+        let e = null == v ? void 0 : v.getGuildId();
+        f.Z.nsfwReturnToSafety(e), (0, y.qV)(a);
     }
-    async function L() {
-        i()(null != c, 'Cannot submit null birthday.');
+    async function O() {
+        s()(null != S, 'Cannot submit null birthday.');
         try {
-            return O(null), S(!0), await (0, g.Av)(c, a);
+            return G(null), w(!0), await (0, A.Av)(S, a);
         } catch (t) {
-            if (null != t.body && null != t.body.date_of_birth) (0, T.C8)(a, t.body.date_of_birth);
+            if (null != t.body && null != t.body.date_of_birth) (0, y.C8)(a, t.body.date_of_birth);
             else {
                 var e;
-                (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null ? O(y.Z.Messages.USER_SETTINGS_UPDATE_FAILURE) : O(null == t ? void 0 : t.body.message), S(!1);
+                (null == t || null == (e = t.body) ? void 0 : e.username) != null ? G(R.NW.string(R.t['TGg/2t'])) : G(null == t ? void 0 : t.body.message), w(!1);
             }
         }
     }
-    async function Y() {
-        if ((i()(null != w, "Cannot submit if we haven't been able to calculate age."), w < 18)) {
-            Z(1);
-            return;
-        }
-        await L();
+    async function V() {
+        if ((s()(null != q, "Cannot submit if we haven't been able to calculate age."), q < 18)) return void Z(1);
+        await O();
     }
-    async function U(e) {
-        e.preventDefault(), !k && null != c && (await Y());
+    async function X(e) {
+        e.preventDefault(), W || null == S || (await V());
     }
-    async function P() {
-        null == (await L()) && Z(0);
+    async function Q() {
+        null == (await O()) && Z(0);
     }
-    l.useEffect(() => {
-        null != r && null != r.nsfwAllowed && (0, T.qq)(a);
+    i.useEffect(() => {
+        null != l && null != l.nsfwAllowed && (0, y.qq)(a);
     }),
-        l.useEffect(() => {
-            b.default.track(G.rMx.AGE_GATE_ACTION, {
+        i.useEffect(() => {
+            k.default.track(L.rMx.AGE_GATE_ACTION, {
                 source: a,
-                action: x.Al.AGE_GATE_OPEN
+                action: j.Al.AGE_GATE_OPEN
             });
         }, [a]);
-    let H = l.useCallback(
+    let J = i.useCallback(
             (e) => {
-                C(e);
+                p(e);
             },
-            [C]
+            [p]
         ),
-        z = l.useCallback(() => {
+        H = i.useCallback(() => {
             var e;
-            null === (e = B.current) || void 0 === e || e.focus();
-        }, [B]);
-    return 0 === D
-        ? (function () {
-              let e = (() => {
-                      if (a === x.L0.FAMILY_CENTER) return y.Z.Messages.AGE_GATE_FAMILY_CENTER_HEADER;
-                      return y.Z.Messages.AGE_GATE_EXISTING_HEADER;
-                  })(),
-                  r = (() => {
-                      switch (a) {
-                          case x.L0.FAMILY_CENTER:
-                              return y.Z.Messages.AGE_GATE_FAMILY_CENTER_BODY;
-                          case x.L0.DEEP_LINK_PROMPT:
-                              return y.Z.Messages.AGE_GATE_DEEP_LINK_BODY.format({ helpURL: v.Z.getArticleURL(G.BhN.AGE_GATE) });
-                          default:
-                              return y.Z.Messages.AGE_GATE_NSFW_BODY.format({ helpURL: v.Z.getArticleURL(G.BhN.AGE_GATE) });
-                      }
-                  })();
-              return (0, o.jsxs)(_.ModalRoot, {
-                  transitionState: t,
-                  size: _.ModalSize.SMALL,
-                  'aria-labelledby': j,
-                  children: [
-                      (0, o.jsxs)(_.ModalContent, {
-                          children: [
-                              (0, o.jsxs)('div', {
-                                  className: R.container,
-                                  children: [
-                                      (0, o.jsx)('img', {
-                                          alt: '',
-                                          src: n(462991),
-                                          className: R.img
-                                      }),
-                                      (0, o.jsx)(_.Heading, {
-                                          variant: 'heading-xl/semibold',
-                                          className: R.title,
-                                          id: j,
-                                          children: e
-                                      }),
-                                      (0, o.jsx)(_.Text, {
-                                          color: 'header-secondary',
-                                          variant: 'text-sm/normal',
-                                          children: r
-                                      })
-                                  ]
-                              }),
-                              (0, o.jsx)('form', {
-                                  onSubmit: U,
-                                  children: (0, o.jsx)(M.Z, {
-                                      label: y.Z.Messages.AGE_GATE_YOUR_BIRTHDAY,
-                                      wrapperClassName: R.birthday,
-                                      name: 'date_of_birth',
-                                      onChange: H,
-                                      onPopulated: z,
-                                      error: N,
-                                      value: c,
-                                      ref: I,
-                                      autoFocus: !0
-                                  })
-                              })
-                          ]
-                      }),
-                      (0, o.jsxs)(_.ModalFooter, {
-                          justify: E.Z.Justify.BETWEEN,
-                          children: [
-                              (0, o.jsx)(_.Button, {
-                                  buttonRef: B,
-                                  submitting: k,
-                                  disabled: null == c,
-                                  size: _.ButtonSizes.SMALL,
-                                  onClick: Y,
-                                  children: y.Z.Messages.AGE_GATE_SUBMIT
-                              }),
-                              (0, o.jsx)(_.Button, {
-                                  look: _.Button.Looks.LINK,
-                                  size: _.Button.Sizes.NONE,
-                                  color: _.Button.Colors.PRIMARY,
-                                  onClick: F,
-                                  children: y.Z.Messages.AGE_GATE_GO_BACK
-                              })
-                          ]
-                      })
-                  ]
-              });
-          })()
-        : (0, o.jsxs)(_.ModalRoot, {
-              transitionState: _.ModalTransitionState.ENTERED,
-              size: _.ModalSize.SMALL,
-              'aria-labelledby': j,
+            null == (e = D.current) || e.focus();
+        }, [D]),
+        $ = i.useCallback(() => {
+            h.Z.showAgeVerificationGetStartedModal(m.cU.NSFW_AGE_GATE);
+        }, []);
+    return P
+        ? (0, r.jsxs)(u.Y0X, {
+              impression: { impressionName: c.ImpressionNames.USER_AGE_GATE_VERIFY },
+              transitionState: t,
+              size: u.CgR.SMALL,
               children: [
-                  (0, o.jsx)(_.ModalContent, {
-                      children: (0, o.jsxs)('div', {
-                          className: R.confirmContainer,
+                  (0, r.jsx)(u.hzk, {
+                      children: (0, r.jsxs)('div', {
+                          className: T.container,
                           children: [
-                              (0, o.jsx)(_.Heading, {
-                                  variant: 'heading-xl/semibold',
-                                  className: R.confirmTitle,
-                                  id: j,
-                                  children: y.Z.Messages.AGE_GATE_CONFIRM_HEADER.format({ age: w })
+                              (0, r.jsx)('img', {
+                                  alt: '',
+                                  src: n(559325),
+                                  className: T.img
                               }),
-                              (0, o.jsx)(_.Text, {
+                              (0, r.jsx)(u.X6q, {
+                                  variant: 'heading-xl/semibold',
+                                  className: T.title,
+                                  children: R.NW.string(R.t.ZmwvDQ)
+                              }),
+                              (0, r.jsx)(u.Text, {
                                   color: 'header-secondary',
                                   variant: 'text-sm/normal',
-                                  children: y.Z.Messages.AGE_GATE_NSFW_BODY.format({ helpURL: v.Z.getArticleURL(G.BhN.AGE_GATE) })
+                                  children: B
                               })
                           ]
                       })
                   }),
-                  (0, o.jsxs)(_.ModalFooter, {
-                      className: R.confirmFooter,
+                  (0, r.jsxs)(u.mzw, {
+                      justify: x.Z.Justify.BETWEEN,
                       children: [
-                          (0, o.jsx)(_.Button, {
-                              look: _.Button.Looks.LINK,
-                              size: _.Button.Sizes.NONE,
-                              color: _.Button.Colors.PRIMARY,
-                              onClick: () => Z(0),
-                              children: y.Z.Messages.AGE_GATE_CONFIRM_GO_BACK
+                          (0, r.jsx)(u.zxk, {
+                              size: u.PhG.SMALL,
+                              onClick: $,
+                              children: U
                           }),
-                          (0, o.jsx)(_.Button, {
-                              color: _.Button.Colors.BRAND,
-                              onClick: P,
-                              children: y.Z.Messages.AGE_GATE_CONFIRM_BUTTON
+                          (0, r.jsx)(u.zxk, {
+                              look: u.zxk.Looks.LINK,
+                              size: u.zxk.Sizes.NONE,
+                              color: u.zxk.Colors.PRIMARY,
+                              onClick: K,
+                              children: R.NW.string(R.t.f3Pet7)
                           })
                       ]
                   })
               ]
-          });
+          })
+        : 0 === I
+          ? (function () {
+                let e = a === j.L0.FAMILY_CENTER ? R.NW.string(R.t.M7mt7u) : R.NW.string(R.t.F8otRk),
+                    i = (() => {
+                        switch (a) {
+                            case j.L0.FAMILY_CENTER:
+                                return R.NW.string(R.t.mhUrKS);
+                            case j.L0.DEEP_LINK_PROMPT:
+                                return R.NW.format(R.t.iyhg2t, { helpURL: g.Z.getArticleURL(L.BhN.AGE_GATE) });
+                            default:
+                                return R.NW.format(R.t.n3QjDA, { helpURL: g.Z.getArticleURL(L.BhN.AGE_GATE) });
+                        }
+                    })();
+                return (0, r.jsxs)(u.Y0X, {
+                    transitionState: t,
+                    size: u.CgR.SMALL,
+                    'aria-labelledby': F,
+                    children: [
+                        (0, r.jsxs)(u.hzk, {
+                            children: [
+                                (0, r.jsxs)('div', {
+                                    className: T.container,
+                                    children: [
+                                        (0, r.jsx)('img', {
+                                            alt: '',
+                                            src: n(559325),
+                                            className: T.img
+                                        }),
+                                        (0, r.jsx)(u.X6q, {
+                                            variant: 'heading-xl/semibold',
+                                            className: T.title,
+                                            id: F,
+                                            children: e
+                                        }),
+                                        (0, r.jsx)(u.Text, {
+                                            color: 'header-secondary',
+                                            variant: 'text-sm/normal',
+                                            children: i
+                                        })
+                                    ]
+                                }),
+                                (0, r.jsx)('form', {
+                                    onSubmit: X,
+                                    children: (0, r.jsx)(C.Z, {
+                                        label: R.NW.string(R.t.rhBeKS),
+                                        wrapperClassName: T.birthday,
+                                        name: 'date_of_birth',
+                                        onChange: J,
+                                        onPopulated: H,
+                                        error: M,
+                                        value: S,
+                                        ref: Y,
+                                        autoFocus: !0
+                                    })
+                                })
+                            ]
+                        }),
+                        (0, r.jsxs)(u.mzw, {
+                            justify: x.Z.Justify.BETWEEN,
+                            children: [
+                                (0, r.jsx)(u.zxk, {
+                                    buttonRef: D,
+                                    submitting: W,
+                                    disabled: null == S,
+                                    size: u.PhG.SMALL,
+                                    onClick: V,
+                                    children: R.NW.string(R.t.uBFuoq)
+                                }),
+                                (0, r.jsx)(u.zxk, {
+                                    look: u.zxk.Looks.LINK,
+                                    size: u.zxk.Sizes.NONE,
+                                    color: u.zxk.Colors.PRIMARY,
+                                    onClick: K,
+                                    children: R.NW.string(R.t['1MrpWF'])
+                                })
+                            ]
+                        })
+                    ]
+                });
+            })()
+          : (0, r.jsxs)(u.Y0X, {
+                transitionState: u.Dvm.ENTERED,
+                size: u.CgR.SMALL,
+                'aria-labelledby': F,
+                children: [
+                    (0, r.jsx)(u.hzk, {
+                        children: (0, r.jsxs)('div', {
+                            className: T.confirmContainer,
+                            children: [
+                                (0, r.jsx)(u.X6q, {
+                                    variant: 'heading-xl/semibold',
+                                    className: T.confirmTitle,
+                                    id: F,
+                                    children: R.NW.format(R.t.wumolZ, { age: q })
+                                }),
+                                (0, r.jsx)(u.Text, {
+                                    color: 'header-secondary',
+                                    variant: 'text-sm/normal',
+                                    children: R.NW.format(R.t.n3QjDA, { helpURL: g.Z.getArticleURL(L.BhN.AGE_GATE) })
+                                })
+                            ]
+                        })
+                    }),
+                    (0, r.jsxs)(u.mzw, {
+                        className: T.confirmFooter,
+                        children: [
+                            (0, r.jsx)(u.zxk, {
+                                look: u.zxk.Looks.LINK,
+                                size: u.zxk.Sizes.NONE,
+                                color: u.zxk.Colors.PRIMARY,
+                                onClick: () => Z(0),
+                                children: R.NW.string(R.t.cfYCra)
+                            }),
+                            (0, r.jsx)(u.zxk, {
+                                color: u.zxk.Colors.BRAND,
+                                onClick: Q,
+                                children: R.NW.string(R.t['6tahio'])
+                            })
+                        ]
+                    })
+                ]
+            });
 }
-((r = a || (a = {}))[(r.AGE_GATE_FORM = 0)] = 'AGE_GATE_FORM'), (r[(r.CONFIRM = 1)] = 'CONFIRM');

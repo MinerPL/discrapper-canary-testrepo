@@ -1,42 +1,38 @@
-l.d(n, {
-    W: function () {
-        return u;
-    }
-});
-var s = l(735250),
-    a = l(470079),
-    t = l(481060),
-    i = l(434404),
-    r = l(496675),
-    o = l(981631),
-    d = l(689938),
-    c = l(324655);
-function u(e) {
-    let { guild: n, error: l, onClose: u } = e,
-        E = n.id,
-        _ = a.useCallback(() => {
-            u(), i.Z.open(E, o.pNK.INSTANT_INVITES);
-        }, [E, u]),
-        I = a.useCallback(
+n.d(t, { W: () => d });
+var r = n(200651),
+    l = n(192379),
+    a = n(481060),
+    i = n(434404),
+    s = n(496675),
+    o = n(981631),
+    c = n(388032),
+    u = n(821022);
+function d(e) {
+    let { guild: t, error: n, onClose: d } = e,
+        m = t.id,
+        x = l.useCallback(() => {
+            d(), i.Z.open(m, o.pNK.INSTANT_INVITES);
+        }, [m, d]),
+        g = l.useCallback(
             (e) =>
-                (0, s.jsx)(t.Clickable, {
-                    className: c.errorLink,
-                    onClick: _,
-                    children: (0, s.jsx)(t.Text, {
+                (0, r.jsx)(a.P3F, {
+                    className: u.errorLink,
+                    onClick: x,
+                    children: (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-link',
                         tag: 'span',
                         children: e
                     })
                 }),
-            [_]
+            [x]
         ),
-        x = a.useCallback(
+        h = l.useCallback(
             (e) =>
-                (0, s.jsx)(t.Anchor, {
+                (0, r.jsx)(a.eee, {
                     href: o.EYA.INVITES_HELP,
                     target: '_blank',
-                    children: (0, s.jsx)(t.Text, {
+                    children: (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-link',
                         tag: 'span',
@@ -45,19 +41,19 @@ function u(e) {
                 }),
             []
         ),
-        m =
-            l.code !== o.evJ.TOO_MANY_INVITES
-                ? l.getAnyErrorMessage()
-                : r.Z.can(o.Plq.MANAGE_GUILD, n)
-                  ? d.Z.Messages.TOO_MANY_INVITES_ERROR.format({
-                        inviteListHook: I,
-                        inviteHelpHook: x
+        v =
+            n.code !== o.evJ.TOO_MANY_INVITES
+                ? n.getAnyErrorMessage()
+                : s.Z.can(o.Plq.MANAGE_GUILD, t)
+                  ? c.NW.format(c.t['H/RUY2'], {
+                        inviteListHook: g,
+                        inviteHelpHook: h
                     })
-                  : d.Z.Messages.TOO_MANY_INVITES_ERROR_MEMBER;
-    return (0, s.jsx)(t.Text, {
-        className: c.errorMessage,
+                  : c.NW.string(c.t['/FxH6O']);
+    return (0, r.jsx)(a.Text, {
+        className: u.errorMessage,
         variant: 'text-xs/normal',
         color: 'text-danger',
-        children: m
+        children: v
     });
 }

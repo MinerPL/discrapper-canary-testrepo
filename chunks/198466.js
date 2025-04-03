@@ -1,89 +1,87 @@
 n.d(t, {
-    m: function () {
-        return E;
-    }
+    Z: () => h,
+    m: () => p
 }),
     n(47120);
-var r,
-    i,
-    a = n(735250),
-    s = n(470079),
-    o = n(338545),
-    l = n(442837),
-    u = n(481060),
-    c = n(607070),
-    d = n(745510),
-    _ = n(686956);
-function E(e) {
-    let { children: t, confettiTriggerRef: n, setConfettiCount: r, setShouldFireConfetti: i, tooltipProps: d } = e,
-        [E, f] = s.useState(0),
-        h = s.useRef(-1),
-        p = s.useRef(!0),
-        m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        { scaleFactor: I } = (0, u.useSpring)({
+var r = n(200651),
+    i = n(192379),
+    o = n(642128),
+    a = n(442837),
+    s = n(481060),
+    l = n(607070),
+    c = n(745510),
+    u = n(185091);
+let d = 200,
+    f = 20,
+    _ = 200;
+function p(e) {
+    let { children: t, confettiTriggerRef: n, setConfettiCount: c, setShouldFireConfetti: f, tooltipProps: p } = e,
+        [h, m] = i.useState(0),
+        g = i.useRef(-1),
+        E = i.useRef(!0),
+        b = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        { scaleFactor: y } = (0, s.q_F)({
             from: { scaleFactor: 1 },
-            to: { scaleFactor: 1 === E ? 0.9 : 2 === E ? 1.2 : 1 },
+            to: { scaleFactor: 1 === h ? 0.9 : 2 === h ? 1.2 : 1 },
             config: {
                 tension: 380,
                 friction: 7
             }
         });
-    return (s.useEffect(
+    return (i.useEffect(
         () => () => {
-            p.current = !1;
+            E.current = !1;
         },
         []
     ),
-    m)
-        ? (0, a.jsx)(a.Fragment, { children: t })
-        : (0, a.jsx)(o.animated.div, {
-              className: _.confettiTriggerWrapper,
-              style: { transform: I.to((e) => 'scale('.concat(e, ')')) },
-              children: (0, a.jsx)(u.Clickable, {
-                  className: _.confettiTrigger,
+    b)
+        ? t
+        : (0, r.jsx)(o.animated.div, {
+              className: u.confettiTriggerWrapper,
+              style: { transform: y.to((e) => 'scale('.concat(e, ')')) },
+              children: (0, r.jsx)(s.P3F, {
+                  className: u.confettiTrigger,
                   onMouseDown: () => {
-                      f(1),
-                          i(!0),
-                          r((e) => Math.min(e + 2, 200)),
-                          window.clearTimeout(h.current),
-                          (h.current = window.setTimeout(() => {
-                              p.current && r(0);
-                          }, 200));
+                      m(1),
+                          f(!0),
+                          c((e) => Math.min(e + 2, _)),
+                          window.clearTimeout(g.current),
+                          (g.current = window.setTimeout(() => {
+                              E.current && c(0);
+                          }, d));
                   },
                   onMouseUp: () => {
-                      f(0), i(!1);
+                      m(0), f(!1);
                   },
                   onMouseEnter: () => {
                       var e;
-                      f(2), null == d || null === (e = d.onMouseEnter) || void 0 === e || e.call(d);
+                      m(2), null == p || null == (e = p.onMouseEnter) || e.call(p);
                   },
                   onMouseLeave: () => {
                       var e;
-                      f(0), null == d || null === (e = d.onMouseLeave) || void 0 === e || e.call(d);
+                      m(0), null == p || null == (e = p.onMouseLeave) || e.call(p);
                   },
                   innerRef: n,
                   children: t
               })
           });
 }
-((i = r || (r = {}))[(i.INACTIVE = 0)] = 'INACTIVE'), (i[(i.PRESSED = 1)] = 'PRESSED'), (i[(i.HOVERED = 2)] = 'HOVERED');
-t.Z = function (e) {
+let h = function (e) {
     let { confettiCount: t, confettiTriggerRef: n, isFiring: r } = e,
-        { cannon: i, createMultipleConfettiAt: a } = s.useContext(d.h),
-        o = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
+        { cannon: o, createMultipleConfettiAt: s } = i.useContext(c.h),
+        u = (0, a.e7)([l.Z], () => l.Z.useReducedMotion);
     return (
-        s.useEffect(
+        i.useEffect(
             () => () => {
-                null == i || i.clearConfetti();
+                null == o || o.clearConfetti();
             },
-            [i]
+            [o]
         ),
-        s.useEffect(() => {
-            if (!r || o || null == n.current) return;
-            let e = n.current.getBoundingClientRect(),
-                i = e.left + e.width / 2;
-            a(
-                i,
+        i.useEffect(() => {
+            if (!r || u || null == n.current) return;
+            let e = n.current.getBoundingClientRect();
+            s(
+                e.left + e.width / 2,
                 e.top + e.height / 2,
                 {
                     velocity: {
@@ -98,9 +96,9 @@ t.Z = function (e) {
                         }
                     }
                 },
-                Math.max(t, 20)
+                Math.max(t, f)
             );
-        }, [t, n, a, r, o]),
+        }, [t, n, s, r, u]),
         null
     );
 };

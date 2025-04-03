@@ -1,21 +1,21 @@
-n(47120);
+n.d(t, { Z: () => S }), n(47120);
 var i,
-    s = n(735250),
-    a = n(470079),
+    r = n(200651),
+    s = n(192379),
     o = n(120356),
-    r = n.n(o),
-    l = n(442837),
+    l = n.n(o),
+    a = n(442837),
     c = n(552062),
-    d = n(416568),
-    u = n(914010),
+    u = n(416568),
+    d = n(914010),
     h = n(518084),
     p = n(178528),
     f = n(669083),
-    _ = n(483962),
-    g = n(711553),
-    m = n(689938),
-    E = n(843156);
-function Z(e, t, n) {
+    g = n(483962),
+    m = n(711553),
+    y = n(388032),
+    O = n(708132);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,16 +28,16 @@ function Z(e, t, n) {
         e
     );
 }
-function I(e) {
+function x(e) {
     let { closePopout: t } = e;
-    return (0, s.jsx)(f.Z, { onClose: t });
+    return (0, r.jsx)(f.Z, { onClose: t });
 }
-class S extends (i = a.PureComponent) {
+class b extends (i = s.PureComponent) {
     render() {
-        let { selectedGuildId: e, locked: t, contained: n } = this.props,
-            i =
+        let { selectedGuildId: e, locked: t, contained: n, className: i } = this.props,
+            s =
                 null != e
-                    ? (0, s.jsx)(
+                    ? (0, r.jsx)(
                           p.Z,
                           {
                               guildId: e,
@@ -45,31 +45,32 @@ class S extends (i = a.PureComponent) {
                           },
                           e
                       )
-                    : (0, s.jsx)(g.Z, {
-                          title: m.Z.Messages.DIRECT_MESSAGES,
-                          renderSettings: I,
+                    : (0, r.jsx)(m.Z, {
+                          title: y.NW.string(y.t.YUU0RE),
+                          renderSettings: x,
                           onDragStart: this.onDragStart,
-                          children: (0, s.jsx)(_.Z, {})
+                          children: (0, r.jsx)(g.Z, {})
                       }),
-            a = n ? 'div' : h.ZP;
-        return (0, s.jsxs)(a, {
-            className: r()(E.base, { [E.widget]: !n }),
+            o = n ? 'div' : h.ZP;
+        return (0, r.jsxs)(o, {
+            className: l()(O.base, { [O.widget]: !n }, i),
             children: [
-                (0, s.jsx)(d.Z, {
+                (0, r.jsx)(u.Z, {
                     isOverlay: !0,
                     disableAppDownload: !0,
                     isVisible: !t
                 }),
-                i
+                s
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'onDragStart', (e) => {
+            v(this, 'onDragStart', (e) => {
                 let { dragStart: t } = this.props;
                 t(c.B.MOVE, e.clientX, e.clientY);
             });
     }
 }
-Z(S, 'defaultProps', { contained: !1 }), (t.Z = l.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(S));
+v(b, 'defaultProps', { contained: !1 });
+let S = a.ZP.connectStores([d.Z], () => ({ selectedGuildId: d.Z.getGuildId() }))(b);

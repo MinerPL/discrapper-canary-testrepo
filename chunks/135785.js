@@ -1,53 +1,54 @@
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
+n.d(t, { Z: () => h });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
     l = n(230711),
     o = n(63063),
     c = n(74538),
     d = n(140465),
-    _ = n(474936),
-    u = n(981631),
-    E = n(689938),
-    T = n(882726);
-t.Z = (e) => {
+    u = n(474936),
+    m = n(981631),
+    g = n(388032),
+    p = n(132383);
+let h = (e) => {
     let t,
         n,
-        { premiumSubscription: a, className: I, isFullscreen: R = !1, textColor: C } = e,
-        g = (0, d.Nx)();
-    if (null == a) return null;
-    let p = null != a ? c.ZP.getPremiumPlanItem(a) : null;
-    if ((c.ZP.isBoostOnlySubscription(a) ? (t = E.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION) : null != p && (t = c.ZP.getDisplayPremiumType(p.planId)), null == t)) return null;
-    let N = () => l.Z.open(u.oAB.SUBSCRIPTIONS),
-        A = (null != p ? c.ZP.getSkuIdForPlan(p.planId) : null) === _.Si.TIER_1;
+        { premiumSubscription: i, className: h, isFullscreen: f = !1, textColor: b } = e,
+        N = (0, d.Nx)();
+    if (null == i) return null;
+    let x = null != i ? c.ZP.getPremiumPlanItem(i) : null;
+    if ((c.ZP.isBoostOnlySubscription(i) ? (t = g.NW.string(g.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
+    let _ = () => l.Z.open(m.oAB.SUBSCRIPTIONS),
+        E = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
     return (
-        (n = null != C ? C : g || R ? 'always-white' : 'text-normal'),
-        (0, s.jsxs)(i.Card, {
-            className: r()(T.container, I, {
-                [T.lightTextLink]: R,
-                [T.centerText]: g
+        (n = null != b ? b : N || f ? 'always-white' : 'text-normal'),
+        (0, r.jsxs)(a.Zbd, {
+            className: s()(p.container, h, {
+                [p.lightTextLink]: f,
+                [p.centerText]: N
             }),
-            type: i.Card.Types.CUSTOM,
+            type: a.Zbd.Types.CUSTOM,
             children: [
-                (0, s.jsx)(i.CircleWarningIcon, {
+                (0, r.jsx)(a.P4T, {
                     size: 'custom',
                     width: 20,
                     height: 20,
                     color: 'currentColor',
-                    className: r()(T.icon, { [T.lightThemeColorOnly]: g || R })
+                    className: s()(p.icon, { [p.lightThemeColorOnly]: N || f })
                 }),
-                (0, s.jsx)(i.Text, {
+                (0, r.jsx)(a.Text, {
                     variant: 'text-sm/medium',
                     color: n,
-                    children: A
-                        ? E.Z.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
-                              helpdeskArticle: o.Z.getArticleURL(u.BhN.PREMIUM_DETAILS),
-                              onSubscriptionsClick: N
+                    children: E
+                        ? g.NW.format(g.t['tYuv+f'], {
+                              helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
+                              onSubscriptionsClick: _
                           })
-                        : E.Z.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
+                        : g.NW.format(g.t.xHRgU1, {
                               subscriptionName: t,
-                              onSubscriptionsClick: N
+                              onSubscriptionsClick: _
                           })
                 })
             ]

@@ -1,15 +1,16 @@
-var T = s(735250);
-s(470079);
-var o = s(353672),
-    n = s(993750),
-    a = s(134612),
-    l = s(689938);
-t.Z = function () {
-    let e = (0, a.Nn)();
-    return (0, T.jsx)(n.Z, {
-        children: (0, T.jsx)(o.Z, {
-            tips: e,
-            headerText: l.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_DESCRIPTION
+n.d(e, { Z: () => a });
+var r = n(200651);
+n(192379);
+var s = n(353672),
+    i = n(993750),
+    o = n(134612),
+    l = n(388032);
+let a = function () {
+    let t = (0, o.Nn)();
+    return (0, r.jsx)(i.Z, {
+        children: (0, r.jsx)(s.Z, {
+            tips: t,
+            headerText: l.NW.string(l.t['0QSL1N'])
         })
     });
 };

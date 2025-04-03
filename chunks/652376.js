@@ -1,38 +1,34 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var i = n(470079),
-    l = n(442837),
-    r = n(623633),
-    a = n(199902),
-    s = n(19780),
-    o = n(979651);
+n.d(t, { Z: () => c });
+var r = n(192379),
+    i = n(442837),
+    l = n(623633),
+    o = n(199902),
+    a = n(19780),
+    s = n(979651);
 function c(e) {
     var t;
-    let n = (0, l.e7)([s.Z], () => s.Z.getGuildId()),
+    let n = (0, i.e7)([a.Z], () => a.Z.getGuildId()),
         c = e.children.map((e) => e.id),
         u = null != n && c.includes(n),
         d = !1,
-        h = !1,
         p = !1,
-        _ = (0, l.e7)([s.Z], () => s.Z.getChannelId()),
-        f = null === (t = (0, r.Z)()) || void 0 === t ? void 0 : t.guild_id,
-        g = null != f && c.includes(f),
-        m = (0, l.e7)([o.Z], () => null != _ && o.Z.hasVideo(_), [_]),
-        C = (0, l.e7)([a.Z], () => a.Z.getCurrentUserActiveStream());
+        h = !1,
+        f = (0, i.e7)([a.Z], () => a.Z.getChannelId()),
+        g = null == (t = (0, l.Z)()) ? void 0 : t.guild_id,
+        m = null != g && c.includes(g),
+        b = (0, i.e7)([s.Z], () => null != f && s.Z.hasVideo(f), [f]),
+        y = (0, i.e7)([o.Z], () => o.Z.getCurrentUserActiveStream());
     return (
-        u && ((d = !m), (h = m), (p = null != C && null != C.guildId && c.includes(C.guildId))),
-        i.useMemo(
+        u && ((d = !b), (p = b), (h = null != y && null != y.guildId && c.includes(y.guildId))),
+        r.useMemo(
             () => ({
                 audio: d,
-                video: h,
-                screenshare: p,
-                liveStage: g,
+                video: p,
+                screenshare: h,
+                liveStage: m,
                 isCurrentUserConnected: u
             }),
-            [d, h, p, g, u]
+            [d, p, h, m, u]
         )
     );
 }

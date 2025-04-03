@@ -1,49 +1,41 @@
 n.d(t, {
-    Nx: function () {
-        return f;
-    },
-    UV: function () {
-        return T;
-    },
-    WR: function () {
-        return I;
-    },
-    lr: function () {
-        return p;
-    },
-    t7: function () {
-        return h;
-    }
+    B4: () => v,
+    Nx: () => h,
+    UV: () => y,
+    WR: () => b,
+    lr: () => g,
+    t7: () => m
 }),
     n(47120);
-var r = n(470079),
+var r = n(192379),
     i = n(913527),
-    a = n.n(i),
-    s = n(442837),
-    o = n(544891),
+    o = n.n(i),
+    a = n(442837),
+    s = n(544891),
     l = n(78839),
-    u = n(775412),
-    c = n(104494),
-    d = n(639119),
+    c = n(775412),
+    u = n(695349),
+    d = n(104494),
+    f = n(639119),
     _ = n(474936),
-    E = n(981631);
-function f() {
-    let e = (0, d.N)(),
-        t = (0, u._O)(),
-        n = (0, c.Ng)(),
-        r = h();
+    p = n(981631);
+function h() {
+    let e = (0, f.N)(),
+        t = (0, c._O)(),
+        n = (0, d.Ng)(),
+        r = m();
     return null != e || t || null != n || r;
 }
-let h = () => {
+let m = () => {
         var e;
-        let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
-            n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_expires_at;
-        return null != n && a()(Date.now()) <= a()(n);
+        let t = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
+            n = null == t || null == (e = t.metadata) ? void 0 : e.active_discount_expires_at;
+        return null != n && o()(Date.now()) <= o()(n);
     },
-    p = () => {
+    g = () => {
         var e;
-        let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
-        switch (null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_id) {
+        let t = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
+        switch (null == t || null == (e = t.metadata) ? void 0 : e.active_discount_id) {
             case _.dT:
             case _.rB:
                 return {
@@ -76,48 +68,57 @@ let h = () => {
                 return;
         }
     },
-    m = async () => {
+    E = async () => {
         let e = null;
         try {
             var t;
-            let n = await o.tn.post({ url: E.ANM.CHURN_USER_OFFER });
-            e = null !== (t = n.body.offer) && void 0 !== t ? t : null;
+            e =
+                null !=
+                (t = (
+                    await s.tn.post({
+                        url: p.ANM.CHURN_USER_OFFER,
+                        rejectWithError: !0
+                    })
+                ).body.offer)
+                    ? t
+                    : null;
         } catch (e) {}
         return e;
     },
-    I = (e) => {
+    b = (e) => {
         let [t, n] = r.useState(!1),
-            [i, a] = r.useState(!1),
-            [s, o] = r.useState(null);
+            [i, o] = r.useState(!1),
+            [a, s] = r.useState(null);
         if (e)
             return {
-                churnUserDiscountOffer: s,
+                churnUserDiscountOffer: a,
                 isFetchingChurnDiscountOffer: i
             };
         let l = () => {
-            n(!0), a(!1);
+            n(!0), o(!1);
         };
         return (
-            !i &&
-                !t &&
-                (a(!0),
-                m()
+            i ||
+                t ||
+                (o(!0),
+                E()
                     .then((e) => {
-                        o(e), l();
+                        s(e), l();
                     })
                     .catch((e) => {
                         l();
                     })),
             {
-                churnUserDiscountOffer: s,
+                churnUserDiscountOffer: a,
                 isFetchingChurnDiscountOffer: i
             }
         );
     },
-    T = () => {
-        let e = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
-            t = h(),
+    y = () => {
+        let e = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
+            t = m(),
             n = null !== e && e.hasPremiumNitroMonthly,
             r = null != e && null != e.trialId;
         return n && !r && !t;
-    };
+    },
+    v = () => (0, u.W)();

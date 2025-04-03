@@ -1,38 +1,34 @@
-t.d(n, {
-    Z: function () {
-        return x;
-    }
-});
-var l = t(735250),
-    s = t(470079),
-    o = t(442837),
-    i = t(100527),
-    a = t(906732),
-    r = t(613464),
-    d = t(6025),
-    c = t(433355),
-    u = t(430824),
-    _ = t(981631),
-    E = t(212911);
-function x(e) {
-    let { guildId: n } = e,
-        t = (0, o.e7)([u.Z], () => u.Z.getGuild(n)),
-        { analyticsLocations: x } = (0, a.ZP)(i.Z.MEMBER_SAFETY_PAGE),
-        I = (0, o.e7)([c.ZP], () => c.ZP.getGuildSidebarState(n), [n]),
-        C = s.useCallback(() => {
-            d.Z.closeGuildSidebar(n);
-        }, [n]),
-        N = null != I;
-    return null != t && N && null != I
-        ? (0, l.jsx)(a.Gt, {
-              value: x,
-              children: (0, l.jsx)('div', {
-                  className: E.__invalid_sidebarContainer,
-                  style: { width: _.$Y6 },
-                  children: (0, l.jsx)(r.Z, {
-                      userId: I.details.userId,
-                      guildId: I.details.guildId,
-                      onClose: C
+n.d(t, { Z: () => h });
+var r = n(200651),
+    l = n(192379),
+    i = n(442837),
+    a = n(100527),
+    s = n(906732),
+    o = n(613464),
+    c = n(6025),
+    d = n(433355),
+    u = n(430824),
+    m = n(981631),
+    x = n(86931);
+function h(e) {
+    let { guildId: t } = e,
+        n = (0, i.e7)([u.Z], () => u.Z.getGuild(t)),
+        { analyticsLocations: h } = (0, s.ZP)(a.Z.MEMBER_SAFETY_PAGE),
+        j = (0, i.e7)([d.ZP], () => d.ZP.getGuildSidebarState(t), [t]),
+        b = l.useCallback(() => {
+            c.Z.closeGuildSidebar(t);
+        }, [t]),
+        f = null != j;
+    return null != n && f && null != j
+        ? (0, r.jsx)(s.Gt, {
+              value: h,
+              children: (0, r.jsx)('div', {
+                  className: x.__invalid_sidebarContainer,
+                  style: { width: m.$Y6 },
+                  children: (0, r.jsx)(o.Z, {
+                      userId: j.details.userId,
+                      guildId: j.details.guildId,
+                      onClose: b
                   })
               })
           })

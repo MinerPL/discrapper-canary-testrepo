@@ -1,67 +1,68 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(442837),
-    r = n(481060),
-    l = n(528963),
-    o = n(143740),
+n.d(t, { Z: () => m });
+var r = n(200651),
+    i = n(192379),
+    a = n(442837),
+    l = n(481060),
+    o = n(528963),
+    s = n(143740),
     c = n(528144),
     u = n(212342),
-    d = n(689938),
-    _ = n(493249);
-t.Z = (e) => {
+    d = n(388032),
+    p = n(745641);
+let m = (e) => {
     let { channelId: t, messageId: n } = e,
-        E = (0, s.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
-        I = a.useCallback(() => {
-            l.Z.dismissPublishBump(n), (0, o.Z)(t, n);
+        m = (0, a.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
+        f = i.useCallback(() => {
+            o.Z.dismissPublishBump(n), (0, s.Z)(t, n);
         }, [t, n]),
-        m = a.useCallback(() => {
-            l.Z.dismissPublishBump(n);
+        h = i.useCallback(() => {
+            o.Z.dismissPublishBump(n);
         }, [n]),
-        T = a.useCallback(() => {
-            l.Z.permanentlyHidePublishBump(t);
+        g = i.useCallback(() => {
+            o.Z.permanentlyHidePublishBump(t);
         }, [t]);
-    return E
-        ? (0, i.jsxs)('div', {
-              className: _.container,
+    return m
+        ? (0, r.jsxs)('div', {
+              className: p.container,
               children: [
-                  (0, i.jsxs)('div', {
-                      className: _.bumpBox,
+                  (0, r.jsxs)('div', {
+                      className: p.bumpBox,
                       children: [
-                          (0, i.jsx)(r.AnnouncementsIcon, {
+                          (0, r.jsx)(l.MqZ, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: _.icon
+                              className: p.icon
                           }),
-                          (0, i.jsx)(c.Z, {
-                              className: _.tagline,
+                          (0, r.jsx)(c.Z, {
+                              className: p.tagline,
                               size: c.Z.Sizes.SIZE_14,
-                              children: d.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP
+                              children: d.NW.string(d.t.hasZoa)
                           }),
-                          (0, i.jsx)(r.Button, {
-                              color: r.Button.Colors.LINK,
-                              look: r.Button.Looks.LINK,
-                              size: r.Button.Sizes.MIN,
-                              className: _.publish,
-                              onClick: I,
-                              children: d.Z.Messages.NEWS_CHANNEL_PUBLISH
+                          (0, r.jsx)(l.zxk, {
+                              color: l.zxk.Colors.LINK,
+                              look: l.zxk.Looks.LINK,
+                              size: l.zxk.Sizes.MIN,
+                              className: p.publish,
+                              onClick: f,
+                              children: d.NW.string(d.t['MFGE5+'])
                           }),
-                          (0, i.jsx)(r.Clickable, {
-                              onClick: m,
-                              children: (0, i.jsx)(r.CircleXIcon, {
+                          (0, r.jsx)(l.P3F, {
+                              onClick: h,
+                              children: (0, r.jsx)(l.k$p, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: _.closeIcon
+                                  className: p.closeIcon
                               })
                           })
                       ]
                   }),
-                  (0, i.jsx)(r.Text, {
+                  (0, r.jsx)(l.Text, {
                       color: 'text-muted',
-                      className: _.hidePermanently,
+                      className: p.hidePermanently,
                       variant: 'text-sm/normal',
-                      children: (0, i.jsx)(r.Clickable, {
-                          onClick: T,
-                          children: d.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
+                      children: (0, r.jsx)(l.P3F, {
+                          onClick: g,
+                          children: d.NW.string(d.t.efSkDg)
                       })
                   })
               ]

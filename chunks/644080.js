@@ -1,30 +1,31 @@
-var a = l(735250),
-    r = l(470079),
-    i = l(120356),
-    t = l.n(i),
+l.d(n, { Z: () => y });
+var t = l(200651),
+    r = l(192379),
+    a = l(120356),
+    i = l.n(a),
     s = l(442837),
-    d = l(692547),
+    c = l(692547),
     o = l(481060),
-    c = l(410030),
+    d = l(410030),
     u = l(565138),
-    h = l(523751),
-    m = l(637853),
+    m = l(523751),
+    h = l(637853),
     g = l(434404),
-    C = l(159300),
+    f = l(159300),
     x = l(496675),
-    f = l(709586),
-    I = l(768581),
-    Z = l(981631),
-    _ = l(689938),
-    v = l(672256),
-    p = l(63190),
-    N = l(102219);
-let j = (e) => {
+    p = l(709586),
+    b = l(768581),
+    j = l(981631),
+    C = l(388032),
+    _ = l(18314),
+    v = l(63190),
+    I = l(102219);
+let Z = (e) => {
     let n = r.useMemo(
         () =>
             null == e
                 ? null
-                : I.ZP.getGuildHomeHeaderURL({
+                : b.ZP.getGuildHomeHeaderURL({
                       id: e.id,
                       homeHeader: e.homeHeader
                   }),
@@ -33,105 +34,148 @@ let j = (e) => {
     return {
         homeHeaderImage: n,
         isHomeHeaderImageSet: null != n,
-        homeHeaderScroll: null != n ? 200 : 0
+        homeHeaderScroll: 200 * (null != n)
     };
 };
-function b(e) {
+function N(e) {
     let { guild: n } = e,
         l = () => {
-            g.Z.open(n.id, Z.pNK.ONBOARDING, void 0, Z.KsC.SERVER_GUIDE);
+            g.Z.open(n.id, j.pNK.ONBOARDING, void 0, j.KsC.SERVER_GUIDE);
         };
-    return n.hasFeature(Z.oNc.BANNER)
-        ? (0, a.jsxs)(o.Button, {
-              className: v.editButton,
-              innerClassName: v.editButtonInner,
+    return n.hasFeature(j.oNc.BANNER)
+        ? (0, t.jsxs)(o.zxk, {
+              className: _.editButton,
+              innerClassName: _.editButtonInner,
               type: 'button',
-              size: o.Button.Sizes.MEDIUM,
-              color: o.Button.Colors.BRAND,
+              size: o.zxk.Sizes.MEDIUM,
+              color: o.zxk.Colors.BRAND,
               onClick: l,
               children: [
-                  (0, a.jsx)(o.ImagePlusIcon, {
+                  (0, t.jsx)(o.FmF, {
                       size: 'xs',
-                      color: d.Z.unsafe_rawColors.WHITE_500.css
+                      color: c.Z.unsafe_rawColors.WHITE_500.css
                   }),
-                  _.Z.Messages.EDIT_IMAGE
+                  C.NW.string(C.t.b0y3DA)
               ]
           })
-        : (0, a.jsxs)(o.ShinyButton, {
-              color: o.Button.Colors.GREEN,
-              className: v.editButton,
-              innerClassName: v.editButtonInner,
+        : (0, t.jsxs)(o.gtL, {
+              color: o.zxk.Colors.GREEN,
+              className: _.editButton,
+              innerClassName: _.editButtonInner,
               onClick: l,
               children: [
-                  (0, a.jsx)(f.Z, {
+                  (0, t.jsx)(p.Z, {
                       height: 16,
                       width: 16
                   }),
-                  _.Z.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA
+                  C.NW.string(C.t['+7XY39'])
               ]
           });
 }
-let E = r.memo(function (e) {
+let y = r.memo(function (e) {
     let { guild: n, titleClassName: r } = e,
-        { homeHeaderImage: i, isHomeHeaderImageSet: d } = j(n),
-        g = (0, m.b$)(n.id),
-        f = (0, s.e7)([x.Z], () => (0, C.b)(x.Z, n)),
-        I = (0, c.ZP)();
-    return (0, a.jsxs)('div', {
-        className: v.header,
+        { homeHeaderImage: a, isHomeHeaderImageSet: c } = Z(n),
+        g = (0, h.b$)(n.id),
+        p = (0, s.e7)([x.Z], () => (0, f.b)(x.Z, n)),
+        b = (0, d.ZP)();
+    return (0, t.jsxs)('div', {
+        className: _.header,
         children: [
-            (0, a.jsxs)('div', {
-                className: v.headerArtWrapper,
+            (0, t.jsxs)('div', {
+                className: _.headerArtWrapper,
                 children: [
-                    (0, a.jsx)('div', {
-                        className: t()(v.headerArt, { [v.headerArtPlaceholder]: !d }),
-                        style: { backgroundImage: 'url('.concat(d ? i : 'dark' === I ? p : N, ')') }
+                    (0, t.jsx)('div', {
+                        className: i()(_.headerArt, { [_.headerArtPlaceholder]: !c }),
+                        style: { backgroundImage: 'url('.concat(c ? a : 'dark' === b ? v : I, ')') }
                     }),
-                    g && (0, a.jsx)(b, { guild: n })
+                    g && (0, t.jsx)(N, { guild: n })
                 ]
             }),
-            (0, a.jsx)('div', {
-                className: v.titleWrapper,
-                children: (0, a.jsxs)('div', {
+            (0, t.jsx)('div', {
+                className: _.titleWrapper,
+                children: (0, t.jsxs)('div', {
                     className: r,
                     children: [
-                        (0, a.jsx)(u.Z, {
-                            className: v.headerIcon,
+                        (0, t.jsx)(u.Z, {
+                            className: _.headerIcon,
                             guild: n,
                             size: u.Z.Sizes.XLARGE,
                             active: !0
                         }),
-                        (0, a.jsx)(o.HeadingLevel, {
-                            children: (0, a.jsxs)('div', {
-                                className: v.headerName,
+                        (0, t.jsx)(o.y5t, {
+                            children: (0, t.jsxs)('div', {
+                                className: _.headerName,
                                 children: [
-                                    (0, a.jsx)(o.Heading, {
-                                        className: v.headerName,
+                                    (0, t.jsx)(o.X6q, {
+                                        className: _.headerName,
                                         variant: 'heading-xxl/bold',
                                         children: n.name
                                     }),
-                                    (0, a.jsx)(h.Z, {
+                                    (0, t.jsx)(m.Z, {
                                         size: 24,
                                         guild: n,
                                         tooltipPosition: 'bottom',
-                                        tooltipColor: o.Tooltip.Colors.PRIMARY
+                                        tooltipColor: o.ua7.Colors.PRIMARY
                                     }),
-                                    f &&
-                                        (0, a.jsx)(o.Button, {
-                                            className: v.inviteButton,
-                                            size: o.Button.Sizes.MEDIUM,
-                                            color: o.Button.Colors.PRIMARY,
+                                    p &&
+                                        (0, t.jsx)(o.zxk, {
+                                            className: _.inviteButton,
+                                            size: o.zxk.Sizes.MEDIUM,
+                                            color: o.zxk.Colors.PRIMARY,
                                             onClick: () =>
-                                                (0, o.openModalLazy)(async () => {
-                                                    let { default: e } = await Promise.all([l.e('7654'), l.e('66633')]).then(l.bind(l, 560114));
-                                                    return (l) =>
-                                                        (0, a.jsx)(e, {
-                                                            ...l,
-                                                            guild: n,
-                                                            source: Z.t4x.GUILD_HOME
-                                                        });
+                                                (0, o.ZDy)(async () => {
+                                                    let { default: e } = await Promise.all([l.e('7654'), l.e('17439')]).then(l.bind(l, 560114));
+                                                    return (l) => {
+                                                        var r, a;
+                                                        return (0, t.jsx)(
+                                                            e,
+                                                            ((r = (function (e) {
+                                                                for (var n = 1; n < arguments.length; n++) {
+                                                                    var l = null != arguments[n] ? arguments[n] : {},
+                                                                        t = Object.keys(l);
+                                                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                                                        (t = t.concat(
+                                                                            Object.getOwnPropertySymbols(l).filter(function (e) {
+                                                                                return Object.getOwnPropertyDescriptor(l, e).enumerable;
+                                                                            })
+                                                                        )),
+                                                                        t.forEach(function (n) {
+                                                                            var t;
+                                                                            (t = l[n]),
+                                                                                n in e
+                                                                                    ? Object.defineProperty(e, n, {
+                                                                                          value: t,
+                                                                                          enumerable: !0,
+                                                                                          configurable: !0,
+                                                                                          writable: !0
+                                                                                      })
+                                                                                    : (e[n] = t);
+                                                                        });
+                                                                }
+                                                                return e;
+                                                            })({}, l)),
+                                                            (a = a =
+                                                                {
+                                                                    guild: n,
+                                                                    source: j.t4x.GUILD_HOME
+                                                                }),
+                                                            Object.getOwnPropertyDescriptors
+                                                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                                                                : (function (e, n) {
+                                                                      var l = Object.keys(e);
+                                                                      if (Object.getOwnPropertySymbols) {
+                                                                          var t = Object.getOwnPropertySymbols(e);
+                                                                          l.push.apply(l, t);
+                                                                      }
+                                                                      return l;
+                                                                  })(Object(a)).forEach(function (e) {
+                                                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                                                                  }),
+                                                            r)
+                                                        );
+                                                    };
                                                 }),
-                                            children: _.Z.Messages.INSTANT_INVITE
+                                            children: C.NW.string(C.t.VINpSE)
                                         })
                                 ]
                             })
@@ -142,4 +186,3 @@ let E = r.memo(function (e) {
         ]
     });
 });
-n.Z = E;

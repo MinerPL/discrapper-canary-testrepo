@@ -1,9 +1,4 @@
-var r, i;
-n.d(t, {
-    z: function () {
-        return r;
-    }
-}),
-    n(47120),
-    ((i = r || (r = {}))[(i.LATEST_ACTIVITY = 0)] = 'LATEST_ACTIVITY'),
-    (i[(i.CREATION_DATE = 1)] = 'CREATION_DATE');
+n.d(t, { z: () => r }), n(47120);
+var r = (function (e) {
+    return (e[(e.LATEST_ACTIVITY = 0)] = 'LATEST_ACTIVITY'), (e[(e.CREATION_DATE = 1)] = 'CREATION_DATE'), e;
+})({});

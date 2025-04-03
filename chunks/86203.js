@@ -1,35 +1,31 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(493683),
-    l = n(726521),
-    r = n(718538),
-    o = n(868807),
-    c = n(689938);
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(493683),
+    o = n(726521),
+    a = n(718538),
+    s = n(868807),
+    c = n(388032);
 function u(e) {
-    let { channel: t, buttonSize: n = a.ButtonSizes.TINY, className: u, onReportClick: d, onReportSubmit: h, onMouseEnter: m, onMouseLeave: p } = e,
-        { error: _, loaded: f } = (0, o.a)(t),
-        E = t.isDM() ? t.getRecipientId() : null,
-        g = (0, r.V)(t.id, E);
-    if (null == g && (f || _)) return null;
-    let C = () => {
-        null == h || h(), s.Z.closePrivateChannel(t.id);
+    let { channel: t, buttonSize: n = i.PhG.TINY, color: u = i.zxk.Colors.RED, className: d, onReportClick: p, onReportSubmit: h, onMouseEnter: f, onMouseLeave: m } = e,
+        { error: g, loaded: b } = (0, s.a)(t),
+        _ = t.isDM() ? t.getRecipientId() : null,
+        C = (0, a.V)(t.id, _);
+    if (null == C && (b || g)) return null;
+    let y = () => {
+        null == h || h(), l.Z.closePrivateChannel(t.id);
     };
-    return (0, i.jsx)(a.Button, {
-        className: u,
+    return (0, r.jsx)(i.zxk, {
+        className: d,
         size: n,
-        color: a.Button.Colors.RED,
-        disabled: null == g,
+        color: u,
+        disabled: null == C,
         onClick: (e) => {
-            e.stopPropagation(), null == d || d(), null != g && (0, l.WL)(g, C);
+            e.stopPropagation(), null == p || p(), null != C && (0, o.WL)(C, y);
         },
-        onMouseEnter: m,
-        onMouseLeave: p,
-        children: c.Z.Messages.REPORT
+        onMouseEnter: f,
+        onMouseLeave: m,
+        children: c.NW.string(c.t['+78Pfn'])
     });
 }

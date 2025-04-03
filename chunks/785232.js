@@ -1,29 +1,49 @@
-var a = t(735250);
-t(470079);
-var n = t(442837),
-    l = t(481060),
-    s = t(289823),
-    r = t(594174);
-i.Z = function (e) {
-    let { recipients: i, size: t, status: c, isTyping: d, className: o, ...u } = e,
-        A = l.AvatarSizeSpecs[t],
-        I = (0, n.Wu)(
-            [r.default],
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    l = n(289823),
+    s = n(594174);
+let c = function (e) {
+    var { recipients: t, size: n, status: c, isTyping: o, className: u } = e,
+        d = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                i,
+                r = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        i,
+                        r = {},
+                        a = Object.keys(e);
+                    for (i = 0; i < a.length; i++) (n = a[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var a = Object.getOwnPropertySymbols(e);
+                for (i = 0; i < a.length; i++) (n = a[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+            }
+            return r;
+        })(e, ['recipients', 'size', 'status', 'isTyping', 'className']);
+    let f = a.ny6[n],
+        p = (0, r.Wu)(
+            [s.default],
             () =>
-                i.slice(0, 2).map((e) => {
-                    let i = r.default.getUser(e);
-                    if (null != i) return i.getAvatarURL(void 0, A.size, !1);
+                t.slice(0, 2).map((e) => {
+                    let t = s.default.getUser(e);
+                    if (null != t) return t.getAvatarURL(void 0, f.size, !1);
                 }),
-            [i, A.size]
+            [t, f.size]
         );
-    return (0, a.jsx)(s.Z, {
-        'aria-label': u['aria-label'],
-        'aria-hidden': u['aria-hidden'],
-        backSrc: I[0],
-        frontSrc: I[1],
-        size: t,
+    return (0, i.jsx)(l.Z, {
+        'aria-label': d['aria-label'],
+        'aria-hidden': d['aria-hidden'],
+        backSrc: p[0],
+        frontSrc: p[1],
+        size: n,
         status: c,
-        isTyping: null != d && d,
-        className: o
+        isTyping: null != o && o,
+        className: u
     });
 };

@@ -1,93 +1,89 @@
-s.r(n),
-    s.d(n, {
-        default: function () {
-            return x;
-        }
-    }),
-    s(47120);
-var a = s(735250),
-    t = s(470079),
-    l = s(481060),
-    i = s(613734),
-    o = s(409617),
-    r = s(451426),
-    c = s(384725),
-    d = s(534044),
-    _ = s(670199),
-    E = s(800530),
-    N = s(981631),
-    u = s(665010);
-function x(e) {
-    let { classificationId: n, transitionState: s, initialSlide: x = E.Cs.SPEED_BUMP, onClose: A } = e,
-        [I, C] = t.useState(x),
-        { classification: S, isDsaEligible: T } = (0, i.YG)(null != n ? n : N.lds),
-        m = (null == S ? void 0 : S.is_spam) || !1,
-        h = (null == S ? void 0 : S.is_coppa) || !1;
-    t.useEffect(() => {
-        T ? C(x) : C(E.Cs.COLLECT_SIGNAL);
-    }, [C, x, T]);
-    let M = t.useCallback(() => {
-            c.Z.close(), A();
-        }, [A]),
-        L = t.useCallback(() => {
-            var e, n;
-            let s = null;
-            (s = T ? (null === (e = E.d9[I]) || void 0 === e ? void 0 : e.next) : null === (n = E.c6[I]) || void 0 === n ? void 0 : n.next) ? C(s) : M();
-        }, [I, T, M]),
-        g = t.useCallback(() => {
-            var e, n;
-            let s;
-            (s = T ? (null === (e = E.d9[I]) || void 0 === e ? void 0 : e.prev) : null === (n = E.c6[I]) || void 0 === n ? void 0 : n.prev) ? C(s) : M();
-        }, [I, T, M]);
-    return (0, a.jsx)(l.ModalRoot, {
-        transitionState: s,
+t.d(n, { default: () => _ }), t(47120);
+var i = t(200651),
+    s = t(192379),
+    a = t(990547),
+    l = t(481060),
+    r = t(613734),
+    o = t(409617),
+    c = t(451426),
+    d = t(384725),
+    x = t(534044),
+    m = t(670199),
+    N = t(800530),
+    u = t(981631),
+    h = t(704906);
+function _(e) {
+    let { classificationId: n, transitionState: t, initialSlide: _ = N.Cs.SPEED_BUMP, onClose: C } = e,
+        [p, g] = s.useState(_),
+        { classification: j, isDsaEligible: I } = (0, r.YG)(null != n ? n : u.lds),
+        k = (null == j ? void 0 : j.is_spam) || !1,
+        E = (null == j ? void 0 : j.is_coppa) || !1;
+    s.useEffect(() => {
+        g(_);
+    }, [g, _]);
+    let T = s.useCallback(() => {
+            d.Z.close(), C();
+        }, [C]),
+        f = s.useCallback(() => {
+            var e;
+            let n = null == (e = N.JQ[p]) ? void 0 : e.next;
+            n ? g(n) : T();
+        }, [p, T]),
+        S = s.useCallback(() => {
+            var e;
+            let n = null == (e = N.JQ[p]) ? void 0 : e.prev;
+            n ? g(n) : T();
+        }, [p, T]);
+    return (0, i.jsx)(l.Y0X, {
+        transitionState: t,
         disableTrack: !0,
-        size: l.ModalSize.DYNAMIC,
-        children: (0, a.jsx)('div', {
-            className: u.container,
-            children: (0, a.jsxs)(l.Slides, {
-                activeSlide: I,
+        size: l.CgR.DYNAMIC,
+        children: (0, i.jsx)('div', {
+            className: h.container,
+            children: (0, i.jsxs)(l.MyZ, {
+                activeSlide: p,
                 width: 500,
                 children: [
-                    (0, a.jsx)(l.Slide, {
-                        id: E.Cs.SPEED_BUMP,
-                        children: (0, a.jsx)(_.Z, {
-                            classification: S,
-                            onClose: M,
-                            onNext: L,
-                            isSpam: m,
-                            isCoppa: h
+                    (0, i.jsx)(l.Mi4, {
+                        id: N.Cs.SPEED_BUMP,
+                        impressionName: a.ImpressionNames.APPEAL_INGESTION_SPEED_BUMP,
+                        impressionProperties: N.ZW,
+                        children: (0, i.jsx)(m.Z, {
+                            classification: j,
+                            onClose: T,
+                            onNext: f,
+                            isSpam: k,
+                            isCoppa: E,
+                            isDsaEligible: I
                         })
                     }),
-                    (0, a.jsx)(l.Slide, {
-                        id: E.Cs.COLLECT_SIGNAL,
-                        children: (0, a.jsx)(o.Z, {
-                            isDsaEligible: T,
-                            onClose: M,
-                            onNext: L,
-                            onBack: g
+                    (0, i.jsx)(l.Mi4, {
+                        id: N.Cs.COLLECT_SIGNAL,
+                        impressionName: a.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL,
+                        impressionProperties: N.ZW,
+                        children: (0, i.jsx)(o.Z, {
+                            isDsaEligible: I,
+                            onClose: T,
+                            onNext: f,
+                            onBack: S
                         })
                     }),
-                    (0, a.jsx)(l.Slide, {
-                        id: E.Cs.CONFIRM_SUBMISSION,
-                        children: (0, a.jsx)(r.Z, {
-                            onClose: M,
-                            onNext: L,
-                            onBack: g
+                    (0, i.jsx)(l.Mi4, {
+                        id: N.Cs.CONFIRM_SUBMISSION,
+                        impressionName: a.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION,
+                        impressionProperties: N.ZW,
+                        children: (0, i.jsx)(c.Z, {
+                            isDsaEligible: I,
+                            onClose: T,
+                            onNext: f,
+                            onBack: S
                         })
                     }),
-                    (0, a.jsx)(l.Slide, {
-                        id: E.Cs.REQUEST_SENT,
-                        children: (0, a.jsx)(d.Z, { onNext: L })
-                    }),
-                    (0, a.jsx)(l.Slide, {
-                        id: E.Cs.THANKS,
-                        children: (0, a.jsx)(o.Z, {
-                            isDsaEligible: T,
-                            onClose: M,
-                            onNext: L,
-                            onBack: g
-                        })
+                    (0, i.jsx)(l.Mi4, {
+                        id: N.Cs.REQUEST_SENT,
+                        impressionName: a.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT,
+                        impressionProperties: N.ZW,
+                        children: (0, i.jsx)(x.Z, { onNext: f })
                     })
                 ]
             })

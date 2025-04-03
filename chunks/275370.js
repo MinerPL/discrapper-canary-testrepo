@@ -1,110 +1,87 @@
-o.r(s), o(47120);
-var t = o(735250),
-    r = o(470079),
-    n = o(512722),
-    a = o.n(n),
-    l = o(481060),
-    c = o(51144),
-    i = o(985002),
-    d = o(880257),
-    _ = o(198952),
-    u = o(130310),
-    C = o(329242),
-    m = o(689938),
-    h = o(619958);
-s.default = (e) => {
-    let { currentUser: s, otherUser: o, transitionState: n, onClose: x } = e,
-        L = r.useCallback(() => {
-            x();
-        }, [x]),
-        E = (0, d.Z)(),
-        [N, M] = r.useState(!1),
-        A = r.useCallback(() => {
-            M(!0);
+t.d(r, { default: () => f }), t(47120);
+var n = t(200651),
+    o = t(192379),
+    s = t(512722),
+    c = t.n(s),
+    i = t(481060),
+    l = t(51144),
+    a = t(985002),
+    d = t(880257),
+    u = t(957656),
+    b = t(130310),
+    h = t(332495),
+    j = t(388032),
+    x = t(13625);
+let f = (e) => {
+    let { currentUser: r, otherUser: t, transitionState: s, onClose: f } = e,
+        p = o.useCallback(() => {
+            f();
+        }, [f]),
+        m = (0, d.Z)(),
+        [y, O] = o.useState(!1),
+        g = o.useCallback(() => {
+            O(!0);
         }, []),
-        { acceptLinkRequest: I, isAcceptLoading: T } = (0, i.G)({
-            onError: A,
-            onSuccess: L
+        { acceptLinkRequest: N, isAcceptLoading: k } = (0, a.G)({
+            onError: g,
+            onSuccess: p
         });
     return (
-        a()(!E, 'FamilyCenterAcceptLinkModal should only be rendered for teens.'),
-        (0, t.jsxs)(l.ModalRoot, {
-            transitionState: n,
-            'aria-label': m.Z.Messages.FAMILY_CENTER_ACCEPT_LINK_MODAL_TITLE,
-            className: h.root,
+        c()(!m, 'FamilyCenterAcceptLinkModal should only be rendered for teens.'),
+        (0, n.jsxs)(u.Z, {
+            transitionState: s,
+            'aria-label': j.NW.string(h.Z.rlNJwc),
+            className: x.root,
             children: [
-                N
-                    ? (0, t.jsx)(l.FormErrorBlock, {
-                          className: h.error,
-                          children: m.Z.Messages.FAMILY_CENTER_ACCEPT_LINK_MODAL_ERROR
-                      })
-                    : null,
-                (0, t.jsxs)(l.ModalContent, {
-                    className: h.__invalid_modalContent,
+                (0, n.jsx)(u.Z.Error, { error: y ? j.NW.string(h.Z.pegSMz) : void 0 }),
+                (0, n.jsxs)(i.hzk, {
                     children: [
-                        (0, t.jsxs)('div', {
-                            className: h.header,
-                            children: [
-                                (0, t.jsx)(_.Z, {
-                                    currentUser: s,
-                                    otherUser: o,
-                                    children: (0, t.jsx)(l.LinkIcon, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: h.linkIcon
-                                    })
-                                }),
-                                (0, t.jsx)(l.Heading, {
-                                    className: h.headerText,
-                                    variant: 'text-lg/bold',
-                                    children: m.Z.Messages.FAMILY_CENTER_ACCEPT_LINK_MODAL_TITLE
-                                }),
-                                (0, t.jsx)(C.Z, {
-                                    user: o,
-                                    fill: !0
-                                })
-                            ]
+                        (0, n.jsx)(u.Z.Header, {
+                            currentUser: r,
+                            otherUser: t,
+                            header: j.NW.string(h.Z.rlNJwc),
+                            icon: (0, n.jsx)(i.xPt, {
+                                size: 'md',
+                                color: 'currentColor',
+                                className: x.linkIcon
+                            })
                         }),
-                        (0, t.jsxs)('div', {
-                            className: h.content,
+                        (0, n.jsxs)(u.Z.Content, {
                             children: [
-                                (0, t.jsx)(u.Z, { inModal: !0 }),
-                                (0, t.jsx)(l.Text, {
-                                    className: h.disclaimer,
+                                (0, n.jsx)(b.Z, { inModal: !0 }),
+                                (0, n.jsx)(i.Text, {
+                                    className: x.disclaimer,
                                     variant: 'text-xs/normal',
                                     color: 'text-normal',
-                                    children: m.Z.Messages.FAMILY_CENTER_ACCEPT_LINK_ACTIVITY_DISCLAIMER.format({ username: c.ZP.getName(o) })
+                                    children: j.NW.format(h.Z.snlFqa, { username: l.ZP.getName(t) })
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, t.jsx)(l.ModalFooter, {
-                    children: (0, t.jsx)('form', {
+                (0, n.jsx)(i.mzw, {
+                    children: (0, n.jsx)('form', {
                         onSubmit: (e) => {
-                            e.preventDefault(), I(o);
+                            e.preventDefault(), N(t);
                         },
-                        children: (0, t.jsxs)('div', {
-                            className: h.footer,
+                        children: (0, n.jsxs)(u.Z.ButtonFooter, {
                             children: [
-                                (0, t.jsx)(l.Button, {
-                                    className: h.button,
+                                (0, n.jsx)(i.zxk, {
                                     type: 'button',
-                                    disabled: T,
-                                    look: l.Button.Looks.LINK,
-                                    color: l.Button.Colors.PRIMARY,
-                                    onClick: x,
-                                    size: l.Button.Sizes.SMALL,
-                                    children: m.Z.Messages.CANCEL
+                                    disabled: k,
+                                    look: i.zxk.Looks.LINK,
+                                    color: i.zxk.Colors.PRIMARY,
+                                    onClick: f,
+                                    size: i.zxk.Sizes.SMALL,
+                                    children: j.NW.string(j.t['ETE/oK'])
                                 }),
-                                (0, t.jsx)(l.Button, {
-                                    className: h.button,
+                                (0, n.jsx)(i.zxk, {
                                     type: 'submit',
-                                    disabled: T,
-                                    submitting: T,
-                                    color: l.ButtonColors.BRAND,
-                                    size: l.Button.Sizes.SMALL,
-                                    children: m.Z.Messages.FAMILY_CENTER_ACCEPT_REQUEST
+                                    disabled: k,
+                                    submitting: k,
+                                    color: i.Ttl.BRAND,
+                                    size: i.zxk.Sizes.SMALL,
+                                    children: j.NW.string(h.Z['wI/jo6'])
                                 })
                             ]
                         })

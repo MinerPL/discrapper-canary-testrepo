@@ -1,64 +1,74 @@
+n.d(t, { Z: () => u }), n(47120), n(266796), n(773603);
 var r = n(544891),
     i = n(570140),
-    a = n(626135),
-    s = n(741847),
-    o = n(981631);
-t.Z = {
-    resolveGuildTemplate: function e(t) {
-        return i.Z.isDispatching()
-            ? Promise.resolve().then(() => e(t))
-            : (i.Z.dispatch({
-                  type: 'GUILD_TEMPLATE_RESOLVE',
-                  code: t
-              }),
-              r.tn
-                  .get({
-                      url: o.ANM.UNRESOLVED_GUILD_TEMPLATE(t),
-                      oldFormErrors: !0
-                  })
-                  .then(
-                      (e) => {
-                          let n = e.body;
-                          return (
-                              a.default.track(o.rMx.GUILD_TEMPLATE_RESOLVED, {
-                                  resolved: !0,
-                                  guild_template_code: t,
-                                  guild_template_name: n.name,
-                                  guild_template_description: n.description,
-                                  guild_template_guild_id: n.source_guild_id
-                              }),
-                              i.Z.dispatch({
-                                  type: 'GUILD_TEMPLATE_RESOLVE_SUCCESS',
-                                  guildTemplate: n,
-                                  code: t
-                              }),
-                              {
-                                  guildTemplate: (0, s.Z)(n),
-                                  code: t
-                              }
-                          );
-                      },
-                      () => (
-                          a.default.track(o.rMx.GUILD_TEMPLATE_RESOLVED, {
-                              resolved: !1,
-                              guild_template_code: t
-                          }),
-                          i.Z.dispatch({
-                              type: 'GUILD_TEMPLATE_RESOLVE_FAILURE',
-                              code: t
-                          }),
-                          {
-                              guildTemplate: null,
-                              code: t
-                          }
-                      )
-                  ));
-    },
+    o = n(626135),
+    a = n(741847),
+    s = n(981631);
+let l = new Map();
+function c(e) {
+    if (i.Z.isDispatching()) return Promise.resolve().then(() => c(e));
+    let t = l.get(e);
+    if (null != t) return t;
+    i.Z.dispatch({
+        type: 'GUILD_TEMPLATE_RESOLVE',
+        code: e
+    });
+    let n = r.tn
+        .get({
+            url: s.ANM.UNRESOLVED_GUILD_TEMPLATE(e),
+            oldFormErrors: !0,
+            rejectWithError: !0
+        })
+        .then(
+            (t) => {
+                let n = t.body;
+                return (
+                    o.default.track(s.rMx.GUILD_TEMPLATE_RESOLVED, {
+                        resolved: !0,
+                        guild_template_code: e,
+                        guild_template_name: n.name,
+                        guild_template_description: n.description,
+                        guild_template_guild_id: n.source_guild_id
+                    }),
+                    i.Z.dispatch({
+                        type: 'GUILD_TEMPLATE_RESOLVE_SUCCESS',
+                        guildTemplate: n,
+                        code: e
+                    }),
+                    {
+                        guildTemplate: (0, a.Z)(n),
+                        code: e
+                    }
+                );
+            },
+            () => (
+                o.default.track(s.rMx.GUILD_TEMPLATE_RESOLVED, {
+                    resolved: !1,
+                    guild_template_code: e
+                }),
+                i.Z.dispatch({
+                    type: 'GUILD_TEMPLATE_RESOLVE_FAILURE',
+                    code: e
+                }),
+                {
+                    guildTemplate: null,
+                    code: e
+                }
+            )
+        )
+        .finally(() => {
+            l.delete(e);
+        });
+    return l.set(e, n), n;
+}
+let u = {
+    resolveGuildTemplate: c,
     loadTemplatesForGuild: (e) =>
         r.tn
             .get({
-                url: o.ANM.GUILD_TEMPLATES(e),
-                oldFormErrors: !0
+                url: s.ANM.GUILD_TEMPLATES(e),
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) => (
@@ -72,12 +82,13 @@ t.Z = {
     createGuildTemplate: (e, t, n) =>
         r.tn
             .post({
-                url: o.ANM.GUILD_TEMPLATES(e),
+                url: s.ANM.GUILD_TEMPLATES(e),
                 body: {
                     name: t,
                     description: n
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 i.Z.dispatch({
@@ -89,8 +100,9 @@ t.Z = {
     syncGuildTemplate: (e, t) =>
         r.tn
             .put({
-                url: o.ANM.GUILD_TEMPLATE(e, t),
-                oldFormErrors: !0
+                url: s.ANM.GUILD_TEMPLATE(e, t),
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 i.Z.dispatch({
@@ -99,15 +111,16 @@ t.Z = {
                     code: t
                 });
             }),
-    updateGuildTemplate: (e, t, n, a) =>
+    updateGuildTemplate: (e, t, n, o) =>
         r.tn
             .patch({
-                url: o.ANM.GUILD_TEMPLATE(e, t),
+                url: s.ANM.GUILD_TEMPLATE(e, t),
                 body: {
                     name: n,
-                    description: a
+                    description: o
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 i.Z.dispatch({
@@ -119,8 +132,9 @@ t.Z = {
     deleteGuildTemplate: (e, t) =>
         r.tn
             .del({
-                url: o.ANM.GUILD_TEMPLATE(e, t),
-                oldFormErrors: !0
+                url: s.ANM.GUILD_TEMPLATE(e, t),
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
                 i.Z.dispatch({

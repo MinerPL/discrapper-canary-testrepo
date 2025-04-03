@@ -1,10 +1,11 @@
-var i = n(544891),
-    a = n(570140),
-    s = n(981631);
-t.Z = {
+n.d(t, { Z: () => o });
+var r = n(544891),
+    i = n(570140),
+    l = n(981631);
+let o = {
     show(e, t) {
-        a.Z.wait(() =>
-            a.Z.dispatch({
+        i.Z.wait(() =>
+            i.Z.dispatch({
                 type: 'TUTORIAL_INDICATOR_SHOW',
                 tutorialId: e,
                 renderData: t
@@ -12,30 +13,32 @@ t.Z = {
         );
     },
     hide(e) {
-        a.Z.wait(() =>
-            a.Z.dispatch({
+        i.Z.wait(() =>
+            i.Z.dispatch({
                 type: 'TUTORIAL_INDICATOR_HIDE',
                 tutorialId: e
             })
         );
     },
     dismiss(e) {
-        a.Z.wait(() =>
-            a.Z.dispatch({
+        i.Z.wait(() =>
+            i.Z.dispatch({
                 type: 'TUTORIAL_INDICATOR_DISMISS',
                 tutorialId: e
             })
         ),
-            i.tn.put({
-                url: s.ANM.TUTORIAL_INDICATOR(e),
-                oldFormErrors: !0
+            r.tn.put({
+                url: l.ANM.TUTORIAL_INDICATOR(e),
+                oldFormErrors: !0,
+                rejectWithError: !0
             });
     },
     suppressAll() {
-        a.Z.dispatch({ type: 'TUTORIAL_INDICATOR_SUPPRESS_ALL' }),
-            i.tn.post({
-                url: s.ANM.TUTORIAL_INDICATORS_SUPPRESS,
-                oldFormErrors: !0
+        i.Z.dispatch({ type: 'TUTORIAL_INDICATOR_SUPPRESS_ALL' }),
+            r.tn.post({
+                url: l.ANM.TUTORIAL_INDICATORS_SUPPRESS,
+                oldFormErrors: !0,
+                rejectWithError: !0
             });
     }
 };

@@ -1,54 +1,49 @@
 n.d(t, {
-    Mn: function () {
-        return o;
-    },
-    WM: function () {
-        return u;
-    },
-    _2: function () {
-        return c;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    l = n(481060),
-    r = n(395193);
-let o = 16;
+    Mn: () => s,
+    WM: () => u,
+    _2: () => c
+}),
+    n(266796);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(44946);
+let s = 16;
 function c(e) {
-    let { description: t, name: n, icon: a, onNavigate: c, className: u, missingNavIcon: d } = e;
-    return (0, i.jsxs)(l.Clickable, {
+    let { description: t, name: n, icon: i, onNavigate: c, className: u, missingNavIcon: d } = e;
+    return (0, r.jsxs)(o.P3F, {
         onClick: c,
-        className: s()(r.modInfoItem, null != c && r.modInfoAction, u),
+        className: l()(a.modInfoItem, null != c && a.modInfoAction, u),
         children: [
-            null != a &&
-                (0, i.jsx)('div', {
-                    className: r.modInfoItemIcon,
-                    children: a
+            null != i &&
+                (0, r.jsx)('div', {
+                    className: a.modInfoItemIcon,
+                    children: i
                 }),
             null != n &&
-                (0, i.jsx)('div', {
-                    className: r.modInfoItemName,
+                (0, r.jsx)('div', {
+                    className: a.modInfoItemName,
                     children: n
                 }),
-            (0, i.jsx)('div', {
-                className: r.modInfoItemDescription,
+            (0, r.jsx)('div', {
+                className: a.modInfoItemDescription,
                 children: t
             }),
             null != c &&
-                (0, i.jsx)('div', {
-                    className: r.modInfoItemActionIcon,
-                    children: (0, i.jsx)(l.ChevronLargeRightIcon, {
+                (0, r.jsx)('div', {
+                    className: a.modInfoItemActionIcon,
+                    children: (0, r.jsx)(o.LJT, {
                         size: 'custom',
-                        width: o,
-                        height: o
+                        width: s,
+                        height: s
                     })
                 }),
             null == c &&
                 null != d &&
-                (0, i.jsx)('div', {
-                    className: r.modInfoItemActionIcon,
+                (0, r.jsx)('div', {
+                    className: a.modInfoItemActionIcon,
                     children: d
                 })
         ]
@@ -56,8 +51,8 @@ function c(e) {
 }
 function u(e) {
     let { children: t } = e;
-    return (0, i.jsx)('div', {
-        className: r.modInfoItemContainer,
+    return (0, r.jsx)('div', {
+        className: a.modInfoItemContainer,
         children: t
     });
 }

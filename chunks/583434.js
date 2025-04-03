@@ -1,25 +1,22 @@
-n.d(t, {
-    T: function () {
-        return u;
-    }
-}),
-    n(47120);
-var r = n(470079),
+n.d(t, { T: () => u }), n(47120);
+var r = n(192379),
     i = n(399606),
-    a = n(55563),
-    s = n(335131),
-    o = n(597688),
+    o = n(55563),
+    a = n(335131),
+    s = n(597688),
     l = n(981631);
+let c = 3600000;
 function u(e) {
-    let t = (0, i.e7)([a.Z], () => (null != e ? a.Z.get(e) : null)),
+    let t = (0, i.e7)([o.Z], () => (null != e ? o.Z.get(e) : null)),
         n = null != t && t.productLine !== l.POd.COLLECTIBLES,
-        [u, c] = (0, i.Wu)([o.Z], () => [o.Z.isFetchingProduct(e), o.Z.getProduct(e)]);
+        [u, d, f, _] = (0, i.Wu)([s.Z], () => [s.Z.isFetchingProduct(e), s.Z.getProduct(e), s.Z.getProductFetchError(e), s.Z.getProductFetchErrorTimestamp(e)]),
+        p = null != f && null != _ && Date.now() - _ < c;
     return (
         (0, r.useEffect)(() => {
-            if (null != e && null == c && !n && !u) (0, s.jr)(e);
-        }, [e, c, n, u]),
+            null == e || null != d || n || u || p || (0, a.jr)(e);
+        }, [e, d, n, u, p]),
         {
-            product: c,
+            product: d,
             isFetching: u
         }
     );

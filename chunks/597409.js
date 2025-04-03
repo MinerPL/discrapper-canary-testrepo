@@ -1,55 +1,98 @@
-a.r(n);
-var s = a(735250);
-a(470079);
-var l = a(442837),
-    o = a(481060),
-    c = a(239091),
-    i = a(496675),
-    d = a(572004),
-    r = a(981631),
-    t = a(689938),
-    u = a(811140);
-n.default = function (e) {
-    var n;
-    let { guild: I, user: p, onSelect: M } = e,
-        _ = null !== (n = null == I ? void 0 : I.id) && void 0 !== n ? n : r.lds,
-        E = (0, l.e7)([i.Z], () => null != I && i.Z.canManageUser(r.Plq.BAN_MEMBERS, p, I), [I, p]);
-    return (0, s.jsx)(o.Menu, {
+r.d(t, { default: () => p });
+var n = r(200651);
+r(192379);
+var c = r(442837),
+    o = r(481060),
+    i = r(239091),
+    a = r(496675),
+    l = r(572004),
+    s = r(981631),
+    u = r(388032),
+    b = r(766879);
+let p = function (e) {
+    var t;
+    let { guild: p, user: d, onSelect: y } = e,
+        O = null != (t = null == p ? void 0 : p.id) ? t : s.lds,
+        f = (0, c.e7)([a.Z], () => null != p && a.Z.canManageUser(s.Plq.BAN_MEMBERS, d, p), [p, d]);
+    return (0, n.jsx)(o.v2r, {
         navId: 'member-application-context-menu',
-        className: u.contextMenu,
-        onClose: c.Zy,
-        'aria-label': t.Z.Messages.USER_ACTIONS_MENU_LABEL,
-        onSelect: M,
-        children: (0, s.jsxs)(o.MenuGroup, {
+        className: b.contextMenu,
+        onClose: i.Zy,
+        'aria-label': u.NW.string(u.t.liqwPD),
+        onSelect: y,
+        children: (0, n.jsxs)(o.kSQ, {
             children: [
-                E &&
-                    (0, s.jsx)(
-                        o.MenuItem,
+                f &&
+                    (0, n.jsx)(
+                        o.sNh,
                         {
                             id: 'ban',
-                            label: t.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_BAN_USER,
-                            icon: o.HammerIcon,
+                            label: u.NW.string(u.t['I+Cbur']),
+                            icon: o.pgN,
                             color: 'danger',
                             action: () =>
-                                (0, o.openModalLazy)(async () => {
-                                    let { default: e } = await a.e('43350').then(a.bind(a, 98746));
-                                    return (n) =>
-                                        (0, s.jsx)(e, {
-                                            ...n,
-                                            guildId: _,
-                                            user: p
-                                        });
+                                (0, o.ZDy)(async () => {
+                                    let { default: e } = await r.e('43350').then(r.bind(r, 98746));
+                                    return (t) => {
+                                        var r, c;
+                                        return (0, n.jsx)(
+                                            e,
+                                            ((r = (function (e) {
+                                                for (var t = 1; t < arguments.length; t++) {
+                                                    var r = null != arguments[t] ? arguments[t] : {},
+                                                        n = Object.keys(r);
+                                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                                        (n = n.concat(
+                                                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                            })
+                                                        )),
+                                                        n.forEach(function (t) {
+                                                            var n;
+                                                            (n = r[t]),
+                                                                t in e
+                                                                    ? Object.defineProperty(e, t, {
+                                                                          value: n,
+                                                                          enumerable: !0,
+                                                                          configurable: !0,
+                                                                          writable: !0
+                                                                      })
+                                                                    : (e[t] = n);
+                                                        });
+                                                }
+                                                return e;
+                                            })({}, t)),
+                                            (c = c =
+                                                {
+                                                    guildId: O,
+                                                    user: d
+                                                }),
+                                            Object.getOwnPropertyDescriptors
+                                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(c))
+                                                : (function (e, t) {
+                                                      var r = Object.keys(e);
+                                                      if (Object.getOwnPropertySymbols) {
+                                                          var n = Object.getOwnPropertySymbols(e);
+                                                          r.push.apply(r, n);
+                                                      }
+                                                      return r;
+                                                  })(Object(c)).forEach(function (e) {
+                                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(c, e));
+                                                  }),
+                                            r)
+                                        );
+                                    };
                                 })
                         },
                         'ban'
                     ),
-                (0, s.jsx)(
-                    o.MenuItem,
+                (0, n.jsx)(
+                    o.sNh,
                     {
                         id: 'copyUserId',
                         label: 'Copy User ID',
-                        icon: o.IdIcon,
-                        action: () => (0, d.JG)(p.id)
+                        icon: o.VuL,
+                        action: () => (0, l.JG)(d.id)
                     },
                     'copyUserId'
                 )

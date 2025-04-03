@@ -1,10 +1,6 @@
 n.d(t, {
-    E: function () {
-        return i;
-    },
-    X: function () {
-        return r;
-    }
+    E: () => i,
+    X: () => r
 });
 let r = {
     getDefaultLinkInterceptor: () => void 0,

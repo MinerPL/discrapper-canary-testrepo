@@ -1,26 +1,14 @@
 n.d(t, {
-    GI: function () {
-        return l;
-    },
-    Iv: function () {
-        return a;
-    },
-    ME: function () {
-        return r;
-    },
-    a4: function () {
-        return s;
-    },
-    jp: function () {
-        return o;
-    },
-    zy: function () {
-        return i;
-    }
+    GI: () => l,
+    Iv: () => o,
+    ME: () => r,
+    a4: () => a,
+    jp: () => s,
+    zy: () => i
 });
 let r = '@',
     i = '#',
-    a = ':',
-    s = '+:',
     o = ':',
+    a = '+:',
+    s = ':',
     l = '/';

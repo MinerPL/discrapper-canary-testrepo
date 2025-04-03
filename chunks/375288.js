@@ -1,3 +1,4 @@
+n.d(t, { Z: () => r });
 var i = n(99887),
     a = {
         lessThanXSeconds: {
@@ -62,9 +63,11 @@ var i = n(99887),
             other: 'लगभग {{count}} वर्ष'
         }
     };
-t.Z = function (e, t, n) {
+let r = function (e, t, n) {
     var r,
         o = a[e];
-    if (((r = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', (0, i.N4)(t))), null != n && n.addSuffix)) return n.comparison && n.comparison > 0 ? r + 'मे ' : r + ' पहले';
+    if (((r = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', (0, i.N4)(t))), null != n && n.addSuffix))
+        if (n.comparison && n.comparison > 0) return r + 'मे ';
+        else return r + ' पहले';
     return r;
 };

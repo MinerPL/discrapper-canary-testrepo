@@ -1,17 +1,13 @@
 n.d(t, {
-    S: function () {
-        return o;
-    },
-    b: function () {
-        return s;
-    }
+    S: () => s,
+    b: () => a
 }),
     n(47120),
     n(653041);
 var r = n(836560);
 n(17089);
 var i = n(710845);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,18 +21,17 @@ function a(e, t, n) {
     );
 }
 n(981631);
-class s {
+class a {
     safeDispatch(e) {
         for (var t, n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
         if (!this.hasSubscribers(e)) {
             let [n] = r;
-            return (this._savedDispatches[e] = null !== (t = this._savedDispatches[e]) && void 0 !== t ? t : []).push(n), this;
+            return (this._savedDispatches[e] = null != (t = this._savedDispatches[e]) ? t : []).push(n), this;
         }
         return this.dispatch(e, ...r);
     }
     dispatch(e, t) {
-        Date.now();
-        return this.emitter.emit(e, t), this;
+        return Date.now(), this.emitter.emit(e, t), this;
     }
     dispatchToLastSubscribed(e, t) {
         Date.now();
@@ -57,7 +52,7 @@ class s {
             (this._savedDispatches[e] = void 0));
     }
     subscribe(e, t) {
-        return this.emitter.listeners(e).indexOf(t) >= 0 ? (new i.Z('ComponentDispatchUtils').warn('ComponentDispatch.subscribe: Attempting to add a duplicate listener', e), this) : (this.emitter.on(e, t), this._checkSavedDispatches(e), this);
+        return this.emitter.listeners(e).indexOf(t) >= 0 ? new i.Z('ComponentDispatchUtils').warn('ComponentDispatch.subscribe: Attempting to add a duplicate listener', e) : (this.emitter.on(e, t), this._checkSavedDispatches(e)), this;
     }
     subscribeOnce(e, t) {
         return this.emitter.once(e, t), this._checkSavedDispatches(e), this;
@@ -83,7 +78,7 @@ class s {
         return this.unsubscribe(''.concat(e, '_').concat(t), n);
     }
     constructor() {
-        a(this, 'emitter', new r.EventEmitter()), a(this, '_savedDispatches', {}), this.emitter.setMaxListeners(100);
+        o(this, 'emitter', new r.EventEmitter()), o(this, '_savedDispatches', {}), this.emitter.setMaxListeners(100);
     }
 }
-let o = new s();
+let s = new a();

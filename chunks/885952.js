@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 var r = {
     start: 'end',
     end: 'start'

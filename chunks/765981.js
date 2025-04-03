@@ -1,34 +1,32 @@
-n.d(t, {
-    f: function () {
-        return a;
-    }
-});
+n.d(t, { f: () => s });
 var r = n(263016);
 function i(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function o(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-var a = (function () {
-    var e, t, n;
-    function a(e, t) {
-        var n = this;
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, a),
+function a(e, t, n) {
+    return t && o(e.prototype, t), n && o(e, n), e;
+}
+var s = (function () {
+    function e(t, n) {
+        var r = this;
+        i(this, e),
             (this.isSetUp = !1),
             (this.handleRefCountChange = function () {
-                var e = n.store.getState().refCount > 0;
-                n.backend && (e && !n.isSetUp ? (n.backend.setup(), (n.isSetUp = !0)) : !e && n.isSetUp && (n.backend.teardown(), (n.isSetUp = !1)));
+                var e = r.store.getState().refCount > 0;
+                r.backend && (e && !r.isSetUp ? (r.backend.setup(), (r.isSetUp = !0)) : !e && r.isSetUp && (r.backend.teardown(), (r.isSetUp = !1)));
             }),
-            (this.store = e),
-            (this.monitor = t),
-            e.subscribe(this.handleRefCountChange);
+            (this.store = t),
+            (this.monitor = n),
+            t.subscribe(this.handleRefCountChange);
     }
     return (
-        (e = a),
-        (t = [
+        a(e, [
             {
                 key: 'receiveBackend',
                 value: function (e) {
@@ -57,21 +55,18 @@ var a = (function () {
                 key: 'getActions',
                 value: function () {
                     var e = this,
-                        t = this.store.dispatch,
-                        n = (0, r.W1)(this);
-                    return Object.keys(n).reduce(function (r, i) {
-                        var a,
-                            s = n[i];
-                        return (
-                            (r[i] =
-                                ((a = s),
-                                function () {
-                                    for (var n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-                                    var s = a.apply(e, r);
-                                    void 0 !== s && t(s);
-                                })),
-                            r
-                        );
+                        t = this.store.dispatch;
+                    function n(n) {
+                        return function () {
+                            for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
+                            var a = n.apply(e, i);
+                            void 0 !== a && t(a);
+                        };
+                    }
+                    var i = (0, r.W1)(this);
+                    return Object.keys(i).reduce(function (e, t) {
+                        var r = i[t];
+                        return (e[t] = n(r)), e;
                     }, {});
                 }
             },
@@ -82,7 +77,6 @@ var a = (function () {
                 }
             }
         ]),
-        i(e.prototype, t),
-        a
+        e
     );
 })();

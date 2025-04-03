@@ -1,7 +1,4 @@
-var r;
-n.d(t, {
-    m: function () {
-        return r;
-    }
-}),
-    ((r || (r = {})).MP4 = 'video/mp4');
+n.d(t, { m: () => r });
+var r = (function (e) {
+    return (e.MP4 = 'video/mp4'), (e.WEBM = 'video/webm'), e;
+})({});

@@ -1,39 +1,36 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
-var i = n(735250);
-n(470079);
-var l = n(266067),
-    r = n(442837),
-    a = n(481060),
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
+var i = n(512969),
+    l = n(442837),
+    o = n(481060),
+    a = n(893607),
     s = n(601964),
-    o = n(701190),
-    c = n(836040),
-    u = n(603592),
-    d = n(981631),
-    h = n(689938);
-function p(e) {
+    c = n(701190),
+    u = n(836040),
+    d = n(603592),
+    p = n(981631),
+    h = n(388032);
+function f(e) {
     var t;
     let { isOnHubVerificationRoute: n } = e,
-        p = (0, l.LX)(null !== (t = window.location.pathname) && void 0 !== t ? t : '', { path: d.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(':guildId', ':inviteCode') }),
-        _ = (0, r.e7)([o.Z], () => {
-            if (null == p) return null;
-            let { inviteCode: e } = p.params;
-            return null != e ? o.Z.getInvite(e) : null;
+        f = (0, i.LX)(null != (t = window.location.pathname) ? t : '', { path: p.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(a.Hw.guildId(), ':inviteCode') }),
+        g = (0, l.e7)([c.Z], () => {
+            if (null == f) return null;
+            let { inviteCode: e } = f.params;
+            return null != e ? c.Z.getInvite(e) : null;
         }),
-        f = (null == _ ? void 0 : _.guild) != null ? new s.ZP(null == _ ? void 0 : _.guild) : null;
+        m = (null == g ? void 0 : g.guild) != null ? new s.ZP(null == g ? void 0 : g.guild) : null;
     return n
-        ? null != f && null != _
-            ? (0, i.jsx)(c.Z, {
-                  guild: f,
-                  invite: _
+        ? null != m && null != g
+            ? (0, r.jsx)(u.Z, {
+                  guild: m,
+                  invite: g
               })
-            : (0, i.jsx)(u.Z, {
-                  tooltip: h.Z.Messages.HUB_DISCORD_HUBS,
+            : (0, r.jsx)(d.Z, {
+                  tooltip: h.NW.string(h.t.rn9HIS),
                   id: 'guild-hub-button',
-                  icon: a.HubIcon
+                  icon: o.aVH
               })
         : null;
 }

@@ -1,28 +1,22 @@
-t.d(n, {
-    C: function () {
-        return l;
-    },
-    k: function () {
-        return u;
-    }
+n.d(t, {
+    C: () => o,
+    k: () => a
 });
-var r = t(470079),
-    i = t(937615),
-    o = t(689938);
-function l(e) {
+var r = n(192379),
+    i = n(937615),
+    l = n(388032);
+function o(e) {
     return r.useMemo(() => {
         if (null == e) return;
-        let n = null != e.role_id,
-            t = e.attachments_count > 0;
-        if (n && t) return o.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE;
-        if (n) return o.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE;
-        if (t) return o.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE;
+        let t = null != e.role_id,
+            n = e.attachments_count > 0;
+        return t && n ? l.NW.string(l.t.ih4QMT) : t ? l.NW.string(l.t.o9xphY) : n ? l.NW.string(l.t.DWYJub) : void 0;
     }, [e]);
 }
-function u(e) {
+function a(e) {
     return r.useMemo(() => {
         if ((null == e ? void 0 : e.price) == null) return;
-        let { amount: n, currency: t } = e.price;
-        return (0, i.T4)(n, t);
+        let { amount: t, currency: n } = e.price;
+        return (0, i.T4)(t, n);
     }, [e]);
 }

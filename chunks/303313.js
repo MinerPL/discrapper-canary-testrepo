@@ -1,49 +1,42 @@
-o.r(s),
-    o.d(s, {
-        default: function () {
-            return M;
-        }
-    }),
-    o(653041),
-    o(47120);
-var i = o(735250);
-o(470079);
-var r = o(149765),
-    a = o(481060),
-    t = o(995648),
-    n = o(422559),
-    d = o(689938),
-    l = o(325254);
-function M(e) {
-    let { defaultMemberPermissions: s, onClose: o, transitionState: M } = e,
-        c = [];
-    for (let e of n.VY) r.e$(s, e) && c.push(e);
-    return (0, i.jsxs)(a.ModalRoot, {
-        size: a.ModalSize.DYNAMIC,
-        'aria-label': d.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_DEFAULT_MEMBER_PERMISSIONS_MODAL_ARIA_LABEL,
-        transitionState: M,
+i.d(e, { default: () => d }), i(653041), i(47120);
+var r = i(200651);
+i(192379);
+var t = i(149765),
+    a = i(481060),
+    n = i(995648),
+    o = i(422559),
+    l = i(388032),
+    c = i(832339);
+function d(s) {
+    let { defaultMemberPermissions: e, onClose: i, transitionState: d } = s,
+        f = [];
+    for (let s of o.VY) t.e$(e, s) && f.push(s);
+    return (0, r.jsxs)(a.Y0X, {
+        size: a.CgR.DYNAMIC,
+        'aria-label': l.NW.string(l.t.vusPtr),
+        transitionState: d,
         children: [
-            (0, i.jsx)(a.ModalHeader, {
+            (0, r.jsx)(a.xBx, {
                 separator: !1,
-                children: (0, i.jsx)(a.Heading, {
-                    className: l.header,
+                children: (0, r.jsx)(a.X6q, {
+                    className: c.header,
                     variant: 'heading-xl/semibold',
-                    children: d.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_DEFAULT_MEMBER_PERMISSIONS_MODAL_HEADER
+                    children: l.NW.string(l.t['4gMlpa'])
                 })
             }),
-            (0, i.jsx)(a.ModalContent, {
-                children: (0, i.jsx)(t.Z, {
-                    className: l.permissionList,
-                    grantedPermissions: c
+            (0, r.jsx)(a.hzk, {
+                children: (0, r.jsx)(n.Z, {
+                    className: c.permissionList,
+                    grantedPermissions: f
                 })
             }),
-            (0, i.jsx)(a.ModalFooter, {
-                className: l.footer,
-                children: (0, i.jsx)(a.Button, {
-                    size: a.ButtonSizes.MEDIUM,
-                    onClick: o,
-                    color: a.ButtonColors.BRAND,
-                    children: d.Z.Messages.DONE
+            (0, r.jsx)(a.mzw, {
+                className: c.footer,
+                children: (0, r.jsx)(a.zxk, {
+                    size: a.PhG.MEDIUM,
+                    onClick: i,
+                    color: a.Ttl.BRAND,
+                    children: l.NW.string(l.t.i4jeWV)
                 })
             })
         ]

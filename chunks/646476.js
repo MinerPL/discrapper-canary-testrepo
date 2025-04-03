@@ -1,24 +1,20 @@
 n.d(t, {
-    RO: function () {
-        return d;
-    },
-    rK: function () {
-        return _;
-    }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(913527),
-    a = n.n(i),
-    s = n(846519),
-    o = n(987170);
-let l = new Date('2024-01-04T07:59:59.000Z'),
-    u = a()(l),
-    c = (0, o.Z)({
-        id: '2023-11_seasonal_gifting',
-        label: 'Seasonal Gifting 2023',
+    RO: () => l,
+    TX: () => d,
+    Ys: () => c,
+    ZP: () => f,
+    rK: () => u
+});
+var r = n(987170),
+    i = n(535201),
+    o = n(987338);
+let a = new Date('2025-01-06T07:59:59.000Z'),
+    s = (0, r.Z)({
+        id: '2024-11_seasonal_gifting',
+        label: 'Seasonal Gifting 2024',
         kind: 'user',
         defaultConfig: { enabled: !1 },
+        commonTriggerPoint: o.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -27,7 +23,7 @@ let l = new Date('2024-01-04T07:59:59.000Z'),
             }
         ]
     }),
-    d = (0, o.Z)({
+    l = (0, r.Z)({
         id: '2023-11_seasonal_gifting_marketing_2023',
         label: 'Seasonal Gifting Marketing 2023',
         kind: 'user',
@@ -39,22 +35,27 @@ let l = new Date('2024-01-04T07:59:59.000Z'),
                 config: { enabled: !0 }
             }
         ]
+    }),
+    c = (0, r.Z)({
+        id: '2024-11_seasonal_gifting_reminder',
+        label: 'Seasonal Gifting Reminder 2024',
+        kind: 'user',
+        defaultConfig: { enabled: !1 },
+        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        treatments: [
+            {
+                id: 1,
+                label: 'Enabled',
+                config: { enabled: !0 }
+            }
+        ]
     });
-function _() {
-    let [e, t] = r.useState(() => u.isAfter(Date.now()));
-    return (
-        r.useEffect(() => {
-            let n = new s.V7(),
-                r = () => {
-                    let e = Math.min(u.diff(Date.now(), 'millisecond'), 86400000);
-                    null == n ||
-                        n.start(e, () => {
-                            u.isBefore(Date.now()) ? t(!1) : r();
-                        });
-                };
-            return e && r(), () => n.stop();
-        }),
-        e
-    );
+function u() {
+    return (0, i.p)(a);
 }
-t.ZP = c;
+function d() {
+    let e = u(),
+        { enabled: t } = s.useExperiment({ location: 'useIsInSeasonalGiftingXPAndSeasonalGiftingActive' }, { autoTrackExposure: !1 });
+    return e && t;
+}
+let f = s;

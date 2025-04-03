@@ -4,8 +4,4 @@ function r(e) {
         scrollTop: e.scrollTop
     };
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });

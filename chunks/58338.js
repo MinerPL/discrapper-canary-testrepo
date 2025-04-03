@@ -1,150 +1,184 @@
-t.d(n, {
-    Z: function () {
-        return g;
-    }
-}),
-    t(47120),
-    t(789020);
-var s = t(735250),
-    i = t(470079),
-    a = t(442837),
-    l = t(481060),
-    u = t(92114),
-    o = t(113449),
-    r = t(748756),
-    d = t(686660),
-    c = t(122074),
-    E = t(9156),
-    _ = t(621600),
-    M = t(981631),
-    N = t(490897),
-    I = t(526761),
-    S = t(689938);
-function g(e) {
-    let n = (0, c.ng)(e, !0),
-        g = (0, c.U)();
-    return (0, s.jsxs)(l.MenuItem, {
+n.d(t, { Z: () => O }), n(47120), n(789020);
+var i = n(200651),
+    r = n(192379),
+    s = n(442837),
+    l = n(481060),
+    a = n(87051),
+    o = n(113449),
+    c = n(748756),
+    u = n(686660),
+    d = n(122074),
+    g = n(9156),
+    b = n(621600),
+    p = n(981631),
+    f = n(490897),
+    S = n(526761),
+    N = n(388032);
+function O(e) {
+    let t = (0, d.ng)(e, !0),
+        O = (0, d.U)();
+    return (0, i.jsxs)(l.sNh, {
         id: 'notification',
-        label: (0, s.jsxs)(s.Fragment, {
-            children: [g, S.Z.Messages.NOTIFICATIONS]
+        label: (0, i.jsxs)(i.Fragment, {
+            children: [O, N.NW.string(N.t.HcoRu7)]
         }),
         action: () => {
-            (0, l.openModalLazy)(async () => {
-                let { default: n } = await Promise.all([t.e('5863'), t.e('69065')]).then(t.bind(t, 751212));
-                return (t) =>
-                    (0, s.jsx)(n, {
-                        ...t,
-                        guildId: e
-                    });
+            (0, l.ZDy)(async () => {
+                let { default: t } = await Promise.all([n.e('5863'), n.e('99922')]).then(n.bind(n, 751212));
+                return (n) => {
+                    var r, s;
+                    return (0, i.jsx)(
+                        t,
+                        ((r = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    i = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (i = i.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: i,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = i);
+                                    });
+                            }
+                            return e;
+                        })({}, n)),
+                        (s = s = { guildId: e }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var i = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, i);
+                                  }
+                                  return n;
+                              })(Object(s)).forEach(function (e) {
+                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
+                              }),
+                        r)
+                    );
+                };
             });
         },
         children: [
             (function (e) {
-                let [n, t] = i.useState(!1),
-                    [c, g] = i.useState(!1),
-                    L = (0, a.e7)([E.ZP], () => E.ZP.getGuildUnreadSetting(e)),
-                    T = (0, a.e7)([E.ZP], () => E.ZP.getMessageNotifications(e)),
-                    A = c ? d.s8.CUSTOM : (0, d.gs)(L, T),
-                    h = (n) => {
-                        g(!1);
-                        let t = { message_notifications: n };
-                        n === M.bL.ALL_MESSAGES && L !== N.i.ALL_MESSAGES && (t.flags = (0, o.Q4)(E.ZP.getGuildFlags(e), I.vc.UNREADS_ALL_MESSAGES)), u.Z.updateGuildNotificationSettings(e, t, _.UE.notifications(n));
+                let [t, n] = r.useState(!1),
+                    [d, O] = r.useState(!1),
+                    E = (0, s.e7)([g.ZP], () => g.ZP.getGuildUnreadSetting(e)),
+                    h = (0, s.e7)([g.ZP], () => g.ZP.getMessageNotifications(e)),
+                    y = d ? u.s8.CUSTOM : (0, u.gs)(E, h),
+                    j = (t) => {
+                        O(!1);
+                        let n = { message_notifications: t };
+                        t === p.bL.ALL_MESSAGES && E !== f.i.ALL_MESSAGES && (n.flags = (0, o.Q4)(g.ZP.getGuildFlags(e), S.vc.UNREADS_ALL_MESSAGES)), a.Z.updateGuildNotificationSettings(e, n, b.UE.notifications(t));
                     },
-                    f = (n) => {
-                        g(!1);
-                        let t = E.ZP.getGuildFlags(e);
-                        u.Z.updateGuildNotificationSettings(e, { flags: (0, o.Q4)(t, n === N.i.ALL_MESSAGES ? I.vc.UNREADS_ALL_MESSAGES : I.vc.UNREADS_ONLY_MENTIONS) }, _.UE.unreads(n));
+                    _ = (t) => {
+                        O(!1);
+                        let n = g.ZP.getGuildFlags(e);
+                        a.Z.updateGuildNotificationSettings(e, { flags: (0, o.Q4)(n, t === f.i.ALL_MESSAGES ? S.vc.UNREADS_ALL_MESSAGES : S.vc.UNREADS_ONLY_MENTIONS) }, b.UE.unreads(t));
                     };
-                return (0, s.jsxs)(s.Fragment, {
+                return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, s.jsxs)(l.MenuGroup, {
+                        (0, i.jsxs)(l.kSQ, {
                             children: [
-                                (0, s.jsx)(l.MenuRadioItem, {
+                                (0, i.jsx)(l.k5B, {
                                     id: 'everything',
                                     group: 'notification-preset',
-                                    checked: A === d.s8.ALL_MESSAGES,
-                                    label: S.Z.Messages.NOTIFICATION_PRESET_1,
-                                    action: () => ((0, r.V)(e, d.s8.ALL_MESSAGES), g(!1))
+                                    checked: y === u.s8.ALL_MESSAGES,
+                                    label: N.NW.string(N.t.hZrr6u),
+                                    action: () => ((0, c.V)(e, u.s8.ALL_MESSAGES), O(!1))
                                 }),
-                                (0, s.jsx)(l.MenuRadioItem, {
+                                (0, i.jsx)(l.k5B, {
                                     id: 'essentials',
                                     group: 'notification-preset',
-                                    checked: A === d.s8.MENTIONS,
-                                    label: S.Z.Messages.NOTIFICATION_PRESET_2,
-                                    action: () => ((0, r.V)(e, d.s8.MENTIONS), g(!1))
+                                    checked: y === u.s8.MENTIONS,
+                                    label: N.NW.string(N.t.y59NJi),
+                                    action: () => ((0, c.V)(e, u.s8.MENTIONS), O(!1))
                                 }),
-                                (0, s.jsx)(l.MenuRadioItem, {
+                                (0, i.jsx)(l.k5B, {
                                     id: 'nothing',
                                     group: 'notification-preset',
-                                    checked: A === d.s8.NOTHING,
-                                    label: S.Z.Messages.NOTIFICATION_PRESET_3,
-                                    action: () => ((0, r.V)(e, d.s8.NOTHING), g(!1))
+                                    checked: y === u.s8.NOTHING,
+                                    label: N.NW.string(N.t['pGn/bG']),
+                                    action: () => ((0, c.V)(e, u.s8.NOTHING), O(!1))
                                 }),
-                                (0, s.jsx)(l.MenuRadioItem, {
+                                (0, i.jsx)(l.k5B, {
                                     id: 'custom',
                                     group: 'notification-preset',
-                                    checked: A === d.s8.CUSTOM,
-                                    action: () => (t(!0), g(!0)),
-                                    label: S.Z.Messages.NOTIFICATION_PRESET_CUSTOM
+                                    checked: y === u.s8.CUSTOM,
+                                    action: () => (n(!0), O(!0)),
+                                    label: N.NW.string(N.t['32yow8'])
                                 })
                             ]
                         }),
-                        (A === d.s8.CUSTOM || n) &&
-                            (0, s.jsxs)(l.MenuGroup, {
+                        (y === u.s8.CUSTOM || t) &&
+                            (0, i.jsxs)(l.kSQ, {
                                 children: [
-                                    (0, s.jsxs)(
-                                        l.MenuItem,
+                                    (0, i.jsxs)(
+                                        l.sNh,
                                         {
                                             id: 'unread_setting',
                                             label: 'Unread Badges',
                                             children: [
-                                                (0, s.jsx)(l.MenuRadioItem, {
+                                                (0, i.jsx)(l.k5B, {
                                                     id: 'unread_setting_all_messages',
                                                     group: 'unread_setting',
-                                                    checked: L === N.i.ALL_MESSAGES,
-                                                    label: S.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-                                                    action: () => f(N.i.ALL_MESSAGES)
+                                                    checked: E === f.i.ALL_MESSAGES,
+                                                    label: N.NW.string(N.t['HVah//']),
+                                                    action: () => _(f.i.ALL_MESSAGES)
                                                 }),
-                                                (0, s.jsx)(l.MenuRadioItem, {
+                                                (0, i.jsx)(l.k5B, {
                                                     id: 'unread_setting_mention_only',
                                                     group: 'unread_setting',
-                                                    checked: L === N.i.ONLY_MENTIONS,
-                                                    label: S.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-                                                    action: () => f(N.i.ONLY_MENTIONS),
-                                                    disabled: L !== N.i.ONLY_MENTIONS && T === M.bL.ALL_MESSAGES,
-                                                    subtext: L !== N.i.ONLY_MENTIONS && T === M.bL.ALL_MESSAGES ? S.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED : void 0
+                                                    checked: E === f.i.ONLY_MENTIONS,
+                                                    label: N.NW.string(N.t['tu+ZWF']),
+                                                    action: () => _(f.i.ONLY_MENTIONS),
+                                                    disabled: E !== f.i.ONLY_MENTIONS && h === p.bL.ALL_MESSAGES,
+                                                    subtext: E !== f.i.ONLY_MENTIONS && h === p.bL.ALL_MESSAGES ? N.NW.string(N.t.eP8yWV) : void 0
                                                 })
                                             ]
                                         },
                                         'unread_setting'
                                     ),
-                                    (0, s.jsxs)(
-                                        l.MenuItem,
+                                    (0, i.jsxs)(
+                                        l.sNh,
                                         {
                                             id: 'push_settings',
-                                            label: S.Z.Messages.NOTIFICATIONS,
+                                            label: N.NW.string(N.t.HcoRu7),
                                             children: [
-                                                (0, s.jsx)(l.MenuRadioItem, {
+                                                (0, i.jsx)(l.k5B, {
                                                     group: 'notification-preset',
                                                     id: 'push_settings_everything',
-                                                    label: S.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-                                                    checked: T === M.bL.ALL_MESSAGES,
-                                                    action: () => h(M.bL.ALL_MESSAGES),
-                                                    subtext: L !== N.i.ALL_MESSAGES && T !== M.bL.ALL_MESSAGES ? S.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING : void 0
+                                                    label: N.NW.string(N.t['HVah//']),
+                                                    checked: h === p.bL.ALL_MESSAGES,
+                                                    action: () => j(p.bL.ALL_MESSAGES),
+                                                    subtext: E !== f.i.ALL_MESSAGES && h !== p.bL.ALL_MESSAGES ? N.NW.string(N.t.idXSbG) : void 0
                                                 }),
-                                                (0, s.jsx)(l.MenuRadioItem, {
+                                                (0, i.jsx)(l.k5B, {
                                                     group: 'notification-preset',
                                                     id: 'push_settings_everything_mention',
-                                                    checked: T === M.bL.ONLY_MENTIONS,
-                                                    label: S.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-                                                    action: () => h(M.bL.ONLY_MENTIONS)
+                                                    checked: h === p.bL.ONLY_MENTIONS,
+                                                    label: N.NW.string(N.t['tu+ZWF']),
+                                                    action: () => j(p.bL.ONLY_MENTIONS)
                                                 }),
-                                                (0, s.jsx)(l.MenuRadioItem, {
+                                                (0, i.jsx)(l.k5B, {
                                                     group: 'notification-preset',
                                                     id: 'push_settings_everything_nothing',
-                                                    label: S.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_NONE,
-                                                    checked: T === M.bL.NO_MESSAGES,
-                                                    action: () => h(M.bL.NO_MESSAGES)
+                                                    label: N.NW.string(N.t.X4wWUl),
+                                                    checked: h === p.bL.NO_MESSAGES,
+                                                    action: () => j(p.bL.NO_MESSAGES)
                                                 })
                                             ]
                                         },
@@ -155,53 +189,53 @@ function g(e) {
                     ]
                 });
             })(e),
-            null != n && (0, s.jsx)(l.MenuGroup, { children: n }),
+            null != t && (0, i.jsx)(l.kSQ, { children: t }),
             (function (e) {
-                let n = (0, a.cj)([E.ZP], () => ({
-                        highligths: E.ZP.getNotifyHighlights(e),
-                        mobilePush: E.ZP.isMobilePushEnabled(e),
-                        suppressRoles: E.ZP.isSuppressRolesEnabled(e),
-                        suppressEveryone: E.ZP.isSuppressEveryoneEnabled(e),
-                        muteScheduledEvents: E.ZP.isMuteScheduledEventsEnabled(e)
+                let t = (0, s.cj)([g.ZP], () => ({
+                        highligths: g.ZP.getNotifyHighlights(e),
+                        mobilePush: g.ZP.isMobilePushEnabled(e),
+                        suppressRoles: g.ZP.isSuppressRolesEnabled(e),
+                        suppressEveryone: g.ZP.isSuppressEveryoneEnabled(e),
+                        muteScheduledEvents: g.ZP.isMuteScheduledEventsEnabled(e)
                     })),
-                    t = u.Z.updateGuildNotificationSettings;
-                return (0, s.jsxs)(s.Fragment, {
+                    n = a.Z.updateGuildNotificationSettings;
+                return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, s.jsxs)(l.MenuGroup, {
+                        (0, i.jsxs)(l.kSQ, {
                             children: [
-                                (0, s.jsx)(l.MenuCheckboxItem, {
+                                (0, i.jsx)(l.S89, {
                                     id: 'mention',
-                                    checked: n.suppressEveryone,
-                                    label: S.Z.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format(),
-                                    action: () => t(e, { suppress_everyone: !n.suppressEveryone }, _.UE.suppressEveryone(!n.suppressEveryone))
+                                    checked: t.suppressEveryone,
+                                    label: N.NW.format(N.t.OWiWAg, {}),
+                                    action: () => n(e, { suppress_everyone: !t.suppressEveryone }, b.UE.suppressEveryone(!t.suppressEveryone))
                                 }),
-                                (0, s.jsx)(l.MenuCheckboxItem, {
+                                (0, i.jsx)(l.S89, {
                                     id: 'roles',
-                                    checked: n.suppressRoles,
-                                    label: S.Z.Messages.FORM_LABEL_SUPPRESS_ROLES,
-                                    action: () => t(e, { suppress_roles: !n.suppressRoles }, _.UE.suppressRoles(!n.suppressRoles))
+                                    checked: t.suppressRoles,
+                                    label: N.NW.string(N.t['O/QdoK']),
+                                    action: () => n(e, { suppress_roles: !t.suppressRoles }, b.UE.suppressRoles(!t.suppressRoles))
                                 }),
-                                (0, s.jsx)(l.MenuCheckboxItem, {
+                                (0, i.jsx)(l.S89, {
                                     id: 'hightlight',
-                                    label: S.Z.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS,
-                                    checked: n.highligths === M.gLR.ENABLED,
-                                    action: () => t(e, { notify_highlights: n.highligths === M.gLR.ENABLED ? M.gLR.DISABLED : M.gLR.ENABLED }, _.UE.highlights(n.highligths !== M.gLR.ENABLED))
+                                    label: N.NW.string(N.t.gPuteH),
+                                    checked: t.highligths === p.gLR.ENABLED,
+                                    action: () => n(e, { notify_highlights: t.highligths === p.gLR.ENABLED ? p.gLR.DISABLED : p.gLR.ENABLED }, b.UE.highlights(t.highligths !== p.gLR.ENABLED))
                                 })
                             ]
                         }),
-                        (0, s.jsxs)(l.MenuGroup, {
+                        (0, i.jsxs)(l.kSQ, {
                             children: [
-                                (0, s.jsx)(l.MenuCheckboxItem, {
+                                (0, i.jsx)(l.S89, {
                                     id: 'event',
-                                    checked: n.muteScheduledEvents,
-                                    label: S.Z.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS,
-                                    action: () => t(e, { mute_scheduled_events: !n.muteScheduledEvents }, _.UE.mutedEvents(!n.muteScheduledEvents))
+                                    checked: t.muteScheduledEvents,
+                                    label: N.NW.string(N.t.ONG3Y2),
+                                    action: () => n(e, { mute_scheduled_events: !t.muteScheduledEvents }, b.UE.mutedEvents(!t.muteScheduledEvents))
                                 }),
-                                (0, s.jsx)(l.MenuCheckboxItem, {
+                                (0, i.jsx)(l.S89, {
                                     id: 'mobile_push',
-                                    checked: n.mobilePush,
-                                    label: S.Z.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS,
-                                    action: () => t(e, { mobile_push: !n.mobilePush }, _.UE.mobilePush(!n.mobilePush))
+                                    checked: t.mobilePush,
+                                    label: N.NW.string(N.t['h1DL6+']),
+                                    action: () => n(e, { mobile_push: !t.mobilePush }, b.UE.mobilePush(!t.mobilePush))
                                 })
                             ]
                         })

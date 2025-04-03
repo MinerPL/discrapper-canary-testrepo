@@ -1,93 +1,91 @@
-t.d(n, {
-    Z: function () {
-        return S;
-    }
-});
-var s = t(735250);
-t(470079);
-var i = t(442837),
-    a = t(481060),
-    l = t(132871),
-    u = t(147890),
-    o = t(593128),
-    r = t(434404),
-    d = t(956324),
-    c = t(994763),
-    E = t(84615),
-    _ = t(984933),
-    M = t(981631),
-    N = t(308083),
-    I = t(689938);
-function S(e) {
-    function n(n) {
-        r.Z.open(e.id, n);
-    }
-    let t = (0, i.Wu)([_.ZP], () => _.ZP.getChannels(e.id).SELECTABLE, [e]),
-        S = (0, d.Z)(e);
-    return __OVERLAY__ || !S
-        ? null
-        : (0, s.jsx)(a.MenuItem, {
-              id: 'guild-settings',
-              label: I.Z.Messages.SERVER_SETTINGS,
-              action: () => n(),
-              children: (0, c.getGuildSettingsSections)(e, t).map((t) => {
-                  let { section: i, label: r } = t;
-                  if (null == r) return null;
-                  switch (i) {
-                      case M.pNK.DELETE:
-                          return null;
-                      case M.pNK.COMMUNITY:
-                          return (0, s.jsx)(
-                              a.MenuItem,
-                              {
-                                  id: i,
-                                  action: () => n(i),
-                                  label: I.Z.Messages.GUILD_SETTINGS_COMMUNITY
-                              },
-                              i
-                          );
-                      case M.pNK.APP_DIRECTORY:
-                          return (0, s.jsx)(
-                              a.MenuItem,
-                              {
-                                  id: i,
-                                  action: () => {
-                                      (0, u.goToAppDirectory)({
-                                          guildId: e.id,
-                                          entrypoint: { name: l.ApplicationDirectoryEntrypointNames.GUILD_CONTEXT_MENU }
-                                      });
-                                  },
-                                  label: r
-                              },
-                              i
-                          );
-                      case M.pNK.CLAN:
-                          return (0, s.jsx)(a.MenuItem, {
-                              id: 'guild-settings',
-                              label: I.Z.Messages.CLAN_SETTINGS,
-                              action: () =>
-                                  (0, E.q4)(
-                                      (n) => {
-                                          let { closeLayer: t } = n;
-                                          return (0, s.jsx)(o.Z, {
-                                              onClose: t,
-                                              guildId: e.id
-                                          });
-                                      },
-                                      { layerKey: N.q2 }
-                                  )
-                          });
-                      default:
-                          return (0, s.jsx)(
-                              a.MenuItem,
-                              {
-                                  id: i,
-                                  action: () => n(i),
-                                  label: r
-                              },
-                              i
-                          );
-                  }
-              })
-          });
+n.d(t, { Z: () => N });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    s = n(40851),
+    l = n(593128),
+    a = n(749681),
+    o = n(258971),
+    c = n(434404),
+    u = n(956324),
+    d = n(640678),
+    g = n(84615),
+    b = n(981631),
+    p = n(308083),
+    f = n(49898),
+    S = n(388032);
+function N(e) {
+    let t = (0, s.Aq)(),
+        n = (0, u.Z)(e);
+    if (__OVERLAY__ || !n) return null;
+    let N = (n) => {
+        c.Z.open(e.id, n), t.dispatch(b.CkL.POPOUT_CLOSE), (0, r.pTH)();
+    };
+    return (0, i.jsx)(r.sNh, {
+        id: 'guild-settings',
+        label: S.NW.string(S.t['154/bG']),
+        action: () => N(),
+        children: (0, d.t)(e).map((t) => {
+            let { section: n, label: s } = t;
+            if (null == s) return null;
+            switch (n) {
+                case b.pNK.DELETE:
+                    return null;
+                case b.pNK.COMMUNITY:
+                    return (0, i.jsx)(
+                        r.sNh,
+                        {
+                            id: n,
+                            action: () => N(n),
+                            label: S.NW.string(S.t.nRtNqq)
+                        },
+                        n
+                    );
+                case b.pNK.APP_DIRECTORY:
+                    return (0, i.jsx)(
+                        r.sNh,
+                        {
+                            id: n,
+                            action: () => {
+                                (0, a.transitionToGlobalDiscovery)({
+                                    tab: f.GlobalDiscoveryTab.APPS,
+                                    newSessionState: {
+                                        guildId: e.id,
+                                        entrypoint: { name: o.xF.GUILD_HEADER_POPOUT }
+                                    }
+                                });
+                            },
+                            label: s
+                        },
+                        n
+                    );
+                case b.pNK.CLAN:
+                    return (0, i.jsx)(r.sNh, {
+                        id: 'guild-settings',
+                        label: S.NW.string(S.t['6g8uHB']),
+                        action: () =>
+                            (0, g.q4)(
+                                (t) => {
+                                    let { closeLayer: n } = t;
+                                    return (0, i.jsx)(l.Z, {
+                                        onClose: n,
+                                        guildId: e.id
+                                    });
+                                },
+                                { layerKey: p.q2 }
+                            )
+                    });
+                default:
+                    return (0, i.jsx)(
+                        r.sNh,
+                        {
+                            id: n,
+                            action: () => N(n),
+                            label: s
+                        },
+                        n
+                    );
+            }
+        })
+    });
 }

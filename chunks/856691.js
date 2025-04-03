@@ -1,33 +1,29 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(692547),
-    s = n(481060),
-    l = n(40851),
-    r = n(881824),
-    o = n(688641),
-    c = n(689938);
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(692547),
+    l = n(481060),
+    o = n(40851),
+    a = n(881824),
+    s = n(688641),
+    c = n(388032);
 function u(e) {
     let { className: t, channel: n, highlight: u } = e,
-        d = (0, l.bp)();
-    return (0, i.jsx)(o.Z, {
+        d = (0, o.bp)();
+    return (0, r.jsx)(s.Z, {
         highlight: null != u && u,
         className: t,
-        icon: (0, i.jsx)(s.StageIcon, {
+        icon: (0, r.jsx)(l.ewx, {
             size: 'custom',
             color: 'currentColor',
             height: 20,
             width: 20
         }),
-        color: a.Z.unsafe_rawColors.GREEN_360.css,
-        title: c.Z.Messages.STAGE_CHANNEL_START_TITLE,
-        description: c.Z.Messages.STAGE_CHANNEL_START_SUBTITLE,
+        color: i.Z.unsafe_rawColors.GREEN_360.css,
+        title: c.NW.string(c.t.OYbHfn),
+        description: c.NW.string(c.t.yXwLMT),
         onClick: function () {
-            (0, r.T)(n, d);
+            (0, a.T)(n, d);
         }
     });
 }

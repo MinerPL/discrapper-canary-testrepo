@@ -1,18 +1,34 @@
-var i = n(735250);
-n(470079);
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
 var l = n(120356),
-    r = n.n(l),
+    i = n.n(l),
+    o = n(481060),
     a = n(570928),
-    s = n(977059),
-    o = n(689938),
-    c = n(433912);
-t.Z = function (e) {
-    let { className: t, hasVideo: n, text: l } = e,
-        { enabled: u } = s.c.useExperiment({ location: 'RTCConnectionStatusText' }),
-        d = n ? o.Z.Messages.E2EE_VIDEO_DETAILS : o.Z.Messages.E2EE_VOICE_DETAILS;
-    return (0, i.jsx)(a.Z, {
-        className: r()(t, u ? c.hoverableStatus : c.status),
-        hoverText: u ? d : null,
-        children: l
+    s = n(540059),
+    c = n(388032),
+    u = n(593210);
+let d = function (e) {
+    let { className: t, hasVideo: n, text: l, hasConnectedChannel: d, textVariant: h = 'text-md/medium' } = e,
+        f = (0, s.Q3)('RTCConnectionStatusText'),
+        p = n ? c.NW.string(c.t.IlHdW1) : c.NW.string(c.t.WsOisr);
+    return (0, r.jsx)(a.Z, {
+        className: i()(t, u.hoverableStatus),
+        hoverText: d
+            ? f
+                ? (0, r.jsx)(o.Text, {
+                      variant: h,
+                      color: 'currentColor',
+                      children: p
+                  })
+                : p
+            : null,
+        children: f
+            ? (0, r.jsx)(o.Text, {
+                  variant: h,
+                  color: 'currentColor',
+                  children: l
+              })
+            : l
     });
 };

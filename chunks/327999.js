@@ -1,99 +1,84 @@
 n.d(t, {
-    MS: function () {
-        return N;
-    },
-    Ph: function () {
-        return v;
-    },
-    _2: function () {
-        return R;
-    },
-    bE: function () {
-        return A;
-    },
-    gq: function () {
-        return i;
-    },
-    nf: function () {
-        return S;
-    }
+    MS: () => y,
+    Ph: () => v,
+    _2: () => I,
+    bE: () => b,
+    gq: () => E,
+    nf: () => g
 }),
+    n(301563),
     n(653041);
-var r,
-    i,
-    a,
-    s,
-    o,
-    l,
-    u = n(544891),
-    c = n(780384),
-    d = n(410030),
-    _ = n(726542),
-    E = n(122021),
-    f = n(981631),
-    h = n(689938);
-let p = {};
-function m(e, t) {
+var r = n(544891),
+    i = n(780384),
+    o = n(410030),
+    a = n(726542),
+    s = n(122021),
+    l = n(981631),
+    c = n(388032);
+let u = {};
+function d(e, t) {
     return e + t;
 }
-function I(e, t) {
-    return t.map((t) => e + t);
+function f(e, t) {
+    return t.map((t) => d(e, t));
 }
-function T(e) {
+function _(e) {
     return e.split('-')[1];
 }
-((s = r || (r = {}))[(s.FAILED = 0)] = 'FAILED'), (s[(s.UNFETCHED = 1)] = 'UNFETCHED'), (s[(s.PENDING = 2)] = 'PENDING'), (s[(s.SUCCEEDED = 3)] = 'SUCCEEDED'), (s[(s.FAILED_NO_RETRY = 4)] = 'FAILED_NO_RETRY');
-function g(e, t) {
+function p(e) {
+    return e.filter((e) => u[e] <= 1).map(_);
+}
+function h(e, t) {
     e.forEach((e) => {
-        p[e] = t;
+        u[e] = t;
     });
 }
-function S(e, t) {
-    t.forEach((t) =>
-        (function (e, t, n) {
-            p[e + t] = 3;
-        })(e, t, 3)
-    );
+function m(e, t, n) {
+    u[d(e, t)] = n;
 }
-((o = i || (i = {}))[(o.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (o[(o.BOT = 1)] = 'BOT'), (o[(o.INTEGRATION = 2)] = 'INTEGRATION'), (o[(o.DISCOVERY = 3)] = 'DISCOVERY'), (o[(o.HUB = 4)] = 'HUB'), (o[(o.INVITE = 5)] = 'INVITE'), (o[(o.VANITY_URL = 6)] = 'VANITY_URL'), (o[(o.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION');
-let A = function (e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    switch (e) {
-        case 1:
-            return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT;
-        case 2:
-            return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION;
-        case 3:
-            return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_DISCOVERY;
-        case 4:
-            return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_HUB;
-        case 5:
-            return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INVITE;
-        case 6:
-            if (null != t && !n) return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format({ vanityUrl: t });
-            return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL;
-        case 7:
-            return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_MANUAL_VERIFICATION;
-        default:
-            return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN;
-    }
-};
-((l = a || (a = {})).DISCORD = 'discord'), (l.TWITCH = 'twitch'), (l.YOUTUBE = 'youtube'), (l.GUILD_SUBSCRIPTION = 'guild_subscription');
-let N = (e) => {
+function g(e, t) {
+    t.forEach((t) => m(e, t, 3));
+}
+var E = (function (e) {
+    return (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.BOT = 1)] = 'BOT'), (e[(e.INTEGRATION = 2)] = 'INTEGRATION'), (e[(e.DISCOVERY = 3)] = 'DISCOVERY'), (e[(e.HUB = 4)] = 'HUB'), (e[(e.INVITE = 5)] = 'INVITE'), (e[(e.VANITY_URL = 6)] = 'VANITY_URL'), (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION'), e;
+})({});
+let b = function (e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+            n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        switch (e) {
+            case 1:
+                return c.NW.string(c.t.HumZAg);
+            case 2:
+                return c.NW.string(c.t.gmCUFx);
+            case 3:
+                return c.NW.string(c.t['Ql/e9f']);
+            case 4:
+                return c.NW.string(c.t.Op8B3N);
+            case 5:
+                return c.NW.string(c.t['/3vIRU']);
+            case 6:
+                if (null != t && !n) return c.NW.formatToPlainString(c.t.EIUjR0, { vanityUrl: t });
+                return c.NW.string(c.t.dGiD1N);
+            case 7:
+                return c.NW.string(c.t.vdu7oa);
+            default:
+                return c.NW.string(c.t.DvMBkZ);
+        }
+    },
+    y = (e) => {
         switch (e) {
             case 'twitch':
-                return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;
+                return c.NW.string(c.t.AVGAk5);
             case 'youtube':
-                return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_YOUTUBE;
+                return c.NW.string(c.t.PHSAsr);
             default:
-                return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION;
+                return c.NW.string(c.t.gmCUFx);
         }
     },
     v = (e) => {
-        let t = _.Z.get((0, E.rR)(e)),
-            n = (0, d.ZP)();
-        return null != t && ['twitch', 'youtube'].includes(e) ? "url('".concat((0, c.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null;
+        let t = a.Z.get((0, s.rR)(e)),
+            n = (0, o.ZP)();
+        return null != t && ['twitch', 'youtube'].includes(e) ? "url('".concat((0, i.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null;
     };
 function O(e) {
     return {
@@ -104,29 +89,30 @@ function O(e) {
         integrationType: e.integration_type
     };
 }
-async function R(e, t) {
-    let n = I(e, t),
-        r = n.filter((e) => p[e] <= 1).map(T);
-    if (0 === r.length) return [];
-    g(n, 2);
+async function I(e, t) {
+    let n = f(e, t),
+        i = p(n);
+    if (0 === i.length) return [];
+    h(n, 2);
     try {
-        let t = await u.tn.post({
-            url: f.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
-            body: { user_ids: r }
+        let t = await r.tn.post({
+            url: l.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
+            body: { user_ids: i },
+            rejectWithError: !0
         });
-        if (!Array.isArray(t.body)) return g(n, 0), [];
-        let i = t.body.map(O),
+        if (!Array.isArray(t.body)) return h(n, 0), [];
+        let o = t.body.map(O),
             a = [];
-        i.forEach((e) => {
+        o.forEach((e) => {
             let { userId: t } = e;
             return a.push(t);
         });
-        let s = I(e, a),
-            o = r.filter((e) => !a.includes(e)),
-            l = I(e, o);
-        return g(s, 3), g(l, 0), i;
+        let s = f(e, a),
+            c = i.filter((e) => !a.includes(e)),
+            u = f(e, c);
+        return h(s, 3), h(u, 0), o;
     } catch (e) {
-        g(n, 0);
+        h(n, 0);
     }
     return [];
 }

@@ -1,50 +1,69 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return I;
-        }
-    });
-var s = n(735250),
-    a = n(470079),
-    o = n(77866),
+n.d(t, { default: () => h });
+var r = n(200651),
+    a = n(192379),
     l = n(704215),
-    r = n(481060),
+    o = n(481060),
+    s = n(211266),
     i = n(605236),
-    E = n(624659),
+    c = n(624659),
     u = n(626135),
-    c = n(263226),
-    d = n(225634),
-    _ = n(981631),
-    b = n(689938);
-function I(e) {
-    let { transitionState: t, onClose: I, guildId: C, guildName: f } = e,
-        m = (0, o.Z)(d.S);
+    d = n(263226),
+    m = n(225634),
+    x = n(981631),
+    N = n(388032);
+function h(e) {
+    let { transitionState: t, onClose: h, guildId: f, guildName: b } = e,
+        _ = (0, s.Z)(m.S);
     return (
         a.useEffect(() => {
-            u.default.track(_.rMx.OPEN_MODAL, { type: 'Guild Leave Report' });
+            u.default.track(x.rMx.OPEN_MODAL, { type: 'Guild Leave Report' });
         }, []),
-        (0, s.jsx)(E.Z, {
-            header: b.Z.Messages.GUILD_LEAVE_FEEDBACK_HEADER,
-            body: b.Z.Messages.GUILD_LEAVE_FEEDBACK_BODY.format({ server: f }),
-            problems: m,
+        (0, r.jsx)(c.Z, {
+            header: N.NW.string(N.t.YT6YAA),
+            body: N.NW.formatToPlainString(N.t.xpn2vL, { server: b }),
+            problems: _,
             onSubmit: function (e) {
-                let { problem: t, dontShowAgain: a, feedback: o } = e;
+                let { problem: t, dontShowAgain: a, feedback: s } = e;
                 a && (0, i.EW)(l.z.GUILD_LEAVE_FEEDBACK);
-                let E = null == t;
-                (0, c.Z)(C, t, o, E),
-                    !E &&
-                        (0, r.openModalLazy)(async () => {
+                let c = null == t;
+                (0, d.Z)(f, t, s, c),
+                    c ||
+                        (0, o.ZDy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
-                                (0, s.jsx)(e, {
-                                    body: b.Z.Messages.GUILD_LEAVE_FEEDBACK_REPORT,
-                                    ...t
-                                });
+                                (0, r.jsx)(
+                                    e,
+                                    (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                r = Object.keys(n);
+                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                (r = r.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    })
+                                                )),
+                                                r.forEach(function (t) {
+                                                    var r;
+                                                    (r = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: r,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0
+                                                              })
+                                                            : (e[t] = r);
+                                                });
+                                        }
+                                        return e;
+                                    })({ body: N.NW.string(N.t.Gxbt29) }, t)
+                                );
                         });
             },
-            onClose: I,
+            onClose: h,
             transitionState: t,
-            otherKey: d.G.OTHER,
+            otherKey: m.G.OTHER,
             hasCloseButton: !0
         })
     );

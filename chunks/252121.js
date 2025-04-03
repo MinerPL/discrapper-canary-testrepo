@@ -1,16 +1,11 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-}),
-    n(47120);
-var s = n(735250),
-    a = n(470079),
-    i = n(236413),
-    r = n(564488);
+n.d(t, { Z: () => l }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(236413),
+    a = n(564488);
 function l(e) {
     let { guildId: t, triggerType: n } = e,
-        l = a.useMemo(() => () => (0, i.ep)(t, n), [t, n]),
-        [o] = a.useState(l);
-    return (0, s.jsx)(r.Z, { rule: o });
+        l = i.useMemo(() => () => (0, s.ep)(t, n), [t, n]),
+        [o] = i.useState(l);
+    return (0, r.jsx)(a.Z, { rule: o });
 }

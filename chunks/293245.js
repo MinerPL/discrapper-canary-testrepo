@@ -1,87 +1,86 @@
-let i, s, a;
-n(47120);
-var o,
-    l,
-    r,
-    c,
-    d = n(442837),
-    u = n(570140),
-    p = n(372123),
-    h = n(594190),
-    C = n(283595),
+let i, r, o;
+n.d(e, { Z: () => g }), n(47120);
+var l,
+    a,
+    s,
+    c = n(442837),
+    d = n(570140),
+    u = n(372123),
+    p = n(594190),
+    h = n(283595),
     f = n(780570),
-    A = n(358085),
-    O = n(209492),
-    N = n(981631);
-class _ extends (o = d.ZP.Store) {
+    y = n(358085),
+    C = n(209492),
+    O = n(981631);
+class N extends (l = c.ZP.Store) {
     initialize() {
-        A.isPlatformEmbedded && O.S(), (i = {}), (s = new Set()), (a = []);
+        y.isPlatformEmbedded && C.S(), (i = {}), (r = new Set()), (o = []);
     }
     getState(t, e) {
         return i[(0, f.Tu)(t, e)];
     }
     isSyncing(t, e) {
         let n = (0, f.Tu)(t, e);
-        return s.has(n);
+        return r.has(n);
     }
 }
-(c = 'CloudSyncStore'),
-    (r = 'displayName') in (l = _)
-        ? Object.defineProperty(l, r, {
-              value: c,
+(s = 'CloudSyncStore'),
+    (a = 'displayName') in N
+        ? Object.defineProperty(N, a, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = c),
-    (e.Z = new _(u.Z, {
-        GAME_CLOUD_SYNC_START: function (t) {
-            let { applicationId: e, branchId: n } = t,
-                i = (0, f.Tu)(e, n);
-            s.add(i);
-        },
-        GAME_CLOUD_SYNC_UPDATE: function (t) {
-            let { state: e } = t;
-            for (let t of Object.keys(e)) i[t] = e[t];
-        },
-        GAME_CLOUD_SYNC_COMPLETE: function (t) {
-            let { applicationId: e, branchId: n } = t,
-                a = (0, f.Tu)(e, n);
-            return (
-                s.delete(a),
-                (i[a] = {
-                    type: N.TzF.DONE,
-                    timestamp: Date.now()
-                }),
-                !0
-            );
-        },
-        GAME_CLOUD_SYNC_CONFLICT: function (t) {
-            let { applicationId: e, branchId: n, next: a, remote: o } = t,
-                l = (0, f.Tu)(e, n);
-            (i[l] = {
-                type: N.TzF.CONFLICT,
-                next: a,
-                remote: o
+        : (N[a] = s);
+let g = new N(d.Z, {
+    GAME_CLOUD_SYNC_START: function (t) {
+        let { applicationId: e, branchId: n } = t,
+            i = (0, f.Tu)(e, n);
+        r.add(i);
+    },
+    GAME_CLOUD_SYNC_UPDATE: function (t) {
+        let { state: e } = t;
+        for (let t of Object.keys(e)) i[t] = e[t];
+    },
+    GAME_CLOUD_SYNC_COMPLETE: function (t) {
+        let { applicationId: e, branchId: n } = t,
+            o = (0, f.Tu)(e, n);
+        return (
+            r.delete(o),
+            (i[o] = {
+                type: O.TzF.DONE,
+                timestamp: Date.now()
             }),
-                s.delete(l);
-        },
-        GAME_CLOUD_SYNC_ERROR: function (t) {
-            let { applicationId: e, branchId: n } = t,
-                a = (0, f.Tu)(e, n);
-            (i[a] = { type: N.TzF.ERROR }), s.delete(a);
-        },
-        RUNNING_GAMES_CHANGE: function () {
-            let t = h.ZP.getRunningDiscordApplicationIds();
-            for (let e of a.filter((e) => !t.includes(e))) {
-                let t = C.Z.getActiveLibraryApplication(e);
-                if (null != t)
-                    u.Z.wait(() => {
-                        try {
-                            p.Z(t.id, t.branchId);
-                        } catch (t) {}
-                    });
-            }
-            return (a = t), !1;
+            !0
+        );
+    },
+    GAME_CLOUD_SYNC_CONFLICT: function (t) {
+        let { applicationId: e, branchId: n, next: o, remote: l } = t,
+            a = (0, f.Tu)(e, n);
+        (i[a] = {
+            type: O.TzF.CONFLICT,
+            next: o,
+            remote: l
+        }),
+            r.delete(a);
+    },
+    GAME_CLOUD_SYNC_ERROR: function (t) {
+        let { applicationId: e, branchId: n } = t,
+            o = (0, f.Tu)(e, n);
+        (i[o] = { type: O.TzF.ERROR }), r.delete(o);
+    },
+    RUNNING_GAMES_CHANGE: function () {
+        let t = p.ZP.getRunningDiscordApplicationIds();
+        for (let e of o.filter((e) => !t.includes(e))) {
+            let t = h.Z.getActiveLibraryApplication(e);
+            null != t &&
+                d.Z.wait(() => {
+                    try {
+                        u.Z(t.id, t.branchId);
+                    } catch (t) {}
+                });
         }
-    }));
+        return (o = t), !1;
+    }
+});

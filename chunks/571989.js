@@ -1,78 +1,75 @@
 n.d(t, {
-    MO: function () {
-        return u;
-    },
-    yx: function () {
-        return i;
-    },
-    zq: function () {
-        return o;
-    }
+    MO: () => f,
+    yx: () => a,
+    zq: () => c
 }),
+    n(474991),
+    n(398202),
+    n(301563),
     n(757143);
-let r = RegExp(''.concat(/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n]|[^\P{Zs} ]/gu.source, '|').concat('͏|឴|឵|ᅠ|ㅤ|ﾠ'), 'gu');
-function i(e) {
-    return e.replace(r, '');
+let r = RegExp('\\p{Cf}|\\p{Zl}|\\p{Zp}|[^\\P{Cc}\\n]|[^\\P{Zs} ]', 'gu'),
+    i = ['͏', '឴', '឵', 'ᅠ', 'ㅤ', 'ﾠ'],
+    o = RegExp(''.concat(r.source, '|').concat(i.join('|')), 'gu');
+function a(e) {
+    return e.replace(o, '');
 }
-let a = [
+let s = [
     {
         character: 'h',
-        matcher: s(['H', 'һ', 'հ', 'Ꮒ', 'ℎ', '\uD835\uDC21', '\uD835\uDC89', '\uD835\uDCBD', '\uD835\uDCF1', '\uD835\uDD25', '\uD835\uDD59', '\uD835\uDD8D', '\uD835\uDDC1', '\uD835\uDDF5', '\uD835\uDE29', '\uD835\uDE5D', '\uD835\uDE91', 'ｈ'])
+        matcher: l(['H', 'һ', 'հ', 'Ꮒ', 'ℎ', '\uD835\uDC21', '\uD835\uDC89', '\uD835\uDCBD', '\uD835\uDCF1', '\uD835\uDD25', '\uD835\uDD59', '\uD835\uDD8D', '\uD835\uDDC1', '\uD835\uDDF5', '\uD835\uDE29', '\uD835\uDE5D', '\uD835\uDE91', 'ｈ'])
     },
     {
         character: 't',
-        matcher: s(['T', '\uD835\uDC2D', '\uD835\uDC61', '\uD835\uDC95', '\uD835\uDCC9', '\uD835\uDCFD', '\uD835\uDD31', '\uD835\uDD65', '\uD835\uDD99', '\uD835\uDDCD', '\uD835\uDE01', '\uD835\uDE35', '\uD835\uDE69', '\uD835\uDE9D'])
+        matcher: l(['T', '\uD835\uDC2D', '\uD835\uDC61', '\uD835\uDC95', '\uD835\uDCC9', '\uD835\uDCFD', '\uD835\uDD31', '\uD835\uDD65', '\uD835\uDD99', '\uD835\uDDCD', '\uD835\uDE01', '\uD835\uDE35', '\uD835\uDE69', '\uD835\uDE9D'])
     },
     {
         character: 'p',
-        matcher: s(['P', 'ρ', 'ϱ', 'р', '\u2374', 'ⲣ', '\uD835\uDC29', '\uD835\uDC5D', '\uD835\uDC91', '\uD835\uDCC5', '\uD835\uDCF9', '\uD835\uDD2D', '\uD835\uDD61', '\uD835\uDD95', '\uD835\uDDC9', '\uD835\uDDFD', '\uD835\uDE31', '\uD835\uDE65', '\uD835\uDE99', '\uD835\uDED2', '\uD835\uDEE0', '\uD835\uDF0C', '\uD835\uDF1A', '\uD835\uDF46', '\uD835\uDF54', '\uD835\uDF80', '\uD835\uDF8E', '\uD835\uDFBA', '\uD835\uDFC8', 'ｐ', 'ҏ'])
+        matcher: l(['P', 'ρ', 'ϱ', 'р', '\u2374', 'ⲣ', '\uD835\uDC29', '\uD835\uDC5D', '\uD835\uDC91', '\uD835\uDCC5', '\uD835\uDCF9', '\uD835\uDD2D', '\uD835\uDD61', '\uD835\uDD95', '\uD835\uDDC9', '\uD835\uDDFD', '\uD835\uDE31', '\uD835\uDE65', '\uD835\uDE99', '\uD835\uDED2', '\uD835\uDEE0', '\uD835\uDF0C', '\uD835\uDF1A', '\uD835\uDF46', '\uD835\uDF54', '\uD835\uDF80', '\uD835\uDF8E', '\uD835\uDFBA', '\uD835\uDFC8', 'ｐ', 'ҏ'])
     },
     {
         character: 's',
-        matcher: s(['S', 'ƽ', 'ѕ', 'ꜱ', 'ꮪ', '\uD801\uDC48', '\uD806\uDCC1', '\uD835\uDC2C', '\uD835\uDC60', '\uD835\uDC94', '\uD835\uDCC8', '\uD835\uDCFC', '\uD835\uDD30', '\uD835\uDD64', '\uD835\uDD98', '\uD835\uDDCC', '\uD835\uDE00', '\uD835\uDE34', '\uD835\uDE68', '\uD835\uDE9C', 'ｓ'])
+        matcher: l(['S', 'ƽ', 'ѕ', 'ꜱ', 'ꮪ', '\uD801\uDC48', '\uD806\uDCC1', '\uD835\uDC2C', '\uD835\uDC60', '\uD835\uDC94', '\uD835\uDCC8', '\uD835\uDCFC', '\uD835\uDD30', '\uD835\uDD64', '\uD835\uDD98', '\uD835\uDDCC', '\uD835\uDE00', '\uD835\uDE34', '\uD835\uDE68', '\uD835\uDE9C', 'ｓ'])
     },
     {
         character: ':',
-        matcher: s(['ː', '\u02F8', '\u0589', '\u05C3', '\u0703', '\u0704', 'ः', 'ઃ', '\u16EC', '\u1803', '\u1809', '\u205A', '\u2236', 'ꓽ', '\uA789', '\uFE30', '\uFF1A', ';', '\u037E'])
+        matcher: l(['ː', '\u02F8', '\u0589', '\u05C3', '\u0703', '\u0704', 'ः', 'ઃ', '\u16EC', '\u1803', '\u1809', '\u205A', '\u2236', 'ꓽ', '\uA789', '\uFE30', '\uFF1A', ';', '\u037E'])
     },
     {
         character: '/',
-        matcher: s(['\u1735', '\u2041', '\u2044', '\u2215', '\u2571', '\u27CB', '\u29F8', 'Ⳇ', '\u2F03', '〳', 'ノ', '\u31D3', '丿', '\uD834\uDE3A'])
+        matcher: l(['\u1735', '\u2041', '\u2044', '\u2215', '\u2571', '\u27CB', '\u29F8', 'Ⳇ', '\u2F03', '〳', 'ノ', '\u31D3', '丿', '\uD834\uDE3A'])
     }
 ];
-function s(e) {
+function l(e) {
     return RegExp(e.join('|'), 'gu');
 }
-function o(e) {
+function c(e) {
     let t = e;
     return (
-        a.forEach((e) => {
+        s.forEach((e) => {
             t = t.replace(e.matcher, e.character);
         }),
         t
     );
 }
-let l = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0];
-function u(e) {
-    let t = (function (e) {
-        if ('null' === e.origin && e.pathname.startsWith('//')) return e.protocol;
-        let t = '';
-        return '' !== e.username && (t += e.username), '' !== e.password && (t += ':' + e.password), '' !== t && (t += '@'), ''.concat(e.protocol, '//').concat(t).concat(e.host);
-    })(e);
-    return (t += c(e.pathname) + c(e.search) + c(e.hash));
+let u = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0];
+function d(e) {
+    return e >= 0 && e < 128 ? 1 === u[e] : !(8206 === e || 8207 === e || 8234 === e || 8235 === e || 8236 === e || 8237 === e || 8238 === e || 1564 === e || 8294 === e || 8295 === e || 8296 === e || 8297 === e || 128271 === e || 128272 === e || 128274 === e || 128275 === e || 133 === e || 160 === e || 5760 === e || 8192 === e || 8193 === e || 8194 === e || 8195 === e || 8196 === e || 8197 === e || 8198 === e || 8199 === e || 8200 === e || 8201 === e || 8202 === e || 8232 === e || 8233 === e || 8239 === e || 8287 === e || 12288 === e || 10240 === e || 173 === e || 847 === e || (e >= 1536 && e <= 1541) || 1757 === e || 1807 === e || 2274 === e || 4447 === e || 4448 === e || 6068 === e || 6069 === e || 6155 === e || 6156 === e || 6157 === e || 6158 === e || 8203 === e || 8204 === e || 8205 === e || 8288 === e || 8289 === e || 8290 === e || 8291 === e || 8292 === e || 8293 === e || (e >= 8298 && e <= 8303) || 12644 === e || (e >= 65520 && e <= 65528) || (e >= 65024 && e <= 65039) || 65279 === e || 65440 === e || 65529 === e || 65530 === e || 65531 === e || 69821 === e || 69837 === e || (e >= 78896 && e <= 78904) || (e >= 113824 && e <= 113827) || (e >= 119155 && e <= 119162) || (e >= 917504 && e <= 921599));
 }
-function c(e) {
+function f(e) {
+    let t = p(e);
+    return (t += _(e.pathname)), (t += _(e.search)), (t += _(e.hash));
+}
+function _(e) {
     let t;
     try {
         t = decodeURIComponent(e);
-    } catch {
+    } catch (t) {
         return e;
     }
     let n = '',
         r = e,
         i = t;
     for (; r.length > 0; ) {
-        var a;
         let e = r.codePointAt(0),
             t = i.codePointAt(0);
         if (e === t) {
@@ -80,10 +77,17 @@ function c(e) {
             (n += t), (r = r.substring(t.length)), (i = i.substring(t.length));
             continue;
         }
-        let s = String.fromCodePoint(t),
-            o = encodeURIComponent(s),
-            u = o === s ? 3 : o.length;
-        (n += ((a = t) >= 0 && a < 128 ? 1 !== l[a] : 8206 === a || 8207 === a || 8234 === a || 8235 === a || 8236 === a || 8237 === a || 8238 === a || 1564 === a || 8294 === a || 8295 === a || 8296 === a || 8297 === a || 128271 === a || 128272 === a || 128274 === a || 128275 === a || 133 === a || 160 === a || 5760 === a || 8192 === a || 8193 === a || 8194 === a || 8195 === a || 8196 === a || 8197 === a || 8198 === a || 8199 === a || 8200 === a || 8201 === a || 8202 === a || 8232 === a || 8233 === a || 8239 === a || 8287 === a || 12288 === a || 10240 === a || 173 === a || 847 === a || (a >= 1536 && a <= 1541) || 1757 === a || 1807 === a || 2274 === a || 4447 === a || 4448 === a || 6068 === a || 6069 === a || 6155 === a || 6156 === a || 6157 === a || 6158 === a || 8203 === a || 8204 === a || 8205 === a || 8288 === a || 8289 === a || 8290 === a || 8291 === a || 8292 === a || 8293 === a || (a >= 8298 && a <= 8303) || 12644 === a || (a >= 65520 && a <= 65528) || (a >= 65024 && a <= 65039) || 65279 === a || 65440 === a || 65529 === a || 65530 === a || 65531 === a || 69821 === a || 69837 === a || (a >= 78896 && a <= 78904) || (a >= 113824 && a <= 113827) || (a >= 119155 && a <= 119162) || (a >= 917504 && a <= 921599)) ? o : s), (r = r.substring(u)), (i = i.substring(s.length));
+        let o = String.fromCodePoint(t),
+            a = encodeURIComponent(o),
+            s = a === o ? 3 : a.length;
+        (n += d(t) ? o : a), (r = r.substring(s)), (i = i.substring(o.length));
     }
     return n;
+}
+function p(e) {
+    if ('null' === e.origin && e.pathname.startsWith('//')) return e.protocol;
+    let t = '';
+    '' !== e.username && (t += e.username), '' !== e.password && (t += ':' + e.password), '' !== t && (t += '@');
+    let n = '//' === e.href.substr(e.protocol.length, 2) ? '//' : '';
+    return ''.concat(e.protocol).concat(n).concat(t).concat(e.host);
 }

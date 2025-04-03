@@ -1,38 +1,40 @@
-a.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var s = a(913527),
-    n = a.n(s),
-    l = a(695346),
-    o = a(626135),
-    r = a(337953),
-    i = a(981631);
-function u(e, t, a, s) {
-    let u = e.trim();
-    if (u.length > 0 || null != t) {
-        var d;
-        l.Ok.updateSetting({
-            text: u.length > 0 ? u : '',
+n.d(t, { Z: () => c }), n(566702);
+var r = n(913527),
+    l = n.n(r),
+    a = n(695346),
+    i = n(626135),
+    o = n(337953),
+    s = n(875425),
+    u = n(981631);
+function c(e) {
+    let { text: t, emojiInfo: n, clearAfter: r, analyticsContext: c, createdAtMs: d, prompt: p } = e,
+        m = t.trim();
+    if (!(m.length > 0) && null == n) return a.Ok.updateSetting(void 0);
+    {
+        let e = a.Ok.updateSetting({
+            text: m.length > 0 ? m : '',
             expiresAtMs:
-                null != a
+                null != r && r !== s.FO.DONT_CLEAR
                     ? String(
-                          n()()
-                              .add((0, r.Z)(a), 'ms')
+                          l()()
+                              .add((0, o.Z)(r), 'ms')
                               .toDate()
                               .getTime()
                       )
                     : '0',
-            emojiId: null != t && null != t.id ? t.id : '0',
-            emojiName: null != t ? t.name : '',
-            createdAtMs: String(n()().toDate().getTime())
-        }),
-            o.default.track(i.rMx.CUSTOM_STATUS_UPDATED, {
-                location: null != s ? s.location : null,
-                emoji_type: null == (d = t) ? null : null != d.id ? 'custom' : 'unicode',
-                text_len: u.length,
-                clear_after: null != a ? ''.concat(a) : null
-            });
-    } else l.Ok.updateSetting(void 0);
+            emojiId: null != n && null != n.id ? n.id : '0',
+            emojiName: null != n ? n.name : '',
+            createdAtMs: String(null != d ? d : l()().toDate().getTime())
+        });
+        return (
+            i.default.track(u.rMx.CUSTOM_STATUS_UPDATED, {
+                location: null != c ? c.location : null,
+                emoji_type: null == n ? null : null != n.id ? 'custom' : 'unicode',
+                text_len: m.length,
+                clear_after: null != r ? ''.concat(r) : null,
+                prompt_type: null == p ? void 0 : p.value
+            }),
+            e
+        );
+    }
 }

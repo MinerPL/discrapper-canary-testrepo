@@ -1,64 +1,60 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    i = n(556012),
-    r = n(689938),
-    l = n(794863);
+n.d(t, { Z: () => o });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(556012),
+    a = n(388032),
+    l = n(467397);
 function o(e) {
     let { action: t, triggerType: n, toggled: o, onToggleAction: c } = e,
         d = (e) => () => c(e),
-        u = (0, i.c)(t.type, t, n);
+        u = (0, s.c)(t.type, t, n);
     if (null == u) return null;
-    let { headerText: _, descriptionText: I, icon: E } = u;
-    return (0, s.jsxs)('div', {
+    let { headerText: m, descriptionText: g, icon: p } = u;
+    return (0, r.jsxs)('div', {
         className: l.actionContainer,
         children: [
-            (0, s.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: l.actionIconContainer,
-                children: (0, s.jsx)(E, {
+                children: (0, r.jsx)(p, {
                     size: 'custom',
                     color: 'currentColor',
                     className: l.actionIcon
                 })
             }),
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: l.actionTextContainer,
                 children: [
-                    (0, s.jsx)(a.Heading, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'heading-sm/semibold',
-                        children: _
+                        children: m
                     }),
-                    (0, s.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
-                        children: I
+                        children: g
                     }),
                     o
-                        ? (0, s.jsxs)(a.Text, {
+                        ? (0, r.jsxs)(i.Text, {
                               color: 'text-muted',
                               variant: 'text-xs/medium',
                               children: [
-                                  r.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_CUSTOM_MESSAGE_HELPER,
-                                  (0, s.jsx)(a.Clickable, {
+                                  a.NW.string(a.t.Oa9oWF),
+                                  (0, r.jsx)(i.P3F, {
                                       onClick: d(!0),
                                       className: l.editChannel,
                                       tag: 'span',
                                       role: 'link',
-                                      children: r.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_CUSTOM_MESSAGE_CTA
+                                      children: a.NW.string(a.t.QupmYW)
                                   })
                               ]
                           })
                         : null
                 ]
             }),
-            (0, s.jsx)('div', {
-                children: (0, s.jsx)(a.Checkbox, {
-                    type: a.Checkbox.Types.INVERTED,
+            (0, r.jsx)('div', {
+                children: (0, r.jsx)(i.XZJ, {
+                    type: i.XZJ.Types.INVERTED,
                     value: o,
                     onChange: d(!1),
                     className: l.__invalid_actionCheckbox

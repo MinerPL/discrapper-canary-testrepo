@@ -1,11 +1,7 @@
-n.d(t, {
-    u: function () {
-        return s;
-    }
-});
+n.d(t, { u: () => a }), n(627494), n(757143), n(301563);
 var r = n(503461),
     i = n(190313);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,15 +14,15 @@ function a(e, t, n) {
         e
     );
 }
-class s {
+class a {
     get prefix() {
         return this.table.prefix;
     }
     withoutLogging() {
-        return new s(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new a(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t, n) {
-        return this.table.get([e, t, u(n)]);
+        return this.table.get([e, t, c(n)]);
     }
     getLatest(e, t, n) {
         return this.table.getMany([e, t], {
@@ -35,7 +31,7 @@ class s {
         });
     }
     getRange(e, t, n, r, i) {
-        return this.table.getRange([e, t, u(n)], [e, t, u(r)], i);
+        return this.table.getRange([e, t, c(n)], [e, t, c(r)], i);
     }
     getMostRecents(e) {
         return this.table.messages.getLatest(e);
@@ -46,8 +42,8 @@ class s {
     }
     putAll(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace,
-            a = n.map((n) => l(e, t, n));
-        return this.table.putAll(a, i);
+            o = n.map((n) => l(e, t, n));
+        return this.table.putAll(o, i);
     }
     deleteAll() {
         return this.table.delete();
@@ -59,24 +55,24 @@ class s {
         return this.table.delete([e, t]);
     }
     deleteMessage(e, t, n) {
-        return this.table.delete([e, t, u(n)]);
+        return this.table.delete([e, t, c(n)]);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new o(t)), t);
+        return this.table.transaction((t) => e(new s(t)), t);
     }
     upgradeTransaction(e) {
-        return new o(this.table.upgradeTransaction(e));
+        return new s(this.table.upgradeTransaction(e));
     }
     constructor(e, t, n, r = !0) {
-        a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
+        o(this, 'originalPrefix', void 0), o(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
     }
 }
-class o {
+class s {
     static fromTableTransaction(e) {
-        return new o(e);
+        return new s(e);
     }
     static fromDatabaseTransaction(e, t, n) {
-        return new o(new i.E(e, t, n));
+        return new s(new i.E(e, t, n));
     }
     put(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace;
@@ -84,8 +80,12 @@ class o {
     }
     putAll(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace,
-            a = n.map((n) => l(e, t, n));
-        this.transaction.putAll(a, i);
+            o = n.map((n) => l(e, t, n));
+        this.transaction.putAll(o, i);
+    }
+    replaceAll(e, t, n) {
+        let r = n.map((n) => l(e, t, n));
+        this.transaction.replaceAll(r);
     }
     deleteAll() {
         this.transaction.delete();
@@ -97,7 +97,7 @@ class o {
         this.transaction.delete([e, t]);
     }
     deleteMessage(e, t, n) {
-        this.transaction.delete([e, t, u(n)]);
+        this.transaction.delete([e, t, c(n)]);
     }
     trimOrphans(e) {
         this.transaction.messages.trimOrphans(e);
@@ -112,17 +112,18 @@ class o {
         this.transaction.messages.trimChannelsNotIn(e, t);
     }
     constructor(e) {
-        a(this, 'transaction', void 0), (this.transaction = e);
+        o(this, 'transaction', void 0), (this.transaction = e);
     }
 }
 function l(e, t, n) {
-    let r = u(n.id);
+    let r = c(n.id);
     return {
         key: [e, t, r],
         data: n,
         generation: r
     };
 }
-function u(e) {
-    return e.padStart(19, '0');
+function c(e) {
+    let t = 19;
+    return e.padStart(t, '0');
 }

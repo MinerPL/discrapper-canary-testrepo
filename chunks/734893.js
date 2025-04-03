@@ -1,86 +1,45 @@
 n.d(t, {
-    HH: function () {
-        return N;
-    },
-    O9: function () {
-        return h;
-    },
-    Vu: function () {
-        return I;
-    },
-    W4: function () {
-        return _;
-    },
-    Wz: function () {
-        return E;
-    },
-    Z3: function () {
-        return f;
-    },
-    ZR: function () {
-        return d;
-    },
-    am: function () {
-        return m;
-    },
-    av: function () {
-        return R;
-    },
-    cq: function () {
-        return g;
-    },
-    j: function () {
-        return s;
-    },
-    k3: function () {
-        return y;
-    },
-    kb: function () {
-        return D;
-    },
-    n: function () {
-        return p;
-    },
-    oi: function () {
-        return a;
-    },
-    pw: function () {
-        return O;
-    },
-    rk: function () {
-        return v;
-    },
-    tB: function () {
-        return A;
-    },
-    uo: function () {
-        return C;
-    },
-    vD: function () {
-        return S;
-    },
-    x3: function () {
-        return T;
-    }
-});
-var r,
-    i,
-    a,
-    s,
-    o = n(592125),
-    l = n(823379),
-    u = n(700785),
-    c = n(981631);
-let d = 7,
-    _ = 300,
-    E = 7,
-    f = 60,
-    h = 5,
-    p = 1,
-    m = 30,
-    I = 200,
-    T = 7;
-function g(e) {
+    HH: () => v,
+    O9: () => f,
+    Vu: () => h,
+    W4: () => l,
+    Wz: () => c,
+    Z3: () => u,
+    ZR: () => s,
+    am: () => p,
+    av: () => S,
+    cq: () => E,
+    j: () => C,
+    k3: () => N,
+    kb: () => A,
+    n: () => _,
+    oi: () => g,
+    pw: () => I,
+    rk: () => O,
+    tB: () => y,
+    uo: () => T,
+    vD: () => b,
+    x3: () => m
+}),
+    n(266796);
+var r = n(592125),
+    i = n(823379),
+    o = n(700785),
+    a = n(981631);
+let s = 7,
+    l = 300,
+    c = 7,
+    u = 60,
+    d = 3,
+    f = 5,
+    _ = 1,
+    p = 30,
+    h = 200,
+    m = 7;
+var g = (function (e) {
+    return (e[(e.VIEW = 0)] = 'VIEW'), (e[(e.CHAT = 1)] = 'CHAT'), e;
+})({});
+function E(e) {
     var t;
     return {
         channelId: e.channel_id,
@@ -95,15 +54,15 @@ function g(e) {
                       name: e.emoji.name,
                       animated: e.emoji.animated
                   },
-        icon: null !== (t = e.icon) && void 0 !== t ? t : null
+        icon: null != (t = e.icon) ? t : null
     };
 }
-function S(e) {
+function b(e) {
     var t, n;
     return {
         channelId: e.channel_id,
         title: e.title,
-        description: null !== (t = e.description) && void 0 !== t ? t : '',
+        description: null != (t = e.description) ? t : '',
         emoji:
             null == e.emoji
                 ? null
@@ -112,101 +71,100 @@ function S(e) {
                       name: e.emoji.name,
                       animated: e.emoji.animated
                   },
-        icon: null !== (n = e.icon) && void 0 !== n ? n : null
+        icon: null != (n = e.icon) ? n : null
     };
 }
-function A(e) {
+function y(e) {
     if (null == e) return null;
-    let { welcome_message: t, new_member_actions: n, resource_channels: r, enabled: i } = e,
-        a = {
+    let { welcome_message: t, new_member_actions: n, resource_channels: o, enabled: a } = e,
+        s = {
             authorIds: t.author_ids,
             message: t.message
-        },
-        s = n.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(g);
+        };
     return {
-        welcomeMessage: a,
-        newMemberActions: s,
-        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(S),
-        enabled: i
+        welcomeMessage: s,
+        newMemberActions: n.filter((e) => (0, i.lm)(r.Z.getChannel(e.channel_id))).map(E),
+        resourceChannels: o.filter((e) => (0, i.lm)(r.Z.getChannel(e.channel_id))).map(b),
+        enabled: a
     };
 }
-function N(e, t) {
-    var n, r;
+function v(e, t) {
+    var n, o;
     if (null == t) return null;
-    let { welcomeMessage: i, newMemberActions: a, resourceChannels: s, enabled: u } = t,
-        c = {
-            author_ids: null !== (n = null == i ? void 0 : i.authorIds) && void 0 !== n ? n : [],
-            message: null !== (r = null == i ? void 0 : i.message) && void 0 !== r ? r : ''
-        },
-        d = (null != a ? a : [])
-            .filter((e) => (0, l.lm)(o.Z.getChannel(e.channelId)))
+    let { welcomeMessage: a, newMemberActions: s, resourceChannels: l, enabled: c } = t,
+        u = {
+            author_ids: null != (n = null == a ? void 0 : a.authorIds) ? n : [],
+            message: null != (o = null == a ? void 0 : a.message) ? o : ''
+        };
+    return {
+        guild_id: e,
+        welcome_message: u,
+        new_member_actions: (null != s ? s : [])
+            .filter((e) => (0, i.lm)(r.Z.getChannel(e.channelId)))
             .map((e) => {
-                var t, n, r, i, a, s, o;
+                var t, n, r, i, o, a, s;
                 return {
                     channel_id: e.channelId,
                     action_type: e.actionType,
                     title: e.title,
                     description: e.description,
                     emoji: {
-                        id: null !== (i = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : void 0,
-                        name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
-                        animated: null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== s ? s : void 0
+                        id: null != (i = null == (t = e.emoji) ? void 0 : t.id) ? i : void 0,
+                        name: null != (o = null == (n = e.emoji) ? void 0 : n.name) ? o : void 0,
+                        animated: null != (a = null == (r = e.emoji) ? void 0 : r.animated) ? a : void 0
                     },
-                    icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
+                    icon: null != (s = e.icon) ? s : void 0
                 };
-            });
-    return {
-        guild_id: e,
-        welcome_message: c,
-        new_member_actions: d,
-        resource_channels: (null != s ? s : [])
-            .filter((e) => (0, l.lm)(o.Z.getChannel(e.channelId)))
+            }),
+        resource_channels: (null != l ? l : [])
+            .filter((e) => (0, i.lm)(r.Z.getChannel(e.channelId)))
             .map((e) => {
-                var t, n, r, i, a, s, o;
+                var t, n, r, i, o, a, s;
                 return {
                     channel_id: e.channelId,
                     title: e.title,
                     description: e.description,
                     emoji: {
-                        id: null !== (i = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : void 0,
-                        name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
-                        animated: null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== s ? s : void 0
+                        id: null != (i = null == (t = e.emoji) ? void 0 : t.id) ? i : void 0,
+                        name: null != (o = null == (n = e.emoji) ? void 0 : n.name) ? o : void 0,
+                        animated: null != (a = null == (r = e.emoji) ? void 0 : r.animated) ? a : void 0
                     },
-                    icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
+                    icon: null != (s = e.icon) ? s : void 0
                 };
             }),
-        enabled: u
+        enabled: c
     };
 }
-((r = a || (a = {}))[(r.VIEW = 0)] = 'VIEW'), (r[(r.CHAT = 1)] = 'CHAT');
-let v = (e) => {
+let O = (e) => {
     if (null == e) return null;
     let t = {};
     for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
     return t;
 };
-function O(e) {
-    return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0);
+function I(e) {
+    return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)));
 }
-function R(e) {
-    return null == e || (!!O(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
+function S(e) {
+    return null == e || (!!I(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)));
 }
-function C(e) {
+function T(e) {
     var t, n;
-    return null != e && (!!R(e) || ((null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < d) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0));
+    return null != e && (!!S(e) || ((null == (t = e.welcomeMessage) ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < s) && (null == (n = e.welcomeMessage) ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < d)));
 }
-function y(e) {
-    return e.type === c.d4z.GUILD_TEXT && !u.Uu(c.Plq.SEND_MESSAGES, e) && u.Uu(c.Plq.VIEW_CHANNEL, e);
+function N(e) {
+    return e.type === a.d4z.GUILD_TEXT && !o.Uu(a.Plq.SEND_MESSAGES, e) && o.Uu(a.Plq.VIEW_CHANNEL, e);
 }
-function D(e) {
+function A(e) {
     switch (e.type) {
-        case c.d4z.GUILD_TEXT:
-        case c.d4z.GUILD_ANNOUNCEMENT:
-        case c.d4z.GUILD_FORUM:
-        case c.d4z.GUILD_MEDIA:
-            return u.Uu(c.Plq.VIEW_CHANNEL, e);
+        case a.d4z.GUILD_TEXT:
+        case a.d4z.GUILD_ANNOUNCEMENT:
+        case a.d4z.GUILD_FORUM:
+        case a.d4z.GUILD_MEDIA:
+            return o.Uu(a.Plq.VIEW_CHANNEL, e);
         default:
             return !1;
     }
 }
-((i = s || (s = {}))[(i.DEFAULT = 0)] = 'DEFAULT'), (i[(i.TODO = 1)] = 'TODO'), (i[(i.RESOURCE = 2)] = 'RESOURCE');
+var C = (function (e) {
+    return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.TODO = 1)] = 'TODO'), (e[(e.RESOURCE = 2)] = 'RESOURCE'), e;
+})({});

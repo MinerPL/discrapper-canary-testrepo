@@ -1,34 +1,72 @@
-l.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var t = l(423875),
-    r = l(740605),
-    i = l(206583),
-    a = l(616922),
-    u = l(689938);
-function s(e) {
-    let n,
-        { entry: l, baseEntryData: s } = e,
-        { provider: o, image_url: c } = l.extra.media,
-        d = l.extra.artist.name,
-        m = () => (0, r.o)(a.Hw.ALBUM, l.extra.media.external_parent_id);
+r.d(t, { Z: () => c });
+var n = r(423875),
+    l = r(740605),
+    i = r(206583),
+    o = r(616922),
+    a = r(388032);
+function c(e) {
+    var t, r;
+    let c,
+        { entry: s, baseEntryData: u } = e,
+        { provider: p, image_url: d } = s.extra.media,
+        f = s.extra.artist.name,
+        b = {
+            onClick: () => (0, l.o)(o.Hw.ALBUM, s.extra.media.external_parent_id),
+            ariaDescription: a.NW.formatToPlainString(a.t.xTsar6, { itemName: s.extra.media.parent_title })
+        },
+        O = {
+            onClick: () => (0, l.o)(o.Hw.ARTIST, s.extra.artist.external_id),
+            ariaDescription: a.NW.formatToPlainString(a.t.xTsar6, { itemName: f })
+        };
     return (
-        o === t.p.SPOTIFY &&
-            (n = {
-                type: i.kG.SPOTIFY,
-                'aria-label': u.Z.Messages.SPOTIFY
+        p === n.p.SPOTIFY && (c = { type: i.kG.SPOTIFY }),
+        (t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, u)),
+        (r = r =
+            {
+                title: f,
+                thumbnailUrl: d,
+                titleClickable: O,
+                subtitleClickable: b,
+                thumbnailClickable: b,
+                userDescription: a.t.CcVI1d,
+                providerIconProps: c
             }),
-        {
-            ...s,
-            title: d,
-            thumbnailUrl: c,
-            onClickTitle: () => (0, r.o)(a.Hw.ARTIST, l.extra.artist.external_id),
-            onClickSubtitle: m,
-            onClickThumbnail: m,
-            userDescription: u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
-            providerIconProps: n
-        }
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t
     );
 }

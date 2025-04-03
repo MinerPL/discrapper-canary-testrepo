@@ -1,168 +1,135 @@
 n.d(t, {
-    GE: function () {
-        return C;
-    },
-    GL: function () {
-        return m;
-    },
-    JY: function () {
-        return h;
-    },
-    Jd: function () {
-        return L;
-    },
-    Nq: function () {
-        return v;
-    },
-    Ol: function () {
-        return S;
-    },
-    PJ: function () {
-        return T;
-    },
-    T_: function () {
-        return p;
-    },
-    V5: function () {
-        return O;
-    },
-    ap: function () {
-        return y;
-    },
-    bT: function () {
-        return D;
-    },
-    dw: function () {
-        return R;
-    },
-    ig: function () {
-        return U;
-    },
-    kr: function () {
-        return g;
-    },
-    n2: function () {
-        return A;
-    },
-    q_: function () {
-        return M;
-    },
-    qy: function () {
-        return w;
-    },
-    vU: function () {
-        return b;
-    },
-    yA: function () {
-        return N;
-    },
-    yh: function () {
-        return I;
-    },
-    zo: function () {
-        return P;
-    }
+    GE: () => N,
+    GL: () => h,
+    Jd: () => R,
+    Jg: () => v,
+    Nq: () => I,
+    Ol: () => b,
+    PJ: () => g,
+    T_: () => _,
+    V5: () => S,
+    ap: () => A,
+    bT: () => C,
+    dw: () => T,
+    ig: () => L,
+    kr: () => E,
+    n2: () => y,
+    q_: () => w,
+    vU: () => P,
+    yA: () => O,
+    yh: () => m,
+    zo: () => D
 }),
-    n(47120);
+    n(301563);
 var r = n(164369),
     i = n(913527),
-    a = n.n(i),
-    s = n(884439),
-    o = n(442837),
-    l = n(876215),
-    u = n(835473),
-    c = n(70956),
-    d = n(709054),
-    _ = n(719247),
-    E = n(689938);
-let f = (e) => {
+    o = n.n(i),
+    a = n(884439),
+    s = n(876215),
+    l = n(70956),
+    c = n(709054),
+    u = n(388032);
+let d = (e) => {
         let { start: t, now: n } = e,
-            r = Math.max(n - t, 0) / c.Z.Millis.SECOND,
-            i = Math.floor(r) % c.Z.Seconds.MINUTE,
-            a = Math.floor(r / c.Z.Seconds.MINUTE) % c.Z.Seconds.MINUTE,
-            s = Math.floor(r / c.Z.Seconds.HOUR);
+            r = Math.max(n - t, 0) / l.Z.Millis.SECOND,
+            i = Math.floor(r) % l.Z.Seconds.MINUTE,
+            o = Math.floor(r / l.Z.Seconds.MINUTE) % l.Z.Seconds.MINUTE;
         return {
             seconds: i,
-            minutes: a,
-            hours: s,
-            days: Math.floor(r / c.Z.Seconds.DAY)
+            minutes: o,
+            hours: Math.floor(r / l.Z.Seconds.HOUR),
+            days: Math.floor(r / l.Z.Seconds.DAY)
         };
     },
-    h = (e, t) => {
-        let n = 'id' in e ? d.default.extractTimestamp(e.id) : e.start;
-        return f({
-            start: n,
+    f = (e, t) =>
+        d({
+            start: 'id' in e ? c.default.extractTimestamp(e.id) : e.start,
             now: 'end' in e && null != e.end ? Math.min(e.end, t) : t
-        });
-    },
-    p = (e, t) => {
-        let { seconds: n, minutes: r, hours: i } = h(e, t);
-        function a(e) {
+        }),
+    _ = (e, t) => {
+        let { seconds: n, minutes: r, hours: i } = f(e, t);
+        function o(e) {
             return String(e).padStart(2, '0');
         }
-        return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE.format({
+        return u.NW.formatToPlainString(u.t['l5PP//'], {
             hours: i,
-            minutes: i > 0 ? a(r) : r,
-            seconds: a(n)
+            minutes: i > 0 ? o(r) : r,
+            seconds: o(n)
         });
     },
-    m = (e, t, n) => {
-        let r = a()(n),
-            i = a()(d.default.extractTimestamp(e.id)),
-            s = r.diff(i, 's');
-        if (s < c.Z.Seconds.MINUTE) return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({ count: s });
-        if (s < c.Z.Seconds.HOUR) {
-            let e = Math.round(s / c.Z.Seconds.MINUTE);
-            return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({ count: e });
-        }
-        if (s < 12 * c.Z.Seconds.HOUR) {
-            let e = Math.round(s / c.Z.Seconds.HOUR);
-            return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO.format({ count: e });
-        } else if (s < 9 * c.Z.Seconds.DAY) {
-            let e = Math.round(s / c.Z.Seconds.DAY);
-            return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO.format({ count: e });
-        } else if (s < 4 * c.Z.Seconds.WEEK) {
-            let e = Math.round(s / (7 * c.Z.Seconds.DAY));
-            return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({ count: e });
-        }
-        let o = Math.round(s / c.Z.Seconds.DAYS_30);
-        return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MONTHS_AGO.format({ count: o });
+    p = {
+        secondsAgo: (e) => u.NW.formatToPlainString(u.t.EOrEJi, { count: e }),
+        minutesAgo: (e) => u.NW.formatToPlainString(u.t.LRNgHh, { count: e }),
+        hoursAgo: (e) => u.NW.formatToPlainString(u.t.raJpz8, { count: e }),
+        daysAgo: (e) => u.NW.formatToPlainString(u.t.KkvKho, { count: e }),
+        weeksAgo: (e) => u.NW.formatToPlainString(u.t.sDtO6O, { count: e }),
+        monthsAgo: (e) => u.NW.formatToPlainString(u.t.ITymoq, { count: e })
     },
-    I = function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
-        return g(e) ? p(e, n) : m(e, t, n);
+    h = function (e, t, n) {
+        let { formatSet: r = p } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+            i = o()(n),
+            a = o()(c.default.extractTimestamp(e.id)),
+            s = i.diff(a, 's'),
+            u = Math.abs(s);
+        if (u < l.Z.Seconds.MINUTE) return r.secondsAgo(s);
+        if (u < l.Z.Seconds.HOUR) {
+            let e = Math.round(s / l.Z.Seconds.MINUTE);
+            return r.minutesAgo(e);
+        }
+        if (u < 12 * l.Z.Seconds.HOUR) {
+            let e = Math.round(s / l.Z.Seconds.HOUR);
+            return r.hoursAgo(e);
+        }
+        if (u < 9 * l.Z.Seconds.DAY) {
+            let e = Math.round(s / l.Z.Seconds.DAY);
+            return r.daysAgo(e);
+        }
+        if (u < 4 * l.Z.Seconds.WEEK) {
+            let e = Math.round(s / (7 * l.Z.Seconds.DAY));
+            return r.weeksAgo(e);
+        }
+        let d = Math.round(s / l.Z.Seconds.DAYS_30);
+        return r.monthsAgo(d);
+    },
+    m = function (e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
+            r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        return E(e) ? _(e, n) : h(e, t, n, r);
     };
-function T(e, t) {
+function g(e, t) {
     return e.traits.find((e) => e.type === t);
 }
-function g(e) {
+function E(e) {
     var t, n;
-    return null !== (n = null === (t = T(e, s.N.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n;
+    return null != (n = null == (t = g(e, a.N.IS_LIVE)) ? void 0 : t.is_live) && n;
 }
-function S(e) {
+function b(e) {
     var t, n;
-    return null !== (n = null === (t = T(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
+    return null != (n = null == (t = g(e, a.N.FIRST_TIME)) ? void 0 : t.first_time) && n;
 }
-function A(e) {
+function y(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
-function N(e) {
-    var t;
-    return null === (t = T(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
-}
 function v(e) {
-    var t;
-    return null === (t = T(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
+    return E(e) && !y(e);
 }
 function O(e) {
     var t;
-    return null === (t = T(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
+    return null == (t = g(e, a.N.DURATION_SECONDS)) ? void 0 : t.duration_seconds;
 }
-function R(e) {
-    let t = T(e, s.N.RESURRECTED);
+function I(e) {
+    var t;
+    return null == (t = g(e, a.N.AGGREGATE_RANGE)) ? void 0 : t.range;
+}
+function S(e) {
+    var t;
+    return null == (t = g(e, a.N.MARATHON)) ? void 0 : t.marathon;
+}
+function T(e) {
+    let t = g(e, a.N.RESURRECTED);
     return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
-function C(e) {
+function N(e) {
     let {
         months: t = 0,
         weeks: n = 0,
@@ -171,77 +138,69 @@ function C(e) {
         start: e,
         end: new Date()
     });
-    return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED_AFTER.format({
+    return u.NW.formatToPlainString(u.t.NXBtjI, {
         months: t,
         weeks: t > 0 ? 0 : n,
         days: t > 0 || n > 0 ? 0 : i
     });
 }
-function y(e) {
+function A(e) {
     if (null == e || '' === e) return null;
     let t = /\w+ (\d+), \w+ (\d+)/.exec(e);
     return null == t
         ? null
-        : E.Z.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
+        : u.NW.formatToPlainString(u.t['ijVm6+'], {
               seasonNum: t[1],
               episodeNum: t[2]
           });
 }
-function D(e, t) {
-    var n, r, i, a;
-    let s = null !== (i = null == t ? void 0 : null === (n = t.size) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : void 0,
-        o = null !== (a = null == t ? void 0 : null === (r = t.size) || void 0 === r ? void 0 : r[1]) && void 0 !== a ? a : void 0,
-        l =
-            null != s && null != o
-                ? E.Z.Messages.CONTENT_INVENTORY_GAME_STATE_SIZE.format({
-                      count: s,
-                      max: o
-                  })
-                : void 0;
-    return null != l && null != e ? ''.concat(e, ' (').concat(l, ')') : null != e ? e : l;
+function C(e, t) {
+    var n, r, i, o;
+    let a,
+        s = null != (i = null == t || null == (n = t.size) ? void 0 : n[0]) ? i : void 0,
+        l = null != (o = null == t || null == (r = t.size) ? void 0 : r[1]) ? o : void 0;
+    return (
+        null != s && null != l && s > 0 && l > 0
+            ? (a = u.NW.formatToPlainString(u.t.wmUSi4, {
+                  count: s,
+                  max: l
+              }))
+            : null != s && s > 0 && (a = u.NW.formatToPlainString(u.t.UTYMsb, { count: s })),
+        null != a && null != e ? ''.concat(e, ' (').concat(a, ')') : null != e ? e : a
+    );
 }
-function L(e) {
-    return e.content_type === l.s.TOP_GAME;
-}
-function b(e) {
-    var t;
-    return null === (t = T(e, s.N.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days;
-}
-function M(e) {
-    let t = b(e);
-    if (null == t || t < 3) return !1;
-    let n = d.default.extractTimestamp(e.id);
-    return !(Date.now() - n > 48 * c.Z.Millis.HOUR) && !0;
+function R(e) {
+    return e.content_type === s.s.TOP_GAME;
 }
 function P(e) {
-    let t = N(e);
+    var t;
+    return null == (t = g(e, a.N.STREAK_DAYS)) ? void 0 : t.streak_count_days;
+}
+function w(e) {
+    let t = P(e);
+    if (null == t || t < 3) return !1;
+    let n = c.default.extractTimestamp(e.id);
+    return !(Date.now() - n > 48 * l.Z.Millis.HOUR);
+}
+function D(e) {
+    let t = O(e);
     if (null == t)
         return {
             text: null,
             tooltipText: null
         };
-    let n = Math.round(t / c.Z.Seconds.HOUR);
+    let n = Math.round(t / l.Z.Seconds.HOUR);
     return n <= 0
         ? {
               text: null,
               tooltipText: null
           }
         : {
-              text: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON_TIME.format({ hours: n }),
-              tooltipText: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({ hours: n })
+              text: u.NW.formatToPlainString(u.t.vZaMen, { hours: n }),
+              tooltipText: u.NW.formatToPlainString(u.t['S5F48/'], { hours: n })
           };
 }
-function U(e) {
+function L(e) {
     var t;
-    return null === (t = T(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
-}
-function w(e) {
-    let t = (0, o.e7)([_.Z], () => _.Z.getMatchingActivity(e)),
-        [n, r] = (0, u.Z)([null == t ? void 0 : t.application_id, 'application_id' in e.extra ? e.extra.application_id : void 0]);
-    return {
-        activity: t,
-        anyMatchingApplication: null != n ? n : r,
-        activityApplication: n,
-        fallbackApplication: r
-    };
+    return null == (t = g(e, a.N.TRENDING_CONTENT)) ? void 0 : t.trending;
 }

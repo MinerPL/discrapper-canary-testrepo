@@ -1,76 +1,174 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(40851),
-    u = n(906732),
-    c = n(78839),
-    d = n(267642),
-    _ = n(879892),
-    E = n(981631),
-    f = n(689938),
-    h = n(330708);
-t.Z = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: p, targetBoostedGuildTier: m, onClose: I = () => {}, closeLayer: T = () => {}, pauseAnimation: g = !1, applicationId: S, handleSubscribeModalClose: A, withHighlight: N = !1, ...v } = e,
-        { analyticsLocations: O } = (0, u.ZP)(),
-        R = (0, l.bp)() === E.IlC.POPOUT,
-        [C, y] = i.useState(!1),
-        D = null != m ? Math.max((0, d.KK)(a, m), 1) : 1,
-        L = (0, d.aq)(),
-        b = async () => {
-            y(!0),
-                await (0, _.u)({
-                    analyticsLocations: O,
+n.d(t, { Z: () => P }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(442837),
+    l = n(481060),
+    c = n(179360),
+    u = n(40851),
+    d = n(906732),
+    f = n(975298),
+    _ = n(125529),
+    p = n(124570),
+    h = n(594174),
+    m = n(314884),
+    g = n(78839),
+    E = n(267642),
+    b = n(879892),
+    y = n(981631),
+    v = n(474936),
+    O = n(388032),
+    I = n(412439);
+function S(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function T(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                S(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function N(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function A(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : N(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function C(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = R(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function R(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let P = (e) => {
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: o, buttonText: S, targetBoostedGuildTier: N, onClose: R = () => {}, closeLayer: P = () => {}, pauseAnimation: w = !1, applicationId: D, handleSubscribeModalClose: L, withHighlight: x = !1, icon: M, intent: k } = e,
+        j = C(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
+        { analyticsLocations: U } = (0, d.ZP)(),
+        G = (0, u.bp)() === y.IlC.POPOUT,
+        [B, F] = i.useState(!1),
+        V = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+        { fractionalState: Z } = (0, f.Z)(),
+        H = (0, p.y)('guild_boosting_subscribe_button', V, Z);
+    m.Z.hasFetched || (0, c.X8)();
+    let W = (0, E.vx)(m.Z.boostSlots),
+        Y = null != N ? Math.max((0, E.KK)(o, N), 1) : 1,
+        K = (0, E.aq)({ isBoostManagementDisabledForFractionalPremium: H }),
+        z = async () => {
+            F(!0),
+                await (0, b.u)({
+                    analyticsLocations: U,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
-                    guild: a,
-                    numberOfBoostsToAdd: D,
-                    onClose: I,
-                    closeLayer: T,
-                    inPopout: R,
-                    applicationId: S,
-                    handleSubscribeModalClose: A
+                    guild: o,
+                    numberOfBoostsToAdd: Y,
+                    onClose: R,
+                    closeLayer: P,
+                    inPopout: G,
+                    applicationId: D,
+                    handleSubscribeModalClose: L,
+                    intent: k
                 }),
-                y(!1);
+                F(!1);
         },
-        M = c.ZP.getPremiumTypeSubscription(),
-        P = (0, r.jsx)('span', { children: null != p ? p : f.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER });
-    return ((null == M ? void 0 : M.isPausedOrPausePending) &&
-        ((P = (0, r.jsxs)('div', {
-            className: h.pausedButton,
+        q = g.ZP.getPremiumTypeSubscription(),
+        Q = (0, r.jsxs)('div', {
+            className: I.button,
+            children: [M, null != S ? S : O.NW.string(O.t.gKmQ1N)]
+        });
+    return ((null == q ? void 0 : q.isPausedOrPausePending) &&
+        (Z === v.a$.NONE || 0 === W.length) &&
+        ((Q = (0, r.jsxs)('div', {
+            className: I.button,
             children: [
-                (0, r.jsx)(o.LockIcon, {
+                (0, r.jsx)(l.mBM, {
                     size: 'xs',
-                    className: h.lockIcon
+                    className: I.buttonIcon
                 }),
                 ' ',
-                P
+                Q
             ]
         })),
-        (v.disabled = !0)),
-    null != L)
-        ? (0, r.jsx)(o.Tooltip, {
-              text: L,
+        (j.disabled = !0)),
+    null != K)
+        ? (0, r.jsx)(_.Z, {
+              text: K,
               'aria-label': !1,
               children: (e) =>
-                  (0, r.jsx)(o.ShinyButton, {
-                      ...e,
-                      disabled: !0,
-                      size: o.Button.Sizes.SMALL,
-                      pauseAnimation: g,
-                      ...v,
-                      children: P
-                  })
+                  (0, r.jsx)(
+                      l.gtL,
+                      A(
+                          T(
+                              A(T({}, e), {
+                                  disabled: !0,
+                                  size: l.zxk.Sizes.SMALL,
+                                  pauseAnimation: w
+                              }),
+                              j
+                          ),
+                          { children: Q }
+                      )
+                  )
           })
-        : (0, r.jsx)(o.ShinyButton, {
-              size: o.Button.Sizes.SMALL,
-              ...v,
-              className: s()(v.className, { [h.buttonHighlighted]: N }),
-              submitting: C,
-              onClick: b,
-              pauseAnimation: g,
-              children: P
-          });
+        : (0, r.jsx)(
+              l.gtL,
+              A(T({ size: l.zxk.Sizes.SMALL }, j), {
+                  className: a()(j.className, { [I.buttonHighlighted]: x }),
+                  submitting: B,
+                  onClick: z,
+                  pauseAnimation: w,
+                  children: Q
+              })
+          );
 };

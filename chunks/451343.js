@@ -1,5 +1,4 @@
 var r = {
-    './activities-rocket-time.mp3': '689096',
     './activity_end.mp3': '90152',
     './activity_launch.mp3': '12790',
     './activity_user_join.mp3': '9907',
@@ -10,7 +9,6 @@ var r = {
     './call_calling.mp3': '646188',
     './call_ringing.mp3': '563705',
     './call_ringing_beat.mp3': '271527',
-    './call_ringing_halloween.mp3': '768953',
     './call_ringing_snow_halation.mp3': '988363',
     './call_ringing_snowsgiving.mp3': '36644',
     './clip_error.mp3': '45594',
@@ -20,28 +18,21 @@ var r = {
     './ddr-right.mp3': '856163',
     './ddr-up.mp3': '722237',
     './deafen.mp3': '585389',
-    './detune_call_calling.mp3': '72474',
-    './detune_call_ringing.mp3': '476934',
-    './detune_deafen.mp3': '192523',
-    './detune_discodo.mp3': '581909',
-    './detune_disconnect.mp3': '230105',
-    './detune_message1.mp3': '687904',
-    './detune_mute.mp3': '44871',
-    './detune_ptt_start.mp3': '227531',
-    './detune_ptt_stop.mp3': '503986',
-    './detune_stream_ended.mp3': '88094',
-    './detune_stream_started.mp3': '606247',
-    './detune_stream_user_joined.mp3': '396419',
-    './detune_stream_user_left.mp3': '169394',
-    './detune_undeafen.mp3': '912417',
-    './detune_unmute.mp3': '546738',
-    './detune_user_join.mp3': '461220',
-    './detune_user_leave.mp3': '614430',
-    './detune_user_moved.mp3': '488303',
     './discodo.mp3': '361510',
     './disconnect.mp3': '554771',
     './ducky_message1.mp3': '514266',
-    './hang_status_select.mp3': '685673',
+    './halloween_call_calling.mp3': '297898',
+    './halloween_call_ringing.mp3': '612363',
+    './halloween_deafen.mp3': '57814',
+    './halloween_defean.mp3': '819098',
+    './halloween_disconnect.mp3': '382472',
+    './halloween_message1.mp3': '772637',
+    './halloween_mute.mp3': '539716',
+    './halloween_undeafen.mp3': '257130',
+    './halloween_undefean.mp3': '107848',
+    './halloween_unmute.mp3': '432915',
+    './halloween_user_join.mp3': '43351',
+    './halloween_user_leave.mp3': '928044',
     './highfive_clap.mp3': '696730',
     './highfive_whistle.mp3': '656602',
     './human_man.mp3': '129538',
@@ -73,12 +64,26 @@ var r = {
     './user_join.mp3': '377100',
     './user_leave.mp3': '351645',
     './user_moved.mp3': '426354',
-    './vibing_wumpus.mp3': '778184'
+    './vibing_wumpus.mp3': '778184',
+    './voice_filter_loopback_off.mp3': '697456',
+    './voice_filter_loopback_on.mp3': '541147',
+    './voice_filter_off.mp3': '212035',
+    './voice_filter_on.mp3': '645136',
+    './voice_filter_swap.mp3': '236957',
+    './winter_call_calling.mp3': '848069',
+    './winter_call_ringing.mp3': '870980',
+    './winter_deafen.mp3': '525773',
+    './winter_disconnect.mp3': '718528',
+    './winter_mute.mp3': '199012',
+    './winter_undeafen.mp3': '411069',
+    './winter_unmute.mp3': '293885',
+    './winter_user_join.mp3': '586680',
+    './winter_user_leave.mp3': '597453'
 };
 function i(e) {
-    return n(a(e));
+    return n(o(e));
 }
-function a(e) {
+function o(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
@@ -88,6 +93,6 @@ function a(e) {
 (i.keys = function () {
     return Object.keys(r);
 }),
-    (i.resolve = a),
+    (i.resolve = o),
     (e.exports = i),
-    (i.id = '451343');
+    (i.id = 451343);

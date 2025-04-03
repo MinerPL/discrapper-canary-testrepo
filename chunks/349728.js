@@ -1,11 +1,6 @@
-t.d(s, {
-    Z: function () {
-        return i;
-    }
-}),
-    t(47120);
-var n = t(981631);
-let a = new Set([n.ABu.XBOX, n.ABu.PLAYSTATION, n.ABu.PLAYSTATION_STAGING, n.ABu.CRUNCHYROLL]);
-function i(e) {
-    return a.has(e.type) && e.twoWayLink;
+n.d(t, { Z: () => s }), n(47120);
+var r = n(981631);
+let i = new Set([r.ABu.XBOX, r.ABu.PLAYSTATION, r.ABu.PLAYSTATION_STAGING, r.ABu.CRUNCHYROLL]);
+function s(e) {
+    return i.has(e.type) && e.twoWayLink;
 }

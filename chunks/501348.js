@@ -1,57 +1,89 @@
-t.d(s, {
-    Z: function () {
-        return q;
-    }
-}),
-    t(47120);
-var n = t(735250),
-    a = t(470079),
-    i = t(120356),
-    r = t.n(i),
-    o = t(442837),
-    l = t(704215),
-    c = t(780384),
-    d = t(481060),
-    _ = t(153867),
-    E = t(230711),
-    u = t(714338),
-    I = t(857595),
-    T = t(607070),
-    S = t(627845),
-    N = t(514361),
-    C = t(600164),
-    m = t(313201),
-    A = t(605236),
-    O = t(786761),
-    g = t(3148),
-    h = t(739566),
-    p = t(753206),
-    R = t(311476),
-    x = t(921801),
-    M = t(594174),
-    f = t(358085),
-    D = t(210887),
-    P = t(740492),
-    L = t(695346),
-    b = t(329013),
-    Z = t(333859),
-    v = t(726985),
-    j = t(981631),
-    B = t(921944),
-    U = t(959517),
-    G = t(689938),
-    F = t(45031),
-    y = t(224499);
-function V(e, s, t) {
+n.d(t, { Z: () => er }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
+    o = n(704215),
+    c = n(524437),
+    d = n(780384),
+    u = n(481060),
+    m = n(153867),
+    g = n(230711),
+    p = n(493773),
+    h = n(714338),
+    f = n(857595),
+    b = n(607070),
+    N = n(627845),
+    x = n(514361),
+    _ = n(600164),
+    E = n(313201),
+    j = n(540059),
+    O = n(605236),
+    C = n(786761),
+    S = n(3148),
+    v = n(739566),
+    T = n(753206),
+    I = n(311476),
+    y = n(921801),
+    A = n(594174),
+    P = n(358085),
+    R = n(210887),
+    D = n(740492),
+    Z = n(695346),
+    w = n(329013),
+    k = n(333859),
+    W = n(726985),
+    L = n(981631),
+    B = n(921944),
+    M = n(959517),
+    U = n(388032),
+    V = n(716827),
+    G = n(20493);
+function F(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
+            : (e[t] = n),
+        e
+    );
+}
+function H(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                F(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function z(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
         e
     );
 }
@@ -59,289 +91,474 @@ let Y = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    w = (0, m.hQ)(),
-    k = (0, m.hQ)(),
-    H = (0, m.hQ)(),
-    W = '1337',
-    K = (e) => {
-        let s = 0;
+    K = (0, E.hQ)(),
+    q = (0, E.hQ)(),
+    X = (0, E.hQ)(),
+    J = '1337',
+    Q = (e) => {
+        let t = 0;
         return [
-            (0, O.e5)({
-                ...(0, g.ZP)({
-                    channelId: W,
-                    content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
-                }),
-                state: j.yb.SENT,
-                id: ''.concat(s++)
-            }),
-            (0, O.e5)({
-                ...(0, g.ZP)({
-                    channelId: W,
-                    content: (0, c.wj)(e) ? G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
-                }),
-                state: j.yb.SENT,
-                id: ''.concat(s++)
-            }),
-            (0, O.e5)({
-                ...(0, g.ZP)({
-                    channelId: W,
-                    content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
-                }),
-                state: j.yb.SENT,
-                id: ''.concat(s++)
-            }),
-            (0, O.e5)({
-                ...(0, g.ZP)({
-                    channelId: W,
-                    content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
-                }),
-                state: j.yb.SENT,
-                id: ''.concat(s++)
-            }),
-            (0, O.e5)({
-                ...(0, g.ZP)({
-                    channelId: W,
-                    content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
-                }),
-                state: j.yb.SENT,
-                id: ''.concat(s)
-            })
+            (0, C.e5)(
+                z(
+                    H(
+                        {},
+                        (0, S.ZP)({
+                            channelId: J,
+                            content: U.NW.string(U.t.oZxkEh)
+                        })
+                    ),
+                    {
+                        state: L.yb.SENT,
+                        id: ''.concat(t++)
+                    }
+                )
+            ),
+            (0, C.e5)(
+                z(
+                    H(
+                        {},
+                        (0, S.ZP)({
+                            channelId: J,
+                            content: (0, d.wj)(e) ? U.NW.string(U.t['WGb/v7']) : U.NW.string(U.t['62m4m5'])
+                        })
+                    ),
+                    {
+                        state: L.yb.SENT,
+                        id: ''.concat(t++)
+                    }
+                )
+            ),
+            (0, C.e5)(
+                z(
+                    H(
+                        {},
+                        (0, S.ZP)({
+                            channelId: J,
+                            content: U.NW.string(U.t.a0Byo6)
+                        })
+                    ),
+                    {
+                        state: L.yb.SENT,
+                        id: ''.concat(t++)
+                    }
+                )
+            ),
+            (0, C.e5)(
+                z(
+                    H(
+                        {},
+                        (0, S.ZP)({
+                            channelId: J,
+                            content: U.NW.string(U.t.bmwEWF)
+                        })
+                    ),
+                    {
+                        state: L.yb.SENT,
+                        id: ''.concat(t++)
+                    }
+                )
+            ),
+            (0, C.e5)(
+                z(
+                    H(
+                        {},
+                        (0, S.ZP)({
+                            channelId: J,
+                            content: U.NW.string(U.t.hK9QW1)
+                        })
+                    ),
+                    {
+                        state: L.yb.SENT,
+                        id: ''.concat(t)
+                    }
+                )
+            )
         ];
     },
-    z = () => {
-        let e = (0, o.e7)([N.Z], () => N.Z.isPreview),
-            { enabled: s } = R.Z.useExperiment(
+    $ = () => {
+        let e = (0, j.Q3)('ThemeTitle'),
+            t = (0, l.e7)([x.Z], () => x.Z.isPreview),
+            { enabled: n } = I.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
                     autoTrackExposure: !1,
-                    disable: !e
+                    disable: !t
                 }
             );
-        return s
+        return n
             ? null
-            : (0, n.jsxs)('div', {
-                  className: F.themeTitle,
+            : (0, r.jsxs)('div', {
+                  className: V.themeTitle,
                   children: [
-                      (0, n.jsx)('div', {
-                          className: F.title,
-                          children: G.Z.Messages.THEME
+                      (0, r.jsxs)('div', {
+                          className: V.themeTitleContainer,
+                          children: [
+                              (0, r.jsx)('div', {
+                                  className: V.title,
+                                  children: e ? U.NW.string(U.t['0EzVsr']) : U.NW.string(U.t.Ksh3io)
+                              }),
+                              e &&
+                                  (0, r.jsx)(u.R94, {
+                                      type: u.R94.Types.DESCRIPTION,
+                                      className: V.subtext,
+                                      children: U.NW.string(U.t.PV3dGR)
+                                  })
+                          ]
                       }),
-                      (0, n.jsx)(b.g, {})
+                      (0, r.jsx)(w.g, {})
                   ]
               });
     };
-class Q extends a.Component {
+class ee extends i.Component {
     renderZoomSlider() {
-        return f.isPlatformEmbedded
-            ? (0, n.jsxs)(d.FormItem, {
-                  className: y.marginTop20,
+        let { isRefreshEnabled: e } = this.props;
+        return P.isPlatformEmbedded
+            ? (0, r.jsxs)(u.xJW, {
+                  className: G.marginTop20,
                   children: [
-                      (0, n.jsx)(d.FormTitle, {
-                          id: w,
-                          tag: d.FormTitleTags.H5,
-                          className: y.marginBottom8,
-                          children: G.Z.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
+                      (0, r.jsx)(u.vwX, {
+                          id: K,
+                          tag: u.RB0.H5,
+                          className: a()(V.title, G.marginBottom8),
+                          children: U.NW.string(U.t.i19n5O)
                       }),
-                      (0, n.jsx)(d.Slider, {
-                          className: r()(y.marginTop20, y.marginBottom4),
+                      e &&
+                          (0, r.jsx)(u.R94, {
+                              type: u.geA.DESCRIPTION,
+                              className: V.subtext,
+                              children: U.NW.string(U.t.ip0uSU)
+                          }),
+                      (0, r.jsx)(u.iRW, {
+                          className: a()(G.marginTop20, G.marginBottom4),
                           initialValue: this.props.zoom,
-                          defaultValue: j.yqN.ZOOM_DEFAULT,
-                          markers: j.yqN.ZOOM_SCALES,
+                          defaultValue: L.yqN.ZOOM_DEFAULT,
+                          markers: L.yqN.ZOOM_SCALES,
                           stickToMarkers: !0,
                           onValueChange: this.handleZoomChange,
                           onValueRender: this.handleSliderRender,
-                          'aria-labelledby': w
+                          'aria-labelledby': K
                       }),
-                      (0, n.jsx)(d.FormText, {
-                          type: d.FormText.Types.DESCRIPTION,
-                          children: G.Z.Messages.USER_SETTINGS_APPEARANCE_ZOOM_TIP.format({ modKey: u.Z.modKey })
+                      (0, r.jsx)(u.R94, {
+                          type: u.R94.Types.DESCRIPTION,
+                          children: U.NW.format(U.t.OMkSUl, { modKey: h.Z.modKey })
                       })
                   ]
               })
             : null;
     }
     renderFontScaleSlider() {
-        return (0, n.jsxs)(d.FormItem, {
-            className: y.marginTop20,
+        let { isRefreshEnabled: e } = this.props;
+        return (0, r.jsxs)(u.xJW, {
+            className: G.marginTop20,
             children: [
-                (0, n.jsx)(d.FormTitle, {
-                    id: k,
-                    tag: d.FormTitleTags.H5,
-                    className: y.marginBottom8,
-                    children: G.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
+                (0, r.jsx)(u.vwX, {
+                    id: q,
+                    tag: u.RB0.H5,
+                    className: a()(V.title, G.marginBottom8),
+                    children: U.NW.string(U.t.qPOqoK)
                 }),
-                (0, n.jsx)(C.Z, {
-                    align: C.Z.Align.CENTER,
-                    children: (0, n.jsx)(d.Slider, {
-                        className: r()(y.marginTop20, y.marginBottom4),
+                e &&
+                    (0, r.jsx)(u.R94, {
+                        type: u.geA.DESCRIPTION,
+                        className: V.subtext,
+                        children: 'Increase or decrease the size of the chat font'
+                    }),
+                (0, r.jsx)(_.Z, {
+                    align: _.Z.Align.CENTER,
+                    children: (0, r.jsx)(u.iRW, {
+                        className: a()({
+                            [G.marginTop20]: !e,
+                            [G.marginBottom4]: !e
+                        }),
                         initialValue: this.props.fontSize,
-                        defaultValue: j.yqN.FONT_SIZE_DEFAULT,
-                        markers: j.yqN.FONT_SIZES,
+                        defaultValue: L.yqN.FONT_SIZE_DEFAULT,
+                        markers: L.yqN.FONT_SIZES,
                         stickToMarkers: !0,
                         onValueChange: this.handleFontSizeChange,
                         onValueRender: this.handleSliderRenderPX,
                         onMarkerRender: this.handleSliderRenderPX,
                         getAriaValueText: this.handleSliderValueText,
-                        'aria-labelledby': k
+                        'aria-labelledby': q
                     })
                 })
             ]
         });
     }
     renderMessageGroupSpacingSlider() {
-        let { messageDisplayCompact: e, messageGroupSpacing: s } = this.props;
-        return (0, n.jsxs)(d.FormItem, {
-            className: y.marginTop20,
+        let { messageDisplayCompact: e, messageGroupSpacing: t, isRefreshEnabled: n } = this.props;
+        return (0, r.jsxs)(u.xJW, {
+            className: V.messageGroupingSpacing,
             children: [
-                (0, n.jsx)(d.FormTitle, {
-                    id: H,
-                    tag: d.FormTitleTags.H5,
-                    className: y.marginBottom8,
-                    children: G.Z.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
+                (0, r.jsx)(u.vwX, {
+                    id: X,
+                    tag: u.RB0.H5,
+                    className: a()(V.title, G.marginBottom8),
+                    children: U.NW.string(U.t.Q6lKkp)
                 }),
-                (0, n.jsx)(d.Slider, {
-                    className: r()(y.marginTop20, y.marginBottom4),
-                    initialValue: s,
-                    defaultValue: e ? U.c8 : U.pq,
-                    markers: U.fP,
+                n &&
+                    (0, r.jsx)(u.R94, {
+                        type: u.geA.DESCRIPTION,
+                        className: V.subtext,
+                        children: U.NW.string(U.t.p7eUra)
+                    }),
+                (0, r.jsx)(u.iRW, {
+                    className: a()({
+                        [G.marginTop20]: !n,
+                        [G.marginBottom4]: !n
+                    }),
+                    initialValue: t,
+                    defaultValue: e ? M.c8 : M.pq,
+                    markers: M.fP,
                     stickToMarkers: !0,
                     onValueChange: this.handleMessageSpacingChange,
                     onValueRender: this.handleSliderRenderPX,
                     onMarkerRender: this.handleSliderRenderPX,
                     getAriaValueText: this.handleSliderValueText,
-                    'aria-labelledby': H
+                    'aria-labelledby': X
                 })
             ]
         });
     }
     renderPreview() {
-        let { messageDisplayCompact: e, theme: s, messageGroupSpacing: t, hideSimpleEmbedContent: a } = this.props,
-            i = (0, c.wj)(s) ? this.darkMessages : this.lightMessages;
-        return (0, n.jsx)(d.FocusBlock, {
-            children: (0, n.jsx)(d.Card, {
-                className: r()(F.preview, y.marginBottom40, e ? F.compactPreview : void 0, 'group-spacing-'.concat(null != t ? t : e ? U.c8 : U.pq)),
+        let { messageDisplayCompact: e, theme: t, messageGroupSpacing: n, hideSimpleEmbedContent: i } = this.props,
+            s = (0, d.wj)(t) ? this.darkMessages : this.lightMessages;
+        return (0, r.jsx)(u.Rny, {
+            children: (0, r.jsx)(u.Zbd, {
+                className: a()(V.preview, G.marginBottom40, e ? V.compactPreview : void 0, 'group-spacing-'.concat(null != n ? n : e ? M.c8 : M.pq)),
                 outline: !0,
                 'aria-hidden': !0,
-                children: i.map((s, t) =>
-                    (0, n.jsx)(
-                        p.Z,
+                children: s.map((t, n) =>
+                    (0, r.jsx)(
+                        T.Z,
                         {
-                            author: (0, h.ZH)(s),
-                            message: s,
+                            author: (0, v.ZH)(t),
+                            message: t,
                             compact: e,
-                            isGroupStart: t % 2 == 0,
-                            className: 0 === t ? F.firstMessage : void 0,
-                            hideSimpleEmbedContent: a
+                            isGroupStart: n % 2 == 0,
+                            className: 0 === n ? V.firstMessage : void 0,
+                            hideSimpleEmbedContent: i
                         },
-                        s.id
+                        t.id
                     )
                 )
             })
         });
     }
     renderTheme() {
-        let { theme: e, useForcedColors: s, darkSidebar: t, gradientPreset: a } = this.props;
-        return s
-            ? (0, n.jsx)(d.FormItem, {
-                  className: r()(y.marginTop8, y.marginBottom40),
-                  title: (0, n.jsx)('div', {
-                      className: F.themeTitle,
-                      children: (0, n.jsx)('div', {
-                          className: F.title,
-                          children: G.Z.Messages.THEME
+        let { theme: e, useForcedColors: t, darkSidebar: n, gradientPreset: i, isRefreshEnabled: s } = this.props;
+        return t
+            ? (0, r.jsx)(u.xJW, {
+                  className: a()(G.marginTop8, G.marginBottom40),
+                  title: (0, r.jsx)('div', {
+                      className: V.themeTitle,
+                      children: (0, r.jsx)('div', {
+                          className: V.title,
+                          children: U.NW.string(U.t.Ksh3io)
                       })
                   }),
-                  children: (0, n.jsx)(d.FormText, {
-                      type: d.FormText.Types.DEFAULT,
-                      className: F.forcedColorsWarning,
-                      children: (0, S.b)()
-                          ? G.Z.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
+                  children: (0, r.jsx)(u.R94, {
+                      type: u.R94.Types.DEFAULT,
+                      className: V.forcedColorsWarning,
+                      children: (0, N.b)()
+                          ? U.NW.format(U.t.Jae48P, {
                                 onClick: () => {
-                                    E.Z.open(j.oAB.ACCESSIBILITY);
+                                    g.Z.open(L.oAB.ACCESSIBILITY);
                                 }
                             })
-                          : G.Z.Messages.THEME_DISABLED_FOR_FORCED_COLORS
+                          : U.NW.string(U.t.AUMSZG)
                   })
               })
-            : (0, n.jsxs)(d.FormItem, {
-                  className: y.marginTop8,
-                  title: (0, n.jsx)(z, {}),
-                  children: [
-                      (0, n.jsx)(b.i, {}),
-                      (0, n.jsx)(x.F, {
-                          setting: v.s6.APPEARANCE_ICON,
-                          children: (0, n.jsx)(Z.c, {})
-                      }),
-                      (0, n.jsx)(d.FormSwitch, {
-                          value: t && (0, c.ap)(e) && !s,
-                          disabled: e !== j.BRd.LIGHT || s || null != a,
-                          onChange: this.handleDarkSidebarChecked,
-                          className: y.marginTop20,
-                          children: G.Z.Messages.ACCESSIBILITY_DARK_SIDEBAR
-                      })
-                  ]
-              });
+            : s
+              ? (0, r.jsxs)(u.Kqy, {
+                    gap: 24,
+                    children: [
+                        (0, r.jsx)(u.Text, {
+                            variant: 'text-lg/medium',
+                            className: V.title,
+                            children: U.NW.string(U.t.Ksh3io)
+                        }),
+                        (0, r.jsx)(u.xJW, {
+                            title: (0, r.jsx)($, {}),
+                            children: (0, r.jsx)(w.i, {})
+                        })
+                    ]
+                })
+              : (0, r.jsxs)(u.xJW, {
+                    className: G.marginTop8,
+                    title: (0, r.jsx)($, {}),
+                    children: [
+                        (0, r.jsx)(w.i, {}),
+                        (0, r.jsx)(y.F, {
+                            setting: W.s6.APPEARANCE_ICON,
+                            children: (0, r.jsx)(k.c, {})
+                        }),
+                        (0, r.jsx)(u.j7V, {
+                            value: n && (0, d.ap)(e) && !t,
+                            disabled: e !== L.BRd.LIGHT || t || null != i,
+                            onChange: this.handleDarkSidebarChecked,
+                            className: G.marginTop20,
+                            children: U.NW.string(U.t.yF54Ki)
+                        })
+                    ]
+                });
     }
     renderDisplayMode() {
-        return (0, n.jsxs)(d.FormItem, {
-            title: G.Z.Messages.MESSAGE_DISPLAY_MODE_LABEL,
-            className: y.marginTop8,
+        return (0, r.jsxs)(u.xJW, {
+            title: U.NW.string(U.t.ZEoGMT),
+            className: G.marginTop8,
             children: [
-                (0, n.jsx)(d.RadioGroup, {
+                (0, r.jsx)(u.FXm, {
                     options: [
                         {
-                            name: G.Z.Messages.COZY_MODE,
+                            name: U.NW.string(U.t.KZIadn),
                             value: Y.COZY
                         },
                         {
-                            name: G.Z.Messages.COMPACT_MODE,
+                            name: U.NW.string(U.t['6+nTjY']),
                             value: Y.COMPACT
                         }
                     ],
                     onChange: this.handleMessageDisplayModeChange,
                     value: this.props.messageDisplayCompact ? Y.COMPACT : Y.COZY
                 }),
-                (0, n.jsx)(d.FormSwitch, {
+                (0, r.jsx)(u.j7V, {
                     value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
                     disabled: !this.props.messageDisplayCompact,
                     onChange: this.handleDisplayCompactAvatarsChanged,
-                    className: y.marginTop20,
-                    children: G.Z.Messages.DISPLAY_COMPACT_AVATARS
+                    className: G.marginTop20,
+                    children: U.NW.string(U.t['7FVjFB'])
                 })
             ]
         });
     }
+    renderListSpacing() {
+        let { isRefreshEnabled: e, density: t } = this.props;
+        return e
+            ? (0, r.jsxs)(y.F, {
+                  setting: W.s6.APPEARANCE_LIST_SPACING,
+                  children: [
+                      (0, r.jsxs)(u.xJW, {
+                          title: (0, r.jsx)('div', {
+                              style: {
+                                  display: 'flex',
+                                  gap: 8,
+                                  alignItems: 'center'
+                              },
+                              children: 'UI Density'
+                          }),
+                          className: G.marginTop8,
+                          children: [
+                              (0, r.jsx)(u.R94, {
+                                  type: u.geA.DESCRIPTION,
+                                  className: G.marginBottom8,
+                                  children: 'Adjust the spacing and layout to balance readability and content based on your preferences.'
+                              }),
+                              (0, r.jsx)(u.FXm, {
+                                  options: [
+                                      {
+                                          name: U.NW.string(U.t.T7G4Y2),
+                                          value: c.Pi.COZY,
+                                          desc: 'Comfortable spacing for easier readability'
+                                      },
+                                      {
+                                          name: U.NW.string(U.t['7iegX1']),
+                                          value: c.Pi.COMPACT,
+                                          desc: 'Tighter layout to fit more content'
+                                      }
+                                  ],
+                                  onChange: this.handleUIDensityChange,
+                                  value: t
+                              })
+                          ]
+                      }),
+                      (0, r.jsx)(u.$i$, { className: G.marginTop8 })
+                  ]
+              })
+            : null;
+    }
     handleDarkSidebarChecked() {
-        (0, I.lq)();
+        (0, f.lq)();
     }
     renderScalingAndSpacing() {
-        return (0, n.jsxs)(n.Fragment, {
-            children: [this.renderFontScaleSlider(), this.renderMessageGroupSpacingSlider(), this.renderZoomSlider(), (0, n.jsx)(d.FormDivider, { className: y.marginTop20 })]
+        return (0, r.jsxs)(r.Fragment, {
+            children: [this.renderFontScaleSlider(), this.renderMessageGroupSpacingSlider(), this.renderZoomSlider(), (0, r.jsx)(u.$i$, { className: G.marginTop20 })]
         });
     }
+    renderTimestampHourCycle() {
+        let { timestampHourCycle: e, isRefreshEnabled: t } = this.props;
+        return (0, r.jsx)(u.xJW, {
+            title: t
+                ? (0, r.jsx)(u.Text, {
+                      variant: 'text-lg/medium',
+                      className: a()(V.timeTitle, V.title),
+                      children: U.NW.string(U.t.dyamEB)
+                  })
+                : U.NW.string(U.t.dyamEB),
+            className: a()({ [G.marginTop20]: !t }),
+            children: (0, r.jsx)(u.FXm, {
+                options: [
+                    {
+                        name: U.NW.string(U.t.FMWYvb),
+                        value: c.hg.AUTO
+                    },
+                    {
+                        name: U.NW.string(U.t.p8NOws),
+                        value: c.hg.H12
+                    },
+                    {
+                        name: U.NW.string(U.t['+o/sOj']),
+                        value: c.hg.H23
+                    }
+                ],
+                onChange: (e) => Z.hg.updateSetting(e.value),
+                value: e
+            })
+        });
+    }
+    renderVisualRefreshOverride() {
+        let { isRefreshEnabled: e, isRefreshExperimentEnabled: t, canOptOutOfRefresh: n } = this.props;
+        return t && n
+            ? (0, r.jsx)(u.xJW, {
+                  className: G.marginTop8,
+                  children: (0, r.jsx)(u.j7V, {
+                      hideBorder: !0,
+                      value: e,
+                      onChange: this.handleDesktopRefreshEnabledChanged,
+                      className: G.marginTop20,
+                      children: 'Enable Desktop Refresh'
+                  })
+              })
+            : null;
+    }
     render() {
-        return (0, n.jsxs)(d.FormSection, {
-            tag: d.FormTitleTags.H1,
-            title: G.Z.Messages.APPEARANCE,
+        return (0, r.jsxs)(u.hjN, {
+            tag: u.RB0.H1,
+            title: U.NW.string(U.t['iHH+k5']),
             children: [
-                (0, n.jsxs)(x.F, {
-                    setting: v.s6.APPEARANCE_THEME,
+                this.renderVisualRefreshOverride(),
+                (0, r.jsxs)(y.F, {
+                    setting: W.s6.APPEARANCE_THEME,
                     children: [this.renderPreview(), this.renderTheme()]
                 }),
-                (0, n.jsx)(x.F, {
-                    setting: v.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
+                (0, r.jsx)(y.F, {
+                    setting: W.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                     children: this.renderDisplayMode()
                 }),
-                (0, n.jsx)(x.F, {
-                    setting: v.s6.APPEARANCE_SCALING_SPACING,
+                this.renderListSpacing(),
+                (0, r.jsx)(y.F, {
+                    setting: W.s6.APPEARANCE_SCALING_SPACING,
                     children: this.renderScalingAndSpacing()
                 }),
-                (0, n.jsx)(d.Text, {
+                (0, r.jsxs)(y.F, {
+                    setting: W.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
+                    children: [this.renderTimestampHourCycle(), (0, r.jsx)(u.$i$, { className: G.marginTop8 })]
+                }),
+                (0, r.jsx)(u.Text, {
                     variant: 'text-md/normal',
-                    className: y.marginTop20,
-                    children: G.Z.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
+                    className: G.marginTop20,
+                    children: U.NW.format(U.t['5LEQdX'], {
                         onAccessibilityClick() {
-                            E.Z.open(j.oAB.ACCESSIBILITY);
+                            g.Z.open(L.oAB.ACCESSIBILITY);
                         }
                     })
                 })
@@ -355,10 +572,10 @@ class Q extends a.Component {
         return ''.concat(e.toFixed(0), 'px');
     }
     handleSliderValueText(e) {
-        return G.Z.Messages.PIXEL_VALUE_A11Y_TEXT.format({ value: e });
+        return U.NW.formatToPlainString(U.t['0hpvOT'], { value: e });
     }
     handleFontSizeChange(e) {
-        (0, I.oL)(e);
+        (0, f.oL)(e);
     }
     handleMessageSpacingChange(e) {
         switch (e) {
@@ -367,59 +584,223 @@ class Q extends a.Component {
             case 8:
             case 16:
             case 24:
-                (0, I.ZZ)(e);
+                (0, f.ZZ)(e);
         }
     }
     handleZoomChange(e) {
-        (0, I.cq)(e);
+        (0, f.cq)(e);
     }
     constructor(...e) {
         super(...e),
-            V(this, 'darkMessages', K(j.BRd.DARK)),
-            V(this, 'lightMessages', K(j.BRd.LIGHT)),
-            V(this, 'handleDisplayCompactAvatarsChanged', (e) => {
-                _.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
+            F(this, 'darkMessages', Q(L.BRd.DARK)),
+            F(this, 'lightMessages', Q(L.BRd.LIGHT)),
+            F(this, 'handleDisplayCompactAvatarsChanged', (e) => {
+                m.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),
-            V(this, 'handleMessageDisplayModeChange', (e) => {
-                let { value: s } = e;
-                L.jU.updateSetting(s === Y.COMPACT), (0, I.ZZ)();
+            F(this, 'handleDesktopRefreshEnabledChanged', (e) => {
+                m.ZP.updatedUnsyncedSettings({ disableVisualRefresh: !e });
+            }),
+            F(this, 'handleMessageDisplayModeChange', (e) => {
+                let { value: t } = e;
+                Z.jU.updateSetting(t === Y.COMPACT), (0, f.ZZ)();
+            }),
+            F(this, 'handleUIDensityChange', (e) => {
+                let { value: t } = e;
+                t !== c.Pi.UNSET_UI_DENSITY && Z.YC.updateSetting(t);
             });
     }
 }
-let X = (e) => {
-    !(0, A.un)(e) &&
-        (0, A.EW)(e, {
+class et extends ee {
+    render() {
+        let { density: e } = this.props,
+            t = (0, r.jsxs)(y.F, {
+                setting: W.s6.APPEARANCE_THEME,
+                children: [this.renderPreview(), this.renderTheme()]
+            }),
+            n = (0, r.jsx)(y.F, {
+                setting: W.s6.APPEARANCE_ICON,
+                children: (0, r.jsx)(k.c, {})
+            }),
+            i = [
+                {
+                    name: U.NW.string(U.t['7iegX1']),
+                    value: c.Pi.COMPACT
+                },
+                {
+                    name: U.NW.string(U.t.bBvAEB),
+                    value: c.Pi.DEFAULT
+                },
+                {
+                    name: U.NW.string(U.t['4cuYHx']),
+                    value: c.Pi.COZY
+                }
+            ],
+            s = (0, r.jsxs)(y.F, {
+                setting: W.s6.APPEARANCE_LIST_SPACING,
+                children: [
+                    (0, r.jsxs)(u.xJW, {
+                        title: (0, r.jsx)(u.Text, {
+                            variant: 'text-lg/medium',
+                            className: V.title,
+                            children: U.NW.string(U.t['C/5V0N'])
+                        }),
+                        children: [
+                            (0, r.jsx)(u.R94, {
+                                type: u.geA.DESCRIPTION,
+                                className: V.subtext,
+                                children: U.NW.string(U.t.QLZhYm)
+                            }),
+                            (0, r.jsx)(u.FXm, {
+                                options: i,
+                                onChange: this.handleUIDensityChange,
+                                value: e
+                            })
+                        ]
+                    }),
+                    (0, r.jsx)(u.$i$, { className: V.divider })
+                ]
+            }),
+            a = (0, r.jsxs)(y.F, {
+                setting: W.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
+                children: [
+                    (0, r.jsxs)(u.Kqy, {
+                        gap: 8,
+                        padding: { bottom: 8 },
+                        children: [
+                            (0, r.jsx)(u.Text, {
+                                variant: 'text-lg/medium',
+                                className: V.title,
+                                children: U.NW.string(U.t['2ed/sL'])
+                            }),
+                            (0, r.jsx)(u.Text, {
+                                variant: 'text-sm/normal',
+                                className: V.subtext,
+                                children: U.NW.string(U.t.u9N6Qk)
+                            })
+                        ]
+                    }),
+                    (0, r.jsxs)(u.xJW, {
+                        titleClassName: V.title,
+                        title: U.NW.string(U.t.nKRoPj),
+                        children: [
+                            (0, r.jsx)(u.R94, {
+                                type: u.geA.DESCRIPTION,
+                                className: V.subtext,
+                                children: U.NW.string(U.t.QntEEB)
+                            }),
+                            (0, r.jsx)(u.FXm, {
+                                options: [
+                                    {
+                                        name: U.NW.string(U.t.Jqj4cX),
+                                        value: Y.COZY
+                                    },
+                                    {
+                                        name: U.NW.string(U.t['1JNcPT']),
+                                        value: Y.COMPACT
+                                    }
+                                ],
+                                onChange: this.handleMessageDisplayModeChange,
+                                value: this.props.messageDisplayCompact ? Y.COMPACT : Y.COZY
+                            }),
+                            this.props.messageDisplayCompact &&
+                                (0, r.jsx)(u.j7V, {
+                                    className: V.compactModeToggle,
+                                    hideBorder: !0,
+                                    value: !this.props.displayCompactAvatars,
+                                    onChange: (e) => this.handleDisplayCompactAvatarsChanged(!e),
+                                    children: (0, r.jsx)(u.Text, {
+                                        variant: 'text-md/medium',
+                                        children: U.NW.string(U.t['//vhWl'])
+                                    })
+                                })
+                        ]
+                    }),
+                    this.renderMessageGroupSpacingSlider(),
+                    (0, r.jsx)(u.$i$, { className: V.divider })
+                ]
+            }),
+            l = (0, r.jsxs)(y.F, {
+                setting: W.s6.APPEARANCE_SCALING_SPACING,
+                children: [
+                    (0, r.jsx)(u.Text, {
+                        variant: 'text-lg/medium',
+                        className: V.title,
+                        children: U.NW.string(U.t['0Yh+ZW'])
+                    }),
+                    this.renderFontScaleSlider(),
+                    this.renderZoomSlider(),
+                    (0, r.jsx)(u.$i$, { className: V.divider })
+                ]
+            }),
+            o = (0, r.jsx)(y.F, {
+                setting: W.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
+                children: this.renderTimestampHourCycle()
+            }),
+            d = (0, r.jsx)(u.Text, {
+                variant: 'text-md/normal',
+                className: V.a11yCallout,
+                children: U.NW.format(U.t['5LEQdX'], {
+                    onAccessibilityClick() {
+                        g.Z.open(L.oAB.ACCESSIBILITY);
+                    }
+                })
+            });
+        return (0, r.jsxs)(u.hjN, {
+            tag: u.RB0.H1,
+            title: U.NW.string(U.t['iHH+k5']),
+            children: [this.renderVisualRefreshOverride(), t, n, s, a, l, o, d]
+        });
+    }
+}
+let en = (e) => {
+    (0, O.un)(e) ||
+        (0, O.EW)(e, {
             dismissAction: B.L.AUTO,
             forceTrack: !0
         });
 };
-function q() {
-    let e = L.jU.useSetting(),
-        s = L.RS.useSetting(),
-        t = L.NA.useSetting(),
-        i = L.L1.useSetting();
-    a.useEffect(() => {
-        X(l.z.CLIENT_THEMES_SETTINGS_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-    }, []);
-    let r = (0, o.cj)([D.Z, P.ZP, T.Z, M.default, N.Z], () => {
-        var e, s;
-        return {
-            theme: D.Z.theme,
-            useForcedColors: T.Z.useForcedColors,
-            useSystemTheme: P.ZP.useSystemTheme,
-            darkSidebar: D.Z.darkSidebar,
-            fontSize: T.Z.fontSize,
-            zoom: T.Z.zoom,
-            messageGroupSpacing: T.Z.messageGroupSpacing,
-            displayCompactAvatars: P.ZP.displayCompactAvatars,
-            isStaff: null !== (s = null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== s && s,
-            gradientPreset: N.Z.gradientPreset
-        };
+function er() {
+    let e = Z.jU.useSetting(),
+        t = Z.RS.useSetting(),
+        n = Z.NA.useSetting(),
+        i = Z.L1.useSetting(),
+        s = Z.hg.useSetting(),
+        a = Z.YC.useSetting();
+    (0, p.ZP)(() => {
+        en(o.z.CLIENT_THEMES_SETTINGS_BADGE), en(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), en(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     });
-    return (0, n.jsx)(Q, {
-        messageDisplayCompact: e,
-        hideSimpleEmbedContent: s && t,
-        clientTheme: i,
-        ...r
-    });
+    let c = (0, l.cj)([R.Z, D.ZP, b.Z, A.default, x.Z], () => {
+            var e, t;
+            return {
+                theme: R.Z.theme,
+                useForcedColors: b.Z.useForcedColors,
+                useSystemTheme: D.ZP.useSystemTheme,
+                darkSidebar: R.Z.darkSidebar,
+                fontSize: b.Z.fontSize,
+                zoom: b.Z.zoom,
+                messageGroupSpacing: b.Z.messageGroupSpacing,
+                displayCompactAvatars: D.ZP.displayCompactAvatars,
+                isStaff: null != (t = null == (e = A.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
+                gradientPreset: x.Z.gradientPreset
+            };
+        }),
+        d = (0, j.nm)('UserSettingsAppearance'),
+        u = (0, j.o9)('UserSettingsAppearance'),
+        m = (0, j.Q3)('UserSettingsAppearance');
+    return (0, r.jsx)(
+        m ? et : ee,
+        H(
+            {
+                messageDisplayCompact: e,
+                hideSimpleEmbedContent: t && n,
+                clientTheme: i,
+                timestampHourCycle: s,
+                isRefreshEnabled: m,
+                isRefreshExperimentEnabled: u,
+                density: a,
+                canOptOutOfRefresh: d
+            },
+            c
+        )
+    );
 }

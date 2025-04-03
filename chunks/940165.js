@@ -1,41 +1,37 @@
-t.d(n, {
-    Z: function () {
-        return I;
-    }
-});
-var a = t(735250);
-t(470079);
-var o = t(120356),
-    s = t.n(o),
-    i = t(793030),
-    c = t(481060),
-    r = t(759198),
-    l = t(552958),
-    _ = t(767157),
-    C = t(689938),
-    O = t(242793);
-function I(e) {
-    let { label: n, className: t, description: o, soundpack: I, location: p } = e,
-        { playSound: M, isPlaying: T } = (0, l.Z)();
-    return (0, a.jsxs)(c.Clickable, {
-        'aria-label': C.Z.Messages.PLAY,
-        className: s()(O.container, t, { [O.containerActive]: T }),
+n.d(e, { Z: () => b }), n(266796);
+var r = n(200651);
+n(192379);
+var o = n(120356),
+    i = n.n(o),
+    a = n(793030),
+    c = n(481060),
+    s = n(759198),
+    l = n(552958),
+    p = n(767157),
+    u = n(388032),
+    O = n(267129);
+function b(t) {
+    let { label: e, className: n, description: o, soundpack: b, location: f } = t,
+        { playSound: d, isPlaying: y } = (0, l.Z)();
+    return (0, r.jsxs)(c.P3F, {
+        'aria-label': u.NW.string(u.t.RscU7O),
+        className: i()(O.container, n, { [O.containerActive]: y }),
         onClick: () => {
-            (0, _.Z)(I, p), M(I);
+            (0, p.Z)(b, f), d(b);
         },
         children: [
-            (0, a.jsx)(c.CirclePlayIcon, {
+            (0, r.jsx)(c.g8d, {
                 className: O.playButton,
-                color: T ? c.tokens.colors.INTERACTIVE_ACTIVE : c.tokens.colors.INTERACTIVE_NORMAL
+                color: y ? c.TVs.colors.INTERACTIVE_ACTIVE : c.TVs.colors.INTERACTIVE_NORMAL
             }),
-            (0, a.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: O.textContainer,
                 children: [
-                    (0, a.jsx)(r.Z, {
+                    (0, r.jsx)(s.Z, {
                         variant: 'text-md/medium',
-                        children: n
+                        children: e
                     }),
-                    (0, a.jsx)(i.x, {
+                    (0, r.jsx)(a.xv, {
                         variant: 'text-sm/normal',
                         children: o
                     })

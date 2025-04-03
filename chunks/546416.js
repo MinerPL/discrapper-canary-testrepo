@@ -1,8 +1,4 @@
-n.d(t, {
-    V: function () {
-        return i;
-    }
-});
+n.d(t, { V: () => i });
 var r = n(594190);
 function i() {
     let e = r.ZP.getCurrentGameForAnalytics();

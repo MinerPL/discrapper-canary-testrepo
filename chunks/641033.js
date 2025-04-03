@@ -1,47 +1,39 @@
 n.d(t, {
-    Eo: function () {
-        return _;
-    },
-    KH: function () {
-        return s;
-    },
-    nc: function () {
-        return c;
-    },
-    yz: function () {
-        return d;
-    }
+    Eo: () => f,
+    KH: () => a,
+    nc: () => u,
+    yz: () => d
 }),
-    n(47120),
-    n(724458);
+    n(47120);
 var r = n(524484),
     i = n(981631);
-let a = function (e, t) {
+let o = function (e, t) {
         let { multiplier: n, value: r } = e,
-            [i, a] = t,
-            s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-            o = r * n;
-        return o <= 0
+            [i, o] = t,
+            a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+            s = r * n;
+        return s <= 0
             ? 0
             : Math.min(
-                  s,
+                  a,
                   i.reduce((e, t, n) => {
-                      if (o > t) {
-                          let e = a[n];
-                          if (n + 1 === i.length) return a[n];
+                      if (s > t) {
+                          let e = o[n];
+                          if (n + 1 === i.length) return o[n];
                           let r = i[n + 1],
-                              s = a[n + 1];
-                          return ((o - t) / (r - t)) * (s - e) + e;
+                              a = o[n + 1],
+                              l = r - t;
+                          return ((s - t) / l) * (a - e) + e;
                       }
-                      return o === t ? a[n] : e;
+                      return s === t ? o[n] : e;
                   }, 0)
               );
     },
-    s = function (e) {
+    a = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.qi.LEVEL_3;
-        return a(e, [r.JR[t], r.u4[t]], 100000);
+        return o(e, [r.JR[t], r.u4[t]], 100000);
     },
-    o = [
+    s = [
         [1, 0.001],
         [25, 0.3],
         [100, 0.5],
@@ -50,15 +42,15 @@ let a = function (e, t) {
         [2500, 0.95],
         [9001, 1]
     ],
-    l = o.map((e) => {
+    l = s.map((e) => {
         let [t] = e;
         return t;
     }),
-    u = o.map((e) => {
+    c = s.map((e) => {
         let [t, n] = e;
         return n;
     }),
-    c = (e) => a(e, [l, u], 1),
+    u = (e) => o(e, [l, c], 1),
     d = (e) =>
         1 === e
             ? { color: i.Ilk.BRAND_500 }
@@ -78,7 +70,7 @@ let a = function (e, t) {
                         color: i.Ilk.ORANGE_345,
                         flair: !0
                     };
-function _(e) {
+function f(e) {
     var t;
-    return e.value * (null !== (t = e.multiplier) && void 0 !== t ? t : 1);
+    return e.value * (null != (t = e.multiplier) ? t : 1);
 }

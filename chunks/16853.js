@@ -1,24 +1,26 @@
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(643560);
-t.Z = (e) => {
-    let { entry: t, hideEditButton: n, children: l, onRequestOpen: r, onRequestClose: o } = e;
-    return (0, i.jsx)(a.Popout, {
-        onRequestOpen: r,
-        onRequestClose: o,
-        animation: a.Popout.Animation.NONE,
+n.d(t, { Z: () => o });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(643560);
+let o = (e) => {
+    let { entry: t, hideEditButton: n, children: o, onRequestOpen: a, onRequestClose: s, targetElementRef: c } = e;
+    return (0, r.jsx)(i.yRy, {
+        targetElementRef: c,
+        onRequestOpen: a,
+        onRequestClose: s,
+        animation: i.yRy.Animation.NONE,
         position: 'bottom',
         spacing: 4,
         align: 'right',
         renderPopout: (e) => {
-            let { closePopout: a } = e;
-            return (0, i.jsx)(s.default, {
+            let { closePopout: i } = e;
+            return (0, r.jsx)(l.default, {
                 entry: t,
-                closePopout: a,
+                closePopout: i,
                 hideEditButton: n
             });
         },
-        children: l
+        children: o
     });
 };

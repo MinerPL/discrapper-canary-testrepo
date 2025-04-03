@@ -1,24 +1,29 @@
-var s = n(735250);
-n(470079);
-var o = n(120356),
-    a = n.n(o),
-    i = n(481060),
-    r = n(689938),
-    l = n(608561);
-t.Z = function (e) {
-    let { className: t, color: n = 'header-primary', textOpacity: o = 0.9, bgOpacity: u = 0.4 } = e;
-    return (0, s.jsxs)(i.Text, {
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var s = n(120356),
+    o = n.n(s),
+    i = n(780384),
+    a = n(481060),
+    l = n(410030),
+    c = n(388032),
+    u = n(286737);
+let d = function (e) {
+    let { className: t, color: n = 'header-primary', textOpacity: s = 0.9 } = e,
+        d = (0, l.Fg)(),
+        m = (0, i.wj)(d);
+    return (0, r.jsxs)(a.Text, {
         variant: 'text-xxs/medium',
         color: n,
-        className: a()(l.promotedTag, t),
+        className: o()(u.promotedTag, t),
         children: [
-            (0, s.jsx)('span', {
-                className: l.promotedTagBackground,
-                style: { opacity: u }
+            (0, r.jsx)('span', {
+                className: u.promotedTagBackground,
+                style: { backgroundColor: 'rgba(0, 0, 0, '.concat(m ? 0.2 : 0.08, ')') }
             }),
-            (0, s.jsx)('span', {
-                style: { opacity: o },
-                children: r.Z.Messages.QUESTS_PROMOTED
+            (0, r.jsx)('span', {
+                style: { opacity: s },
+                children: c.NW.string(c.t.o6FLcH)
             })
         ]
     });

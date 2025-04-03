@@ -1,23 +1,15 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(47120);
-var r = n(470079),
+n.d(t, { Z: () => o }), n(47120);
+var r = n(192379),
     i = n(439849);
-function a(e, t) {
-    let [n, a] = r.useState();
+function o(e, t) {
+    let [n, o] = r.useState();
     return (
         r.useEffect(() => {
-            if (null == e || null != t) {
-                a(void 0);
-                return;
-            }
+            if (null == e || null != t) return void o(void 0);
             (0, i.Z)().then((t) => {
-                if (null != t)
+                null != t &&
                     t.identifyGame(e, (e, t) => {
-                        if (0 === e && null != t.icon && '' !== t.icon && null != t.name && '' !== t.name) a('data:image/png;base64,'.concat(t.icon));
+                        0 === e && null != t.icon && '' !== t.icon && null != t.name && '' !== t.name && o('data:image/png;base64,'.concat(t.icon));
                     });
             });
         }, [e, t]),

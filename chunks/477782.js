@@ -1,67 +1,61 @@
-t.r(s),
-    t.d(s, {
-        default: function () {
-            return r;
-        }
-    }),
-    t(47120);
-var n = t(735250),
-    a = t(470079),
-    o = t(481060),
-    l = t(313201),
-    i = t(117984),
-    c = t(689938),
-    d = t(964622);
-function r(e) {
-    let { onClose: s, transitionState: t } = e,
-        r = (0, l.Dt)(),
-        [u, h] = a.useState('');
+s.d(t, { default: () => d }), s(47120);
+var n = s(200651),
+    i = s(192379),
+    a = s(481060),
+    l = s(313201),
+    o = s(117984),
+    r = s(388032),
+    c = s(788428);
+function d(e) {
+    let { onClose: t, transitionState: s } = e,
+        d = (0, l.Dt)(),
+        [h, u] = i.useState('');
     return (0, n.jsx)('form', {
         onSubmit: function (e) {
-            e.preventDefault(), (0, i.CM)(u), s();
+            e.preventDefault(), (0, o.CM)(h), t();
         },
-        children: (0, n.jsxs)(o.ModalRoot, {
-            transitionState: t,
-            'aria-labelledby': r,
+        children: (0, n.jsxs)(a.Y0X, {
+            transitionState: s,
+            'aria-labelledby': d,
             children: [
-                (0, n.jsxs)(o.ModalContent, {
+                (0, n.jsxs)(a.hzk, {
                     children: [
-                        (0, n.jsx)(o.Heading, {
-                            id: r,
-                            className: d.header,
+                        (0, n.jsx)(a.X6q, {
+                            id: d,
+                            className: c.header,
                             variant: 'heading-xl/semibold',
-                            children: c.Z.Messages.CREATE_CATEGORY
+                            children: r.NW.string(r.t['ISN+ND'])
                         }),
-                        (0, n.jsx)(o.ModalCloseButton, {
-                            onClick: s,
-                            className: d.closeButton
+                        (0, n.jsx)(a.olH, {
+                            onClick: t,
+                            className: c.closeButton
                         }),
-                        (0, n.jsx)(o.FormItem, {
-                            title: c.Z.Messages.CATEGORY_NAME,
-                            className: d.name,
-                            children: (0, n.jsx)(o.TextInput, {
-                                value: u,
-                                onChange: h,
+                        (0, n.jsx)(a.xJW, {
+                            title: r.NW.string(r.t.OCAkGB),
+                            className: c.name,
+                            children: (0, n.jsx)(a.oil, {
+                                value: h,
+                                onChange: u,
                                 maxLength: 100,
-                                placeholder: c.Z.Messages.CATEGORY_NAME_PLACEHOLDER,
-                                className: d.__invalid_inputWrapper,
+                                placeholder: r.NW.string(r.t.eTVbt7),
+                                className: c.__invalid_inputWrapper,
                                 autoFocus: !0
                             })
                         })
                     ]
                 }),
-                (0, n.jsxs)(o.ModalFooter, {
+                (0, n.jsxs)(a.mzw, {
                     children: [
-                        (0, n.jsx)(o.Button, {
+                        (0, n.jsx)(a.zxk, {
                             type: 'submit',
-                            disabled: '' === u,
-                            children: c.Z.Messages.CREATE_CATEGORY
+                            disabled: '' === h,
+                            children: r.NW.string(r.t['ISN+ND'])
                         }),
-                        (0, n.jsx)(o.Button, {
-                            onClick: s,
-                            look: o.Button.Looks.LINK,
-                            color: o.Button.Colors.PRIMARY,
-                            children: c.Z.Messages.CANCEL
+                        (0, n.jsx)(a.zxk, {
+                            onClick: t,
+                            look: a.zxk.Looks.LINK,
+                            color: a.zxk.Colors.PRIMARY,
+                            children: r.NW.string(r.t['ETE/oK'])
                         })
                     ]
                 })

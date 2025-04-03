@@ -1,114 +1,132 @@
-t(47120);
-var a,
-    r,
-    i,
-    s,
-    o = t(392711),
-    l = t.n(o),
-    c = t(906280),
-    d = t.n(c),
-    u = t(442837),
-    m = t(570140),
-    _ = t(944163),
-    f = t(116175),
-    C = t(308083);
-let h = () => ({
+n.d(t, { Z: () => O }), n(47120);
+var r,
+    i = n(392711),
+    s = n.n(i),
+    a = n(906280),
+    l = n.n(a),
+    o = n(442837),
+    c = n(570140),
+    d = n(944163),
+    u = n(77498),
+    m = n(116175),
+    g = n(308083);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e) {
+    return new Set(Array.from(e).filter((e) => null != u.Z.getDetectableGame(e)));
+}
+let b = () => ({
         gameApplicationIds: new Set(),
-        playstyle: C.zv.NONE,
+        playstyle: g.zv.NONE,
         interests: new Set(),
         description: '',
-        wildcardDescriptors: [C.U6, C.U6, C.U6],
+        wildcardDescriptors: [g.U6, g.U6, g.U6],
         tag: '',
-        verificationForm: { ..._.t },
-        badgeKind: f.ZD.SWORD,
-        badgePrimaryColor: f.sg['0'].primary,
-        badgeSecondaryColor: f.sg['0'].secondary,
-        banner: C.qC.NIGHT_SKY,
-        brandPrimaryColor: C.ym['0'].primary,
-        brandSecondaryColor: C.ym['0'].secondary
+        verificationForm: h({}, d.t),
+        badgeKind: m.ZD.SWORD,
+        badgePrimaryColor: m.sg['0'].primary,
+        badgeSecondaryColor: m.sg['0'].secondary,
+        banner: g.qC.NIGHT_SKY,
+        brandPrimaryColor: g.ym['0'].primary,
+        brandSecondaryColor: g.ym['0'].secondary
     }),
-    x = h(),
-    p = d()(x),
-    g = !1,
-    T = !1,
-    E = {};
-class I extends (a = u.ZP.Store) {
+    x = b(),
+    j = l()(x),
+    N = !1,
+    _ = !1,
+    v = {};
+class C extends (r = o.ZP.Store) {
     getState() {
         return {
             initialSettings: x,
-            settings: p,
-            dirty: g,
-            errors: E,
-            submitting: T
+            settings: j,
+            dirty: N,
+            errors: v,
+            submitting: _
         };
     }
 }
-(s = 'ClanSettingsStore'),
-    (i = 'displayName') in (r = I)
-        ? Object.defineProperty(r, i, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = s),
-    (n.Z = new I(m.Z, {
-        CLAN_SETTINGS_FETCH_START: function () {
-            (T = !1), (x = h()), (p = d()(x)), (g = !1), (E = {});
-        },
-        CLAN_SETTINGS_FETCH_SUCCESS: function (e) {
-            let { settings: n } = e;
-            (x = {
-                ...h(),
-                ...n
-            }),
-                (p = d()(x)),
-                (g = !1);
-        },
-        CLAN_SETTINGS_UPDATE: function (e) {
-            let { updates: n } = e;
-            for (let e in ((p = {
-                ...p,
-                ...d()(n)
-            }),
-            n))
-                delete E[e], (E = { ...E });
-            g = !l().isEqual(l().omit(p, 'verificationForm'), l().omit(x, 'verificationForm'));
-        },
-        CLAN_SETTINGS_SUBMIT: function () {
-            (T = !0), (E = {});
-        },
-        CLAN_SETTINGS_SUBMIT_SUCCESS: function () {
-            (T = !1), (x = d()(p)), (g = !1), (E = {});
-        },
-        CLAN_SETTINGS_SUBMIT_ERROR: function (e) {
-            let { error: n } = e;
-            (T = !1),
-                (E = {
-                    gameApplicationIds: n.getFirstFieldErrorMessage('game_application_ids'),
-                    playstyle: n.getFirstFieldErrorMessage('play_style'),
-                    description: n.getFirstFieldErrorMessage('description'),
-                    wildcardDescriptors: n.getFirstFieldErrorMessage('wildcard_descriptors'),
-                    interests: n.getFirstFieldErrorMessage('search_terms'),
-                    tag: n.getFirstFieldErrorMessage('tag'),
-                    verificationForm: n.getFirstFieldErrorMessage(['verification_form', 'form_fields'])
-                });
-        },
-        MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
-            let { form: n, isLocalUpdate: t } = e;
-            if (null == p.verificationForm) return !1;
-            if (
-                ((p = {
-                    ...p,
-                    verificationForm: {
-                        ...p.verificationForm,
-                        ...n
-                    }
-                }),
-                t)
-            ) {
-                var a;
-                g = !l().isEqual(p.verificationForm.formFields, null === (a = x.verificationForm) || void 0 === a ? void 0 : a.formFields);
-            } else g = !1;
-        }
-    }));
+p(C, 'displayName', 'ClanSettingsStore');
+let O = new C(c.Z, {
+    CLAN_SETTINGS_FETCH_START: function () {
+        (_ = !1), (x = b()), (j = l()(x)), (N = !1), (v = {});
+    },
+    CLAN_SETTINGS_FETCH_SUCCESS: function (e) {
+        let { settings: t } = e;
+        (x = h({}, b(), t)), ((j = l()(x)).gameApplicationIds = f(j.gameApplicationIds)), (N = !1);
+    },
+    CLAN_SETTINGS_UPDATE: function (e) {
+        let { updates: t } = e,
+            { gameApplicationIds: n } = t;
+        for (let e in (null != n && (t.gameApplicationIds = f(n)), (j = h({}, j, l()(t))), t)) delete v[e], (v = h({}, v));
+        N = !s().isEqual(s().omit(j, 'verificationForm'), s().omit(x, 'verificationForm'));
+    },
+    CLAN_SETTINGS_SUBMIT: function () {
+        (_ = !0), (v = {});
+    },
+    CLAN_SETTINGS_SUBMIT_SUCCESS: function () {
+        (_ = !1), (x = l()(j)), (N = !1), (v = {});
+    },
+    CLAN_SETTINGS_SUBMIT_ERROR: function (e) {
+        let { error: t } = e;
+        (_ = !1),
+            (v = {
+                gameApplicationIds: t.getFirstFieldErrorMessage('game_application_ids'),
+                playstyle: t.getFirstFieldErrorMessage('play_style'),
+                description: t.getFirstFieldErrorMessage('description'),
+                wildcardDescriptors: t.getFirstFieldErrorMessage('wildcard_descriptors'),
+                interests: t.getFirstFieldErrorMessage('search_terms'),
+                tag: t.getFirstFieldErrorMessage('tag'),
+                verificationForm: t.getFirstFieldErrorMessage(['verification_form', 'form_fields'])
+            });
+    },
+    MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
+        var t, n, r;
+        let { form: i, isLocalUpdate: a } = e;
+        if (null == j.verificationForm) return !1;
+        N =
+            ((t = h({}, j)),
+            (n = n = { verificationForm: h({}, j.verificationForm, i) }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  }),
+            (j = t),
+            !!a && !s().isEqual(j.verificationForm.formFields, null == (r = x.verificationForm) ? void 0 : r.formFields));
+    }
+});

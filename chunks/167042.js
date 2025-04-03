@@ -1,11 +1,7 @@
-n.d(t, {
-    $: function () {
-        return l;
-    }
-});
-var i = n(51596);
-let l = {
+n.d(t, { $: () => i });
+var r = n(51596);
+let i = {
     binds: ['mod+k', 'mod+t'],
     comboKeysBindGlobal: !0,
-    action: () => ((0, i.$Z)('KEYBIND', ''), !1)
+    action: () => ((0, r.$Z)('KEYBIND', ''), !1)
 };

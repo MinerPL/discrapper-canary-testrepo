@@ -1,5 +1,1 @@
-e.exports = {
-    deviceOptionCertified: 'deviceOptionCertified_dfcd87',
-    deviceOption: 'deviceOption_dfcd87',
-    deviceOptionLabel: 'deviceOptionLabel_dfcd87'
-};
+e.exports = '/assets/ef7c44b4c741f61d.svg';

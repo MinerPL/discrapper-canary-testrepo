@@ -1,96 +1,116 @@
-t.d(n, {
-    Z: function () {
-        return I;
-    }
-});
-var i = t(735250),
-    a = t(470079),
-    l = t(442837),
-    o = t(218061),
-    r = t(481060),
-    s = t(361213),
-    c = t(778569),
-    d = t(213459),
-    u = t(835473),
-    m = t(541099),
-    p = t(827498),
-    _ = t(783097),
-    C = t(753972),
-    f = t(387658),
-    h = t(536650),
-    A = t(675993),
-    E = t(689079),
-    N = t(689938),
-    v = t(254044),
-    x = t(413097);
-function I(e) {
-    var n;
-    let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
-        P = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
-        L = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        b = (0, _.ye)({ application: L }) ? g : A.Z,
-        R = a.useRef(null),
-        { iconURL: S, name: T } = a.useMemo(
+n.d(t, { Z: () => P }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    l = n(442837),
+    a = n(218061),
+    o = n(481060),
+    c = n(115130),
+    s = n(361213),
+    u = n(778569),
+    d = n(213459),
+    p = n(835473),
+    m = n(424602),
+    f = n(541099),
+    h = n(827498),
+    b = n(783097),
+    C = n(753972),
+    _ = n(387658),
+    x = n(536650),
+    v = n(675993),
+    y = n(689079),
+    N = n(388032),
+    g = n(189102),
+    j = n(413097);
+function P(e) {
+    var t;
+    let { context: n, application: s, sectionName: u } = e,
+        P = 'channel' === n.type ? n.channel : void 0,
+        A = (0, l.e7)([f.Z], () => f.Z.entrypoint()),
+        O = null != (t = (0, p.q)(s.id === y.bi.BUILT_IN ? null : s.id)) ? t : s,
+        I = (0, l.e7)([c.Z], () => c.Z.inDevModeForApplication(O.id)),
+        S = (0, b.ye)(O) ? E : v.Z,
+        T = m.PM.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
+        L = r.useRef(null),
+        [R, w] = r.useState(!1),
+        { iconURL: k, name: Z } = r.useMemo(
             () =>
-                (0, _.sl)(L, {
-                    fakeAppIconURL: x,
+                (0, b.sl)(O, {
+                    fakeAppIconURL: j,
                     size: 84
                 }),
-            [L]
-        );
+            [O]
+        ),
+        M = (0, d.PL)(!0, !0),
+        D = (0, d.LD)(null == P ? void 0 : P.guild_id, !0),
+        W = r.useMemo(() => (0, d.If)(n, O.id), [M, D, n, O.id]),
+        U = !W.isGuildInstalled && !W.isUserInstalled;
     return (
-        a.useEffect(() => {
-            I ? d.ZP.queryInstallOnDemandApp(L.id, t.id) : d.ZP.maybeQueryForInstallLessApps(L.id, t.id);
-        }, [L.id, t.id, I]),
-        (0, i.jsxs)(r.ScrollerNone, {
-            className: v.container,
+        r.useEffect(() => {
+            U && d.ZP.queryInstallOnDemandApp(O.id, null == P ? void 0 : P.id);
+        }, [O.id, null == P ? void 0 : P.id, U]),
+        (0, i.jsxs)(o.u2D, {
+            className: g.container,
             fade: !0,
-            ref: R,
+            ref: L,
             role: 'region',
-            'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: T }),
+            'aria-label': N.NW.formatToPlainString(N.t['4OP4Ul'], { applicationName: Z }),
             children: [
-                (0, i.jsx)(h.Z, {
-                    name: T,
-                    iconURL: S,
-                    scrollerRef: R
+                (0, i.jsx)(x.Z, {
+                    application: O,
+                    context: n,
+                    name: Z,
+                    iconURL: k,
+                    scrollerRef: L,
+                    sectionName: u
                 }),
-                null != S &&
+                null != k &&
                     (0, i.jsx)(C.Z, {
-                        src: S,
-                        className: v.appIcon
+                        src: k,
+                        className: g.appIcon
                     }),
-                (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(b, {
-                    channel: t,
-                    application: L,
-                    sectionName: c
+                (0, i.jsx)(a.Z, { size: T.enabled ? 44 : 54 }),
+                (0, i.jsx)(S, {
+                    context: n,
+                    application: O,
+                    sectionName: u,
+                    hasCommands: R
                 }),
-                P === p._b.TEXT
-                    ? (0, i.jsx)(f.Z, {
-                          channel: t,
-                          application: L,
-                          sectionName: c,
-                          installOnDemand: I
+                A === h._b.TEXT
+                    ? (0, i.jsx)(_.Z, {
+                          context: n,
+                          application: O,
+                          sectionName: u,
+                          installOnDemand: U,
+                          setHasCommands: w
+                      })
+                    : null,
+                T.enabled
+                    ? (0, i.jsx)(v.u, {
+                          context: n,
+                          application: O,
+                          hasCommands: R,
+                          isDeveloperOfThisApp: I
                       })
                     : null
             ]
         })
     );
 }
-function g(e) {
-    let { channel: n, application: t, sectionName: a } = e,
-        l = (0, c.Z)({
-            applicationId: t.id,
+function E(e) {
+    let { context: t, application: n, sectionName: r, hasCommands: l } = e,
+        a = (0, u.Z)({
+            applicationId: n.id,
             size: 2048,
             names: ['embedded_cover']
         }),
-        o = (0, _.yJ)(t),
-        r = null != o && null != o.activity_preview_video_asset_id ? (0, s.Z)(t.id, o.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(A.Z, {
-        channel: n,
-        application: t,
-        imageCoverUrl: l.url,
-        videoUrl: r,
-        sectionName: a
+        o = (0, b.yJ)(n),
+        c = null != o && null != o.activity_preview_video_asset_id ? (0, s.Z)(n.id, o.activity_preview_video_asset_id) : null;
+    return (0, i.jsx)(v.Z, {
+        context: t,
+        application: n,
+        imageCoverUrl: a.url,
+        videoUrl: c,
+        sectionName: r,
+        hasCommands: l
     });
 }

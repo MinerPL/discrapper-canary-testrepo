@@ -1,21 +1,24 @@
-var n = t(735250);
-t(470079);
-var a = t(120356),
-    i = t.n(a),
-    r = t(481060),
-    o = t(673105);
-s.Z = function (e) {
-    let { children: s, withBorder: t = !1 } = e;
-    return (0, n.jsx)(r.FocusBlock, {
-        children: (0, n.jsx)(r.Card, {
-            className: i()(o.componentPreviewWrapper, { [o.componentPreviewWrapperBordered]: t }),
-            outline: t,
-            children: (0, n.jsx)('div', {
-                className: o.componentPreview,
-                onClickCapture: function (e) {
-                    e.stopPropagation();
-                },
-                children: s
+n.d(t, { Z: () => l });
+var r = n(200651);
+n(192379);
+var o = n(120356),
+    s = n.n(o),
+    a = n(481060),
+    i = n(409667);
+let l = function (e) {
+    let { allowClicks: t = !1, children: n, withBorder: o = !1 } = e;
+    return (0, r.jsx)(a.Rny, {
+        children: (0, r.jsx)(a.Zbd, {
+            className: s()(i.componentPreviewWrapper, { [i.componentPreviewWrapperBordered]: o }),
+            outline: o,
+            children: (0, r.jsx)('div', {
+                className: i.componentPreview,
+                onClickCapture: t
+                    ? void 0
+                    : function (e) {
+                          e.stopPropagation();
+                      },
+                children: n
             })
         })
     });

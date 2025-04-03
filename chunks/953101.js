@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => i }), n(47120);
 let r = ['allow-pointer-lock', 'allow-scripts', 'allow-same-origin', 'allow-forms'];
 function i(e) {
     let { allowPopups: t } = e,

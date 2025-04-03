@@ -1,50 +1,46 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var a = n(470079),
-    s = n(924826);
-function r(e) {
-    let { listRef: t, padding: n, channel: r, isEnabled: l } = e,
-        i = a.useCallback(
+n.d(t, { Z: () => i });
+var r = n(192379),
+    a = n(924826);
+function i(e) {
+    let { listRef: t, padding: n, channel: i, isEnabled: l } = e,
+        s = r.useCallback(
             (e) => {
-                let a = t.current,
-                    s = document.querySelector(e);
-                null != s &&
-                    (null == a ||
-                        a.scrollIntoViewNode({
-                            node: s,
+                let r = t.current,
+                    a = document.querySelector(e);
+                null != a &&
+                    (null == r ||
+                        r.scrollIntoViewNode({
+                            node: a,
                             padding: n,
                             callback: () => {
                                 var t;
-                                null === (t = document.querySelector(e)) || void 0 === t || t.focus({ preventScroll: !0 });
+                                null == (t = document.querySelector(e)) || t.focus({ preventScroll: !0 });
                             }
                         }));
             },
-            [n]
+            [n, t]
         ),
-        o = a.useCallback(
+        o = r.useCallback(
             () =>
                 new Promise((e) => {
                     let n = t.current;
                     null == n || n.scrollToTop({ callback: () => requestAnimationFrame(e) });
                 }),
-            []
+            [t]
         ),
-        c = a.useCallback(
+        c = r.useCallback(
             () =>
                 new Promise((e) => {
                     let n = t.current;
                     null == n || n.scrollToBottom({ callback: () => requestAnimationFrame(e) });
                 }),
-            []
+            [t]
         );
-    return (0, s.ZP)({
-        id: 'forum-channel-list-'.concat(r.id),
+    return (0, a.ZP)({
+        id: 'forum-channel-list-'.concat(i.id),
         isEnabled: l,
         scrollToStart: o,
         scrollToEnd: c,
-        setFocus: i
+        setFocus: s
     });
 }

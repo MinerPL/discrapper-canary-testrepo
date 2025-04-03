@@ -1,47 +1,38 @@
 n.d(t, {
-    $Z: function () {
-        return i;
-    },
-    M0: function () {
-        return o;
-    },
-    Od: function () {
-        return l;
-    },
-    vG: function () {
-        return s;
-    }
+    $Z: () => a,
+    M0: () => l,
+    Od: () => o,
+    vG: () => s
 });
 var r,
-    i,
-    a = n(689938);
+    i = n(388032);
 let s = 'emails';
-((r = i || (i = {})).COMMUNICATION = 'communication'), (r.SOCIAL = 'social'), (r.TIPS = 'tips'), (r.RECOMMENDATIONS_AND_EVENTS = 'recommendations_and_events'), (r.UPDATES_AND_ANNOUNCEMENTS = 'updates_and_announcements'), (r.FAMILY_CENTER_DIGEST = 'family_center_digest');
-let o = ['tips', 'recommendations_and_events', 'updates_and_announcements'],
-    l = [
+var a = (((r = {}).COMMUNICATION = 'communication'), (r.SOCIAL = 'social'), (r.TIPS = 'tips'), (r.RECOMMENDATIONS_AND_EVENTS = 'recommendations_and_events'), (r.UPDATES_AND_ANNOUNCEMENTS = 'updates_and_announcements'), (r.FAMILY_CENTER_DIGEST = 'family_center_digest'), r);
+let l = ['tips', 'recommendations_and_events', 'updates_and_announcements'],
+    o = [
         {
             category: 'communication',
-            label: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION,
-            subLabel: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION_SUBLABEL
+            label: () => i.NW.string(i.t['B75+xc']),
+            subLabel: () => i.NW.string(i.t.ZHg9TU)
         },
         {
             category: 'social',
-            label: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL,
-            subLabel: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL_SUBLABEL
+            label: () => i.NW.string(i.t.sxn7lZ),
+            subLabel: () => i.NW.string(i.t.l7sdzM)
         },
         {
             category: 'updates_and_announcements',
-            label: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS,
-            subLabel: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS_SUBLABEL
+            label: () => i.NW.string(i.t.EkxXhY),
+            subLabel: () => i.NW.string(i.t['8ba9Q0'])
         },
         {
             category: 'tips',
-            label: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS,
-            subLabel: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS_SUBLABEL
+            label: () => i.NW.string(i.t.jNrkrK),
+            subLabel: () => i.NW.string(i.t['FF6/+P'])
         },
         {
             category: 'recommendations_and_events',
-            label: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS,
-            subLabel: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS_SUBLABEL
+            label: () => i.NW.string(i.t.E8g1l5),
+            subLabel: () => i.NW.string(i.t.X4JMt7)
         }
     ];

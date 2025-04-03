@@ -1,25 +1,21 @@
 n.d(t, {
-    Z: function () {
-        return o;
-    },
-    o: function () {
-        return l;
-    }
+    Z: () => s,
+    o: () => l
 });
 var r = n(230367),
     i = n(69122),
-    a = n(825842);
-let s = {
+    o = n(825842);
+let a = {
     readUnknownField: !0,
     readerFactory: (e) => new l(e)
 };
-function o(e) {
-    return e ? Object.assign(Object.assign({}, s), e) : s;
+function s(e) {
+    return e ? Object.assign(Object.assign({}, a), e) : a;
 }
 class l {
     constructor(e, t) {
-        (this.varint64 = a.sg),
-            (this.uint32 = a.jI),
+        (this.varint64 = o.sg),
+            (this.uint32 = o.jI),
             (this.buf = e),
             (this.len = e.length),
             (this.pos = 0),

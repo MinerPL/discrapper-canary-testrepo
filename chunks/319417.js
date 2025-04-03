@@ -1,34 +1,41 @@
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+n.d(t, { Z: () => f });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
     l = n(443603),
-    u = n(689938),
-    c = n(541411);
-t.Z = i.memo(function (e) {
+    c = n(388032),
+    u = n(484585);
+function d(e) {
     let { onClick: t, disabled: n = !1 } = e;
-    return (0, r.jsx)('div', {
-        className: c.separator,
-        children: (0, r.jsx)('div', {
-            className: c.buttonContainer,
-            children: (0, r.jsx)(l.Z, {
-                className: c.button,
-                innerClassName: c.innerButton,
-                childClassName: s()(c.buttonChild, {
-                    [c.disabled]: n,
-                    [c.activeButtonChild]: !n
-                }),
-                onClick: t,
-                disabled: n,
-                isActive: !1,
-                'aria-label': u.Z.Messages.SEND_MESSAGE,
-                children: (0, r.jsx)(o.SendMessageIcon, {
-                    size: 'xs',
-                    color: 'currentColor',
-                    className: c.sendIcon
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)('div', { className: u.separator }),
+            (0, r.jsx)('div', {
+                className: u.container,
+                children: (0, r.jsx)('div', {
+                    className: u.buttonContainer,
+                    children: (0, r.jsx)(l.Z, {
+                        className: u.button,
+                        innerClassName: u.innerButton,
+                        childClassName: a()(u.buttonChild, {
+                            [u.disabled]: n,
+                            [u.activeButtonChild]: !n
+                        }),
+                        onClick: t,
+                        disabled: n,
+                        isActive: !1,
+                        'aria-label': c.NW.string(c.t.oeb1vr),
+                        children: (0, r.jsx)(s.Uuj, {
+                            size: 'xs',
+                            color: 'currentColor',
+                            className: u.sendIcon
+                        })
+                    })
                 })
             })
-        })
+        ]
     });
-});
+}
+let f = i.memo(d);

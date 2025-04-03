@@ -1,2 +1,2 @@
-var n = 'object' == typeof global && global && global.Object === Object && global;
-t.Z = n;
+r.d(t, { Z: () => n });
+let n = 'object' == typeof global && global && global.Object === Object && global;

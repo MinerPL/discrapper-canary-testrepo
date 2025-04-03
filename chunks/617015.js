@@ -1,18 +1,12 @@
 n.d(t, {
-    De: function () {
-        return s;
-    },
-    NV: function () {
-        return a;
-    },
-    nG: function () {
-        return i;
-    },
-    yf: function () {
-        return r;
-    }
+    M1: () => s,
+    NV: () => i,
+    aS: () => o,
+    nG: () => r,
+    yf: () => a
 });
-let i = 64,
-    a = 62,
-    s = 24,
-    r = 5;
+let r = 64,
+    i = 62,
+    o = 50,
+    a = 5,
+    s = 'ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL';

@@ -1,58 +1,108 @@
-function r(e, t) {
+function r(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function i(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                r(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function o(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function a(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : o(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function s(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { onBeforeBatch: r } = n,
-        i = new Set();
-    function a(e) {
-        null != e.channel_id && i.has(e.channel_id) && t(e);
-    }
+        o = new Set();
     function s(e) {
+        null != e.channel_id && o.has(e.channel_id) && t(e);
+    }
+    function l() {
+        o.clear();
+    }
+    function c(e) {
+        let { channelId: t } = e;
+        null != t && o.add(t);
+    }
+    function u(e) {
         let { message: t } = e;
-        if (null != t.channel_id && !!i.has(t.channel_id)) null == r || r(), a(t);
+        null != t.channel_id && o.has(t.channel_id) && (null == r || r(), s(t));
     }
-    function o(e) {
+    function d(e) {
         let { channelId: t, messages: n } = e;
-        i.add(t), null == r || r(), n.forEach((e) => a(e));
+        o.add(t), null == r || r(), n.forEach((e) => s(e));
     }
-    function l(e) {
+    function f(e) {
+        let { messages: n } = e;
+        null == r || r(), n.forEach((e) => t(e));
+    }
+    function _(e) {
+        let { messages: n } = e;
+        null == r || r(), n.forEach((e) => t(e));
+    }
+    function p(e) {
         null == r || r(),
             e.messages.forEach((e) => {
                 e.forEach((e) => t(e));
             });
     }
-    e.actions = {
-        ...e.actions,
-        POST_CONNECTION_OPEN: function () {
-            i.clear();
-        },
+    e.actions = a(i({}, e.actions), {
+        POST_CONNECTION_OPEN: l,
         MESSAGE_CREATE: {
-            callback: s,
+            callback: u,
             autoSubscribe: !1
         },
-        MESSAGE_UPDATE: s,
-        LOAD_MESSAGES_SUCCESS: o,
-        LOAD_MESSAGES_AROUND_SUCCESS: o,
-        LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
-            let { messages: n } = e;
-            null == r || r(), n.forEach((e) => t(e));
-        },
-        LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
-            let { messages: n } = e;
-            null == r || r(), n.forEach((e) => t(e));
-        },
-        SEARCH_FINISH: l,
-        MOD_VIEW_SEARCH_FINISH: l,
+        MESSAGE_UPDATE: u,
+        LOAD_MESSAGES_SUCCESS: d,
+        LOAD_MESSAGES_AROUND_SUCCESS: d,
+        LOAD_RECENT_MENTIONS_SUCCESS: f,
+        LOAD_PINNED_MESSAGES_SUCCESS: _,
+        SEARCH_FINISH: p,
+        MOD_VIEW_SEARCH_FINISH: p,
         CHANNEL_SELECT: {
-            callback: function (e) {
-                let { channelId: t } = e;
-                null != t && i.add(t);
-            },
+            callback: c,
             autoSubscribe: !1
         }
-    };
+    });
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => s }), n(47120);

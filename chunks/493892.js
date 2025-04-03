@@ -1,24 +1,18 @@
 n.d(t, {
-    DQ: function () {
-        return l;
-    },
-    He: function () {
-        return o;
-    },
-    P1: function () {
-        return s;
-    }
+    DQ: () => l,
+    He: () => s,
+    P1: () => a
 });
 var r = n(825829),
     i = n(594174),
-    a = n(981631);
-function s(e) {
-    return void 0 !== e && e.type !== a.d4z.DM;
+    o = n(981631);
+function a(e) {
+    return void 0 !== e && e.type !== o.d4z.DM;
 }
-function o(e) {
+function s(e) {
     var t, n;
-    return null !== (n = null === (t = i.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(a.xW$.SPAMMER)) && void 0 !== n && n;
+    return null != (n = null == (t = i.default.getUser(e)) ? void 0 : t.hasFlag(o.xW$.SPAMMER)) && n;
 }
 function l(e) {
-    return o(e.author.id) && !(0, r.nY)(e);
+    return s(e.author.id) && !(0, r.nY)(e);
 }

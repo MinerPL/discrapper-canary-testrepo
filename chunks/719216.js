@@ -1,44 +1,40 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
-var r = n(735250);
-n(470079);
-var i = n(763472),
-    a = n(49012),
-    s = n(591759),
-    o = n(915863);
-function l(e) {
-    let { activity: t, color: n, user: l, look: u, onAction: c } = e;
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var l = n(763472),
+    i = n(49012),
+    o = n(591759),
+    a = n(915863);
+function s(e) {
+    let { activity: t, color: n, user: s, look: c, onAction: u } = e;
     if ((null == t ? void 0 : t.buttons) == null || t.buttons.length < 1) return null;
     async function d(e, t, n) {
         try {
-            let r = await (0, i.sd)(e, t);
+            let r = await (0, l.sd)(e, t);
             if (r.button_urls.length <= n) return;
-            let o = r.button_urls[n];
-            if ('string' != typeof o) return;
-            let l = s.Z.safeParseWithQuery(o);
-            if (null == l || null == l.protocol || null == l.hostname) return;
-            (0, a.q)({
-                href: s.Z.format(l),
+            let a = r.button_urls[n];
+            if ('string' != typeof a) return;
+            let s = o.Z.safeParseWithQuery(a);
+            if (null == s || null == s.protocol || null == s.hostname) return;
+            (0, i.q)({
+                href: o.Z.format(s),
                 trusted: !1
             });
         } catch (e) {}
     }
     return (0, r.jsx)(r.Fragment, {
-        children: t.buttons.map((e, i) =>
+        children: t.buttons.map((e, l) =>
             (0, r.jsx)(
-                o.Z,
+                a.Z,
                 {
                     color: n,
-                    look: u,
+                    look: c,
                     onClick: () => {
-                        null == c || c(), d(t, l.id, i);
+                        null == u || u(), d(t, s.id, l);
                     },
                     children: e
                 },
-                'customButton-'.concat(i)
+                'customButton-'.concat(l)
             )
         )
     });

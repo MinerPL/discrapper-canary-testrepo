@@ -1,93 +1,35 @@
-n.d(t, {
-    Dw: function () {
-        return c;
-    },
-    RM: function () {
-        return _;
-    },
-    SC: function () {
-        return d;
-    },
-    iA: function () {
-        return f;
-    },
-    pj: function () {
-        return u;
-    },
-    xD: function () {
-        return E;
+function r(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function i(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
     }
-});
-var r = n(735250),
-    i = n(470079),
-    a = n(227879),
-    s = n(260034),
-    o = n(993365),
-    l = n(4834);
-function u(e) {
-    return (0, r.jsx)(a.bL, {
-        ...e,
-        className: l.cell
-    });
+    return n;
 }
-function c(e) {
-    let { children: t, ...n } = e;
-    return (0, r.jsx)(a.sg, {
-        ...n,
-        className: l.column,
-        children: (0, r.jsx)(o.x, {
-            variant: 'eyebrow',
-            className: l.columnText,
-            children: t
-        })
-    });
+function o(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
 }
-function d(e) {
-    return (0, r.jsx)(a.X2, {
-        ...e,
-        className: l.row
-    });
-}
-function _(e) {
-    return (0, r.jsx)(a.RM, {
-        ...e,
-        className: l.body
-    });
-}
-function E(e) {
-    return (0, r.jsx)(a.xD, {
-        ...e,
-        className: l.header
-    });
-}
-function f(e) {
-    let { title: t, header: n, footer: o, ...u } = e,
-        c = i.useId();
-    return (0, r.jsxs)('div', {
-        className: l.container,
-        children: [
-            (0, r.jsxs)('div', {
-                className: l.toolbar,
-                children: [
-                    (0, r.jsx)(s.X, {
-                        className: l.__invalid_title,
-                        variant: 'heading-md/semibold',
-                        id: c,
-                        children: t
-                    }),
-                    (0, r.jsx)('div', { children: n })
-                ]
-            }),
-            (0, r.jsx)(a.iA, {
-                ...u,
-                'aria-labelledby': c,
-                className: l.table
-            }),
-            null != o &&
-                (0, r.jsx)('div', {
-                    className: l.footer,
-                    children: o
-                })
-        ]
-    });
-}
+n(200651), n(192379), n(993365), n(481060), n(25330);

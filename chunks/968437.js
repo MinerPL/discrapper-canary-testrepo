@@ -1,38 +1,35 @@
 n.d(t, {
-    WD: function () {
-        return l;
-    },
-    nt: function () {
-        return o;
-    }
+    WD: () => c,
+    nt: () => l
 });
 var r = n(404759),
     i = n.n(r);
 n(913527);
-var a = n(124368),
-    s = n(689938);
-function o() {
+var o = n(70956),
+    a = n(124368),
+    s = n(388032);
+function l() {
     return [
         {
-            label: s.Z.Messages.AUTO_ARCHIVE_DURATION_1_HOUR,
-            value: 60
+            label: s.NW.string(s.t.cs8A1d),
+            value: o.Z.Minutes.HOUR
         },
         {
-            label: s.Z.Messages.AUTO_ARCHIVE_DURATION_24_HOURS,
-            value: 1440
+            label: s.NW.string(s.t.zFKbrK),
+            value: o.Z.Minutes.DAY
         },
         {
-            label: s.Z.Messages.AUTO_ARCHIVE_DURATION_3_DAYS,
-            value: 4320
+            label: s.NW.string(s.t.TmPIZW),
+            value: 3 * o.Z.Minutes.DAY
         },
         {
-            label: s.Z.Messages.AUTO_ARCHIVE_DURATION_1_WEEK,
-            value: 10080
+            label: s.NW.string(s.t['/7i2en']),
+            value: o.Z.Minutes.WEEK
         }
     ];
 }
-function l(e, t) {
+function c(e, t) {
     var n;
-    return null !== (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== n ? n : a.AX;
+    return null != (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) ? n : a.AX;
 }
-i()(() => o().map((e) => e.value));
+o.Z.Minutes.HOUR, o.Z.Minutes.DAY, o.Z.Minutes.DAY, o.Z.Minutes.WEEK, i()(() => l().map((e) => e.value));

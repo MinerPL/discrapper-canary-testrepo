@@ -1,8 +1,4 @@
-n.d(t, {
-    B: function () {
-        return r;
-    }
-});
+n.d(t, { B: () => r });
 let r = {
     bg: () => n.e('74459').then(n.t.bind(n, 731376, 19)),
     cs: () => n.e('73149').then(n.t.bind(n, 788014, 19)),

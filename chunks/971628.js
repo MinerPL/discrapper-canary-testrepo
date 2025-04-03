@@ -1,107 +1,144 @@
-a.d(t, {
-    G: function () {
-        return b;
-    },
-    Z: function () {
-        return R;
-    }
+r.d(t, {
+    G: () => v,
+    Z: () => T
 }),
-    a(47120),
-    a(724458);
-var n = a(735250),
-    l = a(470079),
-    s = a(120356),
-    r = a.n(s),
-    i = a(91192),
-    o = a(481060),
-    c = a(385499),
-    d = a(600164),
-    u = a(313201),
-    m = a(565138),
-    h = a(631969),
-    S = a(605436),
-    x = a(537383),
-    T = a(71080),
-    g = a(689938),
-    f = a(779077);
-let v = (0, u.hQ)(),
-    _ = (0, u.hQ)();
-function b(e) {
+    r(47120),
+    r(566702);
+var n = r(200651),
+    l = r(192379),
+    i = r(120356),
+    a = r.n(i),
+    s = r(91192),
+    o = r(481060),
+    c = r(385499),
+    d = r(600164),
+    u = r(313201),
+    m = r(565138),
+    x = r(631969),
+    h = r(605436),
+    b = r(537383),
+    y = r(71080),
+    f = r(388032),
+    p = r(208838);
+let g = (0, u.hQ)(),
+    j = (0, u.hQ)();
+function v(e) {
     return ''.concat(e.rowType, ':').concat(e.id);
 }
 function E(e) {
     return (0, n.jsx)(
-        o.FormTitle,
+        o.vwX,
         {
             tag: 'h5',
-            className: r()(f.sectionTitle, f.rowHeight),
+            className: a()(p.sectionTitle, p.rowHeight),
             children: e
         },
         e
     );
 }
-function C(e) {
-    let { id: t, children: a, rowLabel: l, checked: s, onSelect: c, disabled: u, showCheckbox: m, selected: h, onMouseEnter: S, 'aria-posinset': x, 'aria-setsize': T } = e,
-        g = (0, i.JA)(t);
-    return (0, n.jsx)(o.Clickable, {
-        ...g,
-        id: t,
-        className: r()(f.addMemberRow, { [f.selectedRow]: h }),
-        onClick: (e) => {
-            !u && (e.preventDefault(), c());
-        },
-        onMouseEnter: S,
-        role: 'option',
-        'aria-disabled': u,
-        'aria-selected': s,
-        'aria-setsize': T,
-        'aria-posinset': x,
-        children: (0, n.jsxs)(d.Z, {
-            justify: d.Z.Justify.BETWEEN,
-            align: d.Z.Align.CENTER,
-            children: [
-                m
-                    ? (0, n.jsx)(o.Checkbox, {
-                          displayOnly: !0,
-                          size: 18,
-                          value: s,
-                          type: o.Checkbox.Types.INVERTED,
-                          disabled: u,
-                          children: (0, n.jsx)('div', {
-                              className: f.checkboxLabel,
-                              children: a
-                          })
-                      })
-                    : a,
-                null != l
-                    ? (0, n.jsx)(o.Text, {
-                          color: 'text-muted',
-                          variant: 'text-xs/normal',
-                          children: l
-                      })
-                    : null
-            ]
-        })
-    });
+function S(e) {
+    var t, r;
+    let { id: l, children: i, rowLabel: c, checked: u, onSelect: m, disabled: x, showCheckbox: h, selected: b, onMouseEnter: y, 'aria-posinset': f, 'aria-setsize': g } = e,
+        j = (0, s.JA)(l);
+    return (0, n.jsx)(
+        o.P3F,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, j)),
+        (r = r =
+            {
+                id: l,
+                className: a()(p.addMemberRow, { [p.selectedRow]: b }),
+                onClick: (e) => {
+                    x || (e.preventDefault(), m());
+                },
+                onMouseEnter: y,
+                role: 'option',
+                'aria-disabled': x,
+                'aria-selected': u,
+                'aria-setsize': g,
+                'aria-posinset': f,
+                children: (0, n.jsxs)(d.Z, {
+                    justify: d.Z.Justify.BETWEEN,
+                    align: d.Z.Align.CENTER,
+                    children: [
+                        h
+                            ? (0, n.jsx)(o.XZJ, {
+                                  displayOnly: !0,
+                                  size: 18,
+                                  value: u,
+                                  type: o.XZJ.Types.INVERTED,
+                                  disabled: x,
+                                  children: (0, n.jsx)('div', {
+                                      className: p.checkboxLabel,
+                                      children: i
+                                  })
+                              })
+                            : i,
+                        null != c
+                            ? (0, n.jsx)(o.Text, {
+                                  color: 'text-muted',
+                                  variant: 'text-xs/normal',
+                                  children: c
+                              })
+                            : null
+                    ]
+                })
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t)
+    );
 }
-function R(e) {
-    let { listClassName: t, pendingAdditions: a, query: s, onQueryChange: i, onClickRow: u, onRemovePendingAddition: R, roles: p = [], members: I = [], users: M = [], guilds: A = [], placeholderText: w, disabledText: N, hintText: Z, searchTitleText: j, renderEmptyText: L, focusSearchAfterReady: U, isReady: D, maxCount: y, hideRowLabel: O = !1 } = e,
-        G = l.useRef(null),
+function T(e) {
+    let { listClassName: t, pendingAdditions: r, query: i, onQueryChange: s, onClickRow: u, onRemovePendingAddition: T, roles: w = [], members: R = [], users: O = [], guilds: N = [], placeholderText: k, disabledText: C, hintText: L, searchTitleText: M, renderEmptyText: P, focusSearchAfterReady: Z, isReady: z, maxCount: A, hideRowLabel: I = !1 } = e,
         B = l.useRef(null),
-        k = [p.length, I.length, M.length, A.length],
-        [P, F] = l.useState(!1),
-        [H, z] = l.useState(0),
-        [$, K] = l.useState(-1);
+        D = l.useRef(null),
+        W = [w.length, R.length, O.length, N.length],
+        [$, U] = l.useState(!1),
+        [_, q] = l.useState(0),
+        [F, G] = l.useState(-1);
     l.useEffect(() => {
         var e;
-        null === (e = G.current) || void 0 === e || e.focus();
+        null == (e = B.current) || e.focus();
     }, []);
     let Q = l.useCallback(function (e, t) {
-            let a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-            if ((z(e), K(t), a)) {
+            let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+            if ((q(e), G(t), r)) {
                 var n;
-                null === (n = B.current) ||
-                    void 0 === n ||
+                null == (n = D.current) ||
                     n.scrollToIndex({
                         section: null != e ? e : 0,
                         row: null != t ? t : 0,
@@ -109,113 +146,113 @@ function R(e) {
                     });
             }
         }, []),
-        W = l.useCallback(
+        V = l.useCallback(
             (e, t) => {
                 if (null == t) return;
-                i('');
-                let a = (e === T.m$.ROLES ? p : [])[t];
-                a.rowType !== T.aC.EMPTY_STATE && u(a);
+                s('');
+                let r = (e === y.m$.ROLES ? w : [])[t];
+                r.rowType !== y.aC.EMPTY_STATE && u(r);
             },
-            [p, u, i]
+            [w, u, s]
         ),
-        q = l.useCallback(
+        Y = l.useCallback(
             (e) => {
                 var t;
-                if (null != e && e.rowType !== T.aC.EMPTY_STATE) u(e), i(''), null === (t = G.current) || void 0 === t || t.focus();
+                null != e && e.rowType !== y.aC.EMPTY_STATE && (u(e), s(''), null == (t = B.current) || t.focus());
             },
-            [u, i]
+            [u, s]
         ),
-        V = l.useMemo(() => Object.keys(a), [a]),
-        Y = l.useMemo(() => I.some((e) => !e.disabled) || p.some((e) => !e.disabled) || M.some((e) => !e.disabled) || A.some((e) => !e.disabled), [I, p, M, A]) || '' === s.trim();
-    function J() {
+        J = l.useMemo(() => Object.keys(r), [r]),
+        X = l.useMemo(() => R.some((e) => !e.disabled) || w.some((e) => !e.disabled) || O.some((e) => !e.disabled) || N.some((e) => !e.disabled), [R, w, O, N]) || '' === i.trim();
+    function H() {
         var e;
-        F(!(null === (e = B.current) || void 0 === e ? void 0 : e.isScrolledToTop()) && Y);
+        U(!(null == (e = D.current) ? void 0 : e.isScrolledToTop()) && X);
     }
     return (
         l.useEffect(() => {
-            J();
+            H();
         }),
         (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)('div', {
-                    className: r()(f.searchBox, { [f.scrollSeparator]: P }),
+                    className: a()(p.searchBox, { [p.scrollSeparator]: $ }),
                     children: [
-                        null != j &&
-                            (0, n.jsx)(o.FormTitle, {
-                                tag: o.FormTitleTags.H5,
-                                children: j
+                        null != M &&
+                            (0, n.jsx)(o.vwX, {
+                                tag: o.RB0.H5,
+                                children: M
                             }),
-                        (0, n.jsx)(x.Z, {
-                            ref: G,
-                            query: s,
-                            onQueryChange: i,
-                            selectedSection: H,
-                            selectedRow: $,
+                        (0, n.jsx)(b.Z, {
+                            ref: B,
+                            query: i,
+                            onQueryChange: s,
+                            selectedSection: _,
+                            selectedRow: F,
                             onSelectionChange: Q,
-                            onSelect: W,
-                            tags: V.map((e) => a[e].display),
-                            sections: k,
+                            onSelect: V,
+                            tags: J.map((e) => r[e].display),
+                            sections: W,
                             onRemoveTag: function (e) {
-                                R(V[e]);
+                                T(J[e]);
                             },
-                            placeholder: w,
-                            focusAfterReady: U,
-                            isReady: D,
-                            'aria-labelledby': v,
-                            'aria-controls': _
+                            placeholder: k,
+                            focusAfterReady: Z,
+                            isReady: z,
+                            'aria-labelledby': g,
+                            'aria-controls': j
                         }),
-                        null != Z
+                        null != L
                             ? (0, n.jsx)(o.Text, {
                                   variant: 'text-xs/normal',
-                                  children: Z
+                                  children: L
                               })
                             : null
                     ]
                 }),
-                Y
-                    ? (0, n.jsx)(o.List, {
-                          ref: B,
-                          className: r()(f.roleMemberList, t),
-                          sections: k,
+                X
+                    ? (0, n.jsx)(o.aVo, {
+                          ref: D,
+                          className: a()(p.roleMemberList, t),
+                          sections: W,
                           renderRow: (e) => {
                               let t,
                                   l,
-                                  { section: s, row: i } = e,
+                                  { section: i, row: s } = e,
                                   d = null,
                                   u = !1,
-                                  h = !1,
                                   x = !1,
-                                  g = null != y && Object.keys(a).length >= y;
-                              switch (s) {
-                                  case T.m$.ROLES:
-                                      (u = (l = b((d = p[i]))) in a || d.disabled),
-                                          (h = d.disabled || g),
-                                          (x = H === T.m$.ROLES && $ === i),
+                                  b = !1,
+                                  f = null != A && Object.keys(r).length >= A;
+                              switch (i) {
+                                  case y.m$.ROLES:
+                                      (u = (l = v((d = w[s]))) in r || d.disabled),
+                                          (x = d.disabled || (!u && f)),
+                                          (b = _ === y.m$.ROLES && F === s),
                                           (t = (0, n.jsxs)('div', {
-                                              className: f.rowBody,
+                                              className: p.rowBody,
                                               children: [
                                                   (0, n.jsx)('div', {
-                                                      className: r()(f.rowHeight, f.alignCenter),
-                                                      children: (0, n.jsx)(o.ShieldUserIcon, {
+                                                      className: a()(p.rowHeight, p.alignCenter),
+                                                      children: (0, n.jsx)(o.lZ8, {
                                                           size: 'custom',
                                                           color: d.colorString,
                                                           height: 20
                                                       })
                                                   }),
                                                   (0, n.jsxs)('div', {
-                                                      className: f.rowLabel,
+                                                      className: p.rowLabel,
                                                       children: [
                                                           (0, n.jsx)(o.Text, {
                                                               variant: 'text-sm/medium',
-                                                              className: f.__invalid_rowTitle,
-                                                              color: d.rowType === T.aC.EMPTY_STATE ? 'text-muted' : 'text-normal',
+                                                              className: p.__invalid_rowTitle,
+                                                              color: d.rowType === y.aC.EMPTY_STATE ? 'text-muted' : 'text-normal',
                                                               children: d.name
                                                           }),
-                                                          d.disabled && null != N
+                                                          d.disabled && null != C
                                                               ? (0, n.jsx)(o.Text, {
                                                                     color: 'header-secondary',
                                                                     variant: 'text-xs/normal',
-                                                                    children: N
+                                                                    children: C
                                                                 })
                                                               : null
                                                       ]
@@ -223,27 +260,27 @@ function R(e) {
                                               ]
                                           }));
                                       break;
-                                  case T.m$.MEMBERS:
-                                      (u = (l = b((d = I[i]))) in a || d.disabled),
-                                          (h = d.disabled || g),
-                                          (x = H === T.m$.MEMBERS && $ === i),
+                                  case y.m$.MEMBERS:
+                                      (u = (l = v((d = R[s]))) in r || d.disabled),
+                                          (x = d.disabled || (!u && f)),
+                                          (b = _ === y.m$.MEMBERS && F === s),
                                           (t = (0, n.jsxs)('div', {
-                                              className: f.rowBody,
+                                              className: p.rowBody,
                                               children: [
-                                                  (0, n.jsx)(o.Avatar, {
+                                                  (0, n.jsx)(o.qEK, {
                                                       src: d.avatarURL,
-                                                      size: o.AvatarSizes.SIZE_24,
+                                                      size: o.EFr.SIZE_24,
                                                       'aria-label': ''
                                                   }),
                                                   (0, n.jsx)(o.Text, {
-                                                      className: f.rowLabel,
+                                                      className: p.rowLabel,
                                                       variant: 'text-sm/normal',
                                                       children: d.name
                                                   }),
                                                   null != d.nickname
                                                       ? (0, n.jsx)(o.Text, {
                                                             color: 'text-muted',
-                                                            className: f.rowLabelSubText,
+                                                            className: p.rowLabelSubText,
                                                             variant: 'text-sm/normal',
                                                             'aria-hidden': !0,
                                                             children: d.username
@@ -253,30 +290,30 @@ function R(e) {
                                               ]
                                           }));
                                       break;
-                                  case T.m$.USERS:
-                                      (u = (l = b((d = M[i]))) in a || d.disabled),
-                                          (h = d.disabled || g),
-                                          (x = H === T.m$.USERS && $ === i),
+                                  case y.m$.USERS:
+                                      (u = (l = v((d = O[s]))) in r || d.disabled),
+                                          (x = d.disabled || (!u && f)),
+                                          (b = _ === y.m$.USERS && F === s),
                                           (t = (0, n.jsxs)('div', {
-                                              className: f.rowBody,
+                                              className: p.rowBody,
                                               children: [
-                                                  (0, n.jsx)(o.Avatar, {
+                                                  (0, n.jsx)(o.qEK, {
                                                       src: d.avatarURL,
-                                                      size: o.AvatarSizes.SIZE_24,
+                                                      size: o.EFr.SIZE_24,
                                                       'aria-label': ''
                                                   }),
                                                   (0, n.jsxs)('div', {
-                                                      className: f.rowLabel,
+                                                      className: p.rowLabel,
                                                       children: [
                                                           (0, n.jsx)(o.Text, {
                                                               variant: 'text-sm/normal',
                                                               children: d.name
                                                           }),
-                                                          d.disabled && null != N
+                                                          d.disabled && null != C
                                                               ? (0, n.jsx)(o.Text, {
                                                                     color: 'header-secondary',
                                                                     variant: 'text-xs/normal',
-                                                                    children: N
+                                                                    children: C
                                                                 })
                                                               : null
                                                       ]
@@ -284,12 +321,12 @@ function R(e) {
                                               ]
                                           }));
                                       break;
-                                  case T.m$.GUILDS:
-                                      (u = (l = b((d = A[i]))) in a || d.disabled),
-                                          (h = d.disabled || g),
-                                          (x = H === T.m$.GUILDS && $ === i),
+                                  case y.m$.GUILDS:
+                                      (u = (l = v((d = N[s]))) in r || d.disabled),
+                                          (x = d.disabled || (!u && f)),
+                                          (b = _ === y.m$.GUILDS && F === s),
                                           (t = (0, n.jsxs)('div', {
-                                              className: f.rowBody,
+                                              className: p.rowBody,
                                               children: [
                                                   (0, n.jsx)(m.Z, {
                                                       guild: d.guild,
@@ -297,7 +334,7 @@ function R(e) {
                                                       size: m.Z.Sizes.SMALLER
                                                   }),
                                                   (0, n.jsx)('div', {
-                                                      className: f.rowLabel,
+                                                      className: p.rowLabel,
                                                       children: (0, n.jsx)(o.Text, {
                                                           variant: 'text-sm/medium',
                                                           color: 'text-normal',
@@ -310,18 +347,18 @@ function R(e) {
                               return null == d
                                   ? null
                                   : (0, n.jsx)(
-                                        C,
+                                        S,
                                         {
-                                            id: 'user-row-'.concat(i),
-                                            rowLabel: O ? null : S.zB(d.rowType),
+                                            id: 'user-row-'.concat(s),
+                                            rowLabel: I ? null : h.zB(d.rowType),
                                             checked: u,
-                                            disabled: h,
-                                            onSelect: () => q(d),
-                                            showCheckbox: d.rowType !== T.aC.EMPTY_STATE,
-                                            onMouseEnter: () => Q(s, i, !1),
-                                            selected: x,
-                                            'aria-posinset': i + 1,
-                                            'aria-setsize': k.reduce((e, t) => e + t, 0),
+                                            disabled: x,
+                                            onSelect: () => Y(d),
+                                            showCheckbox: d.rowType !== y.aC.EMPTY_STATE,
+                                            onMouseEnter: () => Q(i, s, !1),
+                                            selected: b,
+                                            'aria-posinset': s + 1,
+                                            'aria-setsize': W.reduce((e, t) => e + t, 0),
                                             children: t
                                         },
                                         l
@@ -331,21 +368,21 @@ function R(e) {
                           renderSection: (e) => {
                               let { section: t } = e;
                               switch (t) {
-                                  case T.m$.ROLES:
-                                      return E(g.Z.Messages.ROLES);
-                                  case T.m$.MEMBERS:
-                                      return E(g.Z.Messages.MEMBERS);
-                                  case T.m$.USERS:
-                                      return E(g.Z.Messages.USERS);
-                                  case T.m$.GUILDS:
-                                      return E(g.Z.Messages.SERVERS);
+                                  case y.m$.ROLES:
+                                      return E(f.NW.string(f.t.LPJmLy));
+                                  case y.m$.MEMBERS:
+                                      return E(f.NW.string(f.t['9Oq93t']));
+                                  case y.m$.USERS:
+                                      return E(f.NW.string(f.t.nqDUBQ));
+                                  case y.m$.GUILDS:
+                                      return E(f.NW.string(f.t['7hB4kp']));
                               }
                           },
                           sectionHeight: 32,
-                          onScroll: J,
+                          onScroll: H,
                           role: void 0,
                           innerRole: 'listbox',
-                          innerId: _,
+                          innerId: j,
                           innerAriaMultiselectable: !0,
                           innerAriaOrientation: 'vertical'
                       })
@@ -355,10 +392,10 @@ function R(e) {
                           justify: d.Z.Justify.CENTER,
                           direction: d.Z.Direction.VERTICAL,
                           children: [
-                              (0, n.jsx)(h.Z, { className: f.noResultIcon }),
+                              (0, n.jsx)(x.Z, { className: p.noResultIcon }),
                               (0, n.jsx)(o.Text, {
                                   variant: 'text-sm/normal',
-                                  children: L(s)
+                                  children: P(i)
                               })
                           ]
                       })

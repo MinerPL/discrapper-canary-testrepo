@@ -1,56 +1,52 @@
-a.d(t, {
-    Z: function () {
-        return g;
-    }
-});
-var n = a(735250);
-a(470079);
-var s = a(120356),
-    i = a.n(s),
-    r = a(442837),
-    o = a(481060),
-    l = a(230711),
-    u = a(706454),
-    d = a(346585),
-    c = a(347649),
-    E = a(981631),
-    _ = a(689938),
-    m = a(740080);
-function g(e) {
-    let { onClose: t, handleStartFlow: a } = e,
-        s = (0, c.CC)(),
-        g = (0, r.e7)([u.default], () => u.default.locale);
+r.d(t, { Z: () => E });
+var n = r(200651);
+r(192379);
+var i = r(120356),
+    s = r.n(i),
+    o = r(442837),
+    a = r(481060),
+    l = r(230711),
+    c = r(706454),
+    u = r(346585),
+    d = r(347649),
+    g = r(981631),
+    m = r(388032),
+    f = r(927687);
+function E(e) {
+    let { onClose: t, handleStartFlow: r } = e,
+        i = (0, d.CC)(),
+        E = (0, o.e7)([c.default], () => c.default.locale);
     return (0, n.jsxs)('div', {
-        className: m.infoContainer,
+        className: f.infoContainer,
         children: [
-            (0, n.jsx)(o.Heading, {
-                className: i()(m.finishTitle, { [m.finishTitlePadding]: s }),
+            (0, n.jsx)(a.X6q, {
+                className: s()(f.finishTitle, { [f.finishTitlePadding]: i }),
                 color: 'header-primary',
                 variant: 'heading-xl/bold',
-                children: s ? _.Z.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_1.format({ date: (0, d.IE)(g) }) : _.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_TITLE
+                children: i ? m.NW.formatToPlainString(m.t.XOWfNj, { date: (0, u.IE)(E) }) : m.NW.string(m.t['3C+rbG'])
             }),
-            (0, n.jsx)(o.Text, {
-                className: m.subtitleFinish,
+            (0, n.jsx)(a.Text, {
+                className: f.subtitleFinish,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: s ? _.Z.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_2.format({ date: (0, d.IE)(g) }) : _.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_1
+                children: i ? m.NW.formatToPlainString(m.t['g/gkAw'], { date: (0, u.IE)(E) }) : m.NW.string(m.t.TS1L09)
             }),
-            (0, n.jsx)(o.Text, {
-                className: m.promptFinish,
+            (0, n.jsx)(a.Text, {
+                className: f.promptFinish,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: _.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_2.format({
+                children: m.NW.format(m.t.bWE0ZG, {
                     onClick: () => {
-                        t(), l.Z.open(E.oAB.ACCOUNT);
+                        t(), l.Z.open(g.oAB.ACCOUNT);
                     }
                 })
             }),
-            (0, n.jsx)(o.Button, {
-                className: m.button,
+            (0, n.jsx)(a.zxk, {
+                className: f.button,
                 type: 'button',
-                size: o.Button.Sizes.SMALL,
-                onClick: s ? a : t,
-                children: s ? _.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT : _.Z.Messages.INVITES_DISABLED_CONFIRMATION
+                size: a.zxk.Sizes.SMALL,
+                onClick: i ? r : t,
+                children: i ? m.NW.string(m.t['Zpd+Ym']) : m.NW.string(m.t['yD/zkp'])
             })
         ]
     });

@@ -1,15 +1,12 @@
 n.d(t, {
-    zU: function () {
-        return r;
-    }
+    ZP: () => f,
+    zU: () => s
 }),
     n(47120);
 var r,
-    i,
-    a,
-    s = n(442837),
+    i = n(442837),
     o = n(570140);
-function l(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,8 +19,10 @@ function l(e, t, n) {
         e
     );
 }
-((a = r || (r = {}))[(a.MESSAGING = 0)] = 'MESSAGING'), (a[(a.OVERLAYS = 1)] = 'OVERLAYS'), (a[(a.PREMIUM = 2)] = 'PREMIUM'), (a[(a.REPORTING = 3)] = 'REPORTING');
-let u = {
+var s = (function (e) {
+    return (e[(e.MESSAGING = 0)] = 'MESSAGING'), (e[(e.OVERLAYS = 1)] = 'OVERLAYS'), (e[(e.PREMIUM = 2)] = 'PREMIUM'), (e[(e.REPORTING = 3)] = 'REPORTING'), (e[(e.APP_COLLECTIONS = 4)] = 'APP_COLLECTIONS'), e;
+})({});
+let l = {
         visual_effect_view_overrides: {
             label: 'Blur view overrides for designers to test with',
             category: 1
@@ -55,23 +54,34 @@ let u = {
         iar_skip_api_report_submit: {
             label: 'Enable to skip calling the API to skip submitting actual IAR reports',
             category: 3
+        },
+        only_show_preview_app_collections: {
+            label: "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
+            category: 4
+        },
+        disable_app_collections_cache: {
+            label: 'Disable application collections cache so that you can see updates to collections immediately.',
+            category: 4
         }
     },
     c = {};
-class d extends (i = s.ZP.DeviceSettingsStore) {
+function u(e) {
+    c[e.toggle] = e.value;
+}
+class d extends (r = i.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
         return { toggleStates: c };
     }
     initialize(e) {
-        for (var t in u) {
+        for (var t in l) {
             var n, r;
-            let i = null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== r && r;
+            let i = null != (r = null == e || null == (n = e.toggleStates) ? void 0 : n[t]) && r;
             c[t] = i;
         }
     }
     get(e) {
         var t;
-        return null !== (t = c[e]) && void 0 !== t && t;
+        return null != (t = c[e]) && t;
     }
     set(e, t) {
         return (c[e] = t), t;
@@ -80,7 +90,7 @@ class d extends (i = s.ZP.DeviceSettingsStore) {
         return c;
     }
     allByCategory(e) {
-        return Object.entries(u)
+        return Object.entries(l)
             .filter((t) => {
                 let [n, r] = t;
                 return r.category === e;
@@ -91,10 +101,5 @@ class d extends (i = s.ZP.DeviceSettingsStore) {
             });
     }
 }
-l(d, 'displayName', 'DevToolsDevSettingsStore'),
-    l(d, 'persistKey', 'DevToolsDevSettingsStore'),
-    (t.ZP = new d(o.Z, {
-        DEV_TOOLS_DEV_SETTING_SET: function (e) {
-            c[e.toggle] = e.value;
-        }
-    }));
+a(d, 'displayName', 'DevToolsDevSettingsStore'), a(d, 'persistKey', 'DevToolsDevSettingsStore');
+let f = new d(o.Z, { DEV_TOOLS_DEV_SETTING_SET: u });

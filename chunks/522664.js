@@ -1,45 +1,40 @@
 n.d(t, {
-    Eq: function () {
-        return s;
-    },
-    Uj: function () {
-        return a;
-    },
-    gx: function () {
-        return l;
-    },
-    qO: function () {
-        return o;
-    }
+    Eq: () => a,
+    Uj: () => o,
+    gx: () => l,
+    qO: () => s
 });
 var r = n(544891),
     i = n(981631);
-function a(e, t, n, a) {
+function o(e, t, n, o) {
     return r.tn.post({
         url: i.ANM.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
         body: {
             channel_id: e,
             message_id: t,
             attachment_ids: n,
-            embed_ids: a
-        }
+            embed_ids: o
+        },
+        rejectWithError: !1
     });
 }
-function s(e, t, n, a) {
+function a(e, t, n, o) {
     return r.tn.post({
         url: i.ANM.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
         body: {
             channel_id: e,
             message_id: t,
             attachment_ids: n,
-            filenames: a
-        }
+            filenames: o
+        },
+        rejectWithError: !1
     });
 }
-function o(e, t) {
+function s(e, t) {
     return r.tn.patch({
         url: i.ANM.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
-        body: { message_ids: t }
+        body: { message_ids: t },
+        rejectWithError: !1
     });
 }
 function l(e) {
@@ -49,6 +44,7 @@ function l(e) {
     }));
     return r.tn.patch({
         url: i.ANM.EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES,
-        body: { messages: t }
+        body: { messages: t },
+        rejectWithError: !1
     });
 }

@@ -1,15 +1,11 @@
 n.d(t, {
-    E: function () {
-        return u;
-    },
-    i: function () {
-        return l;
-    }
+    E: () => c,
+    i: () => l
 }),
     n(411104);
 var r = n(503461),
     i = n(218521);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +18,7 @@ function a(e, t, n) {
         e
     );
 }
-function s(e, t) {
+function a(e, t) {
     return 0 === t.length
         ? e
         : {
@@ -31,8 +27,8 @@ function s(e, t) {
               generation: e.generation
           };
 }
-function o(e, t) {
-    return 0 === t.length ? e : e.map((e) => s(e, t));
+function s(e, t) {
+    return 0 === t.length ? e : e.map((e) => a(e, t));
 }
 class l {
     close() {
@@ -40,7 +36,7 @@ class l {
     }
     async get(e) {
         var t;
-        return null !== (t = (await this.getMany(e, { limit: 1 }))[0]) && void 0 !== t ? t : null;
+        return null != (t = (await this.getMany(e, { limit: 1 }))[0]) ? t : null;
     }
     getMany() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
@@ -58,12 +54,12 @@ class l {
     }
     getRange(e, t, n) {
         let r = (0, i.m)(this.prefix, e),
-            a = (0, i.m)(this.prefix, t);
+            o = (0, i.m)(this.prefix, t);
         return this.database.execute(
             {
                 type: 'kv.get_range',
                 table: this.tableId,
-                range: [r, a],
+                range: [r, o],
                 ordering: null == n ? void 0 : n.ordering,
                 limit: null == n ? void 0 : n.limit
             },
@@ -120,7 +116,7 @@ class l {
             {
                 type: 'kv.put_one',
                 table: this.tableId,
-                cell: s(e, this.prefix),
+                cell: a(e, this.prefix),
                 overwrite: t === r.Sn.Replace
             },
             this.defaultDebugTag
@@ -132,7 +128,7 @@ class l {
             {
                 type: 'kv.put_many',
                 table: this.tableId,
-                cells: o(e, this.prefix),
+                cells: s(e, this.prefix),
                 overwrite: t === r.Sn.Replace
             },
             this.defaultDebugTag
@@ -182,10 +178,10 @@ class l {
         );
     }
     transaction(e, t) {
-        return this.database.transaction((t) => e(new u(this.prefix, this.tableId, t)), t);
+        return this.database.transaction((t) => e(new c(this.prefix, this.tableId, t)), t);
     }
     upgradeTransaction(e) {
-        return new u(this.prefix, this.tableId, e);
+        return new c(this.prefix, this.tableId, e);
     }
     getManySyncUnsafe() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
@@ -207,11 +203,11 @@ class l {
         });
     }
     constructor(e, t, n, r) {
-        a(this, 'prefix', void 0),
-            a(this, 'tableId', void 0),
-            a(this, 'database', void 0),
-            a(this, 'defaultDebugTag', void 0),
-            a(this, 'messages', {
+        o(this, 'prefix', void 0),
+            o(this, 'tableId', void 0),
+            o(this, 'database', void 0),
+            o(this, 'defaultDebugTag', void 0),
+            o(this, 'messages', {
                 getLatest: (e) =>
                     this.database.execute(
                         {
@@ -228,16 +224,16 @@ class l {
             (this.defaultDebugTag = r ? void 0 : null);
     }
 }
-class u {
+class c {
     static fromDatabaseTransaction(e, t, n) {
-        return new u(e, t, n);
+        return new c(e, t, n);
     }
     put(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Sn.Replace;
         this.transaction.add({
             type: 'kv.put_one',
             table: this.tableId,
-            cell: s(e, this.prefix),
+            cell: a(e, this.prefix),
             overwrite: t === r.Sn.Replace
         });
     }
@@ -246,7 +242,7 @@ class u {
         this.transaction.add({
             type: 'kv.put_many',
             table: this.tableId,
-            cells: o(e, this.prefix),
+            cells: s(e, this.prefix),
             overwrite: t === r.Sn.Replace
         });
     }
@@ -283,10 +279,10 @@ class u {
         });
     }
     constructor(e, t, n) {
-        a(this, 'prefix', void 0),
-            a(this, 'tableId', void 0),
-            a(this, 'transaction', void 0),
-            a(this, 'messages', {
+        o(this, 'prefix', void 0),
+            o(this, 'tableId', void 0),
+            o(this, 'transaction', void 0),
+            o(this, 'messages', {
                 trimOrphans: (e) => {
                     if (1 !== this.prefix.length || 1 !== e.length) throw Error('trimOrphans: only one prefix component is supported at this time');
                     this.transaction.add({

@@ -1,72 +1,70 @@
-s.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    s(47120),
-    s(773603);
-var n = s(735250),
-    l = s(470079),
-    i = s(658550),
-    r = s(481060),
-    o = s(507453),
-    a = s(689938);
-function d(e) {
-    let { mfaChallenge: t, finish: s, setSlide: d, onClose: u, isSlideReady: c } = e,
-        [h, f] = l.useState(!1),
-        [m, S] = l.useState(null),
-        [_, g] = l.useState(''),
+r.d(t, { Z: () => u }), r(47120), r(773603);
+var n = r(200651),
+    l = r(192379),
+    s = r(658550),
+    i = r(481060),
+    o = r(540059),
+    a = r(507453),
+    c = r(388032);
+function u(e) {
+    let { mfaChallenge: t, finish: r, setSlide: u, onClose: d, isSlideReady: f } = e,
+        h = (0, o.Q3)('TotpSlide'),
+        [m, p] = l.useState(!1),
+        [g, b] = l.useState(null),
+        [j, y] = l.useState(''),
         x = l.useRef(null);
     return (
         l.useEffect(() => {
-            if (c) {
+            if (f) {
                 var e;
-                null === (e = x.current) || void 0 === e || e.focus();
+                null == (e = x.current) || e.focus();
             }
-        }, [c]),
+        }, [f]),
         (0, n.jsxs)('form', {
             onSubmit: (e) => {
                 e.preventDefault(),
-                    f(!0),
-                    s({
+                    p(!0),
+                    b(null),
+                    r({
                         mfaType: 'totp',
-                        data: _
+                        data: j
                     })
                         .catch((e) => {
-                            var t, s;
-                            S(null !== (s = e.message) && void 0 !== s ? s : null === (t = e.body) || void 0 === t ? void 0 : t.message);
+                            var t, r;
+                            b(null != (r = null == (t = e.body) ? void 0 : t.message) ? r : e.message);
                         })
                         .finally(() => {
-                            f(!1);
+                            p(!1);
                         });
             },
             children: [
-                (0, n.jsx)(o.Z.SlideHeader, { onClose: u }),
-                (0, n.jsx)(o.Z.SlideContent, {
-                    children: (0, n.jsxs)(r.FormItem, {
-                        title: a.Z.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL,
+                (0, n.jsx)(a.Z.SlideHeader, { onClose: d }),
+                (0, n.jsx)(a.Z.SlideContent, {
+                    scrollbarType: h ? 'none' : void 0,
+                    children: (0, n.jsxs)(i.xJW, {
+                        title: c.NW.string(c.t.HZPBOT),
                         children: [
-                            (0, n.jsx)(r.TextInput, {
+                            (0, n.jsx)(i.oil, {
                                 inputRef: x,
-                                onChange: g,
-                                placeholder: a.Z.Messages.TWO_FA_AUTH_CODE_NO_BACKUP,
-                                maxLength: i.gH,
-                                minLength: i.gH,
-                                value: _,
+                                onChange: y,
+                                placeholder: c.NW.string(c.t.tARzgo),
+                                maxLength: s.gH,
+                                minLength: s.gH,
+                                value: j,
                                 autoComplete: 'one-time-code',
                                 spellCheck: 'false',
-                                disabled: h
+                                disabled: m
                             }),
-                            (0, n.jsx)(o.Z.SlideError, { error: m })
+                            (0, n.jsx)(a.Z.SlideError, { error: g })
                         ]
                     })
                 }),
-                (0, n.jsx)(o.Z.SlideFooter, {
+                (0, n.jsx)(a.Z.SlideFooter, {
                     mfaChallenge: t,
-                    setSlide: d,
+                    setSlide: u,
                     showConfirm: !0,
-                    disabled: _.length !== i.gH,
-                    submitting: h
+                    disabled: j.length !== s.gH,
+                    submitting: m
                 })
             ]
         })

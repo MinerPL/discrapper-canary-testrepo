@@ -1,9 +1,4 @@
-var r, i;
-n.d(t, {
-    O: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {}))[(i.NORMAL = 0)] = 'NORMAL'),
-    (i[(i.BURST = 1)] = 'BURST'),
-    (i[(i.VOTE = 2)] = 'VOTE');
+n.d(t, { O: () => r }), n(47120);
+var r = (function (e) {
+    return (e[(e.NORMAL = 0)] = 'NORMAL'), (e[(e.BURST = 1)] = 'BURST'), (e[(e.VOTE = 2)] = 'VOTE'), e;
+})({});

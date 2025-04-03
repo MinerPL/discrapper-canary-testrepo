@@ -1,60 +1,64 @@
-var s = n(735250),
-    r = n(470079),
-    i = n(442837),
-    a = n(893776),
-    l = n(129293),
-    o = n(388905),
-    c = n(108427),
-    u = n(314897),
-    d = n(689938),
-    _ = n(224499);
-t.Z = (e) => {
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(893776),
+    a = n(129293),
+    l = n(388905),
+    s = n(108427),
+    c = n(388032),
+    u = n(20493);
+function d(e) {
     let { location: t } = e,
-        { verifyFailed: h, verifySucceeded: E } = (0, i.cj)([u.default], () => ({
-            verifyFailed: u.default.didVerifyFail(),
-            verifySucceeded: u.default.didVerifySucceed()
-        }));
-    return (r.useEffect(() => {
-        let e = (0, l.Z)(t);
-        null != e && a.Z.authorizePayment(e), (0, c.e)('authorize_payment');
+        [d, p] = i.useState('submitting');
+    return (i.useEffect(() => {
+        (0, s.e)('authorize_payment');
+        let e = (0, a.Z)(t);
+        if (null == e) return void p('failed');
+        (async () => {
+            try {
+                await o.Z.authorizePayment(e), p('succeeded');
+            } catch (e) {
+                p('failed');
+            }
+        })();
     }, [t]),
-    h)
-        ? (0, s.jsxs)(o.ZP, {
+    'failed' === d)
+        ? (0, r.jsxs)(l.ZP, {
               children: [
-                  (0, s.jsx)('img', {
+                  (0, r.jsx)('img', {
                       alt: '',
                       src: n(375673),
-                      className: _.marginBottom20
+                      className: u.marginBottom20
                   }),
-                  (0, s.jsx)(o.Dx, {
-                      className: _.marginBottom8,
-                      children: d.Z.Messages.PAYMENT_AUTHORIZATION_EXPIRED
+                  (0, r.jsx)(l.Dx, {
+                      className: u.marginBottom8,
+                      children: c.NW.string(c.t.GHRpub)
                   }),
-                  (0, s.jsx)(o.DK, {
-                      className: _.marginBottom40,
-                      children: d.Z.Messages.PAYMENT_AUTH_EXPIRED_SUGGESTION
+                  (0, r.jsx)(l.DK, {
+                      className: u.marginBottom40,
+                      children: c.NW.string(c.t['1nO55u'])
                   })
               ]
           })
-        : E
-          ? (0, s.jsxs)(o.ZP, {
+        : 'succeeded' === d
+          ? (0, r.jsxs)(l.ZP, {
                 children: [
-                    (0, s.jsx)('img', {
+                    (0, r.jsx)('img', {
                         alt: '',
                         src: n(73962),
-                        className: _.marginBottom20
+                        className: u.marginBottom20
                     }),
-                    (0, s.jsx)(o.Dx, {
-                        className: _.marginBottom8,
-                        children: d.Z.Messages.PAYMENT_AUTHORIZATION_SUCCEEDED
+                    (0, r.jsx)(l.Dx, {
+                        className: u.marginBottom8,
+                        children: c.NW.string(c.t['ihHX5+'])
                     }),
-                    (0, s.jsx)(o.DK, {
-                        className: _.marginBottom40,
-                        children: d.Z.Messages.PAYMENT_AUTHORIZED_SUCCEEDED_SUGGESTION
+                    (0, r.jsx)(l.DK, {
+                        className: u.marginBottom40,
+                        children: c.NW.string(c.t.pGPCv7)
                     })
                 ]
             })
-          : (0, s.jsxs)(o.ZP, {
-                children: [(0, s.jsx)(o.Hh, {}), (0, s.jsx)(o.Dx, { children: d.Z.Messages.PAYMENT_AUTHORIZING })]
+          : (0, r.jsxs)(l.ZP, {
+                children: [(0, r.jsx)(l.Hh, {}), (0, r.jsx)(l.Dx, { children: c.NW.string(c.t.T3vC7u) })]
             });
-};
+}

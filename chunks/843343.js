@@ -1,36 +1,32 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var i = n(735250);
-n(470079);
-var l = n(442837),
-    r = n(481060),
-    a = n(299379),
-    s = n(486472),
-    o = n(430824),
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(299379),
+    a = n(486472),
+    s = n(430824),
     c = n(682662),
     u = n(662146),
     d = n(981631),
-    h = n(689938),
-    p = n(855714);
-function _() {
-    let e = (0, l.e7)([s.Z, o.Z], () => s.Z.unavailableGuilds.filter((e) => null == o.Z.getGuild(e)).length);
+    p = n(388032),
+    h = n(552179);
+function f() {
+    let e = (0, i.e7)([a.Z, s.Z], () => a.Z.unavailableGuilds.filter((e) => null == s.Z.getGuild(e)).length);
     return e <= 0
         ? null
-        : (0, i.jsx)(c.H, {
-              children: (0, i.jsx)(u.Z, {
-                  text: h.Z.Messages.PARTIAL_OUTAGE.format({ count: e }),
-                  color: r.Tooltip.Colors.RED,
-                  children: (0, i.jsx)(r.Anchor, {
-                      href: (0, a.Z)(d.RK.TWITTER),
+        : (0, r.jsx)(c.H, {
+              children: (0, r.jsx)(u.Z, {
+                  text: p.NW.format(p.t['TnH05+'], { count: e }),
+                  color: l.ua7.Colors.RED,
+                  children: (0, r.jsx)(l.eee, {
+                      href: (0, o.Z)(d.RK.TWITTER),
                       target: '_blank',
-                      className: p.guildsError,
-                      'aria-label': h.Z.Messages.PARTIAL_OUTAGE_A11Y.format({ count: e }),
-                      children: (0, i.jsx)('span', {
+                      className: h.guildsError,
+                      'aria-label': p.NW.formatToPlainString(p.t['MEpX+/'], { count: e }),
+                      children: (0, r.jsx)('span', {
                           'aria-hidden': !0,
-                          className: p.errorInner,
+                          className: h.errorInner,
                           children: '!'
                       })
                   })

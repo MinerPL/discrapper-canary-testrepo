@@ -1,44 +1,14 @@
-var r, i, a, s, o, l;
 n.d(t, {
-    R8: function () {
-        return i;
-    },
-    Us: function () {
-        return r;
-    },
-    hy: function () {
-        return a;
-    }
-}),
-    ((s = r || (r = {})).NAVIGATE_UP = 'NAVIGATE_UP'),
-    (s.NAVIGATE_DOWN = 'NAVIGATE_DOWN'),
-    (s.NAVIGATE_LEFT = 'NAVIGATE_LEFT'),
-    (s.NAVIGATE_RIGHT = 'NAVIGATE_RIGHT'),
-    (s.NAVIGATE_START = 'NAVIGATE_START'),
-    (s.NAVIGATE_END = 'NAVIGATE_END'),
-    (s.NAVIGATE_INLINE_START = 'NAVIGATE_INLINE_START'),
-    (s.NAVIGATE_INLINE_END = 'NAVIGATE_INLINE_END'),
-    (s.NAVIGATE_CROSSLINE_START = 'NAVIGATE_CROSSLINE_START'),
-    (s.NAVIGATE_CROSSLINE_END = 'NAVIGATE_CROSSLINE_END'),
-    (s.NAVIGATE_NEXT_INTERACTABLE = 'NAVIGATE_NEXT_INTERACTABLE'),
-    (s.NAVIGATE_PREV_INTERACTABLE = 'NAVIGATE_PREV_INTERACTABLE'),
-    (s.NAVIGATE_IN = 'NAVIGATE_IN'),
-    (s.NAVIGATE_OUT = 'NAVIGATE_OUT'),
-    (s.SELECT_FOCUSED_ITEM = 'SELECT_FOCUSED_ITEM'),
-    (s.QUERY_START = 'QUERY_START'),
-    (s.QUERY_CLEAR = 'QUERY_CLEAR'),
-    ((o = i || (i = {})).ENTER = 'Enter'),
-    (o.SPACE = ' '),
-    (o.ESCAPE = 'Escape'),
-    (o.TAB = 'Tab'),
-    (o.F10 = 'F10'),
-    (o.HOME = 'Home'),
-    (o.END = 'End'),
-    (o.UP = 'ArrowUp'),
-    (o.DOWN = 'ArrowDown'),
-    (o.LEFT = 'ArrowLeft'),
-    (o.RIGHT = 'ArrowRight'),
-    (o.PAGE_UP = 'PageUp'),
-    (o.PAGE_DOWN = 'PageDown'),
-    ((l = a || (a = {})).HORIZONTAL = 'horizontal'),
-    (l.VERTICAL = 'vertical');
+    R8: () => i,
+    Us: () => r,
+    hy: () => o
+});
+var r = (function (e) {
+        return (e.NAVIGATE_UP = 'NAVIGATE_UP'), (e.NAVIGATE_DOWN = 'NAVIGATE_DOWN'), (e.NAVIGATE_LEFT = 'NAVIGATE_LEFT'), (e.NAVIGATE_RIGHT = 'NAVIGATE_RIGHT'), (e.NAVIGATE_START = 'NAVIGATE_START'), (e.NAVIGATE_END = 'NAVIGATE_END'), (e.NAVIGATE_INLINE_START = 'NAVIGATE_INLINE_START'), (e.NAVIGATE_INLINE_END = 'NAVIGATE_INLINE_END'), (e.NAVIGATE_CROSSLINE_START = 'NAVIGATE_CROSSLINE_START'), (e.NAVIGATE_CROSSLINE_END = 'NAVIGATE_CROSSLINE_END'), (e.NAVIGATE_NEXT_INTERACTABLE = 'NAVIGATE_NEXT_INTERACTABLE'), (e.NAVIGATE_PREV_INTERACTABLE = 'NAVIGATE_PREV_INTERACTABLE'), (e.NAVIGATE_IN = 'NAVIGATE_IN'), (e.NAVIGATE_OUT = 'NAVIGATE_OUT'), (e.SELECT_FOCUSED_ITEM = 'SELECT_FOCUSED_ITEM'), (e.QUERY_START = 'QUERY_START'), (e.QUERY_CLEAR = 'QUERY_CLEAR'), e;
+    })({}),
+    i = (function (e) {
+        return (e.ENTER = 'Enter'), (e.SPACE = ' '), (e.ESCAPE = 'Escape'), (e.TAB = 'Tab'), (e.F10 = 'F10'), (e.HOME = 'Home'), (e.END = 'End'), (e.UP = 'ArrowUp'), (e.DOWN = 'ArrowDown'), (e.LEFT = 'ArrowLeft'), (e.RIGHT = 'ArrowRight'), (e.PAGE_UP = 'PageUp'), (e.PAGE_DOWN = 'PageDown'), e;
+    })({}),
+    o = (function (e) {
+        return (e.HORIZONTAL = 'horizontal'), (e.VERTICAL = 'vertical'), e;
+    })({});

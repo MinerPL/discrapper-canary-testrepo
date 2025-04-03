@@ -1,48 +1,42 @@
-l.d(t, {
-    Z: function () {
-        return m;
-    }
-});
-var n = l(735250),
-    a = l(470079),
-    o = l(120356),
-    s = l.n(o),
-    i = l(481060),
-    r = l(994463),
-    C = l(472596),
-    c = l(918192),
-    d = l(689938),
-    u = l(788770);
-function m(e) {
+n.d(t, { Z: () => d });
+var r = n(200651),
+    l = n(192379),
+    o = n(481060),
+    a = n(994463),
+    i = n(472596),
+    s = n(918192),
+    c = n(388032),
+    u = n(128863);
+function d(e) {
     let { searchState: t } = e,
-        l = a.useMemo(
+        n = l.useMemo(
             () => ({
-                [C.po.LOADING]: null,
-                [C.po.SUCCESS_STILL_INDEXING]: {
-                    icon: (0, n.jsx)(r.Z, {}),
-                    message: d.Z.Messages.SEARCH_GUILD_STILL_INDEXING
+                [i.po.LOADING]: null,
+                [i.po.SUCCESS_STILL_INDEXING]: {
+                    icon: (0, r.jsx)(a.Z, {}),
+                    message: c.NW.string(c.t.AXPbZm)
                 },
-                [C.po.SUCCESS_EMPTY]: {
-                    icon: (0, n.jsx)(c.Z, {}),
-                    message: d.Z.Messages.MEMBER_SAFETY_TABLE_NO_RESULTS
+                [i.po.SUCCESS_EMPTY]: {
+                    icon: (0, r.jsx)(s.Z, {}),
+                    message: c.NW.string(c.t['wdyR5+'])
                 },
-                [C.po.SUCCESS_FULL]: null
+                [i.po.SUCCESS_FULL]: null
             }),
             []
         )[t];
-    return null == l
+    return null == n
         ? null
-        : (0, n.jsxs)('div', {
-              className: s()(u.noResultsContainer),
+        : (0, r.jsxs)('div', {
+              className: u.noResultsContainer,
               children: [
-                  (0, n.jsx)('div', {
-                      className: s()(u.__invalid_noResultsIconContainer),
-                      children: l.icon
+                  (0, r.jsx)('div', {
+                      className: u.__invalid_noResultsIconContainer,
+                      children: n.icon
                   }),
-                  (0, n.jsx)(i.Text, {
+                  (0, r.jsx)(o.Text, {
                       variant: 'text-md/normal',
                       color: 'text-muted',
-                      children: l.message
+                      children: n.message
                   })
               ]
           });

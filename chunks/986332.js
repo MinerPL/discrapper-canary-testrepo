@@ -1,9 +1,5 @@
-n.d(t, {
-    o: function () {
-        return a;
-    }
-});
-let i = (0, n(818083).B)({
+n.d(t, { o: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2022-12_channel_notice_redesign',
     label: 'Channel Notice Redesign',
@@ -38,9 +34,9 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function a() {
+function i() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        { showRedesignedChannelNotice: t, showRedesignedLiveChannelNotice: n } = i.useExperiment({ location: 'c0d6eb_1' }, { autoTrackExposure: e });
+        { showRedesignedChannelNotice: t, showRedesignedLiveChannelNotice: n } = r.useExperiment({ location: 'c0d6eb_1' }, { autoTrackExposure: e });
     return {
         showRedesignedChannelNotice: t,
         showRedesignedLiveChannelNotice: n

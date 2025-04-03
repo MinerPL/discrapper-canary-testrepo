@@ -1,86 +1,116 @@
-t.d(n, {
-    Z: function () {
-        return S;
+n.d(t, { Z: () => T });
+var i = n(200651);
+n(192379);
+var r = n(399606),
+    d = n(481060),
+    a = n(231757),
+    l = n(397639),
+    _ = n(19780),
+    s = n(979651),
+    u = n(951206),
+    p = n(446226),
+    o = n(937393),
+    g = n(721351),
+    I = n(981631),
+    c = n(388032);
+function N(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i);
+            });
     }
-});
-var l = t(735250);
-t(470079);
-var i = t(399606),
-    u = t(481060),
-    r = t(231757),
-    a = t(397639),
-    o = t(19780),
-    s = t(979651),
-    d = t(951206),
-    c = t(446226),
-    E = t(937393),
-    _ = t(721351),
-    N = t(981631),
-    f = t(689938);
-function S(e) {
-    let n = (0, i.e7)([o.Z], () => o.Z.getChannelId() === e.id),
-        S = (0, c.Z)(),
-        T = (null == S ? void 0 : S.channelId) === e.id,
-        Z = (0, a.V)(e) && !e.isPrivate(),
-        I = (0, a.Z)(e),
-        g = (!(0, i.e7)([s.Z], () => s.Z.isInChannel(e.id)) && I) || Z,
-        A = (0, E.Z)();
-    if (!T && 0 === A.length) return null;
-    let C = (n) => {
-        if (!n.twoWayLink || n.revoked) {
-            (0, r.Z)({
-                platformType: n.type,
+    return e;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function T(e) {
+    let t = (0, r.e7)([_.Z], () => _.Z.getChannelId() === e.id),
+        T = (0, p.Z)(),
+        U = (null == T ? void 0 : T.channelId) === e.id,
+        L = (0, l.V)(e) && !e.isPrivate(),
+        O = (0, l.Z)(e),
+        y = (!(0, r.e7)([s.Z], () => s.Z.isInChannel(e.id)) && O) || L,
+        D = (0, o.Z)();
+    if (!U && 0 === D.length) return null;
+    let m = (t) => {
+        if (!t.twoWayLink || t.revoked)
+            return void (0, a.Z)({
+                platformType: t.type,
                 location: 'Console Transfer Item'
             });
-            return;
-        }
-        n.type === N.ABu.XBOX
-            ? (0, u.openModalLazy)(async () => {
-                  let { default: n } = await Promise.all([t.e('32873'), t.e('522')]).then(t.bind(t, 200623));
-                  return (t) =>
-                      (0, l.jsx)(n, {
-                          ...t,
-                          channel: e
-                      });
+        t.type === I.ABu.XBOX
+            ? (0, d.ZDy)(async () => {
+                  let { default: t } = await Promise.all([n.e('53419'), n.e('522')]).then(n.bind(n, 200623));
+                  return (n) => (0, i.jsx)(t, E(N({}, n), { channel: e }));
               })
-            : (n.type === N.ABu.PLAYSTATION || n.type === N.ABu.PLAYSTATION_STAGING) &&
-              (0, u.openModalLazy)(async () => {
-                  let { default: i } = await t.e('638').then(t.bind(t, 543974));
-                  return (t) =>
-                      (0, l.jsx)(i, {
-                          ...t,
-                          platform: n.type,
-                          channel: e
-                      });
+            : (t.type === I.ABu.PLAYSTATION || t.type === I.ABu.PLAYSTATION_STAGING) &&
+              (0, d.ZDy)(async () => {
+                  let { default: r } = await n.e('638').then(n.bind(n, 543974));
+                  return (n) =>
+                      (0, i.jsx)(
+                          r,
+                          E(N({}, n), {
+                              platform: t.type,
+                              channel: e
+                          })
+                      );
               });
     };
-    return (0, l.jsx)(l.Fragment, {
-        children: T
-            ? (0, l.jsx)(u.MenuItem, {
-                  label: f.Z.Messages.TRANSFER_VOICE_TO_DEVICE,
-                  id: 'handoff',
-                  action: () => {
-                      (0, d.F)(S);
+    return U
+        ? (0, i.jsx)(d.sNh, {
+              label: c.NW.string(c.t.PlwgdX),
+              id: 'handoff',
+              action: () => {
+                  (0, u.F)(T);
+              },
+              icon: (0, g.Z)(void 0),
+              disabled: y
+          })
+        : D.map((e) => {
+              var n, r;
+              return (0, i.jsx)(
+                  d.sNh,
+                  {
+                      id: 'transfer-'.concat(e.type, '-').concat(e.id),
+                      label: ((n = e.type), (r = t), n === I.ABu.XBOX ? (r ? c.NW.string(c.t['qVE/VF']) : c.NW.string(c.t.E8euSk)) : n === I.ABu.PLAYSTATION ? (r ? c.NW.string(c.t.vzfxmZ) : c.NW.string(c.t.QxEYDg)) : n === I.ABu.PLAYSTATION_STAGING ? (r ? c.NW.string(c.t.BDiXtb) : c.NW.string(c.t['bhdB9/'])) : void 0),
+                      action: () => m(e),
+                      icon: (0, g.Z)(e.type),
+                      disabled: y
                   },
-                  icon: (0, _.Z)(void 0),
-                  disabled: g
-              })
-            : A.map((e) =>
-                  (0, l.jsx)(
-                      u.MenuItem,
-                      {
-                          id: 'transfer-'.concat(e.type, '-').concat(e.id),
-                          label: (function (e, n) {
-                              if (e === N.ABu.XBOX) return n ? f.Z.Messages.TRANSFER_VOICE_TO_XBOX : f.Z.Messages.JOIN_ON_XBOX;
-                              if (e === N.ABu.PLAYSTATION) return n ? f.Z.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE : f.Z.Messages.CONSOLE_PLAYSTATION_JOIN_VOICE;
-                              if (e === N.ABu.PLAYSTATION_STAGING) return n ? f.Z.Messages.CONSOLE_PLAYSTATION_STAGING_TRANSFER_VOICE : f.Z.Messages.CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE;
-                          })(e.type, n),
-                          action: () => C(e),
-                          icon: (0, _.Z)(e.type),
-                          disabled: g
-                      },
-                      e.id
-                  )
-              )
-    });
+                  e.id
+              );
+          });
 }

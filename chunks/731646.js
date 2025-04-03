@@ -1,32 +1,27 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return u;
-        }
-    });
-var i = t(735250),
-    a = t(470079),
-    l = t(481060),
-    r = t(239091),
-    d = t(299206),
-    s = t(689938);
-function u(n) {
-    var e;
-    let t = (0, d.Z)({
-        id: n.id,
-        label: n.label,
-        shiftId: n.shiftId
+n.d(t, { default: () => u });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    a = n(239091),
+    c = n(299206),
+    o = n(388032);
+function u(e) {
+    var t;
+    let n = (0, c.Z)({
+        id: e.id,
+        label: e.label,
+        shiftId: e.shiftId
     });
     return (
-        a.useEffect(() => {
-            null == t && (0, r.Zy)();
-        }, [t]),
-        (0, i.jsx)(l.Menu, {
-            onSelect: n.onSelect,
+        i.useEffect(() => {
+            null == n && (0, a.Zy)();
+        }, [n]),
+        (0, r.jsx)(l.v2r, {
+            onSelect: e.onSelect,
             navId: 'dev-context',
-            'aria-label': null !== (e = n['aria-label']) && void 0 !== e ? e : s.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
-            onClose: r.Zy,
-            children: t
+            'aria-label': null != (t = e['aria-label']) ? t : o.NW.string(o.t.ogxXGh),
+            onClose: a.Zy,
+            children: n
         })
     );
 }

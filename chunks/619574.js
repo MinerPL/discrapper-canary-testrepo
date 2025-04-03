@@ -1,8 +1,4 @@
-n.d(t, {
-    e: function () {
-        return i;
-    }
-});
+n.d(t, { e: () => i });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-04_genshin_admin_signup',

@@ -1,18 +1,14 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
-var s = n(470079),
-    a = n(442837),
-    l = n(897285),
-    r = n(924301);
-function i(e, t, n) {
-    let i = (0, a.e7)([r.ZP], () => r.ZP.getUserCount(t, n));
+n.d(t, { Z: () => c });
+var r = n(192379),
+    l = n(442837),
+    a = n(897285),
+    i = n(924301);
+function c(e, t, n) {
+    let c = (0, l.e7)([i.ZP], () => i.ZP.getUserCount(t, n));
     return (
-        (0, s.useEffect)(() => {
-            null != e && null != t && l.Z.getGuildEventUserCounts(e, t, null != n ? [n] : []);
+        (0, r.useEffect)(() => {
+            null != e && null != t && a.Z.getGuildEventUserCounts(e, t, null != n ? [n] : []);
         }, [t, e, n]),
-        i
+        c
     );
 }

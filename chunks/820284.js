@@ -1,44 +1,38 @@
-r.d(t, {
-    G: function () {
-        return i;
-    }
-});
-var n = r(572299),
-    a = r(263449),
-    o = r(233517);
-let i = function () {
+a.d(e, { G: () => o });
+var r = a(572299),
+    n = a(263449),
+    _ = a(233517);
+let o = function () {
     return {
-        bindClient(e) {
-            (0, a.nZ)().setClient(e);
+        bindClient(t) {
+            (0, n.nZ)().setClient(t);
         },
-        withScope: a.$e,
-        getClient: () => (0, a.s3)(),
-        getScope: a.nZ,
-        getIsolationScope: a.aF,
-        captureException: (e, t) => (0, a.nZ)().captureException(e, t),
-        captureMessage: (e, t, r) => (0, a.nZ)().captureMessage(e, t, r),
-        captureEvent: o.eN,
-        addBreadcrumb: n.n,
-        setUser: o.av,
-        setTags: o.mG,
-        setTag: o.YA,
-        setExtra: o.sU,
-        setExtras: o.rJ,
-        setContext: o.v,
-        getIntegration(e) {
-            let t = (0, a.s3)();
-            return (t && t.getIntegrationByName(e.id)) || null;
+        withScope: n.$e,
+        getClient: () => (0, n.s3)(),
+        getScope: n.nZ,
+        getIsolationScope: n.aF,
+        captureException: (t, e) => (0, n.nZ)().captureException(t, e),
+        captureMessage: (t, e, a) => (0, n.nZ)().captureMessage(t, e, a),
+        captureEvent: _.eN,
+        addBreadcrumb: r.n,
+        setUser: _.av,
+        setTags: _.mG,
+        setTag: _.YA,
+        setExtra: _.sU,
+        setExtras: _.rJ,
+        setContext: _.v,
+        getIntegration(t) {
+            let e = (0, n.s3)();
+            return (e && e.getIntegrationByName(t.id)) || null;
         },
-        startSession: o.yj,
-        endSession: o.TM,
-        captureSession(e) {
-            if (e) return (0, o.TM)();
-            (function () {
-                let e = (0, a.nZ)(),
-                    t = (0, a.s3)(),
-                    r = e.getSession();
-                t && r && t.captureSession(r);
-            })();
+        startSession: _.yj,
+        endSession: _.TM,
+        captureSession(t) {
+            if (t) return (0, _.TM)();
+            let e = (0, n.nZ)(),
+                a = (0, n.s3)(),
+                r = e.getSession();
+            a && r && a.captureSession(r);
         }
     };
 };

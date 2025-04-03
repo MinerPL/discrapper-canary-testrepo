@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 var r = n(261470);
 function i(e, t) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new r.Z();

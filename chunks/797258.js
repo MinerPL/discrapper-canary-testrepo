@@ -1,56 +1,64 @@
+n.d(t, { Z: () => p });
 var r,
-    i,
-    a,
-    s,
-    o = n(392711),
-    l = n.n(o),
-    u = n(442837),
-    c = n(570140),
-    d = n(314897);
-let _ = Object.freeze([]),
-    E = {};
+    i = n(392711),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140),
+    l = n(314897);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let u = Object.freeze([]),
+    d = {};
 function f(e) {
-    (E = {}),
+    (d = {}),
         e.sessions.forEach((e) => {
-            E[e.sessionId] = e;
+            d[e.sessionId] = e;
         });
 }
-class h extends (s = u.ZP.Store) {
+class _ extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(d.default);
+        this.waitFor(l.default);
     }
     getSessions() {
-        return E;
+        return d;
     }
     getSession() {
-        let e = d.default.getSessionId();
+        let e = l.default.getSessionId();
         return null != e ? this.getSessionById(e) : null;
     }
     getRemoteActivities() {
-        let e = d.default.getSessionId(),
-            t = l().find(E, (t) => t.active && t.sessionId !== e);
-        return null != t ? t.activities : _;
+        let e = l.default.getSessionId(),
+            t = o().find(d, (t) => t.active && t.sessionId !== e);
+        return null != t ? t.activities : u;
+    }
+    getHiddenActivities() {
+        let e = l.default.getSessionId(),
+            t = o().find(d, (t) => t.active && t.sessionId !== e);
+        return null != t ? t.hiddenActivities : u;
     }
     getSessionById(e) {
-        return E[e];
+        return d[e];
     }
     getActiveSession() {
-        return l().find(E, (e) => {
+        return o().find(d, (e) => {
             let { active: t } = e;
             return t;
         });
     }
 }
-(a = 'SessionsStore'),
-    (i = 'displayName') in (r = h)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new h(c.Z, {
-        CONNECTION_OPEN: f,
-        SESSIONS_REPLACE: f
-    }));
+c(_, 'displayName', 'SessionsStore');
+let p = new _(s.Z, {
+    CONNECTION_OPEN: f,
+    SESSIONS_REPLACE: f
+});

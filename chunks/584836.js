@@ -1,23 +1,19 @@
-e.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var u = e(735250);
-e(470079);
-var i = e(481060),
-    r = e(37234),
-    l = e(434404),
-    o = e(981631),
-    a = e(689938);
-function c(n, t) {
-    return t === o.IlC.POPOUT
+n.d(t, { Z: () => a });
+var r = n(200651);
+n(192379);
+var o = n(481060),
+    i = n(37234),
+    c = n(434404),
+    l = n(981631),
+    u = n(388032);
+function a(e, t) {
+    return t === l.IlC.POPOUT
         ? null
-        : (0, u.jsx)(i.MenuItem, {
+        : (0, r.jsx)(o.sNh, {
               id: 'nav-server-settings',
-              label: a.Z.Messages.SERVER_SETTINGS,
+              label: u.NW.string(u.t['154/bG']),
               action: () => {
-                  (0, r.xf)(), l.Z.open(n, o.pNK.MODERATION);
+                  (0, i.xf)(), c.Z.open(e, l.pNK.MODERATION);
               }
           });
 }

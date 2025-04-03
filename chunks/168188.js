@@ -1,4 +1,4 @@
-var i = (function () {
+t.exports = (function () {
     function t(t, i) {
         (this.scrollbar_ = {
             position_: 0,
@@ -51,21 +51,22 @@ var i = (function () {
             this.repaint();
         },
         addDataSeries: function (t) {
-            !this.graph_ && (this.graph_ = new i(this.devicePixelRatio)), this.graph_.addDataSeries(t), this.repaint();
+            this.graph_ || (this.graph_ = new i(this.devicePixelRatio)), this.graph_.addDataSeries(t), this.repaint();
         },
         repaint: function () {
-            if (null === this.canvas_.offsetParent) return;
-            this.repaintTimerRunning_ = !1;
-            var t = this.canvas_.width,
-                i = this.canvas_.height,
-                e = this.canvas_.getContext('2d');
-            if (((e.fillStyle = this.backgroundColor), e.fillRect(0, 0, t, i), !(4 * this.fontSize > i) && !(t < 50))) {
-                e.save();
-                var s = this.scrollbar_.position_;
-                0 == this.scrollbar_.range_ && (s = this.getLength_() - t);
-                var a = this.startTime_ + s * this.scale_,
-                    h = i;
-                (i -= Math.ceil(this.fontSize * this.devicePixelRatio) + 4), this.drawTimeLabels(e, t, i, h, a), (e.strokeStyle = this.gridColor), (e.lineWidth = this.devicePixelRatio), e.strokeRect(1, 1, t - 1, i - 1), this.graph_ && (this.graph_.layout(t, i, this.fontSize, a, this.scale_), this.graph_.drawTicks(e), this.graph_.drawLines(e), this.graph_.drawLabels(e)), e.restore();
+            if (null !== this.canvas_.offsetParent) {
+                this.repaintTimerRunning_ = !1;
+                var t = this.canvas_.width,
+                    i = this.canvas_.height,
+                    e = this.canvas_.getContext('2d');
+                if (((e.fillStyle = this.backgroundColor), e.fillRect(0, 0, t, i), !(4 * this.fontSize > i) && !(t < 50))) {
+                    e.save();
+                    var s = this.scrollbar_.position_;
+                    0 == this.scrollbar_.range_ && (s = this.getLength_() - t);
+                    var a = this.startTime_ + s * this.scale_,
+                        h = i;
+                    (i -= Math.ceil(this.fontSize * this.devicePixelRatio) + 4), this.drawTimeLabels(e, t, i, h, a), (e.strokeStyle = this.gridColor), (e.lineWidth = this.devicePixelRatio), e.strokeRect(1, 1, t - 1, i - 1), this.graph_ && (this.graph_.layout(t, i, this.fontSize, a, this.scale_), this.graph_.drawTicks(e), this.graph_.drawLines(e), this.graph_.drawLabels(e)), e.restore();
+                }
             }
         },
         drawTimeLabels: function (t, i, e, s, a) {
@@ -109,10 +110,7 @@ var i = (function () {
                     this.layoutLabels_(n, h);
                 },
                 layoutLabels_: function (t, i) {
-                    if (i - t < 1024) {
-                        this.layoutLabelsBasic_(t, i, 2);
-                        return;
-                    }
+                    if (i - t < 1024) return void this.layoutLabelsBasic_(t, i, 2);
                     var e = ['', 'k', 'M', 'G', 'T', 'P'],
                         s = 1;
                     for (t /= 1024, i /= 1024; e[s + 1] && i - t >= 1024; ) (t /= 1024), (i /= 1024), ++s;
@@ -178,4 +176,3 @@ var i = (function () {
     })();
     return t;
 })();
-t.exports = i;

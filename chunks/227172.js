@@ -1,154 +1,174 @@
 n.d(t, {
-    v: function () {
-        return R;
-    }
+    Z: () => k,
+    v: () => _
 });
-var i = n(735250),
-    a = n(470079),
-    s = n(758713),
-    l = n(442837),
-    r = n(481060),
-    o = n(620662),
+var r = n(200651),
+    a = n(192379),
+    l = n(758713),
+    i = n(442837),
+    o = n(481060),
+    s = n(620662),
     c = n(841784),
     u = n(420660),
     d = n(429589),
-    h = n(757182),
-    m = n(706454),
-    p = n(374129),
-    _ = n(639351),
-    f = n(823379),
-    E = n(192918),
-    g = n(22211),
-    C = n(561308),
-    I = n(919394),
-    x = n(438226),
-    T = n(206295),
+    m = n(757182),
+    p = n(706454),
+    h = n(374129),
+    f = n(639351),
+    g = n(823379),
+    x = n(379357),
+    v = n(192918),
+    y = n(22211),
+    j = n(561308),
+    P = n(919394),
+    O = n(438226),
+    b = n(31074),
+    C = n(206295),
     N = n(91140),
-    v = n(297781),
-    S = n(591853),
-    Z = n(410441),
-    A = n(797342),
-    M = n(981631),
-    b = n(689938);
-let R = {
-    [s.z.DESKTOP]: null,
-    [s.z.LINUX]: null,
-    [s.z.MACOS]: null,
-    [s.z.NINTENDO]: null,
-    [s.z.IOS]: null,
-    [s.z.ANDROID]: null,
-    [s.z.XBOX]: _.Z,
-    [s.z.PLAYSTATION]: p.Z
-};
-t.Z = (e) => {
-    var t;
-    let { channel: n, entry: s, requestId: p, closePopout: _ } = e,
-        { iconUrl: j, iconTitle: L, user: P, details: O, appName: y, activity: D, coverImageUrl: k, richIcon: U } = (0, A.n)(s),
-        { primaryColor: w, secondaryColor: B } = (0, T.Z)(j),
-        H = (0, l.e7)([m.default], () => m.default.locale),
-        { streamPreviewUrl: G, stream: V } = (0, g.Z)(s),
-        { displayParticipants: F, participant1: W, participant2: z, numOtherParticipants: Y } = (0, E.Z)(s, 3),
-        K = a.useCallback(
-            (e) => {
-                if (null == j || null == n || null == P) return;
-                let t =
-                    Y > 0
-                        ? (0, x.VY)({
-                              entry: s,
-                              channel: n,
-                              users: [W, z],
-                              countOthers: Y
-                          })
-                        : (0, x.HV)(s, n, P);
-                return (0, I.SO)({
-                    entry: s,
-                    applicationImageSrc: j,
-                    avatarSrcs: F.map((e) => e.getAvatarURL(n.guild_id, 128)),
-                    description: t,
-                    timestamp: (0, C.yh)(s, H),
-                    colors: [w, B],
-                    channelId: e
-                });
-            },
-            [j, n, F, s, H, Y, W, z, w, B, P]
-        );
-    if (null == P) return null;
-    let q = null != s.extra.platform ? R[s.extra.platform] : null,
-        X = (0, i.jsx)(v.Gk, {
-            location: v.Gt.POPOUT,
-            children: N.W.map((e, t) => (0, i.jsx)(e, { entry: s }, t))
-        }),
-        Q =
-            null == G
-                ? (0, i.jsx)(S.wG, {
-                      thumbnailSrc: null !== (t = null != U ? U : k) && void 0 !== t ? t : j,
-                      thumbnailTitle: L,
-                      channel: n,
-                      headerIcons:
-                          null == q
-                              ? null
-                              : (0, i.jsx)(Z.Z, {
-                                    Icon: q,
-                                    'aria-label': b.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
-                                }),
-                      userDescription: (0, C.kr)(s) ? b.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : b.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-                      title: y,
-                      subtitle: O,
-                      badges: X,
-                      entry: s
-                  })
-                : (0, i.jsx)(S.jL, {
-                      thumbnailSrc: U,
-                      thumbnailTitle: L,
-                      channel: n,
-                      streamPreviewSrc: G,
-                      title: s.extra.game_name,
-                      subtitle: O,
-                      badges: X,
-                      userDescription: b.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
-                      entry: s,
-                      stream: V
-                  }),
-        J =
-            (0, o.Z)(D, M.xjy.JOIN) || (0, c.Z)(D)
-                ? (0, i.jsx)(d.Z, {
-                      activity: D,
-                      user: P,
-                      ButtonComponent: (e) =>
-                          (0, i.jsx)(S.Ll, {
-                              IconComponent: r.GameControllerIcon,
-                              ...e
-                          })
-                  })
-                : null,
-        $ = [
-            J,
-            (0, u.Z)(D)
-                ? (0, i.jsx)(h.Z, {
-                      activity: D,
-                      ButtonComponent: (e) =>
-                          (0, i.jsx)(S.Ll, {
-                              IconComponent: r.EyeIcon,
-                              ...e
-                          })
-                  })
-                : null
-        ].filter(f.lm);
-    return (0, i.jsxs)(S.yR, {
-        children: [
-            Q,
-            (0, i.jsx)(S.St, {
-                children: (0, i.jsx)(S.WT, {
-                    closePopout: _,
-                    user: P,
-                    channel: n,
-                    generateReactionImage: K,
-                    reactionImageAltText: (0, x.IS)(s, P),
-                    entry: s,
-                    requestId: p,
-                    buttons: $
+    I = n(297781),
+    E = n(591853),
+    w = n(410441),
+    Z = n(797342),
+    S = n(981631),
+    T = n(388032);
+function A(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
-            })
-        ]
-    });
-};
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+let _ = {
+        [l.z.DESKTOP]: null,
+        [l.z.LINUX]: null,
+        [l.z.MACOS]: null,
+        [l.z.NINTENDO]: null,
+        [l.z.IOS]: null,
+        [l.z.ANDROID]: null,
+        [l.z.XBOX]: f.Z,
+        [l.z.PLAYSTATION]: h.Z
+    },
+    k = (e) => {
+        let { channel: t, entry: n, disableGameProfileLinks: h, onReaction: f, onVoiceChannelPreview: k, onUserPopoutClosed: R, trackRankingItemInteraction: M } = e,
+            { largeImage: D } = (0, x.rv)({ entry: n }),
+            { user: L, details: W, appName: U, activity: z } = (0, Z.n)(n),
+            { primaryColor: B, secondaryColor: H } = (0, C.Z)(null == D ? void 0 : D.src),
+            G = (0, i.e7)([p.default], () => p.default.locale),
+            { streamPreviewUrl: F, stream: V } = (0, y.Z)(n),
+            { displayParticipants: Y, participant1: q, participant2: J, numOtherParticipants: X } = (0, v.Z)(n, 3),
+            K = n.extra.platform,
+            $ = null != K ? _[K] : null,
+            Q = K === l.z.XBOX ? S.ABu.XBOX : K === l.z.PLAYSTATION ? S.ABu.PLAYSTATION : void 0,
+            ee = (0, b.Z)(Q),
+            et = a.useCallback(
+                (e) => {
+                    if ((null == D ? void 0 : D.src) == null || null == t || null == L) return;
+                    let r =
+                        X > 0
+                            ? (0, O.VY)({
+                                  entry: n,
+                                  channel: t,
+                                  users: [q, J],
+                                  countOthers: X
+                              })
+                            : (0, O.HV)(n, t, L);
+                    return (0, P.SO)({
+                        entry: n,
+                        applicationImageSrc: null == D ? void 0 : D.src,
+                        avatarSrcs: Y.map((e) => e.getAvatarURL(t.guild_id, 128)),
+                        description: r,
+                        timestamp: (0, j.yh)(n, G),
+                        colors: [B, H],
+                        channelId: e
+                    });
+                },
+                [null == D ? void 0 : D.src, t, Y, n, G, X, q, J, B, H, L]
+            );
+        if (null == L) return null;
+        let en = (0, r.jsx)(I.Gk, {
+                location: null == F ? I.Gt.POPOUT : I.Gt.STREAMING_POPOUT,
+                children: N.W.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
+            }),
+            er =
+                null == V
+                    ? (0, r.jsx)(E.wG, {
+                          channel: t,
+                          headerIcons:
+                              null == $
+                                  ? null
+                                  : (0, r.jsx)(w.Z, {
+                                        onClick: ee,
+                                        Icon: $,
+                                        'aria-label': T.NW.string(T.t.YR4cHB)
+                                    }),
+                          userDescription: (0, j.kr)(n) ? T.t.vPg1JS : T.t.rPqqtr,
+                          title: U,
+                          subtitle: W,
+                          badges: en,
+                          entry: n,
+                          disableGameProfileLinks: h,
+                          onUserPopoutClosed: R,
+                          trackRankingItemInteraction: M
+                      })
+                    : (0, r.jsx)(E.jL, {
+                          channel: t,
+                          title: n.extra.game_name,
+                          subtitle: W,
+                          badges: en,
+                          userDescription: T.t['6oWFUF'],
+                          entry: n,
+                          stream: V,
+                          onUserPopoutClosed: R,
+                          trackRankingItemInteraction: M
+                      }),
+            ea = [
+                (0, s.Z)(z, S.xjy.JOIN) || (0, c.Z)(z)
+                    ? (0, r.jsx)(d.Z, {
+                          activity: z,
+                          user: L,
+                          ButtonComponent: (e) => (0, r.jsx)(E.Ll, A({ IconComponent: o.iWm }, e))
+                      })
+                    : null,
+                (0, u.Z)(z)
+                    ? (0, r.jsx)(m.Z, {
+                          activity: z,
+                          ButtonComponent: (e) => (0, r.jsx)(E.Ll, A({ IconComponent: o.tEF }, e))
+                      })
+                    : null
+            ].filter(g.lm);
+        return (0, r.jsxs)(E.yR, {
+            children: [
+                er,
+                (0, r.jsx)(E.St, {
+                    children: (0, r.jsx)(E.WT, {
+                        onReaction: f,
+                        onVoiceChannelPreview: k,
+                        user: L,
+                        channel: t,
+                        generateReactionImage: et,
+                        reactionImageAltText: (0, O.IS)(n, L),
+                        entry: n,
+                        buttons: ea
+                    })
+                })
+            ]
+        });
+    };

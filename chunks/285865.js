@@ -1,9 +1,10 @@
-var i = n(570140);
-t.Z = {
+n.d(t, { Z: () => i });
+var r = n(570140);
+let i = {
     closeSidebar() {
-        i.Z.dispatch({ type: 'MOBILE_WEB_SIDEBAR_CLOSE' });
+        r.Z.dispatch({ type: 'MOBILE_WEB_SIDEBAR_CLOSE' });
     },
     openSidebar() {
-        i.Z.dispatch({ type: 'MOBILE_WEB_SIDEBAR_OPEN' });
+        r.Z.dispatch({ type: 'MOBILE_WEB_SIDEBAR_OPEN' });
     }
 };

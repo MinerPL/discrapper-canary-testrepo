@@ -1,1 +1,8 @@
-e.exports = '/assets/5bbc2c2dda69b3547a10.svg';
+n.d(t, { Z: () => a });
+var r = n(192379),
+    i = n(192720);
+function a() {
+    r.useEffect(() => {
+        (0, i.sE)();
+    }, []);
+}

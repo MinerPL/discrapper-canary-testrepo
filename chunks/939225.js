@@ -1,29 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(230711),
-    r = n(931547),
-    l = n(981631),
-    o = n(526761),
-    c = n(689938);
-function d(e) {
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(230711),
+    a = n(931547),
+    o = n(981631),
+    s = n(526761),
+    c = n(388032);
+function u(e) {
     let { subscription: t } = e;
     return null == t
         ? null
-        : t.status === l.O0b.PAST_DUE
-          ? (0, i.jsxs)(i.Fragment, {
+        : t.status === o.O0b.PAST_DUE
+          ? (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)(a.Spacer, { size: 16 }),
-                    (0, i.jsx)(r.Z, {
-                        message: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
-                        ctaMessage: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_CTA,
+                    (0, r.jsx)(i.LZC, { size: 16 }),
+                    (0, r.jsx)(a.Z, {
+                        message: c.NW.string(c.t.eSuJEx),
+                        ctaMessage: c.NW.string(c.t.RXsxqa),
                         onClick: () => {
-                            s.Z.open(l.oAB.SUBSCRIPTIONS, o.cP);
+                            l.Z.open(o.oAB.SUBSCRIPTIONS, s.cP);
                         }
                     })
                 ]

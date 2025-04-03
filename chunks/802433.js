@@ -1,14 +1,10 @@
-var r, i, a, s;
 n.d(t, {
-    Q: function () {
-        return i;
-    },
-    j: function () {
-        return r;
-    }
-}),
-    ((a = r || (r = {})).FromLoop = 'fromLoop'),
-    (a.FromStart = 'fromStart'),
-    ((s = i || (i = {}))[(s.UNSPECIFIED = 0)] = 'UNSPECIFIED'),
-    (s[(s.PERSISTENT = 1)] = 'PERSISTENT'),
-    (s[(s.INTERMITTENT = 2)] = 'INTERMITTENT');
+    Q: () => i,
+    j: () => r
+});
+var r = (function (e) {
+        return (e.FromLoop = 'fromLoop'), (e.FromStart = 'fromStart'), e;
+    })({}),
+    i = (function (e) {
+        return (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.PERSISTENT = 1)] = 'PERSISTENT'), (e[(e.INTERMITTENT = 2)] = 'INTERMITTENT'), e;
+    })({});

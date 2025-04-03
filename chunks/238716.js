@@ -1,93 +1,87 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return p;
-        }
-    }),
-    n(47120);
-var o = n(735250),
-    s = n(470079),
-    l = n(442837),
-    a = n(481060),
-    i = n(933557),
-    r = n(600164),
-    c = n(313201),
-    d = n(592125),
-    u = n(853856),
-    h = n(117984),
-    x = n(689938),
-    m = n(358631);
-function p(e) {
-    let { channelId: t, onClose: n, transitionState: p, heading: C, formTitle: N, allowReset: f = !1 } = e,
-        j = (0, c.Dt)(),
-        k = (0, l.e7)([d.Z], () => d.Z.getChannel(t)),
-        E = (0, i.ZP)(k),
-        I = u.Z.getNickname(t),
-        [M, b] = s.useState(null != I ? I : '');
-    return (0, o.jsx)('form', {
+s.d(n, { default: () => m }), s(47120), s(266796);
+var i = s(200651),
+    t = s(192379),
+    l = s(442837),
+    o = s(481060),
+    r = s(933557),
+    a = s(600164),
+    c = s(313201),
+    d = s(592125),
+    x = s(853856),
+    u = s(117984),
+    h = s(388032),
+    k = s(64460);
+function m(e) {
+    let { channelId: n, onClose: s, transitionState: m, heading: p, formTitle: j, allowReset: f = !1 } = e,
+        z = (0, c.Dt)(),
+        N = (0, l.e7)([d.Z], () => d.Z.getChannel(n)),
+        g = (0, r.ZP)(N),
+        C = x.Z.getNickname(n),
+        [b, v] = t.useState(null != C ? C : '');
+    return (0, i.jsx)('form', {
         onSubmit: function (e) {
-            e.preventDefault(), (0, h.UT)(t, M), n();
+            e.preventDefault(), (0, u.UT)(n, b), s();
         },
-        children: (0, o.jsxs)(a.ModalRoot, {
-            transitionState: p,
-            'aria-labelledby': j,
+        children: (0, i.jsxs)(o.Y0X, {
+            transitionState: m,
+            'aria-labelledby': z,
             children: [
-                (0, o.jsxs)(a.ModalHeader, {
+                (0, i.jsxs)(o.xBx, {
                     separator: !0,
-                    justify: r.Z.Justify.BETWEEN,
+                    justify: a.Z.Justify.BETWEEN,
                     children: [
-                        (0, o.jsx)(a.Heading, {
-                            id: j,
+                        (0, i.jsx)(o.X6q, {
+                            id: z,
                             variant: 'heading-lg/semibold',
-                            children: C
+                            children: p
                         }),
-                        (0, o.jsx)(a.ModalCloseButton, { onClick: n })
+                        (0, i.jsx)(o.olH, { onClick: s })
                     ]
                 }),
-                (0, o.jsxs)(a.ModalContent, {
+                (0, i.jsxs)(o.hzk, {
                     children: [
-                        (0, o.jsx)(a.FormItem, {
-                            className: m.name,
-                            title: N,
-                            children: (0, o.jsx)(a.TextInput, {
-                                value: M,
-                                onChange: b,
-                                placeholder: null != E ? E : void 0,
+                        (0, i.jsx)(o.xJW, {
+                            className: k.name,
+                            title: j,
+                            children: (0, i.jsx)(o.oil, {
+                                value: b,
+                                onChange: v,
+                                placeholder: null != g ? g : void 0,
                                 maxLength: 100,
                                 autoFocus: !0
                             })
                         }),
-                        f && null != I
-                            ? (0, o.jsx)(a.Button, {
-                                  look: a.Button.Looks.LINK,
-                                  color: a.Button.Colors.LINK,
-                                  size: a.Button.Sizes.NONE,
+                        f && null != C
+                            ? (0, i.jsx)(o.zxk, {
+                                  look: o.zxk.Looks.LINK,
+                                  color: o.zxk.Colors.LINK,
+                                  size: o.zxk.Sizes.NONE,
                                   onClick: function () {
-                                      (0, h.UT)(t, null), n();
+                                      (0, u.UT)(n, null), s();
                                   },
-                                  className: m.reset,
-                                  children: x.Z.Messages.RESET_NICKNAME
+                                  className: k.reset,
+                                  children: h.NW.string(h.t.aE02R0)
                               })
                             : null,
-                        (0, o.jsx)(a.Text, {
-                            className: m.description,
+                        (0, i.jsx)(o.Text, {
+                            className: k.description,
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            children: x.Z.Messages.FAVORITES_SET_NICKNAME_DESCRIPTION
+                            children: h.NW.string(h.t['2vyz+P'])
                         })
                     ]
                 }),
-                (0, o.jsxs)(a.ModalFooter, {
+                (0, i.jsxs)(o.mzw, {
                     children: [
-                        (0, o.jsx)(a.Button, {
+                        (0, i.jsx)(o.zxk, {
                             type: 'submit',
-                            children: C
+                            children: p
                         }),
-                        (0, o.jsx)(a.Button, {
-                            onClick: n,
-                            look: a.Button.Looks.LINK,
-                            color: a.Button.Colors.PRIMARY,
-                            children: x.Z.Messages.CANCEL
+                        (0, i.jsx)(o.zxk, {
+                            onClick: s,
+                            look: o.zxk.Looks.LINK,
+                            color: o.zxk.Colors.PRIMARY,
+                            children: h.NW.string(h.t['ETE/oK'])
                         })
                     ]
                 })

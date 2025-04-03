@@ -1,43 +1,95 @@
-n(47120);
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => O }), n(47120);
+var r = n(200651);
+n(192379);
 var i = n(392711),
-    a = n.n(i),
-    s = n(481060),
-    o = n(493683),
+    o = n.n(i),
+    a = n(481060),
+    s = n(493683),
     l = n(904245),
-    u = n(911969),
-    c = n(933557),
+    c = n(911969),
+    u = n(933557),
     d = n(699516),
-    _ = n(594174),
-    E = n(895924),
-    f = n(689079),
+    f = n(594174),
+    _ = n(895924),
+    p = n(689079),
     h = n(981631),
-    p = n(689938);
-function m(e) {
+    m = n(388032);
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                g(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : b(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function v(e) {
     switch (e) {
         case h.nkL.GIF.title:
         case h.nkL.TENOR.title:
-            return p.Z.Messages.COMMAND_GIPHY_DESCRIPTION;
+            return m.NW.string(m.t['0vrCgI']);
         default:
             return '';
     }
 }
-let I = [
-    ...a()(h.nkL)
+let O = [
+    ...o()(h.nkL)
         .values()
         .map((e) => ({
             id: e.commandId,
-            name: e.command,
+            untranslatedName: e.command,
             displayName: e.command,
-            type: u.yU.CHAT,
-            inputType: E.iw.BUILT_IN_INTEGRATION,
-            applicationId: f.bi.BUILT_IN,
-            get description() {
-                return m(e.title);
+            type: c.yU.CHAT,
+            inputType: _.iw.BUILT_IN_INTEGRATION,
+            applicationId: p.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return v(e.title);
             },
             get displayDescription() {
-                return m(e.title);
+                return v(e.title);
             },
             options:
                 e.type === h.q9n.GIF
@@ -45,12 +97,12 @@ let I = [
                           {
                               name: 'query',
                               displayName: 'query',
-                              type: u.jw.STRING,
+                              type: c.jw.STRING,
                               get description() {
-                                  return p.Z.Messages.COMMAND_GIPHY_QUERY_DESCRIPTION;
+                                  return m.NW.string(m.t['+9g3Dg']);
                               },
                               get displayDescription() {
-                                  return p.Z.Messages.COMMAND_GIPHY_QUERY_DESCRIPTION;
+                                  return m.NW.string(m.t['+9g3Dg']);
                               },
                               required: !0
                           }
@@ -62,88 +114,99 @@ let I = [
         .value(),
     {
         id: '-15',
-        name: 'leave',
+        untranslatedName: 'leave',
         displayName: 'leave',
-        type: u.yU.CHAT,
-        inputType: E.iw.BUILT_IN,
-        applicationId: f.bi.BUILT_IN,
-        get description() {
-            return p.Z.Messages.LEAVE_GROUP_DM;
+        type: c.yU.CHAT,
+        inputType: _.iw.BUILT_IN,
+        applicationId: p.bi.BUILT_IN,
+        get untranslatedDescription() {
+            return m.NW.string(m.t['26C4oq']);
         },
         get displayDescription() {
-            return p.Z.Messages.LEAVE_GROUP_DM;
+            return m.NW.string(m.t['26C4oq']);
         },
         options: [
             {
                 name: 'silent',
                 displayName: 'silent',
-                type: u.jw.BOOLEAN,
+                type: c.jw.BOOLEAN,
                 get description() {
-                    return p.Z.Messages.LEAVE_GROUP_DM_SILENTLY_COMMAND_OPTION;
+                    return m.NW.string(m.t.YH7PkJ);
                 },
                 get displayDescription() {
-                    return p.Z.Messages.LEAVE_GROUP_DM_SILENTLY;
+                    return m.NW.string(m.t.bq3JXl);
                 },
                 required: !1
             }
         ],
         predicate: (e) => {
             let { channel: t } = e;
-            return t.isGroupDM();
+            return null != t && t.isGroupDM();
         },
         execute: (e, t) => {
             var n, i;
-            let { channel: a } = t,
-                u = (0, c.F6)(a, _.default, d.Z),
-                E = p.Z.Messages.LEAVE_GROUP_DM_TITLE.format({ name: u }),
-                f = p.Z.Messages.LEAVE_GROUP_DM_BODY.format({ name: u }),
-                h = null !== (i = null === (n = e.find((e) => 'silent' === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== i && i;
-            async function m() {
-                try {
-                    await o.Z.closePrivateChannel(a.id, void 0, h);
-                } catch (e) {
-                    l.Z.sendBotMessage(a.id, p.Z.Messages.LEAVE_GROUP_DM_ERROR);
-                }
+            let { channel: o } = t;
+            if (null == o) return;
+            let c = (0, u.F6)(o, f.default, d.Z),
+                _ = m.NW.formatToPlainString(m.t.hJ5Ap6, { name: c }),
+                p = m.NW.format(m.t.SSIVOj, { name: c }),
+                h = null != (i = null == (n = e.find((e) => 'silent' === e.name)) ? void 0 : n.value) && i;
+            async function g() {
+                if (null != o)
+                    try {
+                        await s.Z.closePrivateChannel(o.id, void 0, h);
+                    } catch (e) {
+                        l.Z.sendBotMessage(o.id, m.NW.string(m.t.YOsuT0));
+                    }
             }
-            a.isManaged() && ((E = p.Z.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({ name: u })), (f = p.Z.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({ name: u }))),
-                (0, s.openModal)((e) =>
-                    (0, r.jsx)(s.ConfirmModal, {
-                        header: E,
-                        confirmText: p.Z.Messages.LEAVE_GROUP_DM,
-                        cancelText: p.Z.Messages.CANCEL,
-                        onConfirm: m,
-                        ...e,
-                        children: (0, r.jsx)(s.Text, {
-                            variant: 'text-md/normal',
-                            children: f
-                        })
-                    })
+            o.isManaged() && ((_ = m.NW.formatToPlainString(m.t.hVGjER, { name: c })), (p = m.NW.format(m.t.IK1Qvr, { name: c }))),
+                (0, a.h7j)((e) =>
+                    (0, r.jsx)(
+                        a.ConfirmModal,
+                        y(
+                            E(
+                                {
+                                    header: _,
+                                    confirmText: m.NW.string(m.t['26C4oq']),
+                                    cancelText: m.NW.string(m.t['ETE/oK']),
+                                    onConfirm: g
+                                },
+                                e
+                            ),
+                            {
+                                children: (0, r.jsx)(a.Text, {
+                                    variant: 'text-md/normal',
+                                    children: p
+                                })
+                            }
+                        )
+                    )
                 );
         }
     },
     {
         id: '-17',
-        name: 'sticker',
+        untranslatedName: 'sticker',
         displayName: 'sticker',
-        type: u.yU.CHAT,
-        inputType: E.iw.BUILT_IN_INTEGRATION,
-        applicationId: f.bi.BUILT_IN,
-        get description() {
-            return p.Z.Messages.COMMAND_STICKER_DESCRIPTION;
+        type: c.yU.CHAT,
+        inputType: _.iw.BUILT_IN_INTEGRATION,
+        applicationId: p.bi.BUILT_IN,
+        get untranslatedDescription() {
+            return m.NW.string(m.t.GUH9IC);
         },
         get displayDescription() {
-            return p.Z.Messages.COMMAND_STICKER_DESCRIPTION;
+            return m.NW.string(m.t.GUH9IC);
         },
         options: [
             {
                 name: 'query',
                 displayName: 'query',
-                type: u.jw.STRING,
+                type: c.jw.STRING,
                 get description() {
-                    return p.Z.Messages.COMMAND_STICKER_QUERY_DESCRIPTION;
+                    return m.NW.string(m.t.hIbHm5);
                 },
                 get displayDescription() {
-                    return p.Z.Messages.COMMAND_STICKER_QUERY_DESCRIPTION;
+                    return m.NW.string(m.t.hIbHm5);
                 },
                 required: !0
             }
@@ -152,4 +215,3 @@ let I = [
         integrationTitle: 'sticker'
     }
 ];
-t.Z = I;

@@ -1,47 +1,43 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(824203),
-    r = n(981631),
-    l = n(689938),
-    o = n(632777);
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    a = n(824203),
+    l = n(981631),
+    o = n(388032),
+    s = n(806518);
 function c(e) {
     var t;
     let n,
         { message: c, onDeleteMessage: u, children: d } = e,
-        _ = null === (t = c.interactionMetadata) || void 0 === t ? void 0 : t.ephemerality_reason,
-        E = () => u(c, !0);
-    if (null != _) {
-        let e = (0, s.in)(_);
-        n = (0, i.jsx)('div', {
-            className: o.userAppsBetaContent,
-            children: l.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_WITH_REASON.format({
-                handleDelete: E,
+        p = null == (t = c.interactionMetadata) ? void 0 : t.ephemerality_reason,
+        m = () => u(c, !0);
+    if (null != p) {
+        let e = (0, a.i)(p);
+        n = (0, r.jsx)('div', {
+            className: s.userAppsBetaContent,
+            children: o.NW.format(o.t.wx1tLS, {
+                handleDelete: m,
                 reason: e
             })
         });
     } else
         n =
-            c.type === r.uaV.STAGE_RAISE_HAND
-                ? l.Z.Messages.STAGE_SYSTEM_MESSAGE_MODERATOR_VISIBILITY_MESSAGE.format({ handleDelete: E })
-                : l.Z.Messages.ONLY_YOU_CAN_SEE_AND_DELETE_THESE.format({
+            c.type === l.uaV.STAGE_RAISE_HAND
+                ? o.NW.format(o.t['qDAX+/'], { handleDelete: m })
+                : o.NW.format(o.t.uX3ecH, {
                       count: 1,
                       countMessages: 1,
-                      handleDelete: E
+                      handleDelete: m
                   });
-    return (0, i.jsxs)('div', {
-        className: o.ephemeralMessage,
+    return (0, r.jsxs)('div', {
+        className: s.ephemeralMessage,
         onClick: (e) => e.stopPropagation(),
         children: [
-            (0, i.jsx)(a.EyeIcon, {
+            (0, r.jsx)(i.tEF, {
                 size: 'xs',
                 color: 'currentColor',
-                className: o.icon
+                className: s.icon
             }),
             n,
             d

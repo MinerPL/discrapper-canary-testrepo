@@ -1,145 +1,182 @@
-n.d(t, {
-    Z: function () {
-        return A;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(481060),
-    l = n(32750),
-    r = n(323597),
-    o = n(438536),
+n.d(t, { Z: () => S }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(32750),
+    a = n(323597),
+    s = n(438536),
     c = n(193987),
     u = n(933793),
     d = n(13736),
-    h = n(732393),
-    m = n(214906),
-    p = n(612856),
-    _ = n(137591),
-    f = n(299206),
-    E = n(727429),
-    g = n(665149),
+    p = n(732393),
+    h = n(214906),
+    f = n(612856),
+    m = n(137591),
+    g = n(299206),
+    b = n(727429),
+    _ = n(665149),
     C = n(359110),
-    I = n(585483),
+    y = n(585483),
     x = n(739830),
-    T = n(488131),
-    N = n(981631),
-    v = n(689938);
-function S(e) {
-    let { channel: t } = e,
-        [n, l] = a.useState(!1);
-    function r() {
-        l((e) => !e);
+    v = n(488131),
+    j = n(981631),
+    O = n(388032);
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-    let o = v.Z.Messages.MORE;
-    return (0, i.jsx)(s.Popout, {
+    return e;
+}
+function N(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function I(e) {
+    let { channel: t } = e,
+        [n, o] = i.useState(!1);
+    function a() {
+        o((e) => !e);
+    }
+    let s = O.NW.string(O.t.UKOtz8);
+    return (0, r.jsx)(l.yRy, {
         shouldShow: n,
-        animation: s.Popout.Animation.NONE,
+        animation: l.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => l(!1),
+        onRequestClose: () => o(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(Z, {
-                ...e,
-                channel: t
-            });
+            return (0, r.jsx)(P, N(E({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(g.ZP.Icon, {
-                ...e,
-                onClick: r,
-                tooltip: n ? null : o,
-                icon: s.MoreHorizontalIcon,
-                'aria-label': o,
-                selected: n
-            });
+            return (0, r.jsx)(
+                _.ZP.Icon,
+                N(E({}, e), {
+                    onClick: a,
+                    tooltip: n ? null : s,
+                    icon: l.xhG,
+                    'aria-label': s,
+                    selected: n
+                })
+            );
         }
     });
 }
-function Z(e) {
-    let { channel: t, closePopout: n, onSelect: a } = e,
-        E = (0, o.Z)(t, 'Sidebar Overflow'),
-        g = (0, u.Z)(t),
-        x = (0, m.Z)(t),
-        T = (0, p.Z)(t),
-        S = (0, l.Z)(t),
-        Z = (0, c.Z)(t),
-        A = (0, h.Z)(t.id),
-        M = (0, d.Z)(t),
-        b = (0, r.Z)(t),
-        R = (0, f.Z)({
+function P(e) {
+    let { channel: t, closePopout: n, onSelect: i } = e,
+        b = (0, s.Z)(t, 'Sidebar Overflow'),
+        _ = (0, u.Z)(t),
+        x = (0, h.Z)(t),
+        v = (0, f.Z)(t),
+        E = (0, o.Z)(t),
+        N = (0, c.Z)(t),
+        I = (0, p.Z)(t.id),
+        P = (0, d.Z)(t),
+        S = (0, a.Z)(t),
+        Z = (0, g.Z)({
             id: t.id,
-            label: v.Z.Messages.COPY_ID_THREAD
+            label: O.NW.string(O.t.DQ797u)
         }),
-        j = (0, _.Z)(t);
-    function L() {
+        T = (0, m.Z)(t);
+    function A() {
         (0, C.Kh)(t.id);
     }
-    return (0, i.jsxs)(s.Menu, {
+    return (0, r.jsxs)(l.v2r, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': v.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
-        onSelect: a,
+        'aria-label': O.NW.string(O.t['1NBjqa']),
+        onSelect: i,
         children: [
-            (0, i.jsxs)(s.MenuGroup, {
+            (0, r.jsxs)(l.kSQ, {
                 children: [
-                    E,
-                    (0, i.jsx)(s.MenuItem, {
+                    b,
+                    (0, r.jsx)(l.sNh, {
                         id: 'open',
-                        label: v.Z.Messages.OPEN_IN_FULL_VIEW,
-                        action: L
+                        label: O.NW.string(O.t.IxVmZm),
+                        action: A
                     })
                 ]
             }),
-            (0, i.jsxs)(s.MenuGroup, {
-                children: [x, T]
+            (0, r.jsxs)(l.kSQ, {
+                children: [x, v]
             }),
-            (0, i.jsxs)(s.MenuGroup, {
-                children: [M, g, A]
+            (0, r.jsxs)(l.kSQ, {
+                children: [P, _, I]
             }),
-            (0, i.jsxs)(s.MenuGroup, {
+            (0, r.jsxs)(l.kSQ, {
                 children: [
-                    (0, i.jsx)(s.MenuItem, {
+                    (0, r.jsx)(l.sNh, {
                         id: 'search',
-                        label: v.Z.Messages.SEARCH,
-                        icon: s.WindowLaunchIcon,
+                        label: O.NW.string(O.t['5h0QOD']),
+                        icon: l.rgF,
                         action: function () {
-                            L(),
+                            A(),
                                 setTimeout(() => {
-                                    I.S.dispatch(N.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    y.S.dispatch(j.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         }
                     }),
-                    (0, i.jsx)(s.MenuItem, {
+                    (0, r.jsx)(l.sNh, {
                         id: 'pins',
-                        label: v.Z.Messages.PINS,
-                        icon: s.WindowLaunchIcon,
+                        label: O.NW.string(O.t['2BSH7u']),
+                        icon: l.rgF,
                         action: function () {
-                            L(), I.S.dispatch(N.CkL.TOGGLE_CHANNEL_PINS);
+                            A(), y.S.dispatch(j.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]
             }),
-            (0, i.jsxs)(s.MenuGroup, {
-                children: [j, S, Z, b]
+            (0, r.jsxs)(l.kSQ, {
+                children: [T, E, N, S]
             }),
-            (0, i.jsx)(s.MenuGroup, { children: R })
+            (0, r.jsx)(l.kSQ, { children: Z })
         ]
     });
 }
-function A(e) {
+function S(e) {
     let { channel: t, baseChannelId: n } = e;
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            t.isForumPost() ? null : (0, i.jsx)(x.Z, { channel: t }),
-            (0, i.jsx)(S, { channel: t }),
-            (0, i.jsx)(g.ZP.Icon, {
-                icon: s.XSmallIcon,
-                tooltip: v.Z.Messages.CLOSE,
-                onClick: () => (0, T.vN)((0, E.e)(t), null != n ? n : t.parent_id)
+            t.isForumPost() ? null : (0, r.jsx)(x.Z, { channel: t }),
+            (0, r.jsx)(I, { channel: t }),
+            (0, r.jsx)(_.ZP.Icon, {
+                icon: l.Dio,
+                tooltip: O.NW.string(O.t.cpT0Cg),
+                onClick: () => (0, v.vN)((0, b.e)(t), null != n ? n : t.parent_id)
             })
         ]
     });

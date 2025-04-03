@@ -1,9 +1,5 @@
-r.d(t, {
-    V: function () {
-        return n;
-    }
-});
-let n = {
+a.d(e, { V: () => r });
+let r = {
     Themes: {
         DARK: 'dark',
         LIGHT: 'light',

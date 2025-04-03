@@ -1,15 +1,9 @@
 n.d(t, {
-    Dq: function () {
-        return i.D;
-    },
-    Il: function () {
-        return a.I;
-    },
-    MK: function () {
-        return s.M;
-    }
+    Dq: () => r.D,
+    Il: () => i.I,
+    MK: () => a.M
 });
-var i = n(438882);
+var r = n(438882);
 n(309651);
-var a = n(926188),
-    s = n(256147);
+var i = n(926188),
+    a = n(256147);

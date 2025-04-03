@@ -1,25 +1,35 @@
-n(47120);
-var r = n(147913),
-    i = n(405656);
-class a extends r.Z {
+n.d(t, { Z: () => l }), n(47120);
+var r = n(241601),
+    i = n(147913),
+    o = n(405656);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class s extends i.Z {
+    _initialize() {
+        this._unsubscribeIntlLoadingStore = (0, r.Ql)(o.Pe);
+    }
+    _terminate() {
+        var e, t;
+        null == (e = (t = this)._unsubscribeIntlLoadingStore) || e.call(t);
+    }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
-                USER_SETTINGS_PROTO_UPDATE: i.Pe,
-                I18N_LOAD_SUCCESS: i.Pe,
-                POST_CONNECTION_OPEN: i.Pe
+            a(this, 'actions', {
+                USER_SETTINGS_PROTO_UPDATE: o.Pe,
+                POST_CONNECTION_OPEN: o.Pe
             }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            a(this, '_unsubscribeIntlLoadingStore', void 0);
     }
 }
-t.Z = new a();
+let l = new s();

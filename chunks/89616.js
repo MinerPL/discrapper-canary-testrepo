@@ -1,98 +1,92 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return d;
-        }
-    }),
-    s(47120);
-var n = s(735250),
-    o = s(470079),
+s.d(t, { default: () => r }), s(47120);
+var n = s(200651),
+    l = s(192379),
     a = s(481060),
-    l = s(365007),
-    c = s(689938),
-    r = s(992418);
-function d(e) {
-    let { transitionState: t, onClose: s, credential: d } = e,
-        [i, u] = o.useState(!1),
-        [h, _] = o.useState(''),
-        [E, M] = o.useState(void 0),
-        m = o.useRef(null);
-    async function N(e) {
+    i = s(365007),
+    c = s(388032),
+    o = s(17379);
+function r(e) {
+    let { transitionState: t, onClose: s, credential: r } = e,
+        [d, u] = l.useState(!1),
+        [h, x] = l.useState(''),
+        [m, g] = l.useState(void 0),
+        k = l.useRef(null);
+    async function f(e) {
         e.preventDefault(), u(!0);
         try {
-            await (0, l.WQ)(d.id, h), s();
+            await (0, i.WQ)(r.id, h), s();
         } catch (e) {
-            M(e.message);
+            g(e.message);
         } finally {
             u(!1);
         }
     }
     return (
-        o.useEffect(() => {
-            if (t === a.ModalTransitionState.ENTERED) {
+        l.useEffect(() => {
+            if (t === a.Dvm.ENTERED) {
                 var e;
-                null === (e = m.current) || void 0 === e || e.focus();
+                null == (e = k.current) || e.focus();
             }
         }, [t]),
-        (0, n.jsxs)(a.ModalRoot, {
+        (0, n.jsxs)(a.Y0X, {
             transitionState: t,
             children: [
-                (0, n.jsxs)(a.ModalHeader, {
+                (0, n.jsxs)(a.xBx, {
                     separator: !1,
-                    className: r.header,
+                    className: o.header,
                     children: [
                         (0, n.jsx)(a.Text, {
                             color: 'header-secondary',
                             variant: 'text-lg/bold',
-                            className: r.subtitle,
-                            children: c.Z.Messages.TWO_FA_WEBAUTHN_RENAME
+                            className: o.subtitle,
+                            children: c.NW.string(c.t.YjuMsb)
                         }),
-                        (0, n.jsx)(a.ModalCloseButton, {
+                        (0, n.jsx)(a.olH, {
                             onClick: s,
-                            className: r.modalCloseButton
+                            className: o.modalCloseButton
                         })
                     ]
                 }),
                 (0, n.jsxs)('form', {
-                    onSubmit: N,
+                    onSubmit: f,
                     children: [
-                        (0, n.jsx)(a.ModalContent, {
-                            className: r.content,
-                            children: (0, n.jsx)(a.FormItem, {
-                                title: c.Z.Messages.TWO_FA_WEBAUTHN_RENAME_FORM_NEW_KEY,
-                                error: E,
+                        (0, n.jsx)(a.hzk, {
+                            className: o.content,
+                            children: (0, n.jsx)(a.xJW, {
+                                title: c.NW.string(c.t['7yEgJS']),
+                                error: m,
                                 required: !0,
                                 children: (0, n.jsx)('div', {
-                                    children: (0, n.jsx)(a.TextInput, {
-                                        inputRef: m,
-                                        'aria-label': c.Z.Messages.TWO_FA_WEBAUTHN_RENAME_FORM_NEW_KEY,
-                                        placeholder: d.name,
+                                    children: (0, n.jsx)(a.oil, {
+                                        inputRef: k,
+                                        'aria-label': c.NW.string(c.t['7yEgJS']),
+                                        placeholder: r.name,
                                         value: h,
                                         minLength: 1,
                                         maxLength: 32,
-                                        onChange: _,
+                                        onChange: x,
                                         autoFocus: !0,
                                         required: !0
                                     })
                                 })
                             })
                         }),
-                        (0, n.jsxs)(a.ModalFooter, {
+                        (0, n.jsxs)(a.mzw, {
                             children: [
-                                (0, n.jsx)(a.Button, {
+                                (0, n.jsx)(a.zxk, {
                                     type: 'submit',
-                                    color: a.Button.Colors.BRAND,
-                                    size: a.Button.Sizes.MEDIUM,
-                                    submitting: i,
+                                    color: a.zxk.Colors.BRAND,
+                                    size: a.zxk.Sizes.MEDIUM,
+                                    submitting: d,
                                     disabled: 0 === h.length || h.length > 32,
-                                    children: c.Z.Messages.DONE
+                                    children: c.NW.string(c.t.i4jeWV)
                                 }),
-                                (0, n.jsx)(a.Button, {
-                                    className: r.cancel,
-                                    look: a.Button.Looks.LINK,
-                                    color: a.Button.Colors.PRIMARY,
+                                (0, n.jsx)(a.zxk, {
+                                    className: o.cancel,
+                                    look: a.zxk.Looks.LINK,
+                                    color: a.zxk.Colors.PRIMARY,
                                     onClick: s,
-                                    children: c.Z.Messages.CANCEL
+                                    children: c.NW.string(c.t['ETE/oK'])
                                 })
                             ]
                         })

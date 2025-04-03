@@ -1,71 +1,65 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
-var i = n(735250);
-n(470079);
-var s = n(13245),
-    a = n(593481),
-    o = n(237997),
-    r = n(312839),
-    l = n(987650),
-    c = n(689938);
-let d = () => ({
+n.d(t, { Z: () => f });
+var i = n(200651);
+n(192379);
+var r = n(13245),
+    s = n(593481),
+    o = n(371651),
+    l = n(237997),
+    a = n(145597),
+    c = n(312839),
+    u = n(987650),
+    d = n(388032);
+let h = () => ({
         icon: n(328756),
-        title: c.Z.Messages.OVERLAY_LAUNCH_TITLE,
+        title: d.NW.string(d.t.pkXAeH),
         body: null,
-        hint: u,
-        colorScheme: a.IC.PRIMARY,
-        notifType: l.n0.WelcomeNudge
+        hint: p,
+        notifType: u.n0.WelcomeNudge
     }),
-    u = (e) => (0, a.QR)(e, (0, r.P)(), c.Z.Messages.OVERLAY_LAUNCH_OPEN_TIP);
-function h(e) {
+    p = (e) => (0, s.QR)(e, (0, c.P)(), d.t['z8/sgI']);
+function f(e) {
     let { type: t } = e,
         {
             icon: n,
-            title: u,
-            body: h,
-            hint: p,
-            colorScheme: f,
-            notifType: _
+            title: s,
+            body: p,
+            hint: f,
+            notifType: g
         } = (function (e, t) {
-            if (t.type === l.nc.NEWS) {
-                var n, i, s, o, r, c, d, u;
+            if (t.type === u.nc.NEWS) {
+                var n, i, r, s, o, l, a, c;
                 return {
-                    icon: null !== (r = null === (n = t.news) || void 0 === n ? void 0 : n.icon) && void 0 !== r ? r : e.icon,
-                    title: null !== (c = null === (i = t.news) || void 0 === i ? void 0 : i.title) && void 0 !== c ? c : e.title,
-                    body: null !== (d = null === (s = t.news) || void 0 === s ? void 0 : s.body) && void 0 !== d ? d : e.body,
-                    hint: null !== (u = null === (o = t.news) || void 0 === o ? void 0 : o.hint) && void 0 !== u ? u : e.hint,
-                    colorScheme: null != t.news ? a.IC.BRAND : e.colorScheme,
-                    notifType: null != t.news ? l.n0.NewsNudge : e.notifType
+                    icon: null != (o = null == (n = t.news) ? void 0 : n.icon) ? o : e.icon,
+                    title: null != (l = null == (i = t.news) ? void 0 : i.title) ? l : e.title,
+                    body: null != (a = null == (r = t.news) ? void 0 : r.body) ? a : e.body,
+                    hint: null != (c = null == (s = t.news) ? void 0 : s.hint) ? c : e.hint,
+                    notifType: null != t.news ? u.n0.NewsNudge : e.notifType
                 };
             }
             return e;
-        })(d(), e),
-        { trackView: g, trackClick: m } = (0, r.R)(_, { notif_type: _ });
+        })(h(), e),
+        { trackView: m, trackClick: y } = (0, c.R)(g, { notif_type: g });
     return {
-        colorScheme: f,
         icon: n,
-        title: u,
-        body: h,
-        hint: p,
+        title: s,
+        body: p,
+        hint: f,
         renderFooter: () =>
             (0, i.jsx)('div', {
                 style: {
                     textAlign: 'center',
                     padding: 2
                 },
-                children: c.Z.Messages.OVERLAY_CLICK_TO_UNLOCK
+                children: d.NW.string(d.t['9MyuT0'])
             }),
         onNotificationShow: () => {
-            g();
+            m();
         },
         onNotificationClick: (e, n) => {
-            m('unlock'), t === l.nc.NEWS && s.Z.updateNotificationStatus(n), o.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
+            y('unlock'), t === u.nc.NEWS && r.Z.updateNotificationStatus(n), o.default.isOverlayOOPEnabledForPid((0, a.getPID)()) ? r.Z.setInputLocked(!1, (0, a.getPID)()) : l.default.isInstanceLocked() && r.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            m('dismiss');
+            y('dismiss');
         }
     };
 }

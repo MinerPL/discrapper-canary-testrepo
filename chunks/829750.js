@@ -1,54 +1,50 @@
-t.d(n, {
-    Z: function () {
-        return s;
-    },
-    t: function () {
-        return o;
-    }
+n.d(t, {
+    Z: () => c,
+    t: () => l
 });
-var l = t(442837),
-    i = t(430824),
-    a = t(938475),
-    r = t(981631);
-function s(e) {
-    return (0, l.cj)(
-        [a.ZP, i.Z],
+var i = n(442837),
+    o = n(430824),
+    r = n(938475),
+    a = n(981631);
+function c(e) {
+    return (0, i.cj)(
+        [r.ZP, o.Z],
         () => {
-            let n = a.ZP.countVoiceStatesForChannel(e.id),
-                t = i.Z.getGuild(e.getGuildId());
-            return null == t
+            let t = r.ZP.countVoiceStatesForChannel(e.id),
+                n = o.Z.getGuild(e.getGuildId());
+            return null == n
                 ? {
                       reachedLimit: !1,
                       limit: -1
                   }
-                : e.type === r.d4z.GUILD_STAGE_VOICE
+                : e.type === a.d4z.GUILD_STAGE_VOICE
                   ? {
-                        reachedLimit: n > t.maxStageVideoChannelUsers,
-                        limit: t.maxStageVideoChannelUsers
+                        reachedLimit: t > n.maxStageVideoChannelUsers,
+                        limit: n.maxStageVideoChannelUsers
                     }
                   : {
-                        reachedLimit: t.maxVideoChannelUsers > 0 && n > t.maxVideoChannelUsers,
-                        limit: t.maxVideoChannelUsers
+                        reachedLimit: n.maxVideoChannelUsers > 0 && t > n.maxVideoChannelUsers,
+                        limit: n.maxVideoChannelUsers
                     };
         },
         [e]
     );
 }
-function o(e) {
-    let n = a.ZP.countVoiceStatesForChannel(e.id),
-        t = i.Z.getGuild(e.getGuildId());
-    return null == t
+function l(e) {
+    let t = r.ZP.countVoiceStatesForChannel(e.id),
+        n = o.Z.getGuild(e.getGuildId());
+    return null == n
         ? {
               reachedLimit: !1,
               limit: -1
           }
-        : e.type === r.d4z.GUILD_STAGE_VOICE
+        : e.type === a.d4z.GUILD_STAGE_VOICE
           ? {
-                reachedLimit: n > t.maxStageVideoChannelUsers,
-                limit: t.maxStageVideoChannelUsers
+                reachedLimit: t > n.maxStageVideoChannelUsers,
+                limit: n.maxStageVideoChannelUsers
             }
           : {
-                reachedLimit: t.maxVideoChannelUsers > 0 && n > t.maxVideoChannelUsers,
-                limit: t.maxVideoChannelUsers
+                reachedLimit: n.maxVideoChannelUsers > 0 && t > n.maxVideoChannelUsers,
+                limit: n.maxVideoChannelUsers
             };
 }

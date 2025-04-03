@@ -1,108 +1,82 @@
-var r, i;
 n.r(t),
     n.d(t, {
-        PlatformTypes: function () {
-            return r;
-        },
-        getNativePlatform: function () {
-            return T;
-        },
-        getOS: function () {
-            return g;
-        },
-        getPlatform: function () {
-            return m;
-        },
-        getPlatformName: function () {
-            return I;
-        },
-        isAndroid: function () {
-            return h;
-        },
-        isAndroidChrome: function () {
-            return E;
-        },
-        isAndroidWeb: function () {
-            return f;
-        },
-        isDesktop: function () {
-            return d;
-        },
-        isIOS: function () {
-            return p;
-        },
-        isLinux: function () {
-            return c;
-        },
-        isMac: function () {
-            return u;
-        },
-        isPlatformEmbedded: function () {
-            return s;
-        },
-        isWeb: function () {
-            return _;
-        },
-        isWindows: function () {
-            return l;
-        }
+        PlatformTypes: () => r,
+        getNativePlatform: () => b,
+        getOS: () => y,
+        getPlatform: () => g,
+        getPlatformName: () => E,
+        isAndroid: () => h,
+        isAndroidChrome: () => f,
+        isAndroidWeb: () => _,
+        isDesktop: () => u,
+        isIOS: () => m,
+        isLinux: () => c,
+        isMac: () => l,
+        isMacWeb: () => p,
+        isPlatformEmbedded: () => o,
+        isWeb: () => d,
+        isWindows: () => s
     }),
-    ((i = r || (r = {})).WINDOWS = 'WINDOWS'),
-    (i.OSX = 'OSX'),
-    (i.LINUX = 'LINUX'),
-    (i.WEB = 'WEB');
-let a = window.DiscordNative,
-    s = null != a,
-    o = null != a ? a.process.platform : '';
-function l() {
-    return /^win/.test(o);
+    n(301563);
+var r = (function (e) {
+    return (e.WINDOWS = 'WINDOWS'), (e.OSX = 'OSX'), (e.LINUX = 'LINUX'), (e.WEB = 'WEB'), e;
+})({});
+let i = window.DiscordNative,
+    o = null != i,
+    a = null != i ? i.process.platform : '';
+function s() {
+    return /^win/.test(a);
 }
-function u() {
-    return 'darwin' === o;
+function l() {
+    return 'darwin' === a;
 }
 function c() {
-    return 'linux' === o;
+    return 'linux' === a;
+}
+function u() {
+    return s() || l() || c();
 }
 function d() {
-    return l() || u() || c();
-}
-function _() {
-    return 'WEB' === m();
-}
-function E() {
-    return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile');
+    return 'WEB' === g();
 }
 function f() {
-    var e;
-    return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/android/i)) != null;
+    return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile');
 }
-function h() {
-    return 'android' === o;
+function _() {
+    var e;
+    return (null == (e = navigator.userAgent) ? void 0 : e.match(/android/i)) != null;
 }
 function p() {
-    return 'ios' === o;
+    var e;
+    return (null == (e = navigator.userAgent) ? void 0 : e.match(/Macintosh/i)) != null;
+}
+function h() {
+    return 'android' === a;
 }
 function m() {
-    return l() ? 'WINDOWS' : u() ? 'OSX' : c() ? 'LINUX' : 'WEB';
+    return 'ios' === a;
 }
-function I() {
-    return o;
+function g() {
+    return s() ? 'WINDOWS' : l() ? 'OSX' : c() ? 'LINUX' : 'WEB';
 }
-function T() {
-    switch (o) {
+function E() {
+    return a;
+}
+function b() {
+    switch (a) {
         case 'ios':
         case 'android':
-            return o;
+            return a;
         default:
             return 'web';
     }
 }
-function g() {
+function y() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? 'windows mobile' : 'windows';
     if (/(iPhone|iPad|iPod)/.test(e)) return 'ios';
     if (/Android/.test(e)) return 'android';
-    else if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return 'blackberry';
-    else if (/Mac/i.test(e)) return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? 'ios' : 'macos';
+    if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return 'blackberry';
+    if (/Mac/i.test(e)) return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? 'ios' : 'macos';
     else if (/Linux/i.test(e)) return 'linux';
 }

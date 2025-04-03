@@ -1,159 +1,156 @@
-n.d(t, {
-    Z: function () {
-        return M;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(913527),
-    o = n.n(r),
+n.d(t, { Z: () => P });
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(913527),
+    s = n.n(a),
     c = n(399606),
     u = n(481060),
     d = n(480137),
-    h = n(906732),
-    m = n(884737),
-    p = n(376923),
-    _ = n(472596),
-    f = n(987707),
-    E = n(501801),
-    g = n(271383),
+    p = n(906732),
+    h = n(376923),
+    f = n(472596),
+    m = n(987707),
+    g = n(909746),
+    b = n(501801),
+    _ = n(271383),
     C = n(430824),
-    I = n(274730),
-    x = n(5192),
-    T = n(776767),
-    N = n(689938),
-    v = n(577904),
-    S = n(395193),
-    Z = n(446926);
-function A(e) {
-    let { log: t, member: n, guild: s } = e,
-        { analyticsLocations: r } = (0, h.ZP)(),
-        d = m.nm(t),
-        f = m.QM(t),
-        C = m.of(t),
-        I = m.J5(t),
-        T = (0, p.LJ)(t.id),
-        Z = (0, c.e7)([g.ZP], () => (null != t.userId ? g.ZP.getMember(n.guildId, t.userId) : null), [n.guildId, t.userId]),
-        A = a.useCallback(
+    y = n(5192),
+    x = n(776767),
+    v = n(981631),
+    j = n(388032),
+    O = n(54433),
+    E = n(44946),
+    N = n(12740);
+function I(e) {
+    var t;
+    let { log: n, member: l, guild: a } = e,
+        { analyticsLocations: d } = (0, p.ZP)(),
+        m = g.nm(n),
+        C = g.QM(n),
+        x = null == (t = g.V$(v.zUn.REASON, n)) ? void 0 : t.newValue,
+        N = g.J5(n),
+        I = (0, h.LJ)(n.id),
+        P = (0, c.e7)([_.ZP], () => (null != n.userId ? _.ZP.getMember(l.guildId, n.userId) : null), [l.guildId, n.userId]),
+        S = i.useCallback(
             (e) => (t) => {
-                t.preventDefault(), t.stopPropagation(), null != e && (0, _.RE)(e, r);
+                t.preventDefault(), t.stopPropagation(), null != e && (0, f.RE)(e, d);
             },
-            [r]
+            [d]
         ),
-        M = a.useCallback(
+        Z = i.useCallback(
             () =>
-                null == t.user
+                null == n.user
                     ? null
-                    : (0, i.jsx)(u.Tooltip, {
-                          text: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
+                    : (0, r.jsx)(u.ua7, {
+                          text: j.NW.string(j.t.mvsi9v),
                           children: (e) => {
-                              var a;
-                              let { onMouseEnter: s, onMouseLeave: l } = e;
-                              return (0, i.jsx)(u.Clickable, {
+                              var t;
+                              let { onMouseEnter: i, onMouseLeave: o } = e;
+                              return (0, r.jsx)(u.P3F, {
                                   tag: 'span',
-                                  className: v.username,
-                                  onClick: A(Z),
-                                  onMouseEnter: s,
-                                  onMouseLeave: l,
-                                  children: (0, i.jsxs)(u.Text, {
+                                  className: O.username,
+                                  onClick: S(P),
+                                  onMouseEnter: i,
+                                  onMouseLeave: o,
+                                  children: (0, r.jsxs)(u.Text, {
                                       variant: 'text-sm/medium',
                                       tag: 'span',
                                       children: [
                                           '@',
-                                          (0, i.jsx)(u.NameWithRole, {
-                                              name: x.ZP.getName(n.guildId, null, t.user),
-                                              color: null !== (a = null == Z ? void 0 : Z.colorString) && void 0 !== a ? a : void 0
+                                          (0, r.jsx)(u.PUh, {
+                                              name: y.ZP.getName(l.guildId, null, n.user),
+                                              color: null != (t = null == P ? void 0 : P.colorString) ? t : void 0
                                           })
                                       ]
                                   })
                               });
                           }
                       }),
-            [A, t.user, n.guildId, Z]
+            [S, n.user, l.guildId, P]
         )();
-    return (0, i.jsxs)('div', {
-        className: l()(S.modInfoItem, v.auditLogItem),
+    return (0, r.jsxs)('div', {
+        className: o()(E.modInfoItem, O.auditLogItem),
         children: [
-            (0, i.jsxs)('div', {
-                className: v.auditLogItemTitleContainer,
+            (0, r.jsxs)('div', {
+                className: O.auditLogItemTitleContainer,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: v.auditLogItemTitle,
+                    (0, r.jsxs)('div', {
+                        className: O.auditLogItemTitle,
                         children: [
-                            null != d &&
-                                (0, i.jsx)(u.Text, {
+                            null != m &&
+                                (0, r.jsx)(u.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'header-primary',
-                                    children: d
+                                    children: m
                                 }),
-                            null != f &&
-                                (0, i.jsxs)(u.Text, {
+                            null != C &&
+                                (0, r.jsxs)(u.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    children: ['(', 'string' == typeof f ? f : o()(f).fromNow(), ')']
+                                    children: ['(', 'string' == typeof C ? C : s()(C).fromNow(), ')']
                                 })
                         ]
                     }),
-                    (0, i.jsx)('div', {
-                        className: v.auditLogItemDate,
-                        children: (0, i.jsx)(u.Text, {
+                    (0, r.jsx)('div', {
+                        className: O.auditLogItemDate,
+                        children: (0, r.jsx)(u.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-primary',
-                            children: T
+                            children: I
                         })
                     })
                 ]
             }),
-            null != C &&
-                (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
-                    children: (0, i.jsxs)('div', {
-                        className: v.auditLogReason,
+            null != x &&
+                (0, r.jsx)('div', {
+                    className: O.auditLogSecondaryContainer,
+                    children: (0, r.jsxs)('div', {
+                        className: O.auditLogReason,
                         children: [
-                            M,
-                            (0, i.jsx)(u.Text, {
+                            Z,
+                            (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 tag: 'span',
-                                children: C
+                                children: x
                             })
                         ]
                     })
                 }),
-            null == C &&
-                null != I &&
-                (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
-                    children: (0, i.jsxs)('div', {
-                        className: v.auditLogSecondary,
+            null == x &&
+                null != N &&
+                (0, r.jsx)('div', {
+                    className: O.auditLogSecondaryContainer,
+                    children: (0, r.jsxs)('div', {
+                        className: O.auditLogSecondary,
                         children: [
-                            M,
-                            (0, i.jsx)(u.Text, {
+                            Z,
+                            (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 tag: 'span',
-                                children: I
+                                children: N
                             })
                         ]
                     })
                 }),
-            null == C &&
-                null == I &&
-                (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
-                    children: (0, i.jsx)('div', {
-                        className: v.auditLogSecondary,
-                        children: (0, i.jsx)(u.Text, {
+            null == x &&
+                null == N &&
+                (0, r.jsx)('div', {
+                    className: O.auditLogSecondaryContainer,
+                    children: (0, r.jsx)('div', {
+                        className: O.auditLogSecondary,
+                        children: (0, r.jsx)(u.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
                             tag: 'span',
-                            children: (0, i.jsx)(E.tP, {
-                                log: t,
-                                guild: s,
+                            children: (0, r.jsx)(b.tP, {
+                                log: n,
+                                guild: a,
                                 onContentClick: () => {},
-                                className: v.auditLogExpandedChangeDetails
+                                className: O.auditLogExpandedChangeDetails
                             })
                         })
                     })
@@ -161,33 +158,33 @@ function A(e) {
         ]
     });
 }
-function M(e) {
+function P(e) {
     let { member: t } = e,
         n = (0, c.e7)([C.Z], () => C.Z.getGuild(t.guildId), [t.guildId]),
-        s = (0, c.e7)(
-            [f.Z],
+        l = (0, c.e7)(
+            [m.Z],
             () => {
-                let e = f.Z.logs;
-                return null == e || null == n ? [] : I._$(e, n);
+                let e = m.Z.logs;
+                return null == e || null == n ? [] : g._$(e, n);
             },
             [n]
         );
-    return (a.useEffect(() => {
-        (async function e(e, t) {
+    return (i.useEffect(() => {
+        !(async function (e, t) {
             await d.gV(t, e);
         })(t.guildId, t.userId);
     }, [t.guildId, t.userId]),
-    null == n || 0 === s.length)
+    null == n || 0 === l.length)
         ? null
-        : (0, i.jsx)(u.FormItem, {
-              title: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
-              titleClassName: Z.infoTitle,
+        : (0, r.jsx)(u.xJW, {
+              title: j.NW.string(j.t.flCxLi),
+              titleClassName: N.infoTitle,
               children:
-                  s.length > 0
-                      ? (0, i.jsx)(T.WM, {
-                            children: s.map((e) =>
-                                (0, i.jsx)(
-                                    A,
+                  l.length > 0
+                      ? (0, r.jsx)(x.WM, {
+                            children: l.map((e) =>
+                                (0, r.jsx)(
+                                    I,
                                     {
                                         log: e,
                                         member: t,

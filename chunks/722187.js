@@ -1,39 +1,36 @@
-n.d(t, {
-    l: function () {
-        return c;
-    }
-});
-var r = n(735250);
-n(470079);
-var i = n(120356),
-    a = n.n(i),
-    s = n(766646),
-    o = n(112831),
-    l = n(689938),
-    u = n(305634);
-function c(e) {
-    let { children: t, className: n, disabled: i, required: c = !1, ...d } = e;
-    return (0, r.jsxs)(o.Z, {
-        tag: 'label',
-        color: o.Z.Colors.HEADER_SECONDARY,
-        className: a()(u.label, n, {
-            [u.defaultMargin]: null == n,
-            [u.disabled]: i
-        }),
-        ...d,
-        children: [
-            t,
-            c &&
-                (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        (0, r.jsx)('span', {
-                            className: u.required,
-                            'aria-hidden': !0,
-                            children: '*'
-                        }),
-                        (0, r.jsx)(s.n, { children: l.Z.Messages.REQUIRED })
-                    ]
-                })
-        ]
-    });
+function r(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
+n(200651), n(192379), n(120356);
+function i(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function o(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+n(766646), n(481060), n(388032), n(384794);

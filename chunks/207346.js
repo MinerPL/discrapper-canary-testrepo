@@ -1,78 +1,74 @@
-a.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var l = a(735250);
-a(470079);
-var n = a(481060),
-    s = a(547972),
-    i = a(703288),
-    o = a(332325),
-    r = a(689938),
-    c = a(145981);
-function d(e) {
-    let { filterQuery: t, setFilterQuery: a, onClose: d, sortOrder: u, setSortOrder: m } = e;
-    return (0, l.jsxs)(n.ModalHeader, {
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var l = n(481060),
+    a = n(547972),
+    i = n(703288),
+    o = n(332325),
+    s = n(388032),
+    c = n(537796);
+function u(e) {
+    let { filterQuery: t, setFilterQuery: n, onClose: u, sortOrder: d, setSortOrder: p } = e;
+    return (0, r.jsxs)(l.xBx, {
         className: c.root,
         separator: !1,
         children: [
-            (0, l.jsx)(n.ClipsIcon, {
+            (0, r.jsx)(l.AlX, {
                 size: 'xs',
                 color: 'currentColor',
                 className: c.icon
             }),
-            (0, l.jsx)(n.Heading, {
+            (0, r.jsx)(l.X6q, {
                 className: c.title,
                 variant: 'heading-xxl/bold',
-                children: r.Z.Messages.CLIPS
+                children: s.NW.string(s.t.z2jK6e)
             }),
-            (0, l.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: c.betaTag,
-                children: (0, l.jsx)(i.Z, {})
+                children: (0, r.jsx)(i.Z, {})
             }),
-            (0, l.jsx)(n.SearchBar, {
+            (0, r.jsx)(l.E1j, {
                 autoFocus: !0,
-                size: n.SearchBar.Sizes.MEDIUM,
-                placeholder: r.Z.Messages.SEARCH,
+                size: l.E1j.Sizes.MEDIUM,
+                placeholder: s.NW.string(s.t['5h0QOD']),
                 className: c.queryInput,
                 query: t,
-                onChange: a,
-                onClear: () => a('')
+                onChange: n,
+                onClear: () => n('')
             }),
-            (0, l.jsx)(n.Select, {
-                placeholder: r.Z.Messages.CLIPS_SORT_PLACEHOLDER,
+            (0, r.jsx)(l.PhF, {
+                placeholder: s.NW.string(s.t['0XtAW1']),
                 className: c.sortInput,
                 options: [
                     {
                         value: 'descending',
-                        label: r.Z.Messages.CLIPS_SORT_RECENT
+                        label: s.NW.string(s.t.SCsC5u)
                     },
                     {
                         value: 'ascending',
-                        label: r.Z.Messages.CLIPS_SORT_OLDEST
+                        label: s.NW.string(s.t.fdx7aG)
                     }
                 ],
-                isSelected: (e) => e === u,
-                select: m,
+                isSelected: (e) => e === d,
+                select: p,
                 serialize: (e) => e
             }),
-            (0, l.jsx)(n.Button, {
-                color: n.ButtonColors.TRANSPARENT,
-                size: n.Button.Sizes.NONE,
+            (0, r.jsx)(l.zxk, {
+                color: l.Ttl.TRANSPARENT,
+                size: l.zxk.Sizes.NONE,
                 className: c.settingsButton,
-                look: n.Button.Looks.FILLED,
+                look: l.zxk.Looks.FILLED,
                 onClick: () => {
-                    (0, s.Z)(o.Z.CLIPS), d();
+                    (0, a.Z)(o.Z.CLIPS), u();
                 },
-                children: (0, l.jsx)(n.SettingsIcon, {
+                children: (0, r.jsx)(l.ewm, {
                     size: 'md',
                     color: 'currentColor'
                 })
             }),
-            (0, l.jsx)(n.ModalCloseButton, {
+            (0, r.jsx)(l.olH, {
                 className: c.button,
-                onClick: d
+                onClick: u
             })
         ]
     });

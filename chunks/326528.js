@@ -1,54 +1,45 @@
-t.d(s, {
-    b: function () {
-        return _;
-    }
-});
-var n = t(481060),
-    a = t(358085),
-    i = t(394644),
-    r = t(295545),
-    o = t(168308),
-    l = t(726985),
-    c = t(332325),
-    d = t(689938);
-function _() {
-    let e = (0, o.bC)(),
-        s = (0, i.Gj)(l.s6.GAMES);
-    return (function (e, s, t) {
-        var i;
-        let r = ((i = e),
-        [
-            {
-                id: c.Z.MY_GAMES,
-                title: d.Z.Messages.MY_GAMES,
-                icon: n.DpadIcon,
-                predicate: () => !a.isPlatformEmbedded,
-                setting: l.s6.GAMES_MY_GAMES
-            },
-            {
-                id: c.Z.CLIPS,
-                title: d.Z.Messages.CLIPS,
-                icon: n.ClipsIcon,
-                setting: l.s6.GAMES_CLIPS
-            },
-            {
-                id: c.Z.OVERLAY,
-                title: d.Z.Messages.SETTINGS_GAMES_OVERLAY,
-                icon: n.ScreenSystemRequirementsIcon,
-                predicate: () => !i,
-                setting: l.s6.GAMES_OVERLAY
-            },
-            {
-                id: c.Z.ACTIVITY_PRIVACY,
-                title: d.Z.Messages.ACTIVITY_PRIVACY,
-                icon: n.FlashIcon,
-                setting: l.s6.GAMES_ACTIVITY_PRIVACY
-            }
-        ]).filter((e) => null == e.predicate || !e.predicate());
-        if (s && null != t && t.size > 0) {
-            let e = r.filter((e) => t.has(e.setting));
-            return e.length > 0 ? e : r;
+n.d(t, { b: () => d });
+var r = n(481060),
+    i = n(358085),
+    s = n(991346),
+    a = n(168308),
+    l = n(726985),
+    o = n(332325),
+    c = n(388032);
+function d() {
+    let e = (0, a.bC)(),
+        t = (0, s.Gj)(l.s6.GAMES);
+    let n = [
+        {
+            id: o.Z.MY_GAMES,
+            title: c.NW.string(c.t['5DMgp6']),
+            icon: r.xoD,
+            predicate: () => !i.isPlatformEmbedded,
+            setting: l.s6.GAMES_MY_GAMES
+        },
+        {
+            id: o.Z.CLIPS,
+            title: c.NW.string(c.t.z2jK6e),
+            icon: r.AlX,
+            setting: l.s6.GAMES_CLIPS
+        },
+        {
+            id: o.Z.OVERLAY,
+            title: c.NW.string(c.t.bNqkDw),
+            icon: r.n6r,
+            predicate: () => !e,
+            setting: l.s6.GAMES_OVERLAY
+        },
+        {
+            id: o.Z.ACTIVITY_PRIVACY,
+            title: c.NW.string(c.t.Cq98yM),
+            icon: r.qOE,
+            setting: l.s6.GAMES_ACTIVITY_PRIVACY
         }
-        return r;
-    })(e, (0, r.eA)({ location: 'settings' }), s);
+    ].filter((e) => null == e.predicate || !e.predicate());
+    if (null != t && t.size > 0) {
+        let e = n.filter((e) => t.has(e.setting));
+        return e.length > 0 ? e : n;
+    }
+    return n;
 }

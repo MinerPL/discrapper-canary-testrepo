@@ -7,10 +7,6 @@ function i(e) {
     return (t.href = e), t.protocol;
 }
 n.d(t, {
-    E: function () {
-        return i;
-    },
-    F: function () {
-        return r;
-    }
+    E: () => i,
+    F: () => r
 });

@@ -1,16 +1,17 @@
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(689938),
-    l = n(271054);
-t.Z = (e) => {
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    a = n.n(i),
+    l = n(388032),
+    o = n(142770);
+let s = (e) => {
     let { className: t } = e;
-    return (0, i.jsx)('div', {
-        className: s()(l.tag, t),
-        children: (0, i.jsx)('span', {
-            className: l.text,
-            children: r.Z.Messages.APPLICATION_STORE_FIRST_ON_DISCORD
+    return (0, r.jsx)('div', {
+        className: a()(o.tag, t),
+        children: (0, r.jsx)('span', {
+            className: o.text,
+            children: l.NW.string(l.t['8IfYqa'])
         })
     });
 };

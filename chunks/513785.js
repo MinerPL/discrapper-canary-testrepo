@@ -1,14 +1,11 @@
 n.d(t, {
-    M: function () {
-        return i;
-    }
+    M: () => l,
+    Z: () => g
 });
 var r,
-    i,
-    a,
-    s = n(442837),
+    i = n(442837),
     o = n(570140);
-function l(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,57 +18,76 @@ function l(e, t, n) {
         e
     );
 }
-((r = i || (i = {}))[(r.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED');
-let u = {
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+var l = (function (e) {
+    return (e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), e;
+})({});
+let c = {
         userTenureRewardStatusByRewardId: {},
         lastFetchTimeMs: null,
         fetchState: 0
     },
-    c = u;
-class d extends (a = s.ZP.PersistedStore) {
+    u = c;
+function d() {
+    u.fetchState = 1;
+}
+function f(e) {
+    let { userTenureRewardStatus: t } = e;
+    if (null != t) {
+        let e = {};
+        t.forEach((t) => {
+            null != t.next_tenure_reward_id && (e[t.next_tenure_reward_id] = t);
+        }),
+            (u.userTenureRewardStatusByRewardId = e);
+    } else u.userTenureRewardStatusByRewardId = c.userTenureRewardStatusByRewardId;
+    (u.lastFetchTimeMs = Date.now()), (u.fetchState = 2);
+}
+function _() {
+    u.userTenureRewardStatusByRewardId = c.userTenureRewardStatusByRewardId;
+}
+function p(e) {
+    let { tenureRewardIds: t } = e;
+    t.forEach((e) => {
+        delete u.userTenureRewardStatusByRewardId[e];
+    });
+}
+function h() {
+    u = c;
+}
+class m extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        c = {
-            ...c,
-            ...(null != e ? e : {})
-        };
+        u = s({}, u, null != e ? e : {});
     }
     getState() {
-        return c;
+        return u;
     }
     getFetchState() {
-        return c.fetchState;
+        return u.fetchState;
     }
     getTenureRewardStatusForRewardId(e) {
-        return c.userTenureRewardStatusByRewardId[e];
+        return u.userTenureRewardStatusByRewardId[e];
     }
 }
-l(d, 'displayName', 'TenureRewardStore'),
-    l(d, 'persistKey', 'TenureRewardStore'),
-    (t.Z = new d(o.Z, {
-        USER_TENURE_REWARD_SYNC_START: function () {
-            c.fetchState = 1;
-        },
-        USER_TENURE_REWARD_SYNC_SUCCESS: function (e) {
-            let { userTenureRewardStatus: t } = e;
-            if (null != t) {
-                let e = {};
-                t.forEach((t) => {
-                    null != t.next_tenure_reward_id && (e[t.next_tenure_reward_id] = t);
-                }),
-                    (c.userTenureRewardStatusByRewardId = e);
-            } else c.userTenureRewardStatusByRewardId = u.userTenureRewardStatusByRewardId;
-            (c.lastFetchTimeMs = Date.now()), (c.fetchState = 2);
-        },
-        USER_TENURE_REWARD_STATUS_RESET: function () {
-            c.userTenureRewardStatusByRewardId = u.userTenureRewardStatusByRewardId;
-        },
-        USER_TENURE_REWARD_STATUS_DELETE: function (e) {
-            let { tenureRewardIds: t } = e;
-            t.forEach((e) => {
-                delete c.userTenureRewardStatusByRewardId[e];
-            });
-        },
-        LOGOUT: function () {
-            c = u;
-        }
-    }));
+a(m, 'displayName', 'TenureRewardStore'), a(m, 'persistKey', 'TenureRewardStore');
+let g = new m(o.Z, {
+    USER_TENURE_REWARD_SYNC_START: d,
+    USER_TENURE_REWARD_SYNC_SUCCESS: f,
+    USER_TENURE_REWARD_STATUS_RESET: _,
+    USER_TENURE_REWARD_STATUS_DELETE: p,
+    LOGOUT: h
+});

@@ -1,20 +1,16 @@
-n.d(t, {
-    $: function () {
-        return s;
-    }
-});
-var r = n(735250);
-n(470079);
-var i = n(907040),
-    a = n(185923);
-function s(e) {
-    let { channel: t, closePopout: n, analyticsOverride: s, onSelectEmoji: o, messageId: l } = e;
-    return (0, r.jsx)(i.Z, {
-        closePopout: n,
+r.d(t, { $: () => i });
+var n = r(200651);
+r(192379);
+var a = r(907040),
+    o = r(185923);
+function i(e) {
+    let { channel: t, closePopout: r, analyticsOverride: i, onSelectEmoji: l, messageId: s } = e;
+    return (0, n.jsx)(a.Z, {
+        closePopout: r,
         channel: t,
-        onSelectEmoji: o,
-        pickerIntention: a.Hz.REACTION,
-        analyticsOverride: s,
-        messageId: l
+        onSelectEmoji: l,
+        pickerIntention: o.Hz.REACTION,
+        analyticsOverride: i,
+        messageId: s
     });
 }

@@ -1,32 +1,33 @@
 var r = n(821164),
-    i = Object.prototype.hasOwnProperty;
-e.exports = function (e, t, n, a, s, o) {
-    var l = 1 & n,
+    i = 1,
+    o = Object.prototype.hasOwnProperty;
+e.exports = function (e, t, n, a, s, l) {
+    var c = n & i,
         u = r(e),
-        c = u.length;
-    if (c != r(t).length && !l) return !1;
-    for (var d = c; d--; ) {
-        var _ = u[d];
-        if (!(l ? _ in t : i.call(t, _))) return !1;
+        d = u.length;
+    if (d != r(t).length && !c) return !1;
+    for (var f = d; f--; ) {
+        var _ = u[f];
+        if (!(c ? _ in t : o.call(t, _))) return !1;
     }
-    var E = o.get(e);
-    if (E && o.get(t)) return E == t;
-    var f = !0;
-    o.set(e, t), o.set(t, e);
-    for (var h = l; ++d < c; ) {
-        var p = e[(_ = u[d])],
-            m = t[_];
-        if (a) var I = l ? a(m, p, _, t, e, o) : a(p, m, _, e, t, o);
-        if (!(void 0 === I ? p === m || s(p, m, n, a, o) : I)) {
-            f = !1;
+    var p = l.get(e);
+    if (p && l.get(t)) return p == t;
+    var h = !0;
+    l.set(e, t), l.set(t, e);
+    for (var m = c; ++f < d; ) {
+        var g = e[(_ = u[f])],
+            E = t[_];
+        if (a) var b = c ? a(E, g, _, t, e, l) : a(g, E, _, e, t, l);
+        if (!(void 0 === b ? g === E || s(g, E, n, a, l) : b)) {
+            h = !1;
             break;
         }
-        h || (h = 'constructor' == _);
+        m || (m = 'constructor' == _);
     }
-    if (f && !h) {
-        var T = e.constructor,
-            g = t.constructor;
-        T != g && 'constructor' in e && 'constructor' in t && !('function' == typeof T && T instanceof T && 'function' == typeof g && g instanceof g) && (f = !1);
+    if (h && !m) {
+        var y = e.constructor,
+            v = t.constructor;
+        y != v && 'constructor' in e && 'constructor' in t && !('function' == typeof y && y instanceof y && 'function' == typeof v && v instanceof v) && (h = !1);
     }
-    return o.delete(e), o.delete(t), f;
+    return l.delete(e), l.delete(t), h;
 };

@@ -1,123 +1,120 @@
-a.d(s, {
-    D: function () {
-        return d;
-    },
-    Z: function () {
-        return u;
-    }
-});
-var E = a(735250);
-a(470079);
-var _ = a(120356),
-    t = a.n(_),
-    n = a(481060),
-    r = a(388905),
-    L = a(297700),
-    l = a(875307),
-    i = a(837748),
-    M = a(58346),
-    c = a(689938),
-    T = a(457639),
-    C = a(224499);
-function A() {
-    return (0, E.jsx)(L.Z, {
-        className: T.verifiedIcon,
-        children: (0, E.jsx)('div', {
-            className: T.verifiedCheckContainer,
-            children: (0, E.jsx)(n.CheckmarkSmallIcon, {
+r.d(t, {
+    D: () => x,
+    Z: () => f
+}),
+    r(266796);
+var s = r(200651);
+r(192379);
+var n = r(120356),
+    a = r.n(n),
+    i = r(481060),
+    l = r(388905),
+    c = r(297700),
+    d = r(875307),
+    u = r(837748),
+    o = r(58346),
+    C = r(388032),
+    m = r(704983),
+    N = r(20493);
+function L() {
+    return (0, s.jsx)(c.Z, {
+        className: m.verifiedIcon,
+        children: (0, s.jsx)('div', {
+            className: m.verifiedCheckContainer,
+            children: (0, s.jsx)(i.kmB, {
                 size: 'xs',
                 color: 'currentColor',
-                className: T.verifiedCheck
+                className: m.verifiedCheck
             })
         })
     });
 }
-function o(e) {
-    let { verified: s, text: a } = e;
-    return s
-        ? (0, E.jsxs)('div', {
-              className: T.verifiedNameContainer,
-              children: [(0, E.jsx)(A, {}), a]
+function h(e) {
+    let { verified: t, text: r } = e;
+    return t
+        ? (0, s.jsxs)('div', {
+              className: m.verifiedNameContainer,
+              children: [(0, s.jsx)(L, {}), r]
           })
-        : (0, E.jsx)(E.Fragment, { children: a });
+        : r;
 }
-function d(e) {
-    let { className: s, count: a, creator: _, verifiedName: n } = e;
-    return (0, E.jsx)('div', {
-        className: t()(T.usagePill, s, T.userText),
+function x(e) {
+    let { className: t, count: r, creator: n, verifiedName: i } = e;
+    return (0, s.jsx)('div', {
+        className: a()(m.usagePill, t, m.userText),
         children:
-            null != _ || null != n
-                ? c.Z.Messages.GUILD_TEMPLATE_USAGES_BY_CREATOR2.format({
-                      usageCount: a,
-                      creator: null != n ? n : _,
-                      creatorHook: (e, s) =>
-                          (0, E.jsx)(
-                              o,
+            null != n || null != i
+                ? C.NW.format(C.t.TTcKAw, {
+                      usageCount: r,
+                      creator: null != i ? i : n,
+                      creatorHook: (e, t) =>
+                          (0, s.jsx)(
+                              h,
                               {
                                   text: e,
-                                  verified: null != n
+                                  verified: null != i
                               },
-                              s
+                              t
                           )
                   })
-                : c.Z.Messages.GUILD_TEMPLATE_USAGES.format({ usageCount: a })
+                : C.NW.format(C.t.cGXXHB, { usageCount: r })
     });
 }
-function u(e) {
-    var s;
-    let { guildTemplate: a, error: _, tall: L, pillClassName: A } = e;
-    if (null != _ && '' !== _)
-        return (0, E.jsxs)('div', {
-            className: T.container,
-            children: [(0, E.jsx)(r.Dx, { children: c.Z.Messages.INVITE_MODAL_ERROR_TITLE }), (0, E.jsx)(r.DK, { children: _ })]
+function f(e) {
+    var t;
+    let { guildTemplate: r, error: n, tall: c, pillClassName: L } = e;
+    if (null != n && '' !== n)
+        return (0, s.jsxs)('div', {
+            className: m.container,
+            children: [(0, s.jsx)(l.Dx, { children: C.NW.string(C.t.mDFGFh) }), (0, s.jsx)(l.DK, { children: n })]
         });
-    if (a.state === M.Rj.RESOLVING)
-        return (0, E.jsx)('div', {
-            className: T.container,
-            children: (0, E.jsx)(n.Spinner, {})
+    if (r.state === o.Rj.RESOLVING)
+        return (0, s.jsx)('div', {
+            className: m.container,
+            children: (0, s.jsx)(i.$jN, {})
         });
-    let o = (0, i.Z)(a.code).header;
-    if (!L)
-        return (0, E.jsxs)('div', {
-            className: T.container,
-            children: [
-                (0, E.jsx)(r.Dx, {
-                    className: T.title,
-                    children: o
-                }),
-                (0, E.jsx)(r.DK, {
-                    className: t()(T.subtitle, T.userText),
-                    children: a.name
-                })
-            ]
-        });
-    return (0, E.jsxs)('div', {
-        className: T.container,
-        children: [
-            (0, E.jsx)(r.Dx, {
-                className: T.title,
-                children: o
-            }),
-            (0, E.jsx)(r.DK, {
-                className: t()(T.subtitle, C.__invalid_marginTop2),
-                children: c.Z.Messages.GUILD_TEMPLATE_BASED_ON
-            }),
-            (0, E.jsx)(r.Dx, {
-                className: t()(T.title, T.userText),
-                children: a.name
-            }),
-            null != a.description &&
-                '' !== a.description &&
-                (0, E.jsx)(r.DK, {
-                    className: t()(T.subtitle, T.userText, C.marginTop8),
-                    children: a.description
-                }),
-            (0, E.jsx)(d, {
-                className: A,
-                count: null !== (s = a.usageCount) && void 0 !== s ? s : 0,
-                creator: a.creator.username,
-                verifiedName: (0, l.R)(a.code)
-            })
-        ]
-    });
+    let h = (0, u.Z)(r.code).header;
+    return c
+        ? (0, s.jsxs)('div', {
+              className: m.container,
+              children: [
+                  (0, s.jsx)(l.Dx, {
+                      className: m.title,
+                      children: h
+                  }),
+                  (0, s.jsx)(l.DK, {
+                      className: a()(m.subtitle, N.__invalid_marginTop2),
+                      children: C.NW.string(C.t['h+vyOz'])
+                  }),
+                  (0, s.jsx)(l.Dx, {
+                      className: a()(m.title, m.userText),
+                      children: r.name
+                  }),
+                  null != r.description &&
+                      '' !== r.description &&
+                      (0, s.jsx)(l.DK, {
+                          className: a()(m.subtitle, m.userText, N.marginTop8),
+                          children: r.description
+                      }),
+                  (0, s.jsx)(x, {
+                      className: L,
+                      count: null != (t = r.usageCount) ? t : 0,
+                      creator: r.creator.username,
+                      verifiedName: (0, d.R)(r.code)
+                  })
+              ]
+          })
+        : (0, s.jsxs)('div', {
+              className: m.container,
+              children: [
+                  (0, s.jsx)(l.Dx, {
+                      className: m.title,
+                      children: h
+                  }),
+                  (0, s.jsx)(l.DK, {
+                      className: a()(m.subtitle, m.userText),
+                      children: r.name
+                  })
+              ]
+          });
 }

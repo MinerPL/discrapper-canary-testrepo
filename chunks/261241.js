@@ -1,3 +1,1 @@
-n(599454);
-var r = n(974802);
-e.exports = r.String.fromCodePoint;
+n(599454), (e.exports = n(974802).String.fromCodePoint);

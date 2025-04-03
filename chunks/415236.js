@@ -1,43 +1,39 @@
-s.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var n = s(735250);
-s(470079);
-var l = s(481060),
-    a = s(600164),
-    i = s(291338);
-function r(e) {
-    let { description: t, icon: s, id: r, label: o, onChange: d, value: c } = e;
-    return (0, n.jsxs)('div', {
-        className: i.cardContent,
+n.d(t, { Z: () => a }), n(266796);
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(600164),
+    s = n(332067);
+function a(e) {
+    let { description: t, icon: n, id: a, label: o, onChange: c, value: d } = e;
+    return (0, r.jsxs)('div', {
+        className: s.cardContent,
         children: [
-            (0, n.jsxs)(a.Z, {
-                justify: a.Z.Justify.BETWEEN,
-                align: a.Z.Align.CENTER,
+            (0, r.jsxs)(l.Z, {
+                justify: l.Z.Justify.BETWEEN,
+                align: l.Z.Align.CENTER,
                 children: [
-                    s,
-                    (0, n.jsx)(a.Z.Child, {
+                    n,
+                    (0, r.jsx)(l.Z.Child, {
                         grow: 1,
-                        children: (0, n.jsx)(l.Text, {
+                        children: (0, r.jsx)(i.Text, {
                             variant: 'text-md/semibold',
                             children: o
                         })
                     }),
-                    null != d && null != c
-                        ? (0, n.jsx)(l.Switch, {
-                              id: r,
-                              checked: c,
-                              onChange: d
-                          })
-                        : null
+                    null != c &&
+                        null != d &&
+                        (0, r.jsx)(i.rsf, {
+                            id: a,
+                            checked: d,
+                            onChange: c
+                        })
                 ]
             }),
-            (0, n.jsx)(l.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-normal',
-                className: i.cardDescription,
+                className: s.cardDescription,
                 children: t
             })
         ]

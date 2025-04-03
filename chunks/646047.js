@@ -1,4 +1,5 @@
-let n = new (class e {
+n.d(t, { Z: () => i });
+class r {
     setActive(e) {
         return Promise.resolve();
     }
@@ -16,5 +17,8 @@ let n = new (class e {
     isSupported() {
         return !1;
     }
-})();
-t.Z = n;
+    isInPipMode() {
+        return !1;
+    }
+}
+let i = new r();

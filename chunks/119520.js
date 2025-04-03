@@ -1,11 +1,12 @@
-n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(558381),
-    r = n(986035),
-    l = n(689938),
-    o = n(742998);
-function c(e, t, n) {
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(558381),
+    a = n(480916),
+    o = n(986035),
+    s = n(388032),
+    c = n(576823);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,31 +19,32 @@ function c(e, t, n) {
         e
     );
 }
-class d extends a.PureComponent {
+class d extends i.PureComponent {
     render() {
         let {
             game: { name: e }
         } = this.props;
-        return (0, i.jsx)('div', {
-            className: o.matureListing,
-            children: (0, i.jsx)(r.Z, {
+        return (0, r.jsx)('div', {
+            className: c.matureListing,
+            children: (0, r.jsx)(o.Z, {
+                modalType: a.it.NSFW_APP_LISTING,
                 onAgree: this.handleAgree,
                 onDisagree: this.handleDisagree,
-                title: l.Z.Messages.MATURE_LISTING_TITLE.format({ name: e }),
-                description: l.Z.Messages.MATURE_LISTING_DESCRIPTION,
-                agreement: l.Z.Messages.MATURE_LISTING_ACCEPT,
-                disagreement: l.Z.Messages.MATURE_LISTING_DECLINE
+                title: s.NW.formatToPlainString(s.t.n5PGER, { name: e }),
+                description: s.NW.string(s.t['bJx/aG']),
+                agreement: s.NW.string(s.t.odZq8f),
+                disagreement: s.NW.string(s.t.hieTsL)
             })
         });
     }
     constructor(...e) {
         super(...e),
-            c(this, 'handleDisagree', () => {
-                (0, s.M9)();
+            u(this, 'handleDisagree', () => {
+                (0, l.M9)();
             }),
-            c(this, 'handleAgree', () => {
-                (0, s.cj)();
+            u(this, 'handleAgree', () => {
+                (0, l.cj)();
             });
     }
 }
-t.Z = d;
+let p = d;

@@ -1,6 +1,5 @@
-var o;
 (e = n.nmd(e)),
-    (o = function () {
+    (e.exports = (function () {
         return function (e) {
             var t = '/*|*/',
                 n = t + '}';
@@ -31,5 +30,4 @@ var o;
                 }
             };
         };
-    }),
-    (e.exports = o());
+    })());

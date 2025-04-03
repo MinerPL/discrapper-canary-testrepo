@@ -1,46 +1,42 @@
-n.d(t, {
-    Z: function () {
-        return T;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(399606),
-    s = n(481060),
-    r = n(607070),
-    l = n(739566),
-    o = n(942951),
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
+var i = n(399606),
+    a = n(481060),
+    l = n(607070),
+    o = n(739566),
+    s = n(942951),
     c = n(834129),
     u = n(703656),
     d = n(331372),
-    _ = n(981631),
-    E = n(689938),
-    I = n(87191);
-function m(e) {
-    let { guildId: t, user: n, username: l } = e,
-        o = (0, a.e7)([r.Z], () => !r.Z.useReducedMotion),
-        c = n.getAvatarURL(t, 56, o),
-        u = (0, i.jsx)('img', {
+    p = n(981631),
+    m = n(388032),
+    f = n(48215);
+function h(e) {
+    let { guildId: t, user: n, username: o } = e,
+        s = (0, i.e7)([l.Z], () => !l.Z.useReducedMotion),
+        c = n.getAvatarURL(t, 56, s),
+        u = (0, r.jsx)('img', {
             src: c,
-            className: I.userAvatar,
+            className: f.userAvatar,
             alt: ''
         });
-    return (0, i.jsxs)('div', {
-        className: I.thankYouCard,
+    return (0, r.jsxs)('div', {
+        className: f.thankYouCard,
         role: 'img',
-        'aria-label': E.Z.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({ username: l }),
+        'aria-label': m.NW.formatToPlainString(m.t['utf8+f'], { username: o }),
         children: [
-            (0, i.jsx)(d.Z, { avatar: u }),
-            (0, i.jsx)(s.Text, {
-                className: I.thankYouText,
+            (0, r.jsx)(d.Z, { avatar: u }),
+            (0, r.jsx)(a.Text, {
+                className: f.thankYouText,
                 tag: 'p',
                 color: 'status-positive-text',
                 variant: 'heading-xl/medium',
-                children: E.Z.Messages.GUILD_PRODUCT_PURCHASE_THANK_YOU_CARD_TEXT.format({
-                    username: l,
+                children: m.NW.format(m.t['52BAtL'], {
+                    username: o,
                     usernameHook: (e, t) =>
-                        (0, i.jsx)(
-                            s.Text,
+                        (0, r.jsx)(
+                            a.Text,
                             {
                                 tag: 'span',
                                 color: 'status-positive-text',
@@ -55,36 +51,36 @@ function m(e) {
         ]
     });
 }
-function T(e) {
-    var t, a, s;
-    let { channel: r, message: d, compact: I } = e,
-        T = (0, l.ZP)(d),
-        h = (0, o.l)({
+function g(e) {
+    var t, i, a;
+    let { channel: l, message: d, compact: f } = e,
+        g = (0, o.ZP)(d),
+        _ = (0, s.l)({
             user: d.author,
-            channelId: r.id,
-            guildId: r.guild_id,
+            channelId: l.id,
+            guildId: l.guild_id,
             messageId: d.id
-        })(T),
-        N = E.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
-            username: T.nick,
-            usernameHook: h,
-            productName: null !== (s = null === (a = d.purchaseNotification) || void 0 === a ? void 0 : null === (t = a.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== s ? s : '',
+        })(g),
+        b = m.NW.format(m.t.TQs67u, {
+            username: g.nick,
+            usernameHook: _,
+            productName: null != (a = null == (i = d.purchaseNotification) || null == (t = i.guild_product_purchase) ? void 0 : t.product_name) ? a : '',
             handleProductListingClick: () => {
                 var e, t, n;
-                (0, u.uL)(_.Z5c.GUILD_PRODUCT(r.guild_id, null !== (n = null === (t = d.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ''));
+                (0, u.uL)(p.Z5c.GUILD_PRODUCT(l.guild_id, null != (n = null == (t = d.purchaseNotification) || null == (e = t.guild_product_purchase) ? void 0 : e.listing_id) ? n : ''));
             }
         });
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(c.Z, {
+            (0, r.jsx)(c.Z, {
                 icon: n(570111),
                 timestamp: d.timestamp,
-                compact: I,
-                children: N
+                compact: f,
+                children: b
             }),
-            (0, i.jsx)(m, {
-                username: T.nick,
-                guildId: r.guild_id,
+            (0, r.jsx)(h, {
+                username: g.nick,
+                guildId: l.guild_id,
                 user: d.author
             })
         ]

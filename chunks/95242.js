@@ -1,21 +1,17 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(47120);
-var s = n(470079);
-function a(e) {
-    let [t, n] = s.useState(e),
-        a = s.useRef(null);
+n.d(t, { Z: () => i }), n(47120);
+var r = n(192379);
+function i(e) {
+    var t;
+    let [n, i] = r.useState(e),
+        s = r.useRef(null);
     return (
-        s.useEffect(() => {
-            var t, s;
-            n(null !== (s = null === (t = a.current) || void 0 === t ? void 0 : t.offsetHeight) && void 0 !== s ? s : e);
-        }),
+        r.useEffect(() => {
+            var t, n;
+            i(null != (n = null == (t = s.current) ? void 0 : t.offsetHeight) ? n : e);
+        }, [e, null == (t = s.current) ? void 0 : t.offsetHeight]),
         {
-            headerHeight: t,
-            headerRef: a
+            headerHeight: n,
+            headerRef: s
         }
     );
 }

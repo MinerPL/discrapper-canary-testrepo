@@ -1,38 +1,33 @@
-a.r(n),
-    a.d(n, {
-        default: function () {
-            return E;
-        }
-    });
-var t = a(735250);
-a(470079);
-var l = a(481060),
-    i = a(239091),
-    u = a(984933),
-    s = a(904483),
-    d = a(522762),
-    r = a(466330),
-    o = a(981631),
-    c = a(689938);
-function E(e) {
-    let { guild: n, onSelect: a } = e,
-        E = u.ZP.getDefaultChannel(n.id, !0, o.Plq.CREATE_INSTANT_INVITE),
-        _ = (0, d.Z)(n.id),
-        p = (0, s.Z)(n),
-        I = (0, r.Z)({
-            guild: n,
-            source: o.t4x.GUILD_CONTEXT_MENU,
-            channel: E
+n.d(t, { default: () => b });
+var r = n(200651);
+n(192379);
+var l = n(481060),
+    i = n(239091),
+    c = n(984933),
+    a = n(904483),
+    o = n(522762),
+    s = n(466330),
+    u = n(981631),
+    d = n(388032);
+function b(e) {
+    let { guild: t, onSelect: n } = e,
+        b = c.ZP.getDefaultChannel(t.id, !0, u.Plq.CREATE_INSTANT_INVITE),
+        p = (0, o.Z)(t.id),
+        y = (0, a.Z)(t),
+        O = (0, s.Z)({
+            guild: t,
+            source: u.t4x.GUILD_CONTEXT_MENU,
+            channel: b
         });
-    return (0, t.jsxs)(l.Menu, {
+    return (0, r.jsxs)(l.v2r, {
         navId: 'guild-context',
-        'aria-label': c.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
+        'aria-label': d.NW.string(d.t.HpQykZ),
         onClose: i.Zy,
-        onSelect: a,
+        onSelect: n,
         children: [
-            (0, t.jsx)(l.MenuGroup, { children: _ }),
-            (0, t.jsxs)(l.MenuGroup, {
-                children: [p, I]
+            (0, r.jsx)(l.kSQ, { children: p }),
+            (0, r.jsxs)(l.kSQ, {
+                children: [y, O]
             })
         ]
     });

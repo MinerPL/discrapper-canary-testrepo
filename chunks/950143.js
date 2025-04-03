@@ -1,32 +1,33 @@
-n(47120);
-var r = n(147913),
-    i = n(82085),
-    a = n(703656),
-    s = n(981631);
-function o(e) {
-    var t, n, r;
-    let { guild: o } = e.invite;
-    if (null != o && (null == o ? void 0 : null === (t = o.features) || void 0 === t ? void 0 : t.includes(s.oNc.HUB))) {
-        i.Z.onOpenHubInvite(e.invite);
-        return;
-    }
-    null != o && (null == o ? void 0 : null === (n = o.features) || void 0 === n ? void 0 : n.includes(s.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && !(null == o ? void 0 : null === (r = o.features) || void 0 === r ? void 0 : r.includes(s.oNc.PREVIEW_ENABLED)) && (0, a.uL)(s.Z5c.GUILD_MEMBER_VERIFICATION(o.id, e.invite.code));
+n.d(t, { Z: () => f }), n(789020), n(47120);
+var r = n(533800),
+    i = n(147913),
+    o = n(82085),
+    a = n(630388),
+    s = n(461014),
+    l = n(981631);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-class l extends r.Z {
+function u(e) {
+    var t, n;
+    let { guild: i } = e.invite,
+        c = null != (n = e.invite.flags) ? n : 0;
+    if (null != i && (null == i || null == (t = i.features) ? void 0 : t.includes(l.oNc.HUB))) return void o.Z.onOpenHubInvite(e.invite);
+    !((0, a.yE)(c, r.$.IS_GUEST_INVITE) || (0, a.yE)(c, r.$.IS_APPLICATION_BYPASS)) && null != i && (0, s.u)(i) && (0, s._)(i.id);
+}
+class d extends i.Z {
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = { INVITE_ACCEPT_SUCCESS: o }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), c(this, 'actions', { INVITE_ACCEPT_SUCCESS: u });
     }
 }
-t.Z = new l();
+let f = new d();

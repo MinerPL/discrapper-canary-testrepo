@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var r,
     i = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function s(e, t, n) {
         e
     );
 }
-let o = {
+let s = {
         use_topic_dividers_in_chat: 'Use summary topics as divider content in chat instead of string formatted dates.',
         highlight_redesigned_icons: 'Highlight redesigned icons',
         alt_clips_1: 'Use alt clip icon 1',
@@ -31,20 +31,23 @@ let o = {
         ss04: 'Italic - alternate figures (3,4,5,6,7,8,9)'
     },
     l = {};
+function c(e) {
+    l[e.toggle] = e.value;
+}
 class u extends (r = i.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
         return { toggleStates: l };
     }
     initialize(e) {
-        for (var t in o) {
+        for (var t in s) {
             var n, r;
-            let i = null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== r && r;
+            let i = null != (r = null == e || null == (n = e.toggleStates) ? void 0 : n[t]) && r;
             l[t] = i;
         }
     }
     get(e) {
         var t;
-        return null !== (t = l[e]) && void 0 !== t && t;
+        return null != (t = l[e]) && t;
     }
     set(e, t) {
         return (l[e] = t), t;
@@ -55,14 +58,9 @@ class u extends (r = i.ZP.DeviceSettingsStore) {
     allWithDescriptions() {
         return Object.entries(l).map((e) => {
             let [t, n] = e;
-            return [t, n, o[t]];
+            return [t, n, s[t]];
         });
     }
 }
-s(u, 'displayName', 'DevToolsDesignTogglesStore'),
-    s(u, 'persistKey', 'DevToolsDesignTogglesStore'),
-    (t.Z = new u(a.Z, {
-        DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: function (e) {
-            l[e.toggle] = e.value;
-        }
-    }));
+a(u, 'displayName', 'DevToolsDesignTogglesStore'), a(u, 'persistKey', 'DevToolsDesignTogglesStore');
+let d = new u(o.Z, { DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: c });

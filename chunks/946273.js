@@ -1,52 +1,58 @@
-n.d(t, {
-    vV: function () {
-        return u;
-    }
+t.d(n, {
+    BK: () => _,
+    mm: () => E,
+    vV: () => s
 }),
-    n(789020);
-var r = n(442837),
-    i = n(271383),
-    a = n(430824),
-    s = n(594174),
-    o = n(630388),
-    l = n(372897);
-let u = (e, t) => {
-    var n, u, c;
-    let d = (0, r.e7)([i.ZP], () => {
-            var n, r;
-            return (0, o.yE)(null !== (r = null === (n = i.ZP.getMember(e, t)) || void 0 === n ? void 0 : n.flags) && void 0 !== r ? r : 0, l.q.DID_REJOIN);
+    t(789020);
+var l = t(442837),
+    i = t(271383),
+    r = t(430824),
+    u = t(496675),
+    a = t(594174),
+    o = t(630388),
+    c = t(372897),
+    d = t(981631);
+let s = (e, n) => {
+    var t;
+    let u = (0, l.e7)([i.ZP], () => {
+            var t, l;
+            return (0, o.yE)(null != (l = null == (t = i.ZP.getMember(e, n)) ? void 0 : t.flags) ? l : 0, c.q.DID_REJOIN);
         }),
-        _ = (0, r.e7)([a.Z], () => {
-            var t;
-            return null === (t = a.Z.getGuild(e)) || void 0 === t ? void 0 : t.isNew();
+        d = (0, l.e7)([r.Z], () => {
+            var n;
+            return null == (n = r.Z.getGuild(e)) ? void 0 : n.isNew();
         }),
-        E = (0, r.e7)([s.default], () => {
+        s = (0, l.e7)([a.default], () => {
             var e;
-            return null === (e = s.default.getUser(t)) || void 0 === e ? void 0 : e.bot;
+            return null == (e = a.default.getUser(n)) ? void 0 : e.bot;
         });
     return (
-        (n = e),
-        (u = { maxDaysOld: 7 }),
-        (c = t),
-        (0, r.e7)(
+        (t = { maxDaysOld: 7 }),
+        (0, l.e7)(
             [],
             () =>
-                (function (e, t, n) {
-                    let { maxDaysOld: r, minDaysOld: s = 0 } = t,
-                        o = a.Z.getGuild(e),
-                        l = null == o ? void 0 : o.joinedAt;
-                    if (null != n) {
-                        let t = i.ZP.getMember(e, n);
-                        l = (null == t ? void 0 : t.joinedAt) == null ? null : new Date(t.joinedAt);
+                (function (e, n, t) {
+                    let { maxDaysOld: l, minDaysOld: u = 0 } = n,
+                        a = r.Z.getGuild(e),
+                        o = null == a ? void 0 : a.joinedAt;
+                    if (null != t) {
+                        let n = i.ZP.getMember(e, t);
+                        o = (null == n ? void 0 : n.joinedAt) == null ? null : new Date(n.joinedAt);
                     }
-                    if (null == l) return !1;
-                    let u = Date.now() - l.getTime();
-                    return (null == r || u <= 86400000 * r) && u >= 86400000 * s;
-                })(n, u, c),
-            [u, n, c]
+                    if (null == o) return !1;
+                    let c = Date.now() - o.getTime();
+                    return (null == l || c <= 86400000 * l) && c >= 86400000 * u;
+                })(e, t, n),
+            [t, e, n]
         ) &&
-            !_ &&
-            !E &&
-            !d
+            !d &&
+            !s &&
+            !u
     );
 };
+function _(e, n) {
+    return null != n && u.Z.canManageUser(d.Plq.KICK_MEMBERS, e, n) && !e.isNonUserBot();
+}
+function E(e, n) {
+    return null != n && u.Z.canManageUser(d.Plq.BAN_MEMBERS, e, n) && !e.isNonUserBot() && !e.bot;
+}

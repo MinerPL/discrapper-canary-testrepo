@@ -1,157 +1,171 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return x;
-        }
-    });
-var o = s(735250),
-    a = s(470079),
-    n = s(481060),
-    r = s(600164),
-    i = s(63063),
-    l = s(113434),
-    c = s(497505),
-    d = s(918701),
-    u = s(471985),
-    m = s(46140),
-    _ = s(981631),
-    S = s(689938),
-    E = s(552461),
-    T = s(708901);
-function x(e) {
-    var t;
-    let { transitionState: s, onClose: x, questContent: j, quest: f } = e,
-        g = (0, d.zK)(f, m.S7.IN_HOUSE_CONSOLE_QUEST),
-        C = (0, d.Mi)(f, c.jn.GIFT_INVENTORY_FOR_YOU),
-        U = (0, l.tP)(f),
-        h = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        I = j === c.jn.QUEST_BAR || j === c.jn.QUEST_BAR_V2 || (C && !U && !h),
-        R = (0, u.Z)(m.dr.QUEST_DISCLOSURE_MODAL),
-        O = a.useMemo(
-            () =>
-                (0, d.Fs)({
-                    isTargetedDisclosure: I,
-                    gamePublisher: f.config.messages.gamePublisher,
-                    gameTitle: f.config.messages.gameTitle,
-                    isInHouseQuest: g,
-                    hasQuestHomeExperiment: R
-                }),
-            [f, g, R, I]
-        );
-    return (0, o.jsxs)(n.ModalRoot, {
-        transitionState: s,
-        size: n.ModalSize.DYNAMIC,
-        className: E.modalRoot,
+r.d(t, { default: () => g });
+var n = r(200651),
+    s = r(192379),
+    a = r(481060),
+    o = r(600164),
+    i = r(63063),
+    c = r(497505),
+    l = r(918701),
+    d = r(981631),
+    m = r(388032),
+    u = r(698657),
+    x = r(708901);
+let f = (e) => {
+    switch (e) {
+        case c.jn.QUEST_BAR:
+        case c.jn.QUEST_BAR_V2:
+            return {
+                location: !0,
+                age: !0,
+                activity: !0
+            };
+        case c.jn.ACTIVITY_PANEL:
+        case c.jn.QUESTS_EMBED:
+        case c.jn.QUEST_LIVE_STREAM:
+            return { activity: !0 };
+        default:
+            return;
+    }
+};
+function g(e) {
+    let { transitionState: t, onClose: r, questContent: c, quest: g } = e,
+        j = f(c),
+        h = s.useMemo(() => {
+            var e;
+            return (0, l.Fs)({
+                isTargetedDisclosure: null != j,
+                gamePublisher: g.config.messages.gamePublisher,
+                gameTitle: g.config.messages.gameTitle,
+                cosponsorName: null == (e = g.config.cosponsorMetadata) ? void 0 : e.name
+            });
+        }, [g, j]);
+    return (0, n.jsxs)(a.Y0X, {
+        transitionState: t,
+        size: a.CgR.DYNAMIC,
+        className: u.modalRoot,
         children: [
-            (0, o.jsxs)(n.ModalHeader, {
-                direction: r.Z.Direction.VERTICAL,
+            (0, n.jsxs)(a.xBx, {
+                direction: o.Z.Direction.VERTICAL,
                 separator: !1,
-                className: E.modalHeader,
+                className: u.modalHeader,
                 children: [
-                    (0, o.jsxs)('div', {
-                        className: E.modalTop,
+                    (0, n.jsxs)('div', {
+                        className: u.modalTop,
                         children: [
-                            (0, o.jsx)('div', {
-                                className: E.iconFrame,
-                                children: (0, o.jsx)('img', {
-                                    className: E.icon,
+                            (0, n.jsx)('div', {
+                                className: u.iconFrame,
+                                children: (0, n.jsx)('img', {
                                     alt: '',
-                                    src: T
+                                    src: x
                                 })
                             }),
-                            (0, o.jsx)(n.ModalCloseButton, {
-                                className: E.closeBtn,
-                                onClick: x
+                            (0, n.jsx)(a.olH, {
+                                className: u.closeBtn,
+                                onClick: r
                             })
                         ]
                     }),
-                    (0, o.jsx)(n.Heading, {
+                    (0, n.jsx)(a.X6q, {
                         variant: 'heading-xl/bold',
-                        children: S.Z.Messages.QUESTS_DISCLOSURE_LABEL
+                        children: m.NW.string(m.t.GcsZKC)
                     })
                 ]
             }),
-            (0, o.jsxs)(n.ModalContent, {
-                className: E.modalContent,
+            (0, n.jsxs)(a.hzk, {
+                className: u.modalContent,
                 children: [
-                    (0, o.jsx)(n.Text, {
+                    (0, n.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        className: E.upperBodyText,
-                        children: O
+                        className: u.upperBodyText,
+                        children: h
                     }),
-                    (0, o.jsx)(b, {
-                        quest: f,
-                        questContent: j
-                    }),
-                    (0, o.jsx)(n.Text, {
+                    (0, n.jsx)(_, { targetedTraits: j }),
+                    (0, n.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: S.Z.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({ privacySettingsUrl: i.Z.getArticleURL(_.BhN.QUESTS_PRIVACY_CONTROLS) })
+                        children: m.NW.format(m.t.tzq9WV, { privacySettingsUrl: i.Z.getArticleURL(d.BhN.QUESTS_PRIVACY_CONTROLS) })
                     })
                 ]
             }),
-            (0, o.jsx)(n.ModalFooter, {
-                className: E.footer,
-                children: (0, o.jsx)(n.Button, {
-                    onClick: x,
-                    children: S.Z.Messages.CLOSE
+            (0, n.jsx)(a.mzw, {
+                className: u.footer,
+                children: (0, n.jsx)(a.zxk, {
+                    onClick: r,
+                    children: m.NW.string(m.t.cpT0Cg)
                 })
             })
         ]
     });
 }
 function j(e) {
-    let { location: t, age: s, activity: a } = e;
-    return (0, o.jsxs)('ul', {
-        className: E.targetList,
+    let { location: t, age: r, activity: s } = e;
+    return (0, n.jsxs)('ul', {
+        className: u.targetList,
         children: [
             t &&
-                (0, o.jsx)(f, {
-                    icon: n.GlobeEarthIcon,
-                    children: S.Z.Messages.QUESTS_DISCLOSURE_LOCATION
+                (0, n.jsx)(h, {
+                    icon: a.enf,
+                    children: m.NW.string(m.t.xQSdPj)
+                }),
+            r &&
+                (0, n.jsx)(h, {
+                    icon: a.tBG,
+                    children: m.NW.string(m.t.mYt7hY)
                 }),
             s &&
-                (0, o.jsx)(f, {
-                    icon: n.UserIcon,
-                    children: S.Z.Messages.QUESTS_DISCLOSURE_AGE
-                }),
-            a &&
-                (0, o.jsx)(f, {
-                    icon: n.GameControllerIcon,
-                    children: S.Z.Messages.QUESTS_DISCLOSURE_ACTIVITY
+                (0, n.jsx)(h, {
+                    icon: a.iWm,
+                    children: m.NW.string(m.t.XAsWxc)
                 })
         ]
     });
 }
-function b(e) {
-    var t;
-    let { questContent: s, quest: a } = e,
-        n = (0, d.Mi)(a, c.jn.GIFT_INVENTORY_FOR_YOU),
-        r = (0, l.tP)(a),
-        i = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null;
-    return s !== c.jn.QUEST_BAR && s !== c.jn.QUEST_BAR_V2 && (s !== c.jn.QUEST_HOME_DESKTOP || !n || r || i)
-        ? s === c.jn.ACTIVITY_PANEL || s === c.jn.QUESTS_EMBED || s === c.jn.QUEST_LIVE_STREAM
-            ? (0, o.jsx)(j, { activity: !0 })
-            : null
-        : (0, o.jsx)(j, {
-              location: !0,
-              age: !0,
-              activity: !0
-          });
+function _(e) {
+    let { targetedTraits: t } = e;
+    return null != t
+        ? (0, n.jsx)(
+              j,
+              (function (e) {
+                  for (var t = 1; t < arguments.length; t++) {
+                      var r = null != arguments[t] ? arguments[t] : {},
+                          n = Object.keys(r);
+                      'function' == typeof Object.getOwnPropertySymbols &&
+                          (n = n.concat(
+                              Object.getOwnPropertySymbols(r).filter(function (e) {
+                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                              })
+                          )),
+                          n.forEach(function (t) {
+                              var n;
+                              (n = r[t]),
+                                  t in e
+                                      ? Object.defineProperty(e, t, {
+                                            value: n,
+                                            enumerable: !0,
+                                            configurable: !0,
+                                            writable: !0
+                                        })
+                                      : (e[t] = n);
+                          });
+                  }
+                  return e;
+              })({}, t)
+          )
+        : null;
 }
-function f(e) {
-    let { icon: t, children: s } = e;
-    return (0, o.jsxs)(n.Text, {
+function h(e) {
+    let { icon: t, children: r } = e;
+    return (0, n.jsxs)(a.Text, {
         variant: 'text-sm/medium',
         tag: 'li',
-        className: E.targetItem,
+        className: u.targetItem,
         children: [
-            (0, o.jsx)(t, {
+            (0, n.jsx)(t, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            s
+            r
         ]
     });
 }

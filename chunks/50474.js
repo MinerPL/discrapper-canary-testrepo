@@ -1,95 +1,113 @@
-s.r(i),
-    s.d(i, {
-        default: function () {
-            return C;
-        }
-    }),
-    s(47120);
-var o = s(735250),
-    a = s(470079),
-    t = s(392711),
-    r = s.n(t),
-    n = s(481060),
-    d = s(139387),
-    l = s(479531),
-    c = s(895924),
-    m = s(581364),
-    u = s(768581),
-    p = s(821864),
-    h = s(399860),
-    x = s(995390),
-    E = s(665578),
-    M = s(689938),
-    v = s(761291);
-function C(e) {
-    let { applicationIcon: i, applicationId: s, applicationName: t, command: u, guildId: C, onClose: j, transitionState: y } = e,
-        [b, N] = a.useState(null),
-        [A, f] = a.useState(!1),
-        { originalApplicationPermissions: g, originalCommandPermissions: k, editedTargetPermissions: P, hasChanges: S, selectedPermissionCount: _ } = (0, x.Z)(C, s, u.id),
-        B = a.useCallback(async () => {
-            var e, i, o, a, t;
-            if (!S) {
-                j();
-                return;
-            }
-            let n = r().difference(Object.keys(null !== (o = u.permissions) && void 0 !== o ? o : {}), Object.keys(P)),
-                d = r().omit({ ...P }, n),
-                x = (0, m.bD)(C),
-                E = (0, h.rE)(C, c.Kw.ROLE),
-                M = (0, h.rE)(x, c.Kw.CHANNEL),
-                v = null === (a = null === (e = g[E]) || void 0 === e ? void 0 : e.permission) || void 0 === a || a,
-                I = null === (t = null === (i = g[M]) || void 0 === i ? void 0 : i.permission) || void 0 === t || t,
-                y = Object.values(d).map((e) => ({
+r.d(i, { default: () => j }), r(47120);
+var s = r(200651),
+    n = r(192379),
+    o = r(392711),
+    t = r.n(o),
+    a = r(481060),
+    l = r(139387),
+    d = r(479531),
+    c = r(895924),
+    m = r(581364),
+    u = r(768581),
+    p = r(821864),
+    b = r(399860),
+    x = r(995390),
+    h = r(665578),
+    y = r(388032),
+    f = r(566670);
+function j(e) {
+    let { applicationIcon: i, applicationId: r, applicationName: o, command: u, guildId: j, onClose: E, transitionState: g } = e,
+        [v, N] = n.useState(null),
+        [w, C] = n.useState(!1),
+        { originalApplicationPermissions: P, originalCommandPermissions: z, editedTargetPermissions: O, hasChanges: I, selectedPermissionCount: R } = (0, x.Z)(j, r, u.id),
+        D = n.useCallback(async () => {
+            var e, i, s, n, o;
+            if (!I) return void E();
+            let a = t().difference(Object.keys(null != (s = u.permissions) ? s : {}), Object.keys(O)),
+                l = t().omit(
+                    (function (e) {
+                        for (var i = 1; i < arguments.length; i++) {
+                            var r = null != arguments[i] ? arguments[i] : {},
+                                s = Object.keys(r);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (s = s.concat(
+                                    Object.getOwnPropertySymbols(r).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    })
+                                )),
+                                s.forEach(function (i) {
+                                    var s;
+                                    (s = r[i]),
+                                        i in e
+                                            ? Object.defineProperty(e, i, {
+                                                  value: s,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[i] = s);
+                                });
+                        }
+                        return e;
+                    })({}, O),
+                    a
+                ),
+                x = (0, m.bD)(j),
+                h = (0, b.rE)(j, c.Kw.ROLE),
+                y = (0, b.rE)(x, c.Kw.CHANNEL),
+                f = null == (n = null == (e = P[h]) ? void 0 : e.permission) || n,
+                k = null == (o = null == (i = P[y]) ? void 0 : i.permission) || o,
+                g = Object.values(l).map((e) => ({
                     id: e.id,
                     permission: e.permission,
                     type: e.type
                 }));
-            N(null), f(!0);
+            N(null), C(!0);
             try {
                 await p.U3({
-                    defaultEveryoneValue: v,
-                    defaultEverywhereValue: I,
-                    applicationId: s,
+                    defaultEveryoneValue: f,
+                    defaultEverywhereValue: k,
+                    applicationId: r,
                     commandId: u.id,
-                    guildId: C,
-                    permissions: y
+                    guildId: j,
+                    permissions: g
                 }),
-                    f(!1),
-                    j();
+                    C(!1),
+                    E();
             } catch (e) {
-                N(new l.Z(e));
+                N(new d.Z(e));
             }
-            f(!1);
-        }, [s, g, u.id, u.permissions, C, S, j, P, N, f]);
-    a.useEffect(
+            C(!1);
+        }, [r, P, u.id, u.permissions, j, I, E, O, N, C]);
+    n.useEffect(
         () => () => {
-            p.Ui(u.id), d.Z.stopEditingCommandPermissions(u.id);
+            p.Ui(u.id), l.Z.stopEditingCommandPermissions(u.id);
         },
         [u.id]
     );
-    let R = (0, h.gw)(u.type, u.displayName);
-    return (0, o.jsxs)(n.ModalRoot, {
-        'aria-label': M.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_PERMISSIONS_MODIFY,
-        size: n.ModalSize.MEDIUM,
-        transitionState: y,
+    let _ = (0, b.gw)(u.type, u.displayName);
+    return (0, s.jsxs)(a.Y0X, {
+        'aria-label': y.NW.string(y.t['N+InBQ']),
+        size: a.CgR.MEDIUM,
+        transitionState: g,
         children: [
-            (0, o.jsxs)(n.ModalHeader, {
+            (0, s.jsxs)(a.xBx, {
                 separator: !1,
-                className: v.modalHeader,
+                className: f.modalHeader,
                 children: [
-                    (0, o.jsx)(I, {
+                    (0, s.jsx)(k, {
                         icon: i,
-                        id: s,
-                        name: t
+                        id: r,
+                        name: o
                     }),
-                    (0, o.jsxs)('div', {
-                        className: v.headerDescription,
+                    (0, s.jsxs)('div', {
+                        className: f.headerDescription,
                         children: [
-                            (0, o.jsx)(n.Text, {
+                            (0, s.jsx)(a.Text, {
                                 variant: 'text-md/semibold',
-                                children: R
+                                children: _
                             }),
-                            (0, o.jsx)(n.Text, {
+                            (0, s.jsx)(a.Text, {
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
                                 children: u.displayDescription
@@ -98,53 +116,53 @@ function C(e) {
                     })
                 ]
             }),
-            (0, o.jsxs)(n.ModalContent, {
-                className: v.modalBody,
+            (0, s.jsxs)(a.hzk, {
+                className: f.modalBody,
                 children: [
-                    null == b || b.hasFieldErrors() ? null : (0, o.jsx)(n.FormErrorBlock, { children: b.getAnyErrorMessage() }),
-                    (0, o.jsx)(E.Z, {
-                        applicationId: s,
+                    null == v || v.hasFieldErrors() ? null : (0, s.jsx)(a.kzN, { children: v.getAnyErrorMessage() }),
+                    (0, s.jsx)(h.Z, {
+                        applicationId: r,
                         commandId: u.id,
-                        guildId: C,
+                        guildId: j,
                         inModal: !0,
-                        originalApplicationPermissions: g,
-                        originalCommandPermissions: k,
-                        editedTargetPermissions: P,
-                        selectedPermissionCount: _
+                        originalApplicationPermissions: P,
+                        originalCommandPermissions: z,
+                        editedTargetPermissions: O,
+                        selectedPermissionCount: R
                     })
                 ]
             }),
-            (0, o.jsxs)(n.ModalFooter, {
-                className: v.modalFooter,
+            (0, s.jsxs)(a.mzw, {
+                className: f.modalFooter,
                 children: [
-                    (0, o.jsx)(n.Button, {
+                    (0, s.jsx)(a.zxk, {
                         type: 'submit',
-                        disabled: A,
-                        onClick: B,
-                        color: !0 === S ? n.Button.Colors.GREEN : n.Button.Colors.PRIMARY,
-                        children: M.Z.Messages.SAVE
+                        disabled: w,
+                        onClick: D,
+                        color: !0 === I ? a.zxk.Colors.GREEN : a.zxk.Colors.PRIMARY,
+                        children: y.NW.string(y.t.R3BPHx)
                     }),
-                    (0, o.jsx)(n.Button, {
-                        onClick: j,
-                        look: n.Button.Looks.LINK,
-                        color: n.Button.Colors.PRIMARY,
-                        children: M.Z.Messages.CANCEL
+                    (0, s.jsx)(a.zxk, {
+                        onClick: E,
+                        look: a.zxk.Looks.LINK,
+                        color: a.zxk.Colors.PRIMARY,
+                        children: y.NW.string(y.t['ETE/oK'])
                     })
                 ]
             })
         ]
     });
 }
-function I(e) {
-    let { icon: i, id: s } = e,
-        a = u.ZP.getApplicationIconURL({
-            id: s,
+function k(e) {
+    let { icon: i, id: r } = e,
+        n = u.ZP.getApplicationIconURL({
+            id: r,
             icon: i,
             size: 40
         });
-    return (0, o.jsx)(n.Avatar, {
-        src: a,
-        size: n.AvatarSizes.SIZE_40,
+    return (0, s.jsx)(a.qEK, {
+        src: n,
+        size: a.EFr.SIZE_40,
         'aria-hidden': !0
     });
 }

@@ -1,117 +1,111 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return m;
-        }
-    }),
-    n(47120);
-var s = n(735250),
-    u = n(470079),
-    i = n(519953),
-    l = n(442837),
-    a = n(481060),
-    c = n(239091),
+n.d(e, { default: () => y }), n(47120);
+var l = n(200651),
+    r = n(192379),
+    c = n(270445),
+    i = n(442837),
+    s = n(481060),
+    a = n(239091),
     o = n(857595),
-    r = n(607070),
+    u = n(607070),
     d = n(886036),
-    E = n(877794),
-    M = n(695346),
-    S = n(626135),
-    T = n(358085),
-    b = n(998502),
-    C = n(887490),
-    p = n(981631),
-    f = n(689938);
-function m(e) {
-    var t, n, m, h, Z, _, I, g, A;
-    let { text: k, editor: x, target: v, onHeightUpdate: L, onSelect: N } = e,
-        G = u.useCallback(() => {
-            (0, c.Zy)(() => {
-                i.F3.focus(x), setTimeout(() => C.bN.focus(x), 0);
+    b = n(877794),
+    p = n(695346),
+    f = n(626135),
+    h = n(358085),
+    g = n(998502),
+    N = n(887490),
+    E = n(981631),
+    O = n(388032);
+function y(t) {
+    var e, n, y, j, S, k, m, x, C;
+    let { text: P, editor: T, target: v, onHeightUpdate: L, onSelect: Z } = t,
+        W = r.useCallback(() => {
+            (0, a.Zy)(() => {
+                c.F3.focus(T), setTimeout(() => N.bN.focus(T), 0);
             });
-        }, [x]),
-        [O, j] = (0, E.Z)({
-            text: k,
+        }, [T]),
+        [D, _] = (0, b.Z)({
+            text: P,
             target: v,
             onHeightUpdate: L
         }),
-        R = (0, l.e7)([r.Z], () => r.Z.isSubmitButtonEnabled),
-        y = (0, d.Z)(),
-        D = M.Xk.useSetting();
-    if (!T.isPlatformEmbedded) return null;
-    let U = null !== (I = null === (n = x.chatInputType) || void 0 === n ? void 0 : null === (t = n.commands) || void 0 === t ? void 0 : t.enabled) && void 0 !== I && I,
-        P = null !== (g = null === (h = x.chatInputType) || void 0 === h ? void 0 : null === (m = h.stickers) || void 0 === m ? void 0 : m.autoSuggest) && void 0 !== g && g,
-        H = null !== (A = null === (_ = x.chatInputType) || void 0 === _ ? void 0 : null === (Z = _.submit) || void 0 === Z ? void 0 : Z.button) && void 0 !== A && A,
-        X = U || P,
-        K =
-            '' !== k
+        G = (0, i.e7)([u.Z], () => u.Z.isSubmitButtonEnabled),
+        w = (0, d.Z)(),
+        A = p.Xk.useSetting();
+    if (!h.isPlatformEmbedded) return null;
+    let M = null != (m = null == (n = T.chatInputType) || null == (e = n.commands) ? void 0 : e.enabled) && m,
+        R = null != (x = null == (j = T.chatInputType) || null == (y = j.stickers) ? void 0 : y.autoSuggest) && x,
+        I = null != (C = null == (k = T.chatInputType) || null == (S = k.submit) ? void 0 : S.button) && C,
+        H = M || R,
+        X =
+            '' !== P
                 ? [
-                      (0, s.jsx)(
-                          a.MenuItem,
+                      (0, l.jsx)(
+                          s.sNh,
                           {
                               id: 'copy',
-                              label: f.Z.Messages.COPY,
-                              hint: (0, T.isMac)() ? '\u2318C' : 'Ctrl+C',
-                              action: () => setTimeout(() => b.ZP.copy(), 0)
+                              label: O.NW.string(O.t.OpuAlJ),
+                              hint: (0, h.isMac)() ? '\u2318C' : 'Ctrl+C',
+                              action: () => setTimeout(() => g.ZP.copy(), 0)
                           },
                           'copy'
                       ),
-                      (0, s.jsx)(
-                          a.MenuItem,
+                      (0, l.jsx)(
+                          s.sNh,
                           {
                               id: 'cut',
-                              label: f.Z.Messages.CUT,
-                              hint: (0, T.isMac)() ? '\u2318X' : 'Ctrl+X',
-                              action: () => setTimeout(() => b.ZP.cut(), 0)
+                              label: O.NW.string(O.t.pNPVhY),
+                              hint: (0, h.isMac)() ? '\u2318X' : 'Ctrl+X',
+                              action: () => setTimeout(() => g.ZP.cut(), 0)
                           },
                           'cut'
                       )
                   ]
                 : null,
-        B = (0, s.jsx)(a.MenuCheckboxItem, {
+        K = (0, l.jsx)(s.S89, {
             id: 'command-suggestions',
-            label: f.Z.Messages.SUGGEST_SLASH_COMMANDS,
-            checked: D,
+            label: O.NW.string(O.t['9rJKFx']),
+            checked: A,
             action: () => {
-                let e = !D;
-                M.Xk.updateSetting(e),
-                    S.default.track(p.rMx.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
-                        enabled: e,
-                        location: { object: p.qAy.CONTEXT_MENU }
+                let t = !A;
+                p.Xk.updateSetting(t),
+                    f.default.track(E.rMx.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
+                        enabled: t,
+                        location: { object: E.qAy.CONTEXT_MENU }
                     });
             }
         });
-    return (0, s.jsxs)(a.Menu, {
+    return (0, l.jsxs)(s.v2r, {
         navId: 'textarea-context',
-        onClose: G,
-        'aria-label': f.Z.Messages.TEXTAREA_ACTIONS_MENU_LABEL,
-        onSelect: N,
+        onClose: W,
+        'aria-label': O.NW.string(O.t.NWlDSE),
+        onSelect: Z,
         children: [
-            X &&
-                (0, s.jsxs)(a.MenuItem, {
-                    id: 'suggestions',
-                    label: f.Z.Messages.TEXTAREA_ACTIONS_SUGGESTIONS,
-                    children: [P && y, U && B]
-                }),
             H &&
-                (0, s.jsx)(a.MenuCheckboxItem, {
+                (0, l.jsxs)(s.sNh, {
+                    id: 'suggestions',
+                    label: O.NW.string(O.t.zgxg7u),
+                    children: [R && w, M && K]
+                }),
+            I &&
+                (0, l.jsx)(s.S89, {
                     id: 'submit-button',
-                    label: f.Z.Messages.TEXTAREA_ACTIONS_SUBMIT_BUTTON,
-                    checked: R,
+                    label: O.NW.string(O.t.G8XDys),
+                    checked: G,
                     action: () => {
                         (0, o.eN)();
                     }
                 }),
-            (0, s.jsx)(a.MenuGroup, { children: O }),
-            (0, s.jsx)(a.MenuGroup, { children: j }),
-            (0, s.jsxs)(a.MenuGroup, {
+            (0, l.jsx)(s.kSQ, { children: D }),
+            (0, l.jsx)(s.kSQ, { children: _ }),
+            (0, l.jsxs)(s.kSQ, {
                 children: [
-                    K,
-                    (0, s.jsx)(a.MenuItem, {
+                    X,
+                    (0, l.jsx)(s.sNh, {
                         id: 'paste',
-                        label: f.Z.Messages.PASTE,
-                        hint: (0, T.isMac)() ? '\u2318V' : 'Ctrl+V',
-                        action: () => setTimeout(() => b.ZP.paste(), 0)
+                        label: O.NW.string(O.t.lMUxVl),
+                        hint: (0, h.isMac)() ? '\u2318V' : 'Ctrl+V',
+                        action: () => setTimeout(() => g.ZP.paste(), 0)
                     })
                 ]
             })

@@ -1,39 +1,33 @@
-t.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var l = t(735250);
-t(470079);
-var s = t(120356),
-    a = t.n(s),
-    r = t(481060),
-    i = t(600164),
-    o = t(624743);
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var l = n(120356),
+    i = n.n(l),
+    s = n(481060),
+    o = n(600164),
+    a = n(873270);
 function c(e) {
-    let { source: n, selectedSource: t } = e,
-        { id: s, name: c, url: u } = n,
-        d = (null == t ? void 0 : t.id) === s;
-    return (0, l.jsx)(l.Fragment, {
-        children: (0, l.jsxs)(i.Z, {
-            direction: i.Z.Direction.VERTICAL,
-            justify: i.Z.Justify.CENTER,
-            align: i.Z.Align.CENTER,
-            children: [
-                (0, l.jsx)(i.Z, {
-                    justify: i.Z.Justify.CENTER,
-                    align: i.Z.Align.CENTER,
-                    children: (0, l.jsx)('div', {
-                        style: { backgroundImage: 'url('.concat(u, ')') },
-                        className: a()(o.sourceThumbnail, { [o.selected]: d })
-                    })
-                }),
-                (0, l.jsx)(r.Text, {
-                    className: a()(o.sourceName, { [o.selected]: d }),
-                    variant: 'text-sm/normal',
-                    children: c
+    let { source: t, selectedSource: n } = e,
+        { id: l, name: c, url: d } = t,
+        u = (null == n ? void 0 : n.id) === l;
+    return (0, r.jsxs)(o.Z, {
+        direction: o.Z.Direction.VERTICAL,
+        justify: o.Z.Justify.CENTER,
+        align: o.Z.Align.CENTER,
+        children: [
+            (0, r.jsx)(o.Z, {
+                justify: o.Z.Justify.CENTER,
+                align: o.Z.Align.CENTER,
+                children: (0, r.jsx)('div', {
+                    style: { backgroundImage: 'url('.concat(d, ')') },
+                    className: i()(a.sourceThumbnail, { [a.selected]: u })
                 })
-            ]
-        })
+            }),
+            (0, r.jsx)(s.Text, {
+                className: i()(a.sourceName, { [a.selected]: u }),
+                variant: 'text-sm/normal',
+                children: c
+            })
+        ]
     });
 }

@@ -1,64 +1,59 @@
-s.r(e),
-    s.d(e, {
-        default: function () {
-            return d;
-        }
-    });
-var o = s(735250);
-s(470079);
-var n = s(481060),
-    a = s(782568),
-    i = s(313201),
-    l = s(689938),
-    r = s(17319);
-function d(t) {
-    let { href: e, onClose: d, transitionState: c } = t,
-        N = (0, i.Dt)();
-    return (0, o.jsxs)(n.ModalRoot, {
-        transitionState: c,
-        'aria-labelledby': N,
+e.d(s, { default: () => c });
+var i = e(200651);
+e(192379);
+var n = e(481060),
+    o = e(782568),
+    a = e(313201),
+    l = e(388032),
+    r = e(34397);
+function c(t) {
+    let { href: s, onClose: c, transitionState: d } = t,
+        b = (0, a.Dt)();
+    return (0, i.jsxs)(n.Y0X, {
+        transitionState: d,
+        'aria-labelledby': b,
         children: [
-            (0, o.jsx)('img', {
+            (0, i.jsx)('img', {
                 className: r.art,
-                src: s(902623),
+                src: e(902623),
                 alt: ''
             }),
-            (0, o.jsx)(n.ModalContent, {
-                children: (0, o.jsxs)('div', {
+            (0, i.jsx)(n.hzk, {
+                children: (0, i.jsxs)('div', {
                     className: r.modalContent,
                     children: [
-                        (0, o.jsx)(n.Heading, {
-                            id: N,
+                        (0, i.jsx)(n.X6q, {
+                            id: b,
                             variant: 'heading-lg/semibold',
                             className: r.title,
-                            children: l.Z.Messages.SUSPICIOUS_DOWNLOAD_WARNING_TITLE
+                            children: l.NW.string(l.t.XtDo9f)
                         }),
-                        (0, o.jsx)(n.Text, {
+                        (0, i.jsx)(n.Text, {
                             variant: 'text-md/normal',
                             className: r.body,
-                            children: l.Z.Messages.SUSPICIOUS_DOWNLOAD_WARNING_BODY
+                            children: l.NW.string(l.t.L9yFkp)
                         })
                     ]
                 })
             }),
-            (0, o.jsxs)(n.ModalFooter, {
+            (0, i.jsxs)(n.mzw, {
                 children: [
-                    (0, o.jsx)(n.Button, {
+                    (0, i.jsx)(n.zxk, {
                         type: 'button',
-                        size: n.Button.Sizes.MEDIUM,
-                        color: n.Button.Colors.BRAND,
-                        onClick: d,
-                        children: l.Z.Messages.SUSPICIOUS_DOWNLOAD_WARNING_CANCEL
+                        size: n.zxk.Sizes.MEDIUM,
+                        color: n.zxk.Colors.BRAND,
+                        onClick: c,
+                        children: l.NW.string(l.t.j7Vi2t)
                     }),
-                    (0, o.jsx)(n.Button, {
+                    (0, i.jsx)(n.zxk, {
                         type: 'button',
-                        size: n.Button.Sizes.MEDIUM,
-                        color: n.Button.Colors.TRANSPARENT,
-                        look: n.Button.Looks.LINK,
+                        size: n.zxk.Sizes.MEDIUM,
+                        color: n.zxk.Colors.TRANSPARENT,
+                        look: n.zxk.Looks.LINK,
                         onClick: () => {
-                            d(), (0, a.Z)(e, !0);
+                            c(), (0, o.Z)(s, !0);
                         },
-                        children: l.Z.Messages.SUSPICIOUS_DOWNLOAD_WARNING_DOWNLOAD
+                        children: l.NW.string(l.t['/bHu8/'])
                     })
                 ]
             })

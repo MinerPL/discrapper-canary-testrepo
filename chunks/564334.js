@@ -11,16 +11,67 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
-    Z: function () {
-        return s;
+function i(e, t, n) {
+    if (/%$/.test(t)) return 3 === n ? parseFloat(t) / 100 : (255 * parseFloat(t)) / 100;
+    if ('h' === e[n]) {
+        if (/turn$/.test(t)) return 360 * parseFloat(t);
+        if (/rad$/.test(t)) return 57.3 * parseFloat(t);
     }
-}),
-    n(757143),
-    n(47120);
-let i = /^#[0-9a-f]{3,8}$/i,
-    a = /^((?:rgb|hsl)a?)\s*\(([^)]*)\)/i;
-class s {
+    return parseFloat(t);
+}
+function o(e) {
+    let t,
+        { hue: n, saturation: r, lightness: i, alpha: o } = e,
+        a = (1 - Math.abs(2 * (i /= 255) - 1)) * (r /= 255),
+        s = a * (1 - Math.abs(((n / 60) % 2) - 1)),
+        l = i - a / 2,
+        c = (t = n < 60 ? [a, s, 0] : n < 120 ? [s, a, 0] : n < 180 ? [0, a, s] : n < 240 ? [0, s, a] : n < 300 ? [s, 0, a] : [a, 0, s]).map((e) => Math.round((e + l) * 255));
+    return {
+        red: c[0],
+        green: c[1],
+        blue: c[2],
+        alpha: o
+    };
+}
+function a(e) {
+    let { red: t, green: n, blue: r, alpha: i } = e,
+        o = t / 255,
+        a = n / 255,
+        s = r / 255,
+        l = Math.max(o, a, s),
+        c = Math.min(o, a, s),
+        u = l - c,
+        d = (l + c) / 2,
+        f = u > 0 ? u / (1 - Math.abs(2 * d - 1)) : 0;
+    if (0 === u)
+        return {
+            hue: 0,
+            saturation: f,
+            lightness: d,
+            alpha: i
+        };
+    let _ = 0;
+    switch (l) {
+        case o:
+            _ = ((a - s) / u) % 6;
+            break;
+        case a:
+            _ = (s - o) / u + 2;
+            break;
+        case s:
+            _ = (a - s) / u + 4;
+    }
+    return {
+        hue: 60 * _,
+        saturation: f,
+        lightness: d,
+        alpha: i
+    };
+}
+n.d(t, { Z: () => c }), n(301563), n(757143), n(47120), n(566702);
+let s = /^#[0-9a-f]{3,8}$/i,
+    l = /^((?:rgb|hsl)a?)\s*\(([^)]*)\)/i;
+class c {
     toHexString() {
         var e = Math.round(this.red).toString(16),
             t = Math.round(this.green).toString(16),
@@ -28,99 +79,43 @@ class s {
         return '#' + (this.red > 15.5 ? e : '0' + e) + (this.green > 15.5 ? t : '0' + t) + (this.blue > 15.5 ? n : '0' + n);
     }
     static parseString(e) {
-        return null != e.match(a) ? this.parseColorFnString(e) : null != e.match(i) ? this.parseHexString(e) : void 0;
+        return null != e.match(l) ? this.parseColorFnString(e) : null != e.match(s) ? this.parseHexString(e) : void 0;
     }
     static parseRgbString(e) {
-        return 'transparent' === e ? new s(0, 0, 0, 0) : this.parseColorFnString(e);
+        return 'transparent' === e ? new c(0, 0, 0, 0) : this.parseColorFnString(e);
     }
     static parseHexString(e) {
-        if (!(null == e.match(i) || [6, 8].includes(e.length))) {
+        if (!(null == e.match(s) || [6, 8].includes(e.length))) {
             if ((e = e.replace('#', '')).length < 6) {
                 let [t, n, r, i] = e;
                 (e = t + t + n + n + r + r), null != i && (e += i + i);
             }
             var t = e.match(/.{1,2}/g);
-            if (null != t) return new s(parseInt(t[0], 16), parseInt(t[1], 16), parseInt(t[2], 16), null != t[3] ? parseInt(t[3], 16) / 255 : 1);
+            if (null != t) return new c(parseInt(t[0], 16), parseInt(t[1], 16), parseInt(t[2], 16), null != t[3] ? parseInt(t[3], 16) / 255 : 1);
         }
     }
     static parseColorFnString(e) {
         var t;
-        let [, n, r] = null !== (t = e.match(a)) && void 0 !== t ? t : [];
+        let [, n, r] = null != (t = e.match(l)) ? t : [];
         if (null == n || null == r) return;
-        let i = r
+        let a = r
             .split(/\s*[,/\s]\s*/)
             .map((e) => e.replace(',', '').trim())
             .filter((e) => '' !== e)
-            .map((e, t) =>
-                (function (e, t, n) {
-                    if (/%$/.test(t)) return 3 === n ? parseFloat(t) / 100 : (255 * parseFloat(t)) / 100;
-                    if ('h' === e[n]) {
-                        if (/turn$/.test(t)) return 360 * parseFloat(t);
-                        if (/rad$/.test(t)) return 57.3 * parseFloat(t);
-                    }
-                    return parseFloat(t);
-                })(n, e, t)
-            );
+            .map((e, t) => i(n, e, t));
         if ('hsl' === n.substr(0, 3)) {
-            let e = (function (e) {
-                let t,
-                    { hue: n, saturation: r, lightness: i, alpha: a } = e,
-                    s = (1 - Math.abs(2 * (i /= 255) - 1)) * (r /= 255),
-                    o = s * (1 - Math.abs(((n / 60) % 2) - 1)),
-                    l = i - s / 2,
-                    u = (t = n < 60 ? [s, o, 0] : n < 120 ? [o, s, 0] : n < 180 ? [0, s, o] : n < 240 ? [0, o, s] : n < 300 ? [o, 0, s] : [s, 0, o]).map((e) => Math.round((e + l) * 255));
-                return {
-                    red: u[0],
-                    green: u[1],
-                    blue: u[2],
-                    alpha: a
-                };
-            })({
-                hue: i[0],
-                saturation: i[1],
-                lightness: i[2],
-                alpha: i[3]
+            let e = o({
+                hue: a[0],
+                saturation: a[1],
+                lightness: a[2],
+                alpha: a[3]
             });
-            return new s(e.red, e.green, e.blue, e.alpha);
+            return new c(e.red, e.green, e.blue, e.alpha);
         }
-        return new s(i[0], i[1], i[2], 'number' == typeof i[3] ? i[3] : 1);
+        return new c(a[0], a[1], a[2], 'number' == typeof a[3] ? a[3] : 1);
     }
     toHSL() {
-        return (function (e) {
-            let { red: t, green: n, blue: r, alpha: i } = e,
-                a = t / 255,
-                s = n / 255,
-                o = r / 255,
-                l = Math.max(a, s, o),
-                u = Math.min(a, s, o),
-                c = l - u,
-                d = (l + u) / 2,
-                _ = c > 0 ? c / (1 - Math.abs(2 * d - 1)) : 0;
-            if (0 === c)
-                return {
-                    hue: 0,
-                    saturation: _,
-                    lightness: d,
-                    alpha: i
-                };
-            let E = 0;
-            switch (l) {
-                case a:
-                    E = ((s - o) / c) % 6;
-                    break;
-                case s:
-                    E = (o - a) / c + 2;
-                    break;
-                case o:
-                    E = (s - o) / c + 4;
-            }
-            return {
-                hue: 60 * E,
-                saturation: _,
-                lightness: d,
-                alpha: i
-            };
-        })({
+        return a({
             red: this.red,
             green: this.green,
             blue: this.blue,

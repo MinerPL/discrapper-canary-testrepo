@@ -1,86 +1,77 @@
-t.d(n, {
-    Z: function () {
-        return I;
-    }
-}),
-    t(724458),
-    t(47120);
-var l = t(735250),
-    s = t(470079),
-    a = t(512722),
-    r = t.n(a),
-    i = t(392711),
-    o = t.n(i),
-    c = t(856901),
-    u = t(442837),
-    d = t(481060),
-    m = t(131951),
-    E = t(537135),
-    _ = t(176940),
-    S = t(689938),
-    g = t(51449),
-    h = t(458623),
-    C = t(224499);
-function I(e) {
-    let { selectedSource: n, onChangeVideoDeviceSource: t, onChangeAudioDevice: a } = e;
-    r()(null != n, 'Camera capture device cannot be null');
-    let i = (0, _.Z)(),
-        I = (0, u.e7)([m.Z], () => m.Z.getInputDevices()),
-        [N, x] = s.useState(
-            (function (e, n, t) {
-                if (null != n && null != t) {
-                    let l = n.find((n) => n.id === e);
-                    if (null == l) return;
-                    let s = o().reduce(t, (e, n) => ((0, c.stringSimilarity)(l.name, n.name) > (0, c.stringSimilarity)(l.name, e.name) ? n : e));
-                    if (null != s) return s.id;
+n.d(t, { Z: () => _ }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    i = n(512722),
+    s = n.n(i),
+    o = n(392711),
+    a = n.n(o),
+    c = n(856901),
+    d = n(481060),
+    u = n(687058),
+    f = n(537135),
+    m = n(176940),
+    h = n(388032),
+    x = n(729497),
+    p = n(347226),
+    g = n(20493);
+function _(e) {
+    let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: i } = e;
+    s()(null != t, 'Camera capture device cannot be null');
+    let o = (0, m.Z)(),
+        _ = (0, u.Z)(),
+        [j, v] = l.useState(
+            (function (e, t, n) {
+                if (null != t && null != n) {
+                    let r = t.find((t) => t.id === e);
+                    if (null == r) return;
+                    let l = a().reduce(n, (e, t) => ((0, c.stringSimilarity)(r.name, t.name) > (0, c.stringSimilarity)(r.name, e.name) ? t : e));
+                    if (null != l) return l.id;
                 }
-            })(n.id, i, I)
+            })(t.id, o, _)
         );
     return (
-        null != N && a(N),
-        (0, l.jsx)(s.Fragment, {
-            children: (0, l.jsxs)(d.FormItem, {
-                title: 'Capture Device',
-                className: h.modalContent,
-                children: [
-                    (0, l.jsx)(d.FormItem, {
-                        className: C.marginTop8,
-                        children: (0, l.jsxs)(E.Z, {
-                            children: [
-                                (0, l.jsx)('span', {
-                                    className: g.ellipsisText,
-                                    children: n.name
-                                }),
-                                (0, l.jsx)(d.Button, {
-                                    className: g.changeButton,
-                                    color: d.Button.Colors.PRIMARY,
-                                    size: d.Button.Sizes.SMALL,
-                                    onClick: t,
-                                    children: S.Z.Messages.CHANGE
-                                })
-                            ]
-                        })
-                    }),
-                    (0, l.jsx)(d.FormItem, {
-                        className: C.marginTop8,
-                        title: S.Z.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
-                        children: (0, l.jsx)(d.SingleSelect, {
-                            value: N,
-                            className: C.__invalid_marginaTop8,
-                            onChange: (e) => {
-                                x(e), a(e);
-                            },
-                            options: o().map(I, (e) => {
-                                let { id: n, name: t } = e;
-                                return {
-                                    value: n,
-                                    label: t
-                                };
+        null != j && i(j),
+        (0, r.jsxs)(d.xJW, {
+            title: 'Capture Device',
+            className: p.modalContent,
+            children: [
+                (0, r.jsx)(d.xJW, {
+                    className: g.marginTop8,
+                    children: (0, r.jsxs)(f.Z, {
+                        children: [
+                            (0, r.jsx)('span', {
+                                className: x.ellipsisText,
+                                children: t.name
+                            }),
+                            (0, r.jsx)(d.zxk, {
+                                className: x.changeButton,
+                                color: d.zxk.Colors.PRIMARY,
+                                size: d.zxk.Sizes.SMALL,
+                                onClick: n,
+                                children: h.NW.string(h.t.GEgsAw)
                             })
+                        ]
+                    })
+                }),
+                (0, r.jsx)(d.xJW, {
+                    className: g.marginTop8,
+                    title: h.NW.string(h.t.y4ooen),
+                    children: (0, r.jsx)(d.q4e, {
+                        value: j,
+                        className: g.__invalid_marginaTop8,
+                        onChange: (e) => {
+                            v(e), i(e);
+                        },
+                        options: a().map(_, (e) => {
+                            let { id: t, name: n } = e;
+                            return {
+                                value: t,
+                                label: n
+                            };
                         })
                     })
-                ]
-            })
+                })
+            ]
         })
     );
 }

@@ -1,53 +1,58 @@
 n.d(t, {
-    H: function () {
-        return _;
-    },
-    w: function () {
-        return d;
-    }
+    H: () => _,
+    w: () => d
 });
-var r = n(470079),
-    a = n(442837),
-    i = n(668781),
-    l = n(509545),
+var r = n(192379),
+    i = n(442837),
+    o = n(668781),
+    a = n(509545),
     s = n(580130),
-    o = n(74538),
-    u = n(231338),
-    c = n(689938);
+    l = n(74538),
+    c = n(231338),
+    u = n(388032);
 function d(e, t, n) {
+    let i = {
+            closeModal: t,
+            isGift: n
+        },
+        a = r.useRef(i);
     r.useEffect(() => {
-        null != e &&
-            e.isPurchasedExternally &&
-            null != e.paymentGateway &&
-            !n &&
-            (i.Z.show({
-                title: c.Z.Messages.BILLING_EXTERNAL_HEADER.format({ paymentGatewayName: u.Vz[e.paymentGateway] }),
-                body: c.Z.Messages.BILLING_EXTERNAL_MANAGE_ELSEWHERE.format({
-                    paymentGatewayName: u.Vz[e.paymentGateway],
-                    subscriptionManagementLink: (0, o.JE)(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+        a.current = i;
+    }),
+        r.useEffect(() => {
+            let { closeModal: t, isGift: n } = a.current;
+            null != e &&
+                e.isPurchasedExternally &&
+                null != e.paymentGateway &&
+                !n &&
+                (o.Z.show({
+                    title: u.NW.formatToPlainString(u.t['6mIX6u'], { paymentGatewayName: c.Vz[e.paymentGateway] }),
+                    body: u.NW.format(u.t.EOa8en, {
+                        paymentGatewayName: c.Vz[e.paymentGateway],
+                        subscriptionManagementLink: (0, l.JE)(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+                    }),
+                    confirmText: u.NW.string(u.t.BddRzc)
                 }),
-                confirmText: c.Z.Messages.OKAY
-            }),
-            t());
-    }, [e]);
+                t());
+        }, [e]);
 }
-let I = [];
+let f = [];
 function _(e, t) {
-    let n = (0, a.e7)([l.Z], () => (null != e ? l.Z.get(e) : null)),
-        i = (0, a.e7)([s.Z], () => {
+    let n = (0, i.e7)([a.Z], () => (null != e ? a.Z.get(e) : null)),
+        o = (0, i.e7)([s.Z], () => {
             var e;
-            return null != n && null !== (e = s.Z.getForSku(n.skuId)) && void 0 !== e ? e : I;
+            return null != n && null != (e = s.Z.getForSku(n.skuId)) ? e : f;
         }),
-        u = r.useMemo(
+        c = r.useMemo(
             () =>
-                Array.from(i).filter((e) => {
+                Array.from(o).filter((e) => {
                     let { parentId: t, consumed: n } = e;
                     return null != t && !n;
                 }),
-            [i]
+            [o]
         );
     return {
-        hasEntitlements: !t && null != n && null != u && u.length >= o.ZP.getIntervalMonths(n.interval, n.intervalCount),
-        entitlements: u
+        hasEntitlements: !t && null != n && null != c && c.length >= l.ZP.getIntervalMonths(n.interval, n.intervalCount),
+        entitlements: c
     };
 }

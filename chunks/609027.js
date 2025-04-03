@@ -2,7 +2,7 @@ function r(e) {
     var t;
     return function () {
         return (
-            !t &&
+            t ||
                 (t = new Promise(function (n) {
                     Promise.resolve().then(function () {
                         (t = void 0), n(e());
@@ -12,8 +12,4 @@ function r(e) {
         );
     };
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });

@@ -1,41 +1,37 @@
-t.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(442837),
-    r = t(481060),
-    d = t(569471),
-    s = t(346479),
-    o = t(723170),
-    u = t(124368),
-    l = t(689938);
-function c(e) {
-    let n = (0, o.B)(e);
-    return (0, a.e7)([d.Z], () => d.Z.hasJoined(e.id))
-        ? (0, i.jsx)(r.MenuItem, {
+n.d(e, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    l = n(569471),
+    s = n(346479),
+    o = n(723170),
+    d = n(124368),
+    c = n(388032);
+function u(t) {
+    let e = (0, o.B)(t);
+    return (0, r.e7)([l.Z], () => l.Z.hasJoined(t.id))
+        ? (0, i.jsx)(a.sNh, {
               id: 'thread-notifications',
-              label: l.Z.Messages.NOTIFICATION_SETTINGS,
-              children: (0, u.zb)().map((t) => {
-                  let { setting: a, label: d } = t;
+              label: c.NW.string(c.t.h850Sk),
+              children: (0, d.zb)().map((n) => {
+                  let { setting: r, label: l } = n;
                   return (0, i.jsx)(
-                      r.MenuRadioItem,
+                      a.k5B,
                       {
                           group: 'thread-notifications',
-                          id: ''.concat(a),
-                          label: d,
-                          action: () => s.Z.setNotificationSettings(e, { flags: a }),
-                          checked: a === n
+                          id: ''.concat(r),
+                          label: l,
+                          action: () => s.Z.setNotificationSettings(t, { flags: r }),
+                          checked: r === e
                       },
-                      a
+                      r
                   );
               })
           })
-        : (0, i.jsx)(r.MenuItem, {
+        : (0, i.jsx)(a.sNh, {
               id: 'notifications-disabled',
-              label: l.Z.Messages.NOTIFICATION_SETTINGS,
+              label: c.NW.string(c.t.h850Sk),
               disabled: !0
           });
 }

@@ -1,14 +1,8 @@
-o.d(s, {
-    F9: function () {
-        return l;
-    },
-    Qv: function () {
-        return n;
-    },
-    pL: function () {
-        return t;
-    }
+t.d(s, {
+    F9: () => i,
+    Qv: () => o,
+    pL: () => n
 });
-let t = 'example.com',
-    n = (e) => '_discord.'.concat(e),
-    l = (e) => 'https://'.concat(e, '/.well-known/discord');
+let n = 'example.com',
+    o = (e) => '_discord.'.concat(e),
+    i = (e) => 'https://'.concat(e, '/.well-known/discord');

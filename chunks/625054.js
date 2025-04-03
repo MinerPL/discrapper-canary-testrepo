@@ -1,7 +1,8 @@
-var s = n(525654),
-    r = n.n(s),
-    i = n(643191);
-t.Z = {
+n.d(t, { Z: () => a });
+var r = n(525654),
+    i = n.n(r),
+    o = n(643191);
+let a = {
     dump(e) {
         let t;
         null != performance.memory &&
@@ -12,15 +13,15 @@ t.Z = {
             }),
             e({
                 browser: {
-                    name: r().name,
-                    version: r().version
+                    name: i().name,
+                    version: i().version
                 },
                 os: {
-                    name: r().os.family,
-                    version: r().os.version
+                    name: i().os.family,
+                    version: i().os.version
                 },
                 memory: t
             });
     },
-    getTimeSinceNavigationStart: () => Date.now() - i.mb
+    getTimeSinceNavigationStart: () => Date.now() - o.mb
 };

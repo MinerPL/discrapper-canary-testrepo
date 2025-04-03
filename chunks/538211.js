@@ -1,43 +1,53 @@
-n.d(a, {
-    Z: function () {
-        return l;
-    }
-});
-var t = n(70722),
-    s = n(689938);
-function l(e, a) {
-    return [
-        {
-            value: t.kr.BLACK_SCREEN,
-            label: a ? s.Z.Messages.STREAM_REPORT_ENDED_BLACK : s.Z.Messages.STREAM_REPORT_BLACK
-        },
-        {
-            value: t.kr.BLURRY,
-            label: a ? s.Z.Messages.STREAM_REPORT_ENDED_BLURRY : s.Z.Messages.STREAM_REPORT_BLURRY
-        },
-        {
-            value: t.kr.LAGGING,
-            label: a ? s.Z.Messages.STREAM_REPORT_ENDED_LAGGING : s.Z.Messages.STREAM_REPORT_LAGGING
-        },
-        {
-            value: t.kr.OUT_OF_SYNC,
-            label: a ? s.Z.Messages.STREAM_REPORT_ENDED_OUT_OF_SYNC : s.Z.Messages.STREAM_REPORT_OUT_OF_SYNC
-        },
-        {
-            value: t.kr.AUDIO_MISSING,
-            label: a ? s.Z.Messages.STREAM_REPORT_ENDED_AUDIO_MISSING : s.Z.Messages.STREAM_REPORT_AUDIO_MISSING
-        },
-        {
-            value: t.kr.AUDIO_POOR,
-            label: a ? s.Z.Messages.STREAM_REPORT_ENDED_AUDIO_POOR : s.Z.Messages.STREAM_REPORT_AUDIO_POOR
-        },
-        {
-            value: t.kr.STREAM_STOPPED,
-            label: s.Z.Messages.STREAM_REPORT_ENDED_STREAM_STOPPED_UNEXPECTEDLY
-        },
-        {
-            value: t.kr.OTHER,
-            label: s.Z.Messages.CALL_FEEDBACK_OPTION_OTHER
-        }
-    ];
+n.d(t, { Z: () => i }), n(47120);
+var r = n(70722),
+    l = n(388032);
+function i(e) {
+    let t = new Set();
+    return (
+        e.showVibesHoneypot || t.add(r.kr.VIBES_OFF),
+        (function (e) {
+            let { isEndStream: t } = e;
+            return [
+                {
+                    value: r.kr.BLACK_SCREEN,
+                    label: t ? l.NW.string(l.t['0X5Zbm']) : l.NW.string(l.t.fxiRNj)
+                },
+                {
+                    value: r.kr.BLURRY,
+                    label: t ? l.NW.string(l.t.VVPQy8) : l.NW.string(l.t.E8jTMD)
+                },
+                {
+                    value: r.kr.LAGGING,
+                    label: t ? l.NW.string(l.t.ObEHd3) : l.NW.string(l.t.VoSJER)
+                },
+                {
+                    value: r.kr.OUT_OF_SYNC,
+                    label: t ? l.NW.string(l.t.mYmwDw) : l.NW.string(l.t['+NluQk'])
+                },
+                {
+                    value: r.kr.AUDIO_MISSING,
+                    label: t ? l.NW.string(l.t.Xwv419) : l.NW.string(l.t.G2egzc)
+                },
+                {
+                    value: r.kr.AUDIO_POOR,
+                    label: t ? l.NW.string(l.t['fHey+f']) : l.NW.string(l.t.aHOfIi)
+                },
+                {
+                    value: r.kr.STREAM_STOPPED,
+                    label: l.NW.string(l.t.uEoqQk)
+                },
+                {
+                    value: r.kr.VIBES_OFF,
+                    label: l.NW.string(l.t['++JLLy'])
+                },
+                {
+                    value: r.kr.OTHER,
+                    label: l.NW.string(l.t['emlT9/'])
+                }
+            ];
+        })(e).filter((e) => {
+            let { value: n } = e;
+            return !t.has(n);
+        })
+    );
 }

@@ -1,79 +1,75 @@
-n.d(t, {
-    O: function () {
-        return h;
-    }
-}),
-    n(536091);
-var i = n(904245),
-    a = n(339085),
-    s = n(957730),
-    r = n(285651),
-    l = n(268350),
-    o = n(926491),
+n.d(t, { O: () => _ }), n(230036), n(86693), n(536091);
+var r = n(904245),
+    i = n(339085),
+    a = n(957730),
+    l = n(285651),
+    o = n(268350),
+    s = n(926491),
     c = n(373228),
     u = n(430824),
     d = n(594174),
-    _ = n(176354),
-    E = n(709054),
-    I = n(981631),
-    m = n(185923);
-function T(e) {
+    p = n(176354),
+    m = n(709054),
+    f = n(981631),
+    h = n(185923);
+function g(e) {
     let t = u.Z.getGuild(e);
-    return null != t && (t.nsfwLevel === I.V_K.DEFAULT || t.nsfwLevel === I.V_K.SAFE);
+    return null != t && (t.nsfwLevel === f.V_K.DEFAULT || t.nsfwLevel === f.V_K.SAFE);
 }
-async function h(e, t) {
-    var n, I, h;
-    let N = t.getGuildId();
-    if (null == N || null == u.Z.getGuild(N)) return;
-    let f = d.default.getCurrentUser();
-    if (null == f) return;
-    await (0, l.$p)();
-    let C = Array.from(o.Z.getAllStickersIterator()),
-        p = C.filter((e) => e.type === c.n0.GUILD)
-            .filter((e) => T(e.guild_id) && (0, r.kl)(e, f, t))
-            .sort((e, t) => -E.default.compare(e.id, t.id));
-    if (p.length > 5) {
-        let a = [p[Math.floor(Math.pow(Math.random(), 2) * p.length)].id];
-        i.Z.sendStickers(t.id, a, '', {
+async function _(e, t) {
+    var n, f, _;
+    let b = t.getGuildId();
+    if (null == b || null == u.Z.getGuild(b)) return;
+    let x = d.default.getCurrentUser();
+    if (null == x) return;
+    await (0, o.$p)();
+    let y = Array.from(s.Z.getAllStickersIterator()),
+        E = y
+            .filter((e) => e.type === c.n0.GUILD)
+            .filter((e) => g(e.guild_id) && (0, l.kl)(e, x, t))
+            .sort((e, t) => -m.default.compare(e.id, t.id));
+    if (E.length > 5) {
+        let i = [E[Math.floor(Math.pow(Math.random(), 2) * E.length)].id];
+        r.Z.sendStickers(t.id, i, '', {
             messageReference: {
-                guild_id: null !== (n = t.getGuildId()) && void 0 !== n ? n : void 0,
+                guild_id: null != (n = t.getGuildId()) ? n : void 0,
                 channel_id: t.id,
                 message_id: e
             }
         });
         return;
     }
-    let g = u.Z.getGuildIds()
-        .filter(T)
-        .map((e) => a.ZP.getUsableGuildEmoji(e))
+    let v = u.Z.getGuildIds()
+        .filter(g)
+        .map((e) => i.ZP.getUsableGuildEmoji(e))
         .flat()
         .filter(
             (e) =>
                 null ==
-                _.ZP.getEmojiUnavailableReason({
+                p.ZP.getEmojiUnavailableReason({
                     emoji: e,
                     channel: t,
-                    guildId: N,
-                    intention: m.Hz.CHAT
+                    guildId: b,
+                    intention: h.Hz.CHAT
                 })
         )
-        .sort((e, t) => -E.default.compare(e.id, t.id));
-    if (g.length > 10) {
-        let n = g[Math.floor(Math.pow(Math.random(), 2) * g.length)];
-        i.Z.sendMessage(t.id, s.ZP.parse(t, n.allNamesString), !1, {
+        .sort((e, t) => -m.default.compare(e.id, t.id));
+    if (v.length > 10) {
+        let n = v[Math.floor(Math.pow(Math.random(), 2) * v.length)];
+        r.Z.sendMessage(t.id, a.ZP.parse(t, n.allNamesString), !1, {
             messageReference: {
-                guild_id: null !== (I = t.getGuildId()) && void 0 !== I ? I : void 0,
+                guild_id: null != (f = t.getGuildId()) ? f : void 0,
                 channel_id: t.id,
                 message_id: e
             }
         });
         return;
     }
-    let S = C.filter((e) => e.type === c.n0.STANDARD),
-        A = [S[Math.floor(Math.random() * S.length)].id];
-    i.Z.sendStickers(t.id, A, '', {
+    let O = y.filter((e) => e.type === c.n0.STANDARD),
+        N = [O[Math.floor(Math.random() * O.length)].id];
+    r.Z.sendStickers(t.id, N, '', {
         messageReference: {
-            guild_id: null !== (h = t.getGuildId()) && void 0 !== h ? h : void 0,
+            guild_id: null != (_ = t.getGuildId()) ? _ : void 0,
             channel_id: t.id,
             message_id: e
         }

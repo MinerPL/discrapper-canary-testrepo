@@ -1,70 +1,58 @@
 n.d(t, {
-    LD: function () {
-        return E;
-    },
-    LJ: function () {
-        return g;
-    },
-    mV: function () {
-        return _;
-    },
-    mh: function () {
-        return f;
-    },
-    qc: function () {
-        return i;
-    },
-    wi: function () {
-        return C;
-    }
+    LD: () => _,
+    LJ: () => C,
+    mV: () => g,
+    mh: () => b,
+    qc: () => m,
+    wi: () => y
 }),
     n(789020),
     n(47120);
-var i,
-    a,
-    s = n(470079),
+var r,
+    i = n(192379),
     l = n(913527),
-    r = n.n(l),
-    o = n(399606),
+    o = n.n(l),
+    a = n(399606),
+    s = n(983736),
     c = n(271383),
     u = n(430824),
     d = n(594174),
-    h = n(630388),
-    m = n(709054);
+    p = n(630388),
+    h = n(709054);
 n(893966), n(527379);
-var p = n(372897);
-function _(e, t) {
-    var n, i;
-    let a = (0, o.e7)([d.default], () => d.default.getUser(e), [e]),
-        s = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]),
-        l = (0, o.e7)([u.Z], () => u.Z.getGuild(t), [t]);
-    return (null == l ? void 0 : l.hasVerificationGate()) ? (null == a || null == s || null == l ? 1 : (0, h.yE)(null !== (n = s.flags) && void 0 !== n ? n : 0, p.q.BYPASSES_VERIFICATION) || (0, h.yE)(null !== (i = s.flags) && void 0 !== i ? i : 0, p.q.COMPLETED_ONBOARDING) ? 2 : 1) : 0;
+var f = n(372897),
+    m = (((r = {})[(r.NO_GATE = 0)] = 'NO_GATE'), (r[(r.NO_AGREEMENT = 1)] = 'NO_AGREEMENT'), (r[(r.AGREED = 2)] = 'AGREED'), r);
+function g(e, t) {
+    var n, r;
+    let i = (0, a.e7)([d.default], () => d.default.getUser(e), [e]),
+        l = (0, a.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]),
+        o = (0, a.e7)([u.Z], () => u.Z.getGuild(t), [t]);
+    return (0, s.Dc)(o) ? (null == i || null == l || null == o ? 1 : (0, p.yE)(null != (n = l.flags) ? n : 0, f.q.BYPASSES_VERIFICATION) || (0, p.yE)(null != (r = l.flags) ? r : 0, f.q.COMPLETED_ONBOARDING) || (null != l.isPending && !l.isPending) ? 2 : 1) : 0;
 }
-function f(e, t) {
+function b(e, t) {
     var n;
-    let i = (0, o.e7)([d.default], () => d.default.getUser(e), [e]),
-        a = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]);
-    if (null == i || null == a) return !1;
-    let s = (0, h.yE)(null !== (n = a.flags) && void 0 !== n ? n : 0, p.q.BYPASSES_VERIFICATION),
-        l = (null == i ? void 0 : i.isPhoneVerified()) || (null == i ? void 0 : i.isStaff()),
-        r = (null == a ? void 0 : a.joinedAt) != null;
-    return i.verified || l || r || s;
+    let r = (0, a.e7)([d.default], () => d.default.getUser(e), [e]),
+        i = (0, a.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]);
+    if (null == r || null == i) return !1;
+    let l = (0, p.yE)(null != (n = i.flags) ? n : 0, f.q.BYPASSES_VERIFICATION),
+        o = (null == r ? void 0 : r.isPhoneVerified()) || (null == r ? void 0 : r.isStaff()),
+        s = (null == i ? void 0 : i.joinedAt) != null;
+    return r.verified || o || s || l;
 }
-function E(e) {
-    return s.useMemo(() => {
-        let t = m.default.extractTimestamp(e);
-        return r()(new Date(t)).format('MMM DD, YYYY');
+function _(e) {
+    return i.useMemo(() => {
+        let t = h.default.extractTimestamp(e);
+        return o()(new Date(t)).format('MMM DD, YYYY');
     }, [e]);
 }
-function g(e) {
-    return s.useMemo(() => {
-        let t = m.default.extractTimestamp(e);
-        return r()(new Date(t)).format('MM/DD/YYYY');
+function C(e) {
+    return i.useMemo(() => {
+        let t = h.default.extractTimestamp(e);
+        return o()(new Date(t)).format('MM/DD/YYYY');
     }, [e]);
 }
-function C(e, t) {
-    let n = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]),
-        i = null == n ? void 0 : n.joinedAt;
-    return s.useMemo(() => (null == i ? '' : r()(new Date(i)).format('MMM DD, YYYY')), [i]);
+function y(e, t) {
+    let n = (0, a.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]),
+        r = null == n ? void 0 : n.joinedAt;
+    return i.useMemo(() => (null == r ? '' : o()(new Date(r)).format('MMM DD, YYYY')), [r]);
 }
-((a = i || (i = {}))[(a.NO_GATE = 0)] = 'NO_GATE'), (a[(a.NO_AGREEMENT = 1)] = 'NO_AGREEMENT'), (a[(a.AGREED = 2)] = 'AGREED');

@@ -1,24 +1,20 @@
-t.d(n, {
-    Z: function () {
-        return r;
-    }
-});
-var i = t(470079),
-    a = t(442837),
-    l = t(110924),
-    o = t(317381);
-function r(e) {
-    let { applicationId: n, channelId: t, launchingComponentId: r, onSubmissionComplete: s } = e,
-        c = (0, a.e7)([o.ZP], () => o.ZP.getLaunchState(n, t)),
-        d = null != c && c.isLaunching && c.componentId === r,
-        u = (0, l.Z)(d);
+n.d(t, { Z: () => o });
+var i = n(192379),
+    r = n(442837),
+    l = n(110924),
+    a = n(317381);
+function o(e) {
+    let { applicationId: t, context: n, launchingComponentId: o, onSubmissionComplete: c } = e,
+        s = (0, r.e7)([a.ZP], () => a.ZP.getLaunchState(t, 'channel' === n.type ? n.channel.id : void 0)),
+        u = null != s && s.isLaunching && s.componentId === o,
+        d = (0, l.Z)(u);
     return (
         i.useEffect(() => {
-            !d && u && (null == s || s());
-        }, [d, u, s]),
+            !u && d && (null == c || c());
+        }, [u, d, c]),
         {
-            submitting: d,
-            wasSubmitting: u
+            submitting: u,
+            wasSubmitting: d
         }
     );
 }

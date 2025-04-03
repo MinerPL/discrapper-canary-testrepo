@@ -1,53 +1,51 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
-var r = n(735250),
-    i = n(470079),
+n.d(t, { Z: () => m });
+var r = n(200651),
+    i = n(192379),
+    o = n(164484),
     a = n(374470),
     s = n(442837),
-    o = n(481060),
-    l = n(626135),
+    l = n(481060),
+    c = n(626135),
     u = n(5967),
-    c = n(607070),
-    d = n(446108),
-    _ = n(981631);
-function E(e) {
+    d = n(607070),
+    f = n(446108),
+    _ = n(981631),
+    p = n(388032);
+function h(e) {
     var t;
     if (e.ctrlKey || e.altKey || e.metaKey || e.keyCode !== _.yXg.TAB || null == e.target) return;
     let { target: n } = e,
-        r = null === (t = (0, u.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+        r = null == (t = (0, u.uB)(e)) ? void 0 : t.activeElement;
     (0, a.k)(n) &&
-        l.default.track(_.rMx.KEYBOARD_SHORTCUT_USED, {
+        c.default.track(_.rMx.KEYBOARD_SHORTCUT_USED, {
             shortcut_name: 'tab_navigation',
             source_class_list: null != r ? Array.from(r.classList) : [],
             location_object: n.tagName
         });
 }
-function f(e) {
+function m(e) {
     let { children: t } = e,
-        n = (0, s.cj)([c.Z], () => ({
-            enabled: c.Z.useReducedMotion,
-            rawValue: c.Z.rawPrefersReducedMotion
+        n = (0, s.cj)([d.Z], () => ({
+            enabled: d.Z.useReducedMotion,
+            rawValue: d.Z.rawPrefersReducedMotion
         })),
-        a = (0, s.cj)([c.Z], () => ({
-            enabled: c.Z.useForcedColors,
-            rawValue: c.Z.systemForcedColors
+        a = (0, s.cj)([d.Z], () => ({
+            enabled: d.Z.useForcedColors,
+            rawValue: d.Z.systemForcedColors
         })),
-        l = (0, s.e7)([c.Z], () => c.Z.alwaysShowLinkDecorations),
+        c = (0, s.e7)([d.Z], () => d.Z.alwaysShowLinkDecorations),
         u = i.useMemo(
             () => ({
                 reducedMotion: n,
                 prefersCrossfades: !1,
                 forcedColors: a,
-                alwaysShowLinkDecorations: l
+                alwaysShowLinkDecorations: c
             }),
-            [n, a, l]
+            [n, a, c]
         );
     return (
-        i.useEffect(() => ((0, d.d1)(), window.addEventListener('keydown', E), () => window.removeEventListener('keydown', E)), []),
-        (0, r.jsx)(o.AccessibilityPreferencesContext.Provider, {
+        i.useEffect(() => ((0, o.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, f.d1)()), p.NW.onLocaleChange(() => (0, f.d1)()), window.addEventListener('keydown', h), () => window.removeEventListener('keydown', h)), []),
+        (0, r.jsx)(l.Sfi.Provider, {
             value: u,
             children: t
         })

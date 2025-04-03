@@ -1,20 +1,23 @@
 n.d(t, {
-    Z: function () {
-        return i;
-    }
-}),
-    n(399606),
-    n(695346),
-    n(496675);
-var r = n(981631);
-function i(e, t) {
+    Z: () => s,
+    _: () => l
+});
+var r = n(399606),
+    i = n(695346),
+    o = n(496675),
+    a = n(981631);
+function s(e, t) {
     switch (e) {
-        case r.A2N.ALWAYS:
+        case a.A2N.ALWAYS:
             return !0;
-        case r.A2N.IF_MODERATOR:
+        case a.A2N.IF_MODERATOR:
             return t;
-        case r.A2N.ON_CLICK:
+        case a.A2N.ON_CLICK:
         default:
             return !1;
     }
+}
+function l(e) {
+    let t = (0, r.e7)([o.Z], () => o.Z.can(a.Plq.MANAGE_MESSAGES, e));
+    return !s(i.cC.useSetting(), t);
 }

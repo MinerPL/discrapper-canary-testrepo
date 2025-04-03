@@ -6,8 +6,9 @@ var r = Date.prototype.getDay,
             return !1;
         }
     },
-    a = Object.prototype.toString,
+    o = Object.prototype.toString,
+    a = '[object Date]',
     s = n(703825)();
 e.exports = function (e) {
-    return 'object' == typeof e && null !== e && (s ? i(e) : '[object Date]' === a.call(e));
+    return 'object' == typeof e && null !== e && (s ? i(e) : o.call(e) === a);
 };

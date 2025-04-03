@@ -1,76 +1,72 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(442837),
-    l = n(570140),
-    r = n(519938),
-    o = n(928518),
-    c = n(585483),
-    u = n(317381),
-    d = n(917107),
-    h = n(716600),
-    m = n(918559),
-    p = n(981631);
-let _ = (e, t) => {
-    l.Z.wait(() => {
-        (0, r.Cz)(e, t);
+n.d(t, { Z: () => h });
+var r = n(200651),
+    l = n(192379),
+    i = n(442837),
+    a = n(570140),
+    o = n(519938),
+    s = n(928518),
+    u = n(585483),
+    c = n(317381),
+    d = n(16609),
+    f = n(917107),
+    m = n(716600),
+    p = n(918559),
+    g = n(981631);
+let E = (e, t) => {
+    a.Z.wait(() => {
+        (0, o.Cz)(e, t);
     });
 };
-function f(e) {
+function h(e) {
     let t,
-        { embedId: n, className: l, style: r } = e,
-        f = (0, s.e7)([o.Z], () => o.Z.getWindow(p.KJ3.CHANNEL_CALL_POPOUT)),
-        E = (0, h.Z)(),
-        g = (0, s.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
-    if (null != E && !(0, d.Z)(E.channelId) && g === m.Ez.PANEL) t = window;
-    else {
-        var C;
-        t = null !== (C = null == f ? void 0 : f.window) && void 0 !== C ? C : window;
-    }
-    let I = a.useRef(null),
-        x = a.useMemo(() => {
+        { embedId: n, className: a, style: o } = e,
+        h = (0, i.e7)([s.Z], () => s.Z.getWindow(g.KJ3.CHANNEL_CALL_POPOUT)),
+        v = (0, m.Z)(),
+        b = (0, i.e7)([c.ZP], () => c.ZP.getActivityPanelMode());
+    if (null == v || (0, f.Z)((0, d.pY)(v.location)) || b !== p.Ez.PANEL) {
+        var S;
+        t = null != (S = null == h ? void 0 : h.window) ? S : window;
+    } else t = window;
+    let y = l.useRef(null),
+        O = l.useMemo(() => {
             let e = null;
             return () => {
                 null == e &&
                     (e = t.requestAnimationFrame(() => {
-                        var t, i;
-                        _(n, null !== (i = null === (t = I.current) || void 0 === t ? void 0 : t.getBoundingClientRect()) && void 0 !== i ? i : null), (e = null);
+                        var t, r;
+                        E(n, null != (r = null == (t = y.current) ? void 0 : t.getBoundingClientRect()) ? r : null), (e = null);
                     }));
             };
         }, [n, t]);
     return (
-        a.useEffect(
+        l.useEffect(
             () => (
-                t.addEventListener('resize', x),
-                c.S.subscribe(p.CkL.REMEASURE_TARGET, x),
+                t.addEventListener('resize', O),
+                u.S.subscribe(g.CkL.REMEASURE_TARGET, O),
                 () => {
-                    t.removeEventListener('resize', x), c.S.unsubscribe(p.CkL.REMEASURE_TARGET, x);
+                    t.removeEventListener('resize', O), u.S.unsubscribe(g.CkL.REMEASURE_TARGET, O);
                 }
             ),
-            [x, t]
+            [O, t]
         ),
-        a.useLayoutEffect(() => {
-            let e = I.current;
+        l.useLayoutEffect(() => {
+            let e = y.current;
             if (null == e) return;
             let t = e.ownerDocument.defaultView;
             if (null == t) return;
-            x();
-            let i = new t.ResizeObserver(x);
+            O();
+            let r = new t.ResizeObserver(O);
             return (
-                i.observe(e),
+                r.observe(e),
                 () => {
-                    i.disconnect(), _(n, null);
+                    r.disconnect(), E(n, null);
                 }
             );
-        }, [n, x]),
-        (0, i.jsx)('div', {
-            ref: I,
-            style: r,
-            className: l
+        }, [n, O]),
+        (0, r.jsx)('div', {
+            ref: y,
+            style: o,
+            className: a
         })
     );
 }

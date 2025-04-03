@@ -1,23 +1,23 @@
-n(411104), n(47120);
-var i = n(735250),
-    l = n(470079),
-    r = n(120356),
-    a = n.n(r),
-    s = n(442837),
-    o = n(493683),
+n.d(t, { Z: () => P }), n(411104), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(493683),
     c = n(239091),
     u = n(146773),
     d = n(201895),
-    h = n(703656),
-    p = n(592125),
-    _ = n(430824),
-    f = n(496675),
-    g = n(98597),
-    m = n(473403),
-    C = n(981631),
-    I = n(490897),
-    E = n(391463);
-function N(e, t, n) {
+    p = n(703656),
+    h = n(592125),
+    f = n(430824),
+    g = n(496675),
+    m = n(98597),
+    b = n(473403),
+    y = n(981631),
+    _ = n(490897),
+    v = n(915887);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,77 +30,107 @@ function N(e, t, n) {
         e
     );
 }
+function j(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                O(e, t, n[t]);
+            });
+    }
+    return e;
+}
 function x(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error('TextChannel, preloadChannel: Channel does not have a guildId');
-    o.Z.preload(n, t.id);
+    s.Z.preload(n, t.id);
 }
-class S extends g.ZP {
+class C extends m.ZP {
     render() {
-        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: s } = this.props,
-            o = (0, i.jsx)('li', {
-                className: a()(this.getClassName(), { [E.disabled]: this.isDisabled() }),
+        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: i, connectDragPreview: l, canReorderChannel: a } = this.props,
+            s = (0, r.jsx)('li', {
+                className: o()(this.getClassName(), { [v.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
-                children: (0, i.jsxs)(m.Z, {
-                    className: E.iconVisibility,
+                children: (0, r.jsxs)(b.ZP, {
+                    className: v.iconVisibility,
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
                     onMouseDown: x,
                     onContextMenu: this.handleContextMenu,
-                    connectDragPreview: s ? r : null,
+                    connectDragPreview: a ? l : null,
                     'aria-label': (0, d.ZP)({ channel: e }),
-                    resolvedUnreadSetting: I.i.ONLY_MENTIONS,
+                    resolvedUnreadSetting: _.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
                 })
             });
-        return s ? n(l(o)) : o;
+        return a ? n(i(s)) : s;
     }
     constructor(...e) {
         super(...e),
-            N(this, 'handleContextMenu', (e) => {
+            O(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    l = _.Z.getGuild(t.getGuildId());
-                null != l &&
+                    i = f.Z.getGuild(t.getGuildId());
+                null != i &&
                     (0, c.jW)(e, async () => {
                         let { default: e } = await n.e('99905').then(n.bind(n, 649400));
-                        return (n) =>
-                            (0, i.jsx)(e, {
-                                ...n,
-                                channel: t,
-                                guild: l
-                            });
+                        return (n) => {
+                            var l, o;
+                            return (0, r.jsx)(
+                                e,
+                                ((l = j({}, n)),
+                                (o = o =
+                                    {
+                                        channel: t,
+                                        guild: i
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(o)).forEach(function (e) {
+                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                      }),
+                                l)
+                            );
+                        };
                     });
             }),
-            N(this, 'handleClick', (e) => {
-                !(function (e) {
-                    let t = e.getGuildId();
-                    if (null == t) throw Error('TextChannel, transitionTo: Channel does not have a guildId');
-                    (0, h.uL)(C.Z5c.CHANNEL(t, e.id), {
-                        state: {
-                            analyticsSource: {
-                                page: C.ZY5.GUILD_CHANNEL,
-                                section: C.jXE.CHANNEL_LIST,
-                                object: C.qAy.CHANNEL
-                            }
+            O(this, 'handleClick', (e) => {
+                let t = e.getGuildId();
+                if (null == t) throw Error('TextChannel, transitionTo: Channel does not have a guildId');
+                (0, p.uL)(y.Z5c.CHANNEL(t, e.id), {
+                    state: {
+                        analyticsSource: {
+                            page: y.ZY5.GUILD_CHANNEL,
+                            section: y.jXE.CHANNEL_LIST,
+                            object: y.qAy.CHANNEL
                         }
-                    });
-                })(e);
+                    }
+                });
             });
     }
 }
-let v = (0, u.B)(S);
-t.Z = l.memo(function (e) {
-    let { channel: t, guild: n, disableSorting: l } = e,
-        r = (0, s.cj)([p.Z, f.Z], () => {
-            let e = p.Z.getChannel(t.parent_id);
-            return {
-                canManageChannel: f.Z.can(C.Plq.MANAGE_CHANNELS, t),
-                canReorderChannel: !0 !== l && null != e ? f.Z.can(C.Plq.MANAGE_CHANNELS, e) : f.Z.can(C.Plq.MANAGE_CHANNELS, n)
-            };
-        });
-    return (0, i.jsx)(v, {
-        ...r,
-        ...e
+let S = (0, u.B)(C),
+    P = i.memo(function (e) {
+        let { channel: t, guild: n, disableSorting: i } = e,
+            l = (0, a.cj)([h.Z, g.Z], () => {
+                let e = h.Z.getChannel(t.parent_id);
+                return {
+                    canManageChannel: g.Z.can(y.Plq.MANAGE_CHANNELS, t),
+                    canReorderChannel: !0 !== i && null != e ? g.Z.can(y.Plq.MANAGE_CHANNELS, e) : g.Z.can(y.Plq.MANAGE_CHANNELS, n)
+                };
+            });
+        return (0, r.jsx)(S, j({}, l, e));
     });
-});

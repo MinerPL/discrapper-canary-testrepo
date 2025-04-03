@@ -1,10 +1,4 @@
-var r, i;
-n.d(t, {
-    C: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {})).STAGING = 'staging'),
-    (i.DEVELOPMENT = 'development'),
-    (i.PRODUCTION = 'production'),
-    (i.TEST = 'test');
+n.d(t, { C: () => r });
+var r = (function (e) {
+    return (e.STAGING = 'staging'), (e.DEVELOPMENT = 'development'), (e.PRODUCTION = 'production'), (e.TEST = 'test'), e;
+})({});

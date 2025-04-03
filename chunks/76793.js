@@ -1,237 +1,130 @@
-t.d(s, {
-    Z: function () {
-        return P;
-    }
-});
-var n = t(735250),
-    a = t(470079),
-    i = t(442837),
-    r = t(481060),
-    o = t(287734),
-    l = t(232567),
-    c = t(700582),
-    d = t(718629),
-    _ = t(615830),
-    E = t(630759),
-    u = t(931500),
-    I = t(921157),
-    T = t(171368),
-    S = t(314897),
-    N = t(592125),
-    C = t(594174),
-    m = t(979651),
-    A = t(51144),
-    O = t(981631),
-    g = t(760373),
-    h = t(689938),
-    p = t(288338),
-    R = t(224499);
-function x(e) {
-    let { userId: s, count: t } = e,
-        o = (0, i.e7)([C.default], () => C.default.getUser(s)),
-        d = A.ZP.getFormattedName(o),
-        _ = a.useCallback(() => {
-            (0, E.Zn)(s);
-        }, [s]),
-        u = a.useCallback(() => (0, T.openUserProfileModal)({ userId: s }), [s]);
+n.d(t, { q: () => N });
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(232567),
+    o = n(700582);
+n(90641), n(615830);
+var c = n(630759),
+    d = n(931500);
+n(921157);
+var u = n(171368),
+    m = n(594174),
+    g = n(51144),
+    p = n(388032),
+    h = n(552312);
+function f(e) {
+    let { userId: t, count: n } = e,
+        d = (0, s.e7)([m.default], () => m.default.getUser(t)),
+        f = g.ZP.getFormattedName(d),
+        b = i.useCallback(() => {
+            (0, c.Zn)(t);
+        }, [t]),
+        N = i.useCallback(() => (0, u.openUserProfileModal)({ userId: t }), [t]);
     return (
-        a.useEffect(() => {
-            (0, l.PR)(s);
-        }, [s]),
-        (0, n.jsxs)('div', {
-            className: p.section,
+        i.useEffect(() => {
+            (0, l.PR)(t);
+        }, [t]),
+        (0, r.jsxs)('div', {
+            className: h.section,
             children: [
-                null != o &&
-                    (0, n.jsx)(c.Z, {
-                        className: p.avatar,
-                        user: o,
-                        size: r.AvatarSizes.SIZE_40
+                null != d &&
+                    (0, r.jsx)(o.Z, {
+                        className: h.avatar,
+                        user: d,
+                        size: a.EFr.SIZE_40
                     }),
-                (0, n.jsxs)('div', {
-                    className: p.text,
+                (0, r.jsxs)('div', {
+                    className: h.text,
                     children: [
-                        (0, n.jsx)(r.Clickable, {
-                            className: p.username,
-                            onClick: u,
-                            children: (0, n.jsx)(r.Text, {
+                        (0, r.jsx)(a.P3F, {
+                            className: h.username,
+                            onClick: N,
+                            children: (0, r.jsx)(a.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'interactive-active',
-                                children: d
+                                children: f
                             })
                         }),
-                        (0, n.jsx)(r.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: h.Z.Messages.E2EE_DEVICES_COUNT.format({ count: t })
+                            children: p.NW.format(p.t['/MBjYG'], { count: n })
                         })
                     ]
                 }),
-                (0, n.jsx)(r.Clickable, {
-                    onClick: _,
-                    className: p.sectionIconContainer,
-                    children: (0, n.jsx)(r.TrashIcon, { size: 'xs' })
+                (0, r.jsx)(a.P3F, {
+                    onClick: b,
+                    className: h.sectionIconContainer,
+                    children: (0, r.jsx)(a.XHJ, { size: 'xs' })
                 })
             ]
         })
     );
 }
-function M(e) {
-    let { className: s, userId: t, verification: i, index: o } = e,
-        l = (0, E.bo)(i.timestamp),
-        c = a.useCallback(() => {
-            (0, E.ZU)(t, i.verifiedKey);
-        }, [i.verifiedKey, t]);
-    return (0, n.jsxs)('div', {
-        className: s,
+function b(e) {
+    let { className: t, userId: n, verification: s, index: l } = e,
+        o = (0, c.bo)(s.timestamp),
+        d = i.useCallback(() => {
+            (0, c.ZU)(n, s.verifiedKey);
+        }, [s.verifiedKey, n]);
+    return (0, r.jsxs)('div', {
+        className: t,
         children: [
-            (0, n.jsxs)('div', {
-                className: p.text,
+            (0, r.jsxs)('div', {
+                className: h.text,
                 children: [
-                    (0, n.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-active',
-                        children: h.Z.Messages.E2EE_ANONYMOUS_DEVICE_TAG.format({ index: o + 1 })
+                        children: p.NW.format(p.t.N4qBBA, { index: l + 1 })
                     }),
-                    (0, n.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: l
+                        children: o
                     })
                 ]
             }),
-            (0, n.jsx)(r.Clickable, {
-                className: p.icon,
-                onClick: c,
-                children: (0, n.jsx)(r.XSmallIcon, {
+            (0, r.jsx)(a.P3F, {
+                className: h.icon,
+                onClick: d,
+                children: (0, r.jsx)(a.Dio, {
                     size: 'md',
-                    color: r.tokens.colors.INTERACTIVE_NORMAL
+                    color: a.TVs.colors.INTERACTIVE_NORMAL
                 })
             })
         ]
     });
 }
-function f(e) {
-    let { userId: s } = e,
-        t = (0, u._)(s);
-    return (0, n.jsxs)(n.Fragment, {
+function N(e) {
+    let { userId: t } = e,
+        n = (0, d._)(t);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(x, {
-                userId: s,
-                count: t.length
+            (0, r.jsx)(f, {
+                userId: t,
+                count: n.length
             }),
-            t.map((e, i) =>
-                (0, n.jsxs)(
-                    a.Fragment,
+            n.map((e, s) =>
+                (0, r.jsxs)(
+                    i.Fragment,
                     {
                         children: [
-                            (0, n.jsx)(M, {
-                                className: p.row,
-                                userId: s,
-                                index: i,
+                            (0, r.jsx)(b, {
+                                className: h.row,
+                                userId: t,
+                                index: s,
                                 verification: e
                             }),
-                            i !== t.length - 1 && (0, n.jsx)('div', { className: p.divider })
+                            s !== n.length - 1 && (0, r.jsx)('div', { className: h.divider })
                         ]
                     },
-                    ''.concat(i, '-').concat(e.timestamp)
+                    ''.concat(s, '-').concat(e.timestamp)
                 )
             )
         ]
     });
 }
-function D(e) {
-    let { userIds: s } = e;
-    return 0 === s.length
-        ? null
-        : (0, n.jsxs)(n.Fragment, {
-              children: [
-                  (0, n.jsxs)(r.FormItem, {
-                      className: R.marginBottom20,
-                      children: [
-                          (0, n.jsx)(r.FormTitle, {
-                              tag: r.FormTitleTags.H5,
-                              className: R.marginBottom8,
-                              children: h.Z.Messages.E2EE_VERIFIED_DEVICES
-                          }),
-                          (0, n.jsx)(r.FormText, {
-                              type: r.FormTextTypes.DESCRIPTION,
-                              children: h.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({ helpArticle: g.s9 })
-                          })
-                      ]
-                  }),
-                  s.map((e) =>
-                      (0, n.jsx)(
-                          'div',
-                          {
-                              className: p.item,
-                              children: (0, n.jsx)(f, { userId: e })
-                          },
-                          e
-                      )
-                  )
-              ]
-          });
-}
-function P() {
-    let e = (0, i.e7)([_.Z], () => _.Z.getPersistentCodesEnabled()),
-        s = a.useCallback((e) => {
-            d.Z.updatePersistentCodesEnabled(e);
-        }, []),
-        l = a.useCallback(async (e, s) => {
-            o.default.disconnect(), await d.Z.updatePersistentCodesEnabled(s), o.default.selectVoiceChannel(e);
-        }, []),
-        c = a.useCallback(
-            (e) => {
-                let a = m.Z.getVoiceStateForUser(S.default.getId()),
-                    i = N.Z.getChannel(null == a ? void 0 : a.channelId);
-                S.default.getSessionId() === (null == a ? void 0 : a.sessionId) && null != i && i.type !== O.d4z.GUILD_STAGE_VOICE
-                    ? (0, r.openModalLazy)(async () => {
-                          let { default: s } = await t.e('34999').then(t.bind(t, 396473));
-                          return (t) =>
-                              (0, n.jsx)(s, {
-                                  title: e ? h.Z.Messages.E2EE_ENABLE_PERSISTENT_KEY_CONFIRM_TITLE : h.Z.Messages.E2EE_DISABLE_PERSISTENT_KEY_CONFIRM_TITLE,
-                                  subtitle: e ? h.Z.Messages.E2EE_ENABLE_PERSISTENT_KEY_CONFIRM_SUBTITLE : h.Z.Messages.E2EE_DISABLE_PERSISTENT_KEY_CONFIRM_SUBTITLE,
-                                  onConfirm: () => {
-                                      l(i.id, e);
-                                  },
-                                  ...t
-                              });
-                      })
-                    : s(e);
-            },
-            [s, l]
-        ),
-        E = (0, I.s)();
-    return (0, n.jsxs)(n.Fragment, {
-        children: [
-            (0, n.jsxs)(r.FormSection, {
-                tag: r.FormTitleTags.H1,
-                title: h.Z.Messages.E2EE_END_TO_END_ENCRYPTION,
-                children: [
-                    (0, n.jsx)(r.FormText, {
-                        type: r.FormTextTypes.DESCRIPTION,
-                        className: R.marginBottom20,
-                        children: h.Z.Messages.E2EE_SETTINGS_SUBTITLE.format({ helpArticle: g.l4 })
-                    }),
-                    (0, n.jsxs)(r.FormItem, {
-                        children: [
-                            (0, n.jsx)(r.FormTitle, {
-                                tag: r.FormTitleTags.H5,
-                                className: R.marginBottom8,
-                                children: h.Z.Messages.E2EE_VERIFICATION_CODES
-                            }),
-                            (0, n.jsx)(r.FormSwitch, {
-                                hideBorder: 0 === E.length,
-                                value: e,
-                                note: h.Z.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION.format({ helpArticle: g.$J }),
-                                onChange: c,
-                                children: h.Z.Messages.E2EE_ENABLE_PERSISTENT_CODES
-                            })
-                        ]
-                    })
-                ]
-            }),
-            (0, n.jsx)(D, { userIds: E })
-        ]
-    });
-}
+n(20493);

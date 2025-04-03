@@ -1,91 +1,80 @@
 n.d(t, {
-    FN: function () {
-        return o;
-    },
-    M$: function () {
-        return p;
-    },
-    NE: function () {
-        return E;
-    },
-    NO: function () {
-        return f;
-    },
-    Oq: function () {
-        return y;
-    },
-    RF: function () {
-        return A;
-    },
-    Un: function () {
-        return l;
-    },
-    X: function () {
-        return g;
-    },
-    YW: function () {
-        return h;
-    },
-    ae: function () {
-        return N;
-    },
-    b3: function () {
-        return I;
-    },
-    cf: function () {
-        return C;
-    },
-    dr: function () {
-        return O;
-    },
-    fY: function () {
-        return S;
-    },
-    iU: function () {
-        return _;
-    },
-    l7: function () {
-        return s;
-    },
-    md: function () {
-        return T;
-    },
-    qm: function () {
-        return m;
-    },
-    yZ: function () {
-        return v;
+    FN: () => b,
+    M$: () => f,
+    NE: () => c,
+    NO: () => u,
+    Oq: () => A,
+    RF: () => v,
+    Un: () => y,
+    X: () => m,
+    YW: () => d,
+    ae: () => O,
+    b3: () => p,
+    cf: () => N,
+    dr: () => S,
+    fY: () => g,
+    iU: () => l,
+    l7: () => E,
+    md: () => h,
+    qm: () => _,
+    yZ: () => I
+}),
+    n(266796);
+var r = n(348327),
+    i = n.n(r),
+    o = n(388032);
+function a(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = s(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
-});
-var r,
-    i,
-    a,
-    s,
-    o,
-    l,
-    u = n(348327),
-    c = n.n(u),
-    d = n(689938);
-let _ = 100,
-    E = 50,
-    f = 100,
-    h = 15,
-    p = 12,
-    m = 50,
-    I = 4,
-    T = 7,
-    g = 5,
-    S = 13;
-function A(e) {
-    if (e.options.length > 0) return !1;
-    let { id: t, ...n } = N(),
-        { id: r, ...i } = e;
-    return c()(n, i);
+    return i;
 }
-function N() {
+function s(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let l = 100,
+    c = 50,
+    u = 100,
+    d = 15,
+    f = 12,
+    _ = 50,
+    p = 4,
+    h = 7,
+    m = 5,
+    g = 13;
+var E = (function (e) {
+        return (e[(e.CUSTOMIZE = 0)] = 'CUSTOMIZE'), (e[(e.BROWSE = 1)] = 'BROWSE'), e;
+    })({}),
+    b = (function (e) {
+        return (e[(e.MULTIPLE_CHOICE = 0)] = 'MULTIPLE_CHOICE'), (e[(e.DROPDOWN = 1)] = 'DROPDOWN'), e;
+    })({}),
+    y = (function (e) {
+        return (e[(e.ONBOARDING_DEFAULT = 0)] = 'ONBOARDING_DEFAULT'), (e[(e.ONBOARDING_ADVANCED = 1)] = 'ONBOARDING_ADVANCED'), e;
+    })({});
+function v(e) {
+    if (e.options.length > 0) return !1;
+    let t = O(),
+        { id: n } = t,
+        r = a(t, ['id']),
+        { id: o } = e,
+        s = a(e, ['id']);
+    return i()(r, s);
+}
+function O() {
     return {
         id: String(Date.now()),
-        title: d.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE,
+        title: o.NW.string(o.t.vY91Cw),
         options: [],
         singleSelect: !1,
         required: !1,
@@ -93,7 +82,7 @@ function N() {
         type: 0
     };
 }
-function v(e) {
+function I(e) {
     return {
         id: String(Date.now()),
         title: '',
@@ -104,7 +93,7 @@ function v(e) {
         type: 0
     };
 }
-function O(e) {
+function S(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -114,9 +103,9 @@ function O(e) {
                 channel_ids: e.channelIds,
                 role_ids: e.roleIds,
                 emoji: e.emoji,
-                emoji_id: null === (t = e.emoji) || void 0 === t ? void 0 : t.id,
-                emoji_name: null === (n = e.emoji) || void 0 === n ? void 0 : n.name,
-                emoji_animated: null === (r = e.emoji) || void 0 === r ? void 0 : r.animated,
+                emoji_id: null == (t = e.emoji) ? void 0 : t.id,
+                emoji_name: null == (n = e.emoji) ? void 0 : n.name,
+                emoji_animated: null == (r = e.emoji) ? void 0 : r.animated,
                 title: e.title,
                 description: e.description
             };
@@ -129,7 +118,7 @@ function O(e) {
         type: e.type
     };
 }
-function R(e) {
+function T(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -140,7 +129,7 @@ function R(e) {
                 roleIds: e.role_ids,
                 emoji: e.emoji,
                 title: e.title,
-                description: null !== (t = e.description) && void 0 !== t ? t : ''
+                description: null != (t = e.description) ? t : ''
             };
         }),
         title: e.title,
@@ -151,20 +140,19 @@ function R(e) {
         type: e.type
     };
 }
-function C(e) {
+function N(e) {
     var t, n, r;
     return {
-        prompts: e.prompts.map(R),
+        prompts: e.prompts.map(T),
         defaultChannelIds: e.default_channel_ids,
-        responses: null !== (t = e.responses) && void 0 !== t ? t : [],
+        responses: null != (t = e.responses) ? t : [],
         mode: e.mode,
         enabled: e.enabled,
-        onboardingPromptsSeen: null !== (n = e.onboarding_prompts_seen) && void 0 !== n ? n : {},
-        onboardingResponsesSeen: null !== (r = e.onboarding_responses_seen) && void 0 !== r ? r : {},
+        onboardingPromptsSeen: null != (n = e.onboarding_prompts_seen) ? n : {},
+        onboardingResponsesSeen: null != (r = e.onboarding_responses_seen) ? r : {},
         belowRequirements: e.below_requirements
     };
 }
-function y(e) {
+function A(e) {
     return null == e || (null == e.id && null == e.name);
 }
-((r = s || (s = {}))[(r.CUSTOMIZE = 0)] = 'CUSTOMIZE'), (r[(r.BROWSE = 1)] = 'BROWSE'), ((i = o || (o = {}))[(i.MULTIPLE_CHOICE = 0)] = 'MULTIPLE_CHOICE'), (i[(i.DROPDOWN = 1)] = 'DROPDOWN'), ((a = l || (l = {}))[(a.ONBOARDING_DEFAULT = 0)] = 'ONBOARDING_DEFAULT'), (a[(a.ONBOARDING_ADVANCED = 1)] = 'ONBOARDING_ADVANCED');

@@ -1,27 +1,19 @@
 n.d(t, {
-    Nd: function () {
-        return a;
-    },
-    bk: function () {
-        return i;
-    },
-    d3: function () {
-        return s;
-    },
-    oP: function () {
-        return o;
-    }
+    Nd: () => o,
+    bk: () => i,
+    d3: () => a,
+    oP: () => s
 });
 var r = n(246364);
 function i(e) {
     return e === r.wB.APPROVED || e === r.wB.REJECTED;
 }
-function a(e) {
+function o(e) {
     return e === r.wB.SUBMITTED;
 }
-function s(e) {
+function a(e) {
     return e.applicationStatus === r.wB.APPROVED && null != e.lastSeen;
 }
-function o(e) {
+function s(e) {
     return i(e.applicationStatus) && null == e.lastSeen;
 }

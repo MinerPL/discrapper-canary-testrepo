@@ -1,8 +1,8 @@
-n(47120);
-var i,
-    a = n(442837),
-    s = n(570140);
-function l(e, t, n) {
+n.d(t, { Z: () => c }), n(47120);
+var r,
+    i = n(442837),
+    l = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,32 +15,31 @@ function l(e, t, n) {
         e
     );
 }
-let r = {};
-class o extends (i = a.ZP.PersistedStore) {
+let a = {};
+class s extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         for (let t in e) {
             let n = e[t];
-            r[t] = new Set(n);
+            a[t] = new Set(n);
         }
     }
     hasViewedPrompt(e, t) {
-        let n = r[t];
-        return null != n && (!!n.has(e) || !1);
+        let n = a[t];
+        return null != n && !!n.has(e);
     }
     getState() {
-        return r;
+        return a;
     }
 }
-l(o, 'displayName', 'GuildPromptsStore'),
-    l(o, 'persistKey', 'GuildPromptsStore'),
-    (t.Z = new o(s.Z, {
-        GUILD_PROMPT_VIEWED: function (e) {
-            let { prompt: t, guildId: n } = e,
-                i = r[n];
-            return null == i ? ((r[n] = new Set()), r[n].add(t), !0) : !i.has(t) && (i.add(t), !0);
-        },
-        GUILD_DELETE: function (e) {
-            let { guild: t } = e;
-            return null != r[t.id] && !t.unavailable && (delete r[t.id], !0);
-        }
-    }));
+o(s, 'displayName', 'GuildPromptsStore'), o(s, 'persistKey', 'GuildPromptsStore');
+let c = new s(l.Z, {
+    GUILD_PROMPT_VIEWED: function (e) {
+        let { prompt: t, guildId: n } = e,
+            r = a[n];
+        return null == r ? ((a[n] = new Set()), a[n].add(t), !0) : !r.has(t) && (r.add(t), !0);
+    },
+    GUILD_DELETE: function (e) {
+        let { guild: t } = e;
+        return null != a[t.id] && !t.unavailable && (delete a[t.id], !0);
+    }
+});

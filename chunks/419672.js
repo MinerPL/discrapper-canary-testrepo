@@ -1,69 +1,70 @@
-s(47120);
-var T = s(735250),
-    o = s(470079),
-    n = s(481060),
-    a = s(230711),
-    l = s(63063),
-    _ = s(378298),
-    i = s(584656),
-    r = s(993750),
-    S = s(981631),
-    E = s(526761),
-    c = s(689938),
-    O = s(220623);
-t.Z = function (e) {
-    let { onClose: t, channelId: s } = e,
-        [d, A] = o.useState(!1),
-        u = o.useCallback(() => {
-            a.Z.open(S.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: E.to.DM_SAFETY_ALERTS }), t();
-        }, [t]),
-        I = o.useCallback(() => {
-            !d &&
-                (A(!0),
-                (0, _.Uj)(s)
+n.d(e, { Z: () => b }), n(47120);
+var r = n(200651),
+    s = n(192379),
+    i = n(481060),
+    o = n(230711),
+    l = n(63063),
+    a = n(378298),
+    c = n(584656),
+    u = n(993750),
+    d = n(981631),
+    T = n(526761),
+    S = n(388032),
+    _ = n(621164);
+let b = function (t) {
+    let { onClose: e, channelId: n } = t,
+        [b, N] = s.useState(!1),
+        x = s.useCallback(() => {
+            o.Z.open(d.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: T.FY.DM_SAFETY_ALERTS_V2 }), e();
+        }, [e]),
+        p = s.useCallback(() => {
+            b ||
+                (N(!0),
+                (0, a.Uj)(n)
                     .then(() => {
-                        t(),
-                            (0, i.t)({
-                                text: c.Z.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS,
+                        e(),
+                            (0, c.t)({
+                                text: S.NW.string(S.t.FhgVWl),
                                 id: 'safety-tools-report-false-positive'
                             });
                     })
                     .catch(() => {
-                        A(!1), (0, n.showToast)((0, n.createToast)(c.Z.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE));
+                        N(!1), (0, i.showToast)((0, i.createToast)(S.NW.string(S.t.R0RpRU), i.ToastType.FAILURE));
                     }));
-        }, [s, t, d]);
-    return (0, T.jsxs)(r.Z, {
-        style: O.wrapperStyle,
+        }, [n, e, b]);
+    return (0, r.jsxs)(u.Z, {
+        style: _.wrapperStyle,
         children: [
-            (0, T.jsx)(n.Text, {
-                variant: 'text-md/medium',
-                children: c.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format({ learnMoreLink: l.Z.getArticleURL(S.BhN.SAFETY_ALERTS) })
+            (0, r.jsx)(i.Text, {
+                variant: 'text-md/normal',
+                color: 'header-secondary',
+                children: S.NW.format(S.t['njJ/Cg'], { learnMoreLink: l.Z.getArticleURL(d.BhN.SAFETY_ALERTS) })
             }),
-            (0, T.jsx)(n.Button, {
-                className: O.settingsButton,
-                onClick: u,
+            (0, r.jsx)(i.zxk, {
+                className: _.settingsButton,
+                onClick: x,
                 fullWidth: !0,
-                children: c.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS
+                children: S.NW.string(S.t.qpWnyM)
             }),
-            (0, T.jsx)('div', {
-                children: (0, T.jsx)(n.Text, {
+            (0, r.jsx)('div', {
+                children: (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-muted',
-                    className: O.reportFalsePositiveText,
-                    children: c.Z.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE.format({
-                        reportFalsePositiveHook: (e, t) =>
-                            (0, T.jsx)(
-                                n.Button,
+                    className: _.reportFalsePositiveText,
+                    children: S.NW.format(S.t['2uYViI'], {
+                        reportFalsePositiveHook: (t, e) =>
+                            (0, r.jsx)(
+                                i.zxk,
                                 {
-                                    className: O.reportFalsePositiveButton,
-                                    size: n.Button.Sizes.NONE,
-                                    color: n.Button.Colors.LINK,
-                                    look: n.Button.Looks.LINK,
-                                    disabled: d,
-                                    onClick: I,
-                                    children: e
+                                    className: _.reportFalsePositiveButton,
+                                    size: i.zxk.Sizes.NONE,
+                                    color: i.zxk.Colors.LINK,
+                                    look: i.zxk.Looks.LINK,
+                                    disabled: b,
+                                    onClick: p,
+                                    children: t
                                 },
-                                t
+                                e
                             )
                     })
                 })

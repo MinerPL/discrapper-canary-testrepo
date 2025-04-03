@@ -1,127 +1,122 @@
-t.d(s, {
-    Z: function () {
-        return E;
-    }
-}),
-    t(47120);
-var n = t(735250),
-    o = t(470079),
-    a = t(120356),
-    i = t.n(a),
-    r = t(831209),
-    l = t(481060),
-    d = t(367907),
-    c = t(177862),
-    _ = t(981631),
-    x = t(689938),
-    C = t(715218);
-function E(e) {
-    let { guildId: s, transitionState: t, onClose: a } = e,
-        [E, I] = o.useState([]),
-        [u, N] = o.useState(),
-        D = [
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    a = n(831209),
+    l = n(481060),
+    c = n(367907),
+    d = n(177862),
+    x = n(981631),
+    u = n(388032),
+    h = n(147612);
+function p(e) {
+    let { guildId: t, transitionState: n, onClose: s } = e,
+        [p, j] = i.useState([]),
+        [m, N] = i.useState(),
+        _ = [
             {
-                text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_DM_SPAM,
-                value: c.C2.DM_SPAM
+                text: u.NW.string(u.t['//3pvr']),
+                value: d.C2.DM_SPAM
             },
             {
-                text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_MENTION_SPAM,
-                value: c.C2.MENTION_SPAM
+                text: u.NW.string(u.t.SdVsio),
+                value: d.C2.MENTION_SPAM
             },
             {
-                text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANNEL_SPAM,
-                value: c.C2.CHANNEL_SPAM
+                text: u.NW.string(u.t.uTiSVF),
+                value: d.C2.CHANNEL_SPAM
             },
             {
-                text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUS_NEW_MEMBERS,
-                value: c.C2.SUS_NEW_MEMBERS
+                text: u.NW.string(u.t.GQczU1),
+                value: d.C2.SUS_NEW_MEMBERS
             },
             {
-                text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANGING_SETTINGS,
-                value: c.C2.CHANGING_SETTINGS
+                text: u.NW.string(u.t.AAgqy8),
+                value: d.C2.CHANGING_SETTINGS
             },
             {
-                text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_OTHER,
-                value: c.C2.OTHER
+                text: u.NW.string(u.t.ryPKb2),
+                value: d.C2.OTHER
             }
         ];
-    function h(e) {
-        E.includes(e) ? I((s) => s.filter((s) => s !== e)) : I((s) => [...s, e]);
+    function C(e) {
+        p.includes(e) ? j((t) => t.filter((t) => t !== e)) : j((t) => [...t, e]);
     }
-    return null == s
-        ? (a(), null)
-        : (0, n.jsxs)(l.ModalRoot, {
-              transitionState: t,
-              size: l.ModalSize.MEDIUM,
+    return null == t
+        ? (s(), null)
+        : (0, r.jsxs)(l.Y0X, {
+              transitionState: n,
+              size: l.CgR.MEDIUM,
               children: [
-                  (0, n.jsx)(l.ModalHeader, {
+                  (0, r.jsx)(l.xBx, {
                       separator: !0,
-                      children: (0, n.jsxs)('div', {
-                          className: C.headerContainer,
+                      children: (0, r.jsxs)('div', {
+                          className: h.headerContainer,
                           children: [
-                              (0, n.jsxs)('div', {
-                                  className: C.headerText,
+                              (0, r.jsxs)('div', {
+                                  className: h.headerText,
                                   children: [
-                                      (0, n.jsx)(l.LockIcon, {
+                                      (0, r.jsx)(l.mBM, {
                                           size: 'xs',
-                                          color: r.Z.INTERACTIVE_NORMAL
+                                          color: a.Z.INTERACTIVE_NORMAL
                                       }),
-                                      (0, n.jsx)(l.Heading, {
+                                      (0, r.jsx)(l.X6q, {
                                           color: 'header-primary',
                                           variant: 'heading-md/semibold',
-                                          children: x.Z.Messages.GUILD_SERVER_LOCKDOWN_FEEDBACK_DESCRIPTION
+                                          children: u.NW.string(u.t.f5hd9P)
                                       })
                                   ]
                               }),
-                              (0, n.jsx)(l.Clickable, {
-                                  onClick: a,
-                                  children: (0, n.jsx)(l.XSmallIcon, {
+                              (0, r.jsx)(l.P3F, {
+                                  onClick: s,
+                                  children: (0, r.jsx)(l.Dio, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: C.closeIcon
+                                      className: h.closeIcon
                                   })
                               })
                           ]
                       })
                   }),
-                  (0, n.jsx)(l.ModalContent, {
-                      children: (0, n.jsx)('div', {
-                          className: C.options,
-                          children: D.map((e) => {
-                              let { text: s, value: t } = e;
-                              return (0, n.jsxs)(
+                  (0, r.jsx)(l.hzk, {
+                      children: (0, r.jsx)('div', {
+                          className: h.options,
+                          children: _.map((e) => {
+                              let { text: t, value: n } = e;
+                              return (0, r.jsxs)(
                                   'div',
                                   {
-                                      className: i()(C.optionContainer, { [C.optionContainerOther]: t === c.C2.OTHER }),
+                                      className: o()(h.optionContainer, { [h.optionContainerOther]: n === d.C2.OTHER }),
                                       children: [
-                                          (0, n.jsxs)(l.Clickable, {
-                                              className: C.optionText,
-                                              onClick: () => h(t),
+                                          (0, r.jsxs)(l.P3F, {
+                                              className: h.optionText,
+                                              onClick: () => C(n),
                                               children: [
-                                                  (0, n.jsx)('div', {
-                                                      children: (0, n.jsx)(l.Checkbox, {
-                                                          type: l.Checkbox.Types.INVERTED,
+                                                  (0, r.jsx)('div', {
+                                                      children: (0, r.jsx)(l.XZJ, {
+                                                          type: l.XZJ.Types.INVERTED,
                                                           size: 20,
-                                                          value: E.includes(t),
-                                                          onChange: () => h(t)
+                                                          value: p.includes(n),
+                                                          onChange: () => C(n)
                                                       })
                                                   }),
-                                                  (0, n.jsx)(l.Text, {
+                                                  (0, r.jsx)(l.Text, {
                                                       variant: 'text-md/medium',
-                                                      color: E.includes(t) ? 'interactive-active' : 'interactive-normal',
-                                                      children: s
+                                                      color: p.includes(n) ? 'interactive-active' : 'interactive-normal',
+                                                      children: t
                                                   })
                                               ]
                                           }),
-                                          t === c.C2.OTHER &&
-                                              E.includes(c.C2.OTHER) &&
-                                              (0, n.jsx)('div', {
-                                                  className: C.textboxContainer,
-                                                  children: (0, n.jsx)(l.TextArea, {
-                                                      className: C.serverLockdownReasonText,
-                                                      placeholder: x.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_MODAL_OTHER_REASON_PLACEHOLDER,
+                                          n === d.C2.OTHER &&
+                                              p.includes(d.C2.OTHER) &&
+                                              (0, r.jsx)('div', {
+                                                  className: h.textboxContainer,
+                                                  children: (0, r.jsx)(l.Kx8, {
+                                                      className: h.serverLockdownReasonText,
+                                                      placeholder: u.NW.string(u.t['PAM+JS']),
                                                       onChange: (e) => N(e),
-                                                      value: u,
+                                                      value: m,
                                                       rows: 2,
                                                       autoFocus: !0,
                                                       flex: !0
@@ -129,25 +124,25 @@ function E(e) {
                                               })
                                       ]
                                   },
-                                  t
+                                  n
                               );
                           })
                       })
                   }),
-                  (0, n.jsx)(l.ModalFooter, {
-                      children: (0, n.jsx)(l.Button, {
+                  (0, r.jsx)(l.mzw, {
+                      children: (0, r.jsx)(l.zxk, {
                           onClick: function () {
-                              (0, d.yw)(_.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
-                                  raid_lockdown_feedback_type: E,
-                                  raid_lockdown_feedback_other_reason: u,
-                                  guild_id: s
+                              (0, c.yw)(x.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+                                  raid_lockdown_feedback_type: p,
+                                  raid_lockdown_feedback_other_reason: m,
+                                  guild_id: t
                               }),
-                                  a();
+                                  s();
                           },
-                          color: l.Button.Colors.BRAND,
-                          look: l.Button.Looks.FILLED,
+                          color: l.zxk.Colors.BRAND,
+                          look: l.zxk.Looks.FILLED,
                           submitting: !1,
-                          children: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUBMIT
+                          children: u.NW.string(u.t.nAt0rK)
                       })
                   })
               ]

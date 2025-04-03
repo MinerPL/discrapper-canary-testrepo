@@ -1,37 +1,36 @@
-n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(442837),
-    r = n(82950),
-    l = n(623624),
-    o = n(650774),
+n.d(t, { Z: () => f }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    a = n(324262),
+    o = n(623624),
+    s = n(650774),
     c = n(981631),
-    d = n(921944),
-    u = n(689938),
-    _ = n(241626);
-class E extends a.PureComponent {
+    u = n(921944),
+    d = n(388032),
+    p = n(241626);
+class h extends i.PureComponent {
     render() {
         let { guild: e, memberCount: t, markAsDismissed: n } = this.props;
-        return (0, i.jsx)(r.Z, {
+        return (0, r.jsx)(a.Z, {
             guild: e,
-            onDismissed: () => n(d.L.UNKNOWN),
+            onDismissed: () => n(u.L.UNKNOWN),
             onClick: this.handleButtonClick,
-            message: null == t || t < 30 ? u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE_SMALL_GUILD : u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE,
-            cta: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE_BUTTON,
+            message: null == t || t < 30 ? d.NW.string(d.t.hlitVV) : d.NW.string(d.t.XHtaDA),
+            cta: d.NW.string(d.t['vqb+Hx']),
             trackingSource: c.PsQ.GUILD_SUBSCRIPTION_NOTICE,
             type: c.vID.GUILD_BOOSTING,
-            image: _,
+            image: p,
             imageMarginX: 26
         });
     }
     constructor(...e) {
-        var t, n, i;
+        var t, n;
         super(...e),
-            (t = this),
-            (n = 'handleButtonClick'),
-            (i = () => {
+            (t = 'handleButtonClick'),
+            (n = () => {
                 let { guild: e } = this.props;
-                (0, l.f)({
+                (0, o.f)({
                     guildId: e.id,
                     location: {
                         section: c.jXE.CHANNEL_NOTICE,
@@ -39,17 +38,17 @@ class E extends a.PureComponent {
                     }
                 });
             }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
+            t in this
+                ? Object.defineProperty(this, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i);
+                : (this[t] = n);
     }
 }
-t.Z = s.ZP.connectStores([o.Z], (e) => {
+let f = l.ZP.connectStores([s.Z], (e) => {
     let { guild: t } = e;
-    return { memberCount: o.Z.getMemberCount(t.id) };
-})(E);
+    return { memberCount: s.Z.getMemberCount(t.id) };
+})(h);

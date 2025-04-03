@@ -1,44 +1,36 @@
-n.d(s, {
-    Z: function () {
-        return u;
-    }
-}),
-    n(47120);
-var a = n(735250),
-    t = n(470079),
-    r = n(442837),
-    l = n(481060),
-    i = n(287734),
-    o = n(592125),
+n.d(t, { Z: () => u }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    i = n(442837),
+    o = n(481060),
+    l = n(287734),
+    s = n(592125),
     c = n(693546),
-    d = n(689938);
+    d = n(388032);
 function u(e) {
-    let { joinRequest: s } = e,
-        [n, u] = t.useState(!1),
-        I = (0, r.e7)([o.Z], () => o.Z.getChannel(s.interviewChannelId)),
-        E = t.useCallback(() => {
-            (0, l.showToast)((0, l.createToast)(d.Z.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE));
+    let { joinRequest: t } = e,
+        [n, u] = a.useState(!1),
+        m = (0, i.e7)([s.Z], () => s.Z.getChannel(t.interviewChannelId)),
+        p = a.useCallback(() => {
+            (0, o.showToast)((0, o.createToast)(d.NW.string(d.t.R0RpRU), o.ToastType.FAILURE));
         }, []),
-        _ = t.useCallback(async () => {
-            if (null != I) {
-                i.default.selectPrivateChannel(I.id);
-                return;
-            }
+        f = a.useCallback(async () => {
+            if (null != m) return void l.default.selectPrivateChannel(m.id);
             if (!n) {
                 u(!0);
                 try {
-                    await c.Z.createOrEnterJoinRequestInterview(s.joinRequestId);
-                } catch {
-                    E();
+                    await c.Z.createOrEnterJoinRequestInterview(t.joinRequestId);
+                } catch (e) {
+                    p();
                 } finally {
                     u(!1);
                 }
             }
-        }, [I, s.joinRequestId, E, n]);
-    return (0, a.jsx)(l.Button, {
-        color: l.Button.Colors.BRAND,
+        }, [m, t.joinRequestId, p, n]);
+    return (0, r.jsx)(o.zxk, {
+        color: o.zxk.Colors.BRAND,
         submitting: n,
-        onClick: _,
-        children: d.Z.Messages.CLAN_DM_APPLICANT
+        onClick: f,
+        children: d.NW.string(d.t.x2UVBA)
     });
 }

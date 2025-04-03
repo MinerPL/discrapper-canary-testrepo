@@ -1,139 +1,135 @@
-a.d(s, {
-    F: function () {
-        return A;
-    },
-    Z: function () {
-        return I;
-    }
+n.d(t, {
+    F: () => L,
+    Z: () => _
 }),
-    a(47120);
-var n = a(735250),
-    E = a(470079),
-    t = a(442837),
-    _ = a(481060),
-    l = a(493683),
-    i = a(881052),
-    d = a(600164),
-    T = a(313201),
-    M = a(565138),
-    L = a(984933),
-    r = a(430824),
-    o = a(689938),
-    C = a(772509);
-function A(e) {
-    let { createdGuildId: s, hasFooter: a = !0, onClose: A, onChannelPromptCompleted: I, isSlideReady: c } = e,
-        [N, G] = E.useState(''),
-        [u, U] = E.useState(null),
-        [m, O] = E.useState(!1),
-        D = (0, T.Dt)(),
-        p = (0, t.e7)([r.Z], () => r.Z.getGuild(s), [s]),
-        g = E.useRef(null);
-    E.useEffect(() => {
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    a = n(442837),
+    l = n(481060),
+    r = n(493683),
+    d = n(881052),
+    c = n(600164),
+    o = n(313201),
+    C = n(565138),
+    m = n(984933),
+    p = n(430824),
+    N = n(388032),
+    u = n(78389);
+function L(e) {
+    let { createdGuildId: t, hasFooter: n = !0, onClose: L, onChannelPromptCompleted: _, isSlideReady: g } = e,
+        [x, T] = s.useState(''),
+        [E, h] = s.useState(null),
+        [I, G] = s.useState(!1),
+        W = (0, o.Dt)(),
+        D = (0, a.e7)([p.Z], () => p.Z.getGuild(t), [t]),
+        y = s.useRef(null);
+    s.useEffect(() => {
         var e;
-        c && (null === (e = g.current) || void 0 === e || e.focus());
-    }, [c]);
-    let R = E.useCallback(
+        g && (null == (e = y.current) || e.focus());
+    }, [g]);
+    let U = s.useCallback(
             async (e) => {
-                if ((e.preventDefault(), null == p)) return;
-                O(!0), U(null);
-                let s = L.ZP.getDefaultChannel(p.id);
+                if ((e.preventDefault(), null == D)) return;
+                G(!0), h(null);
+                let t = m.ZP.getDefaultChannel(D.id);
                 try {
-                    let e = o.Z.Messages.NUF_CHANNEL_PROMPT_CHANNEL_TOPIC_TEMPLATE.format({ topic: N });
-                    await l.Z.createTextChannel(p.id, N, null == s ? void 0 : s.parent_id, e), I();
+                    let e = N.NW.formatToPlainString(N.t.V4lepK, { topic: x });
+                    await r.Z.createTextChannel(D.id, x, null == t ? void 0 : t.parent_id, e), _();
                 } catch (e) {
-                    U(new i.yZ(e));
+                    h(new d.yZ(e));
                 }
-                O(!1);
+                G(!1);
             },
-            [p, N, I]
+            [D, x, _]
         ),
-        Z = (0, n.jsxs)(n.Fragment, {
+        z = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, n.jsx)(_.Button, {
-                    color: _.Button.Colors.BRAND,
-                    onClick: R,
-                    disabled: 0 === N.length,
-                    submitting: m,
-                    children: o.Z.Messages.DONE
+                (0, i.jsx)(l.zxk, {
+                    color: l.zxk.Colors.BRAND,
+                    onClick: U,
+                    disabled: 0 === x.length,
+                    submitting: I,
+                    children: N.NW.string(N.t.i4jeWV)
                 }),
-                (0, n.jsx)(_.Button, {
-                    className: C.skipButton,
-                    look: _.Button.Looks.BLANK,
-                    size: _.Button.Sizes.MIN,
-                    onClick: I,
-                    children: o.Z.Messages.SKIP
+                (0, i.jsx)(l.zxk, {
+                    className: u.skipButton,
+                    look: l.zxk.Looks.BLANK,
+                    size: l.zxk.Sizes.MIN,
+                    onClick: _,
+                    children: N.NW.string(N.t['5WxrcX'])
                 })
             ]
         });
     return {
-        content: (0, n.jsxs)(n.Fragment, {
+        content: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, n.jsxs)(_.ModalHeader, {
-                    className: C.header,
-                    direction: d.Z.Direction.VERTICAL,
+                (0, i.jsxs)(l.xBx, {
+                    className: u.header,
+                    direction: c.Z.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != p && (0, n.jsx)(M.Z, { guild: p }),
-                        (0, n.jsx)(_.Text, {
-                            className: C.guildName,
+                        null != D && (0, i.jsx)(C.Z, { guild: D }),
+                        (0, i.jsx)(l.Text, {
+                            className: u.guildName,
                             color: 'header-primary',
                             variant: 'text-sm/semibold',
-                            children: null == p ? void 0 : p.name
+                            children: null == D ? void 0 : D.name
                         }),
-                        (0, n.jsx)(_.Heading, {
-                            className: C.title,
+                        (0, i.jsx)(l.X6q, {
+                            className: u.title,
                             variant: 'heading-sm/semibold',
-                            children: o.Z.Messages.NUF_CHANNEL_PROMPT_TITLE
+                            children: N.NW.string(N.t['8VRa7e'])
                         }),
-                        (0, n.jsx)(_.Text, {
-                            className: C.subtitle,
+                        (0, i.jsx)(l.Text, {
+                            className: u.subtitle,
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            children: o.Z.Messages.NUF_CHANNEL_PROMPT_SUBTITLE
+                            children: N.NW.string(N.t['+855Pj'])
                         }),
-                        null != A &&
-                            (0, n.jsx)(_.ModalCloseButton, {
-                                className: C.closeButton,
-                                onClick: A
+                        null != L &&
+                            (0, i.jsx)(l.olH, {
+                                className: u.closeButton,
+                                onClick: L
                             })
                     ]
                 }),
-                (0, n.jsxs)(_.ModalContent, {
-                    className: C.channelPrompt,
+                (0, i.jsxs)(l.hzk, {
+                    className: u.channelPrompt,
                     children: [
-                        (0, n.jsx)('form', {
-                            onSubmit: R,
-                            children: (0, n.jsx)(_.FormItem, {
-                                title: o.Z.Messages.NUF_CHANNEL_PROMPT_TOPIC,
+                        (0, i.jsx)('form', {
+                            onSubmit: U,
+                            children: (0, i.jsx)(l.xJW, {
+                                title: N.NW.string(N.t.bY20tb),
                                 tag: 'label',
-                                htmlFor: D,
-                                error: null == u ? void 0 : u.getFieldMessage('name'),
-                                children: (0, n.jsx)(_.TextInput, {
+                                htmlFor: W,
+                                error: null == E ? void 0 : E.getFieldMessage('name'),
+                                children: (0, i.jsx)(l.oil, {
                                     type: 'text',
-                                    value: N,
-                                    id: D,
-                                    onChange: G,
-                                    placeholder: o.Z.Messages.NUF_CHANNEL_PROMPT_TOPIC_PLACEHOLDER,
-                                    inputRef: g
+                                    value: x,
+                                    id: W,
+                                    onChange: T,
+                                    placeholder: N.NW.string(N.t.xGOYAw),
+                                    inputRef: y
                                 })
                             })
                         }),
-                        null != u &&
-                            0 === Object.keys(u.fields).length &&
-                            (0, n.jsx)(_.Text, {
+                        null != E &&
+                            0 === Object.keys(E.fields).length &&
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'text-danger',
-                                children: u.message
+                                children: E.message
                             })
                     ]
                 }),
-                a && (0, n.jsx)(_.ModalFooter, { children: Z })
+                n && (0, i.jsx)(l.mzw, { children: z })
             ]
         }),
-        footer: Z
+        footer: z
     };
 }
-function I(e) {
-    let { content: s } = A(e);
-    return s;
+function _(e) {
+    let { content: t } = L(e);
+    return t;
 }

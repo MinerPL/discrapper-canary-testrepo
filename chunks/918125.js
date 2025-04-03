@@ -1,38 +1,34 @@
-s.d(a, {
-    Z: function () {
-        return h;
-    }
-});
-var n = s(735250),
-    c = s(470079),
-    o = s(120356),
-    r = s.n(o),
-    i = s(481060),
-    t = s(235449),
-    l = s(300234),
-    d = s(92475);
+n.d(a, { Z: () => h });
+var s = n(200651),
+    r = n(192379),
+    c = n(120356),
+    o = n.n(c),
+    t = n(481060),
+    i = n(235449),
+    l = n(300234),
+    d = n(258033);
 function h(e) {
-    let { guildId: a, goToThread: s } = e,
-        o = (0, t.nA)(a),
-        h = c.useCallback(
+    let { guildId: a, goToThread: n } = e,
+        c = (0, i.nA)(a),
+        h = r.useCallback(
             (e) => {
-                let a = o[e.row];
-                return (0, n.jsx)(
+                let a = c[e.row];
+                return (0, s.jsx)(
                     l.Z,
                     {
                         threadId: a,
-                        goToThread: s,
+                        goToThread: n,
                         showChannelName: !0
                     },
                     ''.concat(e.section, '-').concat(e.row)
                 );
             },
-            [o, s]
+            [c, n]
         );
-    return (0, n.jsx)(i.List, {
-        className: r()(d.list, d.activeThreadsList),
+    return (0, s.jsx)(t.aVo, {
+        className: o()(d.list, d.activeThreadsList),
         fade: !0,
-        sections: [o.length],
+        sections: [c.length],
         renderSection: () => null,
         sectionHeight: 0,
         rowHeight: 80,

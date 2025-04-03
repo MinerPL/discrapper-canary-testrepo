@@ -1,51 +1,159 @@
-n.d(t, {
-    I: function () {
-        return u;
-    }
-});
-var r = n(735250),
-    i = n(470079),
-    a = n(803997),
-    s = n.n(a),
-    o = n(789978),
-    l = n(780900);
+n.d(t, { I: () => m });
+var r = n(200651),
+    i = n(192379),
+    o = n(803997),
+    a = n.n(o),
+    s = n(928873),
+    l = n(821541),
+    c = n(780900);
 function u(e, t, n) {
-    let a = (0, l.G6)(e);
-    return i.forwardRef(function (u, c) {
-        let { children: d, className: _, dir: E = 'ltr', orientation: f = 'vertical', fade: h = !1, customTheme: p = !1, paddingFix: m = !0, style: I, ...T } = u,
-            { scrollerRef: g, getScrollerState: S } = (0, l.Ke)(),
-            A = (0, l.t2)(g, f);
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = h(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function m(e, t, n) {
+    let o = (0, c.G6)(e);
+    return i.forwardRef(function (u, f) {
+        var { children: h, className: m, dir: g = 'ltr', orientation: E = 'vertical', fade: b = !1, customTheme: y = !1, paddingFix: v = !0, style: O, gap: I, experimental_useStack: S } = u,
+            T = p(u, ['children', 'className', 'dir', 'orientation', 'fade', 'customTheme', 'paddingFix', 'style', 'gap', 'experimental_useStack']);
+        let { scrollerRef: N, getScrollerState: A } = (0, c.Ke)(),
+            C = (0, c.t2)(N, E);
         i.useImperativeHandle(
-            c,
-            () => ({
-                getScrollerNode: () => g.current,
-                getScrollerState: S,
-                ...(0, l.Ue)(g, S, A, f)
-            }),
-            [g, S, f, A]
+            f,
+            () =>
+                d(
+                    {
+                        getScrollerNode: () => N.current,
+                        getScrollerState: A
+                    },
+                    (0, c.Ue)(N, A, C, E)
+                ),
+            [N, A, E, C]
         );
-        let N = (0, l.tT)({
-            paddingFix: m,
-            orientation: f,
-            dir: E,
-            className: _,
-            scrollerRef: g,
-            specs: a
+        let R = (0, c.tT)({
+            paddingFix: v,
+            orientation: E,
+            dir: g,
+            className: m,
+            scrollerRef: N,
+            specs: o
         });
-        return (0, r.jsx)('div', {
-            ref: g,
-            className: s()(_, {
-                [e]: !0,
-                [t]: h,
-                [n]: p
-            }),
-            style: (0, l.uT)(I, f),
-            dir: E,
-            ...T,
-            children: (0, r.jsxs)(o.Jc, {
-                containerRef: g,
-                children: [d, N]
-            })
-        });
+        return S
+            ? (0, r.jsx)(
+                  l.K,
+                  _(
+                      d(
+                          {
+                              gap: I,
+                              ref: N,
+                              className: a()(m, {
+                                  [e]: !0,
+                                  [t]: b,
+                                  [n]: y
+                              }),
+                              style: (0, c.uT)(O, E),
+                              dir: g
+                          },
+                          T
+                      ),
+                      {
+                          children: (0, r.jsxs)(s.Jc, {
+                              containerRef: N,
+                              children: [h, R]
+                          })
+                      }
+                  )
+              )
+            : (0, r.jsx)(
+                  'div',
+                  _(
+                      d(
+                          {
+                              ref: N,
+                              className: a()(m, {
+                                  [e]: !0,
+                                  [t]: b,
+                                  [n]: y
+                              }),
+                              style: (0, c.uT)(O, E),
+                              dir: g
+                          },
+                          T
+                      ),
+                      {
+                          children: (0, r.jsxs)(s.Jc, {
+                              containerRef: N,
+                              children: [h, R]
+                          })
+                      }
+                  )
+              );
     });
 }

@@ -1,62 +1,57 @@
 n.d(t, {
-    Wu: function () {
-        return c;
-    },
-    cj: function () {
-        return u;
-    },
-    e7: function () {
-        return l;
-    },
-    pF: function () {
-        return o;
-    }
+    Wu: () => u,
+    cj: () => c,
+    e7: () => l,
+    pF: () => s
 }),
     n(411104),
     n(47120);
-var r = n(470079),
+var r = n(192379),
     i = n(902704),
-    a = n(250919);
-function s(e, t) {
+    o = n(250919);
+function a(e, t) {
     return e === t;
 }
-function o(e, t) {
+function s(e, t) {
     return !1;
 }
 function l(e, t, n) {
-    let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s,
-        { current: l } = (0, r.useRef)({
+    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a,
+        l = (0, r.useRef)(null);
+    null == l.current &&
+        (l.current = {
             stores: e,
-            areStatesEqual: o,
+            areStatesEqual: s,
             getStateFromStores: t,
             prevDeps: void 0,
             state: void 0
-        }),
-        u = l.state;
-    if (null == n || !(0, i.E)(n, l.prevDeps)) {
-        let e = t();
-        (null == u || !o(u, e)) && (u = e);
+        });
+    let c = l.current,
+        u = c.state;
+    if (null == n || !(0, i.E)(n, c.prevDeps)) {
+        let e;
+        (e = t()), (null != u && s(u, e)) || (u = e);
     }
-    (0, r.useLayoutEffect)(() => {
-        (l.getStateFromStores = t), (l.prevDeps = n), (l.state = u);
+    (0, r.useInsertionEffect)(() => {
+        (c.getStateFromStores = t), (c.prevDeps = n), (c.state = u);
     });
-    let [, c] = (0, r.useState)(null);
+    let [, d] = (0, r.useState)(null);
     return (
-        (0, r.useLayoutEffect)(() => {
+        (0, r.useInsertionEffect)(() => {
             let t = () => {
-                let e = l.getStateFromStores();
-                !o(l.state, e) && ((l.state = e), c({}));
-            };
-            t();
-            let n = new a.F(e, t);
+                    let e;
+                    (e = c.getStateFromStores()), s(c.state, e) || ((c.state = e), d({}));
+                },
+                n = new o.F(e, t);
             return n.attach('useStateFromStores'), () => n.detach();
         }, []),
         u
     );
 }
-function u(e, t, n) {
+function c(e, t, n) {
     return l(e, t, n, i.Z);
 }
-function c(e, t, n) {
+function u(e, t, n) {
     return l(e, t, n, i.E);
 }
+n(706678);

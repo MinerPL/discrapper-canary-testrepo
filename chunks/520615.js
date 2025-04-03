@@ -1,44 +1,39 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return d;
-        }
-    });
-var n = s(735250);
-s(470079);
-var a = s(481060),
-    r = s(338690),
-    o = s(689938),
-    i = s(308905);
-function d(e) {
-    let { transitionState: t, onClose: s } = e;
-    return (0, n.jsxs)(a.ModalRoot, {
-        transitionState: t,
+n.d(s, { default: () => d });
+var e = n(200651);
+n(192379);
+var r = n(481060),
+    i = n(338690),
+    a = n(388032),
+    c = n(593047);
+function d(t) {
+    let { transitionState: s, onClose: n } = t;
+    return (0, e.jsxs)(r.Y0X, {
+        transitionState: s,
         children: [
-            (0, n.jsx)(a.ModalHeader, {
+            (0, e.jsx)(r.xBx, {
                 separator: !1,
-                children: (0, n.jsx)(a.Heading, {
+                children: (0, e.jsx)(r.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: o.Z.Messages.SYSTEM_DM_URGENT_MESSAGE_MODAL_HEADER
+                    children: a.NW.string(a.t.bAhz9v)
                 })
             }),
-            (0, n.jsxs)(a.ModalContent, {
+            (0, e.jsxs)(r.hzk, {
                 children: [
-                    (0, n.jsx)(a.Text, {
+                    (0, e.jsx)(r.Text, {
                         variant: 'text-md/normal',
-                        children: o.Z.Messages.SYSTEM_DM_URGENT_MESSAGE_MODAL_BODY
+                        children: a.NW.string(a.t['7KjxW1'])
                     }),
-                    (0, n.jsx)('div', { className: i.art })
+                    (0, e.jsx)('div', { className: c.art })
                 ]
             }),
-            (0, n.jsx)(a.ModalFooter, {
-                children: (0, n.jsx)(a.Button, {
+            (0, e.jsx)(r.mzw, {
+                children: (0, e.jsx)(r.zxk, {
                     type: 'submit',
-                    color: a.Button.Colors.BRAND,
+                    color: r.zxk.Colors.BRAND,
                     onClick: () => {
-                        (0, r.Z)(), s();
+                        (0, i.Z)(), n();
                     },
-                    children: o.Z.Messages.OKAY
+                    children: a.NW.string(a.t.BddRzc)
                 })
             })
         ]

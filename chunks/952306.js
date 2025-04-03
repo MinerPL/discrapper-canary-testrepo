@@ -1,37 +1,59 @@
-var n = t(735250);
-t(470079);
-var a = t(481060),
-    i = t(723359),
-    r = t(231338);
-s.Z = {
+n.d(t, { Z: () => o });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(723359),
+    a = n(231338);
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+let o = {
     openNewUserAgeGateModal: (e) => {
-        (0, a.openModalLazy)(
+        (0, i.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([t.e('20727'), t.e('69790')]).then(t.bind(t, 298237));
-                return (s) => (0, n.jsx)(e, { ...s });
+                let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('7729')]).then(n.bind(n, 298237));
+                return (t) => (0, r.jsx)(e, l({}, t));
             },
             {
-                modalKey: i.$$,
-                onCloseRequest: r.dG,
+                modalKey: s.$$,
+                onCloseRequest: a.dG,
                 onCloseCallback: e
             }
         );
     },
     openClaimAccountModal: function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            s = arguments.length > 1 ? arguments[1] : void 0;
-        (0, a.openModalLazy)(
+            t = arguments.length > 1 ? arguments[1] : void 0;
+        (0, i.ZDy)(
             async () => {
-                let { default: s } = await t.e('1677').then(t.bind(t, 324239));
-                return (t) =>
-                    (0, n.jsx)(s, {
-                        claimRequired: e,
-                        ...t
-                    });
+                let { default: t } = await n.e('60827').then(n.bind(n, 324239));
+                return (n) => (0, r.jsx)(t, l({ claimRequired: e }, n));
             },
             {
-                onCloseRequest: e ? r.dG : null,
-                onCloseCallback: s
+                onCloseRequest: e ? a.dG : null,
+                onCloseCallback: t
             }
         );
     }

@@ -1,112 +1,149 @@
-l.d(t, {
-    Z: function () {
-        return E;
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    o = n(399606),
+    a = n(481060),
+    i = n(823596),
+    s = n(201070),
+    c = n(893966),
+    u = n(527379),
+    d = n(388032),
+    C = n(673285);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-}),
-    l(47120);
-var n = l(735250),
-    a = l(470079),
-    o = l(120356),
-    s = l.n(o),
-    i = l(399606),
-    r = l(481060),
-    C = l(823596),
-    c = l(201070),
-    d = l(893966),
-    u = l(527379),
-    m = l(689938),
-    _ = l(181791);
-function E(e) {
-    let { guildId: t, onPageChange: l } = e,
-        [o, E] = a.useTransition(),
-        h = (0, i.e7)([d.Z], () => d.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        M = (0, i.cj)([d.Z], () => d.Z.getPaginationStateByGuildId(t), [t]),
-        x = (0, c.$j)(t),
-        b = a.useMemo(
+    return e;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function p(e) {
+    let { guildId: t, onPageChange: n } = e,
+        [p, f] = l.useTransition(),
+        h = (0, o.e7)([c.Z], () => c.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        j = (0, o.cj)([c.Z], () => c.Z.getPaginationStateByGuildId(t), [t]),
+        g = (0, s.$j)(t),
+        x = l.useMemo(
             () =>
-                C.LU.map((e) => ({
+                i.LU.map((e) => ({
                     value: e,
                     label: Number(e).toLocaleString()
                 })),
             []
         ),
-        T = new Intl.NumberFormat(m.Z.getLocale()).format(h),
-        L = m.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({ count: x ? '...' : T }),
-        g = h > M.pageSize || x,
-        I = h > C.LU['0'];
-    return (0, n.jsxs)('div', {
-        className: s()(_.paginationContainer),
+        y = new Intl.NumberFormat(d.NW.currentLocale).format(h),
+        v = d.NW.formatToPlainString(d.t.RNDnQ0, { count: g ? '...' : y }),
+        O = h > j.pageSize || g,
+        N = h > i.LU['0'];
+    return (0, r.jsxs)('div', {
+        className: C.paginationContainer,
         children: [
-            (0, n.jsx)('div', {
-                className: s()(_.pageSizeSelection),
-                children: I
-                    ? (0, n.jsxs)(n.Fragment, {
+            (0, r.jsx)('div', {
+                className: C.pageSizeSelection,
+                children: N
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, n.jsx)(r.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
-                                  children: m.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL
+                                  children: d.NW.string(d.t.jNwLu7)
                               }),
-                              (0, n.jsx)(r.Select, {
-                                  'aria-label': L,
-                                  className: _.pageSizeInput,
-                                  options: b,
-                                  isSelected: (e) => e === M.pageSize,
+                              (0, r.jsx)(a.PhF, {
+                                  'aria-label': v,
+                                  className: C.pageSizeInput,
+                                  options: x,
+                                  isSelected: (e) => e === j.pageSize,
                                   select: (e) => {
-                                      E(() => {
-                                          (0, u._o)(t, {
-                                              ...M,
-                                              pageSize: e
-                                          });
+                                      f(() => {
+                                          (0, u._o)(t, b(m({}, j), { pageSize: e }));
                                       });
                                   },
                                   serialize: (e) => ''.concat(e),
                                   popoutPosition: 'top',
                                   popoutWidth: 72
                               }),
-                              (0, n.jsx)(r.Tooltip, {
-                                  text: m.Z.Messages.LOADING,
-                                  shouldShow: x,
+                              (0, r.jsx)(a.ua7, {
+                                  text: d.NW.string(d.t.ZTNur6),
+                                  shouldShow: g,
                                   children: (e) =>
-                                      (0, n.jsx)(r.Text, {
-                                          variant: 'text-md/normal',
-                                          color: 'text-muted',
-                                          className: s()(_.pageLabel),
-                                          ...e,
-                                          children: L
-                                      })
+                                      (0, r.jsx)(
+                                          a.Text,
+                                          b(
+                                              m(
+                                                  {
+                                                      variant: 'text-md/normal',
+                                                      color: 'text-muted',
+                                                      className: C.pageLabel
+                                                  },
+                                                  e
+                                              ),
+                                              { children: v }
+                                          )
+                                      )
                               })
                           ]
                       })
-                    : (0, n.jsx)(r.Text, {
+                    : (0, r.jsx)(a.Text, {
                           variant: 'text-md/normal',
                           color: 'text-muted',
-                          children: m.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_NO_PAGE_NUMBERS_LABEL.format({ count: h })
+                          children: d.NW.format(d.t.GZpwMD, { count: h })
                       })
             }),
-            (0, n.jsx)('div', {
-                className: s()(_.pagination),
+            (0, r.jsx)('div', {
+                className: C.pagination,
                 children:
-                    g &&
-                    (0, n.jsx)(r.Paginator, {
-                        className: s()(_.paginationInput),
+                    O &&
+                    (0, r.jsx)(a.DsT, {
+                        className: C.paginationInput,
                         totalCount: h,
-                        pageSize: M.pageSize,
+                        pageSize: j.pageSize,
                         disablePaginationGap: !0,
                         hideMaxPage: !0,
-                        currentPage: M.currentPage,
+                        currentPage: j.currentPage,
                         onPageChange: (e) => {
-                            null == l || l(e),
+                            null == n || n(e),
                                 requestIdleCallback(() => {
-                                    E(() => {
-                                        (0, u._o)(t, {
-                                            ...M,
-                                            currentPage: e
-                                        });
+                                    f(() => {
+                                        (0, u._o)(t, b(m({}, j), { currentPage: e }));
                                     });
                                 });
                         },
-                        maxVisiblePages: C.hW
+                        maxVisiblePages: i.hW
                     })
             })
         ]

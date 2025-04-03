@@ -1,114 +1,153 @@
-n(653041);
-var i = n(735250);
-n(470079);
-var a = n(392711),
-    s = n.n(a),
-    r = n(481060),
-    l = n(730749),
+n.d(t, { Z: () => g }), n(653041);
+var r = n(200651);
+n(192379);
+var i = n(392711),
+    a = n.n(i),
+    l = n(481060),
     o = n(100527),
-    c = n(184301),
-    u = n(103575),
-    d = n(463618),
-    _ = n(823379),
-    E = n(981631),
-    I = n(607746);
-let m = (0, l.Z)((e) => {
-    let { member: t, empty: n, analyticsContext: a, guildId: s } = e;
-    if (n) return (0, i.jsx)('div', { className: I.partyMemberEmpty });
-    if (null == t)
-        return (0, i.jsx)('div', {
-            className: I.partyMemberUnknown,
-            children: (0, i.jsx)(d.Z, { className: I.partyMemberUnknownIcon })
-        });
-    let l = {
-        location: {
-            ...a.location,
-            object: E.qAy.AVATAR
-        }
-    };
-    return (0, i.jsx)('div', {
-        className: I.partyMemberKnown,
-        children: (0, i.jsx)(r.Popout, {
-            preload: () => (0, c.Z)(t.id, t.getAvatarURL(s, 80), { guildId: s }),
-            renderPopout: (e) =>
-                (0, i.jsx)(u.Z, {
-                    ...e,
-                    location: 'PartyAvatars',
-                    userId: t.id,
-                    guildId: s,
-                    analyticsParams: l,
-                    newAnalyticsLocations: [o.Z.AVATAR]
-                }),
-            position: 'left',
-            children: (e) =>
-                (0, i.jsx)(r.Avatar, {
-                    ...e,
-                    src: t.getAvatarURL(s, 24),
-                    'aria-label': t.username,
-                    size: r.AvatarSizes.SIZE_24,
-                    className: I.partyMember
+    s = n(184301),
+    c = n(347475),
+    u = n(463618),
+    d = n(823379),
+    p = n(88729);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
-        })
-    });
-});
-t.Z = (e) => {
-    let { partySize: t, members: n, minAvatarsShown: a = 1, maxAvatarsShown: r = 2, guildId: l } = e,
-        { unknownSize: o, totalSize: c, knownSize: u } = t;
-    if (c < a) return null;
-    let d = s()(n)
-        .filter(_.lm)
-        .take(r)
-        .map((e) =>
-            (0, i.jsx)(
-                m,
-                {
-                    member: e,
-                    guildId: l
-                },
-                e.id
-            )
-        )
-        .value();
-    for (let e = 0; e < o && d.length < r; e++) d.push((0, i.jsx)(m, { guildId: l }, 'unknown-member-'.concat(e)));
-    let E = c - u - o;
-    for (let e = 0; e < E && d.length < r; e++)
-        d.push(
-            (0, i.jsx)(
-                m,
-                {
-                    empty: !0,
-                    guildId: l
-                },
-                'empty-member-'.concat(e)
-            )
-        );
-    let T = Math.max(Math.min(c - d.length, 99), 0);
-    if (1 === T) {
-        let e = n[r];
-        d.push(
-            (0, i.jsx)(
-                m,
-                {
-                    member: e,
-                    guildId: l
-                },
-                e.id
-            )
-        );
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-    return (0, i.jsx)('div', {
-        className: I.wrapper,
-        children: (0, i.jsxs)('div', {
-            className: I.partyMembers,
-            children: [
-                d,
-                T > 1
-                    ? (0, i.jsxs)('div', {
-                          className: I.partyMemberOverflow,
-                          children: ['+', T]
-                      })
-                    : null
-            ]
-        })
-    });
-};
+    return e;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let h = (e) => {
+        let { member: t, empty: n, guildId: i } = e;
+        return n
+            ? (0, r.jsx)('div', { className: p.partyMemberEmpty })
+            : null == t
+              ? (0, r.jsx)('div', {
+                    className: p.partyMemberUnknown,
+                    children: (0, r.jsx)(u.Z, { className: p.partyMemberUnknownIcon })
+                })
+              : (0, r.jsx)('div', {
+                    className: p.partyMemberKnown,
+                    children: (0, r.jsx)(l.yRy, {
+                        preload: () => (0, s.Z)(t.id, t.getAvatarURL(i, 80), { guildId: i }),
+                        renderPopout: (e) =>
+                            (0, r.jsx)(
+                                c.Z,
+                                f(m({}, e), {
+                                    userId: t.id,
+                                    guildId: i,
+                                    newAnalyticsLocations: [o.Z.AVATAR]
+                                })
+                            ),
+                        position: 'left',
+                        clickTrap: !0,
+                        children: (e) =>
+                            (0, r.jsx)(
+                                l.qEK,
+                                f(m({}, e), {
+                                    src: t.getAvatarURL(i, 24),
+                                    'aria-label': t.username,
+                                    size: l.EFr.SIZE_24,
+                                    className: p.partyMember
+                                })
+                            )
+                    })
+                });
+    },
+    g = (e) => {
+        let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: l = 2, guildId: o } = e,
+            { unknownSize: s, totalSize: c, knownSize: u } = t;
+        if (c < i) return null;
+        let m = a()(n)
+            .filter(d.lm)
+            .take(l)
+            .map((e) =>
+                (0, r.jsx)(
+                    h,
+                    {
+                        member: e,
+                        guildId: o
+                    },
+                    e.id
+                )
+            )
+            .value();
+        for (let e = 0; e < s && m.length < l; e++) m.push((0, r.jsx)(h, { guildId: o }, 'unknown-member-'.concat(e)));
+        let f = c - u - s;
+        for (let e = 0; e < f && m.length < l; e++)
+            m.push(
+                (0, r.jsx)(
+                    h,
+                    {
+                        empty: !0,
+                        guildId: o
+                    },
+                    'empty-member-'.concat(e)
+                )
+            );
+        let g = Math.max(Math.min(c - m.length, 99), 0);
+        if (1 === g) {
+            let e = n[l];
+            m.push(
+                (0, r.jsx)(
+                    h,
+                    {
+                        member: e,
+                        guildId: o
+                    },
+                    e.id
+                )
+            );
+        }
+        return (0, r.jsx)('div', {
+            className: p.wrapper,
+            children: (0, r.jsxs)('div', {
+                className: p.partyMembers,
+                children: [
+                    m,
+                    g > 1
+                        ? (0, r.jsxs)('div', {
+                              className: p.partyMemberOverflow,
+                              children: ['+', g]
+                          })
+                        : null
+                ]
+            })
+        });
+    };

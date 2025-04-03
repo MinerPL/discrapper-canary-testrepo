@@ -1,11 +1,12 @@
-var i = n(570140),
-    a = n(142497),
-    s = n(190378);
-t.Z = {
+n.d(t, { Z: () => a });
+var r = n(570140),
+    i = n(142497),
+    l = n(190378);
+let a = {
     init() {
-        i.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => {
+        r.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => {
             let { channelId: t } = e;
-            null == t && a.Kw(s.v.VOICE_PANEL_INTRODUCTION);
+            null == t && i.Kw(l.v.VOICE_PANEL_INTRODUCTION);
         });
     }
 };

@@ -1,44 +1,38 @@
-o.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var t = o(735250);
-o(470079);
-var s = o(212598),
-    r = o(981631),
-    i = o(927923),
-    c = o(689938),
-    a = o(397995),
-    l = o(848499);
-function d(e) {
-    let { isWaitingForConnection: n, onWaitingForConnection: o, expectedCallbackState: d, onAuthToken: u, onError: _, onClose: C } = e,
-        x = n
-            ? (0, t.jsx)('img', {
-                  src: l,
-                  width: '168',
-                  height: '124',
+n.d(t, { Z: () => l });
+var o = n(200651);
+n(192379);
+var r = n(212598),
+    i = n(981631),
+    s = n(388032),
+    a = n(250331),
+    c = n(300778);
+function l(e) {
+    let { isWaitingForConnection: t, onWaitingForConnection: n, expectedCallbackState: l, onAuthToken: d, onError: u, onClose: f } = e,
+        p = t
+            ? (0, o.jsx)('img', {
+                  src: c.Z,
+                  width: '231',
+                  height: '172',
                   alt: ''
               })
-            : (0, t.jsx)('img', {
-                  src: a,
-                  width: '152',
-                  height: '124',
+            : (0, o.jsx)('img', {
+                  src: a.Z,
+                  width: '231',
+                  height: '160',
                   alt: ''
               }),
-        p = n ? c.Z.Messages.XBOX_DETAILS_TITLE_WAITING : c.Z.Messages.XBOX_DETAILS_TITLE,
-        O = n ? c.Z.Messages.XBOX_DETAILS_BODY_WAITING : c.Z.Messages.XBOX_DETAILS_BODY;
-    return (0, t.jsx)(s.t, {
-        platformType: r.ABu.XBOX,
-        isWaitingForConnection: n,
-        onWaitingForConnection: o,
-        expectedCallbackState: d,
-        onAuthToken: u,
-        onError: _,
-        onClose: C,
-        img: x,
-        title: p,
-        body: O,
-        redirectDestination: i.zM
+        b = t ? s.NW.string(s.t.EuwcxM) : s.NW.string(s.t['e/z3nZ']),
+        x = t ? s.NW.string(s.t['1GjS/f']) : s.NW.string(s.t['7tXu0t']);
+    return (0, o.jsx)(r.t, {
+        platformType: i.ABu.XBOX,
+        isWaitingForConnection: t,
+        onWaitingForConnection: n,
+        expectedCallbackState: l,
+        onAuthToken: d,
+        onError: u,
+        onClose: f,
+        img: p,
+        title: b,
+        body: x
     });
 }

@@ -1,51 +1,45 @@
-t.d(s, {
-    Z: function () {
-        return r;
-    }
-}),
-    t(47120),
-    t(653041);
-var n = t(658722),
-    a = t.n(n);
-function i(e, s, t) {
+n.d(t, { Z: () => a }), n(47120), n(653041);
+var r = n(658722),
+    i = n.n(r);
+function s(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
+            : (e[t] = n),
         e
     );
 }
-class r {
+class a {
     search(e) {
-        return new Promise((s) => {
-            s(this.getMatchingSettings(e));
+        return new Promise((t) => {
+            t(this.getMatchingSettings(e));
         });
     }
     getMatchingSettings(e) {
-        let s = this.cache[e];
-        if (null != s) return s;
+        let t = this.cache[e];
+        if (null != t) return t;
         {
-            let s = [];
+            let t = [];
             return (
-                this.terms.forEach((t) => {
-                    let [n, i] = t;
-                    for (let t of i)
-                        if (a()(e.toLowerCase(), t.toLowerCase())) {
-                            s.push(n);
+                this.terms.forEach((n) => {
+                    let [r, s] = n;
+                    for (let n of s)
+                        if (i()(e.toLowerCase(), n.toLowerCase())) {
+                            t.push(r);
                             break;
                         }
                 }),
-                (this.cache[e] = s),
-                s
+                (this.cache[e] = t),
+                t
             );
         }
     }
     constructor(e) {
-        i(this, 'terms', void 0), i(this, 'cache', void 0), (this.terms = e), (this.cache = {});
+        s(this, 'terms', void 0), s(this, 'cache', void 0), (this.terms = e), (this.cache = {});
     }
 }

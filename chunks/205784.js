@@ -1,67 +1,105 @@
-t.r(l),
-    t.d(l, {
-        default: function () {
-            return _;
-        }
-    });
-var n = t(735250);
-t(470079);
-var d = t(442837),
-    i = t(481060),
-    u = t(239091),
-    a = t(749210),
-    s = t(664915),
-    r = t(771845),
-    o = t(181945),
-    c = t(945983),
-    f = t(981631),
-    E = t(689938);
-function _(e) {
-    var l;
-    let { folderId: _, folderName: m, folderColor: M, unread: p, onSelect: b } = e,
-        Z = (0, d.e7)([r.ZP], () => r.ZP.getGuildFolderById(_), [_]),
-        g = (0, c.Z)(null !== (l = null == Z ? void 0 : Z.guildIds) && void 0 !== l ? l : []),
-        L = (0, d.e7)([s.Z], () => s.Z.getExpandedFolders().size > 0);
-    return (0, n.jsxs)(i.Menu, {
+r.d(t, { default: () => p });
+var n = r(200651);
+r(192379);
+var l = r(442837),
+    i = r(481060),
+    o = r(239091),
+    a = r(749210),
+    d = r(664915),
+    s = r(771845),
+    c = r(181945),
+    u = r(945983),
+    b = r(981631),
+    f = r(388032);
+function p(e) {
+    var t;
+    let { folderId: p, folderName: j, folderColor: g, unread: m, onSelect: O } = e,
+        h = (0, l.e7)([s.ZP], () => s.ZP.getGuildFolderById(p), [p]),
+        y = (0, u.Z)(null != (t = null == h ? void 0 : h.guildIds) ? t : []),
+        k = (0, l.e7)([d.Z], () => d.Z.getExpandedFolders().size > 0);
+    return (0, n.jsxs)(i.v2r, {
         navId: 'guild-context',
-        'aria-label': E.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
-        onClose: u.Zy,
-        onSelect: b,
+        'aria-label': f.NW.string(f.t.HpQykZ),
+        onClose: o.Zy,
+        onSelect: O,
         children: [
-            (0, n.jsx)(i.MenuGroup, {
-                children: (0, n.jsx)(i.MenuItem, {
+            (0, n.jsx)(i.kSQ, {
+                children: (0, n.jsx)(i.sNh, {
                     id: 'mark-folder-read',
-                    label: E.Z.Messages.SERVER_FOLDER_MARK_AS_READ,
+                    label: f.NW.string(f.t.thzRJC),
                     action: function () {
-                        if (null == Z) return;
-                        let { guildIds: e } = Z;
-                        (0, o.Z)(e, f.jXE.GUILD_LIST);
+                        if (null == h) return;
+                        let { guildIds: e } = h;
+                        (0, c.Z)(e, b.jXE.GUILD_LIST);
                     },
-                    disabled: !p
+                    disabled: !m
                 })
             }),
-            null != g ? (0, n.jsx)(i.MenuGroup, { children: g }) : null,
-            (0, n.jsxs)(i.MenuGroup, {
+            null != y ? (0, n.jsx)(i.kSQ, { children: y }) : null,
+            (0, n.jsxs)(i.kSQ, {
                 children: [
-                    (0, n.jsx)(i.MenuItem, {
+                    (0, n.jsx)(i.sNh, {
                         id: 'folder-settings',
-                        label: E.Z.Messages.SERVER_FOLDER_SETTINGS,
+                        label: f.NW.string(f.t.Dx7im5),
                         action: () =>
-                            (0, i.openModalLazy)(async () => {
-                                let { default: e } = await t.e('66915').then(t.bind(t, 662708));
-                                return (l) =>
-                                    (0, n.jsx)(e, {
-                                        ...l,
-                                        folderId: _,
-                                        folderName: m,
-                                        folderColor: M
-                                    });
+                            (0, i.ZDy)(async () => {
+                                let { default: e } = await r.e('66915').then(r.bind(r, 662708));
+                                return (t) => {
+                                    var r, l;
+                                    return (0, n.jsx)(
+                                        e,
+                                        ((r = (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var r = null != arguments[t] ? arguments[t] : {},
+                                                    n = Object.keys(r);
+                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                    (n = n.concat(
+                                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                        })
+                                                    )),
+                                                    n.forEach(function (t) {
+                                                        var n;
+                                                        (n = r[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: n,
+                                                                      enumerable: !0,
+                                                                      configurable: !0,
+                                                                      writable: !0
+                                                                  })
+                                                                : (e[t] = n);
+                                                    });
+                                            }
+                                            return e;
+                                        })({}, t)),
+                                        (l = l =
+                                            {
+                                                folderId: p,
+                                                folderName: j,
+                                                folderColor: g
+                                            }),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                                            : (function (e, t) {
+                                                  var r = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var n = Object.getOwnPropertySymbols(e);
+                                                      r.push.apply(r, n);
+                                                  }
+                                                  return r;
+                                              })(Object(l)).forEach(function (e) {
+                                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                                              }),
+                                        r)
+                                    );
+                                };
                             })
                     }),
-                    L &&
-                        (0, n.jsx)(i.MenuItem, {
+                    k &&
+                        (0, n.jsx)(i.sNh, {
                             id: 'folder-collapse',
-                            label: E.Z.Messages.SERVER_FOLDER_COLLAPSE_ALL,
+                            label: f.NW.string(f.t.rCPsbm),
                             action: () => a.Z.collapseAllFolders()
                         })
                 ]

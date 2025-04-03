@@ -1,52 +1,48 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    i = n(556012),
-    r = n(862085),
+n.d(t, { Z: () => m });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(556012),
+    a = n(862085),
     l = n(769998),
     o = n(671066),
     c = n(273504),
-    d = n(794863);
+    d = n(467397);
 function u(e) {
-    let { action: t, triggerType: n, toggled: r, onToggleAction: l } = e,
-        o = (0, i.c)(t.type, t, n);
+    let { action: t, triggerType: n, toggled: a, onToggleAction: l } = e,
+        o = (0, s.c)(t.type, t, n);
     if (null == o) return null;
-    let { headerText: c, descriptionText: u, icon: _ } = o;
-    return (0, s.jsxs)('div', {
+    let { headerText: c, descriptionText: u, icon: m } = o;
+    return (0, r.jsxs)('div', {
         className: d.actionContainer,
         children: [
-            (0, s.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: d.actionIconContainer,
-                children: (0, s.jsx)(_, {
+                children: (0, r.jsx)(m, {
                     size: 'md',
                     color: 'currentColor',
                     className: d.actionIcon
                 })
             }),
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: d.actionTextContainer,
                 children: [
-                    (0, s.jsx)(a.Heading, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'heading-sm/semibold',
                         children: c
                     }),
-                    (0, s.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
                         children: u
                     })
                 ]
             }),
-            (0, s.jsx)('div', {
-                children: (0, s.jsx)(a.Checkbox, {
+            (0, r.jsx)('div', {
+                children: (0, r.jsx)(i.XZJ, {
                     disabled: !o.isEditable,
-                    type: a.Checkbox.Types.INVERTED,
-                    value: r,
+                    type: i.XZJ.Types.INVERTED,
+                    value: a,
                     onChange: () => l(!1),
                     className: d.__invalid_actionCheckbox
                 })
@@ -54,37 +50,37 @@ function u(e) {
         ]
     });
 }
-function _(e) {
-    let { action: t, guildId: n, triggerType: a, toggled: i, onToggleAction: d } = e;
+function m(e) {
+    let { action: t, guildId: n, triggerType: i, toggled: s, onToggleAction: d } = e;
     switch (t.type) {
         case c.jj.FLAG_TO_CHANNEL:
-            return (0, s.jsx)(o.Z, {
+            return (0, r.jsx)(o.Z, {
                 action: t,
-                triggerType: a,
-                toggled: i,
+                triggerType: i,
+                toggled: s,
                 onToggleAction: d
             });
         case c.jj.USER_COMMUNICATION_DISABLED:
-            return (0, s.jsx)(l.Z, {
+            return (0, r.jsx)(l.Z, {
                 action: t,
                 guildId: n,
-                triggerType: a,
-                toggled: i,
+                triggerType: i,
+                toggled: s,
                 onToggleAction: d
             });
         case c.jj.BLOCK_MESSAGE:
-            return (0, s.jsx)(r.Z, {
+            return (0, r.jsx)(a.Z, {
                 action: t,
-                triggerType: a,
-                toggled: i,
+                triggerType: i,
+                toggled: s,
                 onToggleAction: d
             });
         default:
-            return (0, s.jsx)(u, {
+            return (0, r.jsx)(u, {
                 action: t,
                 guildId: n,
-                toggled: i,
-                triggerType: a,
+                toggled: s,
+                triggerType: i,
                 onToggleAction: d
             });
     }

@@ -1,57 +1,54 @@
-n.d(t, {
-    Z: function () {
-        return X;
-    }
-}),
-    n(47120),
-    n(411104);
-var i = n(735250);
-n(470079);
-var l = n(120356),
-    r = n.n(l),
+n.d(t, { Z: () => er }), n(47120), n(411104);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
     a = n(442837),
     s = n(846519),
-    o = n(481060),
-    c = n(475179),
-    u = n(239091),
-    d = n(146773),
+    c = n(481060),
+    u = n(475179),
+    d = n(239091),
+    p = n(146773),
     h = n(888651),
-    p = n(619915),
-    _ = n(339340),
-    f = n(201895),
-    g = n(718589),
-    m = n(933557),
-    C = n(557135),
-    I = n(873696),
-    E = n(446226),
-    N = n(305325),
+    f = n(619915),
+    g = n(117358),
+    m = n(201895),
+    b = n(718589),
+    y = n(933557),
+    _ = n(557135),
+    v = n(873696),
+    O = n(446226),
+    j = n(305325),
     x = n(281956),
-    S = n(66999),
-    v = n(554747),
-    Z = n(506936),
-    T = n(574176),
-    L = n(359110),
-    A = n(155409),
-    b = n(695346),
-    M = n(592125),
-    R = n(430824),
-    O = n(607744),
-    P = n(496675),
-    y = n(306680),
-    j = n(9156),
-    D = n(979651),
-    w = n(934415),
-    U = n(98597),
-    G = n(648501),
-    k = n(473403),
-    B = n(830993),
-    H = n(653577),
-    V = n(207055),
-    F = n(981631),
-    W = n(647086),
-    z = n(689938),
-    Y = n(391463);
-function K(e, t, n) {
+    C = n(66999),
+    S = n(554747),
+    P = n(378844),
+    I = n(335353),
+    N = n(896835),
+    Z = n(359110),
+    w = n(155409),
+    E = n(695346),
+    T = n(447564),
+    A = n(592125),
+    D = n(430824),
+    R = n(607744),
+    L = n(496675),
+    k = n(306680),
+    M = n(9156),
+    G = n(979651),
+    B = n(934415),
+    U = n(63063),
+    W = n(98597),
+    V = n(648501),
+    F = n(473403),
+    H = n(830993),
+    z = n(653577),
+    Y = n(207055),
+    q = n(981631),
+    Q = n(647086),
+    K = n(388032),
+    J = n(915887);
+function X(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -64,117 +61,213 @@ function K(e, t, n) {
         e
     );
 }
-class q extends U.ZP {
+function $(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                X(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function ee(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+class et extends W.ZP {
     componentWillUnmount() {
         this.activitiesHideTimeout.stop();
     }
     getVoiceStatesCount() {
         var e;
         let { voiceStates: t } = this.props;
-        return null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0;
+        return null != (e = null == t ? void 0 : t.length) ? e : 0;
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, w.rY)(e, D.Z, R.Z);
+        return (0, B.rY)(e, G.Z, D.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
-        if (n) return Y.containerUserOver;
-        if (null != t) return e > t ? Y.containerDragAfter : Y.containerDragBefore;
-        return Y.containerDefault;
+        if (n) return J.containerUserOver;
+        if (null != t)
+            if (e > t) return J.containerDragAfter;
+            else return J.containerDragBefore;
+        return J.containerDefault;
     }
     renderSubtitle() {
         var e;
-        let { channel: t, connected: n, enableHangStatus: l, allowChannelTopic: r } = this.props,
-            a = null === (e = (0, I.D)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle,
-            { hovered: s } = this.state;
-        return (0, i.jsx)(H.Z, {
+        let { channel: t, connected: n } = this.props,
+            i = null == (e = (0, v.D)(this.props.subtitle)) ? void 0 : e.subtitle,
+            { hovered: l } = this.state;
+        return (0, r.jsx)(z.Z, {
             onClick: this.handleVoiceStatusClick,
             channel: t,
             connected: n,
-            subtitle: a,
-            hovered: s,
-            enableHangStatus: l,
-            allowChannelTopic: r
+            subtitle: i,
+            hovered: l
         });
     }
     renderVoiceUsers() {
-        let { channel: e, voiceStates: t, collapsed: n, withGuildIcon: l, tabIndex: r } = this.props;
-        return (0, i.jsx)(V.Z, {
+        let { channel: e, voiceStates: t, collapsed: n, withGuildIcon: i, tabIndex: l } = this.props;
+        return (0, r.jsx)(Y.Z, {
             channel: e,
             collapsed: n,
             collapsedMax: 6,
             voiceStates: t,
-            withGuildIcon: l,
-            tabIndex: r,
-            location: F.Sbl.GUILD_CHANNEL_LIST
+            withGuildIcon: i,
+            tabIndex: l,
+            location: q.Sbl.GUILD_CHANNEL_LIST
         });
     }
     renderChannelInfo() {
         let { channelInfo: e } = this.props;
         return null == e
             ? null
-            : (0, i.jsx)('div', {
-                  className: Y.channelInfo,
+            : (0, r.jsx)('div', {
+                  className: J.channelInfo,
                   children: e
               });
     }
+    renderHDSplashedIcon() {
+        let { channel: e, locked: t } = this.props;
+        return t || !e.isHDStreamSplashed
+            ? null
+            : (0, r.jsx)(c.ua7, {
+                  text: K.NW.string(K.t.gpF6QU),
+                  children: (t) => {
+                      let { onMouseEnter: n, onMouseLeave: i, onFocus: l, onBlur: a } = t;
+                      return (0, r.jsx)(c.P3F, {
+                          className: o()(J.iconItem, J.alwaysShown),
+                          onClick: () => {
+                              (0, N.X)('VoiceChannel') ? (0, T.k)(e, 'VoiceChannel') : window.open(U.Z.getArticleURL(q.BhN.HD_STREAMING_POTION), '_blank');
+                          },
+                          'aria-label': K.NW.string(K.t.gpF6QU),
+                          onMouseEnter: n,
+                          onMouseLeave: i,
+                          onFocus: l,
+                          onBlur: a,
+                          children: (0, r.jsx)(c.hh5, {
+                              size: 'xs',
+                              color: 'currentColor',
+                              className: J.actionIcon
+                          })
+                      });
+                  }
+              });
+    }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: _, connectDragPreview: m, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: x, isSubscriptionGated: S, isFavoriteSuggestion: v, withGuildIcon: Z } = this.props,
-            { shouldShowActivities: T, shouldShowGuildVerificationPopout: L } = this.state,
-            b = this.getVoiceStatesCount(),
-            M = (0, i.jsxs)('li', {
-                className: r()(this.getModeClass(), { [Y.disabled]: this.isDisabled() }),
+        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: a, locked: s, sorting: u, isUserOver: d, connectChannelDropTarget: p, connectChannelDragSource: h, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: y, canMoveMembers: _, showTutorial: v, hasActiveEvent: O, embeddedApps: j, isSubscriptionGated: x, isFavoriteSuggestion: C, withGuildIcon: S } = this.props,
+            { shouldShowActivities: P, shouldShowGuildVerificationPopout: N } = this.state,
+            Z = this.getVoiceStatesCount(),
+            E = (0, r.jsxs)('li', {
+                ref: this.ref,
+                className: o()(this.getModeClass(), { [J.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, r.jsx)('div', {
                         onMouseEnter: this.handleMouseEnter,
                         onMouseLeave: this.handleMouseLeave,
-                        children: (0, i.jsx)(o.Popout, {
+                        children: (0, r.jsx)(c.yRy, {
+                            targetElementRef: this.channelItemRef,
                             position: 'right',
                             renderPopout: this.renderPopout,
                             spacing: 0,
                             onRequestClose: this.closeGuildVerificationPopout,
-                            shouldShow: (T && !u && !d && !L) || L,
+                            shouldShow: (P && !u && !d && !N) || N,
                             children: () =>
-                                (0, i.jsx)(o.Tooltip, {
+                                (0, r.jsx)(c.ua7, {
                                     text: this.getTooltipText(),
-                                    children: (o) => {
-                                        let { onClick: u, onContextMenu: d, ...h } = o;
-                                        return (0, i.jsxs)(k.Z, {
-                                            className: Y.iconVisibility,
-                                            iconClassName: r()({ [Y.iconLive]: N }),
+                                    children: (c) => {
+                                        var { onClick: u, onContextMenu: d } = c,
+                                            p = (function (e, t) {
+                                                if (null == e) return {};
+                                                var n,
+                                                    r,
+                                                    i = (function (e, t) {
+                                                        if (null == e) return {};
+                                                        var n,
+                                                            r,
+                                                            i = {},
+                                                            l = Object.keys(e);
+                                                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                                        return i;
+                                                    })(e, t);
+                                                if (Object.getOwnPropertySymbols) {
+                                                    var l = Object.getOwnPropertySymbols(e);
+                                                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                                }
+                                                return i;
+                                            })(c, ['onClick', 'onContextMenu']);
+                                        return (0, r.jsx)(I.Z, {
                                             channel: e,
-                                            selected: !v && t,
-                                            connected: n,
-                                            unread: n ? l : void 0,
-                                            resolvedUnreadSetting: a,
-                                            mentionCount: s,
-                                            locked: c,
-                                            subtitle: this.renderSubtitle(),
-                                            onClick: () => {
-                                                this.handleClick(), null == u || u();
-                                            },
-                                            onContextMenu: (e) => {
-                                                this.handleContextMenu(e), null == d || d();
-                                            },
-                                            connectDragPreview: m,
-                                            isFavoriteSuggestion: v,
-                                            'aria-label': (0, f.ZP)({
-                                                channel: e,
-                                                unread: l,
-                                                mentionCount: s,
-                                                userCount: b,
-                                                embeddedActivitiesCount: x.length,
-                                                isSubscriptionGated: S
-                                            }),
-                                            'aria-describedby': (0, g.Z)({
-                                                channel: e,
-                                                embeddedApps: x
-                                            }),
-                                            withGuildIcon: Z,
-                                            ...h,
-                                            children: [v && this.renderAcceptSuggestionButton(), v && this.renderRemoveSuggestionButton(), !v && this.renderOpenChatButton(), !v && this.renderInviteButton(), !v && this.renderEditButton(), !v && this.renderChannelInfo()]
+                                            children: (0, r.jsxs)(
+                                                F.ZP,
+                                                ee(
+                                                    $(
+                                                        {
+                                                            ref: this.channelItemRef,
+                                                            className: J.iconVisibility,
+                                                            iconClassName: o()({ [J.iconLive]: O }),
+                                                            hasActiveEvent: O,
+                                                            channel: e,
+                                                            selected: !C && t,
+                                                            connected: n,
+                                                            unread: n ? i : void 0,
+                                                            resolvedUnreadSetting: l,
+                                                            mentionCount: a,
+                                                            locked: s,
+                                                            subtitle: this.renderSubtitle(),
+                                                            onClick: () => {
+                                                                this.handleClick(), null == u || u();
+                                                            },
+                                                            onContextMenu: (e) => {
+                                                                this.handleContextMenu(e), null == d || d();
+                                                            },
+                                                            connectDragPreview: g,
+                                                            isFavoriteSuggestion: C,
+                                                            'aria-label': (0, m.ZP)({
+                                                                channel: e,
+                                                                unread: i,
+                                                                mentionCount: a,
+                                                                userCount: Z,
+                                                                embeddedActivitiesCount: j.length,
+                                                                isSubscriptionGated: x
+                                                            }),
+                                                            'aria-describedby': (0, b.Z)({
+                                                                channel: e,
+                                                                embeddedApps: j
+                                                            }),
+                                                            withGuildIcon: S
+                                                        },
+                                                        p
+                                                    ),
+                                                    {
+                                                        children: [C && this.renderAcceptSuggestionButton(), C && this.renderRemoveSuggestionButton(), !C && this.renderOpenChatButton(), !C && this.renderInviteButton(), !C && this.renderEditButton(), !C && this.renderChannelInfo(), !C && this.renderHDSplashedIcon()]
+                                                    }
+                                                )
+                                            )
                                         });
                                     }
                                 })
@@ -184,61 +277,66 @@ class q extends U.ZP {
                 ]
             });
         return (
-            I && (M = _(M)),
-            C && (M = h(p(M))),
-            E &&
-                (M = (0, i.jsx)(A.Z, {
+            _ && (E = f(E)),
+            y && (E = p(h(E))),
+            v &&
+                (E = (0, r.jsx)(w.Z, {
+                    childRef: this.ref,
                     tutorialId: 'voice-conversations',
                     position: 'right',
                     offsetX: -20,
-                    children: M
+                    children: E
                 })),
-            M
+            E
         );
     }
     constructor(...e) {
         super(...e),
-            K(this, 'state', {
+            X(this, 'state', {
                 shouldShowActivities: !1,
                 shouldShowGuildVerificationPopout: !1,
                 hovered: !1
             }),
-            K(this, 'activitiesHideTimeout', new s.V7()),
-            K(this, 'closeGuildVerificationPopout', () => {
+            X(this, 'ref', i.createRef()),
+            X(this, 'channelItemRef', i.createRef()),
+            X(this, 'activitiesHideTimeout', new s.V7()),
+            X(this, 'closeGuildVerificationPopout', () => {
                 this.setState({ shouldShowGuildVerificationPopout: !1 });
             }),
-            K(this, 'handleVoiceConnect', () => {
-                let { locked: e, connected: t, channel: n, unverifiedAccount: i, needSubscriptionToAccess: l } = this.props;
-                i && this.setState({ shouldShowGuildVerificationPopout: !0 }),
-                    C.Z.handleVoiceConnect({
+            X(this, 'handleVoiceConnect', () => {
+                let { locked: e, connected: t, channel: n, unverifiedAccount: r, needSubscriptionToAccess: i } = this.props;
+                r && this.setState({ shouldShowGuildVerificationPopout: !0 }),
+                    _.Z.handleVoiceConnect({
                         channel: n,
                         connected: t,
-                        needSubscriptionToAccess: l,
+                        needSubscriptionToAccess: i,
                         locked: e
                     });
             }),
-            K(this, 'handleContextMenu', (e) => {
+            X(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    l = R.Z.getGuild(t.getGuildId());
-                null != l &&
-                    (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331')]).then(n.bind(n, 213202));
+                    i = D.Z.getGuild(t.getGuildId());
+                null != i &&
+                    (0, d.jW)(e, async () => {
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('81070')]).then(n.bind(n, 213202));
                         return (n) =>
-                            (0, i.jsx)(e, {
-                                ...n,
-                                channel: t,
-                                guild: l
-                            });
+                            (0, r.jsx)(
+                                e,
+                                ee($({}, n), {
+                                    channel: t,
+                                    guild: i
+                                })
+                            );
                     });
             }),
-            K(this, 'handleMouseEnter', () => {
+            X(this, 'handleMouseEnter', () => {
                 this.activitiesHideTimeout.stop(),
                     this.setState({
                         shouldShowActivities: !0,
                         hovered: !0
                     });
             }),
-            K(this, 'handleMouseLeave', () => {
+            X(this, 'handleMouseLeave', () => {
                 this.activitiesHideTimeout.start(100, () =>
                     this.setState({
                         shouldShowActivities: !1,
@@ -246,147 +344,135 @@ class q extends U.ZP {
                     })
                 );
             }),
-            K(this, 'closePopout', () => {
+            X(this, 'closePopout', () => {
                 this.activitiesHideTimeout.stop(), this.setState({ shouldShowActivities: !1 });
             }),
-            K(this, 'handleClick', () => {
+            X(this, 'handleClick', () => {
                 let { channel: e } = this.props,
                     t = e.getGuildId();
-                null != t && (0, x.n)(t) && (0, N.hk)(t), this.handleVoiceConnect();
+                null != t && (0, x.n)(t) && (0, j.hk)(t), this.handleVoiceConnect();
             }),
-            K(this, 'handleVoiceStatusClick', (e) => {
-                let { connected: t, channel: l } = this.props;
-                t &&
-                    (e.stopPropagation(),
-                    (0, o.openModalLazy)(
-                        async () => {
-                            let { default: e } = await Promise.resolve().then(n.bind(n, 339340));
-                            return (t) =>
-                                (0, i.jsx)(e, {
-                                    channel: l,
-                                    ...t
-                                });
-                        },
-                        { modalKey: _.VOICE_CHANNEL_STATUS_MODAL_KEY }
-                    ));
+            X(this, 'handleVoiceStatusClick', (e) => {
+                let { connected: t, channel: n } = this.props;
+                t && (e.stopPropagation(), (0, g.Z)({ channel: n }));
             }),
-            K(this, 'renderPopout', () => {
-                let { channel: e, voiceStates: t, sorting: n, isUserOver: l, selected: r, guild: a } = this.props,
-                    { shouldShowActivities: s, shouldShowGuildVerificationPopout: o } = this.state;
-                if (s && !n && !l && !o) {
-                    let n = b.SE.getSetting().includes(a.id);
-                    return (0, i.jsx)(B.Z, {
+            X(this, 'renderPopout', () => {
+                let { channel: e, voiceStates: t, sorting: n, isUserOver: i, selected: l, guild: o } = this.props,
+                    { shouldShowActivities: a, shouldShowGuildVerificationPopout: s } = this.state;
+                if (a && !n && !i && !s) {
+                    let n = E.SE.getSetting().includes(o.id);
+                    return (0, r.jsx)(H.Z, {
                         onAction: this.closePopout,
-                        guild: a,
+                        guild: o,
                         channel: e,
                         voiceStates: t,
-                        isChannelSelected: r,
+                        isChannelSelected: l,
                         shouldShowSettingNudge: n
                     });
                 }
-                if (o)
-                    return (0, i.jsx)(Z.Z, {
-                        type: Z.R.VOICE,
+                if (s)
+                    return (0, r.jsx)(P.Z, {
+                        type: P.R.VOICE,
                         guildId: e.guild_id,
                         closePopout: this.closeGuildVerificationPopout
                     });
                 throw Error('VoiceChannel.renderPopout: There must always be something to render');
             }),
-            K(this, 'renderOpenChatButton', () => {
+            X(this, 'renderOpenChatButton', () => {
                 let { channel: e, locked: t, forceShowButtons: n } = this.props;
                 if (!t)
-                    return (0, i.jsx)(o.Tooltip, {
-                        text: z.Z.Messages.OPEN_CHAT,
+                    return (0, r.jsx)(c.ua7, {
+                        text: K.NW.string(K.t.ZXxLQk),
                         children: (t) => {
-                            let { onMouseEnter: l, onMouseLeave: a, onFocus: s, onBlur: u } = t;
-                            return (0, i.jsx)(o.Clickable, {
-                                className: r()(Y.iconItem, n ? Y.alwaysShown : null),
+                            let { onMouseEnter: i, onMouseLeave: l, onFocus: a, onBlur: s } = t;
+                            return (0, r.jsx)(c.P3F, {
+                                className: o()(J.iconItem, n ? J.alwaysShown : null),
                                 onClick: () => {
-                                    c.Z.updateChatOpen(e.id, !0), (0, L.Kh)(e.id);
+                                    u.Z.updateChatOpen(e.id, !0), (0, Z.Kh)(e.id);
                                 },
-                                'aria-label': z.Z.Messages.OPEN_CHAT,
-                                onMouseEnter: l,
-                                onMouseLeave: a,
-                                onFocus: s,
-                                onBlur: u,
-                                children: (0, i.jsx)(o.ChatIcon, {
+                                'aria-label': K.NW.string(K.t.ZXxLQk),
+                                onMouseEnter: i,
+                                onMouseLeave: l,
+                                onFocus: a,
+                                onBlur: s,
+                                children: (0, r.jsx)(c.kBi, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: Y.actionIcon
+                                    className: J.actionIcon
                                 })
                             });
                         }
                     });
             }),
-            K(this, 'getTooltipText', () => {
+            X(this, 'getTooltipText', () => {
                 let { connected: e } = this.props;
-                return this.isFull() && !e ? z.Z.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null;
+                return this.isFull() && !e ? K.NW.string(K.t.rZfiNj) : null;
             });
     }
 }
-let Q = (0, d.B)((0, h.Q)(q));
-function X(e) {
-    let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: r, selected: s, collapsed: o, voiceStates: c } = e,
-        u = (0, a.cj)([y.ZP], () => ({
-            unread: y.ZP.hasUnread(n.id),
-            mentionCount: y.ZP.getMentionCount(n.id)
+let en = (0, p.B)((0, h.Q)(et));
+function er(e) {
+    let { guild: t, channel: n, disableSorting: i, isFavoriteCategory: l, selected: o, collapsed: s, voiceStates: c } = e,
+        u = (0, a.cj)([k.ZP], () => ({
+            unread: k.ZP.hasUnread(n.id),
+            mentionCount: k.ZP.getMentionCount(n.id)
         })),
-        d = (0, a.e7)([j.ZP], () => j.ZP.resolveUnreadSetting(n)),
-        h = (0, a.cj)([M.Z, O.Z, P.Z], () => {
-            let e = M.Z.getChannel(n.parent_id),
-                i = O.Z.getCheck(n.guild_id);
+        d = (0, a.e7)([M.ZP], () => M.ZP.resolveUnreadSetting(n)),
+        p = (0, a.cj)([A.Z, R.Z, L.Z], () => {
+            let e = A.Z.getChannel(n.parent_id),
+                r = R.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: P.Z.can(F.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? P.Z.can(F.Plq.MANAGE_CHANNELS, e) : P.Z.can(F.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: P.Z.can(F.Plq.MOVE_MEMBERS, n),
-                locked: !P.Z.can(F.Plq.CONNECT, n),
-                bypassLimit: P.Z.can(F.Plq.MOVE_MEMBERS, n),
-                unverifiedAccount: !i.canChat
+                canManageChannel: L.Z.can(q.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== i && (t.id === Q._ || (null != e ? L.Z.can(q.Plq.MANAGE_CHANNELS, e) : L.Z.can(q.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: L.Z.can(q.Plq.MOVE_MEMBERS, n),
+                locked: !L.Z.can(q.Plq.CONNECT, n),
+                bypassLimit: L.Z.can(q.Plq.MOVE_MEMBERS, n),
+                unverifiedAccount: !r.canChat
             };
         }),
-        _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)),
-        f = (0, p.ZP)(n),
-        g = (0, m.ZP)(n),
-        C = (0, v.qY)(n.id),
-        { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, S.Z)(n.id),
-        x = (0, E.Z)(),
-        Z = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)),
-        L = e.connected || (null == x ? void 0 : x.channelId) === n.id,
-        { enableHangStatus: A, allowChannelTopic: b } = T.n.useExperiment(
-            {
-                guildId: n.guild_id,
-                location: 'VoiceChannel'
-            },
-            { autoTrackExposure: !1 }
-        ),
-        R = (0, G.Z)({
+        h = (0, a.e7)([G.Z], () => G.Z.hasVideo(n.id)),
+        g = (0, f.ZP)(n),
+        m = (0, y.ZP)(n),
+        b = (0, S.qY)(n.id),
+        { isSubscriptionGated: _, needSubscriptionToAccess: v } = (0, C.Z)(n.id),
+        j = (0, O.Z)(),
+        x = (0, a.e7)([M.ZP], () => M.ZP.isFavorite(t.id, n.id)),
+        P = e.connected || (null == j ? void 0 : j.channelId) === n.id,
+        I = (0, V.Z)({
             channel: n,
-            isChannelSelected: s,
-            isChannelCollapsed: o,
+            isChannelSelected: o,
+            isChannelCollapsed: s,
             voiceStates: c,
-            isSubscriptionGated: I,
-            needSubscriptionToAccess: N,
+            isSubscriptionGated: _,
+            needSubscriptionToAccess: v,
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        w = L && null == R;
-    return (0, i.jsx)(Q, {
-        channelName: g,
-        embeddedApps: f,
-        embeddedActivityType: F.IIU.PLAYING,
-        video: _,
-        hasActiveEvent: null != C,
-        isSubscriptionGated: I,
-        needSubscriptionToAccess: N,
-        ...u,
-        ...h,
-        ...e,
-        connected: L,
-        isFavoriteSuggestion: r && !Z,
-        forceShowButtons: w,
-        channelInfo: R,
-        enableHangStatus: A,
-        allowChannelTopic: b,
-        resolvedUnreadSetting: d
-    });
+        N = P && null == I;
+    return (0, r.jsx)(
+        en,
+        ee(
+            $(
+                {
+                    channelName: m,
+                    embeddedApps: g,
+                    embeddedActivityType: q.IIU.PLAYING,
+                    video: h,
+                    hasActiveEvent: null != b,
+                    isSubscriptionGated: _,
+                    needSubscriptionToAccess: v
+                },
+                u,
+                p,
+                e
+            ),
+            {
+                connected: P,
+                isFavoriteSuggestion: l && !x,
+                forceShowButtons: N,
+                channelInfo: I,
+                resolvedUnreadSetting: d
+            }
+        )
+    );
 }

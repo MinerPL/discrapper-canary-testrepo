@@ -1,64 +1,59 @@
-s.r(e),
-    s.d(e, {
-        default: function () {
-            return d;
-        }
-    });
-var o = s(735250);
-s(470079);
-var n = s(481060),
-    a = s(782568),
-    i = s(313201),
-    l = s(689938),
-    r = s(517681);
-function d(t) {
-    let { url: e, onClose: d, transitionState: c } = t,
-        N = (0, i.Dt)();
-    return (0, o.jsxs)(n.ModalRoot, {
-        transitionState: c,
-        'aria-labelledby': N,
+s.d(e, { default: () => c });
+var a = s(200651);
+s(192379);
+var i = s(481060),
+    n = s(782568),
+    o = s(313201),
+    r = s(388032),
+    l = s(275209);
+function c(t) {
+    let { url: e, onClose: c, transitionState: d } = t,
+        x = (0, o.Dt)();
+    return (0, a.jsxs)(i.Y0X, {
+        transitionState: d,
+        'aria-labelledby': x,
         children: [
-            (0, o.jsx)('img', {
-                className: r.art,
+            (0, a.jsx)('img', {
+                className: l.art,
                 src: s(902623),
                 alt: ''
             }),
-            (0, o.jsx)(n.ModalContent, {
-                children: (0, o.jsxs)('div', {
-                    className: r.modalContent,
+            (0, a.jsx)(i.hzk, {
+                children: (0, a.jsxs)('div', {
+                    className: l.modalContent,
                     children: [
-                        (0, o.jsx)(n.Heading, {
-                            id: N,
+                        (0, a.jsx)(i.X6q, {
+                            id: x,
                             variant: 'heading-lg/semibold',
-                            className: r.title,
-                            children: l.Z.Messages.LINK_NOT_DISCORD_WARNING_TITLE
+                            className: l.title,
+                            children: r.NW.string(r.t.biy1X1)
                         }),
-                        (0, o.jsx)(n.Text, {
+                        (0, a.jsx)(i.Text, {
                             variant: 'text-md/normal',
-                            className: r.body,
-                            children: l.Z.Messages.LINK_NOT_DISCORD_WARNING_BODY.format({ url: e })
+                            className: l.body,
+                            children: r.NW.format(r.t.J86cyc, { url: e })
                         })
                     ]
                 })
             }),
-            (0, o.jsxs)(n.ModalFooter, {
+            (0, a.jsxs)(i.mzw, {
                 children: [
-                    (0, o.jsx)(n.Button, {
+                    (0, a.jsx)(i.zxk, {
                         type: 'button',
-                        size: n.Button.Sizes.MEDIUM,
-                        color: n.Button.Colors.BRAND,
-                        onClick: d,
-                        children: l.Z.Messages.LINK_NOT_DISCORD_WARNING_CANCEL
+                        size: i.zxk.Sizes.MEDIUM,
+                        color: i.zxk.Colors.BRAND,
+                        onClick: c,
+                        children: r.NW.string(r.t['xl8R+/'])
                     }),
-                    (0, o.jsx)(n.Button, {
+                    (0, a.jsx)(i.zxk, {
                         type: 'button',
-                        size: n.Button.Sizes.MEDIUM,
-                        color: n.Button.Colors.TRANSPARENT,
-                        look: n.Button.Looks.LINK,
+                        size: i.zxk.Sizes.MEDIUM,
+                        color: i.zxk.Colors.TRANSPARENT,
+                        look: i.zxk.Looks.LINK,
                         onClick: () => {
-                            (0, a.Z)(e, !0);
+                            (0, n.Z)(e, !0);
                         },
-                        children: l.Z.Messages.LINK_NOT_DISCORD_WARNING_CONTINUE
+                        children: r.NW.string(r.t.gQrLtr)
                     })
                 ]
             })

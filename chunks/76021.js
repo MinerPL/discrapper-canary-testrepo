@@ -1,52 +1,96 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(872810),
-    s = n(451467),
-    o = n(174609),
-    l = n(928518),
-    u = n(120522),
-    c = n(933843),
-    d = n(614011),
-    _ = n(430824),
-    E = n(131951),
-    f = n(594174),
-    h = n(358085),
-    p = n(981631),
-    m = n(37113);
-function I(e, t, I) {
-    let T = l.Z.getWindowOpen(p.KJ3.CHANNEL_CALL_POPOUT) ? p.KJ3.CHANNEL_CALL_POPOUT : null;
-    if (((0, o.Z)(T), h.isPlatformEmbedded))
-        (0, i.openModalLazy)(async () => {
-            let { default: t } = await Promise.all([n.e('79477'), n.e('58603')]).then(n.bind(n, 60594));
+    o = n(872810),
+    a = n(451467),
+    s = n(592125),
+    l = n(430824),
+    c = n(131951),
+    u = n(594174),
+    d = n(358085),
+    f = n(37113);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function g(e, t, _) {
+    if (d.isPlatformEmbedded)
+        (0, i.ZDy)(async () => {
+            let { default: t } = await Promise.all([n.e('46746'), n.e('24184')]).then(n.bind(n, 60594));
             return (n) =>
-                (0, r.jsx)(t, {
-                    ...n,
-                    guildId: e,
-                    analyticsLocation: I
-                });
-        }),
-            (0, c.F4)() && ((0, u.z)(), (0, d.O)());
+                (0, r.jsx)(
+                    t,
+                    m(p({}, n), {
+                        guildId: e,
+                        analyticsLocation: _
+                    })
+                );
+        });
     else {
-        var g;
-        let n = (0, s.Z)(m.tI.PRESET_CUSTOM, m.LY.RESOLUTION_1080, m.ws.FPS_30, f.default.getCurrentUser(), null === (g = _.Z.getGuild(e)) || void 0 === g ? void 0 : g.premiumTier)
-            ? {
-                  width: 1920,
-                  height: 1080
-              }
-            : {
-                  width: 1280,
-                  height: 720
-              };
-        E.Z.getMediaEngine()
-            .getDesktopSource(n, !0)
+        var h;
+        let n = s.Z.getChannel(t),
+            r = (0, a.Z)(f.tI.PRESET_CUSTOM, f.LY.RESOLUTION_1080, f.ws.FPS_30, u.default.getCurrentUser(), null == (h = l.Z.getGuild(e)) ? void 0 : h.premiumTier, n)
+                ? {
+                      width: 1920,
+                      height: 1080
+                  }
+                : {
+                      width: 1280,
+                      height: 720
+                  };
+        c.Z.getMediaEngine()
+            .getDesktopSource(r, !0)
             .then((n) => {
-                (0, a.WH)(e, t, {
+                (0, o.WH)(e, t, {
                     pid: null,
                     sourceId: n,
                     sourceName: null

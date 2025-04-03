@@ -1,27 +1,23 @@
-r.d(t, {
-    s: function () {
-        return o;
-    }
-});
-var n = r(151122),
-    a = r(163162);
-let o = (0, n._I)(() => ({
+a.d(e, { s: () => _ });
+var r = a(151122),
+    n = a(163162);
+let _ = (0, r._I)(() => ({
     name: 'HttpContext',
-    preprocessEvent(e) {
-        if (!a.m9.navigator && !a.m9.location && !a.m9.document) return;
-        let t = (e.request && e.request.url) || (a.m9.location && a.m9.location.href),
-            { referrer: r } = a.m9.document || {},
-            { userAgent: n } = a.m9.navigator || {},
-            o = {
-                ...(e.request && e.request.headers),
-                ...(r && { Referer: r }),
-                ...(n && { 'User-Agent': n })
+    preprocessEvent(t) {
+        if (!n.m9.navigator && !n.m9.location && !n.m9.document) return;
+        let e = (t.request && t.request.url) || (n.m9.location && n.m9.location.href),
+            { referrer: a } = n.m9.document || {},
+            { userAgent: r } = n.m9.navigator || {},
+            _ = {
+                ...(t.request && t.request.headers),
+                ...(a && { Referer: a }),
+                ...(r && { 'User-Agent': r })
             },
-            i = {
-                ...e.request,
-                ...(t && { url: t }),
-                headers: o
+            o = {
+                ...t.request,
+                ...(e && { url: e }),
+                headers: _
             };
-        e.request = i;
+        t.request = o;
     }
 }));

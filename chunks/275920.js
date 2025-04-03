@@ -1,20 +1,21 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => o });
 var r = n(626135),
     i = n(981631);
-function a(e) {
-    let { type: t, source: n, userId: a, applicationId: s, partyId: o, messageId: l, locationObject: u, analyticsLocations: c } = e;
+function o(e) {
+    let { type: t, source: n, userId: o, guildId: a, channelId: s, channelType: l, applicationId: c, partyId: u, messageId: d, locationObject: f, analyticsLocations: _, referrerId: p, inviterUserId: h } = e;
     r.default.track(i.rMx.APPLICATION_OPENED, {
         type: t,
         source: n,
-        application_id: s,
-        party_id: null != o ? o : void 0,
-        other_user_id: a,
-        message_id: l,
-        location: u,
-        location_stack: c
+        guild_id: a,
+        channel_id: s,
+        channel_type: l,
+        application_id: c,
+        party_id: null != u ? u : void 0,
+        other_user_id: o,
+        message_id: d,
+        location: f,
+        location_stack: _,
+        referrer_id: p,
+        invite_inviter_id: h
     });
 }

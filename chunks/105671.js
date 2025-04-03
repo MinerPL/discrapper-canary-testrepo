@@ -1,23 +1,19 @@
-n.d(t, {
-    i: function () {
-        return u;
-    }
-});
-var i = n(392711),
-    a = n.n(i),
-    s = n(442837),
-    l = n(77498),
-    r = n(823379),
-    o = n(353093),
-    c = n(308083);
+r.d(t, { i: () => u });
+var n = r(392711),
+    l = r.n(n),
+    i = r(442837),
+    a = r(77498),
+    s = r(823379),
+    o = r(353093),
+    c = r(308083);
 function u(e) {
-    return (0, s.e7)([l.Z], () => {
-        let t = a()(e)
+    return (0, i.e7)([a.Z], () => {
+        let t = l()(e)
             .map((e) => {
                 var t;
-                return null === (t = l.Z.getDetectableGame(e)) || void 0 === t ? void 0 : t.name;
+                return null == (t = a.Z.getDetectableGame(e)) ? void 0 : t.name;
             })
-            .filter(r.lm)
+            .filter(s.lm)
             .value();
         return (0, o.f6)(t, c.uw);
     });

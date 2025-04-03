@@ -1,33 +1,27 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(47120),
-    n(773603);
-var i = n(470079),
-    a = n(442837),
-    s = n(693546),
+n.d(t, { Z: () => p }), n(47120), n(773603);
+var r = n(192379),
+    i = n(442837),
+    a = n(693546),
     l = n(826581),
-    r = n(937111),
-    o = n(430824),
+    o = n(937111),
+    s = n(430824),
     c = n(496675),
     u = n(709054),
     d = n(981631);
-function h(e) {
-    let [t, n] = i.useState(!1),
-        [h, m] = i.useState(!1),
-        p = u.default.cast(e),
-        { joinRequest: _, guild: f } = (0, a.cj)([l.Z, r.Z, o.Z, c.Z], () => {
+function p(e) {
+    let [t, n] = r.useState(!1),
+        [p, m] = r.useState(!1),
+        f = u.default.cast(e),
+        { joinRequest: h, guild: g } = (0, i.cj)([l.Z, o.Z, s.Z, c.Z], () => {
             var e;
-            let t = l.Z.getRequest(p);
+            let t = l.Z.getRequest(f);
             if (null == t)
                 return {
                     joinRequest: null,
                     isModmin: !1,
                     guild: null
                 };
-            let n = null !== (e = o.Z.getGuild(t.guildId)) && void 0 !== e ? e : r.Z.getJoinRequestGuild(t.guildId);
+            let n = null != (e = s.Z.getGuild(t.guildId)) ? e : o.Z.getJoinRequestGuild(t.guildId);
             return {
                 joinRequest: t,
                 isModmin: null != n && c.Z.can(d.Plq.KICK_MEMBERS, n),
@@ -35,20 +29,20 @@ function h(e) {
             };
         });
     return (
-        i.useEffect(() => {
-            null == f && !h && (m(!0), s.Z.fetchRequestToJoinGuilds());
-        }, [f, h]),
-        i.useEffect(() => {
-            null == _ &&
+        r.useEffect(() => {
+            null != g || p || (m(!0), a.Z.fetchRequestToJoinGuilds());
+        }, [g, p]),
+        r.useEffect(() => {
+            null == h &&
                 (n(!0),
-                s.Z.fetchGuildJoinRequest(p).finally(() => {
+                a.Z.fetchGuildJoinRequest(f).finally(() => {
                     n(!1);
                 }));
-        }, [_, p]),
+        }, [h, f]),
         {
             loading: t,
-            joinRequest: _,
-            joinRequestGuild: f
+            joinRequest: h,
+            joinRequestGuild: g
         }
     );
 }

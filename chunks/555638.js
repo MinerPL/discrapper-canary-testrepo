@@ -1,43 +1,37 @@
-t.d(n, {
-    A: function () {
-        return a;
-    }
-});
-var o = t(735250);
-t(470079);
-var i = t(212598),
-    s = t(927923),
-    r = t(689938),
-    l = t(283554),
-    c = t(124248);
-function a(e) {
-    let { platformType: n, isWaitingForConnection: t, onWaitingForConnection: a, expectedCallbackState: C, onAuthToken: d, onError: u, onClose: _ } = e,
-        T = t
+n.d(e, { A: () => a });
+var o = n(200651);
+n(192379);
+var i = n(212598),
+    r = n(388032),
+    s = n(436200),
+    c = n(757685);
+function a(t) {
+    let { platformType: e, isWaitingForConnection: n, onWaitingForConnection: a, expectedCallbackState: d, onAuthToken: l, onError: u, onClose: p } = t,
+        _ = n
             ? (0, o.jsx)('img', {
-                  src: c,
-                  width: '180',
-                  height: '125',
+                  src: c.Z,
+                  width: '231',
+                  height: '172',
                   alt: ''
               })
             : (0, o.jsx)('img', {
-                  src: l,
-                  width: '180',
-                  height: '111',
+                  src: s.Z,
+                  width: '231',
+                  height: '160',
                   alt: ''
               }),
-        N = t ? r.Z.Messages.CONSOLE_PRECONNECT_TITLE_WAITING : r.Z.Messages.PS_PRECONNECT_TITLE,
-        P = t ? r.Z.Messages.PS_PRECONNECT_BODY_WAITING : r.Z.Messages.PS_PRECONNECT_BODY;
+        b = n ? r.NW.string(r.t.TTIocn) : r.NW.string(r.t['6n+UPT']),
+        N = n ? r.NW.string(r.t.MNmoKC) : r.NW.string(r.t.JaaqIS);
     return (0, o.jsx)(i.t, {
-        platformType: n,
-        isWaitingForConnection: t,
+        platformType: e,
+        isWaitingForConnection: n,
         onWaitingForConnection: a,
-        expectedCallbackState: C,
-        onAuthToken: d,
+        expectedCallbackState: d,
+        onAuthToken: l,
         onError: u,
-        onClose: _,
-        img: T,
-        title: N,
-        body: P,
-        redirectDestination: s.uu
+        onClose: p,
+        img: _,
+        title: b,
+        body: N
     });
 }

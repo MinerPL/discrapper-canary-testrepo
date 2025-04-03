@@ -1,9 +1,5 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
-var r = n(470079);
+n.d(t, { Z: () => i });
+var r = n(192379);
 function i(e) {
     let t = r.useRef(null),
         n = r.useCallback(

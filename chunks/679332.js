@@ -1,54 +1,87 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var r = n(735250);
-n(470079);
-var i = n(481060),
+n.d(t, { Z: () => p });
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
     a = n(100527),
     s = n(906732),
-    o = n(299206),
-    l = n(785717),
+    l = n(299206),
+    c = n(785717),
     u = n(475413),
-    c = n(689938);
-function d(e) {
+    d = n(388032);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e) {
     let { user: t, viewProfileItem: n } = e,
-        { trackUserProfileAction: d } = (0, l.KZ)(),
-        { analyticsLocations: _ } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
-        E = [
+        f = i.useRef(null),
+        { trackUserProfileAction: p } = (0, c.KZ)(),
+        { analyticsLocations: h } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
+        m = [
             [n],
             [
-                (0, o.Z)({
+                (0, l.Z)({
                     id: t.id,
-                    label: c.Z.Messages.COPY_ID_USER,
+                    label: d.NW.string(d.t['/AXYnJ']),
                     onSuccess: () =>
-                        d({
+                        p({
                             action: 'COPY_USER_ID',
-                            analyticsLocations: _
+                            analyticsLocations: h
                         })
                 })
             ]
         ];
-    return E.every((e) => e.every((e) => null == e))
+    return m.every((e) => e.every((e) => null == e))
         ? null
-        : (0, r.jsx)(i.Popout, {
+        : (0, r.jsx)(o.yRy, {
+              targetElementRef: f,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(i.Menu, {
+                  return (0, r.jsx)(o.v2r, {
                       navId: 'non-user-bot-profile-overflow-menu',
                       onSelect: void 0,
                       onClose: t,
-                      'aria-label': c.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
-                      children: E.map((e, t) => (0, r.jsx)(i.MenuGroup, { children: e.map((e) => e) }, t))
+                      'aria-label': d.NW.string(d.t.AXIHpa),
+                      children: m.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(u.oY, {
-                      action: 'PRESS_OPTIONS',
-                      icon: i.MoreHorizontalIcon,
-                      tooltipText: c.Z.Messages.MORE,
-                      ...e
-                  })
+                  (0, r.jsx)(
+                      u.oY,
+                      _(
+                          {
+                              ref: f,
+                              action: 'PRESS_OPTIONS',
+                              icon: o.xhG,
+                              tooltipText: d.NW.string(d.t.UKOtz8)
+                          },
+                          e
+                      )
+                  )
           });
 }

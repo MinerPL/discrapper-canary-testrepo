@@ -1,36 +1,31 @@
 n.d(t, {
-    CJ: function () {
-        return b;
-    },
-    Ee: function () {
-        return y;
-    },
-    Il: function () {
-        return Z;
-    }
+    CJ: () => P,
+    Ee: () => b,
+    Il: () => M
 }),
     n(47120),
     n(789020);
-var l = n(735250),
-    u = n(470079),
-    i = n(512722),
-    r = n.n(i),
-    a = n(442837),
+var l = n(200651),
+    i = n(192379),
+    u = n(512722),
+    a = n.n(u),
+    r = n(442837),
     o = n(570140),
     d = n(911969),
+    c = n(493773),
     s = n(71619),
-    c = n(282397),
-    E = n(622449),
-    T = n(188597),
-    _ = n(41776),
-    I = n(665906),
+    E = n(282397),
+    T = n(622449),
+    I = n(188597),
+    p = n(41776),
+    m = n(665906),
     S = n(592125),
-    C = n(271383),
-    f = n(607744),
-    p = n(594174),
-    N = n(280501),
-    m = n(892902),
-    g = n(359232);
+    f = n(271383),
+    C = n(607744),
+    _ = n(594174),
+    g = n(280501),
+    N = n(892902),
+    h = n(359232);
 let O = (e) => {
         switch (e.type) {
             case d.re.BUTTON:
@@ -42,97 +37,97 @@ let O = (e) => {
             case d.re.CHANNEL_SELECT:
                 return !0;
             case d.re.ACTION_ROW:
-            case d.re.INPUT_TEXT:
+            case d.re.TEXT_INPUT:
                 return !1;
         }
     },
-    M = function (e, t) {
+    A = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            l = N.gH.NORMAL;
-        return null != e && e.state !== E.F.FAILED && (e.data.interactionType === d.B8.MESSAGE_COMPONENT && e.data.componentId === t.id ? (l = N.gH.LOADING) : O(t) && (l = N.gH.DISABLED)), n && (l = N.gH.DISABLED), l;
+            l = g.gH.NORMAL;
+        return null != e && e.state !== T.F.FAILED && (e.data.interactionType === d.B8.MESSAGE_COMPONENT && e.data.componentId === t.id ? (l = g.gH.LOADING) : O(t) && (l = g.gH.DISABLED)), n && (l = g.gH.DISABLED), l;
     },
-    A = (e) => {
+    v = (e) => {
         let t = S.Z.getChannel(e),
-            n = (0, a.e7)([f.Z], () => (null == t ? void 0 : t.guild_id) == null || f.Z.canChatInGuild(t.guild_id), [t]),
-            l = (0, a.e7)([_.Z], () => (null == t ? void 0 : t.guild_id) != null && _.Z.isLurking(t.guild_id), [t]),
-            u = (0, a.e7)([C.ZP, p.default], () => {
+            n = (0, r.e7)([C.Z], () => (null == t ? void 0 : t.guild_id) == null || C.Z.canChatInGuild(t.guild_id), [t]),
+            l = (0, r.e7)([p.Z], () => (null == t ? void 0 : t.guild_id) != null && p.Z.isLurking(t.guild_id), [t]),
+            i = (0, r.e7)([f.ZP, _.default], () => {
                 var e, n;
-                let l = p.default.getCurrentUser();
-                return null !== (n = (null == t ? void 0 : t.guild_id) != null && null != l ? (null === (e = C.ZP.getMember(null == t ? void 0 : t.guild_id, l.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== n && n;
+                let l = _.default.getCurrentUser();
+                return null != (n = (null == t ? void 0 : t.guild_id) != null && null != l ? (null == (e = f.ZP.getMember(null == t ? void 0 : t.guild_id, l.id)) ? void 0 : e.isPending) : null) && n;
             }),
-            [, i] = (0, s.AB)(null == t ? void 0 : t.guild_id),
-            r = (0, I.tc)(t);
-        return !!(!n || l || u || (null == t ? void 0 : t.isLockedThread()) || ((null == t ? void 0 : t.isArchivedThread()) && !r)) || !!i || !1;
+            [, u] = (0, s.AB)(null == t ? void 0 : t.guild_id),
+            a = (0, m.tc)(t);
+        return !!(!n || l || i || (null == t ? void 0 : t.isLockedThread()) || ((null == t ? void 0 : t.isArchivedThread()) && !a)) || !!u;
     };
-function R(e, t) {
-    let n = u.useContext(L),
-        [l, i] = u.useState(null),
-        r = u.useCallback(
+function L(e, t) {
+    let n = i.useContext(y),
+        [l, u] = i.useState(null),
+        a = i.useCallback(
             (t) => {
-                let n = (0, g.Z)(e, t);
-                return i(n), null == n;
+                let n = (0, h.Z)(e, t);
+                return u(n), null == n;
             },
             [e]
         );
     return (
-        u.useEffect(() => {
+        i.useEffect(() => {
             var e;
-            let l = () => r(t);
+            let l = () => a(t);
             return (
-                null === (e = n.validators) || void 0 === e || e.add(l),
+                null == (e = n.validators) || e.add(l),
                 () => {
                     var e;
-                    null === (e = n.validators) || void 0 === e || e.delete(l);
+                    null == (e = n.validators) || e.delete(l);
                 }
             );
-        }, [n.validators, r, t]),
+        }, [n.validators, a, t]),
         {
             error: l,
-            validate: r
+            validate: a
         }
     );
 }
-function h(e, t, n) {
-    var l;
-    let i = (0, a.e7)([m.Z], () => m.Z.getInteractionComponentState(e.id, t.id)),
-        r = (0, a.e7)([c.ZP], () => c.ZP.getInteraction(e), [e]),
-        o = A(e.channel_id),
-        { error: d, validate: s } = R(t, i),
-        E = null !== (l = e.applicationId) && void 0 !== l ? l : e.author.id;
+function R(e, t, n, l) {
+    var u;
+    let a = (0, r.e7)([N.Z], () => N.Z.getInteractionComponentState(e.id, n.id)),
+        o = (0, r.e7)([E.ZP], () => E.ZP.getInteraction(e), [e]),
+        d = v(e.channel_id) || t,
+        { error: c, validate: s } = L(n, a),
+        T = null != (u = e.applicationId) ? u : e.author.id;
     return {
-        state: i,
-        executeStateUpdate: u.useCallback(
-            (n) => {
-                if (!s(n)) return !1;
+        state: a,
+        executeStateUpdate: i.useCallback(
+            (t) => {
+                if (!s(t)) return !1;
                 let l = S.Z.getChannel(e.channel_id);
                 return (
                     null != l &&
-                        null != t.customId &&
-                        (0, T.tM)({
-                            componentType: t.type,
+                        null != n.customId &&
+                        (0, I.tM)({
+                            componentType: n.type,
                             messageId: e.id,
                             messageFlags: e.flags,
-                            customId: t.customId,
-                            componentId: t.id,
-                            applicationId: E,
+                            customId: n.customId,
+                            componentId: n.id,
+                            applicationId: T,
                             channelId: l.id,
                             guildId: l.guild_id,
-                            localState: n
+                            localState: t
                         }),
                     !0
                 );
             },
-            [e.channel_id, e.flags, e.id, t.customId, t.type, t.id, E, s]
+            [e.channel_id, e.flags, e.id, n.customId, n.type, n.id, T, s]
         ),
-        isDisabled: o,
-        visualState: M(r, t),
-        error: d
+        isDisabled: d,
+        visualState: A(o, n),
+        error: c
     };
 }
-function v(e, t, n) {
-    let l = (0, a.e7)([m.Z], () => m.Z.getInteractionComponentState(e.customId, t.id)),
-        { error: i, validate: r } = R(t, l),
-        d = u.useCallback(
+function Z(e, t, n) {
+    let l = (0, r.e7)([N.Z], () => N.Z.getInteractionComponentState(e.customId, t.id)),
+        { error: u, validate: a } = L(t, l),
+        d = i.useCallback(
             (n) =>
                 null == n ||
                 (o.Z.dispatch({
@@ -141,51 +136,51 @@ function v(e, t, n) {
                     componentId: t.id,
                     state: n
                 }),
-                !!r(n) || !1),
-            [e.customId, t.id, r]
+                !!a(n)),
+            [e.customId, t.id, a]
         );
     return (
-        u.useEffect(() => {
+        (0, c.ZP)(() => {
             d(n);
-        }, []),
+        }),
         {
             state: l,
             executeStateUpdate: d,
             isDisabled: !1,
-            visualState: N.gH.NORMAL,
-            error: i
+            visualState: g.gH.NORMAL,
+            error: u
         }
     );
 }
-let L = u.createContext(null);
-function Z(e) {
-    let { children: t, message: n, modal: i, validators: a } = e,
-        o = u.useMemo(
+let y = i.createContext(null);
+function M(e) {
+    let { children: t, message: n, modal: u, validators: r, shouldDisableInteractiveComponents: o = !1 } = e,
+        d = i.useMemo(
             () =>
                 null != n
                     ? {
-                          useComponentState: h.bind(null, n),
+                          useComponentState: R.bind(null, n, o),
                           channelId: n.channel_id,
                           message: n,
-                          validators: a
+                          validators: r
                       }
-                    : (r()(null != i, 'modal is present if message is not'),
+                    : (a()(null != u, 'modal is present if message is not'),
                       {
-                          useComponentState: v.bind(null, i),
-                          channelId: i.channelId,
-                          modal: i,
-                          validators: a
+                          useComponentState: Z.bind(null, u),
+                          channelId: u.channelId,
+                          modal: u,
+                          validators: r
                       }),
-            [n, i, a]
+            [n, u, r, o]
         );
-    return (0, l.jsx)(L.Provider, {
-        value: o,
+    return (0, l.jsx)(y.Provider, {
+        value: d,
         children: t
     });
 }
-function y(e, t) {
-    return u.useContext(L).useComponentState(e, t);
+function b(e, t) {
+    return i.useContext(y).useComponentState(e, t);
 }
-function b() {
-    return u.useContext(L);
+function P() {
+    return i.useContext(y);
 }

@@ -1,14 +1,61 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-}),
-    n(47120);
-var r = n(470079),
+n.d(t, { Z: () => f }), n(47120);
+var r = n(192379),
     i = n(663507),
-    a = n(924428),
-    s = n(151973);
-let o = Object.freeze({
+    o = n(924428),
+    a = n(151973);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = Object.freeze({
     coordsMap: {},
     visibleSections: {},
     totalHeight: 0,
@@ -17,54 +64,53 @@ let o = Object.freeze({
         coordinates: {}
     }
 });
-function l(e) {
-    let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: _, maxBufferWidth: E, itemGutter: f, removeEdgeItemGutters: h, sectionGutter: p, padding: m, paddingVertical: I, paddingHorizontal: T, dir: g } = e,
-        S = (0, a.Z)(),
-        A = (0, r.useRef)(o),
-        [N] = (0, r.useState)(() => new i.ZP()),
-        v = _(),
-        O = Math.min(null != E ? E : 1 / 0, v.offsetWidth),
-        R = null != E ? Math.max(0, v.offsetWidth - E) : 0,
+function f(e) {
+    let { sections: t, columns: n, getItemKey: s, getItemHeight: c, getSectionHeight: f, chunkSize: _ = 250, getScrollerState: p, maxBufferWidth: h, itemGutter: m, removeEdgeItemGutters: g, sectionGutter: E, padding: b, paddingVertical: y, paddingHorizontal: v, dir: O } = e,
+        I = (0, o.Z)(),
+        S = (0, r.useRef)(d),
+        [T] = (0, r.useState)(() => new i.ZP()),
+        N = p(),
+        A = Math.min(null != h ? h : 1 / 0, N.offsetWidth),
+        C = null != h ? Math.max(0, N.offsetWidth - h) : 0,
         {
-            dirty: C,
-            chunkStart: y,
-            chunkEnd: D,
-            forceUpdateOnChunkChange: L
-        } = (0, s.Z)({
-            chunkSize: d,
-            getScrollerState: _,
-            forceUpdate: S
+            dirty: R,
+            chunkStart: P,
+            chunkEnd: w,
+            forceUpdateOnChunkChange: D
+        } = (0, a.Z)({
+            chunkSize: _,
+            getScrollerState: p,
+            forceUpdate: I
         });
     return (
-        (A.current = (0, r.useMemo)(
+        (S.current = (0, r.useMemo)(
             () =>
-                C > 0
-                    ? A.current
-                    : (N.mergeProps({
+                R > 0
+                    ? S.current
+                    : (T.mergeProps({
                           sections: t,
                           columns: n,
-                          getItemKey: l,
-                          getItemHeight: u,
-                          getSectionHeight: c,
-                          bufferWidth: O,
-                          itemGutter: f,
-                          removeEdgeItemGutters: h,
-                          sectionGutter: p,
-                          padding: m,
-                          paddingVertical: I,
-                          paddingHorizontal: T,
-                          marginLeft: R / 2,
-                          dir: g
+                          getItemKey: s,
+                          getItemHeight: c,
+                          getSectionHeight: f,
+                          bufferWidth: A,
+                          itemGutter: m,
+                          removeEdgeItemGutters: g,
+                          sectionGutter: E,
+                          padding: b,
+                          paddingVertical: y,
+                          paddingHorizontal: v,
+                          marginLeft: C / 2,
+                          dir: O
                       }),
-                      N.computeVisibleSections(Math.max(0, y * d), D * d),
-                      N.getState()),
-            [C, N, t, n, l, u, c, y, D, d, f, h, p, m, I, T, O, g]
+                      T.computeVisibleSections(Math.max(0, P * _), w * _),
+                      T.getState()),
+            [R, T, t, n, s, c, f, P, w, _, m, g, E, b, y, v, A, O]
         )),
-        {
-            ...A.current,
-            masonryComputer: N,
-            forceUpdateOnChunkChange: L,
-            forceUpdate: S
-        }
+        u(l({}, S.current), {
+            masonryComputer: T,
+            forceUpdateOnChunkChange: D,
+            forceUpdate: I
+        })
     );
 }

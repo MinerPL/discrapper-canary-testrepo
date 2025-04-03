@@ -1,9 +1,5 @@
-n.d(t, {
-    n: function () {
-        return i;
-    }
-});
-let i = (0, n(652874).Z)((e) => ({
+n.d(t, { n: () => r });
+let r = (0, n(230383).U)((e) => ({
     clipsButtonRef: null,
     setClipsButtonRef: (t) => e({ clipsButtonRef: t })
 }));

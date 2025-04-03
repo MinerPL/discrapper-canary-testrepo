@@ -1,98 +1,94 @@
-a.d(t, {
-    Z: function () {
-        return m;
-    }
-});
-var n = a(735250);
-a(470079);
-var s = a(120356),
-    i = a.n(s),
-    r = a(481060),
-    o = a(63063),
-    l = a(773446),
-    u = a(572264),
-    d = a(981631),
-    c = a(689938),
-    E = a(740080),
-    _ = a(849399);
-function m(e) {
+r.d(t, { Z: () => f });
+var n = r(200651);
+r(192379);
+var i = r(120356),
+    s = r.n(i),
+    o = r(481060),
+    a = r(63063),
+    l = r(773446),
+    c = r(572264),
+    u = r(981631),
+    d = r(388032),
+    g = r(927687),
+    m = r(849399);
+function f(e) {
     let { user: t } = e;
     return (0, n.jsxs)('div', {
-        className: E.infoContainer,
+        className: g.infoContainer,
         children: [
             (0, n.jsx)('img', {
-                className: E.infoPicture,
+                className: g.infoPicture,
                 alt: '',
-                src: _
+                src: m
             }),
-            (0, n.jsx)(r.Heading, {
-                className: E.title,
+            (0, n.jsx)(o.X6q, {
+                className: g.title,
                 color: 'header-primary',
                 variant: 'heading-xl/bold',
-                children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_TITLE.format({ n: t.tag })
+                children: d.NW.format(d.t['au+lPj'], { n: t.tag })
             }),
-            (0, n.jsx)(r.Text, {
-                className: E.subtitleInfo,
+            (0, n.jsx)(o.Text, {
+                className: g.subtitleInfo,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_1.format()
+                children: d.NW.format(d.t['5fwX5+'], {})
             }),
-            (0, n.jsx)(r.Text, {
-                className: E.prompt,
+            (0, n.jsx)(o.Text, {
+                className: g.prompt,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({ helpdeskArticle: o.Z.getArticleURL(d.BhN.POMELO_FAQ) })
+                children: d.NW.format(d.t['i2vB8/'], { helpdeskArticle: a.Z.getArticleURL(u.BhN.POMELO_FAQ) })
             }),
             (0, n.jsxs)('div', {
-                className: i()([E.infoItem, E.infoItemSpacing]),
+                className: s()([g.infoItem, g.infoItemSpacing]),
                 children: [
                     (0, n.jsx)('div', {
-                        className: E.infoIcon,
-                        children: (0, n.jsx)(r.FriendsIcon, {
+                        className: g.infoIcon,
+                        children: (0, n.jsx)(o.iFz, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 20,
                             height: 20
                         })
                     }),
-                    (0, n.jsx)(r.Text, {
+                    (0, n.jsx)(o.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
-                        children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_ITEM_1.format()
+                        children: d.NW.format(d.t.SzUaZ2, {})
                     })
                 ]
             }),
             (0, n.jsxs)('div', {
-                className: i()([E.infoItem, E.infoItemSpacing]),
+                className: s()([g.infoItem, g.infoItemSpacing]),
                 children: [
                     (0, n.jsx)('div', {
-                        className: E.infoIcon,
+                        className: g.infoIcon,
                         children: (0, n.jsx)(l.Z, {
                             width: 20,
                             height: 20
                         })
                     }),
-                    (0, n.jsx)(r.Text, {
+                    (0, n.jsx)(o.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
-                        children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_ITEM_2.format()
+                        children: d.NW.format(d.t['UwPc+P'], {})
                     })
                 ]
             }),
             (0, n.jsxs)('div', {
-                className: E.infoItem,
+                className: g.infoItem,
                 children: [
                     (0, n.jsx)('div', {
-                        className: E.infoIcon,
-                        children: (0, n.jsx)(u.Z, {
+                        className: g.infoIcon,
+                        children: (0, n.jsx)(c.Z, {
                             width: 20,
                             height: 20
                         })
                     }),
-                    (0, n.jsx)(r.Text, {
+                    (0, n.jsx)(o.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
-                        children: c.Z.Messages.UNIQUE_USERNAME_EXISTING_FLOW_PROMPT_ITEM_3.format({ username: t.tag })
+                        children: d.NW.format(d.t.okLjjo, { username: t.tag })
                     })
                 ]
             })

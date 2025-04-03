@@ -1,158 +1,153 @@
-a.r(t),
-    a.d(t, {
-        default: function () {
-            return D;
-        }
-    }),
-    a(47120);
-var l = a(735250),
-    s = a(470079),
-    o = a(442837),
-    n = a(481060),
-    r = a(91176),
-    c = a(906732),
-    i = a(313201),
-    u = a(910693),
-    d = a(594174),
-    _ = a(626135),
-    I = a(5192),
-    C = a(590433),
-    N = a(981631),
-    f = a(689938),
-    T = a(796245);
+l.d(t, { default: () => k }), l(47120);
+var n = l(200651),
+    s = l(192379),
+    o = l(442837),
+    a = l(481060),
+    r = l(91176),
+    c = l(493773),
+    i = l(906732),
+    u = l(313201),
+    d = l(910693),
+    x = l(594174),
+    _ = l(626135),
+    N = l(5192),
+    h = l(590433),
+    m = l(981631),
+    T = l(388032),
+    C = l(454489);
 function U(e) {
     return {
         value: e,
         get label() {
             var t;
-            return null === (t = (0, C.L9)(e)) || void 0 === t ? void 0 : t.toLocaleUpperCase();
+            return null == (t = (0, h.L9)(e)) ? void 0 : t.toLocaleUpperCase();
         }
     };
 }
-let x = [U(C.UK.DURATION_60_SEC), U(C.UK.DURATION_5_MIN), U(C.UK.DURATION_10_MIN), U(C.UK.DURATION_1_HOUR), U(C.UK.DURATION_1_DAY), U(C.UK.DURATION_1_WEEK)];
-function D(e) {
-    var t, a;
-    let { guildId: U, userId: D, anaylticsLocations: A, transitionState: O, onClose: S } = e,
-        M = (0, i.Dt)(),
-        { analyticsLocations: E } = (0, c.ZP)(),
-        m = null !== (a = null !== (t = null == A ? void 0 : A[0]) && void 0 !== t ? t : null == E ? void 0 : E[0]) && void 0 !== a ? a : null,
-        h = (0, o.e7)([d.default], () => d.default.getUser(D), [D]),
-        [L, R] = s.useState(C.UK.DURATION_60_SEC),
-        B = (0, u.sE)(U, {
-            location: m,
-            targetUserId: D
+let g = [U(h.UK.DURATION_60_SEC), U(h.UK.DURATION_5_MIN), U(h.UK.DURATION_10_MIN), U(h.UK.DURATION_1_HOUR), U(h.UK.DURATION_1_DAY), U(h.UK.DURATION_1_WEEK)];
+function k(e) {
+    var t, l;
+    let { guildId: U, userId: k, anaylticsLocations: p, transitionState: I, onClose: S } = e,
+        f = (0, u.Dt)(),
+        { analyticsLocations: j } = (0, i.ZP)(),
+        v = null != (l = null != (t = null == p ? void 0 : p[0]) ? t : null == j ? void 0 : j[0]) ? l : null,
+        D = (0, o.e7)([x.default], () => x.default.getUser(k), [k]),
+        [b, O] = s.useState(h.UK.DURATION_60_SEC),
+        E = (0, d.sE)(U, {
+            location: v,
+            targetUserId: k
         }),
-        [g, v] = s.useState(''),
-        [p, b] = s.useState(!1),
-        j = s.useCallback(async () => {
-            if (null != h) {
-                b(!0);
+        [A, R] = s.useState(''),
+        [y, B] = s.useState(!1),
+        W = s.useCallback(async () => {
+            if (null != D) {
+                B(!0);
                 try {
-                    await r.Z.setCommunicationDisabledDuration(U, D, L, g, m), B(u.jQ.TIMEOUT), (0, n.showToast)((0, n.createToast)(f.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({ user: I.ZP.getName(U, null, h) }), n.ToastType.SUCCESS)), S();
+                    await r.Z.setCommunicationDisabledDuration(U, k, b, A, v), E(d.jQ.TIMEOUT), (0, a.showToast)((0, a.createToast)(T.NW.formatToPlainString(T.t.O9C3Nj, { user: N.ZP.getName(U, null, D) }), a.ToastType.SUCCESS)), S();
                 } catch (e) {
-                    (0, n.showToast)((0, n.createToast)(f.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, n.ToastType.FAILURE));
+                    (0, a.showToast)((0, a.createToast)(T.NW.string(T.t.epyCur), a.ToastType.FAILURE));
                 } finally {
-                    b(!1);
+                    B(!1);
                 }
             }
-        }, [U, h, D, S, L, g, m, B]);
-    return (s.useEffect(() => {
-        if (null != h)
-            _.default.track(N.rMx.OPEN_MODAL, {
-                type: C.Cl,
+        }, [U, D, k, S, b, A, v, E]);
+    return ((0, c.ZP)(() => {
+        null != D &&
+            _.default.track(m.rMx.OPEN_MODAL, {
+                type: h.Cl,
                 guild_id: U,
-                other_user_id: h.id
+                other_user_id: D.id
             });
-    }, []),
+    }),
     s.useEffect(() => {
-        (null == h || null == U) && S();
-    }, [U, h, S]),
-    null == h || null == U)
+        (null == D || null == U) && S();
+    }, [U, D, S]),
+    null == D || null == U)
         ? null
-        : (0, l.jsxs)(n.ModalRoot, {
-              transitionState: O,
-              'aria-labelledby': M,
+        : (0, n.jsxs)(a.Y0X, {
+              transitionState: I,
+              'aria-labelledby': f,
               children: [
-                  (0, l.jsxs)(n.ModalHeader, {
-                      className: T.header,
+                  (0, n.jsxs)(a.xBx, {
+                      className: C.header,
                       separator: !1,
                       children: [
-                          (0, l.jsx)(n.Heading, {
-                              id: M,
+                          (0, n.jsx)(a.X6q, {
+                              id: f,
                               variant: 'heading-lg/semibold',
-                              children: f.Z.Messages.DISABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: I.ZP.getName(U, null, h) })
+                              children: T.NW.format(T.t.OhsOy8, { user: N.ZP.getName(U, null, D) })
                           }),
-                          (0, l.jsx)(n.Clickable, {
+                          (0, n.jsx)(a.P3F, {
                               onClick: S,
-                              className: T.closeButton,
-                              'aria-label': f.Z.Messages.CLOSE,
-                              children: (0, l.jsx)(n.XSmallIcon, {
+                              className: C.closeButton,
+                              'aria-label': T.NW.string(T.t.cpT0Cg),
+                              children: (0, n.jsx)(a.Dio, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: T.closeIcon
+                                  className: C.closeIcon
                               })
                           })
                       ]
                   }),
-                  (0, l.jsxs)(n.ModalContent, {
-                      className: T.contentContainer,
+                  (0, n.jsxs)(a.hzk, {
+                      className: C.contentContainer,
                       children: [
-                          (0, l.jsx)(n.Text, {
+                          (0, n.jsx)(a.Text, {
                               variant: 'text-md/normal',
                               color: 'interactive-normal',
-                              children: f.Z.Messages.DISABLE_GUILD_COMMUNICATION_BODY_HEADER.format({ helpdeskArticle: C.cu })
+                              children: T.NW.format(T.t.Ns83GR, { helpdeskArticle: h.cu })
                           }),
-                          (0, l.jsx)(n.Text, {
-                              className: T.selectorHeader,
+                          (0, n.jsx)(a.Text, {
+                              className: C.selectorHeader,
                               variant: 'text-xs/semibold',
                               color: 'interactive-normal',
-                              children: f.Z.Messages.GUILD_COMMUNICATION_DISABLED_DURATION
+                              children: T.NW.string(T.t['9XsExs'])
                           }),
-                          (0, l.jsx)(n.ButtonGroup, {
-                              buttons: x.map((e) =>
-                                  (function (e, t, a) {
+                          (0, n.jsx)(a.hE2, {
+                              buttons: g.map((e) =>
+                                  (function (e, t, l) {
                                       let { value: s, label: o } = e;
                                       return {
-                                          content: (0, l.jsx)(n.Text, {
+                                          content: (0, n.jsx)(a.Text, {
                                               variant: 'text-xs/normal',
-                                              className: t ? T.selectorTextSelected : T.selectorText,
+                                              className: t ? C.selectorTextSelected : C.selectorText,
                                               children: o
                                           }),
-                                          className: t ? T.selectorButtonSelected : T.selectorButton,
-                                          onClick: () => a(s)
+                                          className: t ? C.selectorButtonSelected : C.selectorButton,
+                                          onClick: () => l(s)
                                       };
-                                  })(e, e.value === L, R)
+                                  })(e, e.value === b, O)
                               )
                           }),
-                          (0, l.jsx)(n.Text, {
-                              className: T.selectorHeader,
+                          (0, n.jsx)(a.Text, {
+                              className: C.selectorHeader,
                               variant: 'text-xs/semibold',
                               color: 'interactive-normal',
-                              children: f.Z.Messages.GUILD_COMMUNICATION_DISABLED_REASON
+                              children: T.NW.string(T.t.ewHW19)
                           }),
-                          (0, l.jsx)(n.TextArea, {
-                              value: g,
-                              onChange: (e) => v(e),
-                              placeholder: f.Z.Messages.GUILD_COMMUNICATION_DISABLED_REASON_PLACEHOLDER,
+                          (0, n.jsx)(a.Kx8, {
+                              value: A,
+                              onChange: (e) => R(e),
+                              placeholder: T.NW.string(T.t.GakiHx),
                               rows: 2,
-                              maxLength: C.GN
+                              maxLength: h.GN
                           })
                       ]
                   }),
-                  (0, l.jsxs)(n.ModalFooter, {
+                  (0, n.jsxs)(a.mzw, {
                       children: [
-                          (0, l.jsx)(n.Button, {
-                              onClick: j,
-                              color: n.Button.Colors.BRAND,
-                              submitting: p,
-                              children: f.Z.Messages.TIMEOUT_SUBMIT
+                          (0, n.jsx)(a.zxk, {
+                              onClick: W,
+                              color: a.zxk.Colors.BRAND,
+                              submitting: y,
+                              children: T.NW.string(T.t.MlPTIi)
                           }),
-                          (0, l.jsx)(n.Button, {
+                          (0, n.jsx)(a.zxk, {
                               type: 'button',
-                              look: n.Button.Looks.LINK,
-                              color: n.Button.Colors.PRIMARY,
+                              look: a.zxk.Looks.LINK,
+                              color: a.zxk.Colors.PRIMARY,
                               onClick: S,
-                              children: f.Z.Messages.CANCEL
+                              children: T.NW.string(T.t['ETE/oK'])
                           })
                       ]
                   })

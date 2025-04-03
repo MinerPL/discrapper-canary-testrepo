@@ -1,8 +1,8 @@
-n(47120);
-var i,
-    a = n(442837),
-    s = n(570140);
-function l(e, t, n) {
+n.d(t, { Z: () => c }), n(47120);
+var r,
+    i = n(442837),
+    l = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,23 +15,22 @@ function l(e, t, n) {
         e
     );
 }
-let r = new Set();
-class o extends (i = a.ZP.PersistedStore) {
+let a = new Set();
+class s extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (r = new Set(e));
+        null != e && (a = new Set(e));
     }
     hasHidden(e) {
-        return r.has(e);
+        return a.has(e);
     }
     getState() {
-        return r;
+        return a;
     }
 }
-l(o, 'displayName', 'ForumChannelAdminOnboardingGuideStore'),
-    l(o, 'persistKey', 'ForumChannelAdminOnboardingGuideStore'),
-    (t.Z = new o(s.Z, {
-        ADMIN_ONBOARDING_GUIDE_HIDE: function (e) {
-            let { channelId: t, hide: n } = e;
-            n ? r.add(t) : r.delete(t);
-        }
-    }));
+o(s, 'displayName', 'ForumChannelAdminOnboardingGuideStore'), o(s, 'persistKey', 'ForumChannelAdminOnboardingGuideStore');
+let c = new s(l.Z, {
+    ADMIN_ONBOARDING_GUIDE_HIDE: function (e) {
+        let { channelId: t, hide: n } = e;
+        n ? a.add(t) : a.delete(t);
+    }
+});

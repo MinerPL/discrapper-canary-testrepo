@@ -1,10 +1,6 @@
 n.d(t, {
-    G: function () {
-        return s;
-    },
-    N: function () {
-        return a;
-    }
+    G: () => s,
+    N: () => o
 }),
     n(518263),
     n(970173),
@@ -15,25 +11,27 @@ n.d(t, {
     n(480839),
     n(744285),
     n(492257),
-    n(873817);
+    n(873817),
+    n(610885),
+    n(126298);
 var r = n(998502);
 let i = null;
+function o() {
+    return null == i && (i = a()), i;
+}
 function a() {
-    return (
-        null == i &&
-            (i = (function () {
-                if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder) return !1;
-                try {
-                    return r.ZP.requireModule('discord_zstd'), !0;
-                } catch (e) {
-                    if (e.message.includes('Cannot find')) return r.ZP.ensureModule('discord_zstd').catch((e) => {}), !1;
-                    throw e;
-                }
-            })()),
-        i
-    );
+    if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder) return !1;
+    try {
+        let e = r.ZP.requireModule('discord_zstd');
+        if (null == e) return !1;
+        return !0;
+    } catch (e) {
+        if (e.message.includes('Cannot find')) return r.ZP.ensureModule('discord_zstd').catch((e) => {}), !1;
+        throw e;
+    }
 }
 function s() {
+    if (!o()) return;
     let { createContext: e } = r.ZP.requireModule('discord_zstd');
     return e();
 }

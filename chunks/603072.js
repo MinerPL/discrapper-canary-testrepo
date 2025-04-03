@@ -1,84 +1,79 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return L;
-        }
-    }),
-    t(47120);
-var l = t(735250),
-    a = t(470079),
-    i = t(120356),
-    r = t.n(i),
-    s = t(442837),
-    o = t(704215),
+t.r(n), t.d(n, { default: () => B }), t(47120);
+var r = t(200651),
+    l = t(192379),
+    a = t(120356),
+    i = t.n(a),
+    o = t(442837),
+    s = t(704215),
     c = t(692547),
     d = t(481060),
     u = t(111028),
-    h = t(252618),
-    m = t(605236),
-    _ = t(473403),
+    m = t(252618),
+    h = t(605236),
+    p = t(473403),
     f = t(984370),
-    C = t(216306),
-    p = t(104155),
-    x = t(22082),
-    g = t(703656),
-    N = t(433355),
-    I = t(592125),
-    b = t(430824),
-    E = t(944486),
-    Z = t(31445),
-    v = t(59350),
-    T = t(290511),
-    j = t(176505),
-    S = t(921944),
-    R = t(689938),
-    A = t(683570),
-    O = t(625032);
-function B(e) {
+    g = t(216306),
+    x = t(104155),
+    _ = t(22082),
+    C = t(703656),
+    j = t(433355),
+    b = t(592125),
+    N = t(430824),
+    v = t(944486),
+    y = t(31445),
+    O = t(59350),
+    I = t(290511),
+    Z = t(176505),
+    w = t(921944),
+    P = t(388032),
+    E = t(56044),
+    S = t(100658);
+function T(e) {
     let { guild: n, previousChannel: t } = e,
-        i = (0, Z.Z)(n);
-    a.useEffect(() => {
-        (0, m.EW)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: S.L.DISMISS });
+        a = (0, y.Z)(n);
+    l.useEffect(() => {
+        (0, h.EW)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: w.L.DISMISS });
     });
-    let r = i ? R.Z.Messages.CHANNELS_AND_ROLES_HTML_TITLE.format({ guildName: n.name }) : R.Z.Messages.CHANNEL_BROWSER_HTML_TITLE.format({ guildName: n.name }),
-        s = i ? R.Z.Messages.CHANNELS_AND_ROLES : R.Z.Messages.CHANNEL_BROWSER_TITLE;
+    let i = a ? P.NW.formatToPlainString(P.t.uqZgYW, { guildName: n.name }) : P.NW.formatToPlainString(P.t.velJeX, { guildName: n.name }),
+        o = a ? P.NW.string(P.t.h9mGOD) : P.NW.string(P.t.et6wam);
     return (
-        (0, h.Tt)({ location: r }),
-        (0, l.jsxs)(f.Z, {
-            className: A.header,
-            innerClassname: A.innerHeader,
+        (0, m.Tt)({ location: i }),
+        (0, r.jsxs)(f.Z, {
+            className: E.header,
+            innerClassname: E.innerHeader,
             hideSearch: !0,
-            channelId: j.oC.CUSTOMIZE_COMMUNITY,
+            channelId: Z.oC.CUSTOMIZE_COMMUNITY,
             guildId: n.id,
             toolbar:
                 null != t
-                    ? (0, l.jsx)(d.Button, {
-                          className: A.returnButton,
-                          size: d.Button.Sizes.SMALL,
-                          look: d.Button.Looks.OUTLINED,
-                          color: d.Button.Colors.PRIMARY,
+                    ? (0, r.jsx)(d.zxk, {
+                          className: E.returnButton,
+                          size: d.zxk.Sizes.SMALL,
+                          look: d.zxk.Looks.OUTLINED,
+                          color: d.zxk.Colors.PRIMARY,
                           onClick: () => {
-                              null != t && (0, g.XU)(n.id, t.id);
+                              null != t && (0, C.XU)(n.id, t.id);
                           },
-                          children: (0, l.jsx)(d.Text, {
-                              className: A.returnButtonText,
+                          children: (0, r.jsx)(d.Text, {
+                              className: E.returnButtonText,
                               variant: 'text-xs/medium',
                               color: 'none',
-                              children: R.Z.Messages.RETURN_TO_CHANNEL.format({
+                              children: P.NW.format(P.t.IX7oWl, {
                                   channelNameHook: () =>
                                       null == t
                                           ? null
-                                          : (0, l.jsxs)(
-                                                a.Fragment,
+                                          : (0, r.jsxs)(
+                                                l.Fragment,
                                                 {
                                                     children: [
-                                                        (0, l.jsx)(_._, {
-                                                            className: A.returnIcon,
+                                                        (0, r.jsx)(p._W, {
+                                                            className: E.returnIcon,
+                                                            containerClassName: E.returnIconContainer,
                                                             guild: n,
                                                             channel: t
                                                         }),
-                                                        (0, l.jsx)(u.Z, {
-                                                            children: (0, l.jsx)(d.Text, {
+                                                        (0, r.jsx)(u.Z, {
+                                                            children: (0, r.jsx)(d.Text, {
                                                                 variant: 'text-xs/medium',
                                                                 color: 'none',
                                                                 children: t.name
@@ -93,96 +88,96 @@ function B(e) {
                       })
                     : [],
             children: [
-                (0, l.jsx)(f.Z.Icon, {
-                    icon: d.ChannelListMagnifyingGlassIcon,
+                (0, r.jsx)(f.Z.Icon, {
+                    icon: d.H$4,
                     'aria-hidden': !0
                 }),
-                (0, l.jsx)(f.Z.Title, { children: s })
+                (0, r.jsx)(f.Z.Title, { children: o })
             ]
         })
     );
 }
-function L(e) {
+function B(e) {
     let { guildId: n, selectedSection: t } = e,
-        i = (0, s.e7)([b.Z], () => b.Z.getGuild(n)),
-        o = (0, Z.Z)(i),
-        [u, h] = a.useState(null != t ? t : T.l7.CUSTOMIZE);
-    a.useEffect(() => {
-        null != t && h(t);
+        a = (0, o.e7)([N.Z], () => N.Z.getGuild(n)),
+        s = (0, y.Z)(a),
+        [u, m] = l.useState(null != t ? t : I.l7.CUSTOMIZE);
+    l.useEffect(() => {
+        null != t && m(t);
     }, [t]);
-    let m = (0, s.e7)([E.Z], () => E.Z.getLastSelectedChannelId(n)),
-        _ = (0, s.e7)([N.ZP], () => N.ZP.getCurrentSidebarChannelId(j.oC.CHANNEL_BROWSER)),
-        f = null != _ && u === T.l7.BROWSE,
-        g = (0, s.e7)([I.Z], () => I.Z.getChannel(m)),
-        S = (0, s.e7)([x.Z], () => x.Z.getNewChannelIds(n).size > 0),
-        L = (0, C.fU)(n);
-    return null == i
+    let h = (0, o.e7)([v.Z], () => v.Z.getLastSelectedChannelId(n)),
+        p = (0, o.e7)([j.ZP], () => j.ZP.getCurrentSidebarChannelId(Z.oC.CHANNEL_BROWSER)),
+        f = null != p && u === I.l7.BROWSE,
+        C = (0, o.e7)([b.Z], () => b.Z.getChannel(h)),
+        w = (0, o.e7)([_.Z], () => _.Z.getNewChannelIds(n).size > 0),
+        B = (0, g.fU)(n);
+    return null == a
         ? null
-        : (0, l.jsxs)(l.Fragment, {
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, l.jsxs)('div', {
-                      className: r()(O.chat, { [O.threadSidebarOpen]: f }),
+                  (0, r.jsxs)('div', {
+                      className: i()(S.chat, { [S.threadSidebarOpen]: f }),
                       children: [
-                          (0, l.jsx)(B, {
-                              guild: i,
-                              previousChannel: g
+                          (0, r.jsx)(T, {
+                              guild: a,
+                              previousChannel: C
                           }),
-                          (0, l.jsxs)('div', {
-                              className: r()(O.content, A.container),
+                          (0, r.jsxs)('div', {
+                              className: i()(S.content, E.container),
                               children: [
-                                  o &&
-                                      (0, l.jsxs)(d.TabBar, {
-                                          className: A.tabBar,
+                                  s &&
+                                      (0, r.jsxs)(d.njP, {
+                                          className: E.tabBar,
                                           type: 'top',
                                           look: 'brand',
                                           selectedItem: u,
-                                          onItemSelect: (e) => h(e),
+                                          onItemSelect: (e) => m(e),
                                           children: [
-                                              (0, l.jsx)(
-                                                  d.TabBar.Item,
+                                              (0, r.jsx)(
+                                                  d.njP.Item,
                                                   {
-                                                      className: A.tabBarItem,
-                                                      id: T.l7.CUSTOMIZE,
-                                                      children: R.Z.Messages.OPT_IN_GUILD_NOTICE_CTA
+                                                      className: E.tabBarItem,
+                                                      id: I.l7.CUSTOMIZE,
+                                                      children: P.NW.string(P.t.H2cICQ)
                                                   },
-                                                  T.l7.CUSTOMIZE
+                                                  I.l7.CUSTOMIZE
                                               ),
-                                              (0, l.jsxs)(
-                                                  d.TabBar.Item,
+                                              (0, r.jsxs)(
+                                                  d.njP.Item,
                                                   {
-                                                      className: A.tabBarItem,
-                                                      id: T.l7.BROWSE,
-                                                      'aria-label': R.Z.Messages.CHANNEL_BROWSER_TITLE,
+                                                      className: E.tabBarItem,
+                                                      id: I.l7.BROWSE,
+                                                      'aria-label': P.NW.string(P.t.et6wam),
                                                       children: [
-                                                          R.Z.Messages.CHANNEL_BROWSER_TITLE,
-                                                          (0, l.jsx)(d.TextBadge, {
-                                                              text: S ? R.Z.Messages.CHANNEL_TYPE_NEW : L,
-                                                              color: S ? c.Z.unsafe_rawColors.BRAND_260.css : c.Z.colors.BACKGROUND_ACCENT.css,
-                                                              className: r()({ [A.newBadge]: S })
+                                                          P.NW.string(P.t.et6wam),
+                                                          (0, r.jsx)(d.IGR, {
+                                                              text: w ? P.NW.string(P.t.psHMa2) : B,
+                                                              color: w ? c.Z.unsafe_rawColors.BRAND_260.css : c.Z.colors.BACKGROUND_ACCENT.css,
+                                                              className: i()({ [E.newBadge]: w })
                                                           })
                                                       ]
                                                   },
-                                                  T.l7.BROWSE
+                                                  I.l7.BROWSE
                                               )
                                           ]
                                       }),
                                   (() => {
                                       switch (u) {
-                                          case T.l7.CUSTOMIZE:
-                                              return (0, l.jsx)(v.Z, {
+                                          case I.l7.CUSTOMIZE:
+                                              return (0, r.jsx)(O.Z, {
                                                   guildId: n,
-                                                  onBrowseChannels: () => h(T.l7.BROWSE)
+                                                  onBrowseChannels: () => m(I.l7.BROWSE)
                                               });
-                                          case T.l7.BROWSE:
+                                          case I.l7.BROWSE:
                                           default:
-                                              return (0, l.jsx)(p.Z, { guildId: n });
+                                              return (0, r.jsx)(x.Z, { guildId: n });
                                       }
                                   })()
                               ]
                           })
                       ]
                   }),
-                  f && (0, l.jsx)(p.I, { channelId: _ })
+                  f && (0, r.jsx)(x.I, { channelId: p })
               ]
           });
 }

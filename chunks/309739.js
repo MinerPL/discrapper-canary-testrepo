@@ -1,141 +1,204 @@
-t.d(s, {
-    Z: function () {
-        return g;
-    }
-}),
-    t(47120);
-var n = t(735250);
-t(470079);
-var a = t(481060),
-    i = t(787740),
-    r = t(134598),
-    o = t(921801),
-    l = t(430824),
-    c = t(63063),
-    d = t(358085),
-    _ = t(709054),
-    E = t(695346),
-    u = t(726985),
-    I = t(981631),
-    T = t(689938),
-    S = t(359043),
-    N = t(224499);
-function C() {
-    let e = E.G6.useSetting(),
-        s = E.Wz.useSetting(),
-        t = d.isPlatformEmbedded ? T.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : T.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
-        i = (e) => {
-            E.Wz.updateSetting(e),
-                !(function (e) {
-                    let s = () => {
-                        E.SE.updateSetting(e ? _.default.keys(l.Z.getGuilds()) : []);
-                    };
-                    (0, a.openModal)((e) =>
-                        (0, n.jsx)(a.ConfirmModal, {
-                            header: T.Z.Messages.USER_DM_SETTINGS_TITLE,
-                            confirmText: T.Z.Messages.NO_TEXT,
-                            cancelText: T.Z.Messages.YES_TEXT,
-                            onCancel: s,
-                            confirmButtonColor: a.Button.Colors.BRAND,
-                            ...e,
-                            children: (0, n.jsx)(a.Text, {
-                                variant: 'text-md/normal',
-                                children: T.Z.Messages.ACTIVITY_RESTRICTION_MODAL_DESC
+n.d(t, { Z: () => B }), n(47120), n(566702);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(658722),
+    o = n.n(l),
+    c = n(442837),
+    d = n(524437),
+    u = n(780384),
+    m = n(481060),
+    g = n(457330),
+    p = n(410030),
+    h = n(726542),
+    f = n(116841),
+    b = n(295377),
+    N = n(921801),
+    x = n(553795),
+    _ = n(430824),
+    E = n(63063),
+    j = n(358085),
+    O = n(709054),
+    C = n(362352),
+    S = n(413182),
+    v = n(695346),
+    T = n(726985),
+    I = n(981631),
+    y = n(388032),
+    A = n(187382),
+    P = n(20493);
+function R(e) {
+    let t = () => {
+        v.SE.updateSetting(e ? O.default.keys(_.Z.getGuilds()) : []);
+    };
+    (0, m.h7j)((e) => {
+        var n, i;
+        return (0, r.jsx)(
+            m.ConfirmModal,
+            ((n = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
-                        })
-                    );
-                })(e);
-        };
-    return (0, n.jsx)(o.F, {
-        setting: u.s6.ACTIVITY_PRIVACY_STATUS,
-        children: (0, n.jsxs)(a.FormSection, {
-            className: N.marginBottom40,
-            children: [
-                (0, n.jsx)(a.FormTitle, {
-                    tag: a.FormTitleTags.H5,
-                    className: N.marginBottom8,
-                    children: T.Z.Messages.ACTIVITY_STATUS
-                }),
-                (0, n.jsx)(a.FormSwitch, {
-                    value: e,
-                    onChange: (e) => E.G6.updateSetting(e),
-                    note: t,
-                    children: T.Z.Messages.SHOW_CURRENT_ACTIVITY
-                }),
-                (0, n.jsx)(a.FormSwitch, {
-                    value: !s,
-                    note: T.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({ helpdeskArticle: c.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS) }),
-                    onChange: (e) => i(!e),
-                    children: T.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT
-                })
-            ]
-        })
-    });
-}
-function m() {
-    let e = E.cP.useSetting(),
-        s = E.Ou.useSetting();
-    return (0, n.jsx)(o.F, {
-        setting: u.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, n.jsxs)(a.FormSection, {
-            className: N.marginBottom40,
-            children: [
-                (0, n.jsx)(a.FormTitle, {
-                    tag: a.FormTitleTags.H5,
-                    className: N.marginBottom8,
-                    children: T.Z.Messages.ACTIVITY_PARTY_PRIVACY
-                }),
-                (0, n.jsx)(a.FormSwitch, {
-                    value: e,
-                    note: T.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP,
-                    onChange: (e) => E.cP.updateSetting(e),
-                    children: T.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS
-                }),
-                (0, n.jsx)(a.FormSwitch, {
-                    value: s,
-                    note: T.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP,
-                    onChange: (e) => E.Ou.updateSetting(e),
-                    children: T.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL
-                })
-            ]
-        })
-    });
-}
-function A() {
-    return (0, n.jsx)(o.F, {
-        setting: u.s6.ACTIVITY_PRIVACY_BROADCASTING,
-        children: (0, n.jsxs)(a.FormSection, {
-            className: N.marginBottom40,
-            children: [
-                (0, n.jsxs)(a.FormTitle, {
-                    tag: a.FormTitleTags.H5,
-                    className: N.marginBottom8,
-                    children: [T.Z.Messages.BROADCASTING_SETTINGS, (0, n.jsx)(i.Z, { className: S.betaTag })]
-                }),
-                (0, n.jsx)(a.FormText, {
-                    type: a.FormText.Types.DESCRIPTION,
-                    className: N.marginBottom20,
-                    children: T.Z.Messages.BROADCASTING_SETTINGS_DESCRIPTION
-                }),
-                (0, n.jsx)(a.FormItem, {
-                    children: (0, n.jsx)(a.Button, {
-                        onClick: () => (0, r.X)(),
-                        size: a.ButtonSizes.SMALL,
-                        children: T.Z.Messages.BROADCASTING_SETTINGS_CTA
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })(
+                {
+                    header: y.NW.string(y.t['uUr+GR']),
+                    confirmText: y.NW.string(y.t.gm1Ven),
+                    cancelText: y.NW.string(y.t.p89ACg),
+                    onCancel: t,
+                    confirmButtonColor: m.zxk.Colors.BRAND
+                },
+                e
+            )),
+            (i = i =
+                {
+                    children: (0, r.jsx)(m.Text, {
+                        variant: 'text-md/normal',
+                        children: y.NW.string(y.t.EFu2Ki)
                     })
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(i)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                  }),
+            n)
+        );
+    });
+}
+function D() {
+    let e = v.G6.useSetting(),
+        t = v.Wz.useSetting(),
+        n = (0, C.Yd)('activity privacy tab'),
+        i = j.isPlatformEmbedded ? y.NW.string(y.t.MznbeH) : y.NW.string(y.t.oKqC4u),
+        s = (e) => {
+            v.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), R(e);
+        },
+        l = (e) => {
+            v.Wz.updateSetting(e), R(e !== d.E5.OFF);
+        },
+        o = [
+            {
+                value: d.E5.ON,
+                label: y.NW.string(y.t.UzGMHx)
+            },
+            {
+                value: d.E5.ON_FOR_LARGE_GUILDS,
+                label: y.NW.string(y.t.OFqxQU)
+            },
+            {
+                value: d.E5.OFF,
+                label: y.NW.string(y.t.MIgNPD)
+            }
+        ];
+    return (0, r.jsx)(N.F, {
+        setting: T.s6.ACTIVITY_PRIVACY_STATUS,
+        children: (0, r.jsxs)(m.hjN, {
+            children: [
+                (0, r.jsx)(m.vwX, {
+                    tag: m.RB0.H5,
+                    className: P.marginBottom8,
+                    children: y.NW.string(y.t['8ka8lp'])
+                }),
+                (0, r.jsx)(m.j7V, {
+                    value: e,
+                    onChange: (e) => v.G6.updateSetting(e),
+                    note: i,
+                    children: y.NW.string(y.t['4q/Ewc'])
+                }),
+                n
+                    ? (0, r.jsxs)(m.xJW, {
+                          tag: m.RB0.H3,
+                          title: y.NW.string(y.t.ffGYGx),
+                          children: [
+                              (0, r.jsx)(m.Text, {
+                                  variant: 'text-sm/normal',
+                                  color: 'header-secondary',
+                                  className: P.marginBottom8,
+                                  children: y.NW.format(y.t.aUxRra, { helpdeskArticle: E.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS) })
+                              }),
+                              (0, r.jsx)(m.q4e, {
+                                  options: o,
+                                  value: t,
+                                  onChange: (e) => l(e)
+                              })
+                          ]
+                      })
+                    : (0, r.jsx)(m.j7V, {
+                          value: t === d.E5.OFF,
+                          note: y.NW.format(y.t['+5/xu7'], { helpdeskArticle: E.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                          onChange: (e) => s(!e),
+                          children: y.NW.string(y.t.D5GXTU)
+                      }),
+                (0, r.jsx)(m.$i$, { className: a()(P.marginBottom20, P.marginTop20) })
+            ]
+        })
+    });
+}
+function Z() {
+    let e = v.cP.useSetting(),
+        t = v.Ou.useSetting();
+    return (0, r.jsx)(N.F, {
+        setting: T.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        children: (0, r.jsxs)(m.hjN, {
+            className: P.marginBottom40,
+            children: [
+                (0, r.jsx)(m.vwX, {
+                    tag: m.RB0.H5,
+                    className: P.marginBottom8,
+                    children: y.NW.string(y.t.VOszPD)
+                }),
+                (0, r.jsx)(m.j7V, {
+                    value: e,
+                    note: y.NW.string(y.t.Hdh7sb),
+                    onChange: (e) => v.cP.updateSetting(e),
+                    children: y.NW.string(y.t.WEWQQk)
+                }),
+                (0, r.jsx)(m.j7V, {
+                    value: t,
+                    note: y.NW.string(y.t.Czr3Bg),
+                    onChange: (e) => v.Ou.updateSetting(e),
+                    children: y.NW.string(y.t.UUvJVl)
                 })
             ]
         })
     });
 }
-function O() {
-    return (0, n.jsx)(o.F, {
-        setting: u.s6.ACTIVITY_PRIVACY_TOS,
-        children: (0, n.jsx)(a.FormSection, {
-            className: N.marginBottom40,
-            children: (0, n.jsx)(a.FormNotice, {
-                type: a.FormNotice.Types.PRIMARY,
-                body: T.Z.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
+function w() {
+    return (0, r.jsx)(N.F, {
+        setting: T.s6.ACTIVITY_PRIVACY_TOS,
+        children: (0, r.jsx)(m.hjN, {
+            className: P.marginBottom40,
+            children: (0, r.jsx)(m.ToO, {
+                type: m.ToO.Types.PRIMARY,
+                body: y.NW.format(y.t.xvCsx8, {
                     termsLink: I.EYA.TERMS,
                     privacyLink: I.EYA.PRIVACY
                 })
@@ -143,12 +206,102 @@ function O() {
         })
     });
 }
-function g(e) {
-    let { className: s, showHeader: t = !0 } = e;
-    return (0, n.jsxs)(a.FormSection, {
-        className: s,
-        tag: a.FormTitleTags.H1,
-        title: t ? T.Z.Messages.ACTIVITY_PRIVACY : null,
-        children: [(0, n.jsx)(C, {}), (0, n.jsx)(m, {}), (0, n.jsx)(A, {}), (0, n.jsx)(O, {})]
+let k = (e) => {
+    switch (e.type) {
+        case I.ABu.SPOTIFY:
+            return y.NW.format(y.t['5sYPnp'], { name: e.name });
+        case I.ABu.CRUNCHYROLL:
+            return y.NW.format(y.t.Ge29Z2, { name: e.name });
+        default:
+            return y.NW.format(y.t.nmMsys, { game: e.name });
+    }
+};
+function W(e) {
+    let { account: t } = e,
+        [n, s] = i.useState(t.showActivity),
+        a = (0, p.ZP)();
+    i.useEffect(() => {
+        s(t.showActivity);
+    }, [t]);
+    let l = h.Z.get(t.type);
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(m.j7V, {
+                className: A.switchRowContainer,
+                hideBorder: !0,
+                value: n,
+                onChange: function (e) {
+                    s(e), g.Z.setShowActivity(t.type, t.id, e);
+                },
+                children: (0, r.jsxs)('div', {
+                    className: A.activitySwitchRow,
+                    children: [
+                        (0, r.jsx)('img', {
+                            alt: l.name,
+                            className: A.connectionIcon,
+                            src: (0, u.wj)(a) ? l.icon.darkSVG : l.icon.lightSVG
+                        }),
+                        (0, r.jsxs)('div', {
+                            children: [
+                                (0, r.jsx)(m.Text, {
+                                    variant: 'text-md/semibold',
+                                    children: l.name
+                                }),
+                                (0, r.jsxs)(m.Text, {
+                                    variant: 'text-sm/normal',
+                                    color: 'text-muted',
+                                    children: ['"', k(l), '"']
+                                })
+                            ]
+                        })
+                    ]
+                })
+            }),
+            (0, r.jsx)('div', { className: A.divider })
+        ]
     });
+}
+function L() {
+    let e = (0, c.e7)([x.Z], () => x.Z.getAccounts()),
+        t = i.useMemo(() => e.filter((e) => h.Z.isSupported(e.type) && I.vbS.has(e.type)), [e]),
+        [n, s] = i.useState(''),
+        a = i.useMemo(() => {
+            let e = n.trim().toLowerCase();
+            return '' === e ? t : t.filter((t) => o()(e, h.Z.get(t.type).name.toLowerCase()));
+        }, [t, n]);
+    return 0 === t.length
+        ? null
+        : (0, r.jsx)(N.F, {
+              setting: T.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
+              children: (0, r.jsxs)(m.hjN, {
+                  className: P.marginBottom40,
+                  children: [
+                      (0, r.jsx)(m.vwX, {
+                          tag: m.RB0.H5,
+                          className: P.marginBottom8,
+                          children: y.NW.string(y.t['4F2KoK'])
+                      }),
+                      (0, r.jsx)(m.oil, {
+                          className: A.searchInput,
+                          value: n,
+                          onChange: s,
+                          placeholder: y.NW.string(y.t.WPrtoa)
+                      }),
+                      a.map((e) => (0, r.jsx)(W, { account: e }, e.id))
+                  ]
+              })
+          });
+}
+function B(e) {
+    let { className: t, showHeader: n = !0 } = e,
+        { showRedesign: i } = S.b.useExperiment({ location: 'activity privacy tab' }),
+        { showPerGuildActivityStatusSetting: s } = (0, f.c)('activity privacy tab');
+    return s
+        ? (0, r.jsx)(b.Z, {})
+        : (0, r.jsxs)(m.hjN, {
+              className: t,
+              tag: m.RB0.H1,
+              title: n ? y.NW.string(y.t.Cq98yM) : null,
+              children: [(0, r.jsx)(D, {}), (0, r.jsx)(Z, {}), (0, r.jsx)(w, {}), i && (0, r.jsx)(L, {})]
+          });
 }

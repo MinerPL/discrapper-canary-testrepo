@@ -1,38 +1,37 @@
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
-    l = n(817199);
-t.Z = (e) => {
-    var t, n, a, o;
-    let { title: c, shouldShowElement: d, cardVariantStyleInfo: _, description: u, titleClassName: E = '', subtitle: T = '', subtitleClassName: I } = e;
-    return (0, s.jsxs)(s.Fragment, {
+n.d(t, { Z: () => o }), n(266796);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(344253);
+let o = (e) => {
+    var t, n, i, o;
+    let { title: c, shouldShowElement: d, cardVariantStyleInfo: u, description: m, titleClassName: g = '', subtitle: p = '', subtitleClassName: h } = e;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, s.jsx)(i.Heading, {
+            (0, r.jsx)(a.X6q, {
                 variant: 'heading-xl/extrabold',
-                className: r()(l.cardHeading, E),
+                className: s()(l.cardHeading, g),
                 children: c
             }),
-            0 !== T.length &&
-                (null == d || d(null == _ ? void 0 : _.subtitle)) &&
-                (0, s.jsx)(s.Fragment, {
-                    children: (0, s.jsxs)('div', {
-                        className: I,
-                        children: [
-                            (0, s.jsx)(i.Text, {
-                                variant: null !== (a = null == _ ? void 0 : null === (t = _.subtitle) || void 0 === t ? void 0 : t.textVariant) && void 0 !== a ? a : 'text-sm/normal',
-                                children: T
-                            }),
-                            null != u &&
-                                (0, s.jsx)(i.Text, {
-                                    variant: null !== (o = null == _ ? void 0 : null === (n = _.description) || void 0 === n ? void 0 : n.textVariant) && void 0 !== o ? o : 'text-sm/normal',
-                                    children: (0, s.jsxs)(s.Fragment, {
-                                        children: [(0, s.jsx)('br', {}), u]
-                                    })
+            '' !== p &&
+                (null == d || d(null == u ? void 0 : u.subtitle)) &&
+                (0, r.jsxs)('div', {
+                    className: h,
+                    children: [
+                        (0, r.jsx)(a.Text, {
+                            variant: null != (i = null == u || null == (t = u.subtitle) ? void 0 : t.textVariant) ? i : 'text-sm/normal',
+                            children: p
+                        }),
+                        null != m &&
+                            (0, r.jsx)(a.Text, {
+                                variant: null != (o = null == u || null == (n = u.description) ? void 0 : n.textVariant) ? o : 'text-sm/normal',
+                                children: (0, r.jsxs)(r.Fragment, {
+                                    children: [(0, r.jsx)('br', {}), m]
                                 })
-                        ]
-                    })
+                            })
+                    ]
                 })
         ]
     });

@@ -1,64 +1,103 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return P;
-        }
-    });
-var i = t(735250);
-t(470079);
-var a = t(442837),
-    l = t(481060),
-    r = t(239091),
-    d = t(812206),
-    s = t(731646),
-    u = t(283595),
-    c = t(499502),
-    I = t(955809),
-    o = t(332845),
-    A = t(78874),
-    _ = t(350758),
-    T = t(149835),
-    E = t(38346),
-    N = t(683609),
-    Z = t(679879),
-    M = t(981631),
-    b = t(689938);
-function C(n) {
-    let { application: e, libraryApplication: t, analyticsContext: a, onSelect: d } = n,
-        s = {
-            ...(null != a ? a.location : null),
-            object: M.qAy.CONTEXT_MENU
-        },
-        u = (0, A.Z)(t, s),
-        C = (0, _.Z)(t),
-        P = (0, E.Z)(t),
-        O = (0, Z.Z)(t),
-        f = (0, N.Z)(t),
-        L = (0, o.Z)(t, e),
-        h = (0, T.Z)(t, e),
-        p = (0, c.Z)(t, e),
-        g = (0, I.Z)(e);
-    return (0, i.jsxs)(l.Menu, {
+n.d(t, { default: () => N });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(239091),
+    c = n(812206),
+    o = n(731646),
+    u = n(283595),
+    s = n(499502),
+    d = n(955809),
+    b = n(332845),
+    p = n(78874),
+    f = n(350758),
+    O = n(149835),
+    y = n(38346),
+    g = n(683609),
+    h = n(679879),
+    j = n(981631),
+    P = n(388032);
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function I(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function Z(e) {
+    let { application: t, libraryApplication: n, analyticsContext: i, onSelect: c } = e,
+        o = I(v({}, null != i ? i.location : null), { object: j.qAy.CONTEXT_MENU }),
+        u = (0, p.Z)(n, o),
+        Z = (0, f.Z)(n),
+        N = (0, y.Z)(n),
+        S = (0, h.Z)(n),
+        A = (0, g.Z)(n),
+        E = (0, b.Z)(n, t),
+        m = (0, O.Z)(n, t),
+        w = (0, s.Z)(n, t),
+        D = (0, d.Z)(t);
+    return (0, r.jsxs)(l.v2r, {
         navId: 'game-context',
-        onClose: r.Zy,
-        'aria-label': b.Z.Messages.APPLICATION_ACTIONS_MENU_LABEL,
-        onSelect: d,
-        children: [u, C, P, O, f, L, h, (0, i.jsx)(l.MenuGroup, { children: p }), (0, i.jsx)(l.MenuGroup, { children: g })]
+        onClose: a.Zy,
+        'aria-label': P.NW.string(P.t.tKobzc),
+        onSelect: c,
+        children: [u, Z, N, S, A, E, m, (0, r.jsx)(l.kSQ, { children: w }), (0, r.jsx)(l.kSQ, { children: D })]
     });
 }
-function P(n) {
-    let { applicationId: e, branchId: t } = n,
-        l = (0, a.e7)([d.Z], () => d.Z.getApplication(e), [e]),
-        r = (0, a.e7)([u.Z], () => (null != t ? u.Z.getLibraryApplication(e, t) : u.Z.getActiveLibraryApplication(e)), [e, t]);
-    return null == l || null == r
-        ? (0, i.jsx)(s.default, {
-              ...n,
-              id: e,
-              label: b.Z.Messages.COPY_ID_APPLICATION
-          })
-        : (0, i.jsx)(C, {
-              ...n,
-              application: l,
-              libraryApplication: r
-          });
+function N(e) {
+    let { applicationId: t, branchId: n } = e,
+        l = (0, i.e7)([c.Z], () => c.Z.getApplication(t), [t]),
+        a = (0, i.e7)([u.Z], () => (null != n ? u.Z.getLibraryApplication(t, n) : u.Z.getActiveLibraryApplication(t)), [t, n]);
+    return null == l || null == a
+        ? (0, r.jsx)(
+              o.default,
+              I(v({}, e), {
+                  id: t,
+                  label: P.NW.string(P.t['FfCL+/'])
+              })
+          )
+        : (0, r.jsx)(
+              Z,
+              I(v({}, e), {
+                  application: l,
+                  libraryApplication: a
+              })
+          );
 }

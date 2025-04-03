@@ -1,159 +1,150 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(106351),
+n.d(t, { Z: () => A }), n(47120), n(566702);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(106351),
     l = n(507274),
-    u = n(541716),
-    c = n(752305),
+    c = n(541716),
+    u = n(752305),
     d = n(893718),
-    _ = n(131704),
-    E = n(699516),
-    f = n(823379),
-    h = n(5192),
-    p = n(51144),
-    m = n(785717),
-    I = n(790286),
-    T = n(485216),
-    g = n(825801),
-    S = n(228168),
-    A = n(689938),
-    N = n(227795);
-let v = (0, _.kt)({
+    f = n(131704),
+    _ = n(823379),
+    p = n(5192),
+    h = n(51144),
+    m = n(698305),
+    g = n(510659),
+    E = n(810097),
+    b = n(652853),
+    y = n(228168),
+    v = n(420212),
+    O = n(388032),
+    I = n(42328);
+let S = (0, f.kt)({
         id: '1',
-        type: o.d.DM
+        type: s.d.DM
     }),
-    O = (e) => {
+    T = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
-            case S.n_.ACTIVITY:
-                let a = A.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({ username: n });
-                return '> -# *'.concat(a, '*\n').concat(t);
-            case S.n_.AVATAR:
-                let s = A.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({ username: n });
-                return '> -# *'.concat(s, '*\n').concat(t);
-            case S.n_.STATUS:
-                let o = A.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
-                return null != i ? '> -# *'.concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : '> -# *'.concat(o, '*\n').concat(t);
+            case y.n_.ACTIVITY:
+                let o = O.NW.formatToPlainString(O.t.WmvMCg, { username: n }),
+                    a = '\n> '.concat(i);
+                return null != i ? ''.concat(E.jd).concat(o, '*').concat(a, '\n').concat(t) : ''.concat(E.jd).concat(o, '*\n').concat(t);
+            case y.n_.AVATAR:
+                let s = O.NW.formatToPlainString(O.t.lpaBsL, { username: n });
+                return ''.concat(E.jd).concat(s, '*\n').concat(t);
+            case y.n_.STATUS:
+                let l = O.NW.formatToPlainString(O.t.lFXgFR, { username: n }),
+                    c = '\n> '.concat(i);
+                return null != i ? ''.concat(E.jd).concat(l, '*').concat(c, '\n').concat(t) : ''.concat(E.jd).concat(l, '*\n').concat(t);
             default:
-                (0, f.vE)(r);
+                (0, _.vE)(r);
         }
     },
-    R = (e) => {
+    N = (e) => {
         switch (e) {
-            case S.n_.ACTIVITY:
-                return A.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
-            case S.n_.AVATAR:
-                return A.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
-            case S.n_.STATUS:
-                return A.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
+            case y.n_.ACTIVITY:
+                return O.t.Qn081N;
+            case y.n_.AVATAR:
+                return O.t.xGNPFB;
+            case y.n_.STATUS:
+                return O.t.g9BTCA;
             default:
-                (0, f.vE)(e);
+                (0, _.vE)(e);
         }
     };
-function C(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: f, onInteraction: A, setPopoutRef: C, modalKey: y, setInteractionToastShown: D, setInteractionSent: L, setIsReplyInteraction: b, onClose: M } = e,
-        { trackUserProfileAction: P } = (0, m.KZ)(),
-        { sendReply: U } = (0, I.Q)(_),
-        [w, x] = i.useState(''),
-        [G, k] = i.useState((0, c.JM)(w)),
-        B = i.useRef(!1),
-        F = i.useRef(null);
+function A(e) {
+    let { user: t, guildId: n, channelId: o, profileType: s, sourceType: f, sourceDetails: _, setPopoutRef: E, modalKey: A, onAction: C, onClose: R, entry: P } = e,
+        { resetInteraction: w, setInteractionToast: D } = (0, g.Xo)(),
+        { primaryColor: L } = (0, b.z)(),
+        [x, M] = i.useState(''),
+        [k, j] = i.useState((0, u.JM)(x)),
+        U = i.useRef(!1),
+        G = i.useRef(null),
+        B = i.useCallback(
+            (e) => {
+                e.key === v.vn.ESCAPE && (e.stopPropagation(), w());
+            },
+            [w]
+        );
     i.useEffect(() => {
-        null == C || C(null == F ? void 0 : F.current);
-    }, [F, C]);
-    let V = async (e) => {
-            var n;
+        null == E || E(null == G ? void 0 : G.current);
+    }, [G, E]);
+    let F = async (e) => {
             if (null == e) return;
-            P({ action: U });
-            let r = O({
+            f === y.n_.AVATAR ? C({ action: 'SEND_REPLY_AVATAR' }) : f === y.n_.STATUS ? C({ action: 'SEND_REPLY_CUSTOM_STATUS' }) : C({ action: 'SEND_REPLY_ACTIVITY' });
+            let n = T({
                 input: e,
-                username: null !== (n = E.Z.getNickname(t.id)) && void 0 !== n ? n : p.ZP.getName(t),
-                sourceType: _,
-                sourceDetails: f
+                username: h.ZP.getName(t),
+                sourceType: f,
+                sourceDetails: _
             });
-            b(!0),
-                L(!1),
-                D(!0),
-                await (0, T.Z)({
+            D(null);
+            try {
+                await (0, m.Z)({
                     userId: t.id,
-                    content: r,
+                    content: n,
                     location: 'UserProfileReplyPopout',
                     openChannel: !1,
-                    whenReady: !1
-                }),
-                L(!0),
-                setTimeout(() => {
-                    D(!1);
-                }, g._);
+                    whenReady: !1,
+                    entry: P
+                });
+            } catch (e) {}
+            D(y.P.REPLY);
         },
-        H = {
-            [N.biteSize]: o === S.y0.BITE_SIZE,
-            [N.panel]: o === S.y0.PANEL
+        V = {
+            [I.biteSize]: s === y.y0.BITE_SIZE,
+            [I.panel]: s === y.y0.PANEL,
+            [I.fullSize]: s === y.y0.FULL_SIZE
         },
         Z = {
-            [N.status]: _ === S.n_.STATUS,
-            [N.avatar]: _ === S.n_.AVATAR
+            [I.status]: f === y.n_.STATUS,
+            [I.avatar]: f === y.n_.AVATAR,
+            [I.activity]: f === y.n_.ACTIVITY
         };
     return (0, r.jsx)(l.V, {
-        ref: F,
+        ref: G,
+        onKeyDown: B,
         children: (0, r.jsx)('div', {
-            className: s()(N.container, H, Z),
+            className: a()(I.container, V, Z, { [I.customProfileTheme]: null != L }),
             children: (0, r.jsx)(d.Z, {
-                parentModalKey: y,
+                parentModalKey: A,
                 emojiPickerCloseOnModalOuterClick: !0,
-                innerClassName: N.inner,
-                editorClassName: N.editor,
-                type: u.I.USER_PROFILE_REPLY,
-                placeholder: R(_).format({ username: h.ZP.getName(n, a, t) }),
-                channel: v,
-                textValue: w,
-                richValue: G,
+                className: I.input,
+                innerClassName: I.inputInner,
+                editorClassName: I.editor,
+                type: c.Ie.USER_PROFILE_REPLY,
+                placeholder: O.NW.formatToPlainString(N(f), { username: p.ZP.getName(n, o, t) }),
+                channel: S,
+                textValue: x,
+                richValue: k,
                 onChange: (e, t, n) => {
-                    if (t !== w) x(t), k(n);
+                    t !== x && (M(t), j(n));
                 },
-                focused: B.current,
+                focused: U.current,
                 onFocus: () => {
-                    B.current = !0;
-                },
-                onBlur: (e) => {
-                    var t;
-                    if (null === (t = F.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
-                        B.current = !1;
-                        return;
-                    }
-                    null !== F.current &&
-                        ((B.current = !1),
-                        null == A ||
-                            A({
-                                interactionType: null,
-                                interactionSourceType: null
-                            }),
-                        null == M || M());
+                    U.current = !0;
                 },
                 onSubmit: async (e) => {
-                    let { value: t } = e;
+                    let { value: t } = e,
+                        n = t.trim();
+                    if (0 === n.length)
+                        return {
+                            shouldClear: !1,
+                            shouldRefocus: !1
+                        };
                     try {
                         return (
-                            await V(t.trim()),
-                            null == A ||
-                                A({
-                                    interactionType: null,
-                                    interactionSourceType: null
-                                }),
-                            null == M || M(),
+                            await F(n),
+                            w(),
+                            null == R || R(),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1
                             }
                         );
-                    } catch {
+                    } catch (e) {
                         return {
                             shouldClear: !1,
                             shouldRefocus: !1

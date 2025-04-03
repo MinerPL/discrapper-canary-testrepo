@@ -1,69 +1,82 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-});
-var r = n(735250);
-n(470079);
-var i = n(620662),
+n.d(t, { Z: () => I });
+var r = n(200651);
+n(192379);
+var i = n(40851),
+    o = n(620662),
     a = n(841784),
     s = n(834353),
-    o = n(802856),
-    l = n(420660),
+    l = n(802856),
+    c = n(420660),
     u = n(374129),
-    c = n(639351),
-    d = n(103479),
-    _ = n(191764),
-    E = n(238607),
-    f = n(414402),
-    h = n(934393),
-    p = n(715547),
-    m = n(981631);
+    d = n(639351),
+    f = n(171368),
+    _ = n(103479),
+    p = n(238607),
+    h = n(414402),
+    m = n(934393),
+    g = n(715547),
+    E = n(981631),
+    b = n(477839),
+    y = n(388032),
+    v = n(622802);
+let O = (e) => {
+    let { user: t, activity: n, onAction: o } = e,
+        a = (0, i.Aq)(),
+        s = (e) => {
+            let { action: t } = e;
+            a.dispatch(E.CkL.POPOUT_CLOSE), (0, f.closeUserProfileModal)(), null == o || o({ action: t });
+        };
+    return (0, r.jsx)(_.Z, {
+        user: t,
+        activity: n,
+        onAction: s
+    });
+};
 function I(e) {
-    let { user: t, currentUser: n, activity: I, onAction: T, onClose: g } = e;
-    return (0, o.Z)(I)
-        ? (0, r.jsx)(h.Z, {
-              platformType: m.ABu.XBOX,
-              icon: () => (0, r.jsx)(c.Z, {}),
-              onAction: T
-          })
-        : (0, s.Z)(I)
-          ? (0, r.jsx)(h.Z, {
-                platformType: m.ABu.PLAYSTATION,
-                icon: () => (0, r.jsx)(u.Z, {}),
-                onAction: T
+    let { user: t, activity: n, onAction: i, onClose: f } = e;
+    return null != n && n.application_id === b.bO
+        ? ((n.buttons = [y.NW.string(v.Z['Fv/2Oz'])]),
+          (n.metadata = { button_urls: [b.U8] }),
+          (0, r.jsx)(O, {
+              user: t,
+              activity: n,
+              onAction: i
+          }))
+        : (0, l.Z)(n)
+          ? (0, r.jsx)(m.Z, {
+                platformType: E.ABu.XBOX,
+                icon: () => (0, r.jsx)(d.Z, {}),
+                onAction: i
             })
-          : (0, l.Z)(I)
-            ? (0, r.jsx)(p.Z, {
-                  activity: I,
-                  onAction: T
+          : (0, s.Z)(n)
+            ? (0, r.jsx)(m.Z, {
+                  platformType: E.ABu.PLAYSTATION,
+                  icon: () => (0, r.jsx)(u.Z, {}),
+                  onAction: i
               })
-            : (0, i.Z)(I, m.xjy.JOIN) || (0, a.Z)(I)
-              ? (0, r.jsx)(E.Z, {
-                    user: t,
-                    currentUser: n,
-                    activity: I,
-                    onAction: T,
-                    onClose: g
+            : (0, c.Z)(n)
+              ? (0, r.jsx)(g.Z, {
+                    activity: n,
+                    onAction: i
                 })
-              : (null == I ? void 0 : I.type) === m.IIU.HANG_STATUS
-                ? (0, r.jsx)(_.Z, {
+              : (0, o.Z)(n, E.xjy.JOIN) || (0, a.Z)(n)
+                ? (0, r.jsx)(p.Z, {
                       user: t,
-                      activity: I,
-                      onAction: T,
-                      onClose: g
+                      activity: n,
+                      onAction: i,
+                      onClose: f
                   })
-                : (null == I ? void 0 : I.buttons) != null && (null == I ? void 0 : I.buttons.length) >= 1
-                  ? (0, r.jsx)(d.Z, {
+                : (null == n ? void 0 : n.buttons) != null && (null == n ? void 0 : n.buttons.length) >= 1
+                  ? (0, r.jsx)(_.Z, {
                         user: t,
-                        activity: I,
-                        onAction: T
+                        activity: n,
+                        onAction: i
                     })
-                  : (0, i.Z)(I, m.xjy.INSTANCE)
-                    ? (0, r.jsx)(f.Z, {
+                  : (0, o.Z)(n, E.xjy.INSTANCE)
+                    ? (0, r.jsx)(h.Z, {
                           user: t,
-                          activity: I,
-                          onAction: T
+                          activity: n,
+                          onAction: i
                       })
                     : null;
 }

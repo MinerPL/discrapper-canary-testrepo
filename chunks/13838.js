@@ -1,347 +1,342 @@
-n(47120);
-var i = n(392711),
-    a = n.n(i),
-    s = n(243814),
-    r = n(902704),
-    l = n(812206),
-    o = n(594190),
+n.d(t, { Z: () => A }), n(47120);
+var r = n(392711),
+    i = n.n(r),
+    l = n(243814),
+    a = n(902704),
+    o = n(812206),
+    s = n(594190),
     c = n(199902),
-    d = n(592125),
-    u = n(271383),
-    _ = n(430824),
-    E = n(131951),
-    h = n(19780),
-    m = n(594174),
-    I = n(979651),
-    g = n(996106),
-    p = n(914946),
-    T = n(238679),
-    S = n(452426),
-    f = n(295424),
-    C = n(222263),
-    N = n(863141),
-    A = n(186901),
-    v = n(981631);
-let Z = (e) => (0, S.Z)(e).required().keys({ channel_id: e.string().required() });
-function L(e) {
+    u = n(592125),
+    d = n(271383),
+    p = n(430824),
+    h = n(131951),
+    f = n(19780),
+    g = n(594174),
+    m = n(979651),
+    b = n(996106),
+    _ = n(914946),
+    E = n(238679),
+    O = n(452426),
+    N = n(295424),
+    y = n(222263),
+    I = n(863141),
+    v = n(186901),
+    C = n(981631);
+let S = (e) => (0, O.Z)(e).required().keys({ channel_id: e.string().required() });
+function T(e) {
     var t;
     let {
             args: { channel_id: n },
-            socket: i
+            socket: r
         } = e,
-        a = d.Z.getChannel(n);
-    if (null == a || !(0, p.zM)(a, i.application.id, i.authorization.scopes)) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
-    if (a.isNSFW() && (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(a.id));
+        i = u.Z.getChannel(n);
+    if (null == i || !(0, _.zM)(i, r.application.id, r.authorization.scopes)) throw new b.Z({ errorCode: C.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
+    if (i.isNSFW() && (null == (t = g.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) !== !0) throw new b.Z({ errorCode: C.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(i.id));
 }
-let O = (e) => (0, S.Z)(e).keys({ channel_id: e.string().allow(null) });
-function R(e) {
+let P = (e) => (0, O.Z)(e).keys({ channel_id: e.string().allow(null) });
+function j(e) {
     let {
         args: { channel_id: t }
     } = e;
-    if (null != t && null == d.Z.getChannel(t)) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+    if (null != t && null == u.Z.getChannel(t)) throw new b.Z({ errorCode: C.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
 }
-let x = {
-    [v.zMe.GUILD_STATUS]: {
-        scope: s.x.RPC,
-        validation: (e) => (0, S.Z)(e).required().keys({ guild_id: e.string().required() }),
+let A = {
+    [C.zMe.GUILD_STATUS]: {
+        scope: l.x.RPC,
+        validation: (e) => (0, O.Z)(e).required().keys({ guild_id: e.string().required() }),
         handler(e) {
             let {
                 args: { guild_id: t }
             } = e;
-            if (null == _.Z.getGuild(t)) throw new g.Z({ errorCode: v.lTL.INVALID_GUILD }, 'Invalid guild id: '.concat(t));
+            if (null == p.Z.getGuild(t)) throw new b.Z({ errorCode: C.lTL.INVALID_GUILD }, 'Invalid guild id: '.concat(t));
             return (e) => {
                 var n;
-                let { prevState: i, dispatch: s } = e,
-                    r = _.Z.getGuild(t);
-                if (null == r) return;
-                let l = {
+                let { prevState: r, dispatch: l } = e,
+                    a = p.Z.getGuild(t);
+                if (null == a) return;
+                let o = {
                     guild: {
-                        id: r.id,
-                        name: r.name,
-                        icon_url: null !== (n = r.getIconURL(128)) && void 0 !== n ? n : null
+                        id: a.id,
+                        name: a.name,
+                        icon_url: null != (n = a.getIconURL(128)) ? n : null
                     },
                     online: 0
                 };
-                return !a().isEqual(i, l) && s(l), l;
+                return i().isEqual(r, o) || l(o), o;
             };
         }
     },
-    [v.zMe.VOICE_STATE_CREATE]: {
+    [C.zMe.VOICE_STATE_CREATE]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, s.x.RPC_VOICE_READ]
+            [v.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
-        validation: (e) => (0, S.Z)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) => (0, O.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t }
             } = e;
-            if (null == d.Z.getChannel(t)) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+            if (null == u.Z.getChannel(t)) throw new b.Z({ errorCode: C.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
             return (e) => {
-                let { prevState: n, dispatch: i } = e,
-                    s = d.Z.getChannel(t);
-                if (null == s) return;
-                let r = s.getGuildId(),
-                    l = Object.values(I.Z.getVoiceStatesForChannel(s.id));
+                let { prevState: n, dispatch: r } = e,
+                    l = u.Z.getChannel(t);
+                if (null == l) return;
+                let a = l.getGuildId(),
+                    o = Object.values(m.Z.getVoiceStatesForChannel(l.id));
                 return (
                     n &&
-                        a()
-                            .differenceBy(l, n, (e) => {
+                        i()
+                            .differenceBy(o, n, (e) => {
                                 let { userId: t } = e;
                                 return t;
                             })
-                            .forEach((e) => i((0, p.aE)(r, s.id, e))),
-                    l
+                            .forEach((e) => r((0, _.aE)(a, l.id, e))),
+                    o
                 );
             };
         }
     },
-    [v.zMe.VOICE_STATE_DELETE]: {
+    [C.zMe.VOICE_STATE_DELETE]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, s.x.RPC_VOICE_READ]
+            [v.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
-        validation: (e) => (0, S.Z)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) => (0, O.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t }
             } = e;
-            if (null == d.Z.getChannel(t)) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+            if (null == u.Z.getChannel(t)) throw new b.Z({ errorCode: C.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
             return (e) => {
-                let { prevState: n, dispatch: i } = e,
-                    s = d.Z.getChannel(t);
-                if (null == s) return;
-                let r = s.getGuildId(),
-                    l = Object.values(I.Z.getVoiceStatesForChannel(s.id));
+                let { prevState: n, dispatch: r } = e,
+                    l = u.Z.getChannel(t);
+                if (null == l) return;
+                let a = l.getGuildId(),
+                    o = Object.values(m.Z.getVoiceStatesForChannel(l.id));
                 return (
-                    a()
-                        .differenceBy(n, l, (e) => {
+                    i()
+                        .differenceBy(n, o, (e) => {
                             let { userId: t } = e;
                             return t;
                         })
-                        .forEach((e) => i((0, p.aE)(r, s.id, e))),
-                    l
+                        .forEach((e) => r((0, _.aE)(a, l.id, e))),
+                    o
                 );
             };
         }
     },
-    [v.zMe.VOICE_STATE_UPDATE]: {
+    [C.zMe.VOICE_STATE_UPDATE]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, s.x.RPC_VOICE_READ]
+            [v.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
-        validation: (e) => (0, S.Z)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) => (0, O.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t }
             } = e;
-            if (null == d.Z.getChannel(t)) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+            if (null == u.Z.getChannel(t)) throw new b.Z({ errorCode: C.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
             return (e) => {
-                let { prevState: n, dispatch: i } = e,
-                    s = d.Z.getChannel(t);
-                if (null == s) return;
-                let r = s.getGuildId(),
-                    l = Object.values(I.Z.getVoiceStatesForChannel(s.id)).map((e) => (0, p.aE)(r, s.id, e));
+                let { prevState: n, dispatch: r } = e,
+                    l = u.Z.getChannel(t);
+                if (null == l) return;
+                let a = l.getGuildId(),
+                    o = Object.values(m.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, _.aE)(a, l.id, e));
                 return (
-                    a()
-                        .differenceWith(l, n, a().isEqual)
-                        .forEach((e) => i(e)),
-                    l
+                    i()
+                        .differenceWith(o, n, i().isEqual)
+                        .forEach((e) => r(e)),
+                    o
                 );
             };
         }
     },
-    [v.zMe.VOICE_CONNECTION_STATUS]: {
+    [C.zMe.VOICE_CONNECTION_STATUS]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, s.x.RPC_VOICE_READ]
+            [v.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                i = {
-                    state: (0, p.zy)(h.Z.getState()),
-                    hostname: h.Z.getHostname(),
-                    pings: h.Z.getPings(),
-                    average_ping: h.Z.getAveragePing(),
-                    last_ping: h.Z.getLastPing()
+                r = {
+                    state: (0, _.zy)(f.Z.getState()),
+                    hostname: f.Z.getHostname(),
+                    pings: f.Z.getPings(),
+                    average_ping: f.Z.getAveragePing(),
+                    last_ping: f.Z.getLastPing()
                 };
-            return !a().isEqual(i, t) && n(i), i;
+            return i().isEqual(r, t) || n(r), r;
         }
     },
-    [v.zMe.MESSAGE_CREATE]: {
-        scope: s.x.RPC,
-        validation: Z,
-        handler: L
+    [C.zMe.MESSAGE_CREATE]: {
+        scope: l.x.RPC,
+        validation: S,
+        handler: T
     },
-    [v.zMe.MESSAGE_UPDATE]: {
-        scope: s.x.RPC,
-        validation: Z,
-        handler: L
+    [C.zMe.MESSAGE_UPDATE]: {
+        scope: l.x.RPC,
+        validation: S,
+        handler: T
     },
-    [v.zMe.MESSAGE_DELETE]: {
-        scope: s.x.RPC,
-        validation: Z,
-        handler: L
+    [C.zMe.MESSAGE_DELETE]: {
+        scope: l.x.RPC,
+        validation: S,
+        handler: T
     },
-    [v.zMe.SPEAKING_START]: {
+    [C.zMe.SPEAKING_START]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, s.x.RPC_VOICE_READ, A.lH]
+            [v.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, v.lH]
         },
-        validation: O,
-        handler: R
+        validation: P,
+        handler: j
     },
-    [v.zMe.SPEAKING_STOP]: {
+    [C.zMe.SPEAKING_STOP]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, s.x.RPC_VOICE_READ, A.lH]
+            [v.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, v.lH]
         },
-        validation: O,
-        handler: R
+        validation: P,
+        handler: j
     },
-    [v.zMe.GUILD_CREATE]: {
-        scope: s.x.RPC,
+    [C.zMe.GUILD_CREATE]: {
+        scope: l.x.RPC,
         handler() {}
     },
-    [v.zMe.CHANNEL_CREATE]: {
-        scope: s.x.RPC,
+    [C.zMe.CHANNEL_CREATE]: {
+        scope: l.x.RPC,
         handler() {}
     },
-    [v.zMe.GAME_JOIN]: {
+    [C.zMe.GAME_JOIN]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, A.lH]
-        },
-        handler() {}
-    },
-    [v.zMe.GAME_SPECTATE]: {
-        scope: {
-            [A.Gp.ANY]: [s.x.RPC, A.lH]
+            [v.Gp.ANY]: [l.x.RPC, v.lH]
         },
         handler() {}
     },
-    [v.zMe.ACTIVITY_JOIN]: {
+    [C.zMe.GAME_SPECTATE]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, A.wE, A.lH]
+            [v.Gp.ANY]: [l.x.RPC, v.lH]
         },
         handler() {}
     },
-    [v.zMe.ACTIVITY_JOIN_REQUEST]: {
+    [C.zMe.ACTIVITY_JOIN]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, A.lH]
+            [v.Gp.ANY]: [l.x.RPC, v.wE, v.lH]
         },
         handler() {}
     },
-    [v.zMe.ACTIVITY_SPECTATE]: {
+    [C.zMe.ACTIVITY_JOIN_REQUEST]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, A.wE, A.lH]
+            [v.Gp.ANY]: [l.x.RPC, v.lH]
         },
         handler() {}
     },
-    [v.zMe.ACTIVITY_INVITE]: {
+    [C.zMe.ACTIVITY_SPECTATE]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, A.lH]
+            [v.Gp.ANY]: [l.x.RPC, v.wE, v.lH]
         },
         handler() {}
     },
-    [v.zMe.ACTIVITY_PIP_MODE_UPDATE]: {
+    [C.zMe.ACTIVITY_INVITE]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, A.wE, A.lH]
+            [v.Gp.ANY]: [l.x.RPC, v.lH]
         },
         handler() {}
     },
-    [v.zMe.ACTIVITY_LAYOUT_MODE_UPDATE]: {
+    [C.zMe.ACTIVITY_PIP_MODE_UPDATE]: {
         scope: {
-            [A.Gp.ANY]: [s.x.RPC, A.wE, A.lH]
+            [v.Gp.ANY]: [l.x.RPC, v.wE, v.lH]
         },
         handler() {}
     },
-    [v.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: T.gQ,
-    [v.zMe.THERMAL_STATE_UPDATE]: {
-        scope: { [A.Gp.ANY]: [A.wE] },
-        handler() {}
-    },
-    [v.zMe.ORIENTATION_UPDATE]: {
-        scope: { [A.Gp.ANY]: [A.wE] },
-        handler() {}
-    },
-    [v.zMe.VOICE_CHANNEL_SELECT]: {
-        scope: s.x.RPC,
-        handler() {}
-    },
-    [v.zMe.NOTIFICATION_CREATE]: {
+    [C.zMe.ACTIVITY_LAYOUT_MODE_UPDATE]: {
         scope: {
-            [A.Gp.ALL]: [s.x.RPC, s.x.RPC_NOTIFICATIONS_READ]
+            [v.Gp.ANY]: [l.x.RPC, v.wE, v.lH]
         },
         handler() {}
     },
-    [v.zMe.RELATIONSHIP_UPDATE]: {
-        scope: s.x.RELATIONSHIPS_READ,
+    [C.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: E.gQ,
+    [C.zMe.THERMAL_STATE_UPDATE]: {
+        scope: { [v.Gp.ANY]: [v.wE] },
         handler() {}
     },
-    [v.zMe.CURRENT_USER_UPDATE]: {
+    [C.zMe.ORIENTATION_UPDATE]: {
+        scope: { [v.Gp.ANY]: [v.wE] },
+        handler() {}
+    },
+    [C.zMe.VOICE_CHANNEL_SELECT]: {
+        scope: l.x.RPC,
+        handler() {}
+    },
+    [C.zMe.NOTIFICATION_CREATE]: {
         scope: {
-            [A.Gp.ANY]: [A.lH, s.x.IDENTIFY]
+            [v.Gp.ALL]: [l.x.RPC, l.x.RPC_NOTIFICATIONS_READ]
+        },
+        handler() {}
+    },
+    [C.zMe.RELATIONSHIP_UPDATE]: {
+        scope: l.x.RELATIONSHIPS_READ,
+        handler() {}
+    },
+    [C.zMe.CURRENT_USER_UPDATE]: {
+        scope: {
+            [v.Gp.ANY]: [v.lH, l.x.IDENTIFY]
         },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                i = { currentUser: m.default.getCurrentUser() };
-            return null != i.currentUser && (null == t || !(0, r.Z)(i, t)) && n((0, N.Z)(i.currentUser)), i;
+                r = { currentUser: g.default.getCurrentUser() };
+            return null == r.currentUser || (null != t && (0, a.Z)(r, t)) || n((0, I.Z)(r.currentUser)), r;
         }
     },
-    [v.zMe.CURRENT_GUILD_MEMBER_UPDATE]: {
+    [C.zMe.CURRENT_GUILD_MEMBER_UPDATE]: {
         scope: {
-            [A.Gp.ALL]: [s.x.IDENTIFY, s.x.GUILDS_MEMBERS_READ]
+            [v.Gp.ALL]: [l.x.IDENTIFY, l.x.GUILDS_MEMBERS_READ]
         },
         handler(e) {
             let {
                 args: { guild_id: t }
             } = e;
             return (e) => {
-                let { prevState: n, dispatch: i } = e,
-                    a = { currentGuildMember: u.ZP.getSelfMember(t) };
-                return null != a.currentGuildMember && (null == n || !(0, r.Z)(a, n)) && i((0, C.Z)(a.currentGuildMember)), a;
+                let { prevState: n, dispatch: r } = e,
+                    i = { currentGuildMember: d.ZP.getSelfMember(t) };
+                return null == i.currentGuildMember || (null != n && (0, a.Z)(i, n)) || r((0, y.Z)(i.currentGuildMember)), i;
             };
         }
     },
-    [v.zMe.ENTITLEMENT_CREATE]: {
+    [C.zMe.ENTITLEMENT_CREATE]: {
         scope: {
-            [A.Gp.ANY]: [A.lH, A.wE]
+            [v.Gp.ANY]: [v.lH, v.wE]
         },
         handler() {}
     },
-    [v.zMe.ENTITLEMENT_DELETE]: {
+    [C.zMe.ENTITLEMENT_DELETE]: {
         scope: {
-            [A.Gp.ANY]: [A.lH, A.wE]
+            [v.Gp.ANY]: [v.lH, v.wE]
         },
         handler() {}
     },
-    [v.zMe.USER_ACHIEVEMENT_UPDATE]: {
-        scope: A.lH,
-        handler() {}
-    },
-    [v.zMe.SCREENSHARE_STATE_UPDATE]: {
+    [C.zMe.SCREENSHARE_STATE_UPDATE]: {
         scope: {
-            [A.Gp.ALL]: [A.lH, s.x.RPC_SCREENSHARE_READ]
+            [v.Gp.ALL]: [v.lH, l.x.RPC_SCREENSHARE_READ]
         },
         handler: () => (e) => {
-            var t, n;
-            let { prevState: i, dispatch: s } = e,
-                r = c.Z.getStreamerActiveStreamMetadata(),
-                d = (null == r ? void 0 : r.pid) != null ? o.ZP.getGameForPID(r.pid) : null,
-                u = (null == d ? void 0 : d.id) != null ? l.Z.getApplication(d.id) : null,
-                _ = null != u ? (0, f.Z)(u) : null,
-                E = null == r ? void 0 : r.sourceName,
+            var t;
+            let { prevState: n, dispatch: r } = e,
+                l = c.Z.getStreamerActiveStreamMetadata(),
+                a = (null == l ? void 0 : l.pid) != null ? s.ZP.getGameForPID(l.pid) : null,
+                u = (null == a ? void 0 : a.id) != null ? o.Z.getApplication(a.id) : null,
+                d = null != u ? (0, N.Z)(u) : null,
+                p = null == l ? void 0 : l.sourceName,
                 h = {
-                    active: null != r,
-                    pid: null !== (t = null == r ? void 0 : r.pid) && void 0 !== t ? t : null,
-                    application: ((n = null != _), n) ? { name: E } : null
+                    active: null != l,
+                    pid: null != (t = null == l ? void 0 : l.pid) ? t : null,
+                    application: null != d ? { name: p } : null
                 };
-            return !a().isEqual(h, i) && s(h), h;
+            return i().isEqual(h, n) || r(h), h;
         }
     },
-    [v.zMe.VIDEO_STATE_UPDATE]: {
+    [C.zMe.VIDEO_STATE_UPDATE]: {
         scope: {
-            [A.Gp.ALL]: [A.lH, s.x.RPC_VIDEO_READ]
+            [v.Gp.ALL]: [v.lH, l.x.RPC_VIDEO_READ]
         },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                i = { active: E.Z.isVideoEnabled() };
-            return !a().isEqual(i, t) && n(i), i;
+                r = { active: h.Z.isVideoEnabled() };
+            return i().isEqual(r, t) || n(r), r;
         }
     }
 };
-t.Z = x;

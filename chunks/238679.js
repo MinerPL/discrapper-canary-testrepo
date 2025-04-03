@@ -1,55 +1,78 @@
 n.d(t, {
-    HU: function () {
-        return m;
-    },
-    KW: function () {
-        return E;
-    },
-    dO: function () {
-        return _;
-    },
-    gQ: function () {
-        return h;
-    }
+    KW: () => h,
+    dO: () => p,
+    gQ: () => f
 });
-var i = n(392711),
-    a = n.n(i),
-    s = n(570140),
-    r = n(317381),
-    l = n(594174),
-    o = n(823379),
+var r = n(392711),
+    i = n.n(r),
+    l = n(317381),
+    a = n(16609),
+    o = n(594174),
+    s = n(823379),
     c = n(5192),
-    d = n(863141),
-    u = n(186901);
-function _() {
-    let e = r.ZP.getCurrentEmbeddedActivity();
+    u = n(863141),
+    d = n(186901);
+function p() {
+    let e = l.ZP.getCurrentEmbeddedActivity();
     if (null == e) return { participants: [] };
-    let { guildId: t, channelId: n } = e;
+    let t = (0, a.jS)(e.location),
+        n = (0, a.pY)(e.location);
     return {
         participants: Array.from(e.userIds, (e) => {
-            let i = l.default.getUser(e);
-            if (null == i) return;
-            let a = (0, c.y)(t, n, i);
-            return {
-                ...(0, d.Z)(i),
-                nickname: null != a ? a : void 0
-            };
-        }).filter(o.lm)
+            var r, i;
+            let l = o.default.getUser(e);
+            if (null == l) return;
+            let a = (0, c.y)(t, n, l);
+            return (
+                (r = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, (0, u.Z)(l))),
+                (i = i = { nickname: null != a ? a : void 0 }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                      }),
+                r
+            );
+        }).filter(s.lm)
     };
 }
-let E = { [u.Gp.ANY]: [u.wE] },
-    h = {
-        scope: E,
+let h = { [d.Gp.ANY]: [d.wE] },
+    f = {
+        scope: h,
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                i = _();
-            return !a().isEqual(i, t) && n(i), i;
+                r = p();
+            return i().isEqual(r, t) || n(r), r;
         }
     };
-function m(e) {
-    let t = 'EMBEDDED_ACTIVITY_UPDATE',
-        n = () => {
-            e(_());
-        };
-    return s.Z.subscribe(t, n), () => s.Z.unsubscribe(t, n);
-}

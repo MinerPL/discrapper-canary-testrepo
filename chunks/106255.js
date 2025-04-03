@@ -1,60 +1,61 @@
 n.d(t, {
-    LA: function () {
-        return h;
-    },
-    MR: function () {
-        return _;
-    },
-    Wb: function () {
-        return f;
-    },
-    YE: function () {
-        return c;
-    },
-    _k: function () {
-        return u;
-    },
-    kG: function () {
-        return d;
-    },
-    u7: function () {
-        return E;
-    }
-}),
-    n(580130);
+    C3: () => h,
+    Cl: () => p,
+    GT: () => E,
+    MR: () => _,
+    Wb: () => g,
+    Xs: () => b,
+    YE: () => u,
+    _k: () => c,
+    kG: () => f,
+    km: () => d,
+    u7: () => m
+});
 var r = n(55563),
     i = n(513785),
-    a = n(474936),
-    s = n(735825),
-    o = n(981631),
-    l = n(689938);
-function u(e) {
-    return e.type === o.qc2.PURCHASE && e.skuId === a.Si.TIER_2 && e.applicationId === a.RQ && e.isValid(null, r.Z);
-}
+    o = n(474936),
+    a = n(735825),
+    s = n(981631),
+    l = n(388032);
 function c(e) {
-    return e.type === o.qc2.PREMIUM_PURCHASE && s.uv.has(e.skuId) && e.applicationId === a.RQ && e.isValid(null, r.Z);
+    return e.type === s.qc2.PURCHASE && e.skuId === o.Si.TIER_2 && e.applicationId === o.CL && e.isValid(null, r.Z);
+}
+function u(e) {
+    return e.type === s.qc2.PREMIUM_PURCHASE && a.uv.has(e.skuId) && e.applicationId === o.CL && e.isValid(null, r.Z);
 }
 function d(e) {
-    if (null != e) return Array.from(e).find((e) => u(e));
-}
-function _(e, t) {
-    if (null != t) return Array.from(t).find((t) => t.type === o.qc2.PREMIUM_PURCHASE && e.includes(t.skuId) && t.applicationId === a.RQ && t.isValid(null, r.Z));
-}
-function E(e) {
-    return null != e.redeemable_at && null != e.next_tenure_reward_id;
+    return e.type === s.qc2.FREE_PURCHASE && e.skuId === a.qY && e.applicationId === s.XAJ && e.isValid(null, r.Z);
 }
 function f(e) {
+    if (null != e) return Array.from(e).find((e) => c(e));
+}
+function _(e, t) {
+    if (null != t) return Array.from(t).find((t) => t.type === s.qc2.PREMIUM_PURCHASE && e.includes(t.skuId) && t.applicationId === o.CL && t.isValid(null, r.Z));
+}
+function p(e, t) {
+    if (null != t) return Array.from(t).find((t) => t.type === s.qc2.FREE_PURCHASE && t.skuId === e && t.applicationId === s.XAJ && t.isValid(null, r.Z));
+}
+function h(e, t) {
+    var n;
+    return null != t && (null == (n = t.avatarDecoration) ? void 0 : n.skuId) === e;
+}
+function m(e) {
+    return null != e.redeemable_at && null != e.next_tenure_reward_id;
+}
+function g(e) {
     switch (e) {
-        case s.EB.PENDING:
-            return l.Z.Messages.REWARD;
-        case s.EB.REDEEMABLE:
-            return l.Z.Messages.REDEEM;
-        case s.EB.REDEEMED:
+        case a.EB.PENDING:
+            return l.NW.string(l.t.jyYgZ2);
+        case a.EB.REDEEMABLE:
+            return l.NW.string(l.t['+zx47e']);
+        case a.EB.REDEEMED:
         default:
             return null;
     }
 }
-function h() {
-    var e;
-    return null !== (e = i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_3_MONTHS);
+function E() {
+    return i.Z.getTenureRewardStatusForRewardId(a.Ft.FREE_AVATAR_DECO_1_MONTH);
+}
+function b(e) {
+    if (e === a.Ft.FREE_AVATAR_DECO_1_MONTH) return a.nW.AVATAR_DECO;
 }

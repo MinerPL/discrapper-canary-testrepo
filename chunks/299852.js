@@ -1,21 +1,21 @@
-n(47120);
-var s,
-    r = n(735250),
-    i = n(470079),
+n.d(t, { Z: () => v }), n(301563), n(47120);
+var r,
+    i = n(200651),
+    o = n(192379),
     a = n(593473),
     l = n(442837),
-    o = n(544891),
+    s = n(544891),
     c = n(481060),
     u = n(129293),
     d = n(388905),
-    _ = n(108427),
-    h = n(598077),
-    E = n(896797),
-    g = n(981631),
-    p = n(930441),
-    I = n(689938),
-    m = n(224499);
-function f(e, t, n) {
+    p = n(108427),
+    g = n(598077),
+    h = n(896797),
+    f = n(981631),
+    m = n(930441),
+    _ = n(388032),
+    b = n(20493);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,31 +29,32 @@ function f(e, t, n) {
     );
 }
 l.ZP.initialize();
-class N extends (s = i.PureComponent) {
+class N extends (r = o.PureComponent) {
     componentDidMount() {
         let e = (0, u.Z)(this.props.location),
             t = (0, a.parse)(this.props.location.search);
-        o.tn
+        s.tn
             .post({
-                url: g.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: f.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
                     category: t.category,
                     email_type: t.email_type
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !0
             })
             .then(
                 (e) => {
                     let {
                             body: { user: n }
                         } = e,
-                        s = new h.Z(n);
+                        r = new g.Z(n);
                     this.setState({
                         success: !0,
                         busy: !1,
-                        user: s,
+                        user: r,
                         category: t.category
                     });
                 },
@@ -63,80 +64,80 @@ class N extends (s = i.PureComponent) {
                         busy: !1
                     })
             ),
-            (0, _.e)('disable_email_notifications');
+            (0, p.e)('disable_email_notifications');
     }
     renderBusy() {
-        return (0, r.jsx)(d.ZP, { children: (0, r.jsx)(d.Hh, {}) });
+        return (0, i.jsx)(d.ZP, { children: (0, i.jsx)(d.Hh, {}) });
     }
     renderCategorySuccess(e, t) {
-        let { defaultRoute: n, transitionTo: s } = this.props,
-            i = I.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_EMAIL_BODY.format({ category: t });
-        return (0, r.jsxs)(d.ZP, {
+        let { defaultRoute: n, transitionTo: r } = this.props,
+            o = _.NW.formatToPlainString(_.t.YDAohI, { category: t });
+        return (0, i.jsxs)(d.ZP, {
             children: [
-                (0, r.jsx)(d.Dx, {
-                    className: m.marginBottom8,
-                    children: I.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
+                (0, i.jsx)(d.Dx, {
+                    className: b.marginBottom8,
+                    children: _.NW.string(_.t.f6rdLi)
                 }),
-                (0, r.jsx)(d.DK, { children: i }),
-                (0, r.jsx)(d.zx, {
-                    className: m.marginTop20,
-                    onClick: () => s(n),
-                    children: I.Z.Messages.CONTINUE_TO_WEBAPP
+                (0, i.jsx)(d.DK, { children: o }),
+                (0, i.jsx)(d.zx, {
+                    className: b.marginTop20,
+                    onClick: () => r(n),
+                    children: _.NW.string(_.t.fIv16O)
                 }),
-                (0, r.jsx)(d.zx, {
-                    className: m.marginTop8,
+                (0, i.jsx)(d.zx, {
+                    className: b.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
-                    onClick: () => s(g.Z5c.SETTINGS('notifications', p.vG)),
-                    children: I.Z.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
+                    onClick: () => r(f.Z5c.SETTINGS('notifications', m.vG)),
+                    children: _.NW.string(_.t.YYTira)
                 })
             ]
         });
     }
     renderSuccess() {
         let { defaultRoute: e, transitionTo: t } = this.props,
-            { user: n, category: s } = this.state;
-        if (null != s) {
-            let e = p.Od.find((e) => e.category === s);
-            if (null != e) return this.renderCategorySuccess(s, e.label());
+            { user: n, category: r } = this.state;
+        if (null != r) {
+            let e = m.Od.find((e) => e.category === r);
+            if (null != e) return this.renderCategorySuccess(r, e.label());
         }
-        return (0, r.jsxs)(d.ZP, {
+        return (0, i.jsxs)(d.ZP, {
             children: [
-                (0, r.jsx)(d.qE, {
+                (0, i.jsx)(d.qE, {
                     src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
-                    size: c.AvatarSizes.DEPRECATED_SIZE_100,
-                    className: m.marginBottom20
+                    size: c.EFr.DEPRECATED_SIZE_100,
+                    className: b.marginBottom20
                 }),
-                (0, r.jsx)(d.Dx, {
-                    className: m.marginBottom8,
-                    children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
+                (0, i.jsx)(d.Dx, {
+                    className: b.marginBottom8,
+                    children: _.NW.string(_.t['6U6OMT'])
                 }),
-                (0, r.jsx)(d.DK, { children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY }),
-                (0, r.jsx)(d.zx, {
-                    className: m.marginTop40,
+                (0, i.jsx)(d.DK, { children: _.NW.string(_.t['yaDJ4+']) }),
+                (0, i.jsx)(d.zx, {
+                    className: b.marginTop40,
                     onClick: () => t(e),
-                    children: I.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: _.NW.string(_.t.fIv16O)
                 })
             ]
         });
     }
     renderError() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, r.jsxs)(d.ZP, {
+        return (0, i.jsxs)(d.ZP, {
             children: [
-                (0, r.jsx)(d.Ee, {
+                (0, i.jsx)(d.Ee, {
                     src: n(105020),
-                    className: m.marginBottom20
+                    className: b.marginBottom20
                 }),
-                (0, r.jsx)(d.Dx, {
-                    className: m.marginBottom8,
-                    children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+                (0, i.jsx)(d.Dx, {
+                    className: b.marginBottom8,
+                    children: _.NW.string(_.t.ox9hIS)
                 }),
-                (0, r.jsx)(d.DK, { children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY }),
-                (0, r.jsx)(d.zx, {
-                    className: m.marginTop40,
+                (0, i.jsx)(d.DK, { children: _.NW.string(_.t['/dcuR0']) }),
+                (0, i.jsx)(d.zx, {
+                    className: b.marginTop40,
                     onClick: () => t(e),
-                    children: I.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: _.NW.string(_.t.fIv16O)
                 })
             ]
         });
@@ -147,7 +148,7 @@ class N extends (s = i.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', {
+            x(this, 'state', {
                 busy: !0,
                 success: !1,
                 user: null,
@@ -155,4 +156,5 @@ class N extends (s = i.PureComponent) {
             });
     }
 }
-f(N, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = l.ZP.connectStores([E.Z], () => ({ defaultRoute: E.Z.defaultRoute }))(N));
+x(N, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
+let v = l.ZP.connectStores([h.Z], () => ({ defaultRoute: h.Z.defaultRoute }))(N);

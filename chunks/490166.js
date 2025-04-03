@@ -1,75 +1,98 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return r;
-        }
-    });
-var s = t(735250);
-t(470079);
-var o = t(481060),
-    a = t(536442),
-    i = t(13140),
-    d = t(487029),
-    c = t(689938),
-    l = t(816376);
-function r(e) {
-    let { guildId: n, channel: r, keybind: _, transitionState: u, onClose: h } = e;
-    function D() {
-        (0, a.Kw)(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), h();
+n.d(t, { default: () => d }), n(301563);
+var o = n(200651);
+n(192379);
+var r = n(481060),
+    i = n(536442),
+    s = n(13140),
+    c = n(487029),
+    a = n(388032),
+    l = n(771031);
+function d(e) {
+    let { guildId: t, channel: d, keybind: u, transitionState: h, onClose: k } = e;
+    function b() {
+        (0, i.Kw)(i.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), k();
     }
-    function O() {
-        D(),
-            (0, o.openModalLazy)(async () => {
-                let { default: e } = await t.e('58120').then(t.bind(t, 355453));
-                return (n) => (0, s.jsx)(e, { ...n });
+    function y() {
+        b(),
+            (0, r.ZDy)(async () => {
+                let { default: e } = await n.e('5551').then(n.bind(n, 355453));
+                return (t) =>
+                    (0, o.jsx)(
+                        e,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    o = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (o = o.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    o.forEach(function (t) {
+                                        var o;
+                                        (o = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: o,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = o);
+                                    });
+                            }
+                            return e;
+                        })({}, t)
+                    );
             });
     }
-    return (0, s.jsxs)(o.ModalRoot, {
-        transitionState: u,
-        'aria-label': c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_HEADER,
+    return (0, o.jsxs)(r.Y0X, {
+        transitionState: h,
+        'aria-label': a.NW.string(a.t['yJeV5+']),
         children: [
-            (0, s.jsxs)(o.ModalContent, {
+            (0, o.jsxs)(r.hzk, {
                 className: l.content,
                 children: [
-                    (0, s.jsx)(o.Heading, {
+                    (0, o.jsx)(r.X6q, {
                         variant: 'heading-xl/extrabold',
                         className: l.header,
-                        children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_HEADER
+                        children: a.NW.string(a.t['yJeV5+'])
                     }),
-                    (0, s.jsx)(o.Text, {
+                    (0, o.jsx)(r.Text, {
                         variant: 'text-md/normal',
-                        children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_BODY.format({
-                            keybind: (0, i.BB)(_.shortcut, !0).split(' + '),
-                            keybindHook: (e, n) =>
-                                (0, s.jsx)(
+                        children: a.NW.format(a.t.fq3Sw8, {
+                            keybind: (0, s.BB)(u.shortcut, !0).split(' + '),
+                            keybindHook: (e, t) =>
+                                (0, o.jsx)(
                                     'span',
                                     {
                                         className: l.keybindHintKeys,
-                                        children: (0, s.jsx)(o.KeyCombo, {
+                                        children: (0, o.jsx)(r.M2$, {
                                             className: l.keybindShortcut,
-                                            shortcut: (0, i.BB)(_.shortcut, !1)
+                                            shortcut: (0, s.BB)(u.shortcut, !1)
                                         })
                                     },
-                                    n
+                                    t
                                 ),
-                            openSettingsHook: (e, n) =>
-                                (0, s.jsx)(
-                                    o.Anchor,
+                            openSettingsHook: (e, t) =>
+                                (0, o.jsx)(
+                                    r.eee,
                                     {
-                                        onClick: O,
+                                        onClick: y,
                                         children: e
                                     },
-                                    n
+                                    t
                                 )
                         })
                     }),
-                    (0, s.jsx)('div', {
+                    (0, o.jsx)('div', {
                         className: l.soundWheel,
-                        children: (0, s.jsx)(d.Z, {
+                        children: (0, o.jsx)(c.Z, {
                             width: 372,
                             height: 316,
-                            guildId: n,
-                            channel: r,
+                            guildId: t,
+                            channel: d,
                             interactive: !1,
                             keepOpen: !0,
                             onClose: () => {},
@@ -78,23 +101,23 @@ function r(e) {
                     })
                 ]
             }),
-            (0, s.jsxs)(o.ModalFooter, {
+            (0, o.jsxs)(r.mzw, {
                 children: [
-                    (0, s.jsx)(o.Button, {
-                        onClick: D,
-                        children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_CONFIRM
+                    (0, o.jsx)(r.zxk, {
+                        onClick: b,
+                        children: a.NW.string(a.t.ZwRzIC)
                     }),
-                    (0, s.jsx)(o.Button, {
-                        look: o.Button.Looks.LINK,
-                        color: o.Button.Colors.PRIMARY,
-                        onClick: O,
-                        children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_EDIT_KEYBIND
+                    (0, o.jsx)(r.zxk, {
+                        look: r.zxk.Looks.LINK,
+                        color: r.zxk.Colors.PRIMARY,
+                        onClick: y,
+                        children: a.NW.string(a.t['TJ0N9/'])
                     })
                 ]
             }),
-            (0, s.jsx)(o.ModalCloseButton, {
+            (0, o.jsx)(r.olH, {
                 className: l.closeButton,
-                onClick: D
+                onClick: b
             })
         ]
     });

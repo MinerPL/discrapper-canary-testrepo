@@ -1,47 +1,42 @@
-n.d(t, {
-    h: function () {
-        return h;
-    }
-}),
-    n(47120);
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(100527),
-    l = n(906732),
-    r = n(545594),
-    o = n(295474),
+n.d(t, { h: () => p }), n(47120);
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(100527),
+    o = n(906732),
+    a = n(545594),
+    s = n(295474),
     c = n(981631),
-    u = n(689938),
-    d = n(86915);
-function h(e) {
+    u = n(388032),
+    d = n(269200);
+function p(e) {
     var t, n;
-    let { guild: h } = e,
-        { analyticsLocations: m } = (0, l.ZP)(s.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [p, _] = (0, o.ww)({
-            guildId: null !== (t = null == h ? void 0 : h.id) && void 0 !== t ? t : c.lds,
-            analyticsLocations: m,
+    let { guild: p } = e,
+        { analyticsLocations: h } = (0, o.ZP)(l.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        [f, m] = (0, s.ww)({
+            guildId: null != (t = null == p ? void 0 : p.id) ? t : c.lds,
+            analyticsLocations: h,
             openWithoutBackstack: !0
         }),
-        f = _ ? u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION : u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION,
-        E = _ ? u.Z.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : u.Z.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
-    return (0, i.jsx)('div', {
-        children: (0, i.jsx)(r.i, {
-            bannerIcon: (0, i.jsx)(a.ChatXIcon, {
+        g = m ? u.NW.string(u.t['9ph2v7']) : u.NW.string(u.t.ldh9Cg),
+        b = m ? u.NW.string(u.t['/PGQf3']) : u.NW.string(u.t.WikgZ2);
+    return (0, r.jsx)('div', {
+        children: (0, r.jsx)(a.i, {
+            bannerIcon: (0, r.jsx)(i.ics, {
                 size: 'lg',
                 color: 'currentColor',
                 className: d.bannerIcon
             }),
-            bannerHeader: u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_MODAL_TITLE_MOBILE.format({ guildName: null !== (n = null == h ? void 0 : h.name) && void 0 !== n ? n : '' }),
-            bannerSubtext: f,
+            bannerHeader: u.NW.format(u.t.kcYdTk, { guildName: null != (n = null == p ? void 0 : p.name) ? n : '' }),
+            bannerSubtext: g,
             containerStyles: d.bannerContainer,
             headerStyles: d.bannerHeader,
-            children: (0, i.jsx)(a.Button, {
+            children: (0, r.jsx)(i.zxk, {
                 onClick: () => {
-                    p();
+                    f();
                 },
-                size: a.Button.Sizes.SMALL,
-                children: E
+                size: i.zxk.Sizes.SMALL,
+                children: b
             })
         })
     });

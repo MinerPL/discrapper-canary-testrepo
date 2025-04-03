@@ -1,38 +1,41 @@
 n.d(t, {
-    f: function () {
-        return o;
-    }
+    US: () => f,
+    ZP: () => j,
+    fF: () => h
 });
-var s,
-    o,
-    a = n(735250);
-n(470079);
+var r,
+    s,
+    o = n(200651);
+n(192379);
 var i = n(120356),
-    r = n.n(i),
-    l = n(780384),
-    u = n(918701),
-    c = n(302245),
-    d = n(78826),
-    E = n(46140),
-    C = n(981631),
-    m = n(272326);
-((s = o || (o = {}))[(s.SMALL = 24)] = 'SMALL'), (s[(s.MEDIUM = 32)] = 'MEDIUM');
-t.Z = function (e) {
-    let { className: t, gameTileSize: n = 24, quest: s, theme: o = C.BRd.DARK, withGameTile: i = !0 } = e,
-        p = (0, l.wj)(o) ? C.BRd.DARK : C.BRd.LIGHT,
-        x = (0, c.vI)(s, E.dr.QUESTS_BAR);
-    return (0, a.jsxs)('div', {
-        className: r()(m.partnerBranding, t),
+    a = n.n(i),
+    l = n(692547),
+    c = n(469244),
+    u = n(780384),
+    d = n(113434),
+    m = n(475595),
+    p = n(78826),
+    x = n(981631),
+    g = n(582835),
+    h = (((r = {})[(r.SMALL = 24)] = 'SMALL'), (r[(r.MEDIUM = 32)] = 'MEDIUM'), r),
+    f = (((s = {})[(s.SMALL = 2)] = 'SMALL'), (s[(s.MEDIUM = 8)] = 'MEDIUM'), s);
+let j = function (e) {
+    let { className: t, logotypeClassName: n, gameTileSize: r = 24, quest: s, separatorSpacing: i = 2, theme: h = x.BRd.DARK, withCosponsor: f = !0, withGameTile: j = !0 } = e,
+        b = (0, u.wj)(h) ? x.BRd.DARK : x.BRd.LIGHT,
+        C = (0, d.Gd)(s.id, b),
+        N = f && null != s.config.cosponsorMetadata && null != C;
+    return (0, o.jsxs)('div', {
+        className: a()(g.partnerBranding, t),
         children: [
-            i &&
-                (0, a.jsx)(d.Fl, {
+            j &&
+                (0, o.jsx)(p.Fl, {
                     id: 'QuestPartnerBranding_gameTile',
                     children: (e) =>
-                        (0, a.jsx)('img', {
+                        (0, o.jsx)('img', {
                             ref: e,
-                            className: m.partnerBrandingGameTile,
+                            className: g.partnerBrandingGameTile,
                             alt: '',
-                            src: (0, u.uo)(s, p),
+                            src: (0, m.fh)(s, m.eC.GAME_TILE, b).url,
                             style: {
                                 borderRadius: (function (e) {
                                     switch (e) {
@@ -41,22 +44,47 @@ t.Z = function (e) {
                                         case 32:
                                             return 4;
                                     }
-                                })(n),
-                                width: n,
-                                height: n
+                                })(r),
+                                width: r,
+                                height: r
                             }
                         })
                 }),
-            (0, a.jsx)(d.Fl, {
+            (0, o.jsx)(p.Fl, {
                 id: 'QuestPartnerBranding_gameLogotype',
                 children: (e) =>
-                    (0, a.jsx)('img', {
+                    (0, o.jsx)('img', {
                         ref: e,
-                        className: r()(m.partnerBrandingLogotype, { [m.rewardHighlightLogotype]: x }),
+                        className: a()(g.partnerBrandingLogotype, n, { [g.partnerBrandingLogotypeWithCosponsor]: N }),
                         alt: s.config.messages.gameTitle,
-                        src: (0, u.Gs)(s, p)
+                        src: (0, m.fh)(s, m.eC.LOGO_TYPE, b).url
                     })
-            })
+            }),
+            N &&
+                (0, o.jsxs)(o.Fragment, {
+                    children: [
+                        (0, o.jsx)('div', {
+                            className: g.cosponsorBrandSeparatorWrapper,
+                            style: { margin: '0 '.concat(i, 'px') },
+                            children: (0, o.jsx)(c.P, {
+                                className: g.cosponsorBrandSeparator,
+                                color: l.Z.colors.WHITE
+                            })
+                        }),
+                        (0, o.jsx)(p.Fl, {
+                            id: 'QuestPartnerBranding_cosponsorLogotype',
+                            children: (e) => {
+                                var t, r;
+                                return (0, o.jsx)('img', {
+                                    ref: e,
+                                    className: a()(g.partnerBrandingLogotype, g.partnerBrandingLogotypeWithCosponsor, n),
+                                    alt: null != (r = null == (t = s.config.cosponsorMetadata) ? void 0 : t.name) ? r : '',
+                                    src: C.url
+                                });
+                            }
+                        })
+                    ]
+                })
         ]
     });
 };

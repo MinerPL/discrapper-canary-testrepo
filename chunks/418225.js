@@ -1,138 +1,132 @@
-a.r(s),
-    a.d(s, {
-        default: function () {
-            return E;
-        }
-    }),
-    a(47120);
-var t = a(735250);
-a(470079);
-var r = a(481060),
-    n = a(935369),
-    i = a(53365),
-    l = a(689938),
-    o = a(270307),
-    _ = a(490962),
-    c = a(221870);
-function T(e) {
-    let { header: s, body: a } = e;
-    return (0, t.jsxs)('div', {
+s.d(t, { default: () => m }), s(47120);
+var r = s(200651);
+s(192379);
+var i = s(481060),
+    a = s(935369),
+    n = s(53365),
+    l = s(388032),
+    o = s(374762),
+    c = s(490962),
+    d = s(221870);
+function x(e) {
+    let { header: t, body: s } = e;
+    return (0, r.jsxs)('div', {
         className: o.bulletItem,
         children: [
-            (0, t.jsx)('img', {
+            (0, r.jsx)('img', {
                 alt: '',
                 className: o.bulletImage,
-                src: _
+                src: c
             }),
-            (0, t.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 children: [
-                    (0, t.jsx)(r.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
-                        children: s
+                        children: t
                     }),
-                    (0, t.jsx)(r.Spacer, { size: 4 }),
-                    (0, t.jsx)(r.Text, {
+                    (0, r.jsx)(i.LZC, { size: 4 }),
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        children: a
+                        children: s
                     })
                 ]
             })
         ]
     });
 }
-function E(e) {
-    let { guildId: s, demonetized: a, transitionState: _, onClose: E } = e,
-        [d, { loading: m, error: x }] = (0, n.Z)(a ? i.$J : i.hY),
-        C = async () => {
+function m(e) {
+    let { guildId: t, demonetized: s, transitionState: c, onClose: m } = e,
+        [h, { loading: u, error: j }] = (0, a.Z)(s ? n.$J : n.hY),
+        g = async () => {
             try {
-                let e = await d(s);
-                null != e && (null == E || E());
+                let e = await h(t);
+                null != e && (null == m || m());
             } catch (e) {}
         };
-    return (0, t.jsxs)(r.ModalRoot, {
+    return (0, r.jsxs)(i.Y0X, {
         className: o.__invalid_container,
-        size: r.ModalSize.SMALL,
-        transitionState: _,
-        'aria-label': l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_TITLE,
+        size: i.CgR.SMALL,
+        transitionState: c,
+        'aria-label': l.NW.string(l.t.TP4GSk),
         children: [
-            (0, t.jsx)(r.ModalHeader, {
+            (0, r.jsx)(i.xBx, {
                 separator: !1,
                 className: o.header,
-                children: (0, t.jsx)('div', {
+                children: (0, r.jsx)('div', {
                     className: o.imageContainer,
-                    children: (0, t.jsx)('img', {
+                    children: (0, r.jsx)('img', {
                         alt: '',
                         className: o.__invalid_image,
-                        src: c
+                        src: d
                     })
                 })
             }),
-            (0, t.jsx)(r.ModalContent, {
-                children: (0, t.jsxs)('div', {
+            (0, r.jsx)(i.hzk, {
+                children: (0, r.jsxs)('div', {
                     className: o.content,
                     children: [
-                        (0, t.jsx)(r.Heading, {
+                        (0, r.jsx)(i.X6q, {
                             variant: 'heading-xl/medium',
                             color: 'header-primary',
-                            children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_TITLE
+                            children: l.NW.string(l.t.TP4GSk)
                         }),
-                        (0, t.jsx)(r.Spacer, { size: 12 }),
-                        (0, t.jsx)(r.Text, {
+                        (0, r.jsx)(i.LZC, { size: 12 }),
+                        (0, r.jsx)(i.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
-                            children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY.format({ termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
+                            children: l.NW.format(l.t.c0IsOD, { termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
                         }),
-                        (0, t.jsx)(r.Spacer, { size: 24 }),
-                        (0, t.jsx)(T, {
-                            header: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_1_HEADER,
-                            body: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_1_BODY
+                        (0, r.jsx)(i.LZC, { size: 24 }),
+                        (0, r.jsx)(x, {
+                            header: l.NW.string(l.t.UzDaWF),
+                            body: l.NW.string(l.t.IDk8Fx)
                         }),
-                        (0, t.jsx)(r.Spacer, { size: 16 }),
-                        (0, t.jsx)(T, {
-                            header: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_2_HEADER,
-                            body: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_2_BODY
+                        (0, r.jsx)(i.LZC, { size: 16 }),
+                        (0, r.jsx)(x, {
+                            header: l.NW.string(l.t['36/RiY']),
+                            body: l.NW.string(l.t.CBzNtr)
                         })
                     ]
                 })
             }),
-            (0, t.jsx)(r.ModalFooter, {
-                children: (0, t.jsxs)('div', {
+            (0, r.jsx)(i.mzw, {
+                children: (0, r.jsxs)('div', {
                     className: o.footer,
                     children: [
-                        (0, t.jsx)(r.Button, {
+                        (0, r.jsx)(i.zxk, {
                             fullWidth: !0,
-                            onClick: C,
-                            submitting: m,
-                            children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_ACCEPT_CTA
+                            onClick: g,
+                            submitting: u,
+                            children: l.NW.string(l.t['pC/ozM'])
                         }),
-                        (0, t.jsx)(r.Spacer, { size: 4 }),
-                        (0, t.jsx)(r.Button, {
-                            color: r.Button.Colors.CUSTOM,
+                        (0, r.jsx)(i.LZC, { size: 4 }),
+                        (0, r.jsx)(i.zxk, {
+                            color: i.zxk.Colors.CUSTOM,
                             innerClassName: o.remindMeLater,
-                            look: r.Button.Looks.LINK,
+                            look: i.zxk.Looks.LINK,
                             fullWidth: !0,
-                            onClick: E,
-                            children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_REMIND_ME_LATER
+                            onClick: m,
+                            children: l.NW.string(l.t.Jj8nUF)
                         }),
-                        null == x
+                        null == j
                             ? null
-                            : (0, t.jsxs)(t.Fragment, {
+                            : (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, t.jsx)(r.Spacer, { size: 8 }),
-                                      (0, t.jsxs)(r.Text, {
+                                      (0, r.jsx)(i.LZC, { size: 8 }),
+                                      (0, r.jsxs)(i.Text, {
                                           variant: 'text-xs/normal',
                                           color: 'status-danger',
-                                          children: ['Error: ', x.message]
+                                          children: ['Error: ', j.message]
                                       })
                                   ]
                               }),
-                        (0, t.jsx)(r.Spacer, { size: 10 }),
-                        (0, t.jsx)(r.Text, {
+                        (0, r.jsx)(i.LZC, { size: 10 }),
+                        (0, r.jsx)(i.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_ACCEPT_DISCLAIMER.format({ termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
+                            children: l.NW.format(l.t['+oNl6+'], { termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
                         })
                     ]
                 })

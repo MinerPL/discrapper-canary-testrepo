@@ -1,88 +1,86 @@
-t(47120), t(411104);
-var s = t(735250),
-    n = t(470079),
-    l = t(160612),
-    r = t(780384),
-    o = t(481060),
-    i = t(410030),
-    c = t(231338),
-    u = t(689938),
-    d = t(885660),
-    E = t(744481),
-    A = t(724641),
-    N = t(811974),
-    m = t(212545),
-    _ = t(184229),
-    p = t(504309);
-a.Z = function (e) {
-    let a = (0, i.ZP)(),
-        t = n.useRef(null),
-        [h, T] = n.useState({});
+n.d(t, { Z: () => m }), n(47120), n(411104);
+var r = n(200651),
+    i = n(192379),
+    o = n(734530),
+    a = n(780384),
+    s = n(481060),
+    l = n(410030),
+    c = n(231338),
+    u = n(388032),
+    d = n(782121),
+    f = n(744481),
+    _ = n(724641),
+    p = n(184229),
+    h = n(504309);
+let m = function (e) {
+    let t = (0, l.ZP)(),
+        n = i.useRef(null),
+        [m, g] = i.useState({}),
+        E = (0, s.dQu)(s.TVs.colors.BG_BASE_SECONDARY).hex();
     switch (
-        (n.useLayoutEffect(() => {
-            let { current: e } = t;
+        (i.useLayoutEffect(() => {
+            let { current: e } = n;
             if (null == e) return;
-            let a = window.getComputedStyle(e),
-                s = window.getComputedStyle(e, '::placeholder'),
-                n = a.getPropertyValue('font-family'),
-                l = a.getPropertyValue('font-weight'),
-                r = a.getPropertyValue('color'),
-                o = a.getPropertyValue('font-size');
-            T({
+            let t = window.getComputedStyle(e),
+                r = window.getComputedStyle(e, '::placeholder'),
+                i = t.getPropertyValue('font-family'),
+                o = t.getPropertyValue('font-weight');
+            g({
                 base: {
-                    fontFamily: n,
-                    fontWeight: l,
-                    color: r,
-                    fontSize: o,
-                    backgroundColor: a.getPropertyValue('background-color'),
+                    fontFamily: i,
+                    fontWeight: o,
+                    color: t.getPropertyValue('color'),
+                    fontSize: t.getPropertyValue('font-size'),
+                    backgroundColor: E,
                     padding: '12px',
-                    '::placeholder': { color: s.getPropertyValue('color') }
+                    '::placeholder': { color: r.getPropertyValue('color') },
+                    borderRadius: s.TVs.radii.xs
                 }
             });
-        }, [t]),
+        }, [n, E]),
         e.type)
     ) {
         case c.He.PRZELEWY24: {
-            let n = (0, r.wj)(a) ? _ : p,
-                { onNameChange: i, onEmailChange: c, onP24BankChange: E, p24BankValue: A, billingAddressInfo: N } = e;
-            return (0, s.jsxs)('div', {
+            let i = (0, a.wj)(t) ? p : h,
+                { onNameChange: l, onEmailChange: c, onP24BankChange: f, p24BankValue: _, billingAddressInfo: g } = e;
+            return (0, r.jsxs)('div', {
                 className: d.body,
                 children: [
-                    (0, s.jsx)(o.FormSection, {
-                        title: u.Z.Messages.EMAIL,
-                        children: (0, s.jsx)(o.TextInput, {
-                            inputRef: t,
-                            name: u.Z.Messages.EMAIL,
-                            placeholder: u.Z.Messages.EMAIL,
+                    (0, r.jsx)(s.hjN, {
+                        title: u.NW.string(u.t['w/qqKC']),
+                        children: (0, r.jsx)(s.oil, {
+                            inputRef: n,
+                            name: u.NW.string(u.t['w/qqKC']),
+                            placeholder: u.NW.string(u.t['w/qqKC']),
                             onChange: (e) => c(e),
-                            value: N.email
+                            value: g.email
                         })
                     }),
-                    (0, s.jsx)(o.FormSection, {
+                    (0, r.jsx)(s.hjN, {
                         className: d.nonTopInputWrapper,
-                        title: u.Z.Messages.CREDIT_CARD_NAME,
-                        children: (0, s.jsx)(o.TextInput, {
-                            name: u.Z.Messages.CREDIT_CARD_NAME,
-                            placeholder: u.Z.Messages.CREDIT_CARD_NAME,
-                            onChange: (e) => i(e),
-                            value: N.name
+                        title: u.NW.string(u.t.yf7ms7),
+                        children: (0, r.jsx)(s.oil, {
+                            name: u.NW.string(u.t.yf7ms7),
+                            placeholder: u.NW.string(u.t.yf7ms7),
+                            onChange: (e) => l(e),
+                            value: g.name
                         })
                     }),
-                    (0, s.jsxs)(o.FormSection, {
+                    (0, r.jsxs)(s.hjN, {
                         className: d.nonTopInputWrapper,
-                        title: u.Z.Messages.PAYMENT_SOURCE_PRZELEWY24_BANK_LABEL,
+                        title: u.NW.string(u.t.De3b8v),
                         children: [
-                            (0, s.jsx)(l.P24BankElement, {
+                            (0, r.jsx)(o.P24BankElement, {
                                 options: {
-                                    value: A,
-                                    style: h
+                                    value: _,
+                                    style: m
                                 },
-                                onChange: (e) => E(e.value)
+                                onChange: (e) => f(e.value)
                             }),
-                            (0, s.jsx)('div', {
+                            (0, r.jsx)('div', {
                                 className: d.bankSelectionStub,
-                                children: (0, s.jsx)('img', {
-                                    src: n,
+                                children: (0, r.jsx)('img', {
+                                    src: i,
                                     alt: 'Przelewy24'
                                 })
                             })
@@ -92,76 +90,37 @@ a.Z = function (e) {
             });
         }
         case c.He.EPS: {
-            let { onAccountHolderNameChange: n, onEPSBankChange: i, epsBankValue: c, billingAddressInfo: N } = e,
-                m = (0, r.wj)(a) ? E : A;
-            return (0, s.jsxs)('div', {
+            let { onAccountHolderNameChange: i, onEPSBankChange: l, epsBankValue: c, billingAddressInfo: p } = e,
+                h = (0, a.wj)(t) ? f : _;
+            return (0, r.jsxs)('div', {
                 className: d.body,
                 children: [
-                    (0, s.jsx)(o.FormSection, {
-                        title: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
-                        children: (0, s.jsx)(o.TextInput, {
-                            inputRef: t,
-                            name: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
-                            placeholder: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
-                            onChange: (e) => n(e),
-                            value: N.name
+                    (0, r.jsx)(s.hjN, {
+                        title: u.NW.string(u.t.sN3wra),
+                        children: (0, r.jsx)(s.oil, {
+                            inputRef: n,
+                            name: u.NW.string(u.t.sN3wra),
+                            placeholder: u.NW.string(u.t.sN3wra),
+                            onChange: (e) => i(e),
+                            value: p.name
                         })
                     }),
-                    (0, s.jsxs)(o.FormSection, {
+                    (0, r.jsxs)(s.hjN, {
                         className: d.nonTopInputWrapper,
-                        title: u.Z.Messages.PAYMENT_SOURCE_EPS_BANK_LABEL,
+                        title: u.NW.string(u.t.dFyV09),
                         children: [
-                            (0, s.jsx)(l.EpsBankElement, {
+                            (0, r.jsx)(o.EpsBankElement, {
                                 options: {
                                     value: c,
-                                    style: h
+                                    style: m
                                 },
-                                onChange: (e) => i(e.value)
+                                onChange: (e) => l(e.value)
                             }),
-                            (0, s.jsx)('div', {
+                            (0, r.jsx)('div', {
                                 className: d.bankSelectionStub,
-                                children: (0, s.jsx)('img', {
-                                    src: m,
+                                children: (0, r.jsx)('img', {
+                                    src: h,
                                     alt: 'EPS'
-                                })
-                            })
-                        ]
-                    })
-                ]
-            });
-        }
-        case c.He.IDEAL: {
-            let { onAccountHolderNameChange: n, onIdealBankChange: i, idealBankValue: c, billingAddressInfo: E } = e,
-                A = (0, r.wj)(a) ? N : m;
-            return (0, s.jsxs)('div', {
-                className: d.body,
-                children: [
-                    (0, s.jsx)(o.FormSection, {
-                        title: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
-                        children: (0, s.jsx)(o.TextInput, {
-                            inputRef: t,
-                            name: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
-                            placeholder: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
-                            onChange: (e) => n(e),
-                            value: E.name
-                        })
-                    }),
-                    (0, s.jsxs)(o.FormSection, {
-                        className: d.nonTopInputWrapper,
-                        title: u.Z.Messages.PAYMENT_SOURCE_IDEAL_BANK_LABEL,
-                        children: [
-                            (0, s.jsx)(l.IdealBankElement, {
-                                options: {
-                                    value: c,
-                                    style: h
-                                },
-                                onChange: (e) => i(e.value)
-                            }),
-                            (0, s.jsx)('div', {
-                                className: d.bankSelectionStub,
-                                children: (0, s.jsx)('img', {
-                                    src: A,
-                                    alt: 'iDeal'
                                 })
                             })
                         ]

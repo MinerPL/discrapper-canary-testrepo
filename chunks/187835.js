@@ -1,33 +1,53 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var i = n(735250);
-n(470079);
-var l = n(481060),
-    r = n(603592),
-    a = n(689938);
-let s = 'DOWNLOAD_APPS';
-function o() {
-    let e = (0, l.useModalsStore)((e) => (0, l.hasModalOpenSelector)(e, s));
-    return (0, i.jsx)(r.Z, {
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(603592),
+    o = n(388032);
+let a = 'DOWNLOAD_APPS';
+function s() {
+    let e = (0, i.s9z)((e) => (0, i.DEQ)(e, a));
+    return (0, r.jsx)(l.Z, {
         id: 'app-download-button',
         onClick: () => {
-            (0, l.openModalLazy)(
+            (0, i.ZDy)(
                 async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
                     return (t) =>
-                        (0, i.jsx)(e, {
-                            source: 'Guilds',
-                            ...t
-                        });
+                        (0, r.jsx)(
+                            e,
+                            (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({ source: 'Guilds' }, t)
+                        );
                 },
-                { modalKey: s }
+                { modalKey: a }
             );
         },
         selected: e,
-        tooltip: a.Z.Messages.DOWNLOAD_APPS,
-        icon: l.DownloadIcon
+        tooltip: o.NW.string(o.t.Z7jwrK),
+        icon: i._8t
     });
 }

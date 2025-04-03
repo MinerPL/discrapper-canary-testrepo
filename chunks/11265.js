@@ -1,65 +1,102 @@
-t(47120);
-var a = t(735250),
-    r = t(470079),
-    i = t(120356),
-    s = t.n(i),
-    o = t(338545),
-    l = t(481060),
-    c = t(393238),
-    d = t(689938),
-    u = t(944455);
-n.Z = r.memo(function (e) {
-    let { renderHeader: n, children: t, isExpanded: i, isStuck: m, onExpand: _, disableAnimation: f, disableBackground: C } = e,
-        [h, x] = r.useState(!0),
-        [p, g] = r.useState(!1),
-        { ref: T, height: E = 0 } = (0, c.Z)(),
-        { ref: I, height: b = 0 } = (0, c.Z)(),
-        [N, v] = r.useState(i),
-        y = (0, l.useSpring)(
+n.d(t, { Z: () => f }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    c = n.n(o),
+    s = n(642128),
+    a = n(481060),
+    l = n(393238),
+    u = n(388032),
+    d = n(212787);
+let f = i.memo(function (e) {
+    var t, n;
+    let { renderHeader: o, children: f, isExpanded: p, isStuck: b, onExpand: j, disableAnimation: y, disableBackground: m } = e,
+        [g, O] = i.useState(!0),
+        [h, v] = i.useState(!1),
+        { ref: x, height: P = 0 } = (0, l.Z)(),
+        { ref: w, height: N = 0 } = (0, l.Z)(),
+        [C, E] = i.useState(p),
+        S = (0, a.q_F)(
             {
-                height: N ? b + E : E,
-                config: {
-                    ...o.config.stiff,
-                    clamp: !0
-                },
+                height: C ? N + P : P,
+                config:
+                    ((t = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, s.config.stiff)),
+                    (n = n = { clamp: !0 }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          }),
+                    t),
                 onStart: () => {
-                    g(!1);
+                    v(!1);
                 },
                 onRest: () => {
-                    g(!0);
+                    v(!0);
                 }
             },
-            h || f ? 'animate-never' : 'respect-motion-settings'
+            g || y ? 'animate-never' : 'respect-motion-settings'
         );
     return (
-        r.useLayoutEffect(() => {
-            g(!1), v(i);
-        }, [i]),
-        r.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
+            v(!1), E(p);
+        }, [p]),
+        i.useLayoutEffect(() => {
             let e = setTimeout(() => {
-                x(!1);
+                O(!1);
             }, 100);
             return () => clearTimeout(e);
         }, []),
-        (0, a.jsx)(l.Clickable, {
-            className: s()(u.editCard, {
-                [u.toggled]: i,
-                [u.noBackground]: C
+        (0, r.jsx)(a.P3F, {
+            className: c()(d.editCard, {
+                [d.toggled]: p,
+                [d.noBackground]: m
             }),
-            children: (0, a.jsxs)(o.animated.div, {
-                className: s()(u.contentExpandContainer, { [u.showOverflow]: i && p }),
-                style: y,
+            children: (0, r.jsxs)(s.animated.div, {
+                className: c()(d.contentExpandContainer, { [d.showOverflow]: p && h }),
+                style: S,
                 children: [
-                    (0, a.jsx)(l.Clickable, {
-                        innerRef: T,
-                        onClick: m ? void 0 : _,
-                        className: s()(u.innerHeader, { [u.toggled]: i && m }),
-                        'aria-label': d.Z.Messages.EXPAND,
-                        children: n
+                    (0, r.jsx)(a.P3F, {
+                        innerRef: x,
+                        onClick: b ? void 0 : j,
+                        className: c()(d.innerHeader, { [d.toggled]: p && b }),
+                        'aria-label': u.NW.string(u.t.dcl9MT),
+                        children: o
                     }),
-                    (0, a.jsx)('div', {
-                        ref: I,
-                        children: t
+                    (0, r.jsx)('div', {
+                        ref: w,
+                        children: f
                     })
                 ]
             })

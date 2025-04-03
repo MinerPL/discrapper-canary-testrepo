@@ -1,207 +1,234 @@
-a.r(s),
-    a.d(s, {
-        default: function () {
-            return j;
-        }
-    }),
-    a(653041);
-var r = a(735250),
-    n = a(470079),
-    i = a(149765),
-    t = a(481060),
-    l = a(422559),
-    o = a(430824),
-    d = a(768581),
-    c = a(700785),
-    m = a(764260),
-    _ = a(981631),
-    x = a(135899),
-    u = a(689938),
-    E = a(406758);
-function N(e) {
-    let { guild: s } = e,
-        a = d.ZP.getGuildIconURL({
-            id: s.id,
-            icon: s.icon,
+t.d(r, { default: () => y }), t(653041);
+var s = t(200651),
+    n = t(192379),
+    i = t(149765),
+    a = t(481060),
+    l = t(422559),
+    o = t(430824),
+    c = t(768581),
+    d = t(700785),
+    m = t(764260),
+    x = t(981631),
+    u = t(135899),
+    p = t(388032),
+    b = t(193198);
+function h(e) {
+    let { guild: r } = e,
+        t = c.ZP.getGuildIconURL({
+            id: r.id,
+            icon: r.icon,
             size: 120
         });
-    return (0, r.jsxs)(t.ModalHeader, {
-        className: E.header,
+    return (0, s.jsxs)(a.xBx, {
+        className: b.header,
         children: [
-            (0, r.jsx)('div', {
-                className: E.headerIconContainer,
+            (0, s.jsx)('div', {
+                className: b.headerIconContainer,
                 children:
-                    null != a
-                        ? (0, r.jsx)(t.Avatar, {
-                              src: a,
-                              'aria-label': s.name,
-                              size: t.AvatarSizes.SIZE_120,
-                              className: E.__invalid_guildIcon
+                    null != t
+                        ? (0, s.jsx)(a.qEK, {
+                              src: t,
+                              'aria-label': r.name,
+                              size: a.EFr.SIZE_120,
+                              className: b.__invalid_guildIcon
                           })
-                        : (0, r.jsx)('div', {
-                              className: E.acronym,
-                              children: s.acronym
+                        : (0, s.jsx)('div', {
+                              className: b.acronym,
+                              children: r.acronym
                           })
             }),
-            (0, r.jsxs)('div', {
-                className: E.headerText,
+            (0, s.jsxs)('div', {
+                className: b.headerText,
                 children: [
-                    (0, r.jsx)(t.Heading, {
+                    (0, s.jsx)(a.X6q, {
                         variant: 'heading-lg/extrabold',
                         color: 'header-primary',
-                        children: u.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_MODAL_TITLE
+                        children: p.NW.string(p.t.MatO7O)
                     }),
-                    (0, r.jsx)(t.Text, {
+                    (0, s.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-primary',
-                        children: u.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_MODAL_SUBTITLE
+                        children: p.NW.string(p.t.VyPIen)
                     })
                 ]
             })
         ]
     });
 }
-let b = (e) => {
-    if (e.toString() === _.Plq.MENTION_EVERYONE.toString()) return u.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
-    return (0, l.wt)(e);
-};
-function h(e) {
-    let { permissions: s } = e;
-    return (0, r.jsxs)('div', {
-        className: E.tableContainer,
+let j = (e) => (e.toString() === x.Plq.MENTION_EVERYONE.toString() ? p.NW.string(p.t.yCpsQ0) : (0, l.wt)(e));
+function _(e) {
+    let { permissions: r } = e;
+    return (0, s.jsxs)('div', {
+        className: b.tableContainer,
         children: [
-            (0, r.jsx)(t.Text, {
-                className: E.tableHeader,
+            (0, s.jsx)(a.Text, {
+                className: b.tableHeader,
                 variant: 'text-xs/semibold',
                 color: 'text-muted',
-                children: u.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_ENABLED_PERMISSIONS
+                children: p.NW.string(p.t['0WZKIy'])
             }),
-            (0, r.jsx)('div', {
-                className: E.permissionsTable,
-                children: s.map((e, s) =>
-                    (0, r.jsxs)(
+            (0, s.jsx)('div', {
+                className: b.permissionsTable,
+                children: r.map((e, r) =>
+                    (0, s.jsxs)(
                         'div',
                         {
-                            className: E.permissionRow,
+                            className: b.permissionRow,
                             children: [
-                                (0, r.jsx)('div', { className: E.bulletWarning }),
-                                (0, r.jsx)(t.Text, {
+                                (0, s.jsx)('div', { className: b.bulletWarning }),
+                                (0, s.jsx)(a.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-normal',
-                                    children: b(e)
+                                    children: j(e)
                                 })
                             ]
                         },
-                        s
+                        r
                     )
                 )
             })
         ]
     });
 }
-function I(e) {
-    let { permissions: s } = e;
-    return (0, r.jsxs)('div', {
-        className: E.tableContainer,
+function f(e) {
+    let { permissions: r } = e;
+    return (0, s.jsxs)('div', {
+        className: b.tableContainer,
         children: [
-            (0, r.jsx)(t.Text, {
-                className: E.tableHeader,
+            (0, s.jsx)(a.Text, {
+                className: b.tableHeader,
                 variant: 'text-xs/semibold',
                 color: 'text-muted',
-                children: u.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED_PERMISSIONS
+                children: p.NW.string(p.t.Yo5qlp)
             }),
-            (0, r.jsx)('div', {
-                className: E.permissionsTable,
-                children: s.map((e, s) =>
-                    (0, r.jsxs)(
+            (0, s.jsx)('div', {
+                className: b.permissionsTable,
+                children: r.map((e, r) =>
+                    (0, s.jsxs)(
                         'div',
                         {
-                            className: E.permissionRow,
+                            className: b.permissionRow,
                             children: [
-                                (0, r.jsx)('div', { className: E.bullet }),
-                                (0, r.jsx)(t.Text, {
+                                (0, s.jsx)('div', { className: b.bullet }),
+                                (0, s.jsx)(a.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-muted',
-                                    children: b(e)
+                                    children: j(e)
                                 })
                             ]
                         },
-                        s
+                        r
                     )
                 )
             })
         ]
     });
 }
-function S(e) {
-    let { permissions: s } = e,
-        { enabledPermissions: a, disabledPermissions: n } = s;
-    return (0, r.jsx)(t.ModalContent, {
-        children: (0, r.jsxs)('div', {
-            className: E.table,
-            children: [(0, r.jsx)(h, { permissions: a }), (0, r.jsx)(I, { permissions: n })]
+function g(e) {
+    let { permissions: r } = e,
+        { enabledPermissions: t, disabledPermissions: n } = r;
+    return (0, s.jsx)(a.hzk, {
+        children: (0, s.jsxs)('div', {
+            className: b.table,
+            children: [(0, s.jsx)(_, { permissions: t }), (0, s.jsx)(f, { permissions: n })]
         })
     });
 }
-function M(e) {
-    let { onConfirm: s, onDismiss: a } = e;
-    return (0, r.jsxs)(t.ModalFooter, {
-        className: E.footer,
+function v(e) {
+    let { onConfirm: r, onDismiss: t } = e;
+    return (0, s.jsxs)(a.mzw, {
+        className: b.footer,
         children: [
-            (0, r.jsx)(t.Button, {
-                onClick: s,
-                children: u.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_CONFIRMATION
+            (0, s.jsx)(a.zxk, {
+                onClick: r,
+                children: p.NW.string(p.t.iOSdAQ)
             }),
-            (0, r.jsx)(t.Button, {
-                look: t.Button.Looks.LINK,
-                onClick: a,
-                color: t.Button.Colors.PRIMARY,
-                children: (0, r.jsx)(t.Text, {
+            (0, s.jsx)(a.zxk, {
+                look: a.zxk.Looks.LINK,
+                onClick: t,
+                color: a.zxk.Colors.PRIMARY,
+                children: (0, s.jsx)(a.Text, {
                     variant: 'text-sm/semibold',
                     color: 'header-primary',
-                    children: u.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_DISMISS
+                    children: p.NW.string(p.t.gWQZvr)
                 })
             })
         ]
     });
 }
-function j(e) {
-    let { guild: s, transitionState: a, onClose: l } = e,
-        d = n.useMemo(() => {
+function y(e) {
+    let { guild: r, transitionState: t, onClose: l } = e,
+        c = n.useMemo(() => {
             let e = [],
-                a = [];
+                t = [];
             return (
-                x.$X.map((r) => {
-                    c.oz(r, s) ? e.push(r) : a.push(r);
+                u.$X.map((s) => {
+                    d.oz(s, r) ? e.push(s) : t.push(s);
                 }),
                 {
                     enabledPermissions: e,
-                    disabledPermissions: a
+                    disabledPermissions: t
                 }
             );
-        }, [s]);
-    if (null == s) return null;
-    let _ = async () => {
-        let e = null != s ? o.Z.getRole(s.id, s.getEveryoneRoleId()) : void 0;
-        if (null == e) return;
-        let a = i.Od(e.permissions, x.mu);
-        await (0, m.Gf)(s.id, [
-            {
-                ...e,
-                permissions: a
-            }
+        }, [r]);
+    if (null == r) return null;
+    let x = async () => {
+        var e, t;
+        let s = null != r ? o.Z.getRole(r.id, r.getEveryoneRoleId()) : void 0;
+        if (null == s) return;
+        let n = i.Od(s.permissions, u.mu);
+        await (0, m.Gf)(r.id, [
+            ((e = (function (e) {
+                for (var r = 1; r < arguments.length; r++) {
+                    var t = null != arguments[r] ? arguments[r] : {},
+                        s = Object.keys(t);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (s = s.concat(
+                            Object.getOwnPropertySymbols(t).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                            })
+                        )),
+                        s.forEach(function (r) {
+                            var s;
+                            (s = t[r]),
+                                r in e
+                                    ? Object.defineProperty(e, r, {
+                                          value: s,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[r] = s);
+                        });
+                }
+                return e;
+            })({}, s)),
+            (t = t = { permissions: n }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                : (function (e, r) {
+                      var t = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var s = Object.getOwnPropertySymbols(e);
+                          t.push.apply(t, s);
+                      }
+                      return t;
+                  })(Object(t)).forEach(function (r) {
+                      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  }),
+            e)
         ]),
             l();
     };
-    return (0, r.jsxs)(t.ModalRoot, {
-        transitionState: a,
-        size: t.ModalSize.SMALL,
-        className: E.modal,
+    return (0, s.jsxs)(a.Y0X, {
+        transitionState: t,
+        size: a.CgR.SMALL,
+        className: b.modal,
         children: [
-            (0, r.jsx)(N, { guild: s }),
-            (0, r.jsx)(S, { permissions: d }),
-            (0, r.jsx)(M, {
-                onConfirm: _,
+            (0, s.jsx)(h, { guild: r }),
+            (0, s.jsx)(g, { permissions: c }),
+            (0, s.jsx)(v, {
+                onConfirm: x,
                 onDismiss: () => {
                     l();
                 }

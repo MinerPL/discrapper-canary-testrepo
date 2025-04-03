@@ -1,41 +1,33 @@
 n.d(t, {
-    EH: function () {
-        return _;
-    },
-    Mf: function () {
-        return d;
-    },
-    lL: function () {
-        return I;
-    },
-    t4: function () {
-        return u;
-    }
+    EH: () => m,
+    Mf: () => d,
+    lL: () => g,
+    t4: () => u
 });
-var s = n(442837),
-    a = n(592125),
-    i = n(430824),
-    r = n(700785),
+var r = n(442837),
+    i = n(592125),
+    s = n(430824),
+    a = n(700785),
     l = n(889369),
     o = n(981631),
-    c = n(689938);
+    c = n(388032);
 function d(e, t) {
-    return (0, s.e7)([l.Z], () => l.Z.editedDefaultChannelIds.has(e) || (null != t && l.Z.editedDefaultChannelIds.has(t)));
+    return (0, r.e7)([l.Z], () => l.Z.editedDefaultChannelIds.has(e) || (null != t && l.Z.editedDefaultChannelIds.has(t)));
 }
 function u(e, t) {
-    return (0, s.e7)([l.Z], () => e === t || (null != t && l.Z.editedDefaultChannelIds.has(t)));
+    return (0, r.e7)([l.Z], () => e === t || (null != t && l.Z.editedDefaultChannelIds.has(t)));
 }
-function _(e, t) {
-    return (0, s.e7)([l.Z, a.Z], () => (null != t && l.Z.editedDefaultChannelIds.has(t) ? c.Z.Messages.CHANNEL_BROWSER_DISABLED_BY_CATEGORY : r.Uu(o.Plq.VIEW_CHANNEL, a.Z.getChannel(e)) ? void 0 : c.Z.Messages.DEFAULT_CHANNELS_DISABLED_PRIVATE));
+function m(e, t) {
+    return (0, r.e7)([l.Z, i.Z], () => (null != t && l.Z.editedDefaultChannelIds.has(t) ? c.NW.string(c.t.Lz94y8) : a.Uu(o.Plq.VIEW_CHANNEL, i.Z.getChannel(e)) ? void 0 : c.NW.string(c.t['031cXl'])));
 }
-function I(e, t) {
-    let n = (0, s.e7)([i.Z], () => {
+function g(e, t) {
+    let n = (0, r.e7)([s.Z], () => {
             var n;
-            return (null === (n = i.Z.getGuild(e)) || void 0 === n ? void 0 : n.rulesChannelId) === t;
+            return (null == (n = s.Z.getGuild(e)) ? void 0 : n.rulesChannelId) === t;
         }),
-        r = (0, s.e7)([a.Z], () => {
+        a = (0, r.e7)([i.Z], () => {
             var e;
-            return null === (e = a.Z.getChannel(t)) || void 0 === e ? void 0 : e.isGuildVocal();
+            return null == (e = i.Z.getChannel(t)) ? void 0 : e.isGuildVocal();
         });
-    return n ? c.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_RULES_DISCOURAGED : r ? c.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_VOICE_TOOLTIP : void 0;
+    return n ? c.NW.string(c.t['2XWEKy']) : a ? c.NW.string(c.t.t6iJLS) : void 0;
 }

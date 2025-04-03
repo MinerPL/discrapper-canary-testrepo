@@ -1,33 +1,18 @@
 n.d(t, {
-    W: function () {
-        return _;
-    },
-    v: function () {
-        return d;
-    }
+    W: () => c,
+    v: () => l
 });
-var r = n(470079),
-    i = n(442837),
-    a = n(430824),
-    s = n(496675),
-    o = n(863249),
-    l = n(944163),
-    u = n(246364),
-    c = n(981631);
-function d(e) {
-    let t = a.Z.getGuild(e);
-    return null != t && t.hasFeature(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && s.Z.can(c.Plq.KICK_MEMBERS, t);
+var r = n(442837),
+    i = n(430824),
+    o = n(496675),
+    a = n(983736),
+    s = n(981631);
+function l(e) {
+    let t = i.Z.getGuild(e);
+    return null != t && t.hasFeature(s.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && o.Z.can(s.Plq.KICK_MEMBERS, t);
 }
-function _(e) {
-    let t = (0, i.e7)([a.Z], () => a.Z.getGuild(e)),
-        n = null != t && t.hasFeature(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && s.Z.can(c.Plq.KICK_MEMBERS, t) && t.hasVerificationGate(),
-        d = (0, i.e7)([l.Z], () => l.Z.get(e), [e]);
-    r.useEffect(() => {
-        n && o.Z.fetchVerificationForm(e);
-    }, [n, e]);
-    let _ = r.useMemo(() => {
-        var e;
-        return (null !== (e = null == d ? void 0 : d.formFields) && void 0 !== e ? e : []).some((e) => !(0, u.J)(e));
-    }, [null == d ? void 0 : d.formFields]);
-    return n && _;
+function c(e) {
+    let t = (0, r.e7)([i.Z], () => i.Z.getGuild(e)),
+        n = o.Z.can(s.Plq.KICK_MEMBERS, t) || o.Z.can(s.Plq.MANAGE_GUILD, t);
+    return null != t && t.hasFeature(s.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && n && (0, a.Dc)(t);
 }

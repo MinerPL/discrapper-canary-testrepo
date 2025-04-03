@@ -1,2 +1,2 @@
-var n = r(383083);
-(e.encode = n.encode), (e.decode = n.decode);
+var r = n(383083);
+(t.encode = r.encode), (t.decode = r.decode);

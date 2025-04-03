@@ -1,13 +1,14 @@
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(689938),
-    s = n(479062);
-t.Z = function () {
-    return (0, r.jsx)(i.ChatIcon, {
+    o = n(388032),
+    a = n(948858);
+let s = function () {
+    return (0, r.jsx)(i.kBi, {
         size: 'md',
         color: 'currentColor',
-        className: s.icon,
-        'aria-label': a.Z.Messages.MESSAGE_A11Y_ROLE_DESCRIPTION
+        className: a.icon,
+        'aria-label': o.NW.string(o.t.BAB0yM)
     });
 };

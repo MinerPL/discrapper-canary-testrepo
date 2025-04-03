@@ -1,19 +1,20 @@
-var s = n(198139),
-    a = n(689938);
-t.Z = {
+n.d(t, { Z: () => s });
+var r = n(198139),
+    i = n(388032);
+let s = {
     getStatusErrorText: function (e) {
         switch (e) {
-            case s.jw.CANCELED:
-            case s.jw.DEFERRED:
-                return a.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED;
-            case s.jw.DEFERRED_INTERNAL:
-                return a.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_DEFERRED;
-            case s.jw.ERROR:
-                return a.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_ERROR;
-            case s.jw.REJECTED:
-                return a.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_REJECTED;
-            case s.jw.RISK_REVIEW:
-                return a.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_RISK_REVIEW;
+            case r.jw.CANCELED:
+            case r.jw.DEFERRED:
+                return i.NW.string(i.t['0SrNPz']);
+            case r.jw.DEFERRED_INTERNAL:
+                return i.NW.string(i.t.OtZ5k5);
+            case r.jw.ERROR:
+                return i.NW.string(i.t.ninjcX);
+            case r.jw.REJECTED:
+                return i.NW.string(i.t.TSC809);
+            case r.jw.RISK_REVIEW:
+                return i.NW.string(i.t.rppxMj);
         }
     }
 };

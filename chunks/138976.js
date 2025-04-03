@@ -1,23 +1,19 @@
-t.d(n, {
-    O: function () {
-        return r;
-    }
-});
-var i = t(904245),
-    l = t(306680),
-    o = t(944486);
-let r = {
+n.d(t, { O: () => a });
+var r = n(904245),
+    i = n(306680),
+    s = n(944486);
+let a = {
     binds: ['shift+pageup'],
     comboKeysBindGlobal: !0,
     action() {
-        let e = o.Z.getChannelId();
+        let e = s.Z.getChannelId();
         if (null != e) {
-            let n = l.ZP.ackMessageId(e);
-            null != n &&
-                l.ZP.getOldestUnreadTimestamp(e) > 0 &&
-                i.Z.jumpToMessage({
+            let t = i.ZP.ackMessageId(e);
+            null != t &&
+                i.ZP.getOldestUnreadTimestamp(e) > 0 &&
+                r.Z.jumpToMessage({
                     channelId: e,
-                    messageId: n,
+                    messageId: t,
                     offset: 1,
                     context: 'Keyboard Shortcut'
                 });

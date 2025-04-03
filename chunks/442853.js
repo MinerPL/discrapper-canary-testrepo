@@ -1,57 +1,51 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120),
-    n(653041);
-var i = n(470079),
-    a = n(149765),
-    s = n(442837),
-    l = n(902704),
-    r = n(592125),
-    o = n(720202),
+n.d(t, { Z: () => f }), n(47120), n(653041);
+var r = n(192379),
+    i = n(149765),
+    l = n(442837),
+    o = n(902704),
+    a = n(592125),
+    s = n(720202),
     c = n(271383),
     u = n(700785),
     d = n(231338);
-let h = [],
-    m = new Set();
-function p(e) {
+let p = [],
+    h = new Set();
+function f(e) {
     let { entries: t, channelId: n } = e,
-        p = (0, s.e7)([r.Z], () => r.Z.getChannel(n)),
-        _ = null == p ? void 0 : p.guild_id,
-        f = i.useRef(new Set()),
-        E = i.useMemo(() => {
+        f = (0, l.e7)([a.Z], () => a.Z.getChannel(n)),
+        m = null == f ? void 0 : f.guild_id,
+        g = r.useRef(new Set()),
+        b = r.useMemo(() => {
             let e = new Set(null == t ? void 0 : t.map((e) => e.author_id));
-            return !(0, l.E)([...f.current], [...e]) && (f.current = e), f.current;
+            return (0, o.E)([...g.current], [...e]) || (g.current = e), g.current;
         }, [t]);
-    i.useEffect(() => {
-        if (null != _)
-            Array.from(E).forEach((e) => {
-                o.Z.requestMember(_, e);
+    r.useEffect(() => {
+        null != m &&
+            Array.from(b).forEach((e) => {
+                s.Z.requestMember(m, e);
             });
-    }, [E, _]);
-    let g = (0, s.Wu)(
+    }, [b, m]);
+    let _ = (0, l.Wu)(
             [c.ZP],
             () => {
-                if (null == _) return h;
+                if (null == m) return p;
                 let e = [];
-                for (let t of E) c.ZP.isMember(_, t) && e.push(t);
+                for (let t of b) c.ZP.isMember(m, t) && e.push(t);
                 return e;
             },
-            [E, _]
+            [b, m]
         ),
-        C = i.useMemo(() => {
-            if (null == p || 0 === g.length) return m;
+        C = r.useMemo(() => {
+            if (null == f || 0 === _.length) return h;
             let e = new Set();
-            for (let t of g) {
+            for (let t of _) {
                 let n = u.uB({
                     user: t,
-                    context: p
+                    context: f
                 });
-                a.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t);
+                i.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t);
             }
             return e;
-        }, [g, p]);
-    return i.useMemo(() => (null == t ? void 0 : t.filter((e) => C.has(e.author_id))), [t, C]);
+        }, [_, f]);
+    return r.useMemo(() => (null == t ? void 0 : t.filter((e) => C.has(e.author_id))), [t, C]);
 }

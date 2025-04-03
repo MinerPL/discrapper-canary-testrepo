@@ -1,17 +1,23 @@
-n.d(t, {
-    s: function () {
-        return o;
-    }
-});
-var r,
-    i,
-    a,
-    s = n(579806);
+n.d(t, { s: () => o });
+var r = n(579806);
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 class o {
     static get() {
         if (null == o.cached) {
             var e, t;
-            let n = null === s.Z || void 0 === s.Z ? void 0 : null === (t = s.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t);
+            let n = null === r.Z || void 0 === r.Z || null == (t = r.Z.processUtils) || null == (e = t.getMainArgvSync) ? void 0 : e.call(t);
             null != n && n.length > 1 && n.shift(), (o.cached = null != n ? n : []);
         }
         return o.cached;
@@ -21,8 +27,8 @@ class o {
     }
     static isEnvVariableTrue(e) {
         var t, n;
-        if (void 0 === s.Z) return !1;
-        switch (null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.process) || void 0 === n ? void 0 : null === (t = n.env) || void 0 === t ? void 0 : t[e]) {
+        if (void 0 === r.Z) return !1;
+        switch (null === r.Z || void 0 === r.Z || null == (n = r.Z.process) || null == (t = n.env) ? void 0 : t[e]) {
             case '1':
             case 'true':
                 return !0;
@@ -39,12 +45,4 @@ class o {
         return !1;
     }
 }
-(a = void 0),
-    (i = 'cached') in (r = o)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a);
+i(o, 'cached', void 0);

@@ -1,20 +1,21 @@
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    r = n(858719),
-    i = n(455364);
-t.Z = (e) => {
+n.d(t, { Z: () => l });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(858719),
+    a = n(164526);
+let l = (e) => {
     let { header: t, displayType: n } = e,
-        l = (0, r.C7)(n);
-    return (0, s.jsxs)('div', {
-        className: i.counter,
+        l = (0, s.C7)(n);
+    return (0, r.jsxs)('div', {
+        className: a.counter,
         children: [
-            (0, s.jsx)(a.Heading, {
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-xxl/medium',
                 color: l > 0 ? 'text-brand' : 'text-muted',
-                children: (0, s.jsx)(a.HeadingLevel, { children: null != l ? l : 0 })
+                children: (0, r.jsx)(i.y5t, { children: null != l ? l : 0 })
             }),
-            (0, s.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/semibold',
                 children: t
             })

@@ -1,74 +1,66 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
-var r = n(833858),
-    i = n(657305),
-    a = n(841784),
-    s = n(420660),
-    o = n(981631),
-    l = n(689938);
-function u(e) {
+n.d(t, { Z: () => u }), n(566702), n(47120);
+var r = n(657305),
+    i = n(841784),
+    l = n(420660),
+    a = n(981631),
+    o = n(388032);
+function s(e) {
     return {
-        [o.IIU.STREAMING]: e ? l.Z.Messages.UNFORMATTED_STREAMING : l.Z.Messages.STREAMING,
-        [o.IIU.LISTENING]: e ? l.Z.Messages.UNFORMATTED_LISTENING_TO : l.Z.Messages.LISTENING_TO,
-        [o.IIU.WATCHING]: e ? l.Z.Messages.UNFORMATTED_WATCHING : l.Z.Messages.WATCHING,
-        [o.IIU.COMPETING]: e ? l.Z.Messages.UNFORMATTED_COMPETING : l.Z.Messages.COMPETING
+        [a.IIU.STREAMING]: e ? o.t['4CQq9f'] : o.t['0wJXSk'],
+        [a.IIU.LISTENING]: e ? o.t['b+lA5+'] : o.t.Vnuxub,
+        [a.IIU.WATCHING]: e ? o.t.mqdfDQ : o.t.pW3Ip6,
+        [a.IIU.COMPETING]: e ? o.t.oHF7Cg : o.t.QQ2wVF
     };
 }
 function c(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        c = arguments.length > 3 ? arguments[3] : void 0;
-    if (null != e && e.type === o.IIU.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
-    if (null != t) return null == e || e.type !== o.IIU.PLAYING ? l.Z.Messages.SHARING_SCREEN : u(n)[o.IIU.STREAMING].format({ name: e.name });
-    if (c && null != e && e.type === o.IIU.HANG_STATUS) return (0, r.O8)(e);
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    if (null != e && e.type === a.IIU.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
+    if (null != t) return null == e || e.type !== a.IIU.PLAYING ? o.NW.string(o.t.eXan7O) : o.NW.format(s(n)[a.IIU.STREAMING], { name: e.name });
     if (null == e || null == e.name) return null;
-    if ((0, s.Z)(e)) {
+    if ((0, l.Z)(e)) {
         let t = null != e.details && '' !== e.details ? e.details : e.name;
-        return u(n)[o.IIU.STREAMING].format({ name: t });
+        return o.NW.format(s(n)[a.IIU.STREAMING], { name: t });
     }
-    return (0, a.Z)(e)
-        ? (0, i.Z)(e.name)
+    return (0, i.Z)(e)
+        ? (0, r.Z)(e.name)
         : (function (e, t, n) {
-              let r = u(n);
+              let r = s(n);
               switch (e) {
-                  case o.IIU.LISTENING:
-                  case o.IIU.WATCHING:
-                  case o.IIU.COMPETING:
-                      return r[e].format({ name: t });
-                  case o.IIU.CUSTOM_STATUS:
-                  case o.IIU.HANG_STATUS:
+                  case a.IIU.LISTENING:
+                  case a.IIU.WATCHING:
+                  case a.IIU.COMPETING:
+                      return o.NW.format(r[e], { name: t });
+                  case a.IIU.CUSTOM_STATUS:
+                  case a.IIU.HANG_STATUS:
                       return null;
-                  case o.IIU.PLAYING:
+                  case a.IIU.PLAYING:
                   default:
-                      return n ? l.Z.Messages.UNFORMATTED_PLAYING_GAME.format({ game: t }) : l.Z.Messages.PLAYING_GAME.format({ game: t });
+                      return n ? o.NW.formatToPlainString(o.t.Sq9xJy, { game: t }) : o.NW.format(o.t.lFApm5, { game: t });
               }
           })(e.type, e.name, n);
 }
-function d(e, t) {
+function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;
     if (Array.isArray(e)) {
         let i = e;
-        null != t && (i = [...i, null]);
-        let a = null;
+        null == t || (r && !1 === t.discoverable) || (i = [...i, null]);
+        let l = null;
         for (let e of i) {
-            let i = c(e, t, n, r);
-            if (null != i)
+            let r = c(e, t, n);
+            if (null != r)
                 return {
                     activity: e,
-                    activityText: i
+                    activityText: r
                 };
-            (null == e ? void 0 : e.type) === o.IIU.CUSTOM_STATUS && null != e.emoji && (a = e);
+            (null == e ? void 0 : e.type) === a.IIU.CUSTOM_STATUS && null != e.emoji && (l = e);
         }
-        return (null == a ? void 0 : a.emoji) != null
+        return (null == l ? void 0 : l.emoji) != null
             ? {
-                  activity: a,
+                  activity: l,
                   activityText: null
               }
             : null;
     }
-    return c(e, t, n, r);
+    return c(e, t, n);
 }

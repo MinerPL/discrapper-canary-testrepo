@@ -1,38 +1,23 @@
 n.d(t, {
-    $J: function () {
-        return d;
-    },
-    $z: function () {
-        return s;
-    },
-    Az: function () {
-        return u;
-    },
-    Dv: function () {
-        return _;
-    },
-    WA: function () {
-        return c;
-    },
-    fw: function () {
-        return l;
-    },
-    gY: function () {
-        return o;
-    },
-    lc: function () {
-        return r;
-    }
+    $J: () => c,
+    $z: () => i,
+    Az: () => s,
+    Dv: () => u,
+    WA: () => l,
+    fw: () => a,
+    gY: () => o,
+    lc: () => d
 }),
     n(47120);
-var r,
-    i,
-    a = n(957825);
-let s = 'POLL_CREATION_MODAL_KEY',
+var r = n(957825);
+let i = 'POLL_CREATION_MODAL_KEY',
     o = 1,
-    l = 10,
-    u = 300,
-    c = 55,
-    d = 3,
-    _ = 50;
-((i = r || (r = {}))[(i.ONE_HOUR = 1)] = 'ONE_HOUR'), (i[(i.FOUR_HOURS = 4)] = 'FOUR_HOURS'), (i[(i.EIGHT_HOURS = 8)] = 'EIGHT_HOURS'), (i[(i.ONE_DAY = 24)] = 'ONE_DAY'), (i[(i.THREE_DAYS = 72)] = 'THREE_DAYS'), (i[(i.SEVEN_DAYS = 168)] = 'SEVEN_DAYS'), (i[(i.FOURTEEN_DAYS = 336)] = 'FOURTEEN_DAYS'), a.X1.GIF, a.X1.EMOJI;
+    a = 10,
+    s = 300,
+    l = 55,
+    c = 3,
+    u = 50;
+var d = (function (e) {
+    return (e[(e.ONE_HOUR = 1)] = 'ONE_HOUR'), (e[(e.FOUR_HOURS = 4)] = 'FOUR_HOURS'), (e[(e.EIGHT_HOURS = 8)] = 'EIGHT_HOURS'), (e[(e.ONE_DAY = 24)] = 'ONE_DAY'), (e[(e.THREE_DAYS = 72)] = 'THREE_DAYS'), (e[(e.SEVEN_DAYS = 168)] = 'SEVEN_DAYS'), (e[(e.FOURTEEN_DAYS = 336)] = 'FOURTEEN_DAYS'), e;
+})({});
+r.X1.GIF, r.X1.EMOJI;

@@ -1,102 +1,143 @@
-n.d(t, {
-    Z: function () {
-        return X;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(392711),
-    o = n.n(r),
+n.d(t, { Z: () => $ }), n(978209), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(392711),
+    s = n.n(a),
     c = n(91192),
     u = n(924826),
     d = n(873546),
-    h = n(442837),
-    m = n(481060),
-    p = n(239091),
-    _ = n(144144),
-    f = n(607070),
-    E = n(100527),
-    g = n(906732),
+    p = n(442837),
+    h = n(481060),
+    f = n(239091),
+    m = n(144144),
+    g = n(607070),
+    b = n(100527),
+    _ = n(906732),
     C = n(82295),
-    I = n(91218),
+    y = n(91218),
     x = n(623624),
-    T = n(518738),
-    N = n(965376),
-    v = n(159299),
-    S = n(184301),
-    Z = n(103575),
-    A = n(199902),
-    M = n(271383),
-    b = n(430824),
-    R = n(158776),
-    j = n(885110),
-    L = n(111583),
-    P = n(594174),
-    O = n(499033),
-    y = n(626135),
-    D = n(585483),
-    k = n(700785),
-    U = n(51144),
-    w = n(998502),
+    v = n(518738),
+    j = n(850020),
+    O = n(965376),
+    E = n(159299),
+    N = n(184301),
+    I = n(347475),
+    P = n(199902),
+    S = n(271383),
+    Z = n(430824),
+    T = n(158776),
+    A = n(885110),
+    w = n(111583),
+    R = n(594174),
+    M = n(499033),
+    k = n(626135),
+    L = n(585483),
+    D = n(700785),
+    W = n(51144),
+    U = n(998502),
     B = n(276264),
     H = n(981631),
-    G = n(689938),
-    V = n(312424),
-    F = n(460356);
-let W = w.ZP.getEnableHardwareAcceleration(),
-    z = 44 + B.x,
-    Y = a.memo(function (e) {
-        let { channel: t, sectionId: s, userId: l, guildOwnerId: r } = e,
-            o = (0, h.e7)([L.Z], () => L.Z.isTyping(t.id, l)),
-            u = (0, h.e7)([M.ZP], () => M.ZP.getMember(t.guild_id, l)),
-            f = (0, h.e7)(
-                [b.Z],
+    F = n(388032),
+    G = n(688826),
+    V = n(11847);
+function z(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function Y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let q = U.ZP.getEnableHardwareAcceleration(),
+    K = 44 + B.x,
+    X = i.memo(function (e) {
+        let { channel: t, sectionId: l, userId: o, guildOwnerId: a } = e,
+            s = (0, p.e7)([w.Z], () => w.Z.isTyping(t.id, o)),
+            u = (0, p.e7)([S.ZP], () => S.ZP.getMember(t.guild_id, o)),
+            g = (0, p.e7)(
+                [Z.Z],
                 () => {
                     var e;
-                    return (null == u ? void 0 : u.colorRoleId) != null ? (null === (e = b.Z.getRole(t.guild_id, u.colorRoleId)) || void 0 === e ? void 0 : e.name) : void 0;
+                    return (null == u ? void 0 : u.colorRoleId) != null ? (null == (e = Z.Z.getRole(t.guild_id, u.colorRoleId)) ? void 0 : e.name) : void 0;
                 },
                 [t.guild_id, u]
             ),
-            E = (0, h.e7)([P.default], () => P.default.getUser(l)),
-            g = (0, h.e7)([P.default], () => P.default.getCurrentUser()),
-            C = (null == E ? void 0 : E.id) === (null == g ? void 0 : g.id),
-            I = (0, h.e7)([R.Z, j.Z], () => (C ? j.Z.getStatus() : R.Z.getStatus(l, t.guild_id))),
-            T = (0, h.e7)([R.Z], () => R.Z.isMobileOnline(l)),
-            N = (0, h.e7)([R.Z, j.Z], () => (C ? j.Z.getActivities() : R.Z.getActivities(l, t.guild_id))),
-            O = (0, h.e7)([A.Z], () => A.Z.getAnyStreamForUser(l)),
-            y = (0, c.JA)(l),
-            k = (0, h.e7)([v.Z], () => v.Z.canUserViewChannel(t.id, s, l)),
-            w = (null == E ? void 0 : E.id) != null && E.id === r,
-            V = a.useCallback(
+            b = (0, p.e7)([R.default], () => R.default.getUser(o)),
+            _ = (0, p.e7)([R.default], () => R.default.getCurrentUser()),
+            C = (null == b ? void 0 : b.id) === (null == _ ? void 0 : _.id),
+            y = (0, p.e7)([T.Z, A.Z], () => (C ? A.Z.getStatus() : T.Z.getStatus(o, t.guild_id))),
+            v = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(o)),
+            O = (0, p.e7)([T.Z, A.Z], () => (C ? A.Z.getActivities() : T.Z.getActivities(o, t.guild_id))),
+            M = (0, p.e7)([P.Z], () => P.Z.getAnyStreamForUser(o)),
+            k = (0, c.JA)(o),
+            D = (0, p.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, o)),
+            U = (null == b ? void 0 : b.id) != null && b.id === a,
+            G = i.useCallback(
                 (e) => {
-                    null != E &&
-                        (0, p.jW)(e, async () => {
+                    null != b &&
+                        (0, f.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
                             return (n) =>
-                                (0, i.jsx)(e, {
-                                    ...n,
-                                    user: E,
-                                    guildId: t.guild_id,
-                                    channel: t
-                                });
+                                (0, r.jsx)(
+                                    e,
+                                    Y(z({}, n), {
+                                        user: b,
+                                        guildId: t.guild_id,
+                                        channel: t
+                                    })
+                                );
                         });
                 },
-                [E, t]
+                [b, t]
             ),
-            F = a.useCallback(() => {
-                if (null == E) return;
-                let e = '@'.concat(U.ZP.getUserTag(E, { decoration: 'never' })),
-                    n = '<@'.concat(E.id, '>');
-                D.S.dispatchToLastSubscribed(H.CkL.INSERT_TEXT, {
+            V = i.useCallback(() => {
+                if (null == b) return;
+                let e = '@'.concat(W.ZP.getUserTag(b, { decoration: 'never' })),
+                    n = '<@'.concat(b.id, '>');
+                L.S.dispatchToLastSubscribed(H.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n
                 }),
-                    _.Z.startTyping(t.id);
-            }, [E, t]),
-            z = a.useCallback(
+                    m.Z.startTyping(t.id);
+            }, [b, t]),
+            K = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
                         (0, x.f)({
@@ -108,164 +149,165 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                         });
                 },
                 [t.guild_id]
-            );
-        if (null == E) return null;
-        let Y = null == u ? void 0 : u.premiumSince;
-        return (0, i.jsx)(m.Popout, {
+            ),
+            X = (0, j.K)({
+                location: 'ThreadMembers',
+                user: b
+            });
+        if (null == b) return null;
+        let Q = null == u ? void 0 : u.premiumSince;
+        return (0, r.jsx)(h.yRy, {
             preload: () =>
-                (0, S.Z)(E, {
+                (0, N.Z)(b, {
                     guildId: t.guild_id,
                     channelId: t.id
                 }),
             renderPopout: (e) =>
-                (0, i.jsx)(Z.Z, {
-                    ...e,
-                    location: 'ThreadMembers',
-                    userId: E.id,
-                    guildId: t.guild_id,
-                    channelId: t.id,
-                    analyticsParams: {
-                        location: {
-                            page: H.ZY5.GUILD_CHANNEL,
-                            section: H.jXE.THREAD_MEMBER_LIST
-                        }
-                    }
-                }),
+                (0, r.jsx)(
+                    I.Z,
+                    Y(z({}, e), {
+                        userId: b.id,
+                        guildId: t.guild_id,
+                        channelId: t.id
+                    })
+                ),
             position: d.tq ? 'window_center' : 'left',
             spacing: 16,
-            onShiftClick: F,
+            onShiftClick: V,
+            clickTrap: !0,
             children: (e, n) => {
-                let { isShown: a } = n;
-                return (0, i.jsx)(B.Z, {
-                    onContextMenu: V,
-                    shouldAnimateStatus: W,
-                    user: E,
-                    currentUser: g,
-                    nick: null == u ? void 0 : u.nick,
-                    status: I,
-                    activities: N,
-                    colorString: null == u ? void 0 : u.colorString,
-                    colorRoleName: f,
-                    isTyping: o,
-                    channel: t,
-                    guildId: t.guild_id,
-                    isMobile: T,
-                    selected: a,
-                    applicationStream: O,
-                    premiumSince: null == Y ? null : new Date(Y),
-                    onClickPremiumGuildIcon: z,
-                    itemProps: y,
-                    lostPermissionTooltipText: k ? void 0 : G.Z.Messages.THREAD_MEMBER_WITHOUT_ACCESS,
-                    isOwner: w,
-                    ...e
-                });
+                let { isShown: i } = n;
+                return (0, r.jsx)(
+                    B.Z,
+                    z(
+                        {
+                            onContextMenu: G,
+                            shouldAnimateStatus: q,
+                            user: b,
+                            currentUser: _,
+                            nick: null == u ? void 0 : u.nick,
+                            status: y,
+                            activities: O,
+                            colorString: null == u ? void 0 : u.colorString,
+                            colorRoleName: g,
+                            isTyping: s,
+                            channel: t,
+                            guildId: t.guild_id,
+                            isMobile: v,
+                            selected: i,
+                            applicationStream: M,
+                            premiumSince: null == Q ? null : new Date(Q),
+                            onClickPremiumGuildIcon: K,
+                            itemProps: k,
+                            lostPermissionTooltipText: D ? void 0 : F.NW.string(F.t['/QcoT0']),
+                            isOwner: U,
+                            nameplate: X
+                        },
+                        e
+                    )
+                );
             }
         });
     }),
-    K = a.memo(function (e) {
-        let { id: t, label: n, count: a, guildId: s } = e,
-            l = (0, T.p9)({
+    Q = i.memo(function (e) {
+        let { id: t, label: n, count: i, guildId: l } = e,
+            o = (0, v.p9)({
                 roleId: t,
-                guildId: s,
+                guildId: l,
                 size: 16
             });
         return t === H.Skl.UNKNOWN
-            ? (0, i.jsx)('div', {
-                  className: F.membersGroup,
-                  children: (0, i.jsx)('div', { className: F.memberGroupsPlaceholder })
+            ? (0, r.jsx)('div', {
+                  className: V.membersGroup,
+                  children: (0, r.jsx)('div', { className: V.memberGroupsPlaceholder })
               })
-            : (0, i.jsxs)(C.Z, {
-                  className: F.membersGroup,
-                  'aria-label': G.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+            : (0, r.jsxs)(C.Z, {
+                  className: V.membersGroup,
+                  'aria-label': F.NW.formatToPlainString(F.t.UaqbkZ, {
                       title: n,
-                      count: a
+                      count: i
                   }),
                   children: [
-                      null != l
-                          ? (0, i.jsx)(I.Z, {
-                                className: F.roleIcon,
-                                ...l
-                            })
-                          : null,
-                      (0, i.jsxs)('span', {
+                      null != o ? (0, r.jsx)(y.Z, z({ className: V.roleIcon }, o)) : null,
+                      (0, r.jsxs)('span', {
                           'aria-hidden': !0,
-                          children: [n, ' \u2014 ', a]
+                          children: [n, ' \u2014 ', i]
                       })
                   ]
               });
     }),
-    q = a.memo(function (e) {
+    J = i.memo(function (e) {
         let { channel: t } = e;
         return t.type === H.d4z.PRIVATE_THREAD
-            ? (0, i.jsxs)(i.Fragment, {
+            ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, i.jsx)('div', { className: V.divider }),
-                      (0, i.jsxs)(m.Text, {
+                      (0, r.jsx)('div', { className: G.divider }),
+                      (0, r.jsxs)(h.Text, {
                           variant: 'text-xs/bold',
                           color: 'header-secondary',
-                          className: V.private,
+                          className: G.private,
                           children: [
-                              (0, i.jsx)(m.LockIcon, {
+                              (0, r.jsx)(h.mBM, {
                                   size: 'xxs',
                                   color: 'currentColor'
                               }),
                               '\xA0',
-                              G.Z.Messages.THREAD_BROWSER_PRIVATE
+                              F.NW.string(F.t.BTLTAg)
                           ]
                       }),
-                      (0, i.jsx)(m.Text, {
+                      (0, r.jsx)(h.Text, {
                           variant: 'text-sm/normal',
                           color: 'header-secondary',
-                          className: V.instructions,
-                          children: G.Z.Messages.MEMBER_LIST_PRIVATE_THREAD_INSTRUCTIONS
+                          className: G.instructions,
+                          children: F.NW.string(F.t.Hsd8hI)
                       })
                   ]
               })
             : null;
     });
-function X(e) {
+function $(e) {
     let { channel: t, guild: n } = e,
-        s = 'members-'.concat(t.id),
-        { analyticsLocations: r } = (0, g.ZP)(E.Z.MEMBER_LIST),
-        d = (0, N.D)(t.id, n),
-        p = d.filter((e) => e.userIds.length > 0).reverse()[0],
-        { navigator: _, listRef: C } = (function (e, t) {
-            let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
-                i = a.useRef(null),
-                s = a.useCallback(
+        l = 'members-'.concat(t.id),
+        { analyticsLocations: a } = (0, _.ZP)(b.Z.MEMBER_LIST),
+        d = (0, O.D)(t.id, n),
+        f = d.filter((e) => e.userIds.length > 0).reverse()[0],
+        { navigator: m, listRef: C } = (function (e, t) {
+            let n = (0, p.e7)([g.Z], () => g.Z.keyboardModeEnabled),
+                r = i.useRef(null),
+                l = i.useCallback(
                     (e, n) => {
-                        let a = i.current;
-                        if (null == a) return;
-                        let s = parseInt(n, 10),
-                            [l, r] = a.getSectionRowFromIndex(s),
-                            o = 0 === l && 0 === r ? t : 0;
-                        a.scrollToIndex({
-                            section: l,
-                            row: r,
-                            padding: o,
+                        let i = r.current;
+                        if (null == i) return;
+                        let l = parseInt(n, 10),
+                            [o, a] = i.getSectionRowFromIndex(l),
+                            s = 0 === o && 0 === a ? t : 0;
+                        i.scrollToIndex({
+                            section: o,
+                            row: a,
+                            padding: s,
                             callback: () => {
                                 requestAnimationFrame(() => {
                                     var t;
-                                    return null === (t = document.querySelector(e)) || void 0 === t ? void 0 : t.focus({ preventScroll: !0 });
+                                    return null == (t = document.querySelector(e)) ? void 0 : t.focus({ preventScroll: !0 });
                                 });
                             }
                         });
                     },
                     [t]
                 ),
-                l = a.useCallback(
+                o = i.useCallback(
                     () =>
                         new Promise((e) => {
-                            let t = i.current;
+                            let t = r.current;
                             if (null == t) return e();
                             t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                         }),
                     []
                 ),
-                r = a.useCallback(
+                a = i.useCallback(
                     () =>
                         new Promise((e) => {
-                            let t = i.current;
+                            let t = r.current;
                             if (null == t) return e();
                             t.scrollToBottom({
                                 callback() {
@@ -278,121 +320,123 @@ function X(e) {
             return {
                 navigator: (0, u.ZP)({
                     id: e,
-                    setFocus: s,
+                    setFocus: l,
                     isEnabled: n,
-                    scrollToStart: l,
-                    scrollToEnd: r
+                    scrollToStart: o,
+                    scrollToEnd: a
                 }),
-                listRef: i
+                listRef: r
             };
-        })(s, z),
-        I = 0 === d.length || d.every((e) => 0 === e.userIds.length);
+        })(l, K),
+        y = 0 === d.length || d.every((e) => 0 === e.userIds.length);
     if (
-        (a.useEffect(() => {
-            y.default.track(H.rMx.MEMBER_LIST_VIEWED, {
+        (i.useEffect(() => {
+            k.default.track(H.rMx.MEMBER_LIST_VIEWED, {
                 channel_id: t.id,
                 channel_type: t.type,
                 guild_id: t.guild_id
             });
         }, [t.guild_id, t.id, t.type]),
-        I)
+        y)
     )
-        return (0, i.jsx)(Q, { channel: t });
-    let x = o().omit(_.containerProps, ['ref']),
-        T = k.iJ(n);
-    return (0, i.jsx)(g.Gt, {
-        value: r,
-        children: (0, i.jsx)(c.bG, {
-            navigator: _,
-            children: (0, i.jsx)(m.FocusJumpSection, {
+        return (0, r.jsx)(ee, { channel: t });
+    let x = s().omit(m.containerProps, ['ref']),
+        v = D.iJ(n);
+    return (0, r.jsx)(_.Gt, {
+        value: a,
+        children: (0, r.jsx)(c.bG, {
+            navigator: m,
+            children: (0, r.jsx)(h.Wdt, {
                 children: (e) =>
-                    (0, i.jsx)('div', {
-                        className: l()(F.membersWrap, F.hiddenMembers),
-                        children: (0, i.jsx)(
-                            m.List,
-                            {
-                                ref: C,
-                                className: F.members,
-                                paddingTop: 0,
-                                sectionHeight: 40,
-                                renderSection: (e) => {
-                                    let { section: t } = e,
-                                        a = d[t];
-                                    return (0, i.jsx)(
-                                        K,
-                                        {
-                                            id: a.id,
-                                            label: a.label,
-                                            count: a.userIds.length,
-                                            guildId: n.id
-                                        },
-                                        a.id
-                                    );
+                    (0, r.jsx)('div', {
+                        className: o()(V.membersWrap, V.hiddenMembers, G.container),
+                        children: (0, r.jsx)(
+                            h.aVo,
+                            z(
+                                {
+                                    ref: C,
+                                    className: V.members,
+                                    paddingTop: 0,
+                                    sectionHeight: 40,
+                                    renderSection: (e) => {
+                                        let { section: t } = e,
+                                            i = d[t];
+                                        return (0, r.jsx)(
+                                            Q,
+                                            {
+                                                id: i.id,
+                                                label: i.label,
+                                                count: i.userIds.length,
+                                                guildId: n.id
+                                            },
+                                            i.id
+                                        );
+                                    },
+                                    rowHeight: K,
+                                    renderRow: (e) => {
+                                        let { section: n, row: i } = e,
+                                            { userIds: l, id: o } = d[n];
+                                        return (0, r.jsx)(
+                                            X,
+                                            {
+                                                channel: t,
+                                                sectionId: o,
+                                                userId: l[i],
+                                                guildOwnerId: v
+                                            },
+                                            l[i]
+                                        );
+                                    },
+                                    footerHeight: (e) => 80 * (d[e] === f && t.type === H.d4z.PRIVATE_THREAD),
+                                    renderFooter: (e) => (d[e.section] === f ? (0, r.jsx)(J, { channel: t }, 'footer') : null),
+                                    innerAriaLabel: F.NW.string(F.t['9Oq93t']),
+                                    innerTag: 'ul',
+                                    sections: d.map((e) => e.userIds.length),
+                                    fade: !0
                                 },
-                                rowHeight: z,
-                                renderRow: (e) => {
-                                    let { section: n, row: a } = e,
-                                        { userIds: s, id: l } = d[n];
-                                    return (0, i.jsx)(
-                                        Y,
-                                        {
-                                            channel: t,
-                                            sectionId: l,
-                                            userId: s[a],
-                                            guildOwnerId: T
-                                        },
-                                        s[a]
-                                    );
-                                },
-                                footerHeight: (e) => (d[e] === p && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0),
-                                renderFooter: (e) => (d[e.section] === p ? (0, i.jsx)(q, { channel: t }, 'footer') : null),
-                                innerAriaLabel: G.Z.Messages.MEMBERS,
-                                innerTag: 'ul',
-                                sections: d.map((e) => e.userIds.length),
-                                fade: !0,
-                                ...x,
-                                ...e
-                            },
-                            s
+                                x,
+                                e
+                            ),
+                            l
                         )
                     })
             })
         })
     });
 }
-function Q(e) {
+function ee(e) {
     let { channel: t } = e;
-    return (0, i.jsxs)('div', {
-        className: l()(F.membersWrap, F.hiddenMembers, F.members, V.emptyState),
+    return (0, r.jsxs)('div', {
+        className: o()(V.membersWrap, V.hiddenMembers, V.members, G.emptyState),
         children: [
-            (0, i.jsx)(m.Text, {
-                className: V.emptyStateHeader,
+            (0, r.jsx)(h.Text, {
+                className: G.emptyStateHeader,
                 variant: 'text-xs/bold',
                 color: 'interactive-normal',
-                children: G.Z.Messages.MEMBERS
+                children: F.NW.string(F.t['9Oq93t'])
             }),
-            (0, i.jsxs)('div', {
-                className: V.emptyStateIconContainer,
+            (0, r.jsxs)('div', {
+                className: G.emptyStateIconContainer,
                 children: [
-                    (0, i.jsx)('div', {
-                        className: V.emptyStateIcon,
-                        children: (0, i.jsx)(m.GroupIcon, {
+                    (0, r.jsx)('div', {
+                        className: G.emptyStateIcon,
+                        children: (0, r.jsx)(h.BFJ, {
                             size: 'lg',
                             color: 'currentColor'
                         })
                     }),
-                    (0, i.jsx)(O.Z, { className: V.emptyStateStars })
+                    (0, r.jsx)(M.Z, { className: G.emptyStateStars })
                 ]
             }),
-            (0, i.jsx)(m.Heading, {
+            (0, r.jsx)(h.X6q, {
                 variant: 'heading-md/semibold',
-                children: t.isForumPost() ? G.Z.Messages.FORUM_POST_MEMBER_LIST_EMPTY_STATE_HEADER : G.Z.Messages.THREAD_MEMBER_LIST_EMPTY_STATE_HEADER
+                children: t.isForumPost() ? F.NW.string(F.t.p0UgNT) : F.NW.string(F.t['9/n5v7'])
             }),
-            (0, i.jsx)(m.Text, {
-                className: V.emptyStateSubtext,
+            (0, r.jsx)(h.Text, {
+                className: G.emptyStateSubtext,
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: G.Z.Messages.THREAD_MEMBER_LIST_EMPTY_STATE_SUBTEXT
+                children: F.NW.string(F.t.emw8UF)
             })
         ]
     });

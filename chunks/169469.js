@@ -1,4 +1,5 @@
-var n = {
+n.d(t, { Z: () => i });
+var a = {
     lessThanXSeconds: {
         standalone: {
             one: 'weniger als 1 Sekunde',
@@ -154,9 +155,11 @@ var n = {
         }
     }
 };
-t.Z = function (e, t, a) {
+let i = function (e, t, n) {
     var i,
-        o = null != a && a.addSuffix ? n[e].withPreposition : n[e].standalone;
-    if (((i = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', String(t))), null != a && a.addSuffix)) return a.comparison && a.comparison > 0 ? 'in ' + i : 'vor ' + i;
+        o = null != n && n.addSuffix ? a[e].withPreposition : a[e].standalone;
+    if (((i = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', String(t))), null != n && n.addSuffix))
+        if (n.comparison && n.comparison > 0) return 'in ' + i;
+        else return 'vor ' + i;
     return i;
 };

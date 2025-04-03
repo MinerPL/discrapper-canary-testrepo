@@ -1,66 +1,49 @@
-_.d(E, {
-    LI: function () {
-        return N;
-    },
-    Qr: function () {
-        return C;
-    },
-    f0: function () {
-        return S;
-    },
-    iB: function () {
-        return u;
-    },
-    jV: function () {
-        return M;
-    },
-    lx: function () {
-        return o;
-    },
-    t3: function () {
-        return i;
-    }
+n.d(e, {
+    LI: () => E,
+    Qr: () => d,
+    f0: () => _,
+    iB: () => c,
+    jV: () => T,
+    lx: () => u,
+    t3: () => l
 }),
-    _(47120);
-var t = _(913527),
-    T = _.n(t),
-    I = _(292352),
-    n = _(689938);
-let s = 3600,
-    A = 86400,
-    r = 172800,
-    a = 604800,
-    i = () => ({
-        today: n.Z.Messages.FAMILY_CENTER_EMPTY_ACTIVITY_TODAY,
-        yesterday: n.Z.Messages.FAMILY_CENTER_EMPTY_ACTIVITY_YESTERDAY,
-        days: n.Z.Messages.FAMILY_CENTER_EMPTY_ACTIVITY_DAYS
+    n(47120);
+var r = n(913527),
+    i = n.n(r),
+    a = n(292352),
+    o = n(332495),
+    s = n(388032);
+let l = () => ({
+        today: s.NW.string(o.Z.VjIAQU),
+        yesterday: s.NW.string(o.Z['2a8xHR']),
+        days: o.Z.Xt6oND
     }),
-    C = (e) =>
-        e
+    d = (t) =>
+        t
             ? {
-                  today: n.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_PARENT_TODAY,
-                  yesterday: n.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_PARENT_YESTERDAY,
-                  days: n.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_PARENT_DAYS
+                  today: s.NW.string(o.Z['2AtcIi']),
+                  yesterday: s.NW.string(o.Z.stOECg),
+                  days: o.Z.n8n5BQ
               }
             : {
-                  today: n.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_TEEN_TODAY,
-                  yesterday: n.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_TEEN_YESTERDAY,
-                  days: n.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_TEEN_DAYS
+                  today: s.NW.string(o.Z.g1ZX6u),
+                  yesterday: s.NW.string(o.Z.s3qSVl),
+                  days: o.Z.f1UJiI
               },
-    N = (e, E, _) => {
-        let t = T()().diff(T()(e), 's'),
-            I = E(),
-            n = T()(e).format('LL');
-        return (n = t < A ? I.today : t < r ? I.yesterday : I.days.format({ days: Math.min(Math.floor(t / A), null != _ ? _ : 999) }));
+    E = (t, e, n) => {
+        let r = i()().diff(i()(t), 's'),
+            a = e(),
+            o = i()(t).format('LL');
+        return r < 86400 ? a.today : r < 172800 ? a.yesterday : s.NW.formatToPlainString(a.days, { days: Math.min(Math.floor(r / 86400), null != n ? n : 999) });
     },
-    o = (e, E) => {
-        let _ = T()().diff(T()(e), 's'),
-            t = E(),
-            I = T()(e).format('LL');
-        return (I = _ < 60 ? t.seconds : _ < s ? t.minutes.format({ count: Math.floor(_ / 60) }) : _ < A ? t.hours.format({ count: Math.floor(_ / s) }) : _ < r ? t.yesterday : _ < a ? t.days.format({ count: Math.floor(_ / A) }) : t.date.format({ date: I }));
+    u = (t, e) => {
+        let n = i()().diff(i()(t), 's'),
+            r = e(),
+            a = i()(t).format('LL');
+        return n < 60 ? r.seconds : n < 3600 ? s.NW.formatToPlainString(r.minutes, { count: Math.floor(n / 60) }) : n < 86400 ? s.NW.formatToPlainString(r.hours, { count: Math.floor(n / 3600) }) : n < 172800 ? r.yesterday : n < 604800 ? s.NW.formatToPlainString(r.days, { count: Math.floor(n / 86400) }) : s.NW.formatToPlainString(r.date, { date: a });
     },
-    u = (e) => e.display_type === I.MY.USER_ADD || e.display_type === I.MY.USER_INTERACTION || e.display_type === I.MY.USER_CALLED,
-    S = (e) => e.display_type === I.MY.GUILD_ADD || e.display_type === I.MY.GUILD_INTERACTION,
-    M = (e) => {
-        for (let E of Object.values(I.MY)) if (E.toString() === e) return E;
+    c = (t) => t.display_type === a.MY.USER_ADD || t.display_type === a.MY.USER_INTERACTION || t.display_type === a.MY.USER_CALLED,
+    _ = (t) => t.display_type === a.MY.GUILD_ADD || t.display_type === a.MY.GUILD_INTERACTION,
+    T = (t) => {
+        for (let e of Object.values(a.MY)) if (e.toString() === t) return e;
     };

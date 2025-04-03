@@ -1,12 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(47120);
-var r = n(470079),
+n.d(t, { Z: () => o }), n(47120);
+var r = n(192379),
     i = n(920103);
-function a(e) {
+function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'vertical',
         [n] = (0, r.useState)(
             () =>
@@ -22,7 +17,7 @@ function a(e) {
                     },
                     getNodeWindow: () => {
                         var t, n, r;
-                        return null !== (r = null === (n = e.current) || void 0 === n ? void 0 : null === (t = n.ownerDocument) || void 0 === t ? void 0 : t.defaultView) && void 0 !== r ? r : null;
+                        return null != (r = null == (n = e.current) || null == (t = n.ownerDocument) ? void 0 : t.defaultView) ? r : null;
                     }
                 })
         );

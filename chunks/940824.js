@@ -1,47 +1,48 @@
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    r = t(37234),
-    s = t(100527),
-    l = t(906732),
-    o = t(703656),
-    c = t(335131),
-    u = t(981631),
-    d = t(689938),
-    _ = t(715125);
-n.Z = (e) => {
-    let { onClose: n } = e,
-        { analyticsLocations: t } = (0, l.ZP)(),
-        p = () => {
-            n(),
-                (0, o.uL)(u.Z5c.COLLECTIBLES_SHOP),
+n.d(t, { Z: () => _ });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    o = n(37234),
+    a = n(100527),
+    s = n(906732),
+    l = n(703656),
+    c = n(335131),
+    u = n(981631),
+    d = n(388032),
+    f = n(279248);
+let _ = (e) => {
+    let { onClose: t } = e,
+        { analyticsLocations: n } = (0, s.ZP)(),
+        _ = () => {
+            t(),
+                (0, l.uL)(u.Z5c.COLLECTIBLES_SHOP),
                 (0, c.mK)({
                     openInLayer: !1,
-                    analyticsSource: s.Z.PREMIUM_PAYMENT_MODAL,
-                    analyticsLocations: t
+                    analyticsSource: a.Z.PREMIUM_PAYMENT_MODAL,
+                    analyticsLocations: n
                 }),
-                (0, r.xf)();
+                (0, o.xf)();
         };
-    return (0, i.jsxs)('div', {
-        className: _.container,
+    return (0, r.jsxs)('div', {
+        className: f.container,
         children: [
-            (0, i.jsx)('div', {
-                className: _.iconBackground,
-                children: (0, i.jsx)(a.ShopIcon, {
+            (0, r.jsx)('div', {
+                className: f.iconBackground,
+                children: (0, r.jsx)(i.EOn, {
                     size: 'custom',
                     width: 20,
                     height: 20,
-                    color: a.tokens.colors.WHITE
+                    color: i.TVs.colors.WHITE
                 })
             }),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-primary',
-                children: d.Z.Messages.COLLECTIBLES_GIFT_CODE_MODAL_UPSELL.format({
+                children: d.NW.format(d.t.twSHtb, {
                     checkItOut: (e) =>
-                        (0, i.jsx)(a.Clickable, {
-                            className: _.link,
-                            onClick: p,
+                        (0, r.jsx)(i.P3F, {
+                            className: f.link,
+                            onClick: _,
                             children: e
                         })
                 })

@@ -11,14 +11,10 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 class i {
     setParams(e) {
-        if (this.param !== e) (this.param = e), (this.loading = !1), (this.loaded = !1);
+        this.param !== e && ((this.param = e), (this.loading = !1), (this.loaded = !1));
     }
     get() {
         return this.ensureLoaded(), this.val;
@@ -28,7 +24,7 @@ class i {
         let e = this.param;
         (this.loading = !0),
             this.loader(e).then((t) => {
-                if (e === this.param) (this.val = t), (this.loading = !1), (this.loaded = !0);
+                e === this.param && ((this.val = t), (this.loading = !1), (this.loaded = !0));
             });
     }
     constructor(e) {

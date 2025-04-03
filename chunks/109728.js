@@ -1,7 +1,6 @@
-n.d(t, {
-    $L: function () {
-        return i;
-    }
-});
-let r = new (n(226351).o)();
-function i() {}
+n.d(t, { $L: () => o });
+let r = new (n(226351).o)(),
+    i = null;
+function o() {
+    null != i && (r.resolve(), clearTimeout(i));
+}

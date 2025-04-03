@@ -1,41 +1,40 @@
 t.d(n, {
-    Dk: function () {
-        return a;
-    },
-    Ix: function () {
-        return r;
-    },
-    me: function () {
-        return i;
-    }
+    Dk: () => o,
+    Ix: () => a,
+    me: () => l
 });
-var l = t(544891),
-    s = t(981631);
-async function i(e, n, t, i, a) {
+var r = t(544891),
+    i = t(981631);
+async function l(e, n, t, l, o) {
     return (
-        await l.tn.post({
-            url: s.ANM.STAGE_INSTANCES,
+        await r.tn.post({
+            url: i.ANM.STAGE_INSTANCES,
             body: {
                 channel_id: e,
                 topic: n,
                 privacy_level: t,
-                guild_scheduled_event_id: a,
-                send_start_notification: i
-            }
+                guild_scheduled_event_id: o,
+                send_start_notification: l
+            },
+            rejectWithError: !1
         })
     ).body;
 }
-async function a(e, n, t) {
+async function o(e, n, t) {
     return (
-        await l.tn.patch({
-            url: s.ANM.STAGE_INSTANCE(e),
+        await r.tn.patch({
+            url: i.ANM.STAGE_INSTANCE(e),
             body: {
                 topic: n,
                 privacy_level: t
-            }
+            },
+            rejectWithError: !1
         })
     ).body;
 }
-function r(e) {
-    return l.tn.del(s.ANM.STAGE_INSTANCE(e));
+function a(e) {
+    return r.tn.del({
+        url: i.ANM.STAGE_INSTANCE(e),
+        rejectWithError: !1
+    });
 }

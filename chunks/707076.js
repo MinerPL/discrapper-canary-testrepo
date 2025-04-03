@@ -1,361 +1,397 @@
-t.d(n, {
-    Z: function () {
-        return x;
-    },
-    j: function () {
-        return g;
-    }
+n.d(t, {
+    Z: () => v,
+    j: () => _
 });
-var s = t(735250);
-t(470079);
-var l = t(120356),
-    a = t.n(l),
-    i = t(442837),
-    r = t(481060),
-    o = t(367907),
-    c = t(548473),
-    d = t(721012),
-    I = t(621923),
-    N = t(869764),
-    _ = t(150512),
-    u = t(430824),
-    E = t(594174),
-    T = t(626135),
-    m = t(999382),
-    O = t(983135),
-    S = t(84658),
-    D = t(981631),
-    G = t(689938),
-    A = t(645);
-let h = () => [
+var l = n(200651);
+n(192379);
+var r = n(120356),
+    i = n.n(r),
+    s = n(442837),
+    a = n(481060),
+    o = n(367907),
+    c = n(548473),
+    d = n(721012),
+    u = n(869764),
+    m = n(150512),
+    N = n(430824),
+    h = n(594174),
+    I = n(626135),
+    g = n(999382),
+    f = n(983135),
+    p = n(84658),
+    E = n(981631),
+    S = n(388032),
+    x = n(568614);
+let T = () => [
         {
             emoji: '\uD83E\uDDD9',
-            emojiDescription: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_1_EMOJI,
-            title: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_1,
+            emojiDescription: S.NW.string(S.t.Jh9uiY),
+            title: S.NW.string(S.t.ATF45u),
             selected: !0
         },
         {
             emoji: '\uD83C\uDFA4',
-            emojiDescription: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_2_EMOJI,
-            title: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_2,
+            emojiDescription: S.NW.string(S.t['nGt+MT']),
+            title: S.NW.string(S.t['30uo7O']),
             selected: !1
         },
         {
             emoji: '\uD83D\uDC40',
-            emojiDescription: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_3_EMOJI,
-            title: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_3,
+            emojiDescription: S.NW.string(S.t.hOMH5u),
+            title: S.NW.string(S.t['5Z5sgo']),
             selected: !1
         }
     ],
-    L = () => [
+    O = () => [
         {
             channelIcon: () =>
-                (0, s.jsx)(r.AnnouncementsIcon, {
+                (0, l.jsx)(a.MqZ, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: A.channelIcon
+                    className: x.channelIcon
                 }),
-            channel: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_1,
+            channel: S.NW.string(S.t.MXJozM),
             selected: !0
         },
         {
             channelIcon: () =>
-                (0, s.jsx)(r.TextIcon, {
+                (0, l.jsx)(a.VL1, {
                     size: 'md',
                     color: 'currentColor',
-                    className: A.channelIcon
+                    className: x.channelIcon
                 }),
-            channel: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_2,
+            channel: S.NW.string(S.t.Pkj0f3),
             selected: !0
         },
         {
             channelIcon: () =>
-                (0, s.jsx)(r.TextIcon, {
+                (0, l.jsx)(a.VL1, {
                     size: 'md',
                     color: 'currentColor',
-                    className: A.channelIcon
+                    className: x.channelIcon
                 }),
-            channel: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_3,
+            channel: S.NW.string(S.t['imVD+v']),
             selected: !1
         },
         {
             channelIcon: () =>
-                (0, s.jsx)(r.ForumIcon, {
+                (0, l.jsx)(a.Mmi, {
                     size: 'md',
                     color: 'currentColor',
-                    className: A.channelIcon
+                    className: x.channelIcon
                 }),
-            channel: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_4,
+            channel: S.NW.string(S.t['Pj/Wpq']),
             selected: !0
         }
     ];
-function g(e) {
-    let { isTooltip: n = !1 } = e,
-        t = h();
-    n && t.pop();
-    let l = n
-            ? (0, s.jsx)(r.Text, {
+function _(e) {
+    let { isTooltip: t = !1 } = e,
+        n = T();
+    t && n.pop();
+    let r = t
+            ? (0, l.jsx)(a.Text, {
                   variant: 'text-sm/semibold',
                   color: 'header-primary',
-                  children: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_TITLE_TOOLTIP
+                  children: S.NW.string(S.t.nTI2mZ)
               })
-            : (0, s.jsx)(r.Heading, {
+            : (0, l.jsx)(a.X6q, {
                   variant: 'heading-md/semibold',
-                  children: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_TITLE
+                  children: S.NW.string(S.t.g1OQtr)
               }),
-        i = n
-            ? (0, s.jsx)(r.Text, {
+        s = t
+            ? (0, l.jsx)(a.Text, {
                   variant: 'text-xxs/normal',
-                  children: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_SUBTITLE_TOOLTIP.format()
+                  children: S.NW.format(S.t.hGwDPT, {})
               })
-            : (0, s.jsx)(r.Text, {
+            : (0, l.jsx)(a.Text, {
                   variant: 'text-xs/normal',
-                  children: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_SUBTITLE.format()
+                  children: S.NW.format(S.t['8XLD3t'], {})
               });
-    return (0, s.jsxs)('div', {
-        className: a()(A.upsellPreview, A.spacingLarge, { [A.tooltip]: n }),
+    return (0, l.jsxs)('div', {
+        className: i()(x.upsellPreview, x.spacingLarge, { [x.tooltip]: t }),
         children: [
-            l,
-            (0, s.jsx)('div', {
-                className: A.spacingSmall,
-                children: t.map((e, n) => {
-                    let { emoji: t, emojiDescription: l, title: i, selected: o } = e;
-                    return (0, s.jsxs)(
+            r,
+            (0, l.jsx)('div', {
+                className: x.spacingSmall,
+                children: n.map((e, t) => {
+                    let { emoji: n, emojiDescription: r, title: s, selected: o } = e;
+                    return (0, l.jsxs)(
                         'div',
                         {
-                            className: a()(A.previewListItem, { [A.selected]: o }),
+                            className: i()(x.previewListItem, { [x.selected]: o }),
                             children: [
-                                (0, s.jsx)('span', {
+                                (0, l.jsx)('span', {
                                     role: 'img',
-                                    'aria-label': l,
-                                    children: t
+                                    'aria-label': r,
+                                    children: n
                                 }),
-                                (0, s.jsx)(r.Text, {
+                                (0, l.jsx)(a.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-primary',
-                                    children: i
+                                    children: s
                                 }),
                                 o &&
-                                    (0, s.jsx)('div', {
-                                        className: A.checkboxCircle,
-                                        children: (0, s.jsx)(r.CheckmarkLargeIcon, {
+                                    (0, l.jsx)('div', {
+                                        className: x.checkboxCircle,
+                                        children: (0, l.jsx)(a.dz2, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: A.checkmark
+                                            className: x.checkmark
                                         })
                                     })
                             ]
                         },
-                        n
+                        t
                     );
                 })
             }),
-            i
+            s
         ]
     });
 }
-function f() {
+function j() {
     let e = [
         {
-            message: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_HARRY_POTTER,
+            message: S.t.FUUXXl,
             profilePic: 'https://cdn.discordapp.com/avatars/302407541994946561/bb3fd59e6c2ea0a86a2bdabf5dff7856.webp?size=80',
-            adminTitle: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_HARRY_POTTER
+            adminTitle: S.NW.string(S.t.RZVpur)
         },
         {
-            message: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_DESIGN_BUDDIES,
+            message: S.t.JAXvDQ,
             profilePic: 'https://cdn.discordapp.com/avatars/433499434098229249/b6d433308debef625537e33df04023e5.webp?size=80',
-            adminTitle: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_DESIGN_BUDDIES
+            adminTitle: S.NW.string(S.t.xyrlg4)
         },
         {
-            message: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_VALORANT,
+            message: S.t.Wj9Djo,
             profilePic: 'https://cdn.discordapp.com/avatars/555460020494663691/599bfcdb0b0700b415f4c695890f272c.webp?size=80',
-            adminTitle: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_VALORANT
+            adminTitle: S.NW.string(S.t['o/LQMj'])
         },
         {
-            message: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_DUNGEON_SLIMES,
+            message: S.t.ALsMNT,
             profilePic: 'https://cdn.discordapp.com/guilds/936317138904440892/users/125526751064489984/avatars/f35679626acac9943e102533fc170d41.webp?size=80',
-            adminTitle: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_DUNGEON_SLIMES
+            adminTitle: S.NW.string(S.t['uvM+xc'])
         }
     ];
-    return (0, s.jsx)(d.i, { testimonials: e });
+    return (0, l.jsx)(d.i, { testimonials: e });
 }
-function x() {
-    let e = (0, i.e7)([m.Z], () => m.Z.getGuildId()),
-        n = (0, i.e7)([u.Z], () => u.Z.getGuild(e)),
-        t = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
-        { homeSettingsEnabled: l } = (0, I.kZ)(null != e ? e : D.lds);
-    return null == e || null == n || null == t
+function v() {
+    let e = (0, s.e7)([g.Z], () => g.Z.getGuildId()),
+        t = (0, s.e7)([N.Z], () => N.Z.getGuild(e)),
+        n = (0, s.e7)([h.default], () => h.default.getCurrentUser());
+    return null == e || null == t || null == n
         ? null
-        : (0, s.jsxs)('div', {
-              className: A.upsellContainer,
+        : (0, l.jsxs)('div', {
+              className: x.upsellContainer,
               children: [
-                  (0, s.jsxs)('div', {
-                      className: A.upsellHeader,
+                  (0, l.jsxs)('div', {
+                      className: x.upsellHeader,
                       children: [
-                          (0, s.jsxs)('div', {
-                              className: A.islands,
+                          (0, l.jsxs)('div', {
+                              className: x.islands,
                               children: [
-                                  (0, s.jsx)(c.xm, {}),
-                                  (0, s.jsx)(c._I, {
-                                      guild: n,
-                                      mainIslandClassName: A.mainIsland,
-                                      balloonDogClassName: A.balloonDog
+                                  (0, l.jsx)(c.xm, {}),
+                                  (0, l.jsx)(c._I, {
+                                      guild: t,
+                                      mainIslandClassName: x.mainIsland,
+                                      balloonDogClassName: x.balloonDog
                                   }),
-                                  (0, s.jsx)(c.B0, {})
+                                  (0, l.jsx)(c.B0, {})
                               ]
                           }),
-                          (0, s.jsxs)('div', {
-                              className: A.upsellHeaderText,
+                          (0, l.jsxs)('div', {
+                              className: x.upsellHeaderText,
                               children: [
-                                  (0, s.jsx)(r.Heading, {
+                                  (0, l.jsx)(a.X6q, {
                                       variant: 'heading-xl/semibold',
-                                      children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_TITLE
+                                      children: S.NW.string(S.t.GnKOAw)
                                   }),
-                                  (0, s.jsx)(r.Text, {
+                                  (0, l.jsx)(a.Text, {
                                       variant: 'text-md/normal',
-                                      children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_SUBTITLE
+                                      children: S.NW.string(S.t.SJRFJi)
                                   })
                               ]
                           }),
-                          (0, s.jsx)('div', {
-                              className: A.upsellButtons,
-                              children: (0, s.jsx)(r.Button, {
+                          (0, l.jsx)('div', {
+                              className: x.upsellButtons,
+                              children: (0, l.jsx)(a.zxk, {
                                   onClick: function () {
-                                      null != e &&
-                                          (T.default.track(D.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-                                              ...(0, o.hH)(e),
-                                              step: S.PG[S.PG.LANDING],
-                                              back: !1,
-                                              skip: !1
-                                          }),
-                                          (0, O.IG)(e, S.PG.LANDING));
+                                      if (null != e) {
+                                          var t, n;
+                                          I.default.track(
+                                              E.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
+                                              ((t = (function (e) {
+                                                  for (var t = 1; t < arguments.length; t++) {
+                                                      var n = null != arguments[t] ? arguments[t] : {},
+                                                          l = Object.keys(n);
+                                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                                          (l = l.concat(
+                                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                              })
+                                                          )),
+                                                          l.forEach(function (t) {
+                                                              var l;
+                                                              (l = n[t]),
+                                                                  t in e
+                                                                      ? Object.defineProperty(e, t, {
+                                                                            value: l,
+                                                                            enumerable: !0,
+                                                                            configurable: !0,
+                                                                            writable: !0
+                                                                        })
+                                                                      : (e[t] = l);
+                                                          });
+                                                  }
+                                                  return e;
+                                              })({}, (0, o.hH)(e))),
+                                              (n = n =
+                                                  {
+                                                      step: p.PG[p.PG.LANDING],
+                                                      back: !1,
+                                                      skip: !1
+                                                  }),
+                                              Object.getOwnPropertyDescriptors
+                                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                                  : (function (e, t) {
+                                                        var n = Object.keys(e);
+                                                        if (Object.getOwnPropertySymbols) {
+                                                            var l = Object.getOwnPropertySymbols(e);
+                                                            n.push.apply(n, l);
+                                                        }
+                                                        return n;
+                                                    })(Object(n)).forEach(function (e) {
+                                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                                    }),
+                                              t)
+                                          ),
+                                              (0, f.IG)(e, p.PG.LANDING);
+                                      }
                                   },
-                                  color: r.Button.Colors.BRAND,
+                                  color: a.zxk.Colors.BRAND,
                                   disabled: !1,
-                                  children: G.Z.Messages.CHECK_IT_OUT
+                                  children: S.NW.string(S.t.RzWDqa)
                               })
                           })
                       ]
                   }),
-                  (0, s.jsx)(r.FormDivider, {}),
-                  (0, s.jsx)(f, {}),
-                  (0, s.jsx)(r.FormDivider, {}),
-                  (0, s.jsxs)('div', {
-                      className: A.valuesContainer,
+                  (0, l.jsx)(a.$i$, {}),
+                  (0, l.jsx)(j, {}),
+                  (0, l.jsx)(a.$i$, {}),
+                  (0, l.jsxs)('div', {
+                      className: x.valuesContainer,
                       children: [
-                          (0, s.jsxs)('div', {
-                              className: A.valueContainer,
+                          (0, l.jsxs)('div', {
+                              className: x.valueContainer,
                               children: [
-                                  (0, s.jsx)(g, {}),
-                                  (0, s.jsxs)('div', {
-                                      className: A.valueText,
+                                  (0, l.jsx)(_, {}),
+                                  (0, l.jsxs)('div', {
+                                      className: x.valueText,
                                       children: [
-                                          (0, s.jsx)(r.Heading, {
+                                          (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_CHANNELS_TITLE
+                                              children: S.NW.string(S.t.Z7kqKS)
                                           }),
-                                          (0, s.jsx)(r.Text, {
+                                          (0, l.jsx)(a.Text, {
                                               variant: 'text-sm/normal',
-                                              children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_CHANNELS_SUBTITLE
+                                              children: S.NW.string(S.t.di3UCw)
                                           })
                                       ]
                                   })
                               ]
                           }),
-                          l &&
-                              (0, s.jsxs)('div', {
-                                  className: A.valueContainer,
-                                  children: [
-                                      (0, s.jsxs)('div', {
-                                          className: A.valueText,
-                                          children: [
-                                              (0, s.jsx)(r.Heading, {
-                                                  variant: 'heading-md/semibold',
-                                                  children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TITLE
-                                              }),
-                                              (0, s.jsx)(r.Text, {
-                                                  variant: 'text-sm/normal',
-                                                  children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_SUBTITLE
-                                              })
-                                          ]
-                                      }),
-                                      (0, s.jsxs)('div', {
-                                          className: a()(A.upsellPreview, A.spacingLarge),
-                                          children: [
-                                              (0, s.jsx)(_.Z, {
-                                                  guildId: e,
-                                                  welcomeMessage: {
-                                                      authorIds: [t.id],
-                                                      message: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_WELCOME_MESSAGE
-                                                  }
-                                              }),
-                                              (0, s.jsx)(N.k, {
-                                                  title: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_TITLE,
-                                                  subtitle: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_CHANNEL_NAME,
-                                                  completed: !0,
-                                                  Icon: r.TextIcon,
-                                                  variant: 'static'
-                                              }),
-                                              (0, s.jsx)(N.k, {
-                                                  title: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_TITLE,
-                                                  subtitle: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_CHANNEL_NAME,
-                                                  completed: !0,
-                                                  Icon: r.TextIcon,
-                                                  variant: 'static'
-                                              })
-                                          ]
-                                      })
-                                  ]
-                              }),
-                          (0, s.jsxs)('div', {
-                              className: A.valueContainer,
+                          (0, l.jsxs)('div', {
+                              className: x.valueContainer,
                               children: [
-                                  (0, s.jsx)('div', {
-                                      className: a()(A.upsellPreview, A.spacingLarge),
-                                      children: L().map((e, n) => {
-                                          let { channelIcon: t, channel: l, selected: i } = e;
-                                          return (0, s.jsxs)(
+                                  (0, l.jsxs)('div', {
+                                      className: x.valueText,
+                                      children: [
+                                          (0, l.jsx)(a.X6q, {
+                                              variant: 'heading-md/semibold',
+                                              children: S.NW.string(S.t.O4jYEh)
+                                          }),
+                                          (0, l.jsx)(a.Text, {
+                                              variant: 'text-sm/normal',
+                                              children: S.NW.string(S.t['l/l/Gx'])
+                                          })
+                                      ]
+                                  }),
+                                  (0, l.jsxs)('div', {
+                                      className: i()(x.upsellPreview, x.spacingLarge),
+                                      children: [
+                                          (0, l.jsx)(m.Z, {
+                                              guildId: e,
+                                              welcomeMessage: {
+                                                  authorIds: [n.id],
+                                                  message: S.NW.string(S.t.hIWAfn)
+                                              }
+                                          }),
+                                          (0, l.jsx)(u.k, {
+                                              title: S.NW.string(S.t['47zu7O']),
+                                              subtitle: S.NW.string(S.t.amoSNz),
+                                              completed: !0,
+                                              Icon: a.VL1,
+                                              variant: 'static'
+                                          }),
+                                          (0, l.jsx)(u.k, {
+                                              title: S.NW.string(S.t.EZfTKC),
+                                              subtitle: S.NW.string(S.t['/sYelZ']),
+                                              completed: !0,
+                                              Icon: a.VL1,
+                                              variant: 'static'
+                                          })
+                                      ]
+                                  })
+                              ]
+                          }),
+                          (0, l.jsxs)('div', {
+                              className: x.valueContainer,
+                              children: [
+                                  (0, l.jsx)('div', {
+                                      className: i()(x.upsellPreview, x.spacingLarge),
+                                      children: O().map((e, t) => {
+                                          let { channelIcon: n, channel: r, selected: s } = e;
+                                          return (0, l.jsxs)(
                                               'div',
                                               {
-                                                  className: a()(A.previewListItem, A.spaceBetween, { [A.selected]: i }),
+                                                  className: i()(x.previewListItem, x.spaceBetween, { [x.selected]: s }),
                                                   children: [
-                                                      (0, s.jsxs)('div', {
-                                                          className: A.channel,
+                                                      (0, l.jsxs)('div', {
+                                                          className: x.channel,
                                                           children: [
-                                                              t(),
-                                                              (0, s.jsx)(r.Text, {
+                                                              n(),
+                                                              (0, l.jsx)(a.Text, {
                                                                   variant: 'text-md/medium',
                                                                   color: 'header-primary',
-                                                                  children: l
+                                                                  children: r
                                                               })
                                                           ]
                                                       }),
-                                                      (0, s.jsx)('div', {
-                                                          className: a()(A.checkbox, { [A.selected]: i }),
+                                                      (0, l.jsx)('div', {
+                                                          className: i()(x.checkbox, { [x.selected]: s }),
                                                           children:
-                                                              i &&
-                                                              (0, s.jsx)(r.CheckmarkLargeIcon, {
+                                                              s &&
+                                                              (0, l.jsx)(a.dz2, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
-                                                                  className: A.checkmark
+                                                                  className: x.checkmark
                                                               })
                                                       })
                                                   ]
                                               },
-                                              n
+                                              t
                                           );
                                       })
                                   }),
-                                  (0, s.jsxs)('div', {
-                                      className: A.valueText,
+                                  (0, l.jsxs)('div', {
+                                      className: x.valueText,
                                       children: [
-                                          (0, s.jsx)(r.Heading, {
+                                          (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_ONBOARDING_TITLE
+                                              children: S.NW.string(S.t['3T9aHB'])
                                           }),
-                                          (0, s.jsx)(r.Text, {
+                                          (0, l.jsx)(a.Text, {
                                               variant: 'text-sm/normal',
-                                              children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_ONBOARDING_SUBTITLE
+                                              children: S.NW.string(S.t.dA7Cam)
                                           })
                                       ]
                                   })

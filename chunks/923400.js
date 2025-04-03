@@ -1,19 +1,15 @@
-t.d(A, {
-    M: function () {
-        return r;
-    }
-});
-var a = t(83439),
-    n = t(100781);
-let r = [
+r.d(t, { M: () => a });
+var n = r(83439),
+    A = r(100781);
+let a = [
     {
         name: 'cool-frog',
         alt: 'A cool frog',
-        data: a.Z
+        data: n.Z
     },
     {
         name: 'cute-bunny',
         alt: 'A cute bunny',
-        data: n.Z
+        data: A.Z
     }
 ];

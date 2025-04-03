@@ -1,22 +1,18 @@
-t.d(e, {
-    Z: function () {
-        return a;
-    }
-});
-var r = t(735250);
-t(470079);
-var i = t(481060),
-    s = t(434404),
-    u = t(144507),
-    o = t(981631),
-    c = t(689938);
-function a(n) {
-    return (0, u.$D)(n)
-        ? (0, r.jsx)(i.MenuItem, {
+t.d(i, { Z: () => l });
+var r = t(200651);
+t(192379);
+var s = t(481060),
+    o = t(434404),
+    e = t(144507),
+    c = t(981631),
+    a = t(388032);
+function l(n) {
+    return (0, e.$D)(n)
+        ? (0, r.jsx)(s.sNh, {
               id: 'role-subscription-settings',
-              label: c.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_EDIT_SETTINGS,
+              label: a.NW.string(a.t.jMN5ZG),
               action: () => {
-                  s.Z.open(n.id, o.pNK.ROLE_SUBSCRIPTIONS);
+                  o.Z.open(n.id, c.pNK.ROLE_SUBSCRIPTIONS);
               }
           })
         : null;

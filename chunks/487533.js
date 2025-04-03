@@ -8,9 +8,4 @@ function k(a, i, x) {
         a
     );
 }
-x.d(i, {
-    Z: function () {
-        return k;
-    }
-}),
-    x(47120);
+x.d(i, { Z: () => k }), x(47120);

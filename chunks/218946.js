@@ -1,8 +1,3 @@
-n.d(t, {
-    m: function () {
-        return r;
-    }
-});
 function r(e) {
     return {
         id: e.id,
@@ -13,3 +8,4 @@ function r(e) {
         mimeType: e.mime_type
     };
 }
+n.d(t, { m: () => r });

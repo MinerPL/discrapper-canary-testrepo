@@ -1,72 +1,68 @@
-n.d(t, {
-    Z: function () {
-        return E;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(852229),
-    l = n(399606),
-    r = n(481060),
-    o = n(367907),
+n.d(t, { Z: () => b });
+var r = n(200651),
+    i = n(192379),
+    l = n(852229),
+    o = n(399606),
+    a = n(481060),
+    s = n(367907),
     c = n(592125),
     u = n(934415),
     d = n(63063),
-    h = n(158222),
-    m = n(410992),
-    p = n(981631),
-    _ = n(689938),
-    f = n(725782);
-function E(e) {
+    p = n(158222),
+    h = n(410992),
+    f = n(981631),
+    m = n(388032),
+    g = n(684885);
+function b(e) {
     let { threadId: t } = e,
-        n = (0, l.e7)([c.Z], () => c.Z.getChannel(t)),
-        E = (0, l.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.parent_id)),
-        g = a.useCallback(() => {
-            null != n && null != E && ((0, o.yw)(p.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, s.J)((0, u.EO)(n, E)));
-        }, [n, E]);
-    return (0, i.jsxs)('div', {
-        className: f.sharePromptContainer,
+        n = (0, o.e7)([c.Z], () => c.Z.getChannel(t)),
+        b = (0, o.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.parent_id)),
+        _ = i.useCallback(() => {
+            null != n && null != b && ((0, s.yw)(f.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, l.J)((0, u.EO)(n, b)));
+        }, [n, b]);
+    return (0, r.jsxs)('div', {
+        className: g.sharePromptContainer,
         children: [
-            (0, i.jsx)(m.Z, {}),
-            (0, i.jsxs)('div', {
-                className: f.sharePromptContent,
+            (0, r.jsx)(h.Z, {}),
+            (0, r.jsxs)('div', {
+                className: g.sharePromptContent,
                 children: [
-                    (0, i.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: _.Z.Messages.MEDIA_POST_SHARE_PROMPT_TITLE
+                        children: m.NW.string(m.t['5uAO7e'])
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: _.Z.Messages.MEDIA_POST_SHARE_PROMPT_SUBTITLE.format({ helpArticleUrl: d.Z.getCreatorSupportArticleURL(p.BhN.MEDIA_CHANNEL) })
+                        children: m.NW.format(m.t.WnfPV1, { helpArticleUrl: d.Z.getCreatorSupportArticleURL(f.BhN.MEDIA_CHANNEL) })
                     }),
-                    (0, i.jsx)(r.Spacer, { size: 4 }),
-                    (0, i.jsxs)(r.Button, {
-                        className: f.sharePromptCta,
-                        innerClassName: f.ctaContent,
-                        onClick: g,
+                    (0, r.jsx)(a.LZC, { size: 4 }),
+                    (0, r.jsxs)(a.zxk, {
+                        className: g.sharePromptCta,
+                        innerClassName: g.ctaContent,
+                        onClick: _,
                         children: [
-                            (0, i.jsx)(r.LinkIcon, {
+                            (0, r.jsx)(a.xPt, {
                                 color: 'currentColor',
                                 size: 'xs'
                             }),
-                            (0, i.jsx)(r.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: _.Z.Messages.MEDIA_POST_SHARE_PROMPT_CTA
+                                children: m.NW.string(m.t.C5UQCw)
                             })
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)(r.Clickable, {
-                className: f.closeButton,
+            (0, r.jsx)(a.P3F, {
+                className: g.closeButton,
                 onClick: () => {
-                    (0, h.fn)(t);
+                    (0, p.fn)(t);
                 },
-                'aria-label': _.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
-                children: (0, i.jsx)(r.XSmallIcon, {
+                'aria-label': m.NW.string(m.t['0+xZHx']),
+                children: (0, r.jsx)(a.Dio, {
                     color: 'currentColor',
                     size: 'xs'
                 })

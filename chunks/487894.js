@@ -1,52 +1,48 @@
-t.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var a = t(735250);
-t(470079);
-var s = t(481060),
-    l = t(499033),
-    r = t(665906),
-    i = t(689938),
-    o = t(587624);
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var a = n(481060),
+    s = n(499033),
+    l = n(665906),
+    i = n(388032),
+    o = n(268797);
 function c(e) {
-    let { channel: n, header: t, startThread: c } = e,
-        d = (0, r.NE)(n),
-        u = (0, r.Xu)(n);
-    return (0, a.jsxs)('div', {
+    let { channel: t, header: n, startThread: c } = e,
+        d = (0, l.NE)(t),
+        u = (0, l.Xu)(t);
+    return (0, r.jsxs)('div', {
         className: o.container,
         children: [
-            (0, a.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: o.iconContainer,
                 children: [
-                    (0, a.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: o.icon,
-                        children: (0, a.jsx)(s.ThreadIcon, {
+                        children: (0, r.jsx)(a.or_, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 36,
                             height: 36
                         })
                     }),
-                    (0, a.jsx)(l.Z, { className: o.stars })
+                    (0, r.jsx)(s.Z, { className: o.stars })
                 ]
             }),
-            (0, a.jsx)(s.Heading, {
+            (0, r.jsx)(a.X6q, {
                 className: o.header,
                 variant: 'heading-xl/semibold',
-                children: t
+                children: n
             }),
-            (0, a.jsx)(s.Text, {
+            (0, r.jsx)(a.Text, {
                 color: 'header-secondary',
                 variant: 'text-md/normal',
-                children: i.Z.Messages.THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN
+                children: i.NW.string(i.t.jmq9GB)
             }),
             d || u
-                ? (0, a.jsx)(s.Button, {
+                ? (0, r.jsx)(a.zxk, {
                       className: o.cta,
                       onClick: c,
-                      children: i.Z.Messages.CREATE_THREAD
+                      children: i.NW.string(i.t.rBIGBA)
                   })
                 : null
         ]

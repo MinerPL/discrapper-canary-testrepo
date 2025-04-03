@@ -1,158 +1,150 @@
-t.d(s, {
-    Z: function () {
-        return m;
-    }
-}),
-    t(47120);
-var n,
-    a,
-    i = t(735250),
-    r = t(470079),
-    o = t(442837),
-    l = t(481060),
-    c = t(570140),
-    d = t(401430),
-    _ = t(155268),
-    E = t(600164),
-    u = t(313201),
-    I = t(695103),
-    T = t(689938),
-    S = t(395571),
-    N = t(224499);
-let C = /^\d+$|^$/;
-((a = n || (n = {})).LOCALHOST = 'localhost'), (a.PROXY = 'proxy');
-function m(e) {
-    let { onClose: s, transitionState: t } = e,
+n.d(t, { Z: () => b }), n(47120), n(301563);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(570140),
+    o = n(401430),
+    c = n(155268),
+    d = n(600164),
+    u = n(313201),
+    m = n(695103),
+    g = n(388032),
+    p = n(458240),
+    h = n(20493);
+let f = /^\d+$|^$/;
+function b(e) {
+    let { onClose: t, transitionState: n } = e,
         {
-            authorizedApplicationId: n,
-            authorizationError: a,
-            authorizing: m
-        } = (0, o.cj)([I.Z], () => ({
-            authorizedApplicationId: I.Z.testModeApplicationId,
-            authorizationError: I.Z.error,
-            authorizing: I.Z.isFetchingAuthorization
+            authorizedApplicationId: b,
+            authorizationError: N,
+            authorizing: x
+        } = (0, s.cj)([m.Z], () => ({
+            authorizedApplicationId: m.Z.testModeApplicationId,
+            authorizationError: m.Z.error,
+            authorizing: m.Z.isFetchingAuthorization
         })),
-        [A, O] = r.useState(null != n ? n : ''),
-        [g, h] = r.useState('8080'),
-        [p, R] = r.useState('localhost'),
-        x = (0, u.Dt)(),
-        M = C.test(A);
-    async function f() {
-        d.q$();
-        let e = (function (e, s, t) {
+        [_, E] = i.useState(null != b ? b : ''),
+        [j, O] = i.useState('8080'),
+        [C, S] = i.useState('localhost'),
+        v = (0, u.Dt)(),
+        T = f.test(_);
+    async function I() {
+        o.q$();
+        let e = (function (e, t, n) {
             if (null == e) return null;
             switch (e) {
                 case 'localhost':
-                    return 'https://localhost:'.concat(s);
+                    return 'https://localhost:'.concat(t);
                 case 'proxy':
-                    return (0, _.Z)(t);
+                    return (0, c.ZP)(n);
             }
-        })(p, g, A);
-        null != (await d.Wt(A, e)) && s();
+        })(C, j, _);
+        null != (await o.Wt(_, e)) && t();
     }
-    r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-    let D = null != n && n === A,
-        P = D
+    i.useEffect(() => () => l.Z.wait(() => o.q$()), []);
+    let y = null != b && b === _,
+        A = y
             ? function () {
-                  d.mc(), O(''), R(null);
+                  o.mc(), E(''), S(null);
               }
-            : f;
-    return (0, i.jsxs)(l.ModalRoot, {
-        'aria-labelledby': x,
-        transitionState: t,
+            : I;
+    return (0, r.jsxs)(a.Y0X, {
+        'aria-labelledby': v,
+        transitionState: n,
         children: [
-            (0, i.jsxs)(l.ModalHeader, {
-                justify: E.Z.Justify.BETWEEN,
+            (0, r.jsxs)(a.xBx, {
+                justify: d.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(l.FormTitle, {
-                        id: x,
+                    (0, r.jsx)(a.vwX, {
+                        id: v,
                         tag: 'h1',
-                        className: N.marginReset,
-                        children: T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
+                        className: h.marginReset,
+                        children: g.NW.string(g.t.f8fzk5)
                     }),
-                    (0, i.jsx)(l.ModalCloseButton, { onClick: s })
+                    (0, r.jsx)(a.olH, { onClick: t })
                 ]
             }),
-            (0, i.jsxs)(l.ModalContent, {
-                className: S.modalContent,
+            (0, r.jsxs)(a.hzk, {
+                className: p.modalContent,
                 children: [
-                    (0, i.jsx)(l.FormText, {
-                        className: N.marginBottom20,
-                        type: l.FormText.Types.DESCRIPTION,
-                        children: T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
+                    (0, r.jsx)(a.R94, {
+                        className: h.marginBottom20,
+                        type: a.R94.Types.DESCRIPTION,
+                        children: g.NW.string(g.t.a6Vilp)
                     }),
-                    null == a
+                    null == N
                         ? null
-                        : (0, i.jsx)(l.FormErrorBlock, {
-                              className: N.marginBottom20,
-                              children: a
+                        : (0, r.jsx)(a.kzN, {
+                              className: h.marginBottom20,
+                              children: N
                           }),
-                    (0, i.jsx)('form', {
+                    (0, r.jsx)('form', {
                         onSubmit: (e) => {
-                            e.preventDefault(), P();
+                            e.preventDefault(), A();
                         },
-                        children: (0, i.jsxs)(E.Z, {
-                            direction: E.Z.Direction.VERTICAL,
-                            align: E.Z.Align.START,
+                        children: (0, r.jsxs)(d.Z, {
+                            direction: d.Z.Direction.VERTICAL,
+                            align: d.Z.Align.START,
                             children: [
-                                (0, i.jsx)(l.FormItem, {
-                                    className: S.inputWrapper,
-                                    title: T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
+                                (0, r.jsx)(a.xJW, {
+                                    className: p.inputWrapper,
+                                    title: g.NW.string(g.t.P6TzgI),
                                     required: !0,
-                                    children: (0, i.jsx)(l.TextInput, {
-                                        value: A,
+                                    children: (0, r.jsx)(a.oil, {
+                                        value: _,
                                         maxLength: 19,
-                                        error: M ? null : T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
+                                        error: T ? null : g.NW.string(g.t.gPNgKC),
                                         onChange: function (e) {
-                                            O(e);
+                                            E(e);
                                         },
-                                        disabled: m
+                                        disabled: x
                                     })
                                 }),
-                                (0, i.jsx)(l.FormItem, {
-                                    className: S.inputWrapper,
-                                    title: T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
-                                    children: (0, i.jsx)(l.SingleSelect, {
-                                        isDisabled: !M || '' === A,
-                                        value: p,
+                                (0, r.jsx)(a.xJW, {
+                                    className: p.inputWrapper,
+                                    title: g.NW.string(g.t['/GTqXF']),
+                                    children: (0, r.jsx)(a.q4e, {
+                                        isDisabled: !T || '' === _,
+                                        value: C,
                                         options: [
                                             {
                                                 value: 'localhost',
-                                                label: T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
+                                                label: g.NW.string(g.t['+Y9Y6u']),
                                                 key: 'localhost'
                                             },
                                             {
                                                 value: 'proxy',
-                                                label: T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PROXY_OPTION,
+                                                label: g.NW.string(g.t.uaksyc),
                                                 key: 'proxy'
                                             }
                                         ],
                                         onChange: function (e) {
-                                            R(e);
+                                            S(e);
                                         },
                                         placeholder: 'URL Origin Type'
                                     })
                                 }),
-                                'localhost' !== p
+                                'localhost' !== C
                                     ? null
-                                    : (0, i.jsx)(l.FormItem, {
-                                          className: S.inputWrapper,
-                                          title: T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
+                                    : (0, r.jsx)(a.xJW, {
+                                          className: p.inputWrapper,
+                                          title: g.NW.string(g.t.fF4zxs),
                                           required: !0,
-                                          children: (0, i.jsx)(l.TextInput, {
-                                              value: g,
+                                          children: (0, r.jsx)(a.oil, {
+                                              value: j,
                                               maxLength: 5,
-                                              onChange: (e) => h(e),
-                                              disabled: m
+                                              onChange: (e) => O(e),
+                                              disabled: x
                                           })
                                       }),
-                                (0, i.jsx)(l.Button, {
-                                    submitting: m,
+                                (0, r.jsx)(a.zxk, {
+                                    submitting: x,
                                     type: 'submit',
-                                    disabled: !M || 0 === A.length || ('localhost' === p && 0 === g.length),
-                                    color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
-                                    children: D ? T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+                                    disabled: !T || 0 === _.length || ('localhost' === C && 0 === j.length),
+                                    color: y ? a.zxk.Colors.RED : a.zxk.Colors.GREEN,
+                                    children: y ? g.NW.string(g.t.d6TR3N) : g.NW.string(g.t.qwuK5O)
                                 })
                             ]
                         })

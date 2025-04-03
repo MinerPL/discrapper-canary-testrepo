@@ -1,5 +1,4 @@
-var r, i;
-function a(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -12,16 +11,13 @@ function a(e, t, n) {
         e
     );
 }
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-}),
-    ((i = r || (r = {})).PRIMARY_APP_COMMAND_NOT_FOUND = 'PRIMARY_APP_COMMAND_NOT_FOUND'),
-    (i.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED = 'LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED');
-class s {
-    constructor(e) {
-        a(this, 'reason', void 0), (this.reason = e);
+n.d(t, { Z: () => o });
+var i = (function (e) {
+    return (e[(e.PRIMARY_APP_COMMAND_NOT_FOUND = 0)] = 'PRIMARY_APP_COMMAND_NOT_FOUND'), (e[(e.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED = 1)] = 'LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED'), (e[(e.INVALID_CHANNEL = 2)] = 'INVALID_CHANNEL'), e;
+})(i || {});
+class o {
+    constructor(e, t) {
+        r(this, 'reason', void 0), r(this, 'detailCode', void 0), (this.reason = e), (this.detailCode = t);
     }
 }
-a(s, 'Reasons', r);
+r(o, 'Reasons', i);

@@ -1,25 +1,20 @@
-t.d(e, {
-    M: function () {
-        return r;
-    }
-}),
-    t(47120);
-var i = t(442837),
-    l = t(580130);
-function r(n) {
-    return (0, i.e7)(
+n.d(t, { M: () => i }), n(47120);
+var r = n(442837),
+    l = n(580130);
+function i(e) {
+    return (0, r.e7)(
         [l.Z],
         () => {
-            let e = l.Z.getForSku(n);
-            if (null == e) return !1;
-            let t = 0;
-            for (let n of e) {
-                var i, r;
-                let e = null !== (r = null === (i = n.endsAt) || void 0 === i ? void 0 : i.getTime()) && void 0 !== r ? r : 1 / 0;
-                e >= t && (t = e);
+            let t = l.Z.getForSku(e);
+            if (null == t) return !1;
+            let n = 0;
+            for (let e of t) {
+                var r, i;
+                let t = null != (i = null == (r = e.endsAt) ? void 0 : r.getTime()) ? i : 1 / 0;
+                t >= n && (n = t);
             }
-            return t > new Date().getTime();
+            return n > new Date().getTime();
         },
-        [n]
+        [e]
     );
 }

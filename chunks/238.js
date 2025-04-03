@@ -1,62 +1,67 @@
 n.d(t, {
-    N: function () {
-        return i;
-    }
+    N: () => f,
+    Z: () => E
 }),
     n(47120);
-var i,
-    a,
-    s,
-    r,
-    l,
-    o,
-    c = n(442837),
-    u = n(570140),
-    d = n(55563),
-    _ = n(551428);
-let E = new Map(),
-    I = new Map();
-((s = i || (i = {}))[(s.NONE = 0)] = 'NONE'), (s[(s.FETCHING = 1)] = 'FETCHING'), (s[(s.FETCHED = 2)] = 'FETCHED'), (s[(s.FAILED = 3)] = 'FAILED');
-let m = {
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(331065),
+    s = n(55563),
+    l = n(551428);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let u = new Map(),
+    d = new Map();
+var f = (function (e) {
+    return (e[(e.NONE = 0)] = 'NONE'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.FAILED = 3)] = 'FAILED'), e;
+})({});
+let _ = new a.Z({
     subscriptions: [],
     otps: []
-};
-class T extends (a = c.ZP.Store) {
+});
+function p(e) {
+    let { applicationId: t, layout: n } = e;
+    u.set(t, a.Z.createFromServer(n)), d.delete(t);
+}
+function h(e) {
+    let { applicationId: t } = e;
+    d.set(t, 3);
+}
+function m(e) {
+    let { applicationId: t } = e;
+    d.set(t, 1);
+}
+class g extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, _.Z);
+        this.waitFor(s.Z, l.Z);
     }
     hasStorefront(e) {
-        return E.has(e);
+        return u.has(e);
     }
     getStoreLayout(e) {
         var t;
-        return null !== (t = E.get(e)) && void 0 !== t ? t : m;
+        return null != (t = u.get(e)) ? t : _;
     }
     getFetchStatus(e) {
         var t;
-        return E.has(e) ? 2 : null !== (t = I.get(e)) && void 0 !== t ? t : 0;
+        return u.has(e) ? 2 : null != (t = d.get(e)) ? t : 0;
     }
 }
-(o = 'ApplicationStoreDirectoryStore'),
-    (l = 'displayName') in (r = T)
-        ? Object.defineProperty(r, l, {
-              value: o,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[l] = o),
-    (t.Z = new T(u.Z, {
-        APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function (e) {
-            let { applicationId: t, listings: n } = e;
-            E.set(t, n), I.delete(t);
-        },
-        APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: function (e) {
-            let { applicationId: t } = e;
-            I.set(t, 3);
-        },
-        APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: function (e) {
-            let { applicationId: t } = e;
-            I.set(t, 1);
-        }
-    }));
+c(g, 'displayName', 'ApplicationStoreDirectoryStore');
+let E = new g(o.Z, {
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: p,
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: h,
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: m
+});

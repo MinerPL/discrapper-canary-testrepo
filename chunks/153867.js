@@ -1,23 +1,22 @@
 n.d(t, {
-    V1: function () {
-        return E;
-    },
-    ZI: function () {
-        return h;
-    }
+    V1: () => h,
+    ZI: () => E,
+    ZP: () => b
 });
 var r = n(524437),
     i = n(381499),
+    o = n(780384),
     a = n(570140),
     s = n(514361),
-    o = n(238514),
-    l = n(210887),
-    u = n(695346),
-    c = n(675478),
-    d = n(981631),
-    _ = n(874893);
-function E(e) {
-    return c.hW.updateAsync(
+    l = n(238514),
+    c = n(781391),
+    u = n(210887),
+    d = n(695346),
+    f = n(675478),
+    _ = n(981631),
+    p = n(874893);
+function h(e) {
+    return f.hW.updateAsync(
         'guildFolders',
         (t) => {
             t.folders = e.map((e) => {
@@ -25,32 +24,37 @@ function E(e) {
                 return null != e.folderId && (t.id = i.r1.create({ value: String(e.folderId) })), null != e.folderColor && (t.color = i.wA.create({ value: String(e.folderColor) })), null != e.folderName && '' !== e.folderName && (t.name = i.Gm.create({ value: String(e.folderName) })), t;
             });
         },
-        c.fy.FREQUENT_USER_ACTION
+        f.fy.FREQUENT_USER_ACTION
     );
 }
-function f(e) {
+function m(e) {
     switch (e) {
-        case d.BRd.DARK:
+        case _.BRd.DARK:
             return r.Q2.DARK;
-        case d.BRd.LIGHT:
+        case _.BRd.LIGHT:
             return r.Q2.LIGHT;
-        case d.BRd.DARKER:
+        case _.BRd.DARKER:
             return r.Q2.DARKER;
-        case d.BRd.MIDNIGHT:
+        case _.BRd.MIDNIGHT:
             return r.Q2.MIDNIGHT;
         default:
             return r.Q2.DARK;
     }
 }
-function h(e) {
+function g(e) {
+    return { backgroundGradientPresetId: null != e.backgroundGradientPresetId ? i.yC.create({ value: e.backgroundGradientPresetId }) : void 0 };
+}
+function E(e) {
     let { backgroundGradientPresetId: t, theme: n, useSystemTheme: r } = e,
-        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.fy.INFREQUENT_USER_ACTION,
-        l = 'system' === n ? _.K.ON : _.K.OFF;
+        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.fy.INFREQUENT_USER_ACTION,
+        s = 'system' === n ? p.KW.ON : p.KW.OFF,
+        u = null != r ? r : s;
     if (
         (a.Z.dispatch({
             type: 'UNSYNCED_USER_SETTINGS_UPDATE',
-            settings: { useSystemTheme: null != r ? r : l }
+            settings: { useSystemTheme: u }
         }),
+        null == t && 'system' !== n && (0, o.wj)(n) && (0, c.Ag)({ [p.zd.DARK]: n }),
         a.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: {
@@ -62,18 +66,17 @@ function h(e) {
                 }
             }
         }),
-        o.Z.shouldSync('appearance'))
+        l.Z.shouldSync('appearance'))
     )
-        return c.hW.updateAsync(
+        return f.hW.updateAsync(
             'appearance',
             (e) => {
-                var r;
-                (e.theme = f(n)), (e.clientThemeSettings = { backgroundGradientPresetId: null != (r = { backgroundGradientPresetId: t }).backgroundGradientPresetId ? i.yC.create({ value: r.backgroundGradientPresetId }) : void 0 });
+                (e.theme = m(n)), (e.clientThemeSettings = g({ backgroundGradientPresetId: t }));
             },
-            s
+            i
         );
 }
-t.ZP = {
+let b = {
     overrideLocale(e) {
         a.Z.dispatch({
             type: 'USER_SETTINGS_LOCALE_OVERRIDE',
@@ -95,13 +98,13 @@ t.ZP = {
                     settings: e
                         ? {}
                         : {
-                              inlineAttachmentMedia: u.x4.getSetting(),
-                              inlineEmbedMedia: u.RS.getSetting(),
-                              renderEmbeds: u.NA.getSetting(),
-                              renderReactions: u.nc.getSetting(),
-                              animateEmoji: u.Yk.getSetting(),
-                              animateStickers: u.Wp.getSetting(),
-                              gifAutoPlay: u.QK.getSetting()
+                              inlineAttachmentMedia: d.x4.getSetting(),
+                              inlineEmbedMedia: d.RS.getSetting(),
+                              renderEmbeds: d.NA.getSetting(),
+                              renderReactions: d.nc.getSetting(),
+                              animateEmoji: d.Yk.getSetting(),
+                              animateStickers: d.Wp.getSetting(),
+                              gifAutoPlay: d.QK.getSetting()
                           }
                 }
             }
@@ -117,9 +120,9 @@ t.ZP = {
                     settings: e
                         ? {}
                         : {
-                              theme: l.Z.theme,
-                              clientThemeSettings: { backgroundGradientPresetId: null === (t = s.Z.gradientPreset) || void 0 === t ? void 0 : t.id },
-                              developerMode: u.Sb.getSetting()
+                              theme: u.Z.theme,
+                              clientThemeSettings: { backgroundGradientPresetId: null == (t = s.Z.gradientPreset) ? void 0 : t.id },
+                              developerMode: d.Sb.getSetting()
                           }
                 }
             }
@@ -139,25 +142,25 @@ t.ZP = {
         });
     },
     updateLocale: (e) =>
-        c.hW.updateAsync(
+        f.hW.updateAsync(
             'localization',
             (t) => {
                 t.locale = i.Gm.create({ value: e });
             },
-            c.fy.INFREQUENT_USER_ACTION
+            f.fy.INFREQUENT_USER_ACTION
         ),
     updateTheme(e) {
         a.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: { appearance: { settings: { theme: e } } }
         }),
-            o.Z.shouldSync('appearance') &&
-                c.hW.updateAsync(
+            l.Z.shouldSync('appearance') &&
+                f.hW.updateAsync(
                     'appearance',
                     (t) => {
-                        t.theme = f(e);
+                        t.theme = m(e);
                     },
-                    c.fy.INFREQUENT_USER_ACTION
+                    f.fy.INFREQUENT_USER_ACTION
                 );
     }
 };

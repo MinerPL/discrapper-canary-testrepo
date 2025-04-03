@@ -1,67 +1,60 @@
 n.d(t, {
-    Pk: function () {
-        return d;
-    },
-    dv: function () {
-        return c;
-    }
+    Pk: () => c,
+    dv: () => o
 }),
     n(411104),
     n(47120);
-var i,
-    a,
-    s = n(735250),
-    r = n(470079),
-    l = n(823379);
-((a = i || (i = {})).POLL_ANSWERS = 'POLL_ANSWERS'), (a.ACTION_BUTTON = 'ACTION_BUTTON');
-let o = r.createContext(void 0);
-function c() {
-    let e = r.useContext(o);
+var r = n(200651),
+    i = n(192379),
+    a = n(823379);
+let l = i.createContext(void 0);
+function o() {
+    let e = i.useContext(l);
     if (null == e) throw Error('No PollFocusContextProvider found');
     return e;
 }
-function u(e) {
-    let { children: t, actionButtonRef: n, pollAnswerRef: i, manageFocusOnAction: a } = e,
-        l = r.useMemo(
+function s(e) {
+    let { children: t, actionButtonRef: n, pollAnswerRef: a, manageFocusOnAction: o } = e,
+        s = i.useMemo(
             () => ({
                 actionButtonRef: n,
-                pollAnswerRef: i,
-                manageFocusOnAction: a
+                pollAnswerRef: a,
+                manageFocusOnAction: o
             }),
-            [n, i, a]
+            [n, a, o]
         );
-    return (0, s.jsx)(o.Provider, {
-        value: l,
+    return (0, r.jsx)(l.Provider, {
+        value: s,
         children: t
     });
 }
-function d(e) {
+function c(e) {
     let { children: t } = e,
-        [n, i] = r.useState(),
-        a = r.useRef(null),
-        o = r.useRef(null);
+        [n, l] = i.useState(),
+        o = i.useRef(null),
+        c = i.useRef(null);
     return (
-        r.useEffect(() => {
-            var e, t, i;
-            'POLL_ANSWERS' === n && null != o.current && (null === (t = o.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()), 'ACTION_BUTTON' === n && null != a.current && (null === (i = a.current) || void 0 === i || i.focus());
+        i.useEffect(() => {
+            var e, t, r;
+            'POLL_ANSWERS' === n && null != c.current && (null == (t = c.current) || null == (e = t.ref) || e.focus()), 'ACTION_BUTTON' === n && null != o.current && (null == (r = o.current) || r.focus());
         }, [n]),
-        (0, s.jsx)(u, {
-            pollAnswerRef: o,
-            actionButtonRef: a,
+        (0, r.jsx)(s, {
+            pollAnswerRef: c,
+            actionButtonRef: o,
             manageFocusOnAction: (e) => {
                 switch (e) {
                     case 'submit':
                     case 'cancel':
-                        i('ACTION_BUTTON');
+                        l('ACTION_BUTTON');
                         break;
                     case 'remove':
                     case 'showVotes':
-                        i('POLL_ANSWERS');
+                        l('POLL_ANSWERS');
                         break;
                     case 'showVoterDetails':
                         break;
                     default:
-                        (0, l.vE)(e);
+                        (0, a.vE)(e);
                 }
             },
             children: t

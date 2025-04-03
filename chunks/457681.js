@@ -1,3 +1,1 @@
-n(995194);
-var e = n(974802);
-t.exports = e.Object.assign;
+n(995194), (t.exports = n(974802).Object.assign);

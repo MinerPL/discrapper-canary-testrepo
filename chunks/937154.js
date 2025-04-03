@@ -1,19 +1,14 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-}),
-    n(47120);
-var s = n(470079);
-function r() {
+n.d(t, { Z: () => o }), n(47120);
+var r = n(192379);
+function i() {
     return 'undefined' == typeof document || 'visible' === document.visibilityState;
 }
-function i() {
-    let [e, t] = (0, s.useState)(r());
+function o() {
+    let [e, t] = (0, r.useState)(i());
     return (
-        (0, s.useEffect)(() => {
+        (0, r.useEffect)(() => {
             function e() {
-                t(r());
+                t(i());
             }
             return (
                 window.addEventListener('visibilitychange', e),

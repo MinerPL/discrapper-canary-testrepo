@@ -1,30 +1,17 @@
 n.d(t, {
-    B: function () {
-        return l;
-    },
-    Fm: function () {
-        return d;
-    },
-    Lc: function () {
-        return c;
-    },
-    Ld: function () {
-        return o;
-    },
-    U4: function () {
-        return u;
-    },
-    hn: function () {
-        return _;
-    },
-    zz: function () {
-        return s;
-    }
+    B: () => l,
+    Fm: () => d,
+    Lc: () => u,
+    U4: () => c,
+    hn: () => f,
+    zz: () => a
 }),
-    n(411104);
+    n(266796),
+    n(411104),
+    n(301563);
 var r = n(830496),
     i = n(959517);
-let a = [
+let o = [
         {
             reName: /\.jpe?g$/i,
             name: (e) => 'image'.concat(e, '.jpg'),
@@ -44,6 +31,11 @@ let a = [
             reName: /\.webp$/i,
             name: (e) => 'image'.concat(e, '.webp'),
             type: 'image/webp'
+        },
+        {
+            reName: /\.avif$/i,
+            name: (e) => 'image'.concat(e, '.avif'),
+            type: 'image/avif'
         },
         {
             reName: /\.heic$/i,
@@ -81,36 +73,36 @@ let a = [
             type: 'image/webm'
         }
     ],
-    s = 524288000,
-    o = 1073741824;
+    a = 524288000;
+function s(e) {
+    let { spoiler: t } = e;
+    return t ? i._j : '';
+}
 function l(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        a = arguments.length > 2 ? arguments[2] : void 0,
-        s = { id: null !== (t = null == n ? void 0 : n.toString()) && void 0 !== t ? t : e.id };
-    null != e.description && (s.description = e.description);
-    let o = (function (e) {
-        let { spoiler: t } = e;
-        return t ? i._j : '';
-    })({ spoiler: e.spoiler });
-    return (s.filename = ''.concat(o).concat(null != a ? a : e.filename)), (s.uploaded_filename = e.uploadedFilename), 'durationSecs' in e && null != e.durationSecs && (s.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (s.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (s.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (s.is_remix = e.isRemix), 'clip' in e && null != e.clip && ((s.is_clip = !0), (s.title = e.clip.name), (s.application_id = e.clip.applicationId), (s.clip_created_at = (0, r.U)(e.clip.id)), (s.clip_participant_ids = (0, r.Z)(e.clip.users))), s;
+        i = arguments.length > 2 ? arguments[2] : void 0,
+        o = { id: null != (t = null == n ? void 0 : n.toString()) ? t : e.id };
+    null != e.description && (o.description = e.description);
+    let a = s({ spoiler: e.spoiler });
+    return (o.filename = ''.concat(a).concat(null != i ? i : e.filename)), (o.uploaded_filename = e.uploadedFilename), 'durationSecs' in e && null != e.durationSecs && (o.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (o.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (o.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (o.is_remix = e.isRemix), 'clip' in e && null != e.clip && ((o.is_clip = !0), (o.title = e.clip.name), (o.application_id = e.clip.applicationId), (o.clip_created_at = (0, r.U)(e.clip.id)), (o.clip_participant_ids = (0, r.Z)(e.clip.users))), o;
 }
-function u(e, t, n) {
+function c(e, t, n) {
     let r = new XMLHttpRequest();
-    return new Promise((i, a) => {
+    return new Promise((i, o) => {
         r.open('GET', e, !0),
             (r.responseType = 'blob'),
             r.setRequestHeader('Range', 'bytes='.concat(t, '-').concat(n)),
-            (r.onabort = (e) => a(e)),
-            (r.onerror = (e) => a(e)),
-            (r.ontimeout = (e) => a(e)),
+            (r.onabort = (e) => o(e)),
+            (r.onerror = (e) => o(e)),
+            (r.ontimeout = (e) => o(e)),
             (r.onload = () => {
-                206 === r.status ? i(r.response) : a(Error('Range request failed'));
+                206 === r.status ? i(r.response) : o(Error('Range request failed'));
             }),
             r.send();
     });
 }
-function c(e) {
+function u(e) {
     let t = new XMLHttpRequest();
     return new Promise((n, r) => {
         t.open('GET', e, !0),
@@ -120,7 +112,7 @@ function c(e) {
             (t.ontimeout = (e) => r(e)),
             (t.onload = () => {
                 var e;
-                return n(null == t ? void 0 : null === (e = t.response) || void 0 === e ? void 0 : e.data);
+                return n(null == t || null == (e = t.response) ? void 0 : e.data);
             }),
             t.send();
     });
@@ -141,24 +133,24 @@ function d(e) {
             r.send();
     });
 }
-function _(e) {
-    var t, n, r, i, s, o;
+function f(e) {
+    var t, n, r, i, a, s;
     let l,
-        { uri: u, i: c, overrideFilename: d, overrideType: _ } = e,
-        E = u.split('/'),
-        f = E[E.length - 1];
-    f = null !== (r = null === (n = f.split('?')) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== r ? r : '';
-    let h = a.find((e) => e.reName.test(f));
-    if ((null == h && null != d && (h = a.find((e) => e.reName.test(d))), null != h && null != d)) {
-        let e = h.name(c).split('.').pop(),
+        { uri: c, i: u, overrideFilename: d, overrideType: f } = e,
+        _ = c.split('/'),
+        p = _[_.length - 1];
+    p = null != (r = null == (n = p.split('?')) || null == (t = n[0]) ? void 0 : t.toLowerCase()) ? r : '';
+    let h = o.find((e) => e.reName.test(p));
+    if ((null == h && null != d && (h = o.find((e) => e.reName.test(d))), null != h && null != d)) {
+        let e = h.name(u).split('.').pop(),
             t = d.lastIndexOf('.');
         l = -1 !== t ? ''.concat(d.substr(0, t), '.').concat(e) : ''.concat(d, '.').concat(e);
-    } else l = null != h ? h.name(c) : null != d ? d : 'unknown';
+    } else l = null != h ? h.name(u) : null != d ? d : 'unknown';
     return {
-        uri: u,
+        uri: c,
         filename: l,
-        type: null !== (i = null != _ ? _ : null == h ? void 0 : h.type) && void 0 !== i ? i : 'unknown',
-        isVideo: -1 !== (null !== (s = null != _ ? _ : null == h ? void 0 : h.name(c)) && void 0 !== s ? s : '').indexOf('video'),
-        isImage: -1 !== (null !== (o = null != _ ? _ : null == h ? void 0 : h.name(c)) && void 0 !== o ? o : '').indexOf('image')
+        type: null != (i = null != f ? f : null == h ? void 0 : h.type) ? i : 'unknown',
+        isVideo: -1 !== (null != (a = null != f ? f : null == h ? void 0 : h.name(u)) ? a : '').indexOf('video'),
+        isImage: -1 !== (null != (s = null != f ? f : null == h ? void 0 : h.name(u)) ? s : '').indexOf('image')
     };
 }

@@ -1,14 +1,10 @@
 t.d(n, {
-    Zk: function () {
-        return d;
-    },
-    bb: function () {
-        return f;
-    },
-    kV: function () {
-        return h;
-    }
+    Zk: () => d,
+    bb: () => f,
+    kV: () => h
 }),
+    t(610885),
+    t(126298),
     t(411104),
     t(653041),
     t(951953),
@@ -24,15 +20,15 @@ t.d(n, {
     t(518263);
 var l = t(512722),
     a = t.n(l),
-    i = t(304809),
-    s = t(70956),
-    r = t(208049),
-    u = t(419202);
-let o = new AudioContext({ sampleRate: Math.min((0, i.N)().sampleRate, 48000) });
+    r = t(304809),
+    i = t(70956),
+    s = t(208049),
+    o = t(419202);
+let u = new AudioContext({ sampleRate: Math.min((0, r.N)().sampleRate, 48000) });
 async function c(e) {
     let n = await e.arrayBuffer();
     if (!(n instanceof ArrayBuffer)) throw Error('Unexpected file type');
-    return o.decodeAudioData(n);
+    return u.decodeAudioData(n);
 }
 async function d(e) {
     var n;
@@ -50,14 +46,14 @@ async function d(e) {
     return t;
 }
 async function f(e) {
-    let { readPromise: n, guildId: t, name: l, volume: a, emojiId: i, emojiName: s } = e;
-    return (0, r.Dx)({
+    let { readPromise: n, guildId: t, name: l, volume: a, emojiId: r, emojiName: i } = e;
+    return (0, s.Dx)({
         guildId: t,
         name: l,
         sound: await n,
         volume: a,
-        emojiId: i,
-        emojiName: s
+        emojiId: r,
+        emojiName: i
     });
 }
 async function m(e) {
@@ -86,17 +82,17 @@ async function m(e) {
             sampleRate: e.sampleRate,
             numberOfFrames: e.length,
             numberOfChannels: e.numberOfChannels,
-            timestamp: 1000000 * e.duration,
+            timestamp: 1000 * e.duration * 1000,
             data: t
         }),
-        i = new AudioEncoder({
+        r = new AudioEncoder({
             output: function (t) {
                 a()(null != t.duration, 'Chunk duration must not be null');
                 let l = (t.duration / 1000000) * e.sampleRate,
-                    i = new Uint8Array(t.byteLength);
-                t.copyTo(i),
+                    r = new Uint8Array(t.byteLength);
+                t.copyTo(r),
                     n.push({
-                        buffer: i,
+                        buffer: r,
                         numSamples: l
                     });
             },
@@ -105,16 +101,16 @@ async function m(e) {
             }
         });
     return (
-        i.configure({
+        r.configure({
             codec: 'opus',
             sampleRate: e.sampleRate,
             numberOfChannels: e.numberOfChannels
         }),
-        i.encode(l),
-        await i.flush(),
+        r.encode(l),
+        await r.flush(),
         new Blob(
             [
-                (0, u.Z)(n, {
+                (0, o.Z)(n, {
                     channelCount: e.numberOfChannels,
                     inputSampleRate: e.sampleRate,
                     outputGain: 0,
@@ -128,14 +124,14 @@ async function m(e) {
 async function h(e, n) {
     let t = (function (e, n) {
         let { startMs: t, endMs: l } = n,
-            { sampleRate: a, numberOfChannels: i, duration: r } = e,
-            u = r * s.Z.Millis.SECOND,
-            c = Math.min(l, u);
-        if (0 === t && c === u) return e;
-        let d = Math.floor((t / u) * e.length),
-            f = Math.floor((c / u) * e.length),
-            m = o.createBuffer(i, f - d, a);
-        for (let n = 0; n < i; n++) {
+            { sampleRate: a, numberOfChannels: r, duration: s } = e,
+            o = s * i.Z.Millis.SECOND,
+            c = Math.min(l, o);
+        if (0 === t && c === o) return e;
+        let d = Math.floor((t / o) * e.length),
+            f = Math.floor((c / o) * e.length),
+            m = u.createBuffer(r, f - d, a);
+        for (let n = 0; n < r; n++) {
             let t = m.getChannelData(n),
                 l = e.getChannelData(n),
                 a = 0;

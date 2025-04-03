@@ -1,414 +1,461 @@
-n(47120), n(653041);
-var s = n(735250),
-    a = n(470079),
-    i = n(120356),
-    r = n.n(i),
+n.d(t, { Z: () => G }), n(47120), n(266796), n(566702), n(653041);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(348327),
     o = n.n(l),
-    c = n(225857),
-    d = n(290843),
+    c = n(999153),
+    d = n(584922),
     u = n(442837),
-    _ = n(481060),
-    I = n(239091),
-    E = n(596454),
-    T = n(607070),
-    m = n(933557),
-    N = n(471445),
-    S = n(339085),
-    h = n(565138),
-    g = n(372769),
-    C = n(621923),
-    x = n(690221),
-    p = n(524329),
-    R = n(575258),
-    f = n(514698),
-    L = n(592125),
-    O = n(4912),
-    A = n(626135),
-    M = n(700785),
-    D = n(434404),
-    v = n(92160),
-    j = n(981631),
+    m = n(481060),
+    g = n(239091),
+    p = n(596454),
+    h = n(493773),
+    f = n(607070),
+    b = n(933557),
+    x = n(471445),
+    j = n(339085),
+    N = n(565138),
+    _ = n(372769),
+    v = n(690221),
+    C = n(524329),
+    O = n(575258),
+    y = n(514698),
+    I = n(592125),
+    E = n(4912),
+    S = n(626135),
+    T = n(700785),
+    P = n(434404),
+    w = n(92160),
+    R = n(981631),
     Z = n(231338),
-    b = n(689938),
-    U = n(897441);
-let G = 'WELCOME_CHANNEL',
-    P = (e) => {
+    D = n(388032),
+    A = n(983459);
+function k(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function W(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let L = 'WELCOME_CHANNEL',
+    M = (e) => {
         var t;
-        let i,
-            { guildId: l, welcomeChannel: o, onEdit: T, onChannelReorder: h, isDropHovered: g, index: x } = e,
-            [p, R] = a.useState(!1),
-            A = a.useRef(null),
-            D = (0, u.e7)([L.Z], () => L.Z.getChannel(o.channel_id)),
-            v = (0, u.e7)([S.ZP], () => (null != o.emoji_id ? S.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
-            P = null != D && M.Uu(j.Plq.VIEW_CHANNEL, D),
-            B = null !== (t = (0, N.KS)(D)) && void 0 !== t ? t : _.TextIcon,
-            y = (0, m.ZP)(D, !1),
-            { homeSettingsEnabled: F } = (0, C.kZ)(l),
-            [, k] = (0, c.c)({
-                type: G,
+        let s,
+            { guildId: l, welcomeChannel: o, onEdit: h, onChannelReorder: f, isDropHovered: N, index: _ } = e,
+            [v, C] = i.useState(!1),
+            O = i.useRef(null),
+            S = (0, u.e7)([I.Z], () => I.Z.getChannel(o.channel_id)),
+            P = (0, u.e7)([j.ZP], () => (null != o.emoji_id ? j.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
+            w = null != S && T.Uu(R.Plq.VIEW_CHANNEL, S),
+            M = null != (t = (0, x.KS)(S)) ? t : m.VL1,
+            G = (0, b.ZP)(S, !1),
+            [, U] = (0, c.c)({
+                type: L,
                 item: {
                     channel: o,
-                    index: x
+                    index: _
                 },
                 end: (e, t) => {
-                    null != e && !t.didDrop() && h(e.channel, null, !0);
+                    null == e || t.didDrop() || f(e.channel, null, !0);
                 }
             }),
-            [, w] = (0, d.L)({
-                accept: G,
+            [, B] = (0, d.L)({
+                accept: L,
                 hover: (e) => {
-                    h(e.channel, x, !1);
+                    f(e.channel, _, !1);
                 },
                 drop: (e) => {
-                    h(e.channel, x, !0);
+                    f(e.channel, _, !0);
                 }
             });
         return (
-            a.useLayoutEffect(
+            i.useLayoutEffect(
                 () => (
-                    k(w(A)),
+                    U(B(O)),
                     () => {
-                        k(null), w(null);
+                        U(null), B(null);
                     }
                 ),
-                [k, w]
+                [U, B]
             ),
-            (i = P
-                ? null != v || null != o.emoji_name
-                    ? (0, s.jsx)(E.Z, {
-                          emojiId: null == v ? void 0 : v.id,
-                          emojiName: null != v ? v.name : o.emoji_name,
-                          animated: !!(null == v ? void 0 : v.animated)
+            (s = w
+                ? null != P || null != o.emoji_name
+                    ? (0, r.jsx)(p.Z, {
+                          emojiId: null == P ? void 0 : P.id,
+                          emojiName: null != P ? P.name : o.emoji_name,
+                          animated: !!(null == P ? void 0 : P.animated)
                       })
-                    : (0, s.jsx)(B, {
+                    : (0, r.jsx)(M, {
                           size: 'md',
                           color: 'currentColor',
-                          className: U.channelIcon
+                          className: A.channelIcon
                       })
-                : (0, s.jsx)(O.Z, {
+                : (0, r.jsx)(E.Z, {
                       width: 24,
                       height: 24,
-                      className: U.warningIcon
+                      className: A.warningIcon
                   })),
-            (0, s.jsxs)('div', {
-                className: r()(U.welcomeChannel, { [U.dragging]: g }),
-                ref: A,
+            (0, r.jsxs)('div', {
+                className: a()(A.welcomeChannel, { [A.dragging]: N }),
+                ref: O,
                 'data-dnd-name': o.description,
                 onContextMenu: (e) => {
-                    (0, I.jW)(e, async () => {
+                    (0, g.jW)(e, async () => {
                         let { default: e } = await n.e('68535').then(n.bind(n, 602320));
                         return (t) =>
-                            (0, s.jsx)(e, {
-                                ...t,
-                                guildId: l,
-                                welcomeChannel: o,
-                                onChannelReorder: h,
-                                setShowConfirmModal: R,
-                                onEdit: T,
-                                index: x
-                            });
+                            (0, r.jsx)(
+                                e,
+                                W(k({}, t), {
+                                    guildId: l,
+                                    welcomeChannel: o,
+                                    onChannelReorder: f,
+                                    setShowConfirmModal: C,
+                                    onEdit: h,
+                                    index: _
+                                })
+                            );
                     });
                 },
                 children: [
-                    i,
-                    (0, s.jsxs)('div', {
-                        className: U.channelDescriptionWrapper,
+                    s,
+                    (0, r.jsxs)('div', {
+                        className: A.channelDescriptionWrapper,
                         children: [
-                            (0, s.jsx)(_.Text, {
+                            (0, r.jsx)(m.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
                                 children: o.description
                             }),
-                            (0, s.jsxs)(_.Text, {
-                                className: P ? void 0 : U.channelWarning,
+                            (0, r.jsxs)(m.Text, {
+                                className: w ? void 0 : A.channelWarning,
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
                                 children: [
-                                    (0, s.jsx)(B, {
-                                        className: U.channelTitleIcon,
+                                    (0, r.jsx)(M, {
+                                        className: A.channelTitleIcon,
                                         size: 'xxs',
                                         color: 'currentColor'
                                     }),
-                                    (0, s.jsx)('span', { children: P ? y : b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INVALID_CHANNEL })
+                                    (0, r.jsx)('span', { children: w ? G : D.NW.string(D.t.zFuCsL) })
                                 ]
                             })
                         ]
                     }),
-                    (0, s.jsx)(_.Button, {
-                        color: _.Button.Colors.PRIMARY,
-                        size: _.Button.Sizes.SMALL,
-                        disabled: F,
+                    (0, r.jsx)(m.zxk, {
+                        color: m.zxk.Colors.PRIMARY,
+                        size: m.zxk.Sizes.SMALL,
+                        disabled: !0,
                         onClick: () =>
-                            (0, _.openModalLazy)(
+                            (0, m.ZDy)(
                                 async () => {
                                     let { default: e } = await n.e('39143').then(n.bind(n, 737868));
                                     return (t) =>
-                                        (0, s.jsx)(e, {
-                                            ...t,
-                                            welcomeChannel: o,
-                                            guildId: l,
-                                            onSave: T
-                                        });
+                                        (0, r.jsx)(
+                                            e,
+                                            W(k({}, t), {
+                                                welcomeChannel: o,
+                                                guildId: l,
+                                                onSave: h
+                                            })
+                                        );
                                 },
                                 { onCloseRequest: () => Z.Vq }
                             ),
-                        children: b.Z.Messages.EDIT
+                        children: D.NW.string(D.t.bt75u7)
                     }),
-                    p &&
-                        (0, s.jsx)(f.Z, {
-                            onConfirm: () => T(),
-                            onCancel: () => R(!1),
+                    v &&
+                        (0, r.jsx)(y.Z, {
+                            onConfirm: () => h(),
+                            onCancel: () => C(!1),
                             channelId: o.channel_id
                         })
                 ]
             })
         );
-    };
-t.Z = (e) => {
-    var t;
-    let { guild: i, showCreateModal: r } = e,
-        { welcomeSettings: l, originalWelcomeSettings: c } = (0, u.e7)([R.Z], () => R.Z.getSettingsProps()),
-        d = (0, u.e7)([T.Z], () => T.Z.useReducedMotion),
-        [I, E] = a.useState(null),
-        [m, N] = a.useState(!1),
-        [S, f] = a.useState(!1),
-        { description: L, channels: M, enabled: G } = l,
-        { homeSettingsEnabled: B } = (0, C.kZ)(null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : j.lds),
-        y = () => {
-            if (null != i) L !== c.description && ((0, p.Es)(i.id, { description: null == L ? void 0 : L.trim() }), N(!0));
-        },
-        F = (e) => {
-            if (null != i) !o()(e, c.channels) && ((0, p.Es)(i.id, { channels: e }), N(!0));
-        },
-        k = (e) => {
-            if (null != i) e !== c.enabled && ((0, p.Es)(i.id, { enabled: e }), f(!d), N(!0));
-        },
-        w = (e) => {
-            if (null == e) return;
-            let t = [...(null != M ? M : []), e];
-            (0, p.VP)({ channels: t }), F(t);
-        },
-        H = (e) => (t) => {
-            let n = [...(null != M ? M : [])];
-            null == t ? n.splice(e, 1) : (n[e] = t), (0, p.VP)({ channels: n }), F(n), 0 === n.length && G && ((0, p.VP)({ enabled: !1 }), k(!1));
-        },
-        V = (e, t, n) => {
-            if (null == M) return;
-            let s = M.indexOf(e),
-                a = [...M];
-            null != t && t !== s && (a.splice(s, 1), a.splice(t, 0, e), (0, p.VP)({ channels: a })), n ? (F(a), E(null)) : E(t);
-        },
-        Y = a.useRef(!1);
-    a.useEffect(
-        () => (
-            null != i &&
-                r &&
-                (0, _.openModalLazy)(
-                    async () => {
-                        let { default: e } = await n.e('39143').then(n.bind(n, 737868));
-                        return (t) =>
-                            (0, s.jsx)(e, {
-                                ...t,
-                                guildId: i.id,
-                                onSave: w
-                            });
-                    },
-                    { onCloseRequest: () => Z.Vq }
-                ),
-            () => {
-                Y.current = !0;
-            }
-        ),
-        []
-    ),
-        a.useEffect(
-            () => () => {
-                if (Y.current && m) {
-                    let e = [],
-                        t = [],
-                        n = !1;
-                    null == M ||
-                        M.forEach((s) => {
-                            e.push(s.description), t.push(s.channel_id), null != s.emoji_id && (n = !0);
-                        }),
-                        A.default.track(j.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
-                            guild_id: null == i ? void 0 : i.id,
-                            options: e,
-                            options_channel_ids: t,
-                            guild_description: L,
-                            has_custom_emojis: n,
-                            is_enabled: G
-                        });
-                }
+    },
+    G = (e) => {
+        let { guild: t, showCreateModal: s } = e,
+            { welcomeSettings: a, originalWelcomeSettings: l } = (0, u.e7)([O.Z], () => O.Z.getSettingsProps()),
+            c = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+            [d, g] = i.useState(null),
+            [p, b] = i.useState(!1),
+            [x, j] = i.useState(!1),
+            { description: y, channels: I, enabled: T } = a,
+            L = () => {
+                null != t && y !== l.description && ((0, C.Es)(t.id, { description: null == y ? void 0 : y.trim() }), b(!0));
             },
-            [m, M, L, G, i, Y]
+            G = (e) => {
+                null != t && (o()(e, l.channels) || ((0, C.Es)(t.id, { channels: e }), b(!0)));
+            },
+            U = (e) => {
+                null != t && e !== l.enabled && ((0, C.Es)(t.id, { enabled: e }), j(!c), b(!0));
+            },
+            B = (e) => {
+                if (null == e) return;
+                let t = [...(null != I ? I : []), e];
+                (0, C.VP)({ channels: t }), G(t);
+            },
+            F = (e) => (t) => {
+                let n = [...(null != I ? I : [])];
+                null == t ? n.splice(e, 1) : (n[e] = t), (0, C.VP)({ channels: n }), G(n), 0 === n.length && T && ((0, C.VP)({ enabled: !1 }), U(!1));
+            },
+            z = (e, t, n) => {
+                if (null == I) return;
+                let r = I.indexOf(e),
+                    i = [...I];
+                null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), (0, C.VP)({ channels: i })), n ? (G(i), g(null)) : g(t);
+            },
+            H = i.useRef(!1);
+        (0, h.ZP)(
+            () => (
+                null != t &&
+                    s &&
+                    (0, m.ZDy)(
+                        async () => {
+                            let { default: e } = await n.e('39143').then(n.bind(n, 737868));
+                            return (n) =>
+                                (0, r.jsx)(
+                                    e,
+                                    W(k({}, n), {
+                                        guildId: t.id,
+                                        onSave: B
+                                    })
+                                );
+                        },
+                        { onCloseRequest: () => Z.Vq }
+                    ),
+                () => {
+                    H.current = !0;
+                }
+            )
         ),
-        a.useEffect(() => () => (0, p.sm)(), []);
-    let W = a.useCallback(() => {
-        null != i && D.Z.open(i.id, j.pNK.ONBOARDING);
-    }, [i]);
-    return null == i
-        ? null
-        : (0, s.jsxs)(_.FormSection, {
-              title: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
-              tag: _.FormTitleTags.H1,
-              children: [
-                  B &&
-                      (0, s.jsx)('div', {
-                          className: U.notice,
-                          children: (0, s.jsxs)(_.Text, {
+            i.useEffect(
+                () => () => {
+                    if (H.current && p) {
+                        let e = [],
+                            n = [],
+                            r = !1;
+                        null == I ||
+                            I.forEach((t) => {
+                                e.push(t.description), n.push(t.channel_id), null != t.emoji_id && (r = !0);
+                            }),
+                            S.default.track(R.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
+                                guild_id: null == t ? void 0 : t.id,
+                                options: e,
+                                options_channel_ids: n,
+                                guild_description: y,
+                                has_custom_emojis: r,
+                                is_enabled: T
+                            });
+                    }
+                },
+                [p, I, y, T, t, H]
+            ),
+            i.useEffect(() => () => (0, C.sm)(), []);
+        let V = i.useCallback(() => {
+            null != t && P.Z.open(t.id, R.pNK.ONBOARDING);
+        }, [t]);
+        return null == t
+            ? null
+            : (0, r.jsxs)(m.hjN, {
+                  title: D.NW.string(D.t['2rkmDg']),
+                  tag: m.RB0.H1,
+                  children: [
+                      (0, r.jsx)('div', {
+                          className: A.notice,
+                          children: (0, r.jsxs)(m.Text, {
                               variant: 'text-md/normal',
                               children: [
-                                  (0, s.jsx)(O.Z, { className: U.noticeIcon }),
-                                  b.Z.Messages.WELCOME_SCREEN_DEPRECATED.format({
+                                  (0, r.jsx)(E.Z, { className: A.noticeIcon }),
+                                  D.NW.format(D.t.oj2vi4, {
                                       onboardingLink: (e) =>
-                                          (0, s.jsx)(x.Z, {
-                                              onClick: W,
+                                          (0, r.jsx)(v.Z, {
+                                              onClick: V,
                                               children: e
                                           })
                                   })
                               ]
                           })
                       }),
-                  (0, s.jsx)(_.Text, {
-                      className: U.__invalid_description,
-                      variant: 'text-sm/normal',
-                      children: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SETTINGS_TEXT
-                  }),
-                  (0, s.jsx)(v.Z, {
-                      enabled: G,
-                      onPreview:
-                          (null == M ? void 0 : M.length) === 0
-                              ? void 0
-                              : () => {
-                                    null != i &&
-                                        (0, _.openModalLazy)(async () => {
-                                            let { default: e } = await n.e('90542').then(n.bind(n, 184782));
-                                            return (t) =>
-                                                (0, s.jsx)(e, {
-                                                    ...t,
-                                                    guildId: i.id,
-                                                    isPreview: !0
-                                                });
-                                        });
-                                },
-                      onToggle:
-                          G || (null == M ? void 0 : M.length) !== 0
-                              ? () => {
-                                    k(!G);
-                                }
-                              : void 0,
-                      animateStatus: S,
-                      firstLine: G ? b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED : b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PROGRESS_WILL_SAVE,
-                      secondLine: G ? b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED_SECOND_LINE : b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLE_REMINDER
-                  }),
-                  (0, s.jsxs)('div', {
-                      className: U.previewContainer,
-                      children: [
-                          (0, s.jsxs)('div', {
-                              className: U.welcomeHeader,
-                              children: [
-                                  (0, s.jsx)(h.Z, {
-                                      size: h.Z.Sizes.LARGER,
-                                      className: U.icon,
-                                      guild: i,
-                                      animate: !0,
-                                      tabIndex: -1
-                                  }),
-                                  (0, s.jsx)(_.Heading, {
-                                      className: U.welcomeTitle,
-                                      variant: 'heading-xl/semibold',
-                                      children: b.Z.Messages.WELCOME_SCREEN_TITLE.format({
-                                          guildName: i.name,
-                                          guildNameHook: (e, t) =>
-                                              (0, s.jsxs)(
-                                                  'span',
-                                                  {
-                                                      children: [
-                                                          (0, s.jsx)(g.Z, {
-                                                              guild: i,
-                                                              className: U.headerGuildBadge,
-                                                              flowerStarClassName: U.flowerStar
-                                                          }),
-                                                          (0, s.jsx)('strong', { children: e })
-                                                      ]
-                                                  },
-                                                  t
-                                              )
+                      (0, r.jsx)(m.Text, {
+                          variant: 'text-sm/normal',
+                          children: D.NW.string(D.t['w2d74+'])
+                      }),
+                      (0, r.jsx)(w.Z, {
+                          enabled: T,
+                          onPreview:
+                              (null == I ? void 0 : I.length) === 0
+                                  ? void 0
+                                  : () => {
+                                        null != t &&
+                                            (0, m.ZDy)(async () => {
+                                                let { default: e } = await n.e('90542').then(n.bind(n, 184782));
+                                                return (n) =>
+                                                    (0, r.jsx)(
+                                                        e,
+                                                        W(k({}, n), {
+                                                            guildId: t.id,
+                                                            isPreview: !0
+                                                        })
+                                                    );
+                                            });
+                                    },
+                          onToggle:
+                              T || (null == I ? void 0 : I.length) !== 0
+                                  ? () => {
+                                        U(!T);
+                                    }
+                                  : void 0,
+                          animateStatus: x,
+                          firstLine: T ? D.NW.string(D.t.JbB7Qk) : D.NW.string(D.t['/bd0Qk']),
+                          secondLine: T ? D.NW.string(D.t['TA1g7+']) : D.NW.string(D.t.nc6r1N)
+                      }),
+                      (0, r.jsxs)('div', {
+                          className: A.previewContainer,
+                          children: [
+                              (0, r.jsxs)('div', {
+                                  className: A.welcomeHeader,
+                                  children: [
+                                      (0, r.jsx)(N.Z, {
+                                          size: N.Z.Sizes.LARGER,
+                                          className: A.icon,
+                                          guild: t,
+                                          animate: !0,
+                                          tabIndex: -1
+                                      }),
+                                      (0, r.jsx)(m.X6q, {
+                                          className: A.welcomeTitle,
+                                          variant: 'heading-xl/semibold',
+                                          children: D.NW.format(D.t['0aydCA'], {
+                                              guildName: t.name,
+                                              guildNameHook: (e, n) =>
+                                                  (0, r.jsxs)(
+                                                      'span',
+                                                      {
+                                                          children: [
+                                                              (0, r.jsx)(_.Z, {
+                                                                  guild: t,
+                                                                  className: A.headerGuildBadge,
+                                                                  flowerStarClassName: A.flowerStar
+                                                              }),
+                                                              (0, r.jsx)('strong', { children: e })
+                                                          ]
+                                                      },
+                                                      n
+                                                  )
+                                          })
+                                      }),
+                                      (0, r.jsx)('div', {
+                                          className: A.descriptionWrapper,
+                                          children: (0, r.jsx)(m.Kx8, {
+                                              className: A.descriptionInput,
+                                              placeholder: D.NW.string(D.t.qzZHaW),
+                                              onChange: (e) => {
+                                                  (0, C.VP)({ description: e });
+                                              },
+                                              onBlur: () => {
+                                                  L();
+                                              },
+                                              onKeyDown: (e) => {
+                                                  e.keyCode === R.yXg.ENTER && e.preventDefault();
+                                              },
+                                              value: y,
+                                              maxLength: 140,
+                                              disabled: !0
+                                          })
                                       })
-                                  }),
-                                  (0, s.jsx)('div', {
-                                      className: U.descriptionWrapper,
-                                      children: (0, s.jsx)(_.TextArea, {
-                                          className: U.descriptionInput,
-                                          placeholder: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_DESCRIPTION_PLACEHOLDER,
-                                          onChange: (e) => {
-                                              (0, p.VP)({ description: e });
-                                          },
-                                          onBlur: () => {
-                                              y();
-                                          },
-                                          onKeyDown: (e) => {
-                                              e.keyCode === j.yXg.ENTER && e.preventDefault();
-                                          },
-                                          value: L,
-                                          maxLength: 140,
-                                          disabled: B
-                                      })
-                                  })
-                              ]
-                          }),
-                          (0, s.jsx)(_.FormDivider, { className: U.divider }),
-                          (0, s.jsxs)('div', {
-                              className: U.welcomeChannels,
-                              children: [
-                                  (0, s.jsx)(_.FormTitle, { children: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_RECOMMENDED_CHANNELS_TITLE }),
-                                  (0, s.jsx)(_.Text, {
-                                      variant: 'text-sm/normal',
-                                      className: U.addChannelSubtext,
-                                      children: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_RECOMMENDED_CHANNELS_DESCRIPTION
-                                  }),
-                                  null == M
-                                      ? void 0
-                                      : M.map((e, t) =>
-                                            (0, s.jsx)(
-                                                P,
-                                                {
-                                                    guildId: i.id,
-                                                    welcomeChannel: e,
-                                                    onEdit: H(t),
-                                                    onChannelReorder: V,
-                                                    isDropHovered: t === I,
-                                                    index: t
-                                                },
-                                                t
-                                            )
-                                        ),
-                                  (null == M || M.length < 5) &&
-                                      (0, s.jsx)(_.Button, {
-                                          onClick: () =>
-                                              (0, _.openModalLazy)(
-                                                  async () => {
-                                                      let { default: e } = await n.e('39143').then(n.bind(n, 737868));
-                                                      return (t) =>
-                                                          (0, s.jsx)(e, {
-                                                              ...t,
-                                                              guildId: i.id,
-                                                              onSave: w
-                                                          });
-                                                  },
-                                                  { onCloseRequest: () => Z.Vq }
-                                              ),
-                                          className: U.addChannelButton,
-                                          disabled: B,
-                                          color: _.Button.Colors.PRIMARY,
-                                          children: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ADD_RECOMMENDED_CHANNEL
-                                      })
-                              ]
-                          })
-                      ]
-                  })
-              ]
-          });
-};
+                                  ]
+                              }),
+                              (0, r.jsx)(m.$i$, { className: A.divider }),
+                              (0, r.jsxs)('div', {
+                                  className: A.welcomeChannels,
+                                  children: [
+                                      (0, r.jsx)(m.vwX, { children: D.NW.string(D.t.euJXzc) }),
+                                      (0, r.jsx)(m.Text, {
+                                          variant: 'text-sm/normal',
+                                          className: A.addChannelSubtext,
+                                          children: D.NW.string(D.t.VOnnn5)
+                                      }),
+                                      null == I
+                                          ? void 0
+                                          : I.map((e, n) =>
+                                                (0, r.jsx)(
+                                                    M,
+                                                    {
+                                                        guildId: t.id,
+                                                        welcomeChannel: e,
+                                                        onEdit: F(n),
+                                                        onChannelReorder: z,
+                                                        isDropHovered: n === d,
+                                                        index: n
+                                                    },
+                                                    n
+                                                )
+                                            ),
+                                      (null == I || I.length < 5) &&
+                                          (0, r.jsx)(m.zxk, {
+                                              onClick: () =>
+                                                  (0, m.ZDy)(
+                                                      async () => {
+                                                          let { default: e } = await n.e('39143').then(n.bind(n, 737868));
+                                                          return (n) =>
+                                                              (0, r.jsx)(
+                                                                  e,
+                                                                  W(k({}, n), {
+                                                                      guildId: t.id,
+                                                                      onSave: B
+                                                                  })
+                                                              );
+                                                      },
+                                                      { onCloseRequest: () => Z.Vq }
+                                                  ),
+                                              className: A.addChannelButton,
+                                              disabled: !0,
+                                              color: m.zxk.Colors.PRIMARY,
+                                              children: D.NW.string(D.t.U1BDe3)
+                                          })
+                                  ]
+                              })
+                          ]
+                      })
+                  ]
+              });
+    };

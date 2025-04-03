@@ -1,14 +1,10 @@
-t.d(n, {
-    S: function () {
-        return E;
-    }
-});
-var i = t(130402),
-    l = t(585483),
-    o = t(981631),
-    r = t(185923);
-let E = {
+n.d(t, { S: () => l });
+var r = n(255963),
+    i = n(585483),
+    s = n(981631),
+    a = n(185923);
+let l = {
     binds: ['mod+e'],
     comboKeysBindGlobal: !0,
-    action: () => ((0, i.x)(r.qR.SearchEmojiKeybindPressed), l.S.dispatchToLastSubscribed(o.CkL.TOGGLE_EMOJI_POPOUT), !1)
+    action: () => ((0, r.x)(a.qR.SearchEmojiKeybindPressed), i.S.dispatchToLastSubscribed(s.CkL.TOGGLE_EMOJI_POPOUT), !1)
 };

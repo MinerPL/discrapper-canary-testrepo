@@ -1,27 +1,24 @@
-t.d(n, {
-    c: function () {
-        return o;
-    }
-});
-var i = t(954955),
-    c = t.n(i),
-    r = t(544891),
-    l = t(570140),
-    u = t(486527),
-    a = t(981631);
-let o = c()(async (e) => {
+n.d(t, { c: () => c });
+var r = n(954955),
+    i = n.n(r),
+    l = n(544891),
+    o = n(570140),
+    a = n(75666),
+    s = n(981631);
+let c = i()(async (e) => {
     try {
-        l.Z.dispatch({ type: 'EVENT_DIRECTORY_FETCH_START' });
-        let n = await r.tn.get({
-            url: a.ANM.DIRECTORY_CHANNEL_ENTRIES(e),
-            query: { type: u.C2.GUILD_SCHEDULED_EVENT }
+        o.Z.dispatch({ type: 'EVENT_DIRECTORY_FETCH_START' });
+        let t = await l.tn.get({
+            url: s.ANM.DIRECTORY_CHANNEL_ENTRIES(e),
+            query: { type: a.C2.GUILD_SCHEDULED_EVENT },
+            rejectWithError: !0
         });
-        l.Z.dispatch({
+        o.Z.dispatch({
             type: 'EVENT_DIRECTORY_FETCH_SUCCESS',
             channelId: e,
-            entries: n.body
+            entries: t.body
         });
     } catch (e) {
-        l.Z.dispatch({ type: 'EVENT_DIRECTORY_FETCH_FAILURE' });
+        o.Z.dispatch({ type: 'EVENT_DIRECTORY_FETCH_FAILURE' });
     }
 }, 200);

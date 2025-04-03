@@ -1,83 +1,125 @@
-var a = t(735250),
-    s = t(470079),
-    l = t(442837),
-    r = t(481060),
-    i = t(239091),
-    o = t(884338),
-    c = t(592125),
-    d = t(720202),
-    u = t(594174),
-    h = t(260483),
-    m = t(314208),
-    g = t(124368),
-    E = t(280301);
-function f(e) {
-    let { channel: n } = e,
-        t = (0, l.e7)([h.Z], () => {
-            var e;
-            return null !== (e = h.Z.getMemberIdsPreview(n.id)) && void 0 !== e ? e : [];
-        }),
-        r = (0, l.e7)([h.Z], () => {
-            var e;
-            return null !== (e = h.Z.getMemberCount(n.id)) && void 0 !== e ? e : 0;
-        }),
-        i = (0, l.Wu)([u.default], () => t.map((e) => u.default.getUser(e)));
-    return (s.useEffect(() => {
-        t.filter((e, n) => null == i[n]).forEach((e) => {
-            d.Z.requestMember(n.guild_id, e);
-        });
-    }, []),
-    0 === t.length)
-        ? null
-        : (0, a.jsx)(o.Z, {
-              className: E.facepile,
-              showDefaultAvatarsForNullUsers: !0,
-              guildId: n.guild_id,
-              users: i,
-              count: r,
-              max: g.yX
-          });
-}
-n.Z = s.memo(function (e) {
-    let { threadId: n, goToThread: s, showChannelName: o } = e,
-        d = (0, l.e7)([c.Z], () => c.Z.getChannel(n)),
-        u = (0, l.e7)([c.Z], () => c.Z.getChannel(d.parent_id));
-    return (0, a.jsxs)(r.Clickable, {
-        className: E.container,
-        onClick: (e) => s(d, e.shiftKey),
+n.d(t, { Z: () => j });
+var r = n(200651),
+    a = n(192379),
+    s = n(442837),
+    l = n(481060),
+    i = n(239091),
+    o = n(493773),
+    c = n(884338),
+    d = n(592125),
+    u = n(720202),
+    h = n(594174),
+    m = n(260483),
+    g = n(314208),
+    f = n(124368),
+    x = n(915298);
+let j = a.memo(function (e) {
+    let { threadId: t, goToThread: a, showChannelName: o } = e,
+        c = (0, s.e7)([d.Z], () => d.Z.getChannel(t)),
+        u = (0, s.e7)([d.Z], () => d.Z.getChannel(c.parent_id));
+    return (0, r.jsxs)(l.P3F, {
+        className: x.container,
+        onClick: (e) => a(c, e.shiftKey),
         onContextMenu: (e) =>
             (0, i.jW)(e, async () => {
-                let { default: e } = await Promise.all([t.e('39285'), t.e('48800'), t.e('4985')]).then(t.bind(t, 422200));
-                return (n) =>
-                    (0, a.jsx)(e, {
-                        ...n,
-                        channel: d
-                    });
+                let { default: e } = await Promise.all([n.e('22356'), n.e('48334')]).then(n.bind(n, 422200));
+                return (t) => {
+                    var n, a;
+                    return (0, r.jsx)(
+                        e,
+                        ((n = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, t)),
+                        (a = a = { channel: c }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(a)).forEach(function (e) {
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                              }),
+                        n)
+                    );
+                };
             }),
         children: [
-            (0, a.jsxs)('div', {
-                className: E.left,
+            (0, r.jsxs)('div', {
+                className: x.left,
                 children: [
-                    (0, a.jsxs)(r.Heading, {
-                        className: E.threadNameLine,
+                    (0, r.jsxs)(l.X6q, {
+                        className: x.threadNameLine,
                         variant: 'heading-md/semibold',
                         children: [
-                            (0, a.jsx)('span', {
-                                className: E.threadName,
-                                children: d.name
+                            (0, r.jsx)('span', {
+                                className: x.threadName,
+                                children: c.name
                             }),
                             o && null != u
-                                ? (0, a.jsx)('span', {
-                                      className: E.parentName,
+                                ? (0, r.jsx)('span', {
+                                      className: x.parentName,
                                       children: '#'.concat(u.name)
                                   })
                                 : null
                         ]
                     }),
-                    (0, m.Z)(d)
+                    (0, g.Z)(c)
                 ]
             }),
-            (0, a.jsx)(f, { channel: d })
+            (0, r.jsx)(v, { channel: c })
         ]
     });
 });
+function v(e) {
+    let { channel: t } = e,
+        n = (0, s.e7)([m.Z], () => {
+            var e;
+            return null != (e = m.Z.getMemberIdsPreview(t.id)) ? e : [];
+        }),
+        a = (0, s.e7)([m.Z], () => {
+            var e;
+            return null != (e = m.Z.getMemberCount(t.id)) ? e : 0;
+        }),
+        l = (0, s.Wu)([h.default], () => n.map((e) => h.default.getUser(e)));
+    return ((0, o.ZP)(() => {
+        n.filter((e, t) => null == l[t]).forEach((e) => {
+            u.Z.requestMember(t.guild_id, e);
+        });
+    }),
+    0 === n.length)
+        ? null
+        : (0, r.jsx)(c.Z, {
+              className: x.facepile,
+              showDefaultAvatarsForNullUsers: !0,
+              guildId: t.guild_id,
+              users: l,
+              count: a,
+              max: f.yX
+          });
+}

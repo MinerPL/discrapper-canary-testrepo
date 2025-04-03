@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i }), n(266796);
 var r = n(58346);
 function i(e) {
     var t;
@@ -10,7 +6,7 @@ function i(e) {
         code: e.code,
         state: r.Rj.RESOLVED,
         name: e.name,
-        description: null !== (t = e.description) && void 0 !== t ? t : '',
+        description: null != (t = e.description) ? t : '',
         creatorId: e.creator_id,
         creator: e.creator,
         createdAt: e.created_at,

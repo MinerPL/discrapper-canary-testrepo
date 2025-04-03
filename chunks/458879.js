@@ -1,32 +1,35 @@
-var a = s(990547),
-    n = s(881052),
-    l = s(573261),
-    o = s(981631);
-async function i(e, t, s, i, r) {
-    try {
-        return (
-            await l.Z.post({
-                url: o.ANM.GUILDS,
-                body: {
-                    name: e,
-                    icon: t,
-                    channels: s.channels,
-                    system_channel_id: s.system_channel_id,
-                    roles: s.roles,
-                    guild_template_code: s.code,
-                    staff_only: !!r || void 0
-                },
-                trackedActionData: {
-                    event: a.NetworkActionNames.GUILD_CREATE,
-                    properties: {
-                        template_name: s.id,
-                        is_community_intent: i
-                    }
-                }
-            })
-        ).body;
-    } catch (e) {
-        throw new n.Hx(e);
+n.d(t, { Z: () => a });
+var s = n(990547),
+    i = n(881052),
+    r = n(573261),
+    l = n(981631);
+let a = {
+    createGuildFromTemplate: async function (e, t, n, a, o) {
+        try {
+            return (
+                await r.Z.post({
+                    url: l.ANM.GUILDS,
+                    body: {
+                        name: e,
+                        icon: t,
+                        channels: n.channels,
+                        system_channel_id: n.system_channel_id,
+                        roles: n.roles,
+                        guild_template_code: n.code,
+                        staff_only: !!o || void 0
+                    },
+                    trackedActionData: {
+                        event: s.NetworkActionNames.GUILD_CREATE,
+                        properties: {
+                            template_name: n.id,
+                            is_community_intent: a
+                        }
+                    },
+                    rejectWithError: !1
+                })
+            ).body;
+        } catch (e) {
+            throw new i.Hx(e);
+        }
     }
-}
-t.Z = { createGuildFromTemplate: i };
+};

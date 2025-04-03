@@ -1,9 +1,9 @@
-n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var r = n(442837),
     i = n(348326),
-    a = n(570140),
-    s = n(314897),
-    o = n(261875);
+    o = n(570140),
+    a = n(314897),
+    s = n(261875);
 function l(e, t, n) {
     return (
         t in e
@@ -18,97 +18,102 @@ function l(e, t, n) {
     );
 }
 i.Ds.KvCache, i.Ds.KvCache;
-class u extends r.yh {
+class c extends r.ZP.Store {
     initialize() {
-        this.waitFor(s.default);
+        this.waitFor(a.default);
     }
     constructor(...e) {
         super(...e),
-            l(this, 'database', (e) => o.Z.database(null != e ? e : s.default.getId())),
+            l(this, 'database', (e) => s.Z.database(null != e ? e : a.default.getId())),
             l(
                 this,
                 'channels',
-                c((e) => new i.Np('guild_channels', i.Ds.KvCache, e))
+                u((e) => new i.Np('guild_channels', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'channelsTemp',
-                c((e) => new i.Bx('guild_channels_temp', i.Ds.KvCache, e))
+                u((e) => new i.Bx('guild_channels_temp', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'basicChannels',
-                c((e) => new i.Nq('basic_channels', i.Ds.KvCache, e))
+                u((e) => new i.Nq('basic_channels', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'syncedBasicChannels',
-                c((e) => new i.Nq('basic_channels_synced', i.Ds.KvCache, e))
+                u((e) => new i.Nq('basic_channels_synced', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'cache',
-                c((e) => new i.Nq('cache', i.Ds.KvCache, e))
+                u((e) => new i.Nq('cache', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'forceResyncVersion',
-                c((e) => new i.Nq('force_resync_version', i.Ds.KvCache, e))
+                u((e) => new i.Nq('force_resync_version', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'emojis',
-                c((e) => new i.Np('guild_emojis', i.Ds.KvCache, e))
+                u((e) => new i.Np('guild_emojis', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'guilds',
-                c((e) => new i.L5('guilds', i.Ds.KvCache, e))
+                u((e) => new i.L5('guilds', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'guildsRequiringDeletedIdsSync',
-                c((e) => new i.L5('guilds_requiring_deleted_ids_sync', i.Ds.KvCache, e))
+                u((e) => new i.L5('guilds_requiring_deleted_ids_sync', i.Ds.KvCache, e))
+            ),
+            l(
+                this,
+                'guildsRequiringChannelSync',
+                u((e) => new i.L5('guilds_requiring_channel_sync', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'messages',
-                c((e) => new i.uC('messages', i.Ds.Messages, e))
+                u((e) => new i.uC('messages', i.Ds.Messages, e))
             ),
             l(
                 this,
                 'stickers',
-                c((e) => new i.Np('guild_stickers', i.Ds.KvCache, e))
+                u((e) => new i.Np('guild_stickers', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'guildVersions',
-                c((e) => new i.L5('guild_versions', i.Ds.KvCache, e))
+                u((e) => new i.L5('guild_versions', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'nonGuildVersions',
-                c((e) => new i.L5('non_guild_versions', i.Ds.KvCache, e))
+                u((e) => new i.L5('non_guild_versions', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'userSettings',
-                c((e) => new i.L5('user_settings', i.Ds.KvCache, e))
+                u((e) => new i.L5('user_settings', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'readStates',
-                c((e) => new i.Nq('read_states', i.Ds.KvCache, e))
+                u((e) => new i.Nq('read_states', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'userGuildSettings',
-                c((e) => new i.Nq('user_guild_settings', i.Ds.KvCache, e))
+                u((e) => new i.Nq('user_guild_settings', i.Ds.KvCache, e))
             ),
             l(
                 this,
                 'userSearchItems',
-                c((e) => new i.L5('user_search_items', i.Ds.KvCache, e))
+                u((e) => new i.L5('user_search_items', i.Ds.KvCache, e))
             ),
             l(this, 'channelsTransaction', (e) => this.channels(e.database).upgradeTransaction(e)),
             l(this, 'channelsTempTransaction', (e) => this.channelsTemp(e.database).upgradeTransaction(e)),
@@ -126,13 +131,14 @@ class u extends r.yh {
             l(this, 'readStatesTransaction', (e) => this.readStates(e.database).upgradeTransaction(e)),
             l(this, 'userGuildSettingsTransaction', (e) => this.userGuildSettings(e.database).upgradeTransaction(e)),
             l(this, 'guildsRequiringDeletedIdsSyncTransaction', (e) => this.guildsRequiringDeletedIdsSync(e.database).upgradeTransaction(e)),
+            l(this, 'guildsRequiringChannelSyncTransaction', (e) => this.guildsRequiringChannelSync(e.database).upgradeTransaction(e)),
             l(this, 'userSearchItemsTransaction', (e) => this.userSearchItems(e.database).upgradeTransaction(e));
     }
 }
-function c(e) {
+function u(e) {
     return function (t) {
-        let n = null != t ? t : o.Z.database(s.default.getId());
+        let n = null != t ? t : s.Z.database(a.default.getId());
         return null == n ? null : e(n);
     };
 }
-t.Z = new u(a.Z, {});
+let d = new c(o.Z, {});

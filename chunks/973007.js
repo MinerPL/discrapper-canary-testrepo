@@ -1,53 +1,56 @@
-var t = n(735250);
-n(470079);
-var r = n(481060),
-    i = n(823188),
-    l = n(474936),
-    a = n(964917);
-function o(e) {
-    let { onClick: s, isGift: n, priceOptions: l } = e;
-    return (0, t.jsx)(r.Clickable, {
-        onClick: s,
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(823188),
+    s = n(474936),
+    o = n(894838);
+function a(e) {
+    let { onClick: t, isGift: n, priceOptions: s, showPromotionalGiftBanner: a } = e;
+    return (0, r.jsx)(i.P3F, {
+        onClick: t,
         style: { cursor: 'pointer' },
-        children: (0, t.jsx)(i.wp, {
-            className: a.tier2MarketingCard,
+        children: (0, r.jsx)(l.wp, {
+            className: o.tier2MarketingCard,
             ctaButton: null,
-            showWumpus: !0,
+            showWumpus: !a,
+            showPromotionalGiftBanner: a,
             showYearlyPrice: !0,
             isGift: n,
             isModal: !0,
-            priceOptions: l
+            priceOptions: s
         })
     });
 }
 function C(e) {
-    let { onClick: s, isGift: n, priceOptions: l } = e;
-    return (0, t.jsx)(r.Clickable, {
-        onClick: s,
+    let { onClick: t, isGift: n, priceOptions: s } = e;
+    return (0, r.jsx)(i.P3F, {
+        onClick: t,
         style: { cursor: 'pointer' },
-        children: (0, t.jsx)(i.Gq, {
-            className: a.tier0MarketingCard,
+        children: (0, r.jsx)(l.Gq, {
+            className: o.tier0MarketingCard,
             ctaButton: null,
             showWumpus: !0,
             showYearlyPrice: !0,
             isGift: n,
-            priceOptions: l
+            priceOptions: s
         })
     });
 }
-s.Z = function (e) {
-    let { onSelectSku: s, isGift: n, priceOptions: r } = e;
-    return (0, t.jsxs)(t.Fragment, {
+let d = function (e) {
+    let { onSelectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: l } = e;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, t.jsx)(o, {
-                onClick: () => s(l.Si.TIER_2),
+            (0, r.jsx)(a, {
+                onClick: () => t(s.Si.TIER_2),
                 isGift: n,
-                priceOptions: r
+                priceOptions: i,
+                showPromotionalGiftBanner: l
             }),
-            (0, t.jsx)(C, {
-                onClick: () => s(l.Si.TIER_0),
+            (0, r.jsx)(C, {
+                onClick: () => t(s.Si.TIER_0),
                 isGift: n,
-                priceOptions: r
+                priceOptions: i
             })
         ]
     });

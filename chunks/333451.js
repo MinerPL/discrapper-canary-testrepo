@@ -1,148 +1,181 @@
-t.d(n, {
-    Z: function () {
-        return v;
-    }
-});
-var o = t(735250),
-    r = t(470079),
-    a = t(120356),
-    i = t.n(a),
-    c = t(442837),
-    l = t(780384),
-    s = t(481060),
-    u = t(100527),
-    d = t(906732),
-    p = t(600164),
-    _ = t(963249),
-    f = t(639119),
-    m = t(165583),
-    h = t(263954),
-    S = t(706454),
-    g = t(709586),
-    b = t(626135),
-    E = t(930153),
-    I = t(74538),
-    P = t(937615),
-    y = t(981631),
-    x = t(474936),
-    T = t(689938),
-    M = t(668166);
-function C(e) {
-    let { shouldUpsellFromNoneTier: n } = e,
-        t = (0, c.e7)([S.default], () => S.default.locale);
-    return (0, o.jsxs)('div', {
-        className: M.perksList,
+n.d(t, { Z: () => L });
+var r = n(200651),
+    l = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    o = n(442837),
+    c = n(780384),
+    a = n(481060),
+    u = n(100527),
+    p = n(906732),
+    d = n(600164),
+    E = n(963249),
+    P = n(639119),
+    m = n(165583),
+    h = n(263954),
+    _ = n(706454),
+    N = n(709586),
+    S = n(626135),
+    y = n(930153),
+    f = n(74538),
+    I = n(937615),
+    g = n(981631),
+    b = n(474936),
+    O = n(388032),
+    x = n(231788);
+function M(e) {
+    let { shouldUpsellFromNoneTier: t } = e,
+        n = (0, o.e7)([_.default], () => _.default.locale);
+    return (0, r.jsxs)('div', {
+        className: x.perksList,
         children: [
-            (0, o.jsx)(h.Z, {
-                icon: g.Z,
-                iconClassName: M.perkIconGuild,
-                description: T.Z.Messages.PREMIUM_UPSELL_FEATURE_FREE_GUILD_SUBSCRIPTION.format({ numFreeGuildSubscriptions: x.cb })
+            (0, r.jsx)(h.Z, {
+                icon: N.Z,
+                iconClassName: x.perkIconGuild,
+                description: O.NW.formatToPlainString(O.t.sQBgs7, { numFreeGuildSubscriptions: b.cb })
             }),
-            (0, o.jsx)(h.Z, {
-                icon: g.Z,
-                iconClassName: M.perkIconGuild,
-                description: T.Z.Messages.PREMIUM_UPSELL_FEATURE_GUILD_SUBSCRIPTION_DISCOUNT.format({ percent: (0, E.T3)(t, x.Rr / 100) })
+            (0, r.jsx)(h.Z, {
+                icon: N.Z,
+                iconClassName: x.perkIconGuild,
+                description: O.NW.formatToPlainString(O.t['1A6vXl'], { percent: (0, y.T3)(n, b.Rr / 100) })
             }),
-            n
-                ? (0, o.jsx)(h.Z, {
-                      icon: s.ReactionIcon,
-                      iconClassName: M.perkIconChatPerks,
-                      description: T.Z.Messages.PREMIUM_UPSELL_FEATURE_CHAT_PERKS
+            t
+                ? (0, r.jsx)(h.Z, {
+                      icon: a.EO4,
+                      iconClassName: x.perkIconChatPerks,
+                      description: O.NW.string(O.t.Z9b2x8)
                   })
                 : null,
-            (0, o.jsx)(h.Z, {
-                icon: s.ScreenArrowIcon,
-                iconClassName: M.perkIconStream,
-                description: T.Z.Messages.PREMIUM_UPSELL_FEATURE_STREAM
+            (0, r.jsx)(h.Z, {
+                icon: a.hGI,
+                iconClassName: x.perkIconStream,
+                description: O.NW.string(O.t['8dqG5O'])
             }),
-            (0, o.jsx)(h.Z, {
-                icon: s.UploadIcon,
-                iconClassName: M.perkIconUpload,
-                description: T.Z.Messages.PREMIUM_UPSELL_FEATURE_UPLOAD
+            (0, r.jsx)(h.Z, {
+                icon: a.rG2,
+                iconClassName: x.perkIconUpload,
+                description: O.NW.string(O.t.cBorIy)
             })
         ]
     });
 }
-function v(e) {
-    var n;
-    let { premiumSubscriptionPlan: t, onClose: a, onBack: c, onSkip: h, onSubscriptionConfirmation: S, analyticsLocation: g, analyticsSourceLocation: E, priceOptions: v } = e,
-        { analyticsLocations: N, sourceAnalyticsLocations: A } = (0, d.ZP)(u.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
-        { theme: R } = (0, s.useThemeContext)(),
-        L = (0, l.ap)(R) ? s.Button.Colors.PRIMARY : s.Button.Colors.WHITE,
-        k = null == t || null == t.premiumSubscriptionType,
-        O = I.ZP.getPrice(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, v),
-        B = (0, P.T4)(O.amount, O.currency),
-        w = (0, f.N)(),
-        U = null == w ? void 0 : w.trial_id,
-        D = (null == w ? void 0 : null === (n = w.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === x.Si.TIER_2;
+function L(e) {
+    var t;
+    let { premiumSubscriptionPlan: n, onClose: i, onBack: o, onSkip: h, onSubscriptionConfirmation: _, analyticsLocation: N, analyticsSourceLocation: y, priceOptions: L } = e,
+        { analyticsLocations: k, sourceAnalyticsLocations: T } = (0, p.ZP)(u.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
+        { theme: j } = (0, a.TCT)(),
+        C = (0, c.ap)(j) ? a.zxk.Colors.PRIMARY : a.zxk.Colors.WHITE,
+        A = null == n || null == n.premiumSubscriptionType,
+        R = f.ZP.getPrice(b.Xh.PREMIUM_MONTH_TIER_2, !1, !1, L),
+        D = (0, I.T4)(R.amount, R.currency),
+        Z = (0, P.N)(),
+        v = null == Z ? void 0 : Z.trial_id,
+        w = (null == Z || null == (t = Z.subscription_trial) ? void 0 : t.sku_id) === b.Si.TIER_2;
     return (
-        r.useEffect(() => {
-            b.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: x.cd.GUILD_PREMIUM_UPSELL_MODAL,
-                location_stack: A
+        l.useEffect(() => {
+            S.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: b.cd.GUILD_PREMIUM_UPSELL_MODAL,
+                location_stack: T
             });
-        }, [A]),
-        (0, o.jsxs)(o.Fragment, {
+        }, [T]),
+        (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, o.jsxs)(s.ModalContent, {
-                    className: M.content,
+                (0, r.jsxs)(a.hzk, {
+                    className: x.content,
                     children: [
-                        (0, o.jsx)(s.ModalCloseButton, {
-                            onClick: a,
-                            className: M.closeButton
+                        (0, r.jsx)(a.olH, {
+                            onClick: i,
+                            className: x.closeButton
                         }),
-                        D && (0, o.jsx)(m.dz, { className: M.premiumTrialBadge }),
-                        (0, o.jsx)('div', { className: i()(M.upsellImage, { [M.upsellImageWithTrialOffer]: D }) }),
-                        (0, o.jsx)('div', {
-                            className: M.bodyText,
-                            children: null != U ? T.Z.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT_TRIAL_VARIANT : T.Z.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT.format({ monthlyPrice: B })
+                        w && (0, r.jsx)(m.dz, { className: x.premiumTrialBadge }),
+                        (0, r.jsx)('div', { className: s()(x.upsellImage, { [x.upsellImageWithTrialOffer]: w }) }),
+                        (0, r.jsx)('div', {
+                            className: x.bodyText,
+                            children: null != v ? O.NW.string(O.t.AoSzEh) : O.NW.format(O.t['7vePZW'], { monthlyPrice: D })
                         }),
-                        (0, o.jsx)(C, { shouldUpsellFromNoneTier: k })
+                        (0, r.jsx)(M, { shouldUpsellFromNoneTier: A })
                     ]
                 }),
-                (0, o.jsxs)(s.ModalFooter, {
-                    align: p.Z.Align.CENTER,
-                    justify: p.Z.Justify.END,
+                (0, r.jsxs)(a.mzw, {
+                    align: d.Z.Align.CENTER,
+                    justify: d.Z.Justify.END,
                     children: [
-                        (0, o.jsxs)('div', {
-                            className: M.footerRight,
+                        (0, r.jsxs)('div', {
+                            className: x.footerRight,
                             children: [
-                                (0, o.jsx)(s.Button, {
-                                    look: s.Button.Looks.LINK,
-                                    color: L,
+                                (0, r.jsx)(a.zxk, {
+                                    look: a.zxk.Looks.LINK,
+                                    color: C,
                                     onClick: h,
-                                    children: T.Z.Messages.PREMIUM_UPSELL_CONTINUE_TO_BOOSTS
+                                    children: O.NW.string(O.t['SI/adn'])
                                 }),
-                                (0, o.jsx)(s.Button, {
-                                    color: s.Button.Colors.GREEN,
+                                (0, r.jsx)(a.zxk, {
+                                    color: a.zxk.Colors.GREEN,
                                     type: 'submit',
                                     onClick: () => {
-                                        a(),
-                                            (0, _.Z)({
+                                        var e, t;
+                                        i(),
+                                            (0, E.Z)({
                                                 initialPlanId: null,
-                                                subscriptionTier: x.Si.TIER_2,
-                                                analyticsLocations: N,
-                                                analyticsObject: {
-                                                    ...g,
-                                                    section: y.jXE.PREMIUM_GUILD_PURCHASE_MODAL
-                                                },
-                                                analyticsSourceLocation: E,
-                                                onSubscriptionConfirmation: S,
-                                                trialId: U
+                                                subscriptionTier: b.Si.TIER_2,
+                                                analyticsLocations: k,
+                                                analyticsObject:
+                                                    ((e = (function (e) {
+                                                        for (var t = 1; t < arguments.length; t++) {
+                                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                                r = Object.keys(n);
+                                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                                (r = r.concat(
+                                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                    })
+                                                                )),
+                                                                r.forEach(function (t) {
+                                                                    var r;
+                                                                    (r = n[t]),
+                                                                        t in e
+                                                                            ? Object.defineProperty(e, t, {
+                                                                                  value: r,
+                                                                                  enumerable: !0,
+                                                                                  configurable: !0,
+                                                                                  writable: !0
+                                                                              })
+                                                                            : (e[t] = r);
+                                                                });
+                                                        }
+                                                        return e;
+                                                    })({}, N)),
+                                                    (t = t = { section: g.jXE.PREMIUM_GUILD_PURCHASE_MODAL }),
+                                                    Object.getOwnPropertyDescriptors
+                                                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                                        : (function (e, t) {
+                                                              var n = Object.keys(e);
+                                                              if (Object.getOwnPropertySymbols) {
+                                                                  var r = Object.getOwnPropertySymbols(e);
+                                                                  n.push.apply(n, r);
+                                                              }
+                                                              return n;
+                                                          })(Object(t)).forEach(function (n) {
+                                                              Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                                          }),
+                                                    e),
+                                                analyticsSourceLocation: y,
+                                                onSubscriptionConfirmation: _,
+                                                trialId: v
                                             });
                                     },
-                                    children: null != U ? T.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : T.Z.Messages.PREMIUM_UPSELL_UPGRADE
+                                    children: null != v ? O.NW.string(O.t['Gd/XHB']) : O.NW.string(O.t.p2moio)
                                 })
                             ]
                         }),
-                        (0, o.jsx)('div', {
-                            className: M.backStep,
-                            children: (0, o.jsx)(s.Button, {
-                                color: L,
-                                look: s.Button.Looks.LINK,
-                                size: s.Button.Sizes.NONE,
-                                onClick: () => c(),
-                                children: T.Z.Messages.BACK
+                        (0, r.jsx)('div', {
+                            className: x.backStep,
+                            children: (0, r.jsx)(a.zxk, {
+                                color: C,
+                                look: a.zxk.Looks.LINK,
+                                size: a.zxk.Sizes.NONE,
+                                onClick: () => o(),
+                                children: O.NW.string(O.t['13/7kZ'])
                             })
                         })
                     ]

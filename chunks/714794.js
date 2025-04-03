@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
-function i(e) {
+n.d(t, { Z: () => r });
+function r(e) {
     return null != e && e > 0;
 }

@@ -1,34 +1,97 @@
 n.d(t, {
-    u: function () {
-        return m;
-    }
+    Z: () => j,
+    u: () => L
 }),
     n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(338545),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(642128),
     l = n(442837),
+    c = n(704215),
     u = n(481060),
-    c = n(607070),
-    d = n(130402),
-    _ = n(78839),
-    E = n(153066),
-    f = n(185923),
-    h = n(689938),
-    p = n(822387);
-let m = {
+    d = n(607070),
+    f = n(540059),
+    _ = n(243778),
+    p = n(255963),
+    h = n(140465),
+    m = n(125900),
+    g = n(546424),
+    E = n(626135),
+    b = n(153066),
+    y = n(981631),
+    v = n(921944),
+    O = n(185923),
+    I = n(388032),
+    S = n(3974);
+function T(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function N(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                T(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function A(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function C(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : A(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let R = 20,
+    P = 24,
+    w = 18,
+    D = 77,
+    L = {
         tension: 800,
         friction: 24
     },
-    I = () => {
-        let e = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
+    x = () => {
+        let e = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
         return (0, r.jsxs)('div', {
-            className: p.premiumTooltipContainer,
+            className: S.premiumTooltipContainer,
             children: [
-                (0, r.jsx)(u.LottieAnimation, {
-                    className: s()(p.premiumUnlockAnimation, { [p.reducedMotion]: e }),
+                (0, r.jsx)(u.Fmz, {
+                    className: a()(S.premiumUnlockAnimation, { [S.reducedMotion]: e }),
                     loop: !1,
                     shouldAnimate: !e,
                     pauseAtFrame: e ? 149 : void 0,
@@ -36,87 +99,111 @@ let m = {
                 }),
                 (0, r.jsx)(u.Text, {
                     variant: 'text-sm/medium',
-                    color: 'always-white',
-                    className: p.premiumTooltipText,
-                    children: h.Z.Messages.PREMIUM_REVERSE_TRIAL_EMOJI_TOOLTIP.format()
+                    className: S.premiumTooltipText,
+                    children: I.NW.format(I.t['/7R4q6'], {})
                 })
             ]
         });
     };
-t.Z = function (e) {
-    var t;
-    let { tabIndex: n, className: a, renderButtonContents: c, active: T, onClick: g, 'aria-controls': S, focusProps: A } = e,
-        [N, v] = i.useState(!1),
-        [O, R] = i.useState(50),
-        C = (0, l.e7)([_.ZP], () => _.ZP.inReverseTrial()),
-        y = N || T,
-        D = (0, E.l)(p, 'emojiButton', y ? 'Hovered' : 'Normal');
-    let L =
-            ((t = O),
-            {
-                '--custom-emoji-sprite-size': ''.concat(24, 'px'),
-                '--custom-emoji-sprite-row': Math.floor(t / 20),
-                '--custom-emoji-sprite-col': t % 20
-            }),
-        b = i.useCallback(() => {
-            if (y) return;
-            let e = Math.floor(77 * Math.random());
-            v(!0), R(e), (0, d.x)(f.qR.EmojiButtonMouseEntered);
-        }, [y, v, R]),
-        M = i.useCallback(() => {
-            v(!1);
-        }, [v]),
-        P = i.useCallback(() => (0, d.x)(f.qR.EmojiButtonFocused), []);
-    return (0, r.jsx)(u.Tooltip, {
-        text: I(),
-        'aria-label': ''.concat(h.Z.Messages.PREMIUM_REVERSE_TRIAL_EMOJI_TOOLTIP.format()),
+function M(e, t) {
+    return {
+        '--custom-emoji-sprite-size': ''.concat(t ? w : P, 'px'),
+        '--custom-emoji-sprite-row': Math.floor(e / R),
+        '--custom-emoji-sprite-col': e % R
+    };
+}
+function k(e, t) {
+    let { tabIndex: n, className: o, renderButtonContents: T, active: A, onClick: R, 'aria-controls': P, focusProps: w, shouldShowSoundmojiCoachmark: k = !1 } = e,
+        [j, U] = i.useState(!1),
+        [G, B] = i.useState(50),
+        F = j || A,
+        V = (0, b.l)(S, 'emojiButton', F ? 'Hovered' : 'Normal'),
+        Z = M(G, (0, f.Q3)('EmojiButton')),
+        H = i.useCallback(() => {
+            if (F) return;
+            let e = Math.floor(Math.random() * D);
+            U(!0), B(e), (0, p.x)(O.qR.EmojiButtonMouseEntered);
+        }, [F, U, B]),
+        W = i.useCallback(() => {
+            U(!1);
+        }, [U]),
+        Y = i.useCallback(() => (0, p.x)(O.qR.EmojiButtonFocused), []),
+        K = (0, h.B4)(),
+        [z, q] = (0, _.US)(K ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
+        Q = z === c.z.TRIAL_NUX_EMOJI_BUTTON,
+        X = !A && Q,
+        J = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        [$, ee] = i.useState(!1),
+        [et, en] = i.useState(!1),
+        er = (0, m.V2)({ location: 'EmojiButton' }),
+        [ei, eo] = (0, _.US)(k && er ? [c.z.SOUNDMOJI_COACHMARK] : []),
+        ea = !$ && ei === c.z.SOUNDMOJI_COACHMARK && !et;
+    return (0, r.jsx)(u.yRy, {
+        renderPopout: () => (0, r.jsx)(g.Z, { markAsDismissed: eo }),
         position: 'top',
-        shouldShow: C && !T,
-        tooltipClassName: p.premiumTooltip,
+        align: 'right',
+        shouldShow: ea,
+        animationPosition: 'bottom',
+        onRequestClose: () => en(!0),
         children: (e) =>
-            (0, r.jsx)(u.Button, {
-                look: u.Button.Looks.BLANK,
-                size: u.Button.Sizes.NONE,
-                tabIndex: n,
-                className: s()(D, a),
-                onMouseEnter: () => {
-                    var t;
-                    b(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
-                },
-                onMouseOver: b,
-                onMouseLeave: () => {
-                    var t;
-                    M(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e);
-                },
-                onFocus: P,
-                onClick: (t) => {
-                    var n;
-                    null == g || g(t), null === (n = e.onClick) || void 0 === n || n.call(e);
-                },
-                'aria-label': h.Z.Messages.SELECT_EMOJI,
-                'aria-controls': S,
-                'aria-expanded': T,
-                'aria-haspopup': 'dialog',
-                focusProps: A,
-                onContextMenu: e.onContextMenu,
-                children:
-                    null != c
-                        ? c()
-                        : (0, r.jsx)(u.Spring, {
-                              config: m,
-                              to: { value: y ? 1 : 0 },
-                              children: (e) => {
-                                  let { value: t } = e;
-                                  return (0, r.jsxs)(o.animated.div, {
-                                      className: p.spriteContainer,
-                                      style: {
-                                          ...L,
-                                          transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
-                                      },
-                                      children: [(0, r.jsx)('div', { className: s()(p.sprite, C ? p.spritePremiumColored : p.spriteColored, y ? p.active : p.inactive) }), (0, r.jsx)('div', { className: s()(p.sprite, C ? p.spritePremiumColored : p.spriteGreyscale, y ? p.inactive : p.active) })]
-                                  });
-                              }
-                          })
+            (0, r.jsx)(u.ua7, {
+                text: () => (0, r.jsx)(x, {}),
+                'aria-label': I.NW.formatToMarkdownString(I.t['/7R4q6'], {}),
+                position: 'top',
+                shouldShow: X,
+                onTooltipHide: () => ee(!1),
+                onTooltipShow: () => ee(X),
+                tooltipClassName: S.premiumTooltip,
+                tooltipContentClassName: S.premiumTooltipContainer,
+                children: (i) =>
+                    (0, r.jsx)(
+                        u.zxk,
+                        C(N({}, e), {
+                            buttonRef: t,
+                            look: u.zxk.Looks.BLANK,
+                            size: u.zxk.Sizes.NONE,
+                            tabIndex: n,
+                            className: a()(V, o),
+                            onMouseEnter: () => {
+                                var e;
+                                H(), null == (e = i.onMouseEnter) || e.call(i), E.default.track(y.rMx.EMOJI_PICKER_BUTTON_HOVERED);
+                            },
+                            onMouseOver: H,
+                            onMouseLeave: () => {
+                                var e;
+                                W(), null == (e = i.onMouseLeave) || e.call(i), Q && q(v.L.USER_DISMISS);
+                            },
+                            onFocus: Y,
+                            onClick: (e) => {
+                                var t;
+                                null == R || R(e), null == (t = i.onClick) || t.call(i);
+                            },
+                            'aria-label': I.NW.string(I.t['59QgaG']),
+                            'aria-controls': P,
+                            'aria-expanded': A,
+                            'aria-haspopup': 'dialog',
+                            focusProps: w,
+                            onContextMenu: i.onContextMenu,
+                            children:
+                                null != T
+                                    ? T()
+                                    : (0, r.jsx)(u.AMe, {
+                                          config: L,
+                                          to: { value: +!!F },
+                                          children: (e) => {
+                                              let { value: t } = e;
+                                              return (0, r.jsxs)(s.animated.div, {
+                                                  className: S.spriteContainer,
+                                                  style: C(N({}, Z), {
+                                                      transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
+                                                  }),
+                                                  children: [(0, r.jsx)('div', { className: a()(S.sprite, S.spriteColored, F ? S.active : S.inactive) }), (0, r.jsx)('div', { className: a()(S.sprite, Q ? S.spritePremiumColored : S.spriteGreyscale, F ? S.inactive : S.active, { [S.reducedMotion]: J }) })]
+                                              });
+                                          }
+                                      })
+                        })
+                    )
             })
     });
-};
+}
+let j = i.forwardRef(k);

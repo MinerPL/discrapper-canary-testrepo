@@ -1,164 +1,301 @@
-n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(442837),
-    o = n(481060),
-    c = n(758059),
-    d = n(194359),
-    u = n(410575),
-    _ = n(607070),
-    E = n(100527),
+n.d(t, { Z: () => k }), n(411104), n(47120), n(653041);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(442837),
+    s = n(481060),
+    c = n(529103),
+    u = n(194359),
+    d = n(410575),
+    p = n(100527),
     h = n(906732),
-    m = n(205976),
-    I = n(699516),
-    g = n(974042),
-    p = n(451478),
-    T = n(434184),
-    S = n(701861),
-    f = n(437314),
-    C = n(696577),
-    N = n(163417),
-    A = n(492347),
-    v = n(42575),
-    Z = n(617015),
-    L = n(981631),
-    O = n(689938),
-    R = n(49175);
-t.Z = function (e) {
-    let { sectionFilter: t, titleId: n } = e,
-        { analyticsLocations: s } = (0, h.ZP)(E.Z.FRIENDS_LIST),
-        { rows: x, section: b } = (0, l.cj)([g.ZP], () => g.ZP.getState()),
-        P = (0, l.e7)([p.Z], () => p.Z.isFocused()),
-        M = (0, l.e7)([I.Z], () => I.Z.getRelationshipCount()),
-        [D, y] = a.useState(() => {
+    f = n(835473),
+    g = n(372460),
+    m = n(795448),
+    b = n(699516),
+    _ = n(974042),
+    E = n(451478),
+    O = n(701861),
+    N = n(437314),
+    y = n(696577),
+    I = n(163417),
+    v = n(830880),
+    C = n(492347),
+    S = n(42575),
+    T = n(617015),
+    P = n(981631),
+    j = n(388032),
+    A = n(222001);
+function Z(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function x(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let L = [];
+function w() {
+    c.Z.setSection(P.pJs.ADD_FRIEND);
+}
+function R() {
+    (0, s.ZDy)(async () => {
+        let { default: e } = await n.e('36312').then(n.bind(n, 153932));
+        return (t) => (0, r.jsx)(e, Z({}, t));
+    });
+}
+function D(e) {
+    let { section: t, showSpamCta: n } = e,
+        l = i.useMemo(() => (n ? R : t !== P.pJs.PENDING ? w : void 0), [n, t]);
+    return (0, r.jsx)('div', {
+        className: A.emptyStateContainer,
+        children: (0, r.jsx)(
+            N.Z,
+            {
+                type: t,
+                onClick: l
+            },
+            t
+        )
+    });
+}
+let k = function (e) {
+    let { titleId: t } = e,
+        { analyticsLocations: n } = (0, h.ZP)(p.Z.FRIENDS_LIST),
+        { rows: l, section: c } = (0, o.cj)([_.ZP], () => _.ZP.getState()),
+        w = (0, o.e7)([E.Z], () => E.Z.isFocused()),
+        { relationshipCount: k, hasBlockedOrIgnored: M } = (0, o.cj)([b.Z], () => ({
+            relationshipCount: b.Z.getRelationshipCount(),
+            hasBlockedOrIgnored: b.Z.getBlockedOrIgnoredIDs().length > 0
+        })),
+        U = (0, g.wn)({ location: 'PeopleList' }),
+        [G, W] = i.useState(() => {
             let e = {};
-            for (let t of Object.values(L.pJs)) e[t] = '';
+            for (let t of Object.values(P.pJs)) e[t] = '';
             return e;
         }),
-        j = a.useCallback(
+        V = i.useCallback(
             (e) => {
-                y({
-                    ...D,
-                    [t]: e
-                });
-            },
-            [D, t]
-        ),
-        U = a.useCallback(() => {
-            y({
-                ...D,
-                [t]: ''
-            });
-        }, [D, t]),
-        G = x.filter(t, D[t]);
-    if (0 === G.length && '' === D[t])
-        return (0, i.jsxs)('div', {
-            className: R.emptyStateContainer,
-            children: [
-                t === L.pJs.ONLINE && (0, i.jsx)(m.Z, {}),
-                (0, i.jsx)(
-                    f.Z,
-                    {
-                        type: t,
-                        onClick: () => {
-                            c.Z.setSection(L.pJs.ADD_FRIEND);
+                let { key: t } = e,
+                    n = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            i = (function (e, t) {
+                                if (null == e) return {};
+                                var n,
+                                    r,
+                                    i = {},
+                                    l = Object.keys(e);
+                                for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                return i;
+                            })(e, t);
+                        if (Object.getOwnPropertySymbols) {
+                            var l = Object.getOwnPropertySymbols(e);
+                            for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                         }
-                    },
-                    b
-                )
-            ]
-        });
-    let k = [G],
-        w = 0 === G.length && '' !== D[t],
-        B = G.filter((e) => e.type === L.OGo.PENDING_INCOMING).length,
-        H = t === L.pJs.PENDING && B > 0 && B >= Z.yf;
-    return (0, i.jsx)(h.Gt, {
-        value: s,
-        children: (0, i.jsxs)(u.Z, {
-            section: L.jXE.FRIENDS_LIST,
-            children: [
-                (0, i.jsx)(o.SearchBar, {
-                    className: r()(R.searchBar, w ? R.searchEmptyState : null),
-                    query: D[t],
-                    onChange: j,
-                    onClear: U,
-                    size: o.SearchBar.Sizes.MEDIUM
+                        return i;
+                    })(e, ['key']);
+                switch (c) {
+                    case P.pJs.PENDING:
+                        return (0, r.jsx)(y.Z, x(Z({}, n), { isFocused: w }), t);
+                    case P.pJs.SUGGESTIONS:
+                        return (0, r.jsx)(S.Z, x(Z({}, n), { isFocused: w }), t);
+                    case P.pJs.ONLINE:
+                    case P.pJs.ALL:
+                    default:
+                        return (0, r.jsx)(O.Z, x(Z({}, n), { isFocused: w }), t);
+                }
+            },
+            [w, c]
+        ),
+        B = i.useCallback(
+            (e) => {
+                W(x(Z({}, G), { [c]: e }));
+            },
+            [G, c]
+        ),
+        H = i.useCallback(() => {
+            W(x(Z({}, G), { [c]: '' }));
+        }, [G, c]),
+        F = i.useMemo(() => c === P.pJs.PENDING && (l.filter(P.pJs.SPAM).length > 0 || l.filter(P.pJs.PENDING_IGNORED).length > 0), [l, c]),
+        z = i.useMemo(() => l.filter(c, G[c]), [l, G, c]),
+        Y = U && c === P.pJs.PENDING,
+        K = i.useMemo(() => {
+            if (!Y) return L;
+            let e = [];
+            return (
+                z.forEach((t) => {
+                    let { applicationId: n } = t;
+                    null != n && e.push(n);
                 }),
-                t === L.pJs.ONLINE && '' === D[t] && (0, i.jsx)(m.Z, {}),
-                (0, i.jsxs)('div', {
-                    className: R.sectionTitle,
-                    children: [
-                        (0, i.jsx)(A.Z, {
-                            id: n,
-                            title: (function (e, t) {
-                                switch (e) {
-                                    case L.pJs.ONLINE:
-                                        return O.Z.Messages.FRIENDS_ONLINE_HEADER.format({ online: t.toString() });
-                                    case L.pJs.PENDING:
-                                        return O.Z.Messages.FRIENDS_PENDING_HEADER.format({ count: t.toString() });
-                                    case L.pJs.SUGGESTIONS:
-                                        return O.Z.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({ count: t.toString() });
-                                    case L.pJs.BLOCKED:
-                                        return O.Z.Messages.FRIENDS_BLOCKED_HEADER.format({ count: t.toString() });
-                                    default:
-                                        return O.Z.Messages.FRIENDS_ALL_HEADER.format({ count: t.toString() });
-                                }
-                            })(t, G.length)
-                        }),
-                        H &&
-                            (0, i.jsx)(o.Button, {
-                                look: o.ButtonLooks.LINK,
-                                color: o.ButtonColors.LINK,
-                                className: R.clearButton,
-                                size: o.Button.Sizes.TINY,
-                                onClick: (e) => {
-                                    e.stopPropagation(), d.Z.confirmClearPendingRelationships(B);
-                                },
-                                'aria-label': O.Z.Messages.CLEAR_INCOMING_REQUESTS_BUTTON,
-                                children: O.Z.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
-                            })
-                    ]
-                }),
-                w
-                    ? (0, i.jsx)('div', {
-                          className: R.emptyStateContainer,
-                          children: (0, i.jsx)(f.Z, { type: f.j.SECTION_NO_RESULTS }, b)
-                      })
-                    : (0, i.jsx)(N.Z, {
-                          relationshipCount: M,
-                          statusSections: k,
-                          renderRow: function (e) {
-                              switch (t) {
-                                  case L.pJs.BLOCKED:
-                                      return (0, i.jsx)(T.Z, {
-                                          ...e,
-                                          isFocused: P
-                                      });
-                                  case L.pJs.PENDING:
-                                      return (0, i.jsx)(C.Z, {
-                                          ...e,
-                                          isFocused: P
-                                      });
-                                  case L.pJs.SUGGESTIONS:
-                                      return (0, i.jsx)(v.Z, {
-                                          ...e,
-                                          isFocused: P
-                                      });
-                                  case L.pJs.ONLINE:
-                                  case L.pJs.ALL:
-                                  default:
-                                      return (0, i.jsx)(S.Z, {
-                                          ...e,
-                                          isFocused: P
-                                      });
-                              }
+                e
+            );
+        }, [Y, z]);
+    (0, f.Z)(K, Y);
+    let q = i.useMemo(() => {
+            if (c !== P.pJs.PENDING) return [z];
+            {
+                let e = [],
+                    t = [];
+                return (
+                    z.forEach((n) => {
+                        n.type === P.OGo.PENDING_INCOMING ? e.push(n) : n.type === P.OGo.PENDING_OUTGOING && t.push(n);
+                    }),
+                    [e, t]
+                );
+            }
+        }, [z, c]),
+        Q = i.useMemo(() => z.filter((e) => e.type === P.OGo.PENDING_INCOMING).length, [z]),
+        X = c === P.pJs.PENDING && Q > 0 && Q >= T.yf,
+        J = i.useCallback(
+            (e) => {
+                e.stopPropagation(), u.Z.confirmClearPendingRelationships(Q);
+            },
+            [Q]
+        ),
+        $ = i.useCallback(
+            (e) => {
+                let n = (function (e, t, n) {
+                    switch (e) {
+                        case P.pJs.ONLINE:
+                            return j.NW.formatToPlainString(j.t.BagU2d, { online: t.toString() });
+                        case P.pJs.PENDING:
+                            if (0 === n) return j.NW.formatToPlainString(j.t['g+3FIS'], { count: t.toString() });
+                            if (1 === n) return j.NW.formatToPlainString(j.t.npJsRk, { count: t.toString() });
+                            throw Error('Unexpected pending friend requests section index: '.concat(n));
+                        case P.pJs.SUGGESTIONS:
+                            return j.NW.formatToPlainString(j.t['DYMZ/v'], { count: t.toString() });
+                        default:
+                            return j.NW.formatToPlainString(j.t.rHRrhI, { count: t.toString() });
+                    }
+                })(c, q[e].length, e);
+                return c === P.pJs.PENDING && 0 === e
+                    ? (0, r.jsxs)(
+                          'div',
+                          {
+                              className: A.sectionTitle,
+                              children: [
+                                  (0, r.jsx)(C.Z, {
+                                      id: t,
+                                      title: n
+                                  }),
+                                  X &&
+                                      (0, r.jsx)(s.zxk, {
+                                          look: s.iLD.LINK,
+                                          color: s.Ttl.LINK,
+                                          className: A.clearButton,
+                                          size: s.zxk.Sizes.TINY,
+                                          onClick: J,
+                                          'aria-label': j.NW.string(j.t.O8k7Oz),
+                                          children: j.NW.string(j.t.O8k7Oz)
+                                      })
+                              ]
                           },
-                          sectionFilter: t,
-                          searchQuery: D[t],
-                          useReducedMotion: _.Z.useReducedMotion
-                      })
+                          n
+                      )
+                    : (0, r.jsx)(
+                          'div',
+                          {
+                              className: A.sectionTitle,
+                              children: (0, r.jsx)(C.Z, {
+                                  id: t,
+                                  title: n
+                              })
+                          },
+                          n
+                      );
+            },
+            [q, c, t, X, J]
+        );
+    if (
+        (i.useEffect(() => {
+            c === P.pJs.ALL && (0, m.d$)();
+        }, [c]),
+        0 === z.length && '' === G[c])
+    )
+        return (0, r.jsx)(D, {
+            section: c,
+            showSpamCta: F
+        });
+    let ee = '' !== G[c],
+        et = 0 === z.length && ee;
+    return (0, r.jsx)(h.Gt, {
+        value: n,
+        children: (0, r.jsxs)(d.Z, {
+            section: P.jXE.FRIENDS_LIST,
+            children: [
+                M && (0, r.jsx)(v.R, {}),
+                (0, r.jsx)(s.E1j, {
+                    className: a()(A.searchBar, et ? A.searchEmptyState : null),
+                    query: G[c],
+                    onChange: B,
+                    onClear: H,
+                    size: s.E1j.Sizes.MEDIUM
+                }),
+                (0, r.jsx)(I.Z, {
+                    rows: q,
+                    renderRow: V,
+                    renderSection: $,
+                    sectionFilter: c,
+                    isVirtualizedList: k >= T.nG,
+                    hasSearchQuery: ee,
+                    footer:
+                        F && !et
+                            ? (0, r.jsx)(s.zxk, {
+                                  look: s.zxk.Looks.LINK,
+                                  color: A.viewSpamButtonColor,
+                                  className: A.viewSpamButton,
+                                  onClick: R,
+                                  size: s.PhG.TINY,
+                                  children: (0, r.jsx)(s.Text, {
+                                      variant: 'text-xs/medium',
+                                      children: j.NW.string(j.t.R40bU1)
+                                  })
+                              })
+                            : null
+                }),
+                et &&
+                    (0, r.jsx)('div', {
+                        className: A.emptyStateContainer,
+                        children: (0, r.jsx)(N.Z, { type: N.j.SECTION_NO_RESULTS }, c)
+                    })
             ]
         })
     });

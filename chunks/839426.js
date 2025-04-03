@@ -1,15 +1,14 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 var r = n(570140);
-function i(e, t, n, i) {
+function i(e) {
+    let { channelId: t, applicationId: n, intent: i, inviterUserId: o, analyticsLocations: a, commandOrigin: s } = e;
     r.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_DEFERRED_OPEN',
-        channelId: e,
-        applicationId: t,
+        channelId: t,
+        applicationId: n,
         intent: i,
-        analyticsLocations: n
+        inviterUserId: o,
+        analyticsLocations: a,
+        commandOrigin: s
     });
 }

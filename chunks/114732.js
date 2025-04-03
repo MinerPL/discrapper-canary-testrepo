@@ -1,52 +1,54 @@
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
 var i = n(780384),
-    a = n(481060),
-    s = n(410030),
-    o = n(689938),
-    l = n(160047),
-    u = n(167969),
-    c = n(557256);
-t.Z = function (e) {
+    o = n(481060),
+    a = n(410030),
+    s = n(388032),
+    l = n(638810),
+    c = n(167969),
+    u = n(557256);
+let d = function (e) {
     let { onClose: t } = e,
-        n = (0, s.ZP)(),
+        n = (0, a.ZP)(),
         d = (0, i.wj)(n);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)(a.ModalHeader, {
+            (0, r.jsxs)(o.xBx, {
                 separator: !1,
                 className: l.header,
                 children: [
                     (0, r.jsx)('img', {
                         alt: '',
                         className: l.headerImage,
-                        src: d ? u : c
+                        src: d ? c : u
                     }),
-                    (0, r.jsx)(a.Heading, {
+                    (0, r.jsx)(o.X6q, {
                         className: l.title,
                         variant: 'heading-xl/medium',
-                        children: o.Z.Messages.STICKER_ASSET_LOAD_ERROR
+                        children: s.NW.string(s.t.tWYWJy)
                     }),
-                    (0, r.jsx)(a.ModalCloseButton, {
+                    (0, r.jsx)(o.olH, {
                         onClick: t,
                         className: l.modalCloseButton
                     })
                 ]
             }),
-            (0, r.jsx)(a.ModalContent, {
+            (0, r.jsx)(o.hzk, {
                 className: l.content,
-                children: (0, r.jsx)(a.Text, {
+                scrollbarType: 'none',
+                children: (0, r.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    children: o.Z.Messages.ACTIVATE_DEVICE_ERROR_UNKNOWN
+                    children: s.NW.string(s.t.JNQRU1)
                 })
             }),
-            (0, r.jsx)(a.ModalFooter, {
+            (0, r.jsx)(o.mzw, {
                 className: l.modalFooter,
-                children: (0, r.jsx)(a.Button, {
-                    color: a.Button.Colors.BRAND,
-                    size: a.Button.Sizes.MEDIUM,
+                children: (0, r.jsx)(o.zxk, {
+                    color: o.zxk.Colors.BRAND,
+                    size: o.zxk.Sizes.MEDIUM,
                     onClick: t,
-                    children: o.Z.Messages.CLOSE
+                    children: s.NW.string(s.t.cpT0Cg)
                 })
             })
         ]

@@ -1,17 +1,13 @@
-n.d(t, {
-    A: function () {
-        return a;
-    }
-});
+n.d(t, { A: () => o });
 var r = n(198584),
     i = n(350167);
-class a {
+class o {
     static open(e, t) {
         return i.r.executeAsync('database_open', (n) => {
             var i;
             return r.d.databaseOpen(n, {
                 database: e,
-                invalidateDisabledHandles: null !== (i = null == t ? void 0 : t.invalidateDisabledHandles) && void 0 !== i && i
+                invalidateDisabledHandles: null != (i = null == t ? void 0 : t.invalidateDisabledHandles) && i
             });
         });
     }
@@ -21,7 +17,7 @@ class a {
             null,
             {
                 database: e,
-                invalidateDisabledHandles: null !== (n = null == t ? void 0 : t.invalidateDisabledHandles) && void 0 !== n && n
+                invalidateDisabledHandles: null != (n = null == t ? void 0 : t.invalidateDisabledHandles) && n
             },
             { synchronous: !0 }
         );

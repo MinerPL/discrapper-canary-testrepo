@@ -1,42 +1,46 @@
+n.d(t, { Z: () => _ });
 var r = n(588468),
     i = n(496675),
-    a = n(483360),
-    s = n(877565),
-    o = n(590921),
+    o = n(483360),
+    a = n(877565),
+    s = n(590921),
     l = n(665692),
-    u = n(981631),
-    c = n(185923),
-    d = n(689938);
+    c = n(981631),
+    u = n(185923),
+    d = n(388032);
+function f(e) {
+    return ''.concat(l.a4).concat(e.name).concat(l.jp);
+}
 let _ = {
     sentinel: l.a4,
-    matches(e, t, n, r, a) {
-        var s, o;
-        return r && null !== (o = null === (s = a.chatInputType.autocomplete) || void 0 === s ? void 0 : s.addReactionShortcut) && void 0 !== o && o && (i.Z.can(u.Plq.ADD_REACTIONS, e) || e.isPrivate());
+    matches(e, t, n, r, o) {
+        var a, s;
+        return r && null != (s = null == (a = o.chatInputType.autocomplete) ? void 0 : a.addReactionShortcut) && s && (i.Z.can(c.Plq.ADD_REACTIONS, e) || e.isPrivate());
     },
     queryResults(e, t, n, r, i) {
-        let { emojis: s } = a.ZP.queryEmojiResults({
+        let { emojis: a } = o.ZP.queryEmojiResults({
             query: n,
             channel: e,
-            intention: c.Hz.REACTION
+            intention: u.Hz.REACTION
         });
-        return { results: { emojis: s.unlocked } };
+        return { results: { emojis: a.unlocked } };
     },
     renderResults(e) {
         let {
             results: { emojis: t },
             selectedIndex: n,
             query: i,
-            onHover: a,
-            onClick: o
+            onHover: o,
+            onClick: s
         } = e;
-        return (0, s.HI)({
+        return (0, a.HI)({
             query: i,
             selectedIndex: n,
             autocompletes: t,
-            onHover: a,
-            onClick: o,
-            titleWithQuery: d.Z.Messages.REACTIONS_MATCHING,
-            titleWithoutQuery: d.Z.Messages.EMOJI,
+            onHover: o,
+            onClick: s,
+            titleWithQuery: d.t.o1Nmpa,
+            titleWithoutQuery: d.NW.string(d.t.sMOuub),
             Component: r.ZP.Emoji,
             getProps: (e) => ({
                 emoji: e,
@@ -54,14 +58,6 @@ let _ = {
                 options: r
             } = e,
             i = t[n];
-        return (
-            r.sendMessage(
-                (function (e) {
-                    return ''.concat(l.a4).concat(e.name).concat(l.jp);
-                })(i)
-            ),
-            { type: o.z2.REACTION }
-        );
+        return r.sendMessage(f(i)), { type: s.z2.REACTION };
     }
 };
-t.Z = _;

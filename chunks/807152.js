@@ -1,6 +1,2 @@
-n.d(t, {
-    v: function () {
-        return i;
-    }
-});
-let i = 'guild-role-subscription-overview-notice';
+n.d(t, { v: () => r });
+let r = 'guild-role-subscription-overview-notice';

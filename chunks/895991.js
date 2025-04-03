@@ -1,28 +1,23 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    o = n(570140),
+n.d(t, { Z: () => y }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(481060),
+    s = n(570140),
     c = n(150063),
-    d = n(274616),
-    u = n(827837),
-    _ = n(410575),
-    E = n(3570),
-    h = n(237919),
-    m = n(957657),
-    I = n(665307),
-    g = n(530151),
-    p = n(981631),
-    T = n(186901),
-    S = n(233255);
-function f(e, t, n) {
+    u = n(274616),
+    d = n(827837),
+    p = n(410575),
+    h = n(3570),
+    f = n(237919),
+    g = n(957657),
+    m = n(665307),
+    b = n(530151),
+    _ = n(981631),
+    E = n(186901),
+    O = n(620282);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,36 +30,36 @@ function f(e, t, n) {
         e
     );
 }
-class C extends a.PureComponent {
+class y extends i.PureComponent {
     componentDidMount() {
-        c.Y(p.Z5c.APPLICATION_LIBRARY), (0, E.T)(T.jE.LIBRARY), o.Z.wait(() => (0, d.o)()), (0, u.N)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
+        c.Y(_.Z5c.APPLICATION_LIBRARY), (0, h.T)(E.jE.LIBRARY), s.Z.wait(() => (0, u.o)()), (0, d.N)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
     }
     renderToolbar() {
-        return (0, i.jsx)(h.Z, {});
+        return (0, r.jsx)(f.Z, {});
     }
     render() {
         let { includeUpdatesInScroller: e } = this.state,
-            t = (0, i.jsx)('div', {
-                children: (0, i.jsx)(_.Z, {
-                    section: p.jXE.LIBRARY_INSTALL_MODULE,
-                    children: (0, i.jsx)(g.Z, { onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange })
+            t = (0, r.jsx)('div', {
+                children: (0, r.jsx)(p.Z, {
+                    section: _.jXE.LIBRARY_INSTALL_MODULE,
+                    children: (0, r.jsx)(b.Z, { onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange })
                 })
             });
-        return (0, i.jsxs)(a.Fragment, {
+        return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(m.Z, {
-                    currentRoute: p.Z5c.APPLICATION_LIBRARY,
+                (0, r.jsx)(g.Z, {
+                    currentRoute: _.Z5c.APPLICATION_LIBRARY,
                     renderToolbar: this.renderToolbar
                 }),
                 e ? null : t,
-                (0, i.jsxs)(l.AdvancedScrollerAuto, {
-                    className: r()(S.container, S.scroller),
+                (0, r.jsxs)(o.yWw, {
+                    className: a()(O.container, O.scroller),
                     ref: this._scrollerRef,
                     children: [
                         e ? t : null,
-                        (0, i.jsx)(_.Z, {
-                            section: p.jXE.LIBRARY_APPLICATION_LIST,
-                            children: (0, i.jsx)(I.Z, {
+                        (0, r.jsx)(p.Z, {
+                            section: _.jXE.LIBRARY_APPLICATION_LIST,
+                            children: (0, r.jsx)(m.Z, {
                                 stickyHeader: !e,
                                 scrollToRow: this.scrollToRow
                             })
@@ -76,14 +71,14 @@ class C extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            f(this, '_scrollerRef', a.createRef()),
-            f(this, '_scrollToOnMount', void 0),
-            f(this, '_scrollToPadding', 0),
-            f(this, 'state', { includeUpdatesInScroller: !1 }),
-            f(this, 'handleHeightTallerThanHalfViewportChange', (e) => {
+            N(this, '_scrollerRef', i.createRef()),
+            N(this, '_scrollToOnMount', void 0),
+            N(this, '_scrollToPadding', 0),
+            N(this, 'state', { includeUpdatesInScroller: !1 }),
+            N(this, 'handleHeightTallerThanHalfViewportChange', (e) => {
                 this.setState({ includeUpdatesInScroller: e });
             }),
-            f(this, 'scrollToRow', (e, t) => {
+            N(this, 'scrollToRow', (e, t) => {
                 let n = this._scrollerRef.current;
                 null != n
                     ? (e.focus(),

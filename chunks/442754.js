@@ -1,58 +1,54 @@
-t.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var a = t(735250);
-t(470079);
-var i = t(442837),
-    l = t(481060),
-    u = t(362658),
-    o = t(152376),
-    r = t(398758),
-    s = t(9156),
-    c = t(981631),
-    d = t(689938);
-function _(e) {
-    let { isFavoritesPerk: n } = (0, u.z)('useChannelOptInItems'),
-        t = (0, r.DM)(e.guild_id),
-        _ = (0, i.e7)([s.ZP], () => s.ZP.isChannelOptedIn(e.guild_id, e.id)),
-        E = (0, i.e7)([s.ZP], () => null != e.parent_id && s.ZP.isChannelOptedIn(e.guild_id, e.parent_id)),
-        N = (0, i.e7)([s.ZP], () => s.ZP.isFavorite(e.guild_id, e.id)),
-        Z = () => {
-            (0, o.XQ)(e.guild_id, e.id, !_, { section: c.jXE.CONTEXT_MENU });
+n.d(t, { Z: () => p });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    c = n(362658),
+    o = n(152376),
+    a = n(398758),
+    u = n(9156),
+    s = n(981631),
+    d = n(388032);
+function p(e) {
+    let { isFavoritesPerk: t } = (0, c.z)('useChannelOptInItems'),
+        n = (0, a.DM)(e.guild_id),
+        p = (0, i.e7)([u.ZP], () => u.ZP.isChannelOptedIn(e.guild_id, e.id)),
+        b = (0, i.e7)([u.ZP], () => null != e.parent_id && u.ZP.isChannelOptedIn(e.guild_id, e.parent_id)),
+        f = (0, i.e7)([u.ZP], () => u.ZP.isFavorite(e.guild_id, e.id)),
+        O = () => {
+            (0, o.XQ)(e.guild_id, e.id, !p, { section: s.jXE.CONTEXT_MENU });
         },
-        p = () => {
-            null != e.parent_id && (0, o.XQ)(e.guild_id, e.parent_id, !1, { section: c.jXE.CONTEXT_MENU });
+        y = () => {
+            null != e.parent_id && (0, o.XQ)(e.guild_id, e.parent_id, !1, { section: s.jXE.CONTEXT_MENU });
         };
-    if (!t || e.isThread()) return null;
+    if (!n || e.isThread()) return null;
     if (e.isCategory())
-        return (0, a.jsx)(l.MenuItem, {
+        return (0, r.jsx)(l.sNh, {
             id: 'opt-into-category',
-            label: _ ? d.Z.Messages.CHANNEL_OPT_OUT : d.Z.Messages.CHANNEL_OPT_IN,
-            action: () => Z()
+            label: p ? d.NW.string(d.t['3zySTE']) : d.NW.string(d.t['9mysCg']),
+            action: () => O()
         });
-    let M = N ? d.Z.Messages.REMOVE_FAVORITE : d.Z.Messages.ADD_FAVORITE,
-        C = N ? d.Z.Messages.UNPIN_CHANNEL : d.Z.Messages.PIN_CHANNEL_TO_TOP;
-    return (0, a.jsxs)(a.Fragment, {
+    let g = f ? d.NW.string(d.t.z7I3gY) : d.NW.string(d.t['N2c/Ul']),
+        j = f ? d.NW.string(d.t.M5PWSU) : d.NW.string(d.t.RMpwZm);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, a.jsx)(l.MenuItem, {
+            (0, r.jsx)(l.sNh, {
                 id: 'opt-in-favorite-channel',
-                label: n ? C : M,
+                label: t ? j : g,
                 action: () => {
-                    (0, o.dM)(e.guild_id, e.id, !N, { section: c.jXE.CONTEXT_MENU });
+                    (0, o.dM)(e.guild_id, e.id, !f, { section: s.jXE.CONTEXT_MENU });
                 }
             }),
-            E
-                ? (0, a.jsx)(l.MenuItem, {
+            b
+                ? (0, r.jsx)(l.sNh, {
                       id: 'opt-out-category',
-                      label: d.Z.Messages.CHANNEL_OPT_OUT_PARENT_CATEGORY,
-                      action: () => p()
+                      label: d.NW.string(d.t.jNphKS),
+                      action: () => y()
                   })
-                : (0, a.jsx)(l.MenuItem, {
+                : (0, r.jsx)(l.sNh, {
                       id: 'opt-into-channel',
-                      label: _ ? d.Z.Messages.CHANNEL_OPT_OUT : d.Z.Messages.CHANNEL_OPT_IN,
-                      action: () => Z()
+                      label: p ? d.NW.string(d.t['3zySTE']) : d.NW.string(d.t['9mysCg']),
+                      action: () => O()
                   })
         ]
     });

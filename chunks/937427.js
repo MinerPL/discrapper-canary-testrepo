@@ -1,49 +1,41 @@
-t.d(n, {
-    w: function () {
-        return c;
-    }
-}),
-    t(47120),
-    t(653041),
-    t(733860);
-var i = t(470079),
-    a = t(581364),
-    s = t(984933),
-    l = t(496675),
-    r = t(282923),
-    o = t(981631),
-    d = t(689938);
-function c(e) {
-    let n = i.useMemo(() => {
-            let n = s.ZP.getChannels(e),
-                t = [...n[s.sH]];
-            t.push(...n[s.Zb].filter((e) => e.channel.isGuildVocal()));
-            let i = t.map((e) => ({
+n.d(t, { w: () => d }), n(47120), n(653041), n(733860);
+var r = n(192379),
+    i = n(581364),
+    l = n(984933),
+    o = n(496675),
+    a = n(282923),
+    s = n(981631),
+    c = n(388032);
+function d(e) {
+    let t = r.useMemo(() => {
+            let t = l.ZP.getChannels(e),
+                n = [...t[l.sH]];
+            n.push(...t[l.Zb].filter((e) => e.channel.isGuildVocal()));
+            let r = n.map((e) => ({
                 id: e.channel.id,
                 name: e.channel.name,
-                canManage: l.Z.can(o.Plq.MANAGE_ROLES, e.channel)
+                canManage: o.Z.can(s.Plq.MANAGE_ROLES, e.channel)
             }));
             return (
-                i.unshift({
-                    id: (0, a.bD)(e),
-                    name: d.Z.Messages.INTEGRATIONS_APPLICATION_ALL_CHANNELS,
+                r.unshift({
+                    id: (0, i.bD)(e),
+                    name: c.NW.string(c.t['7YqSGx']),
                     canManage: !0
                 }),
-                i
+                r
             );
         }, [e]),
-        [t, c] = i.useState(''),
-        I = i.useMemo(() => {
-            let e = (function (e) {
-                return e.startsWith('#') ? e.substr(1) : e;
-            })(t);
-            return (0, r.B)(n, u, e);
-        }, [n, t]);
+        [n, d] = r.useState(''),
+        p = r.useMemo(() => {
+            var e;
+            let r = (e = n).startsWith('#') ? e.substr(1) : e;
+            return (0, a.B)(t, u, r);
+        }, [t, n]);
     return {
-        query: t,
-        results: I,
-        setQuery: c,
-        unfilteredCount: n.length
+        query: n,
+        results: p,
+        setQuery: d,
+        unfilteredCount: t.length
     };
 }
 function u(e) {

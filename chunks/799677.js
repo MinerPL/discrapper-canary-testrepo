@@ -1,54 +1,49 @@
-t.r(a),
-    t.d(a, {
-        default: function () {
-            return c;
-        }
-    });
-var n = t(735250);
-t(470079);
-var s = t(481060),
-    o = t(626135),
-    l = t(39604),
-    i = t(981631),
-    d = t(689938),
-    r = t(313761);
-function c(e) {
-    let { transitionState: a, onClose: t, onBeforeDelete: c, onAfterDelete: _, clip: u } = e;
-    return (0, n.jsxs)(s.ModalRoot, {
-        size: s.ModalSize.SMALL,
-        transitionState: a,
-        className: r.__invalid_modal,
+a.d(e, { default: () => c });
+var i = a(200651);
+a(192379);
+var n = a(481060),
+    s = a(626135),
+    l = a(39604),
+    r = a(981631),
+    d = a(388032),
+    o = a(931009);
+function c(t) {
+    let { transitionState: e, onClose: a, onBeforeDelete: c, onAfterDelete: h, clip: m } = t;
+    return (0, i.jsxs)(n.Y0X, {
+        size: n.CgR.SMALL,
+        transitionState: e,
+        className: o.__invalid_modal,
         children: [
-            (0, n.jsxs)(s.ModalContent, {
-                className: r.modalContent,
+            (0, i.jsxs)(n.hzk, {
+                className: o.modalContent,
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: r.header,
+                    (0, i.jsxs)('div', {
+                        className: o.header,
                         children: [
-                            (0, n.jsx)(s.Heading, {
-                                className: r.__invalid_title,
+                            (0, i.jsx)(n.X6q, {
+                                className: o.__invalid_title,
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                children: d.Z.Messages.CLIPS_DELETE_MODAL_TITLE
+                                children: d.NW.string(d.t.Lzhui4)
                             }),
-                            (0, n.jsx)(s.ModalCloseButton, { onClick: t })
+                            (0, i.jsx)(n.olH, { onClick: a })
                         ]
                     }),
-                    (0, n.jsx)(s.Text, {
+                    (0, i.jsx)(n.Text, {
                         variant: 'text-md/medium',
                         color: 'text-normal',
-                        className: r.__invalid_body,
-                        children: d.Z.Messages.CLIPS_DELETE_MODAL_SUBTITLE
+                        className: o.__invalid_body,
+                        children: d.NW.string(d.t.yxCBqq)
                     })
                 ]
             }),
-            (0, n.jsx)(s.ModalFooter, {
-                children: (0, n.jsx)(s.Button, {
-                    color: s.Button.Colors.RED,
+            (0, i.jsx)(n.mzw, {
+                children: (0, i.jsx)(n.zxk, {
+                    color: n.zxk.Colors.RED,
                     onClick: function () {
-                        null == c || c(), l.sS(u.filepath), _(), o.default.track(i.rMx.CLIP_DELETED);
+                        null == c || c(), l.sS(m.filepath), h(), s.default.track(r.rMx.CLIP_DELETED);
                     },
-                    children: d.Z.Messages.CLIPS_DELETE_CLIP
+                    children: d.NW.string(d.t.VRWPDg)
                 })
             })
         ]

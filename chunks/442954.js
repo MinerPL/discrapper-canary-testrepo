@@ -1,66 +1,118 @@
-t.d(r, {
-    Z: function () {
-        return u;
+n.d(t, { Z: () => h }), n(230036), n(47120);
+var r = n(200651),
+    a = n(192379),
+    l = n(481060),
+    i = n(138464),
+    o = n(585483),
+    s = n(246992),
+    c = n(981631),
+    d = n(616257),
+    u = n(173166);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-}),
-    t(47120);
-var a = t(735250),
-    n = t(470079),
-    i = t(120356),
-    o = t.n(i),
-    l = t(481060),
-    c = t(246992),
-    s = t(535271),
-    d = t(384712);
-function u() {
-    let e = {
-            BOGOAnnouncementModal: async () => {
-                let { default: e } = await t.e('34049').then(t.bind(t, 868508));
-                return (r) => (0, a.jsx)(e, { renderModalProps: r });
-            },
-            PremiumSubscriptionAprilMarketingDecoModal: async () => {
-                let { default: e } = await t.e('18327').then(t.bind(t, 731433));
-                return (r) => (0, a.jsx)(e, { ...r });
-            }
-        },
-        r = Object.keys(e).map((e) => ({
-            label: e,
-            value: e
-        })),
-        [i, u] = n.useState(r[0].value);
-    return (0, a.jsx)(l.ScrollerThin, {
-        className: o()(s.panel),
-        children: (0, a.jsx)('div', {
-            className: d.panelInner,
-            children: (0, a.jsxs)('section', {
-                className: d.section,
-                children: [
-                    (0, a.jsx)(l.Heading, {
-                        variant: 'heading-md/semibold',
-                        children: 'Open a Modal'
-                    }),
-                    (0, a.jsxs)('div', {
-                        className: d.inputRow,
-                        children: [
-                            (0, a.jsx)(l.Select, {
-                                className: d.input,
-                                options: r,
-                                isSelected: (e) => i === e,
-                                placeholder: 'Trial ID',
-                                serialize: (e) => String(e),
-                                select: (e) => u(e),
-                                popoutLayerContext: c.O$
-                            }),
-                            (0, a.jsx)(l.Button, {
+    return e;
+}
+let x = {
+    PremiumSubscriptionAprilMarketingDecoModal: async () => {
+        let { default: e } = await n.e('18327').then(n.bind(n, 731433));
+        return (t) => (0, r.jsx)(e, m({}, t));
+    },
+    PremiumSubscriptionMarketingErrorModal: async () => {
+        let { default: e } = await n.e('76025').then(n.bind(n, 393185));
+        return (t) => (0, r.jsx)(e, m({}, t));
+    },
+    CollectiblesExpiryModal: async () => {
+        let { default: e } = await n.e('77370').then(n.bind(n, 83950));
+        return (t) => (0, r.jsx)(e, m({}, t));
+    },
+    SelectionModal: async () => {
+        let { default: e } = await n.e('74824').then(n.bind(n, 817357));
+        return (t) => (0, r.jsx)(e, m({}, t));
+    }
+};
+function h() {
+    let e = a.useMemo(
+            () =>
+                Object.keys(x)
+                    .map((e) => ({
+                        label: e,
+                        value: e
+                    }))
+                    .sort((e, t) => e.label.localeCompare(t.label)),
+            []
+        ),
+        [t, n] = a.useState(e[0].value);
+    return (0, r.jsx)(l.zJl, {
+        className: d.panel,
+        children: (0, r.jsxs)('div', {
+            className: u.panelInner,
+            children: [
+                (0, r.jsxs)('section', {
+                    className: u.section,
+                    children: [
+                        (0, r.jsx)(l.X6q, {
+                            variant: 'heading-md/semibold',
+                            children: 'Open a Modal'
+                        }),
+                        (0, r.jsxs)('div', {
+                            className: u.inputRow,
+                            children: [
+                                (0, r.jsx)(l.PhF, {
+                                    className: u.input,
+                                    options: e,
+                                    isSelected: (e) => t === e,
+                                    serialize: (e) => e,
+                                    select: (e) => n(e),
+                                    popoutLayerContext: s.O$
+                                }),
+                                (0, r.jsx)(l.zxk, {
+                                    onClick: () => (0, l.ZDy)(x[t]),
+                                    children: 'Open'
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                (0, r.jsxs)('section', {
+                    className: u.section,
+                    children: [
+                        (0, r.jsx)(l.X6q, {
+                            variant: 'heading-md/semibold',
+                            children: 'Wow moment'
+                        }),
+                        (0, r.jsx)('div', {
+                            className: u.inputRow,
+                            children: (0, r.jsx)(l.zxk, {
                                 onClick: () => {
-                                    (0, l.openModalLazy)(e[i]);
+                                    (0, i.H)(!0), o.S.dispatch(c.CkL.PREMIUM_SUBSCRIPTION_CREATED);
                                 },
                                 children: 'Open'
                             })
-                        ]
-                    })
-                ]
-            })
+                        })
+                    ]
+                })
+            ]
         })
     });
 }

@@ -1,124 +1,71 @@
 t.d(n, {
-    AJ: function () {
-        return $;
-    },
-    Bs: function () {
-        return X;
-    },
-    ES: function () {
-        return W;
-    },
-    Eg: function () {
-        return x;
-    },
-    IN: function () {
-        return J;
-    },
-    J$: function () {
-        return er;
-    },
-    MC: function () {
-        return ee;
-    },
-    O2: function () {
-        return Y;
-    },
-    Q: function () {
-        return en;
-    },
-    Vm: function () {
-        return eo;
-    },
-    W3: function () {
-        return H;
-    },
-    XZ: function () {
-        return es;
-    },
-    eV: function () {
-        return z;
-    },
-    eZ: function () {
-        return ec;
-    },
-    iM: function () {
-        return B;
-    },
-    jR: function () {
-        return ed;
-    },
-    kF: function () {
-        return q;
-    },
-    kn: function () {
-        return ea;
-    },
-    ku: function () {
-        return ef;
-    },
-    mX: function () {
-        return et;
-    },
-    n2: function () {
-        return eg;
-    },
-    nP: function () {
-        return K;
-    },
-    ql: function () {
-        return ei;
-    },
-    r_: function () {
-        return eu;
-    },
-    vP: function () {
-        return em;
-    },
-    xw: function () {
-        return V;
-    }
+    AJ: () => K,
+    Bs: () => J,
+    ES: () => Y,
+    Eg: () => G,
+    IN: () => B,
+    J$: () => er,
+    MC: () => $,
+    O2: () => x,
+    Vm: () => eu,
+    W3: () => H,
+    XZ: () => ed,
+    eV: () => Q,
+    eZ: () => eo,
+    iM: () => X,
+    jR: () => ea,
+    kF: () => q,
+    kn: () => ei,
+    ku: () => es,
+    mX: () => ee,
+    n2: () => ec,
+    nP: () => V,
+    ql: () => el,
+    r_: () => en,
+    vP: () => ef,
+    xw: () => z
 }),
     t(47120),
-    t(724458);
-var u = t(470079),
+    t(978209),
+    t(566702);
+var r = t(192379),
     l = t(392711),
-    r = t.n(l),
+    u = t.n(l),
     i = t(683860),
-    o = t(442837),
-    a = t(570140),
+    a = t(442837),
+    o = t(570140),
     d = t(45114),
+    s = t(493773),
     c = t(339085),
-    s = t(987170),
-    f = t(905405),
-    g = t(937889),
+    f = t(987170),
+    g = t(905405),
+    Z = t(937889),
     m = t(739566),
-    Z = t(601070),
-    E = t(344185),
-    v = t(723774),
-    h = t(144140),
-    T = t(91159),
-    _ = t(592125),
-    S = t(720202),
-    I = t(430824),
-    M = t(496675),
-    p = t(306680),
-    C = t(699516),
-    N = t(111583),
-    O = t(594174),
-    P = t(823379),
-    A = t(709054),
-    R = t(883429),
+    h = t(601070),
+    v = t(344185),
+    E = t(723774),
+    p = t(144140),
+    _ = t(91159),
+    P = t(592125),
+    b = t(720202),
+    M = t(430824),
+    O = t(496675),
+    S = t(306680),
+    C = t(594174),
+    I = t(823379),
+    T = t(709054),
+    y = t(883429),
     w = t(238349),
-    b = t(368844),
-    U = t(660189),
-    y = t(581036),
-    L = t(208970),
+    A = t(368844),
+    j = t(660189),
+    N = t(581036),
+    R = t(208970),
     k = t(882252),
-    j = t(710352),
-    D = t(981631),
-    F = t(176505),
-    G = t(124368);
-let Y = (0, s.Z)({
+    U = t(710352),
+    F = t(981631),
+    D = t(176505),
+    L = t(124368);
+let x = (0, f.Z)({
     id: '2023-01_forums_non_community',
     label: 'Forum non-community',
     kind: 'guild',
@@ -131,111 +78,146 @@ let Y = (0, s.Z)({
         }
     ]
 });
-function x(e) {
-    return Y.getCurrentConfig({
+function G(e) {
+    return x.getCurrentConfig({
         guildId: e,
         location: '553713_2'
     }).enabled;
 }
 function H(e) {
-    return (function (e) {
-        let n = (0, o.e7)([I.Z], () => I.Z.getGuild(e));
-        return (
-            Y.useExperiment(
-                {
-                    guildId: e,
-                    location: '553713_1'
-                },
-                { autoTrackExposure: !1 }
-            ).enabled || !!((null == n ? void 0 : n.hasFeature(D.oNc.COMMUNITY)) || (null == n ? void 0 : n.hasFeature(D.oNc.INTERNAL_EMPLOYEE_ONLY)))
-        );
-    })(e);
+    let n = (0, a.e7)([M.Z], () => M.Z.getGuild(e));
+    return (
+        x.useExperiment(
+            {
+                guildId: e,
+                location: '553713_1'
+            },
+            { autoTrackExposure: !1 }
+        ).enabled || !!((null == n ? void 0 : n.hasFeature(F.oNc.COMMUNITY)) || (null == n ? void 0 : n.hasFeature(F.oNc.INTERNAL_EMPLOYEE_ONLY)))
+    );
 }
-function W(e, n, t) {
-    let l = (0, o.e7)([E.Z], () => E.Z.hasLoaded(e.guild_id));
-    u.useEffect(() => {
+function Y(e, n, t) {
+    let l = (0, a.e7)([v.Z], () => v.Z.hasLoaded(e.guild_id));
+    r.useEffect(() => {
         if (!l) return;
-        let u = w.Z.getThreadIds(e.id, n, t),
-            r = y.Z.getThreadIdsMissingCounts(e.guild_id, u)
-                .filter((e) => (0, k.nU)(e, [p.ZP]))
+        let r = w.Z.getThreadIds(e.id, n, t),
+            u = N.Z.getThreadIdsMissingCounts(e.guild_id, r)
+                .filter((e) => (0, k.nU)(e, [S.ZP]))
                 .slice(0, 180)
                 .map((e) => ({
                     threadId: e,
-                    ackMessageId: p.ZP.getTrackedAckMessageId(e)
+                    ackMessageId: S.ZP.getTrackedAckMessageId(e)
                 }));
-        r.length > 0 &&
-            a.Z.dispatch({
+        u.length > 0 &&
+            o.Z.dispatch({
                 type: 'REQUEST_FORUM_UNREADS',
                 guildId: e.guild_id,
                 channelId: e.id,
-                threads: r
+                threads: u
             });
     }, [e.id, e.guild_id, l, t, n]);
 }
 function q(e) {
-    return (0, o.e7)([E.Z, _.Z], () => {
-        let n = r()(E.Z.getThreadsForParent(e.guild_id, e.parent_id))
+    return (0, a.e7)([v.Z, P.Z], () => {
+        let n = u()(v.Z.getThreadsForParent(e.guild_id, e.parent_id))
             .keys()
             .filter((e) => {
                 var n;
-                return (null === (n = _.Z.getChannel(e)) || void 0 === n ? void 0 : n.hasFlag(F.zZ.PINNED)) === !0;
+                return (null == (n = P.Z.getChannel(e)) ? void 0 : n.hasFlag(D.zZ.PINNED)) === !0;
             })
             .head();
-        return _.Z.getChannel(n);
+        return P.Z.getChannel(n);
     });
 }
-let Q = [];
-function z(e) {
+let W = [];
+function Q(e) {
     let n = (function (e) {
         let n = null == e ? void 0 : e.parent_id;
-        return (0, o.cj)(
-            [_.Z],
+        return (0, a.cj)(
+            [P.Z],
             () => {
                 var e;
-                let t = _.Z.getChannel(n);
-                return (null !== (e = null == t ? void 0 : t.availableTags) && void 0 !== e ? e : []).reduce(
-                    (e, n) => ({
-                        ...e,
-                        [n.id]: n
-                    }),
-                    {}
-                );
+                let t = P.Z.getChannel(n);
+                return (null != (e = null == t ? void 0 : t.availableTags) ? e : []).reduce((e, n) => {
+                    var t, r;
+                    return (
+                        (t = (function (e) {
+                            for (var n = 1; n < arguments.length; n++) {
+                                var t = null != arguments[n] ? arguments[n] : {},
+                                    r = Object.keys(t);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (n) {
+                                        var r;
+                                        (r = t[n]),
+                                            n in e
+                                                ? Object.defineProperty(e, n, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[n] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, e)),
+                        (r = r = { [n.id]: n }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                            : (function (e, n) {
+                                  var t = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      t.push.apply(t, r);
+                                  }
+                                  return t;
+                              })(Object(r)).forEach(function (e) {
+                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                              }),
+                        t
+                    );
+                }, {});
             },
             [n]
         );
     })(e);
-    return u.useMemo(() => {
-        var t, u, l;
-        return null !== (l = null == e ? void 0 : null === (u = e.appliedTags) || void 0 === u ? void 0 : null === (t = u.map((e) => n[e])) || void 0 === t ? void 0 : t.filter(P.lm)) && void 0 !== l ? l : Q;
+    return r.useMemo(() => {
+        var t, r, l;
+        return null != (l = null == e || null == (r = e.appliedTags) || null == (t = r.map((e) => n[e])) ? void 0 : t.filter(I.lm)) ? l : W;
     }, [n, null == e ? void 0 : e.appliedTags]);
 }
-function B(e, n) {
-    let t = (0, o.Wu)([O.default], () => n.map((e) => O.default.getUser(e)).filter(P.lm));
+function X(e, n) {
+    let t = (0, a.Wu)([C.default], () => n.map((e) => C.default.getUser(e)).filter(I.lm));
     return (
-        u.useEffect(() => {
+        (0, s.ZP)(() => {
             t.forEach((n) => {
-                S.Z.requestMember(e.guild_id, n.id);
+                b.Z.requestMember(e.guild_id, n.id);
             });
-        }, []),
+        }),
         t
     );
 }
-function V(e, n) {
-    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : j.R6.DURATION_AGO,
-        l = u.useMemo(() => A.default.extractTimestamp(e.id), [e.id]),
-        r = (0, T.Ok)(e),
-        o = u.useMemo(() => (0, k.Uw)(n, t), [n, t]);
-    return u.useMemo(() => (n === i.z.CREATION_DATE ? (0, T.Ye)(l, o) : (0, T.Ye)(r, o)), [r, n, l, o]);
+function z(e, n) {
+    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : U.R6.DURATION_AGO,
+        l = r.useMemo(() => T.default.extractTimestamp(e.id), [e.id]),
+        u = (0, _.Ok)(e),
+        a = r.useMemo(() => (0, k.Uw)(n, t), [n, t]);
+    return r.useMemo(() => (n === i.z.CREATION_DATE ? (0, _.Ye)(l, a) : (0, _.Ye)(u, a)), [u, n, l, a]);
 }
-function J(e) {
-    return u.useMemo(() => {
+function B(e) {
+    return r.useMemo(() => {
         var n;
-        return r().maxBy(null !== (n = null == e ? void 0 : e.reactions) && void 0 !== n ? n : [], (e) => Math.max(e.burst_count, e.count));
+        return u().maxBy(null != (n = null == e ? void 0 : e.reactions) ? n : [], (e) => Math.max(e.burst_count, e.count));
     }, [null == e ? void 0 : e.reactions]);
 }
-function X(e) {
+function J(e) {
     let n = null == e ? void 0 : e.defaultReactionEmoji,
-        t = (0, o.e7)([c.ZP], () => ((null == n ? void 0 : n.emojiId) != null ? c.ZP.getUsableCustomEmojiById(n.emojiId) : null));
+        t = (0, a.e7)([c.ZP], () => ((null == n ? void 0 : n.emojiId) != null ? c.ZP.getUsableCustomEmojiById(n.emojiId) : null));
     return null == n
         ? null
         : null != n.emojiId && null != t
@@ -252,20 +234,20 @@ function X(e) {
               }
             : null;
 }
-function K(e) {
-    let n = (0, o.e7)([h.Z], () => {
+function V(e) {
+    let n = (0, a.e7)([p.Z], () => {
             var n;
-            return null !== (n = h.Z.getCount(e.id)) && void 0 !== n ? n : 0;
+            return null != (n = p.Z.getCount(e.id)) ? n : 0;
         }),
-        t = (0, v.lE)(n, e.id),
-        u = (0, o.e7)([p.ZP], () => (0, k.nU)(e.id, [p.ZP])),
-        l = (0, o.e7)([y.Z], () => {
-            if (!u) return null;
-            let t = y.Z.getCount(e.id);
+        t = (0, E.lE)(n, e.id),
+        r = (0, a.e7)([S.ZP], () => (0, k.nU)(e.id, [S.ZP])),
+        l = (0, a.e7)([N.Z], () => {
+            if (!r) return null;
+            let t = N.Z.getCount(e.id);
             if (null == t || !(t > 0)) return '1+';
             {
                 let e = Math.min(t, n);
-                return e >= G.dg ? ''.concat(G.dg, '+') : e;
+                return e >= L.dg ? ''.concat(L.dg, '+') : e;
             }
         });
     return {
@@ -275,175 +257,159 @@ function K(e) {
         unreadCount: l
     };
 }
-function $(e) {
+function K(e) {
     var n;
-    let t = (0, o.e7)([O.default], () => O.default.getUser(e.ownerId)),
-        l = (0, o.e7)([U.Z], () => {
+    let t = (0, a.e7)([C.default], () => C.default.getUser(e.ownerId)),
+        l = (0, a.e7)([j.Z], () => {
             var n;
-            return null === (n = U.Z.getMessage(e.id)) || void 0 === n ? void 0 : n.firstMessage;
+            return null == (n = j.Z.getMessage(e.id)) ? void 0 : n.firstMessage;
         }),
-        r = (0, m.Sw)(null !== (n = null == l ? void 0 : l.author) && void 0 !== n ? n : t, e);
+        u = (0, m.Sw)(null != (n = null == l ? void 0 : l.author) ? n : t, e);
     return (
-        u.useEffect(() => {
-            null != e.ownerId && S.Z.requestMember(e.guild_id, e.ownerId);
+        r.useEffect(() => {
+            null != e.ownerId && b.Z.requestMember(e.guild_id, e.ownerId);
         }, [e.guild_id, e.ownerId]),
         {
             user: t,
-            author: r
+            author: u
         }
     );
 }
-function ee(e) {
+function $(e) {
     var n, t;
-    let u = O.default.getUser(e.ownerId),
-        l = null === (n = U.Z.getMessage(e.id)) || void 0 === n ? void 0 : n.firstMessage,
-        r = (0, m.ij)(null !== (t = null == l ? void 0 : l.author) && void 0 !== t ? t : u, e);
+    let r = C.default.getUser(e.ownerId),
+        l = null == (n = j.Z.getMessage(e.id)) ? void 0 : n.firstMessage,
+        u = (0, m.ij)(null != (t = null == l ? void 0 : l.author) ? t : r, e);
     return {
-        user: u,
-        author: r
+        user: r,
+        author: u
     };
 }
-function en(e) {
-    return (0, o.Wu)([N.Z, O.default, C.Z], () => {
-        let n = O.default.getCurrentUser();
-        return r()(N.Z.getTypingUsers(e.id))
-            .keys()
-            .filter((e) => e !== (null == n ? void 0 : n.id))
-            .reject((e) => C.Z.isBlocked(e))
-            .map((e) => O.default.getUser(e))
-            .filter(P.lm)
-            .map((e) => e.id)
-            .value();
-    });
-}
-function et(e) {
+function ee(e) {
     let { firstMessage: n, formatInline: t = !0, noStyleAndInteraction: l = !0 } = e,
-        r = (0, f.p)(),
-        { hasSpoilerEmbeds: i, content: o } = u.useMemo(
+        u = (0, g.p)(),
+        { hasSpoilerEmbeds: i, content: a } = r.useMemo(
             () =>
                 (null == n ? void 0 : n.content) != null && '' !== n.content
-                    ? (0, g.ZP)(n, {
+                    ? (0, Z.ZP)(n, {
                           formatInline: t,
                           noStyleAndInteraction: l,
                           allowHeading: !0,
                           allowList: !0,
-                          shouldFilterKeywords: r
+                          shouldFilterKeywords: u
                       })
                     : {
                           hasSpoilerEmbeds: !1,
                           content: null
                       },
-            [n, t, l, r]
+            [n, t, l, u]
         ),
-        a = (0, b.eL)(n, i),
-        d = (0, b.vg)(n, i);
+        o = (0, A.eL)(n, i),
+        d = (0, A.vg)(n, i);
     return {
         hasSpoilerEmbeds: i,
-        content: o,
-        firstMedia: a,
+        content: a,
+        firstMedia: o,
         firstMediaIsEmbed: d
     };
 }
-function eu(e) {
-    return (0, o.e7)([M.Z], () => M.Z.can(D.Plq.MANAGE_CHANNELS, e));
+function en(e) {
+    return (0, a.e7)([O.Z], () => O.Z.can(F.Plq.MANAGE_CHANNELS, e));
 }
-let el = {
+let et = {
     isNew: !1,
     hasUnreads: !1
 };
 function er(e) {
-    return (0, o.cj)([I.Z, p.ZP], () => {
+    return (0, a.cj)([M.Z, S.ZP], () => {
         var n;
-        let t = I.Z.getGuild(null !== (n = e.getGuildId()) && void 0 !== n ? n : D.lds);
-        return null == t ? el : (0, k.FS)(e, t, [p.ZP]);
+        let t = M.Z.getGuild(null != (n = e.getGuildId()) ? n : F.lds);
+        return null == t ? et : (0, k.FS)(e, t, [S.ZP]);
     });
 }
-function ei(e) {
-    return u.useMemo(() => (null == e ? '' : null == e.template ? '' : e.template.trim()), [e]);
+function el(e) {
+    return r.useMemo(() => (null == e || null == e.template ? '' : e.template.trim()), [e]);
 }
-function eo(e) {
-    let n = (0, o.e7)([M.Z], () => M.Z.can(D.Plq.MANAGE_THREADS, e));
-    return u.useMemo(() => {
+function eu(e) {
+    let n = (0, a.e7)([O.Z], () => O.Z.can(F.Plq.MANAGE_THREADS, e));
+    return r.useMemo(() => {
         var t;
-        let u = [...(null !== (t = null == e ? void 0 : e.availableTags) && void 0 !== t ? t : [])];
-        return !n && (u = u.filter((e) => !e.moderated)), u;
+        let r = [...(null != (t = null == e ? void 0 : e.availableTags) ? t : [])];
+        return n || (r = r.filter((e) => !e.moderated)), r;
     }, [n, null == e ? void 0 : e.availableTags]);
 }
-function ea(e, n) {
-    let t = eo((0, o.e7)([_.Z], () => _.Z.getChannel(null == e ? void 0 : e.parent_id), [e]));
-    return u.useMemo(() => n.filter((e) => t.includes(e)), [n, t]);
+function ei(e, n) {
+    let t = eu((0, a.e7)([P.Z], () => P.Z.getChannel(null == e ? void 0 : e.parent_id), [e]));
+    return r.useMemo(() => n.filter((e) => t.includes(e)), [n, t]);
+}
+function ea(e) {
+    return (0, a.e7)([O.Z], () => O.Z.can(F.Plq.READ_MESSAGE_HISTORY, e));
+}
+function eo(e) {
+    return (0, a.e7)([O.Z], () => O.Z.can(F.Plq.READ_MESSAGE_HISTORY, e));
 }
 function ed(e) {
-    return (0, o.e7)([M.Z], () => M.Z.can(D.Plq.READ_MESSAGE_HISTORY, e));
-}
-function ec(e) {
-    return (0, o.e7)([M.Z], () => M.Z.can(D.Plq.READ_MESSAGE_HISTORY, e));
-}
-function es(e) {
     let { channelId: n } = e;
-    return (0, o.cj)([L.Z], () => ({
-        isSearchLoading: L.Z.getSearchLoading(n),
-        searchQuery: L.Z.getSearchQuery(n),
-        searchResults: L.Z.getSearchResults(n)
+    return (0, a.cj)([R.Z], () => ({
+        isSearchLoading: R.Z.getSearchLoading(n),
+        searchQuery: R.Z.getSearchQuery(n),
+        searchResults: R.Z.getSearchResults(n)
     }));
 }
-function ef(e, n) {
+function es(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        { isSearchLoading: l, searchQuery: r } = es({ channelId: e.id }),
-        i = ed(e),
-        o = u.useRef(null),
-        a = u.useRef(new Set());
-    u.useEffect(() => {
-        if (null == r && null != o.current) {
-            R.Z.clearForumSearch(e.id), (o.current = null);
+        { isSearchLoading: l, searchQuery: u } = ed({ channelId: e.id }),
+        i = ea(e),
+        a = r.useRef(null),
+        o = r.useRef(new Set());
+    r.useEffect(() => {
+        if (null == u && null != a.current) {
+            y.Z.clearForumSearch(e.id), (a.current = null);
             return;
         }
-        if (null == r || 0 === r.length || t) return;
-        if (!i) {
-            R.Z.clearForumSearch(e.id);
-            return;
-        }
-        if ((o.current === r && a.current === n) || l) return;
-        let u = setTimeout(async () => {
-            (o.current = r), (a.current = n);
+        if (null == u || 0 === u.length || t) return;
+        if (!i) return void y.Z.clearForumSearch(e.id);
+        if ((a.current === u && o.current === n) || l) return;
+        let r = setTimeout(async () => {
+            (a.current = u), (o.current = n);
             try {
-                await R.Z.searchForumPosts(e.guild_id, e.id, r, n);
-            } catch {}
+                await y.Z.searchForumPosts(e.guild_id, e.id, u, n);
+            } catch (e) {}
         }, 350);
-        return () => clearTimeout(u);
-    }, [i, e.guild_id, e.id, t, l, r, n]);
+        return () => clearTimeout(r);
+    }, [i, e.guild_id, e.id, t, l, u, n]);
 }
-function eg(e, n) {
-    return (0, o.e7)([Z.Z, p.ZP, _.Z], () => {
-        let t = _.Z.getChannel(n);
+function ec(e, n) {
+    return (0, a.e7)([h.Z, S.ZP, P.Z], () => {
+        let t = P.Z.getChannel(n);
         if (!(null == t ? void 0 : t.isForumLikeChannel())) return 0;
-        let u = Z.Z.getActiveJoinedUnreadThreadsForParent(e, n),
-            l = Z.Z.getActiveUnjoinedUnreadThreadsForParent(e, n),
-            r = p.ZP.ackMessageId(n),
+        let r = h.Z.getActiveJoinedUnreadThreadsForParent(e, n),
+            l = h.Z.getActiveUnjoinedUnreadThreadsForParent(e, n),
+            u = S.ZP.ackMessageId(n),
             i = 0;
-        if (null == r) return i;
-        for (let e in u) {
-            let n = u[e],
-                t = p.ZP.lastMessageId(n.channel.id);
-            null != t && t > r && i++;
+        if (null == u) return i;
+        for (let e in r) {
+            let n = r[e],
+                t = S.ZP.lastMessageId(n.channel.id);
+            null != t && t > u && i++;
         }
         for (let e in l) {
             let n = l[e],
-                t = p.ZP.lastMessageId(n.id);
-            null != t && t > r && i++;
+                t = S.ZP.lastMessageId(n.id);
+            null != t && t > u && i++;
         }
         return i;
     });
 }
-function em(e) {
-    let { channel: n, sortOrder: t, tagFilter: l, shouldAutomaticallyAck: r } = e,
-        i = (0, o.Wu)([w.Z], () => w.Z.getThreadIds(n.id, t, l)),
-        a = eg(n.guild_id, n.id),
-        c = (0, o.e7)([w.Z], () => r && (a > 0 || w.Z.getCanAckThreads()), [r, a]);
+function ef(e) {
+    let { channel: n, sortOrder: t, tagFilter: l, shouldAutomaticallyAck: u } = e,
+        i = (0, a.Wu)([w.Z], () => w.Z.getThreadIds(n.id, t, l)),
+        o = ec(n.guild_id, n.id),
+        s = (0, a.e7)([w.Z], () => u && (o > 0 || w.Z.getCanAckThreads()), [u, o]);
     return (
-        u.useEffect(() => {
-            c && (0, d.U6)(n);
-        }, [n, c]),
+        r.useEffect(() => {
+            s && (0, d.U6)(n);
+        }, [n, s]),
         i
     );
 }

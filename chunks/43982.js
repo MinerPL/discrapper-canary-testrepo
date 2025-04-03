@@ -1,47 +1,43 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(512722),
-    s = n.n(a),
-    l = n(392711),
-    r = n.n(l),
-    o = n(970731),
+n.d(t, { Z: () => m });
+var r = n(200651);
+n(192379);
+var i = n(512722),
+    l = n.n(i),
+    o = n(392711),
+    a = n.n(o),
+    s = n(970731),
     c = n(981631),
-    u = n(689938),
-    d = n(213738),
-    h = n(480032),
-    m = n(699352);
-let p = null;
-function _(e) {
-    let { onDismiss: t, onAccept: n, popoutPosition: a, gameConsoleAccounts: l } = e;
-    s()(l.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == p || null == l.find((e) => e.type === p)) && (p = r().shuffle(l)[0].type);
-    let _ = null,
-        f = null;
-    switch (p) {
+    u = n(388032),
+    d = n(203867),
+    p = n(480032),
+    h = n(699352);
+let f = null;
+function m(e) {
+    let { onDismiss: t, onAccept: n, popoutPosition: i, gameConsoleAccounts: o } = e;
+    l()(o.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == f || null == o.find((e) => e.type === f)) && (f = a().shuffle(o)[0].type);
+    let m = null,
+        g = null;
+    switch (f) {
         case c.ABu.XBOX:
-            (_ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX), (f = m);
+            (m = u.NW.string(u.t.soeJqK)), (g = h);
             break;
         case c.ABu.PLAYSTATION:
         case c.ABu.PLAYSTATION_STAGING:
-            (_ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5), (f = h);
+            (m = u.NW.string(u.t.o8gjmJ)), (g = p);
     }
-    return (0, i.jsx)(o.ZP, {
-        header: u.Z.Messages.CONSOLE_NUX_TOOLTIP_HEADER,
-        content: _,
-        asset: (0, i.jsx)('img', {
-            src: f,
+    return (0, r.jsx)(s.ZP, {
+        header: u.NW.string(u.t.ZagEMT),
+        content: m,
+        asset: (0, r.jsx)('img', {
+            src: g,
             alt: '',
             className: d.art
         }),
         onClick: n,
         onSecondaryClick: t,
         markAsDismissed: t,
-        buttonCTA: u.Z.Messages.CONSOLE_NUX_TOOLTIP_ACCEPT,
-        secondaryButtonCTA: u.Z.Messages.CONSOLE_NUX_TOOLTIP_DISMISS,
-        caretPosition: 'top' === a ? o.DF.BOTTOM_LEFT : o.DF.TOP_LEFT
+        buttonCTA: u.NW.string(u.t.HYgaeX),
+        secondaryButtonCTA: u.NW.string(u.t.SlM9wc),
+        caretPosition: 'top' === i ? s.DF.BOTTOM_LEFT : s.DF.TOP_LEFT
     });
 }

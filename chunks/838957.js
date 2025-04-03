@@ -1,2 +1,1 @@
-var n = r(581031);
-e.exports = n({}.isPrototypeOf);
+t.exports = a(581031)({}.isPrototypeOf);

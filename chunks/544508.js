@@ -1,104 +1,106 @@
-s(47120), s(757143);
-var n = s(735250),
-    i = s(470079),
-    a = s(120356),
-    r = s.n(a),
-    o = s(567526),
-    l = s(399606),
-    u = s(481060),
-    c = s(607070),
-    d = s(745510),
-    E = s(78675),
-    _ = s(899007),
-    g = s(51144),
-    m = s(346585),
-    S = s(81259),
-    I = s(119848),
-    T = s(801461),
-    N = s(228168),
-    O = s(689938),
-    h = s(740080),
-    f = s(733469);
-let M = i.forwardRef(function (e, t) {
-    let { style: s, value: i, placeholder: a, maxLength: o, onFocus: l, onChange: c } = e;
-    return (0, n.jsx)(u.TextArea, {
-        className: r()(h.userCardInput, s),
-        autosize: !0,
-        error: null,
-        showCharacterCount: !1,
-        spellCheck: !1,
-        showRemainingCharacterCount: !1,
-        value: i,
-        placeholder: a,
-        rows: 1,
-        maxLength: o,
-        onChange: c,
-        onFocus: l,
-        onKeyDown: (e) => {
-            'Enter' === e.key && e.preventDefault();
-        },
-        inputRef: t
-    });
-});
-t.Z = i.forwardRef(function (e, t) {
-    let { user: s, error: a, formValues: L, displayProfile: x, onChangeFormValue: C, onFocusDisplayName: R, onFocusUsername: A, editState: v, footerNotice: P, usernameSuggestionLoading: p, oneClickFlow: y } = e,
-        { username: Z, globalName: U } = L,
-        G = i.useRef(null),
-        b = i.useRef(null),
-        j = i.useMemo(() => s.merge({ discriminator: '0000' }), [s]),
-        [D, W] = (0, u.useSpring)(() => ({
-            opacity: 0,
-            y: 5
-        }));
-    i.useEffect(() => {
-        W({
-            y: 0,
-            opacity: 1,
-            from: {
-                y: 5,
-                opacity: 0
-            }
+r.d(t, { Z: () => j }), r(47120), r(757143), r(301563);
+var n = r(200651),
+    i = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    a = r(642128),
+    l = r(399606),
+    c = r(481060),
+    u = r(607070),
+    d = r(745510),
+    g = r(899007),
+    m = r(867176),
+    f = r(51144),
+    E = r(346585),
+    h = r(81259),
+    O = r(119848),
+    p = r(801461),
+    y = r(228168),
+    b = r(388032),
+    S = r(927687),
+    N = r(733469);
+let x = i.forwardRef(function (e, t) {
+        let { style: r, value: i, placeholder: s, maxLength: a, onFocus: l, onChange: u } = e;
+        return (0, n.jsx)(c.Kx8, {
+            className: o()(S.userCardInput, r),
+            autosize: !0,
+            error: null,
+            showCharacterCount: !1,
+            spellCheck: !1,
+            showRemainingCharacterCount: !1,
+            value: i,
+            placeholder: s,
+            rows: 1,
+            maxLength: a,
+            onChange: u,
+            onFocus: l,
+            onKeyDown: (e) => {
+                'Enter' === e.key && e.preventDefault();
+            },
+            inputRef: t
         });
-    }, [W, v]),
-        i.useImperativeHandle(
-            t,
-            () => ({
-                focusDisplayName: () => {
-                    var e, t, s;
-                    null === (t = b.current) || void 0 === t || t.setSelection(0, null === (e = b.current) || void 0 === e ? void 0 : e.value.length), null === (s = b.current) || void 0 === s || s.focus();
-                },
-                focusUsername: () => {
-                    var e, t, s;
-                    null === (t = G.current) || void 0 === t || t.setSelection(0, null === (e = G.current) || void 0 === e ? void 0 : e.value.length), null === (s = G.current) || void 0 === s || s.focus();
-                }
-            }),
-            []
-        );
-    let k = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        { createMultipleConfettiAt: F } = i.useContext(d.h),
-        w = null == x ? void 0 : x.getLegacyUsername();
-    return (
+    }),
+    j = i.forwardRef(function (e, t) {
+        let { user: r, error: s, formValues: j, displayProfile: v, onChangeFormValue: T, onFocusDisplayName: P, onFocusUsername: _, editState: I, footerNotice: C, usernameSuggestionLoading: A, oneClickFlow: w } = e,
+            { username: k, globalName: M } = j,
+            L = i.useRef(null),
+            R = i.useRef(null),
+            W = i.useMemo(() => r.merge({ discriminator: '0000' }), [r]),
+            [D, U] = (0, c.q_F)(() => ({
+                opacity: 0,
+                y: 5
+            }));
         i.useEffect(() => {
-            if (!k && v === T.Wq.PREVIEW && !!s.username.includes(T.nA))
-                F(
-                    window.innerWidth / 2 + 150,
-                    0,
-                    {
-                        velocity: {
-                            type: 'static-random',
-                            minValue: {
-                                x: 0,
-                                y: -180
-                            },
-                            maxValue: {
-                                x: 500,
-                                y: 180
-                            }
-                        }
+            U({
+                y: 0,
+                opacity: 1,
+                from: {
+                    y: 5,
+                    opacity: 0
+                }
+            });
+        }, [U, I]),
+            i.useImperativeHandle(
+                t,
+                () => ({
+                    focusDisplayName: () => {
+                        var e, t, r;
+                        null == (t = R.current) || t.setSelection(0, null == (e = R.current) ? void 0 : e.value.length), null == (r = R.current) || r.focus();
                     },
-                    15
-                ),
-                    F(
+                    focusUsername: () => {
+                        var e, t, r;
+                        null == (t = L.current) || t.setSelection(0, null == (e = L.current) ? void 0 : e.value.length), null == (r = L.current) || r.focus();
+                    }
+                }),
+                []
+            );
+        let Z = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+            { createMultipleConfettiAt: G } = i.useContext(d.h),
+            q = null == v ? void 0 : v.getLegacyUsername();
+        return (
+            i.useEffect(() => {
+                !Z &&
+                    I === p.Wq.PREVIEW &&
+                    r.username.includes(p.nA) &&
+                    (G(
+                        window.innerWidth / 2 + 150,
+                        0,
+                        {
+                            velocity: {
+                                type: 'static-random',
+                                minValue: {
+                                    x: 0,
+                                    y: -180
+                                },
+                                maxValue: {
+                                    x: 500,
+                                    y: 180
+                                }
+                            }
+                        },
+                        15
+                    ),
+                    G(
                         window.innerWidth / 2 - 150,
                         0,
                         {
@@ -115,147 +117,190 @@ t.Z = i.forwardRef(function (e, t) {
                             }
                         },
                         15
-                    );
-        }, [F, v, s, k]),
-        (0, n.jsxs)('div', {
-            className: r()(h.userCardContainer, { [h.shinyCard]: v === T.Wq.PREVIEW }),
-            children: [
-                (0, n.jsxs)('div', {
-                    className: h.profileCard,
-                    children: [
-                        (0, n.jsx)(E.Z, {
-                            user: j,
-                            displayProfile: x,
-                            profileType: N.y0.PANEL
-                        }),
-                        (0, n.jsx)(_.Z, {
-                            user: j,
-                            displayProfile: x,
-                            profileType: N.y0.PANEL
-                        }),
-                        v === T.Wq.PREVIEW &&
-                            null != w &&
-                            (0, n.jsx)('div', {
-                                className: h.legacyUsernameBadgeContainer,
-                                children: (0, n.jsx)(u.Tooltip, {
-                                    position: 'top',
-                                    text: O.Z.Messages.ORIGINALLY_KNOWN_AS.format({ legacyUsername: w }),
-                                    spacing: 12,
-                                    children: (e) =>
-                                        (0, n.jsx)(u.Anchor, {
-                                            ...e,
-                                            onClick: e.onClick,
-                                            children: (0, n.jsx)('img', {
-                                                className: h.legacyUsernameBadge,
-                                                alt: '',
-                                                src: f
-                                            })
-                                        })
-                                })
-                            })
-                    ]
-                }),
-                v !== T.Wq.PREVIEW &&
-                    (0, n.jsxs)(o.animated.div, {
-                        style: {
-                            opacity: D.opacity,
-                            y: D.y
-                        },
-                        className: h.inputContainer,
+                    ));
+            }, [G, I, r, Z]),
+            (0, n.jsxs)('div', {
+                className: o()(S.userCardContainer, { [S.shinyCard]: I === p.Wq.PREVIEW }),
+                children: [
+                    (0, n.jsxs)('div', {
+                        className: S.profileCard,
                         children: [
-                            v === T.Wq.EDIT_DISPLAY_NAME &&
-                                (0, n.jsxs)(n.Fragment, {
-                                    children: [
-                                        (0, n.jsx)(u.Text, {
-                                            className: h.textPadding,
-                                            color: 'text-muted',
-                                            variant: 'text-sm/semibold',
-                                            children: O.Z.Messages.DISPLAY_NAME
-                                        }),
-                                        (0, n.jsx)(M, {
-                                            style: r()(h.displayNameHeight, h['heading-xl/bold']),
-                                            value: null != U ? U : '',
-                                            placeholder: g.ZP.getName(s),
-                                            maxLength: T.hy,
-                                            onChange: (e) => C({ globalName: e }),
-                                            onFocus: R,
-                                            ref: b
-                                        })
-                                    ]
-                                }),
-                            (v === T.Wq.EDIT_USERNAME || v === T.Wq.SUGGESTION) &&
-                                (0, n.jsxs)(n.Fragment, {
-                                    children: [
-                                        (0, n.jsx)(u.Text, {
-                                            className: h.textPadding,
-                                            color: 'text-muted',
-                                            variant: 'text-sm/semibold',
-                                            children: O.Z.Messages.USERNAME
-                                        }),
-                                        (0, n.jsx)(M, {
-                                            style: r()(h.userCardHeight, h.lowercaseUsername, h['heading-lg/medium']),
-                                            value: null != Z ? Z : '',
-                                            placeholder: s.username,
-                                            maxLength: T.hy,
-                                            onChange: (e) => C({ username: e.replace('@', '') }),
-                                            onFocus: A,
-                                            ref: G
-                                        })
-                                    ]
-                                }),
-                            (0, n.jsx)('div', {
-                                className: h.messageContainer,
-                                children: (() => {
-                                    if (null != a)
-                                        return (0, n.jsx)(S.Z, {
-                                            type: 'error',
-                                            children: a
-                                        });
-                                    if (null != P) {
-                                        if (v !== T.Wq.SUGGESTION)
-                                            return (0, n.jsx)(u.Text, {
-                                                variant: 'text-sm/normal',
-                                                children: P
-                                            });
-                                        if (!p)
-                                            return (0, n.jsx)(S.Z, {
-                                                type: 'success',
-                                                children: P
-                                            });
-                                    }
-                                    return null == P && null == a && (v === T.Wq.EDIT_USERNAME || v === T.Wq.SUGGESTION)
-                                        ? (0, n.jsx)(I.Z, {
-                                              username: Z,
-                                              oneClickFlow: y
-                                          })
-                                        : null;
-                                })()
-                            })
+                            (0, n.jsx)(m.Z, {
+                                user: W,
+                                displayProfile: v,
+                                profileType: y.y0.PANEL
+                            }),
+                            (0, n.jsx)(g.Z, {
+                                user: W,
+                                displayProfile: v,
+                                profileType: y.y0.PANEL
+                            }),
+                            I === p.Wq.PREVIEW &&
+                                null != q &&
+                                (0, n.jsx)('div', {
+                                    className: S.legacyUsernameBadgeContainer,
+                                    children: (0, n.jsx)(c.ua7, {
+                                        position: 'top',
+                                        text: b.NW.formatToPlainString(b.t.bhrgkJ, { legacyUsername: q }),
+                                        spacing: 12,
+                                        children: (e) => {
+                                            var t, r;
+                                            return (0, n.jsx)(
+                                                c.eee,
+                                                ((t = (function (e) {
+                                                    for (var t = 1; t < arguments.length; t++) {
+                                                        var r = null != arguments[t] ? arguments[t] : {},
+                                                            n = Object.keys(r);
+                                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                                            (n = n.concat(
+                                                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                                })
+                                                            )),
+                                                            n.forEach(function (t) {
+                                                                var n;
+                                                                (n = r[t]),
+                                                                    t in e
+                                                                        ? Object.defineProperty(e, t, {
+                                                                              value: n,
+                                                                              enumerable: !0,
+                                                                              configurable: !0,
+                                                                              writable: !0
+                                                                          })
+                                                                        : (e[t] = n);
+                                                            });
+                                                    }
+                                                    return e;
+                                                })({}, e)),
+                                                (r = r =
+                                                    {
+                                                        onClick: e.onClick,
+                                                        children: (0, n.jsx)('img', {
+                                                            className: S.legacyUsernameBadge,
+                                                            alt: '',
+                                                            src: N
+                                                        })
+                                                    }),
+                                                Object.getOwnPropertyDescriptors
+                                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                                    : (function (e, t) {
+                                                          var r = Object.keys(e);
+                                                          if (Object.getOwnPropertySymbols) {
+                                                              var n = Object.getOwnPropertySymbols(e);
+                                                              r.push.apply(r, n);
+                                                          }
+                                                          return r;
+                                                      })(Object(r)).forEach(function (e) {
+                                                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                                      }),
+                                                t)
+                                            );
+                                        }
+                                    })
+                                })
                         ]
                     }),
-                v === T.Wq.PREVIEW &&
-                    (0, n.jsxs)('div', {
-                        className: h.userCard,
-                        children: [
-                            (0, n.jsx)(u.Heading, {
-                                color: 'header-primary',
-                                variant: 'heading-xl/bold',
-                                children: g.ZP.getName(s)
-                            }),
-                            (0, n.jsx)(u.Heading, {
-                                color: 'text-normal',
-                                variant: 'heading-lg/medium',
-                                children: s.username
-                            }),
-                            (0, n.jsx)(u.Text, {
-                                className: h.memberText,
-                                color: 'text-muted',
-                                variant: 'text-sm/medium',
-                                children: O.Z.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({ date: (0, m.K9)(s.id) })
-                            })
-                        ]
-                    })
-            ]
-        })
-    );
-});
+                    I !== p.Wq.PREVIEW &&
+                        (0, n.jsxs)(a.animated.div, {
+                            style: {
+                                opacity: D.opacity,
+                                y: D.y
+                            },
+                            className: S.inputContainer,
+                            children: [
+                                I === p.Wq.EDIT_DISPLAY_NAME &&
+                                    (0, n.jsxs)(n.Fragment, {
+                                        children: [
+                                            (0, n.jsx)(c.Text, {
+                                                className: S.textPadding,
+                                                color: 'text-muted',
+                                                variant: 'text-sm/semibold',
+                                                children: b.NW.string(b.t['9AjdkJ'])
+                                            }),
+                                            (0, n.jsx)(x, {
+                                                style: o()(S.displayNameHeight, S['heading-xl/bold']),
+                                                value: null != M ? M : '',
+                                                placeholder: f.ZP.getName(r),
+                                                maxLength: p.hy,
+                                                onChange: (e) => T({ globalName: e }),
+                                                onFocus: P,
+                                                ref: R
+                                            })
+                                        ]
+                                    }),
+                                (I === p.Wq.EDIT_USERNAME || I === p.Wq.SUGGESTION) &&
+                                    (0, n.jsxs)(n.Fragment, {
+                                        children: [
+                                            (0, n.jsx)(c.Text, {
+                                                className: S.textPadding,
+                                                color: 'text-muted',
+                                                variant: 'text-sm/semibold',
+                                                children: b.NW.string(b.t.IEpCBQ)
+                                            }),
+                                            (0, n.jsx)(x, {
+                                                style: o()(S.userCardHeight, S.lowercaseUsername, S['heading-lg/medium']),
+                                                value: null != k ? k : '',
+                                                placeholder: r.username,
+                                                maxLength: p.hy,
+                                                onChange: (e) => T({ username: e.replace('@', '') }),
+                                                onFocus: _,
+                                                ref: L
+                                            })
+                                        ]
+                                    }),
+                                (0, n.jsx)('div', {
+                                    className: S.messageContainer,
+                                    children: (() => {
+                                        if (null != s)
+                                            return (0, n.jsx)(h.Z, {
+                                                type: 'error',
+                                                children: s
+                                            });
+                                        if (null != C) {
+                                            if (I !== p.Wq.SUGGESTION)
+                                                return (0, n.jsx)(c.Text, {
+                                                    variant: 'text-sm/normal',
+                                                    children: C
+                                                });
+                                            else if (!A)
+                                                return (0, n.jsx)(h.Z, {
+                                                    type: 'success',
+                                                    children: C
+                                                });
+                                        }
+                                        return null == C && null == s && (I === p.Wq.EDIT_USERNAME || I === p.Wq.SUGGESTION)
+                                            ? (0, n.jsx)(O.Z, {
+                                                  username: k,
+                                                  oneClickFlow: w
+                                              })
+                                            : null;
+                                    })()
+                                })
+                            ]
+                        }),
+                    I === p.Wq.PREVIEW &&
+                        (0, n.jsxs)('div', {
+                            className: S.userCard,
+                            children: [
+                                (0, n.jsx)(c.X6q, {
+                                    color: 'header-primary',
+                                    variant: 'heading-xl/bold',
+                                    children: f.ZP.getName(r)
+                                }),
+                                (0, n.jsx)(c.X6q, {
+                                    color: 'text-normal',
+                                    variant: 'heading-lg/medium',
+                                    children: r.username
+                                }),
+                                (0, n.jsx)(c.Text, {
+                                    className: S.memberText,
+                                    color: 'text-muted',
+                                    variant: 'text-sm/medium',
+                                    children: b.NW.format(b.t['9rfonp'], { date: (0, E.K9)(r.id) })
+                                })
+                            ]
+                        })
+                ]
+            })
+        );
+    });

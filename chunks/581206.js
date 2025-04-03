@@ -3,8 +3,4 @@ function r(e, t) {
         return (t[n] = e), t;
     }, {});
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });

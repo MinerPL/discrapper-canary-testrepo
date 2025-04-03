@@ -1,61 +1,65 @@
-t.d(n, {
-    Z: function () {
-        return x;
-    }
-}),
-    t(47120);
-var i = t(735250),
-    a = t(470079),
-    r = t(120356),
-    s = t.n(r),
-    l = t(481060),
-    o = t(541716),
-    c = t(752305),
-    u = t(893718),
-    d = t(993413),
-    _ = t(131704),
-    p = t(474936),
-    m = t(981631),
-    I = t(689938),
-    f = t(651949);
-let E = (0, _.kt)({
+n.d(t, { Z: () => E }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(541716),
+    c = n(752305),
+    u = n(893718),
+    d = n(993413),
+    f = n(131704),
+    _ = n(474936),
+    p = n(981631),
+    h = n(388032),
+    m = n(913850);
+let g = (0, f.kt)({
     id: '1',
-    type: m.d4z.DM
+    type: p.d4z.DM
 });
-function x(e) {
-    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: _, placeholder: m, currentText: x, className: N, innerClassName: S, disabled: T = !1, disableThemedBackground: h = !1 } = e,
-        [b, g] = a.useState(null != _ ? _ : x),
-        [P, v] = a.useState((0, c.JM)(b)),
-        A = a.useRef(!1);
+function E(e) {
+    let { sectionTitle: t, errors: n, onTextChange: o, pendingText: f, placeholder: p, currentText: E, className: b, innerClassName: y, disabled: v = !1, disableThemedBackground: O = !1 } = e,
+        [I, S] = i.useState(null != f ? f : E),
+        [T, N] = i.useState((0, c.JM)(I)),
+        A = i.useRef(!1);
+    function C(e, t, n) {
+        t !== I && (S(t), N(n), o(t));
+    }
+    function R() {
+        return new Promise((e) => {
+            e({
+                shouldClear: !1,
+                shouldRefocus: !0
+            });
+        });
+    }
     return (
-        a.useEffect(() => {
+        i.useEffect(() => {
             A.current = !0;
         }, []),
-        a.useEffect(() => {
-            if (void 0 === _) {
-                let e = (0, c.JM)(x);
-                g(x), v(e);
+        i.useEffect(() => {
+            if (void 0 === f) {
+                let e = (0, c.JM)(E);
+                S(E), N(e);
             }
-        }, [_, x]),
-        (0, i.jsx)('div', {
-            className: s()(f.body, N),
-            children: (0, i.jsxs)(d.Z, {
-                title: n,
-                errors: t,
-                disabled: T,
+        }, [f, E]),
+        (0, r.jsx)('div', {
+            className: a()(m.body, b),
+            children: (0, r.jsxs)(d.Z, {
+                title: t,
+                errors: n,
+                disabled: v,
                 children: [
-                    (0, i.jsx)(u.Z, {
-                        innerClassName: s()(f.textArea, S),
-                        editorClassName: f.editorTextArea,
-                        maxCharacterCount: p.$n,
-                        onChange: function (e, n, t) {
-                            n !== b && (g(n), v(t), r(n));
-                        },
-                        placeholder: m,
-                        channel: E,
-                        textValue: b,
-                        richValue: P,
-                        type: o.I.CUSTOM_GIFT,
+                    (0, r.jsx)(u.Z, {
+                        innerClassName: a()(m.textArea, y),
+                        editorClassName: m.editorTextArea,
+                        maxCharacterCount: _.$n,
+                        onChange: C,
+                        placeholder: p,
+                        channel: g,
+                        textValue: I,
+                        richValue: T,
+                        type: l.Ie.CUSTOM_GIFT,
                         onBlur: () => {
                             A.current = !1;
                         },
@@ -63,17 +67,10 @@ function x(e) {
                             A.current = !0;
                         },
                         focused: A.current,
-                        onSubmit: function () {
-                            return new Promise((e) => {
-                                e({
-                                    shouldClear: !1,
-                                    shouldRefocus: !0
-                                });
-                            });
-                        },
-                        disableThemedBackground: h
+                        onSubmit: R,
+                        disableThemedBackground: O
                     }),
-                    (0, i.jsx)(l.HiddenVisually, { children: I.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: p.$n }) })
+                    (0, r.jsx)(s.nn4, { children: h.NW.format(h.t['+DFxLS'], { maxLength: _.$n }) })
                 ]
             })
         })

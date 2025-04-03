@@ -1,48 +1,44 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(6025),
-    s = n(433355),
-    r = n(626135),
-    l = n(585483),
-    o = n(922409),
+n.d(t, { Z: () => p });
+var r = n(200651);
+n(192379);
+var i = n(6025),
+    l = n(433355),
+    a = n(626135),
+    o = n(585483),
+    s = n(922409),
     c = n(545724),
-    d = n(749405),
-    u = n(981631);
-function _(e) {
-    let { index: t, className: n, channel: _, user: E, hasSingleMessageRequest: h } = e,
-        { channelId: m } = (0, o._)();
-    return (0, i.jsx)(c.Z, {
+    u = n(749405),
+    d = n(981631);
+function p(e) {
+    let { index: t, className: n, channel: p, user: h, hasSingleMessageRequest: f } = e,
+        { channelId: g } = (0, s._)();
+    return (0, r.jsx)(c.Z, {
         index: t,
         className: n,
-        isFocused: m === _.id,
-        channel: _,
-        user: E,
+        isFocused: g === p.id,
+        channel: p,
+        user: h,
         onClick: (e) => {
             e.stopPropagation(),
-                a.Z.openPrivateChannelAsSidebar({
-                    channelId: _.id,
-                    baseChannelId: s.uZ,
-                    hasSingleMessageRequest: h
+                i.Z.openPrivateChannelAsSidebar({
+                    channelId: p.id,
+                    baseChannelId: l.uZ,
+                    hasSingleMessageRequest: f
                 }),
-                r.default.track(u.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                a.default.track(d.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !1,
-                    channel_id: _.id,
-                    other_user_id: E.id
+                    channel_id: p.id,
+                    other_user_id: h.id
                 }),
                 setTimeout(() => {
-                    l.S.dispatch(u.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: _.id });
+                    o.S.dispatch(d.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: p.id });
                 }, 0);
         },
         children: (e) =>
-            (0, i.jsx)(d.C, {
+            (0, r.jsx)(u.C, {
                 active: e,
-                user: E,
-                channel: _
+                user: h,
+                channel: p
             })
     });
 }

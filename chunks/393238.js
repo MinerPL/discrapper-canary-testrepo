@@ -1,64 +1,61 @@
 n.d(t, {
-    P: function () {
-        return a;
-    },
-    Z: function () {
-        return i;
-    }
+    P: () => o,
+    Z: () => i
 }),
     n(47120);
-var r = n(470079);
+var r = n(192379);
 function i() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    let [i, s] = r.useState(void 0),
-        [o, l] = r.useState(void 0),
-        [u, c] = r.useState(void 0),
-        [d, _] = r.useState(void 0),
-        E = r.useRef(null);
+    let [i, a] = r.useState(void 0),
+        [s, l] = r.useState(void 0),
+        [c, u] = r.useState(void 0),
+        [d, f] = r.useState(void 0),
+        _ = r.useRef(null);
     return (
-        a(
-            E,
+        o(
+            _,
             (e) => {
                 let { width: t, height: n, scrollWidth: r, scrollHeight: i } = e;
-                l(n), s(t), c(r), _(i);
+                l(n), a(t), u(r), f(i);
             },
             t
         ),
         {
-            ref: E,
+            ref: _,
             width: i,
-            height: o,
+            height: s,
             scrollHeight: d,
-            scrollWidth: u
+            scrollWidth: c
         }
     );
 }
-function a(e, t) {
+function o(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     r.useLayoutEffect(() => {
-        let n = e.current,
-            r = null == n ? void 0 : n.ownerDocument.defaultView;
-        if (null != n && null != r) {
-            let i = new r.ResizeObserver((n) => {
-                var r, i, a, s, o, l;
-                let u = n[0],
-                    c = null == u ? void 0 : null === (i = u.borderBoxSize) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.inlineSize,
-                    d = null == u ? void 0 : null === (s = u.borderBoxSize) || void 0 === s ? void 0 : null === (a = s[0]) || void 0 === a ? void 0 : a.blockSize;
-                if (null == c || null == d) {
+        var n;
+        let r = e.current,
+            i = null == r || null == (n = r.ownerDocument) ? void 0 : n.defaultView;
+        if (null != r && null != i) {
+            let n = new i.ResizeObserver((n) => {
+                var r, i, o, a, s, l;
+                let c = n[0],
+                    u = null == c || null == (i = c.borderBoxSize) || null == (r = i[0]) ? void 0 : r.inlineSize,
+                    d = null == c || null == (a = c.borderBoxSize) || null == (o = a[0]) ? void 0 : o.blockSize;
+                if (null == u || null == d) {
                     let t = e.current;
                     if (null != t) {
                         let e = window.getComputedStyle(t);
-                        null == c && (c = parseFloat(null !== (o = e.width) && void 0 !== o ? o : '0')), null == d && (d = parseFloat(null !== (l = e.height) && void 0 !== l ? l : '0'));
+                        null == u && (u = parseFloat(null != (s = e.width) ? s : '0')), null == d && (d = parseFloat(null != (l = e.height) ? l : '0'));
                     }
                 }
                 t({
-                    width: c,
+                    width: u,
                     height: d,
-                    scrollHeight: u.target.scrollHeight,
-                    scrollWidth: u.target.scrollWidth
+                    scrollHeight: c.target.scrollHeight,
+                    scrollWidth: c.target.scrollWidth
                 });
             });
-            return i.observe(n), () => i.disconnect();
+            return n.observe(r), () => n.disconnect();
         }
     }, [e.current, ...n]);
 }

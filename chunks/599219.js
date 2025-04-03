@@ -1,246 +1,309 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return j;
-        }
-    }),
-    n(47120);
-var s = n(735250),
-    a = n(470079),
-    o = n(120356),
-    r = n.n(o),
-    l = n(990547),
-    i = n(442837),
-    c = n(481060),
-    d = n(393238),
-    u = n(600164),
-    _ = n(313201),
-    f = n(215292),
-    p = n(382086),
-    m = n(996453),
-    h = n(446706),
-    E = n(594174),
-    N = n(626135),
-    T = n(792125),
-    x = n(179645),
-    A = n(436046),
-    v = n(963209),
-    b = n(436457),
-    C = n(877758),
-    I = n(701476),
-    g = n(785997),
-    M = n(981631),
-    O = n(834891),
-    S = n(675999),
-    G = n(689938),
-    R = n(807828);
-function j(e) {
-    let t;
-    let n = (0, _.Dt)(),
-        { onSlideChange: o, ...j } = e,
-        { onClose: F } = j,
-        [y, D] = a.useState(!1),
-        Z = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
-        L = null != Z && null == Z.nsfwAllowed,
-        [k, B] = a.useState(L ? g.F.AGE_GATE : g.F.CHOOSE_TEMPLATE),
-        [U, w] = a.useState(null);
-    a.useEffect(() => {
-        o(y ? g.F.COMPLETE : k);
-    }, [o, k, y]);
-    let [P, H] = a.useState(null),
-        [V, Y] = a.useState(null),
-        [z, J] = a.useState(!1),
-        W = (0, i.e7)([x.Z], () => x.Z.getType() === I.M5.INVITE_UNCLAIMED),
-        K = a.useCallback(
+s.d(t, { default: () => k }), s(47120);
+var n = s(200651),
+    o = s(192379),
+    a = s(120356),
+    r = s.n(a),
+    i = s(990547),
+    l = s(442837),
+    c = s(481060),
+    d = s(393238),
+    _ = s(600164),
+    u = s(313201),
+    p = s(215292),
+    f = s(382086),
+    m = s(996453),
+    b = s(446706),
+    N = s(594174),
+    h = s(626135),
+    x = s(179645),
+    E = s(436046),
+    C = s(963209),
+    j = s(436457),
+    T = s(877758),
+    I = s(701476),
+    g = s(785997),
+    v = s(981631),
+    O = s(834891),
+    A = s(675999),
+    F = s(388032),
+    y = s(299982);
+function L(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var s = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(s);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(s).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(s, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = s[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function S(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var s = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      s.push.apply(s, n);
+                  }
+                  return s;
+              })(Object(t)).forEach(function (s) {
+                  Object.defineProperty(e, s, Object.getOwnPropertyDescriptor(t, s));
+              }),
+        e
+    );
+}
+function k(e) {
+    let t = (0, u.Dt)(),
+        { onSlideChange: s } = e,
+        a = (function (e, t) {
+            if (null == e) return {};
+            var s,
+                n,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var s,
+                        n,
+                        o = {},
+                        a = Object.keys(e);
+                    for (n = 0; n < a.length; n++) (s = a[n]), t.indexOf(s) >= 0 || (o[s] = e[s]);
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var a = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < a.length; n++) (s = a[n]), !(t.indexOf(s) >= 0) && Object.prototype.propertyIsEnumerable.call(e, s) && (o[s] = e[s]);
+            }
+            return o;
+        })(e, ['onSlideChange']),
+        { onClose: k } = a,
+        [D, P] = o.useState(!1),
+        w = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
+        G = null != w && null == w.nsfwAllowed,
+        [Z, M] = o.useState(G ? g.F.AGE_GATE : g.F.CHOOSE_TEMPLATE),
+        [B, R] = o.useState(null);
+    o.useEffect(() => {
+        s(D ? g.F.COMPLETE : Z);
+    }, [s, Z, D]);
+    let [U, W] = o.useState(null),
+        [z, H] = o.useState(null),
+        [J, Y] = o.useState(!1),
+        V = (0, l.e7)([x.Z], () => x.Z.getType() === I.M5.INVITE_UNCLAIMED),
+        K = o.useCallback(
             (e) => {
-                Y(e),
-                    B(g.F.CREATION_INTENT),
-                    N.default.track(M.rMx.GUILD_TEMPLATE_SELECTED, {
+                H(e),
+                    M(g.F.CREATION_INTENT),
+                    h.default.track(v.rMx.GUILD_TEMPLATE_SELECTED, {
                         template_name: e.label,
                         template_code: e.code
                     });
             },
-            [Y, B]
+            [H, M]
         ),
-        { content: X, footer: q } = (0, p.v)({
+        { content: q, footer: X } = (0, f.v)({
             hasFooter: !1,
             onBack: () => {
-                Y(null), B(g.F.CHOOSE_TEMPLATE);
+                H(null), M(g.F.CHOOSE_TEMPLATE);
             },
             onCreationIntentChosen: (e) => {
-                J(e === S.lr.COMMUNITY), B(g.F.CUSTOMIZE_GUILD);
+                Y(e === A.lr.COMMUNITY), M(g.F.CUSTOMIZE_GUILD);
             }
         }),
         { content: Q, footer: $ } = (0, m.G)({
-            guildTemplate: V,
-            titleClassName: R.customizeGuildTitle,
+            guildTemplate: z,
+            titleClassName: y.customizeGuildTitle,
             hasFooter: !1,
             onGuildCreated: (e) => {
-                H(e), (null == V ? void 0 : V.id) === O.l.CREATE ? B(g.F.CHANNEL_PROMPT) : D(!0);
+                W(e), (null == z ? void 0 : z.id) === O.l.CREATE ? M(g.F.CHANNEL_PROMPT) : P(!0);
             },
             onBack: () => {
-                B(g.F.CREATION_INTENT);
+                M(g.F.CREATION_INTENT);
             },
-            isSlideReady: U === g.F.CUSTOMIZE_GUILD,
-            isCommunity: z
+            isSlideReady: B === g.F.CUSTOMIZE_GUILD,
+            isCommunity: J
         }),
-        { content: ee, footer: et } = (0, f.F)({
-            createdGuildId: P,
+        { content: ee, footer: et } = (0, p.F)({
+            createdGuildId: U,
             hasFooter: !1,
             onChannelPromptCompleted: () => {
-                D(!0);
+                P(!0);
             },
-            isSlideReady: U === g.F.CHANNEL_PROMPT
+            isSlideReady: B === g.F.CHANNEL_PROMPT
         }),
-        { content: en, footer: es } = (0, b.Z)({
-            onBack: () => B(g.F.CHOOSE_TEMPLATE),
+        { content: es, footer: en } = (0, j.Z)({
+            onBack: () => M(g.F.CHOOSE_TEMPLATE),
             onComplete: () => {
-                F();
+                k();
             },
-            onConnect: F,
-            isSlideReady: U === g.F.JOIN_GUILD
-        });
-    switch (k) {
+            onConnect: k,
+            isSlideReady: B === g.F.JOIN_GUILD
+        }),
+        eo = null;
+    switch (Z) {
         case g.F.CUSTOMIZE_GUILD:
-            t = $;
+            eo = $;
             break;
         case g.F.CHANNEL_PROMPT:
-            t = et;
+            eo = et;
             break;
         case g.F.JOIN_GUILD:
-            t = es;
+            eo = en;
             break;
         case g.F.CREATION_INTENT:
-            t = q;
+            eo = X;
     }
-    let { ref: ea, width: eo } = (0, d.Z)();
-    if (y)
-        return (0, s.jsx)(c.ModalRoot, {
-            ...j,
-            size: c.ModalSize.MEDIUM,
-            className: r()(R.modal, R.completed),
-            'aria-labelledby': n,
-            children: (0, s.jsx)(v.Z, { onComplete: F })
-        });
-    let er = { impression_group: l.ImpressionGroups.GUILD_ADD_NUF };
-    return (0, s.jsxs)(c.ModalRoot, {
-        ...j,
-        size: c.ModalSize.MEDIUM,
-        className: R.modal,
-        'aria-labelledby': n,
-        children: [
-            (0, s.jsx)('div', {
-                className: R.sidebar,
-                children: (0, s.jsx)(C.Z, { step: k })
-            }),
-            (0, s.jsxs)('div', {
-                className: r()(R.content, (0, T.Q)(M.BRd.LIGHT)),
-                ref: ea,
-                children: [
-                    (0, s.jsx)('div', {
-                        className: R.slidesContainer,
-                        children: (0, s.jsxs)(c.Slides, {
-                            activeSlide: k,
-                            onSlideReady: (e) => w(e),
-                            centered: !1,
-                            width: eo,
+    let { ref: ea, width: er } = (0, d.Z)();
+    if (D)
+        return (0, n.jsx)(
+            c.Y0X,
+            S(L({}, a), {
+                size: c.CgR.MEDIUM,
+                className: r()(y.modal, y.completed),
+                'aria-labelledby': t,
+                children: (0, n.jsx)(C.Z, { onComplete: k })
+            })
+        );
+    let ei = { impression_group: i.ImpressionGroups.GUILD_ADD_NUF };
+    return (0, n.jsxs)(
+        c.Y0X,
+        S(L({}, a), {
+            size: c.CgR.MEDIUM,
+            className: y.modal,
+            'aria-labelledby': t,
+            children: [
+                (0, n.jsx)('div', {
+                    className: y.sidebar,
+                    children: (0, n.jsx)(T.Z, { step: Z })
+                }),
+                (0, n.jsx)(c.f6W, {
+                    theme: v.BRd.LIGHT,
+                    children: (e) =>
+                        (0, n.jsxs)('div', {
+                            className: r()(y.content, e),
+                            ref: ea,
                             children: [
-                                (0, s.jsx)(c.Slide, {
-                                    id: g.F.AGE_GATE,
-                                    children: (0, s.jsx)('div', {
-                                        className: R.container,
-                                        children: (0, s.jsx)(A.Z, {
-                                            onComplete: () => {
-                                                W ? F() : B(g.F.CHOOSE_TEMPLATE);
-                                            },
-                                            onClose: F
-                                        })
+                                (0, n.jsx)('div', {
+                                    className: y.slidesContainer,
+                                    children: (0, n.jsxs)(c.MyZ, {
+                                        activeSlide: Z,
+                                        onSlideReady: (e) => R(e),
+                                        centered: !1,
+                                        width: er,
+                                        children: [
+                                            (0, n.jsx)(c.Mi4, {
+                                                id: g.F.AGE_GATE,
+                                                children: (0, n.jsx)('div', {
+                                                    className: y.container,
+                                                    children: (0, n.jsx)(E.Z, {
+                                                        onComplete: () => {
+                                                            V ? k() : M(g.F.CHOOSE_TEMPLATE);
+                                                        },
+                                                        onClose: k
+                                                    })
+                                                })
+                                            }),
+                                            (0, n.jsx)(c.Mi4, {
+                                                id: g.F.CHOOSE_TEMPLATE,
+                                                impressionName: i.ImpressionNames.GUILD_ADD_LANDING,
+                                                impressionProperties: ei,
+                                                children: (0, n.jsx)('div', {
+                                                    className: r()(y.container, y.shortFooter),
+                                                    children: (0, n.jsx)(b.Z, {
+                                                        className: y.templates,
+                                                        onChooseTemplate: K,
+                                                        isNewUser: !0
+                                                    })
+                                                })
+                                            }),
+                                            (0, n.jsx)(c.Mi4, {
+                                                id: g.F.CREATION_INTENT,
+                                                impressionName: i.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
+                                                impressionProperties: ei,
+                                                children: (0, n.jsx)('div', {
+                                                    className: r()(y.container, y.standardFooter),
+                                                    children: q
+                                                })
+                                            }),
+                                            (0, n.jsx)(c.Mi4, {
+                                                id: g.F.CUSTOMIZE_GUILD,
+                                                impressionName: i.ImpressionNames.GUILD_ADD_CUSTOMIZE,
+                                                impressionProperties: ei,
+                                                children: (0, n.jsx)('div', {
+                                                    className: r()(y.container, y.standardFooter),
+                                                    children: Q
+                                                })
+                                            }),
+                                            (0, n.jsx)(c.Mi4, {
+                                                id: g.F.CHANNEL_PROMPT,
+                                                impressionName: i.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
+                                                impressionProperties: ei,
+                                                children: (0, n.jsx)('div', {
+                                                    className: r()(y.container, y.standardFooter),
+                                                    children: ee
+                                                })
+                                            }),
+                                            (0, n.jsx)(c.Mi4, {
+                                                id: g.F.JOIN_GUILD,
+                                                impressionName: i.ImpressionNames.GUILD_ADD_JOIN,
+                                                impressionProperties: ei,
+                                                children: (0, n.jsx)('div', {
+                                                    className: r()(y.container, y.standardFooter),
+                                                    children: es
+                                                })
+                                            })
+                                        ]
                                     })
                                 }),
-                                (0, s.jsx)(c.Slide, {
-                                    id: g.F.CHOOSE_TEMPLATE,
-                                    impressionName: l.ImpressionNames.GUILD_ADD_LANDING,
-                                    impressionProperties: er,
-                                    children: (0, s.jsx)('div', {
-                                        className: r()(R.container, R.shortFooter),
-                                        children: (0, s.jsx)(h.Z, {
-                                            className: R.templates,
-                                            onChooseTemplate: K,
-                                            isNewUser: !0
-                                        })
-                                    })
-                                }),
-                                (0, s.jsx)(c.Slide, {
-                                    id: g.F.CREATION_INTENT,
-                                    impressionName: l.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
-                                    impressionProperties: er,
-                                    children: (0, s.jsx)('div', {
-                                        className: r()(R.container, R.standardFooter),
-                                        children: X
-                                    })
-                                }),
-                                (0, s.jsx)(c.Slide, {
-                                    id: g.F.CUSTOMIZE_GUILD,
-                                    impressionName: l.ImpressionNames.GUILD_ADD_CUSTOMIZE,
-                                    impressionProperties: er,
-                                    children: (0, s.jsx)('div', {
-                                        className: r()(R.container, R.standardFooter),
-                                        children: Q
-                                    })
-                                }),
-                                (0, s.jsx)(c.Slide, {
-                                    id: g.F.CHANNEL_PROMPT,
-                                    impressionName: l.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
-                                    impressionProperties: er,
-                                    children: (0, s.jsx)('div', {
-                                        className: r()(R.container, R.standardFooter),
-                                        children: ee
-                                    })
-                                }),
-                                (0, s.jsx)(c.Slide, {
-                                    id: g.F.JOIN_GUILD,
-                                    impressionName: l.ImpressionNames.GUILD_ADD_JOIN,
-                                    impressionProperties: er,
-                                    children: (0, s.jsx)('div', {
-                                        className: r()(R.container, R.standardFooter),
-                                        children: en
-                                    })
-                                })
+                                Z !== g.F.AGE_GATE
+                                    ? (0, n.jsx)(c.olH, {
+                                          onClick: k,
+                                          className: y.closeButton
+                                      })
+                                    : null,
+                                Z === g.F.CHOOSE_TEMPLATE
+                                    ? (0, n.jsx)(c.mzw, {
+                                          justify: _.Z.Justify.BETWEEN,
+                                          className: r()(y.footer, y.join),
+                                          children: (0, n.jsx)(c.eee, {
+                                              className: y.joinCTA,
+                                              onClick: () => {
+                                                  M(g.F.JOIN_GUILD);
+                                              },
+                                              children: (0, n.jsxs)(c.Text, {
+                                                  variant: 'text-sm/medium',
+                                                  className: y.joinCTA,
+                                                  children: [F.NW.string(F.t['N+Mi/f']), ' ', F.NW.string(F.t.yRjK4u)]
+                                              })
+                                          })
+                                      })
+                                    : null,
+                                null != eo
+                                    ? (0, n.jsx)(c.mzw, {
+                                          justify: _.Z.Justify.BETWEEN,
+                                          className: y.footer,
+                                          children: eo
+                                      })
+                                    : null
                             ]
                         })
-                    }),
-                    k !== g.F.AGE_GATE
-                        ? (0, s.jsx)(c.ModalCloseButton, {
-                              onClick: F,
-                              className: R.closeButton
-                          })
-                        : null,
-                    k === g.F.CHOOSE_TEMPLATE
-                        ? (0, s.jsx)(c.ModalFooter, {
-                              justify: u.Z.Justify.BETWEEN,
-                              className: r()(R.footer, R.join),
-                              children: (0, s.jsx)(c.Anchor, {
-                                  className: R.joinCTA,
-                                  onClick: () => {
-                                      B(g.F.JOIN_GUILD);
-                                  },
-                                  children: (0, s.jsxs)(c.Text, {
-                                      variant: 'text-sm/medium',
-                                      className: R.joinCTA,
-                                      children: [G.Z.Messages.NUF_HAVE_AN_INVITE_ALREADY, ' ', G.Z.Messages.JOIN_SERVER_BUTTON_CTA]
-                                  })
-                              })
-                          })
-                        : null,
-                    null != t
-                        ? (0, s.jsx)(c.ModalFooter, {
-                              justify: u.Z.Justify.BETWEEN,
-                              className: R.footer,
-                              children: t
-                          })
-                        : null
-                ]
-            })
-        ]
-    });
+                })
+            ]
+        })
+    );
 }

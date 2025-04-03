@@ -1,77 +1,37 @@
 n.r(t),
     n.d(t, {
-        FluidValue: function () {
-            return d.B0;
-        },
-        FrameLoop: function () {
-            return u.V;
-        },
-        Globals: function () {
-            return r;
-        },
-        addFluidObserver: function () {
-            return d.UI;
-        },
-        createInterpolator: function () {
-            return c.m;
-        },
-        defineHidden: function () {
-            return l.dE;
-        },
-        each: function () {
-            return l.S6;
-        },
-        flush: function () {
-            return l.yl;
-        },
-        getFluidConfig: function () {
-            return d.Qb;
-        },
-        getFluidValue: function () {
-            return d.je;
-        },
-        hasFluidValue: function () {
-            return d.j$;
-        },
-        is: function () {
-            return l.is;
-        },
-        isAnimatedString: function () {
-            return l.Df;
-        },
-        isEqual: function () {
-            return l.Xy;
-        },
-        noop: function () {
-            return l.ZT;
-        },
-        setFluidConfig: function () {
-            return d.IP;
-        },
-        toArray: function () {
-            return l.qo;
-        },
-        useForceUpdate: function () {
-            return o.NW;
-        },
-        useOnce: function () {
-            return o.tf;
-        },
-        usePrev: function () {
-            return o.zH;
-        }
+        FluidValue: () => d.B0,
+        FrameLoop: () => c.V,
+        Globals: () => r,
+        addFluidObserver: () => d.UI,
+        createInterpolator: () => u.m,
+        defineHidden: () => l.dE,
+        each: () => l.S6,
+        flush: () => l.yl,
+        getFluidConfig: () => d.Qb,
+        getFluidValue: () => d.je,
+        hasFluidValue: () => d.j$,
+        is: () => l.is,
+        isAnimatedString: () => l.Df,
+        isEqual: () => l.Xy,
+        noop: () => l.ZT,
+        setFluidConfig: () => d.IP,
+        toArray: () => l.qo,
+        useForceUpdate: () => s.NW,
+        useOnce: () => s.tf,
+        usePrev: () => s.zH
     });
 var r = n(239189),
     i = n(300121),
-    a = {};
-for (var s in i)
-    'default' !== s &&
-        (a[s] = function (e) {
+    o = {};
+for (var a in i)
+    0 > ['Globals', 'default'].indexOf(a) &&
+        (o[a] = function (e) {
             return i[e];
-        }.bind(0, s));
-n.d(t, a);
-var o = n(314384),
+        }.bind(0, a));
+n.d(t, o);
+var s = n(314384),
     l = n(217348),
-    u = n(19784),
-    c = n(707506),
+    c = n(19784),
+    u = n(707506),
     d = n(414776);

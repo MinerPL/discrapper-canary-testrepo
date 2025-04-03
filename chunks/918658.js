@@ -1,177 +1,173 @@
-t.d(n, {
-    Z: function () {
-        return D;
-    },
-    d: function () {
-        return U;
-    }
+n.d(t, {
+    Z: () => U,
+    d: () => M
 });
-var r = t(735250);
-t(470079);
-var i = t(120356),
-    o = t.n(i),
-    l = t(442837),
-    u = t(692547),
-    a = t(481060),
-    s = t(549817),
-    c = t(819553),
-    d = t(17181),
-    _ = t(303737),
-    f = t(434404),
-    E = t(703656),
-    I = t(944486),
-    g = t(914010),
-    p = t(671533),
-    S = t(259580),
-    C = t(358085),
-    T = t(962086),
-    m = t(160404),
-    A = t(889695),
-    N = t(981631),
-    h = t(176505),
-    v = t(302463),
-    L = t(293810),
-    R = t(689938),
-    M = t(370040);
-function O(e) {
-    let { className: n, onClick: t, children: i } = e;
-    return (0, r.jsx)(a.Button, {
-        className: o()(M.button, n),
-        innerClassName: M.buttonInner,
-        look: a.Button.Looks.OUTLINED,
-        color: a.Button.Colors.WHITE,
-        size: a.Button.Sizes.NONE,
-        onClick: t,
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    o = n(442837),
+    a = n(692547),
+    s = n(481060),
+    c = n(549817),
+    u = n(819553),
+    d = n(17181),
+    E = n(303737),
+    _ = n(434404),
+    I = n(703656),
+    N = n(944486),
+    O = n(914010),
+    T = n(671533),
+    S = n(259580),
+    p = n(358085),
+    f = n(962086),
+    A = n(160404),
+    R = n(889695),
+    P = n(981631),
+    C = n(176505),
+    g = n(302463),
+    m = n(293810),
+    D = n(388032),
+    y = n(800515);
+function h(e) {
+    let { className: t, onClick: n, children: i } = e;
+    return (0, r.jsx)(s.zxk, {
+        className: l()(y.button, t),
+        innerClassName: y.buttonInner,
+        look: s.zxk.Looks.OUTLINED,
+        color: s.zxk.Colors.WHITE,
+        size: s.zxk.Sizes.NONE,
+        onClick: n,
         children: i
     });
 }
 function b(e) {
-    let { onClick: n } = e;
-    return (0, r.jsx)(O, {
-        onClick: n,
-        children: R.Z.Messages.DISABLE
+    let { onClick: t } = e;
+    return (0, r.jsx)(h, {
+        onClick: t,
+        children: D.NW.string(D.t.R9GHyc)
     });
 }
-function D() {
-    let e = (0, l.e7)([g.Z], () => g.Z.getGuildId()),
-        n = (0, l.e7)([I.Z], () => I.Z.getChannelId(e)),
+function U() {
+    let e = (0, o.e7)([O.Z], () => O.Z.getGuildId()),
+        t = (0, o.e7)([N.Z], () => N.Z.getChannelId(e)),
         {
-            viewingRoles: t,
+            viewingRoles: n,
             backNavigationSection: i,
-            isFullServerPreview: o,
-            isServerShopPreview: C
-        } = (0, l.cj)([m.Z], () => ({
-            viewingRoles: null != e ? m.Z.getViewingRoles(e) : null,
-            backNavigationSection: m.Z.getBackNavigationSection(e),
-            isFullServerPreview: null != e && m.Z.isFullServerPreview(e),
-            isServerShopPreview: null != e && m.Z.isViewingServerShop(e)
+            isFullServerPreview: l,
+            isServerShopPreview: p
+        } = (0, o.cj)([A.Z], () => ({
+            viewingRoles: null != e ? A.Z.getViewingRoles(e) : null,
+            backNavigationSection: A.Z.getBackNavigationSection(e),
+            isFullServerPreview: null != e && A.Z.isFullServerPreview(e),
+            isServerShopPreview: null != e && A.Z.isViewingServerShop(e)
         }));
-    if (null == t || null == e) return null;
-    let D = (function (e) {
+    if (null == n || null == e) return null;
+    let U = (function (e) {
             switch (e) {
-                case N.pNK.INTEGRATIONS:
-                    return R.Z.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
-                case N.pNK.ROLE_SUBSCRIPTIONS:
-                    return R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
-                case N.pNK.ONBOARDING:
-                    return R.Z.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
+                case P.pNK.INTEGRATIONS:
+                    return D.NW.string(D.t.k7LGdn);
+                case P.pNK.ROLE_SUBSCRIPTIONS:
+                    return D.NW.string(D.t.bRqiqa);
+                case P.pNK.ONBOARDING:
+                    return D.NW.string(D.t.qZpU3d);
                 default:
-                    return R.Z.Messages.VIEWING_AS_ROLES_BACK;
+                    return D.NW.string(D.t.MTIXho);
             }
         })(i),
-        U = i === N.pNK.ROLE_SUBSCRIPTIONS ? R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : R.Z.Messages.VIEWING_AS_ROLES_SELECT,
-        Z = n === h.oC.GUILD_ONBOARDING,
-        P = (n) => {
-            let { backToSettings: t } = n;
-            null != e && (m.Z.isFullServerPreview(e) && (0, E.uL)(N.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (s.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, T.mL)(e), t && f.Z.open(e, i), i === N.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
+        M = i === P.pNK.ROLE_SUBSCRIPTIONS ? D.NW.string(D.t.hZUCzc) : D.NW.string(D.t['/djIh4']),
+        L = t === C.oC.GUILD_ONBOARDING,
+        Z = (t) => {
+            let { backToSettings: n } = t;
+            null != e && (A.Z.isFullServerPreview(e) && (0, I.uL)(P.Z5c.CHANNEL(e)), u.ZP.shouldShowOnboarding(e) && (c.Z.finishOnboarding(e), (0, d.EI)(e)), (0, f.mL)(e), n && _.Z.open(e, i), i === P.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(e));
         };
-    return (0, r.jsxs)(a.Notice, {
-        color: a.NoticeColors.BRAND,
-        className: M.notice,
+    return (0, r.jsxs)(s.qXd, {
+        color: s.DM8.BRAND,
+        className: y.notice,
         children: [
-            (0, r.jsxs)(O, {
-                onClick: () => P({ backToSettings: !0 }),
-                className: M.backButton,
+            (0, r.jsxs)(h, {
+                onClick: () => Z({ backToSettings: !0 }),
+                className: y.backButton,
                 children: [
-                    (0, r.jsx)(p.Z, {
+                    (0, r.jsx)(T.Z, {
                         width: 16,
                         height: 16,
-                        direction: p.Z.Directions.LEFT,
-                        className: M.backArrow
+                        direction: T.Z.Directions.LEFT,
+                        className: y.backArrow
                     }),
-                    D
+                    U
                 ]
             }),
-            Z && o
+            L && l
                 ? (0, r.jsx)('div', {
-                      className: M.noticeContents,
+                      className: y.noticeContents,
                       children: (0, r.jsx)('div', {
-                          className: M.noticeText,
-                          children: R.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION
+                          className: y.noticeText,
+                          children: D.NW.string(D.t.PxbiAQ)
                       })
                   })
                 : (0, r.jsxs)('div', {
-                      className: M.noticeContents,
+                      className: y.noticeContents,
                       children: [
                           (0, r.jsx)('div', {
-                              className: M.noticeText,
-                              children: o ? R.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({ numRoles: Object.keys(t).length }) : R.Z.Messages.VIEWING_AS_ROLES.format({ numRoles: Object.keys(t).length })
+                              className: y.noticeText,
+                              children: l ? D.NW.formatToPlainString(D.t['0PHahI'], { numRoles: Object.keys(n).length }) : D.NW.formatToPlainString(D.t.vMlK8v, { numRoles: Object.keys(n).length })
                           }),
-                          (0, r.jsx)(a.Popout, {
+                          (0, r.jsx)(s.yRy, {
                               position: 'bottom',
-                              renderPopout: () => (0, r.jsx)(A.Z, { guildId: e }),
+                              renderPopout: () => (0, r.jsx)(R.Z, { guildId: e }),
                               children: (e) => {
-                                  let { onClick: n } = e;
-                                  return (0, r.jsxs)(O, {
-                                      onClick: n,
+                                  let { onClick: t } = e;
+                                  return (0, r.jsxs)(h, {
+                                      onClick: t,
                                       children: [
-                                          U,
+                                          M,
                                           (0, r.jsx)(S.Z, {
                                               width: 16,
                                               height: 16,
                                               direction: S.Z.Directions.DOWN,
-                                              className: M.selectCaret
+                                              className: y.selectCaret
                                           })
                                       ]
                                   });
                               }
                           }),
-                          o &&
-                              (0, r.jsx)(a.TooltipContainer, {
-                                  className: M.previewWarning,
-                                  text: R.Z.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
-                                  children: (0, r.jsx)(a.CircleWarningIcon, {
+                          l &&
+                              (0, r.jsx)(s.DY3, {
+                                  className: y.previewWarning,
+                                  text: D.NW.string(D.t.mW4DUF),
+                                  children: (0, r.jsx)(s.P4T, {
                                       size: 'xs',
-                                      color: u.Z.unsafe_rawColors.YELLOW_300.css
+                                      color: a.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               }),
-                          C &&
-                              (0, r.jsx)(a.TooltipContainer, {
-                                  className: M.previewWarning,
-                                  text: R.Z.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
-                                      maxTiers: L.fF,
-                                      maxProducts: v.dD
+                          p &&
+                              (0, r.jsx)(s.DY3, {
+                                  className: y.previewWarning,
+                                  text: D.NW.formatToPlainString(D.t.eummvb, {
+                                      maxTiers: m.fF,
+                                      maxProducts: g.dD
                                   }),
-                                  children: (0, r.jsx)(a.CircleWarningIcon, {
+                                  children: (0, r.jsx)(s.P4T, {
                                       size: 'xs',
-                                      color: u.Z.unsafe_rawColors.YELLOW_300.css
+                                      color: a.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               })
                       ]
                   }),
-            o || i === N.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(b, { onClick: () => P({ backToSettings: !1 }) })
+            l || i === P.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(b, { onClick: () => Z({ backToSettings: !1 }) })
         ]
     });
 }
-function U(e) {
-    let { guildId: n } = e;
-    return (0, l.e7)([m.Z], () => m.Z.isViewingRoles(n))
+function M(e) {
+    let { guildId: t } = e;
+    return (0, o.e7)([A.Z], () => A.Z.isViewingRoles(t))
         ? (0, r.jsx)('div', {
-              className: o()(M.settingsWrapper, {
-                  [M.windows]: (0, C.isWindows)(),
-                  [M.osx]: (0, C.isMac)()
+              className: l()(y.settingsWrapper, {
+                  [y.windows]: (0, p.isWindows)(),
+                  [y.osx]: (0, p.isMac)()
               }),
-              children: (0, r.jsx)(D, {})
+              children: (0, r.jsx)(U, {})
           })
         : null;
 }

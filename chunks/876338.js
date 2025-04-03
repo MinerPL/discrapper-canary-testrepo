@@ -1,17 +1,13 @@
-n.d(t, {
-    j: function () {
-        return s;
-    }
-});
-var i = n(406432),
-    a = n(981631);
-function s(e, t) {
-    let { targetKind: n, embedIndex: s } = t;
+n.d(t, { j: () => a });
+var r = n(406432),
+    i = n(981631);
+function a(e, t) {
+    let { targetKind: n, embedIndex: a } = t;
     if ('media' === n) {
-        var r, l;
+        var l, o;
         let t = e;
         return (
-            (null === (r = e.messageReference) || void 0 === r ? void 0 : r.type) === a.Uvt.FORWARD && (t = null === (l = e.messageSnapshots[0]) || void 0 === l ? void 0 : l.message),
+            (null == (l = e.messageReference) ? void 0 : l.type) === i.Uvt.FORWARD && (t = null == (o = e.messageSnapshots[0]) ? void 0 : o.message),
             {
                 onlyAttachmentIds:
                     null == t
@@ -19,11 +15,11 @@ function s(e, t) {
                         : t.attachments
                               .filter((e) => {
                                   let { filename: t } = e;
-                                  return (0, i.CO)(t) || (0, i.NU)(t);
+                                  return (0, r.CO)(t) || (0, r.NU)(t);
                               })
                               .map((e) => e.id)
             }
         );
     }
-    if ('embed' === n && null != s) return { onlyEmbedIndices: [s] };
+    return 'embed' === n && null != a ? { onlyEmbedIndices: [a] } : 'shortcut' === n ? {} : void 0;
 }

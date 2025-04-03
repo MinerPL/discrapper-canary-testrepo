@@ -1,8 +1,4 @@
-n.d(t, {
-    N: function () {
-        return i;
-    }
-});
+n.d(t, { N: () => i });
 var r = n(818083);
 (0, r.B)({
     kind: 'user',

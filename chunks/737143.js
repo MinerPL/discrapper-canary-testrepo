@@ -1,44 +1,71 @@
-t.d(a, {
-    q1: function () {
-        return o;
-    },
-    tr: function () {
-        return i;
-    }
+n.d(t, {
+    L4: () => l,
+    q1: () => c,
+    tr: () => u
 });
-var s = t(818083),
-    n = t(358085),
-    l = t(474936);
-let r = (0, s.B)({
-    id: '2023-07_checkout_optimization_browser_autofill',
-    label: 'Checkout Optimization Browser Autofill',
-    kind: 'user',
-    defaultConfig: {
-        enabled: !1,
-        delay: !1
-    },
-    treatments: [
-        {
-            id: 1,
-            label: 'Enabled',
-            config: {
-                enabled: !0,
-                delay: !1
-            }
+var r = n(818083),
+    i = n(358085),
+    o = n(987338),
+    a = n(474936);
+let s = (0, r.B)({
+        id: '2023-07_checkout_optimization_browser_autofill',
+        label: 'Checkout Optimization Browser Autofill',
+        kind: 'user',
+        defaultConfig: {
+            enabled: !1,
+            delay: !1
         },
-        {
-            id: 2,
-            label: 'Enabled with delay',
-            config: {
-                enabled: !0,
-                delay: !0
+        treatments: [
+            {
+                id: 1,
+                label: 'Enabled',
+                config: {
+                    enabled: !0,
+                    delay: !1
+                }
+            },
+            {
+                id: 2,
+                label: 'Enabled with delay',
+                config: {
+                    enabled: !0,
+                    delay: !0
+                }
             }
-        }
-    ]
-});
-function o() {
-    return r.getCurrentConfig({ location: '5f89bb_3' }, { autoTrackExposure: !0 });
+        ]
+    }),
+    l = (0, r.B)({
+        id: '2024-11_checkout_optimization_browser_autofill_global',
+        label: 'Checkout Optimization Browser Autofill Global',
+        kind: 'user',
+        defaultConfig: {
+            enabled: !1,
+            delay: !1
+        },
+        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
+        treatments: [
+            {
+                id: 1,
+                label: 'Enabled',
+                config: {
+                    enabled: !0,
+                    delay: !1
+                }
+            },
+            {
+                id: 2,
+                label: 'Enabled with delay',
+                config: {
+                    enabled: !0,
+                    delay: !0
+                }
+            }
+        ]
+    });
+function c() {
+    let e = s.getCurrentConfig({ location: '5f89bb_3' }, { autoTrackExposure: !0 });
+    return e.enabled ? e : l.getCurrentConfig({ location: '5f89bb_3' }, { autoTrackExposure: !0 });
 }
-function i(e, a, t) {
-    return (0, n.isDesktop)() && null != e && [l.Si.TIER_0, l.Si.TIER_2].includes(e) && !a && null == t;
+function u(e, t, n) {
+    return (0, i.isDesktop)() && null != e && [a.Si.TIER_0, a.Si.TIER_2].includes(e) && !t && null == n;
 }

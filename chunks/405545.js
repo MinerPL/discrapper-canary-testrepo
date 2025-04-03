@@ -1,28 +1,30 @@
-var a = t(735250);
-t(470079);
-var r = t(120356),
-    i = t.n(r),
-    s = t(186078),
-    o = t(137158),
-    l = t(944309);
-n.Z = function (e) {
-    let { formField: n, index: t, isDragEnabled: r, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: _, actionsLocation: f } = e,
-        { label: C } = n;
-    return (0, a.jsx)(o.Z, {
-        field: n,
-        index: t,
-        isDragEnabled: r,
-        isDropHovered: c,
-        onDrop: d,
-        onEdit: u,
-        onRemove: m,
-        title: C,
-        canRemove: _,
-        actionsLocation: f,
-        children: (0, a.jsx)(s.BO, {
-            field: n,
+n.d(t, { Z: () => l });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    o = n.n(i),
+    c = n(186078),
+    s = n(137158),
+    a = n(664305);
+let l = function (e) {
+    let { formField: t, index: n, isDragEnabled: i, isDropHovered: l, onDrop: u, onEdit: d, onRemove: f, canRemove: p, actionsLocation: b, fieldStyle: j } = e,
+        { label: y } = t;
+    return (0, r.jsx)(s.Z, {
+        field: t,
+        index: n,
+        isDragEnabled: i,
+        isDropHovered: l,
+        onDrop: u,
+        onEdit: d,
+        onRemove: f,
+        title: y,
+        canRemove: p,
+        actionsLocation: b,
+        fieldStyle: j,
+        children: (0, r.jsx)(c.BO, {
+            field: t,
             value: void 0,
-            radioItemClassName: i()(l.fieldBackground, l.multipleChoiceFixedTextColor),
+            radioItemClassName: o()(a.fieldBackground, a.multipleChoiceFixedTextColor),
             disabled: !1
         })
     });

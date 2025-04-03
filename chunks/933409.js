@@ -1,237 +1,288 @@
-n.d(l, {
-    Z: function () {
-        return A;
-    }
-}),
-    n(47120),
-    n(789020);
-var t = n(735250),
-    a = n(470079),
-    i = n(442837),
-    r = n(481060),
-    s = n(91176),
+n.d(t, { Z: () => T }), n(47120), n(789020);
+var l = n(200651),
+    i = n(192379),
+    r = n(442837),
+    a = n(481060),
+    o = n(91176),
     u = n(749210),
-    d = n(58540),
-    o = n(251794),
-    c = n(386696),
-    E = n(71619),
-    M = n(910693),
-    Z = n(592125),
-    I = n(271383),
-    g = n(430824),
+    s = n(616780),
+    c = n(251794),
+    d = n(386696),
+    g = n(71619),
+    f = n(946273),
+    P = n(910693),
+    E = n(592125),
+    Z = n(271383),
+    b = n(430824),
     m = n(496675),
-    _ = n(594174),
-    C = n(979651),
-    f = n(630388),
-    R = n(5192),
-    v = n(813872),
-    N = n(981631),
-    O = n(590433),
-    S = n(372897),
-    P = n(689938);
-function A(e, l, A, h) {
-    let U = a.useMemo(() => ({ [l]: [e.id] }), [l, e.id]),
-        T = null != h ? [h] : [];
-    (0, d.$)(U), (0, i.e7)([m.Z], () => m.Z.getGuildVersion(l), [l]);
-    let b = (0, i.e7)([g.Z], () => g.Z.getGuild(l), [l]),
-        L = (0, i.e7)(
-            [_.default],
-            () => {
+    O = n(594174),
+    h = n(979651),
+    v = n(630388),
+    N = n(5192),
+    y = n(813872),
+    S = n(981631),
+    p = n(590433),
+    C = n(372897),
+    j = n(388032);
+function M(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            l = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (l = l.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            l.forEach(function (t) {
                 var l;
-                return (null === (l = _.default.getCurrentUser()) || void 0 === l ? void 0 : l.id) === e.id;
+                (l = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: l,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = l);
+            });
+    }
+    return e;
+}
+function I(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var l = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, l);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function T(e, t, T, U, A) {
+    let W = i.useMemo(() => ({ [t]: [e.id] }), [t, e.id]),
+        _ = null != U ? [U] : [];
+    (0, s.$)(W), (0, r.e7)([m.Z], () => m.Z.getGuildVersion(t), [t]);
+    let x = (0, r.e7)([b.Z], () => b.Z.getGuild(t), [t]),
+        w = (0, r.e7)(
+            [O.default],
+            () => {
+                var t;
+                return (null == (t = O.default.getCurrentUser()) ? void 0 : t.id) === e.id;
             },
             [e.id]
         ),
-        x = (0, i.e7)([I.ZP], () => I.ZP.isGuestOrLurker(l, e.id), [l, e.id]),
-        j = (0, i.e7)([Z.Z], () => Z.Z.getChannel(A), [A]),
-        [, p] = (0, E.ZP)(e.id, l),
-        D = null == j ? void 0 : j.isGuildStageVoice(),
+        B = (0, r.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(t, e.id), [t, e.id]),
+        D = (0, r.e7)([E.Z], () => E.Z.getChannel(T), [T]),
+        [, k] = (0, g.ZP)(e.id, t),
+        R = null == D ? void 0 : D.isGuildStageVoice(),
         {
-            muted: B,
-            deafened: G,
-            suppressed: q,
-            voiceChannelId: y
-        } = (0, i.cj)([C.Z], () => {
-            var n, t, a;
-            let i = C.Z.getVoiceState(l, e.id);
+            muted: q,
+            deafened: L,
+            suppressed: V,
+            voiceChannelId: F
+        } = (0, r.cj)([h.Z], () => {
+            var n, l, i;
+            let r = h.Z.getVoiceState(t, e.id);
             return {
-                muted: null !== (n = null == i ? void 0 : i.mute) && void 0 !== n && n,
-                deafened: null !== (t = null == i ? void 0 : i.deaf) && void 0 !== t && t,
-                suppressed: null !== (a = null == i ? void 0 : i.suppress) && void 0 !== a && a,
-                voiceChannelId: null == i ? void 0 : i.channelId
+                muted: null != (n = null == r ? void 0 : r.mute) && n,
+                deafened: null != (l = null == r ? void 0 : r.deaf) && l,
+                suppressed: null != (i = null == r ? void 0 : r.suppress) && i,
+                voiceChannelId: null == r ? void 0 : r.channelId
             };
         }),
-        V = (0, i.e7)([I.ZP], () => I.ZP.getMember(l, e.id)),
-        k = (0, v.Z)({
+        G = (0, r.e7)([Z.ZP], () => Z.ZP.getMember(t, e.id)),
+        K = (0, y.Z)({
             userId: e.id,
-            guildId: l,
-            channelId: A,
-            location: h
+            guildId: t,
+            channelId: T,
+            location: U,
+            appContext: A
         }),
-        F = (0, M.sE)(l, {
-            location: h,
+        Q = (0, P.sE)(t, {
+            location: U,
             targetUserId: e.id
         }),
-        K = (0, c.Z)(l, e.id),
-        w =
-            null != y && null != A && m.Z.canWithPartialContext(N.Plq.VIEW_CHANNEL, { channelId: y }) && !x
+        Y = (0, d.Z)(t, e.id),
+        z =
+            null != F && null != T && m.Z.canWithPartialContext(S.Plq.VIEW_CHANNEL, { channelId: F }) && !B
                 ? [
-                      (!D || (D && !q)) && m.Z.canWithPartialContext(N.Plq.MUTE_MEMBERS, { channelId: A })
-                          ? (0, t.jsx)(
-                                r.MenuCheckboxItem,
+                      (!R || (R && !V)) && m.Z.canWithPartialContext(S.Plq.MUTE_MEMBERS, { channelId: T })
+                          ? (0, l.jsx)(
+                                a.S89,
                                 {
                                     id: 'voice-mute',
-                                    label: P.Z.Messages.SERVER_VOICE_MUTE,
-                                    checked: B,
+                                    label: j.NW.string(j.t.e9e9UV),
+                                    checked: q,
                                     color: 'danger',
                                     action: () => {
-                                        !1 === B && F(M.jQ.MUTE), u.Z.setServerMute(l, e.id, !B);
+                                        !1 === q && Q(P.jQ.MUTE), u.Z.setServerMute(t, e.id, !q);
                                     }
                                 },
                                 'voice-mute'
                             )
                           : null,
-                      (!D || (D && !q)) && m.Z.canWithPartialContext(N.Plq.DEAFEN_MEMBERS, { channelId: A })
-                          ? (0, t.jsx)(
-                                r.MenuCheckboxItem,
+                      (!R || (R && !V)) && m.Z.canWithPartialContext(S.Plq.DEAFEN_MEMBERS, { channelId: T })
+                          ? (0, l.jsx)(
+                                a.S89,
                                 {
                                     id: 'voice-deafen',
-                                    label: P.Z.Messages.SERVER_DEAFEN,
-                                    checked: G,
+                                    label: j.NW.string(j.t.hMA2GB),
+                                    checked: L,
                                     color: 'danger',
-                                    action: () => u.Z.setServerDeaf(l, e.id, !G)
+                                    action: () => u.Z.setServerDeaf(t, e.id, !L)
                                 },
                                 'voice-deafen'
                             )
                           : null,
-                      !L && null != b && m.Z.canWithPartialContext(N.Plq.MOVE_MEMBERS, { channelId: A })
-                          ? (0, t.jsx)(
-                                r.MenuItem,
+                      !w && null != x && m.Z.canWithPartialContext(S.Plq.MOVE_MEMBERS, { channelId: T })
+                          ? (0, l.jsx)(
+                                a.sNh,
                                 {
                                     id: 'voice-disconnect',
-                                    label: L ? P.Z.Messages.DISCONNECT_SELF : P.Z.Messages.DISCONNECT_OTHER,
+                                    label: w ? j.NW.string(j.t['6vrfgo']) : j.NW.string(j.t['/jERiI']),
                                     color: 'danger',
-                                    action: () => u.Z.setChannel(l, e.id, null)
+                                    action: () => u.Z.setChannel(t, e.id, null)
                                 },
                                 'voice-disconnect'
                             )
                           : null
                   ]
                 : [],
-        Y = async (l, n, t) => {
-            if (l.ctrlKey || l.metaKey)
+        H = async (t, n, l) => {
+            if (t.ctrlKey || t.metaKey)
                 try {
-                    var a;
-                    await s.Z.setCommunicationDisabledDuration(n, t, O.UK.DURATION_60_SEC, null, h), F(M.jQ.TIMEOUT), (0, r.showToast)((0, r.createToast)(P.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({ user: null !== (a = R.ZP.getName(n, null, e)) && void 0 !== a ? a : '' }), r.ToastType.SUCCESS));
+                    var i;
+                    await o.Z.setCommunicationDisabledDuration(n, l, p.UK.DURATION_60_SEC, null, U), Q(P.jQ.TIMEOUT), (0, a.showToast)((0, a.createToast)(j.NW.formatToPlainString(j.t.O9C3Nj, { user: null != (i = N.ZP.getName(n, null, e)) ? i : '' }), a.ToastType.SUCCESS));
                 } catch (e) {
-                    (0, r.showToast)((0, r.createToast)(P.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, r.ToastType.FAILURE));
+                    (0, a.showToast)((0, a.createToast)(j.NW.string(j.t.epyCur), a.ToastType.FAILURE));
                 }
         },
-        H = null,
-        W = null != b && m.Z.canManageUser(N.Plq.MODERATE_MEMBERS, e, b) && m.Z.canManageUser(N.Plq.KICK_MEMBERS, e, b) && m.Z.canManageUser(N.Plq.BAN_MEMBERS, e, b),
-        z = null != b && (m.Z.canManageUser(N.Plq.MANAGE_GUILD, e, b) || m.Z.canManageUser(N.Plq.MANAGE_ROLES, e, b));
-    if (!L && null != b && null != V && null != V.joinedAt && (W || z) && b.hasFeature(N.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
-        var Q;
-        H = (0, f.yE)(null !== (Q = V.flags) && void 0 !== Q ? Q : 0, S.q.BYPASSES_VERIFICATION)
-            ? (0, t.jsx)(
-                  r.MenuItem,
+        J = null,
+        $ = null != x && m.Z.canManageUser(S.Plq.MODERATE_MEMBERS, e, x) && m.Z.canManageUser(S.Plq.KICK_MEMBERS, e, x) && m.Z.canManageUser(S.Plq.BAN_MEMBERS, e, x),
+        X = null != x && (m.Z.canManageUser(S.Plq.MANAGE_GUILD, e, x) || m.Z.canManageUser(S.Plq.MANAGE_ROLES, e, x));
+    if (!w && null != x && null != G && null != G.joinedAt && ($ || X) && x.hasFeature(S.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
+        var ee;
+        J = (0, v.yE)(null != (ee = G.flags) ? ee : 0, C.q.BYPASSES_VERIFICATION)
+            ? (0, l.jsx)(
+                  a.sNh,
                   {
                       id: 'verify',
-                      label: P.Z.Messages.MANUALLY_UNVERIFY_MEMBER,
+                      label: j.NW.string(j.t.NbhSIy),
                       action: () => {
-                          var l;
-                          return u.Z.setMemberFlags(b.id, e.id, (0, f.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, S.q.BYPASSES_VERIFICATION, !1));
+                          var t;
+                          return u.Z.setMemberFlags(x.id, e.id, (0, v.mB)(null != (t = G.flags) ? t : 0, C.q.BYPASSES_VERIFICATION, !1));
                       }
                   },
                   'verify'
               )
-            : (0, t.jsx)(
-                  r.MenuItem,
+            : (0, l.jsx)(
+                  a.sNh,
                   {
                       id: 'verify',
-                      label: P.Z.Messages.MANUALLY_VERIFY_MEMBER,
+                      label: j.NW.string(j.t['6QlTeH']),
                       action: () => {
-                          var l;
-                          return u.Z.setMemberFlags(b.id, e.id, (0, f.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, S.q.BYPASSES_VERIFICATION, !0));
+                          var t;
+                          return u.Z.setMemberFlags(x.id, e.id, (0, v.mB)(null != (t = G.flags) ? t : 0, C.q.BYPASSES_VERIFICATION, !0));
                       }
                   },
                   'verify'
               );
     }
     return [
-        ...w,
-        ...(L || null == b
+        K,
+        ...z,
+        ...(w || null == x
             ? []
             : [
-                  k,
-                  H,
-                  K && !x
-                      ? p
-                          ? (0, t.jsx)(
-                                r.MenuItem,
+                  J,
+                  Y && !B
+                      ? k
+                          ? (0, l.jsx)(
+                                a.sNh,
                                 {
                                     id: 'removetimeout',
-                                    label: P.Z.Messages.ENABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: e.username }),
+                                    label: j.NW.formatToPlainString(j.t.csKetb, { user: e.username }),
                                     color: 'danger',
                                     action: () => {
-                                        (0, o.q)(l, e.id, T);
+                                        (0, c.q)({
+                                            guildId: t,
+                                            userId: e.id,
+                                            anaylticsLocations: _
+                                        });
                                     }
                                 },
                                 'removetimeout'
                             )
-                          : (0, t.jsx)(
-                                r.MenuItem,
+                          : (0, l.jsx)(
+                                a.sNh,
                                 {
                                     id: 'timeout',
-                                    label: P.Z.Messages.DISABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: e.username }),
+                                    label: j.NW.formatToPlainString(j.t.OhsOy8, { user: e.username }),
                                     color: 'danger',
                                     action: (n) => {
-                                        if (n.ctrlKey || n.metaKey) return Y(n, l, e.id);
-                                        (0, o.z)(l, e.id, T);
+                                        if (n.ctrlKey || n.metaKey) return H(n, t, e.id);
+                                        (0, c.z)({
+                                            guildId: t,
+                                            userId: e.id,
+                                            anaylticsLocations: _
+                                        });
                                     }
                                 },
                                 'timeout'
                             )
                       : null,
-                  m.Z.canManageUser(N.Plq.KICK_MEMBERS, e, b) && !e.isClyde()
-                      ? (0, t.jsx)(
-                            r.MenuItem,
+                  (0, f.BK)(e, x)
+                      ? (0, l.jsx)(
+                            a.sNh,
                             {
                                 id: 'kick',
-                                label: P.Z.Messages.KICK_USER.format({ user: e.username }),
+                                label: j.NW.formatToPlainString(j.t['9l/iTU'], { user: e.username }),
                                 color: 'danger',
                                 action: () =>
-                                    (0, r.openModalLazy)(async () => {
-                                        let { default: a } = await n.e('5454').then(n.bind(n, 854360));
+                                    (0, a.ZDy)(async () => {
+                                        let { default: i } = await n.e('5454').then(n.bind(n, 854360));
                                         return (n) =>
-                                            (0, t.jsx)(a, {
-                                                ...n,
-                                                location: h,
-                                                guildId: l,
-                                                user: e
-                                            });
+                                            (0, l.jsx)(
+                                                i,
+                                                I(M({}, n), {
+                                                    location: U,
+                                                    guildId: t,
+                                                    user: e
+                                                })
+                                            );
                                     })
                             },
                             'kick'
                         )
                       : null,
-                  m.Z.canManageUser(N.Plq.BAN_MEMBERS, e, b)
-                      ? (0, t.jsx)(
-                            r.MenuItem,
+                  (0, f.mm)(e, x)
+                      ? (0, l.jsx)(
+                            a.sNh,
                             {
                                 id: 'ban',
-                                label: P.Z.Messages.BAN_USER.format({ user: e.username }),
+                                label: j.NW.formatToPlainString(j.t.WnpUBg, { user: e.username }),
                                 color: 'danger',
                                 action: () =>
-                                    (0, r.openModalLazy)(async () => {
-                                        let { default: a } = await n.e('43350').then(n.bind(n, 98746));
+                                    (0, a.ZDy)(async () => {
+                                        let { default: i } = await n.e('43350').then(n.bind(n, 98746));
                                         return (n) =>
-                                            (0, t.jsx)(a, {
-                                                ...n,
-                                                location: h,
-                                                guildId: l,
-                                                user: e
-                                            });
+                                            (0, l.jsx)(
+                                                i,
+                                                I(M({}, n), {
+                                                    location: U,
+                                                    guildId: t,
+                                                    user: e
+                                                })
+                                            );
                                     })
                             },
                             'ban'

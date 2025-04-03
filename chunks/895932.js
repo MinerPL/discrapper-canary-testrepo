@@ -1,23 +1,19 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var a = n(735250);
-n(470079);
-var s = n(313361),
-    r = n(683860),
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var a = n(313361),
+    i = n(683860),
     l = n(481060),
-    i = n(109434),
+    s = n(109434),
     o = n(228392),
-    c = n(689938),
-    d = n(479856);
+    c = n(388032),
+    d = n(987097);
 function u(e) {
     let { channel: t, closePopout: n } = e,
-        { sortOrder: u, layoutType: m } = (0, i.H)(t.id),
-        h = (0, i.v)(),
-        _ = t.isMediaChannel(),
-        g = (e) => {
+        { sortOrder: u, layoutType: m } = (0, s.H)(t.id),
+        h = (0, s.v)(),
+        g = t.isMediaChannel(),
+        f = (e) => {
             (0, o.KR)({
                 guildId: t.guild_id,
                 channelId: t.id,
@@ -26,7 +22,7 @@ function u(e) {
                 h.getState().setSortOrder(t.id, e),
                 n();
         },
-        x = (e) => {
+        p = (e) => {
             (0, o.Do)({
                 guildId: t.guild_id,
                 channelId: t.id,
@@ -35,65 +31,65 @@ function u(e) {
                 h.getState().setLayoutType(t.id, e),
                 n();
         };
-    return (0, a.jsx)('div', {
+    return (0, r.jsx)('div', {
         className: d.container,
-        children: (0, a.jsxs)(l.Menu, {
+        children: (0, r.jsxs)(l.v2r, {
             navId: 'sort-and-view',
-            'aria-label': _ ? c.Z.Messages.MEDIA_CHANNEL_SORT_A11Y_LABEL : c.Z.Messages.FORUM_SORT_AND_VIEW_AY11_LABEL,
+            'aria-label': g ? c.NW.string(c.t['kQN/bm']) : c.NW.string(c.t.DJzbkJ),
             hideScroller: !0,
             onClose: n,
             onSelect: n,
             children: [
-                (0, a.jsxs)(l.MenuGroup, {
-                    label: c.Z.Messages.FORUM_CHANNEL_SORT_BY,
+                (0, r.jsxs)(l.kSQ, {
+                    label: c.NW.string(c.t.f8wNDg),
                     children: [
-                        (0, a.jsx)(l.MenuRadioItem, {
+                        (0, r.jsx)(l.k5B, {
                             id: 'sort-by-recent-activity',
                             group: 'sort-by',
-                            label: c.Z.Messages.FORUM_CHANNEL_SORT_BY_RECENTLY_ACTIVE,
-                            action: () => g(r.z.LATEST_ACTIVITY),
-                            checked: u === r.z.LATEST_ACTIVITY
+                            label: c.NW.string(c.t.jOPmcH),
+                            action: () => f(i.z.LATEST_ACTIVITY),
+                            checked: u === i.z.LATEST_ACTIVITY
                         }),
-                        (0, a.jsx)(l.MenuRadioItem, {
+                        (0, r.jsx)(l.k5B, {
                             id: 'sort-by-date-posted',
                             group: 'sort-by',
-                            label: c.Z.Messages.FORUM_CHANNEL_SORT_BY_DATE_POSTED,
-                            action: () => g(r.z.CREATION_DATE),
-                            checked: u === r.z.CREATION_DATE
+                            label: c.NW.string(c.t.UIltXV),
+                            action: () => f(i.z.CREATION_DATE),
+                            checked: u === i.z.CREATION_DATE
                         })
                     ]
                 }),
                 !t.isMediaChannel() &&
-                    (0, a.jsxs)(l.MenuGroup, {
-                        label: c.Z.Messages.FORUM_CHANNEL_VIEW_AS,
+                    (0, r.jsxs)(l.kSQ, {
+                        label: c.NW.string(c.t.mFMDSk),
                         children: [
-                            (0, a.jsx)(l.MenuRadioItem, {
+                            (0, r.jsx)(l.k5B, {
                                 id: 'view-as-list',
                                 group: 'view-as',
-                                label: c.Z.Messages.FORUM_CHANNEL_VIEW_AS_LIST,
-                                action: () => x(s.X.LIST),
-                                checked: m === s.X.LIST
+                                label: c.NW.string(c.t['NJFr+v']),
+                                action: () => p(a.X.LIST),
+                                checked: m === a.X.LIST
                             }),
-                            (0, a.jsx)(l.MenuRadioItem, {
+                            (0, r.jsx)(l.k5B, {
                                 id: 'view-as-grid',
                                 group: 'view-as',
-                                label: c.Z.Messages.FORUM_CHANNEL_VIEW_AS_GRID,
-                                action: () => x(s.X.GRID),
-                                checked: m === s.X.GRID
+                                label: c.NW.string(c.t.wKeggY),
+                                action: () => p(a.X.GRID),
+                                checked: m === a.X.GRID
                             })
                         ]
                     }),
-                (0, a.jsx)(l.MenuGroup, {
-                    children: (0, a.jsx)(l.MenuItem, {
+                (0, r.jsx)(l.kSQ, {
+                    children: (0, r.jsx)(l.sNh, {
                         id: 'reset-all',
                         className: d.clearText,
-                        label: (0, a.jsx)(l.Text, {
+                        label: (0, r.jsx)(l.Text, {
                             variant: 'text-sm/medium',
                             color: 'none',
-                            children: c.Z.Messages.FORUM_CHANNEL_RESET_ALL
+                            children: c.NW.string(c.t['3b//lJ'])
                         }),
                         action: () => {
-                            g(t.getDefaultSortOrder()), x(t.getDefaultLayout());
+                            f(t.getDefaultSortOrder()), p(t.getDefaultLayout());
                         }
                     })
                 })

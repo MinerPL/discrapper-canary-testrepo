@@ -1,68 +1,64 @@
-t.d(n, {
-    Z: function () {
-        return N;
-    }
-});
-var i = t(735250),
-    a = t(470079),
-    s = t(442837),
-    l = t(481060),
-    r = t(366598),
-    o = t(821864),
-    d = t(905753),
-    c = t(995390),
-    u = t(469880),
-    I = t(665578),
-    m = t(689938),
-    _ = t(103401);
-function N(e) {
-    let { application: n, canNavigate: t, guildId: c } = e,
-        I = (0, s.e7)([d.Z], () => d.Z.isUnavailable());
-    return (a.useEffect(() => (o.I4(n.id), o.kZ), [n.id]),
-    a.useEffect(() => {
-        o.gq(n.id, c, n.id), o.Sn(c, n.id);
-    }, [n.id, c]),
-    I)
+n.d(t, { Z: () => g });
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(366598),
+    s = n(821864),
+    c = n(905753),
+    d = n(995390),
+    u = n(469880),
+    p = n(665578),
+    m = n(388032),
+    b = n(883685);
+function g(e) {
+    let { application: t, canNavigate: n, guildId: d } = e,
+        p = (0, l.e7)([c.Z], () => c.Z.isUnavailable());
+    return (i.useEffect(() => (s.I4(t.id), s.kZ), [t.id]),
+    i.useEffect(() => {
+        s.gq(t.id, d, t.id), s.Sn(d, t.id);
+    }, [t.id, d]),
+    p)
         ? null
-        : (0, i.jsxs)(a.Fragment, {
+        : (0, r.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(r.Z, {
-                      icon: (0, i.jsx)(l.SlashBoxIcon, {
+                  (0, r.jsx)(a.Z, {
+                      icon: (0, r.jsx)(o.SsZ, {
                           size: 'md',
                           color: 'currentColor'
                       }),
-                      title: m.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_PERMISSIONS
+                      title: m.NW.string(m.t.RGoJND)
                   }),
-                  (0, i.jsx)(l.Text, {
+                  (0, r.jsx)(o.Text, {
                       color: 'text-muted',
                       variant: 'text-sm/normal',
-                      children: m.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_PERMISSIONS_DESCRIPTION
+                      children: m.NW.string(m.t.sCkD3d)
                   }),
-                  (0, i.jsx)(E, {
-                      guildId: c,
-                      applicationId: n.id
+                  (0, r.jsx)(f, {
+                      guildId: d,
+                      applicationId: t.id
                   }),
-                  (0, i.jsx)(u.Z, {
-                      applicationIcon: n.icon,
-                      applicationName: n.name,
-                      canNavigate: t,
-                      guildId: c
+                  (0, r.jsx)(u.Z, {
+                      applicationIcon: t.icon,
+                      applicationName: t.name,
+                      canNavigate: n,
+                      guildId: d
                   })
               ]
           });
 }
-function E(e) {
-    let { applicationId: n, guildId: t } = e,
-        { originalApplicationPermissions: a, editedTargetPermissions: s, selectedPermissionCount: l } = (0, c.Z)(t, n);
-    return (0, i.jsx)('div', {
-        className: _.applicationPermissions,
-        children: (0, i.jsx)(I.Z, {
-            applicationId: n,
-            guildId: t,
+function f(e) {
+    let { applicationId: t, guildId: n } = e,
+        { originalApplicationPermissions: i, editedTargetPermissions: l, selectedPermissionCount: o } = (0, d.Z)(n, t);
+    return (0, r.jsx)('div', {
+        className: b.applicationPermissions,
+        children: (0, r.jsx)(p.Z, {
+            applicationId: t,
+            guildId: n,
             inModal: !1,
-            editedTargetPermissions: s,
-            originalApplicationPermissions: a,
-            selectedPermissionCount: l
+            editedTargetPermissions: l,
+            originalApplicationPermissions: i,
+            selectedPermissionCount: o
         })
     });
 }

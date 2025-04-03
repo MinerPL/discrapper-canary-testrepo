@@ -1,49 +1,44 @@
 n.d(t, {
-    J: function () {
-        return a;
-    },
-    z: function () {
-        return _;
-    }
+    J: () => d,
+    z: () => p
 });
-var i,
-    a,
-    s = n(735250);
-n(470079);
-var r = n(990547),
-    l = n(481060),
+var r,
+    i = n(200651);
+n(192379);
+var l = n(990547),
+    a = n(481060),
     o = n(213609),
-    c = n(689938),
-    d = n(719658),
-    u = n(837753);
-((i = a || (a = {})).GUILD_NOT_ELIGIBLE = 'guild_not_eligible'), (i.NOT_GUILD_MEMBER = 'not_guild_member');
-let _ = (e) => {
+    s = n(388032),
+    c = n(843990),
+    u = n(837753),
+    d = (((r = {}).GUILD_NOT_ELIGIBLE = 'guild_not_eligible'), (r.NOT_GUILD_MEMBER = 'not_guild_member'), r);
+let p = (e) => {
     let { errorType: t } = e;
     return (
         (0, o.Z)({
-            type: r.ImpressionTypes.PAGE,
-            name: r.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
+            type: l.ImpressionTypes.PAGE,
+            name: l.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
             properties: { error_page_type: t }
         }),
-        (0, s.jsx)('div', {
-            className: d.errorPageContainer,
-            children: (0, s.jsxs)('div', {
-                className: d.errorPageContent,
+        (0, i.jsx)('div', {
+            className: c.errorPageContainer,
+            children: (0, i.jsxs)('div', {
+                className: c.errorPageContent,
                 children: [
-                    (0, s.jsx)('img', {
+                    (0, i.jsx)('img', {
                         src: u,
                         alt: '',
-                        className: d.errorPageIllo
+                        className: c.errorPageIllo
                     }),
-                    (0, s.jsx)(l.Heading, {
+                    (0, i.jsx)(a.X6q, {
                         variant: 'heading-xl/extrabold',
-                        className: d.errorPageTitle,
-                        children: 'guild_not_eligible' === t ? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_GUILD_NOT_ELIGIBLE_TITLE : c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_NOT_GUILD_MEMBER_TITLE
+                        className: c.errorPageTitle,
+                        children: 'guild_not_eligible' === t ? s.NW.string(s.t.atZQVV) : s.NW.string(s.t.gAdWBg)
                     }),
-                    (0, s.jsx)(l.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        className: d.errorPagSubtitle,
-                        children: 'guild_not_eligible' === t ? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_GUILD_NOT_ELIGIBLE_SUBTITLE : c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_NOT_GUILD_MEMBER_SUBTITLE
+                        className: c.errorPagSubtitle,
+                        children: 'guild_not_eligible' === t ? s.NW.string(s.t.teWe5O) : s.NW.string(s.t['X/yMrK'])
                     })
                 ]
             })

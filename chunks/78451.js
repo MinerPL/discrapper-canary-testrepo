@@ -1,159 +1,122 @@
-s.d(a, {
-    IF: function () {
-        return l;
-    },
-    LJ: function () {
-        return I;
-    },
-    MF: function () {
-        return i;
-    },
-    X7: function () {
-        return u;
-    },
-    c7: function () {
-        return c;
-    }
+s.d(t, {
+    IF: () => c,
+    LJ: () => a,
+    MF: () => u,
+    c7: () => d
 });
-var n = s(524437);
-s(376345);
-var t = s(692547),
-    E = s(2150),
-    _ = s(981631),
-    r = s(973005),
-    o = s(689938);
-function I(e) {
+var r = s(524437),
+    n = s(900089),
+    i = s(2150),
+    o = s(981631);
+s(973005);
+var l = s(388032);
+function a(e) {
     return e.map((e) => ({
         title: e.name,
         description: e.desc,
         highlightColor: (function (e) {
             switch (e) {
-                case N('PRIMARY_400'):
-                    return E.q.ACCENT;
-                case N('GREEN_360'):
-                    return E.q.GREEN;
-                case N('YELLOW_360'):
-                    return E.q.YELLOW;
-                case N('ORANGE_345'):
-                    return E.q.ORANGE;
-                case N('RED_400'):
-                    return E.q.RED;
+                case (0, n.Fw)('PRIMARY_400'):
+                    return i.q.ACCENT;
+                case (0, n.Fw)('GREEN_360'):
+                    return i.q.GREEN;
+                case (0, n.Fw)('YELLOW_360'):
+                    return i.q.YELLOW;
+                case (0, n.Fw)('ORANGE_345'):
+                    return i.q.ORANGE;
+                case (0, n.Fw)('RED_400'):
+                    return i.q.RED;
                 default:
-                    return E.q.NONE;
+                    return i.q.NONE;
             }
         })(e.color),
         value: e.value,
         disabled: e.disabled
     }));
 }
-function l() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return [
-        {
-            name: o.Z.Messages.VERIFICATION_LEVEL_NONE,
-            desc: o.Z.Messages.VERIFICATION_LEVEL_NONE_CRITERIA,
-            value: _.sFg.NONE,
-            disabled: e,
-            tooltipText: e ? o.Z.Messages.TOOLTIP_COMMUNITY_FEATURE_DISABLED : null
-        },
-        {
-            name: o.Z.Messages.VERIFICATION_LEVEL_LOW,
-            desc: o.Z.Messages.VERIFICATION_LEVEL_LOW_CRITERIA,
-            value: _.sFg.LOW,
-            color: a ? void 0 : N('GREEN_360')
-        },
-        {
-            name: o.Z.Messages.VERIFICATION_LEVEL_MEDIUM,
-            desc: o.Z.Messages.VERIFICATION_LEVEL_MEDIUM_CRITERIA.format({ min: _.YeM.ACCOUNT_AGE }),
-            value: _.sFg.MEDIUM,
-            color: a ? void 0 : N('YELLOW_360')
-        },
-        {
-            name: o.Z.Messages.VERIFICATION_LEVEL_HIGH,
-            desc: o.Z.Messages.VERIFICATION_LEVEL_HIGH_CRITERIA.format({ min: _.YeM.MEMBER_AGE }),
-            value: _.sFg.HIGH,
-            color: a ? void 0 : N('ORANGE_345')
-        },
-        {
-            name: o.Z.Messages.VERIFICATION_LEVEL_VERY_HIGH,
-            desc: o.Z.Messages.VERIFICATION_LEVEL_VERY_HIGH_CRITERIA,
-            value: _.sFg.VERY_HIGH,
-            color: a ? void 0 : N('RED_400')
-        }
-    ];
-}
-function i() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return [
-        {
-            name: o.Z.Messages.EXPLICIT_CONTENT_FILTER_HIGH_V2,
-            desc: o.Z.Messages.EXPLICIT_CONTENT_FILTER_HIGH_DESCRIPTION_V2,
-            value: _.lxg.ALL_MEMBERS,
-            color: N('RED_400')
-        },
-        {
-            name: o.Z.Messages.EXPLICIT_CONTENT_FILTER_MEDIUM_V2,
-            desc: o.Z.Messages.EXPLICIT_CONTENT_FILTER_MEDIUM_DESCRIPTION_V2,
-            value: _.lxg.MEMBERS_WITHOUT_ROLES,
-            disabled: e,
-            tooltipText: e ? o.Z.Messages.TOOLTIP_COMMUNITY_FEATURE_DISABLED : null,
-            color: N('YELLOW_360')
-        },
-        {
-            name: o.Z.Messages.EXPLICIT_CONTENT_FILTER_DISABLED_V2,
-            desc: o.Z.Messages.EXPLICIT_CONTENT_FILTER_DISABLED_DESCRIPTION_V2,
-            value: _.lxg.DISABLED,
-            disabled: e,
-            tooltipText: e ? o.Z.Messages.TOOLTIP_COMMUNITY_FEATURE_DISABLED : null,
-            color: N('PRIMARY_400')
-        }
-    ];
-}
 function c() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return [
         {
-            name: o.Z.Messages.USER_DM_SPAM_FILTER_FRIENDS_AND_NON_FRIENDS,
-            desc: o.Z.Messages.USER_DM_SPAM_FILTER_FRIENDS_AND_NON_FRIENDS_HELP,
-            value: n.Xr.FRIENDS_AND_NON_FRIENDS,
-            color: N('GREEN_360')
+            name: l.NW.string(l.t.PEzffn),
+            desc: l.NW.string(l.t.nDQy0t),
+            value: o.sFg.NONE,
+            disabled: e,
+            tooltipText: e ? l.NW.string(l.t.j9WtHx) : null
         },
         {
-            name: o.Z.Messages.USER_DM_SPAM_FILTER_NON_FRIENDS,
-            desc: o.Z.Messages.USER_DM_SPAM_FILTER_NON_FRIENDS_HELP,
-            value: n.Xr.NON_FRIENDS,
-            color: N('YELLOW_360')
+            name: l.NW.string(l.t.SsCK8P),
+            desc: l.NW.string(l.t['8GCOX1']),
+            value: o.sFg.LOW,
+            color: t ? void 0 : (0, n.Fw)('GREEN_360')
         },
         {
-            name: o.Z.Messages.USER_DM_SPAM_FILTER_DISABLED,
-            desc: o.Z.Messages.USER_DM_SPAM_FILTER_DISABLED_HELP,
-            value: n.Xr.DISABLED,
-            color: N('RED_400')
+            name: l.NW.string(l.t.WwNoR0),
+            desc: l.NW.formatToPlainString(l.t.VS14gY, { min: o.YeM.ACCOUNT_AGE }),
+            value: o.sFg.MEDIUM,
+            color: t ? void 0 : (0, n.Fw)('YELLOW_360')
+        },
+        {
+            name: l.NW.string(l.t.I2jMUF),
+            desc: l.NW.formatToPlainString(l.t['r+b3Iy'], { min: o.YeM.MEMBER_AGE }),
+            value: o.sFg.HIGH,
+            color: t ? void 0 : (0, n.Fw)('ORANGE_345')
+        },
+        {
+            name: l.NW.string(l.t.cJY8w8),
+            desc: l.NW.string(l.t.PWaKmZ),
+            value: o.sFg.VERY_HIGH,
+            color: t ? void 0 : (0, n.Fw)('RED_400')
         }
     ];
 }
 function u() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return [
         {
-            name: o.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS_V2,
-            desc: o.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS_HELP_V2,
-            value: r.TI.FRIENDS_AND_NON_FRIENDS,
-            color: N('GREEN_360')
+            name: l.NW.string(l.t.iHuPEx),
+            desc: l.NW.string(l.t.dzbET0),
+            value: o.lxg.ALL_MEMBERS,
+            color: (0, n.Fw)('RED_400')
         },
         {
-            name: o.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_NON_FRIENDS_V2,
-            desc: o.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_NON_FRIENDS_HELP_V2,
-            value: r.TI.NON_FRIENDS,
-            color: N('YELLOW_360')
+            name: l.NW.string(l.t.ynfFaG),
+            desc: l.NW.string(l.t.qZ1eHh),
+            value: o.lxg.MEMBERS_WITHOUT_ROLES,
+            disabled: e,
+            tooltipText: e ? l.NW.string(l.t.j9WtHx) : null,
+            color: (0, n.Fw)('YELLOW_360')
         },
         {
-            name: o.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_DISABLED_V2,
-            desc: o.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_DISABLED_HELP_V2,
-            value: r.TI.DISABLED,
-            color: N('RED_400')
+            name: l.NW.string(l.t.VbSyAw),
+            desc: l.NW.string(l.t.jesz8f),
+            value: o.lxg.DISABLED,
+            disabled: e,
+            tooltipText: e ? l.NW.string(l.t.j9WtHx) : null,
+            color: (0, n.Fw)('PRIMARY_400')
         }
     ];
 }
-function N(e) {
-    return t.Z.unsafe_rawColors[e].css;
+function d() {
+    return [
+        {
+            name: l.NW.string(l.t['4IaoCA']),
+            desc: l.NW.string(l.t.TgipjI),
+            value: r.Xr.FRIENDS_AND_NON_FRIENDS,
+            color: (0, n.Fw)('GREEN_360')
+        },
+        {
+            name: l.NW.string(l.t['6NnX6O']),
+            desc: l.NW.string(l.t['+dw1qq']),
+            value: r.Xr.NON_FRIENDS,
+            color: (0, n.Fw)('YELLOW_360')
+        },
+        {
+            name: l.NW.string(l.t['1tiAFx']),
+            desc: l.NW.string(l.t.LKTyeH),
+            value: r.Xr.DISABLED,
+            color: (0, n.Fw)('RED_400')
+        }
+    ];
 }

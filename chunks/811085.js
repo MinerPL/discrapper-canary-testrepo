@@ -1,169 +1,164 @@
-n.d(t, {
-    Z: function () {
-        return A;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(392711),
-    l = n(442837),
-    r = n(692547),
-    o = n(481060),
-    c = n(594174),
-    _ = n(531441),
-    u = n(451284),
-    d = n(959562),
-    E = n(800530),
-    T = n(689938),
-    S = n(716539);
-function A() {
+s.d(t, { Z: () => j }), s(47120), s(266796);
+var a = s(200651),
+    n = s(192379),
+    i = s(392711),
+    r = s(442837),
+    l = s(692547),
+    c = s(481060),
+    o = s(594174),
+    d = s(531441),
+    u = s(451284),
+    m = s(959562),
+    h = s(800530),
+    x = s(388032),
+    g = s(627577);
+function j() {
     let e = (0, u.P)(),
-        t = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        [n, A] = a.useState(36),
-        I = a.useRef({
-            [_.Sn.ALL_GOOD]: null,
-            [_.Sn.LIMITED]: null,
-            [_.Sn.VERY_LIMITED]: null,
-            [_.Sn.AT_RISK]: null,
-            [_.Sn.SUSPENDED]: null
+        t = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        [s, j] = n.useState(36),
+        N = n.useRef({
+            [d.Sn.ALL_GOOD]: null,
+            [d.Sn.LIMITED]: null,
+            [d.Sn.VERY_LIMITED]: null,
+            [d.Sn.AT_RISK]: null,
+            [d.Sn.SUSPENDED]: null
         }),
-        N = a.useCallback(() => {
-            A(
+        p = n.useCallback(() => {
+            j(
                 Math.max(
                     Math.max(
-                        ...Object.values(I.current).map((e) => {
+                        ...Object.values(N.current).map((e) => {
                             var t;
-                            return null !== (t = null == e ? void 0 : e.getBoundingClientRect().height) && void 0 !== t ? t : 36;
+                            return null != (t = null == e ? void 0 : e.getBoundingClientRect().height) ? t : 36;
                         })
                     ),
                     36
                 )
             );
         }, []);
-    a.useEffect(() => {
-        N();
-        let e = (0, s.debounce)(N, 100);
+    n.useEffect(() => {
+        p();
+        let e = (0, i.debounce)(p, 100);
         window.addEventListener('resize', e);
-    }, [N]);
-    let g = {
-            [_.Sn.ALL_GOOD]: {
-                title: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE_V2,
-                description: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION_V2.format({
-                    termsOfService: E.sQ.TOS_LINK,
-                    communityGuidelines: E.sQ.COMMUNITY_GUIDELINES
+    }, [p]);
+    let v = {
+            [d.Sn.ALL_GOOD]: {
+                title: x.t.uaKrRk,
+                description: x.NW.format(x.t.pEdBDw, {
+                    termsOfService: h.sQ.TOS_LINK,
+                    communityGuidelines: h.sQ.COMMUNITY_GUIDELINES
                 }),
-                status: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT,
-                Icon: o.CircleCheckIcon,
-                color: r.Z.colors.STATUS_POSITIVE
+                status: x.t['/Idfam'],
+                Icon: c.owK,
+                color: l.Z.colors.STATUS_POSITIVE
             },
-            [_.Sn.LIMITED]: {
-                title: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE_V2,
-                description: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION_V2,
-                status: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_SHORT,
-                Icon: o.CircleWarningIcon,
-                color: r.Z.colors.STATUS_WARNING
+            [d.Sn.LIMITED]: {
+                title: x.t.epkcmZ,
+                description: x.NW.string(x.t['774jub']),
+                status: x.t.umleq6,
+                Icon: c.P4T,
+                color: l.Z.colors.STATUS_WARNING
             },
-            [_.Sn.VERY_LIMITED]: {
-                title: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE_V2,
-                description: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION_V2,
-                status: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_SHORT,
-                Icon: o.CircleWarningIcon,
-                color: r.Z.unsafe_rawColors.ORANGE_345
+            [d.Sn.VERY_LIMITED]: {
+                title: x.t.crzE2d,
+                description: x.NW.string(x.t['T/Ufh4']),
+                status: x.t.WBtMHR,
+                Icon: c.P4T,
+                color: l.Z.unsafe_rawColors.ORANGE_345
             },
-            [_.Sn.AT_RISK]: {
-                title: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE_V2,
-                description: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION,
-                status: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_SHORT,
-                Icon: o.CircleWarningIcon,
-                color: r.Z.colors.STATUS_DANGER
+            [d.Sn.AT_RISK]: {
+                title: x.t.XRNVzM,
+                description: x.NW.string(x.t['hbH+9f']),
+                status: x.t['7f+4Li'],
+                Icon: c.P4T,
+                color: l.Z.colors.STATUS_DANGER
             },
-            [_.Sn.SUSPENDED]: {
-                title: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE_V2,
-                description: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION_V2,
-                status: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
-                Icon: o.CircleXIcon,
-                color: r.Z.colors.ICON_MUTED
+            [d.Sn.SUSPENDED]: {
+                title: x.t.MExFk5,
+                description: x.NW.string(x.t['2liUvr']),
+                status: x.t['0OONGB'],
+                Icon: c.k$p,
+                color: l.Z.colors.ICON_MUTED
             }
         },
-        { title: f, description: C, color: U, Icon: m } = g[e.state],
-        h = Object.keys(g).length;
-    return (0, i.jsxs)(o.Card, {
-        className: S.container,
+        { title: f, description: S, color: b, Icon: T } = v[e.state],
+        E = Object.keys(v).length;
+    return (0, a.jsxs)(c.Zbd, {
+        className: g.container,
         outline: !1,
         children: [
-            (0, i.jsx)('div', {
-                className: S.profile,
-                children: (0, i.jsx)(d.Z, {
+            (0, a.jsx)('div', {
+                className: g.profile,
+                children: (0, a.jsx)(m.Z, {
                     user: t,
-                    size: o.AvatarSizes.SIZE_80
+                    size: c.EFr.SIZE_80
                 })
             }),
-            (0, i.jsxs)('div', {
-                className: S.status,
+            (0, a.jsxs)('div', {
+                className: g.status,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: S.title,
+                    (0, a.jsxs)('div', {
+                        className: g.title,
                         children: [
-                            (0, i.jsx)(o.Heading, {
+                            (0, a.jsx)(c.X6q, {
                                 color: 'header-primary',
                                 variant: 'heading-lg/normal',
-                                children: f.format({
+                                children: x.NW.format(f, {
                                     hook: (e) =>
-                                        (0, i.jsx)(o.Text, {
-                                            style: { color: U.css },
+                                        (0, a.jsx)(c.Text, {
+                                            style: { color: b.css },
                                             variant: 'heading-lg/bold',
                                             tag: 'span',
                                             children: e
                                         })
                                 })
                             }),
-                            (0, i.jsx)(o.Text, {
+                            (0, a.jsx)(c.Text, {
                                 color: 'text-normal',
                                 variant: 'text-sm/normal',
-                                children: C
+                                children: S
                             })
                         ]
                     }),
-                    (0, i.jsxs)('div', {
-                        className: S.health,
-                        style: { height: n },
+                    (0, a.jsxs)('div', {
+                        className: g.health,
+                        style: { height: s },
                         children: [
-                            (0, i.jsx)('div', { className: S.line }),
-                            Object.entries(g).map((t, n) => {
-                                let [a, s] = t,
-                                    l = parseInt(a) === e.state;
-                                return (0, i.jsxs)(
+                            (0, a.jsx)('div', { className: g.line }),
+                            Object.entries(v).map((t, s) => {
+                                let [n, i] = t,
+                                    r = parseInt(n) === e.state;
+                                return (0, a.jsxs)(
                                     'div',
                                     {
-                                        className: S.statusOption,
-                                        ref: (e) => (I.current[parseInt(a)] = e),
+                                        className: g.statusOption,
+                                        ref: (e) => (N.current[parseInt(n)] = e),
                                         children: [
-                                            l
-                                                ? (0, i.jsx)(m, {
-                                                      className: S.marker,
-                                                      color: s.color
+                                            r
+                                                ? (0, a.jsx)(T, {
+                                                      className: g.marker,
+                                                      color: i.color
                                                   })
-                                                : (0, i.jsx)('div', {
-                                                      className: S.marker,
+                                                : (0, a.jsx)('div', {
+                                                      className: g.marker,
                                                       style: {
-                                                          marginLeft: 0 === n ? -6 : 0,
-                                                          marginRight: n === h - 1 ? -6 : 0
+                                                          marginLeft: 0 === s ? -6 : 0,
+                                                          marginRight: s === E - 1 ? -6 : 0
                                                       },
-                                                      children: (0, i.jsx)('div', { className: S.empty })
+                                                      children: (0, a.jsx)('div', { className: g.empty })
                                                   }),
-                                            s.status.format({
+                                            x.NW.format(i.status, {
                                                 hook: (e) =>
-                                                    (0, i.jsx)(o.Text, {
+                                                    (0, a.jsx)(c.Text, {
                                                         color: 'text-normal',
                                                         variant: 'text-sm/normal',
-                                                        className: S.statusLabel,
+                                                        className: g.statusLabel,
                                                         children: e
                                                     })
                                             })
                                         ]
                                     },
-                                    n
+                                    s
                                 );
                             })
                         ]

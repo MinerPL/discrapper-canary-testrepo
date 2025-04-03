@@ -1,23 +1,48 @@
-var A = I(735250);
-I(470079);
-var O = I(481060),
-    T = I(570140);
-_.Z = {
-    open(E) {
-        T.Z.dispatch({
+n.d(t, { Z: () => r });
+var i = n(200651);
+n(192379);
+var a = n(481060),
+    l = n(570140);
+let r = {
+    open(e) {
+        l.Z.dispatch({
             type: 'SAFETY_HUB_APPEAL_OPEN',
-            classificationId: E
+            classificationId: e
         }),
-            (0, O.openModalLazy)(async () => {
-                let { default: _ } = await I.e('65652').then(I.bind(I, 208265));
-                return (I) =>
-                    (0, A.jsx)(_, {
-                        classificationId: E,
-                        ...I
-                    });
+            (0, a.ZDy)(async () => {
+                let { default: t } = await n.e('65652').then(n.bind(n, 208265));
+                return (n) =>
+                    (0, i.jsx)(
+                        t,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    i = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (i = i.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: i,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = i);
+                                    });
+                            }
+                            return e;
+                        })({ classificationId: e }, n)
+                    );
             });
     },
     close() {
-        T.Z.dispatch({ type: 'SAFETY_HUB_APPEAL_CLOSE' });
+        l.Z.dispatch({ type: 'SAFETY_HUB_APPEAL_CLOSE' });
     }
 };

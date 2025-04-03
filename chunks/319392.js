@@ -1,77 +1,73 @@
-o.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var t = o(735250);
-o(470079);
-var s = o(481060),
-    r = o(726542),
-    i = o(198993),
-    c = o(63063),
-    a = o(376340),
-    l = o(981631),
-    d = o(927923),
-    u = o(689938),
-    _ = o(764084),
-    C = o(418811);
-function x() {
-    return (0, t.jsxs)('div', {
-        className: _.getXboxApp,
+n.d(t, { Z: () => x });
+var o = n(200651);
+n(192379);
+var r = n(481060),
+    i = n(726542),
+    s = n(198993),
+    a = n(63063),
+    c = n(376340),
+    l = n(981631),
+    d = n(927923),
+    u = n(388032),
+    f = n(544200),
+    p = n(629582);
+function b() {
+    return (0, o.jsxs)('div', {
+        className: f.getXboxApp,
         children: [
-            (0, t.jsxs)('div', {
-                className: _.getXboxAppBody,
+            (0, o.jsxs)('div', {
+                className: f.getXboxAppBody,
                 children: [
-                    (0, t.jsxs)(s.Heading, {
-                        className: _.getXboxAppHeading,
+                    (0, o.jsxs)(r.X6q, {
+                        className: f.getXboxAppHeading,
                         variant: 'text-lg/semibold',
                         children: [
-                            (0, t.jsx)('div', {
-                                className: _.xboxLogoBox,
-                                children: (0, t.jsx)('img', {
-                                    src: r.Z.get(l.ABu.XBOX).icon.whiteSVG,
+                            (0, o.jsx)('div', {
+                                className: f.xboxLogoBox,
+                                children: (0, o.jsx)('img', {
+                                    src: i.Z.get(l.ABu.XBOX).icon.whiteSVG,
                                     alt: ''
                                 })
                             }),
-                            u.Z.Messages.GET_XBOX_APP
+                            u.NW.string(u.t['12Kx2t'])
                         ]
                     }),
-                    (0, t.jsx)(s.Text, {
+                    (0, o.jsx)(r.Text, {
                         tag: 'p',
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: u.Z.Messages.CONNECT_XBOX_SUCCESS_APP_BODY
+                        children: u.NW.string(u.t.M5yEcX)
                     }),
-                    (0, t.jsx)(s.Text, {
+                    (0, o.jsx)(r.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: (0, t.jsx)(s.Anchor, {
-                            href: c.Z.getArticleURL(l.BhN.XBOX_CONNECTION),
-                            children: u.Z.Messages.LEARN_MORE
+                        children: (0, o.jsx)(r.eee, {
+                            href: a.Z.getArticleURL(l.BhN.XBOX_CONNECTION),
+                            children: u.NW.string(u.t.hvVgAQ)
                         })
                     })
                 ]
             }),
-            (0, t.jsx)(i.ZP, {
-                className: _.getXboxAppQR,
+            (0, o.jsx)(s.ZP, {
+                className: f.getXboxAppQR,
                 text: d.X3,
                 size: 90
             })
         ]
     });
 }
-function p(e) {
-    let { onClose: n } = e;
-    return (0, t.jsx)(a.L, {
-        img: (0, t.jsx)('img', {
-            src: C,
-            width: '232',
-            height: '113',
+function x(e) {
+    let { onClose: t } = e;
+    return (0, o.jsx)(c.L, {
+        img: (0, o.jsx)('img', {
+            src: p.Z,
+            width: '124',
+            height: '160',
             alt: ''
         }),
-        title: u.Z.Messages.CONNECT_XBOX_SUCCESS_TITLE,
-        body: u.Z.Messages.CONNECT_XBOX_SUCCESS_BODY,
-        content: (0, t.jsx)(x, {}),
-        onClose: n
+        title: u.NW.string(u.t['7QsHmp']),
+        body: u.NW.string(u.t.byYNPT),
+        content: (0, o.jsx)(b, {}),
+        onClose: t
     });
 }

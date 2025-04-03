@@ -1,15 +1,9 @@
-t.d(s, {
-    Br: function () {
-        return o;
-    },
-    Gk: function () {
-        return l;
-    },
-    O$: function () {
-        return c;
-    }
+n.d(t, {
+    Br: () => l,
+    Gk: () => o,
+    O$: () => c
 });
-let { Layer: n, LayerContainer: a, LayerProvider: i, layerContext: r } = (0, t(481060).createLayer)('DevTools'),
-    o = a,
+let { Layer: r, LayerContainer: i, LayerProvider: s, layerContext: a } = (0, n(481060).Xvx)('DevTools'),
     l = i,
-    c = r;
+    o = s,
+    c = a;

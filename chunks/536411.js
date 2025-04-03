@@ -1,7 +1,1 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var r = {};
-r = { Empty: `Pr\xe1zdn\xe9` };
+e.exports = '/assets/62acde40410e7173.png';

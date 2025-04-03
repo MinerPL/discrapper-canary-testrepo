@@ -1,484 +1,546 @@
 n.d(t, {
-    X: function () {
-        return M;
-    }
+    X: () => Z,
+    Z: () => k
 }),
+    n(266796),
     n(47120),
     n(653041);
-var s = n(735250),
-    a = n(470079),
-    i = n(120356),
-    r = n.n(i),
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(544891),
     c = n(433517),
     d = n(481060),
     u = n(852860),
-    _ = n(933557),
-    I = n(769654),
-    E = n(984933),
-    T = n(650774),
-    m = n(430824),
-    N = n(496675),
-    S = n(699516),
-    h = n(594174),
-    g = n(434404),
+    m = n(493773),
+    g = n(933557),
+    p = n(63568),
+    h = n(769654),
+    f = n(984933),
+    b = n(650774),
+    x = n(430824),
+    j = n(496675),
+    N = n(699516),
+    _ = n(594174),
+    v = n(434404),
     C = n(999382),
-    x = n(54842),
-    p = n(981631),
-    R = n(731455),
-    f = n(689938),
-    L = n(121276),
-    O = n(922905);
-let A = 'dismissedCommunityFeaturesUpsell',
-    M = () => {
-        let e;
-        let {
+    O = n(54842),
+    y = n(929834),
+    I = n(981631),
+    E = n(388032),
+    S = n(90386),
+    T = n(922905);
+function P(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function w(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let R = 'dismissedCommunityFeaturesUpsell',
+    Z = () => {
+        let e,
+            {
                 guild: t,
                 submitting: n,
-                errors: a
+                errors: i
             } = (0, l.cj)([C.Z], () => ({
                 submitting: C.Z.isSubmitting(),
                 guild: C.Z.getGuild(),
                 errors: C.Z.getErrors()
             })),
-            i = Object.keys(a),
-            r = i.length > 0 ? i[0] : null;
-        if ('rules_channel_id' === r) e = f.Z.Messages.GUILD_RULES_INVALID_CHANNEL;
-        else e = null != r ? a[r] : void 0;
-        return (0, s.jsx)(u.Z, {
-            submitting: n,
-            onReset: () => {
-                if (null != t) g.Z.init(t.id);
-            },
-            onSave: () => {
-                if (null != t)
-                    g.Z.saveGuild(t.id, {
-                        rulesChannelId: t.rulesChannelId,
-                        preferredLocale: t.preferredLocale,
-                        safetyAlertsChannelId: t.safetyAlertsChannelId,
-                        publicUpdatesChannelId: t.publicUpdatesChannelId,
-                        description: t.description,
-                        features: t.features
-                    });
-            },
-            errorMessage: e
-        });
+            s = Object.keys(i),
+            a = s.length > 0 ? s[0] : null;
+        return (
+            (e = 'rules_channel_id' === a ? E.NW.string(E.t['7IrBYm']) : null != a ? i[a] : void 0),
+            (0, r.jsx)(u.Z, {
+                submitting: n,
+                onReset: () => {
+                    null != t && v.Z.init(t.id);
+                },
+                onSave: () => {
+                    null != t &&
+                        v.Z.saveGuild(t.id, {
+                            rulesChannelId: t.rulesChannelId,
+                            preferredLocale: t.preferredLocale,
+                            safetyAlertsChannelId: t.safetyAlertsChannelId,
+                            publicUpdatesChannelId: t.publicUpdatesChannelId,
+                            description: t.description,
+                            features: t.features
+                        });
+                },
+                errorMessage: e
+            })
+        );
     },
     D = (e) => {
-        let { discoveryEnabled: t, onboardingEnabled: n, guild: i } = e,
-            [r, u] = a.useState(!0 === c.K.get(A)),
-            _ = (0, l.e7)([T.Z], () => {
+        let { discoveryEnabled: t, onboardingEnabled: n, guild: s } = e,
+            [a, u] = i.useState(!0 === c.K.get(R)),
+            g = (0, l.e7)([b.Z], () => {
                 var e;
-                return null !== (e = T.Z.getMemberCount(i.id)) && void 0 !== e ? e : 0;
+                return null != (e = b.Z.getMemberCount(s.id)) ? e : 0;
             }),
-            [E, N] = a.useState(!1);
-        a.useEffect(() => {
+            [p, f] = i.useState(!1);
+        (0, m.ZP)(() => {
             o.tn
-                .get(p.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(i.id))
-                .then((e) => {
-                    N(e.body.eligible_for_admin_server);
+                .get({
+                    url: I.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(s.id),
+                    rejectWithError: !0
                 })
-                .catch(() => N(!1));
-        }, []);
-        let S = (0, l.e7)([m.Z], () => m.Z.getGuild('942897714956472401')),
-            h = i.isCommunity() && _ >= 1000 && E && !(null != S);
-        if (t && n && !h) return null;
-        let C = async () => {
+                .then((e) => {
+                    f(e.body.eligible_for_admin_server);
+                })
+                .catch(() => f(!1));
+        });
+        let j = (0, l.e7)([x.Z], () => x.Z.getGuild('942897714956472401')),
+            N = s.isCommunity() && g >= 1000 && p && null == j;
+        if (t && n && !N) return null;
+        let _ = async () => {
             try {
                 let e = await o.tn.post({
-                    url: p.ANM.JOIN_ADMIN_SERVER(i.id),
-                    oldFormErrors: !0
+                    url: I.ANM.JOIN_ADMIN_SERVER(s.id),
+                    oldFormErrors: !0,
+                    rejectWithError: !0
                 });
-                g.Z.close(), (0, I.X)(e.body.id);
-            } catch {}
+                v.Z.close(), (0, h.X)(e.body.id);
+            } catch (e) {}
         };
-        return r && !h
+        return a && !N
             ? null
-            : (0, s.jsxs)('div', {
-                  className: L.upsellContainer,
+            : (0, r.jsxs)('div', {
+                  className: S.upsellContainer,
                   children: [
-                      (0, s.jsxs)('div', {
-                          className: L.upsellContent,
+                      (0, r.jsxs)('div', {
+                          className: S.upsellContent,
                           children: [
-                              (0, s.jsx)('img', {
-                                  src: O,
+                              (0, r.jsx)('img', {
+                                  src: T,
                                   alt: '',
                                   width: 60,
-                                  className: L.upsellImage
+                                  className: S.upsellImage
                               }),
-                              (0, s.jsxs)('div', {
+                              (0, r.jsxs)('div', {
                                   children: [
-                                      (0, s.jsx)(d.Heading, {
+                                      (0, r.jsx)(d.X6q, {
                                           variant: 'heading-md/semibold',
-                                          className: L.upsellHeader,
-                                          children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_HEADER
+                                          className: S.upsellHeader,
+                                          children: E.NW.string(E.t['pR/BgY'])
                                       }),
-                                      (0, s.jsx)(d.Text, {
+                                      (0, r.jsx)(d.Text, {
                                           variant: 'text-sm/normal',
-                                          children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BODY
+                                          children: E.NW.string(E.t['V+Yo1t'])
                                       })
                                   ]
                               })
                           ]
                       }),
-                      (0, s.jsx)(d.Button, {
-                          'aria-label': f.Z.Messages.CLOSE,
-                          look: d.Button.Looks.BLANK,
-                          size: d.Button.Sizes.NONE,
-                          className: L.upsellClose,
+                      (0, r.jsx)(d.zxk, {
+                          'aria-label': E.NW.string(E.t.cpT0Cg),
+                          look: d.zxk.Looks.BLANK,
+                          size: d.zxk.Sizes.NONE,
+                          className: S.upsellClose,
                           onClick: () => {
-                              c.K.set(A, !0), u(!0);
+                              c.K.set(R, !0), u(!0);
                           },
-                          children: (0, s.jsx)(d.XSmallIcon, {
+                          children: (0, r.jsx)(d.Dio, {
                               size: 'md',
                               color: 'currentColor'
                           })
                       }),
-                      (0, s.jsxs)('div', {
-                          className: L.upsellFooter,
+                      (0, r.jsxs)('div', {
+                          className: S.upsellFooter,
                           children: [
-                              h &&
-                                  (0, s.jsx)(d.Button, {
-                                      size: d.Button.Sizes.SMALL,
-                                      onClick: C,
-                                      className: L.upsellButton,
-                                      children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ADMIN_SERVER
+                              N &&
+                                  (0, r.jsx)(d.zxk, {
+                                      size: d.zxk.Sizes.SMALL,
+                                      onClick: _,
+                                      className: S.upsellButton,
+                                      children: E.NW.string(E.t.iF1Asr)
                                   }),
                               n
                                   ? null
-                                  : (0, s.jsx)(d.Button, {
-                                        size: d.Button.Sizes.SMALL,
+                                  : (0, r.jsx)(d.zxk, {
+                                        size: d.zxk.Sizes.SMALL,
                                         onClick: () => {
-                                            g.Z.setSection(p.pNK.ONBOARDING);
+                                            v.Z.setSection(I.pNK.ONBOARDING);
                                         },
-                                        className: L.upsellButton,
-                                        children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ONBOARDING
+                                        className: S.upsellButton,
+                                        children: E.NW.string(E.t['S/DfiY'])
                                     }),
                               t
                                   ? null
-                                  : (0, s.jsx)(d.Button, {
-                                        size: d.Button.Sizes.SMALL,
+                                  : (0, r.jsx)(d.zxk, {
+                                        size: d.zxk.Sizes.SMALL,
                                         onClick: () => {
-                                            g.Z.setSection(p.pNK.DISCOVERY);
+                                            v.Z.setSection(I.pNK.DISCOVERY);
                                         },
-                                        className: L.upsellButton,
-                                        color: d.Button.Colors.PRIMARY,
-                                        children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_DISCOVERY
+                                        className: S.upsellButton,
+                                        color: d.zxk.Colors.PRIMARY,
+                                        children: E.NW.string(E.t['0kmJd3'])
                                     }),
-                              (0, s.jsx)(d.Button, {
-                                  size: d.Button.Sizes.SMALL,
+                              (0, r.jsx)(d.zxk, {
+                                  size: d.zxk.Sizes.SMALL,
                                   onClick: () => {
-                                      g.Z.setSection(p.pNK.ANALYTICS);
+                                      v.Z.setSection(I.pNK.ANALYTICS);
                                   },
-                                  className: L.upsellButton,
-                                  color: d.Button.Colors.PRIMARY,
-                                  children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ANALYTICS
+                                  className: S.upsellButton,
+                                  color: d.zxk.Colors.PRIMARY,
+                                  children: E.NW.string(E.t.BQIYTU)
                               })
                           ]
                       })
                   ]
               });
     },
-    v = () => {
+    A = () => {
         let e = (0, l.e7)([C.Z], () => C.Z.getGuild()),
-            { canManageGuild: t, isGuildAdmin: n } = (0, l.cj)([N.Z], () => ({
-                canManageGuild: N.Z.can(p.Plq.MANAGE_GUILD, e),
-                isGuildAdmin: N.Z.can(p.Plq.ADMINISTRATOR, e)
+            { canManageGuild: t, isGuildAdmin: n } = (0, l.cj)([j.Z], () => ({
+                canManageGuild: j.Z.can(I.Plq.MANAGE_GUILD, e),
+                isGuildAdmin: j.Z.can(I.Plq.ADMINISTRATOR, e)
             })),
-            i = (0, l.e7)([E.ZP], () => (null != e ? E.ZP.getChannels(e.id) : null)),
-            o = a.useMemo(R.jb, []),
-            u = !0 !== c.K.get(A);
+            s = (0, l.e7)([f.ZP], () => (null != e ? f.ZP.getChannels(e.id) : null)),
+            o = i.useMemo(y.jb, []),
+            u = !0 !== c.K.get(R);
         if (null == e) return null;
-        let I = [];
-        null != i &&
-            i[E.sH].forEach((e) => {
+        let m = [];
+        null != s &&
+            s[f.sH].forEach((e) => {
                 let { channel: t } = e;
-                t.type === p.d4z.GUILD_TEXT &&
-                    I.push({
+                t.type === I.d4z.GUILD_TEXT &&
+                    m.push({
                         value: t.id,
-                        label: (0, _.F6)(t, h.default, S.Z, !0)
+                        label: (0, g.F6)(t, _.default, N.Z, !0)
                     });
             });
-        let T = () => {
-                g.Z.init(e.id), g.Z.open(e.id, p.pNK.MEMBER_VERIFICATION);
+        let h = () => {
+                v.Z.init(e.id), v.Z.open(e.id, I.pNK.MEMBER_VERIFICATION);
             },
-            m = () => {
+            b = () => {
                 if (null == e) return;
                 let t = new Set(e.features);
-                t.delete(p.oNc.COMMUNITY),
-                    t.delete(p.oNc.DISCOVERABLE),
-                    !e.hasFeature(p.oNc.CLAN) && t.delete(p.oNc.MEMBER_VERIFICATION_GATE_ENABLED),
-                    t.delete(p.oNc.PREVIEW_ENABLED),
-                    g.Z.updateGuild({
+                t.delete(I.oNc.COMMUNITY),
+                    t.delete(I.oNc.DISCOVERABLE),
+                    (0, p.K2)(e.id, 'disableCommunity') || e.hasFeature(I.oNc.CLAN) || t.delete(I.oNc.MEMBER_VERIFICATION_GATE_ENABLED),
+                    t.delete(I.oNc.PREVIEW_ENABLED),
+                    v.Z.updateGuild({
                         features: t,
                         rulesChannelId: null,
                         publicUpdatesChannelId: null
                     });
             },
             x = (e) => {
-                g.Z.updateGuild({ rulesChannelId: e });
+                v.Z.updateGuild({ description: e });
             },
-            O = (e) => {
-                g.Z.updateGuild({ safetyAlertsChannelId: e });
-            },
-            M = (e) => {
-                g.Z.updateGuild({ publicUpdatesChannelId: e });
-            },
-            v = (e) => {
-                g.Z.updateGuild({ preferredLocale: e });
-            },
-            j = (e) => {
-                g.Z.updateGuild({ description: e });
-            },
-            Z = () => {
-                e.features.has(p.oNc.DISCOVERABLE) && e.features.has(p.oNc.PARTNERED)
-                    ? (0, d.openModal)((e) =>
-                          (0, s.jsx)(d.ConfirmModal, {
-                              ...e,
-                              header: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
-                              confirmText: f.Z.Messages.CONFIRM,
-                              cancelText: f.Z.Messages.NEVERMIND,
-                              onConfirm: m,
-                              children: (0, s.jsx)(d.Text, {
-                                  variant: 'text-sm/normal',
-                                  children: f.Z.Messages.GUILD_SETTINGS_PARTNER_AND_DISCOVERY_DISABLE_PUBLIC_CONFIRM_TEXT
-                              })
-                          })
-                      )
-                    : e.features.has(p.oNc.DISCOVERABLE)
-                      ? (0, d.openModal)((e) =>
-                            (0, s.jsx)(d.ConfirmModal, {
-                                ...e,
-                                header: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
-                                confirmText: f.Z.Messages.CONFIRM,
-                                cancelText: f.Z.Messages.NEVERMIND,
-                                onConfirm: m,
-                                children: (0, s.jsx)(d.Text, {
-                                    variant: 'text-sm/normal',
-                                    children: f.Z.Messages.GUILD_SETTINGS_DISCOVERY_DISABLE_PUBLIC_CONFIRM_TEXT
-                                })
-                            })
-                        )
-                      : e.features.has(p.oNc.PARTNERED)
-                        ? (0, d.openModal)((e) =>
-                              (0, s.jsx)(d.ConfirmModal, {
-                                  ...e,
-                                  header: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
-                                  confirmText: f.Z.Messages.CONFIRM,
-                                  cancelText: f.Z.Messages.NEVERMIND,
-                                  onConfirm: m,
-                                  children: (0, s.jsx)(d.Text, {
+            O = () => {
+                let t = (0, p.K2)(e.id, 'GuildSettingsCommunity');
+                e.features.has(I.oNc.DISCOVERABLE) && e.features.has(I.oNc.PARTNERED)
+                    ? (0, d.h7j)((e) =>
+                          (0, r.jsx)(
+                              d.ConfirmModal,
+                              w(P({}, e), {
+                                  header: E.NW.string(E.t.iBnVHR),
+                                  confirmText: E.NW.string(E.t['cY+Ooa']),
+                                  cancelText: E.NW.string(E.t.oEAioK),
+                                  onConfirm: b,
+                                  children: (0, r.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
-                                      children: f.Z.Messages.GUILD_SETTINGS_PARTNER_DISABLE_PUBLIC_CONFIRM_TEXT
+                                      children: E.NW.string(E.t['P+Sh8f'])
                                   })
                               })
                           )
-                        : e.features.has(p.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && !e.features.has(p.oNc.CLAN)
-                          ? (0, d.openModal)((e) =>
-                                (0, s.jsx)(d.ConfirmModal, {
-                                    ...e,
-                                    header: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
-                                    confirmButtonColor: d.Button.Colors.BRAND,
-                                    confirmText: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_MEMBER_VERIFICATION_CONFIRM,
-                                    cancelText: f.Z.Messages.NEVERMIND,
-                                    onConfirm: T,
-                                    children: (0, s.jsx)(d.Text, {
+                      )
+                    : e.features.has(I.oNc.DISCOVERABLE)
+                      ? (0, d.h7j)((e) =>
+                            (0, r.jsx)(
+                                d.ConfirmModal,
+                                w(P({}, e), {
+                                    header: E.NW.string(E.t.iBnVHR),
+                                    confirmText: E.NW.string(E.t['cY+Ooa']),
+                                    cancelText: E.NW.string(E.t.oEAioK),
+                                    onConfirm: b,
+                                    children: (0, r.jsx)(d.Text, {
                                         variant: 'text-sm/normal',
-                                        children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_MEMBER_VERIFICATION
+                                        children: E.NW.string(E.t['eMx/ub'])
                                     })
                                 })
                             )
-                          : m();
+                        )
+                      : e.features.has(I.oNc.PARTNERED)
+                        ? (0, d.h7j)((e) =>
+                              (0, r.jsx)(
+                                  d.ConfirmModal,
+                                  w(P({}, e), {
+                                      header: E.NW.string(E.t.iBnVHR),
+                                      confirmText: E.NW.string(E.t['cY+Ooa']),
+                                      cancelText: E.NW.string(E.t.oEAioK),
+                                      onConfirm: b,
+                                      children: (0, r.jsx)(d.Text, {
+                                          variant: 'text-sm/normal',
+                                          children: E.NW.string(E.t.l1wLeX)
+                                      })
+                                  })
+                              )
+                          )
+                        : !e.features.has(I.oNc.MEMBER_VERIFICATION_GATE_ENABLED) || t || e.features.has(I.oNc.CLAN)
+                          ? b()
+                          : (0, d.h7j)((e) =>
+                                (0, r.jsx)(
+                                    d.ConfirmModal,
+                                    w(P({}, e), {
+                                        header: E.NW.string(E.t.iBnVHR),
+                                        confirmButtonColor: d.zxk.Colors.BRAND,
+                                        confirmText: E.NW.string(E.t.izNBMz),
+                                        cancelText: E.NW.string(E.t.oEAioK),
+                                        onConfirm: h,
+                                        children: (0, r.jsx)(d.Text, {
+                                            variant: 'text-sm/normal',
+                                            children: E.NW.string(E.t.kQzUNj)
+                                        })
+                                    })
+                                )
+                            );
             };
-        return (0, s.jsxs)(d.FormSection, {
-            title: f.Z.Messages.GUILD_SETTINGS_COMMUNITY,
-            tag: d.FormTitleTags.H1,
+        return (0, r.jsxs)(d.hjN, {
+            title: E.NW.string(E.t.nRtNqq),
+            tag: d.RB0.H1,
             children: [
                 u
-                    ? (0, s.jsx)(D, {
-                          discoveryEnabled: e.features.has(p.oNc.DISCOVERABLE),
-                          onboardingEnabled: e.features.has(p.oNc.GUILD_ONBOARDING),
+                    ? (0, r.jsx)(D, {
+                          discoveryEnabled: e.features.has(I.oNc.DISCOVERABLE),
+                          onboardingEnabled: e.features.has(I.oNc.GUILD_ONBOARDING),
                           guild: e
                       })
                     : null,
-                (0, s.jsxs)(d.FormSection, {
-                    className: r()(L.twoColumnFormSection, L.firstSection),
+                (0, r.jsxs)(d.hjN, {
+                    className: a()(S.twoColumnFormSection, S.firstSection),
                     children: [
-                        (0, s.jsxs)('div', {
-                            className: L.descriptionColumn,
+                        (0, r.jsxs)('div', {
+                            className: S.descriptionColumn,
                             children: [
-                                (0, s.jsx)(d.FormTitle, {
-                                    className: L.formTitle,
-                                    children: f.Z.Messages.FORM_LABEL_DISCOVERY_RULES_CHANNEL
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t.otcXPz)
                                 }),
-                                (0, s.jsx)(d.FormText, {
-                                    type: d.FormTextTypes.DESCRIPTION,
-                                    className: L.__invalid_formDescription,
-                                    children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_RULES_CHANNEL_HELP
+                                (0, r.jsx)(d.R94, {
+                                    type: d.geA.DESCRIPTION,
+                                    className: S.__invalid_formDescription,
+                                    children: E.NW.string(E.t.BtwmYG)
                                 })
                             ]
                         }),
-                        (0, s.jsx)('div', {
-                            className: L.selectColumn,
-                            children: (0, s.jsx)(d.SearchableSelect, {
+                        (0, r.jsx)('div', {
+                            className: S.selectColumn,
+                            children: (0, r.jsx)(d.VcW, {
                                 value: e.rulesChannelId,
-                                options: I,
-                                onChange: x,
+                                options: m,
+                                onChange: (e) => {
+                                    v.Z.updateGuild({ rulesChannelId: e });
+                                },
                                 isDisabled: !t
                             })
                         })
                     ]
                 }),
-                (0, s.jsx)(d.FormDivider, { className: L.divider }),
-                (0, s.jsxs)(d.FormSection, {
-                    className: r()(L.twoColumnFormSection, L.firstSection),
+                (0, r.jsx)(d.$i$, { className: S.divider }),
+                (0, r.jsxs)(d.hjN, {
+                    className: a()(S.twoColumnFormSection, S.firstSection),
                     children: [
-                        (0, s.jsxs)('div', {
-                            className: L.descriptionColumn,
+                        (0, r.jsxs)('div', {
+                            className: S.descriptionColumn,
                             children: [
-                                (0, s.jsx)(d.FormTitle, {
-                                    className: L.formTitle,
-                                    children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t.vAyDGR)
                                 }),
-                                (0, s.jsx)(d.FormText, {
-                                    type: d.FormTextTypes.DESCRIPTION,
-                                    className: L.__invalid_formDescription,
-                                    children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_HELP
+                                (0, r.jsx)(d.R94, {
+                                    type: d.geA.DESCRIPTION,
+                                    className: S.__invalid_formDescription,
+                                    children: E.NW.string(E.t.ZFeonp)
                                 })
                             ]
                         }),
-                        (0, s.jsx)('div', {
-                            className: L.selectColumn,
-                            children: (0, s.jsx)(d.SearchableSelect, {
+                        (0, r.jsx)('div', {
+                            className: S.selectColumn,
+                            children: (0, r.jsx)(d.VcW, {
                                 value: e.publicUpdatesChannelId,
-                                options: I,
-                                onChange: M,
+                                options: m,
+                                onChange: (e) => {
+                                    v.Z.updateGuild({ publicUpdatesChannelId: e });
+                                },
                                 isDisabled: !n
                             })
                         })
                     ]
                 }),
-                (0, s.jsx)(d.FormDivider, { className: L.divider }),
-                (0, s.jsxs)(d.FormSection, {
-                    className: r()(L.twoColumnFormSection, L.firstSection),
+                (0, r.jsx)(d.$i$, { className: S.divider }),
+                (0, r.jsxs)(d.hjN, {
+                    className: a()(S.twoColumnFormSection, S.firstSection),
                     children: [
-                        (0, s.jsxs)('div', {
-                            className: L.descriptionColumn,
+                        (0, r.jsxs)('div', {
+                            className: S.descriptionColumn,
                             children: [
-                                (0, s.jsx)(d.FormTitle, {
-                                    className: L.formTitle,
-                                    children: f.Z.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t.sMkYEx)
                                 }),
-                                (0, s.jsx)(d.FormText, {
-                                    type: d.FormTextTypes.DESCRIPTION,
-                                    className: L.__invalid_formDescription,
-                                    children: f.Z.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_DESCRIPTION
+                                (0, r.jsx)(d.R94, {
+                                    type: d.geA.DESCRIPTION,
+                                    className: S.__invalid_formDescription,
+                                    children: E.NW.string(E.t.htioQk)
                                 })
                             ]
                         }),
-                        (0, s.jsx)('div', {
-                            className: L.selectColumn,
-                            children: (0, s.jsx)(d.SearchableSelect, {
+                        (0, r.jsx)('div', {
+                            className: S.selectColumn,
+                            children: (0, r.jsx)(d.VcW, {
                                 value: e.safetyAlertsChannelId,
-                                options: I,
-                                onChange: O,
+                                options: m,
+                                onChange: (e) => {
+                                    v.Z.updateGuild({ safetyAlertsChannelId: e });
+                                },
                                 isDisabled: !t
                             })
                         })
                     ]
                 }),
-                (0, s.jsx)(d.FormDivider, { className: L.divider }),
-                (0, s.jsxs)(d.FormSection, {
-                    className: L.twoColumnFormSection,
+                (0, r.jsx)(d.$i$, { className: S.divider }),
+                (0, r.jsxs)(d.hjN, {
+                    className: S.twoColumnFormSection,
                     children: [
-                        (0, s.jsxs)('div', {
-                            className: L.descriptionColumn,
+                        (0, r.jsxs)('div', {
+                            className: S.descriptionColumn,
                             children: [
-                                (0, s.jsx)(d.FormTitle, {
-                                    className: L.formTitle,
-                                    children: f.Z.Messages.FORM_LABEL_SERVER_LANGUAGE
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t.pO60f3)
                                 }),
-                                (0, s.jsx)(d.FormText, {
-                                    type: d.FormTextTypes.DESCRIPTION,
-                                    className: L.__invalid_formDescription,
-                                    children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_LOCALE_HELP
+                                (0, r.jsx)(d.R94, {
+                                    type: d.geA.DESCRIPTION,
+                                    className: S.__invalid_formDescription,
+                                    children: E.NW.string(E.t.aIR73d)
                                 })
                             ]
                         }),
-                        (0, s.jsx)('div', {
-                            className: L.selectColumn,
-                            children: (0, s.jsx)(d.SearchableSelect, {
+                        (0, r.jsx)('div', {
+                            className: S.selectColumn,
+                            children: (0, r.jsx)(d.VcW, {
                                 value: e.preferredLocale,
                                 options: o,
-                                onChange: v,
+                                onChange: (e) => {
+                                    v.Z.updateGuild({ preferredLocale: e });
+                                },
                                 isDisabled: !t
                             })
                         })
                     ]
                 }),
-                (0, s.jsx)(d.FormDivider, { className: L.divider }),
+                (0, r.jsx)(d.$i$, { className: S.divider }),
                 (() => {
                     var n;
                     if (null != e)
-                        return (0, s.jsxs)(d.FormSection, {
+                        return (0, r.jsxs)(d.hjN, {
                             children: [
-                                (0, s.jsx)(d.FormTitle, {
-                                    className: L.formTitle,
-                                    children: f.Z.Messages.FORM_LABEL_SERVER_DESCRIPTION
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t['RSfm+v'])
                                 }),
-                                (0, s.jsx)(d.FormText, {
-                                    className: L.description,
-                                    type: d.FormTextTypes.DESCRIPTION,
-                                    children: f.Z.Messages.FORM_HELP_SERVER_DESCRIPTION
+                                (0, r.jsx)(d.R94, {
+                                    className: S.description,
+                                    type: d.geA.DESCRIPTION,
+                                    children: E.NW.string(E.t['/B6PR0'])
                                 }),
-                                (0, s.jsx)(d.TextArea, {
-                                    value: null !== (n = e.description) && void 0 !== n ? n : '',
-                                    placeholder: f.Z.Messages.SERVER_DESCIPTION_EMPTY,
-                                    onChange: j,
+                                (0, r.jsx)(d.Kx8, {
+                                    value: null != (n = e.description) ? n : '',
+                                    placeholder: E.NW.string(E.t.Nvfows),
+                                    onChange: x,
                                     maxLength: 120,
                                     disabled: !t
                                 })
                             ]
                         });
                 })(),
-                (0, s.jsx)(d.FormDivider, { className: L.divider }),
-                (0, s.jsxs)(d.FormSection, {
-                    className: L.twoColumnFormSection,
+                (0, r.jsx)(d.$i$, { className: S.divider }),
+                (0, r.jsxs)(d.hjN, {
+                    className: S.twoColumnFormSection,
                     children: [
-                        (0, s.jsxs)('div', {
-                            className: L.descriptionColumn,
+                        (0, r.jsxs)('div', {
+                            className: S.descriptionColumn,
                             children: [
-                                (0, s.jsx)(d.FormTitle, {
-                                    className: L.formTitle,
-                                    children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_COMMUNITY
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t.c1BmbG)
                                 }),
-                                (0, s.jsx)(d.FormText, {
-                                    type: d.FormTextTypes.DESCRIPTION,
-                                    className: L.__invalid_formDescription,
-                                    children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_COMMUNITY_DESCRIPTION
+                                (0, r.jsx)(d.R94, {
+                                    type: d.geA.DESCRIPTION,
+                                    className: S.__invalid_formDescription,
+                                    children: E.NW.string(E.t.aQzVFx)
                                 })
                             ]
                         }),
-                        (0, s.jsx)(d.Tooltip, {
-                            text: n ? null : f.Z.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
-                            'aria-label': n ? void 0 : f.Z.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
+                        (0, r.jsx)(d.ua7, {
+                            text: n ? null : E.NW.string(E.t['pjG+T0']),
+                            'aria-label': n ? void 0 : E.NW.string(E.t['pjG+T0']),
                             children: (e) =>
-                                (0, s.jsx)(d.Button, {
-                                    size: d.Button.Sizes.SMALL,
-                                    onClick: Z,
-                                    color: d.Button.Colors.RED,
-                                    disabled: !n,
-                                    ...e,
-                                    children: f.Z.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_COMMUNITY
-                                })
+                                (0, r.jsx)(
+                                    d.zxk,
+                                    w(
+                                        P(
+                                            {
+                                                size: d.zxk.Sizes.SMALL,
+                                                onClick: O,
+                                                color: d.zxk.Colors.RED,
+                                                disabled: !n
+                                            },
+                                            e
+                                        ),
+                                        { children: E.NW.string(E.t.c1BmbG) }
+                                    )
+                                )
                         })
                     ]
                 })
             ]
         });
+    },
+    k = () => {
+        let e = (0, l.e7)([C.Z], () => C.Z.getGuild());
+        return null == e ? null : e.features.has(I.oNc.COMMUNITY) ? (0, r.jsx)(A, {}) : (0, r.jsx)(O.Z, { guild: e });
     };
-t.Z = () => {
-    let e = (0, l.e7)([C.Z], () => C.Z.getGuild());
-    return null == e ? null : e.features.has(p.oNc.COMMUNITY) ? (0, s.jsx)(v, {}) : (0, s.jsx)(x.Z, { guild: e });
-};

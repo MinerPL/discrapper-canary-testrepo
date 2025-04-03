@@ -1,85 +1,117 @@
 n.d(t, {
-    Cf: function () {
-        return p;
-    },
-    SR: function () {
-        return _;
-    },
-    ZP: function () {
-        return h;
-    },
-    vM: function () {
-        return E;
-    }
+    Cf: () => O,
+    Dq: () => y,
+    SR: () => m,
+    ZP: () => v,
+    vM: () => E
 }),
     n(47120);
-var r = n(470079),
+var r = n(192379),
     i = n(979590),
-    a = n.n(i),
-    s = n(652874),
-    o = n(731965),
+    o = n.n(i),
+    a = n(230383),
+    s = n(731965),
     l = n(442837),
-    u = n(607070),
-    c = n(302221),
+    c = n(607070),
+    u = n(302221),
     d = n(956664);
-let _ = (0, s.Z)(() => ({
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let m = (0, a.U)(() => ({
     palette: {},
     fetching: {}
 }));
-async function E(e) {
-    var t;
-    if (((t = e), null == _.getState().palette[t])) await f(e);
+function g(e) {
+    return null != m.getState().palette[e];
 }
-async function f(e) {
-    if (!_.getState().fetching[e]) {
-        (0, o.j)(() =>
-            _.setState((t) => ({
-                fetching: {
-                    ...t.fetching,
-                    [e]: !0
-                }
-            }))
-        );
+async function E(e) {
+    g(e) || (await b(e));
+}
+async function b(e) {
+    if (!m.getState().fetching[e]) {
+        (0, s.j)(() => m.setState((t) => ({ fetching: h(_({}, t.fetching), { [e]: !0 }) })));
         try {
             let t = await (0, d.OF)(e),
-                n = (0, c.WY)(t[0]);
-            (0, o.j)(() => {
-                _.setState((r) => ({
-                    fetching: {
-                        ...r.fetching,
-                        [e]: !1
-                    },
-                    palette: {
-                        ...r.palette,
+                n = (0, u.WY)(t[0]);
+            (0, s.j)(() => {
+                m.setState((r) => ({
+                    fetching: h(_({}, r.fetching), { [e]: !1 }),
+                    palette: h(_({}, r.palette), {
                         [e]: [...t.slice(0, 2), ...n]
-                    }
+                    })
                 }));
             });
         } catch (t) {
-            (0, o.j)(() =>
-                _.setState((t) => ({
-                    fetching: {
-                        ...t.fetching,
-                        [e]: !1
-                    }
-                }))
-            );
+            (0, s.j)(() => m.setState((t) => ({ fetching: h(_({}, t.fetching), { [e]: !1 }) })));
         }
     }
 }
-function h(e, t) {
+function y(e) {
+    return !m((t) => null != e && t.fetching[e]);
+}
+function v(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        [r] = p(e, t, n);
+        [r] = O(e, t, n);
     return r;
 }
-function p(e, t) {
+function O(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        i = _((t) => (null == e ? void 0 : t.palette[e])),
-        s = (0, l.e7)([u.Z], () => (n && u.Z.desaturateUserColors ? u.Z.saturation : 1));
+        i = m((t) => (null == e ? void 0 : t.palette[e])),
+        a = (0, l.e7)([c.Z], () => (n && c.Z.desaturateUserColors ? c.Z.saturation : 1));
     r.useEffect(() => {
-        if (null != e && null == i) f(e);
+        null != e && null == i && b(e);
     }, [e, i]);
-    let o = r.useMemo(
+    let s = r.useMemo(
         () =>
             null == i
                 ? void 0
@@ -87,20 +119,20 @@ function p(e, t) {
                       let [t, n, r] = e,
                           {
                               h: i,
-                              s: o,
+                              s,
                               l
-                          } = a()({
+                          } = o()({
                               r: t,
                               g: n,
                               b: r
                           }).toHsl();
-                      return a()({
+                      return o()({
                           h: i,
-                          s: o * s,
+                          s: s * a,
                           l
                       }).toHexString();
                   }),
-        [i, s]
+        [i, a]
     );
-    return null != o ? o : [t, t];
+    return null != s ? s : [t, t];
 }

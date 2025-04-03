@@ -1,132 +1,130 @@
-n.d(t, {
-    i1: function () {
-        return d;
-    },
-    rx: function () {
-        return c;
-    },
-    sB: function () {
-        return _;
-    },
-    vY: function () {
-        return E;
-    }
+i.d(e, {
+    i1: () => u,
+    rx: () => p,
+    sB: () => _,
+    vY: () => d
 }),
-    n(47120);
-var r = n(570140),
-    i = n(821849),
-    a = n(307643),
-    s = n(981631);
-function o(e) {
+    i(266796),
+    i(47120);
+var n = i(570140),
+    r = i(821849),
+    s = i(307643),
+    o = i(981631);
+function l(t) {
     return {
-        id: e.id,
-        type: s.epS.SUBSCRIPTION,
-        application_id: e.application_id,
-        product_line: s.POd.APPLICATION,
-        name: e.name,
+        id: t.id,
+        type: o.epS.SUBSCRIPTION,
+        application_id: t.application_id,
+        product_line: o.POd.APPLICATION,
+        name: t.name,
         summary: '',
-        description: e.description,
-        flags: e.sku_flags,
+        description: t.description,
+        flags: t.sku_flags,
         manifests: [],
         available_regions: [],
         legal_notice: '',
-        deleted: e.soft_deleted,
+        deleted: t.soft_deleted,
         price_tier: 0,
         show_age_gate: !1,
         restricted: !1
     };
 }
-function l(e) {
-    var t;
+function a(t) {
+    var e;
     return {
-        id: e.id,
-        sku: o(e),
-        summary: e.description,
-        description: e.description,
-        benefits: null !== (t = e.store_listing_benefits) && void 0 !== t ? t : [],
-        thumbnail: e.image_asset,
-        published: e.published
+        id: t.id,
+        sku: l(t),
+        summary: t.description,
+        description: t.description,
+        benefits: null != (e = t.store_listing_benefits) ? e : [],
+        thumbnail: t.image_asset,
+        published: t.published
     };
 }
-function u(e) {
-    for (let t of (r.Z.dispatch({
+function c(t) {
+    for (let e of (n.Z.dispatch({
         type: 'SKUS_FETCH_SUCCESS',
-        skus: e.map(o)
+        skus: t.map(l)
     }),
-    r.Z.dispatch({
+    n.Z.dispatch({
         type: 'STORE_LISTINGS_FETCH_SUCCESS',
-        storeListings: e.map(l)
+        storeListings: t.map(a)
     }),
-    e))
-        r.Z.dispatch({
+    t))
+        n.Z.dispatch({
             type: 'SUBSCRIPTION_PLANS_FETCH_SUCCESS',
-            skuId: t.id,
-            subscriptionPlans: t.subscription_plans
+            skuId: e.id,
+            subscriptionPlans: e.subscription_plans
         });
 }
-async function c(e, t) {
-    r.Z.dispatch({
+async function p(t, e) {
+    n.Z.dispatch({
         type: 'APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS',
-        applicationId: e
+        applicationId: t,
+        groupListingId: e
     });
     try {
-        var n;
-        let i = await a.jz(e, t);
+        var i;
+        let r = await s.jz(t, e);
         return (
-            r.Z.dispatch({
+            n.Z.dispatch({
                 type: 'APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS',
-                applicationId: e,
-                groupListing: i
+                applicationId: t,
+                groupListing: r
             }),
-            u(null !== (n = i.subscription_listings) && void 0 !== n ? n : []),
-            i
+            c(null != (i = r.subscription_listings) ? i : []),
+            r
         );
-    } catch (t) {
-        r.Z.dispatch({
+    } catch (e) {
+        n.Z.dispatch({
             type: 'APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE',
-            applicationId: e
+            applicationId: t
         });
     }
 }
-async function d(e) {
-    r.Z.dispatch({
+async function u(t) {
+    n.Z.dispatch({
         type: 'APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS',
-        guildId: e
+        guildId: t
     });
     try {
-        let t = await a.GF(e);
-        r.Z.dispatch({
+        let e = await s.GF(t);
+        n.Z.dispatch({
             type: 'APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS',
-            guildId: e,
-            entitlements: t
+            guildId: t,
+            entitlements: e
         });
-    } catch (t) {
-        r.Z.dispatch({
+    } catch (e) {
+        n.Z.dispatch({
             type: 'APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE',
-            guildId: e
+            guildId: t
         });
     }
 }
-function _(e) {
-    r.Z.dispatch({
+function _(t) {
+    n.Z.dispatch({
         type: 'APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED',
-        guildId: e
+        guildId: t
     });
 }
-async function E(e) {
-    r.Z.dispatch({
+async function d(t) {
+    n.Z.dispatch({
         type: 'APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN',
-        planId: e
+        planId: t
     });
     try {
-        var t;
-        let n = await a.a_(e);
-        r.Z.dispatch({
+        var e;
+        let i = await s.a_(t);
+        n.Z.dispatch({
             type: 'APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS',
-            groupListing: n
+            groupListing: i
         });
-        let s = null !== (t = n.subscription_listings) && void 0 !== t ? t : [];
-        for (let t of s) t.subscription_plans[0].id === e && (await i.GZ(t.id, void 0, void 0, !0));
-        u(s);
-    } catch (e) {}
+        let o = null != (e = i.subscription_listings) ? e : [];
+        await Promise.all(
+            o.map((e) => {
+                if (e.subscription_plans[0].id === t) return r.GZ(e.id, void 0, void 0, !0);
+            })
+        ),
+            c(o);
+    } catch (t) {}
 }

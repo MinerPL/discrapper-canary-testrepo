@@ -1,21 +1,17 @@
-n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(374470),
-    o = n(481060),
+n.d(t, { Z: () => C }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(374470),
+    s = n(481060),
     c = n(239091),
-    u = n(822951),
-    d = n(835473),
-    h = n(933557),
-    m = n(454585),
-    p = n(63063),
-    _ = n(984370),
-    f = n(981631),
-    E = n(689938),
-    g = n(119338);
-function C(e, t, n) {
+    u = n(454585),
+    d = n(984370),
+    p = n(981631),
+    h = n(388032),
+    f = n(916560);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,134 +24,112 @@ function C(e, t, n) {
         e
     );
 }
-function I(e) {
-    var t;
-    let { channel: n, onClose: a, transitionState: s } = e,
-        l = (0, h.ZP)(n, !0),
-        r = (0, d.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
-    return (0, i.jsx)(o.ModalRoot, {
-        transitionState: s,
-        'aria-label': E.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
-        children: (0, i.jsx)(o.ModalContent, {
-            children: (0, i.jsxs)(u.Z, {
-                selectable: !0,
-                onClose: a,
-                renderHeader: () =>
-                    (0, i.jsx)(o.Heading, {
-                        variant: 'heading-lg/semibold',
-                        children: l
-                    }),
-                children: [
-                    (0, i.jsx)(o.Text, {
-                        selectable: !0,
-                        variant: 'text-md/normal',
-                        className: g.content,
-                        children: m.Z.parseTopic(n.topic, !0, { channelId: n.id })
-                    }),
-                    null != r
-                        ? (0, i.jsxs)('div', {
-                              className: g.linkedLobbyNotice,
-                              children: [
-                                  (0, i.jsx)(o.RefreshIcon, { className: g.linkedLobbyApplicationIcon }),
-                                  (0, i.jsx)(o.Text, {
-                                      variant: 'text-sm/normal',
-                                      color: 'header-secondary',
-                                      children: E.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_TOPIC_NOTICE.format({
-                                          applicationName: r.name,
-                                          helpdeskArticle: p.Z.getArticleURL(f.BhN.CHANNEL_LINKED_LOBBIES),
-                                          separatorHook: (e, t) =>
-                                              (0, i.jsx)(
-                                                  'span',
-                                                  {
-                                                      className: g.linkedLobbyNoticeSeparator,
-                                                      children: e
-                                                  },
-                                                  t
-                                              )
-                                      })
-                                  })
-                              ]
-                          })
-                        : null
-                ]
-            })
-        })
-    });
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
+    }
+    return e;
 }
-function x(e) {
+function b(e) {
     return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
-class T extends a.Component {
+class _ extends i.Component {
     render() {
         let { channel: e } = this.props;
-        return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length
-            ? null
-            : (0, i.jsxs)(a.Fragment, {
+        if (e.isMultiUserDM()) return null;
+        let t = null != e.topic && e.topic.length > 0;
+        return null != e.linkedLobby || t
+            ? (0, r.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(_.Z.Divider, {}),
-                      (0, i.jsxs)('div', {
-                          className: l()(g.topic, g.expandable),
+                      (0, r.jsx)(d.Z.Divider, {}),
+                      (0, r.jsxs)('div', {
+                          className: o()(f.topic, f.expandable),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
                           onContextMenu: this.handleContextMenu,
                           onClick: this.handleClick,
                           children: [
-                              (0, i.jsx)(o.Clickable, {
+                              (0, r.jsx)(s.P3F, {
                                   onClick: this.handleClick,
-                                  'aria-label': E.Z.Messages.OPEN_CHANNEL_TOPIC,
-                                  className: g.topicClickTarget
+                                  'aria-label': h.NW.string(h.t.mKwsSk),
+                                  className: f.topicClickTarget
                               }),
-                              m.Z.parseTopic(e.topic, !0, {
-                                  channelId: e.id,
-                                  allowLinks: !0
-                              })
+                              null == e.linkedLobby || t ? u.Z.parseTopic(e.topic, !0, { channelId: e.id }) : h.NW.string(h.t.XJVlf3)
                           ]
                       })
                   ]
-              });
+              })
+            : null;
     }
     constructor(...e) {
         super(...e),
-            C(this, '_mouseDown', !1),
-            C(this, '_mouseUp', !1),
-            C(this, 'handleOpenTopic', (e) => {
+            m(this, '_mouseDown', !1),
+            m(this, '_mouseUp', !1),
+            m(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
-                if ((0, r.k)(t)) {
-                    if (x(t)) return;
+                if ((0, a.k)(t)) {
+                    if (b(t)) return;
                     let e = t.parentNode;
-                    if ((0, r.k)(e) && x(e)) return;
+                    if ((0, a.k)(e) && b(e)) return;
                 }
-                (0, o.openModal)((e) =>
-                    (0, i.jsx)(I, {
-                        ...e,
-                        ...this.props
-                    })
-                );
-            }),
-            C(this, 'onMouseDown', () => {
-                this._mouseDown = !0;
-            }),
-            C(this, 'onMouseMove', () => {
-                this._mouseDown && (this._mouseDown = !1);
-            }),
-            C(this, 'onMouseUp', (e) => {
-                this._mouseDown && e.button !== f.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
-            }),
-            C(this, 'handleContextMenu', (e) => {
-                let { channel: t, guild: a } = this.props;
-                (0, c.jW)(e, async () => {
-                    let { default: e } = await n.e('24783').then(n.bind(n, 439635));
-                    return (n) =>
-                        (0, i.jsx)(e, {
-                            ...n,
-                            channel: t,
-                            guild: a,
-                            includeTopic: !0
-                        });
+                (0, s.ZDy)(async () => {
+                    let { default: e } = await n.e('65631').then(n.bind(n, 10722));
+                    return (t) => (0, r.jsx)(e, g({}, t, this.props));
                 });
             }),
-            C(this, 'handleClick', (e) => {
+            m(this, 'onMouseDown', () => {
+                this._mouseDown = !0;
+            }),
+            m(this, 'onMouseMove', () => {
+                this._mouseDown && (this._mouseDown = !1);
+            }),
+            m(this, 'onMouseUp', (e) => {
+                this._mouseDown && e.button !== p.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
+            }),
+            m(this, 'handleContextMenu', (e) => {
+                let { channel: t, guild: i } = this.props;
+                (0, c.jW)(e, async () => {
+                    let { default: e } = await n.e('24783').then(n.bind(n, 439635));
+                    return (n) => {
+                        var l, o;
+                        return (0, r.jsx)(
+                            e,
+                            ((l = g({}, n)),
+                            (o = o =
+                                {
+                                    channel: t,
+                                    guild: i,
+                                    includeTopic: !0
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(o)).forEach(function (e) {
+                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                  }),
+                            l)
+                        );
+                    };
+                });
+            }),
+            m(this, 'handleClick', (e) => {
                 if (this._mouseUp) {
                     this._mouseUp = !1;
                     return;
@@ -164,4 +138,4 @@ class T extends a.Component {
             });
     }
 }
-t.Z = T;
+let C = _;

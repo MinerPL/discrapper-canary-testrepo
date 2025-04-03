@@ -1,19 +1,19 @@
-n(47120);
-var s,
-    r = n(735250),
-    i = n(470079),
+n.d(t, { Z: () => x }), n(301563), n(47120);
+var r,
+    i = n(200651),
+    o = n(192379),
     a = n(593473),
     l = n(442837),
-    o = n(544891),
+    s = n(544891),
     c = n(108427),
     u = n(601964),
     d = n(896797),
-    _ = n(129293),
-    h = n(388905),
-    E = n(981631),
-    g = n(689938),
-    p = n(224499);
-function I(e, t, n) {
+    p = n(129293),
+    g = n(388905),
+    h = n(981631),
+    f = n(388032),
+    m = n(20493);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,19 +27,20 @@ function I(e, t, n) {
     );
 }
 l.ZP.initialize();
-class m extends (s = i.PureComponent) {
+class b extends (r = o.PureComponent) {
     componentDidMount() {
-        let e = (0, _.Z)(this.props.location),
+        let e = (0, p.Z)(this.props.location),
             t = (0, a.parse)(this.props.location.search);
-        o.tn
+        s.tn
             .post({
-                url: E.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+                url: h.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
                     guild_id: t.guild_id
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !0
             })
             .then(
                 (e) => {
@@ -62,52 +63,52 @@ class m extends (s = i.PureComponent) {
             (0, c.e)('disable_server_highlight_notifications');
     }
     renderBusy() {
-        return (0, r.jsx)(h.ZP, { children: (0, r.jsx)(h.Hh, {}) });
+        return (0, i.jsx)(g.ZP, { children: (0, i.jsx)(g.Hh, {}) });
     }
     renderSuccess() {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { guild: n } = this.state;
-        return (0, r.jsxs)(h.ZP, {
+        return (0, i.jsxs)(g.ZP, {
             children: [
-                (0, r.jsx)(h.Dx, {
-                    className: p.marginBottom8,
-                    children: g.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
+                (0, i.jsx)(g.Dx, {
+                    className: m.marginBottom8,
+                    children: f.NW.string(f.t.Z33eiI)
                 }),
-                (0, r.jsx)(h.DK, { children: g.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({ guildName: n.name }) }),
-                (0, r.jsx)(h.zx, {
-                    className: p.marginTop40,
+                (0, i.jsx)(g.DK, { children: f.NW.format(f.t.NRWtfH, { guildName: n.name }) }),
+                (0, i.jsx)(g.zx, {
+                    className: m.marginTop40,
                     onClick: () => t(e),
-                    children: g.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: f.NW.string(f.t.fIv16O)
                 }),
-                (0, r.jsx)(h.zx, {
-                    className: p.marginTop8,
-                    color: h.zx.Colors.LINK,
-                    look: h.zx.Looks.LINK,
+                (0, i.jsx)(g.zx, {
+                    className: m.marginTop8,
+                    color: g.zx.Colors.LINK,
+                    look: g.zx.Looks.LINK,
                     onClick: () => {
-                        t(E.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
+                        t(h.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
-                    children: g.Z.Messages.SERVER_HIGHLIGHT_MANAGE_SETTINGS
+                    children: f.NW.string(f.t['cGmT/P'])
                 })
             ]
         });
     }
     renderError() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, r.jsxs)(h.ZP, {
+        return (0, i.jsxs)(g.ZP, {
             children: [
-                (0, r.jsx)(h.Ee, {
+                (0, i.jsx)(g.Ee, {
                     src: n(105020),
-                    className: p.marginBottom20
+                    className: m.marginBottom20
                 }),
-                (0, r.jsx)(h.Dx, {
-                    className: p.marginBottom8,
-                    children: g.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+                (0, i.jsx)(g.Dx, {
+                    className: m.marginBottom8,
+                    children: f.NW.string(f.t.ox9hIS)
                 }),
-                (0, r.jsx)(h.DK, { children: g.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY }),
-                (0, r.jsx)(h.zx, {
-                    className: p.marginTop40,
+                (0, i.jsx)(g.DK, { children: f.NW.string(f.t['/dcuR0']) }),
+                (0, i.jsx)(g.zx, {
+                    className: m.marginTop40,
                     onClick: () => t(e),
-                    children: g.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: f.NW.string(f.t.fIv16O)
                 })
             ]
         });
@@ -118,11 +119,12 @@ class m extends (s = i.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'state', {
+            _(this, 'state', {
                 busy: !0,
                 success: !1,
                 guild: null
             });
     }
 }
-I(m, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = l.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(m));
+_(b, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
+let x = l.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(b);

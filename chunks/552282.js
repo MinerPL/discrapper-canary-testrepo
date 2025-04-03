@@ -1,14 +1,10 @@
-function i(e) {
+n.d(t, { Z: () => r });
+function r(e) {
     var t;
     return null != e
         ? {
               id: e.id,
-              name: null !== (t = e.name) && void 0 !== t ? t : ''
+              name: null != (t = e.name) ? t : ''
           }
         : null;
 }
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});

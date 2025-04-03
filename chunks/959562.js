@@ -1,29 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(191413),
-    l = n(660097);
-function r(e) {
-    let { user: t, size: n } = e,
-        r = (0, a.getAvatarSpecs)(n),
-        o = null != t ? t.getAvatarURL(null, r.size) : l;
-    return (0, i.jsx)('div', {
-        className: s.avatarBackground,
-        children: (0, i.jsx)('div', {
-            className: s.avatar,
+s.d(t, { Z: () => l });
+var a = s(200651);
+s(192379);
+var n = s(481060),
+    i = s(632139),
+    r = s(660097);
+function l(e) {
+    let { user: t, size: s } = e,
+        l = (0, n.UCu)(s),
+        c = null != t ? t.getAvatarURL(null, l.size) : r;
+    return (0, a.jsx)('div', {
+        className: i.avatarBackground,
+        children: (0, a.jsx)('div', {
+            className: i.avatar,
             style: {
-                width: r.size,
-                height: r.size
+                width: l.size,
+                height: l.size
             },
-            children: (0, i.jsx)(a.Avatar, {
-                src: o,
+            children: (0, a.jsx)(n.qEK, {
+                src: c,
                 'aria-hidden': !0,
-                size: n
+                size: s
             })
         })
     });

@@ -1,98 +1,159 @@
-n.r(t),
-    n.d(t, {
-        ACTIVITY_ENCOURAGES_HW_ACCELERATION: function () {
-            return h;
-        },
-        default: function () {
-            return m;
-        }
-    }),
+n.d(t, {
+    default: () => g,
+    r: () => f
+}),
     n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(481060),
-    r = n(153867),
-    l = n(835473),
-    o = n(600164),
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    a = n(153867),
+    o = n(835473),
+    s = n(600164),
     c = n(626135),
-    d = n(998502),
-    u = n(981631),
-    _ = n(689938),
-    E = n(434052);
-let h = 'Activity Encourages Hardware Acceleration';
-function m(e) {
-    var t;
-    let { applicationId: n, ...m } = e,
-        [I, g] = a.useState(!1),
-        [p] = (0, l.Z)([n]),
-        T = null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : 'This Activity';
-    a.useEffect(() => {
-        c.default.track(u.rMx.OPEN_MODAL, { type: h });
+    u = n(998502),
+    d = n(981631),
+    p = n(388032),
+    h = n(607919);
+let f = 'Activity Encourages Hardware Acceleration';
+function g(e) {
+    var t,
+        n,
+        g,
+        { applicationId: m } = e,
+        b = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['applicationId']);
+    let [_, E] = i.useState(!1),
+        [O] = (0, o.Z)([m]),
+        N = null != (g = null == O ? void 0 : O.name) ? g : 'This Activity';
+    i.useEffect(() => {
+        c.default.track(d.rMx.OPEN_MODAL, { type: f });
     }, []);
-    let S = () => {
+    let y = () => {
         let e = 'temporary';
-        I && ((e = 'permanent'), r.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
-            c.default.track(u.rMx.MODAL_DISMISSED, {
-                type: h,
+        _ && ((e = 'permanent'), a.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
+            c.default.track(d.rMx.MODAL_DISMISSED, {
+                type: f,
                 dismiss_type: e
             }),
-            m.onClose();
+            b.onClose();
     };
-    return (0, i.jsxs)(s.ModalRoot, {
-        className: E.root,
-        'aria-label': _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE,
-        ...m,
-        children: [
-            (0, i.jsxs)(s.ModalHeader, {
-                separator: !1,
+    return (0, r.jsxs)(
+        l.Y0X,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                className: h.root,
+                'aria-label': p.NW.string(p.t.NQkK4u)
+            },
+            b
+        )),
+        (n = n =
+            {
                 children: [
-                    (0, i.jsx)(s.Text, {
-                        className: E.__invalid_header,
-                        variant: 'text-lg/normal',
-                        children: _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE
+                    (0, r.jsxs)(l.xBx, {
+                        separator: !1,
+                        children: [
+                            (0, r.jsx)(l.Text, {
+                                className: h.__invalid_header,
+                                variant: 'text-lg/normal',
+                                children: p.NW.string(p.t.NQkK4u)
+                            }),
+                            (0, r.jsx)(l.olH, {
+                                onClick: y,
+                                className: h.closeButton
+                            })
+                        ]
                     }),
-                    (0, i.jsx)(s.ModalCloseButton, {
-                        onClick: S,
-                        className: E.closeButton
-                    })
-                ]
-            }),
-            (0, i.jsx)(s.ModalContent, {
-                className: E.content,
-                children: (0, i.jsx)(s.Text, {
-                    variant: 'text-md/normal',
-                    className: E.__invalid_ratingBody,
-                    children: _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_BODY.format({ applicationName: T })
-                })
-            }),
-            (0, i.jsxs)(s.ModalFooter, {
-                className: E.footer,
-                direction: o.Z.Direction.HORIZONTAL,
-                children: [
-                    (0, i.jsx)(s.Checkbox, {
-                        type: s.Checkbox.Types.INVERTED,
-                        size: 18,
-                        value: I,
-                        onChange: () => g(!I),
-                        children: (0, i.jsx)(s.Text, {
-                            variant: 'text-sm/normal',
-                            children: _.Z.Messages.DONT_SHOW_AGAIN
+                    (0, r.jsx)(l.hzk, {
+                        className: h.content,
+                        children: (0, r.jsx)(l.Text, {
+                            variant: 'text-md/normal',
+                            className: h.__invalid_ratingBody,
+                            children: p.NW.format(p.t.B9eiaG, { applicationName: N })
                         })
                     }),
-                    (0, i.jsx)(s.Button, {
-                        color: s.Button.Colors.PRIMARY,
-                        onClick: S,
-                        children: _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_NO_THANKS
-                    }),
-                    (0, i.jsx)(s.Button, {
-                        color: s.Button.Colors.BRAND,
-                        onClick: () => {
-                            c.default.track(u.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }), d.ZP.setEnableHardwareAcceleration(!0);
-                        },
-                        children: _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_TURN_IT_ON
+                    (0, r.jsxs)(l.mzw, {
+                        className: h.footer,
+                        direction: s.Z.Direction.HORIZONTAL,
+                        children: [
+                            (0, r.jsx)(l.XZJ, {
+                                type: l.XZJ.Types.INVERTED,
+                                size: 18,
+                                value: _,
+                                onChange: () => E(!_),
+                                children: (0, r.jsx)(l.Text, {
+                                    variant: 'text-sm/normal',
+                                    children: p.NW.string(p.t['5E9SBw'])
+                                })
+                            }),
+                            (0, r.jsx)(l.zxk, {
+                                color: l.zxk.Colors.PRIMARY,
+                                onClick: y,
+                                children: p.NW.string(p.t['Ibf5/v'])
+                            }),
+                            (0, r.jsx)(l.zxk, {
+                                color: l.zxk.Colors.BRAND,
+                                onClick: () => {
+                                    c.default.track(d.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: m }), u.ZP.setEnableHardwareAcceleration(!0);
+                                },
+                                children: p.NW.string(p.t['/wlDqq'])
+                            })
+                        ]
                     })
                 ]
-            })
-        ]
-    });
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t)
+    );
 }

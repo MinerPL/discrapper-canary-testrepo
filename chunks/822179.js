@@ -1,15 +1,15 @@
-n(653041);
+n.d(t, { Z: () => N }), n(653041);
 var r,
     i = n(392711),
-    a = n.n(i),
-    s = n(442837),
-    o = n(570140),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140),
     l = n(704907),
-    u = n(581883),
-    c = n(70956),
+    c = n(581883),
+    u = n(70956),
     d = n(926491),
-    _ = n(526761);
-function E(e, t, n) {
+    f = n(526761);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,9 +22,49 @@ function E(e, t, n) {
         e
     );
 }
-let f = { pendingUsages: [] };
-c.Z.Millis.DAY;
-let h = new l.Z({
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let g = { pendingUsages: [] };
+u.Z.Millis.DAY;
+let E = 20,
+    b = new l.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
@@ -32,61 +72,59 @@ let h = new l.Z({
         },
         lookupKey: (e) => d.Z.getStickerById(e),
         afterCompute: () => {},
-        numFrequentlyItems: 20
+        numFrequentlyItems: E
     }),
-    p = () => {
-        d.Z.isLoaded && h.compute();
+    y = () => {
+        d.Z.isLoaded && b.compute();
     },
-    m = () => {
-        p();
+    v = (e) => {
+        let { stickerIds: t } = e;
+        null == t ||
+            t.forEach((e) => {
+                b.track(e),
+                    g.pendingUsages.push({
+                        key: e,
+                        timestamp: Date.now()
+                    });
+            }),
+            y();
+    },
+    O = () => {
+        y();
     };
 function I() {
     var e;
-    let t = null === (e = u.Z.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
+    let t = null == (e = c.Z.frecencyWithoutFetchingLatest.stickerFrecency) ? void 0 : e.stickers;
     if (null == t) return !1;
-    h.overwriteHistory(
-        a().mapValues(t, (e) => ({
-            ...e,
-            recentUses: e.recentUses.map(Number).filter((e) => e > 0)
-        })),
-        f.pendingUsages
+    b.overwriteHistory(
+        o().mapValues(t, (e) => m(p({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        g.pendingUsages
     );
 }
-class T extends (r = s.ZP.PersistedStore) {
+function S(e) {
+    let {
+        settings: { type: t },
+        wasSaved: n
+    } = e;
+    if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    g.pendingUsages = [];
+}
+class T extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(d.Z), null != e && (f = e), this.syncWith([d.Z], m), this.syncWith([u.Z], I);
+        this.waitFor(d.Z), null != e && (g = e), this.syncWith([d.Z], O), this.syncWith([c.Z], I);
     }
     getState() {
-        return f;
+        return g;
     }
     hasPendingUsage() {
-        return f.pendingUsages.length > 0;
+        return g.pendingUsages.length > 0;
     }
     get stickerFrecencyWithoutFetchingLatest() {
-        return h;
+        return b;
     }
 }
-E(T, 'displayName', 'StickersPersistedStore'),
-    E(T, 'persistKey', 'StickersPersistedStoreV2'),
-    (t.Z = new T(o.Z, {
-        STICKER_TRACK_USAGE: (e) => {
-            let { stickerIds: t } = e;
-            null == t ||
-                t.forEach((e) => {
-                    h.track(e),
-                        f.pendingUsages.push({
-                            key: e,
-                            timestamp: Date.now()
-                        });
-                }),
-                p();
-        },
-        USER_SETTINGS_PROTO_UPDATE: function (e) {
-            let {
-                settings: { type: t },
-                wasSaved: n
-            } = e;
-            if (t !== _.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-            f.pendingUsages = [];
-        }
-    }));
+_(T, 'displayName', 'StickersPersistedStore'), _(T, 'persistKey', 'StickersPersistedStoreV2');
+let N = new T(s.Z, {
+    STICKER_TRACK_USAGE: v,
+    USER_SETTINGS_PROTO_UPDATE: S
+});

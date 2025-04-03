@@ -1,42 +1,37 @@
-t.d(r, {
-    Z: function () {
-        return m;
-    }
-}),
-    t(47120);
-var a = t(735250),
-    n = t(470079),
-    i = t(120356),
-    o = t.n(i),
-    l = t(442837),
-    c = t(481060),
-    s = t(98357),
-    d = t(432877),
-    u = t(891362),
-    h = t(535271);
-function m(e) {
-    let { devSettingsCategory: r } = e,
-        t = (0, l.e7)([d.ZP], () => d.ZP.allByCategory(r), [r], l.pF),
-        i = n.useMemo(
+n.d(t, { Z: () => x }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    l = n(120356),
+    i = n.n(l),
+    o = n(442837),
+    s = n(481060),
+    c = n(98357),
+    d = n(432877),
+    u = n(738629),
+    m = n(616257);
+function x(e) {
+    let { devSettingsCategory: t } = e,
+        n = (0, o.e7)([d.ZP], () => d.ZP.allByCategory(t), [t], o.pF),
+        l = a.useMemo(
             () =>
-                t.map((e) => {
-                    let [r, t, { label: n }] = e;
-                    return (0, a.jsx)(
-                        c.FormSwitch,
+                n.map((e) => {
+                    let [t, n, { label: a }] = e;
+                    return (0, r.jsx)(
+                        s.j7V,
                         {
-                            value: t,
-                            onChange: (e) => (0, s.Z)(r, e),
+                            value: n,
+                            onChange: (e) => (0, c.Z)(t, e),
                             hideBorder: !0,
                             className: u.switch,
-                            children: n
+                            children: a
                         },
-                        r
+                        t
                     );
                 }),
-            [t]
+            [n]
         );
-    return (0, a.jsx)('div', {
-        className: o()(h.panel, u.panel),
-        children: i
+    return (0, r.jsx)('div', {
+        className: i()(m.panel, u.panel),
+        children: l
     });
 }

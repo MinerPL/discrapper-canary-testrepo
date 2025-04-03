@@ -1,39 +1,33 @@
 n.d(t, {
-    JE: function () {
-        return u;
-    },
-    ct: function () {
-        return c;
-    },
-    dc: function () {
-        return o;
-    }
+    JE: () => u,
+    ct: () => c,
+    dc: () => s
 });
-var i = n(735250);
-n(470079);
+var r = n(200651);
+n(192379);
 var l = n(261600),
-    r = n(157925),
-    a = n(697929);
-let s = { [r.gD]: new l.U() };
-function o(e) {
+    i = n(157925),
+    o = n(147049);
+let a = { [i.gD]: new l.U() };
+function s(e) {
     var t;
     let n = e.application_id;
     if (null == n) return;
-    let i = s[n];
-    if (null != i && (null === (t = i.shouldShow) || void 0 === t ? void 0 : t.call(i, e)) !== !1) return i.createHeader(e);
+    let r = a[n];
+    if (null != r && (null == (t = r.shouldShow) ? void 0 : t.call(r, e)) !== !1) return r.createHeader(e);
 }
 function c(e) {
     var t;
     let n = e.application_id;
     if (null == n) return;
-    let l = s[n];
-    if ((null == l ? void 0 : l.body) != null && (null === (t = l.shouldShow) || void 0 === t ? void 0 : t.call(l, e)) !== !1) {
+    let l = a[n];
+    if ((null == l ? void 0 : l.body) != null && (null == (t = l.shouldShow) ? void 0 : t.call(l, e)) !== !1) {
         let t = l.body;
-        return (0, i.jsx)(
+        return (0, r.jsx)(
             'section',
             {
-                className: a.section,
-                children: (0, i.jsx)(t, { activity: e })
+                className: o.section,
+                children: (0, r.jsx)(t, { activity: e })
             },
             'delegate-'.concat(n)
         );
@@ -43,6 +37,6 @@ function u(e) {
     var t;
     let n = e.application_id;
     if (null == n) return !0;
-    let i = s[n];
-    return null == i || (null === (t = i.shouldShow) || void 0 === t ? void 0 : t.call(i, e)) !== !1;
+    let r = a[n];
+    return null == r || (null == (t = r.shouldShow) ? void 0 : t.call(r, e)) !== !1;
 }

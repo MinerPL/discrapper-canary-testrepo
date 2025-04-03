@@ -1,12 +1,11 @@
-e(312677);
-var n = e(504053);
-self.addEventListener('message', (r) => {
+var o = t(504053);
+self.addEventListener('message', (e) => {
     let {
-            data: { id: t, placeholderData: e }
-        } = r,
-        o = (0, n.F)(e);
+            data: { id: r, placeholderData: t }
+        } = e,
+        n = (0, o.F)(t);
     self.postMessage({
-        png: o,
-        id: t
+        png: n,
+        id: r
     });
 });

@@ -1,28 +1,24 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var s = n(470079),
-    a = n(725803),
-    i = n(766434),
-    r = n(310291),
+n.d(t, { Z: () => c });
+var r = n(192379),
+    i = n(725803),
+    s = n(766434),
+    a = n(310291),
     l = n(674563),
     o = n(198139);
 function c(e) {
     var t;
-    let { application: n, loading: c } = (0, a.Z)(e, l.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        { payoutsByPeriod: d, loading: u } = (0, r.Z)(null == n ? void 0 : n.id, {
+    let { application: n, loading: c } = (0, i.Z)(e, l.wW.GUILD_ROLE_SUBSCRIPTIONS),
+        { payoutsByPeriod: d, loading: u } = (0, a.Z)(null == n ? void 0 : n.id, {
             groupType: o.uw.GUILD_PRODUCT,
-            teamId: null == n ? void 0 : null === (t = n.team) || void 0 === t ? void 0 : t.id
+            teamId: null == n || null == (t = n.team) ? void 0 : t.id
         }),
         {
-            currentPeriod: _,
-            previousPeriods: I,
-            metrics: E
-        } = s.useMemo(() => {
-            let { currentPeriod: e, previousPeriods: t } = (0, i.Br)(d),
-                n = (0, i.Uj)(e, t[0]);
+            currentPeriod: m,
+            previousPeriods: g,
+            metrics: p
+        } = r.useMemo(() => {
+            let { currentPeriod: e, previousPeriods: t } = (0, s.Br)(d),
+                n = (0, s.Uj)(e, t[0]);
             return {
                 currentPeriod: e,
                 previousPeriods: t,
@@ -32,9 +28,9 @@ function c(e) {
     return {
         loading: c || u,
         payoutsByPeriod: d,
-        currentPeriod: _,
-        previousPeriods: I,
-        metrics: E,
+        currentPeriod: m,
+        previousPeriods: g,
+        metrics: p,
         application: n
     };
 }

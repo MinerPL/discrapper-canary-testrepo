@@ -1,27 +1,27 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(392711),
-    s = n.n(a),
-    o = n(818405),
+n.d(t, { Z: () => R }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(392711),
+    a = n.n(o),
+    s = n(818405),
     l = n(587158),
-    u = n(286379),
-    c = n(442837),
-    d = n(481060),
+    c = n(286379),
+    u = n(903772),
+    d = n(442837),
+    f = n(481060),
     _ = n(386506),
-    E = n(304761),
-    f = n(865427),
-    h = n(406128),
-    p = n(25779),
-    m = n(797614),
-    I = n(703656),
-    T = n(626135),
-    g = n(960048),
-    S = n(998502),
-    A = n(981631),
-    N = n(689938),
-    v = n(831547);
-function O(e, t, n) {
+    p = n(304761),
+    h = n(865427),
+    m = n(406128),
+    g = n(797614),
+    E = n(703656),
+    b = n(626135),
+    y = n(960048),
+    v = n(998502),
+    O = n(981631),
+    I = n(388032),
+    S = n(804683);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,13 +34,13 @@ function O(e, t, n) {
         e
     );
 }
-function R() {
+function N() {
     let [e, t] = i.useState(!1);
     if (
         null ==
-        (0, c.e7)([E.C], () => {
+        (0, d.e7)([p.C], () => {
             var e;
-            return (0, f.fD)() ? (null === (e = E.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, h.fD)() ? (null == (e = p.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web) : null;
         })
     )
         return null;
@@ -51,20 +51,20 @@ function R() {
             t(!1);
         }
     };
-    return (0, r.jsx)(d.Button, {
-        size: d.ButtonSizes.LARGE,
+    return (0, r.jsx)(f.zxk, {
+        size: f.PhG.LARGE,
         onClick: n,
         submitting: e,
-        className: v.clearOverrideButton,
-        children: N.Z.Messages.CLEAR_BUILD_OVERRIDE
+        className: S.clearOverrideButton,
+        children: I.NW.string(I.t['/Nz9ra'])
     });
 }
-let C = s().throttle(
+let A = a().throttle(
     (e) => {
-        m.Z.increment(
+        g.Z.increment(
             {
-                name: u.V.APP_CRASHED,
-                tags: ['reason:'.concat(o.v.UNHANDLED_JS_ERROR), 'level:'.concat(l.c.FATAL), 'modded_client:'.concat(e)]
+                name: c.V.APP_CRASHED,
+                tags: ['reason:'.concat(s.v.UNHANDLED_JS_ERROR), 'level:'.concat(l.c.FATAL), 'modded_client:'.concat(e)]
             },
             !0
         );
@@ -72,28 +72,29 @@ let C = s().throttle(
     100,
     { trailing: !1 }
 );
-class y extends i.PureComponent {
+class C extends i.PureComponent {
     componentDidCatch(e, t) {
         this.triggerSoftCrash(e, t);
     }
     triggerSoftCrash(e, t) {
-        let n = (0, I.s1)().location;
+        let n = (0, E.s1)().location;
         this.setState({
             error: e,
             info: t
         });
-        let r = (0, p.e)(),
-            i = g.Z.captureCrash(e, { extra: t });
-        T.default.track(A.rMx.APP_CRASHED, {
+        let r = (0, u.e)(),
+            i = y.Z.captureCrash(e, { extra: t });
+        b.default.track(O.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
             error_stack: e.stack,
             sentry_issue_id: i,
-            uses_client_mods: r
+            uses_client_mods: r,
+            error_level: 'fatal'
         }),
-            C(r),
-            S.ZP.cleanupDisplaySleep();
+            A(r),
+            v.ZP.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
         location.reload(!0);
@@ -114,35 +115,35 @@ class y extends i.PureComponent {
         let { children: e, renderCustomMessage: t } = this.props;
         if (null !== this.state.error) {
             let e = (0, r.jsxs)('div', {
-                    children: [(0, r.jsx)('p', { children: N.Z.Messages.ERRORS_UNEXPECTED_CRASH }), (0, r.jsx)('p', { children: N.Z.Messages.ERRORS_ACTION_TO_TAKE })]
+                    children: [(0, r.jsx)('p', { children: I.NW.string(I.t.tx8CkJ) }), (0, r.jsx)('p', { children: I.NW.string(I.t.CvQlAA) })]
                 }),
                 n = (0, r.jsxs)('div', {
-                    className: v.buttons,
+                    className: S.buttons,
                     children: [
-                        (0, r.jsx)(d.Button, {
-                            size: d.ButtonSizes.LARGE,
+                        (0, r.jsx)(f.zxk, {
+                            size: f.PhG.LARGE,
                             onClick: this._handleSubmitReport,
-                            children: N.Z.Messages.ERRORS_RELOAD
+                            children: I.NW.string(I.t['+hivLS'])
                         }),
-                        (0, r.jsx)(R, {})
+                        (0, r.jsx)(N, {})
                     ]
                 });
-            return (0, r.jsx)(h.Z, {
-                title: N.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
+            return (0, r.jsx)(m.Z, {
+                title: I.NW.string(I.t['3h+n+/']),
                 note: null != t ? t() : e,
                 action: n,
-                className: v.errorPage
+                className: S.errorPage
             });
         }
         return e;
     }
     constructor(...e) {
         super(...e),
-            O(this, 'state', {
+            T(this, 'state', {
                 error: null,
                 info: null
             }),
-            O(this, 'discordErrorsSet', !1);
+            T(this, 'discordErrorsSet', !1);
     }
 }
-t.Z = y;
+let R = C;

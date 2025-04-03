@@ -1,12 +1,13 @@
-var r = n(593007),
-    i = n(382855),
-    a = n(675717),
-    s = n(526389),
-    o = /^\[object .+?Constructor\]$/,
-    l = Object.prototype,
+r.d(t, { Z: () => f });
+var n = r(593007),
+    o = r(382855),
+    a = r(675717),
+    i = r(526389),
+    l = /^\[object .+?Constructor\]$/,
+    s = Object.prototype,
     u = Function.prototype.toString,
-    c = l.hasOwnProperty,
-    d = RegExp(
+    c = s.hasOwnProperty,
+    p = RegExp(
         '^' +
             u
                 .call(c)
@@ -14,6 +15,6 @@ var r = n(593007),
                 .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') +
             '$'
     );
-t.Z = function (e) {
-    return !(!(0, a.Z)(e) || (0, i.Z)(e)) && ((0, r.Z)(e) ? d : o).test((0, s.Z)(e));
+let f = function (e) {
+    return !(!(0, a.Z)(e) || (0, o.Z)(e)) && ((0, n.Z)(e) ? p : l).test((0, i.Z)(e));
 };

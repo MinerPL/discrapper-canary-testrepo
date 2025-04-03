@@ -1,52 +1,51 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var r = n(735250);
-n(470079);
-var i = n(120356),
-    a = n.n(i),
+n.d(t, { Z: () => u });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
-    o = n(689938),
-    l = n(480855);
-function u(e) {
-    let t,
-        { className: n, src: i, unicodeEmoji: u, name: c, size: d = 20, enableTooltip: _ = !0, enableHeight: E = !0, onClick: f } = e;
-    if (null == i && null == u) return null;
-    return (0, r.jsx)(s.TooltipContainer, {
-        text: c,
-        'aria-label': !1,
-        shouldShow: _,
-        element: 'span',
-        children:
-            ((t = (0, r.jsx)('img', {
+    l = n(388032),
+    c = n(163845);
+let u = i.forwardRef(function (e, t) {
+    let { className: n, src: i, unicodeEmoji: o, name: u, size: d = 20, enableTooltip: f = !0, enableHeight: _ = !0, onClick: p } = e;
+    if (null == i && null == o) return null;
+    let h = () => {
+        let e = (0, r.jsx)('img', {
+            ref: t,
+            alt: '',
+            'aria-label': l.NW.formatToPlainString(l.t['9+YWrK'], { name: u }),
+            className: a()(c.roleIcon, n, { [c.clickable]: null != p }),
+            height: _ ? d : void 0,
+            src: i,
+            width: d
+        });
+        return (null != o &&
+            (e = (0, r.jsx)('img', {
+                ref: t,
                 alt: '',
-                'aria-label': o.Z.Messages.ROLE_ICON_ALT_TEXT.format({ name: c }),
-                className: a()(l.roleIcon, n, { [l.clickable]: null != f }),
-                height: E ? d : void 0,
-                src: i,
+                'aria-label': o.allNamesString,
+                className: a()(c.roleIcon, n, { [c.clickable]: null != p }),
+                height: _ ? d : void 0,
+                src: o.url,
                 width: d
             })),
-            (null != u &&
-                (t = (0, r.jsx)('img', {
-                    alt: '',
-                    'aria-label': u.allNamesString,
-                    className: a()(l.roleIcon, n, { [l.clickable]: null != f }),
-                    height: E ? d : void 0,
-                    src: u.url,
-                    width: d
-                })),
-            null == f)
-                ? (0, r.jsx)(s.FocusRing, {
-                      offset: { left: 5 },
-                      children: t
-                  })
-                : (0, r.jsx)(s.Clickable, {
-                      onClick: f,
-                      tag: 'span',
-                      focusProps: { offset: { left: 5 } },
-                      children: t
-                  }))
+        null == p)
+            ? (0, r.jsx)(s.tEY, {
+                  offset: { left: 5 },
+                  children: e
+              })
+            : (0, r.jsx)(s.P3F, {
+                  onClick: p,
+                  tag: 'span',
+                  focusProps: { offset: { left: 5 } },
+                  children: e
+              });
+    };
+    return (0, r.jsx)(s.DY3, {
+        text: u,
+        'aria-label': !1,
+        shouldShow: f,
+        element: 'span',
+        children: h()
     });
-}
+});

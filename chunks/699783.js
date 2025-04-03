@@ -1,77 +1,69 @@
-t.r(o),
-    t.d(o, {
-        default: function () {
-            return N;
-        }
-    });
-var s = t(735250),
-    a = t(470079),
-    n = t(399606),
-    l = t(481060),
-    r = t(194359),
-    i = t(726521),
-    c = t(594174),
-    d = t(51144),
-    C = t(941362),
-    O = t(134612),
-    _ = t(981631),
-    u = t(689938),
-    R = t(288877);
-function N(e) {
-    let { userId: o, channelId: t, transitionState: N, onBlock: T, onBlockAndReport: I, onClose: A, onCancel: B } = e,
-        M = (0, C.q)(t),
-        E = a.useCallback(() => {
-            r.Z.addRelationship({
-                userId: o,
-                context: { location: O.zr },
-                type: _.OGo.BLOCKED
-            }),
-                (0, l.showToast)((0, l.createToast)(u.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, l.ToastType.SUCCESS));
-        }, [o]),
-        h = a.useCallback(() => {
-            E(), T(), A();
-        }, [E, T, A]),
-        L = a.useCallback(() => {
-            E(), (0, i.wk)(M), I(), A();
-        }, [M, E, I, A]),
-        P = (0, n.e7)([c.default], () => c.default.getUser(o)),
-        D = d.ZP.useName(P);
-    return (0, s.jsx)(l.ModalRoot, {
-        transitionState: N,
-        children: (0, s.jsx)(l.Scroller, {
+o.d(t, { default: () => p });
+var s = o(200651),
+    l = o(192379),
+    n = o(399606),
+    a = o(481060),
+    i = o(194359),
+    r = o(726521),
+    c = o(681678),
+    d = o(594174),
+    h = o(51144),
+    k = o(991981),
+    u = o(134612),
+    m = o(388032),
+    x = o(995605);
+function p(e) {
+    let { userId: t, channelId: o, transitionState: p, onBlock: C, onBlockAndReport: z, onClose: N, onCancel: j } = e,
+        D = (0, k.q)(o),
+        M = l.useCallback(() => {
+            i.Z.blockUser(t, { location: u.zr }).then(() => {
+                c.Z.showBlockSuccessToast(t, o);
+            });
+        }, [t, o]),
+        f = l.useCallback(() => {
+            M(), C(), N();
+        }, [M, C, N]),
+        b = l.useCallback(() => {
+            M(), (0, r.wk)(D), z(), N();
+        }, [D, M, z, N]),
+        g = (0, n.e7)([d.default], () => d.default.getUser(t)),
+        T = h.ZP.useName(g);
+    return (0, s.jsx)(a.Y0X, {
+        transitionState: p,
+        children: (0, s.jsx)(a.Ttm, {
             style: { overflow: 'hidden auto' },
-            children: (0, s.jsxs)(l.ModalContent, {
-                className: R.modalContent,
+            children: (0, s.jsxs)(a.hzk, {
+                className: x.modalContent,
                 children: [
-                    (0, s.jsx)(l.Heading, {
+                    (0, s.jsx)(a.X6q, {
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
-                        children: u.Z.Messages.CONFIRM_USER_BLOCK_TITLE.format({ name: D })
+                        children: m.NW.format(m.t.x5pOn5, { name: T })
                     }),
-                    (0, s.jsx)(l.Text, {
+                    (0, s.jsx)(a.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        className: R.modalDescription,
-                        children: u.Z.Messages.INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION
+                        className: x.modalDescription,
+                        children: m.NW.string(m.t.aedksr)
                     }),
-                    (0, s.jsx)(l.Button, {
-                        onClick: h,
-                        color: l.ButtonColors.BRAND,
-                        size: l.ButtonSizes.MEDIUM,
-                        children: u.Z.Messages.INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON
+                    (0, s.jsx)(a.zxk, {
+                        onClick: f,
+                        color: a.Ttl.BRAND,
+                        size: a.PhG.MEDIUM,
+                        children: m.NW.string(m.t.MzsUsr)
                     }),
-                    (0, s.jsx)(l.Button, {
-                        onClick: L,
-                        color: l.ButtonColors.PRIMARY,
-                        size: l.ButtonSizes.MEDIUM,
-                        children: u.Z.Messages.INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON
+                    (0, s.jsx)(a.zxk, {
+                        onClick: b,
+                        color: a.Ttl.PRIMARY,
+                        size: a.PhG.MEDIUM,
+                        children: m.NW.string(m.t['3pzuj4'])
                     }),
-                    (0, s.jsx)(l.Button, {
-                        onClick: B,
-                        color: l.ButtonColors.PRIMARY,
-                        look: l.ButtonLooks.OUTLINED,
-                        size: l.ButtonSizes.MEDIUM,
-                        children: u.Z.Messages.INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_CANCEL_BUTTON
+                    (0, s.jsx)(a.zxk, {
+                        onClick: j,
+                        color: a.Ttl.PRIMARY,
+                        look: a.iLD.OUTLINED,
+                        size: a.PhG.MEDIUM,
+                        children: m.NW.string(m.t.okuCoa)
                     })
                 ]
             })

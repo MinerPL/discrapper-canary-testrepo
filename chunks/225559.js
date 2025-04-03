@@ -1,15 +1,11 @@
 n.d(t, {
-    L: function () {
-        return a;
-    },
-    v: function () {
-        return s;
-    }
+    L: () => r,
+    v: () => l
 });
 var i = n(570140);
-function a() {
+function r() {
     i.Z.dispatch({ type: 'NOW_PLAYING_MOUNTED' });
 }
-function s() {
+function l() {
     i.Z.dispatch({ type: 'NOW_PLAYING_UNMOUNTED' });
 }

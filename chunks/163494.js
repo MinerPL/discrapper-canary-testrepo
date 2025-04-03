@@ -6,8 +6,9 @@ var r = String.prototype.valueOf,
             return !1;
         }
     },
-    a = Object.prototype.toString,
+    o = Object.prototype.toString,
+    a = '[object String]',
     s = n(703825)();
 e.exports = function (e) {
-    return 'string' == typeof e || ('object' == typeof e && (s ? i(e) : '[object String]' === a.call(e)));
+    return 'string' == typeof e || ('object' == typeof e && (s ? i(e) : o.call(e) === a));
 };

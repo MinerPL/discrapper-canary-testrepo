@@ -1,90 +1,62 @@
 n.d(t, {
-    Fu: function () {
-        return p;
-    },
-    Lu: function () {
-        return l;
-    },
-    Vd: function () {
-        return f;
-    },
-    WO: function () {
-        return o;
-    },
-    _n: function () {
-        return E;
-    },
-    ak: function () {
-        return u;
-    },
-    al: function () {
-        return I;
-    },
-    bi: function () {
-        return i;
-    },
-    hz: function () {
-        return d;
-    },
-    lr: function () {
-        return h;
-    },
-    oQ: function () {
-        return _;
-    },
-    tn: function () {
-        return c;
-    },
-    um: function () {
-        return m;
-    }
+    Fu: () => h,
+    Lu: () => a,
+    Vd: () => _,
+    WO: () => o,
+    _n: () => f,
+    ak: () => s,
+    al: () => m,
+    bi: () => l,
+    hz: () => u,
+    lr: () => p,
+    oQ: () => d,
+    tn: () => c
 });
-var r,
-    i,
-    a = n(911969),
-    s = n(689938);
+var r = n(911969),
+    i = n(388032);
 let o = 'True',
-    l = 'False',
-    u = [
+    a = 'False',
+    s = [
         {
             name: o,
             displayName: o,
             value: 'true'
         },
         {
-            name: l,
-            displayName: l,
+            name: a,
+            displayName: a,
             value: 'false'
         }
     ];
-((r = i || (i = {})).BUILT_IN = '-1'), (r.FRECENCY = '-2');
+var l = (function (e) {
+    return (e.BUILT_IN = '-1'), (e.FRECENCY = '-2'), e;
+})({});
 let c = 10,
-    d = 5,
-    _ = '\0',
-    E = 100,
-    f = 3,
-    h = 10,
-    p = 500;
-Object.freeze([]), Object.freeze([]);
-let m = 200;
-function I(e) {
-    if (null != e.choices) return s.Z.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
+    u = 5,
+    d = '\0',
+    f = 100,
+    _ = 3,
+    p = 10,
+    h = 500;
+function m(e) {
+    if (null != e.choices) return i.NW.string(i.t.xi5aam);
     switch (e.type) {
-        case a.jw.BOOLEAN:
-            return s.Z.Messages.COMMAND_VALIDATION_BOOLEAN_ERROR;
-        case a.jw.CHANNEL:
-            return s.Z.Messages.COMMAND_VALIDATION_CHANNEL_ERROR;
-        case a.jw.INTEGER:
-            return s.Z.Messages.COMMAND_VALIDATION_INTEGER_ERROR;
-        case a.jw.NUMBER:
-            return s.Z.Messages.COMMAND_VALIDATION_NUMBER_ERROR;
-        case a.jw.ROLE:
-            return s.Z.Messages.COMMAND_VALIDATION_ROLE_ERROR;
-        case a.jw.USER:
-            return s.Z.Messages.COMMAND_VALIDATION_USER_ERROR;
-        case a.jw.MENTIONABLE:
-            return s.Z.Messages.COMMAND_VALIDATION_MENTIONABLE_ERROR;
+        case r.jw.BOOLEAN:
+            return i.NW.string(i.t.ATIx6O);
+        case r.jw.CHANNEL:
+            return i.NW.string(i.t.Q0z2Gx);
+        case r.jw.INTEGER:
+            return i.NW.string(i.t['d/9Rk5']);
+        case r.jw.NUMBER:
+            return i.NW.string(i.t['FDyk/f']);
+        case r.jw.ROLE:
+            return i.NW.string(i.t.vrRQn5);
+        case r.jw.USER:
+            return i.NW.string(i.t.i2r7j4);
+        case r.jw.MENTIONABLE:
+            return i.NW.string(i.t.I7imeX);
         default:
-            return s.Z.Messages.COMMAND_VALIDATION_GENERAL_ERROR;
+            return i.NW.string(i.t.EkDo1t);
     }
 }
+Object.freeze([]), Object.freeze([]);

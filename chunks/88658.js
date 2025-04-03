@@ -1,58 +1,36 @@
 n.d(t, {
-    $6: function () {
-        return f;
-    },
-    YK: function () {
-        return d;
-    },
-    _o: function () {
-        return b;
-    },
-    ac: function () {
-        return m;
-    },
-    bL: function () {
-        return g;
-    },
-    g0: function () {
-        return a;
-    },
-    gl: function () {
-        return _;
-    },
-    rr: function () {
-        return S;
-    },
-    xH: function () {
-        return T;
-    }
-});
-var o,
-    a,
-    c = n(695346),
+    $6: () => _,
+    YK: () => a,
+    _o: () => u,
+    bL: () => p,
+    gl: () => c,
+    rr: () => d
+}),
+    n(47120);
+var r = n(695346),
     i = n(486472),
-    r = n(430824);
+    o = n(430824);
 n(626135);
-var l = n(981631),
-    s = n(689938);
-let u = 86400000 * l.eBq;
+var l = n(981631);
+n(388032);
+let s = 86400000 * l.eBq;
+function a() {
+    let e = r.h2.getSetting();
+    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
+}
+function c() {
+    let e = r.zA.getSetting();
+    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
+}
+function u() {
+    let e = r.SE.getSetting();
+    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
+}
 function d() {
-    let e = c.h2.getSetting();
-    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
+    let e = r.iH.getSetting();
+    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
 }
-function _() {
-    let e = c.zA.getSetting();
-    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
-}
-function b() {
-    let e = c.SE.getSetting();
-    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
-}
-function S() {
-    let e = c.iH.getSetting();
-    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
-}
-function g(e) {
+function p(e) {
     return (e & l.HGf) === l.HGf
         ? {
               all: !0,
@@ -65,31 +43,6 @@ function g(e) {
               mutualGuilds: (e & l.SOq.MUTUAL_GUILDS) === l.SOq.MUTUAL_GUILDS
           };
 }
-function f(e, t) {
-    return !t.verified || (null != e && u > Date.now() - new Date(e.created_at).getTime());
-}
-((o = a || (a = {}))[(o.UNDECIDED = 0)] = 'UNDECIDED'), (o[(o.OPTIN = 1)] = 'OPTIN'), (o[(o.OPTOUT = 2)] = 'OPTOUT');
-let m = {
-    0: void 0,
-    1: !0,
-    2: !1
-};
-function T() {
-    return [
-        {
-            name: s.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_IN_HEADER,
-            desc: s.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_IN_DESC,
-            value: 1
-        },
-        {
-            name: s.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_OUT_HEADER,
-            desc: s.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_OUT_DESC,
-            value: 2
-        },
-        {
-            name: s.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_UNSET_HEADER,
-            desc: s.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_UNSET_DESC,
-            value: 0
-        }
-    ];
+function _(e, t) {
+    return !!(!t.verified || t.isStaff()) || (null != e && s > Date.now() - new Date(e.created_at).getTime());
 }

@@ -1,106 +1,93 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return O;
-        }
-    }),
-    s(47120);
-var a,
-    l,
-    n = s(735250),
-    r = s(470079),
-    i = s(120356),
-    c = s.n(i),
-    o = s(108131),
-    d = s.n(o),
-    u = s(338545),
-    m = s(481060),
-    x = s(442837),
-    h = s(607070),
-    p = s(313201),
-    C = s(594174),
-    N = s(626135),
-    j = s(792125),
-    v = s(547280),
-    T = s(678513),
-    k = s(445507),
-    E = s(981631),
-    g = s(689938),
-    y = s(13433);
-let I = (0, j.Q)(E.BRd.DARK);
-function S(e) {
-    let { selectedOption: t, targetKey: s, dismissibleContent: a, data: l, handleGoToNextFormGroup: i } = e,
-        [c, o] = r.useState(''),
-        [d, u] = r.useState(null),
-        [x, h] = r.useState(null),
-        [p, C] = r.useState(!1),
-        [N, j] = r.useState(!1),
-        T = r.useCallback(
+n.d(t, { default: () => S }), n(47120), n(266796), n(230036);
+var s = n(200651),
+    l = n(192379),
+    a = n(120356),
+    i = n.n(a),
+    r = n(108131),
+    c = n.n(r),
+    o = n(642128),
+    d = n(481060),
+    m = n(442837),
+    x = n(607070),
+    u = n(313201),
+    h = n(594174),
+    p = n(626135),
+    j = n(547280),
+    v = n(678513),
+    N = n(445507),
+    g = n(981631),
+    k = n(388032),
+    y = n(170141);
+function C(e) {
+    let { selectedOption: t, targetKey: n, dismissibleContent: a, data: i, handleGoToNextFormGroup: r } = e,
+        [c, o] = l.useState(''),
+        [m, x] = l.useState(null),
+        [u, h] = l.useState(null),
+        [p, v] = l.useState(!1),
+        [g, C] = l.useState(!1),
+        b = l.useCallback(
             (e) => {
                 let { value: t } = e;
-                null != l.current && ((l.current.playstyle = t), h(t), i(6));
+                null != i.current && ((i.current.playstyle = t), h(t), r(6));
             },
-            [l, h, i]
+            [i, h, r]
         ),
-        E = r.useCallback(() => {
-            if (null != l.current) {
+        f = l.useCallback(() => {
+            if (null != i.current) {
                 let e = !p;
-                C(e), (l.current.acknowledgeCap = e), e && N && i(8);
+                v(e), (i.current.acknowledgeCap = e), e && g && r(8);
             }
-        }, [N, p, C, l, i]),
-        I = r.useCallback(() => {
-            if (null != l.current) {
-                let e = !N;
-                j(e), (l.current.acknowledgeScreen = e), e && p && i(8);
+        }, [g, p, v, i, r]),
+        W = l.useCallback(() => {
+            if (null != i.current) {
+                let e = !g;
+                C(e), (i.current.acknowledgeScreen = e), e && p && r(8);
             }
-        }, [p, N, j, l, i]),
-        S = r.useCallback(
+        }, [p, g, C, i, r]),
+        S = l.useCallback(
             (e) => {
-                null != l.current && ((l.current.email = e), o(e), u(null));
+                null != i.current && ((i.current.email = e), o(e), x(null));
             },
-            [l, u]
+            [i, x]
         ),
-        M = r.useCallback(() => {
-            if (null != t && null != l.current) {
-                if (c.length < 3 || -1 === c.indexOf('@')) {
-                    u(g.Z.Messages.SIGNUP_EMAIL_ERROR);
-                    return;
-                }
-                (0, v.o)({
-                    targetKey: s,
+        w = l.useCallback(() => {
+            if (null != t && null != i.current) {
+                if (c.length < 3 || -1 === c.indexOf('@')) return void x(k.NW.string(k.t['3dVrwc']));
+                (0, j.o)({
+                    targetKey: n,
                     dismissibleContent: a,
-                    data: l.current,
+                    data: i.current,
                     completed: !0
                 });
             }
-        }, [s, a, c, t, u, l]);
+        }, [n, a, c, t, x, i]);
     return null == t
         ? null
         : 'email' === t.type
-          ? (0, n.jsxs)('div', {
+          ? (0, s.jsxs)('div', {
                 className: y.emailContainer,
                 children: [
-                    (0, n.jsx)(m.Text, {
+                    (0, s.jsx)(d.Text, {
                         variant: 'text-lg/medium',
                         color: 'header-primary',
-                        children: g.Z.Messages.SIGNUP_EMAIL_PROMPT
+                        children: k.NW.string(k.t.NVeQW1)
                     }),
-                    (0, n.jsxs)('div', {
+                    (0, s.jsxs)('div', {
                         className: y.emailForm,
                         children: [
-                            (0, n.jsx)(m.TextInput, {
+                            (0, s.jsx)(d.oil, {
                                 className: y.emailInput,
                                 value: c,
                                 onChange: S,
-                                placeholder: g.Z.Messages.SIGNUP_EMAIL_PLACEHOLDER,
-                                error: d
+                                placeholder: k.NW.string(k.t.e6OPgY),
+                                error: m
                             }),
-                            (0, n.jsx)(m.Button, {
-                                onClick: M,
-                                children: (0, n.jsx)(m.Text, {
+                            (0, s.jsx)(d.zxk, {
+                                onClick: w,
+                                children: (0, s.jsx)(d.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'interactive-active',
-                                    children: g.Z.Messages.SIGNUP_COMPLETE_CTA
+                                    children: k.NW.string(k.t.mhisXl)
                                 })
                             })
                         ]
@@ -108,35 +95,35 @@ function S(e) {
                 ]
             })
           : 'clan' === t.type
-            ? (0, n.jsxs)('div', {
+            ? (0, s.jsxs)('div', {
                   className: y.form,
                   children: [
-                      (0, n.jsxs)('div', {
+                      (0, s.jsxs)('div', {
                           className: y.formGroup,
                           children: [
-                              (0, n.jsxs)('div', {
+                              (0, s.jsxs)('div', {
                                   children: [
-                                      (0, n.jsx)(m.Text, {
+                                      (0, s.jsx)(d.Text, {
                                           variant: 'text-lg/medium',
                                           color: 'header-primary',
-                                          children: g.Z.Messages.SIGNUP_CLAN_PLAYSTYLE_TITLE
+                                          children: k.NW.string(k.t.jhUGT0)
                                       }),
-                                      (0, n.jsx)(m.Text, {
+                                      (0, s.jsx)(d.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
-                                          children: g.Z.Messages.SIGNUP_CLAN_PLAYSTYLE_DESCRIPTION
+                                          children: k.NW.string(k.t.DuYera)
                                       })
                                   ]
                               }),
-                              (0, n.jsx)('div', {
+                              (0, s.jsx)('div', {
                                   className: y.options,
-                                  children: (0, k.z5)(g.Z).map((e) =>
-                                      (0, n.jsx)(
-                                          _,
+                                  children: (0, N.z5)().map((e) =>
+                                      (0, s.jsx)(
+                                          T,
                                           {
                                               option: e,
-                                              isSelected: e.value === x,
-                                              onOptionSelected: T
+                                              isSelected: e.value === u,
+                                              onOptionSelected: b
                                           },
                                           e.value
                                       )
@@ -144,60 +131,60 @@ function S(e) {
                               })
                           ]
                       }),
-                      (0, n.jsxs)('div', {
+                      (0, s.jsxs)('div', {
                           className: y.formGroup,
                           children: [
-                              (0, n.jsxs)('div', {
+                              (0, s.jsxs)('div', {
                                   children: [
-                                      (0, n.jsx)(m.Text, {
+                                      (0, s.jsx)(d.Text, {
                                           variant: 'text-lg/medium',
                                           color: 'header-primary',
-                                          children: g.Z.Messages.SIGNUP_CLAN_ACKNOWLEDGEMENTS_TITLE
+                                          children: k.NW.string(k.t.RpkTY2)
                                       }),
-                                      (0, n.jsx)(m.Text, {
+                                      (0, s.jsx)(d.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
-                                          children: g.Z.Messages.SIGNUP_CLAN_ACKNOWLEDGEMENTS_DESCRIPTION
+                                          children: k.NW.string(k.t.lsZPgI)
                                       })
                                   ]
                               }),
-                              (0, n.jsxs)('div', {
+                              (0, s.jsxs)('div', {
                                   className: y.acknowledgements,
                                   children: [
-                                      (0, n.jsxs)(m.Clickable, {
+                                      (0, s.jsxs)(d.P3F, {
                                           className: y.acknowledgement,
-                                          onClick: E,
+                                          onClick: f,
                                           children: [
-                                              (0, n.jsx)(m.Text, {
+                                              (0, s.jsx)(d.Text, {
                                                   variant: 'text-md/normal',
                                                   color: 'interactive-active',
-                                                  children: g.Z.Messages.SIGNUP_CLAN_ACKNOWLEDGEMENT_CAP
+                                                  children: k.NW.string(k.t.suxlQk)
                                               }),
-                                              (0, n.jsx)('div', {
+                                              (0, s.jsx)('div', {
                                                   className: y.checkboxWrapper,
-                                                  children: (0, n.jsx)(m.Checkbox, {
+                                                  children: (0, s.jsx)(d.XZJ, {
                                                       displayOnly: !0,
-                                                      type: m.Checkbox.Types.INVERTED,
+                                                      type: d.XZJ.Types.INVERTED,
                                                       value: p
                                                   })
                                               })
                                           ]
                                       }),
-                                      (0, n.jsxs)(m.Clickable, {
+                                      (0, s.jsxs)(d.P3F, {
                                           className: y.acknowledgement,
-                                          onClick: I,
+                                          onClick: W,
                                           children: [
-                                              (0, n.jsx)(m.Text, {
+                                              (0, s.jsx)(d.Text, {
                                                   variant: 'text-md/normal',
                                                   color: 'interactive-active',
-                                                  children: g.Z.Messages.SIGNUP_CLAN_ACKNOWLEDGEMENT_APPROVAL
+                                                  children: k.NW.string(k.t.TjPvzM)
                                               }),
-                                              (0, n.jsx)('div', {
+                                              (0, s.jsx)('div', {
                                                   className: y.checkboxWrapper,
-                                                  children: (0, n.jsx)(m.Checkbox, {
+                                                  children: (0, s.jsx)(d.XZJ, {
                                                       displayOnly: !0,
-                                                      type: m.Checkbox.Types.INVERTED,
-                                                      value: N
+                                                      type: d.XZJ.Types.INVERTED,
+                                                      value: g
                                                   })
                                               })
                                           ]
@@ -206,30 +193,30 @@ function S(e) {
                               })
                           ]
                       }),
-                      (0, n.jsxs)('div', {
+                      (0, s.jsxs)('div', {
                           className: y.formGroup,
                           children: [
-                              (0, n.jsx)(m.Text, {
+                              (0, s.jsx)(d.Text, {
                                   variant: 'text-lg/medium',
                                   color: 'header-primary',
-                                  children: g.Z.Messages.SIGNUP_EMAIL_PROMPT
+                                  children: k.NW.string(k.t.NVeQW1)
                               }),
-                              (0, n.jsxs)('div', {
+                              (0, s.jsxs)('div', {
                                   className: y.emailForm,
                                   children: [
-                                      (0, n.jsx)(m.TextInput, {
+                                      (0, s.jsx)(d.oil, {
                                           className: y.emailInput,
                                           value: c,
                                           onChange: S,
-                                          placeholder: g.Z.Messages.SIGNUP_EMAIL_PLACEHOLDER,
-                                          error: d
+                                          placeholder: k.NW.string(k.t.e6OPgY),
+                                          error: m
                                       }),
-                                      (0, n.jsx)(m.Button, {
-                                          onClick: M,
-                                          children: (0, n.jsx)(m.Text, {
+                                      (0, s.jsx)(d.zxk, {
+                                          onClick: w,
+                                          children: (0, s.jsx)(d.Text, {
                                               variant: 'text-sm/medium',
                                               color: 'interactive-active',
-                                              children: g.Z.Messages.SIGNUP_COMPLETE_CTA
+                                              children: k.NW.string(k.t.mhisXl)
                                           })
                                       })
                                   ]
@@ -238,60 +225,60 @@ function S(e) {
                       })
                   ]
               })
-            : (0, n.jsx)('div', {});
+            : (0, s.jsx)('div', {});
 }
-function M(e) {
+function b(e) {
     let { iconName: t } = e,
-        s = null;
+        n = null;
     switch (t) {
         case 'compass':
-            s = (0, n.jsx)(m.CompassIcon, { className: y.icon });
+            n = (0, s.jsx)(d.Jmo, { className: y.icon });
             break;
         case 'gamepad':
-            s = (0, n.jsx)(m.DpadIcon, {
+            n = (0, s.jsx)(d.xoD, {
                 size: 'xs',
                 color: 'currentColor',
                 className: y.icon
             });
             break;
         case 'controller':
-            s = (0, n.jsx)(m.GameControllerIcon, { className: y.icon });
+            n = (0, s.jsx)(d.iWm, { className: y.icon });
             break;
         case 'microphone':
-            s = (0, n.jsx)(m.MicrophoneIcon, { className: y.icon });
+            n = (0, s.jsx)(d.S6n, { className: y.icon });
             break;
         default:
-            s = null;
+            n = null;
     }
-    return (0, n.jsx)('div', {
+    return (0, s.jsx)('div', {
         className: y.iconContainer,
-        children: s
+        children: n
     });
 }
-function _(e) {
-    let { option: t, icon: s, isSelected: a, onOptionSelected: l } = e,
-        [i, o] = r.useState(!1),
-        d = (0, m.useToken)(m.tokens.colors.BACKGROUND_TERTIARY).hsl({ opacity: i && !a ? 0.9 : 0.8 }),
-        u = r.useCallback(() => {
-            l(t);
-        }, [l, t]);
-    return (0, n.jsxs)(m.Clickable, {
-        className: c()(y.option, { [y.selectedOption]: a }),
+function T(e) {
+    let { option: t, icon: n, isSelected: a, onOptionSelected: r } = e,
+        [c, o] = l.useState(!1),
+        m = (0, d.dQu)(d.TVs.colors.BACKGROUND_TERTIARY).hsl({ opacity: c && !a ? 0.9 : 0.8 }),
+        x = l.useCallback(() => {
+            r(t);
+        }, [r, t]);
+    return (0, s.jsxs)(d.P3F, {
+        className: i()(y.option, { [y.selectedOption]: a }),
         onMouseEnter: () => o(!0),
         onMouseLeave: () => o(!1),
-        style: { backgroundColor: d },
-        onClick: u,
+        style: { backgroundColor: m },
+        onClick: x,
         children: [
-            s,
-            (0, n.jsxs)('div', {
+            n,
+            (0, s.jsxs)('div', {
                 className: y.optionContent,
                 children: [
-                    (0, n.jsx)(m.Text, {
+                    (0, s.jsx)(d.Text, {
                         variant: 'text-lg/medium',
                         color: 'header-primary',
                         children: t.title
                     }),
-                    (0, n.jsx)(m.Text, {
+                    (0, s.jsx)(d.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         children: t.description
@@ -301,116 +288,110 @@ function _(e) {
         ]
     });
 }
-function b(e) {
-    let { option: t, selectedOption: s, setSelectedOption: a } = e,
-        l = t.key === (null == s ? void 0 : s.key);
-    return (0, n.jsx)(_, {
+function f(e) {
+    let { option: t, selectedOption: n, setSelectedOption: l } = e,
+        a = t.key === (null == n ? void 0 : n.key);
+    return (0, s.jsx)(T, {
         option: t,
-        icon: (0, n.jsx)(M, { iconName: t.icon }),
-        isSelected: l,
-        onOptionSelected: a
+        icon: (0, s.jsx)(b, { iconName: t.icon }),
+        isSelected: a,
+        onOptionSelected: l
     });
 }
-function P(e) {
-    let { target: t, selectedOption: s, handleSetSelectedOption: a, data: l } = e,
-        i = (0, x.e7)([h.Z], () => h.Z.useReducedMotion),
-        [{ state: c }, o] = (0, m.useSpring)(() => ({ state: 0 }), 'respect-motion-settings', []),
-        p = (0, x.e7)([C.default], () => C.default.getCurrentUser()),
-        N = c.to({
+function W(e) {
+    let { target: t, selectedOption: n, handleSetSelectedOption: a, data: i } = e,
+        r = (0, m.e7)([x.Z], () => x.Z.useReducedMotion),
+        [{ state: u }, p] = (0, d.q_F)(() => ({ state: 0 }), 'respect-motion-settings', []),
+        j = (0, m.e7)([h.default], () => h.default.getCurrentUser()),
+        v = u.to({
             range: [0, 1],
             output: [1, 0]
         }),
-        j = c.to({
+        N = u.to({
             range: [0, 1],
             output: [0, 1]
         }),
-        v = c.to({
+        g = u.to({
             range: [0, 10],
             output: [0, -700]
         }),
-        T = r.useCallback(
+        b = l.useCallback(
             (e) => {
                 a(e),
-                    o({
+                    p({
                         state: 'email' === e.type ? 2 : 3,
-                        immediate: i
+                        immediate: r
                     });
             },
-            [a, o, i]
+            [a, p, r]
         ),
-        k = r.useCallback(
+        T = l.useCallback(
             (e) => {
-                o({
+                p({
                     state: e,
-                    immediate: i
+                    immediate: r
                 });
             },
-            [o, i]
+            [p, r]
         );
-    return null == p
+    return null == j
         ? null
-        : (0, n.jsxs)(n.Fragment, {
+        : (0, s.jsxs)(s.Fragment, {
               children: [
-                  (0, n.jsxs)(u.animated.div, {
+                  (0, s.jsxs)(o.animated.div, {
                       className: y.header,
-                      style: { opacity: N },
+                      style: { opacity: v },
                       children: [
-                          (0, n.jsxs)('div', {
+                          (0, s.jsxs)('div', {
                               className: y.eyebrow,
                               children: [
-                                  (0, n.jsx)(m.EnvelopeIcon, {
+                                  (0, s.jsx)(d._XJ, {
                                       size: 'xxs',
                                       color: 'currentColor'
                                   }),
-                                  (0, n.jsx)(m.Text, {
+                                  (0, s.jsx)(d.Text, {
                                       variant: 'text-xs/semibold',
                                       color: 'none',
-                                      children: g.Z.Messages.SIGNUP_NOTICE_EYEBROW
+                                      children: k.NW.string(k.t.hhKpxs)
                                   })
                               ]
                           }),
-                          (0, n.jsx)(m.Heading, {
+                          (0, s.jsx)(d.X6q, {
                               variant: 'heading-xxl/medium',
                               color: 'header-primary',
                               children: t.title
                           }),
-                          (0, n.jsx)(m.Text, {
+                          (0, s.jsx)(d.Text, {
                               variant: 'text-md/normal',
                               color: 'always-white',
                               children: t.subtitle
                           })
                       ]
                   }),
-                  (0, n.jsxs)(u.animated.div, {
+                  (0, s.jsxs)(o.animated.div, {
                       className: y.question,
                       style: {
-                          transform: v.to((e) => 'translateY('.concat(e, 'px)')),
+                          transform: g.to((e) => 'translateY('.concat(e, 'px)')),
                           marginTop: t.questionMargin
                       },
                       children: [
-                          (0, n.jsx)(m.Text, {
+                          (0, s.jsx)(d.Text, {
                               variant: 'text-lg/medium',
                               color: 'header-primary',
                               children: t.question
                           }),
-                          (0, n.jsx)('div', {
+                          (0, s.jsx)('div', {
                               className: y.options,
                               children: (function (e, t) {
-                                  let s = e.slice();
-                                  return (
-                                      s.sort((e, s) => {
-                                          let a = d().v3(''.concat(e.key).concat(t));
-                                          return a - d().v3(''.concat(s.key).concat(t));
-                                      }),
-                                      s
-                                  );
-                              })(t.options, p.id).map((e) =>
-                                  (0, n.jsx)(
-                                      b,
+                                  let n = e.slice();
+                                  return n.sort((e, n) => c().v3(''.concat(e.key).concat(t)) - c().v3(''.concat(n.key).concat(t))), n;
+                              })(t.options, j.id).map((e) =>
+                                  (0, s.jsx)(
+                                      f,
                                       {
                                           option: e,
-                                          selectedOption: s,
-                                          setSelectedOption: T
+                                          selectedOption: n,
+                                          setSelectedOption: b
                                       },
                                       e.key
                                   )
@@ -418,127 +399,127 @@ function P(e) {
                           })
                       ]
                   }),
-                  (0, n.jsx)(u.animated.div, {
+                  (0, s.jsx)(o.animated.div, {
                       style: {
-                          transform: v.to((e) => 'translateY('.concat(e, 'px)')),
-                          opacity: j
+                          transform: g.to((e) => 'translateY('.concat(e, 'px)')),
+                          opacity: N
                       },
-                      children: (0, n.jsx)(S, {
-                          selectedOption: s,
+                      children: (0, s.jsx)(C, {
+                          selectedOption: n,
                           targetKey: t.key,
                           dismissibleContent: t.dismissibleContent,
-                          data: l,
-                          handleGoToNextFormGroup: k
+                          data: i,
+                          handleGoToNextFormGroup: T
                       })
                   })
               ]
           });
 }
-function O(e) {
-    let { target: t, guildId: s, transitionState: a, onClose: l } = e,
-        i = (0, p.Dt)(),
-        o = r.useRef({ guildId: s }),
-        [d, u] = r.useState(null),
-        h = (0, x.e7)([T.Z], () => T.Z.hasCompletedTarget(t.key)) ? 1 : 0;
-    r.useEffect(() => {
-        N.default.track(E.rMx.SIGNUP_VIEWED, {
+function S(e) {
+    let { target: t, guildId: n, transitionState: a, onClose: r } = e,
+        c = (0, u.Dt)(),
+        o = l.useRef({ guildId: n }),
+        [x, h] = l.useState(null),
+        N = +!!(0, m.e7)([v.Z], () => v.Z.hasCompletedTarget(t.key));
+    l.useEffect(() => {
+        p.default.track(g.rMx.SIGNUP_VIEWED, {
             target_key: t.key,
-            guild_id: s
+            guild_id: n
         });
         let e = o.current;
         return () => {
-            (0, v.o)({
+            (0, j.o)({
                 targetKey: t.key,
                 dismissibleContent: t.dismissibleContent,
                 data: e,
                 completed: !1
             });
         };
-    }, [t.key, t.dismissibleContent, o, s]);
-    let C = r.useCallback(
+    }, [t.key, t.dismissibleContent, o, n]);
+    let C = l.useCallback(
             (e) => {
-                null != o.current && ((o.current.selectedOptionKey = e.key), u(e));
+                null != o.current && ((o.current.selectedOptionKey = e.key), h(e));
             },
-            [u, o]
+            [h, o]
         ),
-        j = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
-        k = null;
-    switch (h) {
+        b = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
+        T = null;
+    switch (N) {
         case 0:
-            k = (0, n.jsx)(P, {
+            T = (0, s.jsx)(W, {
                 target: t,
-                selectedOption: d,
+                selectedOption: x,
                 handleSetSelectedOption: C,
                 data: o
             });
             break;
         case 1:
-            k = (0, n.jsxs)('div', {
+            T = (0, s.jsxs)('div', {
                 className: y.completedContainer,
                 children: [
-                    (0, n.jsx)(m.Text, {
+                    (0, s.jsx)(d.Text, {
                         variant: 'text-lg/medium',
                         color: 'header-primary',
-                        children: g.Z.Messages.SIGNUP_COMPLETED_TITLE
+                        children: k.NW.string(k.t.n2NmuL)
                     }),
-                    (0, n.jsx)(m.Text, {
+                    (0, s.jsx)(d.Text, {
                         variant: 'text-md/normal',
                         color: 'text-muted',
-                        children: g.Z.Messages.SIGNUP_COMPLETED_DESCRIPTION
+                        children: k.NW.string(k.t.SNYnLS)
                     }),
-                    (0, n.jsx)('div', {
-                        children: (0, n.jsx)(m.Button, {
-                            onClick: l,
-                            children: (0, n.jsx)(m.Text, {
+                    (0, s.jsx)('div', {
+                        children: (0, s.jsx)(d.zxk, {
+                            onClick: r,
+                            children: (0, s.jsx)(d.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: g.Z.Messages.CLOSE
+                                children: k.NW.string(k.t.cpT0Cg)
                             })
                         })
                     })
                 ]
             });
     }
-    return (0, n.jsx)(m.ThemeContextProvider, {
-        theme: E.BRd.DARK,
-        children: (0, n.jsxs)(m.ModalRoot, {
-            transitionState: a,
-            'aria-labelledby': i,
-            size: m.ModalSize.LARGE,
-            className: c()(y.modal, I),
-            children: [
-                (0, n.jsxs)(m.Scroller, {
-                    className: y.content,
-                    children: [
-                        (0, n.jsx)('div', {
-                            style: {
-                                background: j,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                right: 0,
-                                bottom: 0,
-                                zIndex: -1
-                            }
-                        }),
-                        (0, n.jsx)('div', {
-                            className: y.contentInner,
-                            children: (0, n.jsx)(m.Sequencer, {
-                                animationMotionType: 'lift',
-                                fillParent: !0,
-                                step: h,
-                                steps: [0, 1],
-                                children: k
+    return (0, s.jsx)(d.f6W, {
+        theme: g.BRd.DARK,
+        children: (e) =>
+            (0, s.jsxs)(d.Y0X, {
+                transitionState: a,
+                'aria-labelledby': c,
+                size: d.CgR.LARGE,
+                className: i()(y.modal, e),
+                children: [
+                    (0, s.jsxs)(d.Ttm, {
+                        className: y.content,
+                        children: [
+                            (0, s.jsx)('div', {
+                                style: {
+                                    background: b,
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                    zIndex: -1
+                                }
+                            }),
+                            (0, s.jsx)('div', {
+                                className: y.contentInner,
+                                children: (0, s.jsx)(d.qBt, {
+                                    animationMotionType: 'lift',
+                                    fillParent: !0,
+                                    step: N,
+                                    steps: [0, 1],
+                                    children: T
+                                })
                             })
-                        })
-                    ]
-                }),
-                (0, n.jsx)('div', {
-                    className: y.closeButtonContainer,
-                    children: (0, n.jsx)(m.ModalCloseButton, { onClick: l })
-                })
-            ]
-        })
+                        ]
+                    }),
+                    (0, s.jsx)('div', {
+                        className: y.closeButtonContainer,
+                        children: (0, s.jsx)(d.olH, { onClick: r })
+                    })
+                ]
+            })
     });
 }
-((l = a || (a = {}))[(l.OPTIONS = 0)] = 'OPTIONS'), (l[(l.COMPLETED = 1)] = 'COMPLETED');

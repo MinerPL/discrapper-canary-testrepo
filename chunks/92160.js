@@ -1,68 +1,64 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    i = n.n(a),
-    r = n(481060),
-    l = n(689938),
-    o = n(998777);
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(388032),
+    o = n(53134);
 function c(e) {
-    let { className: t, enabled: n, previewCTA: a, onPreview: c, onToggle: d, animateStatus: u, firstLine: _, secondLine: I, disabled: E } = e;
-    return (0, s.jsxs)('div', {
-        className: i()(t, o.enableContainer),
+    let { className: t, enabled: n, previewCTA: i, onPreview: c, onToggle: d, animateStatus: u, firstLine: m, secondLine: g, disabled: p } = e;
+    return (0, r.jsxs)('div', {
+        className: s()(t, o.enableContainer),
         children: [
             n
-                ? (0, s.jsx)(r.CheckmarkLargeIcon, {
+                ? (0, r.jsx)(a.dz2, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: i()(o.activeCircle, { [o.animate]: u })
+                      className: s()(o.activeCircle, { [o.animate]: u })
                   })
-                : (0, s.jsx)(r.PencilIcon, {
+                : (0, r.jsx)(a.vdY, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: i()(o.editCircle, { [o.animate]: u })
+                      className: s()(o.editCircle, { [o.animate]: u })
                   }),
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: o.enableDescription,
                 children: [
-                    (0, s.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
-                        children: _
+                        children: m
                     }),
-                    (0, s.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
-                        children: I
+                        children: g
                     })
                 ]
             }),
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: o.buttonContainer,
                 children: [
                     null == c
                         ? null
-                        : (0, s.jsx)(r.Button, {
+                        : (0, r.jsx)(a.zxk, {
                               className: o.previewButton,
-                              look: r.Button.Looks.LINK,
-                              size: r.Button.Sizes.SMALL,
+                              look: a.zxk.Looks.LINK,
+                              size: a.zxk.Sizes.SMALL,
                               onClick: c,
-                              disabled: E,
-                              color: r.Button.Colors.PRIMARY,
-                              children: null != a ? a : l.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
+                              disabled: p,
+                              color: a.zxk.Colors.PRIMARY,
+                              children: null != i ? i : l.NW.string(l.t['5U0kLy'])
                           }),
-                    (0, s.jsx)(r.Button, {
-                        disabled: null == d || E,
-                        size: r.Button.Sizes.SMALL,
-                        color: n ? r.Button.Colors.RED : r.Button.Colors.BRAND,
+                    (0, r.jsx)(a.zxk, {
+                        disabled: null == d || p,
+                        size: a.zxk.Sizes.SMALL,
+                        color: n ? a.zxk.Colors.RED : a.zxk.Colors.BRAND,
                         onClick: d,
-                        children: n ? l.Z.Messages.DISABLE : l.Z.Messages.ENABLE
+                        children: n ? l.NW.string(l.t.R9GHyc) : l.NW.string(l.t.JFfinp)
                     })
                 ]
             })

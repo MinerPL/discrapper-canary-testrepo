@@ -1,69 +1,106 @@
 n.d(t, {
-    Z: function () {
-        return E;
-    },
-    w: function () {
-        return T;
-    }
+    Z: () => f,
+    w: () => b
 });
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    i = n.n(a),
-    r = n(481060),
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
     l = n(259580),
     o = n(73346),
     c = n(817460),
     d = n(723047),
     u = n(880229),
-    _ = n(689938),
-    I = n(376552);
-function E(e) {
-    let { channelBenefits: t, intangibleBenefits: n, subscriptionListings: a, onImport: l } = e,
-        E = (0, d.mY)();
-    return (0, s.jsx)('div', {
-        className: I.container,
-        children: a.map((e) =>
-            (0, s.jsxs)(
+    m = n(388032),
+    g = n(748353);
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function f(e) {
+    let { channelBenefits: t, intangibleBenefits: n, subscriptionListings: i, onImport: l } = e,
+        f = (0, d.mY)();
+    return (0, r.jsx)('div', {
+        className: g.container,
+        children: i.map((e) =>
+            (0, r.jsxs)(
                 'div',
                 {
-                    className: I.row,
+                    className: g.row,
                     children: [
-                        (0, s.jsx)('img', {
+                        (0, r.jsx)('img', {
                             alt: '',
                             src: null == e.image_asset ? void 0 : (0, o._W)(e.application_id, e.image_asset, 512),
-                            className: i()(I.rowIcon, I.listingImage)
+                            className: s()(g.rowIcon, g.listingImage)
                         }),
-                        (0, s.jsxs)('div', {
-                            className: I.rowBody,
+                        (0, r.jsxs)('div', {
+                            className: g.rowBody,
                             children: [
-                                (0, s.jsx)(r.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: 'header-primary',
-                                    className: i()(I.rowText, I.listingName),
+                                    className: s()(g.rowText, g.listingName),
                                     children: e.name
                                 }),
-                                (0, s.jsx)(r.Text, {
+                                (0, r.jsx)(a.Text, {
                                     color: 'header-secondary',
                                     variant: 'text-sm/normal',
-                                    children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_NUM_BENEFITS.format({
+                                    children: m.NW.format(m.t['QMj+Ii'], {
                                         channels: e.role_benefits.benefits.filter(c.rC).length,
                                         benefits: e.role_benefits.benefits.filter(c.lL).length
                                     })
                                 })
                             ]
                         }),
-                        (0, s.jsx)(r.Button, {
-                            look: r.Button.Looks.OUTLINED,
-                            color: r.Button.Colors.PRIMARY,
+                        (0, r.jsx)(a.zxk, {
+                            look: a.zxk.Looks.OUTLINED,
+                            color: a.zxk.Colors.PRIMARY,
                             onClick: () => {
-                                var a;
-                                return (
-                                    (a = e),
-                                    void (0, r.openModal)((e) =>
-                                        (0, s.jsx)(u.K, {
-                                            ...e,
-                                            fromSubscriptionListing: a,
+                                (0, a.h7j)((i) =>
+                                    (0, r.jsx)(
+                                        u.K,
+                                        h(p({}, i), {
+                                            fromSubscriptionListing: e,
                                             existingChannelBenefits: t,
                                             existingIntangibleBenefits: n,
                                             onSubmit: l
@@ -71,8 +108,8 @@ function E(e) {
                                     )
                                 );
                             },
-                            disabled: E,
-                            children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_BUTTON
+                            disabled: f,
+                            children: m.NW.string(m.t['90bIv7'])
                         })
                     ]
                 },
@@ -81,39 +118,41 @@ function E(e) {
         )
     });
 }
-function T(e) {
-    let { guildId: t, onImport: n, disabled: a = !1 } = e;
-    return (0, s.jsxs)(r.Clickable, {
-        className: i()(I.importRoleCard, { [I.disabled]: a }),
-        onClick: a
+function b(e) {
+    let { guildId: t, onImport: n, disabled: i = !1 } = e;
+    return (0, r.jsxs)(a.P3F, {
+        className: s()(g.importRoleCard, { [g.disabled]: i }),
+        onClick: i
             ? void 0
             : function () {
-                  (0, r.openModal)((e) =>
-                      (0, s.jsx)(u.C, {
-                          ...e,
-                          guildId: t,
-                          onImport: n
-                      })
+                  (0, a.h7j)((e) =>
+                      (0, r.jsx)(
+                          u.C,
+                          h(p({}, e), {
+                              guildId: t,
+                              onImport: n
+                          })
+                      )
                   );
               },
-        'aria-disabled': a,
+        'aria-disabled': i,
         children: [
-            (0, s.jsx)(r.ShieldUserIcon, {
+            (0, r.jsx)(a.lZ8, {
                 size: 'custom',
                 width: 23,
                 height: 23,
                 color: 'currentColor',
-                className: I.rowIcon
+                className: g.rowIcon
             }),
-            (0, s.jsx)(r.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 color: 'header-primary',
-                className: I.rowText,
-                children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_SELECT_ROLE
+                className: g.rowText,
+                children: m.NW.string(m.t.xK9pBA)
             }),
-            (0, s.jsx)(l.Z, {
+            (0, r.jsx)(l.Z, {
                 direction: l.Z.Directions.RIGHT,
-                className: I.caret
+                className: g.caret
             })
         ]
     });

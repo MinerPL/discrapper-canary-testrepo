@@ -1,85 +1,74 @@
-r.d(t, {
-    $P: function () {
-        return c;
-    },
-    Fi: function () {
-        return n;
-    },
-    Fr: function () {
-        return I;
-    },
-    Sq: function () {
-        return _;
-    },
-    pE: function () {
-        return i;
-    }
+a.d(e, {
+    $P: () => E,
+    Fi: () => r,
+    Fr: () => l,
+    Sq: () => i,
+    pE: () => o
 });
-let n = '?',
-    a = /\(error: (.*)\)/,
-    o = /captureMessage|captureException/;
-function i(...e) {
-    let t = e.sort((e, t) => e[0] - t[0]).map((e) => e[1]);
-    return (e, r = 0, i = 0) => {
-        let _ = [],
-            s = e.split('\n');
-        for (let e = r; e < s.length; e++) {
-            let r = s[e];
-            if (r.length > 1024) continue;
-            let n = a.test(r) ? r.replace(a, '$1') : r;
-            if (!n.match(/\S*Error: /)) {
-                for (let e of t) {
-                    let t = e(n);
-                    if (t) {
-                        _.push(t);
+let r = '?',
+    n = /\(error: (.*)\)/,
+    _ = /captureMessage|captureException/;
+function o(...t) {
+    let e = t.sort((t, e) => t[0] - e[0]).map((t) => t[1]);
+    return (t, a = 0, o = 0) => {
+        let i = [],
+            s = t.split('\n');
+        for (let t = a; t < s.length; t++) {
+            let a = s[t];
+            if (a.length > 1024) continue;
+            let r = n.test(a) ? a.replace(n, '$1') : a;
+            if (!r.match(/\S*Error: /)) {
+                for (let t of e) {
+                    let e = t(r);
+                    if (e) {
+                        i.push(e);
                         break;
                     }
                 }
-                if (_.length >= 50 + i) break;
+                if (i.length >= 50 + o) break;
             }
         }
-        return (function (e) {
-            if (!e.length) return [];
-            let t = Array.from(e);
-            return (
-                /sentryWrapped/.test(E(t).function || '') && t.pop(),
-                t.reverse(),
-                o.test(E(t).function || '') && (t.pop(), o.test(E(t).function || '') && t.pop()),
-                t.slice(0, 50).map((e) => ({
-                    ...e,
-                    filename: e.filename || E(t).filename,
-                    function: e.function || n
-                }))
-            );
-        })(_.slice(i));
+        var E = i.slice(o);
+        if (!E.length) return [];
+        let l = Array.from(E);
+        return (
+            /sentryWrapped/.test(c(l).function || '') && l.pop(),
+            l.reverse(),
+            _.test(c(l).function || '') && (l.pop(), _.test(c(l).function || '') && l.pop()),
+            l.slice(0, 50).map((t) => ({
+                ...t,
+                filename: t.filename || c(l).filename,
+                function: t.function || r
+            }))
+        );
     };
 }
-function _(e) {
-    return Array.isArray(e) ? i(...e) : e;
+function i(t) {
+    return Array.isArray(t) ? o(...t) : t;
 }
-function E(e) {
-    return e[e.length - 1] || {};
+function c(t) {
+    return t[t.length - 1] || {};
 }
 let s = '<anonymous>';
-function c(e) {
+function E(t) {
     try {
-        if (!e || 'function' != typeof e) return s;
-        return e.name || s;
-    } catch (e) {
+        if (!t || 'function' != typeof t) return s;
+        return t.name || s;
+    } catch (t) {
         return s;
     }
 }
-function I(e) {
-    let t = e.exception;
-    if (t) {
-        let e = [];
+function l(t) {
+    let e = t.exception;
+    if (e) {
+        let t = [];
         try {
             return (
-                t.values.forEach((t) => {
-                    t.stacktrace.frames && e.push(...t.stacktrace.frames);
+                e.values.forEach((e) => {
+                    e.stacktrace.frames && t.push(...e.stacktrace.frames);
                 }),
-                e
+                t
             );
-        } catch (e) {}
+        } catch (t) {}
     }
 }

@@ -1,93 +1,92 @@
-n(627494), n(757143);
-var i = n(735250),
-    a = n(470079),
-    s = n(317261),
-    l = n(70956),
-    r = n(5192),
-    o = n(561308),
-    c = n(919394),
-    u = n(206295),
-    d = n(227172),
-    h = n(555672),
-    m = n(297781),
-    p = n(591853),
-    _ = n(410441),
-    f = n(797342),
-    E = n(689938);
-let g = (e, t, n, i) => {
+n.d(t, { Z: () => P }), n(627494), n(757143), n(301563);
+var r = n(200651),
+    a = n(192379),
+    l = n(317261),
+    i = n(70956),
+    o = n(5192),
+    s = n(379357),
+    c = n(561308),
+    u = n(919394),
+    d = n(206295),
+    m = n(227172),
+    p = n(555672),
+    h = n(297781),
+    f = n(591853),
+    g = n(410441),
+    x = n(797342),
+    v = n(388032);
+let y = (e, t, n, r) => {
         let a = (function (e) {
-                if (e === s._.WEEK) return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
-            })(i),
-            l = r.ZP.getName(t.guild_id, t.id, n),
-            o = e.extra.game_name;
-        return a
-            .plainFormat({
-                gameName: o,
-                userName: l
-            })
-            .replaceAll('*', '');
+                if (e === l._.WEEK) return v.t['7TXfc3'];
+            })(r),
+            i = o.ZP.getName(t.guild_id, t.id, n),
+            s = e.extra.game_name;
+        return v.NW.formatToMarkdownString(a, {
+            gameName: s,
+            userName: i
+        }).replaceAll('*', '');
     },
-    C = (e, t) =>
-        E.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+    j = (e, t) =>
+        v.NW.formatToPlainString(v.t.tAwI1t, {
             username: t.username,
             activity: e.extra.game_name
-        });
-t.Z = (e) => {
-    let { channel: t, entry: n, requestId: s, closePopout: r } = e,
-        { iconUrl: I, iconTitle: x, user: T, details: N, appName: v, coverImageUrl: S } = (0, f.n)(n),
-        { primaryColor: Z, secondaryColor: A } = (0, u.Z)(I),
-        M = (0, o.yA)(n),
-        b = (0, o.Nq)(n),
-        R = a.useCallback(
-            (e) => {
-                if (null != T && null != M && null != b && !!(0, h.qy)(b))
-                    return (0, c.SO)({
-                        entry: n,
-                        applicationImageSrc: I,
-                        avatarSrcs: [T.getAvatarURL(t.guild_id, 128)],
-                        description: g(n, t, T, b),
-                        timestamp: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(M / l.Z.Seconds.HOUR) }),
-                        colors: [Z, A],
-                        channelId: e
-                    });
-            },
-            [I, t, M, n, Z, b, A, T]
-        );
-    if (null == T || null == M || null == b || !(0, h.qy)(b)) return null;
-    let j = null != n.extra.platform ? d.v[n.extra.platform] : null;
-    return (0, i.jsxs)(p.yR, {
-        children: [
-            (0, i.jsx)(p.wG, {
-                thumbnailSrc: null != S ? S : I,
-                thumbnailTitle: x,
-                channel: t,
-                headerIcons:
-                    null == j
-                        ? null
-                        : (0, i.jsx)(_.Z, {
-                              Icon: j,
-                              'aria-label': E.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
-                          }),
-                entry: n,
-                userDescription: E.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-                title: v,
-                subtitle: N,
-                badges: (0, i.jsx)(m.Gk, {
-                    location: m.Gt.POPOUT,
-                    children: h.Hs.map((e, t) => (0, i.jsx)(e, { entry: n }, t))
-                })
-            }),
-            (0, i.jsx)(p.St, {
-                children: (0, i.jsx)(p.WT, {
-                    closePopout: r,
-                    user: T,
+        }),
+    P = (e) => {
+        let { channel: t, entry: n, disableGameProfileLinks: l, onReaction: o, onVoiceChannelPreview: P } = e,
+            { largeImage: O } = (0, s.rv)({ entry: n }),
+            { user: b, details: C, appName: N } = (0, x.n)(n),
+            { primaryColor: I, secondaryColor: E } = (0, d.Z)(null == O ? void 0 : O.src),
+            w = (0, c.yA)(n),
+            Z = (0, c.Nq)(n),
+            S = a.useCallback(
+                (e) => {
+                    if (null != t && null != b && null != w && null != Z && (0, p.qy)(Z))
+                        return (0, u.SO)({
+                            entry: n,
+                            applicationImageSrc: null == O ? void 0 : O.src,
+                            avatarSrcs: [b.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
+                            description: y(n, t, b, Z),
+                            timestamp: v.NW.formatToPlainString(v.t.YL7UEx, { hours: Math.round(w / i.Z.Seconds.HOUR) }),
+                            colors: [I, E],
+                            channelId: e
+                        });
+                },
+                [null == O ? void 0 : O.src, t, w, n, I, Z, E, b]
+            );
+        if (null == b || null == w || null == Z || !(0, p.qy)(Z)) return null;
+        let T = null != n.extra.platform ? m.v[n.extra.platform] : null;
+        return (0, r.jsxs)(f.yR, {
+            children: [
+                (0, r.jsx)(f.wG, {
                     channel: t,
-                    generateReactionImage: R,
-                    reactionImageAltText: C(n, T),
+                    headerIcons:
+                        null == T
+                            ? null
+                            : (0, r.jsx)(g.Z, {
+                                  Icon: T,
+                                  'aria-label': v.NW.string(v.t.YR4cHB)
+                              }),
                     entry: n,
-                    requestId: s
+                    userDescription: v.t.rPqqtr,
+                    title: N,
+                    subtitle: C,
+                    badges: (0, r.jsx)(h.Gk, {
+                        location: h.Gt.POPOUT,
+                        children: p.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
+                    }),
+                    disableGameProfileLinks: l
+                }),
+                (0, r.jsx)(f.St, {
+                    children: (0, r.jsx)(f.WT, {
+                        onReaction: o,
+                        onVoiceChannelPreview: P,
+                        user: b,
+                        channel: t,
+                        generateReactionImage: S,
+                        reactionImageAltText: j(n, b),
+                        entry: n
+                    })
                 })
-            })
-        ]
-    });
-};
+            ]
+        });
+    };

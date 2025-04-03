@@ -1,81 +1,84 @@
-n.d(t, {
-    U: function () {
-        return h;
-    }
-});
-var l = n(735250),
-    i = n(470079),
-    u = n(512722),
-    o = n.n(u),
-    r = n(481060),
-    a = n(479446),
-    s = n(646476),
-    d = n(104494),
-    c = n(639119),
-    _ = n(981632),
-    f = n(798769),
-    E = n(689011),
-    m = n(669079),
-    T = n(987209),
-    p = n(598),
-    A = n(409813),
-    g = n(981631),
-    S = n(474936),
-    P = n(231338),
-    M = n(900550);
-function h(e) {
+n.d(t, { U: () => S });
+var r = n(200651),
+    i = n(192379),
+    o = n(512722),
+    a = n.n(o),
+    s = n(481060),
+    l = n(479446),
+    c = n(646476),
+    u = n(104494),
+    d = n(639119),
+    f = n(981632),
+    _ = n(798769),
+    p = n(689011),
+    h = n(669079),
+    m = n(987209),
+    g = n(563132),
+    E = n(409813),
+    b = n(981631),
+    y = n(474936),
+    v = n(231338),
+    O = n(973579);
+function I(e, t) {
+    return e in t;
+}
+function S(e) {
     var t;
-    let { renderHeader: n, referralTrialOfferId: u, handleClose: h } = e,
-        { selectedSkuId: v, step: I, selectedPlan: y, purchaseState: N, purchaseType: R, selectedSku: C } = (0, p.usePaymentContext)(),
-        { isGift: k, selectedGiftStyle: L, giftRecipient: Z } = (0, T.wD)(),
-        O = k && (0, m.pO)(Z) && I === A.h8.CONFIRM && null != L && (null == C ? void 0 : C.productLine) !== g.POd.COLLECTIBLES,
-        b = null != n && null != I,
-        w = I !== A.h8.SKU_SELECT && null != v,
-        D = (0, c.N)(u),
-        x = !k && null != D && null != v && S.nG[D.trial_id].skus.includes(v),
-        U = (0, d.Ng)(),
-        G = null == U ? void 0 : null === (t = U.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => S.GP[e].skuId === v),
-        Y = !k && null != U && null != v && G,
-        { enabled: W } = s.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
-        F = (0, s.rK)(),
-        H = W && F;
+    let { renderHeader: n, referralTrialOfferId: o, handleClose: S } = e,
+        { selectedSkuId: T, step: N, selectedPlan: A, purchaseState: C, purchaseType: R, selectedSku: P } = (0, g.JL)(),
+        { isGift: w, selectedGiftStyle: D, giftRecipient: L } = (0, m.wD)(),
+        x = w && (0, h.pO)(L) && N === E.h8.CONFIRM && null != D && (null == P ? void 0 : P.productLine) !== b.POd.COLLECTIBLES,
+        M = null != n && null != N,
+        k = [E.h8.SKU_SELECT, E.h8.SELECT_FREE_SKU],
+        j = null != N && !k.includes(N) && null != T,
+        U = (0, d.N)(o),
+        G = !w && null != U && null != T && y.nG[U.trial_id].skus.includes(T),
+        B = (0, u.Ng)(),
+        F = null == B || null == (t = B.discount) ? void 0 : t.plan_ids.some((e) => y.GP[e].skuId === T),
+        V = !w && null != B && null != T && F,
+        { enabled: Z } = c.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
+        H = (0, c.rK)(),
+        W = Z && H;
     return i.useMemo(() => {
-        if (null == I) return;
+        if (null == N) return;
         let e = null;
-        if (O)
-            e = (0, l.jsxs)('div', {
-                className: M.container,
-                children: [
-                    (0, l.jsx)(_.Z, {
-                        defaultAnimationState: a.S.LOOP,
-                        giftStyle: L,
-                        className: M.seasonalGiftBoxHeaderIcon
-                    }),
-                    (0, l.jsx)(r.ModalCloseButton, {
-                        onClick: h,
-                        className: M.closeButton
-                    })
-                ]
-            });
-        else if (b) e = n(null != y ? y : null, h, I);
-        else if (R === P.GZ.ONE_TIME)
-            e = (0, l.jsx)(E.t, {
-                step: I,
-                onClose: h
-            });
-        else if (w)
-            o()(v in S.y7, 'invalid sku id: '.concat(v)),
-                (e = (0, l.jsx)(f.Z, {
-                    currentStep: null != I ? I : void 0,
-                    purchaseState: N,
-                    premiumType: S.y7[v],
-                    onClose: h,
-                    showTrialBadge: x,
-                    showDiscountBadge: Y,
-                    isGift: k,
-                    giftRecipient: Z,
-                    useWinterTheme: H
-                }));
-        return e;
-    }, [L, h, N, n, y, v, I, x, Y, O, w, b, R, k, Z, H]);
+        return (
+            x
+                ? (e = (0, r.jsxs)('div', {
+                      className: O.container,
+                      children: [
+                          (0, r.jsx)(f.Z, {
+                              defaultAnimationState: l.SR.LOOP,
+                              giftStyle: D,
+                              className: O.seasonalGiftBoxHeaderIcon
+                          }),
+                          (0, r.jsx)(s.olH, {
+                              onClick: S,
+                              className: O.closeButton
+                          })
+                      ]
+                  }))
+                : M
+                  ? (e = n(null != A ? A : null, S, N))
+                  : R === v.GZ.ONE_TIME
+                    ? (e = (0, r.jsx)(p.t, {
+                          step: N,
+                          onClose: S
+                      }))
+                    : j &&
+                      (a()(I(T, y.y7), 'invalid sku id: '.concat(T)),
+                      (e = (0, r.jsx)(_.Z, {
+                          currentStep: null != N ? N : void 0,
+                          purchaseState: C,
+                          premiumType: y.y7[T],
+                          onClose: S,
+                          showTrialBadge: G,
+                          showDiscountBadge: V,
+                          isGift: w,
+                          giftRecipient: L,
+                          useWinterTheme: W
+                      }))),
+            e
+        );
+    }, [D, S, C, n, A, T, N, G, V, x, j, M, R, w, L, W]);
 }

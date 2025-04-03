@@ -1,138 +1,132 @@
-n.d(t, {
-    Y: function () {
-        return x;
-    }
-}),
-    n(47120);
-var i,
-    a,
-    s = n(735250),
-    l = n(470079),
-    r = n(120356),
-    o = n.n(r),
-    c = n(338545),
-    u = n(481060),
-    d = n(792125),
-    h = n(542094),
-    m = n(182906),
+n.d(t, { Y: () => y }), n(47120);
+var r,
+    i = n(200651),
+    l = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(642128),
+    c = n(481060),
+    u = n(542094),
+    d = n(182906),
     p = n(556505),
-    _ = n(513202),
+    h = n(513202),
     f = n(981631),
-    E = n(689938),
-    g = n(774867);
-let C = ['embedded_cover'],
-    I = {
+    m = n(388032),
+    g = n(968216);
+let b = ['embedded_cover'],
+    _ = {
         tension: 800,
         friction: 24
     };
-function x(e) {
+var C = (((r = C || {})[(r.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (r[(r.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), r);
+function y(e) {
     var t;
-    let { channel: n, activityItem: i, onClick: a, aspectRatio: r = 0, animatedDivClass: x } = e,
+    let { context: n, activityItem: r, onClick: o, aspectRatio: C = 0, animatedDivClass: y, commandOrigin: x } = e,
         {
-            onActivityItemSelected: T,
-            imageBackground: N,
-            activityAction: v,
-            labelType: S
-        } = (0, h.ZP)({
-            channel: n,
-            activityItem: i,
-            guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
+            onActivityItemSelected: v,
+            imageBackground: j,
+            activityAction: O,
+            labelType: E
+        } = (0, u.ZP)({
+            context: n,
+            activityItem: r,
+            guildId: null != (t = n.channel.getGuildId()) ? t : void 0,
             locationObject: {},
-            onActivityItemSelected: a,
-            embeddedActivitiesManager: _.Z,
-            assetNames: C
+            onActivityItemSelected: o,
+            embeddedActivitiesManager: h.Z,
+            assetNames: b,
+            commandOrigin: x
         }),
-        [Z, A] = l.useState(!1),
-        M = l.useCallback(() => {
-            A(!0);
-        }, [A]),
-        b = l.useCallback(() => {
-            A(!1);
-        }, [A]),
-        R = l.useMemo(
+        [N, I] = l.useState(!1),
+        P = l.useCallback(() => {
+            I(!0);
+        }, [I]),
+        S = l.useCallback(() => {
+            I(!1);
+        }, [I]),
+        Z = l.useMemo(
             () =>
-                (0, s.jsx)('div', {
+                (0, i.jsx)('div', {
                     className: g.overlayBadge,
-                    children: (0, s.jsx)('div', {
+                    children: (0, i.jsx)('div', {
                         className: g.badgeContainer,
-                        children: (0, s.jsx)(p.Z, {
-                            name: i.application.name,
-                            labelType: S
-                        })
+                        children: (0, i.jsx)(p.Z, { labelType: E })
                     })
                 }),
-            [i.application.name, S]
+            [E]
         ),
-        j = l.useMemo(() => {
-            switch (v) {
-                case h.JS.JOIN:
-                    return (0, s.jsx)('div', {
+        T = l.useMemo(() => {
+            switch (O) {
+                case u.JS.JOIN:
+                    return (0, i.jsx)('div', {
                         className: g.activityAction,
-                        children: (0, s.jsx)('div', {
+                        children: (0, i.jsx)('div', {
                             className: g.activityActionButton,
-                            children: (0, s.jsx)(u.Text, {
+                            children: (0, i.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: E.Z.Messages.JOIN
+                                children: m.NW.string(m.t.VJlc0d)
                             })
                         })
                     });
-                case h.JS.LEAVE:
-                    return (0, s.jsx)('div', {
+                case u.JS.LEAVE:
+                    return (0, i.jsx)('div', {
                         className: g.activityAction,
-                        children: (0, s.jsx)('div', {
-                            className: o()(g.activityActionButton, g.activityActionButtonDanger),
-                            children: (0, s.jsx)(u.Text, {
+                        children: (0, i.jsx)('div', {
+                            className: a()(g.activityActionButton, g.activityActionButtonDanger),
+                            children: (0, i.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: E.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE
+                                children: m.NW.string(m.t['wH/wDA'])
                             })
                         })
                     });
-                case h.JS.START:
+                case u.JS.START:
                 default:
-                    return (0, s.jsx)(s.Fragment, {});
+                    return null;
             }
-        }, [v]);
-    return (0, s.jsx)(u.Button, {
-        onClick: T,
+        }, [O]);
+    return (0, i.jsx)(c.zxk, {
+        onClick: v,
         color: 'transparent',
-        look: u.Button.Looks.BLANK,
-        size: u.Button.Sizes.NONE,
-        onFocus: M,
-        onBlur: b,
-        onMouseEnter: M,
-        onMouseLeave: b,
+        look: c.zxk.Looks.BLANK,
+        size: c.zxk.Sizes.NONE,
+        onFocus: P,
+        onBlur: S,
+        onMouseEnter: P,
+        onMouseLeave: S,
         innerClassName: g.activityItemButtonInnerClass,
-        children: (0, s.jsx)(u.Spring, {
-            config: I,
+        children: (0, i.jsx)(c.AMe, {
+            config: _,
             from: { value: 0 },
-            to: { value: Z ? 1 : 0 },
+            to: { value: +!!N },
             children: (e) => {
                 let { value: t } = e;
-                return (0, s.jsx)(c.animated.div, {
-                    className: o()((0, d.Q)(f.BRd.DARK), g.activityItem, x, {
-                        [g.activityItem_13_11]: 0 === r,
-                        [g.activityItem_16_9]: 1 === r
-                    }),
-                    style: {
-                        transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))
-                    },
-                    children: (0, s.jsxs)(s.Fragment, {
-                        children: [
-                            (0, s.jsx)(m.Z, {
-                                imageBackground: N,
-                                applicationName: i.application.name,
-                                imageClassName: g.activitySuggestionImage,
-                                imageNotFoundClassName: g.brokenImageIconWrapper
+                return (0, i.jsx)(c.f6W, {
+                    theme: f.BRd.DARK,
+                    children: (e) =>
+                        (0, i.jsxs)(s.animated.div, {
+                            className: a()(e, g.activityItem, y, {
+                                [g.activityItem_13_11]: 0 === C,
+                                [g.activityItem_16_9]: 1 === C
                             }),
-                            R,
-                            j
-                        ]
-                    })
+                            style: {
+                                transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))
+                            },
+                            children: [
+                                (0, i.jsx)(d.Z, {
+                                    imageBackground: j,
+                                    applicationName: r.application.name,
+                                    imageClassName: g.activitySuggestionImage,
+                                    imageNotFoundClassName: g.brokenImageIconWrapper
+                                }),
+                                Z,
+                                T
+                            ]
+                        })
                 });
             }
         })
     });
 }
-((a = i || (i = {}))[(a.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (a[(a.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), (x.AspectRatio = i);
+y.AspectRatio = C;

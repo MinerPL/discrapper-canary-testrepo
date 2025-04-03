@@ -1,45 +1,46 @@
-var i = n(735250),
-    s = n(470079),
-    a = n(442837),
+n.d(t, { Z: () => m });
+var i = n(200651),
+    r = n(192379),
+    s = n(442837),
     o = n(831218),
-    r = n(840780),
-    l = n(51596),
+    l = n(840780),
+    a = n(51596),
     c = n(905423),
-    d = n(237997),
-    u = n(145597),
+    u = n(237997),
+    d = n(145597),
     h = n(981631),
-    p = n(689938),
-    f = n(319442);
-let _ = () => (0, l.$Z)('DM_SEARCH');
-t.Z = s.memo(function () {
-    let e = (0, a.e7)([d.Z], () => (d.Z.isUILocked((0, u.QF)()) ? 'true' : 'false')),
-        t = (0, c.Z)((e) => {
-            let { channelId: t } = e;
-            return t;
-        });
-    return (0, i.jsxs)('div', {
-        className: f.privateChannels,
-        children: [
-            (0, i.jsx)('div', {
-                className: f.searchBar,
-                children: (0, i.jsx)('button', {
-                    type: 'button',
-                    className: f.searchBarComponent,
-                    onClick: _,
-                    children: p.Z.Messages.DM_SEARCH_PLACEHOLDER
+    p = n(388032),
+    f = n(302615);
+let g = () => (0, a.$Z)('DM_SEARCH'),
+    m = r.memo(function () {
+        let e = (0, s.e7)([u.default], () => (u.default.isLocked((0, d.getPID)()) ? 'true' : 'false')),
+            t = (0, c.Z)((e) => {
+                let { channelId: t } = e;
+                return t;
+            });
+        return (0, i.jsxs)('div', {
+            className: f.privateChannels,
+            children: [
+                (0, i.jsx)('div', {
+                    className: f.searchBar,
+                    children: (0, i.jsx)('button', {
+                        type: 'button',
+                        className: f.searchBarComponent,
+                        onClick: g,
+                        children: p.NW.string(p.t.LzcpeX)
+                    })
+                }),
+                (0, i.jsx)(o.Z, {
+                    padding: 8,
+                    theme: h.BRd.DARK,
+                    version: e,
+                    selectedChannelId: t
+                }),
+                (0, i.jsx)('section', {
+                    className: f.panels,
+                    'aria-label': p.NW.string(p.t.StREWF),
+                    children: (0, i.jsx)(l.Z, { guildId: null })
                 })
-            }),
-            (0, i.jsx)(o.Z, {
-                padding: 8,
-                theme: h.BRd.DARK,
-                version: e,
-                selectedChannelId: t
-            }),
-            (0, i.jsx)('section', {
-                className: f.panels,
-                'aria-label': p.Z.Messages.ACCOUNT_A11Y_LABEL,
-                children: (0, i.jsx)(r.Z, { guildId: null })
-            })
-        ]
+            ]
+        });
     });
-});

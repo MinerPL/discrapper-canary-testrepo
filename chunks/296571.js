@@ -1,44 +1,40 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    r = n(592125),
-    l = n(739566),
-    o = n(834129),
-    c = n(689938),
-    u = n(238874);
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    a = n(481060),
+    l = n(592125),
+    o = n(739566),
+    s = n(834129),
+    c = n(388032),
+    u = n(907273);
 function d(e) {
     var t;
-    let { message: n, compact: d, usernameHook: _, onClickThread: E, onClickViewThreads: I, onContextMenuThread: m } = e,
-        T = (0, l.ZP)(n),
-        h = _(T),
-        N = (0, a.e7)([r.Z], () => {
+    let { message: n, compact: d, usernameHook: p, onClickThread: m, onClickViewThreads: f, onContextMenuThread: h } = e,
+        g = (0, o.ZP)(n),
+        _ = p(g),
+        b = (0, i.e7)([l.Z], () => {
             var e;
-            return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
+            return l.Z.getChannel(null == (e = n.messageReference) ? void 0 : e.channel_id);
         }),
-        f = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
-            actorName: T.nick,
-            actorHook: h,
-            threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
+        x = c.NW.format(c.t.cZ9Uf3, {
+            actorName: g.nick,
+            actorHook: _,
+            threadName: null != (t = null == b ? void 0 : b.name) ? t : n.content,
             threadOnClick: {
-                onClick: E,
-                onContextMenu: m
+                onClick: m,
+                onContextMenu: h
             },
-            viewThreadsOnClick: I
+            viewThreadsOnClick: f
         });
-    return (0, i.jsx)(o.Z, {
-        iconNode: (0, i.jsx)(s.ThreadIcon, {
+    return (0, r.jsx)(s.Z, {
+        iconNode: (0, r.jsx)(a.or_, {
             size: 'md',
             color: 'currentColor',
             className: u.icon
         }),
         timestamp: n.timestamp,
         compact: d,
-        children: f
+        children: x
     });
 }

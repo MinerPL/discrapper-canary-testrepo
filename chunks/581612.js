@@ -1,21 +1,17 @@
-t.d(r, {
-    Z: function () {
-        return i;
-    },
-    q: function () {
-        return o;
-    }
+n.d(t, {
+    Z: () => l,
+    q: () => i
 });
-var a = t(570140),
-    n = t(91311);
-function i(e, r) {
-    let t = 'boolean' == typeof r ? r : !n.Z.get(e);
-    a.Z.dispatch({
+var r = n(570140),
+    a = n(91311);
+function l(e, t) {
+    let n = 'boolean' == typeof t ? t : !a.Z.get(e);
+    r.Z.dispatch({
         type: 'DEV_TOOLS_DESIGN_TOGGLE_WEB_SET',
         toggle: e,
-        value: t
+        value: n
     });
 }
-function o() {
-    for (let e in n.Z.all()) i(e, !1);
+function i() {
+    for (let e in a.Z.all()) l(e, !1);
 }

@@ -1,26 +1,34 @@
 n.d(t, {
-    R: function () {
-        return o;
-    },
-    b: function () {
-        return s;
-    }
+    R: () => s,
+    b: () => a
 }),
-    n(724458),
     n(653041),
     n(47120);
-var a = n(470079),
-    r = n(979554);
-class s {
+var r = n(192379),
+    i = n(979554);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class a {
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(r.Z.AVATAR_DECORATION);
+        return this.getFirstItemByType(i.Z.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(r.Z.PROFILE_EFFECT);
+        return this.getFirstItemByType(i.Z.PROFILE_EFFECT);
     }
     getFirstItemByType(e) {
         var t;
-        let n = (null !== (t = this.itemsByTypes.get(e)) && void 0 !== t ? t : [])[0];
+        let n = (null != (t = this.itemsByTypes.get(e)) ? t : [])[0];
         if (null != n) return n;
     }
     sortByTypes(e) {
@@ -30,22 +38,11 @@ class s {
         }, new Map());
     }
     constructor(e) {
-        var t, n, a;
-        (t = this),
-            (a = void 0),
-            (n = 'itemsByTypes') in t
-                ? Object.defineProperty(t, n, {
-                      value: a,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = a),
-            (this.itemsByTypes = this.sortByTypes(e));
+        o(this, 'itemsByTypes', void 0), (this.itemsByTypes = this.sortByTypes(e));
     }
 }
-let o = (e) => {
-    let { firstProfileEffect: t, firstAvatarDecoration: n } = a.useMemo(() => new s(e.items), [e]);
+let s = (e) => {
+    let { firstProfileEffect: t, firstAvatarDecoration: n } = r.useMemo(() => new a(e.items), [e]);
     return {
         firstProfileEffect: t,
         firstAvatarDecoration: n

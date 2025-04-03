@@ -1,18 +1,27 @@
-var r = n(318217),
-    i = n(689938),
+n.d(t, {
+    O: () => l,
+    Z: () => c
+});
+var r = n(306968),
+    i = n(871465),
+    o = n(388032),
     a = n(586393),
-    s = n(464912);
-let o = {
+    s = n(464912),
+    l = (function (e) {
+        return (e[(e.THROW_EMOJI = 0)] = 'THROW_EMOJI'), (e[(e.SNOW = 1)] = 'SNOW'), e;
+    })({});
+let c = {
     experiment: r.Z,
-    startTimeMs: 1702576800000,
-    endTimeMs: 1704218400000,
+    startTimeMs: 1734631200000,
+    endTimeMs: 1735952400000,
     isDesktopOnly: !0,
-    ringtone: 'call_ringing_snowsgiving',
-    getRingtoneSettingsLabel: () => i.Z.Messages.SOUND_INCOMING_RING_EOY_2023 + ' \u2744️',
+    soundpack: i.YC.WINTER_HOLIDAY,
+    soundpackLabel: o.t.Z5OQNj,
     appSpinnerSources: {
         webmDark: a,
         webmLight: s
     },
-    getLoadingTips: () => []
+    emojiAnimationType: 1,
+    emojiAnimationTriggers: ['snowflake'],
+    triggerEmojiAnimationFromSentMessage: !1
 };
-t.Z = o;

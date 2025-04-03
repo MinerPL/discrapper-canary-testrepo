@@ -1,98 +1,80 @@
-n.r(t), n(47120);
-var a = n(735250),
-    l = n(470079),
-    o = n(481060),
-    r = n(238675),
-    s = n(677065);
-let i = Object.entries(r.fw).map((e) => {
-        let [t, n] = e;
-        return {
-            label: t,
-            value: n
-        };
-    }),
-    c = Object.entries(r.sJ)
-        .map((e) => {
-            let [t, n] = e;
-            return {
-                label: t,
-                value: n
-            };
-        })
-        .filter((e) => {
-            let { value: t } = e;
-            return 'number' == typeof t;
-        });
-t.default = function (e) {
+n.d(t, { default: () => o }), n(47120);
+var a = n(200651),
+    l = n(192379),
+    s = n(481060),
+    i = n(238675),
+    r = n(37291),
+    c = n(332915);
+let o = function (e) {
     let { onClose: t, transitionState: n } = e,
-        [u, d] = l.useState(null),
-        [A, C] = l.useState(null),
-        [h, f] = l.useState(null),
-        [T, p] = l.useState(''),
-        S = async () => {
-            if (u) {
-                p('');
+        [o, A] = l.useState(null),
+        [d, u] = l.useState(null),
+        [T, C] = l.useState(null),
+        [h, f] = l.useState(''),
+        p = async () => {
+            if (o) {
+                f('');
                 try {
-                    await (0, r.qy)(u, {
-                        difficulty: null != A ? A : void 0,
-                        should_serve_invisible: null != h ? h : void 0
+                    await (0, i.qy)(o, {
+                        difficulty: null != d ? d : void 0,
+                        should_serve_invisible: null != T ? T : void 0
                     });
                 } catch (e) {
-                    p(e.message);
+                    f(e.message);
                 }
             }
         };
-    return (0, a.jsxs)(o.ModalRoot, {
+    return (0, a.jsxs)(s.Y0X, {
         transitionState: n,
         children: [
-            (0, a.jsxs)(o.ModalHeader, {
-                className: s.header,
+            (0, a.jsxs)(s.xBx, {
+                className: c.header,
                 children: [
-                    (0, a.jsx)(o.Heading, {
+                    (0, a.jsx)(s.X6q, {
                         variant: 'heading-lg/semibold',
                         children: 'Captcha Test Tool'
                     }),
-                    (0, a.jsx)(o.ModalCloseButton, { onClick: t })
+                    (0, a.jsx)(s.olH, { onClick: t })
                 ]
             }),
-            (0, a.jsxs)(o.ModalContent, {
-                className: s.content,
+            (0, a.jsxs)(s.hzk, {
+                className: c.content,
                 children: [
-                    (0, a.jsx)(o.SingleSelect, {
-                        value: u,
-                        options: i,
+                    (0, a.jsx)(s.q4e, {
+                        value: o,
+                        options: r.p,
                         onChange: (e) => {
-                            e !== r.fw.HCAPTCHA_RQDATA && C(null), e !== r.fw.HCAPTCHA_EASY && f(null), d(e), p('');
+                            e !== i.fw.HCAPTCHA_RQDATA && e !== i.fw.SMITE_RQDATA && C(null), e !== i.fw.HCAPTCHA_RQDATA && u(null), A(e), f('');
                         }
                     }),
-                    u === r.fw.HCAPTCHA_RQDATA &&
-                        (0, a.jsx)(o.SingleSelect, {
-                            value: A,
-                            options: c,
+                    o === i.fw.HCAPTCHA_RQDATA &&
+                        (0, a.jsx)(s.q4e, {
+                            value: d,
+                            options: r.Z,
                             onChange: (e) => {
-                                u === r.fw.HCAPTCHA_RQDATA && C(e);
+                                o === i.fw.HCAPTCHA_RQDATA && u(e);
                             }
                         }),
-                    u === r.fw.HCAPTCHA_EASY &&
-                        (0, a.jsx)(o.Checkbox, {
-                            value: null != h && h,
-                            onChange: (e, t) => f(t),
-                            children: (0, a.jsx)(o.Text, {
+                    (o === i.fw.HCAPTCHA_RQDATA || o === i.fw.SMITE_RQDATA) &&
+                        (0, a.jsx)(s.XZJ, {
+                            value: null != T && T,
+                            onChange: (e, t) => C(t),
+                            children: (0, a.jsx)(s.Text, {
                                 variant: 'text-md/normal',
                                 children: 'Should serve invisible?'
                             })
                         })
                 ]
             }),
-            (0, a.jsxs)(o.ModalFooter, {
-                className: s.footer,
+            (0, a.jsxs)(s.mzw, {
+                className: c.footer,
                 children: [
-                    (0, a.jsx)(o.Button, {
-                        onClick: S,
-                        disabled: !u,
+                    (0, a.jsx)(s.zxk, {
+                        onClick: p,
+                        disabled: !o,
                         children: 'Trigger Captcha'
                     }),
-                    '' !== T && (0, a.jsx)(o.InputError, { error: T })
+                    '' !== h && (0, a.jsx)(s.pdY, { error: h })
                 ]
             })
         ]

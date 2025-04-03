@@ -1,26 +1,24 @@
 n.d(t, {
-    I: function () {
-        return i;
-    }
+    I: () => c,
+    Z: () => g
 }),
-    n(47120);
+    n(47120),
+    n(977457);
 var i,
-    s,
+    r,
     o,
     a,
-    l,
-    r,
-    c = n(442837),
-    u = n(570140);
-((o = i || (i = {})).HOVER = 'HOVER'), (o.EXTERNAL = 'EXTERNAL'), (o.RANDOM = 'RANDOM');
-let d = {},
+    s = n(442837),
+    l = n(570140),
+    c = (((r = {}).HOVER = 'HOVER'), (r.EXTERNAL = 'EXTERNAL'), (r.RANDOM = 'RANDOM'), r);
+let u = {},
+    d = {},
     h = {},
-    m = {},
     p = (e, t) => {
         let n = null != t.id ? t.id : t.name;
         return ''.concat(e, ':').concat(n);
     },
-    g = (e, t) => {
+    m = (e, t) => {
         var n;
         let i;
         switch (e) {
@@ -33,24 +31,24 @@ let d = {},
             default:
                 i = 'EXTERNAL';
         }
-        let s = Object.fromEntries(
-            Object.entries(null !== (n = h[t]) && void 0 !== n ? n : {}).filter((e) => {
+        let r = Object.fromEntries(
+            Object.entries(null != (n = d[t]) ? n : {}).filter((e) => {
                 let [, t] = e;
                 return t === i;
             })
         );
-        if (Object.keys(s).length >= 5 && 'EXTERNAL' === e) {
-            for (let e in s)
-                if (null == m[t] || null == m[t][e]) {
-                    delete h[t][e], delete s[e];
+        if (Object.keys(r).length >= 5 && 'EXTERNAL' === e) {
+            for (let e in r)
+                if (null == h[t] || null == h[t][e]) {
+                    delete d[t][e], delete r[e];
                     break;
                 }
         }
-        return Object.keys(s).length;
+        return Object.keys(r).length;
     };
-class f extends (s = c.ZP.Store) {
+class f extends (i = s.ZP.Store) {
     getReactionPickerAnimation(e, t, n) {
-        return d[
+        return u[
             ''
                 .concat(e, ':')
                 .concat(t, ':')
@@ -59,60 +57,57 @@ class f extends (s = c.ZP.Store) {
     }
     getEffectForEmojiId(e, t, n) {
         var i;
-        let s = p(t, n);
-        return null === (i = h[e]) || void 0 === i ? void 0 : i[s];
+        let r = p(t, n);
+        return null == (i = d[e]) ? void 0 : i[r];
     }
 }
-(r = 'BurstReactionEffectsStore'),
-    (l = 'displayName') in (a = f)
-        ? Object.defineProperty(a, l, {
-              value: r,
+(a = 'BurstReactionEffectsStore'),
+    (o = 'displayName') in f
+        ? Object.defineProperty(f, o, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[l] = r),
-    (t.Z = new f(u.Z, {
-        BURST_REACTION_EFFECT_CLEAR: (e) => {
-            var t;
-            let { channelId: n, messageId: i, emoji: s } = e,
-                o = p(i, s);
-            null === (t = h[n]) || void 0 === t || delete t[o];
-        },
-        BURST_REACTION_EFFECT_PLAY: (e) => {
-            var t, n, i;
-            let { channelId: s, messageId: o, emoji: a, key: l } = e,
-                r = p(o, a);
-            if (g(l, s) >= 5) return;
-            let c = null !== (t = h[s]) && void 0 !== t ? t : {},
-                u = (null !== (n = m[s]) && void 0 !== n ? n : {})[r],
-                d = c[r];
-            if ('HOVER' !== l || null == d) {
-                'HOVER' === d && 'EXTERNAL' === l && null != u && ('function' == typeof u.destroy && u.destroy(), null === (i = m[s]) || void 0 === i || delete i[r], (d = void 0));
-                null == d && (null != h[s] ? (h[s][r] = l) : (h[s] = { [r]: l }));
-            }
-        },
-        BURST_REACTION_ANIMATION_ADD: (e) => {
-            let { channelId: t, messageId: n, emoji: i, animation: s } = e,
-                o = p(n, i);
-            null == m[t] && (m[t] = {}), (m[t][o] = s);
-        },
-        BURST_REACTION_PICKER_ANIMATION_ADD: (e) => {
-            let { messageId: t, emojiName: n, emojiId: i, startPosition: s } = e;
-            d[
-                ''
-                    .concat(t, ':')
-                    .concat(n, ':')
-                    .concat(null != i ? i : '')
-            ] = s;
-        },
-        BURST_REACTION_PICKER_ANIMATION_CLEAR: (e) => {
-            let { messageId: t, emojiName: n, emojiId: i } = e;
-            delete d[
-                ''
-                    .concat(t, ':')
-                    .concat(n, ':')
-                    .concat(null != i ? i : '')
-            ];
-        }
-    }));
+        : (f[o] = a);
+let g = new f(l.Z, {
+    BURST_REACTION_EFFECT_CLEAR: (e) => {
+        var t;
+        let { channelId: n, messageId: i, emoji: r } = e,
+            o = p(i, r);
+        null == (t = d[n]) || delete t[o];
+    },
+    BURST_REACTION_EFFECT_PLAY: (e) => {
+        var t, n, i;
+        let { channelId: r, messageId: o, emoji: a, key: s } = e,
+            l = p(o, a);
+        if (m(s, r) >= 5) return;
+        let c = null != (t = d[r]) ? t : {},
+            u = (null != (n = h[r]) ? n : {})[l],
+            f = c[l];
+        ('HOVER' !== s || null == f) && ('HOVER' === f && 'EXTERNAL' === s && null != u && ('function' == typeof u.destroy && u.destroy(), null == (i = h[r]) || delete i[l], (f = void 0)), null == f && (null != d[r] ? (d[r][l] = s) : (d[r] = { [l]: s })));
+    },
+    BURST_REACTION_ANIMATION_ADD: (e) => {
+        let { channelId: t, messageId: n, emoji: i, animation: r } = e,
+            o = p(n, i);
+        null == h[t] && (h[t] = {}), (h[t][o] = r);
+    },
+    BURST_REACTION_PICKER_ANIMATION_ADD: (e) => {
+        let { messageId: t, emojiName: n, emojiId: i, startPosition: r } = e;
+        u[
+            ''
+                .concat(t, ':')
+                .concat(n, ':')
+                .concat(null != i ? i : '')
+        ] = r;
+    },
+    BURST_REACTION_PICKER_ANIMATION_CLEAR: (e) => {
+        let { messageId: t, emojiName: n, emojiId: i } = e;
+        delete u[
+            ''
+                .concat(t, ':')
+                .concat(n, ':')
+                .concat(null != i ? i : '')
+        ];
+    }
+});

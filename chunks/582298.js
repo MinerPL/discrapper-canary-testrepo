@@ -1,75 +1,114 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(430824),
-    r = n(646504),
-    l = n(834129),
-    o = n(981631),
-    c = n(689938),
-    u = n(400362);
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    a = n(430824),
+    l = n(646504),
+    o = n(834129),
+    s = n(981631),
+    c = n(388032),
+    u = n(39028);
 function d(e) {
     let t,
-        { compact: d, isOwner: _, channel: E } = e,
-        I = () => {
-            let e = s.Z.getGuild(E.getGuildId());
+        { compact: d, isOwner: p, channel: m } = e,
+        f = () => {
+            let e = a.Z.getGuild(m.getGuildId());
             null != e &&
-                ((0, a.openModalLazy)(async () => {
-                    let { default: t } = await Promise.all([n.e('7654'), n.e('1187'), n.e('84003')]).then(n.bind(n, 560114));
-                    return (n) =>
-                        (0, i.jsx)(t, {
-                            ...n,
-                            guild: e,
-                            channel: E,
-                            source: o.t4x.INVITE_SYSTEM_MESSAGE
-                        });
+                ((0, i.ZDy)(async () => {
+                    let { default: t } = await Promise.all([n.e('7654'), n.e('49049'), n.e('19476')]).then(n.bind(n, 560114));
+                    return (n) => {
+                        var i, a;
+                        return (0, r.jsx)(
+                            t,
+                            ((i = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, n)),
+                            (a = a =
+                                {
+                                    guild: e,
+                                    channel: m,
+                                    source: s.t4x.INVITE_SYSTEM_MESSAGE
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                  }),
+                            i)
+                        );
+                    };
                 }),
-                (0, r.w)());
+                (0, l.w)());
         },
-        m = (e, t) =>
-            (0, i.jsx)(
-                a.Anchor,
+        h = (e, t) =>
+            (0, r.jsx)(
+                i.eee,
                 {
                     className: u.inviteLink,
-                    onClick: I,
+                    onClick: f,
                     children: e
                 },
                 t
             );
     return (
         (t = d
-            ? (0, i.jsx)('div', {
+            ? (0, r.jsx)('div', {
                   className: u.inviteContent,
-                  children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({ inviteHook: m }) : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({ inviteHook: m })
+                  children: p ? c.NW.format(c.t['9OheEh'], { inviteHook: h }) : c.NW.format(c.t['7hv6yM'], { inviteHook: h })
               })
-            : (0, i.jsxs)('div', {
+            : (0, r.jsxs)('div', {
                   className: u.content,
                   children: [
-                      (0, i.jsx)('div', {
+                      (0, r.jsx)('div', {
                           className: u.inviteHeader,
-                          children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS
+                          children: p ? c.NW.string(c.t['Ry1T//']) : c.NW.string(c.t.ppUFLy)
                       }),
-                      (0, i.jsx)('div', {
+                      (0, r.jsx)('div', {
                           className: u.inviteContent,
-                          children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
+                          children: p ? c.NW.string(c.t.kLfkNj) : c.NW.string(c.t.gRHGFB)
                       }),
-                      (0, i.jsx)(a.Button, {
-                          onClick: I,
-                          size: a.Button.Sizes.SMALL,
+                      (0, r.jsx)(i.zxk, {
+                          onClick: f,
+                          size: i.zxk.Sizes.SMALL,
                           className: u.inviteButton,
-                          children: c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_BUTTON
+                          children: c.NW.string(c.t.K1BAQ0)
                       })
                   ]
               })),
-        (0, i.jsx)(l.Z, {
+        (0, r.jsx)(o.Z, {
             className: d ? u.compact : u.inviteContent,
             iconNode: d
                 ? null
-                : (0, i.jsx)('img', {
+                : (0, r.jsx)('img', {
                       alt: '',
                       src: n(826926),
                       width: 40,

@@ -1,40 +1,36 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var r = n(735250);
-n(470079);
-var s = n(481060),
-    i = n(847033),
-    o = n(857428),
-    a = n(689938),
-    l = n(973600);
-function c() {
-    let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: n } = (0, i.m)();
+r.d(t, { Z: () => a });
+var n = r(200651);
+r(192379);
+var i = r(481060),
+    o = r(847033),
+    s = r(544978),
+    c = r(388032),
+    l = r(356874);
+function a() {
+    let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: r } = (0, o.m)();
     return t
-        ? (0, r.jsxs)(r.Fragment, {
+        ? (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, n.jsxs)('div', {
                       className: l.previewNotice,
                       children: [
-                          (0, r.jsx)(s.EyeSlashIcon, {
+                          (0, n.jsx)(i.kZF, {
                               size: 'xs',
                               color: 'currentColor'
                           }),
-                          (0, r.jsx)(s.Text, {
+                          (0, n.jsx)(i.Text, {
                               variant: 'text-sm/normal',
                               className: l.previewNoticeText,
-                              children: e === o.y.GUILD_PRODUCTS_PREVIEW ? a.Z.Messages.GUILD_SHOP_TAB_PREVIEW_NOTICE_LABEL : a.Z.Messages.GUILD_SHOP_PAGE_PREVIEW_NOTICE_LABEL
+                              children: e === s.y.GUILD_PRODUCTS_PREVIEW ? c.NW.string(c.t.F4Z0nZ) : c.NW.string(c.t.pzTFpK)
                           })
                       ]
                   }),
-                  (0, r.jsx)(s.Button, {
-                      size: s.Button.Sizes.MIN,
-                      color: s.Button.Colors.PRIMARY,
+                  (0, n.jsx)(i.zxk, {
+                      size: i.zxk.Sizes.MIN,
+                      color: i.zxk.Colors.PRIMARY,
                       className: l.removePreviewButton,
-                      onClick: n,
-                      children: e === o.y.GUILD_PRODUCTS_PREVIEW ? a.Z.Messages.GUILD_SHOP_REMOVE_PREVIEW_TAB_BUTTON : a.Z.Messages.GUILD_SHOP_REMOVE_PREVIEW_PAGE_BUTTON
+                      onClick: r,
+                      children: e === s.y.GUILD_PRODUCTS_PREVIEW ? c.NW.string(c.t.YF35pa) : c.NW.string(c.t.r30bk5)
                   })
               ]
           })

@@ -1,37 +1,46 @@
-t.d(n, {
-    OA: function () {
-        return a;
-    },
-    _C: function () {
-        return l;
-    },
-    kT: function () {
-        return s;
-    }
-});
-var o = t(823379),
-    r = t(246364),
-    i = t(592286);
-let a = (e) => {
-    let { required: n, response: t, field_type: i } = e;
-    if (!n) return !0;
-    if (null == t) return !1;
+n.d(t, {
+    Dc: () => d,
+    OA: () => l,
+    _C: () => u,
+    kT: () => c
+}),
+    n(566702);
+var r = n(823379),
+    i = n(63568),
+    o = n(246364),
+    a = n(592286),
+    s = n(981631);
+let l = (e) => {
+    let { required: t, response: n, field_type: i } = e;
+    if (!t) return !0;
+    if (null == n) return !1;
     switch (i) {
-        case r.QJ.TERMS:
-        case r.QJ.VERIFICATION:
-            return !!t;
-        case r.QJ.TEXT_INPUT:
-        case r.QJ.PARAGRAPH:
-            return 'string' == typeof t && '' !== t.trim();
-        case r.QJ.MULTIPLE_CHOICE:
-            return 'number' == typeof t;
+        case o.QJ.TERMS:
+        case o.QJ.VERIFICATION:
+            return !!n;
+        case o.QJ.TEXT_INPUT:
+        case o.QJ.PARAGRAPH:
+            return 'string' == typeof n && '' !== n.trim();
+        case o.QJ.MULTIPLE_CHOICE:
+            return 'number' == typeof n;
         default:
-            return (0, o.vE)(i);
+            return (0, r.vE)(i);
     }
 };
-function s(e) {
-    return i.lI.has(null == e ? void 0 : e.field_type);
+function c(e) {
+    return a.lI.has(null == e ? void 0 : e.field_type);
 }
-function l(e) {
-    return i.hZ.has(null == e ? void 0 : e.field_type);
+function u(e) {
+    return a.hZ.has(null == e ? void 0 : e.field_type);
+}
+function d(e) {
+    if (null == e) return !1;
+    let { enabled: t } = i.tW.getCurrentConfig(
+        {
+            guildId: e.id,
+            location: 'GuildRecord'
+        },
+        { autoTrackExposure: !1 }
+    );
+    return t ? e.hasFeature(s.oNc.MEMBER_VERIFICATION_GATE_ENABLED) : e.hasVerificationGate();
 }

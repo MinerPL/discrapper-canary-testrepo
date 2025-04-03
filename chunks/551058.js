@@ -1,41 +1,45 @@
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(239052);
-let u = i.memo(function (e) {
-    let { children: t, className: n, icon: i, isCollapsed: a, onClick: u, 'aria-label': c } = e;
-    return (0, r.jsx)('div', {
-        className: s()(l.wrapper, n),
-        children: (0, r.jsxs)(o.Clickable, {
-            onClick: u,
-            onKeyDown: (e) => e.stopPropagation(),
-            className: s()(l.header, { [l.interactive]: null != a }),
-            'aria-expanded': null != a ? !a : void 0,
-            'aria-label': c,
+n.d(t, { Z: () => u });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(52565);
+let c = 16,
+    u = i.memo(function (e) {
+        let { children: t, trailing: n, className: i, icon: o, isCollapsed: u, onClick: d, 'aria-label': f } = e;
+        return (0, r.jsxs)('div', {
+            className: a()(l.wrapper, i),
             children: [
-                null != i &&
-                    (0, r.jsx)('div', {
-                        'aria-hidden': !0,
-                        className: l.headerIcon,
-                        children: i
-                    }),
-                (0, r.jsx)('span', {
-                    className: l.headerLabel,
-                    children: t
+                (0, r.jsxs)(s.P3F, {
+                    onClick: d,
+                    onKeyDown: (e) => e.stopPropagation(),
+                    className: a()(l.header, { [l.interactive]: null != u }),
+                    'aria-expanded': null != u ? !u : void 0,
+                    'aria-label': f,
+                    children: [
+                        null != o &&
+                            (0, r.jsx)('div', {
+                                'aria-hidden': !0,
+                                className: l.headerIcon,
+                                children: o
+                            }),
+                        (0, r.jsx)('span', {
+                            className: l.headerLabel,
+                            children: t
+                        }),
+                        null != u
+                            ? (0, r.jsx)(s.CJ0, {
+                                  size: 'custom',
+                                  color: 'currentColor',
+                                  className: a()(l.headerCollapseIcon, { [l.headerCollapseIconCollapsed]: u }),
+                                  height: c,
+                                  width: c
+                              })
+                            : null
+                    ]
                 }),
-                null != a
-                    ? (0, r.jsx)(o.ChevronSmallDownIcon, {
-                          size: 'custom',
-                          color: 'currentColor',
-                          className: s()(l.headerCollapseIcon, { [l.headerCollapseIconCollapsed]: a }),
-                          height: 16,
-                          width: 16
-                      })
-                    : null
+                n
             ]
-        })
+        });
     });
-});
-t.Z = u;

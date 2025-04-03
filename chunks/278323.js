@@ -1,39 +1,41 @@
+n.d(t, { Z: () => d });
 var r = n(544891),
     i = n(570140),
-    a = n(367907),
-    s = n(957730),
-    o = n(592125),
+    o = n(367907),
+    a = n(957730),
+    s = n(592125),
     l = n(493683),
-    u = n(904245),
-    c = n(981631);
-t.Z = {
+    c = n(904245),
+    u = n(981631);
+let d = {
     updateActivity(e) {
-        let { applicationId: t, distributor: n, shareActivity: a, token: s = null, duration: o = 0, closed: l = !1, exePath: u = null, voiceChannelId: d = null, sessionId: _ = null, mediaSessionId: E = null } = e;
+        let { applicationId: t, distributor: n, shareActivity: o, token: a = null, duration: s = 0, closed: l = !1, exePath: c = null, voiceChannelId: d = null, sessionId: f = null, mediaSessionId: _ = null } = e;
         i.Z.wait(() =>
             i.Z.dispatch({
                 type: 'ACTIVITY_UPDATE_START',
                 applicationId: t,
-                duration: o,
+                duration: s,
                 distributor: n
             })
         ),
             r.tn
                 .post({
-                    url: c.ANM.ACTIVITIES,
+                    url: u.ANM.ACTIVITIES,
                     body: {
                         application_id: t,
-                        token: s,
-                        duration: o,
-                        share_activity: a,
+                        token: a,
+                        duration: s,
+                        share_activity: o,
                         distributor: n,
                         closed: l,
-                        exePath: u,
+                        exePath: c,
                         voice_channel_id: d,
-                        session_id: _,
-                        media_session_id: E
+                        session_id: f,
+                        media_session_id: _
                     },
                     retries: 1,
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !0
                 })
                 .then((e) => {
                     let {
@@ -43,7 +45,7 @@ t.Z = {
                         type: 'ACTIVITY_UPDATE_SUCCESS',
                         applicationId: t,
                         token: r,
-                        duration: o,
+                        duration: s,
                         distributor: n
                     });
                 })
@@ -56,19 +58,19 @@ t.Z = {
     },
     sendActivityInvite(e) {
         let { channelId: t, type: n, activity: r, content: i, location: l } = e,
-            d = o.Z.getChannel(t);
+            d = s.Z.getChannel(t);
         if (null == d) return Promise.resolve(null);
-        let _ = s.ZP.parse(d, null != i ? i : '');
-        return u.Z.sendMessage(d.id, _, !1, {
+        let f = a.ZP.parse(d, null != i ? i : '');
+        return c.Z.sendMessage(d.id, f, !1, {
             activityAction: {
                 type: n,
                 activity: r
             }
         }).then(
             (e) => (
-                a.ZP.trackWithMetadata(c.rMx.INVITE_SENT, {
+                o.ZP.trackWithMetadata(u.rMx.INVITE_SENT, {
                     location: l,
-                    invite_type: r.type === c.IIU.LISTENING ? c.dAT.SPOTIFY : c.dAT.APPLICATION,
+                    invite_type: r.type === u.IIU.LISTENING ? u.dAT.SPOTIFY : u.dAT.APPLICATION,
                     application_id: r.application_id,
                     guild_id: d.getGuildId(),
                     channel_id: d.id,
@@ -80,29 +82,50 @@ t.Z = {
         );
     },
     sendActivityInviteUser(e) {
-        let { userId: t, type: n, activity: r, content: i, location: a } = e;
+        let { userId: t, type: n, activity: r, content: i, location: o } = e;
         return l.Z.ensurePrivateChannel(t).then((e) =>
             this.sendActivityInvite({
                 channelId: e,
                 type: n,
                 activity: r,
                 content: i,
-                location: a
+                location: o
             })
         );
     },
-    async getJoinSecret(e, t, n, i, a) {
-        let s = {};
+    async getJoinSecret(e, t, n, i, o) {
+        let a = {};
         return (
-            null != i && (s.channel_id = i),
-            null != a && (s.message_id = a),
+            null != i && (a.channel_id = i),
+            null != o && (a.message_id = o),
             (
                 await r.tn.get({
-                    url: c.ANM.USER_ACTIVITY_JOIN(e, t, n),
+                    url: u.ANM.USER_ACTIVITY_JOIN(e, t, n),
                     retries: 3,
-                    query: s
+                    query: a,
+                    rejectWithError: !1
                 })
             ).body.secret
         );
+    },
+    async subscribeActivities(e) {
+        let t = e.map((e) => {
+            let { userId: t, applicationId: n, partyId: r, messageId: i, channelId: o } = e;
+            return {
+                user_id: t,
+                application_id: n,
+                party_id: r,
+                message_id: i,
+                channel_id: o
+            };
+        });
+        return (
+            await r.tn.post({
+                url: u.ANM.USER_ACTIVITY_SUBSCRIBE,
+                body: { subscriptions: t },
+                retries: 1,
+                rejectWithError: !1
+            })
+        ).body;
     }
 };

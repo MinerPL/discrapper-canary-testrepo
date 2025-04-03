@@ -1,176 +1,171 @@
-t.d(n, {
-    Z: function () {
-        return g;
-    }
-}),
-    t(653041);
-var a = t(735250);
-t(470079);
-var l = t(442837),
-    s = t(481060),
-    i = t(594174),
-    o = t(311888),
-    r = t(63063),
-    c = t(5192),
-    d = t(431328),
-    u = t(501655),
-    _ = t(659972),
-    m = t(981631),
-    h = t(765305),
-    E = t(689938),
-    x = t(264252);
-function I(e) {
-    let { icon: n } = e;
-    return (0, a.jsx)('div', {
-        className: x.iconContainer,
-        children: (0, a.jsx)(n, {
+n.d(t, { Z: () => N }), n(266796), n(653041);
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(594174),
+    o = n(311888),
+    c = n(63063),
+    s = n(5192),
+    d = n(431328),
+    u = n(501655),
+    h = n(659972),
+    g = n(981631),
+    _ = n(765305),
+    m = n(388032),
+    b = n(158170);
+function x(e) {
+    let { icon: t } = e;
+    return (0, r.jsx)('div', {
+        className: b.iconContainer,
+        children: (0, r.jsx)(t, {
             color: 'currentColor',
             size: 'md'
         })
     });
 }
-function T(e) {
-    let { icon: n, text: t } = e;
-    return (0, a.jsxs)('div', {
-        className: x.listItemContainer,
+function f(e) {
+    let { icon: t, text: n } = e;
+    return (0, r.jsxs)('div', {
+        className: b.listItemContainer,
         children: [
-            (0, a.jsx)('div', {
-                className: x.listItemIconContainer,
-                children: n
+            (0, r.jsx)('div', {
+                className: b.listItemIconContainer,
+                children: t
             }),
-            (0, a.jsx)(s.Text, {
-                className: x.listItemText,
+            (0, r.jsx)(l.Text, {
+                className: b.listItemText,
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: t
+                children: n
             })
         ]
     });
 }
-function N(e) {
-    var n;
-    let { guild: t, channel: s, stageData: o } = e,
-        r = (0, l.e7)([i.default], () => i.default.getCurrentUser(), []),
-        m = {
+function p(e) {
+    var t;
+    let { guild: n, channel: l, stageData: o } = e,
+        c = (0, i.e7)([a.default], () => a.default.getCurrentUser(), []),
+        g = {
             id: '1337',
-            guild_id: t.id,
-            channel_id: s.id,
+            guild_id: n.id,
+            channel_id: l.id,
             topic: o.topic,
             description: o.description,
-            privacy_level: null !== (n = o.privacyLevel) && void 0 !== n ? n : h.j8.PUBLIC
+            privacy_level: null != (t = o.privacyLevel) ? t : _.j8.PUBLIC
         },
-        E = (0, d.w8)(s.id, u.pV.SPEAKER),
-        I = (0, d.Rk)(s.id, u.pV.AUDIENCE),
-        T = E.slice(0, 5);
+        m = (0, d.w8)(l.id, u.pV.SPEAKER),
+        x = (0, d.Rk)(l.id, u.pV.AUDIENCE),
+        f = m.slice(0, 5);
     return (
         null ==
-            T.find((e) => {
-                var n;
-                return (null === (n = e.user) || void 0 === n ? void 0 : n.id) === (null == r ? void 0 : r.id);
+            f.find((e) => {
+                var t;
+                return (null == (t = e.user) ? void 0 : t.id) === (null == c ? void 0 : c.id);
             }) &&
-            T.push({
-                user: r,
-                userNick: c.ZP.getName(t.id, s.id, r)
+            f.push({
+                user: c,
+                userNick: s.ZP.getName(n.id, l.id, c)
             }),
-        (0, a.jsx)('div', {
-            className: x.previewCardContainer,
-            children: (0, a.jsx)('div', {
-                className: x.previewCard,
-                children: (0, a.jsx)(_.Z, {
-                    guild: t,
-                    stageInstance: m,
+        (0, r.jsx)('div', {
+            className: b.previewCardContainer,
+            children: (0, r.jsx)('div', {
+                className: b.previewCard,
+                children: (0, r.jsx)(h.Z, {
+                    guild: n,
+                    stageInstance: g,
                     showGuildPopout: !1,
                     setShowGuildPopout: () => {},
-                    source: _.k.UNSPECIFIED,
-                    speakers: T,
-                    speakerCount: E.length,
-                    audienceCount: Math.max(1337, I),
-                    channelName: s.name
+                    source: h.k.UNSPECIFIED,
+                    speakers: f,
+                    speakerCount: m.length,
+                    audienceCount: Math.max(1337, x),
+                    channelName: l.name
                 })
             })
         })
     );
 }
-function g(e) {
-    let { guild: n, channel: t, stageData: l, headerId: i, loading: c, onNext: d, onCancel: u, onBack: _ } = e;
-    return null == n || null == t || null == l
+function N(e) {
+    let { guild: t, channel: n, stageData: i, headerId: a, loading: s, onNext: d, onCancel: u, onBack: h } = e;
+    return null == t || null == n || null == i
         ? null
-        : (0, a.jsxs)(a.Fragment, {
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, a.jsx)(N, {
-                      guild: n,
-                      channel: t,
-                      stageData: l
+                  (0, r.jsx)(p, {
+                      guild: t,
+                      channel: n,
+                      stageData: i
                   }),
-                  (0, a.jsxs)(s.ModalContent, {
-                      className: x.container,
+                  (0, r.jsxs)(l.hzk, {
+                      className: b.container,
                       children: [
-                          (0, a.jsxs)('div', {
-                              className: x.header,
+                          (0, r.jsxs)('div', {
+                              className: b.header,
                               children: [
-                                  (0, a.jsx)(s.Heading, {
-                                      id: i,
-                                      className: x.__invalid_title,
+                                  (0, r.jsx)(l.X6q, {
+                                      id: a,
+                                      className: b.__invalid_title,
                                       variant: 'heading-xl/semibold',
-                                      children: E.Z.Messages.START_STAGE_PUBLIC_PREVIEW_TITLE
+                                      children: m.NW.string(m.t.GXpXTE)
                                   }),
-                                  (0, a.jsx)(s.Text, {
-                                      className: x.subtitle,
+                                  (0, r.jsx)(l.Text, {
+                                      className: b.subtitle,
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: E.Z.Messages.START_STAGE_PUBLIC_PREVIEW_SUBTITLE
+                                      children: m.NW.string(m.t.JaYMvL)
                                   })
                               ]
                           }),
-                          (0, a.jsxs)('div', {
-                              className: x.__invalid_list,
+                          (0, r.jsxs)('div', {
+                              className: b.__invalid_list,
                               children: [
-                                  (0, a.jsx)(T, {
-                                      icon: (0, a.jsx)(I, { icon: s.CompassIcon }),
-                                      text: E.Z.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_ONE
+                                  (0, r.jsx)(f, {
+                                      icon: (0, r.jsx)(x, { icon: l.Jmo }),
+                                      text: m.NW.string(m.t.u6oOcn)
                                   }),
-                                  (0, a.jsx)(T, {
-                                      icon: (0, a.jsx)(I, { icon: s.FriendsIcon }),
-                                      text: E.Z.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_TWO
+                                  (0, r.jsx)(f, {
+                                      icon: (0, r.jsx)(x, { icon: l.iFz }),
+                                      text: m.NW.string(m.t.QC8ymZ)
                                   }),
-                                  (0, a.jsx)(T, {
-                                      icon: (0, a.jsx)(I, { icon: s.PencilIcon }),
-                                      text: E.Z.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_THREE
+                                  (0, r.jsx)(f, {
+                                      icon: (0, r.jsx)(x, { icon: l.vdY }),
+                                      text: m.NW.string(m.t.mgGOT0)
                                   }),
-                                  (0, a.jsx)(T, {
-                                      icon: (0, a.jsx)(o.Z, {
-                                          className: x.badgeIconBackground,
-                                          foreground: x.badgeIconForeground,
+                                  (0, r.jsx)(f, {
+                                      icon: (0, r.jsx)(o.Z, {
+                                          className: b.badgeIconBackground,
+                                          foreground: b.badgeIconForeground,
                                           width: 40,
                                           height: 40
                                       }),
-                                      text: E.Z.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format({ articleURL: r.Z.getArticleURL(m.BhN.STAGE_CHANNEL_GUIDELINES) })
+                                      text: m.NW.format(m.t.qLmNLC, { articleURL: c.Z.getArticleURL(g.BhN.STAGE_CHANNEL_GUIDELINES) })
                                   })
                               ]
                           })
                       ]
                   }),
-                  (0, a.jsxs)(s.ModalFooter, {
+                  (0, r.jsxs)(l.mzw, {
                       children: [
-                          (0, a.jsx)(s.Button, {
-                              color: s.Button.Colors.GREEN,
+                          (0, r.jsx)(l.zxk, {
+                              color: l.zxk.Colors.GREEN,
                               onClick: d,
-                              submitting: c,
-                              children: E.Z.Messages.START_STAGE_CHANNEL_EVENT_MODAL_BUTTON
+                              submitting: s,
+                              children: m.NW.string(m.t.s8mM8P)
                           }),
-                          (0, a.jsx)(s.Button, {
-                              color: s.Button.Colors.PRIMARY,
-                              className: x.cancelButton,
+                          (0, r.jsx)(l.zxk, {
+                              color: l.zxk.Colors.PRIMARY,
+                              className: b.cancelButton,
                               onClick: u,
-                              children: E.Z.Messages.CANCEL
+                              children: m.NW.string(m.t['ETE/oK'])
                           }),
-                          (0, a.jsx)(s.Button, {
-                              look: s.Button.Looks.LINK,
-                              color: s.Button.Colors.LINK,
-                              className: x.backButton,
-                              onClick: _,
-                              size: s.Button.Sizes.MIN,
-                              children: E.Z.Messages.BACK
+                          (0, r.jsx)(l.zxk, {
+                              look: l.zxk.Looks.LINK,
+                              color: l.zxk.Colors.LINK,
+                              className: b.backButton,
+                              onClick: h,
+                              size: l.zxk.Sizes.MIN,
+                              children: m.NW.string(m.t['13/7kZ'])
                           })
                       ]
                   })

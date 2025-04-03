@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => s }), n(47120);
 var r = n(298444);
 function i(e, t, n) {
     return (
@@ -18,10 +13,22 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class s {
     _load() {
         let e = r.x.get(this._key);
         null != e && (this._set = new Set(e));
+    }
+    values() {
+        return this._set;
+    }
+    size() {
+        return this._set.size;
+    }
+    clear() {
+        this._set.clear(),
+            requestIdleCallback(() => {
+                this._persist();
+            });
     }
     _persist() {
         let e = Array.from(this._set.values());

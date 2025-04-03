@@ -1,9 +1,5 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
-var r = n(689938);
+n.d(t, { Z: () => i });
+var r = n(388032);
 function i(e) {
-    return null != e && '' !== e ? e : r.Z.Messages.EMBEDDED_ACTIVITIES_IN_ACTIVITY;
+    return null != e && '' !== e ? e : r.NW.string(r.t['2YCamp']);
 }

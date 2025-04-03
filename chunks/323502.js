@@ -1,20 +1,17 @@
-n.d(t, {
-    S: function () {
-        return r;
-    }
-});
-var s = n(544891),
-    a = n(570140),
-    i = n(981631);
-function r(e) {
-    return s.tn
+n.d(t, { S: () => a });
+var r = n(544891),
+    i = n(570140),
+    s = n(981631);
+function a(e) {
+    return r.tn
         .get({
-            url: i.ANM.GUILD_TOP_READ_CHANNELS(e),
-            oldFormErrors: !0
+            url: s.ANM.GUILD_TOP_READ_CHANNELS(e),
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .then((t) => {
             let { body: n } = t;
-            a.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS',
                 guildId: e,
                 topChannelIds: n

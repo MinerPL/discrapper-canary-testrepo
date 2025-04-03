@@ -1,82 +1,77 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return _;
-        }
-    });
-var o = t(735250);
-t(470079);
-var i = t(481060),
-    s = t(864762),
-    r = t(428681),
-    l = t(42338),
-    c = t(569932),
-    a = t(555638),
-    C = t(42011),
-    d = t(798930),
-    u = t(564510);
-function _(e) {
-    let { transitionState: n, onClose: t, analyticsLocation: _, platformType: T } = e,
-        { slide: N, gotoNext: P, gotoError: A, handleWaitingForConnection: I, handleAuthToken: f, expectedCallbackState: S, callbackData: h, errorCode: O } = (0, s.k)(_, T);
-    return (0, o.jsx)(i.ModalRoot, {
-        className: u.modal,
-        transitionState: n,
+n.d(e, { default: () => _ });
+var o = n(200651);
+n(192379);
+var i = n(481060),
+    r = n(864762),
+    s = n(428681),
+    c = n(42338),
+    a = n(569932),
+    d = n(555638),
+    l = n(42011),
+    u = n(798930),
+    p = n(475286);
+function _(t) {
+    let { transitionState: e, onClose: n, analyticsLocation: _, platformType: b } = t,
+        { slide: N, gotoNext: C, gotoError: T, handleWaitingForConnection: h, handleAuthToken: f, expectedCallbackState: A, callbackData: g, errorCode: I } = (0, r.k)(_, b);
+    return (0, o.jsx)(i.Y0X, {
+        className: p.modal,
+        transitionState: e,
         disableTrack: !0,
-        children: (0, o.jsxs)(i.Slides, {
+        children: (0, o.jsxs)(i.MyZ, {
             activeSlide: N,
             width: 408,
             children: [
-                (0, o.jsx)(i.Slide, {
-                    id: d.O.LANDING,
-                    children: (0, o.jsx)(c.A, {
-                        platformType: T,
-                        onContinue: P,
-                        onClose: t
+                (0, o.jsx)(i.Mi4, {
+                    id: u.O.LANDING,
+                    children: (0, o.jsx)(a.A, {
+                        platformType: b,
+                        onContinue: C,
+                        onClose: n
                     })
                 }),
-                (0, o.jsx)(i.Slide, {
-                    id: d.O.PRE_CONNECT,
-                    children: (0, o.jsx)(a.A, {
-                        platformType: T,
+                (0, o.jsx)(i.Mi4, {
+                    id: u.O.PRE_CONNECT,
+                    children: (0, o.jsx)(d.A, {
+                        platformType: b,
                         isWaitingForConnection: !1,
-                        onWaitingForConnection: I,
+                        onWaitingForConnection: h,
                         onAuthToken: f,
-                        onError: A,
-                        onClose: t
+                        onError: T,
+                        onClose: n
                     })
                 }),
-                (0, o.jsx)(i.Slide, {
-                    id: d.O.PRE_CONNECT_WAITING,
-                    children: (0, o.jsx)(a.A, {
-                        platformType: T,
+                (0, o.jsx)(i.Mi4, {
+                    id: u.O.PRE_CONNECT_WAITING,
+                    children: (0, o.jsx)(d.A, {
+                        platformType: b,
                         isWaitingForConnection: !0,
-                        expectedCallbackState: S,
+                        expectedCallbackState: A,
                         onAuthToken: f,
-                        onError: A,
-                        onClose: t
+                        onError: T,
+                        onClose: n
                     })
                 }),
-                (0, o.jsx)(i.Slide, {
-                    id: d.O.DISCORD_CONSENT,
-                    children: (0, o.jsx)(r.E, {
-                        platformType: T,
-                        authToken: h,
-                        onContinue: P,
-                        onError: A,
-                        onClose: t
+                (0, o.jsx)(i.Mi4, {
+                    id: u.O.DISCORD_CONSENT,
+                    children: (0, o.jsx)(s.E, {
+                        platformType: b,
+                        authToken: g,
+                        onContinue: C,
+                        onError: T,
+                        onClose: n
                     })
                 }),
-                (0, o.jsx)(i.Slide, {
-                    id: d.O.ERROR,
-                    children: (0, o.jsx)(l.X, {
-                        onContinue: P,
-                        onClose: t,
-                        errorCode: O
+                (0, o.jsx)(i.Mi4, {
+                    id: u.O.ERROR,
+                    children: (0, o.jsx)(c.X, {
+                        onContinue: C,
+                        onClose: n,
+                        errorCode: I
                     })
                 }),
-                (0, o.jsx)(i.Slide, {
-                    id: d.O.SUCCESS,
-                    children: (0, o.jsx)(C.W, { onClose: t })
+                (0, o.jsx)(i.Mi4, {
+                    id: u.O.SUCCESS,
+                    children: (0, o.jsx)(l.W, { onClose: n })
                 })
             ]
         })

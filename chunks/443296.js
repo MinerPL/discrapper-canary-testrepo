@@ -1,8 +1,1 @@
-function r() {
-    return {};
-}
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+e.exports = '/assets/3ceb8c0337536a78.svg';

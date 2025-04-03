@@ -1,28 +1,24 @@
-n.d(t, {
-    Z: function () {
-        return N;
-    }
-});
-var s = n(735250);
-n(470079);
-var o = n(353672),
-    r = n(850165),
-    a = n(134612),
-    i = n(689938),
-    c = n(917475),
-    E = n(190113);
-function N(e) {
-    let {} = e,
-        t = (0, a.Nn)();
-    return (0, s.jsx)(r.Z, {
-        heroImageSrc: E,
-        heroImageAlt: i.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TIPS_ALT,
-        header: i.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TIPS_HEADER,
-        children: (0, s.jsx)('div', {
-            className: c.safetyTips,
-            children: (0, s.jsx)(o.Z, {
-                tips: t,
-                headerText: i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_DESCRIPTION
+n.d(e, { Z: () => u });
+var r = n(200651);
+n(192379);
+var s = n(353672),
+    o = n(850165),
+    i = n(134612),
+    c = n(388032),
+    a = n(948582),
+    l = n(190113);
+function u(t) {
+    let {} = t,
+        e = (0, i.Nn)();
+    return (0, r.jsx)(o.Z, {
+        heroImageSrc: l,
+        heroImageAlt: c.NW.string(c.t['2mJo29']),
+        header: c.NW.string(c.t.eAbVfX),
+        children: (0, r.jsx)('div', {
+            className: a.safetyTips,
+            children: (0, r.jsx)(s.Z, {
+                tips: e,
+                headerText: c.NW.string(c.t['0QSL1N'])
             })
         })
     });

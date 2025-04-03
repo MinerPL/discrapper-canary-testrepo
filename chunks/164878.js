@@ -1,10 +1,6 @@
 n.d(t, {
-    k: function () {
-        return a;
-    },
-    v: function () {
-        return i;
-    }
+    k: () => o,
+    v: () => i
 });
 let r = (0, n(818083).B)({
     kind: 'user',
@@ -45,7 +41,7 @@ function i(e) {
     let { location: t, autoTrackExposure: n } = e;
     return r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
 }
-function a(e) {
+function o(e) {
     let { autoTrackExposure: t, location: n } = e;
     return r.useExperiment({ location: n }, { autoTrackExposure: t });
 }

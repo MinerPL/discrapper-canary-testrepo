@@ -1,21 +1,14 @@
 n.d(t, {
-    $_: function () {
-        return l;
-    },
-    _l: function () {
-        return i;
-    },
-    jk: function () {
-        return o;
-    },
-    vL: function () {
-        return s;
-    }
+    $_: () => s,
+    _l: () => i,
+    jk: () => a,
+    vL: () => o
 });
-var r,
-    i,
-    a = n(786761);
-function s(e) {
+var r = n(786761),
+    i = (function (e) {
+        return (e.ALL = 'ALL'), (e.REMINDER = 'REMINDER'), (e.BOOKMARK = 'BOOKMARK'), e;
+    })({});
+function o(e) {
     return {
         channelId: e.channel_id,
         messageId: e.message_id,
@@ -29,16 +22,15 @@ function s(e) {
         dueAt: null != e.due_at ? new Date(e.due_at) : void 0
     };
 }
-function o(e) {
+function a(e) {
     return {
-        message: null != e.message ? (0, a.e5)(e.message) : null,
-        saveData: s(e.save_data)
+        message: null != e.message ? (0, r.e5)(e.message) : null,
+        saveData: o(e.save_data)
     };
 }
-function l(e) {
+function s(e) {
     return {
         channelId: e.channel_id,
         messageId: e.message_id
     };
 }
-((r = i || (i = {})).REMINDER = 'REMINDER'), (r.BOOKMARK = 'BOOKMARK');

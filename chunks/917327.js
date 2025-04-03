@@ -1,50 +1,70 @@
-i.d(n, {
-    Z: function () {
-        return M;
-    }
-});
-var t = i(735250);
-i(470079);
-var l = i(442837),
-    s = i(481060),
-    a = i(787014),
-    u = i(362721),
-    o = i(339340),
-    r = i(869768),
-    d = i(496675),
-    c = i(12498),
-    Z = i(981631),
-    E = i(689938);
-function M(e, n) {
-    let M = (0, l.e7)([d.Z], () => d.Z.can(Z.Plq.MANAGE_CHANNELS, n)),
-        _ = (0, u.Z)(e),
-        N = (0, r.W)(e),
-        C = (0, l.e7)([c.Z], () => c.Z.getChannelStatus(e)),
-        h = null != C && C.length > 0;
-    return e.isGuildVoice() && (M || _)
-        ? !N && M && h
-            ? (0, t.jsx)(s.MenuItem, {
+n.d(t, { Z: () => b });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(787014),
+    c = n(362721),
+    a = n(339340),
+    s = n(869768),
+    u = n(496675),
+    d = n(12498),
+    Z = n(981631),
+    f = n(388032);
+function b(e, t) {
+    let b = (0, i.e7)([u.Z], () => u.Z.can(Z.Plq.MANAGE_CHANNELS, t)),
+        O = (0, c.ZP)(e),
+        j = (0, s.W)(e),
+        g = (0, i.e7)([d.Z], () => d.Z.getChannelStatus(e)),
+        p = null != g && g.length > 0;
+    return e.isGuildVoice() && (b || O)
+        ? !j && b && p
+            ? (0, r.jsx)(l.sNh, {
                   id: 'clear-status',
-                  label: E.Z.Messages.VOICE_CHANNEL_CLEAR_STATUS,
+                  label: f.NW.string(f.t['22CYiY']),
                   action: () => {
-                      a.ZP.updateVoiceChannelStatus(e.id, '');
+                      o.ZP.updateVoiceChannelStatus(e.id, '');
                   }
               })
-            : N && _
-              ? (0, t.jsx)(s.MenuItem, {
+            : j && O
+              ? (0, r.jsx)(l.sNh, {
                     id: 'set-status',
-                    label: E.Z.Messages.VOICE_CHANNEL_SET_STATUS,
+                    label: f.NW.string(f.t.Mgpxi4),
                     action: () => {
-                        (0, s.openModalLazy)(
+                        (0, l.ZDy)(
                             async () => {
-                                let { default: n } = await Promise.resolve().then(i.bind(i, 339340));
-                                return (i) =>
-                                    (0, t.jsx)(n, {
-                                        channel: e,
-                                        ...i
-                                    });
+                                let { default: t } = await Promise.resolve().then(n.bind(n, 339340));
+                                return (n) =>
+                                    (0, r.jsx)(
+                                        t,
+                                        (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var n = null != arguments[t] ? arguments[t] : {},
+                                                    r = Object.keys(n);
+                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                    (r = r.concat(
+                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                        })
+                                                    )),
+                                                    r.forEach(function (t) {
+                                                        var r;
+                                                        (r = n[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: r,
+                                                                      enumerable: !0,
+                                                                      configurable: !0,
+                                                                      writable: !0
+                                                                  })
+                                                                : (e[t] = r);
+                                                    });
+                                            }
+                                            return e;
+                                        })({ channel: e }, n)
+                                    );
                             },
-                            { modalKey: o.VOICE_CHANNEL_STATUS_MODAL_KEY }
+                            { modalKey: a.a }
                         );
                     }
                 })

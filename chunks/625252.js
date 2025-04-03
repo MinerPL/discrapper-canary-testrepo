@@ -1,90 +1,97 @@
-t.d(s, {
-    Z: function () {
-        return p;
-    }
-});
-var n = t(735250),
-    a = t(470079),
-    i = t(120356),
-    r = t.n(i),
-    o = t(704215),
-    l = t(780384),
-    c = t(481060),
-    d = t(37234),
-    _ = t(410030),
-    E = t(605236),
-    u = t(626135),
-    I = t(617136),
-    T = t(497505),
-    S = t(471985),
-    N = t(341907),
-    C = t(906739),
-    m = t(46140),
-    A = t(981631),
-    O = t(689938),
-    g = t(74242),
-    h = t(66094);
-function p() {
-    let e = (0, S.Z)(m.dr.USER_SETTINGS_GIFT_INVENTORY),
-        s = (0, C.Z)(),
-        t = (0, l.wj)((0, _.ZP)()),
-        i = a.useMemo(() => ({ backgroundImage: 'url('.concat(s, ')') }), [s]),
-        p = a.useCallback(() => {
-            (0, d.xf)(),
-                (0, N.navigateToQuestHome)(m.dr.USER_SETTINGS_GIFT_INVENTORY),
-                u.default.track(A.rMx.QUEST_CONTENT_CLICKED, {
-                    cta_name: I.jZ.VIEW_QUESTS,
-                    ...(0, I.mH)(T.jn.QUEST_HOME_MOVE_CALLOUT)
-                });
+n.d(t, { Z: () => x });
+var r = n(200651),
+    i = n(192379),
+    s = n(780384),
+    a = n(481060),
+    l = n(37234),
+    o = n(410030),
+    c = n(626135),
+    d = n(617136),
+    u = n(497505),
+    m = n(865719),
+    g = n(341907),
+    p = n(46140),
+    h = n(981631),
+    f = n(388032),
+    b = n(31903),
+    N = n(66094);
+function x() {
+    let e = (0, s.wj)((0, o.ZP)()),
+        t = (0, m.y)({ location: p.dr.USER_SETTINGS_GIFT_INVENTORY }),
+        n = i.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
+        x = i.useCallback(() => {
+            (0, l.xf)(),
+                (0, g.navigateToQuestHome)({ fromContent: u.jn.QUEST_HOME_MOVE_CALLOUT }),
+                c.default.track(
+                    h.rMx.QUEST_CONTENT_CLICKED,
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({ cta_name: d.jZ.VIEW_QUESTS }, (0, d.mH)(u.jn.QUEST_HOME_MOVE_CALLOUT))
+                );
         }, []);
-    return (a.useCallback(() => {
-        (0, E.EW)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
-    }, []),
-    e)
-        ? ((0, E.un)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
-          (0, n.jsxs)('div', {
-              className: r()(g.container),
-              style: i,
-              children: [
-                  !1,
-                  (0, n.jsxs)('div', {
-                      className: g.textContainer,
-                      children: [
-                          (0, n.jsxs)('div', {
-                              className: g.headerContainer,
-                              children: [
-                                  (0, n.jsx)('img', {
-                                      alt: '',
-                                      src: h,
-                                      className: g.icon
-                                  }),
-                                  (0, n.jsx)(c.Heading, {
-                                      variant: 'heading-lg/bold',
-                                      color: 'always-white',
-                                      children: O.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_TITLE
-                                  })
-                              ]
-                          }),
-                          (0, n.jsx)(c.Text, {
-                              variant: 'text-md/medium',
-                              color: 'text-muted',
-                              children: O.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_DESCRIPTION_V2
-                          }),
-                          (0, n.jsx)(c.Button, {
-                              size: 'large',
-                              color: t ? c.ButtonColors.BRAND : c.ButtonColors.WHITE,
-                              className: g.button,
-                              onClick: p,
-                              innerClassName: g.innerButton,
-                              children: (0, n.jsx)(c.Text, {
-                                  variant: 'text-md/medium',
-                                  color: t ? 'always-white' : 'text-normal',
-                                  children: O.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_BUTTON
+    return t === m.$.NEVER_SHOW
+        ? null
+        : (0, r.jsx)('div', {
+              className: b.container,
+              style: n,
+              children: (0, r.jsxs)('div', {
+                  className: b.textContainer,
+                  children: [
+                      (0, r.jsxs)('div', {
+                          className: b.headerContainer,
+                          children: [
+                              (0, r.jsx)('img', {
+                                  alt: '',
+                                  src: N,
+                                  className: b.icon
+                              }),
+                              (0, r.jsx)(a.X6q, {
+                                  variant: 'heading-lg/bold',
+                                  color: 'always-white',
+                                  children: f.NW.string(f.t.z8YP2N)
                               })
+                          ]
+                      }),
+                      (0, r.jsx)(a.Text, {
+                          variant: 'text-md/medium',
+                          color: 'text-secondary',
+                          children: f.NW.string(f.t.IqmRZ2)
+                      }),
+                      (0, r.jsx)(a.zxk, {
+                          size: 'large',
+                          color: e ? a.Ttl.BRAND : a.Ttl.WHITE,
+                          className: b.button,
+                          onClick: x,
+                          innerClassName: b.innerButton,
+                          children: (0, r.jsx)(a.Text, {
+                              variant: 'text-md/medium',
+                              color: e ? 'always-white' : 'text-normal',
+                              children: f.NW.string(f.t.GURBQk)
                           })
-                      ]
-                  })
-              ]
-          }))
-        : null;
+                      })
+                  ]
+              })
+          });
 }

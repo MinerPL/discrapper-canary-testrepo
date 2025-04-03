@@ -1,18 +1,14 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => o });
 var r = n(616922),
-    i = n(689938);
-function a(e, t) {
+    i = n(388032);
+function o(e, t) {
     switch (t) {
         case r.kG.USER_ACTIVITY_PLAY:
-            return e.hasSpotifyAccount ? i.Z.Messages.USER_ACTIVITY_PLAY_ON_PLATFORM.format({ platform: r.ai }) : i.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: r.ai });
+            return e.hasSpotifyAccount ? i.NW.formatToPlainString(i.t.LEgD7u, { platform: r.ai }) : i.NW.formatToPlainString(i.t.XWSHTU, { platform: r.ai });
         case r.kG.EMBED_SYNC:
-            if (!e.hasSpotifyAccount) return i.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: r.ai });
-            if (e.syncingWithUser || e.syncingWithParty) return i.Z.Messages.INVITE_EMBED_JOINED;
-            return i.Z.Messages.JOIN;
+            if (!e.hasSpotifyAccount) return i.NW.formatToPlainString(i.t.XWSHTU, { platform: r.ai });
+            if (e.syncingWithUser || e.syncingWithParty) return i.NW.string(i.t.KC26NT);
+            return i.NW.string(i.t.VJlc0d);
         case r.kG.USER_ACTIVITY_SYNC:
         default:
             return;

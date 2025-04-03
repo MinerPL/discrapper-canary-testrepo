@@ -1,8 +1,4 @@
-var r, i;
-n.d(t, {
-    s: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {})).NONE = 'none'),
-    (i.CONSENT = 'consent');
+n.d(t, { s: () => r });
+var r = (function (e) {
+    return (e.NONE = 'none'), (e.CONSENT = 'consent'), e;
+})({});

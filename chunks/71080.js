@@ -1,492 +1,478 @@
 n.d(t, {
-    EQ: function () {
-        return m;
-    },
-    IG: function () {
-        return T;
-    },
-    aC: function () {
-        return o;
-    },
-    kf: function () {
-        return I;
-    },
-    m$: function () {
-        return l;
-    }
+    EQ: () => d,
+    IG: () => _,
+    aC: () => c,
+    kf: () => f,
+    m$: () => u
 });
-var r,
-    i,
-    a,
-    s,
-    o,
-    l,
-    u,
-    c,
-    d = n(230711),
-    _ = n(197062),
-    E = n(727866),
-    f = n(63063),
-    h = n(981631),
-    p = n(689938);
-((r = o || (o = {}))[(r.EMPTY_STATE = 0)] = 'EMPTY_STATE'), (r[(r.ADMINISTRATOR = 1)] = 'ADMINISTRATOR'), (r[(r.ROLE = 2)] = 'ROLE'), (r[(r.OWNER = 3)] = 'OWNER'), (r[(r.MEMBER = 4)] = 'MEMBER'), (r[(r.USER = 5)] = 'USER'), (r[(r.GUILD = 6)] = 'GUILD'), ((i = l || (l = {}))[(i.ROLES = 0)] = 'ROLES'), (i[(i.MEMBERS = 1)] = 'MEMBERS'), (i[(i.USERS = 2)] = 'USERS'), (i[(i.GUILDS = 3)] = 'GUILDS');
-let m = 20,
-    I = 'channelPermissionSettingsAdvancedModeOn';
-function T(e, t, n, r) {
-    let i = e.type;
+var r = n(230711),
+    i = n(197062),
+    o = n(727866),
+    a = n(63063),
+    s = n(981631),
+    l = n(388032),
+    c = (function (e) {
+        return (e[(e.EMPTY_STATE = 0)] = 'EMPTY_STATE'), (e[(e.ADMINISTRATOR = 1)] = 'ADMINISTRATOR'), (e[(e.ROLE = 2)] = 'ROLE'), (e[(e.OWNER = 3)] = 'OWNER'), (e[(e.MEMBER = 4)] = 'MEMBER'), (e[(e.USER = 5)] = 'USER'), (e[(e.GUILD = 6)] = 'GUILD'), e;
+    })({}),
+    u = (function (e) {
+        return (e[(e.ROLES = 0)] = 'ROLES'), (e[(e.MEMBERS = 1)] = 'MEMBERS'), (e[(e.USERS = 2)] = 'USERS'), (e[(e.GUILDS = 3)] = 'GUILDS'), e;
+    })({});
+let d = 20,
+    f = 'channelPermissionSettingsAdvancedModeOn';
+function _(e, t, n, c) {
+    let u = e.type;
     return {
-        [h.Plq.VIEW_CHANNEL.toString()]: {
-            title: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_VIEW_CHANNEL : p.Z.Messages.VIEW_CHANNEL,
+        [s.Plq.VIEW_CHANNEL.toString()]: {
+            title: u === s.d4z.GUILD_CATEGORY ? l.NW.string(l.t.uV83ys) : l.NW.string(l.t['W/A4Qk']),
             description: (() => {
                 if (t)
-                    switch (i) {
-                        case h.d4z.GUILD_CATEGORY:
-                            return p.Z.Messages.ROLE_PERMISSIONS_VIEW_CHANNEL_DESCRIPTION_CATEGORY_EVERYONE;
-                        case h.d4z.GUILD_VOICE:
-                        case h.d4z.GUILD_STAGE_VOICE:
-                            return p.Z.Messages.ROLE_PERMISSIONS_VIEW_CHANNEL_DESCRIPTION_VOICE_EVERYONE;
+                    switch (u) {
+                        case s.d4z.GUILD_CATEGORY:
+                            return l.t['o/vBzs'];
+                        case s.d4z.GUILD_VOICE:
+                        case s.d4z.GUILD_STAGE_VOICE:
+                            return l.t.ejL1Wl;
                         default:
-                            return p.Z.Messages.ROLE_PERMISSIONS_VIEW_CHANNEL_DESCRIPTION_TEXT_EVERYONE;
+                            return l.t['3jG0Bg'];
                     }
-                return i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_VIEW_CHANNEL_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_VIEW_CHANNEL_DESCRIPTION_CHANNEL;
+                return u === s.d4z.GUILD_CATEGORY ? l.t.SzosGh : l.t.M2iEy8;
             })(),
-            flag: h.Plq.VIEW_CHANNEL
+            flag: s.Plq.VIEW_CHANNEL
         },
-        [h.Plq.MANAGE_CHANNELS.toString()]: {
-            title: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.MANAGE_CHANNELS : p.Z.Messages.MANAGE_CHANNEL,
+        [s.Plq.MANAGE_CHANNELS.toString()]: {
+            title: u === s.d4z.GUILD_CATEGORY ? l.NW.string(l.t['9qLtWl']) : l.NW.string(l.t.nAw15O),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_CHANNEL_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_VOICE:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_CHANNEL_DESCRIPTION_VOICE;
-                    case h.d4z.GUILD_STAGE_VOICE:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_CHANNEL_DESCRIPTION_STAGE;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t.KJ2JnJ;
+                    case s.d4z.GUILD_VOICE:
+                        return l.t['+gl2nZ'];
+                    case s.d4z.GUILD_STAGE_VOICE:
+                        return l.t['SDX66+'];
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_CHANNEL_DESCRIPTION_TEXT;
+                        return l.t.ydL28v;
                 }
             })(),
-            flag: h.Plq.MANAGE_CHANNELS
+            flag: s.Plq.MANAGE_CHANNELS
         },
-        [h.Plq.MANAGE_ROLES.toString()]: {
-            title: p.Z.Messages.MANAGE_PERMISSIONS,
+        [s.Plq.MANAGE_ROLES.toString()]: {
+            title: l.NW.string(l.t.ICb6am),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_ROLES_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_STAGE_VOICE:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_ROLES_DESCRIPTION_STAGE;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t.TyyCMD;
+                    case s.d4z.GUILD_STAGE_VOICE:
+                        return l.t.hcw4m5;
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_ROLES_DESCRIPTION_CHANNEL;
+                        return l.t.hOMXOj;
                 }
             })(),
-            flag: h.Plq.MANAGE_ROLES
+            flag: s.Plq.MANAGE_ROLES
         },
-        [h.Plq.MANAGE_WEBHOOKS.toString()]: {
-            title: p.Z.Messages.MANAGE_WEBHOOKS,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_MANAGE_WEBHOOKS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_MANAGE_WEBHOOKS_DESCRIPTION_CHANNEL,
-            flag: h.Plq.MANAGE_WEBHOOKS
+        [s.Plq.MANAGE_WEBHOOKS.toString()]: {
+            title: l.NW.string(l.t['/ADKmJ']),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t['K5+ZZ2'] : l.t.CYBZr6,
+            flag: s.Plq.MANAGE_WEBHOOKS
         },
-        [h.Plq.CREATE_INSTANT_INVITE.toString()]: {
-            title: p.Z.Messages.CREATE_INSTANT_INVITE,
+        [s.Plq.CREATE_INSTANT_INVITE.toString()]: {
+            title: l.NW.string(l.t.zJrgTE),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_CREATE_INSTANT_INVITE_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_VOICE:
-                    case h.d4z.GUILD_STAGE_VOICE:
-                        return p.Z.Messages.ROLE_PERMISSIONS_CREATE_INSTANT_INVITE_DESCRIPTION_VOICE;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t['3YFAAQ'];
+                    case s.d4z.GUILD_VOICE:
+                    case s.d4z.GUILD_STAGE_VOICE:
+                        return l.t.lUCs1t;
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_CREATE_INSTANT_INVITE_DESCRIPTION_TEXT;
+                        return l.t.q4g2aG;
                 }
             })(),
-            flag: h.Plq.CREATE_INSTANT_INVITE
+            flag: s.Plq.CREATE_INSTANT_INVITE
         },
-        [h.Plq.SEND_MESSAGES.toString()]: {
-            title: h.TPd.GUILD_THREADS_ONLY.has(i) ? p.Z.Messages.CREATE_FORUM_POSTS : n && i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.SEND_MESSAGES_AND_CREATE_FORUM_POSTS : p.Z.Messages.SEND_MESSAGES,
+        [s.Plq.SEND_MESSAGES.toString()]: {
+            title: s.TPd.GUILD_THREADS_ONLY.has(u) ? l.NW.string(l.t.nJwAHR) : n && u === s.d4z.GUILD_CATEGORY ? l.NW.string(l.t.S1VOwc) : l.NW.string(l.t.T32rkJ),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return n ? p.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_FORUM:
-                        return (null == r ? void 0 : r.createPostsDisabled) && !e.isMediaChannel() ? _.Z.getForumChannelPermissionText() : p.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_TEXT;
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_TEXT;
-                    case h.d4z.GUILD_ANNOUNCEMENT:
-                        return p.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_ANNOUNCEMENT.format({ articleURL: f.Z.getArticleURL(h.BhN.ANNOUNCEMENT_CHANNELS) });
-                    case h.d4z.GUILD_VOICE:
-                        return E.Z.getTextInVoiceSendMessageChannelPermissionText(null == r ? void 0 : r.sendMessagesDisabled);
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return n ? l.t.IjeLur : l.t.qLnFpa;
+                    case s.d4z.GUILD_FORUM:
+                        return (null == c ? void 0 : c.createPostsDisabled) && !e.isMediaChannel() ? i.Z.getForumChannelPermissionText() : l.t.LG9VAg;
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t.LG9VAg;
+                    case s.d4z.GUILD_ANNOUNCEMENT:
+                        return l.NW.format(l.t.WFwfSE, { articleURL: a.Z.getArticleURL(s.BhN.ANNOUNCEMENT_CHANNELS) });
+                    case s.d4z.GUILD_VOICE:
+                        return o.Z.getTextInVoiceSendMessageChannelPermissionText(null == c ? void 0 : c.sendMessagesDisabled);
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_TEXT;
+                        return l.t.WQ6zpa;
                 }
             })(),
-            flag: h.Plq.SEND_MESSAGES
+            flag: s.Plq.SEND_MESSAGES
         },
-        [h.Plq.EMBED_LINKS.toString()]: {
-            title: p.Z.Messages.EMBED_LINKS,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_EMBED_LINKS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_EMBED_LINKS_DESCRIPTION_TEXT,
-            flag: h.Plq.EMBED_LINKS
+        [s.Plq.EMBED_LINKS.toString()]: {
+            title: l.NW.string(l.t['969dEB']),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t['7zlUa2'] : l.t.XFFhAw,
+            flag: s.Plq.EMBED_LINKS
         },
-        [h.Plq.ATTACH_FILES.toString()]: {
-            title: p.Z.Messages.ATTACH_FILES,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_ATTACH_FILES_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_ATTACH_FILES_DESCRIPTION_TEXT,
-            flag: h.Plq.ATTACH_FILES
+        [s.Plq.ATTACH_FILES.toString()]: {
+            title: l.NW.string(l.t['3AS4UF']),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t.XREf9v : l.t.WK9r7O,
+            flag: s.Plq.ATTACH_FILES
         },
-        [h.Plq.ADD_REACTIONS.toString()]: {
-            title: p.Z.Messages.ADD_REACTIONS,
+        [s.Plq.ADD_REACTIONS.toString()]: {
+            title: l.NW.string(l.t.yEoJAg),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_ADD_REACTIONS_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_VOICE:
-                        return p.Z.Messages.ROLE_PERMISSIONS_ADD_REACTIONS_DESCRIPTION_TEXT_WITH_VOICE_CHANNEL_EFFECTS;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t.pZT2Zm;
+                    case s.d4z.GUILD_VOICE:
+                        return l.t.xSSbIi;
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_ADD_REACTIONS_DESCRIPTION_TEXT;
+                        return l.t.PVjR1d;
                 }
             })(),
-            flag: h.Plq.ADD_REACTIONS
+            flag: s.Plq.ADD_REACTIONS
         },
-        [h.Plq.USE_EXTERNAL_EMOJIS.toString()]: {
-            title: p.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_EMOJIS,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_EMOJIS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_EMOJIS_DESCRIPTION_TEXT,
-            flag: h.Plq.USE_EXTERNAL_EMOJIS
+        [s.Plq.USE_EXTERNAL_EMOJIS.toString()]: {
+            title: l.NW.string(l.t['+bxf3N']),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t.mWAbKy : l.t.Qc5vOj,
+            flag: s.Plq.USE_EXTERNAL_EMOJIS
         },
-        [h.Plq.USE_EXTERNAL_STICKERS.toString()]: {
-            title: p.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_STICKERS,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_STICKERS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_STICKERS_DESCRIPTION_TEXT,
-            flag: h.Plq.USE_EXTERNAL_STICKERS
+        [s.Plq.USE_EXTERNAL_STICKERS.toString()]: {
+            title: l.NW.string(l.t.ERNhYW),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t['39whJy'] : l.t.VF4fZW,
+            flag: s.Plq.USE_EXTERNAL_STICKERS
         },
-        [h.Plq.MENTION_EVERYONE.toString()]: {
-            title: i === h.d4z.GUILD_STAGE_VOICE ? p.Z.Messages.MENTION_EVERYONE_STAGE : p.Z.Messages.MENTION_EVERYONE,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_MENTION_EVERYONE_DESCRIPTION_CATEGORY : i === h.d4z.GUILD_STAGE_VOICE ? p.Z.Messages.ROLE_PERMISSIONS_MENTION_EVERYONE_DESCRIPTION_STAGE : p.Z.Messages.ROLE_PERMISSIONS_MENTION_EVERYONE_DESCRIPTION_TEXT,
-            flag: h.Plq.MENTION_EVERYONE
+        [s.Plq.MENTION_EVERYONE.toString()]: {
+            title: u === s.d4z.GUILD_STAGE_VOICE ? l.NW.string(l.t.VDUAHB) : l.NW.string(l.t.Y78KGB),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t['HOhg/P'] : u === s.d4z.GUILD_STAGE_VOICE ? l.t.rZn1oK : l.t['6IUSdn'],
+            flag: s.Plq.MENTION_EVERYONE
         },
-        [h.Plq.MANAGE_MESSAGES.toString()]: {
-            title: p.Z.Messages.MANAGE_MESSAGES,
+        [s.Plq.MANAGE_MESSAGES.toString()]: {
+            title: l.NW.string(l.t['6lU9xM']),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_MESSAGES_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_ANNOUNCEMENT:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_MESSAGES_DESCRIPTION_ANNOUNCEMENT.format({ articleURL: f.Z.getArticleURL(h.BhN.ANNOUNCEMENT_CHANNELS) });
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t['5R9nYm'];
+                    case s.d4z.GUILD_ANNOUNCEMENT:
+                        return l.NW.format(l.t.XRxOo6, { articleURL: a.Z.getArticleURL(s.BhN.ANNOUNCEMENT_CHANNELS) });
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_MESSAGES_DESCRIPTION_TEXT;
+                        return l.t['SeA+Gx'];
                 }
             })(),
-            flag: h.Plq.MANAGE_MESSAGES
+            flag: s.Plq.MANAGE_MESSAGES
         },
-        [h.Plq.READ_MESSAGE_HISTORY.toString()]: {
-            title: h.TPd.GUILD_THREADS_ONLY.has(i) ? p.Z.Messages.READ_POST_HISTORY : p.Z.Messages.READ_MESSAGE_HISTORY,
+        [s.Plq.READ_MESSAGE_HISTORY.toString()]: {
+            title: s.TPd.GUILD_THREADS_ONLY.has(u) ? l.NW.string(l.t['0RQwtr']) : l.NW.string(l.t.l9ufaW),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_VOICE:
-                        return E.Z.getTextInVoiceReadMessageHistoryChannelPermissionText(null == r ? void 0 : r.readMessageHistoryDisabled);
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_FORUM_CHANNEL;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t['cJRv/v'];
+                    case s.d4z.GUILD_VOICE:
+                        return o.Z.getTextInVoiceReadMessageHistoryChannelPermissionText(null == c ? void 0 : c.readMessageHistoryDisabled);
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t.RqCc7u;
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_TEXT;
+                        return l.t.cuMfHx;
                 }
             })(),
-            flag: h.Plq.READ_MESSAGE_HISTORY
+            flag: s.Plq.READ_MESSAGE_HISTORY
         },
-        [h.Plq.SEND_TTS_MESSAGES.toString()]: {
-            title: p.Z.Messages.ROLE_PERMISSIONS_SEND_TTS_MESSAGES,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_SEND_TTS_MESSAGES_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_SEND_TTS_MESSAGES_DESCRIPTION_TEXT,
-            flag: h.Plq.SEND_TTS_MESSAGES
+        [s.Plq.SEND_TTS_MESSAGES.toString()]: {
+            title: l.NW.string(l.t.mMbwh4),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t.b7pc9f : l.t.CpakGx,
+            flag: s.Plq.SEND_TTS_MESSAGES
         },
-        [h.Plq.USE_APPLICATION_COMMANDS.toString()]: {
-            title: p.Z.Messages.ROLE_PERMISSIONS_USE_APPLICATION_COMMANDS,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_USE_APPLICATION_COMMANDS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_USE_APPLICATION_COMMANDS_DESCRIPTION_TEXT,
-            flag: h.Plq.USE_APPLICATION_COMMANDS
+        [s.Plq.USE_APPLICATION_COMMANDS.toString()]: {
+            title: l.NW.string(l.t.nkoPOj),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t['D+qW0N'] : l.t.ReG3gI,
+            flag: s.Plq.USE_APPLICATION_COMMANDS
         },
-        [h.Plq.SEND_VOICE_MESSAGES.toString()]: {
-            title: p.Z.Messages.ROLE_PERMISSIONS_SEND_VOICE_MESSAGE,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_SEND_VOICE_MESSAGES_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_SEND_VOICE_MESSAGES_DESCRIPTION_TEXT,
-            flag: h.Plq.SEND_VOICE_MESSAGES
+        [s.Plq.SEND_VOICE_MESSAGES.toString()]: {
+            title: l.NW.string(l.t.WlWSBQ),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t.gavGfn : l.t.BhEo9f,
+            flag: s.Plq.SEND_VOICE_MESSAGES
         },
-        [h.Plq.SEND_POLLS.toString()]: {
-            title: p.Z.Messages.ROLE_PERMISSIONS_SEND_POLLS,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_SEND_POLLS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_SEND_POLLS_DESCRIPTION_TEXT,
-            flag: h.Plq.SEND_POLLS
+        [s.Plq.SEND_POLLS.toString()]: {
+            title: l.NW.string(l.t.UMQ7W1),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t['18Ya7O'] : l.t.ckKKIC,
+            flag: s.Plq.SEND_POLLS
         },
-        [h.Plq.USE_CLYDE_AI.toString()]: {
-            title: p.Z.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI_GUILD_DESCRIPTION : p.Z.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI_CHANNEL_DESCRIPTION,
-            flag: h.Plq.USE_CLYDE_AI
+        [s.Plq.USE_CLYDE_AI.toString()]: {
+            title: l.NW.string(l.t['8eeEZm']),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t.Tx5TjI : l.t.d664Fx,
+            flag: s.Plq.USE_CLYDE_AI
         },
-        [h.Plq.CONNECT.toString()]: {
-            title: p.Z.Messages.CONNECT,
+        [s.Plq.CONNECT.toString()]: {
+            title: l.NW.string(l.t.S0W8Z2),
             description: (() => {
                 if (t)
-                    switch (i) {
-                        case h.d4z.GUILD_CATEGORY:
-                            return p.Z.Messages.ROLE_PERMISSIONS_CONNECT_DESCRIPTION_CATEGORY_EVERYONE;
-                        case h.d4z.GUILD_STAGE_VOICE:
-                            return p.Z.Messages.ROLE_PERMISSIONS_CONNECT_DESCRIPTION_STAGE_EVERYONE;
-                        case h.d4z.GUILD_TEXT:
-                        case h.d4z.GUILD_FORUM:
-                        case h.d4z.GUILD_MEDIA:
-                            return p.Z.Messages.ROLE_PERMISSIONS_CONNECT_DESCRIPTION_THREADS_EVERYONE;
+                    switch (u) {
+                        case s.d4z.GUILD_CATEGORY:
+                            return l.t.XcrieH;
+                        case s.d4z.GUILD_STAGE_VOICE:
+                            return l.t.SOFNhI;
+                        case s.d4z.GUILD_TEXT:
+                        case s.d4z.GUILD_FORUM:
+                        case s.d4z.GUILD_MEDIA:
+                            return l.t.LsS8xc;
                         default:
-                            return p.Z.Messages.ROLE_PERMISSIONS_CONNECT_DESCRIPTION_VOICE_EVERYONE;
+                            return l.t.j4AyOz;
                     }
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_CONNECT_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_STAGE_VOICE:
-                        return p.Z.Messages.ROLE_PERMISSIONS_CONNECT_DESCRIPTION_STAGE;
-                    case h.d4z.GUILD_TEXT:
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_CONNECT_DESCRIPTION_THREADS;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t.stA0Hh;
+                    case s.d4z.GUILD_STAGE_VOICE:
+                        return l.t['G9+QiY'];
+                    case s.d4z.GUILD_TEXT:
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t['QU/Rw8'];
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_CONNECT_DESCRIPTION_VOICE;
+                        return l.t.HvG8ub;
                 }
             })(),
-            flag: h.Plq.CONNECT
+            flag: s.Plq.CONNECT
         },
-        [h.Plq.SPEAK.toString()]: {
-            title: p.Z.Messages.SPEAK,
+        [s.Plq.SPEAK.toString()]: {
+            title: l.NW.string(l.t['8w1tIS']),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_SPEAK_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_STAGE_VOICE:
-                        return p.Z.Messages.ROLE_PERMISSIONS_SPEAK_DESCRIPTION_STAGE;
-                    case h.d4z.GUILD_TEXT:
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_SPEAK_DESCRIPTION_THREADS;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t.iXhS6e;
+                    case s.d4z.GUILD_STAGE_VOICE:
+                        return l.t['a8n74+'];
+                    case s.d4z.GUILD_TEXT:
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t['+VXsJC'];
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_SPEAK_DESCRIPTION_VOICE;
+                        return l.t['568E6e'];
                 }
             })(),
-            flag: h.Plq.SPEAK
+            flag: s.Plq.SPEAK
         },
-        [h.Plq.STREAM.toString()]: {
-            title: p.Z.Messages.VIDEO,
+        [s.Plq.STREAM.toString()]: {
+            title: l.NW.string(l.t.FlNoSU),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_STREAM_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_TEXT:
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_STREAM_DESCRIPTION_THREADS;
-                    case h.d4z.GUILD_STAGE_VOICE:
-                        return p.Z.Messages.ROLE_PERMISSIONS_STREAM_DESCRIPTION_STAGE;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t['ryG0/P'];
+                    case s.d4z.GUILD_TEXT:
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t.AuEQEB;
+                    case s.d4z.GUILD_STAGE_VOICE:
+                        return l.t.swJcNz;
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_STREAM_DESCRIPTION_VOICE;
+                        return l.t.RY8rIS;
                 }
             })(),
-            flag: h.Plq.STREAM
+            flag: s.Plq.STREAM
         },
-        [h.Plq.USE_EMBEDDED_ACTIVITIES.toString()]: {
-            title: p.Z.Messages.USE_EMBEDDED_ACTIVITIES,
+        [s.Plq.USE_EMBEDDED_ACTIVITIES.toString()]: {
+            title: l.NW.string(l.t.rLSGen),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_EMBEDDED_ACTIVITIES_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_EMBEDDED_ACTIVITIES_DESCRIPTION_THREADS;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t.maNzCA;
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t.RyEwlZ;
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_EMBEDDED_ACTIVITIES_DESCRIPTION_CHANNEL;
+                        return l.t.qinvMT;
                 }
             })(),
-            flag: h.Plq.USE_EMBEDDED_ACTIVITIES
+            flag: s.Plq.USE_EMBEDDED_ACTIVITIES
         },
-        [h.Plq.USE_EXTERNAL_APPS.toString()]: {
-            title: p.Z.Messages.USE_EXTERNAL_APPS,
+        [s.Plq.USE_EXTERNAL_APPS.toString()]: {
+            title: l.NW.string(l.t['3TzAk5']),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_DESCRIPTION_THREADS;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t.bgIY3N;
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t.qPUPio;
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_DESCRIPTION_CHANNEL;
+                        return l.t.czqMLi;
                 }
             })(),
-            flag: h.Plq.USE_EXTERNAL_APPS
+            flag: s.Plq.USE_EXTERNAL_APPS
         },
-        [h.Plq.USE_SOUNDBOARD.toString()]: {
-            title: p.Z.Messages.USE_SOUNDBOARD,
+        [s.Plq.USE_SOUNDBOARD.toString()]: {
+            title: l.NW.string(l.t.Bco7ND),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_CATEGORY.format({ helpCenterArticle: f.Z.getArticleURL(h.BhN.SOUNDBOARD) });
-                    case h.d4z.GUILD_TEXT:
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_THREADS.format({ helpCenterArticle: f.Z.getArticleURL(h.BhN.SOUNDBOARD) });
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.NW.format(l.t['0kBp//'], { helpCenterArticle: a.Z.getArticleURL(s.BhN.SOUNDBOARD) });
+                    case s.d4z.GUILD_TEXT:
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.NW.format(l.t['6eYqU1'], { helpCenterArticle: a.Z.getArticleURL(s.BhN.SOUNDBOARD) });
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_VOICE.format({ helpCenterArticle: f.Z.getArticleURL(h.BhN.SOUNDBOARD) });
+                        return l.NW.format(l.t.GEi6Ym, { helpCenterArticle: a.Z.getArticleURL(s.BhN.SOUNDBOARD) });
                 }
             })(),
-            flag: h.Plq.USE_SOUNDBOARD
+            flag: s.Plq.USE_SOUNDBOARD
         },
-        [h.Plq.USE_EXTERNAL_SOUNDS.toString()]: {
-            title: p.Z.Messages.USE_EXTERNAL_SOUNDS,
-            description: p.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_SOUNDS_DESCRIPTION,
-            flag: h.Plq.USE_EXTERNAL_SOUNDS
+        [s.Plq.USE_EXTERNAL_SOUNDS.toString()]: {
+            title: l.NW.string(l.t.pwaVJy),
+            description: l.t.qDpPtb,
+            flag: s.Plq.USE_EXTERNAL_SOUNDS
         },
-        [h.Plq.USE_VAD.toString()]: {
-            title: p.Z.Messages.USE_VAD,
+        [s.Plq.USE_VAD.toString()]: {
+            title: l.NW.string(l.t['08zAV1']),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_VAD_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_STAGE_VOICE:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_VAD_DESCRIPTION_STAGE;
-                    case h.d4z.GUILD_TEXT:
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_VAD_DESCRIPTION_THREADS;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t.fUYPl5;
+                    case s.d4z.GUILD_STAGE_VOICE:
+                        return l.t.BJKqsb;
+                    case s.d4z.GUILD_TEXT:
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t['3GJwsb'];
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_USE_VAD_DESCRIPTION_VOICE;
+                        return l.t.s2eihY;
                 }
             })(),
-            flag: h.Plq.USE_VAD
+            flag: s.Plq.USE_VAD
         },
-        [h.Plq.PRIORITY_SPEAKER.toString()]: {
-            title: p.Z.Messages.PRIORITY_SPEAKER,
+        [s.Plq.PRIORITY_SPEAKER.toString()]: {
+            title: l.NW.string(l.t.BVK71t),
             description: (() => {
                 let e = {
-                    keybind: p.Z.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY,
+                    keybind: l.NW.string(l.t.DkSwJy),
                     onClick: () => {
-                        d.Z.open(h.oAB.KEYBINDS);
+                        r.Z.open(s.oAB.KEYBINDS);
                     }
                 };
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_CATEGORY.format(e);
-                    case h.d4z.GUILD_TEXT:
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_THREADS.format(e);
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.NW.format(l.t['8nIfDA'], e);
+                    case s.d4z.GUILD_TEXT:
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.NW.format(l.t['0t6uSk'], e);
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_VOICE.format(e);
+                        return l.NW.format(l.t.UvB2KC, e);
                 }
             })(),
-            flag: h.Plq.PRIORITY_SPEAKER
+            flag: s.Plq.PRIORITY_SPEAKER
         },
-        [h.Plq.MUTE_MEMBERS.toString()]: {
-            title: p.Z.Messages.MUTE_MEMBERS,
+        [s.Plq.MUTE_MEMBERS.toString()]: {
+            title: l.NW.string(l.t['8EI309']),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MUTE_MEMBERS_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_STAGE_VOICE:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MUTE_MEMBERS_DESCRIPTION_STAGE;
-                    case h.d4z.GUILD_TEXT:
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MUTE_MEMBERS_DESCRIPTION_THREADS;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t.bcuobG;
+                    case s.d4z.GUILD_STAGE_VOICE:
+                        return l.t.EbvdHx;
+                    case s.d4z.GUILD_TEXT:
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t.KYDG2N;
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MUTE_MEMBERS_DESCRIPTION_VOICE;
+                        return l.t.LW5C9P;
                 }
             })(),
-            flag: h.Plq.MUTE_MEMBERS
+            flag: s.Plq.MUTE_MEMBERS
         },
-        [h.Plq.DEAFEN_MEMBERS.toString()]: {
-            title: p.Z.Messages.DEAFEN_MEMBERS,
+        [s.Plq.DEAFEN_MEMBERS.toString()]: {
+            title: l.NW.string(l.t['9L47Fh']),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_DEAFEN_MEMBERS_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_TEXT:
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_DEAFEN_MEMBERS_DESCRIPTION_THREADS;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t.amZ5vr;
+                    case s.d4z.GUILD_TEXT:
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t['d+i1nZ'];
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_DEAFEN_MEMBERS_DESCRIPTION_VOICE;
+                        return l.t.UAdIxs;
                 }
             })(),
-            flag: h.Plq.DEAFEN_MEMBERS
+            flag: s.Plq.DEAFEN_MEMBERS
         },
-        [h.Plq.MOVE_MEMBERS.toString()]: {
-            title: p.Z.Messages.MOVE_MEMBERS,
+        [s.Plq.MOVE_MEMBERS.toString()]: {
+            title: l.NW.string(l.t.YtjJPT),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MOVE_MEMBERS_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_STAGE_VOICE:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MOVE_MEMBERS_DESCRIPTION_STAGE;
-                    case h.d4z.GUILD_TEXT:
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MOVE_MEMBERS_DESCRIPTION_THREADS;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return l.t.XmoyRE;
+                    case s.d4z.GUILD_STAGE_VOICE:
+                        return l.t.bizKz8;
+                    case s.d4z.GUILD_TEXT:
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t.cbdQy8;
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MOVE_MEMBERS_DESCRIPTION_VOICE;
+                        return l.t.nSD1am;
                 }
             })(),
-            flag: h.Plq.MOVE_MEMBERS
+            flag: s.Plq.MOVE_MEMBERS
         },
-        [h.Plq.REQUEST_TO_SPEAK.toString()]: {
-            title: p.Z.Messages.REQUEST_TO_SPEAK,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_REQUEST_TO_SPEAK_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_REQUEST_TO_SPEAK_DESCRIPTION_STAGE,
-            flag: h.Plq.REQUEST_TO_SPEAK
+        [s.Plq.REQUEST_TO_SPEAK.toString()]: {
+            title: l.NW.string(l.t['5kicT0']),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t.T1lMSk : l.t.uzlYFB,
+            flag: s.Plq.REQUEST_TO_SPEAK
         },
-        [h.Plq.MANAGE_THREADS.toString()]: {
-            title: h.TPd.GUILD_THREADS_ONLY.has(i) ? p.Z.Messages.MANAGE_FORUM_POSTS : n && i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.MANAGE_THREADS_AND_FORUM_POSTS : p.Z.Messages.MANAGE_THREADS,
+        [s.Plq.MANAGE_THREADS.toString()]: {
+            title: s.TPd.GUILD_THREADS_ONLY.has(u) ? l.NW.string(l.t.ossiZG) : n && u === s.d4z.GUILD_CATEGORY ? l.NW.string(l.t.QKe7Q0) : l.NW.string(l.t.kEqgr6),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return n ? p.Z.Messages.ROLE_PERMISSIONS_MANAGE_THREADS_AND_FORUMS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_MANAGE_THREADS_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_THREADS_AND_FORUMS_DESCRIPTION_TEXT;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return n ? l.t.S31soa : l.t.YDIQ8P;
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t['XLi/jI'];
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_MANAGE_THREADS_DESCRIPTION_TEXT;
+                        return l.t.yvan0t;
                 }
             })(),
-            flag: h.Plq.MANAGE_THREADS
+            flag: s.Plq.MANAGE_THREADS
         },
-        [h.Plq.CREATE_PUBLIC_THREADS.toString()]: {
-            title: p.Z.Messages.CREATE_PUBLIC_THREADS,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_CREATE_PUBLIC_THREADS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_CREATE_PUBLIC_THREADS_DESCRIPTION_TEXT,
-            flag: h.Plq.CREATE_PUBLIC_THREADS
+        [s.Plq.CREATE_PUBLIC_THREADS.toString()]: {
+            title: l.NW.string(l.t['25rKnZ']),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t['+M1yLi'] : l.t['5SDtGB'],
+            flag: s.Plq.CREATE_PUBLIC_THREADS
         },
-        [h.Plq.CREATE_PRIVATE_THREADS.toString()]: {
-            title: p.Z.Messages.CREATE_PRIVATE_THREADS,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_CREATE_PRIVATE_THREADS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_CREATE_PRIVATE_THREADS_DESCRIPTION_TEXT,
-            flag: h.Plq.CREATE_PRIVATE_THREADS
+        [s.Plq.CREATE_PRIVATE_THREADS.toString()]: {
+            title: l.NW.string(l.t.QwbTSU),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t['hBS/zs'] : l.t.Chg2zc,
+            flag: s.Plq.CREATE_PRIVATE_THREADS
         },
-        [h.Plq.SEND_MESSAGES_IN_THREADS.toString()]: {
-            title: h.TPd.GUILD_THREADS_ONLY.has(i) ? p.Z.Messages.SEND_MESSAGES_IN_FORUM_POSTS : n && i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS : p.Z.Messages.SEND_MESSAGES_IN_THREADS,
+        [s.Plq.SEND_MESSAGES_IN_THREADS.toString()]: {
+            title: s.TPd.GUILD_THREADS_ONLY.has(u) ? l.NW.string(l.t.fqhqWl) : n && u === s.d4z.GUILD_CATEGORY ? l.NW.string(l.t['5QlVGx']) : l.NW.string(l.t.fTE74u),
             description: (() => {
-                switch (i) {
-                    case h.d4z.GUILD_CATEGORY:
-                        return n ? p.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_DESCRIPTION_CATEGORY;
-                    case h.d4z.GUILD_FORUM:
-                    case h.d4z.GUILD_MEDIA:
-                        return p.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS_DESCRIPTION_TEXT;
+                switch (u) {
+                    case s.d4z.GUILD_CATEGORY:
+                        return n ? l.t.DlIVcH : l.t.VvrChI;
+                    case s.d4z.GUILD_FORUM:
+                    case s.d4z.GUILD_MEDIA:
+                        return l.t.XTnrPD;
                     default:
-                        return p.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_DESCRIPTION_TEXT;
+                        return l.t.xHO6MT;
                 }
             })(),
-            flag: h.Plq.SEND_MESSAGES_IN_THREADS
+            flag: s.Plq.SEND_MESSAGES_IN_THREADS
         },
-        [h.Plq.MANAGE_EVENTS.toString()]: {
-            title: p.Z.Messages.MANAGE_EVENTS,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_MANAGE_EVENTS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_MANAGE_EVENTS_DESCRIPTION_CHANNEL,
-            flag: h.Plq.MANAGE_EVENTS
+        [s.Plq.MANAGE_EVENTS.toString()]: {
+            title: l.NW.string(l.t.HIgA5e),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t.CP2sz8 : l.t['4pO/TU'],
+            flag: s.Plq.MANAGE_EVENTS
         },
-        [h.Plq.CREATE_EVENTS.toString()]: {
-            title: p.Z.Messages.CREATE_EVENTS,
-            description: i === h.d4z.GUILD_CATEGORY ? p.Z.Messages.ROLE_PERMISSIONS_CREATE_EVENTS_DESCRIPTION_CATEGORY : p.Z.Messages.ROLE_PERMISSIONS_CREATE_EVENTS_DESCRIPTION_CHANNEL,
-            flag: h.Plq.CREATE_EVENTS
+        [s.Plq.CREATE_EVENTS.toString()]: {
+            title: l.NW.string(l.t.qyjZub),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t.XpibmJ : l.t.sPoBLS,
+            flag: s.Plq.CREATE_EVENTS
         },
-        [h.Plq.SET_VOICE_CHANNEL_STATUS.toString()]: {
-            title: p.Z.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE,
-            description: p.Z.Messages.VOICE_CHANNEL_STATUS_PERMISSION_DESCRIPTION,
-            flag: h.Plq.SET_VOICE_CHANNEL_STATUS
+        [s.Plq.SET_VOICE_CHANNEL_STATUS.toString()]: {
+            title: l.NW.string(l.t.VBwkUV),
+            description: l.t.C6BzX1,
+            flag: s.Plq.SET_VOICE_CHANNEL_STATUS
         }
     };
 }
-((a = u || (u = {})).SETTINGS_PAGE = 'settings-page'), (a.MEMBERS_LIST = 'members-list'), (a.EMPTY_STATE = 'empty-state'), (a.CREATE_CHANNEL = 'create-channel'), ((s = c || (c = {})).BASIC = 'basic'), (s.ADVANCED = 'advanced');

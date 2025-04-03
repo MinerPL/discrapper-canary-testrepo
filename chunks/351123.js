@@ -1,374 +1,416 @@
-s(47120), s(724458);
-var n = s(735250),
-    l = s(470079),
-    a = s(120356),
-    i = s.n(a),
-    r = s(442837),
-    o = s(481060),
-    d = s(668781),
-    c = s(493683),
-    u = s(787014),
-    h = s(741361),
-    m = s(911969),
-    g = s(385499),
-    E = s(134433),
-    T = s(600164),
-    p = s(156699),
-    N = s(693196),
-    _ = s(434404),
-    S = s(200498),
-    x = s(146085),
-    f = s(192079),
-    C = s(777036),
-    I = s(277053),
-    M = s(271383),
-    R = s(430824),
-    Z = s(496675),
-    v = s(594174),
-    O = s(903386),
-    A = s(700785),
-    L = s(605436),
-    j = s(27544),
-    b = s(415236),
-    D = s(182905),
-    y = s(71080),
-    w = s(981631),
-    P = s(231338),
-    F = s(689938),
-    B = s(343535);
-function U(e) {
-    let { channel: t, roles: s, members: l, disabledReason: a, getRemoveTooltipHint: r } = e;
-    return (0, n.jsx)(o.List, {
-        className: B.roleMemberList,
-        sections: [s.length, l.length],
+n.d(t, { Z: () => z }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(442837),
+    o = n(481060),
+    c = n(668781),
+    d = n(493683),
+    u = n(787014),
+    h = n(741361),
+    g = n(911969),
+    m = n(385499),
+    p = n(134433),
+    f = n(600164),
+    x = n(156699),
+    j = n(693196),
+    b = n(434404),
+    N = n(200498),
+    v = n(146085),
+    y = n(192079),
+    C = n(277053),
+    S = n(271383),
+    w = n(430824),
+    Z = n(496675),
+    O = n(594174),
+    E = n(903386),
+    T = n(700785),
+    R = n(605436),
+    _ = n(27544),
+    I = n(415236),
+    P = n(182905),
+    W = n(71080),
+    L = n(981631),
+    D = n(231338),
+    A = n(388032),
+    M = n(690550);
+function k(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function B(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function V(e) {
+    let { channel: t, roles: n, members: i, disabledReason: l, getRemoveTooltipHint: a } = e;
+    return (0, r.jsx)(o.aVo, {
+        className: M.roleMemberList,
+        sections: [n.length, i.length],
         renderRow: function (e) {
             let u,
-                p,
-                N,
-                { section: _, row: x } = e,
-                f = !1;
-            switch (_) {
-                case y.m$.ROLES:
+                x,
+                j,
+                { section: b, row: v } = e,
+                y = !1;
+            switch (b) {
+                case W.m$.ROLES:
                     var C;
-                    (N =
-                        (p = s[x]).rowType === y.aC.ROLE && (null === (C = p.tags) || void 0 === C ? void 0 : C.guild_connections) === null
-                            ? (0, n.jsx)(E.Z, {
-                                  className: B.shield,
-                                  color: p.colorString,
+                    (j =
+                        (x = n[v]).rowType === W.aC.ROLE && (null == (C = x.tags) ? void 0 : C.guild_connections) === null
+                            ? (0, r.jsx)(p.Z, {
+                                  className: M.shield,
+                                  color: x.colorString,
                                   size: 20
                               })
-                            : (0, n.jsx)(o.ShieldUserIcon, {
+                            : (0, r.jsx)(o.lZ8, {
                                   size: 'custom',
-                                  className: B.shield,
-                                  color: p.colorString,
+                                  className: M.shield,
+                                  color: x.colorString,
                                   height: 20
                               })),
-                        (u = (0, n.jsxs)(n.Fragment, {
+                        (u = (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, n.jsx)('div', {
-                                    className: B.rowHeight,
-                                    children: N
+                                (0, r.jsx)('div', {
+                                    className: M.rowHeight,
+                                    children: j
                                 }),
-                                (0, n.jsx)(o.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
-                                    className: B.rowLabel,
-                                    color: p.disabled ? 'text-muted' : 'text-normal',
-                                    children: p.name
+                                    className: M.rowLabel,
+                                    color: x.disabled ? 'text-muted' : 'text-normal',
+                                    children: x.name
                                 })
                             ]
                         })),
-                        (f = p.disabled);
+                        (y = x.disabled);
                     break;
-                case y.m$.MEMBERS:
-                    (p = l[x]),
-                        (u = (0, n.jsxs)(n.Fragment, {
+                case W.m$.MEMBERS:
+                    (x = i[v]),
+                        (u = (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, n.jsx)(o.Avatar, {
-                                    src: p.avatarURL,
-                                    size: o.AvatarSizes.SIZE_24,
+                                (0, r.jsx)(o.qEK, {
+                                    src: x.avatarURL,
+                                    size: o.EFr.SIZE_24,
                                     'aria-hidden': !0
                                 }),
-                                (0, n.jsx)(o.Text, {
-                                    className: B.rowLabel,
+                                (0, r.jsx)(o.Text, {
+                                    className: M.rowLabel,
                                     variant: 'text-sm/normal',
-                                    children: p.name
+                                    children: x.name
                                 }),
-                                p.bot &&
-                                    (0, n.jsx)(g.Z, {
-                                        verified: p.verifiedBot,
-                                        className: B.rowBotTag
+                                x.bot &&
+                                    (0, r.jsx)(m.Z, {
+                                        verified: x.verifiedBot,
+                                        className: M.rowBotTag
                                     }),
-                                null != p.nickname &&
-                                    (0, n.jsx)(o.Text, {
+                                null != x.nickname &&
+                                    (0, r.jsx)(o.Text, {
                                         color: 'text-muted',
-                                        className: B.rowLabelSubText,
+                                        className: M.rowLabelSubText,
                                         variant: 'text-sm/normal',
-                                        children: p.username
+                                        children: x.username
                                     })
                             ]
                         })),
-                        (f = p.disabled);
+                        (y = x.disabled);
                     break;
                 default:
-                    p = null;
+                    x = null;
             }
-            if (null == p) return null;
-            let I = !f && null == a && null != p.id;
-            return (0, n.jsxs)(
-                T.Z,
+            if (null == x) return null;
+            let S = !y && null == l && null != x.id;
+            return (0, r.jsxs)(
+                f.Z,
                 {
-                    justify: T.Z.Justify.BETWEEN,
-                    align: T.Z.Align.CENTER,
-                    className: B.memberRow,
+                    justify: f.Z.Justify.BETWEEN,
+                    align: f.Z.Align.CENTER,
+                    className: M.memberRow,
                     children: [
-                        (0, n.jsx)(T.Z, {
-                            justify: T.Z.Justify.START,
-                            align: T.Z.Align.CENTER,
-                            className: B.__invalid_memberRowBody,
+                        (0, r.jsx)(f.Z, {
+                            justify: f.Z.Justify.START,
+                            align: f.Z.Align.CENTER,
+                            className: M.__invalid_memberRowBody,
                             children: u
                         }),
-                        (0, n.jsx)(o.Text, {
+                        (0, r.jsx)(o.Text, {
                             color: 'text-muted',
                             variant: 'text-xs/normal',
-                            children: L.zB(p.rowType)
+                            children: R.zB(x.rowType)
                         }),
-                        p.rowType !== y.aC.EMPTY_STATE &&
-                            (0, n.jsx)(o.TooltipContainer, {
-                                className: B.removeIconContainer,
-                                text: null != a ? a : r(p.rowType, p.disabled),
-                                children: (0, n.jsx)(o.Clickable, {
+                        x.rowType !== W.aC.EMPTY_STATE &&
+                            (0, r.jsx)(o.DY3, {
+                                className: M.removeIconContainer,
+                                text: null != l ? l : a(x.rowType, x.disabled),
+                                children: (0, r.jsx)(o.P3F, {
                                     onClick: () => {
-                                        var e, s, n;
+                                        var e, n, r;
                                         return (
-                                            I &&
-                                            null != p &&
-                                            ((e = p.id),
-                                            (s = p.name),
-                                            (n = p.rowType),
-                                            void d.Z.show({
-                                                title: F.Z.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
-                                                body: F.Z.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({ name: s }),
-                                                cancelText: F.Z.Messages.CANCEL,
+                                            S &&
+                                            null != x &&
+                                            ((e = x.id),
+                                            (n = x.name),
+                                            (r = x.rowType),
+                                            void c.Z.show({
+                                                title: A.NW.string(A.t.GuPYQE),
+                                                body: A.NW.format(A.t.xERCnZ, { name: n }),
+                                                cancelText: A.NW.string(A.t['ETE/oK']),
                                                 onConfirm: () =>
-                                                    (function (e, s) {
+                                                    (function (e, n) {
                                                         if (t.isGuildStageVoice()) {
-                                                            let n = (0, S._L)(e, s === y.aC.ROLE ? m.BN.ROLE : m.BN.MEMBER, t);
-                                                            (0, S.Os)(n) ? c.Z.clearPermissionOverwrite(t.id, n.id) : (0, h.hw)(t.id, [n]);
-                                                        } else c.Z.clearPermissionOverwrite(t.id, e);
-                                                    })(e, n)
+                                                            let r = (0, N._L)(e, n === W.aC.ROLE ? g.BN.ROLE : g.BN.MEMBER, t);
+                                                            (0, N.Os)(r) ? d.Z.clearPermissionOverwrite(t.id, r.id) : (0, h.hw)(t.id, [r]);
+                                                        } else d.Z.clearPermissionOverwrite(t.id, e);
+                                                    })(e, r)
                                             }))
                                         );
                                     },
-                                    'aria-disabled': !I,
-                                    'aria-label': F.Z.Messages.REMOVE,
-                                    children: (0, n.jsx)(o.CircleXIcon, {
+                                    'aria-disabled': !S,
+                                    'aria-label': A.NW.string(A.t.N86XcH),
+                                    children: (0, r.jsx)(o.k$p, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: i()(B.removeIcon, { [B.disabledRemoveIcon]: f || a })
+                                        className: s()(M.removeIcon, { [M.disabledRemoveIcon]: y || l })
                                     })
                                 })
                             })
                     ]
                 },
-                p.id
+                x.id
             );
         },
         rowHeight: 40,
         renderSection: function (e) {
             let { section: t } = e;
             switch (t) {
-                case y.m$.ROLES:
-                    return (0, n.jsx)(k, { title: F.Z.Messages.ROLES }, 'roles-title');
-                case y.m$.MEMBERS:
-                    return (0, n.jsx)(k, { title: F.Z.Messages.MEMBERS }, 'members-title');
+                case W.m$.ROLES:
+                    return (0, r.jsx)(H, { title: A.NW.string(A.t.LPJmLy) }, 'roles-title');
+                case W.m$.MEMBERS:
+                    return (0, r.jsx)(H, { title: A.NW.string(A.t['9Oq93t']) }, 'members-title');
             }
         },
         sectionHeight: 49
     });
 }
-function H(e) {
-    let { guild: t, channel: l, permissionUpdates: a } = e,
-        d = (0, r.e7)([R.Z], () => R.Z.getRoles(t.id)),
-        c = L.RZ(t, d, l, x.yP, a),
-        u = (0, r.e7)([M.ZP], () => L.cR(M.ZP.getMemberIds(t.id), l, t, x.yP, a)),
-        h = (0, S.nG)(l.id);
-    function m() {
-        (0, o.openModalLazy)(async () => {
-            let { default: e } = await s.e('82961').then(s.bind(s, 388131));
-            return (t) =>
-                (0, n.jsx)(e, {
-                    ...t,
-                    channelId: l.id
-                });
+function G(e) {
+    let { guild: t, channel: i, permissionUpdates: l } = e,
+        c = (0, a.e7)([w.Z], () => w.Z.getRoles(t.id)),
+        d = R.RZ(t, c, i, v.yP, l),
+        u = (0, a.e7)([S.ZP], () => R.cR(S.ZP.getMemberIds(t.id), i, t, v.yP, l)),
+        h = (0, N.nG)(i.id);
+    function g() {
+        (0, o.ZDy)(async () => {
+            let { default: e } = await n.e('46786').then(n.bind(n, 388131));
+            return (t) => (0, r.jsx)(e, B(k({}, t), { channelId: i.id }));
         });
     }
-    return (0, n.jsxs)('div', {
-        className: i()(B.settingCard, B.active),
+    return (0, r.jsxs)('div', {
+        className: s()(M.settingCard, M.active),
         children: [
-            (0, n.jsx)(b.Z, {
-                label: F.Z.Messages.CHANNEL_PERMISSIONS_MODERATOR_TITLE,
-                description: F.Z.Messages.CHANNEL_PERMISSIONS_MODERATOR_DESCRIPTION,
-                icon: (0, n.jsx)(o.StageIcon, {
+            (0, r.jsx)(I.Z, {
+                label: A.NW.string(A.t.StpcFR),
+                description: A.NW.string(A.t.f7VbhI),
+                icon: (0, r.jsx)(o.ewx, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: B.cardIcon,
+                    className: M.cardIcon,
                     height: 20,
                     width: 20
                 }),
                 id: 'StageModeratorSettingCard'
             }),
-            (0, n.jsxs)('div', {
-                className: B.cardFolder,
+            (0, r.jsxs)('div', {
+                className: M.cardFolder,
                 children: [
-                    (0, n.jsxs)(T.Z, {
-                        justify: T.Z.Justify.BETWEEN,
-                        align: T.Z.Align.CENTER,
-                        className: B.folderHeader,
+                    (0, r.jsxs)(f.Z, {
+                        justify: f.Z.Justify.BETWEEN,
+                        align: f.Z.Align.CENTER,
+                        className: M.folderHeader,
                         children: [
-                            (0, n.jsx)(o.FormTitle, {
+                            (0, r.jsx)(o.vwX, {
                                 tag: 'h5',
-                                className: B.folderTitle,
-                                children: F.Z.Messages.CHANNEL_PERMISSIONS_MODERATOR_LABEL
+                                className: M.folderTitle,
+                                children: A.NW.string(A.t['7BWDRU'])
                             }),
-                            (0, n.jsx)(o.Tooltip, {
-                                text: F.Z.Messages.CHANNEL_PERMISSIONS_NOT_MODERATOR,
+                            (0, r.jsx)(o.ua7, {
+                                text: A.NW.string(A.t.arRuER),
                                 shouldShow: !h,
                                 children: (e) =>
-                                    (0, n.jsx)(o.Button, {
-                                        ...e,
-                                        size: o.Button.Sizes.SMALL,
-                                        color: o.Button.Colors.BRAND,
-                                        onClick: m,
-                                        disabled: !h,
-                                        children: F.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
-                                    })
+                                    (0, r.jsx)(
+                                        o.zxk,
+                                        B(k({}, e), {
+                                            size: o.zxk.Sizes.SMALL,
+                                            color: o.zxk.Colors.BRAND,
+                                            onClick: g,
+                                            disabled: !h,
+                                            children: A.NW.string(A.t.dMJ3Y2)
+                                        })
+                                    )
                             })
                         ]
                     }),
-                    (0, n.jsx)(U, {
-                        channel: l,
-                        roles: c,
+                    (0, r.jsx)(V, {
+                        channel: i,
+                        roles: d,
                         members: u,
-                        disabledReason: h ? null : F.Z.Messages.CHANNEL_PERMISSIONS_NOT_MODERATOR,
-                        getRemoveTooltipHint: f.kk
+                        disabledReason: h ? null : A.NW.string(A.t.arRuER),
+                        getRemoveTooltipHint: y.kk
                     })
                 ]
             })
         ]
     });
 }
-function G(e) {
-    let { guild: t, channel: l, isPrivateGuildChannel: a, roles: d, members: c } = e,
-        u = (0, r.e7)([Z.Z], () => Z.Z.can(P.Pl.ADMINISTRATOR, t)),
-        h = A.Uu(P.Pl.VIEW_CHANNEL, t),
-        m = A.Uu(P.Pl.ADMINISTRATOR, t);
-    async function g() {
-        let e = l.accessPermissions,
-            i = v.default.getCurrentUser();
-        if (!a && null != (await (0, N.T)(t.id, l.id))) {
-            (0, o.openModalLazy)(async () => {
-                let { ConfirmModal: e } = await Promise.resolve().then(s.bind(s, 878678));
-                return (s) =>
-                    (0, n.jsx)(e, {
-                        ...s,
-                        confirmButtonColor: o.ButtonColors.BRAND,
-                        header: F.Z.Messages.CANNOT_PRIVATIZE_CHANNEL,
-                        confirmText: F.Z.Messages.OKAY,
-                        children: (0, n.jsx)(o.Text, {
-                            variant: 'text-md/normal',
-                            children: F.Z.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING_PRIVATE.format({
-                                onClick: () => {
-                                    _.Z.open(t.id, w.pNK.ONBOARDING), s.onClose();
-                                }
+function U(e) {
+    let { guild: t, channel: i, isPrivateGuildChannel: l, roles: c, members: d } = e,
+        u = (0, a.e7)([Z.Z], () => Z.Z.can(D.Pl.ADMINISTRATOR, t)),
+        h = T.Uu(D.Pl.VIEW_CHANNEL, t),
+        g = T.Uu(D.Pl.ADMINISTRATOR, t);
+    async function m() {
+        let e = i.accessPermissions,
+            s = O.default.getCurrentUser();
+        if (!l && null != (await (0, j.T)(t.id, i.id)))
+            return void (0, o.ZDy)(async () => {
+                let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
+                return (n) =>
+                    (0, r.jsx)(
+                        e,
+                        B(k({}, n), {
+                            confirmButtonColor: o.Ttl.BRAND,
+                            header: A.NW.string(A.t.ZzdgUl),
+                            confirmText: A.NW.string(A.t.BddRzc),
+                            children: (0, r.jsx)(o.Text, {
+                                variant: 'text-md/normal',
+                                children: A.NW.format(A.t.DwY2vL, {
+                                    onClick: () => {
+                                        b.Z.open(t.id, L.pNK.ONBOARDING), n.onClose();
+                                    }
+                                })
                             })
                         })
-                    });
+                    );
             });
-            return;
-        }
-        L.$e(l, e, a), !a && null != i && !u && L.Yh(l, e);
+        R.$e(i, e, l), l || null == s || u || R.Yh(i, e);
     }
-    let E = {
-        title: F.Z.Messages.PRIVATE_CHANNEL,
-        subtitle: F.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION,
-        formLabel: F.Z.Messages.FORM_LABEL_CHANNEL_PERMISSIONS
+    let p = {
+        title: A.NW.string(A.t.aUI70t),
+        subtitle: A.NW.string(A.t.hfbjIC),
+        formLabel: A.NW.string(A.t.P6eCbG)
     };
     return (
-        l.isCategory() ? ((E.title = F.Z.Messages.PRIVATE_CATEGORY), (E.subtitle = F.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION), (E.formLabel = F.Z.Messages.FORM_LABEL_CATEGORY_PERMISSIONS)) : l.type === w.d4z.GUILD_VOICE && (E.subtitle = F.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_VOICE),
-        (0, n.jsxs)('div', {
-            className: i()(B.settingCard, { [B.active]: a }),
+        i.isCategory() ? ((p.title = A.NW.string(A.t.lEPAZ2)), (p.subtitle = A.NW.string(A.t['RQUk6+'])), (p.formLabel = A.NW.string(A.t['8VIxJi']))) : i.type === L.d4z.GUILD_VOICE && (p.subtitle = A.NW.string(A.t.cLjvKi)),
+        (0, r.jsxs)('div', {
+            className: s()(M.settingCard, { [M.active]: l }),
             children: [
-                (0, n.jsx)(b.Z, {
-                    description: E.subtitle,
-                    icon: (0, n.jsx)(o.LockIcon, {
+                (0, r.jsx)(I.Z, {
+                    description: p.subtitle,
+                    icon: (0, r.jsx)(o.mBM, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: B.cardIcon,
+                        className: M.cardIcon,
                         height: 20,
                         width: 20
                     }),
                     id: 'PrivateChannelSettingCard',
-                    label: E.title,
-                    onChange: g,
-                    value: a
+                    label: p.title,
+                    onChange: m,
+                    value: l
                 }),
-                (0, n.jsxs)('div', {
-                    className: B.cardFolder,
+                (0, r.jsxs)('div', {
+                    className: M.cardFolder,
                     children: [
-                        m &&
-                            (0, n.jsx)('div', {
-                                className: B.adminWarning,
-                                children: (0, n.jsx)(C.Z, {
-                                    messageType: C.Q.WARNING,
-                                    children: F.Z.Messages.CHANNEL_PERMISSIONS_EVERYONE_IS_ADMIN_WARNING
+                        g &&
+                            (0, r.jsx)('div', {
+                                className: M.adminWarning,
+                                children: (0, r.jsx)(o.Wn, {
+                                    messageType: o.QYI.WARNING,
+                                    children: A.NW.string(A.t['5f3HIC'])
                                 })
                             }),
                         !h &&
-                            !m &&
-                            !a &&
-                            (0, n.jsx)('div', {
-                                className: B.adminWarning,
-                                children: (0, n.jsx)(C.Z, {
-                                    messageType: C.Q.WARNING,
-                                    children: F.Z.Messages.CHANNEL_PERMISSIONS_EVERYONE_CAN_NOT_VIEW_WARNING
+                            !g &&
+                            !l &&
+                            (0, r.jsx)('div', {
+                                className: M.adminWarning,
+                                children: (0, r.jsx)(o.Wn, {
+                                    messageType: o.QYI.WARNING,
+                                    children: A.NW.string(A.t.ZAk4Q0)
                                 })
                             }),
-                        a &&
-                            (0, n.jsxs)(n.Fragment, {
+                        l &&
+                            (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, n.jsxs)(T.Z, {
-                                        justify: T.Z.Justify.BETWEEN,
-                                        align: T.Z.Align.CENTER,
-                                        className: B.folderHeader,
+                                    (0, r.jsxs)(f.Z, {
+                                        justify: f.Z.Justify.BETWEEN,
+                                        align: f.Z.Align.CENTER,
+                                        className: M.folderHeader,
                                         children: [
-                                            (0, n.jsx)(o.FormTitle, {
+                                            (0, r.jsx)(o.vwX, {
                                                 tag: 'h5',
-                                                className: B.folderTitle,
-                                                children: E.formLabel
+                                                className: M.folderTitle,
+                                                children: p.formLabel
                                             }),
-                                            (0, n.jsx)(o.Button, {
-                                                size: o.Button.Sizes.SMALL,
-                                                color: o.Button.Colors.BRAND,
+                                            (0, r.jsx)(o.zxk, {
+                                                size: o.zxk.Sizes.SMALL,
+                                                color: o.zxk.Colors.BRAND,
                                                 onClick: function () {
-                                                    (0, o.openModalLazy)(async () => {
-                                                        let { default: e } = await Promise.resolve().then(s.bind(s, 185413));
+                                                    (0, o.ZDy)(async () => {
+                                                        let { default: e } = await Promise.resolve().then(n.bind(n, 185413));
                                                         return (t) =>
-                                                            (0, n.jsx)(e, {
-                                                                ...t,
-                                                                channelId: l.id,
-                                                                inSettings: !0
-                                                            });
+                                                            (0, r.jsx)(
+                                                                e,
+                                                                B(k({}, t), {
+                                                                    channelId: i.id,
+                                                                    inSettings: !0
+                                                                })
+                                                            );
                                                     });
                                                 },
-                                                children: F.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
+                                                children: A.NW.string(A.t.dMJ3Y2)
                                             })
                                         ]
                                     }),
-                                    (0, n.jsx)(U, {
-                                        channel: l,
-                                        roles: d,
-                                        members: c,
-                                        getRemoveTooltipHint: L.yv
+                                    (0, r.jsx)(V, {
+                                        channel: i,
+                                        roles: c,
+                                        members: d,
+                                        getRemoveTooltipHint: R.yv
                                     })
                                 ]
                             })
@@ -378,120 +420,118 @@ function G(e) {
         })
     );
 }
-function k(e) {
+function H(e) {
     let { title: t } = e;
-    return (0, n.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         children: [
-            (0, n.jsx)(o.FormDivider, { className: B.divider }),
-            (0, n.jsx)(o.FormTitle, {
-                className: i()(B.folderTitle, B.sectionTitle),
+            (0, r.jsx)(o.$i$, { className: M.divider }),
+            (0, r.jsx)(o.vwX, {
+                className: s()(M.folderTitle, M.sectionTitle),
                 tag: 'h5',
                 children: t
             })
         ]
     });
 }
-t.Z = r.ZP.connectStores([I.Z, Z.Z, M.ZP, R.Z], () => {
-    let e;
-    let t = I.Z.channel,
-        s = I.Z.category,
-        n = [],
-        l = [],
-        a = {},
-        i = !1;
+let z = a.ZP.connectStores([C.Z, Z.Z, S.ZP, w.Z], () => {
+    let e,
+        t = C.Z.channel,
+        n = C.Z.category,
+        r = [],
+        i = [],
+        l = {},
+        s = !1;
     if (null != t) {
-        e = R.Z.getGuild(t.getGuildId());
-        let s = M.ZP.getMemberIds(null == e ? void 0 : e.id);
+        e = w.Z.getGuild(t.getGuildId());
+        let n = S.ZP.getMemberIds(null == e ? void 0 : e.id);
         if (null != e) {
-            let r = R.Z.getRoles(e.id);
-            (a = I.Z.editedPermissionIds.reduce((e, t) => {
-                let s = I.Z.getPermissionOverwrite(t);
-                return null != s && (e[t] = s), e;
+            let a = w.Z.getRoles(e.id);
+            (l = C.Z.editedPermissionIds.reduce((e, t) => {
+                let n = C.Z.getPermissionOverwrite(t);
+                return null != n && (e[t] = n), e;
             }, {})),
-                (n = L.kA(e, r, t, t.accessPermissions, a)),
-                (l = L.cR(s, t, e, t.accessPermissions, a)),
-                (i = L.Yk(t, a));
+                (r = R.kA(e, a, t, t.accessPermissions, l)),
+                (i = R.cR(n, t, e, t.accessPermissions, l)),
+                (s = R.Yk(t, l));
         }
     }
     return {
-        canSyncChannel: null != s && Z.Z.can(P.Pl.MANAGE_ROLES, s),
-        category: s,
+        canSyncChannel: null != n && Z.Z.can(D.Pl.MANAGE_ROLES, n),
+        category: n,
         channel: t,
-        filteredMembers: l,
-        filteredRoles: n,
+        filteredMembers: i,
+        filteredRoles: r,
         guild: e,
-        isPrivateGuildChannel: i,
-        locked: I.Z.locked,
-        permissionUpdates: a
+        isPrivateGuildChannel: s,
+        locked: C.Z.locked,
+        permissionUpdates: l
     };
 })(function (e) {
-    let { canSyncChannel: t, category: a, channel: i, filteredMembers: r, filteredRoles: d, guild: c, isPrivateGuildChannel: h, locked: m, permissionUpdates: g } = e,
-        [E, T] = l.useState(!A.Uu(P.Pl.SEND_MESSAGES, i));
-    if (null == i || null == c) return null;
-    function N() {
-        L.$e(i, P.Pl.SEND_MESSAGES, E), T(!E);
-    }
-    function _() {
-        if (null != a)
-            (0, o.openModalLazy)(async () => {
-                let { default: e } = await Promise.resolve().then(s.bind(s, 170509));
-                return (t) =>
-                    (0, n.jsx)(e, {
-                        ...t,
-                        channel: i,
-                        category: a,
-                        onConfirm: async () => {
-                            let { guild_id: e } = a,
-                                t = { ...a.permissionOverwrites };
-                            null != e && null == t[e] && (t[e] = A.we(e)), (await (0, p.u)(i, t[e].deny, t[e].allow)) && (0, u.wk)(i.id, { permissionOverwrites: Object.values(t) });
-                        }
-                    });
-            });
-    }
-    let S = {
-        title: F.Z.Messages.CHANNEL_PERMISSIONS,
-        subtitle: F.Z.Messages.CHANNEL_PERMISSIONS_SUBTITLE
+    let { canSyncChannel: t, category: l, channel: s, filteredMembers: a, filteredRoles: c, guild: d, isPrivateGuildChannel: h, locked: g, permissionUpdates: m } = e,
+        [p, f] = i.useState(!T.Uu(D.Pl.SEND_MESSAGES, s));
+    if (null == s || null == d) return null;
+    let j = {
+        title: A.NW.string(A.t.BAZMBg),
+        subtitle: A.NW.string(A.t.XLrZys)
     };
     return (
-        i.isCategory() && ((S.title = F.Z.Messages.CATEGORY_SETTINGS), (S.subtitle = F.Z.Messages.CATEGORY_PERMISSIONS_SUBTITLE)),
-        (0, n.jsxs)(n.Fragment, {
+        s.isCategory() && ((j.title = A.NW.string(A.t['/uELTk'])), (j.subtitle = A.NW.string(A.t['8iAg3d']))),
+        (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, n.jsx)(o.FormTitle, {
+                (0, r.jsx)(o.vwX, {
                     tag: 'h1',
-                    children: S.title
+                    children: j.title
                 }),
-                (0, n.jsx)(o.FormText, { children: S.subtitle }),
-                null != a && t
-                    ? m
-                        ? (0, n.jsx)(D.Z, {
+                (0, r.jsx)(o.R94, { children: j.subtitle }),
+                null != l && t
+                    ? g
+                        ? (0, r.jsx)(P.Z, {
                               canSync: !1,
-                              icon: o.RefreshIcon,
-                              noticeText: F.Z.Messages.CHANNEL_LOCKED_TO_CATEGORY.format({ categoryName: a.name })
+                              icon: o.DuK,
+                              noticeText: A.NW.format(A.t.ETJqLi, { categoryName: l.name })
                           })
-                        : (0, n.jsx)(D.Z, {
-                              buttonText: F.Z.Messages.SYNC_NOW,
+                        : (0, r.jsx)(P.Z, {
+                              buttonText: A.NW.string(A.t.NVwuHh),
                               canSync: !0,
-                              icon: (0, o.makeIconCompat)(O.Z),
-                              noticeText: F.Z.Messages.PERMISSIONS_UNSYNCED.format({ categoryName: a.name }),
-                              onClick: _
+                              icon: (0, o.GSL)(E.Z),
+                              noticeText: A.NW.format(A.t.OIhm0N, { categoryName: l.name }),
+                              onClick: function () {
+                                  null != l &&
+                                      (0, o.ZDy)(async () => {
+                                          let { default: e } = await Promise.resolve().then(n.bind(n, 170509));
+                                          return (t) =>
+                                              (0, r.jsx)(
+                                                  e,
+                                                  B(k({}, t), {
+                                                      channel: s,
+                                                      category: l,
+                                                      onConfirm: async () => {
+                                                          let { guild_id: e } = l,
+                                                              t = k({}, l.permissionOverwrites);
+                                                          null != e && null == t[e] && (t[e] = T.we(e)), (await (0, x.u)(s, t[e].deny, t[e].allow)) && (0, u.wk)(s.id, { permissionOverwrites: Object.values(t) });
+                                                      }
+                                                  })
+                                              );
+                                      });
+                              }
                           })
                     : null,
-                i.isGuildStageVoice()
-                    ? (0, n.jsx)(H, {
-                          guild: c,
-                          channel: i,
-                          permissionUpdates: g
+                s.isGuildStageVoice()
+                    ? (0, r.jsx)(G, {
+                          guild: d,
+                          channel: s,
+                          permissionUpdates: m
                       })
                     : null,
-                (0, n.jsx)(G, {
-                    channel: i,
-                    guild: c,
+                (0, r.jsx)(U, {
+                    channel: s,
+                    guild: d,
                     isPrivateGuildChannel: h,
-                    roles: d,
-                    members: r
+                    roles: c,
+                    members: a
                 }),
                 !1,
-                (0, n.jsx)(j.Z, {})
+                (0, r.jsx)(_.Z, {})
             ]
         })
     );

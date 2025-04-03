@@ -1,10 +1,3 @@
-var i, a;
-n.d(t, {
-    p: function () {
-        return i;
-    }
-}),
-    ((a = i || (i = {})).RAID = 'raid'),
-    (a.MENTION_RAID = 'mention_raid'),
-    (a.ACTIVITY_ALERTS_ENABLED = 'activity_alerts_enabled'),
-    (a.INTERACTION_BLOCKED = 'interaction_blocked');
+n.d(t, { p: () => i });
+var r,
+    i = (((r = {}).RAID = 'raid'), (r.MENTION_RAID = 'mention_raid'), (r.ACTIVITY_ALERTS_ENABLED = 'activity_alerts_enabled'), (r.INTERACTION_BLOCKED = 'interaction_blocked'), r);

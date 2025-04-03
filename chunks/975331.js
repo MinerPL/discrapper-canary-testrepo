@@ -1,100 +1,95 @@
-n.d(t, {
-    Z: function () {
-        return S;
-    }
-}),
-    n(47120);
-var s = n(735250),
-    a = n(470079),
-    i = n(512722),
-    r = n.n(i),
+n.d(t, { Z: () => x }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(512722),
+    a = n.n(s),
     l = n(481060),
     o = n(313201),
     c = n(584825),
     d = n(723047),
     u = n(727843),
-    _ = n(290348),
-    I = n(518470),
-    E = n(22902),
-    T = n(783454),
-    m = n(689938),
-    N = n(325850);
-function S() {
+    m = n(290348),
+    g = n(518470),
+    p = n(22902),
+    h = n(783454),
+    f = n(388032),
+    b = n(301849);
+function x() {
     var e;
     let { editStateId: t } = (0, u.N)(),
-        [n, i] = _.TT(t),
-        [S, h] = _.F2(t),
-        g = (0, c.oC)(t),
-        { options: C } = (0, E.Z)(null !== (e = null == g ? void 0 : g.active_trial) && void 0 !== e ? e : null),
-        x = (0, I.Z)(),
-        p = null != n,
-        R = a.useCallback(
+        [n, s] = m.TT(t),
+        [x, j] = m.F2(t),
+        N = (0, c.oC)(t),
+        { options: _ } = (0, p.Z)(null != (e = null == N ? void 0 : N.active_trial) ? e : null),
+        v = (0, g.Z)(),
+        C = null != n,
+        O = i.useCallback(
             (e) => {
-                let t = C.find((e) => e.isDefault);
-                r()(null != t, 'Missing default trial duartion option'), i(e ? t.value : null);
+                let t = _.find((e) => e.isDefault);
+                a()(null != t, 'Missing default trial duartion option'), s(e ? t.value : null);
             },
-            [i, C]
+            [s, _]
         ),
-        f = (0, d.mY)(),
-        L = (0, o.Dt)(),
-        O = (0, o.Dt)();
-    return (0, s.jsxs)(T.Z, {
-        title: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TITLE,
-        description: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_DESCRIPTION,
+        y = (0, d.mY)(),
+        I = (0, o.Dt)(),
+        E = (0, o.Dt)();
+    return (0, r.jsxs)(h.Z, {
+        title: f.NW.string(f.t['6antoq']),
+        description: f.NW.string(f.t.urVijY),
         children: [
-            (0, s.jsx)(l.FormSwitch, {
-                onChange: (e, t) => R(e),
-                value: p,
-                disabled: f,
+            (0, r.jsx)(l.j7V, {
+                onChange: (e, t) => O(e),
+                value: C,
+                disabled: y,
                 hideBorder: !0,
-                children: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_ENABLE_FREE_TRIAL_CTA
+                children: f.NW.string(f.t['+hTmdX'])
             }),
-            (0, s.jsxs)(l.FormSection, {
-                title: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TIME_LIMIT_TITLE,
-                titleId: L,
-                disabled: !p || f,
+            (0, r.jsxs)(l.hjN, {
+                title: f.NW.string(f.t.m1KuWV),
+                titleId: I,
+                disabled: !C || y,
                 children: [
-                    (0, s.jsx)(l.FormText, {
-                        type: l.FormText.Types.DESCRIPTION,
-                        className: N.formDescription,
-                        disabled: !p || f,
-                        children: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TIME_LIMIT_DESCRIPTION
+                    (0, r.jsx)(l.R94, {
+                        type: l.R94.Types.DESCRIPTION,
+                        className: b.formDescription,
+                        disabled: !C || y,
+                        children: f.NW.string(f.t.NB9NLC)
                     }),
-                    (0, s.jsx)(l.Spacer, { size: 8 }),
-                    (0, s.jsx)(l.SingleSelect, {
-                        'aria-labelledby': L,
-                        options: C,
-                        className: N.formInput,
-                        placeholder: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_DISABLED,
+                    (0, r.jsx)(l.LZC, { size: 8 }),
+                    (0, r.jsx)(l.q4e, {
+                        'aria-labelledby': I,
+                        options: _,
+                        className: b.formInput,
+                        placeholder: f.NW.string(f.t.WZG1BQ),
                         value: n,
-                        onChange: i,
+                        onChange: s,
                         maxVisibleItems: 5,
-                        isDisabled: !p || f,
-                        look: l.SelectLooks.CUSTOM
+                        isDisabled: !C || y,
+                        look: l.qQH.CUSTOM
                     })
                 ]
             }),
-            (0, s.jsx)(l.Spacer, { size: 24 }),
-            (0, s.jsxs)(l.FormSection, {
-                title: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_TITLE,
-                titleId: O,
-                disabled: !p || f,
+            (0, r.jsx)(l.LZC, { size: 24 }),
+            (0, r.jsxs)(l.hjN, {
+                title: f.NW.string(f.t['/JD9oa']),
+                titleId: E,
+                disabled: !C || y,
                 children: [
-                    (0, s.jsx)(l.FormText, {
-                        type: l.FormText.Types.DESCRIPTION,
-                        className: N.formDescription,
-                        disabled: !p || f,
-                        children: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_DESCRIPTION
+                    (0, r.jsx)(l.R94, {
+                        type: l.R94.Types.DESCRIPTION,
+                        className: b.formDescription,
+                        disabled: !C || y,
+                        children: f.NW.string(f.t.Cg5eBg)
                     }),
-                    (0, s.jsx)(l.SingleSelect, {
-                        'aria-labelledby': O,
-                        options: x,
-                        className: N.formInput,
-                        value: S,
-                        onChange: h,
+                    (0, r.jsx)(l.q4e, {
+                        'aria-labelledby': E,
+                        options: v,
+                        className: b.formInput,
+                        value: x,
+                        onChange: j,
                         maxVisibleItems: 5,
-                        isDisabled: !p || f,
-                        look: l.SelectLooks.CUSTOM
+                        isDisabled: !C || y,
+                        look: l.qQH.CUSTOM
                     })
                 ]
             })

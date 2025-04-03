@@ -1,8 +1,4 @@
-n.d(t, {
-    T: function () {
-        return r;
-    }
-});
+n.d(t, { T: () => r });
 let r = (0, n(987170).Z)({
     kind: 'guild',
     id: '2023-08_improved_bans_page',

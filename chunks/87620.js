@@ -1,8 +1,4 @@
-n.d(t, {
-    oV: function () {
-        return i;
-    }
-});
+n.d(t, { oV: () => i });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-09_iar_user_reporting',

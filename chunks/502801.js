@@ -1,56 +1,49 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return b;
-        }
-    }),
-    t(653041),
-    t(47120);
-var i = t(735250),
-    l = t(470079),
-    a = t(120356),
-    E = t.n(a),
-    r = t(442837),
-    o = t(952265),
-    d = t(481060),
-    _ = t(493683),
+t.d(e, { default: () => M }), t(653041), t(230036), t(47120);
+var l = t(200651),
+    i = t(192379),
+    r = t(120356),
+    E = t.n(r),
+    a = t(442837),
+    d = t(952265),
+    _ = t(481060),
+    o = t(493683),
     u = t(700582),
     s = t(100527),
     c = t(906732),
     C = t(933557),
-    S = t(471445),
-    A = t(734307),
-    T = t(359110),
+    A = t(471445),
+    T = t(734307),
+    S = t(359110),
     I = t(814443),
     L = t(210887),
-    D = t(131704),
-    N = t(699516),
+    N = t(131704),
+    D = t(699516),
     h = t(944486),
     U = t(914010),
-    R = t(594174),
-    P = t(186523),
+    P = t(594174),
+    R = t(186523),
     f = t(553826),
     g = t(823379),
-    O = t(407316),
-    G = t(937784),
-    m = t(689938),
-    H = t(49945),
-    Z = t(138715),
-    v = t(979770);
-function p(e) {
-    let { channel: n, ChannelIcon: t, selected: l, onClick: a } = e,
-        E = (0, C.ZP)(n);
-    return (0, i.jsxs)(d.Clickable, {
-        className: H.channelRow,
-        onClick: () => a(n.id),
+    G = t(407316),
+    O = t(937784),
+    m = t(388032),
+    Z = t(417254),
+    H = t(138715),
+    x = t(979770);
+function p(n) {
+    let { channel: e, ChannelIcon: t, selected: i, onClick: r } = n,
+        E = (0, C.ZP)(e);
+    return (0, l.jsxs)(_.P3F, {
+        className: Z.channelRow,
+        onClick: () => r(e.id),
         children: [
-            l ? (0, i.jsx)(f.Z, { className: H.radioIcon }) : (0, i.jsx)(P.Z, { className: H.radioIcon }),
-            (0, i.jsx)(t, {
-                className: H.icon,
+            i ? (0, l.jsx)(f.Z, { className: Z.radioIcon }) : (0, l.jsx)(R.Z, { className: Z.radioIcon }),
+            (0, l.jsx)(t, {
+                className: Z.icon,
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, i.jsx)(d.Text, {
+            (0, l.jsx)(_.Text, {
                 variant: 'text-md/medium',
                 color: 'interactive-active',
                 children: E
@@ -58,214 +51,214 @@ function p(e) {
         ]
     });
 }
-function M(e) {
-    let { guildId: n, selectedChannelId: t, onSelectChannelId: a } = e,
-        o = (0, r.e7)([h.Z], () => h.Z.getChannelId()),
-        { guildChannels: _ } = (0, r.cj)([A.Z], () => A.Z.getGuildWithoutChangingGuildActionRows(n)),
-        u = l.useMemo(() => {
-            let e = [];
+function v(n) {
+    let { guildId: e, selectedChannelId: t, onSelectChannelId: r } = n,
+        d = (0, a.e7)([h.Z], () => h.Z.getChannelId()),
+        { guildChannels: o } = (0, a.cj)([T.Z], () => T.Z.getGuildWithoutChangingGuildActionRows(e)),
+        u = i.useMemo(() => {
+            let n = [];
             return (
-                _.forEachChannel((n) => {
-                    !1 !== (0, O.W)(n.id) && ((0, D.r8)(n.type) || (0, D.bw)(n.type)) && e.push(n);
+                o.forEachChannel((e) => {
+                    !1 !== (0, G.W)(e.id) && ((0, N.r8)(e.type) || (0, N.bw)(e.type)) && n.push(e);
                 }),
-                e.sort((e, n) => (e.id === o ? -1 : n.id === o ? 1 : 0))
+                n.sort((n, e) => (n.id === d ? -1 : +(e.id === d)))
             );
-        }, [_, o]);
+        }, [o, d]);
     return 0 === u.length
         ? null
-        : (0, i.jsxs)(i.Fragment, {
+        : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, i.jsx)('div', { className: E()(H.divider, H.bottomDivider) }),
-                  (0, i.jsx)(d.Text, {
+                  (0, l.jsx)('div', { className: E()(Z.divider, Z.bottomDivider) }),
+                  (0, l.jsx)(_.Text, {
                       variant: 'eyebrow',
                       color: 'interactive-normal',
-                      className: H.contentPadding,
-                      children: m.Z.Messages.CLIP_SHARE_SELECT_CHANNEL
+                      className: Z.contentPadding,
+                      children: m.NW.string(m.t.SOtDeX)
                   }),
-                  (0, i.jsx)(d.List, {
+                  (0, l.jsx)(_.aVo, {
                       sections: [u.length],
                       sectionHeight: 0,
-                      renderRow: (e) => {
-                          let { section: n, row: l } = e;
-                          if (n > 0) return null;
-                          let E = u[l],
-                              r = (0, S.KS)(E);
-                          return null == r
+                      renderRow: (n) => {
+                          let { section: e, row: i } = n;
+                          if (e > 0) return null;
+                          let E = u[i],
+                              a = (0, A.KS)(E);
+                          return null == a
                               ? null
-                              : (0, i.jsx)(
+                              : (0, l.jsx)(
                                     p,
                                     {
                                         channel: E,
-                                        ChannelIcon: r,
+                                        ChannelIcon: a,
                                         selected: t === E.id,
-                                        onClick: a
+                                        onClick: r
                                     },
                                     E.id
                                 );
                       },
-                      rowHeight: (e, n) => (e > 0 ? 0 : null != u[n] ? 56 : 0),
+                      rowHeight: (n, e) => (n > 0 ? 0 : 56 * (null != u[e])),
                       renderSection: () => null,
-                      className: E()(H.channelList, H.contentPadding),
+                      className: E()(Z.channelList, Z.contentPadding),
                       fade: !0
                   })
               ]
           });
 }
-function x(e) {
-    let { friends: n, searchQuery: t, disabled: a, onShareClip: o } = e,
-        _ = l.useMemo(() => (0 === t.length ? n : n.filter((e) => e.username.toLowerCase().includes(t.toLowerCase()))), [n, t]),
-        s = (0, r.e7)([L.Z], () => L.Z.theme);
-    return 0 === _.length
-        ? (0, i.jsxs)(d.EmptyState, {
+function b(n) {
+    let { friends: e, searchQuery: t, disabled: r, onShareClip: d } = n,
+        o = i.useMemo(() => (0 === t.length ? e : e.filter((n) => n.username.toLowerCase().includes(t.toLowerCase()))), [e, t]),
+        s = (0, a.e7)([L.Z], () => L.Z.theme);
+    return 0 === o.length
+        ? (0, l.jsxs)(_.ubH, {
               theme: s,
-              className: H.emptyStateContainer,
+              className: Z.emptyStateContainer,
               children: [
-                  (0, i.jsx)(d.EmptyStateImage, {
+                  (0, l.jsx)(_.oxh, {
                       width: 415,
                       height: 75,
-                      lightSrc: v,
-                      darkSrc: Z
+                      lightSrc: x,
+                      darkSrc: H
                   }),
-                  (0, i.jsx)(d.EmptyStateText, { note: m.Z.Messages.FRIEND_REQUEST_NO_RESULTS_FOUND })
+                  (0, l.jsx)(_.OZU, { note: m.NW.string(m.t['+Zg0lZ']) })
               ]
           })
-        : (0, i.jsx)(d.List, {
-              sections: [_.length],
+        : (0, l.jsx)(_.aVo, {
+              sections: [o.length],
               sectionHeight: 0,
-              renderRow: (e) => {
-                  let { section: n, row: t } = e;
-                  if (n > 0) return null;
-                  let l = _[t],
-                      E = _[t].username;
-                  return (0, i.jsxs)(
+              renderRow: (n) => {
+                  let { section: e, row: t } = n;
+                  if (e > 0) return null;
+                  let i = o[t],
+                      E = o[t].username;
+                  return (0, l.jsxs)(
                       'div',
                       {
-                          className: H.userRow,
+                          className: Z.userRow,
                           children: [
-                              (0, i.jsx)(u.Z, { user: l }),
-                              (0, i.jsx)(d.Text, {
-                                  className: H.username,
+                              (0, l.jsx)(u.Z, { user: i }),
+                              (0, l.jsx)(_.Text, {
+                                  className: Z.username,
                                   variant: 'text-md/normal',
                                   children: E
                               }),
-                              (0, i.jsx)(d.Button, {
-                                  disabled: a,
-                                  onClick: () => o(l.id),
-                                  className: H.__invalid_friendShareButton,
-                                  look: d.ButtonLooks.OUTLINED,
-                                  size: d.ButtonSizes.SMALL,
-                                  color: d.ButtonColors.BRAND,
-                                  children: (0, i.jsx)(d.Text, {
+                              (0, l.jsx)(_.zxk, {
+                                  disabled: r,
+                                  onClick: () => d(i.id),
+                                  className: Z.__invalid_friendShareButton,
+                                  look: _.iLD.OUTLINED,
+                                  size: _.PhG.SMALL,
+                                  color: _.Ttl.BRAND,
+                                  children: (0, l.jsx)(_.Text, {
                                       variant: 'text-sm/medium',
-                                      children: m.Z.Messages.SHARE
+                                      children: m.NW.string(m.t.RDE0SU)
                                   })
                               })
                           ]
                       },
-                      l.id
+                      i.id
                   );
               },
-              rowHeight: (e, n) => (e > 0 ? 0 : null != _[n] ? 52 : 0),
+              rowHeight: (n, e) => (n > 0 ? 0 : 52 * (null != o[e])),
               renderSection: () => null,
-              className: E()(H.friendsList, H.contentPadding),
+              className: E()(Z.friendsList, Z.contentPadding),
               fade: !0
           });
 }
-function b(e) {
-    let { clip: n, editMetadata: t, transitionState: a, onClose: u } = e,
-        [C, S] = l.useState(''),
-        [A, L] = l.useState(!1),
-        [D, h] = l.useState(null),
-        P = (0, r.Wu)([N.Z], () => N.Z.getFriendIDs()),
-        f = (0, r.Wu)(
-            [I.Z, R.default],
+function M(n) {
+    let { clip: e, editMetadata: t, transitionState: r, onClose: u } = n,
+        [C, A] = i.useState(''),
+        [T, L] = i.useState(!1),
+        [N, h] = i.useState(null),
+        R = (0, a.Wu)([D.Z], () => D.Z.getFriendIDs()),
+        f = (0, a.Wu)(
+            [I.Z, P.default],
             () =>
-                P.map((e) => R.default.getUser(e))
+                R.map((n) => P.default.getUser(n))
                     .filter(g.lm)
-                    .sort((e, n) => {
-                        var t, i, l, a;
-                        return (null !== (l = null === (t = I.Z.getUserAffinity(n.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== l ? l : 0) - (null !== (a = null === (i = I.Z.getUserAffinity(e.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== a ? a : 0);
+                    .sort((n, e) => {
+                        var t, l, i, r;
+                        return (null != (i = null == (t = I.Z.getUserAffinity(e.id)) ? void 0 : t.affinity) ? i : 0) - (null != (r = null == (l = I.Z.getUserAffinity(n.id)) ? void 0 : l.affinity) ? r : 0);
                     }),
-            [P]
+            [R]
         ),
-        O = (0, r.e7)([U.Z], () => U.Z.getGuildId()),
-        { analyticsLocations: Z } = (0, c.ZP)(s.Z.CLIPS_SHARE_MODAL);
-    async function v(e) {
-        let i = null != e ? e : D;
-        if (null != i) {
+        G = (0, a.e7)([U.Z], () => U.Z.getGuildId()),
+        { analyticsLocations: H } = (0, c.ZP)(s.Z.CLIPS_SHARE_MODAL);
+    async function x(n) {
+        let l = null != n ? n : N;
+        if (null != l) {
             L(!0);
             try {
-                await (0, G.e)(n, {
-                    channelId: i,
+                await (0, O.e)(e, {
+                    channelId: l,
                     editMetadata: t,
-                    analyticsLocations: Z
+                    analyticsLocations: H
                 }),
-                    null == e && (0, T.Kh)(i),
-                    o.pT();
-            } catch (e) {
+                    null == n && (0, S.Kh)(l),
+                    d.pT();
+            } catch (n) {
             } finally {
                 L(!1);
             }
         }
     }
-    async function p(e) {
-        let n = await _.Z.openPrivateChannel(e);
-        await v(n);
+    async function p(n) {
+        let e = await o.Z.openPrivateChannel(n);
+        await x(e);
     }
-    return (0, i.jsxs)(d.ModalRoot, {
-        size: d.ModalSize.SMALL,
-        transitionState: a,
+    return (0, l.jsxs)(_.Y0X, {
+        size: _.CgR.SMALL,
+        transitionState: r,
         children: [
-            (0, i.jsx)(d.Heading, {
-                className: E()(H.title, H.contentPadding),
+            (0, l.jsx)(_.X6q, {
+                className: E()(Z.title, Z.contentPadding),
                 variant: 'heading-lg/semibold',
                 color: 'interactive-active',
-                children: m.Z.Messages.CLIP_SHARE_MODAL_TITLE
+                children: m.NW.string(m.t['6EcIlJ'])
             }),
-            (0, i.jsx)(d.Text, {
+            (0, l.jsx)(_.Text, {
                 variant: 'text-md/normal',
                 color: 'text-normal',
-                className: E()(H.subtitle, H.contentPadding),
-                children: m.Z.Messages.CLIP_SHARE_MODAL_SUBTITLE
+                className: E()(Z.subtitle, Z.contentPadding),
+                children: m.NW.string(m.t.Ey7mOT)
             }),
-            (0, i.jsx)(d.SearchBar, {
-                className: H.searchBar,
+            (0, l.jsx)(_.E1j, {
+                className: Z.searchBar,
                 query: C,
-                onChange: S,
-                size: d.SearchBar.Sizes.MEDIUM,
+                onChange: A,
+                size: _.E1j.Sizes.MEDIUM,
                 onClear: function () {
-                    S('');
+                    A('');
                 },
-                placeholder: m.Z.Messages.INVITE_SEARCH_FOR_FRIENDS
+                placeholder: m.NW.string(m.t.CmSHY2)
             }),
-            (0, i.jsx)('div', { className: E()(H.divider, H.topDivider) }),
-            (0, i.jsx)(x, {
+            (0, l.jsx)('div', { className: E()(Z.divider, Z.topDivider) }),
+            (0, l.jsx)(b, {
                 searchQuery: C,
                 friends: f,
                 onShareClip: p,
-                disabled: A
+                disabled: T
             }),
-            null != O &&
-                (0, i.jsx)(M, {
-                    guildId: O,
-                    selectedChannelId: D,
+            null != G &&
+                (0, l.jsx)(v, {
+                    guildId: G,
+                    selectedChannelId: N,
                     onSelectChannelId: h
                 }),
-            (0, i.jsxs)(d.ModalFooter, {
+            (0, l.jsxs)(_.mzw, {
                 children: [
-                    (0, i.jsx)(d.Button, {
-                        disabled: null == D,
-                        submitting: A,
-                        color: d.Button.Colors.BRAND,
-                        onClick: () => v(),
-                        children: m.Z.Messages.CLIPS_EDIT_SHARE_CLIP
+                    (0, l.jsx)(_.zxk, {
+                        disabled: null == N,
+                        submitting: T,
+                        color: _.zxk.Colors.BRAND,
+                        onClick: () => x(),
+                        children: m.NW.string(m.t.I8lglZ)
                     }),
-                    (0, i.jsx)(d.Button, {
-                        submitting: A,
-                        look: d.ButtonLooks.LINK,
+                    (0, l.jsx)(_.zxk, {
+                        submitting: T,
+                        look: _.iLD.LINK,
                         onClick: u,
-                        color: d.ButtonColors.PRIMARY,
-                        children: m.Z.Messages.BACK
+                        color: _.Ttl.PRIMARY,
+                        children: m.NW.string(m.t['13/7kZ'])
                     })
                 ]
             })

@@ -1,38 +1,39 @@
-t.d(s, {
-    Z: function () {
-        return l;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(120356),
-    o = t.n(a),
-    r = t(481060),
-    i = t(679768),
-    c = t(447421);
-function l(e) {
-    let { copy: s, className: t } = e;
-    return (0, n.jsxs)('div', {
-        className: o()(c.badgeContainer, t),
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    o = n.n(i),
+    l = n(481060),
+    s = n(679768),
+    a = n(456411);
+function c(e) {
+    let { copy: t, showStars: n = !0, className: i } = e;
+    return (0, r.jsxs)('div', {
+        className: o()(a.badgeContainer, i),
         children: [
-            (0, n.jsx)('span', {
-                className: o()(c.star, c.starLeft),
-                children: (0, n.jsx)(i.Z, {
-                    width: '10',
-                    height: '10'
-                })
-            }),
-            (0, n.jsx)('span', {
-                className: o()(c.star, c.starRight),
-                children: (0, n.jsx)(i.Z, {
-                    width: '14',
-                    height: '14'
-                })
-            }),
-            (0, n.jsx)(r.Text, {
+            n &&
+                (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        (0, r.jsx)('span', {
+                            className: o()(a.star, a.starLeft),
+                            children: (0, r.jsx)(s.Z, {
+                                width: '10',
+                                height: '10'
+                            })
+                        }),
+                        (0, r.jsx)('span', {
+                            className: o()(a.star, a.starRight),
+                            children: (0, r.jsx)(s.Z, {
+                                width: '14',
+                                height: '14'
+                            })
+                        })
+                    ]
+                }),
+            (0, r.jsx)(l.Text, {
                 variant: 'eyebrow',
-                className: c.newBadge,
-                children: s
+                className: a.newBadge,
+                children: t
             })
         ]
     });

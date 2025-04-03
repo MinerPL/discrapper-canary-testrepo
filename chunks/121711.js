@@ -1,109 +1,185 @@
-n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(990547),
-    r = n(481060),
-    l = n(410030),
-    o = n(213609),
-    c = n(252618),
-    d = n(979233),
-    u = n(175307),
-    _ = n(374939),
-    h = n(611928),
-    E = n(791734),
-    m = n(63063),
-    I = n(113434),
-    g = n(471985),
-    p = n(710914),
-    T = n(906739),
-    S = n(452081),
-    f = n(46140),
-    C = n(981631),
-    N = n(689938),
-    A = n(296561);
-t.Z = function (e) {
-    let {} = e,
-        t = (0, g.Z)(f.dr.QUEST_HOME_DESKTOP),
-        { tabs: v, selectedTab: Z, onSelectTab: L } = (0, S.z)(),
-        { onScroll: O, scrollPosition: R } = (0, d.M)(),
-        x = (0, l.ZP)(),
-        { quests: b, isFetchingCurrentQuests: P } = (0, I.bA)(Z),
-        M = (0, T.Z)(),
-        D = null;
-    if (window.location.hash.length > 0) {
-        let e = window.location.hash.slice(1);
-        for (let t of b)
-            if (t.id === e) {
-                D = e;
-                break;
-            }
-    }
-    a.useEffect(() => {
-        (0, o.h)({
-            name: s.ImpressionNames.QUEST_HOME,
-            type: s.ImpressionTypes.VIEW
-        });
-    }, []);
-    let y = a.useCallback(() => {
-        window.open(m.Z.getArticleURL(C.BhN.QUESTS_LEARN_MORE));
-    }, []);
-    (0, c.Tt)({ location: N.Z.Messages.QUESTS });
-    let j = a.useMemo(() => ({ backgroundImage: 'url('.concat(M, ')') }), [M]);
-    return t
-        ? (0, i.jsxs)('div', {
-              className: A.container,
-              children: [
-                  (0, i.jsxs)(h.ZP, {
-                      children: [
-                          (0, i.jsx)('div', { className: A.dragRegion }),
-                          (0, i.jsx)(h.z6, { scrollPosition: R }),
-                          (0, i.jsx)(h.aV, { icon: r.QuestsIcon }),
-                          (0, i.jsx)(E.Z, {
-                              tabs: v,
-                              selectedTab: Z,
-                              onTabSelect: L
-                          })
-                      ]
-                  }),
-                  (0, i.jsx)(_.Z, {
-                      title: N.Z.Messages.QUESTS_HOME_HERO_TITLE,
-                      description: N.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-                      onScroll: O,
-                      button: (0, i.jsx)(u.u, {
-                          text: N.Z.Messages.LEARN_MORE,
-                          onClick: y
-                      }),
-                      bannerClassName: A.bannerContainer,
-                      bannerBackground: (0, i.jsx)('div', {
-                          className: A.bannerImage,
-                          style: j,
-                          children: (0, i.jsx)('div', { className: A.bannerGradient })
-                      }),
-                      children:
-                          P && 0 === b.length
-                              ? (0, i.jsx)(r.Spinner, { className: A.spinner })
-                              : 0 === b.length && Z === I.e5.CLAIMED
-                                ? (0, i.jsxs)(r.EmptyState, {
-                                      theme: x,
-                                      children: [
-                                          (0, i.jsx)(r.EmptyStateImage, {
-                                              lightSrc: n(979770),
-                                              darkSrc: n(138715),
-                                              width: 415,
-                                              height: 200
-                                          }),
-                                          (0, i.jsx)(r.EmptyStateText, { note: N.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({ onClick: () => L(I.e5.ALL) }) })
-                                      ]
-                                  })
-                                : (0, i.jsx)('div', {
-                                      className: A.gridContainer,
-                                      children: (0, i.jsx)(p.Z, {
-                                          quests: b,
-                                          selectedQuestId: D
-                                      })
-                                  })
-                  })
-              ]
+n.d(t, { Z: () => H });
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(990547),
+    s = n(442837),
+    c = n(481060),
+    u = n(607070),
+    d = n(100527),
+    p = n(213609),
+    h = n(335131),
+    f = n(252618),
+    g = n(70097),
+    m = n(114851),
+    b = n(175307),
+    _ = n(17845),
+    E = n(374939),
+    O = n(233374),
+    N = n(611928),
+    y = n(763433),
+    I = n(283293),
+    v = n(822857),
+    C = n(775451),
+    S = n(63063),
+    T = n(113434),
+    P = n(569984),
+    j = n(833435),
+    A = n(918701),
+    Z = n(150560),
+    x = n(558652),
+    L = n(736683),
+    w = n(452081),
+    R = n(46140),
+    D = n(981631),
+    k = n(215023),
+    M = n(388032),
+    U = n(87671),
+    G = n(13299),
+    W = n(843385);
+function V() {
+    return (0, s.e7)(
+        [P.Z],
+        () => {
+            let e = P.Z.getQuest(R.V6);
+            return null != e && !(0, A.zi)(e);
+        },
+        []
+    );
+}
+function B() {
+    let e = V(),
+        t = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        n = i.useRef(null);
+    return (i.useEffect(() => {
+        var e, r, i, l;
+        null != n && (!t || (null == (e = n.current) ? void 0 : e.paused) ? !t && (null == (r = n.current) ? void 0 : r.paused) && (null == (l = n.current) || l.play()) : null == (i = n.current) || i.pause());
+    }, [t]),
+    e)
+        ? (0, r.jsx)(g.Z, {
+              ref: n,
+              autoPlay: !t,
+              loop: !0,
+              muted: !0,
+              playsInline: !0,
+              className: a()(U.bannerAsset, U.orbsBannerAsset),
+              controls: !1,
+              children: (0, r.jsx)('source', {
+                  src: W.Z,
+                  type: 'video/webm'
+              })
           })
-        : null;
+        : (0, r.jsx)('img', {
+              src: G.ZP,
+              className: a()(U.bannerAsset, U.oversizedImg),
+              alt: ''
+          });
+}
+let H = function () {
+    let { selectedTab: e, onSelectTab: t, tabs: n } = (0, w.z)(),
+        { onScroll: l, scrollPosition: s } = (0, m.M)(),
+        u = Z.Z.getState().getUtmCurrentContext(),
+        g = (0, j._)({ location: R.dr.QUEST_HOME_DESKTOP }) ? L.Z : L.j,
+        P = i.useRef(u);
+    i.useEffect(() => {
+        P.current = u;
+    }),
+        i.useEffect(() => {
+            let { current: t } = P;
+            (0, p.h)({
+                name: o.ImpressionNames.QUEST_HOME,
+                type: o.ImpressionTypes.VIEW,
+                properties: {
+                    utm_source_current: t.utmSourceCurrent,
+                    utm_medium_current: t.utmMediumCurrent,
+                    utm_campaign_current: t.utmCampaignCurrent,
+                    utm_content_current: t.utmContentCurrent,
+                    tab: e
+                }
+            });
+        }, [e]);
+    let { enabled: A } = (0, v.W)({ location: R.dr.QUEST_HOME_DESKTOP }),
+        G = V(),
+        W = i.useCallback(() => {
+            if (G) return void window.open(S.Z.getArticleURL(D.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
+            window.open(S.Z.getArticleURL(D.BhN.QUESTS_LEARN_MORE));
+        }, [G]);
+    (0, f.Tt)({ location: M.NW.string(M.t.JALI2N) });
+    let H = G ? M.NW.format(M.t.BCBIlp, {}) : M.NW.format(M.t.lmMBf3, {}),
+        F = G ? M.NW.format(M.t.U9FY0N, {}) : M.NW.string(M.t.oWCrBg);
+    return (0, r.jsx)('div', {
+        className: U.container,
+        children: A
+            ? (0, r.jsxs)(I.Z, {
+                  onScroll: l,
+                  children: [
+                      (0, r.jsx)(y.a, {
+                          selectedTabId: e,
+                          handleTransition: t,
+                          tabs: n,
+                          icon: c.qDn,
+                          children: (0, r.jsx)(C.V9, {
+                              cardAlignment: C.ek.END,
+                              ctaText: M.NW.string(M.t['J+vlIS']),
+                              ctaOnClick: () => {
+                                  (0, h.mK)({
+                                      openInLayer: !1,
+                                      tab: k.AW.ORBS,
+                                      analyticsLocations: [],
+                                      analyticsSource: d.Z.QUEST_HOME_PAGE
+                                  });
+                              }
+                          })
+                      }),
+                      (0, r.jsxs)(_.Z, {
+                          title: H,
+                          description: F,
+                          button: (0, r.jsx)(b.u, {
+                              text: M.NW.string(M.t.hvVgAQ),
+                              onClick: W
+                          }),
+                          className: a()(U.bannerContainer, { [U.orbsContainer]: G }),
+                          children: [(0, r.jsx)('div', { className: a()(U.bannerGradient, { [U.orbsGradient]: G }) }), (0, r.jsx)(B, {})]
+                      }),
+                      (0, r.jsx)(E.Z, { children: e === T.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(x.Z, {}) })
+                  ]
+              })
+            : (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      (0, r.jsxs)(N.ZP, {
+                          variant: N._6.OVERLAY,
+                          children: [(0, r.jsx)('div', { className: U.dragRegion }), (0, r.jsx)(N.z6, { scrollPosition: s }), (0, r.jsx)(N.aV, { icon: c.qDn })]
+                      }),
+                      (0, r.jsxs)(I.Z, {
+                          onScroll: l,
+                          children: [
+                              (0, r.jsxs)(_.Z, {
+                                  title: H,
+                                  description: F,
+                                  button: (0, r.jsx)(b.u, {
+                                      text: M.NW.string(M.t.hvVgAQ),
+                                      onClick: W
+                                  }),
+                                  className: a()(U.bannerContainer, { [U.orbsContainer]: G }),
+                                  children: [(0, r.jsx)('div', { className: a()(U.bannerGradient, { [U.orbsGradient]: G }) }), (0, r.jsx)(B, {})]
+                              }),
+                              (0, r.jsxs)(E.Z, {
+                                  children: [
+                                      (0, r.jsx)('div', {
+                                          className: U.tabs,
+                                          children: (0, r.jsx)(O.Z, {
+                                              tabs: n,
+                                              selectedTab: e,
+                                              onTabSelect: t
+                                          })
+                                      }),
+                                      e === T.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(x.Z, {})
+                                  ]
+                              })
+                          ]
+                      })
+                  ]
+              })
+    });
 };

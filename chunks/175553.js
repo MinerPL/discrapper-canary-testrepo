@@ -1,32 +1,27 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(593481),
-    s = n(768581),
-    a = n(312839),
+    r = n(768581),
+    s = n(312839),
     o = n(981631),
-    r = n(987650),
-    l = n(689938);
+    l = n(987650),
+    a = n(388032);
 function c(e, t) {
     let n = e.username,
-        c = l.Z.Messages.USER_ACTIVITY_USER_JOIN.format({ username: '' }),
-        d = (0, s.ov)(e),
-        { trackView: u, trackClick: h } = (0, a.R)(r.n0.ActivityUserJoin, {
-            notif_type: r.n0.ActivityUserJoin,
+        c = a.NW.format(a.t['Yk+uYG'], { username: '' }),
+        u = (0, r.ov)(e),
+        { trackView: d, trackClick: h } = (0, s.R)(l.n0.ActivityUserJoin, {
+            notif_type: l.n0.ActivityUserJoin,
             notif_user_id: e.id,
             activity_type: o.mFx.JOIN,
             activity_name: t.name
         });
     return {
-        colorScheme: i.ZP.ColorSchemes.PRIMARY,
-        icon: d,
+        icon: u,
         title: n,
         body: c,
-        hint: (e) => (0, i.Yj)(e, l.Z.Messages.USER_ACTIVITY_USER_JOIN_HINT),
+        hint: (e) => (0, i.Yj)(e, a.NW.string(a.t.WRj1Wl)),
         onNotificationShow: () => {
-            u();
+            d();
         },
         onDismissClick: () => {
             h('dismiss');

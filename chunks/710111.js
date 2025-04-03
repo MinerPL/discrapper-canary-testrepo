@@ -1,45 +1,25 @@
-var r, i;
 n.d(t, {
-    D_: function () {
-        return u;
-    },
-    Ek: function () {
-        return a;
-    },
-    FW: function () {
-        return l;
-    },
-    Hy: function () {
-        return c;
-    },
-    O6: function () {
-        return E;
-    },
-    X8: function () {
-        return o;
-    },
-    YW: function () {
-        return s;
-    },
-    hY: function () {
-        return d;
-    },
-    zb: function () {
-        return _;
-    }
+    D_: () => s,
+    Ek: () => r,
+    FW: () => a,
+    Hy: () => l,
+    O6: () => d,
+    X8: () => o,
+    YW: () => i,
+    hY: () => c,
+    zb: () => u
 }),
     n(47120);
-let a = 32,
-    s = 5,
-    o = 'DEFAULT';
-((i = r || (r = {}))[(i.SUCCESS = 0)] = 'SUCCESS'), (i[(i.INTERRUPTED = 1)] = 'INTERRUPTED');
-let l = {
+let r = 32,
+    i = 5,
+    o = '0',
+    a = {
         width: 424,
         height: 424,
         padding: 100
     },
-    u = 'ctrl+`',
-    c = [],
-    d = '0',
-    _ = 6,
-    E = 6;
+    s = 'ctrl+`',
+    l = [],
+    c = '0',
+    u = 6,
+    d = 6;

@@ -1,20 +1,14 @@
-t.d(n, {
-    B: function () {
-        return s;
+n.d(t, { B: () => l }), n(653041), n(47120);
+var r = n(658722),
+    i = n.n(r);
+function l(e, t, n) {
+    if ('' === n) return e;
+    let r = n.toLowerCase(),
+        l = [];
+    for (let o of e) {
+        let { id: e, names: a } = t(o);
+        if (e === n) return [o];
+        a.some((e) => i()(r, e.toLowerCase())) && l.push(o);
     }
-}),
-    t(653041),
-    t(47120);
-var i = t(658722),
-    a = t.n(i);
-function s(e, n, t) {
-    if ('' === t) return e;
-    let i = t.toLowerCase(),
-        s = [];
-    for (let l of e) {
-        let { id: e, names: r } = n(l);
-        if (e === t) return [l];
-        r.some((e) => a()(i, e.toLowerCase())) && s.push(l);
-    }
-    return s;
+    return l;
 }

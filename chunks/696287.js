@@ -1,14 +1,14 @@
-n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var r = n(846519),
     i = n(147913),
-    a = n(77498),
-    s = n(19780),
-    o = n(626135),
+    o = n(77498),
+    a = n(19780),
+    s = n(626135),
     l = n(70956),
-    u = n(581567),
-    c = n(594190),
+    c = n(581567),
+    u = n(594190),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,63 +21,81 @@ function _(e, t, n) {
         e
     );
 }
-let E = 5 * l.Z.Millis.MINUTE;
-class f extends i.Z {
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let p = 5 * l.Z.Millis.MINUTE;
+class h extends i.Z {
     _terminate() {
         this.stopHeartbeat();
     }
     maybeStartHeartbeat() {
-        !this.heartbeatInterval.isStarted() && (this.logRunningGameHeartbeats(), this.heartbeatInterval.start(E, this.logRunningGameHeartbeats));
+        this.heartbeatInterval.isStarted() || (this.logRunningGameHeartbeats(), this.heartbeatInterval.start(p, this.logRunningGameHeartbeats));
     }
     stopHeartbeat() {
         this.heartbeatInterval.stop(), this.runningGameKeys.clear();
     }
     handlePostConnectionOpen() {
-        c.ZP.getRunningGames().length > 0 && this.maybeStartHeartbeat();
+        u.ZP.getRunningGames().length > 0 && this.maybeStartHeartbeat();
     }
     constructor(...e) {
         super(...e),
-            _(this, 'heartbeatInterval', new r.Xp()),
-            _(this, 'runningGameKeys', new Set()),
-            _(this, 'actions', {
+            f(this, 'heartbeatInterval', new r.Xp()),
+            f(this, 'runningGameKeys', new Set()),
+            f(this, 'actions', {
                 RUNNING_GAMES_CHANGE: (e) => this.handleRunningGamesChanged(e),
                 LOGOUT: () => this.stopHeartbeat(),
                 CONNECTION_CLOSED: () => this.stopHeartbeat(),
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
             }),
-            _(this, 'handleRunningGamesChanged', (e) => {
+            f(this, 'handleRunningGamesChanged', (e) => {
                 let { games: t } = e;
-                if (0 === t.length) {
-                    this.stopHeartbeat();
-                    return;
-                }
+                if (0 === t.length) return void this.stopHeartbeat();
                 this.maybeStartHeartbeat();
             }),
-            _(this, 'logRunningGameHeartbeats', () => {
-                let e = c.ZP.getRunningGames(),
+            f(this, 'logRunningGameHeartbeats', () => {
+                let e = u.ZP.getRunningGames(),
                     t = {
-                        rtc_connection_id: s.Z.getRTCConnectionId(),
-                        media_session_id: s.Z.getMediaSessionId()
+                        rtc_connection_id: a.Z.getRTCConnectionId(),
+                        media_session_id: a.Z.getMediaSessionId()
                     },
                     n = new Set();
                 e.forEach((e) => {
                     var r, i;
-                    let s = (0, c.rH)(e),
-                        l = !this.runningGameKeys.has(s),
-                        _ = null !== (i = e.id) && void 0 !== i ? i : null === (r = a.Z.getGameByName(e.name)) || void 0 === r ? void 0 : r.id;
-                    o.default.track(d.rMx.RUNNING_GAME_HEARTBEAT, {
-                        game_id: _,
-                        game_name: e.name,
-                        game_distributor: e.distributor,
-                        game_executable: (0, u.N6)(e.exePath),
-                        game_detection_enabled: (0, c.ik)(e),
-                        initial_heartbeat: l,
-                        ...t
-                    }),
-                        n.add((0, c.rH)(e));
+                    let a = (0, u.rH)(e),
+                        l = !this.runningGameKeys.has(a),
+                        f = null != (i = e.id) ? i : null == (r = o.Z.getGameByName(e.name)) ? void 0 : r.id;
+                    s.default.track(
+                        d.rMx.RUNNING_GAME_HEARTBEAT,
+                        _(
+                            {
+                                game_id: f,
+                                game_name: e.name,
+                                game_distributor: e.distributor,
+                                game_executable: (0, c.N6)(e.exePath),
+                                game_detection_enabled: (0, u.ik)(e),
+                                initial_heartbeat: l
+                            },
+                            t
+                        )
+                    ),
+                        n.add((0, u.rH)(e));
                 }),
                     (this.runningGameKeys = n);
             });
     }
 }
-t.Z = new f();
+let m = new h();

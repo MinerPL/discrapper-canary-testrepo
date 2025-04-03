@@ -1,45 +1,76 @@
-n.d(t, {
-    Z: function () {
-        return E;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    r = n(270144),
-    l = n(488915),
-    o = n(171246),
-    c = n(696906),
-    u = n(981631),
-    d = n(689938),
-    _ = n(259028);
-function E(e) {
+n.d(t, { Z: () => u });
+var r = n(200651),
+    i = n(192379),
+    a = n(481060),
+    l = n(283836),
+    o = n(728345),
+    s = n(388032),
+    c = n(75905);
+function u(e) {
     let { applicationId: t, guildId: n } = e,
-        E = (0, r.IX)(t),
-        { listingsLoaded: I } = (0, r.FE)(t, null == E ? void 0 : E.primarySkuId),
-        m = (0, a.e7)([l.Z], () => l.Z.getSubscriptionGroupListingForApplication(t), [t]),
-        T = null != m ? (0, o.Pw)(m) : null,
-        { openModal: h, canOpenModal: N } = (0, c.Z)({
-            guildId: n,
-            groupListingId: null == m ? void 0 : m.id,
-            showBenefitsFirst: !0,
-            analyticsLocation: u.Sbl.INTERACTION_RESPONSE,
-            skuId: null == T ? void 0 : T.id
+        { data: i } = (0, o.IX)(t);
+    return null == i
+        ? null
+        : (0, r.jsx)(d, {
+              app: i,
+              guildId: n
+          });
+}
+function d(e) {
+    let { app: t, guildId: o } = e;
+    (0, l.q)(t.id);
+    let u = i.useCallback(() => {
+        (0, a.ZDy)(async () => {
+            let { default: e } = await Promise.all([n.e('77803'), n.e('83372')]).then(n.bind(n, 7225));
+            return (n) =>
+                (0, r.jsx)(
+                    e,
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })(
+                        {
+                            appId: t.id,
+                            guildId: o
+                        },
+                        n
+                    )
+                );
         });
-    return (0, i.jsx)(s.Button, {
-        color: s.Button.Colors.BRAND,
-        size: s.Button.Sizes.SMALL,
-        onClick: () => h(),
-        disabled: !N || !I,
-        children: (0, i.jsxs)('div', {
-            className: _.button,
+    }, [t, o]);
+    return (0, r.jsx)(a.zxk, {
+        color: a.zxk.Colors.BRAND,
+        size: a.zxk.Sizes.SMALL,
+        onClick: u,
+        children: (0, r.jsxs)('div', {
+            className: c.button,
             children: [
-                (0, i.jsx)(s.ShopIcon, {
+                (0, r.jsx)(a.QJP, {
                     size: 'xs',
                     color: 'white'
                 }),
-                d.Z.Messages.INTERACTION_PREMIUM_UPSELL_CTA
+                s.NW.format(s.t.XDRjs7, { appName: t.name })
             ]
         })
     });

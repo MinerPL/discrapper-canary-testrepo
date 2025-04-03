@@ -1,46 +1,42 @@
-t.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var l = t(735250);
-t(470079);
-var i = t(481060),
-    u = t(572004),
-    s = t(592126),
-    r = t(981631),
-    a = t(689938);
-function d(e, n, t) {
-    let d = null != t,
-        { isMember: E } = (0, s.Z)(n, e);
-    if (!E) return null;
-    function o() {
-        let l = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        (0, u.JG)(
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var l = n(481060),
+    i = n(572004),
+    o = n(592126),
+    c = n(981631),
+    a = n(388032);
+function u(e, t, n) {
+    let u = null != n,
+        { isMember: s } = (0, o.Z)(t, e);
+    if (!s) return null;
+    function d() {
+        let r = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        (0, i.JG)(
             ''
                 .concat(location.protocol, '//')
                 .concat(location.host)
-                .concat(r.Z5c.GUILD_EVENT_DETAILS(n, e, l ? null : t))
+                .concat(c.Z5c.GUILD_EVENT_DETAILS(t, e, r ? null : n))
         ),
-            (0, i.showToast)((0, i.createToast)(a.Z.Messages.COPIED_LINK, i.ToastType.SUCCESS));
+            (0, l.showToast)((0, l.createToast)(a.NW.string(a.t['L/PwZW']), l.ToastType.SUCCESS));
     }
-    return (0, l.jsx)(i.MenuItem, {
-        id: a.Z.Messages.COPY_EVENT_LINK,
-        label: a.Z.Messages.COPY_EVENT_LINK,
-        action: d ? void 0 : () => o(!0),
+    return (0, r.jsx)(l.sNh, {
+        id: a.NW.string(a.t['9o+VKy']),
+        label: a.NW.string(a.t['9o+VKy']),
+        action: u ? void 0 : () => d(!0),
         children:
-            d &&
-            (0, l.jsxs)(l.Fragment, {
+            u &&
+            (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, l.jsx)(i.MenuItem, {
-                        id: a.Z.Messages.COPY_RECURRENCE_LINK,
-                        label: a.Z.Messages.COPY_RECURRENCE_LINK,
-                        action: () => o(!1)
+                    (0, r.jsx)(l.sNh, {
+                        id: a.NW.string(a.t.QLtDqK),
+                        label: a.NW.string(a.t.QLtDqK),
+                        action: () => d(!1)
                     }),
-                    (0, l.jsx)(i.MenuItem, {
-                        id: a.Z.Messages.COPY_SERIES_LINK,
-                        label: a.Z.Messages.COPY_SERIES_LINK,
-                        action: () => o(!0)
+                    (0, r.jsx)(l.sNh, {
+                        id: a.NW.string(a.t.AYnhBw),
+                        label: a.NW.string(a.t.AYnhBw),
+                        action: () => d(!0)
                     })
                 ]
             })

@@ -1,22 +1,18 @@
-n.d(t, {
-    al: function () {
-        return S;
-    },
-    ck: function () {
-        return b;
-    }
+r.d(t, {
+    al: () => N,
+    ck: () => C
 }),
-    n(47120),
-    n(653041),
-    n(571269),
-    n(298267);
-var r = n(735250),
-    a = n(470079),
-    i = n(112456),
-    o = n.n(i),
-    s = n(226961),
-    l = n(706619),
-    c = n(206314);
+    r(47120),
+    r(653041),
+    r(571269),
+    r(298267);
+var n = r(200651),
+    a = r(192379),
+    i = r(112456),
+    s = r.n(i),
+    l = r(226961),
+    o = r(706619),
+    c = r(206314);
 let d = {
     accelerateRate: 'Accelerate Rate',
     audioDetected: 'Audio Detected',
@@ -24,6 +20,7 @@ let d = {
     availableOutgoingBitrate: 'Available Outgoing Bitrate',
     averageDecodeTime: 'Average Decode Time',
     averageEncodeTime: 'Average Encode Time',
+    bandwidthLimitedFrameRate: 'Bandwidth Limited Frame Rate',
     bandwidthLimitedResolution: 'Bandwidth Limited Resolution',
     bitrate: 'Bitrate',
     bitrateTarget: 'Bitrate (Target)',
@@ -42,8 +39,8 @@ let d = {
     decodingNormal: 'Decoding Normal',
     decodingPLC: 'Decoding PLC',
     decodingPLCCNG: 'Decoding PLC CNG',
-    decryptionFailures: 'Decryption Failures',
     decryptFailureCount: 'Decrypt Failures',
+    decryptionFailures: 'Decryption Failures',
     decryptSuccessCount: 'Decrypt Successes',
     delayEstimate: 'Delay Estimate',
     encoderImplementationName: 'Encoder',
@@ -65,6 +62,7 @@ let d = {
     framesDecodeErrors: 'Decoder Error Count',
     framesDropped: 'Frames Dropped',
     framesDroppedCongestionWindow: 'Frames Dropped by Congestion Window',
+    framesDroppedEncoder: 'Frames Dropped by Encoder',
     framesDroppedEncoderQueue: 'Frames Dropped by Encoder Queue',
     framesDroppedRateLimiter: 'Frames Dropped by Bitrate Limiter',
     framesEncoded: 'Frames Encoded',
@@ -110,8 +108,8 @@ let d = {
     qpSum: 'QP Sum',
     qualityDecodeErrors: 'Encoder Quality Decode Errors',
     qualityDecoderReboots: 'Encoder Quality Decoder Reboots',
-    qualityScoreErrors: 'Encoder Quality Score Errors',
     qualityFrameDrops: 'Encoder Quality Frame Drops',
+    qualityScoreErrors: 'Encoder Quality Score Errors',
     qualitySizeMismatches: 'Encoder Quality Size Mismatches',
     quartzFrames: 'Quartz Frames',
     receiverBitrateEstimate: 'Receiver Bitrate Estimate (REMB)',
@@ -123,7 +121,7 @@ let d = {
     screenCaptureKitFrames: 'ScreenCaptureKit frames',
     screenshareFrames: 'WebRTC Frames',
     secondaryDecodedRate: 'Secondary Decode Rate',
-    secureFramesProtocolVersion: 'SF Protocol',
+    secureFramesProtocolVersion: 'DAVE Protocol',
     sinkWant: 'Sink Quality Level (Remote)',
     sinkWantLocal: 'Sink Quality Level (Local)',
     speechExpandRate: 'Speech Expand Rate',
@@ -133,13 +131,14 @@ let d = {
     totalFreezesDuration: 'Freezes Duration (ms)',
     totalPausesDuration: 'Pauses Duration (ms)',
     videohookBackend: 'Videohook Backend',
-    videohookFrames: 'Videohook Frames'
+    videohookFrames: 'Videohook Frames',
+    videoEntropy: 'Video Entropy'
 };
 function u(e) {
     return ''.concat((e / 1000).toFixed(2), ' Kbps');
 }
 function m(e) {
-    return o().filesize(e);
+    return s().filesize(e);
 }
 function p(e) {
     return e;
@@ -147,27 +146,40 @@ function p(e) {
 function h(e) {
     return ''.concat(e, ' ms');
 }
-function g(e) {
+function y(e) {
     return ''.concat(e.toFixed(0), '%');
 }
-function f(e) {
+function g(e) {
     return e ? 'Yes' : 'No';
 }
-function C(e) {
+function f(e) {
     return ''.concat(Math.max(e, 0).toFixed(2), ' dB');
 }
-function y(e) {
+function v(e) {
     let { last: t } = e;
     return ''.concat(t, ' ms');
 }
-let S = {
+function D(e) {
+    return e.toFixed(2);
+}
+let N = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
         audioPlayoutUnderruns: !0,
+        decryptAttempts: !0,
+        decryptDuration: !0,
+        decryptMissingKeyCount: !0,
+        decryptInvalidNonceCount: !0,
+        encryptAttempts: !0,
+        encryptDuration: !0,
+        encryptMaxAttempts: !0,
+        encryptMissingKeyCount: !0,
         fractionLost: !0,
         framesCaptured: !0,
         framesRendered: !0,
+        hqSimulcastStreamEncoded: !0,
+        lqSimulcastStreamEncoded: !0,
         noiseCancellerFrames: !0,
         noiseCancellerProcessTime: !0,
         sinkWantAsInt: !0,
@@ -177,41 +189,36 @@ let S = {
         videoJitterBuffer: !0,
         videoJitterDelay: !0,
         videoJitterTarget: !0,
-        voiceActivityDetectorProcessTime: !0,
-        decryptAttempts: !0,
-        decryptDuration: !0,
-        encryptAttempts: !0,
-        encryptDuration: !0,
-        encryptMaxAttempts: !0,
-        lqSimulcastStreamEncoded: !0
+        voiceActivityDetectorProcessTime: !0
     },
-    R = {
-        accelerateRate: g,
-        audioDetected: f,
-        audioLevel: C,
+    b = {
+        accelerateRate: y,
+        audioDetected: g,
+        audioLevel: f,
         availableOutgoingBitrate: u,
         averageDecodeTime: h,
         averageEncodeTime: h,
-        bandwidthLimitedResolution: f,
+        bandwidthLimitedFrameRate: g,
+        bandwidthLimitedResolution: g,
         bitrate: u,
         bitrateTarget: u,
         bytesReceived: m,
         bytesSent: m,
         codec: function (e) {
-            let { id: t, name: n } = e;
-            return (n = null != (n = '' === n ? 'unknown' : n) ? n : 'unknown'), ''.concat(n[0].toUpperCase()).concat(n.slice(1), ' (').concat(t, ')');
+            let { id: t, name: r } = e;
+            return (r = null != (r = '' === r ? 'unknown' : r) ? r : 'unknown'), ''.concat(r[0].toUpperCase()).concat(r.slice(1), ' (').concat(t, ')');
         },
-        cpuLimitedResolution: f,
+        cpuLimitedResolution: g,
         currentDelay: h,
         decoderImplementationName: p,
         delayEstimate: h,
         encoderImplementationName: p,
-        encoderQualityPsnr: C,
-        encoderQualityVmaf: (e) => ''.concat(e.toFixed(2)),
-        encodeUsage: g,
-        expandRate: g,
+        encoderQualityPsnr: f,
+        encoderQualityVmaf: D,
+        encodeUsage: y,
+        expandRate: y,
         filter: p,
-        fractionLost: g,
+        fractionLost: y,
         inboundBitrateEstimate: u,
         jitter: h,
         jitterBuffer: h,
@@ -221,28 +228,29 @@ let S = {
         outboundBitrateEstimate: u,
         pacerDelay: h,
         ping: h,
-        preemptiveExpandRate: g,
+        preemptiveExpandRate: y,
         receiverBitrateEstimate: u,
-        relativePlayoutDelay: y,
-        relativeReceptionDelay: y,
+        relativePlayoutDelay: v,
+        relativeReceptionDelay: v,
         renderDelay: h,
         resolution: (e) => {
-            let { width: t, height: n } = e;
-            return ''.concat(t, 'x').concat(n);
+            let { width: t, height: r } = e;
+            return ''.concat(t, 'x').concat(r);
         },
-        secondaryDecodedRate: g,
+        secondaryDecodedRate: y,
         secureFramesProtocolVersion: function (e) {
-            return e >= 100 ? 'MLS Test ('.concat(e, ')') : e > 0 ? 'Static Key Test ('.concat(e, ')') : 'Disabled';
+            return e > 0 ? 'Version '.concat(e) : 'Disabled';
         },
-        speechExpandRate: g,
+        speechExpandRate: y,
         targetDelay: h,
         videohookBackend: function (e) {
             let t = ['N/A', 'Direct3D 9', 'Direct3D 10', 'Direct3D 11', 'Direct3D 12', 'OpenGL', 'Vulkan'];
             return e < t.length ? t[e] : 'Unknown';
-        }
+        },
+        videoEntropy: D
     },
-    D = (e) => e,
-    v = (e) => {
+    E = (e) => e,
+    j = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -250,38 +258,38 @@ let S = {
                 time: Date.now()
             }),
             t.length > 600 && t.shift(),
-            (0, r.jsx)(l.Z, {
+            (0, n.jsx)(o.Z, {
                 dataPoints: t,
                 width: e.width,
                 height: e.height
             })
         );
     };
-function b(e) {
-    var t, n, a, i;
-    let { label: o, value: u, section: m } = e,
-        p = null !== (n = R[o]) && void 0 !== n ? n : D;
-    let h =
-            s.Pz[o] &&
-            (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value
-                ? (0, r.jsx)(l.Z, {
-                      dataPoints: i,
+function C(e) {
+    var t, r, a;
+    let { label: i, value: s, section: u } = e,
+        m = null != (r = b[i]) ? r : E,
+        p =
+            l.Pz[i] &&
+            (Array.isArray(s) && s.length > 0 && 'number' == typeof s[0].value
+                ? (0, n.jsx)(o.Z, {
+                      dataPoints: s,
                       width: 300,
                       height: 100
                   })
-                : 'number' == typeof i
-                  ? (0, r.jsx)(v, {
-                        value: i,
+                : 'number' == typeof s
+                  ? (0, n.jsx)(j, {
+                        value: s,
                         width: 300,
                         height: 100
                     })
                   : void 0),
-        g = Array.isArray(u) ? (null === (t = u.at(-1)) || void 0 === t ? void 0 : t.value) : u;
-    return (0, r.jsx)(c.Z, {
-        label: o,
-        valueRendered: p(g),
-        section: m,
-        renderGraph: h,
-        children: null !== (a = d[o]) && void 0 !== a ? a : o
+        h = Array.isArray(s) ? (null == (t = s.at(-1)) ? void 0 : t.value) : s;
+    return (0, n.jsx)(c.Z, {
+        label: i,
+        valueRendered: m(h),
+        section: u,
+        renderGraph: p,
+        children: null != (a = d[i]) ? a : i
     });
 }

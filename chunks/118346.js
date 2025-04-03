@@ -1,86 +1,125 @@
-n.d(s, {
-    B: function () {
-        return I;
-    },
-    b: function () {
-        return c;
-    }
+r.d(t, {
+    B: () => d,
+    b: () => f
 }),
-    n(47120);
-var t = n(735250),
-    l = n(470079),
-    i = n(481060),
-    a = n(893776),
-    r = n(489813),
-    o = n(689938),
-    d = n(994735);
-function u() {
-    let [e, s] = l.useState(!1),
-        [n, r] = l.useState(!1),
-        [u, c] = l.useState(!1);
-    l.useEffect(() => {
+    r(47120);
+var n = r(200651),
+    i = r(192379),
+    o = r(481060),
+    l = r(893776),
+    s = r(489813),
+    c = r(388032),
+    u = r(667084);
+function a() {
+    let [e, t] = i.useState(!1),
+        [r, s] = i.useState(!1),
+        [a, f] = i.useState(!1);
+    i.useEffect(() => {
         let e;
         return (
-            n &&
+            r &&
                 (e = setTimeout(() => {
-                    r(!1);
+                    s(!1);
                 }, 2000)),
             () => {
                 null != e && clearTimeout(e);
             }
         );
-    }, [n]);
-    let I = async () => {
+    }, [r]);
+    let d = async () => {
         if (!e) {
-            s(!0);
+            t(!0);
             try {
-                await a.Z.verifyResend(), r(!0), c(!0);
+                await l.Z.verifyResend(), s(!0), f(!0);
             } catch (e) {
             } finally {
-                s(!1);
+                t(!1);
             }
         }
     };
-    return n
-        ? (0, t.jsx)(i.Text, {
-              className: d.verifyConfirmText,
+    return r
+        ? (0, n.jsx)(o.Text, {
+              className: u.verifyConfirmText,
               variant: 'text-sm/normal',
               color: 'text-positive',
-              children: o.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT
+              children: c.NW.string(c.t.H3Q7U1)
           })
-        : (0, t.jsx)(i.Button, {
-              size: i.Button.Sizes.SMALL,
+        : (0, n.jsx)(o.zxk, {
+              size: o.zxk.Sizes.SMALL,
               submitting: e,
-              onClick: I,
-              children: u ? o.Z.Messages.RESEND_EMAIL_SHORT : o.Z.Messages.VERIFY
+              onClick: d,
+              children: a ? c.NW.string(c.t.WnX4Jy) : c.NW.string(c.t['13ofGh'])
           });
 }
-function c() {
-    return (0, t.jsx)(r.PU, {
-        icon: i.EnvelopeIcon,
-        text: o.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_LABEL,
-        footnote: o.Z.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
+function f() {
+    return (0, n.jsx)(s.PU, {
+        icon: o._XJ,
+        text: c.NW.string(c.t.c6EUJC),
+        footnote: c.NW.string(c.t['jMh+TU']),
         meetsRequirement: !1,
-        children: (0, t.jsx)(i.Tooltip, {
-            text: o.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_FIELD_SETTINGS_TOOLTIP,
-            children: (e) =>
-                (0, t.jsx)(i.Button, {
-                    ...e,
-                    size: i.Button.Sizes.SMALL,
-                    disabled: !0,
-                    children: o.Z.Messages.VERIFY
-                })
+        children: (0, n.jsx)(o.ua7, {
+            text: c.NW.string(c.t.mGlP39),
+            children: (e) => {
+                var t, r;
+                return (0, n.jsx)(
+                    o.zxk,
+                    ((t = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var r = null != arguments[t] ? arguments[t] : {},
+                                n = Object.keys(r);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (n = n.concat(
+                                    Object.getOwnPropertySymbols(r).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    })
+                                )),
+                                n.forEach(function (t) {
+                                    var n;
+                                    (n = r[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: n,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = n);
+                                });
+                        }
+                        return e;
+                    })({}, e)),
+                    (r = r =
+                        {
+                            size: o.zxk.Sizes.SMALL,
+                            disabled: !0,
+                            children: c.NW.string(c.t['13ofGh'])
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                        : (function (e, t) {
+                              var r = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var n = Object.getOwnPropertySymbols(e);
+                                  r.push.apply(r, n);
+                              }
+                              return r;
+                          })(Object(r)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                          }),
+                    t)
+                );
+            }
         })
     });
 }
-function I(e) {
-    let { isUserVerified: s } = e,
-        n = s ? o.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFIED : o.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_LABEL;
-    return (0, t.jsx)(r.PU, {
-        icon: i.EnvelopeIcon,
-        text: n,
-        footnote: o.Z.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
-        meetsRequirement: s,
-        children: (0, t.jsx)(u, {})
+function d(e) {
+    let { isUserVerified: t } = e,
+        r = t ? c.NW.string(c.t.qY1jHB) : c.NW.string(c.t.c6EUJC);
+    return (0, n.jsx)(s.PU, {
+        icon: o._XJ,
+        text: r,
+        footnote: c.NW.string(c.t['jMh+TU']),
+        meetsRequirement: t,
+        children: (0, n.jsx)(a, {})
     });
 }

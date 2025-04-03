@@ -1,63 +1,70 @@
-var r = n(735250),
-    i = n(470079),
-    a = n(442837),
-    s = n(481060),
+n.d(t, { Z: () => g });
+var r = n(200651),
+    l = n(192379),
+    i = n(442837),
+    a = n(481060),
     o = n(39154),
-    l = n(739566),
-    u = n(492593),
-    c = n(930282),
-    d = n(464891),
-    _ = n(267128),
-    E = n(25015),
+    s = n(739566),
+    c = n(492593),
+    d = n(930282),
+    u = n(464891),
+    m = n(267128),
+    x = n(25015),
+    p = n(367814),
     f = n(592125),
-    h = n(217702),
-    p = n(689938),
-    m = n(644830);
-t.Z = (e) => {
-    let { message: t } = e,
-        n = (0, l.ZP)(t),
-        I = (0, a.e7)([f.Z], () => f.Z.getChannel(t.channel_id)),
-        T = i.useMemo(() => (0, o.Z)(t), [t]),
-        { content: g } = (0, E.Z)(T, { hideSimpleEmbedContent: !1 }),
-        S = i.useCallback(() => {
-            let { leadingIcon: e, trailingIcon: n } = (0, _.f)(t, g, !1, '', {
-                leadingIconClass: m.attachmentIcon,
-                trailingIconClass: m.attachmentIcon,
-                iconSize: h.WW
+    b = n(217702),
+    h = n(388032),
+    _ = n(782544);
+let g = (e) => {
+    var t;
+    let { message: n } = e,
+        g = (0, s.ZP)(n),
+        v = null != (t = n.getGuildId()) ? t : void 0,
+        j = (0, p.Z)(g),
+        N = (0, i.e7)([f.Z], () => f.Z.getChannel(n.channel_id)),
+        y = l.useMemo(() => (0, o.Z)(n), [n]),
+        { content: O } = (0, x.Z)(y, { hideSimpleEmbedContent: !1 }),
+        Z = l.useCallback(() => {
+            let { leadingIcon: e, trailingIcon: t } = (0, m.f)(n, O, !1, !1, '', {
+                leadingIconClass: _.attachmentIcon,
+                trailingIconClass: _.attachmentIcon,
+                iconSize: b.WW
             });
             return (0, r.jsxs)('div', {
-                className: m.contentContainer,
+                className: _.contentContainer,
                 children: [
                     e,
-                    (0, r.jsx)(c.ZP, {
-                        message: t,
-                        content: g
+                    (0, r.jsx)(d.ZP, {
+                        message: n,
+                        content: O
                     }),
-                    n
+                    t
                 ]
             });
-        }, [t, g]);
-    return null == I
+        }, [n, O]);
+    return null == N
         ? null
         : (0, r.jsxs)('div', {
-              className: m.container,
+              className: _.container,
               children: [
-                  (0, r.jsx)(s.Heading, {
-                      className: m.header,
+                  (0, r.jsx)(a.X6q, {
+                      className: _.header,
                       variant: 'heading-sm/semibold',
-                      children: p.Z.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
+                      children: h.NW.string(h.t.iouM3d)
                   }),
-                  (0, r.jsx)(s.Scroller, {
-                      className: m.messagePreviewContainer,
-                      children: (0, r.jsx)(u.Z, {
-                          childrenMessageContent: S(),
-                          childrenHeader: (0, r.jsx)(d.ZP, {
-                              message: t,
-                              channel: I,
-                              author: n,
-                              guildId: I.guild_id
+                  (0, r.jsx)(a.Ttm, {
+                      className: _.messagePreviewContainer,
+                      children: (0, r.jsx)(c.Z, {
+                          childrenMessageContent: Z(),
+                          childrenHeader: (0, r.jsx)(u.ZP, {
+                              message: n,
+                              channel: N,
+                              author: g,
+                              guildId: N.guild_id
                           }),
-                          disableInteraction: !0
+                          disableInteraction: !0,
+                          authorHasGradientRole: j,
+                          guildId: v
                       })
                   })
               ]

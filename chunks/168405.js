@@ -1,21 +1,17 @@
-t.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = t(735250);
-t(470079);
-var s = t(481060),
-    l = t(665906),
-    a = t(50284),
-    r = t(689938);
-function o(e, n) {
-    return (0, l.$R)(n)
-        ? (0, i.jsx)(s.MenuItem, {
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(665906),
+    a = n(50284),
+    o = n(388032);
+function s(e, t) {
+    return (0, l.$R)(t)
+        ? (0, r.jsx)(i.sNh, {
               id: 'mark-unread',
-              label: r.Z.Messages.MARK_UNREAD,
-              action: () => (0, a.Z)(n.id, e.id),
-              icon: s.ChatMarkUnreadIcon
+              label: o.NW.string(o.t.RpE9k5),
+              action: () => (0, a.Z)(t.id, e.id),
+              icon: i.z7b
           })
         : null;
 }

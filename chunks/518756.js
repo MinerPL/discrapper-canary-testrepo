@@ -1,35 +1,23 @@
-a(47120);
-var t = a(470079),
-    c = a(442837),
-    i = a(889161),
-    o = a(984933),
-    r = a(430824),
-    l = a(496675),
-    d = a(981631);
-n.Z = (e, n) => {
-    let a = (0, c.e7)([r.Z], () => r.Z.getGuild(e), [e]),
-        { canCreateGuildEvent: s } = (0, i.XJ)(a),
-        u = (0, c.e7)([o.ZP], () => o.ZP.getChannels(e)[o.Zb], [e]),
-        _ = t.useMemo(
-            () =>
-                null != n
-                    ? u.filter((e) => {
-                          let { channel: a } = e;
-                          return a.type === n;
-                      })
-                    : u,
-            [u, n]
-        );
-    return (0, c.e7)(
-        [l.Z],
+n.d(t, { Z: () => s }), n(47120);
+var r = n(442837),
+    o = n(357156),
+    a = n(984933),
+    i = n(430824),
+    c = n(496675),
+    l = n(981631);
+function s(e, t) {
+    return (0, r.e7)(
+        [i.Z, a.ZP, c.Z],
         () => {
-            if (l.Z.can(d.Plq.ADMINISTRATOR, a) || s) return !0;
-            for (let { channel: e } of _) {
-                let { canCreateGuildEvent: n } = (0, i.Gw)(e);
-                if (n) return !0;
-            }
+            let n = i.Z.getGuild(e);
+            if (c.Z.can(l.Plq.ADMINISTRATOR, n) || c.Z.can(l.Plq.CREATE_EVENTS, n)) return !0;
+            for (let { channel: n } of a.ZP.getChannels(e)[a.Zb])
+                if (null == t || n.type === t) {
+                    let [e] = (0, o.Ob)(n);
+                    if (c.Z.can(e, n)) return !0;
+                }
             return !1;
         },
-        [_, a, s]
+        [e, t]
     );
-};
+}

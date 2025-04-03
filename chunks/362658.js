@@ -1,7 +1,6 @@
 n.d(t, {
-    z: function () {
-        return i;
-    }
+    Z: () => o,
+    z: () => i
 });
 let r = (0, n(818083).B)({
         kind: 'user',
@@ -56,5 +55,5 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !0 });
-t.Z = r;
+    i = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !0 }),
+    o = r;

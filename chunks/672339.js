@@ -1,13 +1,7 @@
 n.d(t, {
-    FU: function () {
-        return g;
-    },
-    eH: function () {
-        return S;
-    },
-    wG: function () {
-        return T;
-    }
+    FU: () => v,
+    eH: () => O,
+    wG: () => y
 }),
     n(66153),
     n(970173),
@@ -18,27 +12,56 @@ n.d(t, {
     n(480839),
     n(744285),
     n(492257),
-    n(873817);
+    n(873817),
+    n(610885),
+    n(126298);
 var r = n(512722),
     i = n.n(r),
-    a = n(46973),
-    s = n(594174),
-    o = n(768581),
+    o = n(46973),
+    a = n(594174),
+    s = n(768581),
     l = n(932724),
-    u = n(716161),
-    c = n(634041),
+    c = n(716161),
+    u = n(634041),
     d = n(647177),
-    _ = n(63985),
-    E = n(638457),
-    f = n(678916),
+    f = n(63985),
+    _ = n(638457),
+    p = n(678916),
     h = n(981631);
-async function p(e) {
+function m(e) {
+    return new Promise((t, n) => {
+        let r = new Image();
+        (r.crossOrigin = 'anonymous'),
+            (r.onload = () => {
+                let e = document.createElement('canvas');
+                (e.width = p.HE.width), (e.height = p.HE.height);
+                let n = e.getContext('2d');
+                i()(null != n, 'Canvas context is missing');
+                let o = r.height / r.width,
+                    a = p.HE.height,
+                    s = p.HE.height / o,
+                    l = (e.width - s) / 2,
+                    c = (e.height - a) / 2;
+                n.drawImage(r, l, c, s, a);
+                let u = n.getImageData(0, 0, e.width, e.height);
+                t({
+                    data: u.data,
+                    width: u.width,
+                    height: u.height,
+                    pixelFormat: 'rgba'
+                });
+            }),
+            (r.onerror = (e) => n(e)),
+            (r.src = e);
+    });
+}
+async function g(e) {
     let t = await fetch(e),
         n = await t.blob();
     return new Uint8ClampedArray(await n.arrayBuffer());
 }
-function m(e, t, n, r, i) {
-    (0, u.RI)({
+function E(e, t, n, r, i) {
+    (0, c.RI)({
         [e]: {
             graph: n,
             target: t,
@@ -47,81 +70,54 @@ function m(e, t, n, r, i) {
         }
     });
 }
-async function I(e, t, n) {
-    var r, s;
-    let l,
-        c = !1;
-    if (null == n) return m(e, t, a.zZ.NONE);
-    if (n === f.f7) return m(e, t, a.zZ.BACKGROUND_BLUR);
+async function b(e, t, n) {
+    let r,
+        i = !1;
+    if (null == n) return E(e, t, o.zZ.NONE);
+    if (n === p.f7) return E(e, t, o.zZ.BACKGROUND_BLUR);
     if ('string' == typeof n || 'number' == typeof n) {
-        let e = (0, _.Z)()[n];
-        (c = null !== (r = e.isVideo) && void 0 !== r && r), (l = e.source);
+        var a;
+        let e = (0, f.Z)()[n];
+        (i = null != (a = e.isVideo) && a), (r = e.source);
     } else {
         let e = n.asset;
-        (c = (0, o.xR)(e) || (0, o.ay)(e)),
-            (l = (0, o.rI)({
+        (i = (0, s.xR)(e) || (0, s.ay)(e)),
+            (r = (0, s.rI)({
                 userId: n.user_id,
                 assetId: n.id,
                 assetHash: e,
-                size: f.HE.width
+                size: p.HE.width
             }));
     }
-    if (null != l)
+    if (null != r)
         try {
-            let n = c
-                    ? void 0
-                    : await ((s = l),
-                      new Promise((e, t) => {
-                          let n = new Image();
-                          (n.crossOrigin = 'anonymous'),
-                              (n.onload = () => {
-                                  let t = document.createElement('canvas');
-                                  (t.width = f.HE.width), (t.height = f.HE.height);
-                                  let r = t.getContext('2d');
-                                  i()(null != r, 'Canvas context is missing');
-                                  let a = n.height / n.width,
-                                      s = f.HE.height,
-                                      o = f.HE.height / a,
-                                      l = (t.width - o) / 2,
-                                      u = (t.height - s) / 2;
-                                  r.drawImage(n, l, u, o, s);
-                                  let c = r.getImageData(0, 0, t.width, t.height);
-                                  e({
-                                      data: c.data,
-                                      width: c.width,
-                                      height: c.height,
-                                      pixelFormat: 'rgba'
-                                  });
-                              }),
-                              (n.onerror = (e) => t(e)),
-                              (n.src = s);
-                      })),
-                r = c ? await p(l) : void 0;
-            m(e, t, a.zZ.BACKGROUND_REPLACEMENT, n, r);
+            let n = i ? void 0 : await m(r),
+                a = i ? await g(r) : void 0;
+            E(e, t, o.zZ.BACKGROUND_REPLACEMENT, n, a);
         } catch (e) {
-            (0, u.Nm)();
+            (0, c.Nm)();
         }
 }
-async function T(e, t) {
+async function y(e, t) {
     let { track: n = !0, location: r } = t;
-    await I(a.TO.CAMERA_BACKGROUND_LIVE, { type: a.W$.INPUT_DEVICE }, e), n && (0, d.Bh)(e, r, 'Enabled');
+    await b(o.TO.CAMERA_BACKGROUND_LIVE, { type: o.W$.INPUT_DEVICE }, e), n && (0, d.Bh)(e, r, 'Enabled');
 }
-async function g(e, t, n) {
+async function v(e, t, n) {
     let { track: r = !0, location: i } = n;
-    (0, u.GS)(),
-        await I(
-            a.TO.CAMERA_BACKGROUND_PREVIEW,
+    (0, c.GS)(),
+        await b(
+            o.TO.CAMERA_BACKGROUND_PREVIEW,
             {
-                type: a.W$.STREAM,
+                type: o.W$.STREAM,
                 streamId: t
             },
             e
         ),
         r && (0, d.Bh)(e, i, 'Preview');
 }
-function S() {
-    let e = s.default.getCurrentUser();
+function O() {
+    let e = a.default.getCurrentUser();
     if (null == e) return;
     let t = (0, l.P)(e);
-    (0, E.Z)() && !c.Z.hasBeenApplied && null != t && T(t, { track: !1 }).catch(h.dG4);
+    (0, _.Z)() && !u.Z.hasBeenApplied && null != t && y(t, { track: !1 }).catch(h.dG4);
 }

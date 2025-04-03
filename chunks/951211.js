@@ -1,109 +1,110 @@
 n.d(t, {
-    Z: function () {
-        return m;
-    },
-    r: function () {
-        return i;
-    }
+    Z: () => h,
+    r: () => p
 }),
     n(653041);
-var i,
-    a,
-    s = n(481060),
+var r,
+    i = n(481060),
     l = n(620662),
-    r = n(933557),
-    o = n(377171),
-    c = n(699516),
-    u = n(594174),
-    d = n(981631),
-    h = n(689938);
-function m(e) {
-    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: a, hasClips: m, channel: p, activities: _, newClipsCount: f, canPostPolls: E, canLaunchActivities: g, appContext: C } = e,
-        I = [];
+    o = n(933557),
+    a = n(377171),
+    s = n(699516),
+    c = n(594174),
+    u = n(981631),
+    d = n(388032),
+    p = (((r = {}).UPLOAD_A_FILE = 'UPLOAD_A_FILE'), (r.UPLOAD_TEXT_AS_FILE = 'UPLOAD_TEXT_AS_FILE'), (r.INVITE_TO_PLAY_GAME = 'INVITE_TO_GAME'), (r.INVITE_TO_LISTEN = 'INVITE_TO_LISTEN'), (r.INVITE_TO_WATCH = 'INVITE_TO_WATCH'), (r.CREATE_THREAD = 'CREATE_THREAD'), (r.SLASH_COMMAND = 'SLASH_COMMAND'), (r.CLIPS = 'CLIPS'), (r.POLL = 'POLL'), (r.ACTIVITY = 'ACTIVITY'), (r.SCHEDULED_MESSAGE = 'SCHEDULED_MESSAGE'), r);
+function h(e) {
+    let { canAttachFiles: t, canStartThreads: n, useSlate: r, canUseApplicationCommands: p, hasClips: h, channel: f, activities: m, newClipsCount: g, canPostPolls: b, canLaunchActivities: _, appContext: C, canSendScheduledMessages: y } = e,
+        x = [];
     return (
         t &&
-            (I.push({
+            (x.push({
                 type: 'UPLOAD_A_FILE',
-                icon: s.FileUpIcon,
-                display: h.Z.Messages.CHAT_ATTACH_UPLOAD_A_FILE
+                icon: i.xD0,
+                display: d.NW.string(d.t['d3+iYm'])
             }),
-            I.push({
+            x.push({
                 type: 'UPLOAD_TEXT_AS_FILE',
-                icon: s.FileUpIcon,
-                display: h.Z.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
+                icon: i.xD0,
+                display: d.NW.string(d.t['G9s+EB'])
             })),
-        m &&
+        h &&
             t &&
-            C !== d.IlC.POPOUT &&
-            I.push({
+            C !== u.IlC.POPOUT &&
+            x.push({
                 type: 'CLIPS',
-                icon: s.ClipsIcon,
-                display: h.Z.Messages.CLIPS_SHARE_A_CLIP,
-                badgeVal: f,
-                badgeColor: o.Z.BG_BRAND
+                icon: i.AlX,
+                display: d.NW.string(d.t.o034cn),
+                badgeVal: g,
+                badgeColor: a.Z.BG_BRAND
             }),
         n &&
-            I.push({
+            x.push({
                 type: 'CREATE_THREAD',
-                icon: s.ThreadPlusIcon,
-                display: h.Z.Messages.CREATE_THREAD
+                icon: i.YPH,
+                display: d.NW.string(d.t.rBIGBA)
             }),
-        E &&
-            I.push({
+        b &&
+            x.push({
                 type: 'POLL',
-                icon: s.PollsIcon,
-                display: h.Z.Messages.CREATE_POLL
+                icon: i.QDj,
+                display: d.NW.string(d.t.Flr51t)
             }),
-        i &&
-            a &&
-            I.push({
+        r &&
+            p &&
+            x.push({
                 type: 'SLASH_COMMAND',
-                icon: s.AppsIcon,
-                display: h.Z.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
+                icon: i.jje,
+                display: d.NW.string(d.t.Bbvp6O)
             }),
-        g &&
-            I.push({
+        _ &&
+            x.push({
                 type: 'ACTIVITY',
-                icon: s.ActivitiesIcon,
-                display: h.Z.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL
+                icon: i.nG3,
+                display: d.NW.string(d.t['16Lfra'])
             }),
-        _.forEach((e) => {
-            if (!(0, l.Z)(e, d.xjy.EMBEDDED))
-                e.type === d.IIU.PLAYING &&
-                    (0, l.Z)(e, d.xjy.JOIN) &&
-                    I.push({
+        m.forEach((e) => {
+            !(0, l.Z)(e, u.xjy.EMBEDDED) &&
+                (e.type === u.IIU.PLAYING &&
+                    (0, l.Z)(e, u.xjy.JOIN) &&
+                    x.push({
                         type: 'INVITE_TO_GAME',
-                        icon: s.DpadIcon,
-                        display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
-                            channel: (0, r.F6)(p, u.default, c.Z, !0),
+                        icon: i.xoD,
+                        display: d.NW.formatToPlainString(d.t['KHLo+P'], {
+                            channel: (0, o.F6)(f, c.default, s.Z, !0),
                             game: null != e ? e.name : ''
                         }),
                         activity: e
                     }),
-                    e.type === d.IIU.LISTENING &&
-                        (0, l.Z)(e, d.xjy.SYNC) &&
-                        I.push({
-                            type: 'INVITE_TO_LISTEN',
-                            icon: s.UserPlayIcon,
-                            display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
-                                channel: (0, r.F6)(p, u.default, c.Z, !0),
-                                name: null != e ? e.name : ''
-                            }),
-                            activity: e
+                e.type === u.IIU.LISTENING &&
+                    (0, l.Z)(e, u.xjy.SYNC) &&
+                    x.push({
+                        type: 'INVITE_TO_LISTEN',
+                        icon: i.iOO,
+                        display: d.NW.formatToPlainString(d.t.I479p6, {
+                            channel: (0, o.F6)(f, c.default, s.Z, !0),
+                            name: null != e ? e.name : ''
                         }),
-                    e.type === d.IIU.WATCHING &&
-                        (0, l.Z)(e, d.xjy.SYNC) &&
-                        I.push({
-                            type: 'INVITE_TO_WATCH',
-                            icon: s.EyeIcon,
-                            display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
-                                channel: (0, r.F6)(p, u.default, c.Z, !0),
-                                name: null != e ? e.name : ''
-                            }),
-                            activity: e
-                        });
+                        activity: e
+                    }),
+                e.type === u.IIU.WATCHING &&
+                    (0, l.Z)(e, u.xjy.SYNC) &&
+                    x.push({
+                        type: 'INVITE_TO_WATCH',
+                        icon: i.tEF,
+                        display: d.NW.formatToPlainString(d.t['EvCP/v'], {
+                            channel: (0, o.F6)(f, c.default, s.Z, !0),
+                            name: null != e ? e.name : ''
+                        }),
+                        activity: e
+                    }));
         }),
-        I
+        y &&
+            x.push({
+                type: 'SCHEDULED_MESSAGE',
+                icon: i.T39,
+                display: d.NW.string(d.t['3+ii4O'])
+            }),
+        x
     );
 }
-((a = i || (i = {})).UPLOAD_A_FILE = 'UPLOAD_A_FILE'), (a.UPLOAD_TEXT_AS_FILE = 'UPLOAD_TEXT_AS_FILE'), (a.INVITE_TO_PLAY_GAME = 'INVITE_TO_GAME'), (a.INVITE_TO_LISTEN = 'INVITE_TO_LISTEN'), (a.INVITE_TO_WATCH = 'INVITE_TO_WATCH'), (a.CREATE_THREAD = 'CREATE_THREAD'), (a.SLASH_COMMAND = 'SLASH_COMMAND'), (a.CLIPS = 'CLIPS'), (a.POLL = 'POLL'), (a.ACTIVITY = 'ACTIVITY');

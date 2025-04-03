@@ -1,488 +1,534 @@
 n.d(t, {
-    Kh: function () {
-        return w;
-    },
-    Tm: function () {
-        return b;
-    }
+    Kh: () => G,
+    Tm: () => M
 }),
     n(47120),
+    n(566702),
     n(411104);
 var r = n(512722),
     i = n.n(r),
-    a = n(913527),
-    s = n.n(a),
-    o = n(106351),
+    o = n(913527),
+    a = n.n(o),
+    s = n(106351),
     l = n(969812),
-    u = n(493683),
-    c = n(749210),
+    c = n(493683),
+    u = n(749210),
     d = n(904245),
-    _ = n(911969),
-    E = n(386696),
-    f = n(957730),
+    f = n(911969),
+    _ = n(386696),
+    p = n(957730),
     h = n(968437),
-    p = n(928477),
-    m = n(665906),
-    I = n(695346),
-    T = n(592125),
-    g = n(496675),
-    S = n(594174),
-    A = n(70956),
-    N = n(51144),
-    v = n(895924),
-    O = n(689079),
-    R = n(981631),
-    C = n(590433),
-    y = n(689938);
-let D = n(227419).Z,
-    L = (e, t) => {
+    m = n(928477),
+    g = n(665906),
+    E = n(695346),
+    b = n(592125),
+    y = n(496675),
+    v = n(594174),
+    O = n(70956),
+    I = n(51144),
+    S = n(895924),
+    T = n(689079),
+    N = n(981631),
+    A = n(590433),
+    C = n(388032);
+function R(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function P(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                R(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function w(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function D(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : w(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let L = n(227419).Z,
+    x = (e, t) => {
         var n;
-        return null === (n = e.find((e) => e.name === t)) || void 0 === n ? void 0 : n.value;
+        return null == (n = e.find((e) => e.name === t)) ? void 0 : n.value;
     },
-    b = {
-        [O.bi.BUILT_IN]: {
-            id: O.bi.BUILT_IN,
-            type: v.Qi.BUILT_IN,
+    M = {
+        [T.bi.BUILT_IN]: {
+            id: T.bi.BUILT_IN,
+            type: S.Qi.BUILT_IN,
             get name() {
-                return y.Z.Messages.COMMAND_SECTION_BUILT_IN_NAME;
+                return C.NW.string(C.t.fI5MTU);
             }
         },
-        [O.bi.FRECENCY]: {
-            id: O.bi.FRECENCY,
-            type: v.Qi.BUILT_IN,
+        [T.bi.FRECENCY]: {
+            id: T.bi.FRECENCY,
+            type: S.Qi.BUILT_IN,
             get name() {
-                return y.Z.Messages.FREQUENTLY_USED;
+                return C.NW.string(C.t['+cGVV1']);
             }
         }
     },
-    M = [
-        ...D,
+    k = [
+        ...L,
         {
             id: '-1',
-            name: 'shrug',
+            untranslatedName: 'shrug',
             displayName: 'shrug',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN_TEXT,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_SHRUG_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN_TEXT,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t.j5xUSU);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_SHRUG_DESCRIPTION;
+                return C.NW.string(C.t.j5xUSU);
             },
             options: [
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_SHRUG_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.JewOra);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_SHRUG_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.JewOra);
                     }
                 }
             ],
             execute: (e) => {
                 var t;
-                let n = null !== (t = L(e, 'message')) && void 0 !== t ? t : '';
+                let n = null != (t = x(e, 'message')) ? t : '';
                 return { content: ''.concat(n, ' \xAF\\_(ツ)_/\xAF').trim() };
             }
         },
         {
             id: '-2',
-            name: 'tableflip',
+            untranslatedName: 'tableflip',
             displayName: 'tableflip',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN_TEXT,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_TABLEFLIP_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN_TEXT,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t.nrQRcX);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_TABLEFLIP_DESCRIPTION;
+                return C.NW.string(C.t.nrQRcX);
             },
             options: [
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_TABLEFLIP_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.EI80t7);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_TABLEFLIP_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.EI80t7);
                     }
                 }
             ],
             execute: (e) => {
                 var t;
-                let n = null !== (t = L(e, 'message')) && void 0 !== t ? t : '';
+                let n = null != (t = x(e, 'message')) ? t : '';
                 return { content: ''.concat(n, ' (\u256F\xB0\u25A1\xB0)\u256F\uFE35 \u253B\u2501\u253B').trim() };
             }
         },
         {
             id: '-3',
-            name: 'unflip',
+            untranslatedName: 'unflip',
             displayName: 'unflip',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN_TEXT,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN_TEXT,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t.pnnn8f);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION;
+                return C.NW.string(C.t.pnnn8f);
             },
             options: [
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_TABLEUNFLIP_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.ETs6go);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_TABLEUNFLIP_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.ETs6go);
                     }
                 }
             ],
             execute: (e) => {
                 var t;
-                let n = null !== (t = L(e, 'message')) && void 0 !== t ? t : '';
+                let n = null != (t = x(e, 'message')) ? t : '';
                 return { content: ''.concat(n, ' \u252C\u2500\u252Cノ( º _ ºノ)').trim() };
             }
         },
         {
             id: '-4',
-            name: 'tts',
+            untranslatedName: 'tts',
             displayName: 'tts',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN_TEXT,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_TTS_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN_TEXT,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t.jZcIiY);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_TTS_DESCRIPTION;
+                return C.NW.string(C.t.jZcIiY);
             },
             options: [
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_TTS_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t['k+sw9v']);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_TTS_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t['k+sw9v']);
                     },
                     required: !0
                 }
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return !t.isPrivate() && I.OW.getSetting() && g.Z.can(R.Plq.SEND_TTS_MESSAGES, t);
+                return null != t && !t.isPrivate() && E.OW.getSetting() && y.Z.can(N.Plq.SEND_TTS_MESSAGES, t);
             },
             execute: (e) => {
                 var t;
                 return {
-                    content: null !== (t = L(e, 'message')) && void 0 !== t ? t : '',
+                    content: null != (t = x(e, 'message')) ? t : '',
                     tts: !0
                 };
             }
         },
         {
             id: '-5',
-            name: 'me',
+            untranslatedName: 'me',
             displayName: 'me',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN_TEXT,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_ME_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN_TEXT,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t.UGO8fX);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_ME_DESCRIPTION;
+                return C.NW.string(C.t.UGO8fX);
             },
             options: [
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_ME_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.RWTgNT);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_ME_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.RWTgNT);
                     },
                     required: !0
                 }
             ],
             execute: (e) => {
                 var t;
-                let n = null !== (t = L(e, 'message')) && void 0 !== t ? t : '';
+                let n = null != (t = x(e, 'message')) ? t : '';
                 return { content: '_'.concat(n, '_') };
             }
         },
         {
             id: '-6',
-            name: 'spoiler',
+            untranslatedName: 'spoiler',
             displayName: 'spoiler',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN_TEXT,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_SPOILER_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN_TEXT,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t.v0eDdX);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_SPOILER_DESCRIPTION;
+                return C.NW.string(C.t.v0eDdX);
             },
             options: [
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_SPOILER_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.D13pbW);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_SPOILER_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.D13pbW);
                     },
                     required: !0
                 }
             ],
             execute: (e) => {
                 var t;
-                let n = null !== (t = L(e, 'message')) && void 0 !== t ? t : '';
-                return { content: (0, R.XmY)(n).trim() };
+                let n = null != (t = x(e, 'message')) ? t : '';
+                return { content: (0, N.XmY)(n).trim() };
             }
         },
         {
             id: '-7',
-            name: 'nick',
+            untranslatedName: 'nick',
             displayName: 'nick',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_NICK_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t.jiHfS0);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_NICK_DESCRIPTION;
+                return C.NW.string(C.t.jiHfS0);
             },
             options: [
                 {
                     name: 'new_nick',
                     displayName: 'new_nick',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_NICK_NEWNICK_DESCRIPTION;
+                        return C.NW.string(C.t.WTSzVl);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_NICK_NEWNICK_DESCRIPTION;
+                        return C.NW.string(C.t.WTSzVl);
                     }
                 }
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return !t.isPrivate() && (g.Z.can(R.Plq.CHANGE_NICKNAME, t) || g.Z.can(R.Plq.MANAGE_NICKNAMES, t));
+                return null != t && !t.isPrivate() && (y.Z.can(N.Plq.CHANGE_NICKNAME, t) || y.Z.can(N.Plq.MANAGE_NICKNAMES, t));
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
-                if (null == r) return;
-                let a = null !== (n = L(e, 'new_nick')) && void 0 !== n ? n : '';
-                l.Z.changeNickname(r.id, i.id, R.ME, a || '');
+                if (null == r || null == i) return;
+                let o = null != (n = x(e, 'new_nick')) ? n : '';
+                l.Z.changeNickname(r.id, i.id, N.ME, o || '');
             }
         },
         {
             id: '-10',
-            name: 'thread',
+            untranslatedName: 'thread',
             displayName: 'thread',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_THREAD_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t.t6ZAS0);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_THREAD_DESCRIPTION;
+                return C.NW.string(C.t.t6ZAS0);
             },
             options: [
                 {
                     name: 'name',
                     displayName: 'name',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_THREAD_NAME_DESCRIPTION;
+                        return C.NW.string(C.t.TffOfX);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_THREAD_NAME_DESCRIPTION;
+                        return C.NW.string(C.t.TffOfX);
                     },
                     required: !0
                 },
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_THREAD_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.QXfSfX);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_THREAD_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.QXfSfX);
                     },
                     required: !0
                 }
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return (0, m.ki)(t);
+                return null != t && (0, g.ki)(t);
             },
             execute: async (e, t) => {
                 var n, r;
                 let { channel: i } = t,
-                    a = null !== (n = L(e, 'name')) && void 0 !== n ? n : '',
-                    s = null !== (r = L(e, 'message')) && void 0 !== r ? r : '',
-                    l = await (0, p.gK)(i, a, o.d.PUBLIC_THREAD, (0, h.WD)(i, null), 'Slash Command');
-                d.Z.sendMessage(l.id, f.ZP.parse(l, s));
+                    o = null != (n = x(e, 'name')) ? n : '',
+                    a = null != (r = x(e, 'message')) ? r : '',
+                    l = await (0, m.gK)(i, o, s.d.PUBLIC_THREAD, (0, h.WD)(i, null), 'Slash Command');
+                d.Z.sendMessage(l.id, p.ZP.parse(l, a));
             }
         },
         {
             id: '-11',
-            name: 'kick',
+            untranslatedName: 'kick',
             displayName: 'kick',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_KICK_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t['03N0UF']);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_KICK_DESCRIPTION;
+                return C.NW.string(C.t['03N0UF']);
             },
             options: [
                 {
                     name: 'user',
                     displayName: 'user',
-                    type: _.jw.USER,
+                    type: f.jw.USER,
                     get description() {
-                        return y.Z.Messages.COMMAND_KICK_USER_DESCRIPTION;
+                        return C.NW.string(C.t.gF8IpK);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_KICK_USER_DESCRIPTION;
+                        return C.NW.string(C.t.gF8IpK);
                     },
                     required: !0
                 },
                 {
                     name: 'reason',
                     displayName: 'reason',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_KICK_REASON_DESCRIPTION;
+                        return C.NW.string(C.t.QWldgo);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_KICK_REASON_DESCRIPTION;
+                        return C.NW.string(C.t.QWldgo);
                     },
                     required: !1
                 }
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return g.Z.can(R.Plq.KICK_MEMBERS, t);
+                return y.Z.can(N.Plq.KICK_MEMBERS, t);
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
-                if (null == r) return;
-                let a = null !== (n = L(e, 'user')) && void 0 !== n ? n : '';
-                if (!g.Z.canManageUser(R.Plq.KICK_MEMBERS, a, r)) {
-                    d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_KICK_UNABLE);
-                    return;
-                }
+                if (null == r || null == i) return;
+                let o = null != (n = x(e, 'user')) ? n : '';
+                if (!y.Z.canManageUser(N.Plq.KICK_MEMBERS, o, r)) return void d.Z.sendBotMessage(i.id, C.NW.string(C.t['6RIwPD']));
                 (async () => {
                     var t;
-                    let n = S.default.getUser(a);
+                    let n = v.default.getUser(o);
                     if (null == n) throw Error();
-                    await c.Z.kickUser(r.id, a, null !== (t = L(e, 'reason')) && void 0 !== t ? t : ''), d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_KICK_CONFIRMATION.format({ user: N.ZP.getUserTag(n) }));
+                    await u.Z.kickUser(r.id, o, null != (t = x(e, 'reason')) ? t : ''), d.Z.sendBotMessage(i.id, C.NW.formatToPlainString(C.t['9wzHDQ'], { user: I.ZP.getUserTag(n) }));
                 })().catch(() => {
-                    d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_KICK_ERROR);
+                    d.Z.sendBotMessage(i.id, C.NW.string(C.t.l0gNlp));
                 });
             }
         },
         {
             id: '-12',
-            name: 'ban',
+            untranslatedName: 'ban',
             displayName: 'ban',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_BAN_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t.HWuskp);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_BAN_DESCRIPTION;
+                return C.NW.string(C.t.HWuskp);
             },
             options: [
                 {
                     name: 'user',
                     displayName: 'user',
-                    type: _.jw.USER,
+                    type: f.jw.USER,
                     get description() {
-                        return y.Z.Messages.COMMAND_BAN_USER_DESCRIPTION;
+                        return C.NW.string(C.t.z3XPjo);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_BAN_USER_DESCRIPTION;
+                        return C.NW.string(C.t.z3XPjo);
                     },
                     required: !0
                 },
                 {
                     name: 'delete_messages',
                     displayName: 'delete_messages',
-                    type: _.jw.INTEGER,
+                    type: f.jw.INTEGER,
                     get description() {
-                        return y.Z.Messages.COMMAND_BAN_DELETE_MESSAGES_DESCRIPTION;
+                        return C.NW.string(C.t.smrvAw);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_BAN_DELETE_MESSAGES_DESCRIPTION;
+                        return C.NW.string(C.t.smrvAw);
                     },
                     required: !0,
                     get choices() {
                         return [
                             {
-                                name: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE,
-                                displayName: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE,
+                                name: C.NW.string(C.t['4obaMT']),
+                                displayName: C.NW.string(C.t['4obaMT']),
                                 value: 0
                             },
                             {
-                                name: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR,
-                                displayName: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR,
-                                value: A.Z.Seconds.HOUR
+                                name: C.NW.string(C.t.RKpitb),
+                                displayName: C.NW.string(C.t.RKpitb),
+                                value: O.Z.Seconds.HOUR
                             },
                             {
-                                name: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR,
-                                displayName: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR,
-                                value: 6 * A.Z.Seconds.HOUR
+                                name: C.NW.string(C.t['8WfJZ2']),
+                                displayName: C.NW.string(C.t['8WfJZ2']),
+                                value: 6 * O.Z.Seconds.HOUR
                             },
                             {
-                                name: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR,
-                                displayName: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR,
-                                value: 12 * A.Z.Seconds.HOUR
+                                name: C.NW.string(C.t.p1up7u),
+                                displayName: C.NW.string(C.t.p1up7u),
+                                value: 12 * O.Z.Seconds.HOUR
                             },
                             {
-                                name: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR,
-                                displayName: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR,
-                                value: A.Z.Seconds.DAY
+                                name: C.NW.string(C.t.XuVkkJ),
+                                displayName: C.NW.string(C.t.XuVkkJ),
+                                value: O.Z.Seconds.DAY
                             },
                             {
-                                name: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D,
-                                displayName: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D,
-                                value: 3 * A.Z.Seconds.DAY
+                                name: C.NW.string(C.t.gMcDS0),
+                                displayName: C.NW.string(C.t.gMcDS0),
+                                value: 3 * O.Z.Seconds.DAY
                             },
                             {
-                                name: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D,
-                                displayName: y.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D,
-                                value: 7 * A.Z.Seconds.DAY
+                                name: C.NW.string(C.t.FA7IUl),
+                                displayName: C.NW.string(C.t.FA7IUl),
+                                value: 7 * O.Z.Seconds.DAY
                             }
                         ];
                     }
@@ -490,197 +536,193 @@ let D = n(227419).Z,
                 {
                     name: 'reason',
                     displayName: 'reason',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_BAN_REASON_DESCRIPTION;
+                        return C.NW.string(C.t.dG4noa);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_BAN_REASON_DESCRIPTION;
+                        return C.NW.string(C.t.dG4noa);
                     },
                     required: !1
                 }
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return g.Z.can(R.Plq.BAN_MEMBERS, t);
+                return y.Z.can(N.Plq.BAN_MEMBERS, t);
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
-                if (null == r) return;
-                let a = null !== (n = L(e, 'user')) && void 0 !== n ? n : '';
-                if (!g.Z.canManageUser(R.Plq.BAN_MEMBERS, a, r)) {
-                    d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_BAN_UNABLE);
-                    return;
-                }
+                if (null == r || null == i) return;
+                let o = null != (n = x(e, 'user')) ? n : '';
+                if (!y.Z.canManageUser(N.Plq.BAN_MEMBERS, o, r)) return void d.Z.sendBotMessage(i.id, C.NW.string(C.t.R27LJi));
                 (async () => {
                     var t, n;
-                    if ('' === a) throw Error();
-                    let s = null !== (t = L(e, 'delete_messages')) && void 0 !== t ? t : 0,
-                        o = null !== (n = L(e, 'reason')) && void 0 !== n ? n : '',
-                        l = S.default.getUser(a);
-                    await c.Z.banUser(r.id, a, s, o), d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_BAN_CONFIRMATION.format({ user: null != l ? N.ZP.getUserTag(l) : a }));
+                    if ('' === o) throw Error();
+                    let a = null != (t = x(e, 'delete_messages')) ? t : 0,
+                        s = null != (n = x(e, 'reason')) ? n : '',
+                        l = v.default.getUser(o);
+                    await u.Z.banUser(r.id, o, a, s), d.Z.sendBotMessage(i.id, C.NW.formatToPlainString(C.t.YflWdH, { user: null != l ? I.ZP.getUserTag(l) : o }));
                 })().catch(() => {
-                    d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_BAN_ERROR);
+                    d.Z.sendBotMessage(i.id, C.NW.string(C.t.w2J6Qk));
                 });
             }
         },
         {
             id: '-13',
-            name: 'timeout',
+            untranslatedName: 'timeout',
             displayName: 'timeout',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_TIMEOUT_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t.KkPcen);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_TIMEOUT_DESCRIPTION;
+                return C.NW.string(C.t.KkPcen);
             },
             options: [
                 {
                     name: 'user',
                     displayName: 'user',
-                    type: _.jw.USER,
+                    type: f.jw.USER,
                     get description() {
-                        return y.Z.Messages.COMMAND_TIMEOUT_USER_DESCRIPTION;
+                        return C.NW.string(C.t.UU3VRk);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_TIMEOUT_USER_DESCRIPTION;
+                        return C.NW.string(C.t.UU3VRk);
                     },
                     required: !0
                 },
                 {
                     name: 'duration',
                     displayName: 'duration',
-                    type: _.jw.STRING,
+                    type: f.jw.INTEGER,
                     get description() {
-                        return y.Z.Messages.COMMAND_TIMEOUT_DURATION_DESCRIPTION;
+                        return C.NW.string(C.t.SNqN1d);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_TIMEOUT_DURATION_DESCRIPTION;
+                        return C.NW.string(C.t.SNqN1d);
                     },
                     required: !0,
                     get choices() {
-                        return (0, C.tr)().map((e) => ({
-                            ...e,
-                            name: e.label,
-                            displayName: e.label
-                        }));
+                        return (0, A.tr)().map((e) =>
+                            D(P({}, e), {
+                                name: e.label,
+                                displayName: e.label
+                            })
+                        );
                     }
                 },
                 {
                     name: 'reason',
                     displayName: 'reason',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_TIMEOUT_REASON_DESCRIPTION;
+                        return C.NW.string(C.t.akHScH);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_TIMEOUT_REASON_DESCRIPTION;
+                        return C.NW.string(C.t.akHScH);
                     },
                     required: !1
                 }
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return g.Z.can(R.Plq.MODERATE_MEMBERS, t);
+                return y.Z.can(N.Plq.MODERATE_MEMBERS, t);
             },
             execute: (e, t) => {
                 let { guild: n, channel: r } = t;
-                if (null == n) return;
-                let i = L(e, 'user');
-                if (!(0, E.F)(n.id, i)) {
-                    d.Z.sendBotMessage(r.id, y.Z.Messages.COMMAND_TIMEOUT_UNABLE);
-                    return;
-                }
+                if (null == n || null == r) return;
+                let i = x(e, 'user');
+                if (!(0, _.F)(n.id, i)) return void d.Z.sendBotMessage(r.id, C.NW.string(C.t.F5pqSU));
                 (async () => {
-                    var t, a;
-                    let o = null !== (t = L(e, 'duration')) && void 0 !== t ? t : '',
-                        l = null !== (a = L(e, 'reason')) && void 0 !== a ? a : '',
-                        u = S.default.getUser(i);
-                    if (null == u) throw Error();
-                    await c.Z.setCommunicationDisabledUntil({
+                    var t, o;
+                    let s = null != (t = x(e, 'duration')) ? t : '',
+                        l = null != (o = x(e, 'reason')) ? o : '',
+                        c = v.default.getUser(i);
+                    if (null == c) throw Error();
+                    await u.Z.setCommunicationDisabledUntil({
                         guildId: n.id,
                         userId: i,
-                        communicationDisabledUntilTimestamp: s()().add(o, 's').toISOString(),
-                        duration: o,
+                        communicationDisabledUntilTimestamp: a()().add(s, 's').toISOString(),
+                        duration: s,
                         reason: l
                     }),
                         d.Z.sendBotMessage(
                             r.id,
-                            y.Z.Messages.COMMAND_TIMEOUT_CONFIRMATION.format({
-                                user: N.ZP.getUserTag(u),
-                                duration: o
+                            C.NW.formatToPlainString(C.t.BbRV6u, {
+                                user: I.ZP.getUserTag(c),
+                                duration: s
                             })
                         );
                 })().catch(() => {
-                    d.Z.sendBotMessage(r.id, y.Z.Messages.COMMAND_TIMEOUT_ERROR);
+                    d.Z.sendBotMessage(r.id, C.NW.string(C.t['+mWyVl']));
                 });
             }
         },
         {
             id: '-14',
-            name: 'msg',
+            untranslatedName: 'msg',
             displayName: 'msg',
-            type: _.yU.CHAT,
-            inputType: v.iw.BUILT_IN,
-            applicationId: O.bi.BUILT_IN,
-            get description() {
-                return y.Z.Messages.COMMAND_MSG_DESCRIPTION;
+            type: f.yU.CHAT,
+            inputType: S.iw.BUILT_IN,
+            applicationId: T.bi.BUILT_IN,
+            get untranslatedDescription() {
+                return C.NW.string(C.t.Dg8XZ2);
             },
             get displayDescription() {
-                return y.Z.Messages.COMMAND_MSG_DESCRIPTION;
+                return C.NW.string(C.t.Dg8XZ2);
             },
             options: [
                 {
                     name: 'user',
                     displayName: 'user',
-                    type: _.jw.USER,
+                    type: f.jw.USER,
                     get description() {
-                        return y.Z.Messages.COMMAND_MSG_USER_DESCRIPTION;
+                        return C.NW.string(C.t['KmVq/P']);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_MSG_USER_DESCRIPTION;
+                        return C.NW.string(C.t['KmVq/P']);
                     },
                     required: !0
                 },
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: _.jw.STRING,
+                    type: f.jw.STRING,
                     get description() {
-                        return y.Z.Messages.COMMAND_MSG_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.oGUuOD);
                     },
                     get displayDescription() {
-                        return y.Z.Messages.COMMAND_MSG_MESSAGE_DESCRIPTION;
+                        return C.NW.string(C.t.oGUuOD);
                     },
                     required: !0,
                     get maxLength() {
-                        var P;
-                        return (null === (P = S.default.getCurrentUser()) || void 0 === P ? void 0 : P.premiumType) ? R.en1 : R.J6R;
+                        var j;
+                        return (null == (j = v.default.getCurrentUser()) ? void 0 : j.premiumType) ? N.en1 : N.J6R;
                     }
                 }
             ],
             execute: (e, t) => {
                 var n;
-                let { channel: r } = t,
-                    a = L(e, 'user'),
-                    s = null !== (n = L(e, 'message')) && void 0 !== n ? n : '';
+                let { channel: r } = t;
+                if (null == r) return;
+                let o = x(e, 'user'),
+                    a = null != (n = x(e, 'message')) ? n : '';
                 (async () => {
-                    await u.Z.openPrivateChannel(a).then((e) => {
-                        let t = T.Z.getChannel(e);
-                        i()(null != t, 'Newly created PrivateChannel is null'), d.Z.sendMessage(t.id, f.ZP.parse(t, s));
+                    await c.Z.openPrivateChannel(o).then((e) => {
+                        let t = b.Z.getChannel(e);
+                        i()(null != t, 'Newly created PrivateChannel is null'), d.Z.sendMessage(t.id, p.ZP.parse(t, a));
                     });
                 })().catch(() => {
-                    d.Z.sendBotMessage(r.id, y.Z.Messages.COMMAND_MSG_ERROR);
+                    d.Z.sendBotMessage(r.id, C.NW.string(C.t['3XaE9/']));
                 });
             }
         }
     ],
-    U = M.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.name)),
-    w = (e, t, n) => {
-        let r = t ? M : U;
-        return (r = r.filter((t) => e.includes(t.type) && (!n || t.inputType === v.iw.BUILT_IN_TEXT || t.inputType === v.iw.BUILT_IN_INTEGRATION)));
+    U = k.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.untranslatedName)),
+    G = (e, t, n) => {
+        let r = t ? k : U;
+        return r.filter((t) => e.includes(t.type) && (!n || t.inputType === S.iw.BUILT_IN_TEXT || t.inputType === S.iw.BUILT_IN_INTEGRATION));
     };

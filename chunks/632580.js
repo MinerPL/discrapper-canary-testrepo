@@ -1,109 +1,157 @@
-t.d(n, {
-    H: function () {
-        return f;
+n.d(t, { H: () => y }), n(47120);
+var r = n(512722),
+    i = n.n(r),
+    o = n(570140),
+    a = n(355467),
+    s = n(159351),
+    l = n(366939),
+    c = n(16084),
+    u = n(255078),
+    d = n(626135),
+    f = n(74538),
+    _ = n(45572),
+    p = n(981631),
+    h = n(474936);
+function m(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
     }
-}),
-    t(47120);
-var i = t(512722),
-    a = t.n(i),
-    r = t(570140),
-    s = t(355467),
-    l = t(976255),
-    o = t(366939),
-    c = t(16084),
-    u = t(255078),
-    d = t(626135),
-    _ = t(74538),
-    p = t(45572),
-    m = t(981631),
-    I = t(474936);
-async function f(e) {
-    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: E, setHasRedirectURL: x, isGift: N, baseAnalyticsData: S, analyticsLocation: T, analyticsLocations: h, flowStartTime: b, subscriptionPlan: g, planGroup: P, trialId: v, priceOptions: A, paymentSource: y, isPrepaidPaymentPastDue: M, openInvoiceId: C, premiumSubscription: O, onNext: R, metadata: L, sku: j, skuPricePreview: Z, purchaseType: D, referralCode: w, loadId: G, giftInfoOptions: B, invoicePreview: U } = e;
-    n(p.A.PURCHASING), t(!0), i(!0), r.Z.wait(l.fw), f(null);
+    return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+async function y(e) {
+    let { setPurchaseState: t, setHasAcceptedTerms: n, setIsSubmitting: r, setPurchaseError: m, hasRedirectURL: E, setHasRedirectURL: y, isGift: v, baseAnalyticsData: O, analyticsLocation: I, analyticsLocations: S, flowStartTime: T, subscriptionPlan: N, planGroup: A, trialId: C, priceOptions: R, paymentSource: P, isPrepaidPaymentPastDue: w, openInvoiceId: D, premiumSubscription: L, onNext: x, metadata: M, sku: k, skuPricePreview: j, purchaseType: U, referralCode: G, loadId: B, giftInfoOptions: F, invoicePreview: V } = e;
+    t(_.A.PURCHASING), n(!0), r(!0), o.Z.wait(s.fw), m(null);
     try {
-        let e, t, i;
+        let e, n, r;
         if (
-            (d.default.track(m.rMx.PAYMENT_FLOW_COMPLETED, {
-                ...S,
-                subtotal: null == U ? void 0 : U.subtotal,
-                tax: null == U ? void 0 : U.tax,
-                expected_amount: null == U ? void 0 : U.total,
-                expected_currency: null == U ? void 0 : U.currency,
-                duration_ms: Date.now() - b
-            }),
+            (d.default.track(
+                p.rMx.PAYMENT_FLOW_COMPLETED,
+                b(g({}, O), {
+                    subtotal: null == V ? void 0 : V.subtotal,
+                    tax: null == V ? void 0 : V.tax,
+                    expected_amount: null == V ? void 0 : V.total,
+                    expected_currency: null == V ? void 0 : V.currency,
+                    duration_ms: Date.now() - T
+                })
+            ),
             E)
         )
             return;
-        if (D === m.GZQ.ONE_TIME)
-            a()(null != j, 'SKU must exist and be fetched.'),
-                a()(null != Z, 'SKUPricePreview must exist.'),
-                (e = await (0, c.ZZ)(j.applicationId, j.id, {
-                    expectedAmount: Z.amount,
-                    expectedCurrency: Z.currency,
-                    isGift: N,
-                    paymentSource: y,
-                    loadId: G,
-                    giftInfoOptions: B
+        if (U === p.GZQ.ONE_TIME)
+            i()(null != k, 'SKU must exist and be fetched.'),
+                i()(null != j, 'SKUPricePreview must exist.'),
+                (e = await (0, c.ZZ)(k.applicationId, k.id, {
+                    expectedAmount: j.amount,
+                    expectedCurrency: j.currency,
+                    isGift: v,
+                    paymentSource: P,
+                    loadId: B,
+                    giftInfoOptions: F
                 }));
-        else if ((a()(null != g, 'Missing subscriptionPlan'), N)) {
-            a()(null != U, 'Missing invoicePreview');
-            let n = U.total,
-                t = U.currency;
-            e = await (0, c.ZZ)(I.RQ, g.skuId, {
-                expectedAmount: n,
-                expectedCurrency: t,
-                paymentSource: y,
-                subscriptionPlanId: g.id,
+        else if ((i()(null != N, 'Missing subscriptionPlan'), v)) {
+            i()(null != V, 'Missing invoicePreview');
+            let t = V.total,
+                n = V.currency;
+            e = await (0, c.ZZ)(h.CL, N.skuId, {
+                expectedAmount: t,
+                expectedCurrency: n,
+                paymentSource: P,
+                subscriptionPlanId: N.id,
                 isGift: !0,
-                loadId: G,
-                giftInfoOptions: B
+                loadId: B,
+                giftInfoOptions: F
             });
-        } else if (M && null != C && null != y && null != O)
-            e = m.Uk1.has(y.type)
-                ? await (0, s.G)(O, C, y, A.currency)
-                : await (0, s.Mg)(
-                      O,
+        } else if (w && null != D && null != P && null != L)
+            e = p.Uk1.has(P.type)
+                ? await (0, a.G)(L, D, P, R.currency)
+                : await (0, a.Mg)(
+                      L,
                       {
-                          paymentSource: y,
-                          currency: A.currency
+                          paymentSource: P,
+                          currency: R.currency
                       },
-                      h,
-                      T,
-                      G
+                      S,
+                      I,
+                      B
                   );
-        else if (null != O) {
-            let n = (0, _.al)(O, g.id, 1, new Set(P)),
-                t = {
-                    paymentSource: y,
-                    currency: A.currency
+        else if (null != L) {
+            let t = (0, f.al)(L, N.id, 1, new Set(A)),
+                n = {
+                    paymentSource: P,
+                    currency: R.currency
                 };
-            O.status === m.O0b.PAUSED ? (t.status = m.O0b.ACTIVE) : (t.items = n), (e = await (0, s.Mg)(O, t, h, T, G));
+            L.isPausedAllowsResumeButNotUpdates ? (n.status = p.O0b.ACTIVE) : (n.items = t), (e = await (0, a.Mg)(L, n, S, I, B));
         } else
-            e = await (0, o.Ld)({
-                planId: g.id,
-                currency: A.currency,
-                paymentSource: y,
-                trialId: v,
-                metadata: L,
-                referralCode: w,
-                loadId: G
+            e = await (0, l.Ld)({
+                planId: N.id,
+                currency: R.currency,
+                paymentSource: P,
+                trialId: C,
+                metadata: M,
+                referralCode: G,
+                loadId: B
             });
-        if (e.redirectConfirmation) {
-            x(null != e.redirectURL);
-            return;
-        }
-        n(p.A.COMPLETED), 'subscription' in e ? (t = null != e.subscription ? u.Z.createFromServer(e.subscription) : null) : 'entitlements' in e && (i = null != e.entitlements ? e.entitlements : void 0), R(t, i);
+        if (e.redirectConfirmation) return void y(null != e.redirectURL);
+        t(_.A.COMPLETED), 'subscription' in e ? (n = null != e.subscription ? u.Z.createFromServer(e.subscription) : null) : 'entitlements' in e && (r = null != e.entitlements ? e.entitlements : void 0), x(n, r);
     } catch (e) {
-        n(p.A.FAIL),
-            f(e),
-            d.default.track(m.rMx.PAYMENT_FLOW_FAILED, {
-                ...S,
-                payment_error_code: null == e ? void 0 : e.code,
-                payment_source_id: null == y ? void 0 : y.id,
-                payment_source_type: null == y ? void 0 : y.type,
-                duration_ms: Date.now() - b
-            });
+        t(_.A.FAIL),
+            m(e),
+            d.default.track(
+                p.rMx.PAYMENT_FLOW_FAILED,
+                b(g({}, O), {
+                    payment_error_code: null == e ? void 0 : e.code,
+                    payment_source_id: null == P ? void 0 : P.id,
+                    payment_source_type: null == P ? void 0 : P.type,
+                    duration_ms: Date.now() - T
+                })
+            );
     } finally {
-        !E && i(!1);
+        E || r(!1);
     }
 }

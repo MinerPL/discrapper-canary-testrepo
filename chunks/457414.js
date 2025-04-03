@@ -1,17 +1,13 @@
 n.d(t, {
-    S: function () {
-        return c;
-    },
-    w: function () {
-        return m;
-    }
+    S: () => c,
+    w: () => f
 });
-var s = n(481060),
-    a = n(925221),
-    i = n(236413),
-    r = n(85960),
+var r = n(481060),
+    i = n(925221),
+    s = n(236413),
+    a = n(85960),
     l = n(273504),
-    o = n(689938);
+    o = n(388032);
 let c = (e) => {
         switch (e) {
             case l.fX.KEYWORD:
@@ -36,60 +32,58 @@ let c = (e) => {
     },
     u = (e, t) => {
         var n;
-        return null !== (n = null == t ? void 0 : t.name) && void 0 !== n ? n : r.I6[e].getDefaultRuleName();
+        return null != (n = null == t ? void 0 : t.name) ? n : a.I6[e].getDefaultRuleName();
     },
-    _ = (e, t) => {
-        if (!!(0, i.Vb)(t)) {
-            if ((0, i.DO)(t))
-                return t.triggerMetadata.regexPatterns.length > 0
-                    ? o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_AND_REGEX_COUNT.format({
-                          keywordCount: t.triggerMetadata.keywordFilter.length,
-                          regexPatternCount: t.triggerMetadata.regexPatterns.length
-                      })
-                    : o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_COUNT.format({ keywordCount: t.triggerMetadata.keywordFilter.length });
-        }
+    m = (e, t) => {
+        if ((0, s.Vb)(t) && (0, s.DO)(t))
+            return t.triggerMetadata.regexPatterns.length > 0
+                ? o.NW.formatToPlainString(o.t.xZUvxc, {
+                      keywordCount: t.triggerMetadata.keywordFilter.length,
+                      regexPatternCount: t.triggerMetadata.regexPatterns.length
+                  })
+                : o.NW.formatToPlainString(o.t.dJN7Li, { keywordCount: t.triggerMetadata.keywordFilter.length });
     },
-    I = (e) => {
+    g = (e) => {
         switch (e) {
             case l.fX.KEYWORD:
-                return o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_DESCRIPTION;
+                return o.NW.string(o.t.TzvaeH);
             case l.fX.ML_SPAM:
-                return o.Z.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_DESCRIPTION;
+                return o.NW.string(o.t.jBZSQk);
             case l.fX.DEFAULT_KEYWORD_LIST:
-                return o.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_DESCRIPTION_TEXT;
+                return o.NW.string(o.t.Drc8fn);
             case l.fX.MENTION_SPAM:
-                return o.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_DESCRIPTION;
+                return o.NW.string(o.t.flhXOz);
             case l.fX.USER_PROFILE:
-                return o.Z.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_DESCRIPTION;
+                return o.NW.string(o.t.A35LyM);
             default:
                 return null;
         }
     },
-    E = (e) => {
-        if (e === l.fX.KEYWORD) return o.Z.Messages.GUILD_AUTOMOD_LINK_FILTER_MATCHING_STRATEGY_DESCRIPTION.format();
+    p = (e) => {
+        if (e === l.fX.KEYWORD) return o.NW.formatToPlainString(o.t.yNec2t, {});
     },
-    T = (e) => {
+    h = (e) => {
         switch (e) {
             case l.fX.MENTION_SPAM:
-                return s.AtIcon;
+                return r.lOy;
             case l.fX.KEYWORD:
-                return s.ChannelListPlusIcon;
+                return r.avL;
             case l.fX.ML_SPAM:
             case l.fX.USER_PROFILE:
-                return (0, s.makeIconCompat)(a.Z);
+                return (0, r.GSL)(i.Z);
             case l.fX.DEFAULT_KEYWORD_LIST:
-                return s.MenuIcon;
+                return r.Oqj;
         }
     };
-function m(e, t) {
-    var n, a, i, r, l;
+function f(e, t) {
+    var n, i, s, a, l;
     return null != e && d(e)
         ? {
-              headerText: null !== (n = u(e, t)) && void 0 !== n ? n : '',
-              headerSubtext: null !== (a = _(e, t)) && void 0 !== a ? a : '',
-              descriptionText: null !== (i = I(e)) && void 0 !== i ? i : '',
-              descriptionSubtext: null !== (r = E(e)) && void 0 !== r ? r : '',
-              icon: null !== (l = T(e)) && void 0 !== l ? l : s.LinkIcon
+              headerText: null != (n = u(e, t)) ? n : '',
+              headerSubtext: null != (i = m(e, t)) ? i : '',
+              descriptionText: null != (s = g(e)) ? s : '',
+              descriptionSubtext: null != (a = p(e)) ? a : '',
+              icon: null != (l = h(e)) ? l : r.xPt
           }
         : null;
 }

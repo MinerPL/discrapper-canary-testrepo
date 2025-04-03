@@ -1,41 +1,37 @@
-t.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var a = t(735250),
-    s = t(470079),
-    l = t(120356),
-    r = t.n(l),
-    i = t(481060),
-    o = t(487894),
-    c = t(300234),
-    d = t(689938),
-    u = t(92475);
+n.d(t, { Z: () => h });
+var r = n(200651),
+    a = n(192379),
+    s = n(120356),
+    l = n.n(s),
+    i = n(481060),
+    o = n(487894),
+    c = n(300234),
+    d = n(388032),
+    u = n(258033);
 function h(e) {
-    let { channel: n, threadIds: t, startThread: l, goToThread: h } = e,
-        m = s.useCallback(
+    let { channel: t, threadIds: n, startThread: s, goToThread: h } = e,
+        m = a.useCallback(
             (e) =>
-                (0, a.jsx)(
+                (0, r.jsx)(
                     c.Z,
                     {
-                        threadId: t[e.row],
+                        threadId: n[e.row],
                         goToThread: h
                     },
                     ''.concat(e.section, '-').concat(e.row)
                 ),
-            [t, h]
+            [n, h]
         );
-    return 0 === t.length
-        ? (0, a.jsx)(o.Z, {
-              channel: n,
-              header: d.Z.Messages.THREAD_BROWSER_EMPTY_STATE_HEADER,
-              startThread: l
+    return 0 === n.length
+        ? (0, r.jsx)(o.Z, {
+              channel: t,
+              header: d.NW.string(d.t.HgTQ8v),
+              startThread: s
           })
-        : (0, a.jsx)(i.List, {
-              className: r()(u.list, u.activeThreadsList),
+        : (0, r.jsx)(i.aVo, {
+              className: l()(u.list, u.activeThreadsList),
               fade: !0,
-              sections: [t.length],
+              sections: [n.length],
               sectionHeight: 0,
               rowHeight: 80,
               renderRow: m,

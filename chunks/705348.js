@@ -1,29 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(82950),
-    s = n(63063),
-    r = n(981631),
-    l = n(921944),
-    o = n(689938),
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(324262),
+    l = n(63063),
+    a = n(981631),
+    o = n(921944),
+    s = n(388032),
     c = n(157476);
-function d(e) {
+function u(e) {
     let { guild: t, markAsDismissed: n } = e;
-    return (0, i.jsx)(a.Z, {
+    return (0, r.jsx)(i.Z, {
         image: c,
         guild: t,
-        onDismissed: () => n(l.L.UNKNOWN),
+        onDismissed: () => n(o.L.UNKNOWN),
         onClick: () => {
-            open(s.Z.getArticleURL(r.BhN.CONNECTION_DETAILS)), n(l.L.UNKNOWN);
+            open(l.Z.getArticleURL(a.BhN.CONNECTION_DETAILS)), n(o.L.UNKNOWN);
         },
-        title: o.Z.Messages.LINKED_ROLES_ADMIN_NUX_TITLE,
-        message: o.Z.Messages.LINKED_ROLES_ADMIN_NUX_CONTENT,
-        cta: o.Z.Messages.LEARN_MORE,
-        trackingSource: r.PsQ.LINKED_ROLES_ADMIN_NUX,
-        type: r.vID.LINKED_ROLES_ADMIN
+        title: s.NW.string(s.t.YMgaJi),
+        message: s.NW.string(s.t['AV/9eX']),
+        cta: s.NW.string(s.t.hvVgAQ),
+        trackingSource: a.PsQ.LINKED_ROLES_ADMIN_NUX,
+        type: a.vID.LINKED_ROLES_ADMIN
     });
 }

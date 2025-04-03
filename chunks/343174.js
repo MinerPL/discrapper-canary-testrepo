@@ -1,8 +1,4 @@
-n.d(t, {
-    L: function () {
-        return i;
-    }
-});
+n.d(t, { L: () => i });
 var r = 'ResizeObserver loop completed with undelivered notifications.',
     i = function () {
         var e;

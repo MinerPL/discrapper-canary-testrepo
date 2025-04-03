@@ -1,29 +1,21 @@
-n.d(t, {
-    Z: function () {
-        return A;
-    }
-}),
-    n(47120),
-    n(411104),
-    n(733860),
-    n(653041);
-var r,
-    i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    o = n.n(s),
-    l = n(699581),
-    u = n(374470),
-    c = n(442837),
-    d = n(249458),
-    _ = n(134432),
-    E = n(695346),
-    f = n(237997),
+n.d(t, { Z: () => C }), n(47120), n(411104);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(442837),
+    l = n(990169),
+    c = n(249458),
+    u = n(146128),
+    d = n(134432),
+    f = n(959258),
+    _ = n(695346),
+    p = n(237997),
     h = n(768581),
-    p = n(176354),
-    m = n(506071),
-    I = n(149203);
-function T(e, t, n) {
+    m = n(176354),
+    g = n(506071),
+    E = n(149203);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,163 +28,205 @@ function T(e, t, n) {
         e
     );
 }
-class g extends (r = a.PureComponent) {
-    componentWillUnmount() {
-        var e;
-        null === (e = this.cancelLoadImage) || void 0 === e || e.call(this);
-    }
-    getSrc() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props,
-            { src: t, emojiId: n, emojiName: r, animated: i, shouldAnimate: a, isFocused: s, isInteracting: o, size: l = 'default' } = e,
-            { hover: u } = this.state;
-        if (null != t) return t;
-        if (null != n) {
-            let e = I.kV[l];
-            return h.ZP.getEmojiURL({
-                id: n,
-                animated: s && !0 === i && (!0 === a || u || !0 === o),
-                size: e
-            });
-        }
-        if (null != r) return p.ZP.getURL(r);
-    }
-    render() {
-        var e;
-        let t;
-        let { emojiName: n, animated: r, className: s, size: l = 'default', alt: u, shouldAnimate: c, isFocused: d, emojiId: _, autoplay: E, isInteracting: f, ...h } = this.props,
-            p = this.getSrc();
-        return null == p || '' === p
-            ? (0, i.jsx)('span', {
-                  className: o()('emoji', 'emoji-text'),
-                  children: n
-              })
-            : (r &&
-                  (t = {
-                      onMouseEnter: this.onMouseEnter,
-                      onMouseLeave: this.onMouseLeave
-                  }),
-              (0, a.createElement)('img', {
-                  ...h,
-                  key: this.key,
-                  src: p,
-                  alt: null !== (e = null != u ? u : n) && void 0 !== e ? e : void 0,
-                  draggable: !1,
-                  ...t,
-                  className: o()('emoji', s, { jumboable: 'jumbo' === l }),
-                  onError: this.onError,
-                  'data-type': 'emoji',
-                  ...(null != _ && '' !== _ ? { 'data-id': _ } : { 'data-name': n })
-              }));
-    }
-    constructor(...e) {
-        super(...e),
-            T(this, 'state', { hover: !1 }),
-            T(this, 'key', void 0),
-            T(this, 'cancelLoadImage', void 0),
-            T(this, 'onError', () => {
-                let e = this.getSrc();
-                null != e &&
-                    (this.cancelLoadImage = (0, _.po)(e, (e) => {
-                        !e && ((this.key = Date.now()), this.forceUpdate());
-                    }));
-            }),
-            T(this, 'onMouseEnter', (e) => {
-                this.setState({ hover: !0 });
-                let { onMouseEnter: t } = this.props;
-                null != t && t(e);
-            }),
-            T(this, 'onMouseLeave', (e) => {
-                this.setState({ hover: !1 });
-                let { onMouseLeave: t } = this.props;
-                null != t && t(e);
+function y(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                b(e, t, n[t]);
             });
     }
+    return e;
 }
-T(g, 'defaultProps', { isInteracting: !1 });
-let S = (function (e) {
-    if (null == window.IntersectionObserver)
-        return function (t) {
-            return (0, i.jsx)(e, {
-                ...t,
-                shouldAnimate: t.animated
-            });
-        };
-    let t = [],
-        n = [],
-        r = new window.IntersectionObserver(
-            (e) => {
-                e.forEach((e) => {
-                    let r = n.find((t) => {
-                        let [n] = t;
-                        return n === e.target;
-                    });
-                    if (null == r) return;
-                    let i = r[1];
-                    if (e.intersectionRatio >= 0.7) {
-                        var a, s;
-                        if (-1 !== t.indexOf(i)) return;
-                        let n = Math.abs(e.intersectionRect.bottom - Number(null === (a = e.rootBounds) || void 0 === a ? void 0 : a.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (s = e.rootBounds) || void 0 === s ? void 0 : s.top));
-                        n ? t.unshift(i) : t.push(i), i.forceUpdate(), n && t.length > 100 && t[100].forceUpdate();
-                    } else {
-                        let e = t.indexOf(i);
-                        -1 !== e && (t.splice(e, 1), i.forceUpdate(), e < 100 && t.length >= 100 && t[99].forceUpdate());
-                    }
+function v(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : v(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function I(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = S(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function S(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+n(477526);
+let T = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFocused()) : g.n;
+function N(e) {
+    var t,
+        n,
+        { src: o, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: v, size: S = 'default', isInteracting: N = !1, shouldAnimate: A, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerAnimatedElementRef: D } = e,
+        L = I(e, ['src', 'alt', 'className', 'emojiId', 'emojiName', 'channelId', 'messageId', 'animated', 'size', 'isInteracting', 'shouldAnimate', 'onMouseEnter', 'onMouseLeave', 'canSelect', 'autoplay', 'registerAnimatedElementRef']);
+    let [x, M] = i.useState(!1),
+        [k, j] = i.useState(void 0),
+        U = i.useRef(),
+        { triggerAnimation: G, untriggerAnimation: B } = i.useContext(u.Rm),
+        F = _.Yk.useSetting(),
+        V = T(),
+        Z = null == w ? F : w,
+        H = E.kV[S],
+        W = i.useRef(null),
+        Y = i.useMemo(() => {
+            if (null != o) return o;
+            if (null != f) {
+                let e = !0 === A && Z;
+                return h.ZP.getEmojiURL({
+                    id: f,
+                    animated: V && !0 === v && (e || x || !0 === N),
+                    size: H
                 });
+            }
+            if (null != p) return m.ZP.getURL(p);
+            throw Error('Unknown Src for Emoji');
+        }, [v, Z, f, p, H, V, x, N, A, o]),
+        K = i.useCallback(() => {
+            null != Y &&
+                (U.current = (0, d.po)(Y, (e) => {
+                    e || j(Date.now());
+                }));
+        }, [Y]),
+        z = i.useCallback(
+            (e) => {
+                v && M(!0), null == f && G(p), null == C || C(e);
             },
-            { threshold: 0.7 }
-        );
-    function s(e) {
-        let t = l.findDOMNode(e);
-        if (!!(0, u.k)(t)) n.push([t, e]), r.observe(t);
-    }
-    function o(e) {
-        let i = l.findDOMNode(e);
-        r.unobserve(i);
-        let a = n.findIndex((t) => {
-            let [n, r] = t;
-            return r === e;
-        });
-        if (-1 !== a) n.splice(a, 1), -1 !== (a = t.indexOf(e)) && (t.splice(a, 1), a < 100 && t.length >= 100 && t[99].forceUpdate());
-    }
-    return class extends a.Component {
-        shouldAutoplay(e) {
-            return e.animated && e.autoplay;
-        }
-        componentDidMount() {
-            this.shouldAutoplay(this.props) && s(this);
-        }
-        componentDidUpdate(e) {
-            let t = this.shouldAutoplay(e),
-                n = this.shouldAutoplay(this.props);
-            n !== t && (n ? s(this) : o(this));
-        }
-        componentWillUnmount() {
-            this.shouldAutoplay(this.props) && o(this);
-        }
-        render() {
-            let n = t.indexOf(this),
-                { autoplay: r, allowAnimatedEmoji: a, ...s } = this.props;
-            return (0, i.jsx)(d.G.Consumer, {
-                children: (t) =>
-                    (0, i.jsx)(e, {
-                        ...s,
-                        autoplay: r || !1,
-                        shouldAnimate: -1 !== n && n < 100 && !t.disableAnimations && a
-                    })
-            });
-        }
-    };
-})(g);
-function A(e) {
-    let t = E.Yk.useSetting(),
-        n = {
-            autoplay: null == e.autoplay ? t : e.autoplay,
-            allowAnimatedEmoji: t
+            [v, p, C, G, f]
+        ),
+        q = i.useCallback(
+            (e) => {
+                v && M(!1), null == f && B(p), null == R || R(e);
+            },
+            [v, f, p, R, B]
+        ),
+        Q = i.useMemo(() => {
+            let e = null != f && '' !== f ? { 'data-id': f } : { 'data-name': p };
+            return y(
+                O(y({}, L), {
+                    className: a()('emoji', c, {
+                        jumboable: 'jumbo' === S,
+                        reactionLarge: 'reactionLarge' === S
+                    }),
+                    onError: K,
+                    onMouseEnter: z,
+                    onMouseLeave: q,
+                    'data-type': 'emoji'
+                }),
+                e
+            );
+        }, [c, f, p, z, q, K, L, S]);
+    i.useEffect(
+        () => () => {
+            var e;
+            return null == (e = U.current) ? void 0 : e.call(U);
         },
-        r = __OVERLAY__ ? (0, c.e7)([f.Z], () => f.Z.isInstanceFocused()) : (0, m.n)();
-    return (0, i.jsx)(S, {
-        ...e,
-        ...n,
-        isFocused: r
-    });
+        []
+    );
+    let X = i.useCallback(
+            (e) => {
+                (W.current = e), null == D || D(e);
+            },
+            [D]
+        ),
+        J = (0, l.Z)(W);
+    return null == Y || '' === Y
+        ? (0, r.jsx)('span', {
+              className: a()('emoji', 'emoji-text'),
+              children: p
+          })
+        : (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)(u.aO, {
+                      channelId: g,
+                      messageId: b,
+                      emojiName: p,
+                      disable: !1 === Z || !1 === F,
+                      emojiRef: J
+                  }),
+                  P
+                      ? (0, r.jsx)(
+                            'img',
+                            O(y({}, Q), {
+                                ref: X,
+                                src: Y,
+                                alt: null != (t = null != s ? s : p) ? t : void 0,
+                                draggable: !1
+                            }),
+                            k
+                        )
+                      : (0, r.jsx)(
+                            'div',
+                            O(y({}, Q), {
+                                ref: X,
+                                role: 'img',
+                                'aria-label': null != (n = null != s ? s : p) ? n : void 0,
+                                style: {
+                                    backgroundImage: 'url('.concat(Y, ')'),
+                                    backgroundSize: 'contain',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'center center'
+                                }
+                            }),
+                            k
+                        )
+              ]
+          });
+}
+function A(e) {
+    var { registerInnerRef: t } = e,
+        n = I(e, ['registerInnerRef']);
+    let { useThoughtfullyAnimated: o } = i.useContext(f.q),
+        { animate: a, registerRef: s } = o(),
+        { disableAnimations: l } = i.useContext(c.G),
+        u = i.useCallback(
+            (e) => {
+                s(e), null == t || t(e);
+            },
+            [t, s]
+        );
+    return (0, r.jsx)(
+        N,
+        O(y({}, n), {
+            registerAnimatedElementRef: u,
+            shouldAnimate: a && !l
+        })
+    );
+}
+function C(e) {
+    return null == e.emojiId && null == e.emojiName && null == e.src ? null : e.animated && void 0 === e.shouldAnimate ? (0, r.jsx)(A, y({}, e)) : (0, r.jsx)(N, y({}, e));
 }

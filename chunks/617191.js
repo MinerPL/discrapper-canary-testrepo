@@ -1,22 +1,23 @@
+n.d(t, { Z: () => o });
 var r = n(524437),
-    i = n(163268),
-    a = n(82554),
-    s = n(689938);
+    l = n(247206),
+    i = n(82554),
+    a = n(388032);
 let o = {
-    getTitle: () => s.Z.Messages.IAR_UPSELLS_SENSITIVE_MEDIA_TITLE,
-    getDescription: () => s.Z.Messages.IAR_UPSELLS_SENSITIVE_MEDIA_DESCRIPTION,
-    eligibleReportSubtypes: [a.i5.SUB_CSAM, a.i5.SUB_LOLI, a.i5.SUB_NCP, a.i5.SUB_SEXUALLY_DEGRADING_CONTENT, a.i5.SUB_UNSOLICITED_PORN],
+    getTitle: () => a.NW.string(a.t['5Qu1IS']),
+    getDisabledTitle: () => a.NW.string(a.t.YdZZtL),
+    getDescription: () => a.NW.string(a.t.Vzp5BA),
+    eligibleReportSubtypes: [i.i5.SUB_CSAM, i.i5.SUB_LOLI, i.i5.SUB_NCP, i.i5.SUB_SEXUALLY_DEGRADING_CONTENT, i.i5.SUB_UNSOLICITED_PORN],
     onApply: () =>
-        (0, i.zj)(
+        (0, l.zj)(
             (function () {
-                let { explicitContentGuilds: e, explicitContentFriendDm: t, explicitContentNonFriendDm: n } = (0, i.l4)(),
-                    a = {};
-                return e === r.Q4.SHOW && (a.explicitContentGuilds = r.Q4.BLUR), t === r.Q4.SHOW && (a.explicitContentFriendDm = r.Q4.BLUR), n === r.Q4.SHOW && (a.explicitContentNonFriendDm = r.Q4.BLUR), a;
+                let { explicitContentGuilds: e, explicitContentFriendDm: t, explicitContentNonFriendDm: n } = (0, l.l4)(),
+                    i = {};
+                return e === r.Q4.SHOW && (i.explicitContentGuilds = r.Q4.BLUR), t === r.Q4.SHOW && (i.explicitContentFriendDm = r.Q4.BLUR), n === r.Q4.SHOW && (i.explicitContentNonFriendDm = r.Q4.BLUR), i;
             })()
         ),
     predicate: () => {
-        let { explicitContentGuilds: e, explicitContentFriendDm: t, explicitContentNonFriendDm: n } = (0, i.l4)();
+        let { explicitContentGuilds: e, explicitContentFriendDm: t, explicitContentNonFriendDm: n } = (0, l.l4)();
         return e === r.Q4.SHOW || t === r.Q4.SHOW || n === r.Q4.SHOW;
     }
 };
-t.Z = o;

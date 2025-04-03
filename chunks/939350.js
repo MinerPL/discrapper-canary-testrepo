@@ -1,9 +1,5 @@
-n.d(t, {
-    _: function () {
-        return i;
-    }
-});
-var r = n(837244);
+n.d(t, { _: () => i });
+var r = n(906944);
 let i = {
     default: r.colorDefault,
     brand: r.colorBrand,

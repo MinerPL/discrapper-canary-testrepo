@@ -1,82 +1,79 @@
-var s,
-    l,
-    a,
+n.d(t, { Z: () => x });
+var l,
+    r,
     i,
-    r = t(392711),
-    o = t.n(r),
-    c = t(442837),
-    d = t(570140),
-    I = t(45966),
-    N = t(999382),
-    _ = t(981631),
-    u = t(290511);
-let E = !1,
-    T = null,
-    m = [],
-    O = !1,
-    S = [];
-function D() {
-    (function () {
-        (E = !1), (T = null), (S = []), (O = !1);
-    })(),
-        null != (T = N.Z.getGuildId()) && N.Z.getSection() === _.pNK.ONBOARDING && ((m = I.Z.getOnboardingPrompts(T)), (O = I.Z.isAdvancedMode(T)));
+    s = n(392711),
+    a = n.n(s),
+    o = n(442837),
+    c = n(570140),
+    d = n(45966),
+    u = n(999382),
+    m = n(981631),
+    N = n(290511);
+let h = !1,
+    I = null,
+    g = [],
+    f = !1,
+    p = [];
+function E() {
+    (h = !1), (I = null), (p = []), (f = !1), null != (I = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && ((g = d.Z.getOnboardingPrompts(I)), (f = d.Z.isAdvancedMode(I)));
 }
-class G extends (i = c.ZP.Store) {
+class S extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(N.Z, I.Z);
+        this.waitFor(u.Z, d.Z);
     }
     hasChanges() {
-        return null != T && !o().isEqual(I.Z.getOnboardingPrompts(T), m);
+        return null != I && !a().isEqual(d.Z.getOnboardingPrompts(I), g);
     }
     get guildId() {
-        return T;
+        return I;
     }
     get submitting() {
-        return E;
+        return h;
     }
     get errors() {
-        return S;
+        return p;
     }
     get editedOnboardingPrompts() {
-        return m;
+        return g;
     }
     get advancedMode() {
-        return O;
+        return f;
     }
 }
-(a = 'GuildSettingsOnboardingPromptsStore'),
-    (l = 'displayName') in (s = G)
-        ? Object.defineProperty(s, l, {
-              value: a,
+(r = 'GuildSettingsOnboardingPromptsStore'),
+    (l = 'displayName') in S
+        ? Object.defineProperty(S, l, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[l] = a),
-    (n.Z = new G(d.Z, {
-        GUILD_SETTINGS_INIT: D,
-        GUILD_SETTINGS_SET_SECTION: D,
-        GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: D,
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: D,
-        GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: D,
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: D,
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
-            var n;
-            (S = null !== (n = e.errors) && void 0 !== n ? n : []), (E = !1);
-        },
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
-            let { prompts: n } = e;
-            m = n;
-        },
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-            (E = !0), (S = []);
-        },
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (e) {
-            var n;
-            S = null !== (n = e.errors) && void 0 !== n ? n : [];
-        },
-        GUILD_SETTINGS_ONBOARDING_SET_MODE: function (e) {
-            let { mode: n } = e;
-            O = n === u.Un.ONBOARDING_ADVANCED;
-        }
-    }));
+        : (S[l] = r);
+let x = new S(c.Z, {
+    GUILD_SETTINGS_INIT: E,
+    GUILD_SETTINGS_SET_SECTION: E,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: E,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: E,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: E,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: E,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
+        var t;
+        (p = null != (t = e.errors) ? t : []), (h = !1);
+    },
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
+        let { prompts: t } = e;
+        g = t;
+    },
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
+        (h = !0), (p = []);
+    },
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (e) {
+        var t;
+        p = null != (t = e.errors) ? t : [];
+    },
+    GUILD_SETTINGS_ONBOARDING_SET_MODE: function (e) {
+        let { mode: t } = e;
+        f = t === N.Un.ONBOARDING_ADVANCED;
+    }
+});

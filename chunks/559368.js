@@ -1,77 +1,74 @@
-var s,
-    a,
-    i,
-    r,
-    l = n(877921),
-    o = n.n(l),
-    c = n(442837),
-    d = n(570140);
-let u = ['pct_retained', 'new_members', 'visitors', 'communicators'],
-    _ = {},
-    I = {},
-    E = null;
-function T(e) {
+n.d(t, { Z: () => h });
+var r,
+    i = n(877921),
+    s = n.n(i),
+    a = n(442837),
+    l = n(570140);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let c = ['pct_retained', 'new_members', 'visitors', 'communicators'],
+    d = {},
+    u = null;
+function m(e) {
     let { guildId: t, stats: n } = e;
-    E = null;
-    let s = {},
-        a = {},
-        i = n[0],
-        r = n[1];
-    null != i &&
-        u.forEach((e) => {
-            if (null != i[e]) {
-                let t = o()(e);
-                null != r && 0 !== r[e] && (s[''.concat(t, 'Change')] = ((i[e] - r[e]) * 100) / r[e]), (a[t] = i[e]);
+    u = null;
+    let r = {},
+        i = {},
+        a = n[0],
+        l = n[1];
+    null != a &&
+        c.forEach((e) => {
+            if (null != a[e]) {
+                let t = s()(e);
+                null != l && 0 !== l[e] && (r[''.concat(t, 'Change')] = ((a[e] - l[e]) * 100) / l[e]), (i[t] = a[e]);
             }
         }),
-        (_[t] = {
-            ...a,
-            ...s,
-            ..._[t]
-        });
+        (d[t] = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        o(e, t, n[t]);
+                    });
+            }
+            return e;
+        })({}, i, r, d[t]));
 }
-function m(e) {
+function g(e) {
     let { error: t } = e;
-    E = t.code;
+    u = t.code;
 }
-class N extends (r = c.ZP.Store) {
+class p extends (r = a.ZP.Store) {
     getOverviewAnalytics(e) {
-        return _[e];
-    }
-    getMemberInsights(e) {
-        var t;
-        return null !== (t = I[e]) && void 0 !== t ? t : {};
-    }
-    shouldFetchMemberInsights(e) {
-        var t;
-        let n = null === (t = I[e]) || void 0 === t ? void 0 : t.fetchedAt;
-        return null == n || Date.now() - n > 43200000;
+        return d[e];
     }
     getError() {
-        return E;
+        return u;
     }
 }
-(i = 'GuildSettingsAnalyticsStore'),
-    (a = 'displayName') in (s = N)
-        ? Object.defineProperty(s, a, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (s[a] = i),
-    (t.Z = new N(d.Z, {
-        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: T,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: T,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: T,
-        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: m,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: m,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: m,
-        GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS: function (e) {
-            let { guildId: t, ...n } = e;
-            I[t] = {
-                ...n,
-                fetchedAt: Date.now()
-            };
-        }
-    }));
+o(p, 'displayName', 'GuildSettingsAnalyticsStore');
+let h = new p(l.Z, {
+    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: m,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: m,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: m,
+    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: g,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: g,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: g
+});

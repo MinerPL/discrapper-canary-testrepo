@@ -1,127 +1,99 @@
-t.d(n, {
-    $K: function () {
-        return h;
-    },
-    IG: function () {
-        return f;
-    },
-    Nb: function () {
-        return L;
-    },
-    Ts: function () {
-        return g;
-    },
-    Wy: function () {
-        return x;
-    },
-    di: function () {
-        return R;
-    }
+n.d(t, {
+    $K: () => O,
+    IG: () => v,
+    Nb: () => _,
+    Ts: () => j,
+    Wy: () => b,
+    di: () => D
 }),
-    t(47120);
-var s = t(570140),
-    l = t(668781),
-    a = t(479531),
-    i = t(45966),
-    r = t(819553),
-    o = t(637853),
-    c = t(17181),
-    d = t(621923),
-    I = t(962086),
-    N = t(225675),
-    _ = t(592125),
-    u = t(430824),
-    E = t(823379),
-    T = t(434404),
-    m = t(889369),
-    O = t(570961),
-    S = t(84658),
-    D = t(176505),
-    G = t(290511),
-    A = t(689938);
-function h(e) {
-    s.Z.dispatch({
+    n(47120);
+var l = n(570140),
+    r = n(668781),
+    i = n(479531),
+    s = n(983736),
+    a = n(45966),
+    o = n(819553),
+    c = n(637853),
+    d = n(17181),
+    u = n(962086),
+    m = n(225675),
+    N = n(592125),
+    h = n(430824),
+    I = n(823379),
+    g = n(434404),
+    f = n(889369),
+    p = n(570961),
+    E = n(84658),
+    S = n(176505),
+    x = n(290511),
+    T = n(388032);
+function O(e) {
+    l.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_STEP',
         step: e
     });
 }
-function L(e) {
+function _(e) {
     null != e &&
-        s.Z.dispatch({
+        l.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED',
             upsellType: e
         });
 }
-async function g(e, n) {
-    let t = i.Z.getEnabled(e),
-        r = Array.from(m.Z.editedDefaultChannelIds).filter((e) => null != _.Z.getChannel(e)),
-        [c, d] = (0, o.d9)(e, [...r]);
-    if (t && n === G.Un.ONBOARDING_DEFAULT && (d.length < G.md || c.length < G.X)) {
-        l.Z.show({
-            title: A.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-            body: A.Z.Messages.DEFAULT_CHANNELS_SAVE_INVALID_DEFAULT_CHANNELS
+async function j(e, t) {
+    let n = a.Z.getEnabled(e),
+        s = Array.from(f.Z.editedDefaultChannelIds).filter((e) => null != N.Z.getChannel(e)),
+        [o, d] = (0, c.d9)(e, [...s]);
+    if (n && t === x.Un.ONBOARDING_DEFAULT && (d.length < x.md || o.length < x.X))
+        return void r.Z.show({
+            title: T.NW.string(T.t.iLdiqa),
+            body: T.NW.string(T.t.JOT74e)
         });
-        return;
-    }
     try {
-        await (0, O.n_)(e, { mode: n });
-    } catch (t) {
-        var I;
-        let { fieldName: e, error: n } = null !== (I = new a.Z(t).getAnyErrorMessageAndField()) && void 0 !== I ? I : {};
-        l.Z.show({
-            title: A.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-            body: [e, n].filter(E.lm).join(': ')
+        await (0, p.n_)(e, { mode: t });
+    } catch (n) {
+        var u;
+        let { fieldName: e, error: t } = null != (u = new i.Z(n).getAnyErrorMessageAndField()) ? u : {};
+        r.Z.show({
+            title: T.NW.string(T.t.iLdiqa),
+            body: [e, t].filter(I.lm).join(': ')
         });
     }
-    s.Z.dispatch({
+    l.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_SET_MODE',
         guildId: e,
-        mode: n
+        mode: t
     });
 }
-function f(e, n) {
-    let { homeSettingsEnabled: t } = (0, d.l6)(e),
-        s = S.xh.findIndex((e) => e === n);
-    if (-1 !== s && s !== S.xh.length - 1) {
-        if (!t && S.xh[s + 1] === S.PG.HOME_SETTINGS) {
-            h(S.xh[s + 2]);
-            return;
-        }
-        h(S.xh[s + 1]);
-    }
+function v(e, t) {
+    let n = E.xh.findIndex((e) => e === t);
+    -1 !== n && n !== E.xh.length - 1 && O(E.xh[n + 1]);
 }
-function x(e, n) {
-    let { homeSettingsEnabled: t } = (0, d.l6)(e),
-        s = S.xh.findIndex((e) => e === n);
-    if (-1 !== s && 0 !== s) {
-        if (!t && S.xh[s - 1] === S.PG.HOME_SETTINGS) {
-            h(S.xh[s - 2]);
-            return;
-        }
-        h(S.xh[s - 1]);
-    }
+function b(e, t) {
+    let n = E.xh.findIndex((e) => e === t);
+    -1 !== n && 0 !== n && O(E.xh[n - 1]);
 }
-async function R(e) {
-    let n = u.Z.getGuild(e);
-    null != n &&
-        (T.Z.close(),
-        (0, I.iD)(n.id, {
-            type: N.z.NEW_MEMBER,
+async function D(e) {
+    let t = h.Z.getGuild(e);
+    null != t &&
+        (g.Z.close(),
+        (0, u.iD)(t.id, {
+            type: m.z.NEW_MEMBER,
             roles: {},
             optInChannels: new Set(),
             optInEnabled: !1,
             onboardingResponses: new Set(),
             onboardingEnabled: !0,
             memberOptions: {
-                isPending: n.hasVerificationGate(),
+                isPending: (0, s.Dc)(t),
                 flags: 0
             }
         }),
-        r.ZP.resetOnboardingStatus(n.id),
-        (0, c.discardOnboardingPromise)(n.id),
-        await (0, c.default)({
-            guildId: n.id,
+        o.ZP.resetOnboardingStatus(t.id),
+        (0, d.EI)(t.id),
+        await (0, d.default)({
+            guildId: t.id,
             isPreview: !0,
-            returnChannelId: D.oC.GUILD_HOME
+            returnChannelId: S.oC.GUILD_HOME
         }));
 }

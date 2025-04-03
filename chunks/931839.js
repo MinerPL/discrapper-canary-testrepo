@@ -1,74 +1,69 @@
-a.d(s, {
-    O: function () {
-        return n;
-    },
-    Z: function () {
-        return _;
-    }
+s.d(t, {
+    O: () => o,
+    Z: () => m
 });
-var t,
-    n,
-    i = a(735250);
-a(470079);
-var l = a(120356),
-    r = a.n(l),
-    c = a(481060),
-    d = a(689938),
-    o = a(573606);
-function _(e) {
-    let { selectedTab: s, onClick: a, submitted: t } = e;
+var n,
+    i = s(200651);
+s(192379);
+var r = s(120356),
+    a = s.n(r),
+    l = s(481060),
+    c = s(388032),
+    d = s(923918),
+    o = (((n = {})[(n.Intro = 0)] = 'Intro'), (n[(n.Customize = 1)] = 'Customize'), (n[(n.Tips = 2)] = 'Tips'), n);
+function m(e) {
+    let { selectedTab: t, onClick: s, submitted: n } = e;
     return (0, i.jsxs)('div', {
-        className: o.tabs,
+        className: d.tabs,
         children: [
-            (0, i.jsx)(I, {
+            (0, i.jsx)(x, {
                 tab: 0,
-                selectedTab: s,
-                label: d.Z.Messages.NOTIF_MIGRATION_INTRO_TAB,
-                disabled: t,
-                onClick: a
+                selectedTab: t,
+                label: c.NW.string(c.t.JwwVrq),
+                disabled: n,
+                onClick: s
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(x, {
                 tab: 1,
-                selectedTab: s,
-                label: d.Z.Messages.NOTIF_MIGRATION_CUSTOMIZE_TAB,
-                disabled: t,
-                onClick: a
+                selectedTab: t,
+                label: c.NW.string(c.t['56vYWV']),
+                disabled: n,
+                onClick: s
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(x, {
                 tab: 2,
-                selectedTab: s,
-                label: d.Z.Messages.NOTIF_MIGRATION_TIPS_TAB,
-                disabled: !t,
-                onClick: a
+                selectedTab: t,
+                label: c.NW.string(c.t['0l0rJi']),
+                disabled: !n,
+                onClick: s
             })
         ]
     });
 }
-function I(e) {
-    let { tab: s, selectedTab: a, label: t, disabled: n, onClick: l } = e;
-    return n
+function x(e) {
+    let { tab: t, selectedTab: s, label: n, disabled: r, onClick: c } = e;
+    return r
         ? (0, i.jsxs)('div', {
-              className: r()(o.tab, { [o.current]: a === s }),
+              className: a()(d.tab, { [d.current]: s === t }),
               children: [
-                  (0, i.jsx)('div', { className: o.progressBar }),
-                  (0, i.jsx)(c.Text, {
+                  (0, i.jsx)('div', { className: d.progressBar }),
+                  (0, i.jsx)(l.Text, {
                       variant: 'text-xs/medium',
-                      color: a === s ? 'text-brand' : 'text-muted',
-                      children: t
+                      color: s === t ? 'text-brand' : 'text-muted',
+                      children: n
                   })
               ]
           })
-        : (0, i.jsxs)(c.Clickable, {
-              onClick: () => l(s),
-              className: r()(o.tab, { [o.current]: a === s }),
+        : (0, i.jsxs)(l.P3F, {
+              onClick: () => c(t),
+              className: a()(d.tab, { [d.current]: s === t }),
               children: [
-                  (0, i.jsx)('div', { className: o.progressBar }),
-                  (0, i.jsx)(c.Text, {
+                  (0, i.jsx)('div', { className: d.progressBar }),
+                  (0, i.jsx)(l.Text, {
                       variant: 'text-xs/medium',
-                      color: a === s ? 'text-brand' : 'text-muted',
-                      children: t
+                      color: s === t ? 'text-brand' : 'text-muted',
+                      children: n
                   })
               ]
           });
 }
-((t = n || (n = {}))[(t.Intro = 0)] = 'Intro'), (t[(t.Customize = 1)] = 'Customize'), (t[(t.Tips = 2)] = 'Tips');

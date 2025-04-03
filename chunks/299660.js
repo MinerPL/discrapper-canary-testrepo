@@ -1,21 +1,17 @@
-t.d(e, {
-    Z: function () {
-        return a;
-    }
-});
-var r = t(735250);
-t(470079);
-var i = t(852229),
-    s = t(481060),
-    u = t(934415),
-    o = t(176505),
-    c = t(689938);
-function a(n) {
-    return (0, r.jsx)(s.MenuItem, {
+t.d(i, { Z: () => l });
+var r = t(200651);
+t(192379);
+var s = t(852229),
+    o = t(481060),
+    e = t(934415),
+    c = t(176505),
+    a = t(388032);
+function l(n) {
+    return (0, r.jsx)(o.sNh, {
         id: 'role-subscription-copy-link',
-        label: c.Z.Messages.COPY_LINK,
+        label: a.NW.string(a.t.WqhZsr),
         action: () => {
-            (0, i.J)((0, u.wR)(n, o.oC.ROLE_SUBSCRIPTIONS));
+            (0, s.J)((0, e.wR)(n, c.oC.ROLE_SUBSCRIPTIONS));
         }
     });
 }

@@ -1,73 +1,46 @@
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(570140),
-    r = n(809206),
+n.d(t, { Z: () => m });
+var r = n(570140),
+    i = n(809206),
     l = n(317770),
-    o = n(18438),
+    a = n(18438),
+    o = n(378879),
+    s = n(643879),
     c = n(350327),
-    d = n(594174),
-    u = n(74538),
-    _ = n(486324);
-let E = (e) => {
-        let { imageSrc: t, file: s, guildId: l, isTryItOutFlow: E } = e;
-        if (E) {
-            (0, c.c_)(t);
-            return;
-        }
-        let h = d.default.getCurrentUser(),
-            m = null != l ? o.I5 : r.I5;
-        if (u.ZP.canUseAnimatedAvatar(h) || 'image/gif' !== s.type) {
-            m(t);
-            return;
-        }
-        if (null != h)
-            return (0, a.openModalLazy)(async () => {
-                let { default: e } = await n.e('12736').then(n.bind(n, 844594));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        user: h,
-                        imageSrc: t,
-                        uploadType: _.pC.AVATAR,
-                        onSubscribe: () => m(t),
-                        ...n
-                    });
-            });
+    u = n(594174),
+    d = n(74538),
+    p = n(486324);
+let h = (e) => {
+        let { image: t, file: n, guildId: r, isTryItOutFlow: l } = e;
+        if (l) return void (0, c.c_)(t);
+        let h = u.default.getCurrentUser(),
+            f = null != r ? a.I5 : i.I5,
+            g = d.ZP.canUseAnimatedAvatar(h);
+        if (g || 'image/gif' !== n.type) return void f(t);
+        if (null == h) return;
+        let m = (0, s.SD)({
+            userId: h.id,
+            image: t
+        });
+        if (!g) return void (0, o.s)(p.pC.AVATAR, m);
     },
-    h = (e) => {
-        let { imageSrc: t, guildId: s, isTryItOutFlow: r } = e;
-        if (r) {
-            (0, c.f4)(t);
-            return;
-        }
-        let l = d.default.getCurrentUser(),
-            E = null != s ? o.g_ : c.g_;
-        if (u.ZP.canUsePremiumProfileCustomization(l)) {
-            E(t);
-            return;
-        }
-        if (null != l)
-            return (0, a.openModalLazy)(async () => {
-                let { default: e } = await n.e('12736').then(n.bind(n, 844594));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        user: l,
-                        imageSrc: t,
-                        uploadType: _.pC.BANNER,
-                        onSubscribe: () => E(t),
-                        ...n
-                    });
-            });
+    f = (e) => {
+        let { image: t, guildId: n, isTryItOutFlow: r } = e,
+            i = t.imageUri;
+        if (r) return void (0, c.f4)(i);
+        let l = u.default.getCurrentUser(),
+            s = null != n ? a.g_ : c.g_,
+            h = d.ZP.canUsePremiumProfileCustomization(l);
+        return d.ZP.canUsePremiumProfileCustomization(l) ? void s(i) : null == l || h ? void 0 : void (0, o.s)(p.pC.BANNER, i);
     };
-class m extends l.Z {
+class g extends l.Z {
     _initialize() {
-        s.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
+        r.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
     }
     _terminate() {
-        s.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
+        r.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
     }
     maybeOpenProfilePreviewModal(e) {
-        return e.uploadType === _.pC.AVATAR ? E(e) : e.uploadType === _.pC.BANNER ? h(e) : void 0;
+        return e.uploadType === p.pC.AVATAR ? h(e) : e.uploadType === p.pC.BANNER ? f(e) : void 0;
     }
 }
-t.Z = new m();
+let m = new g();

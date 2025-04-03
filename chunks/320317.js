@@ -1,10 +1,5 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-}),
-    n(47120);
-var r = n(470079);
+n.d(t, { Z: () => i }), n(47120);
+var r = n(192379);
 function i() {
     let [e, t] = r.useState(null),
         n = r.useRef(null);

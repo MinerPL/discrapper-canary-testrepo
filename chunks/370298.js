@@ -1,293 +1,353 @@
-n.d(t, {
-    Z: function () {
-        return O;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    o = n(470079),
-    a = n(442837),
-    l = n(481060),
-    r = n(166459),
-    d = n(911969),
-    c = n(476326),
-    m = n(827498),
-    u = n(555573),
-    s = n(213459),
-    p = n(998698),
-    _ = n(895924),
-    E = n(581364),
-    g = n(667204),
-    x = n(873387),
-    M = n(147391),
-    A = n(978983),
-    I = n(592125),
-    C = n(703558),
-    h = n(430824),
-    f = n(626135),
+n.d(t, { Z: () => D }), n(47120), n(653041);
+var r = n(200651),
+    l = n(192379),
+    o = n(442837),
+    i = n(749280),
+    a = n(481060),
+    c = n(166459),
+    u = n(911969),
+    s = n(476326),
+    d = n(827498),
+    m = n(555573),
+    p = n(213459),
+    f = n(998698),
+    O = n(895924),
+    b = n(581364),
+    E = n(667204),
+    g = n(873387),
+    y = n(809090),
+    h = n(147391),
+    v = n(583027),
+    C = n(978983),
+    P = n(592125),
+    _ = n(703558),
+    j = n(430824),
+    S = n(626135),
     N = n(585483),
-    P = n(619895),
-    y = n(844439),
-    b = n(981631),
-    v = n(689938),
-    T = n(834033);
-function O(e) {
-    let { toggleShowMenu: t, showMenu: n, className: o, channelId: r, imageUrl: d, mimeType: c } = e,
-        m = (0, a.e7)([I.Z], () => I.Z.getChannel(r));
+    M = n(619895),
+    w = n(844439),
+    A = n(981631),
+    I = n(388032),
+    T = n(568618);
+function R(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function D(e) {
+    let { toggleShowMenu: t, showMenu: n, className: c, channelId: u, imageUrl: s, mimeType: d } = e,
+        m = (0, o.e7)([P.Z], () => P.Z.getChannel(u)),
+        { Component: p, events: f, play: O } = (0, i.w)(),
+        [b, E] = l.useState(!1),
+        g = l.useRef(null);
     return null == m
         ? null
-        : (0, i.jsx)(l.Popout, {
+        : (b || O(),
+          (0, r.jsx)(a.yRy, {
+              targetElementRef: g,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, i.jsx)(R, {
+                  return (0, r.jsx)(U, {
                       onClose: t,
                       channel: m,
-                      imageUrl: d,
-                      mimeType: c
+                      imageUrl: s,
+                      mimeType: d
                   });
               },
               position: 'right',
               align: 'top',
-              animation: l.Popout.Animation.NONE,
+              animation: a.yRy.Animation.NONE,
               onRequestClose: t,
               shouldShow: n,
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, i.jsx)(l.Tooltip, {
-                      text: v.Z.Messages.APP_IMAGE_REC_MENU_HEADER,
-                      children: (e) =>
-                          (0, i.jsx)(l.Clickable, {
-                              ...e,
-                              className: o,
-                              focusProps: { offset: 2 },
-                              onClick: t,
-                              'aria-label': v.Z.Messages.APP_IMAGE_REC_MENU_HEADER,
-                              children: (0, i.jsx)(l.AppsIcon, {
-                                  size: 'custom',
-                                  color: 'currentColor',
-                                  width: 20,
-                                  height: 20
-                              })
-                          })
+                  return (0, r.jsx)(a.ua7, {
+                      text: I.NW.string(I.t.emnnEB),
+                      children: (e) => {
+                          var n, l;
+                          return (0, r.jsx)(
+                              a.P3F,
+                              ((n = R({}, e)),
+                              (l = l =
+                                  {
+                                      className: c,
+                                      focusProps: { offset: 2 },
+                                      innerRef: g,
+                                      onClick: t,
+                                      onMouseEnter: () => {
+                                          E(!0), f.onMouseEnter();
+                                      },
+                                      onMouseLeave: f.onMouseLeave,
+                                      'aria-label': I.NW.string(I.t.emnnEB),
+                                      children: (0, r.jsx)(p, {
+                                          size: 'custom',
+                                          width: 20,
+                                          height: 20,
+                                          color: 'currentColor'
+                                      })
+                                  }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                                  : (function (e, t) {
+                                        var n = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, r);
+                                        }
+                                        return n;
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                    }),
+                              n)
+                          );
+                      }
                   });
               }
-          });
+          }));
 }
-function R(e) {
-    let { onSelect: t, onClose: n, channel: I, imageUrl: O, mimeType: R } = e,
-        S = (0, a.e7)([h.Z], () => h.Z.getGuild(I.guild_id)),
-        { fetchState: U, imageRecCommandContexts: Z } = (0, P.hR)({ channelId: I.id }),
-        F = U === y.M.FETCHING,
-        w = (0, x.g)(I),
-        D = (0, s.PL)(!0, !0),
-        j = (0, s.LD)(I.guild_id, !0);
-    o.useEffect(() => {
-        (U === y.M.ERROR || (U === y.M.FETCHED && 0 === Z.length)) && n();
-    }, [U, Z.length, n]),
-        o.useEffect(() => {
+function U(e) {
+    let { onSelect: t, onClose: n, channel: i, imageUrl: P, mimeType: D } = e,
+        U = (0, o.e7)([j.Z], () => j.Z.getGuild(i.guild_id)),
+        { fetchState: x, imageRecCommandContexts: Z } = (0, M.h)({ channelId: i.id }),
+        k = x === w.M.FETCHING,
+        F = (0, g.g)(i),
+        L = (0, p.PL)(!0, !0),
+        H = (0, p.LD)(i.guild_id, !0);
+    l.useEffect(() => {
+        (x === w.M.ERROR || (x === w.M.FETCHED && 0 === Z.length)) && n();
+    }, [x, Z.length, n]),
+        l.useEffect(() => {
             var e, t;
-            if (!F && 0 !== Z.length)
-                f.default.track(b.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
-                    guild_id: null !== (e = null == I ? void 0 : I.guild_id) && void 0 !== e ? e : '',
-                    channel_id: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : '',
-                    application_ids: [...Z.map((e) => Number(e.application.id))],
-                    command_ids: [...Z.map((e) => Number(e.command.id))]
+            if (k || 0 === Z.length) return;
+            let n = [];
+            Z.forEach((e) => {
+                n.push(Number(e.command.id)), null != e.overrideSendCommand && n.push(Number(e.overrideSendCommand.id));
+            }),
+                S.default.track(A.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
+                    guild_id: null != (e = null == i ? void 0 : i.guild_id) ? e : '',
+                    channel_id: null != (t = null == i ? void 0 : i.id) ? t : '',
+                    application_ids: [...Z.map((e) => Number(e.command.applicationId))],
+                    command_ids: n
                 });
-        }, [Z, I, F]);
-    let k = o.useCallback(
+        }, [Z, i, k]);
+    let G = l.useCallback(
             async (e) => {
-                let t = await fetch(O),
+                let t = await fetch(P),
                     n = await t.arrayBuffer(),
-                    i = R.join('/'),
-                    o = new File([n], 'image'.concat((0, P.Qm)({ contentType: i })), { type: i });
-                r.Z.setFile({
-                    channelId: I.id,
+                    r = D.join('/'),
+                    l = new File([n], 'image'.concat((0, M.Q)({ contentType: r })), { type: r });
+                c.Z.setFile({
+                    channelId: i.id,
                     id: e,
                     file: {
                         id: e,
-                        file: o,
-                        platform: c.ow.WEB
+                        file: l,
+                        platform: s.ow.WEB
                     },
-                    draftType: C.d.SlashCommand
+                    draftType: _.d.SlashCommand
                 });
             },
-            [O, I.id, R]
+            [P, i.id, D]
         ),
-        L = o.useCallback(
-            async (e, t, n) => {
-                var i, o, a, l;
-                if (!w) return;
-                let r = P.Id[e.id],
-                    c = e.applicationId,
-                    E = (null === (i = D.result) || void 0 === i ? void 0 : i.sections[c]) != null,
-                    g = (null === (o = j.result) || void 0 === o ? void 0 : o.sections[c]) != null;
-                await k(r.imageOption),
-                    null != p.Z.getActiveCommand(I.id) &&
-                        u.Po({
-                            channelId: I.id,
+        B = l.useCallback(
+            async (e, t, n, r) => {
+                var l, o;
+                if (!F) return;
+                let a = e.applicationId,
+                    c = (null == (l = L.result) ? void 0 : l.sections[a]) != null,
+                    s = (null == (o = H.result) ? void 0 : o.sections[a]) != null;
+                await G(r),
+                    null != f.Z.getActiveCommand(i.id) &&
+                        m.Po({
+                            channelId: i.id,
                             command: null,
                             section: null
-                        });
-                let x = {
-                    type: _.Qi.APPLICATION,
-                    id: t.id,
-                    icon: t.icon,
-                    name: null !== (l = null == t ? void 0 : null === (a = t.bot) || void 0 === a ? void 0 : a.username) && void 0 !== l ? l : t.name,
-                    application: t
-                };
-                E || g || s.ZP.queryInstallOnDemandApp(e.applicationId, I.id),
-                    u.Po({
-                        channelId: I.id,
+                        }),
+                    c || s || p.ZP.queryInstallOnDemandApp(e.applicationId, i.id),
+                    m.Po({
+                        channelId: i.id,
                         command: e,
-                        section: x,
+                        section: t,
                         location: n,
-                        source: m._b.TEXT,
+                        source: d._b.TEXT,
                         initialValues: {
-                            [r.imageOption]: {
-                                type: d.jw.ATTACHMENT,
-                                name: r.imageOption,
+                            [r]: {
+                                type: u.jw.ATTACHMENT,
+                                name: r,
                                 value: 'image'
                             }
                         },
-                        commandOrigin: _.bB.APPLICATION_LAUNCHER
+                        commandOrigin: n === O.Vh.IMAGE_RECS_SUBMENU ? O.bB.IMAGE_RECS_SUBMENU : O.bB.IMAGE_RECS_MENU
                     }),
-                    N.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: I.id });
-            },
-            [I.id, k, w, D, j]
-        ),
-        H = o.useCallback(
-            async (e, t) => {
-                var n, i;
-                let o = e.applicationId,
-                    a = (null === (n = D.result) || void 0 === n ? void 0 : n.sections[o]) != null,
-                    l = (null === (i = j.result) || void 0 === i ? void 0 : i.sections[o]) != null;
-                a || l || s.ZP.queryInstallOnDemandApp(e.applicationId, I.id);
-                let r = await (0, M.L)({
-                    applicationId: o,
-                    userIndexState: D,
-                    guildIndexState: j,
-                    location: t,
-                    source: m._b.TEXT
-                });
-                if (
-                    ((0, E.qJ)({
+                    (0, v.Mo)({
                         command: e,
-                        location: t,
-                        source: m._b.TEXT
+                        location: n,
+                        sectionName: t.name
                     }),
-                    r)
-                ) {
-                    let t = P.Id[e.id],
-                        n = t.additionalOptions;
-                    await k(t.imageOption),
-                        await (0, g.Z)({
-                            command: { ...e },
+                    N.S.dispatch(A.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: i.id });
+            },
+            [i.id, G, F, L, H]
+        ),
+        V = l.useCallback(
+            async (e, t, n) => {
+                var r, l;
+                let o = e.applicationId,
+                    a = (null == (r = L.result) ? void 0 : r.sections[o]) != null,
+                    c = (null == (l = H.result) ? void 0 : l.sections[o]) != null;
+                a || c || p.ZP.queryInstallOnDemandApp(e.applicationId, i.id);
+                let u = await (0, h.L)({
+                    applicationId: o,
+                    userIndexState: L,
+                    guildIndexState: H,
+                    location: t,
+                    source: d._b.TEXT
+                });
+                (0, b.qJ)({
+                    command: e,
+                    location: t,
+                    source: d._b.TEXT
+                }),
+                    u &&
+                        (await G(n),
+                        await (0, E.Z)({
+                            command: R({}, e),
                             optionValues: {
-                                [t.imageOption]: [
+                                [n]: [
                                     {
                                         text: 'image',
                                         type: 'text'
                                     }
-                                ],
-                                ...(null == n ? {} : n[Math.floor(Math.random() * n.length)])
+                                ]
                             },
                             context: {
-                                channel: I,
-                                guild: S
+                                channel: i,
+                                guild: U
                             },
-                            commandOrigin: _.bB.IMAGE_RECS_MENU
-                        });
-                }
+                            commandOrigin: t === O.Vh.IMAGE_RECS_SUBMENU ? O.bB.IMAGE_RECS_SUBMENU : O.bB.IMAGE_RECS_MENU
+                        }));
             },
-            [I, S, D, j, k]
+            [i, U, L, H, G]
         );
-    return (0, i.jsxs)(l.Menu, {
+    return (0, r.jsxs)(a.v2r, {
         onSelect: t,
         navId: 'image-context-commands-popout',
         onClose: n,
-        'aria-label': v.Z.Messages.APP_IMAGE_REC_MENU_ARIA_LABEL,
+        'aria-label': I.NW.string(I.t.P3ShV1),
         children: [
-            (0, i.jsx)(
-                l.MenuItem,
+            (0, r.jsx)(
+                a.sNh,
                 {
                     id: 'menu-image-rec-header',
                     render: () =>
-                        (0, i.jsx)(l.Text, {
+                        (0, r.jsx)(a.Text, {
                             className: T.title,
                             variant: 'text-md/bold',
                             color: 'header-primary',
-                            children: v.Z.Messages.APP_IMAGE_REC_MENU_HEADER
+                            children: I.NW.string(I.t.emnnEB)
                         }),
                     navigable: !1,
                     disabled: !0
                 },
                 'menu-image-rec-header'
             ),
-            (0, i.jsx)(l.MenuSeparator, {}),
-            F
-                ? (0, i.jsx)(
-                      l.MenuItem,
+            (0, r.jsx)(a.Clw, {}),
+            k
+                ? (0, r.jsx)(
+                      a.sNh,
                       {
                           id: 'menu-image-recs-placeholder',
-                          render: () => (0, i.jsx)(A.Z, {}),
+                          render: () => (0, r.jsx)(C.Z, {}),
                           navigable: !1,
                           disabled: !0
                       },
                       'menu-image-recs-placeholder'
                   )
-                : (0, i.jsx)(i.Fragment, {
-                      children: Z.map((e) => {
-                          var t;
-                          let n = null != P.Id[e.command.id].additionalOptions,
-                              o = P.Id[e.command.id].onlyAllowEdit;
-                          return (0, i.jsx)(
-                              l.MenuItem,
-                              {
-                                  id: e.command.id,
-                                  action: () => {
-                                      o ? L(e.command, e.application, _.Vh.IMAGE_RECS_MENU) : H(e.command, _.Vh.IMAGE_RECS_MENU);
-                                  },
-                                  label: null !== (t = P.Id[e.command.id].overrideCommandName) && void 0 !== t ? t : e.command.name,
-                                  subtext: e.command.description,
-                                  subtextLineClamp: 1,
-                                  icon: o ? l.PencilIcon : n ? void 0 : l.SendMessageIcon,
-                                  imageUrl: e.applicationImageURL,
-                                  imageClassName: T.appIcon,
-                                  showImageFirst: !0,
-                                  disabled: !w && o,
-                                  children:
-                                      n && !o
-                                          ? (0, i.jsxs)(i.Fragment, {
-                                                children: [
-                                                    (0, i.jsx)(
-                                                        l.MenuItem,
-                                                        {
-                                                            id: ''.concat(e.command.id, '-send'),
-                                                            label: v.Z.Messages.APP_IMAGE_REC_MENU_SEND_LABEL,
-                                                            subtext: v.Z.Messages.APP_IMAGE_REC_MENU_SEND_SUBTEXT,
-                                                            action: () => H(e.command, _.Vh.IMAGE_RECS_SUBMENU),
-                                                            icon: l.SendMessageIcon
-                                                        },
-                                                        ''.concat(e.command.id, '-send')
-                                                    ),
-                                                    (0, i.jsx)(
-                                                        l.MenuItem,
-                                                        {
-                                                            id: ''.concat(e.command.id, '-edit'),
-                                                            label: v.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_LABEL,
-                                                            subtext: v.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_SUBTEXT,
-                                                            action: () => L(e.command, e.application, _.Vh.IMAGE_RECS_SUBMENU),
-                                                            icon: l.PencilIcon,
-                                                            disabled: !w
-                                                        },
-                                                        ''.concat(e.command.id, '-edit')
-                                                    )
-                                                ]
-                                            })
-                                          : null
-                              },
-                              e.command.id
-                          );
+                : (0, r.jsx)(r.Fragment, {
+                      children: Z.filter((e) => null != e.imageOption).map((e) => {
+                          let t = e.overrideSendCommand,
+                              n = null == e ? void 0 : e.overrideSendCommandInfo,
+                              l = null != t && null != n,
+                              o = e.onlyAllowEdit || (null != n && null == t),
+                              c = e.imageOption;
+                          return null == c
+                              ? null
+                              : (0, r.jsx)(
+                                    a.sNh,
+                                    {
+                                        id: e.command.id,
+                                        action: () => {
+                                            o ? B(e.command, e.section, O.Vh.IMAGE_RECS_MENU, c) : V(l ? t : e.command, O.Vh.IMAGE_RECS_MENU, l ? n.imageOption : c);
+                                        },
+                                        label: e.command.displayName,
+                                        subtext: e.command.displayDescription,
+                                        subtextLineClamp: 1,
+                                        icon: o ? a.vdY : l ? void 0 : a.Uuj,
+                                        iconLeft: () =>
+                                            (0, r.jsx)(y.Z, {
+                                                channel: i,
+                                                section: e.section,
+                                                width: 32,
+                                                height: 32,
+                                                isSquircle: !0,
+                                                selectable: !1
+                                            }),
+                                        iconLeftSize: 'lg',
+                                        showImageFirst: !0,
+                                        disabled: !F && o,
+                                        children: l
+                                            ? (0, r.jsxs)(r.Fragment, {
+                                                  children: [
+                                                      (0, r.jsx)(
+                                                          a.sNh,
+                                                          {
+                                                              id: ''.concat(e.command.id, '-send'),
+                                                              label: I.NW.string(I.t['M+BhUV']),
+                                                              subtext: I.NW.string(I.t.zXFjJS),
+                                                              action: () => V(t, O.Vh.IMAGE_RECS_SUBMENU, n.imageOption),
+                                                              icon: a.Uuj
+                                                          },
+                                                          ''.concat(e.command.id, '-send')
+                                                      ),
+                                                      (0, r.jsx)(
+                                                          a.sNh,
+                                                          {
+                                                              id: ''.concat(e.command.id, '-edit'),
+                                                              label: I.NW.string(I.t['wTaN+P']),
+                                                              subtext: I.NW.string(I.t.bIB3bm),
+                                                              action: () => {
+                                                                  B(e.command, e.section, O.Vh.IMAGE_RECS_SUBMENU, c);
+                                                              },
+                                                              icon: a.vdY,
+                                                              disabled: !F
+                                                          },
+                                                          ''.concat(e.command.id, '-edit')
+                                                      )
+                                                  ]
+                                              })
+                                            : null
+                                    },
+                                    e.command.id
+                                );
                       })
                   })
         ]

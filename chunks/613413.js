@@ -1,79 +1,100 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
-    l = n(481060),
+n.d(t, { Z: () => b }), n(47120), n(26686);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(788347),
+    l = n(442837),
+    c = n(481060),
     u = n(314910),
-    c = n(906467),
-    d = n(857192),
+    d = n(906467),
+    f = n(857192),
     _ = n(835225),
-    E = n(117795),
-    f = n(565384),
-    h = n(292357);
-function p() {
-    let { debugTrackedData: e, impressions: t } = (0, f.Xo)((e) => ({
-            debugTrackedData: e.debugTrackedData,
-            impressions: e.impressions
-        })),
-        n = (0, o.e7)([d.default], () => d.default.isAnalyticsDebuggerEnabled),
-        a = (0, o.e7)([c.Z], () => c.Z.isDeveloper),
-        [p, m] = i.useState(!1),
-        { name: I, ...T } = null != e ? e : {},
-        g = null != I;
-    return a && n
+    p = n(117795),
+    h = n(565384),
+    m = n(418075);
+function g(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = E(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function E(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function b() {
+    let { debugTrackedData: e, impressions: t } = (0, h.Xo)(
+            (e) => ({
+                debugTrackedData: e.debugTrackedData,
+                impressions: e.impressions
+            }),
+            s.X
+        ),
+        n = (0, l.e7)([f.default], () => f.default.isAnalyticsDebuggerEnabled),
+        o = (0, l.e7)([d.Z], () => d.Z.isDeveloper),
+        [E, b] = i.useState(!1),
+        y = null != e ? e : {},
+        { name: v } = y,
+        O = g(y, ['name']),
+        I = null != v;
+    return o && n
         ? (0, r.jsx)(u.ZP, {
               children: (0, r.jsxs)('div', {
-                  className: s()(h.container, {
-                      [h.containerMinimized]: p,
-                      [h.notTracked]: !g
+                  className: a()(m.container, {
+                      [m.containerMinimized]: E,
+                      [m.notTracked]: !I
                   }),
                   children: [
-                      (0, r.jsx)(l.Clickable, {
-                          className: h.minimizeButton,
+                      (0, r.jsx)(c.P3F, {
+                          className: m.minimizeButton,
                           onClick: () => {
-                              m(!p);
+                              b(!E);
                           },
-                          children: p ? (0, r.jsx)(_.Z, {}) : (0, r.jsx)(E.Z, {})
+                          children: E ? (0, r.jsx)(_.Z, {}) : (0, r.jsx)(p.Z, {})
                       }),
                       (0, r.jsxs)('div', {
-                          className: s()(h.content, { [h.contentMinimized]: p }),
+                          className: a()(m.content, { [m.contentMinimized]: E }),
                           children: [
-                              (0, r.jsxs)(l.Text, {
-                                  className: s()(h.label, { [h.notTracked]: !g }),
+                              (0, r.jsxs)(c.Text, {
+                                  className: a()(m.label, { [m.notTracked]: !I }),
                                   variant: 'text-xxs/normal',
                                   children: [
-                                      g
-                                          ? (0, r.jsx)(l.CircleCheckIcon, {
+                                      I
+                                          ? (0, r.jsx)(c.owK, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: h.iconTracked
+                                                className: m.iconTracked
                                             })
-                                          : (0, r.jsx)(l.CircleXIcon, {
+                                          : (0, r.jsx)(c.k$p, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: h.iconNotTracked
+                                                className: m.iconNotTracked
                                             }),
-                                      null != I ? I : '(untracked)'
+                                      null != v ? v : '(untracked)'
                                   ]
                               }),
                               (0, r.jsx)('div', {
-                                  className: h.current,
-                                  children: JSON.stringify(T, void 0, 2)
+                                  className: m.current,
+                                  children: JSON.stringify(O, void 0, 2)
                               }),
-                              (0, r.jsx)(l.Text, {
-                                  className: s()(h.label, { [h.notTracked]: !g }),
+                              (0, r.jsx)(c.Text, {
+                                  className: a()(m.label, { [m.notTracked]: !I }),
                                   variant: 'text-xxs/normal',
                                   children: 'impressions stack'
                               }),
                               (0, r.jsx)('div', {
-                                  className: h.stack,
+                                  className: m.stack,
                                   children: JSON.stringify(t, void 0, 2)
                               })
                           ]

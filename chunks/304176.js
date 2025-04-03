@@ -1,100 +1,151 @@
-var r = n(735250),
-    i = n(470079),
-    a = n(442837),
-    s = n(481060),
-    o = n(367907),
-    l = n(111028),
-    u = n(91218),
-    c = n(829883),
+n.d(t, { Z: () => T });
+var r = n(200651);
+n(192379);
+var o = n(442837),
+    a = n(481060),
+    i = n(493773),
+    s = n(367907),
+    c = n(111028),
+    l = n(91218),
+    u = n(829883),
     d = n(623624),
-    _ = n(973542),
-    E = n(703656),
-    f = n(592125),
-    h = n(430824),
-    p = n(944486),
-    m = n(709586),
-    I = n(626135),
-    T = n(524444),
-    g = n(981631),
-    S = n(176505),
-    A = n(689938),
-    N = n(157732);
-t.Z = (e) => {
+    p = n(973542),
+    g = n(703656),
+    m = n(592125),
+    f = n(430824),
+    _ = n(944486),
+    b = n(709586),
+    h = n(626135),
+    y = n(524444),
+    v = n(981631),
+    O = n(176505),
+    x = n(388032),
+    C = n(854422);
+function j(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function P(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let T = (e) => {
     let { roleIcon: t, guild: n } = e,
-        { name: v } = t;
-    i.useEffect(() => {
-        I.default.track(g.rMx.OPEN_POPOUT, {
-            type: 'Role Icon Popout',
-            guild_id: n.id,
-            ...(0, o.v_)(f.Z.getChannel(p.Z.getChannelId(n.id)))
-        });
-    }, []);
-    let O = (0, a.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
-        R = (0, _.Z)(O),
-        C = R ? A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({ name: v }) : A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({ name: v }),
-        y = {
-            ...t,
-            src: null == t.src ? t.src : (0, c.o)(t.src, 40),
+        { name: T } = t;
+    (0, i.ZP)(() => {
+        h.default.track(
+            v.rMx.OPEN_POPOUT,
+            j(
+                {
+                    type: 'Role Icon Popout',
+                    guild_id: n.id
+                },
+                (0, s.v_)(m.Z.getChannel(_.Z.getChannelId(n.id)))
+            )
+        );
+    });
+    let N = (0, o.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
+        I = (0, p.Z)(N),
+        w = I ? x.NW.formatToPlainString(x.t.t0928f, { name: T }) : x.NW.formatToPlainString(x.t.UDDkGx, { name: T }),
+        S = P(j({}, t), {
+            src: null == t.src ? t.src : (0, u.o)(t.src, 40),
             size: 40
-        },
-        D = R
+        }),
+        k = I
             ? () => {
-                  (0, E.uL)(g.Z5c.CHANNEL(n.id, S.oC.ROLE_SUBSCRIPTIONS));
+                  (0, g.uL)(v.Z5c.CHANNEL(n.id, O.oC.ROLE_SUBSCRIPTIONS));
               }
             : () => {
                   (0, d.f)({
                       guildId: n.id,
-                      location: { section: g.jXE.ROLE_ICON_POPOUT }
+                      location: { section: v.jXE.ROLE_ICON_POPOUT }
                   });
               };
-    return (0, r.jsx)(s.Dialog, {
-        children: (0, r.jsx)(T.W_, {
+    return (0, r.jsx)(a.VqE, {
+        children: (0, r.jsx)(y.W_, {
             children: (0, r.jsxs)('div', {
-                className: N.popoutContainer,
+                className: C.popoutContainer,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: N.mainContent,
+                        className: C.mainContent,
                         children: [
                             (0, r.jsx)('div', {
-                                className: N.roleIconContainer,
-                                children: (0, r.jsx)(u.Z, {
-                                    ...y,
-                                    enableTooltip: !1,
-                                    className: N.__invalid_roleIcon,
-                                    enableHeight: !1
-                                })
+                                className: C.roleIconContainer,
+                                children: (0, r.jsx)(
+                                    l.Z,
+                                    P(j({}, S), {
+                                        enableTooltip: !1,
+                                        className: C.__invalid_roleIcon,
+                                        enableHeight: !1
+                                    })
+                                )
                             }),
                             (0, r.jsxs)('div', {
-                                className: N.truncatingText,
+                                className: C.truncatingText,
                                 children: [
-                                    (0, r.jsx)(s.Heading, {
+                                    (0, r.jsx)(a.X6q, {
                                         variant: 'heading-md/semibold',
-                                        className: N.roleName,
-                                        children: (0, r.jsx)(l.Z, { children: v })
+                                        className: C.roleName,
+                                        children: (0, r.jsx)(c.Z, { children: T })
                                     }),
-                                    (0, r.jsx)(s.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         variant: 'text-sm/normal',
-                                        children: C
+                                        children: w
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, r.jsxs)(s.Button, {
-                        size: s.Button.Sizes.SMALL,
-                        color: s.Button.Colors.PRIMARY,
-                        className: N.ctaButton,
-                        innerClassName: N.ctaButtonContent,
+                    (0, r.jsxs)(a.zxk, {
+                        size: a.zxk.Sizes.SMALL,
+                        color: a.zxk.Colors.PRIMARY,
+                        className: C.ctaButton,
+                        innerClassName: C.ctaButtonContent,
                         fullWidth: !0,
-                        onClick: D,
+                        onClick: k,
                         autoFocus: !0,
                         children: [
-                            (0, r.jsx)(m.Z, {
+                            (0, r.jsx)(b.Z, {
                                 width: 14,
                                 height: 14,
-                                className: N.boosterBadge
+                                className: C.boosterBadge
                             }),
-                            A.Z.Messages.ROLE_ICON_POPOUT_CTA
+                            x.NW.string(x.t['H930+P'])
                         ]
                     })
                 ]

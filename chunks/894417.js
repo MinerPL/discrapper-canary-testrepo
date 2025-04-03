@@ -1,14 +1,8 @@
 n.d(t, {
-    Fp: function () {
-        return r;
-    },
-    NM: function () {
-        return a;
-    },
-    VV: function () {
-        return i;
-    }
+    Fp: () => r,
+    NM: () => o,
+    VV: () => i
 });
 var r = Math.max,
     i = Math.min,
-    a = Math.round;
+    o = Math.round;

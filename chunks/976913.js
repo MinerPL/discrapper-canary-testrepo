@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => a });
 var r = n(811645);
 function o(e, t, n, o, a, i, s) {
     try {

@@ -1,50 +1,56 @@
-t.d(s, {
-    Z: function () {
-        return u;
-    }
-}),
-    t(47120);
-var n = t(735250),
-    a = t(470079),
-    i = t(442837),
-    r = t(852860),
-    o = t(164946),
-    l = t(350327),
-    c = t(647699),
-    d = t(18438),
-    _ = t(778825),
-    E = t(689938);
-function u() {
-    let e = (0, i.e7)([_.Z], () => _.Z.getIsSubmitDisabled()),
-        s = (0, i.e7)([_.Z], () => _.Z.getGuild()),
-        t = (0, i.e7)([_.Z], () => _.Z.getErrors()),
-        [u, I] = a.useState(!1),
-        T = a.useMemo(() => ((null == t ? void 0 : t.message) != null ? (null == t ? void 0 : t.message) : Object.keys(null != t ? t : {}).length > 0 ? E.Z.Messages.GUILD_SETTINGS_EDIT_PROFILE_GENERIC_ERROR : null), [t]),
-        S = a.useCallback(async () => {
-            var e, t;
-            I(!0);
-            let n = _.Z.getAllPending(),
-                a = (0, o.Jo)(n),
-                i = (0, o.g9)(n),
-                r = !0;
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(852860),
+    l = n(164946),
+    o = n(350327),
+    c = n(330055),
+    d = n(647699),
+    u = n(18438),
+    m = n(778825),
+    g = n(388032);
+function p() {
+    let e = (0, s.e7)([m.Z], () => m.Z.getIsSubmitDisabled()),
+        t = (0, s.e7)([m.Z], () => m.Z.getGuild()),
+        n = (0, s.e7)([m.Z], () => m.Z.getErrors()),
+        [p, h] = i.useState(!1),
+        f = i.useMemo(() => ((null == n ? void 0 : n.message) != null ? (null == n ? void 0 : n.message) : Object.keys(null != n ? n : {}).length > 0 ? g.NW.string(g.t.s35OuL) : null), [n]),
+        b = i.useCallback(async () => {
+            var e, n, r;
+            h(!0);
+            let i = m.Z.getAllPending(),
+                s = (0, l.Jo)(i),
+                a = (0, l.g9)(i),
+                g = !0;
+            if (Object.keys(s).length > 0) {
+                let r = await (0, u.iq)(null == t ? void 0 : t.id, s);
+                if (((g = g && null != (e = null == r ? void 0 : r.ok) && e), null == r ? void 0 : r.ok)) {
+                    let e = r.body;
+                    void 0 !== i.pendingAvatar &&
+                        (0, c.Z)({
+                            isGuildProfile: !0,
+                            avatarHash: e.avatar,
+                            avatarId: s.avatarId,
+                            avatarAssetOrigin: null == (n = i.pendingAvatar) ? void 0 : n.assetOrigin
+                        }),
+                        (0, u.IO)();
+                }
+            }
             if (Object.keys(a).length > 0) {
-                let t = await (0, d.iq)(null == s ? void 0 : s.id, a);
-                (r = r && null !== (e = null == t ? void 0 : t.ok) && void 0 !== e && e), (null == t ? void 0 : t.ok) && (0, d.IO)();
+                let e = await (0, o.Z)(a, null == t ? void 0 : t.id);
+                (g = g && null != (r = null == e ? void 0 : e.ok) && r), (null == e ? void 0 : e.ok) ? (0, u.pG)() : (0, d.v)();
             }
-            if (Object.keys(i).length > 0) {
-                let e = await (0, l.Z)(i, null == s ? void 0 : s.id);
-                (r = r && null !== (t = null == e ? void 0 : e.ok) && void 0 !== t && t), (null == e ? void 0 : e.ok) ? (0, d.pG)() : (0, c.v)();
-            }
-            r && (0, d.b9)(), I(!1);
-        }, [null == s ? void 0 : s.id]),
-        N = a.useCallback(() => {
-            (0, d.W3)();
+            g && (0, u.b9)(), h(!1);
+        }, [null == t ? void 0 : t.id]),
+        N = i.useCallback(() => {
+            (0, u.W3)();
         }, []);
-    return (0, n.jsx)(r.Z, {
-        submitting: u,
-        onSave: S,
+    return (0, r.jsx)(a.Z, {
+        submitting: p,
+        onSave: b,
         onReset: N,
         disabled: e,
-        errorMessage: null != T ? T : void 0
+        errorMessage: null != f ? f : void 0
     });
 }

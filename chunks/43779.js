@@ -1,152 +1,205 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-});
-var i = n(735250),
-    a = n(470079),
+n.d(t, { Z: () => S }), n(266796);
+var r = n(200651),
+    o = n(192379),
     s = n(120356),
-    r = n.n(s),
-    l = n(338545),
-    o = n(442837),
+    a = n.n(s),
+    i = n(642128),
+    l = n(442837),
     c = n(481060),
     d = n(393238),
     u = n(607070),
-    _ = n(113434),
-    E = n(566078),
-    h = n(472144),
-    m = n(644646),
-    I = n(69439),
-    g = n(46140),
-    p = n(642145),
-    T = n(689938),
-    S = n(803162);
-let f = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
-function C(e) {
-    var t, n, s;
-    let { quest: C, questContent: N, isHovering: A, contentPosition: v, rowIndex: Z, onReceiveErrorHints: L } = e,
-        O = E.r.build(C.config).defaultReward.messages.name,
-        R = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        { ref: x, scrollHeight: b } = (0, d.Z)(),
-        P = 104 !== b,
-        { expansionSpring: M } = (0, c.useSpring)({
-            expansionSpring: A ? 1 : 0,
-            config: {
-                ...p.Y,
-                clamp: !0
-            }
+    p = n(113434),
+    m = n(918701),
+    f = n(467628),
+    g = n(566078),
+    x = n(472144),
+    h = n(160766),
+    b = n(644646),
+    j = n(65443),
+    v = n(69439),
+    y = n(46140),
+    _ = n(642145),
+    C = n(388032),
+    O = n(882067);
+let w = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
+function S(e) {
+    var t, n, s, S, P;
+    let { quest: N, questContent: E, isHovering: T, contentPosition: A, rowIndex: B, onReceiveErrorHints: R } = e,
+        k = (0, f.j)({ location: y.dr.QUESTS_BAR_MOBILE }),
+        q = o.useMemo(() => g.r.build(N.config), [N.config]),
+        D = q.defaultReward.messages.name,
+        I = q.defaultReward.messages.nameWithArticle,
+        W = k ? D : I,
+        M = (null == (t = N.userStatus) ? void 0 : t.enrolledAt) != null,
+        { ref: L, scrollHeight: Z } = (0, d.Z)(),
+        V = 104 !== Z,
+        { expansionSpring: Q } = (0, c.q_F)({
+            expansionSpring: +!!T,
+            config:
+                ((S = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, _.Y)),
+                (P = P = { clamp: !0 }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(S, Object.getOwnPropertyDescriptors(P))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(P)).forEach(function (e) {
+                          Object.defineProperty(S, e, Object.getOwnPropertyDescriptor(P, e));
+                      }),
+                S)
         }),
-        D = (null === (n = C.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        y = (null === (s = C.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
-        { completedRatio: j, completedRatioDisplay: U } = (0, _.I)(C),
-        G = (0, _.Bd)(C),
-        k = a.useCallback(
-            () =>
-                (0, i.jsx)(c.Text, {
-                    variant: 'text-md/semibold',
-                    color: 'text-normal',
-                    tag: 'span',
-                    className: S.header,
-                    children: O
-                }),
-            [O]
+        U = (null == (n = N.userStatus) ? void 0 : n.completedAt) != null,
+        H = (null == (s = N.userStatus) ? void 0 : s.claimedAt) != null,
+        { completedRatio: z, completedRatioDisplay: F } = (0, p.I)(N),
+        X = (0, p.Bd)(N),
+        K = o.useCallback(
+            (e) =>
+                (0, r.jsx)(
+                    c.Text,
+                    {
+                        variant: 'text-md/semibold',
+                        color: 'text-normal',
+                        tag: 'span',
+                        className: O.header,
+                        children: e
+                    },
+                    ''.concat(N.id, '_reward')
+                ),
+            [N.id]
         ),
-        w = a.useMemo(() => (y ? k() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: k })), [y, k]),
-        B = a.useMemo(() => {
-            if (null != G)
-                return (0, i.jsx)(c.Text, {
+        Y = o.useMemo(() => (H ? K(D) : C.NW.format(C.t['0IUT4e'], { rewardWithArticleHook: () => K(W) })), [D, H, K, W]),
+        G = o.useMemo(() => {
+            if (null != X)
+                return (0, r.jsx)(c.Text, {
                     variant: 'text-sm/medium',
                     color: 'text-muted',
-                    className: r()(S.description),
-                    children: G
+                    className: O.description,
+                    children: X
                 });
-        }, [G]),
-        H = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
-    return (0, i.jsxs)('div', {
-        className: r()(S.container),
+        }, [X]),
+        J = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
+    return (0, r.jsxs)('div', {
+        className: O.container,
         children: [
-            (0, i.jsxs)(l.animated.div, {
+            (0, r.jsxs)(i.animated.div, {
                 style: {
-                    maxHeight: M.to([0, 1], [104, (null != b ? b : 0) + 12])
+                    maxHeight: Q.to([0, 1], [104, (null != Z ? Z : 0) + 12])
                 },
-                className: r()(S.rewardDescriptionContainer),
+                className: O.rewardDescriptionContainer,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: S.assetWrapper,
+                    (0, r.jsxs)('div', {
+                        className: O.assetWrapper,
                         children: [
-                            !y && D && (0, i.jsx)('div', { className: S.completionAnimation }),
-                            R && !y
-                                ? (0, i.jsxs)('div', {
-                                      className: S.progressWrapper,
+                            !H && U && (0, r.jsx)('div', { className: O.completionAnimation }),
+                            M && !H
+                                ? (0, r.jsxs)('div', {
+                                      className: O.progressWrapper,
                                       children: [
-                                          D &&
-                                              (0, i.jsx)(c.LottieAnimation, {
-                                                  importData: f,
-                                                  className: S.confetti,
+                                          U &&
+                                              (0, r.jsx)(c.Fmz, {
+                                                  importData: w,
+                                                  className: O.confetti,
                                                   loop: !1,
                                                   autoplay: !1,
-                                                  shouldAnimate: !H
+                                                  shouldAnimate: !J
                                               }),
-                                          (0, i.jsx)(h.Z, {
-                                              quest: C,
+                                          (0, r.jsx)(x.Z, {
+                                              quest: N,
                                               size: 76,
-                                              percentComplete: j,
-                                              percentCompleteText: A ? U : void 0,
-                                              children: (0, i.jsx)('div', {
-                                                  className: S.circularRewardTileWrapper,
-                                                  children: (0, i.jsx)(m.Z, {
-                                                      quest: C,
-                                                      questContent: N,
-                                                      className: S.circularQuestRewardTileAsset,
-                                                      location: g.dr.QUEST_HOME_DESKTOP
+                                              percentComplete: z,
+                                              percentCompleteText: T && !(0, m.zi)(N) ? F : void 0,
+                                              children: (0, r.jsx)('div', {
+                                                  className: O.circularRewardTileWrapper,
+                                                  children: (0, r.jsx)(b.Z, {
+                                                      quest: N,
+                                                      questContent: E,
+                                                      className: O.circularQuestRewardTileAsset,
+                                                      location: y.dr.QUEST_HOME_DESKTOP,
+                                                      autoplay: T
                                                   })
                                               })
                                           })
                                       ]
                                   })
-                                : (0, i.jsx)(m.Z, {
-                                      quest: C,
-                                      autoplay: A,
-                                      questContent: N,
-                                      className: S.questRewardTileAsset,
-                                      location: g.dr.QUEST_HOME_DESKTOP
+                                : (0, r.jsx)(h.Z, {
+                                      quest: N,
+                                      children: (0, r.jsx)(b.Z, {
+                                          quest: N,
+                                          autoplay: T,
+                                          questContent: E,
+                                          className: O.questRewardTileAsset,
+                                          location: y.dr.QUEST_HOME_DESKTOP
+                                      })
                                   })
                         ]
                     }),
-                    (0, i.jsxs)('div', {
-                        ref: x,
-                        className: r()(S.textContainer, { [S.justifyCenter]: !P }),
+                    (0, r.jsxs)('div', {
+                        ref: L,
+                        className: a()(O.textContainer, { [O.justifyCenter]: !V }),
                         children: [
-                            (0, i.jsx)(c.Heading, {
+                            (0, r.jsx)(c.X6q, {
                                 variant: 'eyebrow',
                                 color: 'text-brand',
-                                className: S.questName,
-                                children: T.Z.Messages.QUEST.format({ questName: C.config.messages.questName })
+                                className: O.questName,
+                                children: C.NW.format(C.t.EAYZAg, { questName: N.config.messages.questName })
                             }),
-                            (0, i.jsx)(c.Text, {
+                            (0, r.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                className: S.header,
-                                children: w
+                                className: a()(O.header, { [O.headerWithoutMargin]: k }),
+                                children: Y
                             }),
-                            B
+                            k &&
+                                (0, r.jsx)(j.Z, {
+                                    quest: N,
+                                    textColor: 'text-muted'
+                                }),
+                            G
                         ]
                     }),
-                    P &&
-                        (0, i.jsx)(l.animated.div, {
+                    V &&
+                        (0, r.jsx)(i.animated.div, {
                             style: {
-                                opacity: M.to([0, 1], [1, 0])
+                                opacity: Q.to([0, 1], [1, 0])
                             },
-                            className: S.textOverflowBlur
+                            className: O.textOverflowBlur
                         })
                 ]
             }),
-            (0, i.jsx)(I.Z, {
-                quest: C,
-                location: N,
-                contentPosition: v,
-                rowIndex: Z,
-                onReceiveErrorHints: L
+            (0, r.jsx)(v.Z, {
+                quest: N,
+                location: E,
+                contentPosition: A,
+                rowIndex: B,
+                onReceiveErrorHints: R
             })
         ]
     });

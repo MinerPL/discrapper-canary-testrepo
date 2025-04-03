@@ -1,55 +1,63 @@
 n.d(t, {
-    $U: function () {
-        return l;
-    },
-    KP: function () {
-        return d;
-    },
-    Tn: function () {
-        return o;
-    },
-    dt: function () {
-        return _;
-    },
-    xx: function () {
-        return u;
-    }
+    $U: () => u,
+    KP: () => _,
+    Tn: () => c,
+    dt: () => p,
+    xx: () => d
 });
 var r = n(392711),
     i = n.n(r),
-    a = n(544891),
-    s = n(981631);
-async function o() {
-    return (await a.tn.get(s.ANM.NOTIFICATION_SNAPSHOTS)).body;
-}
-async function l(e) {
+    o = n(544891),
+    a = n(981631);
+let s = 5,
+    l = 1000000;
+async function c() {
     return (
-        await a.tn.post({
-            url: s.ANM.NOTIFICATION_SNAPSHOTS,
-            body: { label: e }
+        await o.tn.get({
+            url: a.ANM.NOTIFICATION_SNAPSHOTS,
+            rejectWithError: !1
         })
     ).body;
 }
 async function u(e) {
-    return (await a.tn.post(s.ANM.RESTORE_NOTIFICATION_SNAPSHOT(e))).body;
+    return (
+        await o.tn.post({
+            url: a.ANM.NOTIFICATION_SNAPSHOTS,
+            body: { label: e },
+            rejectWithError: !1
+        })
+    ).body;
 }
-async function c(e) {
-    return (await a.tn.del(s.ANM.NOTIFICATION_SNAPSHOT(e))).body;
+async function d(e) {
+    return (
+        await o.tn.post({
+            url: a.ANM.RESTORE_NOTIFICATION_SNAPSHOT(e),
+            rejectWithError: !1
+        })
+    ).body;
 }
-async function d() {
-    let e = await o(),
+async function f(e) {
+    return (
+        await o.tn.del({
+            url: a.ANM.NOTIFICATION_SNAPSHOT(e),
+            rejectWithError: !1
+        })
+    ).body;
+}
+async function _() {
+    let e = await c(),
         t = i().sortBy(e, (e) => new Date(e.recorded_at).getTime());
-    0 !== t.length && (await u(t[t.length - 1].id));
+    0 !== t.length && (await d(t[t.length - 1].id));
 }
-async function _(e) {
+async function p(e) {
     if (e.length > 0) {
         var t;
         let n = i().sum(e.map((e) => e.length)),
-            r = null !== (t = i().max(e.map((e) => e.length))) && void 0 !== t ? t : 0;
-        if (e.length >= 5 || n + r > 1000000) {
+            r = null != (t = i().max(e.map((e) => e.length))) ? t : 0;
+        if (e.length >= s || n + r > l) {
             let t = i().sortBy(e, (e) => new Date(e.recorded_at).getTime());
-            await c(t[0].id);
+            await f(t[0].id);
         }
     }
-    return l('Backup from '.concat(new Date().toLocaleDateString()));
+    return u('Backup from '.concat(new Date().toLocaleDateString()));
 }

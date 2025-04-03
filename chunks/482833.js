@@ -1,8 +1,4 @@
-n.d(t, {
-    c: function () {
-        return r;
-    }
-});
+n.d(t, { c: () => r });
 let r = (0, n(818083).B)({
     kind: 'guild',
     id: '2023-04_server_products',

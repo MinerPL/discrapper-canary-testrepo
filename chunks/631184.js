@@ -1,9 +1,5 @@
-n.d(t, {
-    u: function () {
-        return i;
-    }
-});
-let i = (0, n(818083).B)({
+n.d(t, { u: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-06_message_forward_breadcrumb',
     label: 'Message forward breadcrumb',

@@ -1,11 +1,12 @@
-var r = n(887913);
-t.Z = function (e, t, n) {
-    '__proto__' == t && r.Z
-        ? (0, r.Z)(e, t, {
+r.d(t, { Z: () => o });
+var n = r(887913);
+let o = function (e, t, r) {
+    '__proto__' == t && n.Z
+        ? (0, n.Z)(e, t, {
               configurable: !0,
               enumerable: !0,
-              value: n,
+              value: r,
               writable: !0
           })
-        : (e[t] = n);
+        : (e[t] = r);
 };

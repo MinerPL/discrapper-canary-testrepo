@@ -1,15 +1,54 @@
-var i = s(735250);
-s(470079);
-var n = s(481060);
-t.Z = (e) => {
-    let { product: t, analyticsLocations: a } = e;
-    (0, n.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([s.e('87624'), s.e('28072')]).then(s.bind(s, 331042));
-        return (s) =>
-            (0, i.jsx)(e, {
-                product: t,
-                analyticsLocations: a,
-                ...s
-            });
-    });
+n.d(t, { Z: () => l });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    o = n(215023);
+let l = (e) => {
+    let { product: t, analyticsLocations: l, overrideTitle: s, overrideDescription: a, shouldShowPromotionalExperience: c, onCloseCallback: u, itemConsumed: d, purchaseType: p = o.o8.FIAT } = e;
+    (0, i.ZDy)(
+        async () => {
+            let { default: e } = await Promise.resolve().then(n.bind(n, 331042));
+            return (n) =>
+                (0, r.jsx)(
+                    e,
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })(
+                        {
+                            product: t,
+                            analyticsLocations: l,
+                            overrideTitle: s,
+                            overrideDescription: a,
+                            shouldShowPromotionalExperience: c,
+                            itemConsumed: d,
+                            purchaseType: p
+                        },
+                        n
+                    )
+                );
+        },
+        { onCloseCallback: u }
+    );
 };

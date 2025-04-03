@@ -1,101 +1,70 @@
-n(627341);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(278074),
-    l = n(481060),
-    u = n(721987),
-    c = n(138655),
-    d = n(793397),
-    _ = n(652853),
-    E = n(228168),
-    f = n(280598);
-let h = (e, t) => {
-        let n = (0, o.EQ)(e)
-                .with(E.y0.MODAL, () => f.userProfileModalOuter)
-                .with(E.y0.PANEL, () => f.userPanelOuter)
-                .with(E.y0.CARD, () => f.userCardOuter)
-                .with(E.y0.BITE_SIZE, () => f.biteSizeOuter)
-                .with(E.y0.FULL_SIZE, () => f.fullSizeOuter)
-                .otherwise(() => f.userPopoutOuter),
-            r = t ? f.userProfileOuterThemed : f.userProfileOuterUnthemed;
-        return s()(n, r);
-    },
-    p = (e, t, n) => {
-        let r = (0, o.EQ)(e)
-                .with(E.y0.MODAL, E.y0.FULL_SIZE, () => f.userProfileModalInner)
-                .with(E.y0.PANEL, () => f.userPanelInner)
-                .with(E.y0.CARD, () => f.userCardInner)
-                .otherwise(() => f.userPopoutInner),
-            i = (0, o.EQ)(e)
-                .with(E.y0.PANEL, () => f.userPanelInnerThemed)
-                .with(E.y0.BITE_SIZE, () => f.biteSizeInnerThemed)
-                .with(E.y0.FULL_SIZE, () => f.fullSizeInnerThemed)
-                .otherwise(() =>
-                    (0, d.zW)({
-                        premiumUserWithBanner: f.userProfileInnerThemedWithBanner,
-                        premiumUserWithoutBanner: f.userProfileInnerThemedPremiumWithoutBanner,
-                        default: f.userProfileInnerThemedNonPremium
-                    })({
-                        isPremium: t,
-                        hasBanner: n
-                    })
-                );
-        return s()(r, i);
-    },
-    m = i.forwardRef(function (e, t) {
-        let { user: n, displayProfile: i, profileType: a, className: o, pendingThemeColors: d, pendingProfileEffectId: E, themeOverride: m, children: I, forceShowPremium: T = !1, showOutOfBoundaryComponents: g = !1 } = e,
+n.d(t, { Z: () => _ });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(576635),
+    c = n(213053),
+    u = n(652853),
+    d = n(228168),
+    f = n(750883);
+let _ = Object.assign(
+    i.forwardRef(function (e, t) {
+        let { user: n, displayProfile: i, profileType: o, className: _, pendingThemeColors: p, themeOverride: h, children: m, forceShowPremium: g = !1 } = e,
             {
-                theme: S,
-                primaryColor: A,
-                secondaryColor: N
-            } = (0, u.Z)({
+                theme: E,
+                primaryColor: b,
+                secondaryColor: y
+            } = (0, l.Z)({
                 user: n,
                 displayProfile: i,
-                pendingThemeColors: d,
-                isPreview: T
+                pendingThemeColors: p,
+                isPreview: g
             }),
             { profileThemeStyle: v, profileThemeClassName: O } = (0, c.Z)({
-                theme: null != m ? m : S,
-                primaryColor: A,
-                secondaryColor: N
+                theme: null != h ? h : E,
+                primaryColor: b,
+                secondaryColor: y
             }),
-            R = (null == i ? void 0 : i.canEditThemes) || T,
-            C = null !== E && ((null == i ? void 0 : i.banner) != null || void 0 !== E);
+            I = {
+                [f.biteSize]: o === d.y0.BITE_SIZE,
+                [f.fullSize]: o === d.y0.FULL_SIZE,
+                [f.panel]: o === d.y0.PANEL
+            };
         return (0, r.jsx)('div', {
-            className: s()(h(a, R), g ? f.showOutOfBoundaryComponents : void 0, O, o),
+            className: a()(f.outer, O, I, _),
             style: v,
             ref: t,
             children: (0, r.jsx)('div', {
-                className: p(a, R, C),
-                children: (0, r.jsx)(l.ThemeContextProvider, {
-                    theme: null != m ? m : S,
-                    children: (0, r.jsx)(_.X, {
-                        profileType: a,
-                        theme: null != m ? m : S,
-                        primaryColor: A,
-                        secondaryColor: N,
-                        children: I
+                className: a()(f.inner, I),
+                children: (0, r.jsx)(s.ze6, {
+                    theme: null != h ? h : E,
+                    children: (0, r.jsx)(u.X, {
+                        profileType: o,
+                        theme: null != h ? h : E,
+                        primaryColor: b,
+                        secondaryColor: y,
+                        children: m
                     })
                 })
             })
         });
     }),
-    I = (e) =>
-        (0, o.EQ)(e)
-            .with(E.y0.POPOUT, E.y0.SETTINGS, () => f.userPopoutOverlayBackground)
-            .with(E.y0.MODAL, () => f.userProfileModalOverlayBackground)
-            .with(E.y0.BITE_SIZE, () => f.biteSizeOverlayBackground)
-            .with(E.y0.FULL_SIZE, () => f.fullSizeOverlayBackground)
-            .otherwise(() => f.overlayBackground),
-    T = i.forwardRef(function (e, t) {
-        let { children: n, className: i } = e,
-            { profileType: a } = (0, _.z)();
-        return (0, r.jsx)('div', {
-            ref: t,
-            className: s()(I(a), i),
-            children: n
-        });
-    });
-t.Z = Object.assign(m, { Overlay: T });
+    {
+        Overlay: i.forwardRef(function (e, t) {
+            let { children: n, className: i } = e,
+                { profileType: o } = (0, u.z)(),
+                s = {
+                    [f.biteSize]: o === d.y0.BITE_SIZE,
+                    [f.fullSize]: o === d.y0.FULL_SIZE,
+                    [f.panel]: o === d.y0.PANEL
+                };
+            return (0, r.jsx)('div', {
+                ref: t,
+                className: a()(f.overlay, s, i),
+                children: n
+            });
+        })
+    }
+);

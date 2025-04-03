@@ -1,44 +1,40 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(689938),
-    l = n(326108);
-function r(e) {
+n.d(t, { Z: () => a });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(388032),
+    o = n(892703);
+function a(e) {
     let { onClose: t, guildName: n } = e;
-    return (0, i.jsxs)('div', {
-        className: l.container,
+    return (0, r.jsxs)('div', {
+        className: o.container,
         children: [
-            (0, i.jsx)('div', {
-                className: l.iconContainer,
-                children: (0, i.jsx)(a.ClockWarningIcon, {
+            (0, r.jsx)('div', {
+                className: o.iconContainer,
+                children: (0, r.jsx)(i.YlB, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: l.icon,
+                    className: o.icon,
                     width: 20,
                     height: 20
                 })
             }),
-            (0, i.jsxs)('div', {
-                className: l.header,
+            (0, r.jsxs)('div', {
+                className: o.header,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'heading-md/semibold',
-                        className: l.headerText,
-                        children: s.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_HEADER
+                        className: o.headerText,
+                        children: l.NW.string(l.t.LIIyeH)
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-sm/normal',
-                        children: s.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_SUBHEADER.format({ guildName: n })
+                        children: l.NW.format(l.t['4/6vQk'], { guildName: n })
                     }),
-                    (0, i.jsx)(a.Button, {
+                    (0, r.jsx)(i.zxk, {
                         onClick: t,
-                        className: l.button,
-                        children: s.Z.Messages.OKAY
+                        className: o.button,
+                        children: l.NW.string(l.t.BddRzc)
                     })
                 ]
             })

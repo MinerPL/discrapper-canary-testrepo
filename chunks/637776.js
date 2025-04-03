@@ -1,108 +1,103 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120);
-var s = n(735250),
-    r = n(470079),
-    i = n(442837),
+n.d(t, { Z: () => m }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
     a = n(231239),
     l = n(129293),
-    o = n(388905),
+    s = n(388905),
     c = n(703656),
     u = n(108427),
     d = n(844800),
-    _ = n(580497),
-    h = n(981631),
-    E = n(689938),
-    g = n(19162);
-function p(e) {
+    p = n(580497),
+    g = n(981631),
+    h = n(388032),
+    f = n(742834);
+function m(e) {
     let { location: t } = e,
-        [p, I] = r.useState(!1),
-        { verifySuccess: m, verifyErrors: f, redirectGuildId: N } = (0, i.e7)([d.Z], () => d.Z.getState());
-    r.useEffect(() => {
+        [m, _] = i.useState(!1),
+        { verifySuccess: b, verifyErrors: x, redirectGuildId: N } = (0, o.e7)([d.Z], () => d.Z.getState());
+    i.useEffect(() => {
         let e = (0, l.Z)(t);
         a.Z.verify(e), (0, u.e)('verify_hub_email');
     }, [t]);
-    let T = () => {
-        (0, _.Z)(N), I(!0);
+    let v = () => {
+        (0, p.Z)(N), _(!0);
     };
-    return p
-        ? (0, s.jsxs)(o.ZP, {
+    return m
+        ? (0, r.jsxs)(s.ZP, {
               children: [
-                  (0, s.jsx)(o.Dx, {
-                      className: g.title,
-                      children: E.Z.Messages.APP_OPENED_TITLE
+                  (0, r.jsx)(s.Dx, {
+                      className: f.title,
+                      children: h.NW.string(h.t.csrAMD)
                   }),
-                  (0, s.jsx)(o.DK, {
-                      className: g.subtitle,
-                      children: E.Z.Messages.APP_OPENED_BODY
+                  (0, r.jsx)(s.DK, {
+                      className: f.subtitle,
+                      children: h.NW.string(h.t['m1+IBg'])
                   }),
-                  (0, s.jsx)(o.zx, {
-                      className: g.spacedButton,
-                      onClick: () => (0, c.uL)(h.Z5c.CHANNEL(N)),
-                      children: E.Z.Messages.CONTINUE_TO_WEBAPP
+                  (0, r.jsx)(s.zx, {
+                      className: f.spacedButton,
+                      onClick: () => (0, c.uL)(g.Z5c.CHANNEL(N)),
+                      children: h.NW.string(h.t.fIv16O)
                   })
               ]
           })
-        : m
-          ? (0, s.jsxs)(o.ZP, {
+        : b
+          ? (0, r.jsxs)(s.ZP, {
                 children: [
-                    (0, s.jsx)(o.Ee, {
-                        className: g.image,
+                    (0, r.jsx)(s.Ee, {
+                        className: f.image,
                         src: n(73962)
                     }),
-                    (0, s.jsx)(o.Dx, {
-                        className: g.title,
-                        children: E.Z.Messages.VERIFICATION_VERIFIED
+                    (0, r.jsx)(s.Dx, {
+                        className: f.title,
+                        children: h.NW.string(h.t.dAfGb2)
                     }),
-                    (0, s.jsx)(o.zx, {
-                        onClick: T,
-                        children: E.Z.Messages.VERIFICATION_OPEN_DISCORD
+                    (0, r.jsx)(s.zx, {
+                        onClick: v,
+                        children: h.NW.string(h.t.uJWIj4)
                     })
                 ]
             })
-          : null != f
-            ? (0, s.jsxs)(o.ZP, {
+          : null != x
+            ? (0, r.jsxs)(s.ZP, {
                   children: [
-                      (0, s.jsx)(o.Ee, {
-                          className: g.image,
+                      (0, r.jsx)(s.Ee, {
+                          className: f.image,
                           src: n(375673)
                       }),
-                      (0, s.jsx)(o.Dx, {
-                          className: g.title,
-                          children: E.Z.Messages.VERFICATION_EXPIRED
+                      (0, r.jsx)(s.Dx, {
+                          className: f.title,
+                          children: h.NW.string(h.t.PCgG39)
                       }),
-                      (0, s.jsx)(o.DK, {
-                          className: g.subtitle,
-                          children: E.Z.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
+                      (0, r.jsx)(s.DK, {
+                          className: f.subtitle,
+                          children: h.NW.string(h.t.tQpeAw)
                       }),
-                      (0, s.jsx)(o.zx, {
-                          onClick: T,
-                          children: E.Z.Messages.VERIFICATION_OPEN_DISCORD
+                      (0, r.jsx)(s.zx, {
+                          onClick: v,
+                          children: h.NW.string(h.t.uJWIj4)
                       })
                   ]
               })
-            : (0, s.jsxs)(o.ZP, {
+            : (0, r.jsxs)(s.ZP, {
                   children: [
-                      (0, s.jsx)(o.Ee, {
-                          className: g.image,
+                      (0, r.jsx)(s.Ee, {
+                          className: f.image,
                           src: n(892235)
                       }),
-                      (0, s.jsx)(o.Dx, {
-                          className: g.title,
-                          children: E.Z.Messages.VERIFICATION_VERIFYING
+                      (0, r.jsx)(s.Dx, {
+                          className: f.title,
+                          children: h.NW.string(h.t['0c8+5u'])
                       }),
-                      (0, s.jsx)(o.DK, {
-                          className: g.subtitle,
-                          children: E.Z.Messages.ACTION_MAY_TAKE_A_MOMENT
+                      (0, r.jsx)(s.DK, {
+                          className: f.subtitle,
+                          children: h.NW.string(h.t.ULTCBA)
                       }),
-                      (0, s.jsx)(o.zx, {
+                      (0, r.jsx)(s.zx, {
                           submitting: !0,
-                          color: o.zx.Colors.PRIMARY
+                          color: s.zx.Colors.PRIMARY
                       })
                   ]
               });
 }
-i.ZP.initialize();
+o.ZP.initialize();

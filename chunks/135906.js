@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => o });
 var r = n(871465);
 let i = {
     [r.YC.CLASSIC]: {
@@ -29,33 +25,36 @@ let i = {
         poggermode_achievement_unlock: 'poggermode_achievement_unlock',
         stage_waiting: 'stage_waiting'
     },
-    [r.YC.DETUNE]: {
-        discodo: 'detune_discodo',
-        message1: 'detune_message1',
-        deafen: 'detune_deafen',
-        undeafen: 'detune_undeafen',
-        mute: 'detune_mute',
-        unmute: 'detune_unmute',
-        disconnect: 'detune_disconnect',
-        ptt_start: 'detune_ptt_start',
-        ptt_stop: 'detune_ptt_stop',
-        user_join: 'detune_user_join',
-        user_leave: 'detune_user_leave',
-        user_moved: 'detune_user_moved',
-        call_calling: 'detune_call_calling',
-        call_ringing: 'detune_call_ringing',
-        stream_started: 'detune_stream_started',
-        stream_ended: 'detune_stream_ended',
-        stream_user_joined: 'detune_stream_user_joined',
-        stream_user_left: 'detune_stream_user_left'
-    },
     [r.YC.RETRO]: { message1: 'bit_message1' },
     [r.YC.BUBBLE]: { message1: 'bop_message1' },
     [r.YC.DUCKY]: { message1: 'ducky_message1' },
     [r.YC.LOFI]: { message1: 'lofi_message1' },
     [r.YC.ASMR]: { message1: 'asmr_message1' },
-    [r.YC.DISCODO]: { message1: 'discodo' }
+    [r.YC.DISCODO]: { message1: 'discodo' },
+    [r.YC.HALLOWEEN]: {
+        call_calling: 'halloween_call_calling',
+        call_ringing: 'halloween_call_ringing',
+        message1: 'halloween_message1',
+        deafen: 'halloween_deafen',
+        undeafen: 'halloween_undeafen',
+        mute: 'halloween_mute',
+        unmute: 'halloween_unmute',
+        disconnect: 'halloween_disconnect',
+        user_join: 'halloween_user_join',
+        user_leave: 'halloween_user_leave'
+    },
+    [r.YC.WINTER_HOLIDAY]: {
+        call_calling: 'winter_call_calling',
+        call_ringing: 'winter_call_ringing',
+        deafen: 'winter_deafen',
+        undeafen: 'winter_undeafen',
+        mute: 'winter_mute',
+        unmute: 'winter_unmute',
+        disconnect: 'winter_disconnect',
+        user_join: 'winter_user_join',
+        user_leave: 'winter_user_leave'
+    }
 };
-function a(e) {
+function o(e) {
     return i[e];
 }

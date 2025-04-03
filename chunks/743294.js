@@ -1,14 +1,8 @@
 n.d(t, {
-    Li: function () {
-        return r;
-    },
-    aY: function () {
-        return s;
-    },
-    v6: function () {
-        return o;
-    }
+    Li: () => s,
+    aY: () => r,
+    v6: () => o
 });
-let s = '#00000000',
+let r = '#00000000',
     o = '#CDD8FF1A',
-    r = 12;
+    s = 12;

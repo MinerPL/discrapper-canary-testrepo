@@ -1,2 +1,1 @@
-var n = r(400957);
-e.exports = n && !Symbol.sham && 'symbol' == typeof Symbol.iterator;
+t.exports = a(400957) && !Symbol.sham && 'symbol' == typeof Symbol.iterator;

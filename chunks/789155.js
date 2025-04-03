@@ -1,69 +1,70 @@
-var t = n(735250);
-n(470079);
-var a = n(780384),
-    i = n(481060),
-    r = n(410030),
-    l = n(689938),
-    o = n(866152),
-    c = n(982404),
-    u = n(299156);
-s.Z = function (e) {
-    let { churnUserDiscountOffer: s, onDiscountClaim: n, onContinue: _ } = e,
-        d = (0, r.ZP)(),
-        I = (0, a.wj)(d) ? c : u;
+r.d(s, { Z: () => m });
+var t = r(200651);
+r(192379);
+var n = r(780384),
+    a = r(481060),
+    o = r(410030),
+    i = r(388032),
+    l = r(615836),
+    c = r(982404),
+    u = r(299156);
+let m = function (e) {
+    let { churnUserDiscountOffer: s, onDiscountClaim: r, onContinue: m } = e,
+        d = (0, o.ZP)(),
+        p = (0, n.wj)(d) ? c : u;
     return null == s
         ? null
         : (0, t.jsxs)('div', {
-              className: o.churnFooterContainer,
+              className: l.churnFooterContainer,
               children: [
-                  (0, t.jsx)('div', { className: o.churnFooterGlow }),
-                  (0, t.jsx)('div', { className: o.churnFooterTopBorder }),
+                  (0, t.jsx)('div', { className: l.churnFooterGlow }),
+                  (0, t.jsx)('div', { className: l.churnFooterTopBorder }),
                   (0, t.jsx)('div', {
-                      className: o.churnFooterContent,
+                      className: l.churnFooterContent,
                       children: (0, t.jsxs)('div', {
-                          className: o.churnFooterContentBody,
+                          className: l.churnFooterContentBody,
                           children: [
                               (0, t.jsx)('img', {
                                   alt: '',
-                                  src: I,
-                                  className: o.churnFooterIcon
+                                  src: p,
+                                  className: l.churnFooterIcon
                               }),
                               (0, t.jsxs)('div', {
-                                  className: o.churnFooterContentBodyInner,
+                                  className: l.churnFooterContentBodyInner,
                                   children: [
-                                      (0, t.jsx)(i.Text, {
+                                      (0, t.jsx)(a.Text, {
                                           variant: 'text-md/medium',
-                                          className: o.churnFooterCopy,
-                                          children: l.Z.Messages.CHURN_DISCOUNT_DESCRIPTION.format({
+                                          className: l.churnFooterCopy,
+                                          children: i.NW.format(i.t['2gem09'], {
                                               percent: s.discount.amount,
                                               numMonths: s.discount.user_usage_limit
                                           })
                                       }),
                                       (0, t.jsxs)('div', {
-                                          className: o.churnFooterCTAs,
+                                          className: l.churnFooterCTAs,
                                           children: [
-                                              (0, t.jsxs)(i.ShinyButton, {
-                                                  className: o.churnFooterClaimCTA,
-                                                  innerClassName: o.churnFooterClaimCTAInner,
-                                                  look: i.ButtonLooks.OUTLINED,
-                                                  color: i.ButtonColors.CUSTOM,
-                                                  onClick: () => (null == n ? void 0 : n()),
+                                              (0, t.jsxs)(a.gtL, {
+                                                  className: l.churnFooterClaimCTA,
+                                                  innerClassName: l.churnFooterClaimCTAInner,
+                                                  look: a.iLD.OUTLINED,
+                                                  color: a.Ttl.CUSTOM,
+                                                  onClick: () => (null == r ? void 0 : r()),
                                                   children: [
-                                                      (0, t.jsx)(i.NitroWheelIcon, {
+                                                      (0, t.jsx)(a.SrA, {
                                                           size: 'xs',
                                                           color: 'currentColor',
-                                                          className: o.churnFooterClaimIcon
+                                                          className: l.churnFooterClaimIcon
                                                       }),
-                                                      (0, t.jsx)(i.Text, {
+                                                      (0, t.jsx)(a.Text, {
                                                           variant: 'text-sm/semibold',
-                                                          className: o.churnFooterClaimCopy,
-                                                          children: l.Z.Messages.CHURN_DISCOUNT_CLAIM
+                                                          className: l.churnFooterClaimCopy,
+                                                          children: i.NW.string(i.t.zrCzVF)
                                                       })
                                                   ]
                                               }),
-                                              (0, t.jsx)(i.Button, {
-                                                  onClick: () => (null == _ ? void 0 : _()),
-                                                  children: l.Z.Messages.CONTINUE
+                                              (0, t.jsx)(a.zxk, {
+                                                  onClick: () => (null == m ? void 0 : m()),
+                                                  children: i.NW.string(i.t['3PatS0'])
                                               })
                                           ]
                                       })

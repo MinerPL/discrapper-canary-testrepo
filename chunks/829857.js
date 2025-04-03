@@ -1,12 +1,3 @@
-var s, a;
-n.d(t, {
-    C: function () {
-        return s;
-    }
-}),
-    ((a = s || (s = {}))[(a.UNSUBMITTED = 1)] = 'UNSUBMITTED'),
-    (a[(a.PENDING = 2)] = 'PENDING'),
-    (a[(a.ACTION_REQUIRED = 3)] = 'ACTION_REQUIRED'),
-    (a[(a.ACTIVE = 4)] = 'ACTIVE'),
-    (a[(a.BLOCKED = 5)] = 'BLOCKED'),
-    (a[(a.SUSPENDED = 6)] = 'SUSPENDED');
+n.d(t, { C: () => i });
+var r,
+    i = (((r = {})[(r.UNSUBMITTED = 1)] = 'UNSUBMITTED'), (r[(r.PENDING = 2)] = 'PENDING'), (r[(r.ACTION_REQUIRED = 3)] = 'ACTION_REQUIRED'), (r[(r.ACTIVE = 4)] = 'ACTIVE'), (r[(r.BLOCKED = 5)] = 'BLOCKED'), (r[(r.SUSPENDED = 6)] = 'SUSPENDED'), r);

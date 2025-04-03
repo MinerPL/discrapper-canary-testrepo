@@ -1,152 +1,157 @@
-a(47120);
-var n = a(735250),
-    l = a(470079),
-    r = a(120356),
-    t = a.n(r),
-    i = a(512722),
-    o = a.n(i),
-    E = a(442837),
-    c = a(481060),
-    _ = a(493683),
-    I = a(220779),
-    u = a(142550),
-    d = a(201133),
-    A = a(693824),
-    R = a(919394),
-    N = a(91140),
-    O = a(297781),
-    T = a(359110),
-    m = a(592125),
-    L = a(944486),
-    g = a(594174),
-    M = a(5192),
-    P = a(810568),
-    S = a(289538),
-    G = a(689938),
-    f = a(255341),
-    C = a(707443);
-let v = (e) => {
-    let { entry: s, setGeneratedImage: a, nickName: r } = e,
-        [i, E] = l.useState();
-    return (
-        l.useEffect(() => {
-            (async () => {
-                let e = await _.Z.getOrEnsurePrivateChannel(s.author_id),
-                    n = m.Z.getChannel(e);
-                o()(null != n, 'DM channel cannot be null');
-                let l = await (0, R.QC)(s, n, A.kH.Base64),
-                    r = await (0, R.QC)(s, n, A.kH.CloudUpload);
-                E(l), a(r);
-            })();
-        }, [s, a]),
-        (0, n.jsxs)('div', {
-            className: f.reactReplyPreviewWrapper,
-            children: [
-                (0, n.jsx)('div', { className: t()(f.placeholderImage, null != i && f.in) }),
-                null != i &&
-                    (0, n.jsx)('img', {
-                        className: f.reactReplyPreview,
-                        src: i,
-                        alt: G.Z.Messages.GAME_PROFILE_GAME_REACT_REPLY_ALT.format({
-                            userName: r,
-                            gameName: s.extra.game_name
-                        })
-                    })
-            ]
-        })
-    );
-};
-s.Z = (e) => {
-    let { entry: s, viewId: a, style: r = {}, onClose: i } = e,
-        A = (0, E.e7)([L.Z, m.Z], () => m.Z.getChannel(L.Z.getChannelId())),
-        R = (0, E.e7)([g.default], () => g.default.getUser(s.author_id)),
-        h = l.useMemo(() => M.ZP.getName(null == A ? void 0 : A.guild_id, null == A ? void 0 : A.id, R), [R, A]),
-        [x, p] = l.useState();
-    return null == R
+r.d(t, { Z: () => y });
+var n = r(200651),
+    a = r(192379),
+    o = r(120356),
+    i = r.n(o),
+    l = r(442837),
+    s = r(481060),
+    c = r(178762),
+    u = r(91140),
+    d = r(297781),
+    p = r(592125),
+    f = r(944486),
+    m = r(594174),
+    g = r(5192),
+    b = r(810568),
+    _ = r(388032),
+    h = r(865136),
+    O = r(263930);
+let y = (e) => {
+    let { entry: t, viewId: r, officialGuildId: o, onClose: y } = e,
+        v = a.useRef(null),
+        j = (0, l.e7)([f.Z, p.Z], () => p.Z.getChannel(f.Z.getChannelId())),
+        x = (0, l.e7)([m.default], () => m.default.getUser(t.author_id)),
+        { nick: P, avatar: E } = a.useMemo(() => {
+            let e = null == x ? void 0 : x.getAvatarURL(null == j ? void 0 : j.guild_id, 48, !1);
+            return {
+                nick: g.ZP.getName(null == j ? void 0 : j.guild_id, null == j ? void 0 : j.id, x),
+                avatar: e
+            };
+        }, [x, j]);
+    return null == x
         ? null
-        : (0, n.jsxs)('div', {
-              className: f.profileEntryCard,
-              style: r,
-              children: [
-                  (0, n.jsxs)('div', {
-                      className: t()(C.row, C.gapSm),
-                      style: r,
-                      children: [
-                          (0, n.jsx)(S.D, {
-                              user: R,
-                              channel: A
+        : (0, n.jsx)(s.yRy, {
+              targetElementRef: v,
+              position: 'right',
+              renderPopout: (e) => {
+                  let { closePopout: a, updatePosition: i } = e;
+                  return (0, n.jsx)(c.J, {
+                      entry: t,
+                      closePopout: a,
+                      updatePopoutPosition: i,
+                      onReaction: () => {
+                          (0, b.UE)({
+                              action: b.as.SendMessageUser,
+                              applicationId: t.extra.application_id,
+                              gameName: t.extra.game_name,
+                              recipientUserId: t.author_id,
+                              viewId: r,
+                              officialGuildId: o
                           }),
-                          (0, n.jsx)(c.Spacer, { size: 10 }),
-                          (0, n.jsx)('div', {
-                              className: t()(f.playerInfo),
-                              children: (0, n.jsxs)('div', {
-                                  className: t()(C.column, C.gapXs),
-                                  children: [
-                                      (0, n.jsx)(c.Text, {
-                                          variant: 'text-md/medium',
-                                          color: 'text-primary',
-                                          lineClamp: 1,
-                                          children: h
-                                      }),
-                                      (0, n.jsx)(O.Gk, {
-                                          location: O.Gt.GAME_PROFILE,
-                                          children: N.W.map((e, a) => (0, n.jsx)(e, { entry: s }, a))
+                              y(),
+                              a();
+                      },
+                      onUserPopoutClosed: () => a(),
+                      disableGameProfileLinks: !0
+                  });
+              },
+              positionKey: 'game-profile-entry-'.concat(t.id),
+              onRequestOpen: () => {
+                  (0, b.UE)({
+                      action: b.as.ClickMessageUser,
+                      applicationId: t.extra.application_id,
+                      gameName: t.extra.game_name,
+                      recipientUserId: t.author_id,
+                      viewId: r,
+                      officialGuildId: o
+                  });
+              },
+              children: (e) => {
+                  var r, a;
+                  return (0, n.jsx)(
+                      s.P3F,
+                      ((r = (function (e) {
+                          for (var t = 1; t < arguments.length; t++) {
+                              var r = null != arguments[t] ? arguments[t] : {},
+                                  n = Object.keys(r);
+                              'function' == typeof Object.getOwnPropertySymbols &&
+                                  (n = n.concat(
+                                      Object.getOwnPropertySymbols(r).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                       })
-                                  ]
-                              })
-                          })
-                      ]
-                  }),
-                  (0, n.jsx)('div', {
-                      className: f.reactions,
-                      children: (0, n.jsx)(I.ZP, {
-                          showReply: !0,
-                          showReact: !1,
-                          onInteraction: async (e) => {
-                              let { interactionType: n, reply: l } = e;
-                              if (
-                                  (n === u.L.ReplyBegin &&
-                                      (0, P.UE)({
-                                          action: P.as.ClickMessageUser,
-                                          applicationId: s.extra.application_id,
-                                          gameName: s.extra.game_name,
-                                          recipientUserId: s.author_id,
-                                          viewId: a
-                                      }),
-                                  n === u.L.ReplySubmit)
-                              ) {
-                                  (0, P.UE)({
-                                      action: P.as.SendMessageUser,
-                                      applicationId: s.extra.application_id,
-                                      gameName: s.extra.game_name,
-                                      recipientUserId: s.author_id,
-                                      viewId: a
+                                  )),
+                                  n.forEach(function (t) {
+                                      var n;
+                                      (n = r[t]),
+                                          t in e
+                                              ? Object.defineProperty(e, t, {
+                                                    value: n,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0
+                                                })
+                                              : (e[t] = n);
                                   });
-                                  let e = await _.Z.getOrEnsurePrivateChannel(s.author_id),
-                                      n = m.Z.getChannel(e);
-                                  o()(null != n, 'GameProfile ReactReply - DM channel cannot be null'),
-                                      o()(null != x, 'GameProfile ReactReply - Reaction Image cannot be null'),
-                                      (0, d.B)({
-                                          file: x,
-                                          channel: n,
-                                          altText: '',
-                                          reply: null != l ? l : ''
-                                      }),
-                                      i(),
-                                      (0, T.Kh)(n.id);
-                              }
-                          },
-                          popoutProps: {
-                              popoutBody: (0, n.jsx)(v, {
-                                  entry: s,
-                                  setGeneratedImage: p,
-                                  nickName: h
-                              }),
-                              replyHeaderText: '',
-                              replyPlaceholder: G.Z.Messages.QUICK_DM_USER.format({ name: h })
                           }
-                      })
-                  })
-              ]
+                          return e;
+                      })({ innerRef: v }, e)),
+                      (a = a =
+                          {
+                              className: h.profileEntryCard,
+                              children: (0, n.jsx)(s.tEY, {
+                                  offset: {
+                                      top: 4,
+                                      bottom: 4,
+                                      left: 4,
+                                      right: 4
+                                  },
+                                  children: (0, n.jsxs)(n.Fragment, {
+                                      children: [
+                                          (0, n.jsx)('img', {
+                                              className: h.avatar,
+                                              src: E,
+                                              alt: _.NW.formatToPlainString(_.t.IzVXxc, { userName: P })
+                                          }),
+                                          (0, n.jsx)('div', {
+                                              className: h.playerInfo,
+                                              children: (0, n.jsxs)('div', {
+                                                  className: i()(O.column, O.gapXs),
+                                                  children: [
+                                                      (0, n.jsx)(s.Text, {
+                                                          variant: 'text-md/medium',
+                                                          color: 'text-primary',
+                                                          lineClamp: 1,
+                                                          children: P
+                                                      }),
+                                                      (0, n.jsx)(d.Gk, {
+                                                          location: d.Gt.GAME_PROFILE,
+                                                          children: u.W.map((e, r) => (0, n.jsx)(e, { entry: t }, r))
+                                                      })
+                                                  ]
+                                              })
+                                          }),
+                                          (0, n.jsx)('div', {
+                                              className: h.reactions,
+                                              children: (0, n.jsx)(s.n$P, { size: 'sm' })
+                                          })
+                                      ]
+                                  })
+                              })
+                          }),
+                      Object.getOwnPropertyDescriptors
+                          ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                          : (function (e, t) {
+                                var r = Object.keys(e);
+                                if (Object.getOwnPropertySymbols) {
+                                    var n = Object.getOwnPropertySymbols(e);
+                                    r.push.apply(r, n);
+                                }
+                                return r;
+                            })(Object(a)).forEach(function (e) {
+                                Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                            }),
+                      r)
+                  );
+              }
           });
 };

@@ -1,102 +1,98 @@
-l.d(n, {
-    Z: function () {
-        return T;
-    }
-});
-var s = l(735250),
-    a = l(470079),
-    t = l(442837),
-    i = l(481060),
-    r = l(471445),
-    o = l(41776),
-    d = l(592125),
-    c = l(430824),
-    u = l(594174),
-    E = l(236373),
-    _ = l(230900),
-    I = l(405613),
-    x = l(460838),
-    m = l(689938),
-    N = l(98758);
-function T(e) {
-    var n, l, T;
-    let { guildId: h, guildEvent: g, guildEventId: v, error: S } = e,
-        C = a.useMemo(() => (0, E.Gb)(g, h), [g, h]),
-        { channel_id: L, name: A, image: Z, description: f } = C,
-        j = (0, t.e7)([d.Z], () => d.Z.getChannel(L), [L]),
-        M = (0, t.e7)([c.Z], () => c.Z.getGuild(h), [h]),
-        D = (0, _.cS)(C),
-        R = (0, t.e7)([u.default], () => (null != g.creatorId ? u.default.getUser(g.creatorId) : u.default.getCurrentUser()), [g.creatorId]),
-        p = (0, t.e7)([o.Z], () => o.Z.isLurking(h), [h]),
-        V = (0, r.KS)(j, M);
-    return (0, s.jsxs)('div', {
-        className: N.content,
+n.d(t, { Z: () => p }), n(266796), n(301563);
+var r = n(200651),
+    l = n(192379),
+    a = n(442837),
+    i = n(481060),
+    s = n(471445),
+    o = n(41776),
+    c = n(592125),
+    u = n(430824),
+    d = n(594174),
+    m = n(236373),
+    x = n(230900),
+    g = n(405613),
+    h = n(460838),
+    v = n(388032),
+    f = n(237466);
+function p(e) {
+    var t, n;
+    let { guildId: p, guildEvent: j, guildEventId: N, error: b } = e,
+        y = l.useMemo(() => (0, m.Gb)(j, p), [j, p]),
+        { channel_id: O, name: E, image: C, description: I } = y,
+        S = (0, a.e7)([c.Z], () => c.Z.getChannel(O), [O]),
+        T = (0, a.e7)([u.Z], () => u.Z.getGuild(p), [p]),
+        P = (0, x.cS)(y),
+        W = (0, a.e7)([d.default], () => (null != j.creatorId ? d.default.getUser(j.creatorId) : d.default.getCurrentUser()), [j.creatorId]),
+        w = (0, a.e7)([o.Z], () => o.Z.isLurking(p), [p]),
+        Z = (0, s.KS)(S, T);
+    return (0, r.jsxs)('div', {
+        className: f.content,
         children: [
-            (0, s.jsx)(x.Z, {
-                className: N.previewCard,
-                guild: M,
-                channel: j,
-                location: null != D ? D : void 0,
-                creator: R,
-                name: A,
-                description: f,
-                imageSource: ((l = (0, E.Gb)(g, h, v)), null == (T = Z) && null == l.image ? null : null != T && /^data:/.test(T) ? T : (0, I.Z)(l)),
+            (0, r.jsx)(h.Z, {
+                className: f.previewCard,
+                guild: T,
+                channel: S,
+                location: null != P ? P : void 0,
+                creator: W,
+                name: E,
+                description: I,
+                imageSource: ((n = (0, m.Gb)(j, p, N)), null == C && null == n.image ? null : null != C && /^data:/.test(C) ? C : (0, g.Z)(n)),
                 isActive: !1,
-                isUserLurking: p,
+                isUserLurking: w,
                 speakers: [],
                 speakerCount: 0,
                 rsvped: !0,
-                guildEvent: C,
-                eventPreview: C
+                guildEvent: y,
+                eventPreview: y
             }),
-            (0, s.jsxs)('div', {
-                className: N.textContainer,
+            (0, r.jsxs)('div', {
+                className: f.textContainer,
                 children: [
-                    (0, s.jsx)(i.Heading, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: m.Z.Messages.GUILD_EVENT_PREVIEW_TITLE
+                        children: v.NW.string(v.t.yBsFEx)
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        className: N.subheader,
+                        className: f.subheader,
                         children:
                             null != location
-                                ? m.Z.Messages.GUILD_EVENT_PREVIEW_EXTERNAL_EVENT_BODY
-                                : m.Z.Messages.GUILD_EVENT_PREVIEW_BODY.format({
-                                      channelName: null !== (n = null == j ? void 0 : j.name) && void 0 !== n ? n : '',
+                                ? v.NW.string(v.t.KDPFi4)
+                                : v.NW.format(v.t.f55NX1, {
+                                      channelName: null != (t = null == S ? void 0 : S.name) ? t : '',
                                       channelHook: () => {
                                           var e;
-                                          return (0, s.jsxs)('div', {
-                                              className: N.channelName,
+                                          return (0, r.jsxs)('div', {
+                                              className: f.channelName,
                                               children: [
-                                                  null != V
-                                                      ? (0, s.jsx)(V, {
+                                                  null != Z
+                                                      ? (0, r.jsx)(Z, {
                                                             size: 'custom',
                                                             color: 'currentColor',
                                                             width: 20,
                                                             height: 20,
-                                                            className: N.icon
+                                                            className: f.icon
                                                         })
-                                                      : (0, s.jsx)(i.LocationIcon, {
+                                                      : (0, r.jsx)(i._tJ, {
                                                             size: 'custom',
                                                             color: 'currentColor',
                                                             height: 18,
                                                             width: 18,
-                                                            className: N.locationIcon
+                                                            className: f.locationIcon
                                                         }),
-                                                  null !== (e = null == j ? void 0 : j.name) && void 0 !== e ? e : D
+                                                  null != (e = null == S ? void 0 : S.name) ? e : P
                                               ]
                                           });
                                       }
                                   })
                     }),
-                    null != S &&
-                        (0, s.jsx)(i.Text, {
+                    null != b &&
+                        (0, r.jsx)(i.Text, {
                             color: 'text-danger',
                             variant: 'text-xs/normal',
-                            className: N.subheader,
-                            children: S.getAnyErrorMessage()
+                            className: f.subheader,
+                            children: b.getAnyErrorMessage()
                         })
                 ]
             })

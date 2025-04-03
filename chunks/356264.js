@@ -1,42 +1,46 @@
+n.d(t, { Z: () => _ });
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
-let u = 0,
-    c = {};
-class d extends (s = o.ZP.Store) {
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let s = 0,
+    l = {};
+function c(e) {
+    return (l[e.guildId] = { type: 'loading' }), !1;
+}
+function u(e) {
+    (l[e.guildId] = e.guildInfo), s++;
+}
+function d(e) {
+    return (l[e.guildId] = { type: 'failed' }), !1;
+}
+class f extends (r = i.ZP.Store) {
     getGuild(e) {
-        let t = c[e];
-        if (null != t) {
-            if (!('type' in t)) return t;
-        }
+        let t = l[e];
+        if (null != t && !('type' in t)) return t;
     }
     getGuildOrStatus(e) {
-        return c[e];
+        return l[e];
     }
     getVersion() {
-        return u;
+        return s;
     }
 }
-(a = 'BasicGuildStore'),
-    (i = 'displayName') in (r = d)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new d(l.Z, {
-        BASIC_GUILD_FETCH: function (e) {
-            return (c[e.guildId] = { type: 'loading' }), !1;
-        },
-        BASIC_GUILD_FETCH_SUCCESS: function (e) {
-            (c[e.guildId] = e.guildInfo), u++;
-        },
-        BASIC_GUILD_FETCH_FAILURE: function (e) {
-            return (c[e.guildId] = { type: 'failed' }), !1;
-        }
-    }));
+a(f, 'displayName', 'BasicGuildStore');
+let _ = new f(o.Z, {
+    BASIC_GUILD_FETCH: c,
+    BASIC_GUILD_FETCH_SUCCESS: u,
+    BASIC_GUILD_FETCH_FAILURE: d
+});

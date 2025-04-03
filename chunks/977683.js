@@ -1,30 +1,26 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var i = n(470079),
-    a = n(410030),
-    s = n(695346),
-    r = n(798628),
-    l = n(275344),
-    o = n(918088),
+n.d(t, { Z: () => u });
+var r = n(192379),
+    i = n(410030),
+    a = n(695346),
+    l = n(798628),
+    o = n(275344),
+    s = n(918088),
     c = n(562293);
 function u(e, t) {
     var n;
-    let u = (0, l.v)(e),
-        d = (0, r.cE)(u.getChannelId())[u.id],
-        _ = (0, c.Z)(null === (n = u.poll) || void 0 === n ? void 0 : n.expiry),
-        E = s.Yk.useSetting(),
-        I = (0, a.ZP)(),
-        m = null != t ? t : I;
-    return i.useMemo(
+    let u = (0, o.v)(e),
+        d = (0, l.cE)(u.getChannelId())[u.id],
+        p = (0, c.Z)(null == (n = u.poll) ? void 0 : n.expiry),
+        m = a.Yk.useSetting(),
+        f = (0, i.ZP)(),
+        h = null != t ? t : f;
+    return r.useMemo(
         () =>
-            (0, o.ZP)(u, d, {
-                animateEmoji: E,
-                theme: m,
-                formattedExpirationLabel: _
+            (0, s.ZP)(u, d, {
+                animateEmoji: m,
+                theme: h,
+                formattedExpirationLabel: p
             }),
-        [E, u, d, _, m]
+        [m, u, d, p, h]
     );
 }

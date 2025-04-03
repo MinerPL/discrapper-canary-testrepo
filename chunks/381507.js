@@ -1,47 +1,77 @@
-var t = n(735250);
-n(470079);
-var r = n(780384),
-    i = n(481060),
-    l = n(410030),
-    a = n(204197),
-    o = n(51144),
+n.d(t, { Z: () => x });
+var r = n(200651);
+n(192379);
+var i = n(780384),
+    l = n(481060),
+    s = n(410030),
+    o = n(518950),
+    a = n(51144),
     C = n(105759),
     d = n(898969),
-    u = n(703614),
-    c = n(182294),
-    _ = n(689938),
-    p = n(521096);
-s.Z = () => {
+    c = n(703614),
+    u = n(182294),
+    p = n(388032),
+    _ = n(332546);
+let x = () => {
     let e = (0, C.Z)(),
-        { avatarSrc: s, eventHandlers: n } = (0, a.Z)({
+        { avatarSrc: t, eventHandlers: n } = (0, o.Z)({
             user: e,
-            size: c.EF.SIZE_32,
+            size: u.EF.SIZE_32,
             animateOnHover: !0
         }),
-        x = (0, l.Fg)(),
-        L = (0, r.ap)(x),
-        h = o.ZP.getName(e),
-        f = L ? d.Z : u.Z;
+        x = (0, s.Fg)(),
+        f = (0, i.ap)(x),
+        h = a.ZP.getName(e),
+        m = f ? d.Z : c.Z;
     return null == e
         ? null
-        : (0, t.jsxs)('div', {
-              className: p.attributionBannerContainer,
+        : (0, r.jsxs)('div', {
+              className: _.attributionBannerContainer,
               children: [
-                  (0, t.jsx)('div', {
-                      className: p.avatarContainer,
-                      children: (0, t.jsx)(i.Avatar, {
-                          src: s,
-                          'aria-label': e.username,
-                          size: c.EF.SIZE_32,
-                          ...n
-                      })
+                  (0, r.jsx)('div', {
+                      className: _.avatarContainer,
+                      children: (0, r.jsx)(
+                          l.qEK,
+                          (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var n = null != arguments[t] ? arguments[t] : {},
+                                      r = Object.keys(n);
+                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                      (r = r.concat(
+                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          })
+                                      )),
+                                      r.forEach(function (t) {
+                                          var r;
+                                          (r = n[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
+                                                        value: r,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0
+                                                    })
+                                                  : (e[t] = r);
+                                      });
+                              }
+                              return e;
+                          })(
+                              {
+                                  src: t,
+                                  'aria-label': e.username,
+                                  size: u.EF.SIZE_32
+                              },
+                              n
+                          )
+                      )
                   }),
-                  (0, t.jsx)(i.Text, {
+                  (0, r.jsx)(l.Text, {
                       variant: 'text-xs/bold',
-                      className: p.bannerHeader,
-                      children: _.Z.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({ userName: h })
+                      className: _.bannerHeader,
+                      children: p.NW.format(p.t.oxhCOj, { userName: h })
                   }),
-                  (0, t.jsx)(f, { className: p.bannerIcon })
+                  (0, r.jsx)(m, { className: _.bannerIcon })
               ]
           });
 };

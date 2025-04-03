@@ -1,44 +1,40 @@
-r.d(t, {
-    P: function () {
-        return s;
-    }
-});
-var n = r(101284),
-    a = r(696486),
-    o = r(147498),
-    i = r(218234),
-    _ = r(823878),
-    E = r(939747);
+a.d(e, { P: () => s });
+var r = a(101284),
+    n = a(696486),
+    _ = a(147498),
+    o = a(218234),
+    i = a(823878),
+    c = a(939747);
 class s {
-    constructor(e) {
-        (this._client = e), (this._buckets = new Map()), (this._interval = setInterval(() => this.flush(), o.RF));
+    constructor(t) {
+        (this._client = t), (this._buckets = new Map()), (this._interval = setInterval(() => this.flush(), _.RF));
     }
-    add(e, t, r, i = 'none', s = {}, c = (0, n.ph)()) {
-        let I = Math.floor(c),
-            u = (0, E.s3)(t),
-            l = (0, E.Bg)(s),
-            R = (0, E.OC)(i),
-            A = (0, E.Ic)(e, u, R, l),
-            T = this._buckets.get(A),
-            d = T && e === o.is ? T.metric.weight : 0;
-        T
-            ? (T.metric.add(r), T.timestamp < I && (T.timestamp = I))
-            : ((T = {
-                  metric: new _.ZN[e](r),
-                  timestamp: I,
-                  metricType: e,
+    add(t, e, a, o = 'none', s = {}, E = (0, r.ph)()) {
+        let l = Math.floor(E),
+            u = (0, c.s3)(e),
+            I = (0, c.Bg)(s),
+            R = (0, c.OC)(o),
+            d = (0, c.Ic)(t, u, R, I),
+            A = this._buckets.get(d),
+            f = A && t === _.is ? A.metric.weight : 0;
+        A
+            ? (A.metric.add(a), A.timestamp < l && (A.timestamp = l))
+            : ((A = {
+                  metric: new i.ZN[t](a),
+                  timestamp: l,
+                  metricType: t,
                   name: u,
                   unit: R,
-                  tags: l
+                  tags: I
               }),
-              this._buckets.set(A, T));
-        let N = 'string' == typeof r ? T.metric.weight - d : r;
-        (0, a.yc)(e, u, N, R, s, A);
+              this._buckets.set(d, A));
+        let p = 'string' == typeof a ? A.metric.weight - f : a;
+        (0, n.yc)(t, u, p, R, s, d);
     }
     flush() {
         if (0 === this._buckets.size) return;
-        let e = Array.from(this._buckets.values());
-        (0, i.o)(this._client, e), this._buckets.clear();
+        let t = Array.from(this._buckets.values());
+        (0, o.o)(this._client, t), this._buckets.clear();
     }
     close() {
         clearInterval(this._interval), this.flush();

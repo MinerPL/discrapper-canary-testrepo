@@ -1,66 +1,62 @@
-t.d(s, {
-    Z: function () {
-        return C;
-    }
-}),
-    t(47120);
-var n = t(735250),
-    a = t(470079),
-    i = t(481060),
-    r = t(541716),
-    o = t(752305),
-    l = t(893718),
-    c = t(313201),
-    d = t(131704),
-    _ = t(993413),
-    E = t(981631),
-    u = t(689938),
-    I = t(637309);
-let T = (0, c.hQ)(),
-    S = (0, d.kt)({
+n.d(t, { Z: () => N }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(541716),
+    l = n(752305),
+    o = n(893718),
+    c = n(313201),
+    d = n(131704),
+    u = n(993413),
+    m = n(981631),
+    g = n(388032),
+    p = n(967600);
+let h = (0, c.hQ)(),
+    f = (0, d.kt)({
         id: '1',
-        type: E.d4z.DM
+        type: m.d4z.DM
     }),
-    N = (0, c.hQ)();
-function C(e) {
-    let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: C, currentBio: m, disabled: A = !1 } = e,
-        [O, g] = a.useState(null != d ? d : m),
-        [h, p] = a.useState((0, o.JM)(O)),
-        R = a.useRef(!1);
+    b = (0, c.hQ)();
+function N(e) {
+    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: N, currentBio: x, disabled: _ = !1 } = e,
+        [E, j] = i.useState(null != d ? d : x),
+        [O, C] = i.useState((0, l.JM)(E)),
+        S = i.useRef(!1);
     return (
-        a.useEffect(() => {
+        i.useEffect(() => {
             if (void 0 === d) {
-                let e = (0, o.JM)(m);
-                g(m), p(e);
+                let e = (0, l.JM)(x);
+                j(x), C(e);
             }
-        }, [d, m]),
-        (0, n.jsxs)(_.Z, {
-            title: s,
-            titleId: T,
-            description: u.Z.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
-            errors: t,
-            disabled: A,
+        }, [d, x]),
+        (0, r.jsxs)(u.Z, {
+            title: t,
+            titleId: h,
+            description: g.NW.string(g.t.Bbw6AQ),
+            errors: n,
+            disabled: _,
             children: [
-                (0, n.jsx)(l.Z, {
-                    'aria-describedby': N,
-                    'aria-labelledby': T,
-                    innerClassName: I.bioTextArea,
-                    maxCharacterCount: E.tPV,
-                    onChange: function (e, s, t) {
-                        s !== O && (g(s), p(t), c(s));
+                (0, r.jsx)(o.Z, {
+                    'aria-describedby': b,
+                    'aria-labelledby': h,
+                    className: p.bioTextAreaContainer,
+                    innerClassName: p.bioTextArea,
+                    maxCharacterCount: m.tPV,
+                    onChange: function (e, t, n) {
+                        t !== E && (j(t), C(n), c(t));
                     },
-                    placeholder: C,
-                    channel: S,
-                    textValue: O,
-                    richValue: h,
-                    type: r.I.PROFILE_BIO_INPUT,
+                    placeholder: N,
+                    channel: f,
+                    textValue: E,
+                    richValue: O,
+                    type: a.Ie.PROFILE_BIO_INPUT,
                     onBlur: () => {
-                        R.current = !1;
+                        S.current = !1;
                     },
                     onFocus: () => {
-                        R.current = !0;
+                        S.current = !0;
                     },
-                    focused: R.current,
+                    focused: S.current,
                     onSubmit: function () {
                         return new Promise((e) => {
                             e({
@@ -70,9 +66,9 @@ function C(e) {
                         });
                     }
                 }),
-                (0, n.jsx)(i.HiddenVisually, {
-                    id: N,
-                    children: u.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: E.tPV })
+                (0, r.jsx)(s.nn4, {
+                    id: b,
+                    children: g.NW.format(g.t['+DFxLS'], { maxLength: m.tPV })
                 })
             ]
         })

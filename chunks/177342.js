@@ -1,33 +1,29 @@
-n.d(t, {
-    Q: function () {
-        return c;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(286379),
-    l = n(797614),
-    r = n(596739),
-    o = n(473092);
+n.d(t, { Q: () => c }), n(266796);
+var r = n(200651),
+    i = n(192379),
+    l = n(286379),
+    o = n(797614),
+    a = n(596739),
+    s = n(473092);
 function c(e) {
-    let { channelId: t, warningId: n, senderId: c, warningType: u, header: d, description: h, onDismiss: m, buttons: p } = e;
-    a.useEffect(() => {
-        l.Z.increment({ name: s.V.SAFETY_WARNING_VIEW });
+    let { channelId: t, warningId: n, senderId: c, warningType: u, header: d, description: p, onDismiss: h, buttons: f } = e;
+    i.useEffect(() => {
+        o.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
     }, []);
-    let _ = a.useCallback(() => {
-        null == m || m(),
-            (0, o.qc)({
+    let m = i.useCallback(() => {
+        null == h || h(),
+            (0, s.qc)({
                 channelId: t,
                 warningId: n,
                 senderId: c,
                 warningType: u,
-                cta: o.NM.USER_BANNER_DISMISS
+                cta: s.NM.USER_BANNER_DISMISS
             });
-    }, [m, t, n, c, u]);
-    return (0, i.jsx)(r.W, {
-        buttons: p,
-        description: h,
+    }, [h, t, n, c, u]);
+    return (0, r.jsx)(a.W, {
+        buttons: f,
+        description: p,
         header: d,
-        onDismiss: _
+        onDismiss: m
     });
 }

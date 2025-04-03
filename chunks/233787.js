@@ -1,80 +1,139 @@
-var n,
-    t,
-    c = a(735250);
-a(470079);
-var i = a(481060),
-    l = a(600164),
-    o = a(690490);
-((n = t || (t = {})).UPGRADE = 'UPGRADE'), (n.CANCEL = 'CANCEL'), (n.UNVERIFIED = 'UNVERIFIED'), (n.UNCLAIMED = 'UNCLAIMED'), (n.GRANDFATHERED = 'GRANDFATHERED');
-let r = {
+n.d(t, { Z: () => b });
+var r,
+    s = n(200651);
+n(192379);
+var i = n(481060),
+    c = n(600164),
+    o = n(390668),
+    a = (((r = a || {}).UPGRADE = 'UPGRADE'), (r.CANCEL = 'CANCEL'), (r.UNVERIFIED = 'UNVERIFIED'), (r.UNCLAIMED = 'UNCLAIMED'), (r.GRANDFATHERED = 'GRANDFATHERED'), r);
+let l = {
         UPGRADE: 'imageUpgrade',
         CANCEL: 'imageCancel',
         UNVERIFIED: 'imageUnverified',
         UNCLAIMED: 'imageUnclaimed',
         GRANDFATHERED: 'imageCancel'
     },
-    d = (e) => {
-        let { children: s, ...a } = e;
-        return (0, c.jsx)(i.ModalRoot, {
-            ...a,
-            children: s
-        });
+    u = (e) => {
+        var t,
+            n,
+            { children: r } = e,
+            c = (function (e, t) {
+                if (null == e) return {};
+                var n,
+                    r,
+                    s = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            s = {},
+                            i = Object.keys(e);
+                        for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (s[n] = e[n]);
+                        return s;
+                    })(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var i = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+                }
+                return s;
+            })(e, ['children']);
+        return (0, s.jsx)(
+            i.Y0X,
+            ((t = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, c)),
+            (n = n = { children: r }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  }),
+            t)
+        );
     };
-(d.Header = (e) => {
-    let { children: s, onClose: a } = e;
-    return (0, c.jsxs)(i.ModalHeader, {
-        justify: l.Z.Justify.BETWEEN,
+(u.Header = (e) => {
+    let { children: t, onClose: n } = e;
+    return (0, s.jsxs)(i.xBx, {
+        justify: c.Z.Justify.BETWEEN,
         separator: !1,
         children: [
-            (0, c.jsx)(i.FormTitle, {
-                tag: i.FormTitleTags.H4,
-                children: s
+            (0, s.jsx)(i.vwX, {
+                tag: i.RB0.H4,
+                children: t
             }),
-            null != a
-                ? (0, c.jsx)(i.ModalCloseButton, {
+            null != n
+                ? (0, s.jsx)(i.olH, {
                       className: o.__invalid_closeIcon,
-                      onClick: a
+                      onClick: n
                   })
                 : null
         ]
     });
 }),
-    (d.Content = (e) => {
-        let { children: s, type: a } = e;
-        return (0, c.jsxs)(i.ModalContent, {
+    (u.Content = (e) => {
+        let { children: t, type: n } = e;
+        return (0, s.jsxs)(i.hzk, {
             children: [
-                (0, c.jsx)('div', { className: o[r[a]] }),
-                (0, c.jsx)('div', {
+                (0, s.jsx)('div', { className: o[l[n]] }),
+                (0, s.jsx)('div', {
                     className: o.message,
-                    children: s
+                    children: t
                 })
             ]
         });
     }),
-    (d.Footer = (e) => {
-        let { primary: s, primaryRenderer: a, secondary: n } = e;
-        return (0, c.jsx)(i.ModalFooter, {
-            children: (0, c.jsxs)(l.Z, {
-                justify: l.Z.Justify.END,
+    (u.Footer = (e) => {
+        let { primary: t, primaryRenderer: n, secondary: r } = e;
+        return (0, s.jsx)(i.mzw, {
+            children: (0, s.jsxs)(c.Z, {
+                justify: c.Z.Justify.END,
                 children: [
-                    null != n
-                        ? (0, c.jsx)(i.Button, {
-                              onClick: n.onClick,
-                              look: i.Button.Looks.LINK,
+                    null != r
+                        ? (0, s.jsx)(i.zxk, {
+                              onClick: r.onClick,
+                              look: i.zxk.Looks.LINK,
                               innerClassName: o.secondaryButton,
-                              children: n.label
+                              children: r.label
                           })
                         : null,
-                    null != s
-                        ? (0, c.jsx)(i.Button, {
-                              onClick: s.onClick,
-                              color: i.Button.Colors.BRAND,
-                              children: s.label
+                    null != t
+                        ? (0, s.jsx)(i.zxk, {
+                              onClick: t.onClick,
+                              color: i.zxk.Colors.BRAND,
+                              children: t.label
                           })
-                        : a
+                        : n
                 ]
             })
         });
     }),
-    (d.Types = t),
-    (s.Z = d);
+    (u.Types = a);
+let b = u;

@@ -1,35 +1,30 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-}),
-    n(47120);
-var i = n(470079),
-    a = n(668781),
-    s = n(881052),
-    r = n(824389),
-    l = n(179838),
-    o = n(689938);
+n.d(t, { Z: () => c }), n(47120);
+var r = n(192379),
+    i = n(668781),
+    a = n(881052),
+    l = n(824389),
+    o = n(179838),
+    s = n(388032);
 function c(e, t) {
-    let [n, c] = i.useState(!1);
+    let [n, c] = r.useState(!1);
     return {
         isLoading: n,
-        downloadAttachment: i.useCallback(
+        downloadAttachment: r.useCallback(
             async (n) => {
                 if (null != e && null != t) {
                     c(!0);
                     try {
-                        let { url: i } = await r.gs({
+                        let { url: r } = await l.gs({
                             guildId: e,
                             productId: t,
                             attachmentId: n
                         });
-                        await l.L(i);
+                        await o.L(r);
                     } catch (t) {
-                        let e = t instanceof s.Hx ? t.getAnyErrorMessage() : void 0;
-                        a.Z.show({
-                            title: o.Z.Messages.ERROR_GENERIC_TITLE,
-                            body: null != e ? e : o.Z.Messages.GENERIC_ERROR_BODY
+                        let e = t instanceof a.Hx ? t.getAnyErrorMessage() : void 0;
+                        i.Z.show({
+                            title: s.NW.string(s.t.R0RpRU),
+                            body: null != e ? e : s.NW.string(s.t.eAn6z8)
                         });
                     } finally {
                         c(!1);

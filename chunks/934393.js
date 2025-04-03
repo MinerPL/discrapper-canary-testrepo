@@ -1,33 +1,30 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
 var i = n(442837),
-    a = n(726542),
-    s = n(906732),
-    o = n(231757),
+    o = n(726542),
+    a = n(906732),
+    s = n(231757),
     l = n(553795),
-    u = n(475413),
-    c = n(981631),
-    d = n(689938);
-function _(e) {
-    let { platformType: t, icon: n, onAction: _ } = e,
-        { newestAnalyticsLocation: E } = (0, s.ZP)();
+    c = n(475413),
+    u = n(981631),
+    d = n(388032);
+function f(e) {
+    let { platformType: t, icon: n, onAction: f } = e,
+        { newestAnalyticsLocation: _ } = (0, a.ZP)();
     return (0, i.e7)([l.Z], () => null != l.Z.getAccount(null, t))
         ? null
-        : (0, r.jsx)(u.tG, {
+        : (0, r.jsx)(c.tG, {
               icon: n,
-              text: d.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: a.Z.get(t).name }),
+              text: d.NW.formatToPlainString(d.t.XWSHTU, { platform: o.Z.get(t).name }),
               fullWidth: !0,
-              onClick: () => {
-                  let e = t === c.ABu.XBOX;
-                  null == _ || _({ action: e ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
-                      (0, o.Z)({
+              onClick: (e) => {
+                  e.stopPropagation();
+                  let n = t === u.ABu.XBOX;
+                  null == f || f({ action: n ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
+                      (0, s.Z)({
                           platformType: t,
-                          location: E
+                          location: _
                       });
               }
           });

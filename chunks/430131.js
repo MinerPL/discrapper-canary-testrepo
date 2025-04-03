@@ -1,40 +1,36 @@
-t.d(s, {
-    Z: function () {
-        return E;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(442837),
-    i = t(481060),
-    r = t(993413),
-    o = t(496675),
-    l = t(52597),
-    c = t(981631),
-    d = t(689938),
-    _ = t(290605);
-function E(e) {
-    let { errors: s, pendingNick: t, currentNick: E, username: u, guild: I } = e,
-        T = null != t ? t : E,
-        S = (0, a.e7)([o.Z], () => o.Z.can(c.Plq.CHANGE_NICKNAME, I) || o.Z.can(c.Plq.MANAGE_NICKNAMES, I));
-    return (0, n.jsxs)(r.Z, {
-        title: d.Z.Messages.SERVER_NICKNAME,
-        errors: s,
+n.d(t, { Z: () => m });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    s = n(481060),
+    a = n(993413),
+    l = n(496675),
+    o = n(52597),
+    c = n(981631),
+    d = n(388032),
+    u = n(784740);
+function m(e) {
+    let { errors: t, pendingNick: n, currentNick: m, username: g, guild: p } = e,
+        h = null != n ? n : m,
+        f = (0, i.e7)([l.Z], () => l.Z.can(c.Plq.CHANGE_NICKNAME, p) || l.Z.can(c.Plq.MANAGE_NICKNAMES, p));
+    return (0, r.jsxs)(a.Z, {
+        title: d.NW.string(d.t.me1lRk),
+        errors: t,
         children: [
-            (0, n.jsx)(i.TextInput, {
-                value: null != T ? T : '',
-                placeholder: u,
+            (0, r.jsx)(s.oil, {
+                value: null != h ? h : '',
+                placeholder: g,
                 maxLength: c.l$U,
                 onChange: function (e) {
-                    (0, l.wi)(e, E);
+                    (0, o.wi)(e, m);
                 },
-                disabled: !S
+                disabled: !f
             }),
-            !S &&
-                (0, n.jsx)(i.FormText, {
-                    className: _.nicknameDisabled,
-                    type: i.FormText.Types.DESCRIPTION,
-                    children: d.Z.Messages.CHANGE_IDENTITY_NICKNAME_PERMISSIONS_DISABLED
+            !f &&
+                (0, r.jsx)(s.R94, {
+                    className: u.nicknameDisabled,
+                    type: s.R94.Types.DESCRIPTION,
+                    children: d.NW.string(d.t.gzjxQk)
                 })
         ]
     });

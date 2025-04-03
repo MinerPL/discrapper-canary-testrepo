@@ -1,8 +1,8 @@
-n(653041);
+n.d(t, { Z: () => f }), n(653041);
 var r = n(981631);
 let i = [],
-    a = !1;
-function s() {
+    o = !1;
+function a() {
     let e = window.navigator.connection;
     return null == e
         ? {
@@ -14,11 +14,28 @@ function s() {
               effectiveSpeed: e.effectiveType
           };
 }
-function o() {
-    let e = s();
+function s() {
+    if (!0 === o) return;
+    let e = window.navigator.connection;
+    null != e && ((o = !0), e.addEventListener('change', c));
+}
+function l() {
+    if (!1 === o) return;
+    let e = window.navigator.connection;
+    null != e && 0 === i.length && null != e && (e.removeEventListener('change', c), (o = !1));
+}
+function c() {
+    let e = a();
     i.forEach((t) => t(e));
 }
-t.Z = {
+function u(e) {
+    i.push(e), s();
+}
+function d(e) {
+    let t = i.indexOf(e);
+    -1 !== t && (i.splice(t, 1), l());
+}
+let f = {
     addOnlineCallback(e) {
         window.addEventListener('online', e);
     },
@@ -32,28 +49,12 @@ t.Z = {
         window.removeEventListener('offline', e);
     },
     addChangeCallback(e) {
-        var t;
-        (t = e),
-            i.push(t),
-            (function () {
-                if (!0 === a) return;
-                let e = window.navigator.connection;
-                null != e && ((a = !0), e.addEventListener('change', o));
-            })();
+        u(e);
     },
     removeChangeCallback(e) {
-        !(function (e) {
-            let t = i.indexOf(e);
-            -1 !== t &&
-                (i.splice(t, 1),
-                !(function () {
-                    if (!1 === a) return;
-                    let e = window.navigator.connection;
-                    null != e && 0 === i.length && null != e && (e.removeEventListener('change', o), (a = !1));
-                })());
-        })(e);
+        d(e);
     },
-    getNetworkInformation: () => Promise.resolve(s()),
+    getNetworkInformation: () => Promise.resolve(a()),
     isOnline() {
         let e = navigator.onLine;
         return void 0 === e || e;

@@ -1,18 +1,15 @@
-l.d(n, {
-    X: function () {
-        return t;
-    }
-});
-var s = l(544891),
-    a = l(981631);
-async function t(e, n, l) {
+n.d(t, { X: () => a });
+var r = n(544891),
+    l = n(981631);
+async function a(e, t, n) {
     return (
-        await s.tn.get({
-            url: a.ANM.DIRECTORY_ENTRIES_BROADCAST_INFO(e),
+        await r.tn.get({
+            url: l.ANM.DIRECTORY_ENTRIES_BROADCAST_INFO(e),
             query: {
-                type: n,
-                entity_id: l
-            }
+                type: t,
+                entity_id: n
+            },
+            rejectWithError: !1
         })
     ).body;
 }

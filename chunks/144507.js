@@ -1,72 +1,61 @@
 n.d(t, {
-    $D: function () {
-        return h;
-    },
-    H2: function () {
-        return p;
-    },
-    MO: function () {
-        return f;
-    },
-    X$: function () {
-        return E;
-    },
-    d5: function () {
-        return i;
-    }
+    $D: () => _,
+    H2: () => O,
+    MO: () => E,
+    X$: () => f,
+    d5: () => d
 });
 var r,
-    i,
-    a = n(442837),
-    s = n(223892),
+    i = n(442837),
+    l = n(223892),
     o = n(674180),
-    l = n(496675),
+    a = n(496675),
     u = n(594174),
-    c = n(923726),
-    d = n(981631);
-((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.WAITLIST_ONLY = 1)] = 'WAITLIST_ONLY'), (r[(r.NEEDS_COMMUNITY = 2)] = 'NEEDS_COMMUNITY'), (r[(r.VISIBLE = 3)] = 'VISIBLE');
-function _(e) {
-    if (e.guild.hasFeature(d.oNc.CREATOR_MONETIZABLE_DISABLED)) return 0;
+    s = n(923726),
+    c = n(981631),
+    d = (((r = {})[(r.NONE = 0)] = 'NONE'), (r[(r.WAITLIST_ONLY = 1)] = 'WAITLIST_ONLY'), (r[(r.NEEDS_COMMUNITY = 2)] = 'NEEDS_COMMUNITY'), (r[(r.VISIBLE = 3)] = 'VISIBLE'), r);
+function p(e) {
+    if (e.guild.hasFeature(c.oNc.CREATOR_MONETIZABLE_DISABLED)) return 0;
     if (
         (function (e) {
-            let { guild: t, isOwner: n, canManageGuildRoleSubscriptions: r, isGuildEligibleForRoleSubscriptions: i, isExpeditedMonetizationOnboardingGuild: a, isUserInCreatorMonetizationEligibleCountry: s, shouldRestrictUpdatingRoleSubscriptionSettings: o } = e;
-            return !!t.hasFeature(d.oNc.COMMUNITY) && !!r && (!o || !!n) && (!!(t.hasFeature(d.oNc.CREATOR_MONETIZABLE) || t.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || ((!!i || !!a) && n && s));
+            let { guild: t, isOwner: n, canManageGuildRoleSubscriptions: r, isGuildEligibleForRoleSubscriptions: i, isExpeditedMonetizationOnboardingGuild: l, isUserInCreatorMonetizationEligibleCountry: o, shouldRestrictUpdatingRoleSubscriptionSettings: a } = e;
+            return !!r && (!a || !!n) && (!!(t.hasFeature(c.oNc.CREATOR_MONETIZABLE) || t.hasFeature(c.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!t.hasFeature(c.oNc.COMMUNITY) && (!!i || !!l) && n && o));
         })(e)
     )
         return 3;
-    let { guild: t, isOwner: n, isUserInCreatorMonetizationEligibleCountry: r, isMonetizationWaitlistEnabledForGuild: i, isGuildEligibleForRoleSubscriptions: a, isExpeditedMonetizationOnboardingGuild: s } = e;
-    return n && !r && i ? 1 : n && i && (a || s) && !t.hasFeature(d.oNc.COMMUNITY) ? 2 : 0;
-}
-function E(e) {
-    return 0 !== _(e);
+    let { guild: t, isOwner: n, isUserInCreatorMonetizationEligibleCountry: r, isMonetizationWaitlistEnabledForGuild: i, isGuildEligibleForRoleSubscriptions: l, isExpeditedMonetizationOnboardingGuild: o } = e;
+    return n && !r && i ? 1 : n && i && (l || o) && !t.hasFeature(c.oNc.COMMUNITY) ? 2 : 0;
 }
 function f(e) {
-    let t = (0, c.Bt)(null == e ? void 0 : e.id),
-        n = (0, s.Ob)(e),
-        r = (0, s.gS)(null == e ? void 0 : e.id),
-        i = h(e),
-        l = (0, a.e7)([u.default], () => {
+    return 0 !== p(e);
+}
+function E(e) {
+    let t = (0, s.Bt)(null == e ? void 0 : e.id),
+        n = (0, l.Ob)(e),
+        r = (0, l.gS)(null == e ? void 0 : e.id),
+        a = _(e),
+        c = (0, i.e7)([u.default], () => {
             let t = u.default.getCurrentUser();
             return null != t && (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
-        d = (0, s.Sd)(),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: E } = (0, o.gX)(null == e ? void 0 : e.id);
+        d = (0, l.Sd)(),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: f } = (0, o.gX)(null == e ? void 0 : e.id);
     return null == e
         ? 0
-        : _({
+        : p({
               guild: e,
-              isOwner: l,
-              canManageGuildRoleSubscriptions: i,
+              isOwner: c,
+              canManageGuildRoleSubscriptions: a,
               isGuildEligibleForRoleSubscriptions: t,
               isMonetizationWaitlistEnabledForGuild: r,
               isExpeditedMonetizationOnboardingGuild: n,
               isUserInCreatorMonetizationEligibleCountry: d,
-              shouldRestrictUpdatingRoleSubscriptionSettings: E
+              shouldRestrictUpdatingRoleSubscriptionSettings: f
           });
 }
-function h(e) {
-    return (0, a.e7)([l.Z], () => p(e), [e]);
+function _(e) {
+    return (0, i.e7)([a.Z], () => O(e), [e]);
 }
-function p(e) {
-    return null != e && l.Z.can(d.Plq.ADMINISTRATOR, e);
+function O(e) {
+    return null != e && a.Z.can(c.Plq.ADMINISTRATOR, e);
 }

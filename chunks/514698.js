@@ -1,29 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(442837),
-    i = n(481060),
-    r = n(933557),
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    s = n(481060),
+    a = n(933557),
     l = n(592125),
-    o = n(689938);
+    o = n(388032);
 function c(e) {
     let { onConfirm: t, onCancel: n, channelId: c } = e,
-        d = (0, a.e7)([l.Z], () => (null != c ? l.Z.getChannel(c) : null)),
-        u = (0, r.ZP)(d, !0);
-    return (0, s.jsx)(i.DeclarativeConfirmModal, {
+        d = (0, i.e7)([l.Z], () => (null != c ? l.Z.getChannel(c) : null)),
+        u = (0, a.ZP)(d, !0);
+    return (0, r.jsx)(s.sYh, {
         dismissable: !0,
-        header: o.Z.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_TITLE,
-        confirmText: o.Z.Messages.REMOVE,
-        cancelText: o.Z.Messages.CANCEL,
+        header: o.NW.string(o.t.S2eoq6),
+        confirmText: o.NW.string(o.t.N86XcH),
+        cancelText: o.NW.string(o.t['ETE/oK']),
         onConfirm: t,
         onCancel: n,
-        children: (0, s.jsx)(i.Text, {
+        children: (0, r.jsx)(s.Text, {
             variant: 'text-sm/normal',
-            children: null != d ? o.Z.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY.format({ channelName: u }) : o.Z.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY_GENERIC
+            children: null != d ? o.NW.format(o.t['1KT3Fh'], { channelName: u }) : o.NW.string(o.t.VOPUV1)
         })
     });
 }

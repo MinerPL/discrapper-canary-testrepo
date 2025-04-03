@@ -11,11 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
-    o: function () {
-        return i;
-    }
-});
+n.d(t, { o: () => i });
 class i {
     constructor() {
         r(this, 'promise', void 0),

@@ -12,39 +12,32 @@ function r() {
 function i(e) {
     return {
         textValue: e,
-        richValue: s(e)
+        richValue: a(e)
     };
 }
 n.d(t, {
-    H2: function () {
-        return r;
-    },
-    JM: function () {
-        return s;
-    },
-    VI: function () {
-        return o;
-    },
-    eK: function () {
-        return i;
-    }
+    H2: () => r,
+    JM: () => a,
+    VI: () => s,
+    eK: () => i
 }),
+    n(301563),
     n(411104);
-let a = Object.freeze([
+let o = Object.freeze([
     Object.freeze({
         type: 'line',
         children: Object.freeze([Object.freeze({ text: '' })])
     })
 ]);
-function s(e) {
+function a(e) {
     return '' !== e
         ? e.split('\n').map((e) => ({
               type: 'line',
               children: [{ text: e }]
           }))
-        : a;
+        : o;
 }
-function o(e) {
+function s(e) {
     switch (e.type) {
         case 'userMention':
             return {
@@ -56,14 +49,10 @@ function o(e) {
                 type: 'channelMention',
                 channelId: e.channelId
             };
-        case 'staticRouteLink':
-            return {
-                type: 'staticRouteLink',
-                channelId: e.channelId
-            };
         case 'soundboard':
             return {
                 type: 'soundboard',
+                guildId: e.guildId,
                 soundId: e.soundId
             };
         case 'roleMention':

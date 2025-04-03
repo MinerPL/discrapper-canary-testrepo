@@ -1,37 +1,31 @@
 n.d(t, {
-    f: function () {
-        return p;
-    },
-    y: function () {
-        return h;
-    }
+    f: () => h,
+    y: () => d
 });
-var i = n(735250);
-n(470079);
-var s = n(481060),
-    a = n(312839),
-    o = n(593481),
-    r = n(556296),
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    s = n(312839),
+    o = n(556296),
     l = n(13140),
-    c = n(981631),
-    d = n(987650),
-    u = n(689938);
-function h() {
-    let { trackView: e, trackClick: t } = (0, a.R)(d.n0.ClipsReminderNotification, { notif_type: d.n0.ClipsReminderNotification }),
-        n = r.Z.getKeybindForAction(c.kg4.SAVE_CLIP);
+    a = n(981631),
+    c = n(987650),
+    u = n(388032);
+function d() {
+    let { trackView: e, trackClick: t } = (0, s.R)(c.n0.ClipsReminderNotification, { notif_type: c.n0.ClipsReminderNotification }),
+        n = o.ZP.getKeybindForAction(a.kg4.SAVE_CLIP);
     if (null == n) return null;
-    let h = l.BB(n.shortcut, !0);
+    let d = l.BB(n.shortcut, !0);
     return {
-        colorScheme: o.IC.PRIMARY,
-        title: u.Z.Messages.CLIPS_REMINDER_NOTIFICATION_TITLE.format({
-            keybind: h,
+        title: u.NW.format(u.t.S5uhCA, {
+            keybind: d,
             keybindHook: () =>
                 (0, i.jsx)('span', {
                     style: { display: 'inline-block' },
-                    children: (0, i.jsx)(s.KeyCombo, { shortcut: h })
+                    children: (0, i.jsx)(r.M2$, { shortcut: d })
                 })
         }),
-        icon: (0, i.jsx)(s.ClipsIcon, {
+        icon: (0, i.jsx)(r.AlX, {
             size: 'xs',
             color: 'currentColor'
         }),
@@ -43,12 +37,11 @@ function h() {
         }
     };
 }
-function p(e) {
-    let { trackView: t, trackClick: n } = (0, a.R)(d.n0.ClipsNotification, { notif_type: d.n0.ClipsNotification });
+function h(e) {
+    let { trackView: t, trackClick: n } = (0, s.R)(c.n0.ClipsNotification, { notif_type: c.n0.ClipsNotification });
     return {
-        colorScheme: o.IC.PRIMARY,
         title: e,
-        icon: (0, i.jsx)(s.ClipsIcon, {
+        icon: (0, i.jsx)(r.AlX, {
             size: 'xs',
             color: 'currentColor'
         }),

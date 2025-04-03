@@ -1,79 +1,86 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(112724),
-    o = n(613611),
+n.d(t, { Z: () => v });
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(112724),
+    s = n(413458),
     c = n(351248),
     u = n(600164),
-    d = n(585483),
+    d = n(540059),
+    p = n(585483),
     h = n(340295),
-    m = n(171277),
-    p = n(677845),
-    _ = n(430371),
-    f = n(236564),
-    E = n(981631),
-    g = n(354459),
-    C = n(201614);
-t.Z = (0, r.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: s, participantsVersion: r, layout: I, onSelectParticipant: x, onContextMenuParticipant: T, onFullscreenParticipant: N, channel: v, hasConnectPermission: S, className: Z, inCall: A, showParticipants: M = !0, paused: b = !1, width: R, height: j, idle: L, mode: P, popoutWindow: O, awaitingRemoteSessionInfo: y } = e;
-    a.useEffect(() => {
-        d.S.dispatch(E.CkL.REMEASURE_TARGET);
-    }, [R, j]);
-    let D = a.useMemo(() => n.filter((e) => e.type !== g.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, r]);
-    if ((null == y ? void 0 : y.channelId) === v.id) return (0, i.jsx)(m.Z, { height: j });
-    if ((null == v ? void 0 : v.isGuildVocal()) && !A)
-        return (0, i.jsx)(h.Z, {
-            channel: v,
-            participants: t,
-            hasConnectPermission: S
-        });
-    if (P === E.WtW.VOICE)
-        return (0, i.jsx)(c.Z, {
-            guildId: v.guild_id,
-            width: R,
-            className: C.voiceCallWrapper,
-            participants: t,
-            onContextMenu: T
-        });
-    if (((n = A ? n : t), null == s))
-        return 0 === n.length
-            ? (0, i.jsx)(f.Z, {
-                  className: l()(C.videoGrid, C.hiddenParticipants),
-                  channelId: v.id,
-                  width: R
+    f = n(171277),
+    m = n(677845),
+    g = n(430371),
+    b = n(236564),
+    _ = n(45430),
+    C = n(981631),
+    y = n(354459),
+    x = n(363987);
+let v = (0, a.Z)((e) => {
+    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: a, layout: v, onSelectParticipant: j, onContextMenuParticipant: O, onFullscreenParticipant: E, channel: N, hasConnectPermission: I, className: P, inCall: S, showParticipants: Z = !0, paused: T = !1, width: A, height: w, idle: R, mode: M, popoutWindow: k, awaitingRemoteSessionInfo: L, callContainerDimensions: D } = e;
+    i.useEffect(() => {
+        p.S.dispatch(C.CkL.REMEASURE_TARGET);
+    }, [A, w, D.width, D.height]);
+    let W = (0, d.Q3)('ChannelCallContent'),
+        U = i.useMemo(() => n.filter((e) => e.type !== y.fO.ACTIVITY || !e.participants.some((e) => (0, s.J)(e))), [n, a]);
+    return (null == L ? void 0 : L.channelId) === N.id
+        ? (0, r.jsx)(f.Z, { height: w })
+        : (null == N ? void 0 : N.isGuildVocal()) && !S
+          ? (0, r.jsx)(h.Z, {
+                channel: N,
+                participants: t,
+                hasConnectPermission: I
+            })
+          : M === C.WtW.VOICE
+            ? (0, r.jsx)(c.Z, {
+                  guildId: N.guild_id,
+                  width: A,
+                  className: x.voiceCallWrapper,
+                  participants: t,
+                  onContextMenu: O
               })
-            : (0, i.jsx)(u.Z, {
-                  className: C.videoGridWrapper,
-                  justify: u.Z.Justify.CENTER,
-                  align: u.Z.Align.CENTER,
-                  children: (0, i.jsx)(p.Z, {
-                      channel: v,
-                      className: C.videoGrid,
-                      participants: D,
-                      totalNumberOfParticipants: t.length,
-                      onClick: x,
-                      onDoubleClick: N,
-                      onContextMenu: T,
-                      paused: b,
-                      inCall: A
-                  })
-              });
-    return (0, i.jsx)(_.Z, {
-        onFullscreenParticipant: N,
-        onContextMenuParticipant: T,
-        onSelectParticipant: x,
-        selectedParticipant: s,
-        filteredParticipants: D,
-        participants: t,
-        popoutWindow: O,
-        className: Z,
-        idle: L,
-        height: j,
-        width: R,
-        layout: I,
-        inCall: A,
-        channel: v,
-        showParticipants: M
-    });
+            : ((n = S ? n : t), null == l)
+              ? 0 === n.length
+                  ? W
+                      ? (0, r.jsx)(_.Z, { channelId: N.id })
+                      : (0, r.jsx)(b.Z, {
+                            className: o()(x.videoGrid, x.hiddenParticipants),
+                            channelId: N.id,
+                            width: A
+                        })
+                  : (0, r.jsx)(u.Z, {
+                        className: x.videoGridWrapper,
+                        justify: u.Z.Justify.CENTER,
+                        align: u.Z.Align.CENTER,
+                        children: (0, r.jsx)(m.Z, {
+                            channel: N,
+                            className: x.videoGrid,
+                            participants: U,
+                            totalNumberOfParticipants: t.length,
+                            onClick: j,
+                            onDoubleClick: E,
+                            onContextMenu: O,
+                            paused: T,
+                            inCall: S
+                        })
+                    })
+              : (0, r.jsx)(g.Z, {
+                    onFullscreenParticipant: E,
+                    onContextMenuParticipant: O,
+                    onSelectParticipant: j,
+                    selectedParticipant: l,
+                    filteredParticipants: U,
+                    participants: t,
+                    popoutWindow: k,
+                    className: P,
+                    idle: R,
+                    height: w,
+                    width: A,
+                    layout: v,
+                    inCall: S,
+                    channel: N,
+                    showParticipants: Z
+                });
 });

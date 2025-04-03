@@ -1,13 +1,7 @@
 n.d(t, {
-    ad: function () {
-        return s;
-    },
-    fs: function () {
-        return a;
-    },
-    xT: function () {
-        return i;
-    }
+    ad: () => a,
+    fs: () => o,
+    xT: () => i
 });
 var r = n(818083);
 let i = (0, r.B)({
@@ -23,7 +17,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (0, r.B)({
+    o = (0, r.B)({
         kind: 'user',
         id: '2024-01_unreads',
         label: 'Unreads Experiment (grey-dot mode)',
@@ -62,10 +56,10 @@ let i = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    a = (0, r.B)({
         kind: 'user',
-        id: '2024-03_unreads_new_users',
-        label: 'Unreads Experiment (grey-dot mode) (new users)',
+        id: '2024-11_unreads_new_users2',
+        label: 'Unreads Experiment (grey-dot mode) (new users) 2',
         defaultConfig: {
             enabled: !1,
             logExposure: !1

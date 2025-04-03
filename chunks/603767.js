@@ -1,10 +1,5 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(47120);
-var r = n(338545);
+n.d(t, { Z: () => o }), n(47120);
+var r = n(642128);
 function i(e, t, n) {
     return (
         t in e
@@ -18,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class a extends r.FrameLoop {
+class o extends r.FrameLoop {
     setRAF(e, t) {
         0 !== this.id && (this._cancelAnimationFrame(this.id), (this.id = 0)), (this._requestAnimationFrame = e), (this._cancelAnimationFrame = t), this.loop();
     }
@@ -50,7 +45,7 @@ class a extends r.FrameLoop {
                     }
             }),
             i(this, 'startLoop', () => {
-                if (!(this.lastTime > 0)) (this.lastTime = r.Globals.now()), (this.id = this._requestAnimationFrame(this.loop));
+                this.lastTime > 0 || ((this.lastTime = r.Globals.now()), (this.id = this._requestAnimationFrame(this.loop)));
             }),
             i(this, 'advance', () => {
                 let e = r.Globals.now();
@@ -58,7 +53,7 @@ class a extends r.FrameLoop {
                     (this.startQueue.size > 0 && (this.startQueue.forEach(this.addAnimation), this.startQueue.clear()),
                     this.timeoutQueue.length > 0 &&
                         r.Globals.batchedUpdates(() => {
-                            let t = s(this.timeoutQueue, (t) => t.time > e);
+                            let t = a(this.timeoutQueue, (t) => t.time > e);
                             this.timeoutQueue.splice(0, t).forEach((e) => e.handler());
                         }),
                     e > this.lastTime)
@@ -66,7 +61,7 @@ class a extends r.FrameLoop {
                     let t = Math.min(64, e - this.lastTime);
                     (this.lastTime = e),
                         r.Globals.batchedUpdates(() => {
-                            this.animations.length > 0 && (r.Globals.willAdvance(this.animations), (this.animations = this.animations.filter((e) => ((this.priority = e.priority), !e.idle && e.advance(t), !e.idle))), (this.priority = 0)), this.frameQueue.size > 0 && (this.frameQueue.forEach((t) => t(e)), this.frameQueue.clear()), this.writeQueue.size > 0 && ((this.writing = !0), this.writeQueue.forEach((t) => t(e)), this.writeQueue.clear(), (this.writing = !1));
+                            this.animations.length > 0 && (r.Globals.willAdvance(this.animations), (this.animations = this.animations.filter((e) => ((this.priority = e.priority), e.idle || e.advance(t), !e.idle))), (this.priority = 0)), this.frameQueue.size > 0 && (this.frameQueue.forEach((t) => t(e)), this.frameQueue.clear()), this.writeQueue.size > 0 && ((this.writing = !0), this.writeQueue.forEach((t) => t(e)), this.writeQueue.clear(), (this.writing = !1));
                         });
                 }
             }),
@@ -79,13 +74,13 @@ class a extends r.FrameLoop {
                         let e = this.timeoutQueue.findIndex((e) => e.cancel === i);
                         e >= 0 && this.timeoutQueue.splice(e, 1);
                     },
-                    a = s(this.timeoutQueue, (e) => e.time > n),
-                    o = {
+                    o = a(this.timeoutQueue, (e) => e.time > n),
+                    s = {
                         time: n,
                         handler: e,
                         cancel: i
                     };
-                return this.timeoutQueue.splice(a, 0, o), this.startLoop(), o;
+                return this.timeoutQueue.splice(o, 0, s), this.startLoop(), s;
             }),
             i(this, 'onFrame', (e) => {
                 this.frameQueue.add(e), this.startLoop();
@@ -95,7 +90,7 @@ class a extends r.FrameLoop {
             });
     }
 }
-function s(e, t) {
+function a(e, t) {
     let n = e.findIndex(t);
     return n < 0 ? e.length : n;
 }

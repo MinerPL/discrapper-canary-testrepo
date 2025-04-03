@@ -1,19 +1,15 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
+n.d(t, { Z: () => l });
 var r = n(626135),
     i = n(647162),
-    a = n(616922),
-    s = n(981631);
-let o = [a.kG.USER_ACTIVITY_SYNC, a.kG.EMBED_SYNC];
-function l(e, t, n, a) {
-    r.default.track(s.rMx.SPOTIFY_BUTTON_CLICKED, {
+    o = n(616922),
+    a = n(981631);
+let s = [o.kG.USER_ACTIVITY_SYNC, o.kG.EMBED_SYNC];
+function l(e, t, n, o) {
+    r.default.track(a.rMx.SPOTIFY_BUTTON_CLICKED, {
         type: e,
-        source: a,
+        source: o,
         is_premium: (0, i.Wo)(),
-        party_id: o.includes(e) && (null == n ? void 0 : n.party) != null ? n.party.id : null,
+        party_id: s.includes(e) && (null == n ? void 0 : n.party) != null ? n.party.id : null,
         other_user_id: t.id
     });
 }

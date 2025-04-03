@@ -1,45 +1,41 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    l = n(442837),
-    r = n(481060),
-    o = n(607070),
+n.d(t, { Z: () => p });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    o = n(442837),
+    a = n(481060),
+    s = n(607070),
     c = n(254238),
-    u = n(689938),
-    d = n(547438);
-function h(e) {
+    u = n(388032),
+    d = n(382771);
+function p(e) {
     let { height: t } = e,
-        a = (0, l.e7)([o.Z], () => o.Z.useReducedMotion);
-    return (0, i.jsxs)('div', {
+        i = (0, o.e7)([s.Z], () => s.Z.useReducedMotion);
+    return (0, r.jsxs)('div', {
         className: d.root,
         children: [
-            (0, i.jsx)(r.LottieAnimation, {
+            (0, r.jsx)(a.Fmz, {
                 importData: () =>
                     n
-                        .e('70036')
+                        .e('78698')
                         .then(n.t.bind(n, 141923, 19))
                         .then((e) => {
                             let { default: t } = e;
                             return t;
                         }),
-                shouldAnimate: !a,
-                className: s()(d.art, { [d.hidden]: t <= 280 })
+                shouldAnimate: !i,
+                className: l()(d.art, { [d.hidden]: t <= 280 })
             }),
-            (0, i.jsx)(r.Heading, {
+            (0, r.jsx)(a.X6q, {
                 className: d.header,
                 variant: 'heading-md/bold',
-                children: u.Z.Messages.PLAYSTATION_TRANSFERRING
+                children: u.NW.string(u.t['C+tj1d'])
             }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: u.Z.Messages.CONSOLE_TRANSFERRING_SUBTITLE.format({ onCancel: c.s6 })
+                children: u.NW.format(u.t['nNHd//'], { onCancel: c.s6 })
             })
         ]
     });

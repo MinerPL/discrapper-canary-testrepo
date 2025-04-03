@@ -1,43 +1,82 @@
-a.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var t = a(735250);
-a(470079);
-var l = a(442837),
-    r = a(481060),
-    u = a(496675),
-    c = a(981631),
-    i = a(689938);
-function s(e, n) {
-    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
-        o = (0, l.e7)([u.Z], () => u.Z.can(c.Plq.MANAGE_CHANNELS, e), [e]);
-    if (__OVERLAY__ || !o) return null;
-    let d = () => {
-        (0, r.openModalLazy)(async () => {
-            let { default: n } = await Promise.all([a.e('7590'), a.e('45094'), a.e('1379')]).then(a.bind(a, 218613));
-            return (a) =>
-                (0, t.jsx)(n, {
-                    ...a,
-                    channelType: s,
-                    guildId: e.guild_id,
-                    categoryId: e.parent_id
-                });
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var c = n(442837),
+    o = n(481060),
+    l = n(496675),
+    a = n(981631),
+    i = n(388032);
+function u(e, t) {
+    let u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
+        s = (0, c.e7)([l.Z], () => l.Z.can(a.Plq.MANAGE_CHANNELS, e), [e]);
+    if (__OVERLAY__ || !s) return null;
+    let b = () => {
+        (0, o.ZDy)(async () => {
+            let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('7911')]).then(n.bind(n, 218613));
+            return (n) => {
+                var c, o;
+                return (0, r.jsx)(
+                    t,
+                    ((c = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, n)),
+                    (o = o =
+                        {
+                            channelType: u,
+                            guildId: e.guild_id,
+                            categoryId: e.parent_id
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(o))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(o)).forEach(function (e) {
+                              Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(o, e));
+                          }),
+                    c)
+                );
+            };
         });
     };
-    switch (s) {
-        case c.d4z.GUILD_TEXT:
-            return (0, t.jsx)(r.MenuItem, {
+    switch (u) {
+        case a.d4z.GUILD_TEXT:
+            return (0, r.jsx)(o.sNh, {
                 id: 'create-text-channel',
-                label: i.Z.Messages.CREATE_TEXT_CHANNEL,
-                action: d
+                label: i.NW.string(i.t.HHkTJC),
+                action: b
             });
-        case c.d4z.GUILD_VOICE:
-            return (0, t.jsx)(r.MenuItem, {
+        case a.d4z.GUILD_VOICE:
+            return (0, r.jsx)(o.sNh, {
                 id: 'create-voice-channel',
-                label: i.Z.Messages.CREATE_VOICE_CHANNEL,
-                action: d
+                label: i.NW.string(i.t.AlbZaG),
+                action: b
             });
         default:
             return null;

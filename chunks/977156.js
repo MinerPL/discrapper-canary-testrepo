@@ -1,13 +1,7 @@
 n.d(t, {
-    X7: function () {
-        return l;
-    },
-    Zy: function () {
-        return s;
-    },
-    cB: function () {
-        return a;
-    }
+    X7: () => l,
+    Zy: () => a,
+    cB: () => o
 });
 var r = n(818083);
 let i = (0, r.B)({
@@ -28,15 +22,15 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (e) => {
+    o = (e) => {
         let { location: t } = e;
         return i.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
     },
-    s = (e) => {
+    a = (e) => {
         let { location: t } = e;
         return i.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
     },
-    o = (0, r.B)({
+    s = (0, r.B)({
         id: '2024-04_quest_preview_tool',
         kind: 'user',
         label: 'Quest Preview Tool',
@@ -51,5 +45,5 @@ let i = (0, r.B)({
     });
 function l(e) {
     let { location: t } = e;
-    return o.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return s.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
 }

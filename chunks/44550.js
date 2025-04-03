@@ -1,57 +1,64 @@
-var s,
-    a,
+n.d(t, { Z: () => p });
+var r,
     i,
-    r,
-    l = n(442837),
-    o = n(570140);
-let c = null,
-    d = 0,
+    s,
+    a = n(442837),
+    l = n(570140);
+let o = null,
+    c = 0,
+    d = null,
     u = null,
-    _ = null;
-class I extends (r = l.ZP.Store) {
+    m = !1;
+class g extends (s = a.ZP.Store) {
+    hasChanges() {
+        return o !== d;
+    }
     showNotice() {
-        return c !== u;
+        return this.hasChanges();
     }
     get vanityURLCode() {
-        return c;
+        return o;
     }
     get originalVanityURLCode() {
-        return u;
-    }
-    get vanityURLUses() {
         return d;
     }
+    get vanityURLUses() {
+        return c;
+    }
     hasError() {
-        return null != _;
+        return null != u;
     }
     get errorDetails() {
-        return _;
+        return u;
+    }
+    get fetchedVanityURL() {
+        return m;
     }
 }
 (i = 'GuildSettingsVanityURLStore'),
-    (a = 'displayName') in (s = I)
-        ? Object.defineProperty(s, a, {
+    (r = 'displayName') in g
+        ? Object.defineProperty(g, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = i),
-    (t.Z = new I(o.Z, {
-        GUILD_SETTINGS_SET_VANITY_URL: function (e) {
-            var t, n;
-            (u = c = null !== (t = e.code) && void 0 !== t ? t : ''), (d = e.uses), (_ = null !== (n = e.error) && void 0 !== n ? n : null);
-        },
-        GUILD_SETTINGS_VANITY_URL_CLOSE: function () {
-            (u = c = null), (d = 0), (_ = null);
-        },
-        GUILD_SETTINGS_VANITY_URL_RESET: function () {
-            (c = u), (d = 0);
-        },
-        GUILD_SETTINGS_VANITY_URL_SET: function (e) {
-            (c = e.code), (d = 0);
-        },
-        GUILD_SETTINGS_VANITY_URL_ERROR: function (e) {
-            _ = e.error;
-        }
-    }));
+        : (g[r] = i);
+let p = new g(l.Z, {
+    GUILD_SETTINGS_SET_VANITY_URL: function (e) {
+        var t, n;
+        (d = o = null != (t = e.code) ? t : ''), (c = e.uses), (u = null != (n = e.error) ? n : null), (m = !0);
+    },
+    GUILD_SETTINGS_CLOSE: function () {
+        (d = o = null), (c = 0), (u = null), (m = !1);
+    },
+    GUILD_SETTINGS_VANITY_URL_RESET: function () {
+        (o = d), (c = 0), (u = null);
+    },
+    GUILD_SETTINGS_VANITY_URL_SET: function (e) {
+        (o = e.code), (c = 0);
+    },
+    GUILD_SETTINGS_VANITY_URL_ERROR: function (e) {
+        u = e.error;
+    }
+});

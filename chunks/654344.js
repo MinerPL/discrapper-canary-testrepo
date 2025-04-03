@@ -1,9 +1,5 @@
-a.d(t, {
-    c: function () {
-        return s;
-    }
-});
-let n = (0, a(818083).B)({
+r.d(t, { c: () => i });
+let n = (0, r(818083).B)({
         kind: 'user',
         label: 'Pomelo Debounce Delay',
         id: '2023-03_pomelo_debounce_delay',
@@ -36,4 +32,4 @@ let n = (0, a(818083).B)({
             }
         ]
     }),
-    s = () => n.useExperiment({ location: '52560d_1' }, { autoTrackExposure: !1 }).delay;
+    i = () => n.useExperiment({ location: '52560d_1' }, { autoTrackExposure: !1 }).delay;

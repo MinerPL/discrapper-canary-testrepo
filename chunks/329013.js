@@ -1,121 +1,129 @@
-t.d(s, {
-    g: function () {
-        return P;
-    },
-    i: function () {
-        return D;
-    }
+n.d(t, {
+    g: () => w,
+    i: () => D
 });
-var n = t(735250),
-    a = t(470079),
-    i = t(442837),
-    r = t(704215),
-    o = t(481060),
-    l = t(37234),
-    c = t(100527),
-    d = t(906732),
-    _ = t(238302),
-    E = t(514361),
-    u = t(705262),
-    I = t(605236),
-    T = t(104494),
-    S = t(639119),
-    N = t(311476),
-    C = t(165583),
-    m = t(197115),
-    A = t(504983),
-    O = t(626135),
-    g = t(981631),
-    h = t(921944),
-    p = t(474936),
-    R = t(689938),
-    x = t(582889),
-    M = t(224499);
-let f = () => {
-        (0, I.EW)(r.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
-            dismissAction: h.L.PRIMARY,
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(704215),
+    l = n(780384),
+    o = n(481060),
+    c = n(37234),
+    d = n(857595),
+    u = n(607070),
+    m = n(100527),
+    g = n(906732),
+    p = n(238302),
+    h = n(514361),
+    f = n(705262),
+    b = n(540059),
+    N = n(605236),
+    x = n(104494),
+    _ = n(639119),
+    E = n(311476),
+    j = n(165583),
+    O = n(197115),
+    C = n(504983),
+    S = n(626135),
+    v = n(210887),
+    T = n(981631),
+    I = n(921944),
+    y = n(474936),
+    A = n(388032),
+    P = n(967655);
+let R = () => {
+        (0, N.EW)(a.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
+            dismissAction: I.L.PRIMARY,
             forceTrack: !0
         }),
-            (0, _.Kq)(),
-            (0, l.xf)();
+            (0, p.Kq)(),
+            (0, c.xf)();
     },
     D = () => {
-        var e, s;
-        let { analyticsLocations: t } = (0, d.ZP)(c.Z.USER_SETTINGS),
-            r = (0, i.e7)([E.Z], () => E.Z.isPreview),
-            l = (null === (s = (0, S.N)()) || void 0 === s ? void 0 : null === (e = s.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === p.Si.TIER_2,
-            _ = (0, T.Ng)(),
-            I = (0, T.Wp)(_, p.Si.TIER_2),
-            h = !r || l,
-            { enabled: D } = N.Z.getCurrentConfig(
+        var e, t;
+        let { analyticsLocations: n } = (0, g.ZP)(m.Z.USER_SETTINGS),
+            a = (0, s.e7)([h.Z], () => h.Z.isPreview),
+            l = (null == (t = (0, _.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === y.Si.TIER_2,
+            c = (0, x.Ng)(),
+            d = (0, x.Wp)(c, y.Si.TIER_2),
+            u = !a || l,
+            { enabled: p } = E.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceClientThemes' },
                 {
-                    autoTrackExposure: !h,
-                    disable: h
+                    autoTrackExposure: !u,
+                    disable: u
                 }
             ),
-            P = () =>
-                !r || l
+            N = (0, b.Q3)('UserSettingsAppearanceClientThemes'),
+            v = () =>
+                !a || l
                     ? null
-                    : (0, n.jsxs)('div', {
-                          className: x.tryItOutButtons,
+                    : (0, r.jsxs)('div', {
+                          className: P.tryItOutButtons,
                           children: [
-                              (0, n.jsx)(o.Button, {
-                                  color: D ? o.Button.Colors.BRAND : o.Button.Colors.PRIMARY,
-                                  onClick: () => f(),
-                                  children: D ? R.Z.Messages.PREVIEW : R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
+                              (0, r.jsx)(o.zxk, {
+                                  size: o.zxk.Sizes.MEDIUM,
+                                  color: p ? o.zxk.Colors.BRAND : o.zxk.Colors.PRIMARY,
+                                  onClick: () => R(),
+                                  children: p ? A.NW.string(A.t.SKNnqq) : A.NW.string(A.t['E+COuL'])
                               }),
-                              (0, n.jsx)(m.Z, {
-                                  showGradient: D,
-                                  subscriptionTier: p.Si.TIER_2,
-                                  buttonText: D ? R.Z.Messages.PREMIUM_UPSELL_GET_NITRO : I ? R.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == _ ? void 0 : _.discount.amount }) : R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
-                                  className: x.premiumCta
+                              (0, r.jsx)(O.Z, {
+                                  showGradient: p,
+                                  subscriptionTier: y.Si.TIER_2,
+                                  buttonText: p ? A.NW.string(A.t.pj0XBA) : d ? A.NW.formatToPlainString(A.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : A.NW.string(A.t.mr4K7O),
+                                  className: P.premiumCta
                               })
                           ]
                       });
         return (
-            a.useEffect(() => {
-                r &&
-                    O.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: p.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                        location_stack: t
+            i.useEffect(() => {
+                a &&
+                    S.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+                        type: y.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                        location_stack: n
                     });
-            }, [r, t]),
-            (0, n.jsxs)('div', {
+            }, [a, n]),
+            (0, r.jsxs)('div', {
                 children: [
-                    (0, n.jsx)(u.ZP, {
-                        type: u.yH.SETTINGS,
-                        children: D
-                            ? (0, n.jsx)(u.ZP.BasicAndGradient, {
-                                  className: x.basicThemeSelectors,
-                                  renderCTAButtons: P
-                              })
-                            : (0, n.jsxs)(n.Fragment, {
+                    (0, r.jsx)(f.ZP, {
+                        type: f.yH.SETTINGS,
+                        children: p
+                            ? (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, n.jsx)(u.ZP.Basic, { className: x.basicThemeSelectors }),
-                                      (0, n.jsxs)(A.Z, {
-                                          className: x.featureBorder,
-                                          isShown: r,
-                                          type: A.Y.PREMIUM,
+                                      (0, r.jsx)(f.ZP.BasicAndGradient, {
+                                          className: P.basicThemeSelectors,
+                                          renderCTAButtons: v
+                                      }),
+                                      N && (0, r.jsx)(Z, {})
+                                  ]
+                              })
+                            : (0, r.jsxs)(r.Fragment, {
+                                  children: [
+                                      (0, r.jsx)(f.ZP.Basic, { className: P.basicThemeSelectors }),
+                                      N && (0, r.jsx)(Z, {}),
+                                      (0, r.jsxs)(C.Z, {
+                                          className: P.featureBorder,
+                                          isShown: a,
+                                          type: C.Y.PREMIUM,
                                           children: [
-                                              (0, n.jsx)(u.ZP.Gradient, {
-                                                  disabled: r,
-                                                  renderCTAButtons: P
+                                              (0, r.jsx)(f.ZP.Gradient, {
+                                                  disabled: a,
+                                                  renderCTAButtons: v
                                               }),
                                               l &&
-                                                  r &&
-                                                  (0, n.jsxs)('div', {
+                                                  a &&
+                                                  (0, r.jsxs)('div', {
                                                       children: [
-                                                          (0, n.jsx)(o.Button, {
-                                                              className: x.previewThemeButtonWide,
-                                                              color: o.Button.Colors.PRIMARY,
-                                                              onClick: () => f(),
-                                                              children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
+                                                          (0, r.jsx)(o.zxk, {
+                                                              className: P.previewThemeButtonWide,
+                                                              color: o.zxk.Colors.PRIMARY,
+                                                              onClick: () => R(),
+                                                              children: A.NW.string(A.t['E+COuL'])
                                                           }),
-                                                          (0, n.jsx)('div', { className: x.premiumTier2Divider }),
-                                                          (0, n.jsx)(C.ZP, {
-                                                              type: p.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
-                                                              subscriptionTier: p.Si.TIER_2
+                                                          (0, r.jsx)('div', { className: P.premiumTier2Divider }),
+                                                          (0, r.jsx)(j.ZP, {
+                                                              type: y.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
+                                                              subscriptionTier: y.Si.TIER_2
                                                           })
                                                       ]
                                                   })
@@ -124,16 +132,45 @@ let f = () => {
                                   ]
                               })
                     }),
-                    (0, n.jsx)(o.FormDivider, { className: M.marginTop20 })
+                    (0, r.jsx)(o.$i$, { className: P.divider })
                 ]
             })
         );
-    },
-    P = () =>
-        (0, i.e7)([E.Z], () => E.Z.isPreview)
-            ? null
-            : (0, n.jsx)(o.Button, {
-                  size: o.ButtonSizes.SMALL,
-                  onClick: () => f(),
-                  children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEMES_TITLE
-              });
+    };
+function Z() {
+    let {
+        theme: e,
+        useForcedColors: t,
+        gradientPreset: n,
+        darkSidebar: i
+    } = (0, s.cj)([v.Z, u.Z, h.Z], () => ({
+        theme: v.Z.theme,
+        useForcedColors: u.Z.useForcedColors,
+        darkSidebar: v.Z.darkSidebar,
+        gradientPreset: h.Z.gradientPreset
+    }));
+    return e !== T.BRd.LIGHT
+        ? null
+        : (0, r.jsx)(o.j7V, {
+              hideBorder: !0,
+              value: i && (0, l.ap)(e) && !t,
+              disabled: e !== T.BRd.LIGHT || t || null != n,
+              onChange: d.lq,
+              className: P.darkSidebarToggle,
+              children: (0, r.jsx)('span', {
+                  className: P.title,
+                  children: A.NW.string(A.t.yF54Ki)
+              })
+          });
+}
+let w = () => {
+    let e = (0, s.e7)([h.Z], () => h.Z.isPreview),
+        t = (0, b.Q3)('ClientThemesSidebarButton');
+    return e
+        ? null
+        : (0, r.jsx)(o.zxk, {
+              size: t ? o.PhG.MEDIUM : o.PhG.SMALL,
+              onClick: R,
+              children: A.NW.string(A.t.qYXrkZ)
+          });
+};

@@ -1,14 +1,16 @@
-var n = s(735250);
-s(470079);
-var l = s(481060),
-    i = s(600164),
-    r = s(689938),
-    o = s(286609);
-t.Z = {
+r.d(t, { Z: () => a });
+var n = r(200651);
+r(192379);
+var l = r(481060),
+    s = r(600164),
+    i = r(388032),
+    o = r(895453);
+let a = {
     SlideContent: function (e) {
-        let { children: t } = e;
-        return (0, n.jsx)(l.ModalContent, {
+        let { children: t, scrollbarType: r } = e;
+        return (0, n.jsx)(l.hzk, {
             className: o.content,
+            scrollbarType: r,
             children: t
         });
     },
@@ -24,40 +26,98 @@ t.Z = {
               });
     },
     SlideFooter: function (e) {
-        let { mfaChallenge: t, setSlide: s, showConfirm: a = !1, ...d } = e,
-            u = t.methods.length > 1;
-        return u || a
-            ? (0, n.jsxs)(l.ModalFooter, {
+        var t,
+            r,
+            { mfaChallenge: a, setSlide: c, showConfirm: u = !1 } = e,
+            d = (function (e, t) {
+                if (null == e) return {};
+                var r,
+                    n,
+                    l = (function (e, t) {
+                        if (null == e) return {};
+                        var r,
+                            n,
+                            l = {},
+                            s = Object.keys(e);
+                        for (n = 0; n < s.length; n++) (r = s[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                        return l;
+                    })(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var s = Object.getOwnPropertySymbols(e);
+                    for (n = 0; n < s.length; n++) (r = s[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                }
+                return l;
+            })(e, ['mfaChallenge', 'setSlide', 'showConfirm']);
+        let f = a.methods.length > 1;
+        return f || u
+            ? (0, n.jsxs)(l.mzw, {
                   className: o.footer,
-                  direction: a && !u ? i.Z.Direction.HORIZONTAL_REVERSE : i.Z.Direction.HORIZONTAL,
+                  direction: u && !f ? s.Z.Direction.HORIZONTAL_REVERSE : s.Z.Direction.HORIZONTAL,
                   children: [
-                      u &&
-                          (0, n.jsx)(l.Button, {
-                              look: l.Button.Looks.LINK,
-                              onClick: () => s('select'),
-                              color: l.Button.Colors.PRIMARY,
-                              children: r.Z.Messages.MFA_V2_GO_TO_SELECT
+                      f &&
+                          (0, n.jsx)(l.zxk, {
+                              look: l.zxk.Looks.LINK,
+                              onClick: () => c('select'),
+                              color: l.zxk.Colors.PRIMARY,
+                              children: i.NW.string(i.t.Tot4EB)
                           }),
-                      a &&
-                          (0, n.jsx)(l.Button, {
-                              type: 'submit',
-                              ...d,
-                              children: r.Z.Messages.CONFIRM
-                          })
+                      u &&
+                          (0, n.jsx)(
+                              l.zxk,
+                              ((t = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var r = null != arguments[t] ? arguments[t] : {},
+                                          n = Object.keys(r);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (n = n.concat(
+                                              Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                              })
+                                          )),
+                                          n.forEach(function (t) {
+                                              var n;
+                                              (n = r[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: n,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = n);
+                                          });
+                                  }
+                                  return e;
+                              })({ type: 'submit' }, d)),
+                              (r = r = { children: i.NW.string(i.t['cY+Ooa']) }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                  : (function (e, t) {
+                                        var r = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var n = Object.getOwnPropertySymbols(e);
+                                            r.push.apply(r, n);
+                                        }
+                                        return r;
+                                    })(Object(r)).forEach(function (e) {
+                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                    }),
+                              t)
+                          )
                   ]
               })
             : null;
     },
     SlideHeader: function (e) {
-        let { subtitle: t, onClose: s } = e;
-        return (0, n.jsxs)(l.ModalHeader, {
-            direction: i.Z.Direction.VERTICAL,
+        let { subtitle: t, onClose: r } = e;
+        return (0, n.jsxs)(l.xBx, {
+            direction: s.Z.Direction.VERTICAL,
             className: o.header,
             separator: !1,
             children: [
-                (0, n.jsx)(l.Heading, {
+                (0, n.jsx)(l.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: r.Z.Messages.MFA_V2_HEADER
+                    children: i.NW.string(i.t.saHocH)
                 }),
                 null != t &&
                     (0, n.jsx)(l.Text, {
@@ -66,9 +126,9 @@ t.Z = {
                         className: o.subtitle,
                         children: t
                     }),
-                (0, n.jsx)(l.ModalCloseButton, {
+                (0, n.jsx)(l.olH, {
                     className: o.closeButton,
-                    onClick: s
+                    onClick: r
                 })
             ]
         });

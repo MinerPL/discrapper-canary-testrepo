@@ -1,29 +1,27 @@
 n.d(t, {
-    Z: function () {
-        return d;
-    },
-    n: function () {
-        return c;
-    }
+    ZP: () => _,
+    nK: () => d,
+    uj: () => f
 });
-var r = n(735250);
-n(470079);
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(26033),
-    s = n(810568),
-    o = n(168524),
-    l = n(981631),
-    u = n(689938);
-function c(e) {
+    o = n(26033),
+    a = n(810568),
+    s = n(168524),
+    l = n(858042),
+    c = n(981631),
+    u = n(388032);
+function d(e) {
     let { user: t, activity: n, entry: r } = e;
     return null != r
         ? {
-              applicationId: (0, a.dX)(r) ? r.extra.application_id : void 0,
+              applicationId: (0, o.dX)(r) ? r.extra.application_id : void 0,
               sourceUserId: r.author_id
           }
         : null != n
           ? {
-                applicationId: n.type === l.IIU.PLAYING && null != n.application_id ? n.application_id : void 0,
+                applicationId: n.type === c.IIU.PLAYING && null != n.application_id ? n.application_id : void 0,
                 sourceUserId: t.id
             }
           : {
@@ -31,27 +29,40 @@ function c(e) {
                 sourceUserId: void 0
             };
 }
-function d(e) {
-    let { user: t, activity: n, entry: a, onAction: l } = e,
-        { applicationId: d, sourceUserId: _ } = c({
+function f(e) {
+    let { user: t, activity: n, entry: r } = e,
+        { applicationId: i } = d({
             activity: n,
-            entry: a,
+            entry: r,
+            user: t
+        });
+    return (0, l.M)({
+        applicationId: i,
+        showOutdatedInfoOption: !1
+    });
+}
+function _(e) {
+    let { user: t, activity: n, entry: o, onAction: l, isMenuOpen: c, appContext: f } = e,
+        { applicationId: _, sourceUserId: p } = d({
+            activity: n,
+            entry: o,
             user: t
         }),
-        E = (0, o.Z)({
+        h = (0, s.Z)({
             location: 'UserProfileActivityContextMenu',
-            source: s.m1.UserProfileCardContextMenu,
-            trackEntryPointImpression: !0,
-            applicationId: d,
-            sourceUserId: _
+            source: a.m1.UserProfileCardContextMenu,
+            trackEntryPointImpression: c,
+            applicationId: _,
+            sourceUserId: p,
+            appContext: f
         });
-    return null == E
+    return null == h
         ? null
-        : (0, r.jsx)(i.MenuItem, {
+        : (0, r.jsx)(i.sNh, {
               id: 'game-profile',
-              label: u.Z.Messages.VIEW_GAME_PROFILE,
-              action: () => {
-                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), E();
+              label: u.NW.string(u.t.ajHoOj),
+              action: (e) => {
+                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), h(e);
               }
           });
 }

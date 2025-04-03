@@ -1,42 +1,69 @@
-i.d(n, {
-    Z: function () {
-        return u;
-    }
-}),
-    i(47120);
-var l = i(735250);
-i(470079);
-var t = i(442837),
-    s = i(481060),
-    a = i(699516),
-    o = i(689938);
-function u(e) {
-    let { user: n, onAction: u } = e,
-        d = n.id,
-        [r, c] = (0, t.Wu)(
+n.d(t, { Z: () => s }), n(47120);
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    r = n(481060),
+    a = n(699516),
+    o = n(388032);
+function s(e) {
+    let { user: t, onAction: s, appContext: u } = e,
+        c = t.id,
+        [d, g] = (0, l.Wu)(
             [a.Z],
             () => {
                 var e;
-                return [a.Z.isFriend(d), null !== (e = a.Z.getNickname(d)) && void 0 !== e ? e : null];
+                return [a.Z.isFriend(c), null != (e = a.Z.getNickname(c)) ? e : null];
             },
-            [d]
+            [c]
         );
-    if (!r) return null;
-    let Z = null == c ? o.Z.Messages.ADD_FRIEND_NICKNAME : o.Z.Messages.CHANGE_FRIEND_NICKNAME;
-    return (0, l.jsx)(s.MenuItem, {
-        id: null == c ? 'add-friend-nickname' : 'edit-friend-nickname',
-        label: Z,
+    if (!d) return null;
+    let f = null == g ? o.NW.string(o.t.BGYkaG) : o.NW.string(o.t['8pOYUF']);
+    return (0, i.jsx)(r.sNh, {
+        id: null == g ? 'add-friend-nickname' : 'edit-friend-nickname',
+        label: f,
         action: () => {
-            null == u || u(),
-                (0, s.openModalLazy)(async () => {
-                    let { default: e } = await i.e('25070').then(i.bind(i, 670794));
-                    return (i) =>
-                        (0, l.jsx)(e, {
-                            user: n,
-                            nickname: c,
-                            ...i
-                        });
-                });
+            null == s || s(),
+                (0, r.ZDy)(
+                    async () => {
+                        let { default: e } = await n.e('25070').then(n.bind(n, 670794));
+                        return (n) =>
+                            (0, i.jsx)(
+                                e,
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            i = Object.keys(n);
+                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                            (i = i.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                })
+                                            )),
+                                            i.forEach(function (t) {
+                                                var i;
+                                                (i = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: i,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0
+                                                          })
+                                                        : (e[t] = i);
+                                            });
+                                    }
+                                    return e;
+                                })(
+                                    {
+                                        user: t,
+                                        nickname: g
+                                    },
+                                    n
+                                )
+                            );
+                    },
+                    { contextKey: null != u ? (0, r.VnL)(u) : void 0 }
+                );
         }
     });
 }

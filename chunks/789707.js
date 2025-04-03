@@ -1,44 +1,40 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => l });
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(499033),
-    s = n(689938),
-    o = n(377552);
+    o = n(499033),
+    a = n(388032),
+    s = n(879730);
 function l() {
     return (0, r.jsxs)('div', {
-        className: o.container,
+        className: s.container,
         children: [
             (0, r.jsxs)('div', {
-                className: o.iconContainer,
+                className: s.iconContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: o.icon,
-                        children: (0, r.jsx)(i.TopicsIcon, {
+                        className: s.icon,
+                        children: (0, r.jsx)(i.sVe, {
                             size: 'custom',
                             color: 'currentColor',
-                            className: o.iconOffset,
+                            className: s.iconOffset,
                             width: 28,
                             height: 28
                         })
                     }),
-                    (0, r.jsx)(a.Z, { className: o.stars })
+                    (0, r.jsx)(o.Z, { className: s.stars })
                 ]
             }),
-            (0, r.jsx)(i.Heading, {
-                className: o.header,
+            (0, r.jsx)(i.X6q, {
+                className: s.header,
                 variant: 'heading-xl/semibold',
-                children: s.Z.Messages.SUMMARY_EMPTY_STATE_TITLE
+                children: a.NW.string(a.t.yJHJen)
             }),
             (0, r.jsx)(i.Text, {
-                className: o.text,
+                className: s.text,
                 color: 'header-secondary',
                 variant: 'text-md/normal',
-                children: s.Z.Messages.SUMMARY_EMPTY_STATE_TEXT
+                children: a.NW.string(a.t.p2dIh4)
             })
         ]
     });

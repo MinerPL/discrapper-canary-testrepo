@@ -1,5 +1,6 @@
 var r = n(323151),
     i = n(533206);
-e.exports = function e(t, n, a, s, o) {
-    return t === n || (null != t && null != n && (i(t) || i(n)) ? r(t, n, a, s, e, o) : t != t && n != n);
-};
+function o(e, t, n, a, s) {
+    return e === t || (null != e && null != t && (i(e) || i(t)) ? r(e, t, n, a, o, s) : e != e && t != t);
+}
+e.exports = o;

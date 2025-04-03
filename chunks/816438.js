@@ -1,37 +1,33 @@
-n.d(t, {
-    kZ: function () {
-        return E;
-    }
-});
+n.d(t, { kZ: () => _ });
 var r = n(4313),
     i = n(493623),
-    a = n(620720),
-    s = n(343713),
-    o = n(540321),
+    o = n(620720),
+    a = n(343713),
+    s = n(540321),
     l = n(609027),
-    u = n(375317),
-    c = n(882159),
+    c = n(375317),
+    u = n(882159),
     d = {
         placement: 'bottom',
         modifiers: [],
         strategy: 'absolute'
     };
-function _() {
+function f() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return !t.some(function (e) {
         return !(e && 'function' == typeof e.getBoundingClientRect);
     });
 }
-function E(e) {
+function _(e) {
     void 0 === e && (e = {});
     var t = e,
         n = t.defaultModifiers,
-        E = void 0 === n ? [] : n,
-        f = t.defaultOptions,
-        h = void 0 === f ? d : f;
+        _ = void 0 === n ? [] : n,
+        p = t.defaultOptions,
+        h = void 0 === p ? d : p;
     return function (e, t, n) {
         void 0 === n && (n = h);
-        var f = {
+        var p = {
                 placement: 'bottom',
                 orderedModifiers: [],
                 options: Object.assign({}, d, h),
@@ -43,97 +39,103 @@ function E(e) {
                 attributes: {},
                 styles: {}
             },
-            p = [],
-            m = !1,
-            I = {
-                state: f,
+            m = [],
+            g = !1,
+            E = {
+                state: p,
                 setOptions: function (n) {
-                    var r = 'function' == typeof n ? n(f.options) : n;
-                    T(),
-                        (f.options = Object.assign({}, h, f.options, r)),
-                        (f.scrollParents = {
-                            reference: (0, c.kK)(e) ? (0, a.Z)(e) : e.contextElement ? (0, a.Z)(e.contextElement) : [],
-                            popper: (0, a.Z)(t)
+                    var r = 'function' == typeof n ? n(p.options) : n;
+                    y(),
+                        (p.options = Object.assign({}, h, p.options, r)),
+                        (p.scrollParents = {
+                            reference: (0, u.kK)(e) ? (0, o.Z)(e) : e.contextElement ? (0, o.Z)(e.contextElement) : [],
+                            popper: (0, o.Z)(t)
                         });
-                    var i = (0, o.Z)((0, u.Z)([].concat(E, f.options.modifiers)));
+                    var i = (0, s.Z)((0, c.Z)([].concat(_, p.options.modifiers)));
                     return (
-                        (f.orderedModifiers = i.filter(function (e) {
+                        (p.orderedModifiers = i.filter(function (e) {
                             return e.enabled;
                         })),
-                        (function () {
-                            f.orderedModifiers.forEach(function (e) {
-                                var t = e.name,
-                                    n = e.options,
-                                    r = e.effect;
-                                if ('function' == typeof r) {
-                                    var i = r({
-                                        state: f,
-                                        name: t,
-                                        instance: I,
-                                        options: void 0 === n ? {} : n
-                                    });
-                                    p.push(i || function () {});
-                                }
-                            });
-                        })(),
-                        I.update()
+                        b(),
+                        E.update()
                     );
                 },
                 forceUpdate: function () {
-                    if (m) return;
-                    var e = f.elements,
-                        t = e.reference,
-                        n = e.popper;
-                    if (!!_(t, n)) {
-                        (f.rects = {
-                            reference: (0, r.Z)(t, (0, s.Z)(n), 'fixed' === f.options.strategy),
-                            popper: (0, i.Z)(n)
-                        }),
-                            (f.reset = !1),
-                            (f.placement = f.options.placement),
-                            f.orderedModifiers.forEach(function (e) {
-                                return (f.modifiersData[e.name] = Object.assign({}, e.data));
-                            });
-                        for (var a = 0; a < f.orderedModifiers.length; a++) {
-                            if (!0 === f.reset) {
-                                (f.reset = !1), (a = -1);
-                                continue;
+                    if (!g) {
+                        var e = p.elements,
+                            t = e.reference,
+                            n = e.popper;
+                        if (f(t, n)) {
+                            (p.rects = {
+                                reference: (0, r.Z)(t, (0, a.Z)(n), 'fixed' === p.options.strategy),
+                                popper: (0, i.Z)(n)
+                            }),
+                                (p.reset = !1),
+                                (p.placement = p.options.placement),
+                                p.orderedModifiers.forEach(function (e) {
+                                    return (p.modifiersData[e.name] = Object.assign({}, e.data));
+                                });
+                            for (var o = 0; o < p.orderedModifiers.length; o++) {
+                                if (!0 === p.reset) {
+                                    (p.reset = !1), (o = -1);
+                                    continue;
+                                }
+                                var s = p.orderedModifiers[o],
+                                    l = s.fn,
+                                    c = s.options,
+                                    u = void 0 === c ? {} : c,
+                                    d = s.name;
+                                'function' == typeof l &&
+                                    (p =
+                                        l({
+                                            state: p,
+                                            options: u,
+                                            name: d,
+                                            instance: E
+                                        }) || p);
                             }
-                            var o = f.orderedModifiers[a],
-                                l = o.fn,
-                                u = o.options,
-                                c = void 0 === u ? {} : u,
-                                d = o.name;
-                            'function' == typeof l &&
-                                (f =
-                                    l({
-                                        state: f,
-                                        options: c,
-                                        name: d,
-                                        instance: I
-                                    }) || f);
                         }
                     }
                 },
                 update: (0, l.Z)(function () {
                     return new Promise(function (e) {
-                        I.forceUpdate(), e(f);
+                        E.forceUpdate(), e(p);
                     });
                 }),
                 destroy: function () {
-                    T(), (m = !0);
+                    y(), (g = !0);
                 }
             };
-        if (!_(e, t)) return I;
-        I.setOptions(n).then(function (e) {
-            !m && n.onFirstUpdate && n.onFirstUpdate(e);
-        });
-        function T() {
-            p.forEach(function (e) {
+        if (!f(e, t)) return E;
+        function b() {
+            p.orderedModifiers.forEach(function (e) {
+                var t = e.name,
+                    n = e.options,
+                    r = void 0 === n ? {} : n,
+                    i = e.effect;
+                if ('function' == typeof i) {
+                    var o = i({
+                            state: p,
+                            name: t,
+                            instance: E,
+                            options: r
+                        }),
+                        a = function () {};
+                    m.push(o || a);
+                }
+            });
+        }
+        function y() {
+            m.forEach(function (e) {
                 return e();
             }),
-                (p = []);
+                (m = []);
         }
-        return I;
+        return (
+            E.setOptions(n).then(function (e) {
+                !g && n.onFirstUpdate && n.onFirstUpdate(e);
+            }),
+            E
+        );
     };
 }

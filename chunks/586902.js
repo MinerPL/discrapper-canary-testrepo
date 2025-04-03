@@ -1,40 +1,38 @@
 n.d(t, {
-    O: function () {
-        return c;
-    },
-    Z: function () {
-        return u;
-    }
-});
+    O: () => u,
+    Z: () => c
+}),
+    n(47120);
 var r = n(442837),
     i = n(763296),
-    a = n(944486),
-    s = n(606304),
-    o = n(979651);
+    o = n(944486),
+    a = n(606304),
+    s = n(979651);
 function l(e, t, n) {
     return e || t || n;
 }
-function u(e) {
-    var t, n, l;
-    let { userId: u, checkSoundSharing: c = !1, checkSoundboardSounds: d = !0, checkIsMuted: _ = !1, context: E } = e,
-        f = (0, r.e7)([o.Z, a.Z], () => {
-            let e = a.Z.getVoiceChannelId();
-            return null != e ? o.Z.getVoiceStateForChannel(e, u) : null;
-        }),
-        h = _ && ((null == f ? void 0 : f.mute) || (null == f ? void 0 : f.selfMute)),
-        p = (0, r.e7)([s.Z], () => s.Z.isSpeaking(u, E) && !h),
-        m = (0, r.e7)([s.Z], () => s.Z.isSoundSharing(u) && c),
-        I = (0, r.e7)([i.Z], () => i.Z.isUserPlayingSounds(u) && d);
-    return (t = p), (n = I), (l = m), t || n || l;
-}
 function c(e) {
-    var t, n, r;
-    let { userId: l, checkSoundSharing: u = !1, checkSoundboardSounds: c = !0, checkIsMuted: d = !1, context: _ } = e,
-        E = a.Z.getVoiceChannelId(),
-        f = null != E ? o.Z.getVoiceStateForChannel(E, l) : null,
-        h = d && ((null == f ? void 0 : f.mute) || (null == f ? void 0 : f.selfMute)),
-        p = s.Z.isSpeaking(l, _) && !h,
-        m = s.Z.isSoundSharing(l) && u,
-        I = i.Z.isUserPlayingSounds(l) && c;
-    return (t = p), (n = I), (r = m), t || n || r;
+    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: c = !0, checkIsMuted: u = !1, context: d } = e,
+        f = (0, r.e7)([s.Z, o.Z], () => {
+            let e = o.Z.getVoiceChannelId();
+            return null != e ? s.Z.getVoiceStateForChannel(e, t) : null;
+        }),
+        _ = u && ((null == f ? void 0 : f.mute) || (null == f ? void 0 : f.selfMute)),
+        p = (0, r.e7)([a.Z], () => a.Z.isSpeaking(t, d) && !_),
+        h = (0, r.e7)([a.Z], () => a.Z.isSoundSharing(t) && n);
+    return l(
+        p,
+        (0, r.e7)([i.Z], () => i.Z.isUserPlayingSounds(t) && c),
+        h
+    );
+}
+function u(e) {
+    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: r = !0, checkIsMuted: c = !1, context: u } = e,
+        [d, f, _, p] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.Z, o.Z, a.Z, i.Z],
+        h = f.getVoiceChannelId(),
+        m = null != h ? d.getVoiceStateForChannel(h, t) : null,
+        g = c && ((null == m ? void 0 : m.mute) || (null == m ? void 0 : m.selfMute)),
+        E = _.isSpeaking(t, u) && !g,
+        b = _.isSoundSharing(t) && n;
+    return l(E, p.isUserPlayingSounds(t) && r, b);
 }

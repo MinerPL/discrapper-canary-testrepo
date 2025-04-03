@@ -1,12 +1,13 @@
-var r = n(844511),
-    i = n(364555);
-t.Z = function (e, t, n, a) {
-    var s = !n;
-    n || (n = {});
-    for (var o = -1, l = t.length; ++o < l; ) {
-        var u = t[o],
-            c = a ? a(n[u], e[u], u, n, e) : void 0;
-        void 0 === c && (c = e[u]), s ? (0, i.Z)(n, u, c) : (0, r.Z)(n, u, c);
+r.d(t, { Z: () => a });
+var n = r(844511),
+    o = r(364555);
+let a = function (e, t, r, a) {
+    var i = !r;
+    r || (r = {});
+    for (var l = -1, s = t.length; ++l < s; ) {
+        var u = t[l],
+            c = a ? a(r[u], e[u], u, r, e) : void 0;
+        void 0 === c && (c = e[u]), i ? (0, o.Z)(r, u, c) : (0, n.Z)(r, u, c);
     }
-    return n;
+    return r;
 };

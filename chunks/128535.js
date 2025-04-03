@@ -1,137 +1,138 @@
-n(653041), n(47120), n(724458);
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(959078),
-    l = n(442837),
-    o = n(481060),
+n.d(t, { Z: () => y }), n(653041), n(47120);
+var r = n(200651);
+n(192379);
+var s = n(120356),
+    o = n.n(s),
+    i = n(959078),
+    a = n(442837),
+    l = n(481060),
     c = n(607070),
     u = n(553795),
     d = n(358085),
-    _ = n(617136),
-    E = n(111382),
-    I = n(113434),
-    m = n(918701),
-    T = n(566078),
-    h = n(667105),
-    N = n(981631),
-    f = n(689938),
-    C = n(410301);
-let p = (e) => (0 === e.length ? C.warning : C.danger),
-    g = (e, t) => (0 === e.length ? f.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: t }) : f.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: t })),
-    S = (e) => {
-        let { quest: t, location: n, errors: a, gameTitle: s, consoleHelpArticle: l, expiredCredentialsInteractable: c } = e;
-        if (0 === a.length)
-            return (0, i.jsx)(o.Text, {
+    m = n(617136),
+    p = n(915750),
+    x = n(111382),
+    g = n(113434),
+    h = n(918701),
+    f = n(667105),
+    j = n(388032),
+    b = n(166246);
+let C = (e) => (0 === e.length ? b.warning : b.danger),
+    N = (e, t) => (0 === e.length ? j.NW.formatToPlainString(j.t.gX0Qc3, { gameTitle: t }) : j.NW.formatToPlainString(j.t['28Ql29'], { gameTitle: t })),
+    v = (e) => {
+        let { quest: t, location: n, errors: s, gameTitle: o, consoleHelpArticle: a, expiredCredentialsInteractable: c, impressionId: p } = e;
+        if (0 === s.length)
+            return (0, r.jsx)(l.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: f.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: s })
+                children: j.NW.format(j.t.GXqvCw, { gameTitle: o })
             });
-        let E = [];
-        (0, m.Nj)({ quest: t }) && E.push((0, d.isWeb)() ? f.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : f.Z.Messages.QUEST_PROGRESS_NO_GAME);
-        let I = [
-            ...E,
-            ...a.map((e) => {
-                if (e.type !== r.K.EXPIRED_CREDENTIAL || !c) return e.message;
-                let i = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                    a = (0, m.C9)(e),
-                    s = (0, m._j)(e),
-                    l = s === N.ABu.XBOX;
-                return a.format({
-                    account_name: null == i ? void 0 : i.name,
+        let x = [];
+        (0, h.Nj)({ quest: t }) && x.push((0, d.isWeb)() ? j.NW.string(j.t['0UTkPz']) : j.NW.string(j.t.XGRUho));
+        let g = [
+            ...x,
+            ...s.map((e) => {
+                if (e.type !== i.K.EXPIRED_CREDENTIAL || !c) return e.message;
+                let r = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
+                    s = (0, h.C9)(e),
+                    o = (0, h._j)(e);
+                return j.NW.format(s, {
+                    account_name: null == r ? void 0 : r.name,
                     onClick: () => {
-                        (0, m.fY)(
+                        (0, h.fY)(
                             {
                                 quest: t,
-                                showInline: l,
-                                platformType: s
+                                platformType: o
                             },
                             {
                                 content: n,
-                                ctaContent: _.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE
+                                ctaContent: m.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE,
+                                impressionId: p
                             }
                         );
                     }
                 });
             }),
-            l
+            a
         ];
-        return (0, i.jsx)(o.Text, {
+        return (0, r.jsx)(l.Text, {
             variant: 'text-sm/medium',
             color: 'text-muted',
-            children: I.reduce((e, t) => [...e, t, ' '], [])
+            children: g.reduce((e, t) => [...e, t, ' '], [])
         });
-    };
-t.Z = function (e) {
-    let t = T.r.build(e.quest.config).application.name,
-        n = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        a = (0, h.k3)(e.quest.id, e.location),
-        r = (0, E.n)(),
-        u = (0, h.g2)({
-            useReducedMotion: n,
-            className: C.refreshIcon
-        }),
-        {
-            errorHints: d,
-            startingConsoleQuest: m,
-            startConsoleQuest: N
-        } = (0, I.GI)({
-            questId: e.quest.id,
-            beforeRequest: () => {
-                u.startAnimation(),
-                    (0, _._3)({
-                        questId: e.quest.id,
-                        questContent: e.location,
-                        questContentCTA: _.jZ.DEFIBRILLATOR
-                    });
-            },
-            afterRequest: u.stopAnimation
-        });
-    return (0, i.jsxs)('div', {
-        className: s()(C.container, { [C.inFlight]: m }),
-        children: [
-            (0, i.jsxs)('div', {
-                className: C.info,
-                children: [
-                    (0, i.jsxs)('div', {
-                        className: C.header,
-                        children: [
-                            (0, i.jsx)(o.CircleWarningIcon, {
-                                className: s()(C.headerIcon, p(d)),
-                                size: 'custom',
-                                color: 'currentColor',
-                                width: 16,
-                                height: 16
-                            }),
-                            (0, i.jsx)(o.Text, {
-                                variant: 'text-sm/semibold',
-                                children: g(d, t)
-                            })
-                        ]
-                    }),
-                    S({
-                        quest: e.quest,
-                        errors: d,
-                        gameTitle: t,
-                        location: e.location,
-                        consoleHelpArticle: a,
-                        expiredCredentialsInteractable: r
-                    })
-                ]
+    },
+    y = function (e) {
+        let t = e.quest.config.messages.gameTitle,
+            n = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
+            s = (0, f.k3)(e.quest.id, e.location),
+            i = (0, x.n)(),
+            u = (0, m.O5)(),
+            d = (0, p.aM)(),
+            h = (0, f.g2)({
+                useReducedMotion: n,
+                className: b.refreshIcon
             }),
-            (0, i.jsx)('div', {
-                className: C.cta,
-                children: (0, i.jsx)(o.Button, {
-                    color: o.ButtonColors.PRIMARY,
-                    onClick: N,
-                    disabled: m,
-                    children: (0, i.jsxs)('div', {
-                        className: C.ctaInner,
-                        children: [u.render(), f.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
+            {
+                errorHints: y,
+                startingConsoleQuest: O,
+                startConsoleQuest: T
+            } = (0, g.GI)({
+                questId: e.quest.id,
+                beforeRequest: () => {
+                    h.startAnimation(),
+                        u({
+                            questId: e.quest.id,
+                            questContent: e.location,
+                            questContentCTA: m.jZ.DEFIBRILLATOR
+                        });
+                },
+                afterRequest: h.stopAnimation
+            });
+        return (0, r.jsxs)('div', {
+            className: o()(b.container, { [b.inFlight]: O }),
+            children: [
+                (0, r.jsxs)('div', {
+                    className: b.info,
+                    children: [
+                        (0, r.jsxs)('div', {
+                            className: b.header,
+                            children: [
+                                (0, r.jsx)(l.P4T, {
+                                    className: o()(b.headerIcon, C(y)),
+                                    size: 'custom',
+                                    color: 'currentColor',
+                                    width: 16,
+                                    height: 16
+                                }),
+                                (0, r.jsx)(l.Text, {
+                                    variant: 'text-sm/semibold',
+                                    children: N(y, t)
+                                })
+                            ]
+                        }),
+                        v({
+                            quest: e.quest,
+                            errors: y,
+                            gameTitle: t,
+                            location: e.location,
+                            consoleHelpArticle: s,
+                            expiredCredentialsInteractable: i,
+                            impressionId: d
+                        })
+                    ]
+                }),
+                (0, r.jsx)('div', {
+                    className: b.cta,
+                    children: (0, r.jsx)(l.zxk, {
+                        color: l.Ttl.PRIMARY,
+                        onClick: T,
+                        disabled: O,
+                        children: (0, r.jsxs)('div', {
+                            className: b.ctaInner,
+                            children: [h.render(), j.NW.string(j.t.nPThNT)]
+                        })
                     })
                 })
-            })
-        ]
-    });
-};
+            ]
+        });
+    };

@@ -1,50 +1,45 @@
-n.d(t, {
-    T: function () {
-        return f;
-    }
-}),
-    n(47120);
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    l = n(346486),
-    r = n(545594),
-    o = n(314897),
+n.d(t, { T: () => g }), n(47120);
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(346486),
+    a = n(545594),
+    s = n(314897),
     c = n(271383),
     u = n(322937),
     d = n(134049),
-    h = n(893732),
-    m = n(590433),
-    p = n(689938),
-    _ = n(679061);
-function f(e) {
+    p = n(893732),
+    h = n(590433),
+    f = n(388032),
+    m = n(790806);
+function g(e) {
     let { guild: t, disabledUntil: n } = e,
-        [f, E] = (0, d.i)(t.id),
-        g = (0, a.e7)([c.ZP, o.default], () => c.ZP.getMember(t.id, o.default.getId()), [t.id]);
+        [g, b] = (0, d.i)(t.id),
+        _ = (0, i.e7)([c.ZP, s.default], () => c.ZP.getMember(t.id, s.default.getId()), [t.id]);
     return (
-        (0, u.$)(g),
-        (0, i.jsxs)('div', {
+        (0, u.$)(_),
+        (0, r.jsxs)('div', {
             children: [
-                f
-                    ? (0, i.jsx)(h.Z, {
-                          onClose: () => E(t.id),
+                g
+                    ? (0, r.jsx)(p.Z, {
+                          onClose: () => b(t.id),
                           guildName: t.name
                       })
                     : null,
-                (0, i.jsx)(r.i, {
-                    bannerIcon: (0, i.jsx)(s.ClockWarningIcon, {
+                (0, r.jsx)(a.i, {
+                    bannerIcon: (0, r.jsx)(l.YlB, {
                         size: 'md',
                         color: 'currentColor',
-                        className: _.bannerIcon
+                        className: m.bannerIcon
                     }),
-                    bannerHeader: p.Z.Messages.GUILD_COMMUNICATION_DISABLED_NOTICE_HEADER,
-                    bannerSubtext: p.Z.Messages.GUILD_COMMUNICATION_DISABLED_CHAT_NOTICE_DESCRIPTION.format({ link: m.cu }),
-                    containerStyles: _.bannerContainer,
-                    headerStyles: _.bannerHeader,
-                    children: (0, i.jsx)(s.Text, {
+                    bannerHeader: f.NW.string(f.t['9UoK6e']),
+                    bannerSubtext: f.NW.format(f.t['4ZwD5O'], { link: h.cu }),
+                    containerStyles: m.bannerContainer,
+                    headerStyles: m.bannerHeader,
+                    children: (0, r.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
-                        children: (0, i.jsx)(l.Z, {
+                        children: (0, r.jsx)(o.Z, {
                             deadline: new Date(n),
                             showUnits: !0,
                             stopAtOneSec: !0

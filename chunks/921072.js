@@ -1,20 +1,13 @@
-n.d(t, {
-    u$: function () {
-        return r;
-    }
-}),
-    n(47120),
-    n(411104),
-    n(653041);
-var r,
-    i,
-    a = n(230367),
-    s = n(320215),
+n.d(t, { u$: () => l }), n(611060), n(47120), n(411104), n(653041);
+var r = n(230367),
+    i = n(320215),
     o = n(240773),
-    l = n(495852),
-    u = n(835913);
-((i = r || (r = {}))[(i.UNSPECIFIED_DISCLOSURE = 0)] = 'UNSPECIFIED_DISCLOSURE'), (i[(i.IP_LOCATION = 1)] = 'IP_LOCATION'), (i[(i.DISPLAYS_ADVERTISEMENTS = 2)] = 'DISPLAYS_ADVERTISEMENTS');
-class c extends l.C {
+    a = n(495852),
+    s = n(835913),
+    l = (function (e) {
+        return (e[(e.UNSPECIFIED_DISCLOSURE = 0)] = 'UNSPECIFIED_DISCLOSURE'), (e[(e.IP_LOCATION = 1)] = 'IP_LOCATION'), (e[(e.DISPLAYS_ADVERTISEMENTS = 2)] = 'DISPLAYS_ADVERTISEMENTS'), (e[(e.PARTNER_SDK_DATA_SHARING_MESSAGE = 3)] = 'PARTNER_SDK_DATA_SHARING_MESSAGE'), e;
+    })({});
+class c extends a.C {
     create(e) {
         let t = {
             metadata: {},
@@ -27,62 +20,62 @@ class c extends l.C {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, s.l)(this, t, e),
+            void 0 !== e && (0, i.l)(this, t, e),
             t
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let i = null != r ? r : this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
-            let [t, r] = e.tag();
+    internalBinaryRead(e, t, n, i) {
+        let o = null != i ? i : this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
+            let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    this.binaryReadMap1(i.metadata, e, n);
+                    this.binaryReadMap1(o.metadata, e, n);
                     break;
                 case 2:
-                    i.platformName = e.string();
+                    o.platformName = e.string();
                     break;
                 case 3:
-                    i.platformUsername = e.string();
+                    o.platformUsername = e.string();
                     break;
                 case 4:
-                    i.version = e.fixed64().toString();
+                    o.version = e.fixed64().toString();
                     break;
                 default:
-                    let s = n.readUnknownField;
-                    if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? a.z.onRead : s)(this.typeName, i, t, r, o);
+                    let a = n.readUnknownField;
+                    if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                    let s = e.skip(i);
+                    !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, s);
             }
         }
-        return i;
+        return o;
     }
     binaryReadMap1(e, t, n) {
         let r = t.uint32(),
             i = t.pos + r,
-            a,
-            s;
+            o,
+            a;
         for (; t.pos < i; ) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
-                    a = t.string();
+                    o = t.string();
                     break;
                 case 2:
-                    s = t.string();
+                    a = t.string();
                     break;
                 default:
                     throw new globalThis.Error('unknown map entry field for field discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection.metadata');
             }
         }
-        e[null != a ? a : ''] = null != s ? s : '';
+        e[null != o ? o : ''] = null != a ? a : '';
     }
     internalBinaryWrite(e, t, n) {
-        for (let n of Object.keys(e.metadata)) t.tag(1, a.TD.LengthDelimited).fork().tag(1, a.TD.LengthDelimited).string(n).tag(2, a.TD.LengthDelimited).string(e.metadata[n]).join();
-        '' !== e.platformName && t.tag(2, a.TD.LengthDelimited).string(e.platformName), '' !== e.platformUsername && t.tag(3, a.TD.LengthDelimited).string(e.platformUsername), '0' !== e.version && t.tag(4, a.TD.Bit64).fixed64(e.version);
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? a.z.onWrite : r)(this.typeName, e, t), t;
+        for (let n of Object.keys(e.metadata)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(n).tag(2, r.TD.LengthDelimited).string(e.metadata[n]).join();
+        '' !== e.platformName && t.tag(2, r.TD.LengthDelimited).string(e.platformName), '' !== e.platformUsername && t.tag(3, r.TD.LengthDelimited).string(e.platformUsername), '0' !== e.version && t.tag(4, r.TD.Bit64).fixed64(e.version);
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
     constructor() {
         super('discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection', [
@@ -118,7 +111,7 @@ class c extends l.C {
     }
 }
 new c();
-class d extends l.C {
+class u extends a.C {
     create(e) {
         let t = { disclosureType: 0 };
         return (
@@ -126,35 +119,35 @@ class d extends l.C {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, s.l)(this, t, e),
+            void 0 !== e && (0, i.l)(this, t, e),
             t
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let i = null != r ? r : this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
-            let [t, r] = e.tag();
+    internalBinaryRead(e, t, n, i) {
+        let o = null != i ? i : this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
+            let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    i.disclosureType = e.int32();
+                    o.disclosureType = e.int32();
                     break;
                 case 2:
-                    i.ackedAt = u.E.internalBinaryRead(e, e.uint32(), n, i.ackedAt);
+                    o.ackedAt = s.E.internalBinaryRead(e, e.uint32(), n, o.ackedAt);
                     break;
                 default:
-                    let s = n.readUnknownField;
-                    if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                    let o = e.skip(r);
-                    !1 !== s && (!0 === s ? a.z.onRead : s)(this.typeName, i, t, r, o);
+                    let a = n.readUnknownField;
+                    if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                    let l = e.skip(i);
+                    !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, l);
             }
         }
-        return i;
+        return o;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.disclosureType && t.tag(1, a.TD.Varint).int32(e.disclosureType), e.ackedAt && u.E.internalBinaryWrite(e.ackedAt, t.tag(2, a.TD.LengthDelimited).fork(), n).join();
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? a.z.onWrite : r)(this.typeName, e, t), t;
+        0 !== e.disclosureType && t.tag(1, r.TD.Varint).int32(e.disclosureType), e.ackedAt && s.E.internalBinaryWrite(e.ackedAt, t.tag(2, r.TD.LengthDelimited).fork(), n).join();
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
     constructor() {
         super('discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure', [
@@ -162,19 +155,19 @@ class d extends l.C {
                 no: 1,
                 name: 'disclosure_type',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType', r]
+                T: () => ['discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType', l]
             },
             {
                 no: 2,
                 name: 'acked_at',
                 kind: 'message',
-                T: () => u.E
+                T: () => s.E
             }
         ]);
     }
 }
-let _ = new d();
-class E extends l.C {
+let d = new u();
+class f extends a.C {
     create(e) {
         let t = { ackedDisclosures: [] };
         return (
@@ -182,29 +175,29 @@ class E extends l.C {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, s.l)(this, t, e),
+            void 0 !== e && (0, i.l)(this, t, e),
             t
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let i = null != r ? r : this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
-            let [t, r] = e.tag();
-            if (1 === t) i.ackedDisclosures.push(_.internalBinaryRead(e, e.uint32(), n));
+    internalBinaryRead(e, t, n, i) {
+        let o = null != i ? i : this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
+            let [t, i] = e.tag();
+            if (1 === t) o.ackedDisclosures.push(d.internalBinaryRead(e, e.uint32(), n));
             else {
-                let s = n.readUnknownField;
-                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let o = e.skip(r);
-                !1 !== s && (!0 === s ? a.z.onRead : s)(this.typeName, i, t, r, o);
+                let a = n.readUnknownField;
+                if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let s = e.skip(i);
+                !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, s);
             }
         }
-        return i;
+        return o;
     }
     internalBinaryWrite(e, t, n) {
-        for (let r = 0; r < e.ackedDisclosures.length; r++) _.internalBinaryWrite(e.ackedDisclosures[r], t.tag(1, a.TD.LengthDelimited).fork(), n).join();
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? a.z.onWrite : r)(this.typeName, e, t), t;
+        for (let i = 0; i < e.ackedDisclosures.length; i++) d.internalBinaryWrite(e.ackedDisclosures[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
     constructor() {
         super('discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures', [
@@ -213,9 +206,9 @@ class E extends l.C {
                 name: 'acked_disclosures',
                 kind: 'message',
                 repeat: 1,
-                T: () => _
+                T: () => d
             }
         ]);
     }
 }
-new E();
+new f();

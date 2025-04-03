@@ -1,16 +1,12 @@
-t.d(s, {
-    Z: function () {
-        return i;
-    }
-});
-var n = t(969943),
-    a = t(689938);
-function i(e) {
+n.d(t, { Z: () => s });
+var r = n(969943),
+    i = n(388032);
+function s(e) {
     switch (e) {
-        case n.mX.REDUCED_MOTION:
-            return a.Z.Messages.ACCESSIBILITY_REDUCED_MOTION_SETTINGS_OVERRIDE.format();
-        case n.mX.REDUCED_MOTION_STICKERS:
-            return a.Z.Messages.STICKERS_AUTO_PLAY_HELP_DISABLED;
+        case r.mX.REDUCED_MOTION:
+            return i.NW.format(i.t['1dT9V1'], {});
+        case r.mX.REDUCED_MOTION_STICKERS:
+            return i.NW.string(i.t['2ExvRk']);
         default:
             return;
     }

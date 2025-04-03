@@ -1,142 +1,183 @@
-n.d(t, {
-    Z: function () {
-        return v;
-    }
-}),
-    n(789020),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(442837),
-    l = n(904245),
-    r = n(257559),
-    o = n(541716),
+n.d(t, { Z: () => E }), n(789020), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(904245),
+    a = n(257559),
+    s = n(541716),
     c = n(893718),
-    u = n(314897),
-    d = n(323873),
+    u = n(540059),
+    d = n(314897),
+    p = n(323873),
     h = n(430824),
-    m = n(496675),
-    p = n(585483),
-    _ = n(630388),
-    f = n(838440),
-    E = n(930282),
-    g = n(955384),
-    C = n(981631),
-    I = n(58755);
-function x(e) {
+    f = n(496675),
+    m = n(585483),
+    g = n(630388),
+    b = n(838440),
+    _ = n(930282),
+    C = n(955384),
+    y = n(981631),
+    x = n(30804);
+function v(e) {
     let { value: t, channel: n } = e;
-    return (0, f.v)({
-        type: o.I.EDIT,
+    return (0, b.v)({
+        type: s.Ie.EDIT,
         content: t,
         channel: n,
         restrictMentions: !1,
         respectCooldown: !1
     });
 }
-function T(e) {
+function j(e) {
     let { channel: t, message: n } = e,
-        { id: o } = t,
+        { id: s } = t,
         { id: c } = n,
-        p = t.getGuildId(),
-        f = (0, s.e7)([h.Z], () => h.Z.getGuild(p), [p]),
-        E = t.type === C.d4z.GUILD_ANNOUNCEMENT,
-        T = null != f && f.hasFeature(C.oNc.NEWS),
-        v = E && T,
+        m = t.getGuildId(),
+        b = (0, l.e7)([h.Z], () => h.Z.getGuild(m), [m]),
+        _ = t.type === y.d4z.GUILD_ANNOUNCEMENT,
+        j = null != b && b.hasFeature(y.oNc.NEWS),
+        E = _ && j,
         {
-            editingMessage: S,
-            editingTextValue: Z,
-            editingRichValue: A
-        } = (0, s.cj)(
-            [d.Z],
+            editingMessage: N,
+            editingTextValue: I,
+            editingRichValue: P
+        } = (0, l.cj)(
+            [p.Z],
             () => ({
-                editingMessage: d.Z.getEditingMessage(o),
-                editingTextValue: d.Z.getEditingTextValue(o),
-                editingRichValue: d.Z.getEditingRichValue(o)
+                editingMessage: p.Z.getEditingMessage(s),
+                editingTextValue: p.Z.getEditingTextValue(s),
+                editingRichValue: p.Z.getEditingRichValue(s)
             }),
-            [o]
+            [s]
         ),
-        M = (0, s.e7)([u.default], () => u.default.getId()),
-        b = a.useCallback(
-            (e, n, i) => {
-                let { content: a } = i,
-                    s = m.Z.can(C.Plq.MANAGE_MESSAGES, t),
-                    o = null != S && null != S.author ? S.author.id : null;
-                return v && (o === M || s) && null != S && (0, _.yE)(S.flags, C.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, a) : l.Z.editMessage(e, n, { content: a }), Promise.resolve();
+        S = (0, l.e7)([d.default], () => d.default.getId()),
+        Z = i.useCallback(
+            (e, n, r) => {
+                let { content: i } = r,
+                    l = f.Z.can(y.Plq.MANAGE_MESSAGES, t),
+                    s = null != N && null != N.author ? N.author.id : null;
+                return E && (s === S || l) && null != N && (0, g.yE)(N.flags, y.iLy.CROSSPOSTED) ? a.Z.confirmEdit(e, n, i) : o.Z.editMessage(e, n, { content: i }), Promise.resolve();
             },
-            [S, v, M, t]
+            [N, E, S, t]
         ),
-        R = a.useCallback(
-            (e) =>
-                (0, a.createElement)(N, {
-                    ...e,
-                    className: I.channelTextArea,
-                    key: c
-                }),
+        T = i.useCallback(
+            (e) => {
+                var t, n;
+                return (0, i.createElement)(
+                    O,
+                    ((t = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, e)),
+                    (n = n =
+                        {
+                            className: x.channelTextArea,
+                            key: c
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          }),
+                    t)
+                );
+            },
             [c]
-        );
-    return null != Z && null != A
-        ? (0, i.jsx)(g.Z, {
+        ),
+        A = (0, u.R6)('EditorWrapper');
+    return null != I && null != P
+        ? (0, r.jsx)(C.Z, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: Z,
-              richValue: A,
-              onCancel: l.Z.endEditMessage,
-              onChange: l.Z.updateEditMessage,
-              onConfirmDelete: r.Z.confirmDelete,
-              saveMessage: b,
-              validateEdit: x,
-              children: R
+              textValue: I,
+              richValue: P,
+              onCancel: o.Z.endEditMessage,
+              onChange: o.Z.updateEditMessage,
+              onConfirmDelete: a.Z.confirmDelete,
+              saveMessage: Z,
+              validateEdit: v,
+              isRefreshEnabled: A,
+              children: T
           })
         : null;
 }
-function N(e) {
-    let { textValue: t, richValue: n, message: s, channel: l, onChange: r, onSubmit: u, onKeyDown: d } = e,
-        [h, m] = a.useState(!0),
-        _ = a.useCallback(() => m(!0), []),
-        f = a.useCallback(() => m(!1), []);
+function O(e) {
+    let { textValue: t, richValue: n, message: l, channel: o, onChange: a, onSubmit: u, onKeyDown: d, renderLeftAccessories: p } = e,
+        [h, f] = i.useState(!0),
+        g = i.useCallback(() => f(!0), []),
+        b = i.useCallback(() => f(!1), []);
     return (
-        a.useEffect(
+        i.useEffect(
             () => (
-                p.S.subscribe(C.CkL.TEXTAREA_FOCUS, _),
-                p.S.subscribe(C.CkL.TEXTAREA_BLUR, f),
+                m.S.subscribe(y.CkL.TEXTAREA_FOCUS, g),
+                m.S.subscribe(y.CkL.TEXTAREA_BLUR, b),
                 () => {
-                    p.S.unsubscribe(C.CkL.TEXTAREA_FOCUS, _), p.S.unsubscribe(C.CkL.TEXTAREA_BLUR, f);
+                    m.S.unsubscribe(y.CkL.TEXTAREA_FOCUS, g), m.S.unsubscribe(y.CkL.TEXTAREA_BLUR, b);
                 }
             ),
-            [_, f]
+            [g, b]
         ),
-        (0, i.jsx)(
+        (0, r.jsx)(
             c.Z,
             {
-                className: I.channelTextArea,
+                className: x.channelTextArea,
                 textValue: t,
                 richValue: n,
-                channel: l,
-                type: o.I.EDIT,
-                onChange: r,
+                channel: o,
+                type: s.Ie.EDIT,
+                onChange: a,
                 onSubmit: (e) => {
                     let { value: t } = e;
                     return u(t);
                 },
                 onKeyDown: d,
                 focused: h,
-                onFocus: _,
-                onBlur: f
+                onFocus: g,
+                onBlur: b,
+                renderLeftAccessories: p
             },
-            s.id
+            l.id
         )
     );
 }
-function v(e, t, n) {
-    let { message: a, channel: s } = e;
+function E(e, t, n) {
+    let { message: i, channel: l } = e;
     return n
-        ? (0, i.jsx)(T, {
-              channel: s,
-              message: a
+        ? (0, r.jsx)(j, {
+              channel: l,
+              message: i
           })
-        : (0, i.jsx)(E.ZP, {
-              message: a,
+        : (0, r.jsx)(_.ZP, {
+              message: i,
               content: t
           });
 }

@@ -1,8 +1,4 @@
-n.d(t, {
-    c: function () {
-        return i;
-    }
-});
+n.d(t, { c: () => i });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-10_call_banner_bg',

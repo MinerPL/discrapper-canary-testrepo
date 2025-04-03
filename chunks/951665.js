@@ -1,65 +1,97 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
-var s = n(735250),
-    a = n(470079),
-    i = n(481060),
-    r = n(457414),
+n.d(t, { Z: () => m }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(457414),
     l = n(311173),
-    o = n(689938),
-    c = n(883333);
+    o = n(388032),
+    c = n(320705);
 function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e) {
     var t;
-    let { rule: n, onChangeRule: d, collapsed: u = !1 } = e,
-        [_, I] = a.useState(!u),
-        E = a.useCallback(() => {
-            I(!_);
-        }, [_, I]),
-        T = a.useCallback(
+    let { rule: n, onChangeRule: m, collapsed: g = !1 } = e,
+        [p, h] = i.useState(!g),
+        f = i.useCallback(() => {
+            h(!p);
+        }, [p, h]),
+        b = i.useCallback(
             (e) => {
-                d({
-                    ...n,
-                    triggerMetadata: {
-                        ...n.triggerMetadata,
-                        regexPatterns: e
-                    }
-                });
+                m(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
-            [d, n]
+            [m, n]
         );
-    return (0, r.S)(n.triggerType)
-        ? (0, s.jsx)(i.Collapsible, {
-              isExpanded: _,
-              collapsibleContent: (0, s.jsx)(l.Z, {
+    return (0, a.S)(n.triggerType)
+        ? (0, r.jsx)(s.zF9, {
+              isExpanded: p,
+              collapsibleContent: (0, r.jsx)(l.Z, {
                   rule: n,
-                  onChangeText: T,
+                  onChangeText: b,
                   className: c.textAreaContainer,
-                  initialValue: null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.regexPatterns
+                  initialValue: null == (t = n.triggerMetadata) ? void 0 : t.regexPatterns
               }),
               className: c.collapseable,
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, s.jsx)(i.Clickable, {
+                  return (0, r.jsx)(s.P3F, {
                       onClick: (e) => {
-                          E(), t(e);
+                          f(), t(e);
                       },
-                      children: (0, s.jsxs)('div', {
+                      children: (0, r.jsxs)('div', {
                           className: c.header,
                           children: [
-                              (0, s.jsx)(i.Heading, {
+                              (0, r.jsx)(s.X6q, {
                                   variant: 'text-sm/medium',
-                                  children: o.Z.Messages.GUILD_AUTOMOD_REGEX_TEXTAREA_TITLE
+                                  children: o.NW.string(o.t.dnunm5)
                               }),
-                              _
-                                  ? (0, s.jsx)(i.ChevronSmallUpIcon, {
+                              p
+                                  ? (0, r.jsx)(s.u04, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: c.arrow
                                     })
-                                  : (0, s.jsx)(i.ChevronSmallDownIcon, {
+                                  : (0, r.jsx)(s.CJ0, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: c.arrow

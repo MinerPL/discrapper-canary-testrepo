@@ -1,19 +1,16 @@
 n.d(t, {
-    G8: function () {
-        return s;
-    },
-    N6: function () {
-        return a;
-    },
-    vp: function () {
-        return o;
-    }
-});
+    G8: () => s,
+    N6: () => a,
+    vp: () => l
+}),
+    n(301563);
 var r = n(77498),
     i = n(358085);
+function o(e) {
+    return (e = e.toLowerCase()).endsWith('/') && (e = e.slice(0, -1)), e;
+}
 function a(e) {
-    var t;
-    return ((t = (t = e).toLowerCase()).endsWith('/') && (t = t.slice(0, -1)), t).split('/').slice(-2).join('/');
+    return o(e).split('/').slice(-2).join('/');
 }
 function s(e) {
     var t, n;
@@ -25,15 +22,15 @@ function s(e) {
             distributor: void 0
         };
     let i = r.Z.getGameByName(e.name),
-        s = 'exePath' in e ? e.exePath : e.exe;
+        o = 'exePath' in e ? e.exePath : e.exe;
     return {
-        gameName: null !== (t = e.name) && void 0 !== t ? t : void 0,
+        gameName: null != (t = e.name) ? t : void 0,
         gameId: null == i ? void 0 : i.id,
-        exe: null != s ? a(s) : void 0,
-        distributor: null !== (n = e.distributor) && void 0 !== n ? n : void 0
+        exe: null != o ? a(o) : void 0,
+        distributor: null != (n = e.distributor) ? n : void 0
     };
 }
-function o(e, t) {
+function l(e, t) {
     if (null == e || null == t) return !1;
     let n = a(e),
         r = (0, i.getPlatformName)();

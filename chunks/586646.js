@@ -1,81 +1,78 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
-var i = n(735250),
-    l = n(470079),
-    r = n(442837),
-    a = n(481060),
-    s = n(19780),
-    o = n(571826),
-    c = n(301107),
-    u = n(785792),
-    d = n(190054),
-    h = n(760373),
-    p = n(689938),
-    _ = n(943494);
-function f(e) {
+n.d(t, { Z: () => N });
+var r = n(200651),
+    l = n(192379),
+    i = n(442837),
+    o = n(481060),
+    a = n(19780),
+    s = n(571826),
+    c = n(630759),
+    u = n(301107),
+    d = n(785792),
+    h = n(190054),
+    f = n(760373),
+    p = n(388032),
+    g = n(764229);
+function N(e) {
     let { channelId: t } = e,
-        n = (0, r.e7)([s.Z], () => {
+        n = (0, i.e7)([a.Z], () => {
             var e;
-            return null === (e = s.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator;
+            return null == (e = a.Z.getSecureFramesState()) ? void 0 : e.epochAuthenticator;
         }),
-        f = (0, c.W)({
+        N = (0, u.W)({
             fingerprintBase64: n,
-            chunkSize: h.y6,
-            desiredLength: h.YP
+            chunkSize: f.y6,
+            desiredLength: f.YP
         }),
-        g = l.useCallback(() => {
-            (0, o.PM)({ channelId: t });
+        y = l.useCallback(() => {
+            (0, s.PM)({ channelId: t });
         }, [t]);
-    return (0, i.jsxs)('div', {
-        className: _.container,
+    return (0, r.jsxs)('div', {
+        className: g.container,
         children: [
-            (0, i.jsxs)('div', {
-                className: _.tag,
+            (0, r.jsxs)('div', {
+                className: g.tag,
                 children: [
-                    (0, i.jsx)(a.LockIcon, {
+                    (0, r.jsx)(o.mBM, {
                         size: 'xxs',
-                        color: a.tokens.colors.TEXT_POSITIVE
+                        color: o.TVs.colors.TEXT_POSITIVE
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-positive',
-                        children: p.Z.Messages.E2EE_END_TO_END_ENCRYPTED
+                        children: p.NW.string(p.t['3BogKS'])
                     })
                 ]
             }),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: p.Z.Messages.E2EE_RTC_PANEL_CALL_VERIFICATION_SUBTITLE
+                children: p.NW.string(p.t.B9JNsr)
             }),
-            (0, i.jsxs)('div', {
-                className: _.header,
+            (0, r.jsxs)('div', {
+                className: g.header,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, r.jsx)(o.X6q, {
                         variant: 'text-sm/bold',
                         color: 'header-primary',
-                        children: p.Z.Messages.E2EE_VOICE_PRIVACY_CODE
+                        children: p.NW.string(p.t.cTQI5u)
                     }),
-                    null != f &&
-                        (0, i.jsx)(d.H, {
-                            chunks: f,
-                            color: a.tokens.colors.INTERACTIVE_NORMAL.css,
-                            onCopy: g
+                    null != N &&
+                        (0, r.jsx)(h.H, {
+                            chunks: N,
+                            color: o.TVs.colors.INTERACTIVE_NORMAL.css,
+                            onCopy: y
                         })
                 ]
             }),
-            (0, i.jsx)(u.b, {
-                className: _.code,
-                chunks: f,
-                columns: h.WK
+            (0, r.jsx)(d.b, {
+                className: g.code,
+                chunks: N,
+                columns: f.WK
             }),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: p.Z.Messages.E2EE_CALL_VERIFICATION_FOOTER_TEXT.format({ helpArticle: h.l4 })
+                children: p.NW.format(p.t.wKxADQ, { helpArticle: (0, c.uV)() })
             })
         ]
     });

@@ -1,64 +1,56 @@
-n.d(t, {
-    s: function () {
-        return T;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+n.d(t, { s: () => O });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     l = n(481060),
-    o = n(346610),
+    s = n(346610),
     c = n(868643),
     u = n(912332),
-    d = n(503349),
-    _ = n(689938),
-    E = n(903783);
-function I() {
-    (0, l.closeModal)(d.c);
+    d = n(701865),
+    f = n(388032),
+    p = n(919399);
+function _() {
+    (0, l.Mr3)(d.U);
 }
-function m(e) {
-    let { className: t, channelId: n, messageId: s, target: o } = e,
-        c = a.useCallback(() => {
-            if ('embed' === o.type) {
-                (0, u.l8)({
-                    messageId: s,
-                    channelId: n,
+function h(e) {
+    let { className: t, message: n, target: o, onClick: s } = e,
+        c = i.useCallback(() => {
+            if ((null == s || s(), 'embed' === o.type))
+                return void (0, u.l8)({
+                    message: n,
                     source: 'media-viewer',
                     forwardOptions: { onlyEmbedIndices: [o.embedIndex] },
-                    onRequestSent: I
+                    onRequestSent: _
                 });
-                return;
-            }
             (0, u.l8)({
-                messageId: s,
-                channelId: n,
+                message: n,
                 source: 'media-viewer',
                 forwardOptions: { onlyAttachmentIds: [o.attachmentId] },
-                onRequestSent: I
+                onRequestSent: _
             });
-        }, [n, s, o]);
-    return (0, i.jsx)(l.Clickable, {
-        className: r()(E.container, t),
+        }, [n, o, s]);
+    return (0, r.jsx)(l.P3F, {
+        className: a()(p.container, t),
         onClick: c,
-        children: (0, i.jsx)(l.Text, {
-            className: E.text,
+        children: (0, r.jsx)(l.Text, {
+            className: p.text,
             variant: 'text-sm/medium',
             color: 'always-white',
-            children: _.Z.Messages.MESSAGE_ACTION_FORWARD
+            children: f.NW.string(f.t.I3ltXF)
         })
     });
 }
-function T(e, t) {
-    let { canForwardMessages: n } = (0, o.WT)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
-    return n && (0, c.h)(e)
-        ? (n) => {
-              let { className: a } = n;
-              return (0, i.jsx)(m, {
-                  className: a,
-                  channelId: e.channel_id,
-                  messageId: e.id,
-                  target: t
+function O(e, t, n) {
+    let { canForwardMessages: i } = (0, s.WT)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
+    return i && (0, c.h)(e)
+        ? (i) => {
+              let { className: o } = i;
+              return (0, r.jsx)(h, {
+                  className: o,
+                  message: e,
+                  target: t,
+                  onClick: n
               });
           }
         : () => null;

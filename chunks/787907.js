@@ -1,13 +1,9 @@
-a.d(t, {
-    O: function () {
-        return o;
-    }
-});
-var n = a(735250),
-    i = a(470079),
+a.d(t, { O: () => i });
+var n = a(200651),
+    s = a(192379),
     r = a(435935),
-    l = a(770357);
-class o extends i.PureComponent {
+    l = a(551472);
+class i extends s.PureComponent {
     render() {
         return (0, n.jsxs)(r.k, {
             wrap: r.k.Wrap.NO_WRAP,

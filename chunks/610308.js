@@ -1,7 +1,7 @@
-n(411104);
+n.d(t, { Z: () => s }), n(26686), n(411104);
 var r = n(374023);
 let i = (0, n(733393).V)();
-class a {
+class o {
     pack(e) {
         return JSON.stringify(e);
     }
@@ -16,5 +16,6 @@ class a {
         return !0;
     }
 }
-let s = void 0 !== i ? i : a;
-r.s.isDiscordGatewayPlaintextSet() && (s = a), (t.Z = s);
+let a = void 0 !== i ? i : o;
+r.s.isDiscordGatewayPlaintextSet() && (a = o);
+let s = a;

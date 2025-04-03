@@ -1,51 +1,47 @@
-t.d(r, {
-    Z: function () {
-        return p;
-    }
-}),
-    t(47120);
-var a = t(735250);
-t(470079);
-var n = t(346652),
-    i = t(692547),
-    o = t(410030),
-    l = t(95398),
-    c = t(981631),
-    s = t(535271);
+n.d(t, { Z: () => p }), n(47120), n(301563);
+var r = n(200651);
+n(192379);
+var a = n(189223),
+    l = n(692547),
+    i = n(410030),
+    o = n(95398),
+    s = n(981631),
+    c = n(616257);
 let d = {
-    base00: i.Z.colors.BACKGROUND_SECONDARY.css,
-    base03: i.Z.colors.TEXT_WARNING.css,
-    base07: i.Z.colors.TEXT_NORMAL.css,
-    base08: i.Z.colors.TEXT_MUTED.css,
-    base09: i.Z.colors.TEXT_POSITIVE.css,
-    base0B: i.Z.colors.TEXT_WARNING.css,
-    base0D: i.Z.colors.TEXT_BRAND.css
+    base00: l.Z.colors.BACKGROUND_SECONDARY.css,
+    base03: l.Z.colors.TEXT_WARNING.css,
+    base07: l.Z.colors.TEXT_NORMAL.css,
+    base08: l.Z.colors.TEXT_MUTED.css,
+    base09: l.Z.colors.TEXT_POSITIVE.css,
+    base0B: l.Z.colors.TEXT_WARNING.css,
+    base0D: l.Z.colors.TEXT_BRAND.css
 };
 function u(e) {
-    let r = {};
-    for (let [t, a] of Object.entries(e)) r[t] = a;
-    return r;
+    let t = {};
+    for (let [n, r] of Object.entries(e)) t[n] = r;
+    return t;
 }
-let h = u(d),
-    m = u(d);
-function g(e) {
-    return c.Jn9.test(e)
-        ? (0, a.jsx)(l.Z, {
-              type: l.Z.Types.TEXT,
-              children: () => (0, a.jsx)(a.Fragment, { children: e })
+let m = u(d),
+    x = u(d);
+function h(e) {
+    return s.Jn9.test(e)
+        ? (0, r.jsx)(o.ZP, {
+              type: o.ZP.Types.TEXT,
+              children: () => e
           })
         : e;
 }
 function p(e) {
-    let { data: r } = e,
-        t = (0, o.ZP)();
-    return (0, a.jsx)('div', {
-        className: s.inspectorWrapper,
-        children: (0, a.jsx)(n.L, {
-            data: r,
-            theme: 'light' === t ? m : h,
+    let { data: t } = e,
+        n = (0, i.ZP)();
+    return (0, r.jsx)('div', {
+        className: c.inspectorWrapper,
+        children: (0, r.jsx)(a.L, {
+            data: t,
+            theme: 'light' === n ? x : m,
             invertTheme: !1,
-            valueRenderer: g
+            valueRenderer: h,
+            shouldExpandNode: () => !0
         })
     });
 }

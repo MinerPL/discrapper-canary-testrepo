@@ -1,77 +1,76 @@
-s.r(a),
-    s.d(a, {
-        default: function () {
-            return _;
-        }
-    });
-var t = s(735250);
-s(470079);
-var o = s(481060),
-    d = s(547972),
-    n = s(63063),
-    r = s(981631),
-    l = s(332325),
-    i = s(689938),
-    c = s(552269),
-    N = s(83173);
+t.d(a, { default: () => _ });
+var s = t(200651);
+t(192379);
+var r = t(481060),
+    n = t(688465),
+    o = t(547972),
+    i = t(63063),
+    c = t(981631),
+    d = t(332325),
+    l = t(388032),
+    m = t(347383),
+    x = t(83173);
 function _(e) {
-    let { transitionState: a, onClose: s } = e;
-    return (0, t.jsxs)(o.ModalRoot, {
+    let { transitionState: a, onClose: t } = e;
+    return (0, s.jsxs)(r.Y0X, {
         transitionState: a,
-        size: o.ModalSize.DYNAMIC,
-        className: c.modalRoot,
+        size: r.CgR.DYNAMIC,
+        className: m.modalRoot,
         children: [
-            (0, t.jsxs)(o.ModalHeader, {
+            (0, s.jsxs)(r.xBx, {
                 separator: !1,
-                className: c.modalHeader,
+                className: m.modalHeader,
                 children: [
-                    (0, t.jsx)('div', {
-                        className: c.imageFrame,
-                        children: (0, t.jsx)('img', {
-                            alt: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_ALT,
-                            src: N,
-                            className: c.heroImage
+                    (0, s.jsx)('div', {
+                        className: m.imageFrame,
+                        children: (0, s.jsx)('img', {
+                            alt: l.NW.string(l.t.AWkQTk),
+                            src: x,
+                            className: m.heroImage
                         })
                     }),
-                    (0, t.jsx)('div', {
-                        className: c.headerWrapper,
-                        children: (0, t.jsx)(o.Heading, {
-                            variant: 'heading-xl/bold',
-                            children: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_HEADER
-                        })
+                    (0, s.jsxs)('div', {
+                        className: m.headerWrapper,
+                        children: [
+                            (0, s.jsx)(r.X6q, {
+                                variant: 'heading-xl/bold',
+                                children: l.NW.string(l.t.gb37Ky)
+                            }),
+                            (0, s.jsx)(n.Z, { className: m.betaTag })
+                        ]
                     })
                 ]
             }),
-            (0, t.jsxs)(o.ModalContent, {
-                className: c.modalContent,
+            (0, s.jsxs)(r.hzk, {
+                className: m.modalContent,
                 children: [
-                    (0, t.jsxs)('div', {
-                        className: c.modalContentFrame,
+                    (0, s.jsxs)('div', {
+                        className: m.modalContentFrame,
                         children: [
-                            (0, t.jsx)(o.Text, {
+                            (0, s.jsx)(r.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-secondary',
-                                children: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_DESCRIPTION
+                                children: l.NW.string(l.t.WKxo8v)
                             }),
-                            (0, t.jsx)(E, {})
+                            (0, s.jsx)(b, {})
                         ]
                     }),
-                    (0, t.jsxs)('div', {
-                        className: c.modalFooter,
+                    (0, s.jsxs)('div', {
+                        className: m.modalFooter,
                         children: [
-                            (0, t.jsx)(o.Button, {
-                                onClick: s,
-                                className: c.button,
-                                children: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT
+                            (0, s.jsx)(r.zxk, {
+                                onClick: t,
+                                className: m.button,
+                                children: l.NW.string(l.t['x/26d3'])
                             }),
-                            (0, t.jsx)(o.Text, {
+                            (0, s.jsx)(r.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'text-muted',
-                                className: c.disclosureText,
-                                children: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_DISCLOSURE.format({
-                                    recentActivityURL: n.Z.getArticleURL(r.BhN.MEMBER_LIST_ACTIVITY_FEED),
+                                className: m.disclosureText,
+                                children: l.NW.format(l.t['5Ey5Dw'], {
+                                    recentActivityURL: i.Z.getArticleURL(c.BhN.MEMBER_LIST_ACTIVITY_FEED),
                                     handleActivityPrivacyClick: () => {
-                                        s(), (0, d.Z)(l.Z.ACTIVITY_PRIVACY);
+                                        t(), (0, o.Z)(d.Z.ACTIVITY_PRIVACY);
                                     }
                                 })
                             })
@@ -82,37 +81,41 @@ function _(e) {
         ]
     });
 }
-let E = () => {
+let b = () => {
     let e = [
         {
-            icon: (0, t.jsx)(o.FriendsIcon, { className: c.icon }),
-            text: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_FRIEND_NOTE
+            icon: (0, s.jsx)(r.iFz, { className: m.icon }),
+            text: l.NW.string(l.t.vXBrdn)
         },
         {
-            icon: (0, t.jsx)(o.GameControllerIcon, { className: c.icon }),
-            text: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_PLAYED_NOTE
+            icon: (0, s.jsx)(r.iWm, { className: m.icon }),
+            text: l.NW.string(l.t.aExjOz)
         },
         {
-            icon: (0, t.jsx)(o.ChatIcon, { className: c.icon }),
-            text: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_REPLY_NOTE
+            icon: (0, s.jsx)(r.kBi, { className: m.icon }),
+            text: l.NW.string(l.t['i7/QHB'])
+        },
+        {
+            icon: (0, s.jsx)(r.lMe, { className: m.icon }),
+            text: l.NW.string(l.t.ZmBfKC)
         }
     ];
-    return (0, t.jsx)('div', {
-        className: c.notes,
+    return (0, s.jsx)('div', {
+        className: m.notes,
         children: e.map((e, a) => {
-            let { icon: s, text: d } = e;
-            return (0, t.jsxs)(
+            let { icon: t, text: n } = e;
+            return (0, s.jsxs)(
                 'div',
                 {
-                    className: c.badgeNote,
+                    className: m.badgeNote,
                     children: [
-                        (0, t.jsx)('div', {
-                            className: c.badge,
-                            children: s
+                        (0, s.jsx)('div', {
+                            className: m.badge,
+                            children: t
                         }),
-                        (0, t.jsx)(o.Text, {
+                        (0, s.jsx)(r.Text, {
                             variant: 'text-sm/medium',
-                            children: d
+                            children: n
                         })
                     ]
                 },

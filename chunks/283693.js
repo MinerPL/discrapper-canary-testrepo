@@ -4,17 +4,11 @@ function r(e) {
 function i(e, t) {
     return e.hasOwnProperty(t);
 }
-function a(e, t) {
+function o(e, t) {
     return Object.setPrototypeOf(e, t.prototype);
 }
 n.d(t, {
-    gh: function () {
-        return a;
-    },
-    iG: function () {
-        return r;
-    },
-    nr: function () {
-        return i;
-    }
+    gh: () => o,
+    iG: () => r,
+    nr: () => i
 });

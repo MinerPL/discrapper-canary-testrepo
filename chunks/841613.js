@@ -1,16 +1,10 @@
 n.d(t, {
-    Gl: function () {
-        return i;
-    },
-    hG: function () {
-        return s;
-    },
-    oI: function () {
-        return o;
-    }
+    Gl: () => s,
+    hG: () => i,
+    oI: () => r
 });
 var a = n(570140);
-function s(e, t, n) {
+function i(e, t, n) {
     a.Z.dispatch({
         type: 'CONNECTED_DEVICE_SET',
         displayName: e,
@@ -18,12 +12,12 @@ function s(e, t, n) {
         location: n
     });
 }
-function i(e) {
+function s(e) {
     a.Z.dispatch({
         type: 'CONNECTED_DEVICE_IGNORE',
         displayName: e
     });
 }
-function o() {
+function r() {
     a.Z.dispatch({ type: 'CONNECTED_DEVICE_NEVER_SHOW_MODAL' });
 }

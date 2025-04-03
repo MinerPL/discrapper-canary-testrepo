@@ -1,59 +1,98 @@
-n.d(t, {
-    Z: function () {
-        return T;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(512722),
-    s = n.n(a),
-    r = n(399606),
-    l = n(481060),
-    o = n(607070),
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
+var i = n(512722),
+    a = n.n(i),
+    l = n(399606),
+    o = n(481060),
+    s = n(607070),
     c = n(430824),
     u = n(506071),
     d = n(267101),
-    _ = n(240864),
-    E = n(57949),
-    I = n(400916),
-    m = n(689938);
-function T(e) {
-    let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: a } = e,
-        T = (0, r.e7)([_.Z], () => _.Z.getGuildProduct(n)),
-        h = (0, r.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        N = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
-        f = (0, u.n)();
-    if ((s()(null != h, 'guild cannot be null'), s()(null != T, 'guildProductListing cannot be null'), (0, d.SO)(h)))
-        return (0, i.jsx)(l.Tooltip, {
-            text: m.Z.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
-            children: (e) =>
-                (0, i.jsx)(l.Button, {
-                    ...e,
-                    color: l.Button.Colors.BRAND,
-                    disabled: !0,
-                    children: m.Z.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
-                })
-        });
-    if (!T.has_entitlement)
-        return (0, i.jsx)(l.ShinyButton, {
-            shineSize: l.ShinyButton.ShineSizes.SMALL,
-            pauseAnimation: N || !f,
-            onClick: () =>
-                (0, E.z)({
-                    guildProductListing: T,
-                    guildId: h.id,
-                    sourceAnalyticsLocations: a
-                }),
-            children: m.Z.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
-        });
-    return null != T.attachments
-        ? (0, i.jsx)(I.Z, {
-              guildId: h.id,
-              productId: T.id
+    p = n(240864),
+    m = n(57949),
+    f = n(400916),
+    h = n(388032);
+function g(e) {
+    let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: i } = e,
+        g = (0, l.e7)([p.Z], () => p.Z.getGuildProduct(n)),
+        _ = (0, l.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        b = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+        x = (0, u.n)();
+    return (a()(null != _, 'guild cannot be null'), a()(null != g, 'guildProductListing cannot be null'), (0, d.SO)(_))
+        ? (0, r.jsx)(o.ua7, {
+              text: h.NW.string(h.t.sAJr9f),
+              children: (e) => {
+                  var t, n;
+                  return (0, r.jsx)(
+                      o.zxk,
+                      ((t = (function (e) {
+                          for (var t = 1; t < arguments.length; t++) {
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  r = Object.keys(n);
+                              'function' == typeof Object.getOwnPropertySymbols &&
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                      })
+                                  )),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      (r = n[t]),
+                                          t in e
+                                              ? Object.defineProperty(e, t, {
+                                                    value: r,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0
+                                                })
+                                              : (e[t] = r);
+                                  });
+                          }
+                          return e;
+                      })({}, e)),
+                      (n = n =
+                          {
+                              color: o.zxk.Colors.BRAND,
+                              disabled: !0,
+                              children: h.NW.string(h.t.xUi3BA)
+                          }),
+                      Object.getOwnPropertyDescriptors
+                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                          : (function (e, t) {
+                                var n = Object.keys(e);
+                                if (Object.getOwnPropertySymbols) {
+                                    var r = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, r);
+                                }
+                                return n;
+                            })(Object(n)).forEach(function (e) {
+                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                            }),
+                      t)
+                  );
+              }
           })
-        : (0, i.jsx)(l.Button, {
-              color: l.Button.Colors.PRIMARY,
-              disabled: !0,
-              children: m.Z.Messages.GUILD_PRODUCT_CARD_PURCHASED
-          });
+        : g.has_entitlement
+          ? null != g.attachments
+              ? (0, r.jsx)(f.Z, {
+                    guildId: _.id,
+                    productId: g.id
+                })
+              : (0, r.jsx)(o.zxk, {
+                    color: o.zxk.Colors.PRIMARY,
+                    disabled: !0,
+                    children: h.NW.string(h.t.RcTOGB)
+                })
+          : (0, r.jsx)(o.gtL, {
+                shineSize: o.gtL.ShineSizes.SMALL,
+                pauseAnimation: b || !x,
+                onClick: () =>
+                    (0, m.z)({
+                        guildProductListing: g,
+                        guildId: _.id,
+                        sourceAnalyticsLocations: i
+                    }),
+                children: h.NW.string(h.t.xUi3BA)
+            });
 }

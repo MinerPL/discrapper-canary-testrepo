@@ -1,8 +1,4 @@
-n.d(t, {
-    K: function () {
-        return i;
-    }
-});
+n.d(t, { K: () => i });
 var r = n(470167);
 let i = (e) => {
     let { type: t } = e;

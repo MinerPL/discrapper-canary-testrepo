@@ -1,45 +1,41 @@
-r.d(t, {
-    b: function () {
-        return o;
-    }
-});
-var n = r(394798),
-    a = r(696486);
-class o {
-    constructor(e = {}) {
-        (this._traceId = e.traceId || (0, n.DM)()), (this._spanId = e.spanId || (0, n.DM)().substring(16));
+a.d(e, { b: () => _ });
+var r = a(394798),
+    n = a(696486);
+class _ {
+    constructor(t = {}) {
+        (this._traceId = t.traceId || (0, r.DM)()), (this._spanId = t.spanId || (0, r.DM)().substring(16));
     }
     spanContext() {
         return {
             spanId: this._spanId,
             traceId: this._traceId,
-            traceFlags: a.ve
+            traceFlags: n.ve
         };
     }
-    end(e) {}
-    setAttribute(e, t) {
+    end(t) {}
+    setAttribute(t, e) {
         return this;
     }
-    setAttributes(e) {
+    setAttributes(t) {
         return this;
     }
-    setStatus(e) {
+    setStatus(t) {
         return this;
     }
-    updateName(e) {
+    updateName(t) {
         return this;
     }
     isRecording() {
         return !1;
     }
-    addEvent(e, t, r) {
+    addEvent(t, e, a) {
         return this;
     }
-    addLink(e) {
+    addLink(t) {
         return this;
     }
-    addLinks(e) {
+    addLinks(t) {
         return this;
     }
-    recordException(e, t) {}
+    recordException(t, e) {}
 }

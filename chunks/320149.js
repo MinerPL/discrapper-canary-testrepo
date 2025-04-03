@@ -1,94 +1,90 @@
-n.d(t, {
-    Z: function () {
-        return N;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(442837),
-    r = n(481060),
-    l = n(541716),
-    o = n(665149),
+n.d(t, { Z: () => I });
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    a = n(481060),
+    o = n(541716),
+    s = n(665149),
     c = n(910611),
-    d = n(355298),
-    u = n(333984),
-    _ = n(26373),
-    E = n(486622),
-    h = n(718538),
-    m = n(359110),
-    I = n(6025),
-    g = n(433355),
-    p = n(933557),
-    T = n(287746),
-    S = n(689938),
-    f = n(225301),
-    C = n(759573);
-function N(e) {
+    u = n(355298),
+    d = n(333984),
+    p = n(26373),
+    h = n(486622),
+    f = n(718538),
+    g = n(359110),
+    m = n(6025),
+    b = n(433355),
+    _ = n(933557),
+    E = n(287746),
+    O = n(388032),
+    N = n(560460),
+    y = n(46467);
+function I(e) {
     let { channel: t, baseChannelId: n } = e,
-        N = (0, p.ZP)(t),
-        A = (0, _.K)(),
-        v = (0, _.V)(),
-        Z = (0, s.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
-        L = (0, s.e7)([u.Z], () => u.Z.isSpam(t.id)),
-        O = (0, h.V)(t.id, t.getRecipientId()),
-        R = a.useCallback(() => {
-            I.Z.closeChannelSidebar(g.uZ), Z && A && (0, m.Kh)(t.id), L && v && (0, m.Kh)(t.id);
-        }, [t.id, L, v, Z, A]),
-        x = a.useCallback(() => {
-            (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
+        I = (0, _.ZP)(t),
+        v = (0, p.K)(),
+        C = (0, p.V)(),
+        S = (0, l.e7)([u.Z], () => u.Z.isMessageRequest(t.id)),
+        T = (0, l.e7)([d.Z], () => d.Z.isSpam(t.id)),
+        P = (0, f.V)(t.id, t.getRecipientId()),
+        j = i.useCallback(() => {
+            m.Z.closeChannelSidebar(b.uZ), S && v && (0, g.Kh)(t.id), T && C && (0, g.Kh)(t.id);
+        }, [t.id, T, C, S, v]),
+        A = i.useCallback(() => {
+            (0, a.showToast)((0, a.createToast)(O.NW.string(O.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
-        { markAsNotSpam: b } = (0, E.m)({
-            onAcceptSuccess: R,
-            onError: x
+        { markAsNotSpam: Z } = (0, h.m)({
+            onAcceptSuccess: j,
+            onError: A
         });
     if (null == t || !t.isDM()) return null;
-    let P = [
-        (0, i.jsx)(
-            o.ZP.Icon,
+    let x = [
+        (0, r.jsx)(
+            s.ZP.Icon,
             {
-                icon: r.XSmallIcon,
-                tooltip: S.Z.Messages.CLOSE,
-                onClick: () => I.Z.closeChannelSidebar(n)
+                icon: a.Dio,
+                tooltip: O.NW.string(O.t.cpT0Cg),
+                onClick: () => m.Z.closeChannelSidebar(n)
             },
             'close'
         )
     ];
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(o.ZP, {
-                toolbar: P,
-                'aria-label': S.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
+            (0, r.jsx)(s.ZP, {
+                toolbar: x,
+                'aria-label': O.NW.string(O.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
-                    channelName: N,
+                    channelName: I,
                     inSidebar: !0
                 })
             }),
-            L &&
-                (0, i.jsxs)('div', {
-                    className: C.hamBanner,
+            T &&
+                (0, r.jsxs)('div', {
+                    className: y.hamBanner,
                     children: [
-                        (0, i.jsx)(r.Text, {
-                            className: C.__invalid_hamBannerText,
+                        (0, r.jsx)(a.Text, {
+                            className: y.__invalid_hamBannerText,
                             variant: 'text-sm/normal',
-                            children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
+                            children: O.NW.string(O.t.XVOKgo)
                         }),
-                        (0, i.jsx)(r.Button, {
-                            className: C.hamBannerButton,
-                            size: r.ButtonSizes.SMALL,
-                            onClick: () => b(t, O),
-                            children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
+                        (0, r.jsx)(a.zxk, {
+                            className: y.hamBannerButton,
+                            size: a.PhG.SMALL,
+                            onClick: () => Z(t, P),
+                            children: O.NW.string(O.t.koqL3d)
                         })
                     ]
                 }),
-            (0, i.jsx)('div', {
-                className: f.chat,
-                children: (0, i.jsx)(
-                    T.Z,
+            (0, r.jsx)('div', {
+                className: N.chat,
+                children: (0, r.jsx)(
+                    E.Z,
                     {
                         channel: t,
                         guild: null,
-                        chatInputType: l.I.SIDEBAR
+                        chatInputType: o.Ie.SIDEBAR
                     },
                     t.id
                 )

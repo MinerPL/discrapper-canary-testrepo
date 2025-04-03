@@ -1,27 +1,23 @@
-I.d(_, {
-    s: function () {
-        return N;
-    }
-});
-var A = I(735250);
-I(470079);
-var O = I(481060),
-    T = I(621145),
-    S = I(689938),
-    C = I(473860);
-let N = (E) => {
-    let { flaggedContent: _ } = E;
-    return 0 === _.length
+n.d(t, { s: () => s });
+var i = n(200651);
+n(192379);
+var a = n(481060),
+    l = n(621145),
+    r = n(388032),
+    o = n(9351);
+let s = (e) => {
+    let { flaggedContent: t } = e;
+    return 0 === t.length
         ? null
-        : (0, A.jsxs)('div', {
-              className: C.classificationEvidenceContainer,
+        : (0, i.jsxs)('div', {
+              className: o.classificationEvidenceContainer,
               children: [
-                  (0, A.jsx)(O.Text, {
+                  (0, i.jsx)(a.Text, {
                       variant: 'eyebrow',
                       color: 'text-muted',
-                      children: S.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
+                      children: r.NW.string(r.t.s64CMj)
                   }),
-                  (0, A.jsx)(T.Z, { flaggedContent: _ })
+                  (0, i.jsx)(l.Z, { flaggedContent: t })
               ]
           });
 };

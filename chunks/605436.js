@@ -1,318 +1,308 @@
 n.d(t, {
-    $7: function () {
-        return Y;
-    },
-    $e: function () {
-        return B;
-    },
-    GJ: function () {
-        return I;
-    },
-    Gy: function () {
-        return v;
-    },
-    RD: function () {
-        return H;
-    },
-    RZ: function () {
-        return D;
-    },
-    Tj: function () {
-        return j;
-    },
-    W: function () {
-        return g;
-    },
-    Wx: function () {
-        return C;
-    },
-    X0: function () {
-        return T;
-    },
-    Yh: function () {
-        return F;
-    },
-    Yk: function () {
-        return V;
-    },
-    _A: function () {
-        return k;
-    },
-    aq: function () {
-        return S;
-    },
-    cR: function () {
-        return w;
-    },
-    iI: function () {
-        return U;
-    },
-    ik: function () {
-        return R;
-    },
-    kA: function () {
-        return y;
-    },
-    nT: function () {
-        return Z;
-    },
-    pM: function () {
-        return N;
-    },
-    yv: function () {
-        return G;
-    },
-    zB: function () {
-        return x;
-    }
+    $7: () => X,
+    $e: () => Y,
+    GJ: () => y,
+    Gy: () => A,
+    RD: () => q,
+    RZ: () => x,
+    Tj: () => J,
+    W: () => I,
+    Wx: () => P,
+    X0: () => O,
+    Yh: () => K,
+    Yk: () => z,
+    _A: () => W,
+    aq: () => S,
+    cR: () => V,
+    iI: () => B,
+    ik: () => R,
+    kA: () => L,
+    nT: () => Q,
+    pM: () => N,
+    yv: () => H,
+    zB: () => Z
 }),
+    n(230036),
     n(653041);
 var r = n(149765),
     i = n(866442),
-    a = n(741361),
-    s = n(911969),
-    o = n(131704),
+    o = n(741361),
+    a = n(911969),
+    s = n(131704),
     l = n(271383),
-    u = n(594174),
-    c = n(934415),
+    c = n(594174),
+    u = n(934415),
     d = n(823379),
-    _ = n(700785),
-    E = n(709054),
-    f = n(51144),
+    f = n(700785),
+    _ = n(709054),
+    p = n(51144),
     h = n(71080),
-    p = n(981631),
-    m = n(689938);
-function I(e) {
-    return r.e$(e.permissions, p.Plq.ADMINISTRATOR);
+    m = n(981631),
+    g = n(388032);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-function T(e) {
-    var t, n;
-    let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    let s = ((n = e), r.e$(n.permissions, p.Plq.ADMINISTRATOR) ? h.aC.ADMINISTRATOR : h.aC.ROLE);
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function y(e) {
+    return r.e$(e.permissions, m.Plq.ADMINISTRATOR);
+}
+function v(e) {
+    return r.e$(e.permissions, m.Plq.ADMINISTRATOR) ? h.aC.ADMINISTRATOR : h.aC.ROLE;
+}
+function O(e) {
+    var t;
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        r = v(e);
     return {
-        rowType: s,
-        colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, i.Rf)(p.p6O),
+        rowType: r,
+        colorString: null != (t = e.colorString) ? t : (0, i.Rf)(m.p6O),
         name: e.name,
         id: e.id,
-        disabled: I(e) || a,
-        key: ''.concat(s, ':').concat(e.id),
+        disabled: y(e) || n,
+        key: ''.concat(r, ':').concat(e.id),
         tags: e.tags
     };
 }
-function g(e, t) {
-    let n = I(e) ? 0 : 1,
-        r = I(t) ? 0 : 1;
+function I(e, t) {
+    let n = +!y(e),
+        r = +!y(t);
     return n !== r ? n - r : t.position - e.position;
 }
 function S() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.NW.string(g.t.gnsna2);
     return [
         {
             rowType: h.aC.EMPTY_STATE,
-            colorString: (0, i.Rf)(p.p6O),
+            colorString: (0, i.Rf)(m.p6O),
             name: e,
             disabled: !0,
             id: 'EMPTY_STATE'
         }
     ];
 }
-function A(e, t, n, i) {
-    let a = u.default.getCurrentUser();
-    if (null == a) return !1;
-    if (null == e) return a.id !== t;
-    let s = e.permissionOverwrites[t];
-    return (null == i ? void 0 : i[t]) != null && (s = i[t]), null == s || !r.e$(s.allow, n);
+function T(e, t, n, i) {
+    let o = c.default.getCurrentUser();
+    if (null == o) return !1;
+    if (null == e) return o.id !== t;
+    let a = e.permissionOverwrites[t];
+    return (null == i ? void 0 : i[t]) != null && (a = i[t]), null == a || !r.e$(a.allow, n);
 }
 function N(e, t) {
-    return E.default.castGuildIdAsEveryoneGuildRoleId(e) === t;
+    return _.default.castGuildIdAsEveryoneGuildRoleId(e) === t;
 }
-function v(e, t) {
+function A(e, t) {
     return !N(e, t);
 }
-function O(e, t) {
+function C(e, t) {
     return !N(e.id, t.id);
 }
 function R(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return Object.values(t)
-        .filter((t) => !I(t) && A(n, t.id, r) && O(e, t) && i(t.name))
-        .sort(g)
-        .map((e) => T(e));
+        .filter((t) => !y(t) && T(n, t.id, r) && C(e, t) && i(t.name))
+        .sort(I)
+        .map((e) => O(e));
 }
-function C(e, t, n, i) {
-    let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
+function P(e, t, n, i) {
+    let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return Object.values(t)
-        .filter((t) => !I(t) && A(n, t.id, i) && O(e, t) && a(t.name))
-        .sort(g)
-        .map((e) => T(e, r.e$(e.permissions, i)));
+        .filter((t) => !y(t) && T(n, t.id, i) && C(e, t) && o(t.name))
+        .sort(I)
+        .map((e) => O(e, r.e$(e.permissions, i)));
 }
-function y(e, t, n, r, i) {
-    var a, s, o, l, u;
-    let c = [];
-    return 0 === (c = ((a = e), (s = t), (o = n), (l = r), (u = i), Object.values(s).filter((e) => I(e) || (!A(o, e.id, l, u) && O(a, e)))).sort(g).map((e) => T(e))).length ? S(m.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
+function w(e, t, n, r, i) {
+    return Object.values(t).filter((t) => y(t) || (!T(n, t.id, r, i) && C(e, t)));
 }
-function D(e, t, n, i, a) {
-    var s, o, l, u, c;
-    let d = [];
+function D(e, t, n, i, o) {
+    return Object.values(t).filter((t) => {
+        var a;
+        return y(t) || (!T(n, t.id, i, o) && C(e, t)) || r.e$(r.$e(t.permissions, null == (a = n.permissionOverwrites[t.id]) ? void 0 : a.allow), i);
+    });
+}
+function L(e, t, n, r, i) {
+    let o = [];
     return 0 ===
-        (d = ((s = e),
-        (o = t),
-        (l = n),
-        (u = i),
-        (c = a),
-        Object.values(o).filter((e) => {
-            var t;
-            return I(e) || (!A(l, e.id, u, c) && O(s, e)) || r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u);
-        }))
-            .sort(g)
-            .map((e) => T(e, r.e$(e.permissions, i)))).length
-        ? S(m.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES)
-        : d;
+        (o = w(e, t, n, r, i)
+            .sort(I)
+            .map((e) => O(e))).length
+        ? S(g.NW.string(g.t.nZfHsb))
+        : o;
 }
-function L(e, t) {
-    var n;
-    return null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : f.ZP.getName(e);
-}
-function b(e, t) {
-    return t.isOwner(e);
+function x(e, t, n, i, o) {
+    let a = [];
+    return 0 ===
+        (a = D(e, t, n, i, o)
+            .sort(I)
+            .map((e) => O(e, r.e$(e.permissions, i)))).length
+        ? S(g.NW.string(g.t.nZfHsb))
+        : a;
 }
 function M(e, t) {
-    var n, r, i;
-    let a = ((r = e), t.isOwner(r) ? h.aC.OWNER : h.aC.MEMBER);
+    var n;
+    return null != (n = l.ZP.getNick(t.id, e.id)) ? n : p.ZP.getName(e);
+}
+function k(e, t) {
+    return t.isOwner(e);
+}
+function j(e, t) {
+    return t.isOwner(e) ? h.aC.OWNER : h.aC.MEMBER;
+}
+function U(e, t) {
+    var n;
+    let r = j(e, t);
     return {
-        rowType: a,
-        name: L(e, t),
-        nickname: null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : null,
-        username: f.ZP.getName(e),
+        rowType: r,
+        name: M(e, t),
+        nickname: null != (n = l.ZP.getNick(t.id, e.id)) ? n : null,
+        username: p.ZP.getName(e),
         id: e.id,
         avatarURL: e.getAvatarURL(t.id, 24),
         bot: e.bot,
         verifiedBot: e.isVerifiedBot(),
-        disabled: ((i = e), t.isOwner(i)),
-        key: ''.concat(a, ':').concat(e.id)
+        disabled: k(e, t),
+        key: ''.concat(r, ':').concat(e.id)
     };
 }
-function P(e, t) {
+function G(e, t) {
     return e.rowType !== t.rowType ? e.rowType - t.rowType : e.name.toLocaleLowerCase().localeCompare(t.name.toLocaleLowerCase());
 }
-function U(e, t, n, r) {
+function B(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return e
-        .map(u.default.getUser)
+        .map(c.default.getUser)
         .filter(d.lm)
-        .filter((e) => !n.isOwner(e) && A(t, e.id, r) && (i(L(e, n)) || i(e.username) || i(e.discriminator)))
-        .map((e) => M(e, n))
-        .sort(P);
+        .filter((e) => !n.isOwner(e) && T(t, e.id, r) && (i(M(e, n)) || i(e.username) || i(e.discriminator)))
+        .map((e) => U(e, n))
+        .sort(G);
 }
-function w(e, t, n, r, i) {
-    var a, s, o, l, c;
-    return ((a = e),
-    (s = t),
-    (o = n),
-    (l = r),
-    (c = i),
-    a
-        .map(u.default.getUser)
+function F(e, t, n, r, i) {
+    return e
+        .map(c.default.getUser)
         .filter(d.lm)
-        .filter((e) => {
-            var t;
-            return !A(s, e.id, l, c) || ((t = e), o.isOwner(t));
-        }))
-        .map((e) => M(e, n))
-        .sort(P);
+        .filter((e) => !T(t, e.id, r, i) || k(e, n));
 }
-function x(e, t) {
+function V(e, t, n, r, i) {
+    return F(e, t, n, r, i)
+        .map((e) => U(e, n))
+        .sort(G);
+}
+function Z(e, t) {
     switch (e) {
         case h.aC.ROLE:
-            return m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
+            return g.NW.string(g.t.ZxoFOD);
         case h.aC.OWNER:
-            return m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
+            return g.NW.string(g.t.NWhYJi);
         case h.aC.ADMINISTRATOR:
-            return m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
+            return g.NW.string(g.t.dwlcc3);
         case h.aC.MEMBER:
-            return t ? m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
+            return t ? g.NW.string(g.t.UAJxZm) : null;
         case h.aC.USER:
-            return m.Z.Messages.USER;
+            return g.NW.string(g.t.KD6OJC);
         case h.aC.GUILD:
-            return m.Z.Messages.SERVER;
+            return g.NW.string(g.t['5qyruL']);
         case h.aC.EMPTY_STATE:
             return null;
     }
 }
-function G(e) {
+function H(e) {
     switch (e) {
         case h.aC.ROLE:
-            return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+            return g.NW.string(g.t['Gzc/a2']);
         case h.aC.OWNER:
-            return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
+            return g.NW.string(g.t.icuNBA);
         case h.aC.ADMINISTRATOR:
-            return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
+            return g.NW.string(g.t.eTmN5e);
         case h.aC.MEMBER:
-            return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+            return g.NW.string(g.t['Gzc/a2']);
         case h.aC.EMPTY_STATE:
         default:
             return null;
     }
 }
-function k(e, t, n) {
+function W(e, t, n) {
     let i = e.permissionOverwrites[e.guild_id];
-    null == i && (i = _.we(e.guild_id));
-    let a = { ...i };
-    return (a.deny = r.Od(a.deny, t)), (a.allow = r.Od(a.allow, t)), !n && (a.deny = r.IH(a.deny, t)), a;
+    null == i && (i = f.we(e.guild_id));
+    let o = b({}, i);
+    return (o.deny = r.Od(o.deny, t)), (o.allow = r.Od(o.allow, t)), n || (o.deny = r.IH(o.deny, t)), o;
 }
-function B(e, t, n) {
-    let r = k(e, t, n);
-    (0, a.kY)(e, r.id, r.allow, r.deny);
+function Y(e, t, n) {
+    let r = W(e, t, n);
+    (0, o.kY)(e, r.id, r.allow, r.deny);
 }
-function F(e, t) {
-    let n = u.default.getCurrentUser();
+function K(e, t) {
+    let n = c.default.getCurrentUser();
     if (null == n) return;
     let i = e.permissionOverwrites[n.id];
     if (null == i) {
         let i = {
             id: n.id,
-            type: s.BN.MEMBER,
-            allow: r.IH(_.Hn, t),
-            deny: _.Hn
+            type: a.BN.MEMBER,
+            allow: r.IH(f.Hn, t),
+            deny: f.Hn
         };
-        return (0, a.hw)(e.id, [i], !0);
+        return (0, o.hw)(e.id, [i], !0);
     }
     {
-        let { allow: n, deny: s } = i;
-        return (n = r.IH(n, t)), (0, a.kY)(e, i.id, n, s);
+        let { allow: n, deny: a } = i;
+        return (n = r.IH(n, t)), (0, o.kY)(e, i.id, n, a);
     }
 }
-function V(e, t) {
+function z(e, t) {
     if (null == e) return !1;
     let n = e.permissionOverwrites[e.guild_id];
     return (null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && r.e$(n.deny, e.accessPermissions);
 }
-function H(e, t) {
+function q(e, t) {
     let n = Object.keys(t);
     return 0 !== n.length && (1 !== n.length || n[0] !== e.id);
 }
-function Z(e, t, n) {
-    return e === p.d4z.GUILD_TEXT || e === p.d4z.GUILD_ANNOUNCEMENT ? t : (!(0, o.bw)(e) && e !== p.d4z.GUILD_CATEGORY) || (t && n);
+function Q(e, t, n) {
+    return e === m.d4z.GUILD_TEXT || e === m.d4z.GUILD_ANNOUNCEMENT ? t : (!(0, s.bw)(e) && e !== m.d4z.GUILD_CATEGORY) || (t && n);
 }
-function Y(e) {
+function X(e) {
     switch (e) {
-        case p.d4z.GUILD_TEXT:
-        case p.d4z.GUILD_ANNOUNCEMENT:
-            return m.Z.Messages.PRIVATE_TEXT_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
-        case p.d4z.GUILD_VOICE:
-            return m.Z.Messages.PRIVATE_VOICE_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
-        case p.d4z.GUILD_CATEGORY:
-            return m.Z.Messages.PRIVATE_CATEGORY_CREATION_PERMISSION_MISSING_HINT.format();
+        case m.d4z.GUILD_TEXT:
+        case m.d4z.GUILD_ANNOUNCEMENT:
+            return g.NW.format(g.t.ZDtA0d, {});
+        case m.d4z.GUILD_VOICE:
+            return g.NW.format(g.t.iZAMt7, {});
+        case m.d4z.GUILD_CATEGORY:
+            return g.NW.format(g.t.PhnARU, {});
         default:
             return null;
     }
 }
-function j(e, t) {
+function J(e, t) {
     let n = [];
     return (
         Object.values(e).forEach((e) => {
             let { row: r } = e;
-            null != r.id && '' !== r.id && (r.rowType === h.aC.ROLE ? n.push((0, c.rX)(r.id, t)) : r.rowType === h.aC.MEMBER && n.push((0, c.jZ)(r.id, t)));
+            null != r.id && '' !== r.id && (r.rowType === h.aC.ROLE ? n.push((0, u.rX)(r.id, t)) : r.rowType === h.aC.MEMBER && n.push((0, u.jZ)(r.id, t)));
         }),
         n
     );

@@ -1,19 +1,13 @@
 n.d(t, {
-    KV: function () {
-        return u;
-    },
-    ZP: function () {
-        return d;
-    },
-    dj: function () {
-        return l;
-    }
+    KV: () => c,
+    ZP: () => f,
+    dj: () => l
 });
 var r = n(392711),
     i = n.n(r),
-    a = n(31775),
-    s = n.n(a);
-function o(e, t, n) {
+    o = n(31775),
+    a = n.n(o);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,8 +21,8 @@ function o(e, t, n) {
     );
 }
 let l = 100,
-    u = [[0, 99]];
-function c(e) {
+    c = [[0, 99]];
+function u(e) {
     let t = {};
     return (
         e.forEach((e, n) => {
@@ -37,25 +31,26 @@ function c(e) {
         t
     );
 }
-class d {
+let d = 5;
+class f {
     reset() {
         this._subscriptions = {};
     }
     get(e) {
-        return c(this._get(e));
+        return u(this._get(e));
     }
     _get(e) {
         var t;
-        return null !== (t = this._subscriptions[e]) && void 0 !== t ? t : new (s())({ max: 5 });
+        return null != (t = this._subscriptions[e]) ? t : new (a())({ max: d });
     }
     clear(e) {
         delete this._subscriptions[e];
     }
     subscribe(e, t, n) {
         let r = this._get(e);
-        return !i().isEqual(r.get(t), n) && (r.set(t, n), (this._subscriptions[e] = r), this._onChange(e, c(r)), !0);
+        return !i().isEqual(r.get(t), n) && (r.set(t, n), (this._subscriptions[e] = r), this._onChange(e, u(r)), !0);
     }
     constructor(e) {
-        o(this, '_subscriptions', {}), o(this, '_onChange', void 0), (this._onChange = e);
+        s(this, '_subscriptions', {}), s(this, '_onChange', void 0), (this._onChange = e);
     }
 }

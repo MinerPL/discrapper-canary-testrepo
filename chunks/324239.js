@@ -1,116 +1,106 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return T;
-        }
-    }),
-    n(47120);
-var o = n(735250),
-    s = n(470079),
-    l = n(120356),
-    r = n.n(l),
-    a = n(481060),
-    i = n(893776),
-    c = n(809206),
-    u = n(600164),
-    d = n(390885),
-    m = n(626135),
-    f = n(361207),
-    _ = n(792125),
-    p = n(981631),
-    g = n(630724),
-    C = n(689938),
-    N = n(809784);
-function A(e) {
-    let { email: t, setEmail: n, claimRequired: l, onSuccess: m, onClose: f } = e,
-        [A, S] = s.useState(),
-        [T, I] = s.useState(''),
-        [x, M] = s.useState(''),
-        [E, O] = s.useState(!1);
-    s.useEffect(() => d.Z.flowStep(g.MK.ANY, g.mx.CLAIM_ACCOUNT), []);
-    let h = async (e) => {
-        e.preventDefault(), O(!0), S(''), M('');
+n.d(t, { default: () => S }), n(47120);
+var r = n(200651),
+    o = n(192379),
+    l = n(481060),
+    s = n(893776),
+    i = n(809206),
+    c = n(600164),
+    a = n(390885),
+    u = n(626135),
+    m = n(361207),
+    f = n(981631),
+    d = n(630724),
+    p = n(388032),
+    _ = n(327342);
+function g(e) {
+    let { email: t, setEmail: n, claimRequired: u, onSuccess: m, onClose: f } = e,
+        [g, N] = o.useState(),
+        [S, x] = o.useState(''),
+        [y, b] = o.useState(''),
+        [v, O] = o.useState(!1);
+    o.useEffect(() => a.Z.flowStep(d.MK.ANY, d.mx.CLAIM_ACCOUNT), []);
+    let j = async (e) => {
+        e.preventDefault(), O(!0), N(''), b('');
         try {
-            await (0, c.S2)({
+            await (0, i.S2)({
                 email: t,
-                password: T
+                password: S
             }),
                 O(!1),
                 m();
         } catch (e) {
-            var n, o;
-            (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.email) && S(e.body.email), (null == e ? void 0 : null === (o = e.body) || void 0 === o ? void 0 : o.password) && M(e.body.password), O(!1);
+            var n, r;
+            (null == e || null == (n = e.body) ? void 0 : n.email) && N(e.body.email), (null == e || null == (r = e.body) ? void 0 : r.password) && b(e.body.password), O(!1);
         }
     };
-    return (0, o.jsxs)('div', {
-        className: r()(N.modalLight, (0, _.Q)(p.BRd.LIGHT)),
+    return (0, r.jsxs)('div', {
         children: [
-            (0, o.jsxs)(a.ModalHeader, {
-                className: N.formHeader,
-                direction: u.Z.Direction.VERTICAL,
+            (0, r.jsxs)(l.xBx, {
+                className: _.formHeader,
+                direction: c.Z.Direction.VERTICAL,
                 separator: !1,
                 children: [
-                    (0, o.jsx)('div', { className: N.formImage }),
-                    (0, o.jsx)(a.Heading, {
-                        className: N.formTitle,
+                    (0, r.jsx)('div', { className: _.formImage }),
+                    (0, r.jsx)(l.X6q, {
+                        className: _.formTitle,
                         variant: 'heading-xl/semibold',
-                        children: C.Z.Messages.FINISH_SIGNING_UP
+                        children: p.NW.string(p.t.uQShv7)
                     }),
-                    (0, o.jsx)(a.Text, {
-                        className: N.formBody,
+                    (0, r.jsx)(l.Text, {
+                        className: _.formBody,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: l ? C.Z.Messages.CLAIM_ACCOUNT_REQUIRED_BODY : C.Z.Messages.CLAIM_ACCOUNT_BODY_2
+                        children: u ? p.NW.string(p.t.sW28gY) : p.NW.string(p.t['gP/vPT'])
                     }),
-                    (0, o.jsx)(a.ModalCloseButton, {
-                        className: N.closeButton,
+                    (0, r.jsx)(l.olH, {
+                        className: _.closeButton,
                         onClick: f
                     })
                 ]
             }),
-            (0, o.jsx)(a.ModalContent, {
-                children: (0, o.jsxs)('form', {
-                    className: N.formContent,
-                    onSubmit: h,
+            (0, r.jsx)(l.hzk, {
+                children: (0, r.jsxs)('form', {
+                    className: _.formContent,
+                    onSubmit: j,
                     children: [
-                        (0, o.jsx)(a.FormItem, {
-                            title: C.Z.Messages.FORM_LABEL_EMAIL,
-                            className: N.formItem,
-                            children: (0, o.jsx)(a.TextInput, {
+                        (0, r.jsx)(l.xJW, {
+                            title: p.NW.string(p.t.dI4d4e),
+                            className: _.formItem,
+                            children: (0, r.jsx)(l.oil, {
                                 value: t,
-                                error: A,
+                                error: g,
                                 onChange: (e) => n(e),
                                 autoFocus: !0
                             })
                         }),
-                        (0, o.jsx)(a.FormItem, {
-                            title: C.Z.Messages.FORM_LABEL_PASSWORD,
-                            className: N.formItem,
-                            children: (0, o.jsx)(a.TextInput, {
+                        (0, r.jsx)(l.xJW, {
+                            title: p.NW.string(p.t['CIGa+/']),
+                            className: _.formItem,
+                            children: (0, r.jsx)(l.oil, {
                                 type: 'password',
-                                value: T,
-                                error: x,
-                                onChange: (e) => I(e)
+                                value: S,
+                                error: y,
+                                onChange: (e) => x(e)
                             })
                         }),
-                        (0, o.jsx)(a.Button, {
+                        (0, r.jsx)(l.zxk, {
                             type: 'submit',
-                            size: a.Button.Sizes.LARGE,
+                            size: l.zxk.Sizes.LARGE,
                             fullWidth: !0,
-                            submitting: E,
-                            disabled: 0 === t.length || 0 === T.length,
-                            children: C.Z.Messages.CLAIM_ACCOUNT
+                            submitting: v,
+                            disabled: 0 === t.length || 0 === S.length,
+                            children: p.NW.string(p.t.fiNVio)
                         }),
-                        l &&
-                            (0, o.jsx)(a.Button, {
-                                className: N.logoutButton,
-                                color: a.Button.Colors.PRIMARY,
-                                look: a.Button.Looks.LINK,
-                                size: a.Button.Sizes.NONE,
+                        u &&
+                            (0, r.jsx)(l.zxk, {
+                                className: _.logoutButton,
+                                color: l.zxk.Colors.PRIMARY,
+                                look: l.zxk.Looks.LINK,
+                                size: l.zxk.Sizes.NONE,
                                 onClick: () => {
-                                    i.Z.logout(), f();
+                                    s.Z.logout(), f();
                                 },
-                                children: C.Z.Messages.LOGOUT
+                                children: p.NW.string(p.t['2jxGen'])
                             })
                     ]
                 })
@@ -118,87 +108,85 @@ function A(e) {
         ]
     });
 }
-function S(e) {
-    let { email: t, claimRequired: n, onClose: l } = e,
-        i = n ? C.Z.Messages.CLAIM_ACCOUNT_REQUIRED_EMAIL_TO : C.Z.Messages.CLAIM_ACCOUNT_EMAIL_TO;
-    function c() {
-        window.open((0, f.t3)(), '_blank'),
-            m.default.track(p.rMx.DOWNLOAD_APP, {
-                platform: (0, f.DW)(),
-                ptb: !1,
-                released: !0,
-                has_e_mail: !0,
-                referring_location: 'Claim Modal',
-                qr_code: !1
-            });
-    }
+function N(e) {
+    let { email: t, claimRequired: n, onClose: s } = e,
+        i = n ? p.t.D7trIC : p.t.JNWX7O;
     return (
-        s.useEffect(() => d.Z.flowStep(g.MK.ANY, g.mx.CLAIM_ACCOUNT_SUCCESS), []),
-        (0, o.jsxs)('div', {
-            className: r()(N.modalLight, (0, _.Q)(p.BRd.LIGHT)),
+        o.useEffect(() => a.Z.flowStep(d.MK.ANY, d.mx.CLAIM_ACCOUNT_SUCCESS), []),
+        (0, r.jsxs)('div', {
             children: [
-                (0, o.jsxs)(a.ModalContent, {
-                    className: N.successContent,
+                (0, r.jsxs)(l.hzk, {
+                    className: _.successContent,
                     children: [
                         !n &&
-                            (0, o.jsx)(a.ModalCloseButton, {
-                                className: N.closeButton,
-                                onClick: l
+                            (0, r.jsx)(l.olH, {
+                                className: _.closeButton,
+                                onClick: s
                             }),
-                        (0, o.jsx)('div', { className: N.successImage }),
-                        (0, o.jsx)(a.Text, {
-                            className: N.successTitle,
+                        (0, r.jsx)('div', { className: _.successImage }),
+                        (0, r.jsx)(l.Text, {
+                            className: _.successTitle,
                             variant: 'text-lg/semibold',
-                            children: i.format({ email: t })
+                            children: p.NW.format(i, { email: t })
                         }),
-                        (0, o.jsx)(a.Text, {
-                            className: N.successPromotion,
+                        (0, r.jsx)(l.Text, {
+                            className: _.successPromotion,
                             variant: 'text-md/normal',
-                            children: C.Z.Messages.CLAIM_ACCOUNT_PROMOTE_APP_2021_04
+                            children: p.NW.string(p.t.eXqM2d)
                         })
                     ]
                 }),
                 n
-                    ? (0, o.jsx)(a.ModalFooter, {
-                          direction: u.Z.Direction.VERTICAL,
-                          children: (0, o.jsx)(a.Button, {
-                              size: a.Button.Sizes.LARGE,
-                              onClick: l,
-                              children: C.Z.Messages.OKAY
+                    ? (0, r.jsx)(l.mzw, {
+                          direction: c.Z.Direction.VERTICAL,
+                          children: (0, r.jsx)(l.zxk, {
+                              size: l.zxk.Sizes.LARGE,
+                              onClick: s,
+                              children: p.NW.string(p.t.BddRzc)
                           })
                       })
-                    : (0, o.jsx)(a.ModalFooter, {
-                          direction: u.Z.Direction.VERTICAL,
-                          children: (0, o.jsx)(a.Button, {
-                              color: a.Button.Colors.BRAND,
-                              size: a.Button.Sizes.LARGE,
-                              onClick: c,
-                              children: C.Z.Messages.CLAIM_ACCOUNT_GET_APP
+                    : (0, r.jsx)(l.mzw, {
+                          direction: c.Z.Direction.VERTICAL,
+                          children: (0, r.jsx)(l.zxk, {
+                              color: l.zxk.Colors.BRAND,
+                              size: l.zxk.Sizes.LARGE,
+                              onClick: function () {
+                                  window.open((0, m.t3)(), '_blank'),
+                                      u.default.track(f.rMx.DOWNLOAD_APP, {
+                                          platform: (0, m.DW)(),
+                                          ptb: !1,
+                                          released: !0,
+                                          has_e_mail: !0,
+                                          referring_location: 'Claim Modal',
+                                          qr_code: !1
+                                      });
+                              },
+                              children: p.NW.string(p.t.ygArIS)
                           })
                       })
             ]
         })
     );
 }
-function T(e) {
-    let { onClose: t, transitionState: n, claimRequired: l = !1 } = e,
-        [r, i] = s.useState(''),
-        [c, u] = s.useState(!1);
-    return c
-        ? (0, o.jsx)(a.ModalRoot, {
+function S(e) {
+    let { onClose: t, transitionState: n, claimRequired: s = !1 } = e,
+        [i, c] = o.useState(''),
+        [a, u] = o.useState(!1);
+    return a
+        ? (0, r.jsx)(l.Y0X, {
               transitionState: n,
-              children: (0, o.jsx)(S, {
-                  email: r,
-                  claimRequired: l,
+              children: (0, r.jsx)(N, {
+                  email: i,
+                  claimRequired: s,
                   onClose: t
               })
           })
-        : (0, o.jsx)(a.ModalRoot, {
+        : (0, r.jsx)(l.Y0X, {
               transitionState: n,
-              children: (0, o.jsx)(A, {
-                  email: r,
-                  setEmail: i,
-                  claimRequired: l,
+              children: (0, r.jsx)(g, {
+                  email: i,
+                  setEmail: c,
+                  claimRequired: s,
                   onSuccess: () => u(!0),
                   onClose: t
               })

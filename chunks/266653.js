@@ -1,131 +1,117 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return E;
-        }
-    }),
-    s(47120);
-var o,
-    n,
-    r = s(735250),
-    a = s(470079),
-    i = s(990547),
-    l = s(442837),
-    d = s(481060),
-    c = s(570140),
-    u = s(213609),
-    h = s(777036),
-    f = s(594174),
-    _ = s(726745),
-    p = s(475062),
-    m = s(760213),
-    C = s(71509),
-    g = s(981631),
-    T = s(689938),
-    N = s(680396);
-((n = o || (o = {}))[(n.MANAGE_ACCOUNTS = 0)] = 'MANAGE_ACCOUNTS'), (n[(n.LOGIN = 1)] = 'LOGIN');
-let A = {
-    0: d.ModalSize.SMALL,
-    1: d.ModalSize.DYNAMIC
+s.d(t, { default: () => x }), s(47120);
+var r = s(200651),
+    n = s(192379),
+    o = s(990547),
+    i = s(442837),
+    a = s(481060),
+    l = s(213609),
+    c = s(594174),
+    d = s(726745),
+    u = s(475062),
+    h = s(760213),
+    p = s(71509),
+    f = s(981631),
+    m = s(388032),
+    g = s(248910);
+let _ = {
+    0: a.CgR.SMALL,
+    1: a.CgR.DYNAMIC
 };
-function E(e) {
+function x(e) {
     let { transitionState: t, onClose: s } = e,
-        [o, n] = a.useState(0),
-        { currentUser: E, multiAccountUsers: I } = (0, l.cj)([f.default, _.Z], () => ({
-            currentUser: f.default.getCurrentUser(),
-            multiAccountUsers: _.Z.getUsers()
+        [x, b] = n.useState(0),
+        { currentUser: N, multiAccountUsers: C } = (0, i.cj)([c.default, d.Z], () => ({
+            currentUser: c.default.getCurrentUser(),
+            multiAccountUsers: d.Z.getUsers()
         })),
-        [R, O] = a.useState(!1),
-        [S, M] = a.useState(g.lds),
-        [x, L] = a.useState(null);
-    a.useEffect(() => {
-        if (R)
-            L(
-                (0, r.jsx)(h.Z, {
-                    messageType: h.Q.ERROR,
-                    className: N.infoMessage,
-                    children: T.Z.Messages.MULTI_ACCOUNT_MAX_ACCOUNTS_ERROR.format({ maxNumAccounts: C.$H })
+        [j, w] = n.useState(!1),
+        [k, R] = n.useState(f.lds),
+        [P, y] = n.useState(null);
+    n.useEffect(() => {
+        if (j)
+            y(
+                (0, r.jsx)(a.Wn, {
+                    messageType: a.QYI.ERROR,
+                    className: g.infoMessage,
+                    children: m.NW.format(m.t.HAuRSE, { maxNumAccounts: p.$H })
                 })
             ),
-                M(g.lds);
-        else if (null != S) {
-            let e = f.default.getUser(S);
+                R(f.lds);
+        else if (null != k) {
+            let e = c.default.getUser(k);
             null != e &&
-                L(
-                    (0, r.jsx)(h.Z, {
-                        messageType: h.Q.POSITIVE,
-                        className: N.infoMessage,
-                        children: T.Z.Messages.MULTI_ACCOUNT_LOGGED_OUT.format({ username: e.username })
+                y(
+                    (0, r.jsx)(a.Wn, {
+                        messageType: a.QYI.POSITIVE,
+                        className: g.infoMessage,
+                        children: m.NW.format(m.t['09qidX'], { username: e.username })
                     })
                 ),
-                O(!1);
+                w(!1);
         }
-    }, [S, R]),
-        a.useEffect(() => {
-            I.length < C.$H && O(!1);
-        }, [I]),
-        (0, u.Z)({
-            type: i.ImpressionTypes.MODAL,
-            name: 0 === o ? i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : i.ImpressionNames.USER_LOGIN
+    }, [k, j]),
+        n.useEffect(() => {
+            C.length < p.$H && w(!1);
+        }, [C]),
+        (0, l.Z)({
+            type: o.ImpressionTypes.MODAL,
+            name: 0 === x ? o.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : o.ImpressionNames.USER_LOGIN
         });
-    let b = null;
+    let A = null;
     return (
-        0 === o
-            ? (b = (0, r.jsxs)(r.Fragment, {
+        0 === x
+            ? (A = (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(d.ModalHeader, {
+                      (0, r.jsx)(a.xBx, {
                           separator: !1,
                           children: (0, r.jsxs)('div', {
-                              className: N.header,
+                              className: g.header,
                               children: [
-                                  (0, r.jsx)(d.Heading, {
+                                  (0, r.jsx)(a.X6q, {
                                       variant: 'heading-xl/semibold',
                                       color: 'header-primary',
-                                      children: T.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS
+                                      children: m.NW.string(m.t.WbFpq6)
                                   }),
-                                  (0, r.jsx)(d.Text, {
-                                      className: N.subheaderText,
+                                  (0, r.jsx)(a.Text, {
+                                      className: g.subheaderText,
                                       color: 'header-secondary',
                                       variant: 'text-md/normal',
-                                      children: T.Z.Messages.SWITCH_ACCOUNTS_MODAL_SUBHEADER
+                                      children: m.NW.string(m.t['+1Uk3d'])
                                   })
                               ]
                           })
                       }),
-                      (0, r.jsxs)(d.ModalContent, {
+                      (0, r.jsxs)(a.hzk, {
                           children: [
-                              x,
-                              (0, r.jsx)(m.Z, {
-                                  actionText: T.Z.Messages.SWITCH_ACCOUNTS_ACTION_SWITCH,
+                              P,
+                              (0, r.jsx)(h.Z, {
+                                  actionText: m.NW.string(m.t.Wf421N),
                                   onAction: (e, t) => {
                                       switch (e) {
-                                          case m.W.LOGIN_REQUIRED:
-                                              n(1);
+                                          case h.W.LOGIN_REQUIRED:
+                                              b(1);
                                               break;
-                                          case m.W.SWITCHED:
+                                          case h.W.SWITCHED:
                                               s();
                                               break;
-                                          case m.W.REMOVED:
-                                              t === (null == E ? void 0 : E.id) && s(), M(t);
+                                          case h.W.REMOVED:
+                                              t === (null == N ? void 0 : N.id) && s(), R(t);
                                       }
                                   }
                               }),
                               (0, r.jsx)('div', {
-                                  className: N.actions,
-                                  children: (0, r.jsx)(d.Button, {
-                                      look: d.Button.Looks.LINK,
-                                      color: d.Button.Colors.PRIMARY,
+                                  className: g.actions,
+                                  children: (0, r.jsx)(a.zxk, {
+                                      look: a.zxk.Looks.LINK,
+                                      color: a.zxk.Colors.PRIMARY,
                                       onClick: () => {
-                                          if (I.length >= C.$H) {
-                                              O(!0);
-                                              return;
-                                          }
-                                          n(1);
+                                          if (C.length >= p.$H) return void w(!0);
+                                          b(1);
                                       },
-                                      size: d.Button.Sizes.MEDIUM,
-                                      children: (0, r.jsx)(d.Text, {
+                                      size: a.zxk.Sizes.MEDIUM,
+                                      children: (0, r.jsx)(a.Text, {
                                           variant: 'text-sm/semibold',
-                                          children: T.Z.Messages.SWITCH_ACCOUNTS_ADD_AN_ACCOUNT_BUTTON
+                                          children: m.NW.string(m.t['9g2mqa'])
                                       })
                                   })
                               })
@@ -133,21 +119,21 @@ function E(e) {
                       })
                   ]
               }))
-            : 1 === o &&
-              (b = (0, r.jsx)(p.Z, {
+            : 1 === x &&
+              (A = (0, r.jsx)(u.Z, {
                   onClose: () => {
-                      c.Z.dispatch({ type: 'CLEAR_AUTHENTICATION_ERRORS' }), n(0);
+                      b(0);
                   }
               })),
-        (0, r.jsx)(d.ModalRoot, {
-            className: N.modal,
+        (0, r.jsx)(a.Y0X, {
+            className: g.modal,
             transitionState: t,
-            size: A[o],
-            'aria-label': T.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
-            children: (0, r.jsx)(d.Sequencer, {
-                step: o,
+            size: _[x],
+            'aria-label': m.NW.string(m.t.WbFpq6),
+            children: (0, r.jsx)(a.qBt, {
+                step: x,
                 steps: [0, 1],
-                children: b
+                children: A
             })
         })
     );

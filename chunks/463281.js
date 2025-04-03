@@ -1,27 +1,21 @@
-e.a(n, async function (r, u) {
+t.a(n, async function (r, a) {
     try {
-        e.d(t, {
-            h4: function () {
-                return _;
-            },
-            nD: function () {
-                return d;
-            },
-            oW: function () {
-                return f;
-            }
+        t.d(e, {
+            h4: () => d,
+            hM: () => o,
+            nD: () => f
         });
-        var i = e(612580);
-        n = e.hmd(n);
-        var a = r([i]);
-        i = (a.then ? (await a)() : a)[0];
+        var i = t(612580);
+        n = t.hmd(n);
+        var u = r([i]);
+        i = (u.then ? (await u)() : u)[0];
         let l = new ('undefined' == typeof TextDecoder ? (0, n.require)('util').TextDecoder : TextDecoder)('utf-8', {
             ignoreBOM: !0,
             fatal: !0
         });
         l.decode();
         let h = null;
-        function o() {
+        function _() {
             return (null === h || h.buffer !== i.memory.buffer) && (h = new Uint8Array(i.memory.buffer)), h;
         }
         let w = Array(32).fill(void 0);
@@ -32,44 +26,39 @@ e.a(n, async function (r, u) {
         function c() {
             return (null === g || g.buffer !== i.memory.buffer) && (g = new Int32Array(i.memory.buffer)), g;
         }
-        function f(n, t, e, r, u) {
+        function o(n, e, t, r, a, u) {
             try {
-                let s = i.__wbindgen_add_to_stack_pointer(-16);
-                var a,
-                    f,
-                    _ = (function (n, t) {
-                        let e = t(1 * n.length);
-                        return o().set(n, e / 1), (b = n.length), e;
+                let w = i.__wbindgen_add_to_stack_pointer(-16);
+                var o = (function (n, e) {
+                        let t = e(+n.length);
+                        return _().set(n, t / 1), (b = n.length), t;
                     })(n, i.__wbindgen_malloc),
                     d = b;
-                i.crop_gif(s, _, d, t, e, r, u);
-                var l = c()[s / 4 + 0],
-                    h = c()[s / 4 + 1];
-                var w = ((a = l), (f = h), o().subarray(a / 1, a / 1 + f)).slice();
-                return i.__wbindgen_free(l, 1 * h), w;
+                i.crop_and_rotate_gif(w, o, d, e, t, r, a, u);
+                var f = c()[w / 4 + 0],
+                    l = c()[w / 4 + 1],
+                    h = _()
+                        .subarray(f / 1, f / 1 + l)
+                        .slice();
+                return i.__wbindgen_free(f, +l), h;
             } finally {
                 i.__wbindgen_add_to_stack_pointer(16);
             }
         }
-        function _(n, t) {
-            var e,
-                r,
-                u = ((e = n), (r = t), l.decode(o().subarray(e, e + r)));
-            return (function (n) {
-                s === w.length && w.push(w.length + 1);
-                let t = s;
-                return (s = w[t]), (w[t] = n), t;
-            })(u);
+        function d(n, e) {
+            var t = l.decode(_().subarray(n, n + e));
+            s === w.length && w.push(w.length + 1);
+            let r = s;
+            return (s = w[r]), (w[r] = t), r;
         }
-        function d(n) {
+        function f(n) {
             throw (function (n) {
-                var t;
                 let e = w[n];
-                return (t = n) < 36 || ((w[t] = s), (s = t)), e;
+                return n < 36 || ((w[n] = s), (s = n)), e;
             })(n);
         }
-        u();
+        a();
     } catch (n) {
-        u(n);
+        a(n);
     }
 });

@@ -1,106 +1,143 @@
-t.d(e, {
-    A: function () {
-        return x;
-    }
-});
-var i = t(735250);
-t(470079);
-var l = t(442837),
-    r = t(481060),
-    o = t(264043),
-    s = t(812206),
-    a = t(572004),
-    c = t(601911),
-    d = t(504211),
-    u = t(981631),
-    S = t(689938),
-    m = t(437561),
-    I = t(27399);
-function x(n) {
-    let { appId: e, skuId: t, transitionState: x, onClose: f, onHeaderTitleClick: _, children: p, footer: h } = n,
-        T = (0, l.e7)(
-            [s.Z, o.Z],
+l.d(n, { A: () => j });
+var t = l(200651);
+l(192379);
+var r = l(442837),
+    s = l(481060),
+    i = l(812206),
+    a = l(370210),
+    o = l(757746),
+    c = l(572004),
+    d = l(601911),
+    u = l(504211),
+    m = l(533159),
+    x = l(981631),
+    h = l(388032),
+    p = l(969878),
+    v = l(409369);
+function j(e) {
+    let { appId: n, skuId: l, transitionState: j, onClose: N, onHeaderTitleClick: f, children: b, footer: S } = e,
+        g = (0, r.e7)(
+            [i.Z, a.Z],
             () => {
-                var n;
-                return null !== (n = s.Z.getApplication(e)) && void 0 !== n ? n : o.Z.getApplicationRecord(e);
+                var e;
+                return null != (e = i.Z.getApplication(n)) ? e : a.Z.getApplicationRecord(n);
             },
-            [e]
-        );
-    if (null == T) return null;
-    let v = (0, c.y)(T, 25),
-        { termsOfServiceUrl: E, privacyPolicyUrl: N } = T;
-    return (0, i.jsxs)(r.ModalRoot, {
-        transitionState: x,
-        size: r.ModalSize.DYNAMIC,
-        className: I.modal,
-        children: [
-            (0, i.jsxs)(r.ModalHeader, {
-                className: m.modalHeader,
-                children: [
-                    (0, i.jsxs)(r.Clickable, {
-                        className: m.modalTitle,
-                        onClick: _,
-                        children: [
-                            null != v &&
-                                (0, i.jsx)('img', {
-                                    src: v.href,
-                                    alt: '',
-                                    className: I.appIcon
-                                }),
-                            (0, i.jsx)(r.Heading, {
-                                variant: 'heading-md/semibold',
-                                children: T.name
-                            })
-                        ]
-                    }),
-                    (0, i.jsx)(r.ModalCloseButton, {
-                        onClick: f,
-                        className: m.modalCloseBtn
-                    })
-                ]
-            }),
-            p,
-            (0, i.jsxs)(r.ModalFooter, {
-                className: I.footer,
-                children: [
-                    null != E && null != N
-                        ? (0, i.jsx)(r.Text, {
-                              color: 'header-primary',
-                              variant: 'text-sm/normal',
-                              children: S.Z.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
-                                  tosUrl: E,
-                                  ppUrl: N
-                              })
-                          })
-                        : (0, i.jsx)(r.Text, {
-                              color: 'header-primary',
-                              variant: 'text-xs/normal',
-                              children: S.Z.Messages.STOREFRONT_NO_TOS_PP
+            [n]
+        ),
+        { data: k } = (0, o.Z)(l);
+    if (null == g) return null;
+    let O = (0, d.y)(g, 25),
+        { termsOfServiceUrl: I, privacyPolicyUrl: y } = g;
+    return (null == k ? void 0 : k.applicationId) !== n
+        ? (0, t.jsxs)(s.Y0X, {
+              transitionState: j,
+              size: s.CgR.SMALL,
+              children: [
+                  (0, t.jsxs)(s.hzk, {
+                      className: v.content,
+                      children: [
+                          (0, t.jsx)(s.olH, {
+                              onClick: N,
+                              className: p.modalCloseBtn
                           }),
-                    (0, i.jsxs)('div', {
-                        className: I.footerButtons,
-                        children: [
-                            a.wS &&
-                                (0, i.jsx)(r.Button, {
-                                    look: r.ButtonLooks.FILLED,
-                                    size: r.ButtonSizes.ICON,
-                                    color: r.ButtonColors.CUSTOM,
-                                    'aria-label': S.Z.Messages.COPY_LINK,
-                                    className: I.linkButton,
-                                    onClick: () => {
-                                        let n = ''.concat(location.protocol, '//').concat(location.host).concat(u.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(e, t));
-                                        (0, a.JG)(n), (0, r.showToast)((0, r.createToast)(S.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), (0, d.X)(e, d.B.DETAILS_MODAL, t);
-                                    },
-                                    children: (0, i.jsx)(r.LinkIcon, {
-                                        size: 'xs',
-                                        color: 'currentColor'
+                          (0, t.jsx)(s.Text, {
+                              variant: 'text-lg/semibold',
+                              color: 'header-primary',
+                              className: v.unavailableTitle,
+                              children: h.NW.string(h.t['0Bf80N'])
+                          }),
+                          (0, t.jsx)(s.Text, {
+                              variant: 'text-md/normal',
+                              color: 'header-secondary',
+                              className: v.unavailableBody,
+                              children: h.NW.string(h.t.omH3bm)
+                          })
+                      ]
+                  }),
+                  (0, t.jsx)(s.mzw, {
+                      children: (0, t.jsx)(s.zxk, {
+                          className: v.button,
+                          color: s.zxk.Colors.BRAND,
+                          onClick: N,
+                          size: s.zxk.Sizes.LARGE,
+                          children: h.NW.string(h.t.BddRzc)
+                      })
+                  })
+              ]
+          })
+        : (0, t.jsxs)(s.Y0X, {
+              transitionState: j,
+              size: s.CgR.DYNAMIC,
+              className: v.modal,
+              children: [
+                  (0, t.jsxs)(s.xBx, {
+                      className: p.modalHeader,
+                      children: [
+                          (0, t.jsxs)(s.P3F, {
+                              className: p.modalTitle,
+                              onClick: f,
+                              children: [
+                                  null != O &&
+                                      (0, t.jsx)('img', {
+                                          src: O.href,
+                                          alt: '',
+                                          className: v.appIcon
+                                      }),
+                                  (0, t.jsx)(s.X6q, {
+                                      variant: 'heading-md/semibold',
+                                      children: g.name
+                                  })
+                              ]
+                          }),
+                          (0, t.jsx)(s.olH, {
+                              onClick: N,
+                              className: p.modalCloseBtn
+                          })
+                      ]
+                  }),
+                  b,
+                  (0, t.jsxs)(s.mzw, {
+                      className: v.footer,
+                      children: [
+                          null != I || null != y
+                              ? (0, t.jsx)(s.Text, {
+                                    color: 'header-primary',
+                                    variant: 'text-sm/normal',
+                                    children: (0, t.jsx)(m.Z, {
+                                        termsOfServiceUrl: I,
+                                        privacyPolicyUrl: y
                                     })
+                                })
+                              : (0, t.jsx)(s.Text, {
+                                    color: 'header-primary',
+                                    variant: 'text-xs/normal',
+                                    children: h.NW.string(h.t['3ZY+0N'])
                                 }),
-                            h
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
+                          (0, t.jsxs)('div', {
+                              className: v.footerButtons,
+                              children: [
+                                  c.wS &&
+                                      (0, t.jsx)(s.zxk, {
+                                          look: s.zxk.Looks.FILLED,
+                                          size: s.zxk.Sizes.ICON,
+                                          color: s.zxk.Colors.PRIMARY,
+                                          'aria-label': h.NW.string(h.t.WqhZsr),
+                                          className: v.linkButton,
+                                          innerClassName: v.innerLinkButton,
+                                          onClick: () => {
+                                              let e = ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n, l));
+                                              (0, c.JG)(e), (0, s.showToast)((0, s.createToast)(h.NW.string(h.t['L/PwZW']), s.ToastType.SUCCESS)), (0, u.X)(n, u.B.DETAILS_MODAL, l);
+                                          },
+                                          children: (0, t.jsx)(s.xPt, {
+                                              size: 'xs',
+                                              color: 'currentColor'
+                                          })
+                                      }),
+                                  S
+                              ]
+                          })
+                      ]
+                  })
+              ]
+          });
 }

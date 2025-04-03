@@ -1,309 +1,230 @@
-n.d(t, {
-    Z: function () {
-        return U;
-    }
-}),
-    n(47120),
-    n(653041);
-var i = n(735250),
-    a = n(470079),
-    s = n(873546),
-    l = n(442837),
-    r = n(481060),
-    o = n(239091),
+n.d(t, { Z: () => L }), n(47120), n(653041);
+var r = n(200651),
+    i = n(192379),
+    l = n(873546),
+    o = n(442837),
+    a = n(481060),
+    s = n(239091),
     c = n(144144),
     u = n(100527),
     d = n(906732),
-    h = n(385499),
-    m = n(82295),
-    p = n(554300),
-    _ = n(556084),
-    f = n(184301),
-    E = n(103575),
-    g = n(158776),
+    p = n(385499),
+    h = n(545957),
+    f = n(82295),
+    m = n(850020),
+    g = n(184301),
+    b = n(347475),
+    _ = n(158776),
     C = n(699516),
-    I = n(111583),
+    y = n(111583),
     x = n(594174),
-    T = n(626135),
-    N = n(768581),
-    v = n(585483),
-    S = n(233870),
-    Z = n(51144),
-    A = n(998502),
-    M = n(276264),
-    b = n(981631),
-    R = n(689938),
-    j = n(410740),
-    L = n(460356);
-let P = [],
-    O = A.ZP.getEnableHardwareAcceleration();
-function y(e) {
-    let { user: t, channel: a, status: u, activities: d } = e,
-        h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(a.id)[t.id]),
-        m = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
-        p = (0, l.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
-        _ = (0, l.e7)([C.Z], () => C.Z.getNickname(t.id)),
-        T = (e) => {
-            (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('17354')]).then(n.bind(n, 354589));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        ...n,
-                        user: t,
-                        channel: a
-                    });
+    v = n(626135),
+    j = n(585483),
+    O = n(233870),
+    E = n(51144),
+    N = n(998502),
+    I = n(276264),
+    P = n(981631),
+    S = n(388032),
+    Z = n(11847);
+function T(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
             });
-        };
-    return (0, i.jsx)(r.Popout, {
-        preload: () => (0, f.Z)(t, { channelId: a.id }),
+    }
+    return e;
+}
+function A(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let w = [],
+    R = N.ZP.getEnableHardwareAcceleration();
+function M(e) {
+    let { user: t, channel: i, status: u, activities: d } = e,
+        p = (0, o.e7)([y.Z], () => null != y.Z.getTypingUsers(i.id)[t.id]),
+        f = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
+        v = (0, o.e7)([_.Z], () => _.Z.isMobileOnline(t.id)),
+        O = (0, o.e7)([C.Z], () => C.Z.getNickname(t.id)),
+        N = (0, h.Z)(t.id, 'private-channel-recipient'),
+        Z = (e) => {
+            (0, s.jW)(e, async () => {
+                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('14126')]).then(n.bind(n, 354589));
+                return (n) =>
+                    (0, r.jsx)(
+                        e,
+                        A(T({}, n), {
+                            user: t,
+                            channel: i
+                        })
+                    );
+            });
+        },
+        w = (0, m.K)({
+            location: 'PrivateChannelRecipients',
+            user: t
+        });
+    return (0, r.jsx)(a.yRy, {
+        preload: () => (0, g.Z)(t, { channelId: i.id }),
         renderPopout: (e) =>
-            (0, i.jsx)(E.Z, {
-                ...e,
-                location: 'PrivateChannelRecipients',
-                userId: t.id,
-                channelId: a.id
-            }),
-        position: s.tq ? 'window_center' : 'left',
+            (0, r.jsx)(
+                b.Z,
+                A(T({}, e), {
+                    userId: t.id,
+                    channelId: i.id
+                })
+            ),
+        position: l.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: () => {
-            let e = '@'.concat(Z.ZP.getUserTag(t, { decoration: 'never' })),
+            let e = '@'.concat(E.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+            j.S.dispatchToLastSubscribed(P.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }),
-                c.Z.startTyping(a.id);
+                c.Z.startTyping(i.id);
         },
+        clickTrap: !0,
         children: (e) =>
-            (0, i.jsx)(
-                M.Z,
-                {
-                    user: t,
-                    currentUser: m,
-                    isOwner: t.id === a.ownerId,
-                    ownerTooltipText: R.Z.Messages.GROUP_OWNER,
-                    shouldAnimateStatus: O,
-                    isTyping: h,
-                    status: u,
-                    activities: d,
-                    channel: a,
-                    onContextMenu: T,
-                    isMobile: p,
-                    nick: _,
-                    ...e
-                },
+            (0, r.jsx)(
+                I.Z,
+                T(
+                    {
+                        user: t,
+                        currentUser: f,
+                        isOwner: t.id === i.ownerId,
+                        ownerTooltipText: S.NW.string(S.t['MRXZ+/']),
+                        shouldAnimateStatus: R,
+                        isTyping: p,
+                        status: u,
+                        activities: d,
+                        applicationStream: N,
+                        channel: i,
+                        onContextMenu: Z,
+                        isMobile: v,
+                        nick: O,
+                        nameplate: w
+                    },
+                    e
+                ),
                 t.id
             )
     });
 }
-function D(e) {
-    var t;
-    let { integration: l, channel: c } = e,
-        u = a.useCallback(
-            (e) => {
-                (0, o.jW)(e, async () => {
-                    let { default: e } = await n.e('37969').then(n.bind(n, 496281));
-                    return (t) =>
-                        (0, i.jsx)(e, {
-                            ...t,
-                            channel: c,
-                            integration: l
-                        });
-                });
-            },
-            [l, c]
-        ),
-        d = l.application.bot,
-        m = N.ZP.getApplicationIconURL({
-            id: l.application.id,
-            icon: l.application.icon,
-            bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
-            botIconFirst: !0
-        });
-    return null != d
-        ? (0, i.jsx)(r.Popout, {
-              preload: () => (0, f.Z)(d.id, m, { channelId: c.id }),
-              renderPopout: (e) =>
-                  (0, i.jsx)(E.Z, {
-                      ...e,
-                      location: 'PrivateChannelRecipients',
-                      userId: d.id,
-                      channelId: c.id
-                  }),
-              position: s.tq ? 'window_center' : 'left',
-              spacing: 16,
-              children: (e) =>
-                  (0, i.jsx)(p.Z, {
-                      onContextMenu: u,
-                      className: j.member,
-                      name: (0, i.jsx)('span', {
-                          className: j.username,
-                          children: l.application.name
-                      }),
-                      avatar: (0, i.jsx)(r.Avatar, {
-                          size: r.AvatarSizes.SIZE_32,
-                          src: m,
-                          'aria-label': l.application.name,
-                          statusTooltip: !0
-                      }),
-                      decorators: (0, i.jsx)(h.Z, {
-                          className: j.botTag,
-                          verified: null == d ? void 0 : d.isVerifiedBot()
-                      }),
-                      id: l.application.id,
-                      focusProps: {
-                          offset: {
-                              top: 4,
-                              bottom: 4,
-                              left: 4,
-                              right: 4
-                          }
-                      },
-                      ...e
-                  })
-          })
-        : null;
-}
 function k(e, t) {
     if (e.listItems.length !== t.listItems.length) return !1;
     for (let n = 0; n < e.listItems.length; n++) {
-        let i = e.listItems[n],
-            a = t.listItems[n];
-        if (i.user !== a.user || i.status !== a.status || i.activities !== a.activities) return !1;
+        let r = e.listItems[n],
+            i = t.listItems[n];
+        if (r.user !== i.user || r.status !== i.status || r.activities !== i.activities) return !1;
     }
     return !0;
 }
-function U(e) {
-    var t;
-    let { channel: s } = e,
-        o = x.default.getCurrentUser(),
-        c = null == o ? void 0 : o.isStaff(),
-        { analyticsLocations: E } = (0, d.ZP)(u.Z.MEMBER_LIST);
-    let { listItems: I } =
-            ((t = s),
-            (0, l.e7)(
-                [C.Z, x.default, g.Z],
-                () => {
-                    let e = (0, S.T)(t.recipients, x.default),
-                        n = {};
-                    for (let t of e) {
-                        var i, a, s;
-                        C.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
-                            ? (n[t.id] = {
-                                  status: null !== (a = g.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
-                                  activities: null !== (s = g.Z.getActivities(t.id)) && void 0 !== s ? s : P
-                              })
-                            : (n[t.id] = {
-                                  status: b.Skl.OFFLINE,
-                                  activities: P
-                              });
-                    }
-                    let l = [];
-                    for (let t of e) {
-                        let e = {
-                            user: t,
-                            status: n[t.id].status,
-                            activities: n[t.id].activities
-                        };
-                        l.push(e);
-                    }
-                    return { listItems: l };
-                },
-                [t],
-                k
-            )),
-        { installedIntegrations: N, applicationsShelf: v, fetched: Z, appsInGDMEnabled: A, availableApplications: M } = (0, _.j)({ channelId: s.id });
-    a.useEffect(() => {
-        if (c)
-            for (let e of I)
-                (0, f.Z)(e.user, {
-                    dispatchWait: !0,
-                    channelId: s.id
-                });
-    }, [c, I, s.id]),
-        a.useEffect(() => {
-            T.default.track(b.rMx.MEMBER_LIST_VIEWED, {
-                channel_id: s.id,
-                channel_type: s.type,
-                guild_id: s.guild_id
-            });
-        }, [s.guild_id, s.id, s.type]);
-    let O = c && I.every((e) => e.user.isStaff());
-    return (0, i.jsx)(d.Gt, {
-        value: E,
-        children: (0, i.jsx)('div', {
-            className: L.membersWrap,
-            children: (0, i.jsxs)(r.Scroller, {
-                className: L.members,
-                fade: !0,
-                children: [
-                    (0, i.jsxs)(m.Z, {
-                        className: L.membersGroup,
-                        children: [
-                            ''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(I.length, ' '),
-                            O
-                                ? (0, i.jsx)(h.Z, {
-                                      className: L.__invalid_decorator,
-                                      type: h.Z.Types.STAFF_ONLY_DM
-                                  })
-                                : null
-                        ]
-                    }),
-                    I.map((e) =>
-                        (0, i.jsx)(
-                            y,
-                            {
-                                user: e.user,
-                                status: e.status,
-                                activities: e.activities,
-                                channel: s
-                            },
-                            e.user.id
+function L(e) {
+    let { channel: t } = e,
+        n = x.default.getCurrentUser(),
+        l = null == n ? void 0 : n.isStaff(),
+        { analyticsLocations: s } = (0, d.ZP)(u.Z.MEMBER_LIST),
+        { listItems: c } = (0, o.e7)(
+            [C.Z, x.default, _.Z],
+            () => {
+                let e = (0, O.T)(t.recipients, x.default),
+                    n = {};
+                for (let t of e) {
+                    var r, i, l;
+                    C.Z.isFriend(t.id) || t.id === (null == (r = x.default.getCurrentUser()) ? void 0 : r.id)
+                        ? (n[t.id] = {
+                              status: null != (i = _.Z.getStatus(t.id)) ? i : P.Skl.OFFLINE,
+                              activities: null != (l = _.Z.getActivities(t.id)) ? l : w
+                          })
+                        : (n[t.id] = {
+                              status: P.Skl.OFFLINE,
+                              activities: w
+                          });
+                }
+                let o = [];
+                for (let t of e) {
+                    let e = {
+                        user: t,
+                        status: n[t.id].status,
+                        activities: n[t.id].activities
+                    };
+                    o.push(e);
+                }
+                return { listItems: o };
+            },
+            [t],
+            k
+        );
+    i.useEffect(() => {
+        v.default.track(P.rMx.MEMBER_LIST_VIEWED, {
+            channel_id: t.id,
+            channel_type: t.type,
+            guild_id: t.guild_id
+        });
+    }, [t.guild_id, t.id, t.type]);
+    let h = l && c.every((e) => e.user.isStaff());
+    return (0, r.jsx)(d.Gt, {
+        value: s,
+        children: (0, r.jsx)('div', {
+            className: Z.container,
+            children: (0, r.jsx)('aside', {
+                className: Z.membersWrap,
+                children: (0, r.jsxs)(a.Ttm, {
+                    className: Z.members,
+                    fade: !0,
+                    children: [
+                        (0, r.jsxs)(f.Z, {
+                            className: Z.membersGroup,
+                            children: [''.concat(S.NW.string(S.t['9Oq93t']), '\u2014').concat(c.length, ' '), h && (0, r.jsx)(p.Z, { type: p.Z.Types.STAFF_ONLY_DM })]
+                        }),
+                        c.map((e) =>
+                            (0, r.jsx)(
+                                M,
+                                {
+                                    user: e.user,
+                                    status: e.status,
+                                    activities: e.activities,
+                                    channel: t
+                                },
+                                e.user.id
+                            )
                         )
-                    ),
-                    A &&
-                        (N.length > 0 || (Z && v.length > 0)) &&
-                        (0, i.jsxs)(i.Fragment, {
-                            children: [
-                                (0, i.jsx)(m.Z, {
-                                    className: L.membersGroup,
-                                    children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(N.length)
-                                }),
-                                N.map((e) =>
-                                    (0, i.jsx)(
-                                        D,
-                                        {
-                                            integration: e,
-                                            channel: s
-                                        },
-                                        e.application.id
-                                    )
-                                ),
-                                M.length > 0 &&
-                                    (0, i.jsx)(p.Z, {
-                                        className: j.member,
-                                        onClick: () => {
-                                            (0, r.openModalLazy)(async () => {
-                                                let { default: e } = await n.e('4536').then(n.bind(n, 422677));
-                                                return (t) =>
-                                                    (0, i.jsx)(e, {
-                                                        ...t,
-                                                        channelId: s.id
-                                                    });
-                                            });
-                                        },
-                                        avatar: (0, i.jsx)('div', {
-                                            className: L.appIconWrapper,
-                                            children: (0, i.jsx)(r.PlusSmallIcon, {
-                                                size: 'sm',
-                                                color: 'currentColor'
-                                            })
-                                        }),
-                                        name: R.Z.Messages.PRIVATE_CHANNEL_ADD_APPS
-                                    })
-                            ]
-                        })
-                ]
+                    ]
+                })
             })
         })
     });

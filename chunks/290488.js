@@ -20,8 +20,4 @@ function i() {
               return await t.init(), t;
           })());
 }
-n.d(t, {
-    n: function () {
-        return i;
-    }
-});
+n.d(t, { n: () => i });

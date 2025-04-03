@@ -1,14 +1,10 @@
-n.d(t, {
-    k: function () {
-        return l;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { k: () => l });
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    s = n(939350),
-    o = n(837244);
+    o = n.n(i),
+    a = n(939350),
+    s = n(906944);
 function l(e) {
     let { contents: t, label: n, className: i, color: l = 'default' } = e;
     return 0 === t.length
@@ -20,7 +16,7 @@ function l(e) {
               children: [
                   null != n
                       ? (0, r.jsx)('div', {
-                            className: a()(o.groupLabel, o.hideInteraction, s._[l]),
+                            className: o()(s.groupLabel, s.hideInteraction, a._[l]),
                             children: n
                         })
                       : null,

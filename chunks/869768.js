@@ -1,13 +1,10 @@
-i.d(n, {
-    W: function () {
-        return a;
-    }
-});
-var t = i(442837),
-    l = i(314897),
-    s = i(979651);
+n.d(t, { W: () => a });
+var r = n(442837),
+    i = n(314897),
+    o = n(979651);
 function a(e) {
-    return (function (e) {
-        return (0, t.e7)([s.Z, l.default], () => s.Z.isInChannel(e, l.default.getId()));
-    })(null == e ? void 0 : e.id);
+    return s(null == e ? void 0 : e.id);
+}
+function s(e) {
+    return (0, r.e7)([o.Z, i.default], () => o.Z.isInChannel(e, i.default.getId()));
 }

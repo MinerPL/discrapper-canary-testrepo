@@ -1,6 +1,2 @@
-n.d(t, {
-    G: function () {
-        return i;
-    }
-});
-let i = 'content-inventory-feed';
+n.d(t, { G: () => r });
+let r = 'content-inventory-feed';

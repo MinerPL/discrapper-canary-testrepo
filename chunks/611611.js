@@ -1,57 +1,52 @@
-n.r(a),
-    n.d(a, {
-        default: function () {
-            return P;
-        }
-    }),
-    n(47120);
-var t = n(735250),
-    r = n(470079),
-    l = n(120356),
-    s = n.n(l),
-    o = n(525769),
-    i = n(263568),
+n.d(t, { default: () => E }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    o = n(120356),
+    l = n.n(o),
+    i = n(525769),
+    s = n(263568),
     c = n(481060),
     u = n(213609),
     d = n(313201),
-    _ = n(542383),
-    m = n(79390),
-    E = n(728076),
-    A = n(2466),
-    f = n(485168),
-    C = n(309081),
-    L = n(185306),
-    h = n(240521),
-    R = n(489887),
-    I = n(20281),
-    x = n(689938),
-    p = n(724506);
-let O = (0, d.hQ)(),
-    g = (0, d.hQ)();
-function T(e) {
-    let { question: a, onChange: n, error: l, inputRef: o } = e,
-        [i, u] = r.useState(!1);
-    return (0, t.jsxs)(t.Fragment, {
+    f = n(540059),
+    m = n(542383),
+    p = n(79390),
+    b = n(728076),
+    g = n(2466),
+    h = n(485168),
+    O = n(309081),
+    j = n(185306),
+    y = n(240521),
+    x = n(489887),
+    w = n(20281),
+    v = n(388032),
+    _ = n(735077);
+let P = (0, d.hQ)(),
+    C = (0, d.hQ)();
+function N(e) {
+    let { question: t, onChange: n, error: o, inputRef: i } = e,
+        [s, u] = a.useState(!1);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, t.jsx)(c.FormTitle, {
-                tag: c.FormTitleTags.LABEL,
-                htmlFor: g,
-                children: x.Z.Messages.CREATE_POLL_QUESTION_INPUT_LABEL
+            (0, r.jsx)(c.vwX, {
+                tag: c.RB0.LABEL,
+                htmlFor: C,
+                children: v.NW.string(v.t.WBiKnJ)
             }),
-            (0, t.jsx)(c.TextArea, {
-                inputRef: o,
-                id: g,
-                placeholder: x.Z.Messages.CREATE_POLL_QUESTION_PLACEHOLDER,
-                value: a,
-                className: s()(p.questionInput, { [p.hasError]: null != l }),
+            (0, r.jsx)(c.Kx8, {
+                inputRef: i,
+                id: C,
+                placeholder: v.NW.string(v.t['/uQqJS']),
+                value: t,
+                className: l()(_.questionInput, { [_.hasError]: null != o }),
                 onChange: n,
-                maxLength: R.Az,
-                error: l,
+                maxLength: x.Az,
+                error: o,
                 onFocus: () => u(!0),
                 onBlur: () => u(!1),
-                showCharacterCount: i,
+                showCharacterCount: s,
                 showCharacterCountFullPadding: !0,
-                showRemainingCharacterCount: i,
+                showRemainingCharacterCount: s,
                 rows: 1,
                 autosize: !0,
                 autoFocus: !0
@@ -59,35 +54,35 @@ function T(e) {
         ]
     });
 }
-function N(e) {
-    let { selectedDuration: a, onSelect: n } = e,
-        r = (0, A.Z)(),
-        l = r[a];
-    return (0, t.jsxs)('div', {
-        className: p.duration,
+function A(e) {
+    let { selectedDuration: t, onSelect: n } = e,
+        a = (0, g.Z)(),
+        o = a[t];
+    return (0, r.jsxs)('div', {
+        className: _.duration,
         children: [
-            (0, t.jsx)(c.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: 'text-md/medium',
                 color: 'header-secondary',
                 tag: 'label',
                 'aria-hidden': !0,
-                children: x.Z.Messages.CREATE_POLL_DURATION_LABEL
+                children: v.NW.string(v.t.bGHzxc)
             }),
-            (0, t.jsx)(c.Select, {
-                'aria-label': x.Z.Messages.CREATE_POLL_DURATION_SELECTION_ARIA_LABEL.format({ duration: l }),
-                className: p.durationSelect,
-                options: Object.entries(r).map((e) => {
-                    let [a, n] = e;
+            (0, r.jsx)(c.PhF, {
+                'aria-label': v.NW.formatToPlainString(v.t.nXNHND, { duration: o }),
+                className: _.durationSelect,
+                options: Object.entries(a).map((e) => {
+                    let [t, n] = e;
                     return {
                         label: n,
-                        value: parseInt(a)
+                        value: parseInt(t)
                     };
                 }),
-                isSelected: (e) => e === a,
+                isSelected: (e) => e === t,
                 select: n,
                 serialize: (e) => ''.concat(e),
                 renderOptionLabel: (e) =>
-                    (0, t.jsx)(c.Text, {
+                    (0, r.jsx)(c.Text, {
                         variant: 'text-sm/normal',
                         children: e.label
                     }),
@@ -96,207 +91,250 @@ function N(e) {
         ]
     });
 }
-function P(e) {
-    let { channel: a, transitionState: n, onClose: l } = e,
-        d = (0, m._N)();
+function E(e) {
+    let { channel: t, transitionState: n, onClose: o } = e,
+        d = (0, p._N)();
     (0, u.Z)({
-        type: I.n.MODAL,
-        name: o.z.POLL_EDITOR_VIEWED
+        type: w.n.MODAL,
+        name: i.z.POLL_EDITOR_VIEWED
     });
-    let A = r.useRef(null),
-        g = r.useRef([]),
-        v = r.useRef([]),
-        j = r.useRef(null),
-        D = r.useRef([]),
-        M = r.useCallback((e) => {
-            var a, n, t, r;
-            let { indexToRemove: l, numberOfAnswers: s } = e;
-            s === R.gY + 1 ? null === (n = j.current) || void 0 === n || null === (a = n.ref) || void 0 === a || a.focus() : null === (r = D.current[l === s - 1 ? l - 1 : l + 1]) || void 0 === r || null === (t = r.ref) || void 0 === t || t.focus();
+    let g = a.useRef(null),
+        C = a.useRef([]),
+        k = a.useRef([]),
+        I = a.useRef(null),
+        S = a.useRef([]),
+        D = a.useCallback((e) => {
+            var t, n, r, a;
+            let { indexToRemove: o, numberOfAnswers: l } = e;
+            l === x.gY + 1 ? null == (n = I.current) || null == (t = n.ref) || t.focus() : null == (a = S.current[o === l - 1 ? o - 1 : o + 1]) || null == (r = a.ref) || r.focus();
         }, []),
-        { answers: w, question: S, selectedLayoutType: b, setSelectedLayoutType: k, allowMultiSelect: Z, setAllowMultiSelect: y, duration: B, setDuration: U, handleQuestionChange: W, handleAnswerTextChange: H, handleEmojiSelect: Y, canAddMoreAnswers: F, handleRemoveAnswerImage: G, canRemoveMoreAnswers: z, handleAddAnswer: K, handleRemoveAnswer: V, createPollError: J, handleSubmitPoll: q, fieldErrors: Q, submitting: X, shouldFocusOnInvalidField: $, setShouldFocusOnInvalidField: ee } = (0, E.Z)(a, l, M),
-        { trackPollCreationCancelled: ea } = (0, f.l)(w, Z, b),
-        en = r.useRef(w.length),
-        et = b === i.C.DEFAULT,
-        er = r.useCallback(() => {
-            ea(), l();
-        }, [l, ea]),
-        el = r.useCallback(() => {
-            if ((0, m.D$)(S, w, b)) er();
-            else {
-                (0, h.Z)({
-                    title: x.Z.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
-                    body: x.Z.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY,
-                    cta: x.Z.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_CTA_EXIT,
-                    closeLabel: x.Z.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BACK_TO_EDITING,
+        { answers: R, question: W, selectedLayoutType: T, setSelectedLayoutType: L, allowMultiSelect: B, setAllowMultiSelect: Z, duration: U, setDuration: M, handleQuestionChange: z, handleAnswerTextChange: H, handleEmojiSelect: Y, canAddMoreAnswers: K, handleRemoveAnswerImage: F, canRemoveMoreAnswers: q, handleAddAnswer: X, handleRemoveAnswer: J, createPollError: G, handleSubmitPoll: Q, fieldErrors: V, submitting: $, shouldFocusOnInvalidField: ee, setShouldFocusOnInvalidField: et } = (0, b.Z)(t, o, D),
+        { trackPollCreationCancelled: en } = (0, h.l)(R, B, T),
+        er = (0, f.Q3)('PollCreationModal'),
+        ea = (0, c.dQu)(c.TVs.colors.INTERACTIVE_NORMAL).hex(),
+        eo = a.useRef(R.length),
+        el = T === s.C.DEFAULT,
+        ei = a.useCallback(() => {
+            en(), o();
+        }, [o, en]),
+        es = a.useCallback(() => {
+            if (!(0, p.D$)(W, R, T))
+                return void (0, y.Z)({
+                    title: v.NW.string(v.t.HMrgcn),
+                    body: v.NW.string(v.t['Wxa/j4']),
+                    cta: v.NW.string(v.t.TzJA4u),
+                    closeLabel: v.NW.string(v.t['2BR5R0']),
                     onConfirm: () => {
-                        er();
+                        ei();
                     }
                 });
-                return;
-            }
-        }, [er, w, S, b]);
-    r.useEffect(() => {
-        (0, c.updateModal)(
-            R.$z,
-            (e) =>
-                (0, t.jsx)(P, {
-                    ...e,
-                    channel: a
-                }),
-            el
+            ei();
+        }, [ei, R, W, T]);
+    a.useEffect(() => {
+        (0, c.oav)(
+            x.$z,
+            (e) => {
+                var n, a;
+                return (0, r.jsx)(
+                    E,
+                    ((n = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, e)),
+                    (a = a = { channel: t }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                          }),
+                    n)
+                );
+            },
+            es
         );
-    }, [el, a]),
-        r.useEffect(() => {
-            if (w.length > en.current) {
+    }, [es, t]),
+        a.useEffect(() => {
+            if (R.length > eo.current) {
                 var e;
-                null === (e = v.current[w.length - 1]) || void 0 === e || e.focus();
+                null == (e = k.current[R.length - 1]) || e.focus();
             }
-            en.current = w.length;
-        }, [w.length]),
-        r.useEffect(() => {
-            if ($) {
-                var e, a;
-                if ((null == Q ? void 0 : Q.question) != null) null === (e = A.current) || void 0 === e || e.focus();
+            eo.current = R.length;
+        }, [R.length]),
+        a.useEffect(() => {
+            if (ee) {
+                var e, t;
+                if ((null == V ? void 0 : V.question) != null) null == (e = g.current) || e.focus();
                 else {
-                    let e = w.findIndex((e) => Q['answer-'.concat(e.localCreationAnswerId)]);
-                    -1 !== e && (null === (a = v.current[e]) || void 0 === a || a.focus());
+                    let e = R.findIndex((e) => V['answer-'.concat(e.localCreationAnswerId)]);
+                    -1 !== e && (null == (t = k.current[e]) || t.focus());
                 }
-                ee(!1);
+                et(!1);
             }
-        }, [Q, w, $, ee, v, g]);
-    let es = (0, _.Z)({
-        disabled: X,
-        onSubmit: q
-    });
-    return (0, t.jsxs)(c.ModalRoot, {
-        size: c.ModalSize.MEDIUM,
-        className: p.container,
+        }, [V, R, ee, et, k, C]);
+    let ec = () => {
+            n === c.Dvm.ENTERED && Q();
+        },
+        eu = (0, m.Z)({
+            disabled: $,
+            onSubmit: ec
+        });
+    return (0, r.jsxs)(c.Y0X, {
+        size: c.CgR.MEDIUM,
+        className: _.container,
         transitionState: n,
-        'aria-labelledby': O,
+        'aria-labelledby': P,
         children: [
-            (0, t.jsxs)(c.ModalHeader, {
-                className: p.header,
+            (0, r.jsxs)(c.xBx, {
+                className: _.header,
                 separator: !1,
                 children: [
-                    (0, t.jsx)(c.Heading, {
+                    (0, r.jsx)(c.X6q, {
                         color: 'interactive-normal',
                         variant: 'text-lg/semibold',
-                        className: p.headerText,
-                        id: O,
-                        children: x.Z.Messages.CREATE_POLL_HEADING
+                        className: _.headerText,
+                        id: P,
+                        children: v.NW.string(v.t['GD/8X1'])
                     }),
-                    (0, t.jsx)(c.ModalCloseButton, { onClick: el })
+                    (0, r.jsx)(c.olH, { onClick: es })
                 ]
             }),
-            (0, t.jsxs)(c.ModalContent, {
-                className: p.content,
-                onKeyDown: es,
+            (0, r.jsxs)(c.hzk, {
+                className: _.content,
+                onKeyDown: eu,
                 children: [
-                    null != J &&
-                        (0, t.jsx)(c.FormErrorBlock, {
-                            className: p.apiErrorBlock,
-                            children: J.getAnyErrorMessage()
+                    null != G &&
+                        (0, r.jsx)(c.kzN, {
+                            className: _.apiErrorBlock,
+                            children: G.getAnyErrorMessage()
                         }),
-                    (0, t.jsx)(T, {
-                        question: S,
-                        onChange: W,
-                        error: null == Q ? void 0 : Q.question,
-                        inputRef: A
+                    (0, r.jsx)(N, {
+                        question: W,
+                        onChange: z,
+                        error: null == V ? void 0 : V.question,
+                        inputRef: g
                     }),
                     d &&
-                        (0, t.jsx)(L.Z, {
-                            selectedLayoutType: b,
-                            onSelectedLayoutType: k
+                        (0, r.jsx)(j.Z, {
+                            selectedLayoutType: T,
+                            onSelectedLayoutType: L
                         }),
-                    (0, t.jsx)(c.Spacer, { size: 26 }),
-                    (0, t.jsxs)('fieldset', {
-                        className: s()(p.answerInputsContainer, et ? p.defaultContainer : p.imageOnlyContainer),
+                    (0, r.jsx)(c.LZC, { size: 26 }),
+                    (0, r.jsxs)('fieldset', {
+                        className: l()(_.answerInputsContainer, el ? _.defaultContainer : _.imageOnlyContainer),
                         children: [
-                            (0, t.jsx)(c.FormTitle, {
-                                tag: c.FormTitleTags.LEGEND,
-                                children: x.Z.Messages.CREATE_POLL_ANSWERS_FIELDSET_LABEL
+                            (0, r.jsx)(c.vwX, {
+                                tag: c.RB0.LEGEND,
+                                children: v.NW.string(v.t.oMBfeX)
                             }),
-                            w.map((e, n) =>
-                                (0, t.jsx)(
-                                    C.Z,
+                            R.map((e, n) =>
+                                (0, r.jsx)(
+                                    O.Z,
                                     {
                                         answer: e,
-                                        channelId: a.id,
+                                        channelId: t.id,
                                         index: n,
-                                        isLastAnswer: n === w.length - 1,
+                                        isLastAnswer: n === R.length - 1,
                                         onEmojiSelect: Y,
-                                        onEmojiRemove: G,
-                                        layout: b,
+                                        onEmojiRemove: F,
+                                        layout: T,
                                         onAnswerTextChange: H,
-                                        onRemoveAnswer: V,
-                                        addAnswer: K,
-                                        submitPoll: q,
-                                        answerTextInputRefs: v,
-                                        error: null == Q ? void 0 : Q['answer-'.concat(e.localCreationAnswerId)],
-                                        canRemoveAnswer: z,
-                                        ref: (e) => (g.current[n] = e),
-                                        inputRef: (e) => (v.current[n] = e),
-                                        deleteButtonRef: (e) => (D.current[n] = e)
+                                        onRemoveAnswer: J,
+                                        addAnswer: X,
+                                        submitPoll: ec,
+                                        answerTextInputRefs: k,
+                                        error: null == V ? void 0 : V['answer-'.concat(e.localCreationAnswerId)],
+                                        canRemoveAnswer: q,
+                                        ref: (e) => (C.current[n] = e),
+                                        inputRef: (e) => (k.current[n] = e),
+                                        deleteButtonRef: (e) => (S.current[n] = e)
                                     },
                                     e.localCreationAnswerId
                                 )
                             ),
-                            F &&
-                                (0, t.jsxs)(c.Clickable, {
-                                    className: s()(et ? p.addAnswerButtonDefault : p.addAnswerButtonImageOnly, { [p.canRemoveMoreAnswers]: z }),
-                                    onClick: F ? K : void 0,
-                                    'aria-label': x.Z.Messages.CREATE_POLL_ADD_ANSWER_BUTTON,
-                                    ref: j,
+                            K &&
+                                (0, r.jsxs)(c.P3F, {
+                                    className: l()(el ? _.addAnswerButtonDefault : _.addAnswerButtonImageOnly, { [_.canRemoveMoreAnswers]: q }),
+                                    onClick: K ? X : void 0,
+                                    'aria-label': v.NW.string(v.t.B2UvmZ),
+                                    ref: I,
                                     children: [
-                                        (0, t.jsx)(c.PlusSmallIcon, {
+                                        (0, r.jsx)(c.qJs, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: et ? p.addAnswerIconDefault : p.addAnswerIconImageOnly
+                                            className: el ? _.addAnswerIconDefault : _.addAnswerIconImageOnly
                                         }),
-                                        et &&
-                                            (0, t.jsx)(c.Text, {
+                                        el &&
+                                            (0, r.jsx)(c.Text, {
                                                 variant: 'text-md/normal',
                                                 color: 'text-muted',
-                                                className: p.addAnswerButtonLabel,
-                                                children: x.Z.Messages.CREATE_POLL_ADD_ANSWER_BUTTON
+                                                className: _.addAnswerButtonLabel,
+                                                children: v.NW.string(v.t.B2UvmZ)
                                             })
                                     ]
                                 })
                         ]
                     }),
-                    (0, t.jsx)(c.Spacer, { size: 18 }),
-                    (0, t.jsx)(N, {
-                        selectedDuration: B,
-                        onSelect: U
+                    (0, r.jsx)(c.LZC, { size: 18 }),
+                    (0, r.jsx)(A, {
+                        selectedDuration: U,
+                        onSelect: M
                     })
                 ]
             }),
-            (0, t.jsxs)(c.ModalFooter, {
-                className: p.footer,
+            (0, r.jsxs)(c.mzw, {
+                className: _.footer,
                 children: [
-                    (0, t.jsx)(c.Checkbox, {
-                        className: p.checkbox,
-                        type: c.Checkbox.Types.INVERTED,
+                    (0, r.jsx)(c.XZJ, {
+                        className: _.checkbox,
+                        type: er ? void 0 : c.XZJ.Types.INVERTED,
                         size: 24,
-                        value: Z,
-                        checkboxColor: (0, c.useToken)(c.tokens.colors.INTERACTIVE_NORMAL).hex(),
-                        onChange: (e, a) => y(a),
-                        children: (0, t.jsx)(c.Text, {
+                        value: B,
+                        checkboxColor: er ? void 0 : ea,
+                        onChange: (e, t) => Z(t),
+                        children: (0, r.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             color: 'interactive-active',
-                            children: x.Z.Messages.CREATE_POLL_MULTIPLE_ANSWERS
+                            children: v.NW.string(v.t['Ux+iQU'])
                         })
                     }),
-                    (0, t.jsx)(c.Button, {
-                        look: c.ButtonLooks.FILLED,
-                        size: c.Button.Sizes.MEDIUM,
-                        className: p.postButton,
-                        onClick: q,
-                        submitting: X,
-                        children: (0, t.jsx)(c.Text, {
+                    (0, r.jsx)(c.zxk, {
+                        look: c.iLD.FILLED,
+                        size: c.zxk.Sizes.MEDIUM,
+                        className: _.postButton,
+                        onClick: ec,
+                        submitting: $,
+                        children: (0, r.jsx)(c.Text, {
                             variant: 'text-md/semibold',
-                            className: p.postButtonText,
-                            children: x.Z.Messages.CREATE_POLL_POST
+                            className: _.postButtonText,
+                            children: v.NW.string(v.t.JOj8Zm)
                         })
                     })
                 ]

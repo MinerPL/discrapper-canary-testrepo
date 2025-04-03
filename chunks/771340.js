@@ -1,23 +1,25 @@
-var i = n(544891),
-    a = n(570140),
-    s = n(981631);
-t.Z = {
+n.d(t, { Z: () => o });
+var r = n(544891),
+    i = n(570140),
+    l = n(981631);
+let o = {
     fetchRegions(e) {
-        i.tn
+        r.tn
             .get({
-                url: s.ANM.REGIONS(e),
+                url: l.ANM.REGIONS(e),
                 retries: 1,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !0
             })
             .then(
                 (t) =>
-                    a.Z.dispatch({
+                    i.Z.dispatch({
                         type: 'LOAD_REGIONS',
                         regions: t.body,
                         guildId: e
                     }),
                 () =>
-                    a.Z.dispatch({
+                    i.Z.dispatch({
                         type: 'LOAD_REGIONS',
                         regions: [],
                         guildId: e
@@ -25,10 +27,11 @@ t.Z = {
             );
     },
     changeCallRegion(e, t) {
-        i.tn.patch({
-            url: s.ANM.CALL(e),
+        r.tn.patch({
+            url: l.ANM.CALL(e),
             body: { region: t },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !0
         });
     }
 };

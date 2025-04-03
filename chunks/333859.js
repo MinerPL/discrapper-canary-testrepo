@@ -1,72 +1,70 @@
-t.d(s, {
-    c: function () {
-        return g;
-    }
-});
-var n = t(735250),
-    a = t(470079),
-    i = t(442837),
-    r = t(481060),
-    o = t(37234),
-    l = t(100527),
-    c = t(906732),
-    d = t(94795),
-    _ = t(327943),
-    E = t(539873),
-    u = t(311476),
-    I = t(197115),
-    T = t(626135),
-    S = t(981631),
-    N = t(474936),
-    C = t(689938),
-    m = t(115907),
-    A = t(224499);
-let O = () => {
-        (0, d.nJ)(), (0, o.xf)();
+n.d(t, { c: () => E });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    s = n(481060),
+    a = n(37234),
+    l = n(493773),
+    o = n(100527),
+    c = n(906732),
+    d = n(94795),
+    u = n(327943),
+    m = n(539873),
+    g = n(311476),
+    p = n(197115),
+    h = n(626135),
+    f = n(981631),
+    b = n(474936),
+    N = n(388032),
+    x = n(614467);
+let _ = () => {
+        (0, d.nJ)(), (0, a.xf)();
     },
-    g = () => {
-        let { analyticsLocations: e } = (0, c.ZP)(l.Z.USER_SETTINGS),
-            s = (0, i.e7)([_.Z], () => _.Z.isUpsellPreview),
-            { enabled: t } = u.Z.getCurrentConfig(
+    E = () => {
+        let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
+            t = (0, i.e7)([u.Z], () => u.Z.isUpsellPreview),
+            { enabled: n } = g.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceInAppIcon' },
                 {
-                    autoTrackExposure: s,
-                    disable: !s
+                    autoTrackExposure: t,
+                    disable: !t
                 }
             );
         return (
-            a.useEffect(() => {
-                s &&
-                    T.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: N.cd.APP_ICON_UPSELL,
+            (0, l.ZP)(() => {
+                t &&
+                    h.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
+                        type: b.cd.APP_ICON_UPSELL,
                         location_stack: e
                     });
-            }, []),
-            (0, n.jsxs)('div', {
-                className: m.selectionGroup,
+            }),
+            (0, r.jsxs)('div', {
+                className: x.selectionGroup,
                 children: [
-                    (0, n.jsx)(E.Z, {
-                        disabled: s && !t,
+                    (0, r.jsx)(m.Z, {
+                        disabled: t && !n,
                         renderCTAButtons: () =>
-                            (0, n.jsxs)('div', {
-                                className: m.tryItOutButtons,
+                            (0, r.jsxs)('div', {
+                                className: x.tryItOutButtons,
                                 children: [
-                                    (0, n.jsx)(r.Button, {
-                                        color: !t && s ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
-                                        onClick: () => O(),
-                                        children: t ? C.Z.Messages.PREVIEW : C.Z.Messages.APP_ICON_PREVIEW_TITLE
+                                    (0, r.jsx)(s.zxk, {
+                                        size: s.zxk.Sizes.MEDIUM,
+                                        color: !n && t ? s.zxk.Colors.PRIMARY : s.zxk.Colors.BRAND,
+                                        onClick: () => _(),
+                                        children: n ? N.NW.string(N.t.SKNnqq) : N.NW.string(N.t['hb/wEx'])
                                     }),
-                                    s
-                                        ? (0, n.jsx)(I.Z, {
-                                              showGradient: t,
-                                              subscriptionTier: N.Si.TIER_2,
-                                              buttonText: t ? C.Z.Messages.PREMIUM_UPSELL_GET_NITRO : C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+                                    t
+                                        ? (0, r.jsx)(p.Z, {
+                                              className: x.tryItOutButton,
+                                              showGradient: n,
+                                              subscriptionTier: b.Si.TIER_2,
+                                              buttonText: n ? N.NW.string(N.t.pj0XBA) : N.NW.string(N.t.mr4K7O)
                                           })
                                         : null
                                 ]
                             })
                     }),
-                    (0, n.jsx)(r.FormDivider, { className: A.marginTop20 })
+                    (0, r.jsx)(s.$i$, { className: x.divider })
                 ]
             })
         );

@@ -1,116 +1,111 @@
-s.r(e),
-    s.d(e, {
-        default: function () {
-            return M;
-        }
-    });
-var o = s(735250);
-s(470079);
-var i = s(481060),
-    a = s(600164),
-    n = s(623624),
-    l = s(430824),
-    d = s(496675),
-    r = s(626135),
-    u = s(565799),
-    c = s(501655),
-    _ = s(146085),
-    T = s(981631),
-    S = s(474936),
-    E = s(689938),
-    L = s(99253);
-function M(t) {
-    var e;
-    let s,
-        { channel: M, transitionState: I, onClose: B } = t,
-        g = l.Z.getGuild(M.guild_id),
-        h = null !== (e = null == g ? void 0 : g.maxStageVideoChannelUsers) && void 0 !== e ? e : 0,
-        O = !!(null == g ? void 0 : g.isCommunity()),
-        C = E.Z.Messages.STAGE_FULL_TITLE,
-        f = O ? h < T.TU7 : (null == g ? void 0 : g.premiumTier) !== T.Eu4.TIER_3 && h <= T.eez,
-        m = d.Z.can(_.yP, M);
-    s = O && (null == g ? void 0 : g.premiumTier) === T.Eu4.TIER_3 ? (h <= T.TU7 ? E.Z.Messages.STAGE_FULL_BOOST_MORE_BODY : E.Z.Messages.STAGE_FULL_MAX_BODY) : f ? E.Z.Messages.STAGE_FULL_BODY : E.Z.Messages.STAGE_FULL_MAX_BODY;
-    let x = () => {
-            B(),
-                r.default.track(T.rMx.BOOSTING_UPSELL_CLICKED, {
-                    guild_id: M.guild_id,
-                    type: S.cd.VIDEO_STAGE_LIMIT,
-                    is_moderator: m,
-                    action: S.T7.DISMISS
+e.d(i, { default: () => I });
+var a = e(200651);
+e(192379);
+var n = e(481060),
+    s = e(600164),
+    l = e(623624),
+    o = e(430824),
+    r = e(496675),
+    d = e(626135),
+    c = e(565799),
+    u = e(501655),
+    _ = e(146085),
+    h = e(981631),
+    T = e(474936),
+    g = e(388032),
+    E = e(783328);
+function I(t) {
+    var i;
+    let e,
+        { channel: I, transitionState: x, onClose: m } = t,
+        L = o.Z.getGuild(I.guild_id),
+        S = null != (i = null == L ? void 0 : L.maxStageVideoChannelUsers) ? i : 0,
+        N = !!(null == L ? void 0 : L.isCommunity()),
+        f = g.NW.string(g.t.pqPQLy),
+        p = N ? S < h.TU7 : (null == L ? void 0 : L.premiumTier) !== h.Eu4.TIER_3 && S <= h.eez,
+        C = r.Z.can(_.yP, I);
+    e = N && (null == L ? void 0 : L.premiumTier) === h.Eu4.TIER_3 ? (S <= h.TU7 ? g.NW.string(g.t.tJmOu7) : g.NW.string(g.t['7FHbPD'])) : p ? g.NW.string(g.t['8/uDSE']) : g.NW.string(g.t['7FHbPD']);
+    let k = () => {
+            m(),
+                d.default.track(h.rMx.BOOSTING_UPSELL_CLICKED, {
+                    guild_id: I.guild_id,
+                    type: T.cd.VIDEO_STAGE_LIMIT,
+                    is_moderator: C,
+                    action: T.T7.DISMISS
                 });
         },
-        A = u.Z.getMutableParticipants(M.id, c.pV.SPEAKER).filter((t) => t.type === c.Ui.VOICE).length,
-        p = u.Z.getParticipantCount(M.id, c.pV.AUDIENCE);
+        b = c.Z.getMutableParticipants(I.id, u.pV.SPEAKER).filter((t) => t.type === u.Ui.VOICE).length,
+        O = c.Z.getParticipantCount(I.id, u.pV.AUDIENCE);
     return (
-        r.default.track(T.rMx.BOOSTING_UPSELL_VIEWED, {
-            guild_id: M.guild_id,
-            type: S.cd.VIDEO_STAGE_LIMIT,
-            is_moderator: m,
-            listener_count: A + p
+        d.default.track(h.rMx.BOOSTING_UPSELL_VIEWED, {
+            guild_id: I.guild_id,
+            type: T.cd.VIDEO_STAGE_LIMIT,
+            is_moderator: C,
+            listener_count: b + O
         }),
-        (0, o.jsxs)(i.ModalRoot, {
-            size: i.ModalSize.SMALL,
-            transitionState: I,
-            'aria-label': C,
+        (0, a.jsxs)(n.Y0X, {
+            size: n.CgR.SMALL,
+            transitionState: x,
+            'aria-label': f,
             children: [
-                (0, o.jsxs)(i.ModalHeader, {
-                    justify: a.Z.Justify.END,
+                (0, a.jsxs)(n.xBx, {
+                    justify: s.Z.Justify.END,
                     separator: !1,
-                    className: L.header,
-                    children: [(0, o.jsx)('div', { className: L.fullArt }), (0, o.jsx)(i.ModalCloseButton, { onClick: B })]
+                    className: E.header,
+                    children: [(0, a.jsx)('div', { className: E.fullArt }), (0, a.jsx)(n.olH, { onClick: m })]
                 }),
-                (0, o.jsxs)(i.ModalContent, {
-                    className: L.content,
+                (0, a.jsxs)(n.hzk, {
+                    className: E.content,
                     children: [
-                        (0, o.jsx)(i.Heading, {
+                        (0, a.jsx)(n.X6q, {
                             variant: 'heading-xl/bold',
-                            children: C
+                            children: f
                         }),
-                        (0, o.jsx)(i.Text, {
+                        (0, a.jsx)(n.Text, {
                             variant: 'text-md/medium',
-                            children: s
+                            children: e
                         })
                     ]
                 }),
-                (0, o.jsx)(i.ModalFooter, {
-                    className: L.footer,
-                    children: f
-                        ? (0, o.jsxs)(o.Fragment, {
+                (0, a.jsx)(n.mzw, {
+                    className: E.footer,
+                    children: p
+                        ? (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  (0, o.jsx)(i.Button, {
-                                      look: i.ButtonLooks.LINK,
-                                      className: L.noThanksButton,
-                                      color: i.ButtonColors.CUSTOM,
-                                      size: i.ButtonSizes.SMALL,
-                                      onClick: x,
-                                      children: E.Z.Messages.NO_THANKS
+                                  (0, a.jsx)(n.zxk, {
+                                      look: n.iLD.LINK,
+                                      className: E.noThanksButton,
+                                      color: n.Ttl.CUSTOM,
+                                      size: n.PhG.SMALL,
+                                      onClick: k,
+                                      children: g.NW.string(g.t.f3Pet7)
                                   }),
-                                  (0, o.jsx)(i.ShinyButton, {
+                                  (0, a.jsx)(n.gtL, {
                                       onClick: () => {
-                                          B(),
-                                              (0, n.f)({
-                                                  guildId: M.guild_id,
-                                                  location: { section: T.jXE.STAGE_VIDEO_LIMIT }
+                                          m(),
+                                              (0, l.f)({
+                                                  guildId: I.guild_id,
+                                                  location: { section: h.jXE.STAGE_VIDEO_LIMIT }
                                               }),
-                                              r.default.track(T.rMx.BOOSTING_UPSELL_CLICKED, {
-                                                  guild_id: M.guild_id,
-                                                  type: S.cd.VIDEO_STAGE_LIMIT,
-                                                  is_moderator: m,
-                                                  action: S.T7.BOOST
+                                              d.default.track(h.rMx.BOOSTING_UPSELL_CLICKED, {
+                                                  guild_id: I.guild_id,
+                                                  type: T.cd.VIDEO_STAGE_LIMIT,
+                                                  is_moderator: C,
+                                                  action: T.T7.BOOST
                                               });
                                       },
-                                      size: i.ButtonSizes.SMALL,
-                                      className: L.boostButton,
-                                      children: E.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION
+                                      size: n.PhG.SMALL,
+                                      className: E.boostButton,
+                                      children: g.NW.string(g.t.Uj0md3)
                                   })
                               ]
                           })
-                        : (0, o.jsx)(i.Button, {
-                              onClick: x,
-                              size: i.ButtonSizes.SMALL,
-                              color: i.ButtonColors.CUSTOM,
-                              className: L.boostButton,
-                              children: E.Z.Messages.GOT_IT
+                        : (0, a.jsx)(n.zxk, {
+                              onClick: k,
+                              size: n.PhG.SMALL,
+                              color: n.Ttl.CUSTOM,
+                              className: E.boostButton,
+                              children: g.NW.string(g.t['NX+WJC'])
                           })
                 })
             ]

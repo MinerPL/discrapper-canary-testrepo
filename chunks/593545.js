@@ -1,115 +1,219 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(608787),
+n.d(t, { Z: () => P }), n(301563), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(608787),
     l = n(481060),
-    u = n(858644),
-    c = n(571989),
-    d = n(65838),
-    _ = n(259580),
-    E = n(424218),
-    f = n(689938),
-    h = n(48182),
-    p = n(594402);
-function m(e) {
+    c = n(40330),
+    u = n(571989),
+    d = n(828061),
+    f = n(259580),
+    _ = n(424218),
+    p = n(388032),
+    h = n(8410),
+    m = n(283574);
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                g(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : b(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function v(e) {
+    var t;
+    let n = 'utf-8',
+        r = null != (t = null == e ? void 0 : e.split('charset=').slice(-1)[0]) ? t : n;
+    try {
+        return new TextDecoder(r);
+    } catch (t) {
+        if ((null == e ? void 0 : e.startsWith('text')) || r.toLowerCase().includes('utf')) return new TextDecoder(n);
+        throw t;
+    }
+}
+function O(e, t) {
+    let [n, r] = i.useState(!1),
+        [o, a] = i.useState(null),
+        [s, l] = i.useState(1);
+    return (
+        i.useEffect(() => {
+            let n = 50000;
+            !(async function () {
+                try {
+                    var i, o;
+                    let s = await fetch(e, {
+                            headers: {
+                                Range: 'bytes=0-'.concat(n),
+                                Accept: 'text/plain'
+                            }
+                        }),
+                        c = v(t).decode(await s.arrayBuffer()),
+                        u = null != (i = s.headers.get('content-range')) ? i : '0',
+                        d = null != (o = s.headers.get('content-length')) ? o : '1',
+                        f = parseInt(u.split('/')[1]) - parseInt(d);
+                    a(0 === f ? c : c.slice(0, -1)), l(f), r(!1);
+                } catch (e) {
+                    l(0), r(!0);
+                }
+            })();
+        }, [e, t]),
+        {
+            fileContents: o,
+            bytesLeft: s,
+            hadError: n
+        }
+    );
+}
+function I(e) {
     let { text: t, language: i } = e,
-        a = () =>
+        o = () =>
             (0, r.jsx)('pre', {
                 children: (0, r.jsx)('code', {
-                    className: s()(p.scrollbarGhostHairline, h.codeView, 'hljs'),
+                    className: a()(m.scrollbarGhostHairline, h.codeView, 'hljs'),
                     children: t
                 })
             });
-    return (0, r.jsx)(o.GI, {
+    return (0, r.jsx)(s.GI, {
         createPromise: () => Promise.resolve().then(n.bind(n, 364964)),
         webpackId: 364964,
         render: (e) => {
-            if (!e.hasLanguage(i)) return a();
+            if (!e.hasLanguage(i)) return o();
             let n = e.highlight(i, t, !0);
             return null == n
-                ? a()
+                ? o()
                 : (0, r.jsx)('pre', {
                       children: (0, r.jsx)('code', {
-                          className: s()(p.scrollbarGhostHairline, h.codeView, 'hljs', n.language),
+                          className: a()(m.scrollbarGhostHairline, h.codeView, 'hljs', n.language),
                           dangerouslySetInnerHTML: { __html: n.value }
                       })
                   });
         },
-        renderFallback: () => a()
+        renderFallback: () => o()
     });
 }
-function I(e) {
-    let { expanded: t, setExpanded: n, isWholeFile: i, numLines: a } = e,
-        s = (i ? f.Z.Messages.PREVIEW_NUM_LINES : f.Z.Messages.PREVIEW_NUM_LINES_AT_LEAST).format({ lines: a });
-    return (0, r.jsx)(l.Tooltip, {
-        text: ''.concat(t ? f.Z.Messages.COLLAPSE : f.Z.Messages.EXPAND, ' (').concat(s, ')'),
+function S(e) {
+    let { expanded: t, setExpanded: n, isWholeFile: i, numLines: o } = e,
+        a = p.NW.formatToPlainString(i ? p.t.Go5Vvr : p.t.yJcYam, { lines: o });
+    return (0, r.jsx)(l.ua7, {
+        text: ''.concat(t ? p.NW.string(p.t.iTcumZ) : p.NW.string(p.t.dcl9MT), ' (').concat(a, ')'),
         children: (e) =>
-            (0, r.jsxs)(l.Clickable, {
-                ...e,
-                className: h.toggleExpandSection,
-                onClick: () => {
-                    n(!t);
-                },
-                children: [(0, r.jsx)(_.Z, { direction: t ? _.Z.Directions.UP : _.Z.Directions.DOWN }), t ? f.Z.Messages.COLLAPSE : f.Z.Messages.EXPAND]
-            })
+            (0, r.jsxs)(
+                l.P3F,
+                y(E({}, e), {
+                    className: h.toggleExpandSection,
+                    onClick: () => {
+                        n(!t);
+                    },
+                    children: [(0, r.jsx)(f.Z, { direction: t ? f.Z.Directions.UP : f.Z.Directions.DOWN }), t ? p.NW.string(p.t.iTcumZ) : p.NW.string(p.t.dcl9MT)]
+                })
+            )
     });
 }
 function T(e) {
     let { url: t, fileName: n, fileSize: i } = e,
-        a = ''.concat(n, ' (').concat((0, E.IC)(i), ')');
+        o = ''.concat(n, ' (').concat((0, _.IC)(i), ')');
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(l.Tooltip, {
-                text: a,
+            (0, r.jsx)(l.ua7, {
+                text: o,
                 children: (e) =>
-                    (0, r.jsx)('span', {
-                        ...e,
-                        className: s()(h.downloadSection, h.attachmentName),
-                        children: n
-                    })
-            }),
-            (0, r.jsx)(l.Tooltip, {
-                text: a,
-                children: (e) =>
-                    (0, r.jsx)('span', {
-                        ...e,
-                        className: s()(h.downloadSection, h.formattedSize),
-                        children: (0, E.IC)(i)
-                    })
-            }),
-            (0, r.jsx)(l.Tooltip, {
-                text: ''.concat(f.Z.Messages.DOWNLOAD, ' ').concat(a),
-                children: (e) =>
-                    (0, r.jsx)(l.Anchor, {
-                        ...e,
-                        className: h.downloadSection,
-                        href: t,
-                        target: '_blank',
-                        rel: 'noreferrer noopener',
-                        children: (0, r.jsx)(l.DownloadIcon, {
-                            size: 'md',
-                            color: 'currentColor',
-                            className: h.downloadButton
+                    (0, r.jsx)(
+                        'span',
+                        y(E({}, e), {
+                            className: a()(h.downloadSection, h.attachmentName),
+                            children: n
                         })
-                    })
+                    )
+            }),
+            (0, r.jsx)(l.ua7, {
+                text: o,
+                children: (e) =>
+                    (0, r.jsx)(
+                        'span',
+                        y(E({}, e), {
+                            className: a()(h.downloadSection, h.formattedSize),
+                            children: (0, _.IC)(i)
+                        })
+                    )
+            }),
+            (0, r.jsx)(l.ua7, {
+                text: ''.concat(p.NW.string(p.t['1WjMbG']), ' ').concat(o),
+                children: (e) =>
+                    (0, r.jsx)(
+                        l.eee,
+                        y(E({}, e), {
+                            className: h.downloadSection,
+                            href: t,
+                            target: '_blank',
+                            rel: 'noreferrer noopener',
+                            children: (0, r.jsx)(l._8t, {
+                                size: 'md',
+                                color: 'currentColor',
+                                className: h.downloadButton
+                            })
+                        })
+                    )
             })
         ]
     });
 }
-function g(e) {
+function N(e) {
     let { language: t, setLanguage: n } = e;
-    return (0, r.jsx)(l.Popout, {
+    return (0, r.jsx)(l.yRy, {
         position: 'left',
         renderPopout: (e) => {
             let { closePopout: i } = e;
-            return (0, r.jsx)(l.Dialog, {
-                'aria-label': f.Z.Messages.PREVIEW_CHANGE_LANGUAGE,
-                children: (0, r.jsx)(l.Combobox, {
+            return (0, r.jsx)(l.VqE, {
+                'aria-label': p.NW.string(p.t.utm4qq),
+                children: (0, r.jsx)(l.hQY, {
                     className: h.languageSelector,
                     multiSelect: !1,
-                    placeholder: f.Z.Messages.PREVIEW_SEARCH_LANGUAGE_PLACEHOLDER,
+                    placeholder: p.NW.string(p.t.Gofftb),
                     value: new Set([t]),
                     autoFocus: !0,
                     onChange: (e) => {
@@ -120,10 +224,10 @@ function g(e) {
                             .filter((t) => t.toLowerCase().includes(e.toLowerCase()))
                             .map((e) =>
                                 (0, r.jsx)(
-                                    l.ComboboxItem,
+                                    l.lo1,
                                     {
                                         value: e,
-                                        children: (0, r.jsx)(l.ComboboxItem.Label, { children: e })
+                                        children: (0, r.jsx)(l.lo1.Label, { children: e })
                                     },
                                     e
                                 )
@@ -132,64 +236,68 @@ function g(e) {
             });
         },
         children: (e) =>
-            (0, r.jsx)(l.Tooltip, {
-                text: f.Z.Messages.PREVIEW_CHANGE_LANGUAGE,
+            (0, r.jsx)(l.ua7, {
+                text: p.NW.string(p.t.utm4qq),
                 children: (t) =>
-                    (0, r.jsx)(l.AngleBracketsIcon, {
-                        size: 'md',
-                        color: 'currentColor',
-                        ...t,
-                        ...e,
-                        className: h.codeIcon
-                    })
-            })
-    });
-}
-function S(e) {
-    return (0, r.jsx)(l.Tooltip, {
-        text: f.Z.Messages.PREVIEW_WHOLE_FILE,
-        children: (t) =>
-            (0, r.jsx)(l.Clickable, {
-                ...t,
-                className: h.openFullPreviewSection,
-                onClick: () => {
-                    (0, l.openModal)((t) =>
-                        (0, r.jsx)(N, {
-                            ...e,
-                            ...t
-                        })
-                    );
-                },
-                children: (0, r.jsx)(l.MaximizeIcon, {
-                    size: 'xs',
-                    color: 'currentColor'
-                })
+                    (0, r.jsx)(
+                        l.nF$,
+                        y(
+                            E(
+                                {
+                                    size: 'md',
+                                    color: 'currentColor'
+                                },
+                                t,
+                                e
+                            ),
+                            { className: h.codeIcon }
+                        )
+                    )
             })
     });
 }
 function A(e) {
+    return (0, r.jsx)(l.ua7, {
+        text: p.NW.string(p.t['0PQYk5']),
+        children: (t) =>
+            (0, r.jsx)(
+                l.P3F,
+                y(E({}, t), {
+                    className: h.openFullPreviewSection,
+                    onClick: () => {
+                        (0, l.h7j)((t) => (0, r.jsx)(R, E({}, e, t)));
+                    },
+                    children: (0, r.jsx)(l.bJT, {
+                        size: 'xs',
+                        color: 'currentColor'
+                    })
+                })
+            )
+    });
+}
+function C(e) {
     var t;
-    let { url: n, fileName: i, fileSize: a, fileContents: o, expanded: u, setExpanded: d, language: _, setLanguage: p, bytesLeft: A, className: N } = e,
-        v = null == o ? void 0 : o.split('\n'),
-        O = null !== (t = null == v ? void 0 : v.length) && void 0 !== t ? t : 0,
-        R = u ? 100 : 6,
-        C = 0 === A,
-        y = '';
-    C && u && O > R ? (y = '\n...') : !C && (y = '...'), '' !== y && (C ? (y += ' ' + f.Z.Messages.PREVIEW_LINES_LEFT.format({ lines: O - R })) : (y += ' ' + f.Z.Messages.PREVIEW_BYTES_LEFT.format({ formattedBytes: (0, E.IC)(A) })));
-    let D = (null == v ? void 0 : v.slice(0, R).join('\n')) + y,
-        L = (0, c.yx)(D),
-        b = u || R < O;
+    let { url: n, fileName: i, fileSize: o, fileContents: s, expanded: c, setExpanded: d, language: f, setLanguage: m, bytesLeft: g, className: E } = e,
+        b = null == s ? void 0 : s.split('\n'),
+        y = null != (t = null == b ? void 0 : b.length) ? t : 0,
+        v = c ? 100 : 6,
+        O = 0 === g,
+        C = '';
+    O && c && y > v ? (C = '\n...') : O || (C = '...'), '' !== C && (O ? (C += ' ' + p.NW.formatToPlainString(p.t.DQnFp6, { lines: y - v })) : (C += ' ' + p.NW.formatToPlainString(p.t['1+gGcH'], { formattedBytes: (0, _.IC)(g) })));
+    let R = (null == b ? void 0 : b.slice(0, v).join('\n')) + C,
+        P = (0, u.yx)(R),
+        w = c || v < y;
     return (0, r.jsxs)('div', {
-        className: s()(N, h.container),
+        className: a()(E, h.container),
         children: [
             (0, r.jsx)('div', {
-                className: s()(h.textContainer, { [h.expanded]: u }),
+                className: a()(h.textContainer, { [h.expanded]: c }),
                 children:
-                    null == o
-                        ? (0, r.jsx)(l.Spinner, { className: h.spinner })
-                        : (0, r.jsx)(m, {
-                              text: L,
-                              language: _
+                    null == s
+                        ? (0, r.jsx)(l.$jN, { className: h.spinner })
+                        : (0, r.jsx)(I, {
+                              text: P,
+                              language: f
                           })
             }),
             (0, r.jsxs)(l.Text, {
@@ -197,22 +305,22 @@ function A(e) {
                 className: h.footer,
                 variant: 'text-sm/normal',
                 children: [
-                    b
+                    w
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(I, {
-                                      expanded: u,
-                                      setExpanded: d,
-                                      isWholeFile: C,
-                                      numLines: O
-                                  }),
                                   (0, r.jsx)(S, {
+                                      expanded: c,
+                                      setExpanded: d,
+                                      isWholeFile: O,
+                                      numLines: y
+                                  }),
+                                  (0, r.jsx)(A, {
                                       url: n,
                                       fileName: i,
-                                      fileSize: a,
-                                      language: _,
-                                      fileContents: o,
-                                      bytesLeft: A
+                                      fileSize: o,
+                                      language: f,
+                                      fileContents: s,
+                                      bytesLeft: g
                                   })
                               ]
                           })
@@ -221,38 +329,38 @@ function A(e) {
                     (0, r.jsx)(T, {
                         url: n,
                         fileName: i,
-                        fileSize: a
+                        fileSize: o
                     }),
-                    (0, r.jsx)(g, {
-                        language: _,
-                        setLanguage: p
+                    (0, r.jsx)(N, {
+                        language: f,
+                        setLanguage: m
                     })
                 ]
             })
         ]
     });
 }
-function N(e) {
-    let { url: t, fileName: n, fileSize: a, transitionState: s, language: o, fileContents: u, bytesLeft: c } = e,
-        [d, _] = i.useState(o),
-        p = null != u ? u : '';
+function R(e) {
+    let { url: t, fileName: n, fileSize: o, transitionState: a, language: s, fileContents: c, bytesLeft: u } = e,
+        [d, f] = i.useState(s),
+        m = null != c ? c : '';
     return (
-        0 !== c && (p += '... '.concat(f.Z.Messages.PREVIEW_BYTES_LEFT.format({ formattedBytes: (0, E.IC)(c) }))),
-        (0, r.jsx)(l.ModalRoot, {
-            transitionState: s,
-            'aria-label': f.Z.Messages.PREVIEW_MODAL_LABEL,
-            size: l.ModalSize.LARGE,
+        0 !== u && (m += '... '.concat(p.NW.formatToPlainString(p.t['1+gGcH'], { formattedBytes: (0, _.IC)(u) }))),
+        (0, r.jsx)(l.Y0X, {
+            transitionState: a,
+            'aria-label': p.NW.string(p.t.qxQjc3),
+            size: l.CgR.LARGE,
             className: h.modalRoot,
             children: (0, r.jsxs)('div', {
                 className: h.modalContent,
                 children: [
-                    (0, r.jsx)(l.ScrollerThin, {
+                    (0, r.jsx)(l.zJl, {
                         className: h.modalTextContainer,
                         children:
-                            null == u
-                                ? (0, r.jsx)(l.Spinner, { className: h.spinner })
-                                : (0, r.jsx)(m, {
-                                      text: p,
+                            null == c
+                                ? (0, r.jsx)(l.$jN, { className: h.spinner })
+                                : (0, r.jsx)(I, {
+                                      text: m,
                                       language: d
                                   })
                     }),
@@ -265,11 +373,11 @@ function N(e) {
                             (0, r.jsx)(T, {
                                 url: t,
                                 fileName: n,
-                                fileSize: a
+                                fileSize: o
                             }),
-                            (0, r.jsx)(g, {
+                            (0, r.jsx)(N, {
                                 language: d,
-                                setLanguage: _
+                                setLanguage: f
                             })
                         ]
                     })
@@ -278,77 +386,32 @@ function N(e) {
         })
     );
 }
-t.Z = i.memo(
+let P = i.memo(
     function (e) {
-        let { url: t, fileName: n, fileSize: a, contentType: o, className: l, onClick: c, onContextMenu: d } = e,
-            [_, E] = i.useState(!1),
-            [f, p] = i.useState(n.split('.').slice(-1)[0]),
-            {
-                fileContents: m,
-                bytesLeft: I,
-                hadError: T
-            } = (function (e, t) {
-                let [n, r] = i.useState(!1),
-                    [a, s] = i.useState(null),
-                    [o, l] = i.useState(1);
-                return (
-                    i.useEffect(() => {
-                        (async function n() {
-                            try {
-                                var n, i;
-                                let a = await fetch(e, {
-                                        headers: {
-                                            Range: 'bytes=0-'.concat(50000),
-                                            Accept: 'text/plain'
-                                        }
-                                    }),
-                                    o = (function (e) {
-                                        var t;
-                                        let n = 'utf-8',
-                                            r = null !== (t = null == e ? void 0 : e.split('charset=').slice(-1)[0]) && void 0 !== t ? t : n;
-                                        try {
-                                            return new TextDecoder(r);
-                                        } catch (t) {
-                                            if ((null == e ? void 0 : e.startsWith('text')) || r.toLowerCase().includes('utf')) return new TextDecoder(n);
-                                            throw t;
-                                        }
-                                    })(t).decode(await a.arrayBuffer()),
-                                    u = null !== (n = a.headers.get('content-range')) && void 0 !== n ? n : '0',
-                                    c = null !== (i = a.headers.get('content-length')) && void 0 !== i ? i : '1',
-                                    d = parseInt(u.split('/')[1]) - parseInt(c);
-                                s(0 === d ? o : o.slice(0, -1)), l(d), r(!1);
-                            } catch (e) {
-                                l(0), r(!0);
-                            }
-                        })();
-                    }, [e, t]),
-                    {
-                        fileContents: a,
-                        bytesLeft: o,
-                        hadError: n
-                    }
-                );
-            })(t, o);
-        return T
-            ? (0, r.jsx)(u.Z, {
+        let { url: t, fileName: n, fileSize: o, contentType: s, className: l, onClick: u, onContextMenu: d } = e,
+            [f, _] = i.useState(!1),
+            [p, m] = i.useState(n.split('.').slice(-1)[0]),
+            { fileContents: g, bytesLeft: E, hadError: b } = O(t, s);
+        return b
+            ? (0, r.jsx)(c.Z, {
                   url: t,
                   fileName: n,
-                  fileSize: a,
-                  onClick: c,
+                  fileSize: o,
+                  onClick: u,
                   onContextMenu: d,
                   className: l
               })
-            : (0, r.jsx)(A, {
+            : (0, r.jsx)(C, {
                   url: t,
                   fileName: n,
-                  fileSize: a,
-                  fileContents: m,
-                  bytesLeft: I,
-                  expanded: _,
-                  setExpanded: E,
-                  language: f,
-                  setLanguage: p,
-                  className: s()(h.newMosaicStyle, l)
+                  fileSize: o,
+                  fileContents: g,
+                  bytesLeft: E,
+                  expanded: f,
+                  setExpanded: _,
+                  language: p,
+                  setLanguage: m,
+                  className: a()(h.newMosaicStyle, l)
               });
     },
     (e, t) => e.url === t.url && e.className === t.className

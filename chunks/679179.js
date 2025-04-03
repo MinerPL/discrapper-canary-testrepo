@@ -1,63 +1,59 @@
-r.d(t, {
-    EZ: function () {
-        return _;
-    },
-    Gf: function () {
-        return i;
-    }
+a.d(e, {
+    EZ: () => i,
+    Gf: () => o
 });
-let n = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
-function a(...e) {
-    let t = '',
-        r = !1;
-    for (let n = e.length - 1; n >= -1 && !r; n--) {
-        let a = n >= 0 ? e[n] : '/';
-        if (!!a) (t = `${a}/${t}`), (r = '/' === a.charAt(0));
+let r = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
+function n(...t) {
+    let e = '',
+        a = !1;
+    for (let r = t.length - 1; r >= -1 && !a; r--) {
+        let n = r >= 0 ? t[r] : '/';
+        n && ((e = `${n}/${e}`), (a = '/' === n.charAt(0)));
     }
     return (
-        (t = (function (e, t) {
-            let r = 0;
-            for (let t = e.length - 1; t >= 0; t--) {
-                let n = e[t];
-                '.' === n ? e.splice(t, 1) : '..' === n ? (e.splice(t, 1), r++) : r && (e.splice(t, 1), r--);
+        (e = (function (t, e) {
+            let a = 0;
+            for (let e = t.length - 1; e >= 0; e--) {
+                let r = t[e];
+                '.' === r ? t.splice(e, 1) : '..' === r ? (t.splice(e, 1), a++) : a && (t.splice(e, 1), a--);
             }
-            if (t) for (; r--; r) e.unshift('..');
-            return e;
+            if (e) for (; a--; ) t.unshift('..');
+            return t;
         })(
-            t.split('/').filter((e) => !!e),
-            !r
+            e.split('/').filter((t) => !!t),
+            !a
         ).join('/')),
-        (r ? '/' : '') + t || '.'
+        (a ? '/' : '') + e || '.'
     );
 }
-function o(e) {
-    let t = 0;
-    for (; t < e.length && '' === e[t]; t++);
-    let r = e.length - 1;
-    for (; r >= 0 && '' === e[r]; r--);
-    return t > r ? [] : e.slice(t, r - t + 1);
+function _(t) {
+    let e = 0;
+    for (; e < t.length && '' === t[e]; e++);
+    let a = t.length - 1;
+    for (; a >= 0 && '' === t[a]; a--);
+    return e > a ? [] : t.slice(e, a - e + 1);
 }
-function i(e, t) {
-    (e = a(e).slice(1)), (t = a(t).slice(1));
-    let r = o(e.split('/')),
-        n = o(t.split('/')),
-        i = Math.min(r.length, n.length),
-        _ = i;
-    for (let e = 0; e < i; e++)
-        if (r[e] !== n[e]) {
-            _ = e;
+function o(t, e) {
+    (t = n(t).slice(1)), (e = n(e).slice(1));
+    let a = _(t.split('/')),
+        r = _(e.split('/')),
+        o = Math.min(a.length, r.length),
+        i = o;
+    for (let t = 0; t < o; t++)
+        if (a[t] !== r[t]) {
+            i = t;
             break;
         }
-    let E = [];
-    for (let e = _; e < r.length; e++) E.push('..');
-    return (E = E.concat(n.slice(_))).join('/');
+    let c = [];
+    for (let t = i; t < a.length; t++) c.push('..');
+    return (c = c.concat(r.slice(i))).join('/');
 }
-function _(e, t) {
-    let r =
-        (function (e) {
-            let t = e.length > 1024 ? `<truncated>${e.slice(-1024)}` : e,
-                r = n.exec(t);
-            return r ? r.slice(1) : [];
-        })(e)[2] || '';
-    return t && r.slice(-1 * t.length) === t && (r = r.slice(0, r.length - t.length)), r;
+function i(t, e) {
+    let a =
+        (function (t) {
+            let e = t.length > 1024 ? `<truncated>${t.slice(-1024)}` : t,
+                a = r.exec(e);
+            return a ? a.slice(1) : [];
+        })(t)[2] || '';
+    return e && a.slice(-1 * e.length) === e && (a = a.slice(0, a.length - e.length)), a;
 }

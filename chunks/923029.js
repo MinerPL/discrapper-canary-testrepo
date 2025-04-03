@@ -1,50 +1,46 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(873546),
-    l = n(442837),
-    r = n(481060),
-    o = n(665149),
+n.d(t, { Z: () => m });
+var r = n(200651),
+    i = n(192379),
+    l = n(873546),
+    o = n(442837),
+    a = n(481060),
+    s = n(665149),
     c = n(911560),
     u = n(210887),
     d = n(914010),
-    h = n(981631),
-    m = n(689938),
-    p = n(42894);
-function _(e) {
+    p = n(981631),
+    h = n(388032),
+    f = n(487153);
+function m(e) {
     let t,
-        { channelId: _ } = e;
-    a.useEffect(() => {
-        c.Z.loadThread(_);
+        { channelId: m } = e;
+    i.useEffect(() => {
+        c.Z.loadThread(m);
     });
-    let f = (0, l.e7)([d.Z], () => d.Z.getGuildId()) === h.I_8,
-        E = (0, l.e7)([u.Z], () => u.Z.theme);
+    let g = (0, o.e7)([d.Z], () => d.Z.getGuildId()) === p.I_8,
+        b = (0, o.e7)([u.Z], () => u.Z.theme);
     return (
-        (t = f
-            ? (0, i.jsx)(r.EmptyStateText, {
-                  note: m.Z.Messages.FAVORITES_EMPTY_BODY,
-                  children: m.Z.Messages.FAVORITES_EMPTY_TITLE
+        (t = g
+            ? (0, r.jsx)(a.OZU, {
+                  note: h.NW.string(h.t['D5SN5+']),
+                  children: h.NW.string(h.t.xVTAdX)
               })
-            : null != _
-              ? (0, i.jsx)(r.Spinner, { type: r.Spinner.Type.SPINNING_CIRCLE })
-              : (0, i.jsx)(r.EmptyStateText, {
-                    note: m.Z.Messages.CHANNELS_UNAVAILABLE_BODY,
-                    children: m.Z.Messages.CHANNELS_UNAVAILABLE_TITLE
+            : null != m
+              ? (0, r.jsx)(a.$jN, { type: a.$jN.Type.SPINNING_CIRCLE })
+              : (0, r.jsx)(a.OZU, {
+                    note: h.NW.string(h.t['LTr+x8']),
+                    children: h.NW.string(h.t.ai6Lbm)
                 })),
-        (0, i.jsxs)('div', {
-            className: p.noChannel,
+        (0, r.jsxs)('div', {
+            className: f.noChannel,
             children: [
-                s.tq && (0, i.jsx)(o.ZP, { children: (0, i.jsx)(a.Fragment, {}) }),
-                (0, i.jsxs)(r.EmptyState, {
-                    theme: E,
+                l.tq && (0, r.jsx)(s.ZP, { children: null }),
+                (0, r.jsxs)(a.ubH, {
+                    theme: b,
                     children: [
-                        (0, i.jsx)(r.EmptyStateImage, {
-                            darkSrc: f ? n(691270) : n(625065),
-                            lightSrc: f ? n(704139) : n(875184),
+                        (0, r.jsx)(a.oxh, {
+                            darkSrc: g ? n(691270) : n(625065),
+                            lightSrc: g ? n(704139) : n(875184),
                             width: 272,
                             height: 222
                         }),

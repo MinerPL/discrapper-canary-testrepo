@@ -1,46 +1,67 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
-var r = n(735250);
-n(470079);
-var i = n(442837),
-    a = n(481060),
-    s = n(493683),
-    o = n(740492),
-    l = n(314897),
-    u = n(592125),
-    c = n(699516),
-    d = n(944486),
-    _ = n(981631),
-    E = n(689938);
-function f(e) {
-    let { user: t, context: f, label: h, joinCallVideo: p, id: m, onCall: I } = e,
-        T = l.default.getId(),
-        g = f === _.IlC.POPOUT,
-        S = (0, i.e7)([d.Z, u.Z], () => d.Z.getVoiceChannelId() === u.Z.getDMFromUserId(t.id)),
-        A = (0, i.e7)([c.Z], () => c.Z.isBlocked(t.id));
-    if (T === t.id || g || S || t.bot) return null;
-    let N = () => {
-            null == I || I(), s.Z.openPrivateChannel(t.id, !0, p);
+n.d(t, { Z: () => Z });
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    r = n(481060),
+    a = n(493683),
+    o = n(40851),
+    s = n(740492),
+    u = n(314897),
+    c = n(592125),
+    d = n(699516),
+    g = n(944486),
+    f = n(981631),
+    b = n(388032);
+function Z(e) {
+    let { user: t, context: Z, label: N, joinCallVideo: m, id: v, onCall: p } = e,
+        O = (0, o.Aq)(),
+        h = (0, l.e7)([u.default], () => u.default.getId() === t.id),
+        j = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
+        x = (0, l.e7)([g.Z, c.Z], () => g.Z.getVoiceChannelId() === c.Z.getDMFromUserId(t.id));
+    if (h || Z === f.IlC.POPOUT || x || t.bot || t.isProvisional) return null;
+    let _ = () => {
+            null == p || p(), a.Z.openPrivateChannel(t.id, !0, m), O.dispatch(f.CkL.POPOUT_CLOSE), (0, r.pTH)();
         },
-        v = !o.ZP.disableCallUserConfirmationPrompt;
-    return (0, r.jsx)(a.MenuItem, {
-        id: null != m ? m : 'call',
-        label: null != h ? h : E.Z.Messages.CALL,
-        action: v
+        y = !s.ZP.disableCallUserConfirmationPrompt;
+    return (0, i.jsx)(r.sNh, {
+        id: null != v ? v : 'call',
+        label: null != N ? N : b.NW.string(b.t.JJogjo),
+        action: y
             ? () => {
-                  (0, a.openModalLazy)(async () => {
+                  (0, r.ZDy)(async () => {
                       let { default: e } = await n.e('27157').then(n.bind(n, 736454));
                       return (t) =>
-                          (0, r.jsx)(e, {
-                              onSubmit: N,
-                              ...t
-                          });
+                          (0, i.jsx)(
+                              e,
+                              (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          i = Object.keys(n);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (i = i.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                              })
+                                          )),
+                                          i.forEach(function (t) {
+                                              var i;
+                                              (i = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: i,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = i);
+                                          });
+                                  }
+                                  return e;
+                              })({ onSubmit: _ }, t)
+                          );
                   });
               }
-            : N,
-        disabled: A
+            : _,
+        disabled: j
     });
 }

@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => a });
 var r = n(226430),
     i = n(951516),
-    a = n(227700);
-function s(e, t, n) {
+    o = n(227700);
+function a(e, t, n) {
     (0, i.Z)(2, arguments);
-    var s = (0, r.Z)(e, t) / 1000;
-    return (0, a.u)(null == n ? void 0 : n.roundingMethod)(s);
+    var a = (0, r.Z)(e, t) / 1000;
+    return (0, o.u)(null == n ? void 0 : n.roundingMethod)(a);
 }

@@ -1,70 +1,65 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(392711),
-    r = n.n(s),
-    l = n(442837),
-    o = n(570140),
+n.d(t, { Z: () => x }), n(47120), n(230036);
+var r = n(200651),
+    i = n(192379),
+    a = n(392711),
+    l = n.n(a),
+    o = n(442837),
+    s = n(570140),
     c = n(45114),
     u = n(404616),
     d = n(470623),
-    _ = n(344185),
-    E = n(488131),
-    I = n(592125),
-    m = n(823379),
-    T = n(709054),
-    h = n(124368),
-    N = n(742644);
-function f(e) {
-    let { channel: t, channelRecord: n, deleteChannel: s } = e,
-        f = (0, l.Wu)(
-            [_.Z, I.Z],
+    p = n(344185),
+    m = n(488131),
+    f = n(592125),
+    h = n(823379),
+    g = n(709054),
+    _ = n(124368),
+    b = n(572198);
+function x(e) {
+    let { channel: t, channelRecord: n, deleteChannel: a } = e,
+        x = (0, o.Wu)(
+            [p.Z, f.Z],
             () =>
-                r()(_.Z.getThreadsForParent(n.guild_id, n.id))
+                l()(p.Z.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
-                        return T.default.compare(n, t.oldestReadMessageId) > 0;
+                        return g.default.compare(n, t.oldestReadMessageId) > 0;
                     })
                     .map((e) => {
                         let { id: t } = e;
-                        return I.Z.getChannel(t);
+                        return f.Z.getChannel(t);
                     })
-                    .filter(m.lm)
-                    .sort((e, t) => T.default.compare(e.id, t.id))
+                    .filter(h.lm)
+                    .sort((e, t) => g.default.compare(e.id, t.id))
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
-        C = a.useCallback((e, t) => {
-            (0, E.ok)(e, t, h.on.INBOX);
+        y = i.useCallback((e, t) => {
+            (0, m.ok)(e, t, _.on.INBOX);
         }, []);
     return (
-        a.useEffect(() => {
-            null != n &&
-                t.isFullyLoaded &&
-                !t.hasError &&
-                !t.collapsed &&
-                0 === f.length &&
-                o.Z.wait(() => {
-                    (0, c.In)(t.channelId, !0), s(t.channelId);
+        i.useEffect(() => {
+            null == n ||
+                !t.isFullyLoaded ||
+                t.hasError ||
+                t.collapsed ||
+                0 !== x.length ||
+                s.Z.wait(() => {
+                    (0, c.In)(t.channelId, !0), a(t.channelId);
                 });
         }),
-        (0, i.jsx)('div', {
-            className: N.container,
-            children: f.map((e) =>
-                (0, i.jsx)(
+        (0, r.jsx)('div', {
+            className: b.container,
+            children: x.map((e) =>
+                (0, r.jsx)(
                     d.oL,
                     {
-                        createStore: () => (0, d.NU)(n),
-                        children: (0, i.jsx)(u.ZP, {
-                            className: N.forumPost,
+                        channel: n,
+                        children: (0, r.jsx)(u.ZP, {
+                            className: b.forumPost,
                             threadId: e.id,
-                            goToThread: C
+                            goToThread: y
                         })
                     },
                     e.id

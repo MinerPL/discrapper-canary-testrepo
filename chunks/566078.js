@@ -1,68 +1,92 @@
-n.d(t, {
-    r: function () {
-        return i;
+n.d(t, { r: () => u }), n(411104), n(47120);
+var r = n(742635),
+    i = n(319245),
+    o = n(918701);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
     }
-}),
-    n(627341),
-    n(47120);
-var r = n(278074);
-class i {
+    return e;
+}
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+class u {
     static build(e) {
-        return new i(e);
+        if (2 !== e.configVersion) throw Error('Cannot build SharedQuestFields when [configVersion !== 2]');
+        return new u(e);
     }
     get features() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => new Set(e.features))
-            .exhaustive();
+        return new Set(this.quest.features);
     }
     _defaultRewardV2(e) {
         return e.rewardsConfig.rewards[0];
     }
     get defaultReward() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => this._defaultRewardV2(e))
-            .exhaustive();
-    }
-    get defaultRewardAsset() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => this._defaultRewardV2(e).asset)
-            .exhaustive();
+        return this._defaultRewardV2(this.quest);
     }
     get defaultRewardRedemptionInstructionsByPlatform() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => this._defaultRewardV2(e).messages.redemptionInstructionsByPlatform)
-            .exhaustive();
+        return this._defaultRewardV2(this.quest).messages.redemptionInstructionsByPlatform;
     }
     get rewardsExpireAt() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewardsExpireAt)
-            .exhaustive();
+        return this.quest.rewardsConfig.rewardsExpireAt;
     }
     get application() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => ({
-                ...e.application,
-                ids: [e.application.id]
-            }))
-            .exhaustive();
+        return c(s({}, this.quest.application), { ids: [this.quest.application.id] });
     }
     get rewardPlatforms() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => e.rewardsConfig.platforms)
-            .exhaustive();
+        return this.quest.rewardsConfig.platforms;
+    }
+    get questType() {
+        return (0, o.q8)({ config: this.quest }) ? i.W.VIDEO : i.W.GAMEPLAY;
+    }
+    get defaultInGameTask() {
+        return this.quest.taskConfig.type !== r.L.THIRD_PARTY || 0 === Object.keys(this.quest.taskConfig.tasks).length ? null : Object.values(this.quest.taskConfig.tasks)[0];
     }
     constructor(e) {
-        var t, n, r;
-        (t = this),
-            (r = void 0),
-            (n = 'quest') in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r),
-            (this.quest = e);
+        a(this, 'quest', void 0), (this.quest = e);
     }
 }

@@ -1,27 +1,23 @@
 n.d(t, {
-    c: function () {
-        return a;
-    },
-    m: function () {
-        return s;
-    }
+    c: () => o,
+    m: () => a
 });
 let r = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'.split(''),
     i = [];
 for (let e = 0; e < r.length; e++) i[r[e].charCodeAt(0)] = e;
-function a(e) {
+function o(e) {
     let t = (3 * e.length) / 4;
     '=' == e[e.length - 2] ? (t -= 2) : '=' == e[e.length - 1] && (t -= 1);
     let n = new Uint8Array(t),
         r = 0,
-        a = 0,
-        s,
-        o = 0;
+        o = 0,
+        a,
+        s = 0;
     for (let t = 0; t < e.length; t++) {
-        if (void 0 === (s = i[e.charCodeAt(t)]))
+        if (void 0 === (a = i[e.charCodeAt(t)]))
             switch (e[t]) {
                 case '=':
-                    a = 0;
+                    o = 0;
                 case '\n':
                 case '\r':
                 case '\t':
@@ -30,39 +26,39 @@ function a(e) {
                 default:
                     throw Error('invalid base64 string.');
             }
-        switch (a) {
+        switch (o) {
             case 0:
-                (o = s), (a = 1);
+                (s = a), (o = 1);
                 break;
             case 1:
-                (n[r++] = (o << 2) | ((48 & s) >> 4)), (o = s), (a = 2);
+                (n[r++] = (s << 2) | ((48 & a) >> 4)), (s = a), (o = 2);
                 break;
             case 2:
-                (n[r++] = ((15 & o) << 4) | ((60 & s) >> 2)), (o = s), (a = 3);
+                (n[r++] = ((15 & s) << 4) | ((60 & a) >> 2)), (s = a), (o = 3);
                 break;
             case 3:
-                (n[r++] = ((3 & o) << 6) | s), (a = 0);
+                (n[r++] = ((3 & s) << 6) | a), (o = 0);
         }
     }
-    if (1 == a) throw Error('invalid base64 string.');
+    if (1 == o) throw Error('invalid base64 string.');
     return n.subarray(0, r);
 }
-function s(e) {
+function a(e) {
     let t = '',
         n = 0,
         i,
-        a = 0;
-    for (let s = 0; s < e.length; s++)
-        switch (((i = e[s]), n)) {
+        o = 0;
+    for (let a = 0; a < e.length; a++)
+        switch (((i = e[a]), n)) {
             case 0:
-                (t += r[i >> 2]), (a = (3 & i) << 4), (n = 1);
+                (t += r[i >> 2]), (o = (3 & i) << 4), (n = 1);
                 break;
             case 1:
-                (t += r[a | (i >> 4)]), (a = (15 & i) << 2), (n = 2);
+                (t += r[o | (i >> 4)]), (o = (15 & i) << 2), (n = 2);
                 break;
             case 2:
-                (t += r[a | (i >> 6)] + r[63 & i]), (n = 0);
+                (t += r[o | (i >> 6)]), (t += r[63 & i]), (n = 0);
         }
-    return n && ((t += r[a] + '='), 1 == n && (t += '=')), t;
+    return n && ((t += r[o]), (t += '='), 1 == n && (t += '=')), t;
 }
-(i['-'.charCodeAt(0)] = r.indexOf('+')), (i['_'.charCodeAt(0)] = r.indexOf('/'));
+(i[45] = r.indexOf('+')), (i[95] = r.indexOf('/'));

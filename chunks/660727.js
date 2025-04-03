@@ -1,173 +1,165 @@
-o.r(a), o(47120);
-var n,
-    t,
-    l = o(735250),
-    i = o(470079),
-    s = o(120356),
-    r = o.n(s),
-    d = o(77866),
-    c = o(481060),
-    u = o(313201),
-    p = o(907040),
-    v = o(906411),
-    f = o(813197),
-    I = o(984933),
-    _ = o(768581),
-    b = o(956664),
-    m = o(185923),
-    N = o(689938),
-    j = o(643094),
-    O = o(84717);
-((t = n || (n = {})).TAB_ID_FILE_UPLOAD = 'tab-id-role-icon-file-upload'), (t.TAB_ID_EMOJI = 'tab-id-role-icon-emoji');
-function x() {
+n.d(a, { default: () => k }), n(47120);
+var o = n(200651),
+    t = n(192379),
+    i = n(120356),
+    l = n.n(i),
+    d = n(481060),
+    r = n(211266),
+    s = n(313201),
+    c = n(907040),
+    u = n(906411),
+    p = n(345861),
+    v = n(984933),
+    m = n(768581),
+    x = n(956664),
+    N = n(185923),
+    b = n(388032),
+    f = n(853967),
+    h = n(84717);
+function j() {
     return [
         {
-            name: N.Z.Messages.IMAGES,
+            name: b.NW.string(b.t.Sp2NFx),
             extensions: ['jpg', 'jpeg', 'png']
         }
     ];
 }
-async function h(e) {
-    let a = (0, _.gT)({
+async function I(e) {
+    let a = (0, m.gT)({
             id: e.id,
             animated: !1,
             size: 48,
             forcePNG: !0
         }),
-        o = await fetch(a),
-        n = await o.blob();
-    return await (0, b.fD)(n);
+        n = await fetch(a),
+        o = await n.blob();
+    return await (0, x.fD)(o);
 }
-a.default = function (e) {
-    let { guildId: a, onUploadIcon: o, onSelectUnicodeEmoji: n, onClose: t, transitionState: s } = e,
-        _ = (0, u.Dt)(),
-        b = I.ZP.getDefaultChannel(a),
-        [B, C] = i.useState('tab-id-role-icon-file-upload'),
-        [E, L] = i.useState(!1),
-        g = (0, d.Z)(x);
+let k = function (e) {
+    let { guildId: a, onUploadIcon: n, onSelectUnicodeEmoji: i, onClose: m, transitionState: x } = e,
+        k = (0, s.Dt)(),
+        C = v.ZP.getDefaultChannel(a),
+        [g, z] = t.useState('tab-id-role-icon-file-upload'),
+        [_, S] = t.useState(!1),
+        B = (0, r.Z)(j);
     return (
-        i.useEffect(() => {
-            L(!1);
-        }, [B]),
-        (0, l.jsx)(c.ModalRoot, {
-            transitionState: s,
-            'aria-labelledby': _,
-            size: c.ModalSize.MEDIUM,
-            className: j.modalRoot,
-            children: (0, l.jsxs)('div', {
-                className: j.contentWrapper,
+        t.useEffect(() => {
+            S(!1);
+        }, [g]),
+        (0, o.jsx)(d.Y0X, {
+            transitionState: x,
+            'aria-labelledby': k,
+            size: d.CgR.MEDIUM,
+            className: f.modalRoot,
+            children: (0, o.jsxs)('div', {
+                className: f.contentWrapper,
                 children: [
-                    (0, l.jsx)('nav', {
-                        className: r()(j.nav, { [j.navUploadSelected]: 'tab-id-role-icon-file-upload' === B }),
-                        children: (0, l.jsxs)('div', {
-                            className: j.navList,
+                    (0, o.jsx)('nav', {
+                        className: l()(f.nav, { [f.navUploadSelected]: 'tab-id-role-icon-file-upload' === g }),
+                        children: (0, o.jsxs)('div', {
+                            className: f.navList,
                             role: 'tablist',
                             'aria-label': 'Expression Picker',
                             children: [
-                                (0, l.jsx)('div', {
-                                    className: j.navItem,
+                                (0, o.jsx)('div', {
+                                    className: f.navItem,
                                     role: 'tab',
                                     'aria-controls': 'tab-id-role-icon-file-upload',
-                                    'aria-selected': 'tab-id-role-icon-file-upload' === B,
-                                    children: (0, l.jsx)(c.Button, {
+                                    'aria-selected': 'tab-id-role-icon-file-upload' === g,
+                                    children: (0, o.jsx)(d.zxk, {
                                         onClick: () => {
-                                            C('tab-id-role-icon-file-upload');
+                                            z('tab-id-role-icon-file-upload');
                                         },
                                         'aria-current': 'page',
-                                        className: r()(j.navButton, { [j.navButtonActive]: 'tab-id-role-icon-file-upload' === B }),
-                                        look: c.Button.Looks.BLANK,
-                                        size: c.Button.Sizes.NONE,
-                                        children: N.Z.Messages.ROLE_ICON_TAB_UPLOAD_IMAGE
+                                        className: l()(f.navButton, { [f.navButtonActive]: 'tab-id-role-icon-file-upload' === g }),
+                                        look: d.zxk.Looks.BLANK,
+                                        size: d.zxk.Sizes.NONE,
+                                        children: b.NW.string(b.t.royWSE)
                                     })
                                 }),
-                                (0, l.jsx)('div', {
-                                    className: j.navItem,
+                                (0, o.jsx)('div', {
+                                    className: f.navItem,
                                     role: 'tab',
                                     'aria-controls': 'tab-id-role-icon-emoji',
-                                    'aria-selected': 'tab-id-role-icon-emoji' === B,
-                                    children: (0, l.jsx)(c.Button, {
+                                    'aria-selected': 'tab-id-role-icon-emoji' === g,
+                                    children: (0, o.jsx)(d.zxk, {
                                         onClick: () => {
-                                            C('tab-id-role-icon-emoji');
+                                            z('tab-id-role-icon-emoji');
                                         },
                                         'aria-current': 'page',
-                                        className: r()(j.navButton, { [j.navButtonActive]: 'tab-id-role-icon-emoji' === B }),
-                                        look: c.Button.Looks.BLANK,
-                                        size: c.Button.Sizes.NONE,
-                                        children: N.Z.Messages.ROLE_ICON_TAB_EMOJI
+                                        className: l()(f.navButton, { [f.navButtonActive]: 'tab-id-role-icon-emoji' === g }),
+                                        look: d.zxk.Looks.BLANK,
+                                        size: d.zxk.Sizes.NONE,
+                                        children: b.NW.string(b.t['/Ny2wc'])
                                     })
                                 })
                             ]
                         })
                     }),
-                    'tab-id-role-icon-file-upload' === B
-                        ? (0, l.jsx)(c.ModalContent, {
-                              children: (0, l.jsxs)('div', {
-                                  className: j.uploadContainer,
+                    'tab-id-role-icon-file-upload' === g
+                        ? (0, o.jsx)(d.hzk, {
+                              children: (0, o.jsxs)('div', {
+                                  className: f.uploadContainer,
                                   children: [
-                                      (0, l.jsxs)('div', {
-                                          className: j.uploadIconOuterContainer,
+                                      (0, o.jsxs)('div', {
+                                          className: f.uploadIconOuterContainer,
                                           children: [
-                                              (0, l.jsx)('img', {
-                                                  src: O,
+                                              (0, o.jsx)('img', {
+                                                  src: h,
                                                   alt: 'sparkles'
                                               }),
-                                              (0, l.jsx)('div', {
-                                                  className: j.uploadIconInnerContainer,
-                                                  children: (0, l.jsx)(c.ImagePlusIcon, {
+                                              (0, o.jsx)('div', {
+                                                  className: f.uploadIconInnerContainer,
+                                                  children: (0, o.jsx)(d.FmF, {
                                                       size: 'md',
                                                       color: 'currentColor',
-                                                      className: j.uploadIcon
+                                                      className: f.uploadIcon
                                                   })
                                               })
                                           ]
                                       }),
-                                      (0, l.jsx)('div', {
-                                          className: j.uploadInfo,
-                                          children: N.Z.Messages.ROLE_ICON_UPLOAD_FILES_INFO
+                                      (0, o.jsx)('div', {
+                                          className: f.uploadInfo,
+                                          children: b.NW.string(b.t['mz++Qk'])
                                       }),
-                                      (0, l.jsxs)(c.Button, {
-                                          size: c.Button.Sizes.SMALL,
-                                          children: [
-                                              N.Z.Messages.ROLE_ICON_UPLOAD_BROWSE_FILES,
-                                              (0, l.jsx)(f.ZP, {
-                                                  onChange: (e) => {
-                                                      L(!1), o(e), t();
-                                                  },
-                                                  onFileSizeError: () => {
-                                                      L(!0);
-                                                  },
-                                                  maxFileSizeBytes: 256000,
-                                                  multiple: !1,
-                                                  filters: g
-                                              })
-                                          ]
+                                      (0, o.jsx)(p.Z, {
+                                          size: d.zxk.Sizes.SMALL,
+                                          buttonCTA: b.NW.string(b.t.sdCQY2),
+                                          onChange: (e) => {
+                                              S(!1), n(e), m();
+                                          },
+                                          onFileSizeError: () => {
+                                              S(!0);
+                                          },
+                                          maxFileSizeBytes: 256000,
+                                          filters: B
                                       }),
-                                      E
-                                          ? (0, l.jsx)(c.Text, {
-                                                className: j.uploadError,
+                                      _
+                                          ? (0, o.jsx)(d.Text, {
+                                                className: f.uploadError,
                                                 color: 'text-danger',
                                                 variant: 'text-sm/normal',
-                                                children: N.Z.Messages.ROLE_ICON_UPLOAD_FILE_TOO_BIG
+                                                children: b.NW.string(b.t.HFyKsb)
                                             })
                                           : null
                                   ]
                               })
                           })
                         : null,
-                    'tab-id-role-icon-emoji' === B
-                        ? (0, l.jsx)(p.Z, {
+                    'tab-id-role-icon-emoji' === g
+                        ? (0, o.jsx)(c.Z, {
                               hasTabWrapper: !0,
-                              closePopout: () => t(),
+                              closePopout: () => m(),
                               onSelectEmoji: async (e) => {
-                                  if ((null == e ? void 0 : e.id) != null) (null == e ? void 0 : e.type) === v.B.GUILD && o(await h(e));
+                                  if ((null == e ? void 0 : e.id) != null) (null == e ? void 0 : e.type) === u.B.GUILD && n(await I(e));
                                   else if ((null == e ? void 0 : e.surrogates) != null) {
-                                      var a, l;
-                                      n(null !== (l = null === (a = e.defaultDiversityChild) || void 0 === a ? void 0 : a.surrogates) && void 0 !== l ? l : e.surrogates);
+                                      var a, o;
+                                      i(null != (o = null == (a = e.defaultDiversityChild) ? void 0 : a.surrogates) ? o : e.surrogates);
                                   }
-                                  t();
+                                  m();
                               },
-                              pickerIntention: m.Hz.COMMUNITY_CONTENT,
-                              channel: b
+                              pickerIntention: N.Hz.COMMUNITY_CONTENT,
+                              channel: C
                           })
                         : null
                 ]

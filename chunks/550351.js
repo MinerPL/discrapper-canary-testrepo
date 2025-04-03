@@ -1,50 +1,47 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => h });
 var r = n(594190),
     i = n(569545),
-    a = n(199902),
-    s = n(314897),
-    o = n(158776),
+    o = n(199902),
+    a = n(314897),
+    s = n(158776),
     l = n(19780),
-    u = n(979651),
-    c = n(709054),
+    c = n(979651),
+    u = n(709054),
     d = n(356659),
-    _ = n(981631),
-    E = n(689938);
-function f(e) {
-    let { sourceName: t, sourceApplicationId: n } = (function (e) {
-            var t, n;
-            if (null != e) {
-                let { ownerId: t } = i.my(e);
-                if (t !== s.default.getId()) {
-                    let e = o.Z.getActivities(t).find((e) => e.type === _.IIU.PLAYING);
-                    return {
-                        sourceName: null == e ? void 0 : e.name,
-                        sourceApplicationId: null == e ? void 0 : e.application_id
-                    };
-                }
-            }
-            let l = a.Z.getStreamerActiveStreamMetadata(),
-                u = null == l ? void 0 : l.pid,
-                c = null != l ? (null != u ? r.ZP.getGameForPID(u) : null) : r.ZP.getVisibleGame();
+    f = n(981631),
+    _ = n(388032);
+function p(e) {
+    var t, n;
+    if (null != e) {
+        let { ownerId: t } = i.my(e);
+        if (t !== a.default.getId()) {
+            let e = s.Z.getActivities(t).find((e) => e.type === f.IIU.PLAYING);
             return {
-                sourceName: null !== (t = null == l ? void 0 : l.sourceName) && void 0 !== t ? t : null == c ? void 0 : c.name,
-                sourceApplicationId: null !== (n = null == l ? void 0 : l.id) && void 0 !== n ? n : null == c ? void 0 : c.id
+                sourceName: null == e ? void 0 : e.name,
+                sourceApplicationId: null == e ? void 0 : e.application_id
             };
-        })(e),
-        f = l.Z.getChannelId(),
-        h = [s.default.getId()];
+        }
+    }
+    let l = o.Z.getStreamerActiveStreamMetadata(),
+        c = null == l ? void 0 : l.pid,
+        u = null != l ? (null != c ? r.ZP.getGameForPID(c) : null) : r.ZP.getVisibleGame();
+    return {
+        sourceName: null != (t = null == l ? void 0 : l.sourceName) ? t : null == u ? void 0 : u.name,
+        sourceApplicationId: null != (n = null == l ? void 0 : l.id) ? n : null == u ? void 0 : u.id
+    };
+}
+function h(e) {
+    let { sourceName: t, sourceApplicationId: n } = p(e),
+        r = l.Z.getChannelId(),
+        i = [a.default.getId()];
     return (
-        null != f && (h = Object.keys(u.Z.getVoiceStatesForChannel(f))),
+        null != r && (i = Object.keys(c.Z.getVoiceStatesForChannel(r))),
         {
-            id: c.default.fromTimestamp(Date.now()),
+            id: u.default.fromTimestamp(Date.now()),
             version: d.Bg,
-            applicationName: null != t ? t : E.Z.Messages.CLIPS_UNKNOWN_SOURCE,
+            applicationName: null != t ? t : _.NW.string(_.t.qtSJxc),
             applicationId: n,
-            users: h,
+            users: i,
             clipMethod: 'manual',
             length: 0,
             thumbnail: ''

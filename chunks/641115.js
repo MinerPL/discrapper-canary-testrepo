@@ -1,253 +1,296 @@
-t.d(n, {
-    Z: function () {
-        return P;
-    }
-}),
-    t(47120);
-var l = t(735250),
-    s = t(470079),
-    a = t(120356),
-    r = t.n(a),
-    i = t(512722),
-    o = t.n(i),
-    c = t(848246),
-    u = t(442837),
-    d = t(481060),
-    m = t(410575),
-    E = t(2052),
-    _ = t(924557),
-    S = t(600164),
-    g = t(436774),
-    h = t(933843),
-    C = t(1163),
-    I = t(594174),
-    N = t(74538),
-    x = t(451467),
-    Z = t(122186),
-    f = t(37113),
-    R = t(981631),
-    A = t(474936),
-    T = t(689938),
-    v = t(458623),
-    L = t(782765),
-    M = t(224499);
-function p(e) {
-    let { analyticsLocation: n, onClose: s } = e;
-    (0, d.openModalLazy)(async () => {
-        let { default: e } = await t.e('28479').then(t.bind(t, 78865));
-        return (t) =>
-            (0, l.jsx)(e, {
-                ...t,
-                onCloseParent: s,
-                analyticsSource: n
+n.d(t, { Z: () => k }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    o = n(512722),
+    a = n.n(o),
+    c = n(442837),
+    d = n(481060),
+    u = n(410575),
+    f = n(2052),
+    m = n(924557),
+    h = n(600164),
+    x = n(436774),
+    p = n(140465),
+    g = n(774026),
+    _ = n(592125),
+    j = n(944486),
+    v = n(594174),
+    b = n(74538),
+    S = n(451467),
+    C = n(122186),
+    N = n(37113),
+    y = n(981631),
+    Z = n(388032),
+    I = n(347226),
+    w = n(480197),
+    O = n(20493);
+function T(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
             });
+    }
+    return e;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function P(e) {
+    let { analyticsLocation: t } = e;
+    (0, d.ZDy)(async () => {
+        let { default: e } = await n.e('28479').then(n.bind(n, 78865));
+        return (n) => (0, r.jsx)(e, E(T({}, n), { analyticsSource: t }));
     });
 }
-function O() {
-    return (0, l.jsxs)('div', {
-        className: L.toolTipTextContainer,
+function R() {
+    return (0, r.jsxs)('div', {
+        className: w.toolTipTextContainer,
         children: [
-            (0, l.jsx)(d.NitroWheelIcon, {
+            (0, r.jsx)(d.SrA, {
                 size: 'md',
-                color: g.JX.PREMIUM_TIER_2,
-                className: r()(L.premiumIcon)
+                color: x.JX.PREMIUM_TIER_2,
+                className: w.premiumIcon
             }),
-            (0, l.jsx)(d.Text, {
-                className: L.upsellText,
+            (0, r.jsx)(d.Text, {
+                className: w.upsellText,
                 variant: 'text-sm/medium',
-                children: T.Z.Messages.UNLOCK_WITH_NITRO
+                children: Z.NW.string(Z.t.sEAnVF)
             })
         ]
     });
 }
-function j(e) {
-    let n,
-        t,
-        { type: s, selected: a, needsPremium: i, needsDemo: o, analyticsLocation: c, onClick: u, onClose: m, setIsHovering: E } = e,
-        { value: _, label: S } = s;
+function W(e) {
+    let t,
+        n,
+        { type: l, selected: i, needsPremium: o, needsDemo: a, analyticsLocation: c, onClick: u, onClose: f, setIsHovering: m } = e,
+        { value: h, label: x } = l;
     return (
-        i
-            ? ((n = (0, l.jsx)(d.TooltipContainer, {
-                  tooltipClassName: L.tooltip,
+        o
+            ? ((t = (0, r.jsx)(d.DY3, {
+                  tooltipClassName: w.tooltip,
                   spacing: 6,
-                  'aria-label': T.Z.Messages.UNLOCK_WITH_NITRO,
-                  text: (0, l.jsx)(O, {}),
-                  children: (0, l.jsx)('div', {
-                      className: L.textContainer,
-                      onMouseEnter: () => E(!0),
-                      onMouseLeave: () => E(!1),
-                      children: (0, l.jsx)(d.Text, {
+                  'aria-label': Z.NW.string(Z.t.sEAnVF),
+                  text: (0, r.jsx)(R, {}),
+                  children: (0, r.jsx)('div', {
+                      className: w.textContainer,
+                      onMouseEnter: () => m(!0),
+                      onMouseLeave: () => m(!1),
+                      children: (0, r.jsx)(d.Text, {
                           variant: 'text-xs/bold',
-                          className: r()(L.selectorNitroText, L.enhancedSelectorNitroText),
-                          children: S
+                          className: s()(w.selectorNitroText, w.enhancedSelectorNitroText),
+                          children: x
                       })
                   })
               })),
-              (t = () =>
-                  p({
+              (n = () =>
+                  P({
                       analyticsLocation: c,
-                      onClose: m
+                      onClose: f
                   })))
-            : ((n = (0, l.jsx)('div', {
-                  className: L.textContainer,
-                  children: (0, l.jsx)(d.Text, {
+            : ((t = (0, r.jsx)('div', {
+                  className: w.textContainer,
+                  children: (0, r.jsx)(d.Text, {
                       variant: 'text-xs/normal',
-                      className: r()(L.selectorText, { [L.enhancedSelectorNitroText]: o }),
-                      children: S
+                      className: s()(w.selectorText, { [w.enhancedSelectorNitroText]: a }),
+                      children: x
                   })
               })),
-              (t = () => u(_))),
+              (n = () => u(h))),
         {
-            content: n,
-            className: r()(L.selectorButton, {
-                [L.selectorButtonSelected]: a,
-                [L.perksDemo]: o,
-                [L.premiumUpsell]: i
+            content: t,
+            className: s()(w.selectorButton, {
+                [w.selectorButtonSelected]: i,
+                [w.perksDemo]: a,
+                [w.premiumUpsell]: o
             }),
-            onClick: t
+            onClick: n
         }
     );
 }
-function P(e) {
-    let { onClose: n, selectedPreset: t, selectedResolution: a, selectedFPS: r, onResolutionChange: i, onFPSChange: g, onPresetChange: O, targetGuildPremiumTier: P, captureDeviceSelected: D } = e,
-        G = (0, u.e7)([I.default], () => {
-            let e = I.default.getCurrentUser();
-            return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
+function k(e) {
+    let { onClose: t, selectedPreset: n, selectedResolution: i, selectedFPS: s, onResolutionChange: o, onFPSChange: x, onPresetChange: R, targetGuildPremiumTier: k, captureDeviceSelected: A } = e,
+        M = (0, c.e7)([v.default], () => {
+            let e = v.default.getCurrentUser();
+            return a()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
-        U = N.ZP.canStreamQuality(N.U2.MID, G),
-        { location: b } = (0, E.O)(),
-        w = (0, _.Zq)({ autoTrackExposure: !1 }),
-        k = (0, N.I5)(G, A.p9.TIER_1);
-    C.Z.useExperiment(
-        { location: 'Go Live Modal' },
-        {
-            autoTrackExposure: !0,
-            disable: k
-        }
-    );
-    let B = (0, h.So)(c.q.STREAM_HIGH_QUALITY),
-        V = (!U && !w) || B,
-        [y, H] = s.useState(!1),
-        W = D ? f.z8 : f.WC,
-        F = {
-            ...b,
-            section: R.jXE.STREAM_SETTINGS
-        },
-        z = (0, l.jsx)(d.ButtonGroup, {
-            buttons: W.map((e) =>
-                j({
+        L = (0, c.e7)([j.Z, _.Z], () => _.Z.getChannel(j.Z.getVoiceChannelId())),
+        D = b.ZP.canStreamQuality(b.U2.MID, M),
+        { location: G } = (0, f.O)(),
+        U = (0, m.Zq)({ autoTrackExposure: !1 }),
+        B = (0, p.B4)(),
+        z = v.default.getUser(null == L ? void 0 : L.hdStreamingBuyerId),
+        F = null != L && null != L.hdStreamingUntil && new Date(L.hdStreamingUntil) > new Date() && null != z,
+        H = !D && !U,
+        [V, Y] = l.useState(!1),
+        J = A ? N.z8 : N.WC,
+        X = E(T({}, G), { section: y.jXE.STREAM_SETTINGS }),
+        K = (0, r.jsx)(d.hE2, {
+            buttons: J.map((e) =>
+                W({
                     type: e,
-                    selected: e.value === a,
-                    needsPremium: !(0, x.Z)(t, e.value, r, G, P),
-                    needsDemo: B && e.value !== f.LY.RESOLUTION_720,
-                    analyticsLocation: F,
-                    onClick: () => i(e.value),
-                    onClose: n,
-                    setIsHovering: H
+                    selected: e.value === i,
+                    needsPremium: !(0, S.Z)(n, e.value, s, M, k, L),
+                    needsDemo: B && e.value !== N.LY.RESOLUTION_720,
+                    analyticsLocation: X,
+                    onClick: () => o(e.value),
+                    onClose: t,
+                    setIsHovering: Y
                 })
             )
         }),
-        K = (0, l.jsx)(d.ButtonGroup, {
-            buttons: f.k0.map((e) =>
-                j({
+        q = (0, r.jsx)(d.hE2, {
+            buttons: N.k0.map((e) =>
+                W({
                     type: e,
-                    selected: e.value === r,
-                    needsPremium: !(0, x.Z)(t, a, e.value, G, P),
-                    needsDemo: B && e.value === f.ws.FPS_60,
-                    analyticsLocation: F,
-                    onClick: () => g(e.value),
-                    onClose: n,
-                    setIsHovering: H
+                    selected: e.value === s,
+                    needsPremium: !(0, S.Z)(n, i, e.value, M, k, L),
+                    needsDemo: B && e.value === N.ws.FPS_60,
+                    analyticsLocation: X,
+                    onClick: () => x(e.value),
+                    onClose: t,
+                    setIsHovering: Y
                 })
             )
         }),
-        Y = [
+        Q = [
             {
-                value: f.tI.PRESET_VIDEO,
-                label: T.Z.Messages.STREAM_PRESET_VIDEO
+                value: N.tI.PRESET_VIDEO,
+                label: Z.NW.string(Z.t.HcwHc3)
             },
-            ...(D
+            ...(A
                 ? []
                 : [
                       {
-                          value: f.tI.PRESET_DOCUMENTS,
-                          label: T.Z.Messages.STREAM_PRESET_DOCUMENTS
+                          value: N.tI.PRESET_DOCUMENTS,
+                          label: Z.NW.string(Z.t['/RfohI'])
                       }
                   ]),
             {
-                value: f.tI.PRESET_CUSTOM,
-                label: T.Z.Messages.STREAM_PRESET_CUSTOM
+                value: N.tI.PRESET_CUSTOM,
+                label: Z.NW.string(Z.t['+eOtrK'])
             }
         ],
-        Q =
-            t === f.tI.PRESET_DOCUMENTS
-                ? (0, l.jsxs)(l.Fragment, {
+        $ =
+            n === N.tI.PRESET_DOCUMENTS
+                ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, l.jsx)(S.Z, {
-                              children: (0, l.jsx)(d.FormItem, {
-                                  title: T.Z.Messages.STREAM_RESOLUTION,
-                                  titleClassName: v.formItemTitleSlim,
-                                  className: L.documentModeGroup,
-                                  children: (0, l.jsx)(d.Text, {
+                          (0, r.jsx)(h.Z, {
+                              children: (0, r.jsx)(d.xJW, {
+                                  title: Z.NW.string(Z.t.rHyPXl),
+                                  titleClassName: I.formItemTitleSlim,
+                                  className: w.documentModeGroup,
+                                  children: (0, r.jsx)(d.Text, {
                                       variant: 'text-xs/normal',
-                                      children: T.Z.Messages.STREAM_PRESET_DOCUMENTS_DESCRIPTION_NITRO.format({ fps: r })
+                                      children: Z.NW.format(Z.t['U+hmam'], { fps: s })
                                   })
                               })
                           }),
-                          V
-                              ? (0, l.jsx)(Z.Z, {
-                                    message: T.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
-                                    onClose: n,
-                                    openStreamUpsellModal: p
+                          H
+                              ? (0, r.jsx)(C.Z, {
+                                    message: Z.NW.string(Z.t.deDogI),
+                                    onClose: t,
+                                    openStreamUpsellModal: P
                                 })
-                              : null
+                              : null,
+                          B && (0, r.jsx)(C.c, {}),
+                          F &&
+                              null != L.hdStreamingUntil &&
+                              (0, r.jsx)(g.Z, {
+                                  streamingUntil: L.hdStreamingUntil,
+                                  user: z,
+                                  channel: L
+                              })
                       ]
                   })
-                : (0, l.jsxs)(l.Fragment, {
+                : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, l.jsxs)(S.Z, {
+                          (0, r.jsxs)(h.Z, {
                               children: [
-                                  (0, l.jsx)(d.FormItem, {
-                                      title: T.Z.Messages.STREAM_RESOLUTION,
-                                      className: L.settingsGroup,
-                                      titleClassName: v.formItemTitleSlim,
-                                      children: z
-                                  }),
-                                  (0, l.jsx)(d.FormItem, {
-                                      title: T.Z.Messages.SCREENSHARE_FRAME_RATE,
-                                      className: L.settingsGroup,
-                                      titleClassName: v.formItemTitleSlim,
+                                  (0, r.jsx)(d.xJW, {
+                                      title: Z.NW.string(Z.t.rHyPXl),
+                                      className: w.settingsGroup,
+                                      titleClassName: I.formItemTitleSlim,
                                       children: K
+                                  }),
+                                  (0, r.jsx)(d.xJW, {
+                                      title: Z.NW.string(Z.t.SkkeIi),
+                                      className: w.settingsGroup,
+                                      titleClassName: I.formItemTitleSlim,
+                                      children: q
                                   })
                               ]
                           }),
-                          V
-                              ? (0, l.jsx)(Z.Z, {
-                                    onClose: n,
-                                    openStreamUpsellModal: p,
-                                    glow: y
+                          H
+                              ? (0, r.jsx)(C.Z, {
+                                    onClose: t,
+                                    openStreamUpsellModal: P,
+                                    glow: V
                                 })
-                              : null
+                              : null,
+                          B && (0, r.jsx)(C.c, {}),
+                          F &&
+                              null != L.hdStreamingUntil &&
+                              (0, r.jsx)(g.Z, {
+                                  streamingUntil: null == L ? void 0 : L.hdStreamingUntil,
+                                  user: z,
+                                  channel: L
+                              })
                       ]
                   });
-    return (0, l.jsx)(m.Z, {
-        ...F,
-        children: (0, l.jsx)(d.FormItem, {
-            title: T.Z.Messages.STREAM_QUALITY,
-            titleClassName: v.formItemTitle,
-            className: v.modalContent,
-            children: (0, l.jsxs)('div', {
-                className: L.qualitySettingsContainer,
-                children: [
-                    (0, l.jsx)(d.SingleSelect, {
-                        value: t,
-                        className: M.marginTop8,
-                        options: Y,
-                        onChange: (e) => O(e)
-                    }),
-                    Q
-                ]
+    return (0, r.jsx)(
+        u.Z,
+        E(T({}, X), {
+            children: (0, r.jsx)(d.xJW, {
+                title: Z.NW.string(Z.t.ax4FnZ),
+                titleClassName: I.formItemTitle,
+                className: I.modalContent,
+                children: (0, r.jsxs)('div', {
+                    className: w.qualitySettingsContainer,
+                    children: [
+                        (0, r.jsx)(d.q4e, {
+                            value: n,
+                            className: O.marginTop8,
+                            options: Q,
+                            onChange: (e) => R(e)
+                        }),
+                        $
+                    ]
+                })
             })
         })
-    });
+    );
 }

@@ -1,4 +1,5 @@
-var n = {
+n.d(t, { Z: () => i });
+var a = {
     lessThanXSeconds: {
         one: '1초 미만',
         other: '{{count}}초 미만'
@@ -61,9 +62,11 @@ var n = {
         other: '거의 {{count}}년'
     }
 };
-t.Z = function (e, t, a) {
+let i = function (e, t, n) {
     var i,
-        o = n[e];
-    if (((i = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', t.toString())), null != a && a.addSuffix)) return a.comparison && a.comparison > 0 ? i + ' 후' : i + ' 전';
+        r = a[e];
+    if (((i = 'string' == typeof r ? r : 1 === t ? r.one : r.other.replace('{{count}}', t.toString())), null != n && n.addSuffix))
+        if (n.comparison && n.comparison > 0) return i + ' 후';
+        else return i + ' 전';
     return i;
 };

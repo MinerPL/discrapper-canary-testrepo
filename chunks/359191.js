@@ -1,86 +1,80 @@
-n(47120);
-var s,
-    a,
+n.d(t, { Z: () => O }), n(47120);
+var r,
     i,
-    r,
-    l = n(442837),
-    o = n(570140),
-    c = n(45966),
-    d = n(734893),
-    u = n(999382),
-    _ = n(392885),
-    I = n(740903),
-    E = n(889369),
-    T = n(969632),
-    m = n(208665),
-    N = n(84658),
-    S = n(142961),
-    h = n(981631);
-let g = new Set(),
-    C = N.PG.LANDING,
-    x = null;
-function p(e) {
+    s,
+    a = n(442837),
+    l = n(570140),
+    o = n(45966),
+    c = n(734893),
+    d = n(999382),
+    u = n(392885),
+    m = n(740903),
+    g = n(889369),
+    p = n(969632),
+    h = n(208665),
+    f = n(84658),
+    b = n(142961),
+    x = n(981631);
+let j = new Set(),
+    N = f.PG.LANDING,
+    _ = null;
+function v(e) {
     let { subsection: t } = e;
-    if (u.Z.getGuildId() === x) return !1;
-    (C = t === h.KsC.SERVER_GUIDE ? N.PG.HOME_SETTINGS : N.PG.LANDING), (x = u.Z.getGuildId());
+    if (d.Z.getGuildId() === _) return !1;
+    (N = t === x.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (_ = d.Z.getGuildId());
 }
-class R extends (s = l.ZP.Store) {
+class C extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, E.Z, m.Z, T.Z, _.Z), this.syncWith([c.Z, E.Z, m.Z, T.Z, _.Z], () => !0);
+        this.waitFor(o.Z, g.Z, h.Z, p.Z, u.Z), this.syncWith([o.Z, g.Z, h.Z, p.Z, u.Z], () => !0);
     }
     isEducationUpsellDismissed(e) {
-        return g.has(e);
+        return j.has(e);
     }
     getCurrentPage() {
-        return C;
+        return N;
     }
     hasChanges() {
-        if (null == x) return !1;
-        let e = c.Z.isAdvancedMode(x);
-        if (C === N.PG.DEFAULT_CHANNELS) return e ? E.Z.hasChanges() || m.Z.hasChanges() : E.Z.hasChanges();
-        if (C === N.PG.CUSTOMIZATION_QUESTIONS) return m.Z.hasChanges();
-        if (C === N.PG.HOME_SETTINGS) return T.Z.hasChanges();
-        return !1;
+        if (null == _) return !1;
+        let e = o.Z.isAdvancedMode(_);
+        if (N === f.PG.DEFAULT_CHANNELS)
+            if (e) return g.Z.hasChanges() || h.Z.hasChanges();
+            else return g.Z.hasChanges();
+        return N === f.PG.CUSTOMIZATION_QUESTIONS ? h.Z.hasChanges() : N === f.PG.HOME_SETTINGS && p.Z.hasChanges();
     }
     hasConfiguredAnythingForCurrentStep() {
-        if (null == x) return !1;
-        if (C === N.PG.SAFETY_CHECK) return !0;
-        if (C === N.PG.DEFAULT_CHANNELS) return E.Z.editedDefaultChannelIds.size > 0;
-        if (C === N.PG.CUSTOMIZATION_QUESTIONS) return m.Z.editedOnboardingPrompts.length > 0;
-        else if (C === N.PG.HOME_SETTINGS) return !(0, d.av)(T.Z.getSettings());
-        return !1;
+        return null != _ && (N === f.PG.SAFETY_CHECK || (N === f.PG.DEFAULT_CHANNELS ? g.Z.editedDefaultChannelIds.size > 0 : N === f.PG.CUSTOMIZATION_QUESTIONS ? h.Z.editedOnboardingPrompts.length > 0 : N === f.PG.HOME_SETTINGS && !(0, c.av)(p.Z.getSettings())));
     }
     hasErrors() {
-        return C === N.PG.CUSTOMIZATION_QUESTIONS && null != m.Z.errors.find((e) => null != e);
+        return N === f.PG.CUSTOMIZATION_QUESTIONS && null != h.Z.errors.find((e) => null != e);
     }
     showNotice() {
-        if (null == x) return !1;
-        if ((0, S.C)(x)) return this.hasChanges();
-        let e = _.Z.getCurrentPage();
-        return (C !== N.PG.SAFETY_CHECK || e === I.u.OVERVIEW) && null != C && C !== N.PG.LANDING;
+        if (null == _) return !1;
+        if ((0, b.C)(_)) return this.hasChanges();
+        let e = u.Z.getCurrentPage();
+        return (N !== f.PG.SAFETY_CHECK || e === m.u.OVERVIEW) && null != N && N !== f.PG.LANDING;
     }
     canCloseEarly() {
-        return null == x || (!this.hasErrors() && (!(0, S.C)(x) || !this.hasChanges()));
+        return null == _ || (!this.hasErrors() && (!(0, b.C)(_) || !this.hasChanges()));
     }
 }
-(r = 'GuildSettingsOnboardingStore'),
-    (i = 'displayName') in (a = R)
-        ? Object.defineProperty(a, i, {
-              value: r,
+(s = 'GuildSettingsOnboardingStore'),
+    (i = 'displayName') in C
+        ? Object.defineProperty(C, i, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[i] = r),
-    (t.Z = new R(o.Z, {
-        GUILD_SETTINGS_INIT: p,
-        GUILD_SETTINGS_SET_SECTION: p,
-        GUILD_SETTINGS_ONBOARDING_STEP: function (e) {
-            let { step: t } = e;
-            C = t;
-        },
-        GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED: function (e) {
-            let { upsellType: t } = e;
-            g.add(t);
-        }
-    }));
+        : (C[i] = s);
+let O = new C(l.Z, {
+    GUILD_SETTINGS_INIT: v,
+    GUILD_SETTINGS_SET_SECTION: v,
+    GUILD_SETTINGS_ONBOARDING_STEP: function (e) {
+        let { step: t } = e;
+        N = t;
+    },
+    GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED: function (e) {
+        let { upsellType: t } = e;
+        j.add(t);
+    }
+});

@@ -1,7 +1,6 @@
 n.d(t, {
-    S: function () {
-        return i;
-    }
+    S: () => i,
+    Z: () => o
 });
 let r = (0, n(818083).B)({
     kind: 'user',
@@ -21,4 +20,4 @@ function i(e) {
         { canSplitFrecencyList: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
     return { canSplitFrecencyList: i };
 }
-t.Z = r;
+let o = r;

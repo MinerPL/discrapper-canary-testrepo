@@ -1,52 +1,60 @@
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(481060),
-    l = n(318713),
-    o = n(236323);
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    a = n.n(i),
+    l = n(481060),
+    o = n(318713),
+    s = n(614507);
 function c(e) {
-    let { icon: t, iconNode: n, timestamp: a, className: r, children: c, contentClassName: u, iconClassName: d, iconContainerClassName: _, compact: E = !1 } = e;
-    return (0, i.jsxs)('div', {
-        className: s()(r, {
-            [o.container]: !0,
-            [o.compact]: E,
-            [o.cozy]: !E
+    let { icon: t, iconNode: n, timestamp: i, className: l, children: c, contentClassName: u, iconClassName: d, iconContainerClassName: p, timestampClassName: m, compact: f = !1 } = e;
+    return (0, r.jsxs)('div', {
+        className: a()(l, {
+            [s.container]: !0,
+            [s.compact]: f,
+            [s.cozy]: !f
         }),
         children: [
             null != n &&
-                (0, i.jsx)('div', {
-                    className: s()(o.iconContainer, _),
+                (0, r.jsx)('div', {
+                    className: a()(s.iconContainer, p),
                     children: n
                 }),
             null != t &&
-                (0, i.jsx)('div', {
-                    className: o.iconContainer,
-                    children: (0, i.jsx)('div', {
+                (0, r.jsx)('div', {
+                    className: s.iconContainer,
+                    children: (0, r.jsx)('div', {
                         'data-accessibility': 'desaturate',
-                        className: s()(o.icon, o.iconSize, d),
+                        className: a()(s.icon, s.iconSize, d),
                         style: { backgroundImage: "url('".concat(t, "')") }
                     })
                 }),
-            (0, i.jsxs)('div', {
-                className: s()(u, o.content),
-                children: [c, null != a && (0, i.jsx)(l.Z, { timestamp: a })]
+            (0, r.jsxs)('div', {
+                className: a()(u, s.content),
+                children: [
+                    c,
+                    null != i &&
+                        (0, r.jsx)(o.Z, {
+                            timestamp: i,
+                            className: m
+                        })
+                ]
             })
         ]
     });
 }
-(c.Action = (e) => {
+c.Action = (e) => {
     let { onClick: t, children: n } = e;
-    return (0, i.jsxs)('span', {
-        className: o.action,
+    return (0, r.jsxs)('span', {
+        className: s.action,
         children: [
             '\u2014',
-            (0, i.jsx)(r.Anchor, {
+            (0, r.jsx)(l.eee, {
                 onClick: t,
-                className: o.actionAnchor,
+                className: s.actionAnchor,
                 children: n
             })
         ]
     });
-}),
-    (t.Z = c);
+};
+let u = c;

@@ -1,35 +1,36 @@
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(689938),
-    l = n(358758);
-t.Z = (e) => {
-    let { guild: t, onClose: r } = e;
-    return (0, i.jsxs)('div', {
-        className: l.container,
+n.d(t, { Z: () => a });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(388032),
+    o = n(695256);
+let a = (e) => {
+    let { guild: t, onClose: a } = e;
+    return (0, r.jsxs)('div', {
+        className: o.container,
         children: [
-            (0, i.jsx)('img', {
+            (0, r.jsx)('img', {
                 alt: '',
-                className: l.image,
+                className: o.image,
                 src: n(238980)
             }),
-            (0, i.jsxs)('div', {
-                className: l.content,
+            (0, r.jsxs)('div', {
+                className: o.content,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'heading-md/semibold',
-                        children: s.Z.Messages.LURKER_MODE_POPOUT_SUCCESS_HEADER.format({ guild: t.name })
+                        children: l.NW.format(l.t.THgVCA, { guild: t.name })
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: s.Z.Messages.LURKER_MODE_POPOUT_SUCCESS_BODY
+                        children: l.NW.string(l.t['1yq3nJ'])
                     }),
-                    (0, i.jsx)('div', {
-                        className: l.buttonContainer,
-                        children: (0, i.jsx)(a.Button, {
-                            onClick: r,
-                            children: s.Z.Messages.LURKER_MODE_POPOUT_SUCCESS_BUTTON
+                    (0, r.jsx)('div', {
+                        className: o.buttonContainer,
+                        children: (0, r.jsx)(i.zxk, {
+                            onClick: a,
+                            children: l.NW.string(l.t.hLw0wc)
                         })
                     })
                 ]

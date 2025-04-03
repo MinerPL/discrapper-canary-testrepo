@@ -1,8 +1,4 @@
-n.d(t, {
-    w: function () {
-        return i;
-    }
-});
+n.d(t, { w: () => i });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-03_web_audio_api_rollout',

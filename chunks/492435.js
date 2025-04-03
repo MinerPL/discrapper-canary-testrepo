@@ -1,22 +1,30 @@
 n.d(t, {
-    W9: function () {
-        return s;
-    },
-    Xz: function () {
-        return o;
-    },
-    gK: function () {
-        return l;
-    },
-    rX: function () {
-        return u;
-    }
-});
+    W9: () => s,
+    Xz: () => l,
+    gK: () => c,
+    rX: () => u
+}),
+    n(266796);
 var r = n(570140),
     i = n(353926),
-    a = n(987338);
+    o = n(987338);
+let a = !1;
 function s(e, t, n) {
-    var r, a;
+    if (a) {
+        var s, l;
+        let a = null == n ? void 0 : n.location,
+            c = (null == n ? void 0 : n.exposureType) === o.a0.AUTO_FALLBACK,
+            u = i.Z.hasExperimentTrackedExposure(e, t, a, c);
+        r.Z.dispatch({
+            type: 'TRACK_TRIGGER',
+            experimentId: e,
+            descriptor: t,
+            previouslyTracked: u,
+            exposureType: null != (s = null == n ? void 0 : n.exposureType) ? s : 'unknown',
+            excluded: null != (l = null == n ? void 0 : n.excluded) && l,
+            location: null != a ? a : 'unknown'
+        });
+    }
     i.Z.trackExposure({
         experimentId: e,
         descriptor: t,
@@ -27,30 +35,30 @@ function s(e, t, n) {
         exposureType: null == n ? void 0 : n.exposureType
     });
 }
-function o(e) {
-    let { id: t, title: n, description: r, buckets: s, commonTriggerPoint: o } = e;
+function l(e) {
+    let { id: t, title: n, description: r, buckets: a, commonTriggerPoint: s } = e;
     return (
         (0, i.V)({
             experimentId: t,
-            experimentType: a.xY.USER,
+            experimentType: o.xY.USER,
             title: n,
             description: r,
-            buckets: s,
-            commonTriggerPoint: o
+            buckets: a,
+            commonTriggerPoint: s
         }),
         { id: t }
     );
 }
-function l(e) {
-    let { id: t, title: n, description: r, buckets: s, commonTriggerPoint: o } = e;
+function c(e) {
+    let { id: t, title: n, description: r, buckets: a, commonTriggerPoint: s } = e;
     return (
         (0, i.V)({
             experimentId: t,
-            experimentType: a.xY.GUILD,
+            experimentType: o.xY.GUILD,
             title: n,
             description: r,
-            buckets: s,
-            commonTriggerPoint: o
+            buckets: a,
+            commonTriggerPoint: s
         }),
         { id: t }
     );

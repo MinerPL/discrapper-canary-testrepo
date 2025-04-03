@@ -1,8 +1,4 @@
-n.d(t, {
-    D: function () {
-        return i;
-    }
-});
+n.d(t, { D: () => i });
 var r = n(222285),
     i = function (e) {
         if ((0, r.xj)(e)) return 1 / 0;

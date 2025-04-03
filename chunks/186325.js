@@ -1,9 +1,5 @@
-n.d(t, {
-    S: function () {
-        return r;
-    }
-});
-let r = n(470079).createContext({
+n.d(t, { S: () => r });
+let r = n(192379).createContext({
     reducedMotion: {
         enabled: !1,
         rawValue: 'no-preference'

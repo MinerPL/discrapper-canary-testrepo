@@ -1,56 +1,25 @@
-n.r(t),
-    n.d(t, {
-        INVITE_OPTIONS_100_TIMES: function () {
-            return o;
-        },
-        INVITE_OPTIONS_10_TIMES: function () {
-            return a;
-        },
-        INVITE_OPTIONS_12_HOURS: function () {
-            return f;
-        },
-        INVITE_OPTIONS_1_DAY: function () {
-            return T;
-        },
-        INVITE_OPTIONS_1_HOUR: function () {
-            return N;
-        },
-        INVITE_OPTIONS_25_TIMES: function () {
-            return _;
-        },
-        INVITE_OPTIONS_30_MINUTES: function () {
-            return S;
-        },
-        INVITE_OPTIONS_50_TIMES: function () {
-            return l;
-        },
-        INVITE_OPTIONS_5_TIMES: function () {
-            return u;
-        },
-        INVITE_OPTIONS_6_HOURS: function () {
-            return O;
-        },
-        INVITE_OPTIONS_7_DAYS: function () {
-            return c;
-        },
-        INVITE_OPTIONS_FOREVER: function () {
-            return d;
-        },
-        INVITE_OPTIONS_ONCE: function () {
-            return I;
-        },
-        INVITE_OPTIONS_UNLIMITED: function () {
-            return s;
-        },
-        MAX_AGE_OPTIONS: function () {
-            return m;
-        },
-        MAX_USES_OPTIONS: function () {
-            return E;
-        }
+I.r(t),
+    I.d(t, {
+        INVITE_OPTIONS_100_TIMES: () => T,
+        INVITE_OPTIONS_10_TIMES: () => u,
+        INVITE_OPTIONS_12_HOURS: () => P,
+        INVITE_OPTIONS_1_DAY: () => f,
+        INVITE_OPTIONS_1_HOUR: () => S,
+        INVITE_OPTIONS_25_TIMES: () => N,
+        INVITE_OPTIONS_30_MINUTES: () => s,
+        INVITE_OPTIONS_50_TIMES: () => _,
+        INVITE_OPTIONS_5_TIMES: () => l,
+        INVITE_OPTIONS_6_HOURS: () => E,
+        INVITE_OPTIONS_7_DAYS: () => g,
+        INVITE_OPTIONS_8_HOURS: () => o,
+        INVITE_OPTIONS_FOREVER: () => m,
+        INVITE_OPTIONS_ONCE: () => O,
+        INVITE_OPTIONS_UNLIMITED: () => i,
+        MAX_AGE_OPTIONS: () => d,
+        MAX_USES_OPTIONS: () => a
     });
-var r = n(689938);
-function i(e, t) {
+var n = I(388032);
+function r(e, t) {
     return {
         value: e,
         get label() {
@@ -58,19 +27,20 @@ function i(e, t) {
         }
     };
 }
-let s = i(0, () => r.Z.Messages.MAX_USES.format({ maxUses: 0 })),
-    I = i(1, () => r.Z.Messages.MAX_USES.format({ maxUses: 1 })),
-    u = i(5, () => r.Z.Messages.MAX_USES.format({ maxUses: 5 })),
-    a = i(10, () => r.Z.Messages.MAX_USES.format({ maxUses: 10 })),
-    _ = i(25, () => r.Z.Messages.MAX_USES.format({ maxUses: 25 })),
-    l = i(50, () => r.Z.Messages.MAX_USES.format({ maxUses: 50 })),
-    o = i(100, () => r.Z.Messages.MAX_USES.format({ maxUses: 100 })),
-    E = [s, I, u, a, _, l, o],
-    S = i(1800, () => r.Z.Messages.DURATION_MINUTES.format({ minutes: 30 })),
-    N = i(3600, () => r.Z.Messages.DURATION_HOURS.format({ hours: 1 })),
-    O = i(21600, () => r.Z.Messages.DURATION_HOURS.format({ hours: 6 })),
-    f = i(43200, () => r.Z.Messages.DURATION_HOURS.format({ hours: 12 })),
-    T = i(86400, () => r.Z.Messages.DURATION_DAYS.format({ days: 1 })),
-    c = i(604800, () => r.Z.Messages.DURATION_DAYS.format({ days: 7 })),
-    d = i(0, () => r.Z.Messages.MAX_AGE_NEVER),
-    m = [S, N, O, f, T, c, d];
+let i = r(0, () => n.NW.formatToPlainString(n.t['r/IcuL'], { maxUses: 0 })),
+    O = r(1, () => n.NW.formatToPlainString(n.t['r/IcuL'], { maxUses: 1 })),
+    l = r(5, () => n.NW.formatToPlainString(n.t['r/IcuL'], { maxUses: 5 })),
+    u = r(10, () => n.NW.formatToPlainString(n.t['r/IcuL'], { maxUses: 10 })),
+    N = r(25, () => n.NW.formatToPlainString(n.t['r/IcuL'], { maxUses: 25 })),
+    _ = r(50, () => n.NW.formatToPlainString(n.t['r/IcuL'], { maxUses: 50 })),
+    T = r(100, () => n.NW.formatToPlainString(n.t['r/IcuL'], { maxUses: 100 })),
+    a = [i, O, l, u, N, _, T],
+    s = r(1800, () => n.NW.formatToPlainString(n.t.iXLF9f, { minutes: 30 })),
+    S = r(3600, () => n.NW.formatToPlainString(n.t.xCjYxM, { hours: 1 })),
+    E = r(21600, () => n.NW.formatToPlainString(n.t.xCjYxM, { hours: 6 })),
+    o = r(28800, () => n.NW.formatToPlainString(n.t.xCjYxM, { hours: 8 })),
+    P = r(43200, () => n.NW.formatToPlainString(n.t.xCjYxM, { hours: 12 })),
+    f = r(86400, () => n.NW.formatToPlainString(n.t.k2UNz8, { days: 1 })),
+    g = r(604800, () => n.NW.formatToPlainString(n.t.k2UNz8, { days: 7 })),
+    m = r(0, () => n.NW.string(n.t.PqEzn5)),
+    d = [s, S, E, P, f, g, m];

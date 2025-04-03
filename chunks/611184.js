@@ -1,33 +1,35 @@
-n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var r = n(147913),
     i = n(594190),
-    a = n(77498),
-    s = n(454293);
-function o(e) {
+    o = n(77498),
+    a = n(454293);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
     var t, n;
     let { game: r } = e,
-        o = i.ZP.isDetectionEnabled(r),
-        l = null !== (n = r.id) && void 0 !== n ? n : null === (t = a.Z.getGameByName(r.name)) || void 0 === t ? void 0 : t.id;
-    null != l && (0, s.M)(l, o);
+        s = i.ZP.isDetectionEnabled(r),
+        l = null != (n = r.id) ? n : null == (t = o.Z.getGameByName(r.name)) ? void 0 : t.id;
+    null != l && (0, a.M)(l, s);
 }
-class l extends r.Z {
+class c extends r.Z {
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
-                RUNNING_GAME_TOGGLE_DETECTION: o,
-                RUNNING_GAME_DELETE_ENTRY: o
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            s(this, 'actions', {
+                RUNNING_GAME_TOGGLE_DETECTION: l,
+                RUNNING_GAME_DELETE_ENTRY: l
+            });
     }
 }
-t.Z = new l();
+let u = new c();

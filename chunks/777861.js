@@ -1,20 +1,16 @@
 n.d(t, {
-    U: function () {
-        return s;
-    },
-    Z: function () {
-        return o;
-    }
+    U: () => a,
+    Z: () => s
 });
-var r = n(735250);
-n(470079);
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(689938);
-function s(e) {
+    o = n(388032);
+function a(e) {
     return null == e || null == e.end_time
         ? null
-        : a.Z.Messages.MUTED_UNTIL_TIME.format({
-              endTime: new Date(e.end_time).toLocaleString(a.Z.getLocale(), {
+        : o.NW.formatToPlainString(o.t.j7h4AA, {
+              endTime: new Date(e.end_time).toLocaleString(o.NW.currentLocale, {
                   month: 'numeric',
                   day: 'numeric',
                   hour: 'numeric',
@@ -22,15 +18,15 @@ function s(e) {
               })
           });
 }
-function o(e) {
+function s(e) {
     let { muteConfig: t, className: n } = e,
-        a = s(t);
-    return null != a
+        o = a(t);
+    return null != o
         ? (0, r.jsx)(i.Text, {
               variant: 'text-xs/normal',
               color: 'text-muted',
               className: n,
-              children: a
+              children: o
           })
         : null;
 }

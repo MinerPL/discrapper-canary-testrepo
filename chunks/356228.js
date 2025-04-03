@@ -1,50 +1,50 @@
-r.d(e, {
-    I: function () {
-        return p;
-    },
-    O: function () {
-        return o;
-    }
+n.d(t, {
+    I: () => h,
+    O: () => o
 });
-var n = r(146150),
-    i = r(647005);
-function o(t) {
-    if (0 === t.length) throw Error('Number skeleton cannot be empty');
+var r = n(139232),
+    i = n(647005);
+function o(e) {
+    if (0 === e.length) throw Error('Number skeleton cannot be empty');
     for (
-        var e = t.split(i.r).filter(function (t) {
-                return t.length > 0;
+        var t = e.split(i.r).filter(function (e) {
+                return e.length > 0;
             }),
-            r = [],
-            n = 0;
-        n < e.length;
-        n++
+            n = [],
+            r = 0,
+            o = t;
+        r < o.length;
+        r++
     ) {
-        var o = e[n].split('/');
-        if (0 === o.length) throw Error('Invalid number skeleton');
-        for (var a = o[0], s = o.slice(1), u = 0; u < s.length; u++) if (0 === s[u].length) throw Error('Invalid number skeleton');
-        r.push({
-            stem: a,
-            options: s
+        var a = o[r].split('/');
+        if (0 === a.length) throw Error('Invalid number skeleton');
+        for (var s = a[0], l = a.slice(1), c = 0, u = l; c < u.length; c++) if (0 === u[c].length) throw Error('Invalid number skeleton');
+        n.push({
+            stem: s,
+            options: l
         });
     }
-    return r;
+    return n;
 }
-var a = /^\.(?:(0+)(\*)?|(#+)|(0+)(#+))$/g,
-    s = /^(@+)?(\+|#+)?[rs]?$/g,
-    u = /(\*)(0+)|(#+)(0+)|(0+)/g,
-    c = /^(0+)$/;
-function l(t) {
-    var e = {};
+function a(e) {
+    return e.replace(/^(.*?)-/, '');
+}
+var s = /^\.(?:(0+)(\*)?|(#+)|(0+)(#+))$/g,
+    l = /^(@+)?(\+|#+)?[rs]?$/g,
+    c = /(\*)(0+)|(#+)(0+)|(0+)/g,
+    u = /^(0+)$/;
+function d(e) {
+    var t = {};
     return (
-        'r' === t[t.length - 1] ? (e.roundingPriority = 'morePrecision') : 's' === t[t.length - 1] && (e.roundingPriority = 'lessPrecision'),
-        t.replace(s, function (t, r, n) {
-            return 'string' != typeof n ? ((e.minimumSignificantDigits = r.length), (e.maximumSignificantDigits = r.length)) : '+' === n ? (e.minimumSignificantDigits = r.length) : '#' === r[0] ? (e.maximumSignificantDigits = r.length) : ((e.minimumSignificantDigits = r.length), (e.maximumSignificantDigits = r.length + ('string' == typeof n ? n.length : 0))), '';
+        'r' === e[e.length - 1] ? (t.roundingPriority = 'morePrecision') : 's' === e[e.length - 1] && (t.roundingPriority = 'lessPrecision'),
+        e.replace(l, function (e, n, r) {
+            return 'string' != typeof r ? ((t.minimumSignificantDigits = n.length), (t.maximumSignificantDigits = n.length)) : '+' === r ? (t.minimumSignificantDigits = n.length) : '#' === n[0] ? (t.maximumSignificantDigits = n.length) : ((t.minimumSignificantDigits = n.length), (t.maximumSignificantDigits = n.length + ('string' == typeof r ? r.length : 0))), '';
         }),
-        e
+        t
     );
 }
-function h(t) {
-    switch (t) {
+function f(e) {
+    switch (e) {
         case 'sign-auto':
             return { signDisplay: 'auto' };
         case 'sign-accounting':
@@ -73,138 +73,140 @@ function h(t) {
             return { signDisplay: 'never' };
     }
 }
-function f(t) {
-    var e = h(t);
-    return e ? e : {};
+function _(e) {
+    var t;
+    if (('E' === e[0] && 'E' === e[1] ? ((t = { notation: 'engineering' }), (e = e.slice(2))) : 'E' === e[0] && ((t = { notation: 'scientific' }), (e = e.slice(1))), t)) {
+        var n = e.slice(0, 2);
+        if (('+!' === n ? ((t.signDisplay = 'always'), (e = e.slice(2))) : '+?' === n && ((t.signDisplay = 'exceptZero'), (e = e.slice(2))), !u.test(e))) throw Error('Malformed concise eng/scientific notation');
+        t.minimumIntegerDigits = e.length;
+    }
+    return t;
 }
-function p(t) {
-    for (var e = {}, r = 0; r < t.length; r++) {
-        var i = t[r];
-        switch (i.stem) {
+function p(e) {
+    var t = {},
+        n = f(e);
+    return n || t;
+}
+function h(e) {
+    for (var t = {}, n = 0, i = e; n < i.length; n++) {
+        var o = i[n];
+        switch (o.stem) {
             case 'percent':
             case '%':
-                e.style = 'percent';
+                t.style = 'percent';
                 continue;
             case '%x100':
-                (e.style = 'percent'), (e.scale = 100);
+                (t.style = 'percent'), (t.scale = 100);
                 continue;
             case 'currency':
-                (e.style = 'currency'), (e.currency = i.options[0]);
+                (t.style = 'currency'), (t.currency = o.options[0]);
                 continue;
             case 'group-off':
             case ',_':
-                e.useGrouping = !1;
+                t.useGrouping = !1;
                 continue;
             case 'precision-integer':
             case '.':
-                e.maximumFractionDigits = 0;
+                t.maximumFractionDigits = 0;
                 continue;
             case 'measure-unit':
             case 'unit':
-                (e.style = 'unit'), (e.unit = i.options[0].replace(/^(.*?)-/, ''));
+                (t.style = 'unit'), (t.unit = a(o.options[0]));
                 continue;
             case 'compact-short':
             case 'K':
-                (e.notation = 'compact'), (e.compactDisplay = 'short');
+                (t.notation = 'compact'), (t.compactDisplay = 'short');
                 continue;
             case 'compact-long':
             case 'KK':
-                (e.notation = 'compact'), (e.compactDisplay = 'long');
+                (t.notation = 'compact'), (t.compactDisplay = 'long');
                 continue;
             case 'scientific':
-                e = (0, n.pi)(
-                    (0, n.pi)((0, n.pi)({}, e), { notation: 'scientific' }),
-                    i.options.reduce(function (t, e) {
-                        return (0, n.pi)((0, n.pi)({}, t), f(e));
+                t = (0, r.pi)(
+                    (0, r.pi)((0, r.pi)({}, t), { notation: 'scientific' }),
+                    o.options.reduce(function (e, t) {
+                        return (0, r.pi)((0, r.pi)({}, e), p(t));
                     }, {})
                 );
                 continue;
             case 'engineering':
-                e = (0, n.pi)(
-                    (0, n.pi)((0, n.pi)({}, e), { notation: 'engineering' }),
-                    i.options.reduce(function (t, e) {
-                        return (0, n.pi)((0, n.pi)({}, t), f(e));
+                t = (0, r.pi)(
+                    (0, r.pi)((0, r.pi)({}, t), { notation: 'engineering' }),
+                    o.options.reduce(function (e, t) {
+                        return (0, r.pi)((0, r.pi)({}, e), p(t));
                     }, {})
                 );
                 continue;
             case 'notation-simple':
-                e.notation = 'standard';
+                t.notation = 'standard';
                 continue;
             case 'unit-width-narrow':
-                (e.currencyDisplay = 'narrowSymbol'), (e.unitDisplay = 'narrow');
+                (t.currencyDisplay = 'narrowSymbol'), (t.unitDisplay = 'narrow');
                 continue;
             case 'unit-width-short':
-                (e.currencyDisplay = 'code'), (e.unitDisplay = 'short');
+                (t.currencyDisplay = 'code'), (t.unitDisplay = 'short');
                 continue;
             case 'unit-width-full-name':
-                (e.currencyDisplay = 'name'), (e.unitDisplay = 'long');
+                (t.currencyDisplay = 'name'), (t.unitDisplay = 'long');
                 continue;
             case 'unit-width-iso-code':
-                e.currencyDisplay = 'symbol';
+                t.currencyDisplay = 'symbol';
                 continue;
             case 'scale':
-                e.scale = parseFloat(i.options[0]);
+                t.scale = parseFloat(o.options[0]);
                 continue;
             case 'rounding-mode-floor':
-                e.roundingMode = 'floor';
+                t.roundingMode = 'floor';
                 continue;
             case 'rounding-mode-ceiling':
-                e.roundingMode = 'ceil';
+                t.roundingMode = 'ceil';
                 continue;
             case 'rounding-mode-down':
-                e.roundingMode = 'trunc';
+                t.roundingMode = 'trunc';
                 continue;
             case 'rounding-mode-up':
-                e.roundingMode = 'expand';
+                t.roundingMode = 'expand';
                 continue;
             case 'rounding-mode-half-even':
-                e.roundingMode = 'halfEven';
+                t.roundingMode = 'halfEven';
                 continue;
             case 'rounding-mode-half-down':
-                e.roundingMode = 'halfTrunc';
+                t.roundingMode = 'halfTrunc';
                 continue;
             case 'rounding-mode-half-up':
-                e.roundingMode = 'halfExpand';
+                t.roundingMode = 'halfExpand';
                 continue;
             case 'integer-width':
-                if (i.options.length > 1) throw RangeError('integer-width stems only accept a single optional option');
-                i.options[0].replace(u, function (t, r, n, i, o, a) {
-                    if (r) e.minimumIntegerDigits = n.length;
+                if (o.options.length > 1) throw RangeError('integer-width stems only accept a single optional option');
+                o.options[0].replace(c, function (e, n, r, i, o, a) {
+                    if (n) t.minimumIntegerDigits = r.length;
                     else if (i && o) throw Error('We currently do not support maximum integer digits');
                     else if (a) throw Error('We currently do not support exact integer digits');
                     return '';
                 });
                 continue;
         }
-        if (c.test(i.stem)) {
-            e.minimumIntegerDigits = i.stem.length;
+        if (u.test(o.stem)) {
+            t.minimumIntegerDigits = o.stem.length;
             continue;
         }
-        if (a.test(i.stem)) {
-            if (i.options.length > 1) throw RangeError('Fraction-precision stems only accept a single optional option');
-            i.stem.replace(a, function (t, r, n, i, o, a) {
-                return '*' === n ? (e.minimumFractionDigits = r.length) : i && '#' === i[0] ? (e.maximumFractionDigits = i.length) : o && a ? ((e.minimumFractionDigits = o.length), (e.maximumFractionDigits = o.length + a.length)) : ((e.minimumFractionDigits = r.length), (e.maximumFractionDigits = r.length)), '';
+        if (s.test(o.stem)) {
+            if (o.options.length > 1) throw RangeError('Fraction-precision stems only accept a single optional option');
+            o.stem.replace(s, function (e, n, r, i, o, a) {
+                return '*' === r ? (t.minimumFractionDigits = n.length) : i && '#' === i[0] ? (t.maximumFractionDigits = i.length) : o && a ? ((t.minimumFractionDigits = o.length), (t.maximumFractionDigits = o.length + a.length)) : ((t.minimumFractionDigits = n.length), (t.maximumFractionDigits = n.length)), '';
             });
-            var o = i.options[0];
-            'w' === o ? (e = (0, n.pi)((0, n.pi)({}, e), { trailingZeroDisplay: 'stripIfInteger' })) : o && (e = (0, n.pi)((0, n.pi)({}, e), l(o)));
+            var h = o.options[0];
+            'w' === h ? (t = (0, r.pi)((0, r.pi)({}, t), { trailingZeroDisplay: 'stripIfInteger' })) : h && (t = (0, r.pi)((0, r.pi)({}, t), d(h)));
             continue;
         }
-        if (s.test(i.stem)) {
-            e = (0, n.pi)((0, n.pi)({}, e), l(i.stem));
+        if (l.test(o.stem)) {
+            t = (0, r.pi)((0, r.pi)({}, t), d(o.stem));
             continue;
         }
-        var p = h(i.stem);
-        p && (e = (0, n.pi)((0, n.pi)({}, e), p));
-        var d = (function (t) {
-            var e;
-            if (('E' === t[0] && 'E' === t[1] ? ((e = { notation: 'engineering' }), (t = t.slice(2))) : 'E' === t[0] && ((e = { notation: 'scientific' }), (t = t.slice(1))), e)) {
-                var r = t.slice(0, 2);
-                if (('+!' === r ? ((e.signDisplay = 'always'), (t = t.slice(2))) : '+?' === r && ((e.signDisplay = 'exceptZero'), (t = t.slice(2))), !c.test(t))) throw Error('Malformed concise eng/scientific notation');
-                e.minimumIntegerDigits = t.length;
-            }
-            return e;
-        })(i.stem);
-        d && (e = (0, n.pi)((0, n.pi)({}, e), d));
+        var m = f(o.stem);
+        m && (t = (0, r.pi)((0, r.pi)({}, t), m));
+        var g = _(o.stem);
+        g && (t = (0, r.pi)((0, r.pi)({}, t), g));
     }
-    return e;
+    return t;
 }

@@ -1,101 +1,127 @@
-n.d(t, {
-    L: function () {
-        return f;
-    }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(906280),
-    l = n.n(o),
-    u = n(186325),
-    c = n(390507),
+n.d(t, { L: () => g }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(906280),
+    l = n.n(s),
+    c = n(186325),
+    u = n(390507),
     d = n(679400),
-    _ = n(580747),
-    E = n(549738);
-let f = i.forwardRef(function (e, t) {
-    let { color: a, src: o, size: f = 'md', width: h, height: p, className: m, initialAnimation: I, markers: T } = e,
-        [g, S] = i.useState(null),
-        A = i.useRef(null),
+    f = n(580747),
+    _ = n(480993);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    let { color: o, useLottieDefaultColors: s, src: p, size: m = 'md', width: g, height: E, className: b, initialAnimation: y, markers: v } = e,
+        [O, I] = i.useState(null),
+        S = i.useRef(null),
+        T = i.useRef(null),
         N = i.useRef(null),
-        v = i.useRef(null),
-        O =
-            'custom' === f
+        A =
+            'custom' === m
                 ? {
-                      width: h,
-                      height: p
+                      width: g,
+                      height: E
                   }
-                : (0, c.m)(f),
-        R = !(0, _.Z)('lottie_hover_multiple_loop'),
-        C = i.useContext(u.S).reducedMotion.enabled,
-        { enabled: y } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
-        D = C || !y,
-        L = i.useRef(I);
+                : (0, u.m)(m),
+        C = !(0, f.Z)('lottie_hover_multiple_loop'),
+        R = i.useContext(c.S).reducedMotion.enabled,
+        { enabled: P } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
+        w = R || !P,
+        D = i.useRef(y);
     return (
         i.useImperativeHandle(
             t,
             () => ({
                 play: (e) => {
-                    if (null != v.current) {
-                        if (((N.current = e), D)) {
-                            let t = T[e];
-                            v.current.resetSegments(!0), v.current.setSegment(t.start + t.duration, t.start + t.duration), v.current.stop();
-                        } else v.current.setLoop(!R && e.includes('hover')), v.current.resetSegments(!0), v.current.playSegments([T[e].start, T[e].start + T[e].duration], !0);
-                    }
+                    if (null != N.current)
+                        if (((T.current = e), w)) {
+                            let t = v[e];
+                            N.current.resetSegments(!0), N.current.setSegment(t.start + t.duration, t.start + t.duration), N.current.stop();
+                        } else N.current.setLoop(!C && e.includes('hover')), N.current.resetSegments(!0), N.current.playSegments([v[e].start, v[e].start + v[e].duration], !0);
                 },
                 stop: () => {
-                    if (null == v.current || D) return;
+                    if (null == N.current || w) return;
                 },
                 stopIfPlaying: (e) => {
-                    null != v.current && !D && N.current === e && (v.current.resetSegments(!0), v.current.setSegment(T[e].start, T[e].start), v.current.stop());
-                }
+                    null == N.current || w || (T.current === e && (N.current.resetSegments(!0), N.current.setSegment(v[e].start, v[e].start), N.current.stop()));
+                },
+                getDuration: (e) => (null == N.current ? null : N.current.getDuration(e))
             }),
-            [D, R, T]
+            [w, C, v]
         ),
         i.useEffect(() => {
-            null == g && o().then((e) => S(e.default));
-        }, [g, o]),
+            null == O && p().then((e) => I(e.default));
+        }, [O, p]),
         i.useEffect(
             () => (
-                n
-                    .e('23755')
+                Promise.resolve()
                     .then(n.t.bind(n, 500923, 23))
                     .then((e) => {
                         var t;
                         let n,
                             { default: r } = e,
-                            i = null !== (t = N.current) && void 0 !== t ? t : L.current;
-                        if (null != i && null != T[i]) {
-                            let e = T[i];
+                            i = null != (t = T.current) ? t : D.current;
+                        if (null != i && null != v[i]) {
+                            let e = v[i];
                             n = [e.start, e.start + e.duration];
                         }
-                        null != A.current &&
-                            (v.current = r.loadAnimation({
-                                container: A.current,
+                        null != S.current &&
+                            (N.current = r.loadAnimation({
+                                container: S.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !1,
-                                animationData: l()(g),
+                                animationData: l()(O),
                                 initialSegment: n
                             }));
                     }),
                 () => {
                     var e;
-                    null === (e = v.current) || void 0 === e || e.destroy();
+                    null == (e = N.current) || e.destroy();
                 }
             ),
-            [g, T]
+            [O, v]
         ),
         (0, r.jsx)('div', {
-            style: {
-                '--__lottieIconColor': null != a && 'string' == typeof a ? a : null == a ? void 0 : a.css,
-                display: 'flex',
-                ...O
-            },
-            className: s()(E.lottieIcon, m),
-            ref: A
+            style: h(
+                {
+                    '--__lottieIconColor': null != o && 'string' == typeof o ? o : null == o ? void 0 : o.css,
+                    display: 'flex'
+                },
+                A
+            ),
+            className: a()(_.lottieIcon, s ? void 0 : _.lottieIconColors, b),
+            ref: S
         })
     );
-});
+}
+let g = i.forwardRef(m);

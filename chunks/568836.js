@@ -1,41 +1,82 @@
 n.d(t, {
-    $G: function () {
-        return c;
-    },
-    OR: function () {
-        return u;
-    },
-    aL: function () {
-        return o;
-    }
+    $G: () => d,
+    OR: () => p,
+    aL: () => u
 });
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(345898),
-    l = n(236809);
-let o = 660,
-    c = (e) =>
-        (0, i.jsx)(r.Z, {
-            ...e,
-            className: s()(e.className, {
-                [l.embedVertical]: !e.isHorizontal,
-                [l.embedHorizontal]: e.isHorizontal
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    a = n.n(i),
+    l = n(345898),
+    o = n(433962);
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let u = 660,
+    d = (e) =>
+        (0, r.jsx)(
+            l.Z,
+            c(s({}, e), {
+                className: a()(e.className, {
+                    [o.embedVertical]: !e.isHorizontal,
+                    [o.embedHorizontal]: e.isHorizontal
+                })
             })
-        }),
-    u = (e) => {
+        ),
+    p = (e) => {
         let { isHorizontal: t } = e;
-        return (0, i.jsx)(c, {
-            ...e,
-            media: () =>
-                (0, i.jsx)('div', {
-                    className: s()(l.loadingDescription),
-                    children: (0, i.jsx)('div', {
-                        className: s()(l.loadingBackgroundWrapper, { [l.loadingBackgroundWrapperHorizontal]: t }),
-                        children: (0, i.jsx)('div', { className: l.loadingBackground })
-                    })
-                }),
-            title: () => (0, i.jsx)('div', { className: s()(l.loadingImage, { [l.loadingImageHorizontal]: t }) })
-        });
+        return (0, r.jsx)(
+            d,
+            c(s({}, e), {
+                media: () =>
+                    (0, r.jsx)('div', {
+                        className: o.loadingDescription,
+                        children: (0, r.jsx)('div', {
+                            className: a()(o.loadingBackgroundWrapper, { [o.loadingBackgroundWrapperHorizontal]: t }),
+                            children: (0, r.jsx)('div', { className: o.loadingBackground })
+                        })
+                    }),
+                title: () => (0, r.jsx)('div', { className: a()(o.loadingImage, { [o.loadingImageHorizontal]: t }) })
+            })
+        );
     };

@@ -1,10 +1,11 @@
-t.Z = function (e) {
+r.d(t, { Z: () => n });
+let n = function (e) {
     var t = -1,
-        n = Array(e.size);
+        r = Array(e.size);
     return (
-        e.forEach(function (e, r) {
-            n[++t] = [r, e];
+        e.forEach(function (e, n) {
+            r[++t] = [n, e];
         }),
-        n
+        r
     );
 };

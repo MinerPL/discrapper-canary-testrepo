@@ -1,33 +1,28 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-}),
-    n(47120);
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(295474),
-    r = n(689938),
-    l = n(66740);
-function o(e) {
-    let { guildId: t, analyticsLocations: n, analyticsLocation: o } = e,
-        [c, u] = (0, s.ww)({
+n.d(t, { Z: () => s }), n(47120);
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(295474),
+    o = n(388032),
+    a = n(131715);
+function s(e) {
+    let { guildId: t, analyticsLocations: n, analyticsLocation: s } = e,
+        [c, u] = (0, l.ww)({
             guildId: t,
             analyticsLocations: n,
-            analyticsLocation: o,
+            analyticsLocation: s,
             openWithoutBackstack: !0
         }),
-        d = u ? r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE : r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_NO_PERMS,
-        _ = u ? r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_CTA : r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_ACCOUNT_USERNAME_CTA;
-    return (0, i.jsxs)(a.Notice, {
-        color: a.NoticeColors.CUSTOM,
-        className: l.quarantineNotice,
+        d = u ? o.NW.string(o.t['6ndMcn']) : o.NW.string(o.t['0eiu6O']),
+        E = u ? o.NW.string(o.t.S09nw8) : o.NW.string(o.t.tEttXV);
+    return (0, r.jsxs)(i.qXd, {
+        color: i.DM8.CUSTOM,
+        className: a.quarantineNotice,
         children: [
             d,
-            (0, i.jsx)(a.NoticeButton, {
+            (0, r.jsx)(i.EyT, {
                 onClick: c,
-                children: _
+                children: E
             })
         ]
     });

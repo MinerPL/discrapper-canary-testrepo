@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => s });
 var r = n(217942);
 function i(e, t, n) {
     return (
@@ -17,20 +13,23 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+let o = 500,
+    a = 150;
+class s {
     getCurrentValue() {
         if (null == this.animationDetails) return this.value;
         let e = performance.now() - this.animationDetails.animationStart,
-            t = this.value < this.animationDetails.lastValue ? 150 : 500;
+            t = this.value < this.animationDetails.lastValue ? a : o;
         return e > t ? ((this.animationDetails = null), this.value) : this.value < this.animationDetails.lastValue ? r.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : r.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4);
     }
     animateTo(e) {
-        if (((this.isReset = !1), this.value !== e))
-            (this.animationDetails = {
-                lastValue: this.value,
-                animationStart: performance.now()
-            }),
-                (this.value = e);
+        (this.isReset = !1),
+            this.value !== e &&
+                ((this.animationDetails = {
+                    lastValue: this.value,
+                    animationStart: performance.now()
+                }),
+                (this.value = e));
     }
     isAnimating() {
         return null != this.animationDetails;

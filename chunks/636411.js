@@ -1,101 +1,99 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => y });
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    s = n(442837),
-    o = n(481060),
+    o = n.n(i),
+    a = n(442837),
+    s = n(481060),
     l = n(607070),
-    u = n(70097),
-    c = n(104494),
+    c = n(70097),
+    u = n(104494),
     d = n(639119),
-    _ = n(165583),
-    E = n(197115),
-    f = n(981631),
+    f = n(165583),
+    _ = n(197115),
+    p = n(981631),
     h = n(474936),
-    p = n(689938),
-    m = n(604755);
-function I(e) {
+    m = n(388032),
+    g = n(645885);
+let E = 'https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4',
+    b = 32;
+function y(e) {
     var t, n;
     let { onDismiss: i } = e,
-        I = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-        T = p.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2,
-        g = (0, d.N)(),
-        S = (0, c.Ng)(),
-        A = (null == g ? void 0 : g.subscription_trial) != null || null != S,
-        N = {
-            object: f.qAy.BUTTON_CTA,
-            section: f.jXE.SUPER_REACTION_PICKER
+        y = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        v = m.NW.string(m.t['eikz4+']),
+        O = (0, d.N)(),
+        I = (0, u.Ng)(),
+        S = (null == O ? void 0 : O.subscription_trial) != null || null != I,
+        T = {
+            object: p.qAy.BUTTON_CTA,
+            section: p.jXE.SUPER_REACTION_PICKER
         };
     return (0, r.jsxs)('div', {
-        className: m.wrapper,
+        className: g.wrapper,
         children: [
-            (0, r.jsx)(o.Clickable, {
+            (0, r.jsx)(s.P3F, {
                 onClick: i,
-                className: m.closeButton,
-                'aria-label': p.Z.Messages.DISMISS,
-                children: (0, r.jsx)(o.XSmallIcon, {
+                className: g.closeButton,
+                'aria-label': m.NW.string(m.t.WAI6xs),
+                children: (0, r.jsx)(s.Dio, {
                     size: 'md',
                     color: 'currentColor'
                 })
             }),
             (0, r.jsxs)('div', {
-                className: m.content,
+                className: g.content,
                 children: [
                     (0, r.jsx)('div', {
-                        className: m.contentFill,
-                        children: (0, r.jsx)(u.Z, {
-                            className: a()(m.banner, { [m.hasTrialOffer]: A }),
-                            src: 'https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4',
+                        className: g.contentFill,
+                        children: (0, r.jsx)(c.Z, {
+                            className: o()(g.banner, { [g.hasTrialOffer]: S }),
+                            src: E,
                             loop: !0,
-                            autoPlay: !I,
+                            autoPlay: !y,
                             muted: !0,
                             controls: !0
                         })
                     }),
-                    A
-                        ? (0, r.jsx)(_.ZP, {
+                    S
+                        ? (0, r.jsx)(f.ZP, {
                               type: h.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
-                              subscriptionTier: null !== (n = null == g ? void 0 : null === (t = g.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : h.Si.TIER_2,
-                              headingText: p.Z.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
-                              analyticsLocationObject: N,
-                              discountOffer: S,
-                              trialOffer: g,
-                              children: T
+                              subscriptionTier: null != (n = null == O || null == (t = O.subscription_trial) ? void 0 : t.sku_id) ? n : h.Si.TIER_2,
+                              headingText: m.NW.string(m.t.Wfl5zs),
+                              analyticsLocationObject: T,
+                              discountOffer: I,
+                              trialOffer: O,
+                              children: v
                           })
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsxs)('div', {
-                                      className: m.header,
+                                      className: g.header,
                                       children: [
-                                          (0, r.jsx)(o.NitroWheelIcon, {
+                                          (0, r.jsx)(s.SrA, {
                                               size: 'custom',
                                               color: 'currentColor',
-                                              className: m.nitroWheel,
-                                              width: 32,
-                                              height: 32
+                                              className: g.nitroWheel,
+                                              width: b,
+                                              height: b
                                           }),
-                                          (0, r.jsx)(o.Heading, {
-                                              className: m.headerText,
+                                          (0, r.jsx)(s.X6q, {
+                                              className: g.headerText,
                                               variant: 'heading-xl/bold',
-                                              children: p.Z.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE
+                                              children: m.NW.string(m.t.Wfl5zs)
                                           })
                                       ]
                                   }),
-                                  (0, r.jsx)(o.Text, {
-                                      className: m.subheaderText,
+                                  (0, r.jsx)(s.Text, {
+                                      className: g.subheaderText,
                                       variant: 'text-md/normal',
-                                      children: T
+                                      children: v
                                   }),
                                   (0, r.jsx)('div', {
-                                      className: m.ctaActionWrapper,
-                                      children: (0, r.jsx)(E.Z, {
+                                      className: g.ctaActionWrapper,
+                                      children: (0, r.jsx)(_.Z, {
                                           subscriptionTier: h.Si.TIER_2,
-                                          buttonText: p.Z.Messages.UNLOCK_WITH_NITRO
+                                          buttonText: m.NW.string(m.t.sEAnVF)
                                       })
                                   })
                               ]

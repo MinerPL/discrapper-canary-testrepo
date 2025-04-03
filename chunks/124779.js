@@ -1,72 +1,67 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return d;
-        }
-    });
-var i = t(735250);
-t(470079);
-var s = t(481060),
-    l = t(287734),
-    a = t(313201),
-    r = t(471253),
-    c = t(939863),
-    o = t(689938),
-    u = t(38043);
-function d(n) {
-    let { channel: e, transitionState: t, onClose: d } = n,
-        _ = (0, a.Dt)();
-    function E() {
-        l.default.disconnect(), d();
+n.d(t, { default: () => u });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(287734),
+    c = n(313201),
+    a = n(471253),
+    o = n(939863),
+    s = n(388032),
+    d = n(548726);
+function u(e) {
+    let { channel: t, transitionState: n, onClose: u } = e,
+        _ = (0, c.Dt)();
+    function h() {
+        l.default.disconnect(), u();
     }
-    return (0, i.jsxs)(s.ModalRoot, {
-        transitionState: t,
+    return (0, r.jsxs)(i.Y0X, {
+        transitionState: n,
         'aria-labelledby': _,
         children: [
-            (0, i.jsxs)(s.ModalContent, {
-                className: u.content,
+            (0, r.jsxs)(i.hzk, {
+                className: d.content,
                 children: [
-                    (0, i.jsx)(c.Z, {
-                        children: (0, i.jsx)('div', {
-                            className: u.iconBackground,
-                            children: (0, i.jsx)(s.StageXIcon, {
+                    (0, r.jsx)(o.Z, {
+                        children: (0, r.jsx)('div', {
+                            className: d.iconBackground,
+                            children: (0, r.jsx)(i.XzT, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 40,
                                 height: 40,
-                                className: u.headerIcon
+                                className: d.headerIcon
                             })
                         })
                     }),
-                    (0, i.jsx)(s.Heading, {
+                    (0, r.jsx)(i.X6q, {
                         id: _,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        className: u.title,
-                        children: o.Z.Messages.EXPLICIT_END_STAGE_TITLE
+                        className: d.title,
+                        children: s.NW.string(s.t.pADdJi)
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: u.subtitle,
-                        children: o.Z.Messages.EXPLICIT_END_STAGE_SUBTITLE
+                        className: d.subtitle,
+                        children: s.NW.string(s.t.mT7jwM)
                     })
                 ]
             }),
-            (0, i.jsxs)(s.ModalFooter, {
+            (0, r.jsxs)(i.mzw, {
                 children: [
-                    (0, i.jsx)(s.Button, {
-                        color: s.Button.Colors.RED,
+                    (0, r.jsx)(i.zxk, {
+                        color: i.zxk.Colors.RED,
                         onClick: function () {
-                            (0, r.NZ)(e), E();
+                            (0, a.NZ)(t), h();
                         },
-                        children: o.Z.Messages.EXPLICIT_END_STAGE_CONFIRM
+                        children: s.NW.string(s.t['sBP/1t'])
                     }),
-                    (0, i.jsx)(s.Button, {
-                        color: s.Button.Colors.PRIMARY,
-                        className: u.cancelButton,
-                        onClick: E,
-                        children: o.Z.Messages.EXPLICIT_END_STAGE_CANCEL
+                    (0, r.jsx)(i.zxk, {
+                        color: i.zxk.Colors.PRIMARY,
+                        className: d.cancelButton,
+                        onClick: h,
+                        children: s.NW.string(s.t.xTwqz8)
                     })
                 ]
             })

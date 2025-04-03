@@ -1,49 +1,48 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var r = n(735250);
-n(470079);
-var s = n(481060),
-    i = n(78675),
-    l = n(654904),
-    a = n(486324),
-    o = n(228168),
-    c = n(689938),
-    d = n(360247);
-function u(e) {
-    let { user: t, displayProfile: n, guildId: u, canUsePremiumCustomization: f, pendingBanner: m, hasProfileEffect: E, isTryItOutFlow: p, disabledInputs: _, onUpsellClick: h } = e,
-        g = f || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
-        I = g ? s.PencilIcon : s.NitroWheelIcon;
-    return (0, r.jsx)(i.Z, {
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    o = n(222062),
+    a = n(867176),
+    s = n(654904),
+    l = n(486324),
+    c = n(228168),
+    u = n(388032),
+    d = n(179168);
+function f(e) {
+    let { user: t, displayProfile: n, guildId: f, canUsePremiumCustomization: _, pendingBanner: p, pendingAccentColor: h, isTryItOutFlow: m, disabledInputs: g, onUpsellClick: E } = e,
+        b = _ || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
+        y = b ? i.vdY : i.SrA,
+        v = (0, o.M)(b),
+        O = () => {
+            if (!b && !v) {
+                null == E || E();
+                return;
+            }
+            (0, s.$r)(l.pC.BANNER, f, m);
+        };
+    return (0, r.jsx)(a.Z, {
         user: t,
         displayProfile: n,
-        guildId: u,
-        profileType: o.y0.BITE_SIZE,
-        pendingBanner: m,
-        hasProfileEffect: E,
-        canUsePremiumCustomization: f,
+        guildId: f,
+        profileType: c.y0.BITE_SIZE,
+        pendingBanner: p,
+        pendingAccentColor: h,
+        canUsePremiumProfileCustomization: _,
         children:
-            !_ &&
-            (0, r.jsxs)(s.Clickable, {
-                onClick: () => {
-                    if (!g) {
-                        null == h || h();
-                        return;
-                    }
-                    (0, l.$r)(a.pC.BANNER, u, p);
-                },
+            !g &&
+            (0, r.jsxs)(i.P3F, {
+                onClick: O,
                 className: d.clickable,
                 children: [
-                    (0, r.jsx)(I, {
+                    (0, r.jsx)(y, {
                         size: 'xs',
                         color: 'white'
                     }),
-                    (0, r.jsx)(s.Heading, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: g ? c.Z.Messages.CHANGE_BANNER : c.Z.Messages.USER_SETTINGS_UNLOCK_BANNER
+                        children: b || v ? u.NW.string(u.t.N0bC3N) : u.NW.string(u.t.O1sT5u)
                     })
                 ]
             })

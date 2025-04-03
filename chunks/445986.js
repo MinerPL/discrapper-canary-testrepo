@@ -1,81 +1,149 @@
-s.d(t, {
-    Q: function () {
-        return c;
-    }
+n.d(t, {
+    Q: () => f,
+    Z: () => x
 }),
-    s(653041),
-    s(47120);
-var n = s(735250),
-    i = s(470079),
-    a = s(481060),
-    r = s(33122),
-    l = s(761705),
-    o = s(9807),
-    h = s(843445),
-    d = s(981631),
-    u = s(689938);
-function c(e) {
+    n(301563),
+    n(653041),
+    n(47120);
+var r = n(200651),
+    a = n(192379),
+    i = n(481060),
+    l = n(33122),
+    o = n(761705),
+    s = n(9807),
+    c = n(843445),
+    d = n(981631),
+    u = n(388032);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function g(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        a = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                a = {},
+                i = Object.keys(e);
+            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+            return a;
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var i = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+    }
+    return a;
+}
+function f(e) {
     return ''.concat(e.split('?')[0], '?size=').concat(2048);
 }
-let p = (e) => {
-    let { index: t, items: s, ...i } = e,
-        a = s[t],
-        r = 0,
-        o = [];
-    for (let e of s)
+let _ = (e) => {
+    var { index: t, items: n } = e,
+        a = g(e, ['index', 'items']);
+    let i = n[t],
+        l = 0,
+        s = [];
+    for (let e of n)
         if (e.type === d.s9s.IMG) {
-            let { width: t, height: s, src: n } = e;
-            e === a && (r = o.length),
-                o.push({
-                    src: c(n),
+            let { width: t, height: n, src: r } = e;
+            e === i && (l = s.length),
+                s.push({
+                    src: f(r),
                     width: t,
-                    height: s
+                    height: n
                 });
         }
-    return (0, n.jsx)(l.Z, {
-        ...i,
-        items: o,
-        startWith: r
-    });
+    return (0, r.jsx)(
+        o.Z,
+        h(m({}, a), {
+            items: s,
+            startWith: l
+        })
+    );
 };
-class m extends i.Component {
+class b extends a.Component {
     render() {
-        let { pageSize: e, ...t } = this.props,
-            s = e === h.b.SMALL ? o.Z : r.Z;
-        return (0, n.jsx)(s, {
-            ...t,
-            onCurrentItemClick: this.handleCurrentItemClick
-        });
+        let e = this.props,
+            { pageSize: t } = e,
+            n = g(e, ['pageSize']),
+            a = t === c.b.SMALL ? s.Z : l.Z;
+        return (0, r.jsx)(a, h(m({}, n), { onCurrentItemClick: this.handleCurrentItemClick }));
     }
     constructor(...e) {
-        var t, s, i;
         super(...e),
-            (t = this),
-            (s = 'handleCurrentItemClick'),
-            (i = (e, t) => {
-                e.type === d.s9s.IMG &&
-                    !(0, a.hasAnyModalOpen)() &&
-                    (0, a.openModal)((e) =>
-                        (0, n.jsx)(a.ModalRoot, {
-                            size: a.ModalSize.DYNAMIC,
-                            'aria-label': u.Z.Messages.IMAGE,
-                            ...e,
-                            children: (0, n.jsx)(p, {
-                                ...e,
-                                index: t,
-                                items: this.props.items
-                            })
-                        })
+            p(this, 'handleCurrentItemClick', (e, t) => {
+                e.type !== d.s9s.IMG ||
+                    (0, i.$sL)() ||
+                    (0, i.h7j)((e) =>
+                        (0, r.jsx)(
+                            i.Y0X,
+                            h(
+                                m(
+                                    {
+                                        size: i.CgR.DYNAMIC,
+                                        'aria-label': u.NW.string(u.t.X4IxWF)
+                                    },
+                                    e
+                                ),
+                                {
+                                    children: (0, r.jsx)(
+                                        _,
+                                        h(m({}, e), {
+                                            index: t,
+                                            items: this.props.items
+                                        })
+                                    )
+                                }
+                            )
+                        )
                     );
-            }),
-            s in t
-                ? Object.defineProperty(t, s, {
-                      value: i,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[s] = i);
+            });
     }
 }
-t.Z = m;
+let x = b;

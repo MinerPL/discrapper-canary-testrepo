@@ -1,50 +1,51 @@
-var n = t(735250);
-t(470079);
-var a = t(481060),
-    i = t(230711),
-    r = t(63063),
-    o = t(74538),
-    l = t(937615),
-    c = t(981631),
-    d = t(474936),
-    _ = t(689938),
-    E = t(110938);
-s.Z = function (e) {
-    let { hasAppliedGuildBoosts: s, isUserPremiumTier2: t, hasGuildAffinitiesOrInGuild: u, subscriptionIsPausedOrPausePending: I } = e,
-        { subtitle: T, flavor: S } = (function (e) {
-            let { hasAppliedGuildBoosts: s, isUserPremiumTier2: t, hasGuildAffinitiesOrInGuild: n, subscriptionIsPausedOrPausePending: a } = e;
-            if (a) return { flavor: _.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION_WITH_LINK.format({ onClick: () => i.Z.open(c.oAB.SUBSCRIPTIONS) }) };
-            if (!n) return { subtitle: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_JOINED_SERVER_SUBTITLE };
-            if (s)
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(230711),
+    a = n(63063),
+    l = n(74538),
+    o = n(937615),
+    c = n(981631),
+    d = n(474936),
+    u = n(388032),
+    m = n(839058);
+let g = function (e) {
+    let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: g, subscriptionIsPausedOrPausePending: p } = e,
+        { subtitle: h, flavor: f } = (function (e) {
+            let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: r, subscriptionIsPausedOrPausePending: i } = e;
+            if (i) return { flavor: u.NW.format(u.t.doslJi, { onClick: () => s.Z.open(c.oAB.SUBSCRIPTIONS) }) };
+            if (!r) return { subtitle: u.NW.string(u.t.oiWYAQ) };
+            if (t)
                 return {
-                    subtitle: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_ACTIVE_BOOSTS,
-                    flavor: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_ACTIVE_BOOSTS_FLAVOR.format({ helpdeskArticle: r.Z.getArticleURL(c.BhN.GUILD_SUBSCRIPTIONS) })
+                    subtitle: u.NW.string(u.t.W5rDjY),
+                    flavor: u.NW.format(u.t.cUHcaW, { helpdeskArticle: a.Z.getArticleURL(c.BhN.GUILD_SUBSCRIPTIONS) })
                 };
-            let E = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
-                u = o.ZP.getDefaultPrice(E.id, t),
-                I = (0, l.og)((0, l.T4)(u.amount, u.currency), E.interval, E.intervalCount);
+            let m = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
+                g = l.ZP.getDefaultPrice(m.id, n),
+                p = (0, o.og)((0, o.T4)(g.amount, g.currency), m.interval, m.intervalCount);
             return {
-                subtitle: t ? _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_SUBBED_NO_ACTIVE_BOOSTS : _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_NO_SUB_NO_ACTIVE_BOOSTS,
-                flavor: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_NO_ACTIVE_BOOSTS_FLAVOR.format({ monthlyGuildBoostPrice: I })
+                subtitle: n ? u.NW.string(u.t.bhPzXV) : u.NW.string(u.t.Zs9h9f),
+                flavor: u.NW.formatToPlainString(u.t.PGgTdH, { monthlyGuildBoostPrice: p })
             };
         })({
-            hasAppliedGuildBoosts: s,
-            isUserPremiumTier2: t,
-            hasGuildAffinitiesOrInGuild: u,
-            subscriptionIsPausedOrPausePending: I
+            hasAppliedGuildBoosts: t,
+            hasBoostPerk: n,
+            hasGuildAffinitiesOrInGuild: g,
+            subscriptionIsPausedOrPausePending: p
         });
-    return (0, n.jsxs)('div', {
-        className: E.wrapper,
+    return (0, r.jsxs)('div', {
+        className: m.wrapper,
         children: [
-            (0, n.jsx)(a.Heading, {
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/bold',
-                className: E.subtitle,
-                children: T
+                className: m.subtitle,
+                children: h
             }),
-            null != S &&
-                (0, n.jsx)(a.Text, {
+            null != f &&
+                (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
-                    children: S
+                    children: f
                 })
         ]
     });

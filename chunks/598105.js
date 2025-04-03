@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(411104);
+n.d(t, { Z: () => s }), n(411104);
 var r = n(998502);
 function i(e, t, n) {
     return (
@@ -18,7 +13,25 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+let o = 256;
+function a(e, t) {
+    return r.ZP.ensureModule('discord_spellcheck').then(() => {
+        let { cld: n } = r.ZP.requireModule('discord_spellcheck');
+        return new Promise((r, i) => {
+            n.detect(
+                e,
+                {
+                    httpHint: t,
+                    encodingHint: 'UTF8'
+                },
+                (e, t) => {
+                    null != e ? i(Error(e.message)) : !t.reliable || t.languages[0].percent < 90 || t.languages[0].score < 500 ? i(Error('Not enough reliable text.')) : r(t.languages[0].code);
+                }
+            );
+        });
+    });
+}
+class s {
     get language() {
         return this._language;
     }
@@ -29,32 +42,12 @@ class a {
         this._languageHint = e;
     }
     process(e) {
-        !this._processing &&
+        this._processing ||
             ((this._processing = !0),
             requestIdleCallback((t) => {
-                var n, i;
-                if (t.timeRemaining() <= this._minimumTimeRemaining) {
-                    this._processEnd();
-                    return;
-                }
-                e.length > 256 && (e = e.slice(0, 256)),
-                    ((n = e),
-                    (i = this._languageHint),
-                    r.ZP.ensureModule('discord_spellcheck').then(() => {
-                        let { cld: e } = r.ZP.requireModule('discord_spellcheck');
-                        return new Promise((t, r) => {
-                            e.detect(
-                                n,
-                                {
-                                    httpHint: i,
-                                    encodingHint: 'UTF8'
-                                },
-                                (e, n) => {
-                                    null != e ? r(Error(e.message)) : !n.reliable || n.languages[0].percent < 90 || n.languages[0].score < 500 ? r(Error('Not enough reliable text.')) : t(n.languages[0].code);
-                                }
-                            );
-                        });
-                    })).then(
+                if (t.timeRemaining() <= this._minimumTimeRemaining) return void this._processEnd();
+                e.length > o && (e = e.slice(0, o)),
+                    a(e, this._languageHint).then(
                         (e) => {
                             (this.language = e), this._processEnd(t.didTimeout);
                         },

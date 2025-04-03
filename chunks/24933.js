@@ -1,7 +1,8 @@
+n.d(t, { Z: () => f });
 var r,
     i = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,28 +15,39 @@ function s(e, t, n) {
         e
     );
 }
-function o() {
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function l() {
     return {
         usageByApplicationId: {},
         shelfOrder: []
     };
 }
-let l = o();
-class u extends (r = i.ZP.PersistedStore) {
+let c = l();
+function u() {
+    c = l();
+}
+class d extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        l = {
-            ...o(),
-            ...(null != e ? e : {})
-        };
+        c = s({}, l(), null != e ? e : {});
     }
     getState() {
-        return l;
+        return c;
     }
 }
-s(u, 'displayName', 'ActivityShelfStore'),
-    s(u, 'persistKey', 'ActivityShelfStore'),
-    (t.Z = new u(a.Z, {
-        LOGOUT: function () {
-            l = o();
-        }
-    }));
+a(d, 'displayName', 'ActivityShelfStore'), a(d, 'persistKey', 'ActivityShelfStore');
+let f = new d(o.Z, { LOGOUT: u });

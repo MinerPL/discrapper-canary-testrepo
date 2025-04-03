@@ -1,131 +1,126 @@
-s.d(t, {
-    Z: function () {
-        return N;
-    }
-}),
-    s(47120);
-var a = s(735250),
-    n = s(470079),
-    i = s(481060),
-    C = s(153867),
-    _ = s(626135),
-    o = s(981631),
-    l = s(689938),
-    r = s(715450);
-let I = [
+i.d(t, { Z: () => C }), i(47120);
+var a = i(200651),
+    n = i(192379),
+    s = i(481060),
+    l = i(153867),
+    r = i(626135),
+    o = i(981631),
+    d = i(388032),
+    c = i(266354);
+let _ = [
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_USING_ENOUGH',
-        nameGetter: () => l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_USING_ENOUGH
+        nameGetter: () => d.NW.string(d.t['+RZgNT'])
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_TOO_EXPENSIVE',
-        nameGetter: () => l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_TOO_EXPENSIVE
+        nameGetter: () => d.NW.string(d.t.kgPXgo)
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_WORTH',
-        nameGetter: () => l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_WORTH
+        nameGetter: () => d.NW.string(d.t.vujsUF)
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_SURE_HOW_TO_USE',
-        nameGetter: () => l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_SURE_HOW_TO_USE
+        nameGetter: () => d.NW.string(d.t.AYAOLC)
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER',
-        nameGetter: () => l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER
+        nameGetter: () => d.NW.string(d.t.wZLu3d)
     }
 ];
-function N(e) {
-    let { application: t, subscriptionId: s, onClose: N } = e,
-        [c, A] = n.useState(!1),
-        [d, S] = n.useState(null),
-        [O, E] = n.useState(''),
-        T = n.useCallback(() => {
-            null != d &&
-                (_.default.track(o.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
-                    answer: d,
+function C(e) {
+    let { application: t, subscriptionId: i, onClose: C } = e,
+        [N, u] = n.useState(!1),
+        [x, m] = n.useState(null),
+        [h, I] = n.useState(''),
+        S = n.useCallback(() => {
+            null != x &&
+                (r.default.track(o.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
+                    answer: x,
                     application_id: t.id,
-                    reason: O,
-                    subscription_id: s
+                    reason: h,
+                    subscription_id: i
                 }),
-                N());
-        }, [t.id, s, d, N, O]);
+                C());
+        }, [t.id, i, x, C, h]);
     return (
         n.useEffect(() => {
-            C.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: c });
-        }, [c]),
+            l.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: N });
+        }, [N]),
         (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsxs)(i.ModalHeader, {
-                    className: r.headerContainer,
+                (0, a.jsxs)(s.xBx, {
+                    className: c.headerContainer,
                     separator: !1,
                     children: [
                         (0, a.jsxs)('div', {
-                            className: r.titleContainer,
+                            className: c.titleContainer,
                             children: [
-                                (0, a.jsx)(i.Text, {
-                                    className: r.headerTitle,
+                                (0, a.jsx)(s.Text, {
+                                    className: c.headerTitle,
                                     variant: 'text-lg/semibold',
-                                    children: l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_TITLE
+                                    children: d.NW.string(d.t.zPxMdX)
                                 }),
-                                (0, a.jsx)(i.ModalCloseButton, {
-                                    className: r.modalCloseButton,
-                                    onClick: N
+                                (0, a.jsx)(s.olH, {
+                                    className: c.modalCloseButton,
+                                    onClick: C
                                 })
                             ]
                         }),
-                        (0, a.jsx)(i.Spacer, { size: 8 }),
-                        (0, a.jsx)(i.Text, {
-                            className: r.headerSubtitle,
+                        (0, a.jsx)(s.LZC, { size: 8 }),
+                        (0, a.jsx)(s.Text, {
+                            className: c.headerSubtitle,
                             variant: 'text-md/medium',
-                            children: l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_SUBTITLE
+                            children: d.NW.string(d.t.QJGdBw)
                         })
                     ]
                 }),
-                (0, a.jsxs)(i.ModalContent, {
+                (0, a.jsxs)(s.hzk, {
                     children: [
                         (0, a.jsx)('div', {
-                            className: r.answerChoicesContainer,
-                            children: (0, a.jsx)(i.RadioGroup, {
-                                value: d,
-                                options: I.map((e) => {
-                                    let { nameGetter: t, value: s } = e;
+                            className: c.answerChoicesContainer,
+                            children: (0, a.jsx)(s.FXm, {
+                                value: x,
+                                options: _.map((e) => {
+                                    let { nameGetter: t, value: i } = e;
                                     return {
                                         name: t(),
-                                        value: s
+                                        value: i
                                     };
                                 }),
-                                onChange: (e) => S(e.value),
+                                onChange: (e) => m(e.value),
                                 withTransparentBackground: !0
                             })
                         }),
-                        'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER' === d &&
-                            (0, a.jsx)(i.TextInput, {
+                        'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER' === x &&
+                            (0, a.jsx)(s.oil, {
                                 autoFocus: !0,
-                                className: r.otherField,
-                                placeholder: l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_OTHER_PLACEHOLDER,
-                                value: O,
-                                onChange: E
+                                className: c.otherField,
+                                placeholder: d.NW.string(d.t.s6tM8f),
+                                value: h,
+                                onChange: I
                             })
                     ]
                 }),
-                (0, a.jsxs)(i.ModalFooter, {
-                    className: r.footer,
+                (0, a.jsxs)(s.mzw, {
+                    className: c.footer,
                     children: [
-                        (0, a.jsx)(i.Button, {
-                            onClick: T,
-                            color: i.Button.Colors.BRAND,
-                            disabled: null == d,
-                            children: l.Z.Messages.SUBMIT
+                        (0, a.jsx)(s.zxk, {
+                            onClick: S,
+                            color: s.zxk.Colors.BRAND,
+                            disabled: null == x,
+                            children: d.NW.string(d.t.geKm7u)
                         }),
-                        (0, a.jsx)(i.Checkbox, {
-                            type: i.Checkbox.Types.INVERTED,
-                            value: c,
-                            onChange: (e, t) => A(t),
+                        (0, a.jsx)(s.XZJ, {
+                            type: s.XZJ.Types.INVERTED,
+                            value: N,
+                            onChange: (e, t) => u(t),
                             size: 20,
-                            className: r.__invalid_checkbox,
-                            children: (0, a.jsx)(i.Text, {
+                            className: c.__invalid_checkbox,
+                            children: (0, a.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
-                                children: l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_DONT_SHOW_AGAIN
+                                children: d.NW.string(d.t['3vPFQk'])
                             })
                         })
                     ]

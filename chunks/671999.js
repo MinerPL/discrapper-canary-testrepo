@@ -14,11 +14,7 @@ function i(e, t, n) {
     r.dispatchEvent(e);
 }
 n.d(t, {
-    B: function () {
-        return r;
-    },
-    J: function () {
-        return i;
-    }
+    B: () => r,
+    J: () => i
 }),
     n(411104);

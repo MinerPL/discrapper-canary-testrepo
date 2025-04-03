@@ -1,28 +1,21 @@
-l.d(t, {
-    BK: function () {
-        return r;
-    },
-    Bf: function () {
-        return d;
-    },
-    KZ: function () {
-        return u;
-    }
+n.d(t, {
+    BK: () => c,
+    Bf: () => d,
+    KZ: () => _
 }),
-    l(724458),
-    l(653041);
-var i = l(476326),
-    n = l(403182),
-    s = l(74538),
-    a = l(474936),
-    o = l(689938);
-function r(e, t) {
-    let l = n.Ng(n.dg(t));
-    return s.ZP.isPremium(e, a.p9.TIER_2) ? o.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: l }) : s.ZP.isPremium(e, a.p9.TIER_1) ? o.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP_PREMIUM_TIER_1.format({ maxSize: l }) : o.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: l });
+    n(653041);
+var i = n(476326),
+    o = n(403182),
+    r = n(74538),
+    l = n(474936),
+    a = n(388032);
+function c(e, t) {
+    let n = o.Ng(o.dg(t));
+    return r.ZP.isPremium(e, l.p9.TIER_2) ? a.NW.formatToPlainString(a.t.fxEKdX, { maxSize: n }) : r.ZP.isPremium(e, l.p9.TIER_1) ? a.NW.formatToPlainString(a.t['Nr+Lsb'], { maxSize: n }) : a.NW.formatToPlainString(a.t.fxEKdX, { maxSize: n });
 }
 function d(e, t) {
-    return n.nA(e, t) || n.vY(e);
+    return o.nA(e, t) || o.vY(e);
 }
-function u(e) {
+function _(e) {
     return e.reduce((e, t) => (t.item.platform === i.ow.WEB && e.push(t.item.file), e), []);
 }

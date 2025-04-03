@@ -1,43 +1,27 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return d;
-        }
-    });
-var n = s(735250);
-s(470079);
-var a = s(332664),
-    o = s(814249),
-    l = s(531578),
-    i = s(689938),
-    r = s(995335);
-let c = [
-    {
-        className: r.emojiThumbsUp,
-        rating: l.aZ.GOOD,
-        classNameSelected: r.selected
-    },
-    {
-        className: r.emojiThumbsDown,
-        rating: l.aZ.BAD,
-        classNameSelected: r.selected
-    }
-];
-function d(e) {
-    let { transitionState: t, startRating: s, onClose: l, onSubmit: d } = e;
-    return (0, n.jsx)(a.Z, {
-        header: i.Z.Messages.SUMMARIES_FEEDBACK_HEADER,
-        body: i.Z.Messages.SUMMARIES_FEEDBACK_BODY,
-        problemTitle: i.Z.Messages.SUMMARIES_FEEDBACK_PROBLEM_TITLE,
+n.d(t, { default: () => r });
+var a = n(200651);
+n(192379);
+var s = n(332664),
+    o = n(814249),
+    i = n(531578),
+    l = n(388032);
+let c = [o.R7.OTHER];
+function r(e) {
+    let { transitionState: t, startRating: n, onClose: r, onSubmit: d } = e;
+    return (0, a.jsx)(s.Z, {
+        modalType: 'summary',
+        header: l.NW.string(l.t.hghcMj),
+        body: l.NW.string(l.t['QFU78/']),
+        problemTitle: l.NW.string(l.t.CtiHPj),
         onSubmit: d,
-        onClose: l,
-        ratingConfigs: c,
+        onClose: r,
+        ratingOptions: [i.aZ.GOOD, i.aZ.BAD],
+        ratingEmojiKind: 'thumb',
         transitionState: t,
         problems: (0, o.iq)(),
-        ratingsSelectorClassName: r.ratingsSelector,
-        feedbackProblems: [o.R7.OTHER],
+        freeformNeededProblems: c,
         otherKey: o.R7.OTHER,
-        startRating: s,
+        startRating: n,
         hideDontShowCheckbox: !0
     });
 }

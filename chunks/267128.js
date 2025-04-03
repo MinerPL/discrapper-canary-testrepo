@@ -1,313 +1,336 @@
-n.d(t, {
-    Z: function () {
-        return P;
-    },
-    f: function () {
-        return M;
-    }
-});
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(913527),
-    l = n.n(o),
-    u = n(481060),
-    c = n(100527),
-    d = n(906732),
-    _ = n(978003),
-    E = n(39154),
-    f = n(245216),
-    h = n(79390),
-    p = n(869765),
-    m = n(403132),
-    I = n(378233),
-    T = n(768581),
-    g = n(55935),
-    S = n(823379),
-    A = n(453687),
-    N = n(930282),
-    v = n(123145),
-    O = n(223021),
-    R = n(217702),
-    C = n(981631),
-    y = n(689938),
-    D = n(438379);
-function L(e) {
-    let { width: t = 12, height: n = 8, color: i = 'currentColor', className: a, foreground: s } = e;
-    return (0, r.jsx)('svg', {
+t.d(s, {
+    Z: () => D,
+    f: () => A
+}),
+    t(47120);
+var n = t(200651),
+    l = t(192379),
+    a = t(120356),
+    r = t.n(a),
+    i = t(913527),
+    o = t.n(i),
+    c = t(481060),
+    u = t(100527),
+    d = t(906732),
+    m = t(407477),
+    p = t(978003),
+    g = t(39154),
+    h = t(245216),
+    C = t(79390),
+    N = t(869765),
+    P = t(403132),
+    x = t(378233),
+    O = t(768581),
+    j = t(55935),
+    v = t(823379),
+    E = t(453687),
+    f = t(930282),
+    y = t(123145),
+    M = t(223021),
+    S = t(217702),
+    T = t(981631),
+    I = t(388032),
+    _ = t(848697);
+function b(e) {
+    let { width: s = 12, height: t = 8, color: l = 'currentColor', className: a, foreground: r } = e;
+    return (0, n.jsx)('svg', {
         className: a,
-        width: t,
-        height: n,
+        width: s,
+        height: t,
         viewBox: '0 0 12 8',
-        children: (0, r.jsx)('path', {
+        children: (0, n.jsx)('path', {
             d: 'M0.809739 3.59646L5.12565 0.468433C5.17446 0.431163 5.23323 0.408043 5.2951 0.401763C5.35698 0.395482 5.41943 0.406298 5.4752 0.432954C5.53096 0.45961 5.57776 0.50101 5.61013 0.552343C5.64251 0.603676 5.65914 0.662833 5.6581 0.722939V2.3707C10.3624 2.3707 11.2539 5.52482 11.3991 7.21174C11.4028 7.27916 11.3848 7.34603 11.3474 7.40312C11.3101 7.46021 11.2554 7.50471 11.1908 7.53049C11.1262 7.55626 11.0549 7.56204 10.9868 7.54703C10.9187 7.53201 10.857 7.49695 10.8104 7.44666C8.72224 5.08977 5.6581 5.63359 5.6581 5.63359V7.28135C5.65831 7.34051 5.64141 7.39856 5.60931 7.44894C5.5772 7.49932 5.53117 7.54004 5.4764 7.5665C5.42163 7.59296 5.3603 7.60411 5.29932 7.59869C5.23834 7.59328 5.18014 7.57151 5.13128 7.53585L0.809739 4.40892C0.744492 4.3616 0.691538 4.30026 0.655067 4.22975C0.618596 4.15925 0.599609 4.08151 0.599609 4.00269C0.599609 3.92386 0.618596 3.84612 0.655067 3.77562C0.691538 3.70511 0.744492 3.64377 0.809739 3.59646Z',
-            className: s,
-            fill: i
+            className: r,
+            fill: l
         })
     });
 }
-function b(e) {
-    let { width: t = 18, height: n = 18, className: i, foreground: a } = e;
-    return (0, r.jsx)('svg', {
-        className: i,
-        width: t,
-        height: n,
+function L(e) {
+    let { width: s = 18, height: t = 18, className: l, foreground: a } = e;
+    return (0, n.jsx)('svg', {
+        className: l,
+        width: s,
+        height: t,
         viewBox: '0 0 18 18',
-        children: (0, r.jsx)('path', {
+        children: (0, n.jsx)('path', {
             fill: '#3ba55c',
             d: 'M0 8h14.2l-3.6-3.6L12 3l6 6-6 6-1.4-1.4 3.6-3.6H0',
             className: a
         })
     });
 }
-function M(e, t, n, i, a) {
-    let s, o, l, c;
-    let d = (0, E.Z)(e),
-        { trailingIconClass: p, leadingIconClass: m, iconSize: T } = a,
-        g = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
-        S = (0, I.cv)(d).length > 0,
-        A = null != d.interaction,
-        v = d.hasFlag(C.iLy.IS_VOICE_MESSAGE),
-        O = d.isPoll(),
-        R = d.type === C.uaV.POLL_RESULT;
+function A(e, s, t, l, a, r) {
+    let i,
+        o,
+        u,
+        d,
+        m = (0, g.Z)(e),
+        { trailingIconClass: N, leadingIconClass: P, iconSize: O } = r,
+        j = null == s || '' === s || (Array.isArray(s) && 0 === s.length),
+        v = (0, x.cv)(m).length > 0,
+        E = null != m.interaction,
+        y = m.hasFlag(T.iLy.IS_VOICE_MESSAGE),
+        M = m.isPoll(),
+        S = m.type === T.uaV.POLL_RESULT;
     if (
-        ((0, _.Z)(e) &&
-            (c = (0, r.jsx)(f.Z, {
+        ((0, p.Z)(e) &&
+            (d = (0, n.jsx)(h.Z, {
                 size: 'custom',
-                className: m,
-                width: T,
-                height: T
+                className: P,
+                width: O,
+                height: O
             })),
-        n)
+        t)
     )
-        s = y.Z.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
-    else if (d.type === C.uaV.CHANNEL_PINNED_MESSAGE) s = y.Z.Messages.MESSAGE_PINNED;
-    else if (g) {
-        if (O) {
-            var D, L;
-            o = null == d ? void 0 : null === (L = d.poll) || void 0 === L ? void 0 : null === (D = L.question) || void 0 === D ? void 0 : D.text;
+        i = I.NW.string(I.t.XAkOo6);
+    else if (l) i = I.NW.string(I.t.G7p6v7);
+    else if (m.type === T.uaV.CHANNEL_PINNED_MESSAGE) i = I.NW.string(I.t.sCfDDg);
+    else if (j)
+        if (M) {
+            var _, b;
+            o = null == m || null == (b = m.poll) || null == (_ = b.question) ? void 0 : _.text;
         } else
-            R
-                ? (s = (0, h.N4)(d))
-                : S
-                  ? (s = y.Z.Messages.REPLY_QUOTE_STICKER)
-                  : A
-                    ? (s = y.Z.Messages.REPLY_QUOTE_COMMAND)
-                    : v
-                      ? (s = y.Z.Messages.REPLY_QUOTE_VOICE_MESSAGE)
-                      : ((s = y.Z.Messages.REPLY_QUOTE_NO_TEXT_CONTENT),
-                        (l = (0, r.jsx)(u.ImageIcon, {
+            S
+                ? (i = (0, C.N4)(m))
+                : v
+                  ? (i = I.NW.string(I.t.kHdYCQ))
+                  : E
+                    ? (i = I.NW.string(I.t['E+6SSU']))
+                    : y
+                      ? (i = I.NW.string(I.t['XC3A5+']))
+                      : ((i = I.NW.string(I.t['6hGo0d'])),
+                        (u = (0, n.jsx)(c.XBm, {
                             size: 'custom',
                             color: 'currentColor',
-                            className: p,
-                            width: T,
-                            height: T
+                            className: N,
+                            width: O,
+                            height: O
                         })));
-    } else
-        o = (0, r.jsx)(N.ZP, {
-            message: d,
-            content: t,
-            className: i
+    else
+        o = (0, n.jsx)(f.ZP, {
+            message: m,
+            content: s,
+            className: a
         });
     return (
-        S
-            ? (l = (0, r.jsx)(u.StickerSmallIcon, {
+        v
+            ? (u = (0, n.jsx)(c.B7q, {
                   size: 'custom',
                   color: 'currentColor',
-                  className: p,
-                  width: T,
-                  height: T
+                  className: N,
+                  width: O,
+                  height: O
               }))
-            : A
-              ? (l = (0, r.jsx)(u.SlashBoxIcon, {
+            : E
+              ? (u = (0, n.jsx)(c.SsZ, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: p,
-                    width: T,
-                    height: T
+                    className: N,
+                    width: O,
+                    height: O
                 }))
-              : v
-                ? (l = (0, r.jsx)(u.MicrophoneIcon, {
+              : y
+                ? (u = (0, n.jsx)(c.S6n, {
                       size: 'custom',
                       color: 'currentColor',
-                      className: p,
-                      width: (19 / 24) * T,
-                      height: T
+                      className: N,
+                      width: (19 / 24) * O,
+                      height: O
                   }))
-                : (d.attachments.length > 0 || d.embeds.length > 0) &&
-                  !R &&
-                  (l = (0, r.jsx)(u.ImageIcon, {
+                : (m.attachments.length > 0 || m.embeds.length > 0) &&
+                  !S &&
+                  (u = (0, n.jsx)(c.XBm, {
                       size: 'custom',
                       color: 'currentColor',
-                      className: p,
-                      width: T,
-                      height: T
+                      className: N,
+                      width: O,
+                      height: O
                   })),
         {
-            contentPlaceholder: s,
+            contentPlaceholder: i,
             renderedContent: o,
-            trailingIcon: l,
-            leadingIcon: c
+            trailingIcon: u,
+            leadingIcon: d
         }
     );
 }
-function P(e) {
-    let t;
-    let { repliedAuthor: n, baseAuthor: a, baseMessage: o, referencedMessage: _, renderPopout: E } = e,
-        f = i.useMemo(() => (null != E && _.state === p.Y.LOADED ? (e) => E(e, _.message) : void 0), [_, E]),
-        h = (function (e, t) {
-            let { referencedMessage: n, channel: i, compact: a, isReplyAuthorBlocked: o, repliedAuthor: l, showAvatarPopout: _, onClickAvatar: E, onContextMenu: f, onPopoutRequestClose: h } = e,
-                { analyticsLocations: m } = (0, d.ZP)(c.Z.AVATAR);
-            if (a || n.state !== p.Y.LOADED || o)
-                return (0, r.jsx)('div', {
-                    className: D.replyBadge,
-                    children: (0, r.jsx)(L, { className: D.replyIcon })
-                });
-            if (n.message.type === C.uaV.USER_JOIN || n.message.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE || n.message.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || n.message.type === C.uaV.GUILD_GAMING_STATS_PROMPT) return (0, r.jsx)(b, { className: D.userJoinSystemMessageIcon });
-            if (n.message.type === C.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
-                return (0, r.jsx)(u.TicketIcon, {
+function D(e) {
+    let s,
+        { repliedAuthor: t, baseAuthor: a, baseMessage: i, referencedMessage: p, renderPopout: g, isReplySpineClickable: h, showReplySpine: C } = e,
+        { canShowReactionsOnMessageHover: x } = m.ZP.useExperiment({ location: 'RepliedMessage' }, { autoTrackExposure: !1 }),
+        [f, D] = l.useState(!1),
+        R = l.useMemo(() => (null != g && p.state === N.Y.LOADED ? (e) => g(e, p.message) : void 0), [p, g]),
+        k = l.useCallback(() => D((e) => !e), []),
+        w = (function (e, s, t) {
+            let { referencedMessage: l, channel: a, compact: i, isReplyAuthorBlocked: o, repliedAuthor: m, showAvatarPopout: p, onClickAvatar: g, onContextMenu: h, onPopoutRequestClose: C } = e,
+                { analyticsLocations: P } = (0, d.ZP)(u.Z.AVATAR);
+            if (i || l.state !== N.Y.LOADED || o)
+                return t === T.uaV.CONTEXT_MENU_COMMAND
+                    ? (0, n.jsx)('div', {
+                          className: _.replyChatIconContainer,
+                          children: (0, n.jsx)(c.kBi, { size: 'xs' })
+                      })
+                    : (0, n.jsx)('div', {
+                          className: _.replyBadge,
+                          children: (0, n.jsx)(b, { className: _.replyIcon })
+                      });
+            if (l.message.type === T.uaV.USER_JOIN || l.message.type === T.uaV.ROLE_SUBSCRIPTION_PURCHASE || l.message.type === T.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || l.message.type === T.uaV.GUILD_GAMING_STATS_PROMPT) return (0, n.jsx)(L, { className: _.userJoinSystemMessageIcon });
+            if (l.message.type === T.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
+                return (0, n.jsx)(c.Prq, {
                     size: 'md',
                     color: 'currentColor',
-                    className: D.ticketIcon
+                    className: _.ticketIcon
                 });
-            if (n.message.type === C.uaV.POLL_RESULT)
-                return (0, r.jsx)(u.PollsIcon, {
-                    className: D.repliedTextContentLeadingIcon,
-                    width: R.WW,
-                    height: R.WW,
+            if (l.message.type === T.uaV.POLL_RESULT)
+                return (0, n.jsx)(c.QDj, {
+                    className: _.repliedTextContentLeadingIcon,
+                    width: S.WW,
+                    height: S.WW,
                     size: 'custom'
                 });
-            let I = () => {
-                var e, t, a, o, u;
+            let x = () => {
+                var e, s;
                 return (
-                    (e = n.message.author),
-                    (t = l),
-                    (a = i.guild_id),
-                    (o = E),
-                    (u = f),
-                    (0, r.jsx)('img', {
+                    (e = l.message.author),
+                    (s = a.guild_id),
+                    (0, n.jsx)('img', {
                         alt: '',
                         src:
-                            (null == t ? void 0 : t.guildMemberAvatar) != null && null != a
-                                ? (0, T.JM)({
-                                      guildId: a,
+                            (null == m ? void 0 : m.guildMemberAvatar) != null && null != s
+                                ? (0, O.JM)({
+                                      guildId: s,
                                       userId: e.id,
-                                      avatar: t.guildMemberAvatar
+                                      avatar: m.guildMemberAvatar
                                   })
-                                : e.getAvatarURL(a, 16),
-                        onClick: o,
-                        onContextMenu: u,
-                        className: s()({
-                            [D.replyAvatar]: !0,
-                            [D.clickable]: null != o
+                                : e.getAvatarURL(s, 16),
+                        onClick: g,
+                        onContextMenu: h,
+                        className: r()({
+                            [_.replyAvatar]: !0,
+                            [_.clickable]: null != g
                         })
                     })
                 );
             };
-            return null != t && null != _
-                ? (0, r.jsx)(d.Gt, {
-                      value: m,
-                      children: (0, r.jsx)(u.Popout, {
-                          renderPopout: t,
-                          shouldShow: _,
+            return null != s && null != p
+                ? (0, n.jsx)(d.Gt, {
+                      value: P,
+                      children: (0, n.jsx)(c.yRy, {
+                          renderPopout: s,
+                          shouldShow: p,
                           position: 'right',
-                          onRequestClose: h,
-                          children: I
+                          onRequestClose: C,
+                          children: x
                       })
                   })
-                : (0, r.jsx)(d.Gt, {
-                      value: m,
-                      children: I()
+                : (0, n.jsx)(d.Gt, {
+                      value: P,
+                      children: x()
                   });
-        })(e, f),
-        I = (function (e, t) {
-            let { baseMessage: n, channel: i, referencedMessage: a, showUsernamePopout: s, onClickUsername: o, onContextMenu: l, onPopoutRequestClose: u } = e,
-                c = (null == a ? void 0 : a.state) === p.Y.LOADED ? a.message : void 0;
-            return null == c || c.type === C.uaV.USER_JOIN || c.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE || c.type === C.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || c.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || c.type === C.uaV.GUILD_GAMING_STATS_PROMPT || c.type === C.uaV.POLL_RESULT
+        })(e, R, i.type),
+        V = (function (e, s) {
+            let { baseMessage: t, channel: l, referencedMessage: a, showUsernamePopout: r, onClickUsername: i, onContextMenu: o, onPopoutRequestClose: c } = e,
+                u = (null == a ? void 0 : a.state) === N.Y.LOADED ? a.message : void 0;
+            return null == u || u.type === T.uaV.USER_JOIN || u.type === T.uaV.ROLE_SUBSCRIPTION_PURCHASE || u.type === T.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || u.type === T.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || u.type === T.uaV.GUILD_GAMING_STATS_PROMPT || u.type === T.uaV.POLL_RESULT
                 ? null
-                : (0, r.jsx)(v.Z, {
-                      message: c,
-                      channel: i,
+                : (0, n.jsx)(y.Z, {
+                      message: u,
+                      channel: l,
                       compact: !0,
-                      withMentionPrefix: (0, m.Z)(n, c),
-                      showPopout: s,
-                      renderPopout: t,
-                      onClick: o,
-                      onContextMenu: l,
-                      onPopoutRequestClose: u,
+                      withMentionPrefix: (0, P.Z)(t, u),
+                      showPopout: r,
+                      renderPopout: s,
+                      onClick: i,
+                      onContextMenu: o,
+                      onPopoutRequestClose: c,
                       isRepliedMessage: !0
                   });
-        })(e, f),
-        N = (function (e) {
-            let { content: t, referencedMessage: n, isReplyAuthorBlocked: i } = e,
-                a = n.state !== p.Y.DELETED ? e.onClickReply : void 0;
-            switch (n.state) {
-                case p.Y.LOADED: {
+        })(e, R),
+        U = (function (e, s, t) {
+            let { content: l, referencedMessage: a, isReplyAuthorBlocked: i, isReplyAuthorIgnored: o, onClickReply: u } = e,
+                d = a.state !== N.Y.DELETED ? u : void 0;
+            switch (a.state) {
+                case N.Y.LOADED: {
                     let {
                         contentPlaceholder: e,
-                        renderedContent: o,
-                        trailingIcon: l,
-                        leadingIcon: c
-                    } = M(n.message, t, i, D.repliedTextContent, {
-                        trailingIconClass: D.repliedTextContentTrailingIcon,
-                        leadingIconClass: D.repliedTextContentLeadingIcon,
-                        iconSize: R.WW
+                        renderedContent: u,
+                        trailingIcon: m,
+                        leadingIcon: p
+                    } = A(a.message, l, i, o, _.repliedTextContent, {
+                        trailingIconClass: _.repliedTextContentTrailingIcon,
+                        leadingIconClass: _.repliedTextContentLeadingIcon,
+                        iconSize: S.WW
                     });
-                    return (0, r.jsxs)(r.Fragment, {
+                    return (0, n.jsxs)(n.Fragment, {
                         children: [
-                            c,
-                            (0, r.jsx)(u.Clickable, {
-                                className: s()(D.repliedTextPreview, D.clickable),
-                                onClick: a,
-                                children: (0, r.jsx)(u.BlockInteractions, {
+                            p,
+                            (0, n.jsx)(c.P3F, {
+                                className: r()(_.repliedTextPreview, _.clickable, { [_.repliedMessageClickableSpineHovered]: s }),
+                                onClick: d,
+                                onMouseEnter: t,
+                                onMouseLeave: t,
+                                children: (0, n.jsx)(c.nuw, {
                                     children:
-                                        null != o
-                                            ? o
-                                            : (0, r.jsx)('span', {
-                                                  className: D.repliedTextPlaceholder,
+                                        null != u
+                                            ? u
+                                            : (0, n.jsx)('span', {
+                                                  className: _.repliedTextPlaceholder,
                                                   children: e
                                               })
                                 })
                             }),
-                            l
+                            m
                         ]
                     });
                 }
-                case p.Y.NOT_LOADED:
-                    return (0, r.jsx)(u.Clickable, {
-                        className: s()(D.repliedTextPreview, D.clickable),
-                        onClick: a,
-                        children: (0, r.jsx)('span', {
-                            className: D.repliedTextPlaceholder,
-                            children: y.Z.Messages.REPLY_QUOTE_MESSAGE_NOT_LOADED
+                case N.Y.NOT_LOADED:
+                    return (0, n.jsx)(c.P3F, {
+                        className: r()(_.repliedTextPreview, _.clickable),
+                        onClick: d,
+                        children: (0, n.jsx)('span', {
+                            className: _.repliedTextPlaceholder,
+                            children: I.NW.string(I.t['1i+hMj'])
                         })
                     });
-                case p.Y.DELETED:
-                    return (0, r.jsx)('div', {
-                        className: D.repliedTextPreview,
-                        children: (0, r.jsx)('span', {
-                            className: D.repliedTextPlaceholder,
-                            children: y.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED
+                case N.Y.DELETED:
+                    return (0, n.jsx)('div', {
+                        className: _.repliedTextPreview,
+                        children: (0, n.jsx)('span', {
+                            className: _.repliedTextPlaceholder,
+                            children: I.NW.string(I.t.mE3KJC)
                         })
                     });
                 default:
-                    (0, S.vE)(n);
+                    (0, v.vE)(a);
             }
-        })(e),
-        P = i.useMemo(() => (e.compact ? (0, O.Z)((0, g.vc)(l()(), 'LT')) : null), [e.compact]);
-    return (
-        null != n &&
-            null != a &&
-            (t = y.Z.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
-                author: null == a ? void 0 : a.nick,
-                repliedAuthor: null == n ? void 0 : n.nick
-            })),
-        (0, r.jsxs)('div', {
-            id: (0, A.Gq)(o),
-            className: s()(D.repliedMessage, P),
-            'aria-label': t,
-            children: [h, I, N]
-        })
-    );
+        })(e, f, k),
+        Z = l.useMemo(() => (e.compact ? (0, M.Z)((0, j.vc)(o()(), 'LT')) : null), [e.compact]);
+    null != t &&
+        null != a &&
+        (s = I.NW.formatToPlainString(I.t.RhbQ2N, {
+            author: null == a ? void 0 : a.nick,
+            repliedAuthor: null == t ? void 0 : t.nick
+        }));
+    let G = i.type === T.uaV.CONTEXT_MENU_COMMAND;
+    return (0, n.jsxs)('div', {
+        id: (0, E.Gq)(i),
+        className: r()(_.repliedMessage, Z, G ? _.contextCommandMessage : { [_.messageSpine]: !x || (!h && C) }),
+        'aria-label': s,
+        children: [
+            x &&
+                h &&
+                C &&
+                (0, n.jsx)(c.P3F, {
+                    tag: 'div',
+                    'aria-label': I.NW.string(I.t.dpjpOj),
+                    className: r()(_.repliedMessageClickableSpine, { [_.repliedMessageContentHovered]: f }),
+                    onClick: e.onClickReply,
+                    onMouseEnter: k,
+                    onMouseLeave: k
+                }),
+            w,
+            V,
+            U
+        ]
+    });
 }

@@ -1,106 +1,99 @@
-n.d(t, {
-    c: function () {
-        return S;
-    }
-});
+n.d(t, { c: () => j });
 var r = n(481060),
-    a = n(933557),
+    l = n(933557),
     i = n(592125),
-    E = n(699516),
-    _ = n(594174),
-    u = n(273504),
-    l = n(590433),
-    s = n(689938);
-let o = (e) => {
-        if (e === u.jj.QUARANTINE_USER) return !1;
-        return !0;
-    },
-    I = (e) => {
+    a = n(699516),
+    u = n(594174),
+    o = n(273504),
+    s = n(590433),
+    c = n(388032);
+let f = (e) => e !== o.jj.QUARANTINE_USER,
+    E = (e) => {
         switch (e) {
-            case u.jj.BLOCK_MESSAGE:
-            case u.jj.FLAG_TO_CHANNEL:
-            case u.jj.USER_COMMUNICATION_DISABLED:
-            case u.jj.QUARANTINE_USER:
+            case o.jj.BLOCK_MESSAGE:
+            case o.jj.FLAG_TO_CHANNEL:
+            case o.jj.USER_COMMUNICATION_DISABLED:
+            case o.jj.QUARANTINE_USER:
                 return !0;
             default:
                 return !1;
         }
     },
-    T = (e) => {
+    g = (e) => {
         switch (e) {
-            case u.jj.BLOCK_MESSAGE:
-                return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
-            case u.jj.FLAG_TO_CHANNEL:
-                return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME;
-            case u.jj.USER_COMMUNICATION_DISABLED:
-                return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_DISABLE_GUILD_COMMUNICATION_FOR_USER;
-            case u.jj.QUARANTINE_USER:
-                return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER;
+            case o.jj.BLOCK_MESSAGE:
+                return c.NW.string(c.t.d1ab8v);
+            case o.jj.FLAG_TO_CHANNEL:
+                return c.NW.string(c.t['Y+Vmvb']);
+            case o.jj.USER_COMMUNICATION_DISABLED:
+                return c.NW.string(c.t.Xz2njI);
+            case o.jj.QUARANTINE_USER:
+                return c.NW.string(c.t.NPO8eX);
         }
     },
-    O = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.fX.KEYWORD;
+    d = function (e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.fX.KEYWORD;
         switch (e) {
-            case u.jj.BLOCK_MESSAGE:
+            case o.jj.BLOCK_MESSAGE:
                 switch (t) {
-                    case u.fX.MENTION_SPAM:
-                        return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION_MENTION_SPAM;
-                    case u.fX.ML_SPAM:
-                        return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION_ML_SPAM;
+                    case o.fX.MENTION_SPAM:
+                        return c.NW.string(c.t['8hdId3']);
+                    case o.fX.ML_SPAM:
+                        return c.NW.string(c.t.tLQYs7);
                     default:
-                        return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION;
+                        return c.NW.string(c.t.xAAocn);
                 }
-            case u.jj.FLAG_TO_CHANNEL:
-                return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DESCRIPTION;
-            case u.jj.USER_COMMUNICATION_DISABLED:
-                return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_DISABLE_GUILD_COMMUNICATION_FOR_USER_DESCRIPTION;
-            case u.jj.QUARANTINE_USER:
-                return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER_DESCRIPTION;
+            case o.jj.FLAG_TO_CHANNEL:
+                return c.NW.string(c.t.BHAXfX);
+            case o.jj.USER_COMMUNICATION_DISABLED:
+                return c.NW.string(c.t['bNK+gI']);
+            case o.jj.QUARANTINE_USER:
+                return c.NW.string(c.t['/7nL5e']);
         }
     },
-    A = (e, t) => {
-        var n, r, o;
+    S = (e, t) => {
+        var n, r, f;
         switch (e) {
-            case u.jj.QUARANTINE_USER:
-            case u.jj.BLOCK_MESSAGE:
+            case o.jj.QUARANTINE_USER:
+            case o.jj.BLOCK_MESSAGE:
                 return null;
-            case u.jj.FLAG_TO_CHANNEL: {
-                let e = null == t ? void 0 : null === (n = t.metadata) || void 0 === n ? void 0 : n.channelId;
+            case o.jj.FLAG_TO_CHANNEL: {
+                let e = null == t || null == (n = t.metadata) ? void 0 : n.channelId;
                 if (null == e) return null;
                 let r = i.Z.getChannel(e);
                 if (null == r) return null;
-                let u = (0, a.F6)(r, _.default, E.Z);
-                return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DISPLAY_HELPER.format({ channelName: u });
+                let o = (0, l.F6)(r, u.default, a.Z);
+                return c.NW.format(c.t.xQXnkJ, { channelName: o });
             }
-            case u.jj.USER_COMMUNICATION_DISABLED: {
-                let e = null !== (o = null == t ? void 0 : null === (r = t.metadata) || void 0 === r ? void 0 : r.durationSeconds) && void 0 !== o ? o : 0,
-                    n = (0, l.L9)(e);
+            case o.jj.USER_COMMUNICATION_DISABLED: {
+                let e = null != (f = null == t || null == (r = t.metadata) ? void 0 : r.durationSeconds) ? f : 0,
+                    n = (0, s.L9)(e);
                 if (null == n) return null;
-                return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_USER_DISABLE_COMMUNICATION_DISPLAY_HELPER.format({ duration: n });
+                return c.NW.format(c.t.AFmbfX, { duration: n });
             }
         }
     },
-    N = (e) => {
+    O = (e) => {
         switch (e) {
-            case u.jj.BLOCK_MESSAGE:
-                return r.CircleXIcon;
-            case u.jj.FLAG_TO_CHANNEL:
-                return r.TextIcon;
-            case u.jj.USER_COMMUNICATION_DISABLED:
-                return r.ClockWarningIcon;
-            case u.jj.QUARANTINE_USER:
-                return r.ChatXIcon;
+            case o.jj.BLOCK_MESSAGE:
+                return r.k$p;
+            case o.jj.FLAG_TO_CHANNEL:
+                return r.VL1;
+            case o.jj.USER_COMMUNICATION_DISABLED:
+                return r.YlB;
+            case o.jj.QUARANTINE_USER:
+                return r.ics;
         }
     };
-function S(e, t, n) {
-    var a, i, E, _;
-    return I(e)
+function j(e, t, n) {
+    var l, i, a, u;
+    return E(e)
         ? {
-              headerText: null !== (a = T(e)) && void 0 !== a ? a : '',
-              descriptionText: null !== (i = O(e, n)) && void 0 !== i ? i : '',
-              helperText: null !== (E = A(e, t)) && void 0 !== E ? E : null,
-              icon: null !== (_ = N(e)) && void 0 !== _ ? _ : r.CircleXIcon,
-              isEditable: o(e)
+              headerText: null != (l = g(e)) ? l : '',
+              descriptionText: null != (i = d(e, n)) ? i : '',
+              helperText: null != (a = S(e, t)) ? a : null,
+              icon: null != (u = O(e)) ? u : r.k$p,
+              isEditable: f(e)
           }
         : null;
 }

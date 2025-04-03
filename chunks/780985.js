@@ -1,25 +1,21 @@
 n.d(t, {
-    I: function () {
-        return o;
-    },
-    c: function () {
-        return l;
-    }
+    I: () => o,
+    c: () => l
 });
-var s = n(399606),
-    a = n(594174),
-    r = n(914788),
-    i = n(880257);
+var r = n(399606),
+    i = n(594174),
+    s = n(914788),
+    a = n(880257);
 let l = () => {
-        let e = (0, i.Z)();
-        return (0, s.e7)([r.Z, a.default], () => {
-            if (!e) return a.default.getCurrentUser();
-            let t = r.Z.getSelectedTeenId();
-            if (null !== t) return a.default.getUser(t);
+        let e = (0, a.Z)();
+        return (0, r.e7)([s.Z, i.default], () => {
+            if (!e) return i.default.getCurrentUser();
+            let t = s.Z.getSelectedTeenId();
+            if (null !== t) return i.default.getUser(t);
         });
     },
     o = (e) =>
-        (0, s.e7)([a.default], () => {
-            let t = a.default.getUser(e);
+        (0, r.e7)([i.default], () => {
+            let t = i.default.getUser(e);
             if (null != t) return t;
         });

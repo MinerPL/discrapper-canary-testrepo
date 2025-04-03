@@ -1,61 +1,122 @@
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(813615),
-    r = n(812206),
-    l = n(69580),
-    o = n(358085),
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(531826),
+    a = n(812206),
+    o = n(69580),
+    s = n(358085),
     c = n(998502),
-    d = n(996106),
-    u = n(703912),
-    _ = n(981631);
-t.Z = (0, u.Z)(
+    u = n(996106),
+    d = n(703912),
+    p = n(852926),
+    h = n(981631);
+let f = (0, d.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: o, scopes: c, parsedPermissions: u, responseType: E, redirectUri: h, codeChallenge: m, codeChallengeMethod: I, state: g, guildId: p, channelId: T, prompt: S, disableGuildSelect: f, disclosures: C, integrationType: N } = e,
-            A = 'OAuth2Authorize_'.concat(n, '_').concat(p, '_').concat(T),
-            v = null != N ? (null == o ? void 0 : o.get(N)) : void 0,
-            Z = null !== (t = null == v ? void 0 : v.application) && void 0 !== t ? t : r.Z.getApplication(n);
+        let { clientId: n, authorizations: s, scopes: c, parsedPermissions: d, responseType: f, redirectUri: g, codeChallenge: m, codeChallengeMethod: b, state: _, guildId: E, channelId: O, prompt: N, disableGuildSelect: y, disclosures: I, integrationType: v, pid: C } = e,
+            S = 'OAuth2Authorize_'.concat(n, '_').concat(E, '_').concat(O),
+            T = null != v ? (null == s ? void 0 : s.get(v)) : void 0,
+            P = null != (t = null == T ? void 0 : T.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
-            let r = (n) => {
-                let { location: i } = n;
-                null != location ? e(i) : t(new d.Z({ errorCode: _.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
-            };
-            (0, a.openModal)(
-                (e) =>
-                    (0, i.jsx)(l.OAuth2AuthorizeModal, {
-                        ...e,
-                        authorizations: o,
-                        clientId: n,
-                        scopes: null != c ? c : [],
-                        disclosures: null != C ? C : [],
-                        callback: r,
-                        responseType: E,
-                        redirectUri: h,
-                        codeChallenge: m,
-                        codeChallengeMethod: I,
-                        state: g,
-                        permissions: u,
-                        guildId: p,
-                        channelId: T,
-                        prompt: S,
-                        disableGuildSelect: 'boolean' == typeof f ? f : 'true' === f,
-                        integrationType: N
-                    }),
-                {
-                    modalKey: A,
-                    onCloseRequest: () => {
-                        (0, a.closeModal)(A), t(new d.Z({ errorCode: _.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
-                    }
+            let a = (0, p.jU)(C),
+                T = !1,
+                j = (r) => {
+                    let { clientId: i, location: l } = r;
+                    (null == i || i === n) && ((T = !0), null != location ? e(l) : t(new u.Z({ errorCode: h.lTL.OAUTH2_ERROR }, 'User cancelled authorization')), a.lock());
                 },
-                null != Z && (0, s.Z)(Z, T) ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
-            );
+                A = i.z1l;
+            null != P &&
+            null !=
+                (0, l.ZP)({
+                    application: P,
+                    channelId: O
+                })
+                ? (A = i.u1M)
+                : a.context === h.IlC.POPOUT && (A = i.u1M),
+                (0, i.h7j)(
+                    (e) => {
+                        var t, i;
+                        return (0, r.jsx)(
+                            o.OAuth2AuthorizeModal,
+                            ((t = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, e)),
+                            (i = i =
+                                {
+                                    authorizations: s,
+                                    clientId: n,
+                                    scopes: null != c ? c : [],
+                                    disclosures: null != I ? I : [],
+                                    callback: j,
+                                    responseType: f,
+                                    redirectUri: g,
+                                    codeChallenge: m,
+                                    codeChallengeMethod: b,
+                                    state: _,
+                                    permissions: d,
+                                    guildId: E,
+                                    channelId: O,
+                                    prompt: N,
+                                    disableGuildSelect: 'boolean' == typeof y ? y : 'true' === y,
+                                    integrationType: v
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(i)).forEach(function (e) {
+                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
+                                  }),
+                            t)
+                        );
+                    },
+                    {
+                        modalKey: S,
+                        onCloseRequest: () => {
+                            (0, i.Mr3)(S);
+                        },
+                        onCloseCallback: () => {
+                            T || (t(new u.Z({ errorCode: h.lTL.OAUTH2_ERROR }, 'User cancelled authorization')), a.lock());
+                        }
+                    },
+                    A
+                );
         });
     },
-    function (e, t) {
-        if (o.isPlatformEmbedded) {
-            let n = (0, s.Z)(e, t) ? _.KJ3.CHANNEL_CALL_POPOUT : null;
-            (0, o.isWindows)() ? c.ZP.minimize(n) : c.ZP.restore(n), c.ZP.focus(n);
-        }
+    function (e, t, n) {
+        if ((0, p.br)(n) || !s.isPlatformEmbedded) return;
+        let r = (0, l.ZP)({
+            application: e,
+            channelId: t
+        });
+        (0, s.isWindows)() ? c.ZP.minimize(r) : c.ZP.restore(r), c.ZP.focus(r);
     }
 );

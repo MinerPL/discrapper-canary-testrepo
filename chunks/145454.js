@@ -1,34 +1,34 @@
-s(47120);
-var n = s(735250),
-    i = s(470079),
-    o = s(120356),
-    l = s.n(o),
-    a = s(772848),
-    r = s(990547),
-    h = s(481060),
-    d = s(600164),
-    u = s(7557),
-    c = s(200357),
-    p = s(689938),
-    m = s(403608),
-    C = s(257995),
-    f = s(224499);
-function g(e, t, s) {
+n.d(t, { Z: () => C }), n(47120), n(266796);
+var s = n(200651),
+    i = n(192379),
+    r = n(120356),
+    o = n.n(r),
+    l = n(772848),
+    a = n(990547),
+    h = n(481060),
+    c = n(600164),
+    d = n(7557),
+    u = n(200357),
+    p = n(388032),
+    E = n(282287),
+    m = n(893354),
+    R = n(20493);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = n),
         e
     );
 }
-class y extends i.PureComponent {
+class g extends i.PureComponent {
     async componentDidMount() {
-        let [e, { default: t }] = await Promise.all([s.e('93198').then(s.t.bind(s, 140523, 19)), s.e('23755').then(s.t.bind(s, 500923, 23))]);
+        let [e, { default: t }] = await Promise.all([n.e('93198').then(n.t.bind(n, 140523, 19)), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
         null != this._lottieRef &&
             (this._animItem = t.loadAnimation({
                 container: this._lottieRef,
@@ -42,69 +42,71 @@ class y extends i.PureComponent {
         null != this._animItem && (this._animItem.destroy(), (this._animItem = void 0));
     }
     render() {
-        let e, t, s;
-        let { error: i, working: o, transitionState: a, validPhone: g } = this.props;
+        let e,
+            t,
+            n,
+            { error: i, working: r, transitionState: l, validPhone: f } = this.props;
         return (
             (e =
                 null != i && '' !== i
-                    ? (0, n.jsx)('div', {
-                          className: l()(m.description, m.error, f.marginBottom20),
+                    ? (0, s.jsx)('div', {
+                          className: o()(E.description, E.error, R.marginBottom20),
                           children: i
                       })
-                    : g
-                      ? (0, n.jsx)('div', {
-                            className: l()(m.description, f.marginBottom20),
-                            children: p.Z.Messages.VERIFICATION_PHONE_DESCRIPTION
+                    : f
+                      ? (0, s.jsx)('div', {
+                            className: o()(E.description, R.marginBottom20),
+                            children: p.NW.string(p.t['4qMI6O'])
                         })
-                      : (0, n.jsxs)(n.Fragment, {
+                      : (0, s.jsxs)(s.Fragment, {
                             children: [
-                                (0, n.jsx)('div', {
-                                    className: l()(m.description, f.marginBottom20),
-                                    children: p.Z.Messages.ENTER_PHONE_DESCRIPTION
+                                (0, s.jsx)('div', {
+                                    className: o()(E.description, R.marginBottom20),
+                                    children: p.NW.string(p.t.Vp9je3)
                                 }),
-                                (0, n.jsx)('div', {
-                                    className: l()(m.description, f.marginBottom20),
-                                    children: p.Z.Messages.ENTER_PHONE_DESCRIPTION_NOTE.format()
+                                (0, s.jsx)('div', {
+                                    className: o()(E.description, R.marginBottom20),
+                                    children: p.NW.format(p.t['3BTmqa'], {})
                                 })
                             ]
                         })),
-            (t = g
-                ? (0, n.jsxs)(d.Z, {
-                      className: m.field,
-                      direction: d.Z.Direction.VERTICAL,
-                      align: d.Z.Align.CENTER,
+            (t = f
+                ? (0, s.jsxs)(c.Z, {
+                      className: E.field,
+                      direction: c.Z.Direction.VERTICAL,
+                      align: c.Z.Align.CENTER,
                       children: [
-                          (0, n.jsx)(u.Z, { onSubmit: this.handleVerifyPhone }),
-                          (0, n.jsx)(h.Button, {
-                              className: f.marginTop8,
-                              size: h.ButtonSizes.SMALL,
-                              look: h.ButtonLooks.LINK,
-                              color: h.ButtonColors.PRIMARY,
+                          (0, s.jsx)(d.Z, { onSubmit: this.handleVerifyPhone }),
+                          (0, s.jsx)(h.zxk, {
+                              className: R.marginTop8,
+                              size: h.PhG.SMALL,
+                              look: h.iLD.LINK,
+                              color: h.Ttl.PRIMARY,
                               onClick: this.handleResendCode,
-                              children: p.Z.Messages.RESEND_CODE
+                              children: p.NW.string(p.t['5b60go'])
                           })
                       ]
                   })
-                : (0, n.jsx)(c.Z, {
-                      className: m.field,
+                : (0, s.jsx)(u.Z, {
+                      className: E.field,
                       onSubmit: this.handleAddPhone,
-                      submitting: o
+                      submitting: r
                   })),
-            (s = g ? p.Z.Messages.VERIFICATION_PHONE_TITLE : p.Z.Messages.ENTER_PHONE_TITLE),
-            (0, n.jsxs)(h.ModalRoot, {
-                impression: { impressionName: r.ImpressionNames.USER_VERIFY_PHONE },
-                transitionState: a,
-                className: l()(m.phoneVerificationModal, C.vertical, C.alignCenter, C.justifyCenter, f.marginTop60),
+            (n = f ? p.NW.string(p.t.Xclkxs) : p.NW.string(p.t.uR76s7)),
+            (0, s.jsxs)(h.Y0X, {
+                impression: { impressionName: a.ImpressionNames.USER_VERIFY_PHONE },
+                transitionState: l,
+                className: o()(E.phoneVerificationModal, m.vertical, m.alignCenter, m.justifyCenter, R.marginTop60),
                 'aria-labelledby': this.headerId,
                 children: [
-                    (0, n.jsx)('div', {
-                        className: m.animationContainer,
+                    (0, s.jsx)('div', {
+                        className: E.animationContainer,
                         ref: this.setLottieRef
                     }),
-                    (0, n.jsx)('div', {
-                        className: l()(m.title, f.marginBottom8),
+                    (0, s.jsx)('div', {
+                        className: o()(E.title, R.marginBottom8),
                         id: this.headerId,
-                        children: s
+                        children: n
                     }),
                     e,
                     t
@@ -114,13 +116,13 @@ class y extends i.PureComponent {
     }
     constructor(e) {
         super(e),
-            g(this, '_animItem', null),
-            g(this, '_lottieRef', void 0),
-            g(this, 'headerId', (0, a.Z)()),
-            g(this, 'setLottieRef', (e) => {
+            f(this, '_animItem', null),
+            f(this, '_lottieRef', void 0),
+            f(this, 'headerId', (0, l.Z)()),
+            f(this, 'setLottieRef', (e) => {
                 this._lottieRef = e;
             }),
-            g(this, 'handleAddPhone', (e) => {
+            f(this, 'handleAddPhone', (e) => {
                 this.state.animated || null == this._animItem
                     ? this.setState({ phone: e })
                     : (this._animItem.play(),
@@ -131,11 +133,11 @@ class y extends i.PureComponent {
                 let { onAddPhone: t } = this.props;
                 null == t || t(e);
             }),
-            g(this, 'handleVerifyPhone', (e) => {
+            f(this, 'handleVerifyPhone', (e) => {
                 let { onVerifyPhone: t } = this.props;
                 null == t || t(e);
             }),
-            g(this, 'handleResendCode', () => {
+            f(this, 'handleResendCode', () => {
                 let { onAddPhone: e } = this.props;
                 null == e || e(this.state.phone);
             }),
@@ -145,4 +147,4 @@ class y extends i.PureComponent {
             });
     }
 }
-t.Z = y;
+let C = g;

@@ -10,10 +10,6 @@ function i(e) {
     return null !== e && 'object' == typeof e && !Array.isArray(e);
 }
 n.d(t, {
-    Z: function () {
-        return r;
-    },
-    b: function () {
-        return i;
-    }
+    Z: () => r,
+    b: () => i
 });

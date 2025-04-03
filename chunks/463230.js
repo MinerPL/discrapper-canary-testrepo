@@ -1,42 +1,43 @@
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(230711),
-    r = n(985754),
-    l = n(91802),
-    o = n(222727),
+n.d(t, { Z: () => _ });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(230711),
+    o = n(985754),
+    a = n(91802),
+    s = n(222727),
     c = n(981631),
     u = n(921944),
-    d = n(689938),
-    _ = n(66740);
-t.Z = (e) => {
-    let { notice: t, noticeType: n, dismissCurrentNotice: E } = e,
+    d = n(388032),
+    E = n(131715);
+let _ = (e) => {
+    let { notice: t, noticeType: n, dismissCurrentNotice: _ } = e,
         I = (null == t ? void 0 : t.metadata.premiumSubscription) != null,
-        m = (0, l.n)();
-    if (((0, o.U)(c.jXE.NOTIFICATION_BAR, null == m ? void 0 : m.countryCode), null == m)) return null;
-    let T = m.countryCode,
-        h = m.currency,
-        N = m.paymentSourceTypes.length > 0;
-    return (0, i.jsxs)(a.Notice, {
-        color: I ? a.NoticeColors.BRAND : a.NoticeColors.PREMIUM_TIER_2,
+        N = (0, a.n)();
+    if (((0, s.U)(c.jXE.NOTIFICATION_BAR, null == N ? void 0 : N.countryCode), null == N)) return null;
+    let O = N.countryCode,
+        T = N.currency,
+        S = N.paymentSourceTypes.length > 0;
+    return (0, r.jsxs)(i.qXd, {
+        color: I ? i.DM8.BRAND : i.DM8.PREMIUM_TIER_2,
         children: [
-            (0, i.jsx)(a.NoticeCloseButton, {
-                onClick: () => E(u.L.UNKNOWN),
+            (0, r.jsx)(i.RyX, {
+                onClick: () => _(u.L.UNKNOWN),
                 noticeType: n
             }),
             !I &&
-                (0, i.jsx)(a.NitroWheelIcon, {
+                (0, r.jsx)(i.SrA, {
                     size: 'md',
                     color: 'currentColor',
-                    className: _.premiumIcon
+                    className: E.premiumIcon
                 }),
-            (0, r.Gv)(T, h, N, I),
-            (0, i.jsx)(a.PrimaryCTANoticeButton, {
+            (0, o.Gv)(O, T, S, I),
+            (0, r.jsx)(i.NoS, {
                 onClick: () => {
-                    E(u.L.UNKNOWN), s.Z.open(c.oAB.PREMIUM);
+                    _(u.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM);
                 },
                 noticeType: n,
-                children: d.Z.Messages.LEARN_MORE
+                children: d.NW.string(d.t.hvVgAQ)
             })
         ]
     });

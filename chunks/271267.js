@@ -1,136 +1,176 @@
 n.d(t, {
-    Q: function () {
-        return _;
-    },
-    Z: function () {
-        return m;
-    }
+    Q: () => g,
+    Z: () => b
 }),
     n(47120);
-var s = n(735250),
-    a = n(470079),
-    i = n(481060),
-    r = n(957011),
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(957011),
     l = n(587431),
     o = n(756066),
-    c = n(689938),
-    d = n(564420),
+    c = n(388032),
+    d = n(601781),
     u = n(270395);
-let _ = 'role_subscriptions_eligibility_modal';
-function I(e) {
-    let { guild: t, eligibility: a, eligibilityLoading: r, eligibilityError: l, refreshEligibility: o } = e;
-    return (0, s.jsxs)(i.Button, {
-        color: i.ButtonColors.CUSTOM,
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+let g = 'role_subscriptions_eligibility_modal';
+function p(e) {
+    let { guild: t, eligibility: i, eligibilityLoading: a, eligibilityError: l, refreshEligibility: o } = e;
+    return (0, r.jsxs)(s.zxk, {
+        color: s.Ttl.CUSTOM,
         className: d.ineligibleButton,
         innerClassName: d.ineligibleButtonContent,
         grow: !0,
         onClick: function () {
-            (0, i.openModalLazy)(
+            (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e('21863').then(n.bind(n, 466501));
-                    return (n) =>
-                        (0, s.jsx)(e, {
-                            ...n,
-                            eligibility: a,
-                            eligibilityLoading: r,
-                            eligibilityError: l,
-                            refreshEligibility: o,
-                            guildId: t.id
-                        });
+                    return (n) => {
+                        var s, c;
+                        return (0, r.jsx)(
+                            e,
+                            ((s = m({}, n)),
+                            (c = c =
+                                {
+                                    eligibility: i,
+                                    eligibilityLoading: a,
+                                    eligibilityError: l,
+                                    refreshEligibility: o,
+                                    guildId: t.id
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(c))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(c)).forEach(function (e) {
+                                      Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(c, e));
+                                  }),
+                            s)
+                        );
+                    };
                 },
-                { modalKey: _ }
+                { modalKey: g }
             );
         },
-        size: i.Button.Sizes.LARGE,
+        size: s.zxk.Sizes.LARGE,
         children: [
-            (0, s.jsx)(i.CircleWarningIcon, {
+            (0, r.jsx)(s.P4T, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA
+            c.NW.string(c.t.NL5ZNT)
         ]
     });
 }
-function E(e) {
+function h(e) {
     let { guild: t, checkboxText: n } = e,
-        { canSubmitAcceptance: o, error: u, loading: _, submitAcceptTermsRequest: I } = (0, r.Z)(t.id),
-        [E, T] = a.useState(!1);
-    return (0, s.jsxs)(s.Fragment, {
+        { canSubmitAcceptance: o, error: u, loading: m, submitAcceptTermsRequest: g } = (0, a.Z)(t.id),
+        [p, h] = i.useState(!1);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, s.jsx)(i.Checkbox, {
+            (0, r.jsx)(s.XZJ, {
                 onChange: function () {
-                    T((e) => !e);
+                    h((e) => !e);
                 },
                 size: 20,
-                type: i.Checkbox.Types.INVERTED,
-                value: E,
-                children: (0, s.jsx)(i.Text, {
+                type: s.XZJ.Types.INVERTED,
+                value: p,
+                children: (0, r.jsx)(s.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: n
                 })
             }),
-            (0, s.jsx)(i.Spacer, { size: 24 }),
-            (0, s.jsx)(i.Button, {
+            (0, r.jsx)(s.LZC, { size: 24 }),
+            (0, r.jsx)(s.zxk, {
                 className: d.ctaButton,
-                disabled: !E || !o,
+                disabled: !p || !o,
                 grow: !0,
-                onClick: I,
-                size: i.Button.Sizes.LARGE,
-                submitting: _,
-                children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA
+                onClick: g,
+                size: s.zxk.Sizes.LARGE,
+                submitting: m,
+                children: c.NW.string(c.t.NL5ZNT)
             }),
             null != u &&
-                (0, s.jsxs)(s.Fragment, {
-                    children: [(0, s.jsx)(i.Spacer, { size: 24 }), (0, s.jsx)(l.Z, { children: u.getAnyErrorMessage() })]
+                (0, r.jsxs)(r.Fragment, {
+                    children: [(0, r.jsx)(s.LZC, { size: 24 }), (0, r.jsx)(l.Z, { children: u.getAnyErrorMessage() })]
                 })
         ]
     });
 }
-function T(e) {
+function f(e) {
     let { guild: t, monetizationEligibility: n } = e,
-        { eligibilityLoading: a, eligibilityError: i, refreshEligibility: r, eligibility: l, eligibleForMonetization: c, acceptTermsCheckboxText: d, wasRejectedInV1: u } = n;
+        { eligibilityLoading: i, eligibilityError: s, refreshEligibility: a, eligibility: l, eligibleForMonetization: c, acceptTermsCheckboxText: d, wasRejectedInV1: u } = n;
     return c
         ? u
-            ? (0, s.jsx)(o.Z, { ...n })
-            : (0, s.jsx)(E, {
+            ? (0, r.jsx)(o.Z, m({}, n))
+            : (0, r.jsx)(h, {
                   guild: t,
                   checkboxText: d
               })
-        : (0, s.jsx)(I, {
+        : (0, r.jsx)(p, {
               guild: t,
               eligibility: l,
-              eligibilityLoading: a,
-              eligibilityError: i,
-              refreshEligibility: r
+              eligibilityLoading: i,
+              eligibilityError: s,
+              refreshEligibility: a
           });
 }
-function m(e) {
+function b(e) {
     let { guild: t, monetizationEligibility: n } = e;
-    return (0, s.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: d.ctaContainer,
         children: [
-            (0, s.jsx)('img', {
+            (0, r.jsx)('img', {
                 className: d.heroBanner,
                 src: u,
-                alt: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
+                alt: c.NW.string(c.t.Af4klJ)
             }),
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: d.ctaContent,
                 children: [
-                    (0, s.jsx)(i.Heading, {
+                    (0, r.jsx)(s.X6q, {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
+                        children: c.NW.string(c.t.PqYfh4)
                     }),
-                    (0, s.jsx)(i.Spacer, { size: 12 }),
-                    (0, s.jsx)(i.Text, {
+                    (0, r.jsx)(s.LZC, { size: 12 }),
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
+                        children: c.NW.string(c.t['41wkMT'])
                     }),
-                    (0, s.jsx)(i.Spacer, { size: 24 }),
-                    (0, s.jsx)(T, {
+                    (0, r.jsx)(s.LZC, { size: 24 }),
+                    (0, r.jsx)(f, {
                         guild: t,
                         monetizationEligibility: n
                     })

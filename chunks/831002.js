@@ -1,73 +1,69 @@
 n.d(t, {
-    Z: function () {
-        return v;
-    }
+    $A: () => O,
+    ZP: () => N,
+    j8: () => E
 });
-var i = n(735250);
-n(470079);
-var a = n(512722),
-    s = n.n(a),
-    l = n(442837),
-    r = n(481060),
-    o = n(40851),
+var r = n(200651);
+n(192379);
+var i = n(512722),
+    l = n.n(i),
+    o = n(442837),
+    a = n(481060),
+    s = n(40851),
     c = n(358221),
     u = n(431368),
     d = n(167675),
-    h = n(418469),
-    m = n(673539),
-    p = n(218035),
-    _ = n(775666),
-    f = n(423589),
-    E = n(592125),
-    g = n(496675),
+    p = n(418469),
+    h = n(673539),
+    f = n(218035),
+    m = n(775666),
+    g = n(423589),
+    b = n(592125),
+    _ = n(496675),
     C = n(881824),
-    I = n(146085),
+    y = n(146085),
     x = n(427679),
-    T = n(354459),
-    N = n(689938);
-function v(e) {
-    let { channelId: t, closePopout: n, appContext: a, onSelect: v } = e,
-        S = (0, l.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
-        Z = (null == S ? void 0 : S.type) === T.fO.STREAM ? S.stream : null,
-        A = (0, m.Z)(t);
-    return (0, i.jsxs)(r.Menu, {
+    v = n(354459),
+    j = n(388032);
+function O(e) {
+    let t = (0, o.e7)([b.Z], () => b.Z.getChannel(e), [e]),
+        n = (0, o.e7)([_.Z], () => _.Z.can(y.yP, t)),
+        i = (0, o.e7)([x.Z], () => x.Z.getStageInstanceByChannel(e), [e]),
+        l = (0, s.bp)(),
+        c = () => null != t && (0, C.T)(t, l);
+    return (null == t ? void 0 : t.isGuildStageVoice()) && n
+        ? null != i
+            ? (0, r.jsx)(a.sNh, {
+                  id: 'edit-stage',
+                  label: j.NW.string(j.t['I+9bLy']),
+                  action: c
+              })
+            : (0, r.jsx)(a.sNh, {
+                  id: 'start-stage',
+                  label: j.NW.string(j.t.OYbHfn),
+                  action: c
+              })
+        : null;
+}
+function E(e) {
+    let t = (0, o.e7)([b.Z], () => b.Z.getChannel(e), [e]);
+    l()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
+    let n = (0, g.Mn)('StageChannelCallOverflowMenu'),
+        r = (0, m.ZP)(t),
+        i = (0, f.Z)(t);
+    return n ? r : i;
+}
+function N(e) {
+    let { channelId: t, closePopout: n, appContext: i, onSelect: l, onInteraction: s } = e,
+        f = (0, o.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
+        m = (null == f ? void 0 : f.type) === v.fO.STREAM ? f.stream : null,
+        g = (0, h.Z)(t);
+    return (0, r.jsxs)(a.v2r, {
         navId: 'stage-channel-call-overflow-popout',
         onClose: n,
-        'aria-label': N.Z.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
-        onSelect: v,
-        children: [
-            (function (e) {
-                let t = (0, l.e7)([E.Z], () => E.Z.getChannel(e), [e]),
-                    n = (0, l.e7)([g.Z], () => g.Z.can(I.yP, t)),
-                    a = (0, l.e7)([x.Z], () => x.Z.getStageInstanceByChannel(e), [e]),
-                    s = (0, o.bp)(),
-                    c = () => null != t && (0, C.T)(t, s);
-                return (null == t ? void 0 : t.isGuildStageVoice()) && n
-                    ? null != a
-                        ? (0, i.jsx)(r.MenuItem, {
-                              id: 'edit-stage',
-                              label: N.Z.Messages.EDIT_STAGE_SUBTITLE,
-                              action: c
-                          })
-                        : (0, i.jsx)(r.MenuItem, {
-                              id: 'start-stage',
-                              label: N.Z.Messages.STAGE_CHANNEL_START_TITLE,
-                              action: c
-                          })
-                    : null;
-            })(t),
-            (function (e) {
-                let t = (0, l.e7)([E.Z], () => E.Z.getChannel(e), [e]);
-                s()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
-                let n = (0, f.Mn)('StageChannelCallOverflowMenu'),
-                    i = (0, _.ZP)(t),
-                    a = (0, p.Z)(t);
-                return n ? i : a;
-            })(t),
-            (0, d.Z)(),
-            (0, u.Z)(t),
-            A,
-            (0, h.Z)(Z, a)
-        ]
+        'aria-label': j.NW.string(j.t.pkYeAw),
+        onSelect: l,
+        onInteraction: s,
+        children: [O(t), E(t), (0, d.Z)(), (0, u.Z)(t), g, (0, p.Z)(m, i)]
     });
 }

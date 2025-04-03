@@ -1,49 +1,50 @@
-var r = n(735250),
-    i = n(470079),
-    a = n(481060),
-    s = n(600164),
-    o = n(689938),
-    l = n(509674);
-t.Z = (e) => {
+n.d(t, { Z: () => c });
+var r = n(200651),
+    l = n(192379),
+    i = n(481060),
+    a = n(600164),
+    o = n(388032),
+    s = n(18537);
+let c = (e) => {
     let t,
-        { button: n, submitting: u, disableNext: c, onClick: d, canNavigateBack: _, onBackClicked: E } = e,
-        f = i.useRef(null),
-        h = null != n && 'cancel' !== n.type,
-        p = _ && (null == n ? void 0 : n.type) !== 'done',
-        m = h || p;
+        { button: n, submitting: c, disableNext: d, onClick: u, canNavigateBack: m, onBackClicked: x } = e,
+        p = l.useRef(null),
+        f = null != n && 'cancel' !== n.type,
+        b = m && (null == n ? void 0 : n.type) !== 'done',
+        h = f || b;
     if (
-        (i.useEffect(() => {
+        (l.useEffect(() => {
             if ((null == n ? void 0 : n.type) === 'submit' || (null == n ? void 0 : n.type) === 'done') {
                 var e;
-                null === (e = f.current) || void 0 === e || e.focus();
+                null == (e = p.current) || e.focus();
             }
         }, [null == n ? void 0 : n.type]),
-        !m)
+        !h)
     )
         return null;
-    let I = o.Z.Messages.DONE;
+    let _ = o.NW.string(o.t.i4jeWV);
     return (
-        (null == n ? void 0 : n.type) === 'submit' ? ((I = o.Z.Messages.MOBILE_REPORTS_SUBMIT_REPORT), (t = a.Button.Colors.RED)) : (null == n ? void 0 : n.type) === 'next' ? (I = o.Z.Messages.NEXT) : (null == n ? void 0 : n.type) === 'cancel' && ((I = o.Z.Messages.CANCEL), (t = a.Button.Colors.TRANSPARENT)),
-        (0, r.jsxs)(a.ModalFooter, {
-            direction: s.Z.Direction.HORIZONTAL,
+        (null == n ? void 0 : n.type) === 'submit' ? ((_ = o.NW.string(o.t['G+vU8/'])), (t = i.zxk.Colors.RED)) : (null == n ? void 0 : n.type) === 'next' ? (_ = o.NW.string(o.t.PDTjLC)) : (null == n ? void 0 : n.type) === 'cancel' && ((_ = o.NW.string(o.t['ETE/oK'])), (t = i.zxk.Colors.TRANSPARENT)),
+        (0, r.jsxs)(i.mzw, {
+            direction: a.Z.Direction.HORIZONTAL,
             children: [
-                p &&
-                    (0, r.jsx)(a.Button, {
-                        onClick: E,
-                        color: a.Button.Colors.TRANSPARENT,
-                        disabled: u,
-                        children: o.Z.Messages.BACK
+                b &&
+                    (0, r.jsx)(i.zxk, {
+                        onClick: x,
+                        color: i.zxk.Colors.TRANSPARENT,
+                        disabled: c,
+                        children: o.NW.string(o.t['13/7kZ'])
                     }),
-                h &&
-                    (0, r.jsx)(a.Button, {
+                f &&
+                    (0, r.jsx)(i.zxk, {
                         onClick: () => {
-                            if (null != n) d(n);
+                            null != n && u(n);
                         },
                         color: t,
-                        className: l.actionButton,
-                        disabled: u || c,
-                        buttonRef: f,
-                        children: I
+                        className: s.actionButton,
+                        disabled: c || d,
+                        buttonRef: p,
+                        children: _
                     })
             ]
         })

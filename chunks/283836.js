@@ -1,45 +1,38 @@
-i.d(n, {
-    Z: function () {
-        return c;
-    },
-    q: function () {
-        return u;
-    }
-}),
-    i(47120);
-var l = i(470079),
-    t = i(442837),
-    s = i(241159),
-    r = i(496929),
-    a = i(558381),
-    o = i(270144),
-    d = i(238);
-function u(e, n) {
-    l.useEffect(() => {
-        c(e);
+n.d(t, {
+    Z: () => p,
+    q: () => _
+});
+var r = n(192379),
+    i = n(442837),
+    o = n(241159),
+    a = n(496929),
+    s = n(558381),
+    l = n(171246),
+    c = n(314897),
+    u = n(509545),
+    d = n(238),
+    f = n(55563);
+function _(e) {
+    r.useEffect(() => {
+        p(e);
     }, [e]);
-    let { subscriptionGroupListing: i } = (0, o.F5)(e, n),
-        s = null == i ? void 0 : i.subscription_listings,
-        r = (0, t.Wu)(
-            [d.Z],
+    let t = (0, i.Wu)(
+            [d.Z, f.Z, u.Z],
             () => {
-                var n;
-                let { subscriptions: i } = d.Z.getStoreLayout(e),
-                    l = new Set(i.map((e) => e.id));
-                return null !== (n = null == s ? void 0 : s.filter((e) => l.has(e.id))) && void 0 !== n ? n : [];
+                let t = d.Z.getStoreLayout(e);
+                return (0, l.Ej)(t.subscriptions, f.Z, u.Z);
             },
-            [e, s]
+            [e]
         ),
-        a = (0, t.Wu)([d.Z], () => d.Z.getStoreLayout(e).otps, [e]);
-    return l.useMemo(
+        n = (0, i.Wu)([d.Z], () => d.Z.getStoreLayout(e).otps, [e]);
+    return r.useMemo(
         () => ({
-            subs: r,
-            otps: a,
-            subscriptionGroupListing: null != i ? i : void 0
+            subscriptions: t,
+            otps: n
         }),
-        [r, a, i]
+        [t, n]
     );
 }
-function c(e) {
-    (0, s.k)(e), (0, a.oJ)(e), (0, r.yD)(e, !1);
+function p(e) {
+    (0, o.k)(e), (0, s.oJ)(e), c.default.isAuthenticated() && (0, a.yD)(e, !1);
 }

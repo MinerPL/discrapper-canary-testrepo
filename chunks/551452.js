@@ -1,85 +1,132 @@
-n.d(t, {
-    Z: function () {
-        return T;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => I });
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(239091),
-    s = n(287734),
-    o = n(364640),
+    o = n(239091),
+    a = n(287734),
+    s = n(364640),
     l = n(754688),
-    u = n(336197),
-    c = n(124072),
-    d = n(891984),
-    _ = n(131704),
-    E = n(592125),
-    f = n(430824),
+    c = n(336197),
+    u = n(124072),
+    d = n(692629),
+    f = n(131704),
+    _ = n(592125),
+    p = n(430824),
     h = n(900849),
-    p = n(746878),
-    m = n(981631);
-async function I(e, t, n) {
+    m = n(746878),
+    g = n(981631);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function v(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : y(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+async function O(e, t, n) {
     if (null == t) return;
     if (
-        (o.Z.trackDiscordLinkClicked({
+        (s.Z.trackDiscordLinkClicked({
             guildId: e,
             channelId: t,
             messageId: n
         }),
         null != e)
     ) {
-        let n = f.Z.getGuild(e);
+        let n = p.Z.getGuild(e);
         if ((null == n ? void 0 : n.joinedAt) == null)
             try {
                 await h.Ub(e, {}, { channelId: t });
                 return;
-            } catch {}
+            } catch (e) {}
     }
-    let r = E.Z.getChannel(t);
-    if (null != r && null == n && (0, _.bw)(r.type) && (0, l.YO)(r)) {
-        s.default.selectVoiceChannel(r.id);
-        return;
-    }
-    (0, u.Z)(m.Z5c.CHANNEL(e, t, n));
+    let r = _.Z.getChannel(t);
+    if (null != r && null == n && (0, f.bw)(r.type) && (0, l.YO)(r)) return void a.default.selectVoiceChannel(r.id);
+    (0, c.Z)(g.Z5c.CHANNEL(e, t, n));
 }
-function T(e) {
+function I(e) {
     return {
-        react(t, s, o) {
-            let l = E.Z.getChannel(t.channelId),
-                u = o.noStyleAndInteraction
+        react(t, a, s) {
+            let l = _.Z.getChannel(t.channelId),
+                c = s.noStyleAndInteraction
                     ? void 0
                     : (n) => {
-                          e.shouldStopPropagation && (null == n || n.stopPropagation()), I(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, i.closeAllModals)();
+                          e.shouldStopPropagation && (null == n || n.stopPropagation()), O(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, i.pTH)();
                       },
-                _ =
-                    o.noStyleAndInteraction || null == t.channelId || (null == l && null == t.originalLink)
-                        ? m.dG4
+                f =
+                    s.noStyleAndInteraction || null == t.channelId || (null == l && null == t.originalLink)
+                        ? g.dG4
                         : (e) => {
-                              (0, a.jW)(e, async () => {
+                              (0, o.jW)(e, async () => {
                                   let { default: e } = await n.e('9573').then(n.bind(n, 546649));
                                   return (n) => {
                                       var i;
-                                      return (0, r.jsx)(e, {
-                                          ...n,
-                                          channel: l,
-                                          channelId: null !== (i = null == l ? void 0 : l.id) && void 0 !== i ? i : t.channelId,
-                                          originalLink: t.originalLink,
-                                          messageId: t.messageId
-                                      });
+                                      return (0, r.jsx)(
+                                          e,
+                                          v(b({}, n), {
+                                              channel: l,
+                                              channelId: null != (i = null == l ? void 0 : l.id) ? i : t.channelId,
+                                              originalLink: t.originalLink,
+                                              messageId: t.messageId
+                                          })
+                                      );
                                   };
                               });
                           };
             return (0, r.jsxs)(
-                c.Z,
+                u.Z,
                 {
                     role: 'link',
-                    onClick: u,
-                    onContextMenu: _,
+                    onClick: c,
+                    onContextMenu: f,
                     className: 'channelMention',
-                    children: [null != t.inContent ? s(t.inContent, o) : null, null != t.inContent ? (0, r.jsx)(d.Z, {}) : null, (0, p.S)(t, s, o)]
+                    children: [null != t.inContent ? a(t.inContent, s) : null, null != t.inContent ? (0, r.jsx)(d.Z, {}) : null, (0, m.S)(t, a, s)]
                 },
-                o.key
+                s.key
             );
         }
     };

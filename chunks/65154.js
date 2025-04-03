@@ -1,200 +1,114 @@
 n.d(t, {
-    $A: function () {
-        return X;
-    },
-    $B: function () {
-        return ee;
-    },
-    $j: function () {
-        return v;
-    },
-    AN: function () {
-        return y;
-    },
-    AS: function () {
-        return D;
-    },
-    Av: function () {
-        return j;
-    },
-    Dg: function () {
-        return M;
-    },
-    Er: function () {
-        return ei;
-    },
-    Gs: function () {
-        return en;
-    },
-    H3: function () {
-        return k;
-    },
-    JA: function () {
-        return Q;
-    },
-    P8: function () {
-        return er;
-    },
-    QO: function () {
-        return q;
-    },
-    QP: function () {
-        return O;
-    },
-    Qx: function () {
-        return F;
-    },
-    Tr: function () {
-        return P;
-    },
-    Uc: function () {
-        return G;
-    },
-    V8: function () {
-        return x;
-    },
-    WA: function () {
-        return z;
-    },
-    XR: function () {
-        return el;
-    },
-    YE: function () {
-        return ea;
-    },
-    Yh: function () {
-        return V;
-    },
-    Yn: function () {
-        return S;
-    },
-    Z: function () {
-        return C;
-    },
-    Zq: function () {
-        return K;
-    },
-    ad: function () {
-        return b;
-    },
-    dX: function () {
-        return H;
-    },
-    ed: function () {
-        return Z;
-    },
-    fC: function () {
-        return R;
-    },
-    h7: function () {
-        return A;
-    },
-    iA: function () {
-        return L;
-    },
-    jg: function () {
-        return W;
-    },
-    kS: function () {
-        return eu;
-    },
-    mC: function () {
-        return J;
-    },
-    mN: function () {
-        return $;
-    },
-    pM: function () {
-        return N;
-    },
-    pk: function () {
-        return eo;
-    },
-    u$: function () {
-        return et;
-    },
-    uA: function () {
-        return w;
-    },
-    ux: function () {
-        return ec;
-    },
-    vA: function () {
-        return B.vA;
-    },
-    w5: function () {
-        return Y;
-    },
-    yf: function () {
-        return es;
-    }
+    $A: () => I,
+    $B: () => N,
+    $j: () => s,
+    AN: () => H,
+    AS: () => W,
+    Av: () => m,
+    Dg: () => z,
+    Er: () => P,
+    Gs: () => C,
+    H3: () => ee,
+    JA: () => v,
+    Jk: () => O,
+    LD: () => D,
+    P8: () => R,
+    QO: () => y,
+    QP: () => l,
+    Qx: () => d,
+    R$: () => M,
+    Tr: () => q,
+    UC: () => j,
+    Uc: () => $,
+    V8: () => J,
+    WA: () => b,
+    XR: () => B,
+    YE: () => U,
+    Yh: () => f,
+    Yn: () => i,
+    Z: () => u,
+    Zq: () => E,
+    ad: () => K,
+    dX: () => _,
+    ed: () => p,
+    ef: () => L,
+    fC: () => c,
+    h7: () => o,
+    iA: () => Y,
+    jg: () => g,
+    kS: () => F,
+    mC: () => T,
+    mN: () => S,
+    n4: () => Z,
+    pM: () => a,
+    pk: () => k,
+    ru: () => x,
+    u$: () => A,
+    uA: () => Q,
+    ux: () => V,
+    vA: () => r.vA,
+    w5: () => h,
+    y7: () => w,
+    yf: () => G,
+    ym: () => X
 });
-var r,
-    i,
-    a,
-    s,
-    o,
-    l,
-    u,
-    c,
-    d,
-    _,
-    E,
-    f,
-    h,
-    p,
-    m,
-    I,
-    T,
-    g,
-    S,
-    A,
-    N,
-    v,
-    O,
-    R,
-    C,
-    y,
-    D,
-    L,
-    b,
-    M,
-    P,
-    U,
-    w,
-    x,
-    G,
-    k,
-    B = n(268146);
-((r = S || (S = {})).DEFAULT = 'default'), (r.STREAM = 'stream'), ((i = A || (A = {})).AUDIO_INPUT = 'audioinput'), (i.AUDIO_OUTPUT = 'audiooutput'), (i.VIDEO_INPUT = 'videoinput'), ((a = N || (N = {})).PUSH_TO_TALK = 'PUSH_TO_TALK'), (a.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), ((s = v || (v = {})).DISCONNECTED = 'DISCONNECTED'), (s.CONNECTING = 'CONNECTING'), (s.CONNECTED = 'CONNECTED'), (s.NO_ROUTE = 'NO_ROUTE'), (s.ICE_CHECKING = 'ICE_CHECKING'), (s.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((o = O || (O = {}))[(o.TRANSPORT = 1)] = 'TRANSPORT'), (o[(o.OUTBOUND = 2)] = 'OUTBOUND'), (o[(o.INBOUND = 4)] = 'INBOUND'), (o[(o.ALL = 7)] = 'ALL'), ((l = R || (R = {})).MANUAL_DISABLE = 'video_manual_disable'), (l.MANUAL_ENABLE = 'video_manual_enable'), (l.MANUAL_REENABLE = 'video_manual_reenable'), (l.AUTO_DISABLE = 'video_auto_disable'), (l.AUTO_ENABLE = 'video_auto_enable'), (l.AUTO_DOWNGRADE = 'video_auto_downgrade'), (l.AUTO_UPGRADE = 'video_auto_upgrade,'), ((u = C || (C = {})).NO_OVERRIDE = 'no_override'), (u.HIGH = 'high'), (u.LOW = 'low');
-let F = 100,
-    V = 18,
-    H = 64000,
-    Z = 128000,
-    Y = 'default',
-    j = 'disabled',
-    W = 0.1,
-    K = -40,
-    z = -25,
-    q = 1 / 15,
-    Q = 0.8,
-    X = 600000,
-    $ = 150000,
-    J = 10000000,
-    ee = 5000,
-    et = 15000,
-    en = 30,
-    er = 20,
-    ei = 12,
-    ea = 3500000,
-    es = 9000000,
-    eo = 500000,
-    el = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
-    eu = {
+var r = n(268146),
+    i = (function (e) {
+        return (e.DEFAULT = 'default'), (e.STREAM = 'stream'), e;
+    })({}),
+    o = (function (e) {
+        return (e.AUDIO_INPUT = 'audioinput'), (e.AUDIO_OUTPUT = 'audiooutput'), (e.VIDEO_INPUT = 'videoinput'), e;
+    })({}),
+    a = (function (e) {
+        return (e.PUSH_TO_TALK = 'PUSH_TO_TALK'), (e.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), e;
+    })({}),
+    s = (function (e) {
+        return (e.DISCONNECTED = 'DISCONNECTED'), (e.CONNECTING = 'CONNECTING'), (e.CONNECTED = 'CONNECTED'), (e.NO_ROUTE = 'NO_ROUTE'), (e.ICE_CHECKING = 'ICE_CHECKING'), (e.DTLS_CONNECTING = 'DTLS_CONNECTING'), e;
+    })({}),
+    l = (function (e) {
+        return (e[(e.TRANSPORT = 1)] = 'TRANSPORT'), (e[(e.OUTBOUND = 2)] = 'OUTBOUND'), (e[(e.INBOUND = 4)] = 'INBOUND'), (e[(e.ALL = 7)] = 'ALL'), e;
+    })({}),
+    c = (function (e) {
+        return (e.MANUAL_DISABLE = 'video_manual_disable'), (e.MANUAL_ENABLE = 'video_manual_enable'), (e.MANUAL_REENABLE = 'video_manual_reenable'), (e.AUTO_DISABLE = 'video_auto_disable'), (e.AUTO_ENABLE = 'video_auto_enable'), (e.AUTO_DOWNGRADE = 'video_auto_downgrade'), (e.AUTO_UPGRADE = 'video_auto_upgrade,'), e;
+    })({}),
+    u = (function (e) {
+        return (e.NO_OVERRIDE = 'no_override'), (e.HIGH = 'high'), (e.LOW = 'low'), e;
+    })({});
+let d = 100,
+    f = 18,
+    _ = 64000,
+    p = 128000,
+    h = 'default',
+    m = 'disabled',
+    g = 0.1,
+    E = -40,
+    b = -25,
+    y = 1 / 15,
+    v = 0.8,
+    O = 0.4,
+    I = 600000,
+    S = 150000,
+    T = 10000000,
+    N = 5000,
+    A = 15000,
+    C = 30,
+    R = 20,
+    P = 12,
+    w = 100,
+    D = 50,
+    L = 1280,
+    x = 720,
+    M = 30,
+    k = 1500000,
+    j = 500000,
+    U = 3500000,
+    G = 9000000,
+    B = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
+    F = {
         videoBudget: {
             width: 1280,
             height: 720,
-            framerate: en
+            framerate: 30
         },
         videoCapture: {
             width: 1280,
@@ -212,103 +126,38 @@ let F = 100,
         },
         videoBitrateFloor: 150000
     },
-    ec = 60000;
-((c = y || (y = {})).AUTO_ENABLE = 'AUTO_ENABLE'),
-    (c.ATTENUATION = 'ATTENUATION'),
-    (c.AUDIO_INPUT_DEVICE = 'AUDIO_INPUT_DEVICE'),
-    (c.AUDIO_OUTPUT_DEVICE = 'AUDIO_OUTPUT_DEVICE'),
-    (c.VOICE_PROCESSING = 'VOICE_PROCESSING'),
-    (c.QOS = 'QOS'),
-    (c.NATIVE_PING = 'NATIVE_PING'),
-    (c.LEGACY_AUDIO_SUBSYSTEM = 'LEGACY_AUDIO_SUBSYSTEM'),
-    (c.EXPERIMENTAL_AUDIO_SUBSYSTEM = 'EXPERIMENTAL_AUDIO_SUBSYSTEM'),
-    (c.DEBUG_LOGGING = 'DEBUG_LOGGING'),
-    (c.AUTOMATIC_VAD = 'AUTOMATIC_VAD'),
-    (c.VOICE_PANNING = 'VOICE_PANNING'),
-    (c.DIAGNOSTICS = 'DIAGNOSTICS'),
-    (c.VIDEO = 'VIDEO'),
-    (c.DESKTOP_CAPTURE = 'DESKTOP_CAPTURE'),
-    (c.DESKTOP_CAPTURE_FORMAT = 'DESKTOP_CAPTURE_FORMAT'),
-    (c.DESKTOP_CAPTURE_APPLICATIONS = 'DESKTOP_CAPTURE_APPLICATIONS'),
-    (c.SOUNDSHARE = 'SOUNDSHARE'),
-    (c.LOOPBACK = 'LOOPBACK'),
-    (c.VIDEO_HOOK = 'VIDEO_HOOK'),
-    (c.EXPERIMENTAL_SOUNDSHARE = 'EXPERIMENTAL_SOUNDSHARE'),
-    (c.WUMPUS_VIDEO = 'WUMPUS_VIDEO'),
-    (c.ELEVATED_HOOK = 'ELEVATED_HOOK'),
-    (c.HYBRID_VIDEO = 'HYBRID_VIDEO'),
-    (c.OPEN_H264 = 'OPEN_H264'),
-    (c.EXPERIMENTAL_ENCODERS = 'EXPERIMENTAL_ENCODERS'),
-    (c.REMOTE_LOCUS_NETWORK_CONTROL = 'REMOTE_LOCUS_NETWORK_CONTROL'),
-    (c.SCREEN_PREVIEWS = 'SCREEN_PREVIEWS'),
-    (c.WINDOW_PREVIEWS = 'WINDOW_PREVIEWS'),
-    (c.AUDIO_DEBUG_STATE = 'AUDIO_DEBUG_STATE'),
-    (c.AEC_DUMP = 'AEC_DUMP'),
-    (c.DISABLE_VIDEO = 'DISABLE_VIDEO'),
-    (c.CONNECTION_REPLAY = 'CONNECTION_REPLAY'),
-    (c.SIMULCAST = 'SIMULCAST'),
-    (c.RTC_REGION_RANKING = 'RTC_REGION_RANKING'),
-    (c.DIRECT_VIDEO = 'DIRECT_VIDEO'),
-    (c.ELECTRON_VIDEO = 'ELECTRON_VIDEO'),
-    (c.MEDIAPIPE = 'MEDIAPIPE'),
-    (c.FIXED_KEYFRAME_INTERVAL = 'FIXED_KEYFRAME_INTERVAL'),
-    (c.SAMPLE_PLAYBACK = 'SAMPLE_PLAYBACK'),
-    (c.FIRST_FRAME_CALLBACK = 'FIRST_FRAME_CALLBACK'),
-    (c.REMOTE_USER_MULTI_STREAM = 'REMOTE_USER_MULTI_STREAM'),
-    (c.NOISE_SUPPRESSION = 'NOISE_SUPPRESSION'),
-    (c.NOISE_CANCELLATION = 'NOISE_CANCELLATION'),
-    (c.AUTOMATIC_GAIN_CONTROL = 'AUTOMATIC_GAIN_CONTROL'),
-    (c.CLIPS = 'CLIPS'),
-    (c.SPEED_TEST = 'SPEED_TEST'),
-    (c.IMAGE_QUALITY_MEASUREMENT = 'IMAGE_QUALITY_MEASUREMENT'),
-    (c.AMD_EXPERIMENTAL_RATE_CONTROL = 'AMD_EXPERIMENTAL_RATE_CONTROL'),
-    (c.GO_LIVE_HARDWARE = 'GO_LIVE_HARDWARE'),
-    (c.SCREEN_CAPTURE_KIT = 'SCREEN_CAPTURE_KIT'),
-    (c.CAPTURE_TIMEOUT_EXPERIMENTS = 'CAPTURE_TIMEOUT_EXPERIMENTS'),
-    (c.SCREEN_SOUNDSHARE = 'SCREEN_SOUNDSHARE'),
-    (c.NATIVE_SCREENSHARE_PICKER = 'NATIVE_SCREENSHARE_PICKER'),
-    ((d = D || (D = {})).NATIVE = 'NATIVE'),
-    (d.WEBRTC = 'WEBRTC'),
-    (d.DUMMY = 'DUMMY'),
-    ((_ = L || (L = {})).LEGACY = 'legacy'),
-    (_.STANDARD = 'standard'),
-    (_.EXPERIMENTAL = 'experimental'),
-    ((E = b || (b = {})).OPUS = 'opus'),
-    (E.VP8 = 'VP8'),
-    (E.VP9 = 'VP9'),
-    (E.H264 = 'H264'),
-    (E.RTX = 'rtx'),
-    (E.TEST = 'TEST'),
-    ((f = M || (M = {}))[(f.NONE = 0)] = 'NONE'),
-    (f[(f.VOICE = 1)] = 'VOICE'),
-    (f[(f.SOUNDSHARE = 2)] = 'SOUNDSHARE'),
-    (f[(f.PRIORITY = 4)] = 'PRIORITY'),
-    ((h = P || (P = {})).AUDIO = 'audio'),
-    (h.VIDEO = 'video'),
-    (h.SCREEN = 'screen'),
-    (h.TEST = 'test'),
-    ((p = U || (U = {})).PLAYING = 'playing'),
-    (p.PAUSED = 'paused'),
-    ((m = w || (w = {})).FIXED = 'fixed'),
-    (m.SOURCE = 'source'),
-    ((I = x || (x = {})).VIDEOTOOLBOX_RATE_CONTROL = 'videotoolbox_rate_control'),
-    (I.SIGNAL_AV1 = 'signal_av1'),
-    (I.SIGNAL_AV1_DECODE = 'signal_av1_decode'),
-    (I.SIGNAL_AV1_HARDWARE_DECODE = 'signal_av1_hardware_decode'),
-    (I.STREAMER_CLIP = 'streamer_clip'),
-    (I.VIEWER_CLIP = 'viewer_clip'),
-    (I.MUTE_BEFORE_PROCESSING = 'mute_before_processing'),
-    (I.PTT_BEFORE_PROCESSING = 'ptt_before_processing'),
-    (I.SKIP_ENCODE = 'skip_encode'),
-    (I.RESET_DECODER_ON_ERRORS = 'reset_decoder_on_errors'),
-    (I.SOFTWARE_FALLBACK_ON_ERRORS = 'software_fallback_on_errors'),
-    (I.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = 'software_fallback_on_consecutive_errors'),
-    (I.GOLIVE_SIMULCAST_480P_500K = 'golive_simulcast_480p@500kbps'),
-    (I.GOLIVE_SIMULCAST_480P_750K = 'golive_simulcast_480p@750kbps'),
-    (I.GOLIVE_SIMULCAST_480P_1000K = 'golive_simulcast_480p@1000kbps'),
-    ((T = G || (G = {}))[(T.AUTO = 1)] = 'AUTO'),
-    (T[(T.FULL = 2)] = 'FULL'),
-    ((g = k || (k = {}))[(g.CPU_OVERUSE = 1)] = 'CPU_OVERUSE'),
-    (g[(g.FAILED = 2)] = 'FAILED'),
-    (g[(g.VAD_CPU_OVERUSE = 3)] = 'VAD_CPU_OVERUSE'),
-    (g[(g.INITIALIZED = 4)] = 'INITIALIZED');
+    V = 60000,
+    Z = '>=22.0.0';
+var H = (function (e) {
+        return (e.AUTO_ENABLE = 'AUTO_ENABLE'), (e.ATTENUATION = 'ATTENUATION'), (e.AUDIO_INPUT_DEVICE = 'AUDIO_INPUT_DEVICE'), (e.AUDIO_OUTPUT_DEVICE = 'AUDIO_OUTPUT_DEVICE'), (e.VOICE_PROCESSING = 'VOICE_PROCESSING'), (e.QOS = 'QOS'), (e.NATIVE_PING = 'NATIVE_PING'), (e.LEGACY_AUDIO_SUBSYSTEM = 'LEGACY_AUDIO_SUBSYSTEM'), (e.EXPERIMENTAL_AUDIO_SUBSYSTEM = 'EXPERIMENTAL_AUDIO_SUBSYSTEM'), (e.AUTOMATIC_AUDIO_SUBSYSTEM = 'AUTOMATIC_AUDIO_SUBSYSTEM'), (e.AUDIO_SUBSYSTEM_DEFERRED_SWITCH = 'AUDIO_SUBSYSTEM_DEFERRED_SWITCH'), (e.DEBUG_LOGGING = 'DEBUG_LOGGING'), (e.AUTOMATIC_VAD = 'AUTOMATIC_VAD'), (e.VOICE_PANNING = 'VOICE_PANNING'), (e.DIAGNOSTICS = 'DIAGNOSTICS'), (e.VIDEO = 'VIDEO'), (e.DESKTOP_CAPTURE = 'DESKTOP_CAPTURE'), (e.DESKTOP_CAPTURE_FORMAT = 'DESKTOP_CAPTURE_FORMAT'), (e.DESKTOP_CAPTURE_APPLICATIONS = 'DESKTOP_CAPTURE_APPLICATIONS'), (e.SOUNDSHARE = 'SOUNDSHARE'), (e.LOOPBACK = 'LOOPBACK'), (e.VIDEO_HOOK = 'VIDEO_HOOK'), (e.EXPERIMENTAL_SOUNDSHARE = 'EXPERIMENTAL_SOUNDSHARE'), (e.WUMPUS_VIDEO = 'WUMPUS_VIDEO'), (e.ELEVATED_HOOK = 'ELEVATED_HOOK'), (e.HYBRID_VIDEO = 'HYBRID_VIDEO'), (e.OPEN_H264 = 'OPEN_H264'), (e.EXPERIMENTAL_ENCODERS = 'EXPERIMENTAL_ENCODERS'), (e.REMOTE_LOCUS_NETWORK_CONTROL = 'REMOTE_LOCUS_NETWORK_CONTROL'), (e.SCREEN_PREVIEWS = 'SCREEN_PREVIEWS'), (e.WINDOW_PREVIEWS = 'WINDOW_PREVIEWS'), (e.AUDIO_DEBUG_STATE = 'AUDIO_DEBUG_STATE'), (e.AEC_DUMP = 'AEC_DUMP'), (e.DISABLE_VIDEO = 'DISABLE_VIDEO'), (e.CONNECTION_REPLAY = 'CONNECTION_REPLAY'), (e.SIMULCAST = 'SIMULCAST'), (e.RTC_REGION_RANKING = 'RTC_REGION_RANKING'), (e.ELECTRON_VIDEO = 'ELECTRON_VIDEO'), (e.MEDIAPIPE = 'MEDIAPIPE'), (e.FIXED_KEYFRAME_INTERVAL = 'FIXED_KEYFRAME_INTERVAL'), (e.SAMPLE_PLAYBACK = 'SAMPLE_PLAYBACK'), (e.FIRST_FRAME_CALLBACK = 'FIRST_FRAME_CALLBACK'), (e.REMOTE_USER_MULTI_STREAM = 'REMOTE_USER_MULTI_STREAM'), (e.NOISE_SUPPRESSION = 'NOISE_SUPPRESSION'), (e.NOISE_CANCELLATION = 'NOISE_CANCELLATION'), (e.VOICE_FILTERS = 'VOICE_FILTERS'), (e.AUTOMATIC_GAIN_CONTROL = 'AUTOMATIC_GAIN_CONTROL'), (e.CLIPS = 'CLIPS'), (e.SPEED_TEST = 'SPEED_TEST'), (e.IMAGE_QUALITY_MEASUREMENT = 'IMAGE_QUALITY_MEASUREMENT'), (e.GO_LIVE_HARDWARE = 'GO_LIVE_HARDWARE'), (e.SCREEN_CAPTURE_KIT = 'SCREEN_CAPTURE_KIT'), (e.CAPTURE_TIMEOUT_EXPERIMENTS = 'CAPTURE_TIMEOUT_EXPERIMENTS'), (e.SCREEN_SOUNDSHARE = 'SCREEN_SOUNDSHARE'), (e.NATIVE_SCREENSHARE_PICKER = 'NATIVE_SCREENSHARE_PICKER'), (e.MLS_PAIRWISE_FINGERPRINTS = 'MLS_PAIRWISE_FINGERPRINTS'), e;
+    })({}),
+    W = (function (e) {
+        return (e.NATIVE = 'NATIVE'), (e.WEBRTC = 'WEBRTC'), (e.DUMMY = 'DUMMY'), e;
+    })({}),
+    Y = (function (e) {
+        return (e.LEGACY = 'legacy'), (e.STANDARD = 'standard'), (e.EXPERIMENTAL = 'experimental'), (e.AUTOMATIC = 'automatic'), e;
+    })({}),
+    K = (function (e) {
+        return (e.OPUS = 'opus'), (e.VP8 = 'VP8'), (e.VP9 = 'VP9'), (e.H264 = 'H264'), (e.RTX = 'rtx'), (e.TEST = 'TEST'), e;
+    })({}),
+    z = (function (e) {
+        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.VOICE = 1)] = 'VOICE'), (e[(e.SOUNDSHARE = 2)] = 'SOUNDSHARE'), (e[(e.PRIORITY = 4)] = 'PRIORITY'), e;
+    })({}),
+    q = (function (e) {
+        return (e.AUDIO = 'audio'), (e.VIDEO = 'video'), (e.SCREEN = 'screen'), (e.TEST = 'test'), e;
+    })({}),
+    Q = (function (e) {
+        return (e.FIXED = 'fixed'), (e.SOURCE = 'source'), e;
+    })({}),
+    X = (function (e) {
+        return (e.REMB = 'remb'), e;
+    })({}),
+    J = (function (e) {
+        return (e.VIDEOTOOLBOX_RATE_CONTROL = 'videotoolbox_rate_control'), (e.SIGNAL_AV1 = 'signal_av1'), (e.SIGNAL_AV1_DECODE = 'signal_av1_decode'), (e.SIGNAL_AV1_HARDWARE_DECODE = 'signal_av1_hardware_decode'), (e.STREAMER_CLIP = 'streamer_clip'), (e.VIEWER_CLIP = 'viewer_clip'), (e.MUTE_BEFORE_PROCESSING = 'mute_before_processing'), (e.PTT_BEFORE_PROCESSING = 'ptt_before_processing'), (e.SKIP_ENCODE = 'skip_encode'), (e.RESET_DECODER_ON_ERRORS = 'reset_decoder_on_errors'), (e.SOFTWARE_FALLBACK_ON_ERRORS = 'software_fallback_on_errors'), (e.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = 'software_fallback_on_consecutive_errors'), e;
+    })({}),
+    $ = (function (e) {
+        return (e[(e.AUTO = 1)] = 'AUTO'), (e[(e.FULL = 2)] = 'FULL'), e;
+    })({}),
+    ee = (function (e) {
+        return (e[(e.CPU_OVERUSE = 1)] = 'CPU_OVERUSE'), (e[(e.FAILED = 2)] = 'FAILED'), (e[(e.VAD_CPU_OVERUSE = 3)] = 'VAD_CPU_OVERUSE'), (e[(e.INITIALIZED = 4)] = 'INITIALIZED'), e;
+    })({});

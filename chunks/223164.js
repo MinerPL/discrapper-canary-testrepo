@@ -1,72 +1,67 @@
-n.r(a),
-    n.d(a, {
-        default: function () {
-            return _;
-        }
-    });
-var s = n(735250),
-    t = n(470079),
-    o = n(120356),
-    r = n.n(o),
-    d = n(481060),
-    c = n(313201),
-    i = n(454585),
-    l = n(585483),
-    h = n(981631),
-    u = n(689938),
-    p = n(528675),
-    x = n(910212);
+a.d(n, { default: () => _ });
+var s = a(200651),
+    t = a(192379),
+    r = a(120356),
+    i = a.n(r),
+    c = a(481060),
+    l = a(313201),
+    o = a(454585),
+    d = a(585483),
+    h = a(981631),
+    u = a(388032),
+    x = a(44534),
+    p = a(73433);
 function _(e) {
-    let { channel: a, isFromComposer: n, transitionState: o, onClose: _ } = e,
-        I = (0, c.Dt)();
+    let { channel: n, isFromComposer: a, transitionState: r, onClose: _ } = e,
+        C = (0, l.Dt)();
     return (
         t.useEffect(
             () => () => {
-                n && l.S.dispatch(h.CkL.FOCUS_COMPOSER_TITLE);
+                a && d.S.dispatch(h.CkL.FOCUS_COMPOSER_TITLE);
             },
-            [n]
+            [a]
         ),
-        (0, s.jsxs)(d.ModalRoot, {
-            transitionState: o,
-            'aria-labelledby': I,
-            size: d.ModalSize.DYNAMIC,
-            className: p.container,
+        (0, s.jsxs)(c.Y0X, {
+            transitionState: r,
+            'aria-labelledby': C,
+            size: c.CgR.DYNAMIC,
+            className: x.container,
             children: [
-                (0, s.jsxs)(d.ModalHeader, {
-                    className: p.header,
+                (0, s.jsxs)(c.xBx, {
+                    className: x.header,
                     separator: !1,
                     children: [
-                        (0, s.jsx)(d.BookCheckIcon, {
+                        (0, s.jsx)(c.snC, {
                             size: 'custom',
                             color: 'currentColor',
-                            className: p.rulesIcon,
+                            className: x.rulesIcon,
                             width: 24,
                             height: 24
                         }),
-                        (0, s.jsx)(d.Heading, {
+                        (0, s.jsx)(c.X6q, {
                             variant: 'heading-lg/extrabold',
-                            children: u.Z.Messages.FORUM_POST_GUIDELINES_TITLE
+                            children: u.NW.string(u.t['4d4T4u'])
                         })
                     ]
                 }),
-                (0, s.jsx)(d.ModalContent, {
-                    children: (0, s.jsx)(d.Text, {
-                        className: r()(p.content, x.markup),
+                (0, s.jsx)(c.hzk, {
+                    children: (0, s.jsx)(c.Text, {
+                        className: i()(x.content, p.markup),
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         children: (0, s.jsx)('div', {
-                            children: i.Z.parseForumPostGuidelines(a.topic, !0, {
-                                channelId: a.id,
+                            children: o.Z.parseForumPostGuidelines(n.topic, !0, {
+                                channelId: n.id,
                                 allowHeading: !0,
                                 allowList: !0
                             })
                         })
                     })
                 }),
-                (0, s.jsx)(d.ModalFooter, {
-                    children: (0, s.jsx)(d.Button, {
+                (0, s.jsx)(c.mzw, {
+                    children: (0, s.jsx)(c.zxk, {
                         onClick: _,
-                        children: u.Z.Messages.GOT_IT
+                        children: u.NW.string(u.t['NX+WJC'])
                     })
                 })
             ]

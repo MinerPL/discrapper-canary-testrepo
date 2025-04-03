@@ -1,16 +1,11 @@
 n.d(t, {
-    mv: function () {
-        return s;
-    },
-    xJ: function () {
-        return o;
-    }
+    mv: () => a,
+    xJ: () => s
 });
-var r,
-    i,
-    a = n(358085);
-let s = null;
-function o() {
-    return (0, a.isAndroid)(), null;
+var r = n(358085);
+let i = null,
+    o = null,
+    a = null;
+function s() {
+    return (0, r.isAndroid)() ? i : o;
 }
-((r = i || (i = {})).REMINDER = 'reminder'), (r.TOP_MESSAGE_PUSH = 'top_messages_push'), (r.TRENDING_CONTENT_PUSH = 'trending_content_push');

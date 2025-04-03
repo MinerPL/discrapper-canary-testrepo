@@ -1,176 +1,212 @@
-i.r(n);
-var t = i(735250);
-i(470079);
-var l = i(442837),
-    s = i(481060),
-    a = i(239091),
-    u = i(883385),
-    o = i(108843),
-    r = i(947440),
-    d = i(100527),
-    c = i(299206),
-    Z = i(916069),
-    E = i(895563),
-    M = i(212205),
-    _ = i(478035),
-    N = i(62420),
-    C = i(420529),
-    h = i(554747),
-    T = i(924952),
-    f = i(423589),
-    x = i(427679),
-    g = i(398048),
-    p = i(109764),
-    A = i(3689),
-    L = i(323597),
-    v = i(852245),
-    G = i(493802),
-    I = i(367722),
-    j = i(461535),
-    S = i(776568),
-    O = i(218035),
-    P = i(775666),
-    m = i(442754),
-    V = i(333805),
-    D = i(567521),
-    U = i(917327),
-    b = i(381924),
-    H = i(601274),
-    y = i(981631),
-    R = i(689938);
-function X(e) {
-    let { channel: n, guild: i, onSelect: u } = e,
-        o = n.isGuildStageVoice(),
-        d = (0, l.e7)([x.Z], () => (o ? x.Z.getStageInstanceByChannel(n.id) : void 0), [o, n.id]),
-        Z = (0, p.Z)(n),
-        C = (0, h.qY)(n.id),
-        g = (0, T.Z)(null == C ? void 0 : C.id, i, n),
-        A = (0, D.Z)(n, d),
-        L = (0, E.l)(n),
-        I = (0, E.P)(n),
-        j = (0, M.Z)(n),
-        S = (0, _.Z)(n),
-        m = (0, N.Z)(n),
-        U = (0, G.Z)(n),
-        b = (0, O.Z)(n),
-        y = (0, v.Z)(n),
-        X = (0, H.Z)(n, i),
-        k = (0, c.Z)({
-            id: n.id,
-            label: R.Z.Messages.COPY_ID_CHANNEL
+n.d(t, { default: () => q });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(239091),
+    c = n(883385),
+    a = n(108843),
+    s = n(947440),
+    u = n(100527),
+    d = n(299206),
+    Z = n(916069),
+    f = n(895563),
+    b = n(212205),
+    O = n(478035),
+    j = n(62420),
+    g = n(420529),
+    p = n(554747),
+    h = n(924952),
+    y = n(423589),
+    v = n(427679),
+    P = n(398048),
+    N = n(109764),
+    S = n(3689),
+    x = n(323597),
+    m = n(852245),
+    C = n(493802),
+    E = n(367722),
+    _ = n(461535),
+    w = n(776568),
+    k = n(218035),
+    T = n(775666),
+    W = n(442754),
+    L = n(333805),
+    D = n(567521),
+    Q = n(624514),
+    V = n(917327),
+    G = n(381924),
+    M = n(601274),
+    I = n(981631),
+    A = n(388032);
+function U(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function R(e) {
+    let { channel: t, guild: n, onSelect: c } = e,
+        a = t.isGuildStageVoice(),
+        u = (0, i.e7)([v.Z], () => (a ? v.Z.getStageInstanceByChannel(t.id) : void 0), [a, t.id]),
+        Z = (0, N.Z)(t),
+        g = (0, p.qY)(t.id),
+        P = (0, h.Z)(null == g ? void 0 : g.id, n, t),
+        S = (0, D.Z)(t, u),
+        x = (0, f.l)(t),
+        E = (0, f.P)(t),
+        _ = (0, b.Z)(t),
+        w = (0, O.Z)(t),
+        W = (0, j.Z)(t),
+        V = (0, C.Z)(t),
+        G = (0, k.Z)(t),
+        I = (0, m.Z)(t),
+        U = (0, M.Z)(t, n),
+        R = (0, d.Z)({
+            id: t.id,
+            label: A.NW.string(A.t.gFHI3t)
         }),
-        q = (0, V.Z)(n),
-        Y = (0, r.Z)(n),
-        B = (0, f.Mn)('ChannelListVoiceContextMenuFavorite'),
-        w = (0, P.ZP)(n);
-    return (0, t.jsxs)(s.Menu, {
+        X = (0, L.Z)(t),
+        q = (0, s.Z)(t),
+        Y = (0, y.Mn)('ChannelListVoiceContextMenuFavorite'),
+        F = (0, T.ZP)(t),
+        H = (0, Q.Z)();
+    return (0, r.jsxs)(l.v2r, {
         navId: 'channel-context',
-        onClose: a.Zy,
-        'aria-label': R.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-        onSelect: u,
+        onClose: o.Zy,
+        'aria-label': A.NW.string(A.t.Xm41aW),
+        onSelect: c,
         children: [
-            (0, t.jsx)(s.MenuGroup, { children: null != C ? g : A }),
-            (0, t.jsxs)(s.MenuGroup, {
-                children: [S, m, j, L]
+            (0, r.jsx)(l.kSQ, { children: null != g ? P : S }),
+            (0, r.jsxs)(l.kSQ, {
+                children: [w, W, _, x]
             }),
-            (0, t.jsxs)(s.MenuGroup, {
-                children: [U, B ? w : b, y]
+            (0, r.jsxs)(l.kSQ, {
+                children: [V, Y ? F : G, I]
             }),
-            (0, t.jsx)(s.MenuGroup, { children: Y }),
-            (0, t.jsx)(s.MenuGroup, { children: I }),
-            (0, t.jsxs)(s.MenuGroup, {
-                children: [X, Z]
+            (0, r.jsx)(l.kSQ, { children: q }),
+            (0, r.jsx)(l.kSQ, { children: E }),
+            (0, r.jsxs)(l.kSQ, {
+                children: [U, Z]
             }),
-            (0, t.jsx)(s.MenuGroup, { children: q }),
-            (0, t.jsx)(s.MenuGroup, { children: k })
+            (0, r.jsx)(l.kSQ, { children: X }),
+            (0, r.jsxs)(l.kSQ, {
+                children: [R, H]
+            })
         ]
     });
 }
-function k(e) {
-    let { channel: n, guild: i, onSelect: u } = e,
-        o = n.isGuildStageVoice(),
-        d = (0, l.e7)([x.Z], () => (o ? x.Z.getStageInstanceByChannel(n.id) : void 0), [o, n.id]),
-        Z = (0, j.Z)(n),
-        M = (0, p.Z)(n),
-        _ = (0, h.qY)(n.id),
-        N = (0, T.Z)(null == _ ? void 0 : _.id, i, n),
-        y = (0, D.Z)(n, d),
-        X = (0, E.l)(n),
-        k = (0, E.P)(n),
-        q = (0, G.Z)(n),
-        Y = (0, O.Z)(n),
-        B = (0, v.Z)(n),
-        w = (0, I.Z)(n, i, d),
-        F = (0, H.Z)(n, i),
-        W = (0, U.Z)(n, i),
-        J = (0, b.Z)(n, i.id),
-        K = (0, g.Z)(n, i),
-        z = (0, A.Z)(n, i),
-        Q = (0, L.Z)(n),
-        $ = (0, c.Z)({
-            id: n.id,
-            label: R.Z.Messages.COPY_ID_CHANNEL
+function X(e) {
+    let { channel: t, guild: n, onSelect: c } = e,
+        a = t.isGuildStageVoice(),
+        u = (0, i.e7)([v.Z], () => (a ? v.Z.getStageInstanceByChannel(t.id) : void 0), [a, t.id]),
+        Z = (0, _.Z)(t),
+        b = (0, N.Z)(t),
+        O = (0, p.qY)(t.id),
+        j = (0, h.Z)(null == O ? void 0 : O.id, n, t),
+        I = (0, D.Z)(t, u),
+        U = (0, f.l)(t),
+        R = (0, f.P)(t),
+        X = (0, C.Z)(t),
+        q = (0, k.Z)(t),
+        Y = (0, m.Z)(t),
+        F = (0, E.Z)(t, n, u),
+        H = (0, M.Z)(t, n),
+        z = (0, V.Z)(t, n),
+        B = (0, G.Z)(t, n.id),
+        K = (0, P.Z)(t, n),
+        J = (0, S.Z)(t, n),
+        $ = (0, x.Z)(t),
+        ee = (0, d.Z)({
+            id: t.id,
+            label: A.NW.string(A.t.gFHI3t)
         }),
-        ee = (0, V.Z)(n),
-        en = (0, r.Z)(n),
-        ei = (0, m.Z)(n),
-        et = (0, C.Z)(n),
-        el = (0, S.ZP)(n),
-        es = (0, f.Mn)('ChannelListVoiceContextMenuNormal'),
-        ea = (0, P.ZP)(n);
-    return (0, t.jsxs)(s.Menu, {
+        et = (0, L.Z)(t),
+        en = (0, s.Z)(t),
+        er = (0, W.Z)(t),
+        ei = (0, g.Z)(t),
+        el = (0, w.ZP)(t),
+        eo = (0, y.Mn)('ChannelListVoiceContextMenuNormal'),
+        ec = (0, T.ZP)(t),
+        ea = (0, Q.Z)();
+    return (0, r.jsxs)(l.v2r, {
         navId: 'channel-context',
-        onClose: a.Zy,
-        'aria-label': R.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-        onSelect: u,
+        onClose: o.Zy,
+        'aria-label': A.NW.string(A.t.Xm41aW),
+        onSelect: c,
         children: [
-            (0, t.jsx)(s.MenuGroup, { children: null != _ ? N : y }),
-            (0, t.jsxs)(
-                s.MenuGroup,
+            (0, r.jsx)(l.kSQ, { children: null != O ? j : I }),
+            (0, r.jsxs)(
+                l.kSQ,
                 {
-                    children: [Z, X]
+                    children: [Z, U]
                 },
                 'mark-as-read-or-favorite'
             ),
-            (0, t.jsxs)(
-                s.MenuGroup,
+            (0, r.jsxs)(
+                l.kSQ,
                 {
-                    children: [w, en, ei, M]
+                    children: [F, en, er, b]
                 },
                 'channel-actions'
             ),
-            (0, t.jsxs)(
-                s.MenuGroup,
+            (0, r.jsxs)(
+                l.kSQ,
                 {
-                    children: [J, F, W, q, et, ee]
+                    children: [B, H, z, X, ei, et]
                 },
                 'voice-actions'
             ),
-            (0, t.jsxs)(
-                s.MenuGroup,
+            (0, r.jsxs)(
+                l.kSQ,
                 {
-                    children: [el, es ? ea : Y]
+                    children: [el, eo ? ec : q]
                 },
                 'notifications'
             ),
-            (0, t.jsx)(s.MenuGroup, { children: k }),
-            (0, t.jsxs)(
-                s.MenuGroup,
+            (0, r.jsx)(l.kSQ, { children: R }),
+            (0, r.jsxs)(
+                l.kSQ,
                 {
-                    children: [B, K, z, Q]
+                    children: [Y, K, J, $]
                 },
                 'admin-actions'
             ),
-            (0, t.jsx)(s.MenuGroup, { children: $ }, 'developer-actions')
+            (0, r.jsxs)(
+                l.kSQ,
+                {
+                    children: [ee, ea]
+                },
+                'developer-actions'
+            )
         ]
     });
 }
-n.default = (0, o.Z)(
-    (0, u.Z)(
+let q = (0, a.Z)(
+    (0, c.Z)(
         function (e) {
-            return (0, Z.Z)() ? (0, t.jsx)(X, { ...e }) : (0, t.jsx)(k, { ...e });
+            return (0, Z.Z)() ? (0, r.jsx)(R, U({}, e)) : (0, r.jsx)(X, U({}, e));
         },
-        { object: y.qAy.CONTEXT_MENU }
+        { object: I.qAy.CONTEXT_MENU }
     ),
-    [d.Z.CONTEXT_MENU, d.Z.CHANNEL_LIST_VOICE_CHANNEL_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.CHANNEL_LIST_VOICE_CHANNEL_MENU]
 );

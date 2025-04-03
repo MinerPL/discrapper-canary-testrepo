@@ -1,55 +1,48 @@
-t.d(r, {
-    Z: function () {
-        return h;
-    }
-});
-var a = t(735250);
-t(470079);
-var n = t(442837),
-    i = t(481060),
-    o = t(814443),
-    l = t(594174),
-    c = t(681619),
-    s = t(914121),
-    d = t(535271);
-let u = [
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var a = n(442837),
+    l = n(814443),
+    i = n(594174),
+    o = n(681619),
+    s = n(534514),
+    c = n(616257);
+let d = [
     {
         key: 'user',
         cellClassName: s.userCell,
         render(e) {
-            var r;
-            let { user: t, key: a } = e;
-            return null !== (r = null == t ? void 0 : t.username) && void 0 !== r ? r : a;
+            var t;
+            let { user: n, key: r } = e;
+            return null != (t = null == n ? void 0 : n.username) ? t : r;
         }
     },
     {
         key: 'affinity',
         cellClassName: s.affinityCell,
         render(e) {
-            let { affinity: r } = e;
-            return ''.concat(r);
+            let { affinity: t } = e;
+            return ''.concat(t);
         }
     }
 ];
-function h() {
-    let e = (0, n.Wu)([o.Z, l.default], () =>
-        o.Z.getUserAffinities().map((e) => {
-            let { user_id: r, affinity: t } = e;
+function u() {
+    let e = (0, a.Wu)([l.Z, i.default], () =>
+        l.Z.getUserAffinities().map((e) => {
+            let { user_id: t, affinity: n } = e;
             return {
-                user: l.default.getUser(r),
-                affinity: t,
-                key: r
+                user: i.default.getUser(t),
+                affinity: n,
+                key: t
             };
         })
     );
     return 0 === e.length
         ? null
-        : (0, a.jsx)(i.ScrollerThin, {
-              children: (0, a.jsx)(c.Z, {
-                  className: d.panel,
-                  columns: u,
-                  rowClassName: s.row,
-                  data: e
-              })
+        : (0, r.jsx)(o.Z, {
+              className: c.panel,
+              columns: d,
+              rowClassName: s.row,
+              data: e
           });
 }

@@ -1,8 +1,4 @@
-n.d(t, {
-    V: function () {
-        return r;
-    }
-});
+n.d(t, { V: () => r });
 class r {
     call() {
         try {

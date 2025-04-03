@@ -1,41 +1,39 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => h });
+var r = n(200651);
+n(192379);
 var i = n(512722),
-    a = n.n(i),
-    s = n(442837),
-    o = n(481060),
+    o = n.n(i),
+    a = n(442837),
+    s = n(481060),
     l = n(410575),
-    u = n(594174),
-    c = n(907285),
+    c = n(594174),
+    u = n(907285),
     d = n(737013),
+    f = n(137810),
     _ = n(981631),
-    E = n(689938);
-function f(e) {
-    let { onClose: t, onSelect: n } = e,
-        i = (0, s.e7)([u.default], () => {
-            let e = u.default.getCurrentUser();
-            return a()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e;
+    p = n(388032);
+function h(e) {
+    let { onClose: t, onSelect: n, simplified: i = !1, appContext: h, onInteraction: m } = e,
+        g = (0, a.e7)([c.default], () => {
+            let e = c.default.getCurrentUser();
+            return o()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e;
         }),
-        f = (0, c.Z)(),
-        h = (0, d.Z)(i.id);
+        E = (0, u.Z)(i),
+        b = (0, d.Z)(g.id, h),
+        y = (0, f.Z)(h);
     return (0, r.jsx)(l.Z, {
         object: _.qAy.CONTEXT_MENU,
-        children: (0, r.jsxs)(o.Menu, {
+        children: (0, r.jsxs)(s.v2r, {
             onClose: t,
             navId: 'video-device-context',
-            'aria-label': E.Z.Messages.FORM_LABEL_VIDEO_DEVICE,
+            'aria-label': p.NW.string(p.t.F122Gx),
             onSelect: n,
+            onInteraction: m,
             children: [
-                (0, r.jsx)(o.MenuGroup, {
-                    label: E.Z.Messages.FORM_LABEL_VIDEO_DEVICE,
-                    children: f
-                }),
-                (0, r.jsx)(o.MenuGroup, { children: h })
+                E,
+                (0, r.jsxs)(s.kSQ, {
+                    children: [b, i ? y : null]
+                })
             ]
         })
     });

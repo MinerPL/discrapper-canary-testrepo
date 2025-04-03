@@ -1,117 +1,112 @@
-a.r(t),
-    a.d(t, {
-        default: function () {
-            return N;
-        }
-    });
-var n = a(735250);
-a(470079);
-var r = a(512722),
-    s = a.n(r),
-    i = a(990547),
-    o = a(442837),
-    l = a(481060),
-    c = a(100527),
-    d = a(213609),
-    u = a(240657),
-    m = a(809086),
-    x = a(430824),
-    _ = a(240864),
-    h = a(942833),
-    f = a(409110),
-    j = a(226060),
-    p = a(689938),
-    g = a(575928);
-function N(e) {
-    var t, a;
-    let { transitionState: r, guildProductListingId: N, analyticsLocation: v, guildId: I, onClose: D } = e,
-        b = (0, o.e7)([_.Z], () => _.Z.getGuildProduct(N));
-    s()(null != b, 'guildProductListing cannot be null'),
+n.d(t, { default: () => b }), n(266796);
+var r = n(200651);
+n(192379);
+var a = n(512722),
+    i = n.n(a),
+    s = n(990547),
+    l = n(442837),
+    o = n(481060),
+    c = n(100527),
+    d = n(213609),
+    u = n(240657),
+    m = n(809086),
+    x = n(430824),
+    f = n(240864),
+    h = n(942833),
+    j = n(409110),
+    _ = n(226060),
+    p = n(388032),
+    g = n(486893);
+function b(e) {
+    var t, n;
+    let { transitionState: a, guildProductListingId: b, analyticsLocation: v, guildId: N, onClose: Z } = e,
+        C = (0, l.e7)([f.Z], () => f.Z.getGuildProduct(b));
+    i()(null != C, 'guildProductListing cannot be null'),
         (0, d.Z)({
-            type: i.ImpressionTypes.MODAL,
-            name: i.ImpressionNames.GUILD_PRODUCT_LISTING_INFO_MODAL,
+            type: s.ImpressionTypes.MODAL,
+            name: s.ImpressionNames.GUILD_PRODUCT_LISTING_INFO_MODAL,
             properties: {
-                guild_product_listing_id: N,
-                has_entitlement: !0 === b.has_entitlement,
+                guild_product_listing_id: b,
+                has_entitlement: !0 === C.has_entitlement,
                 location: v
             }
         });
-    let C = null !== (t = (0, h.C)(b)) && void 0 !== t ? t : '',
-        O = (0, h.k)(b),
-        Z = (0, o.e7)([x.Z], () => x.Z.getGuild(I));
-    return (0, n.jsxs)(l.ModalRoot, {
+    let y = null != (t = (0, h.C)(C)) ? t : '',
+        I = (0, h.k)(C),
+        O = (0, l.e7)([x.Z], () => x.Z.getGuild(N));
+    return (0, r.jsxs)(o.Y0X, {
         className: g.modal,
-        size: l.ModalSize.MEDIUM,
-        transitionState: r,
-        'aria-label': b.name,
+        size: o.CgR.MEDIUM,
+        transitionState: a,
+        'aria-label': C.name,
         children: [
-            (0, n.jsxs)(l.ModalHeader, {
+            (0, r.jsxs)(o.xBx, {
                 separator: !1,
                 children: [
-                    (0, n.jsx)(m.e, {
+                    (0, r.jsx)(m.e, {
                         height: 267,
-                        listing: b,
+                        listing: C,
                         className: g.headerImage,
                         alt: ''
                     }),
-                    (0, n.jsx)(l.ModalCloseButton, {
+                    (0, r.jsx)(o.olH, {
                         className: g.closeButton,
-                        onClick: D,
+                        onClick: Z,
                         withCircleBackground: !0
                     })
                 ]
             }),
-            (0, n.jsx)(l.ModalContent, {
-                children: (0, n.jsxs)('div', {
+            (0, r.jsx)(o.hzk, {
+                children: (0, r.jsxs)('div', {
                     className: g.body,
                     children: [
-                        (0, n.jsx)(l.Heading, {
+                        (0, r.jsx)(o.X6q, {
                             variant: 'heading-xl/medium',
                             color: 'header-primary',
-                            children: b.name
+                            children: C.name
                         }),
-                        (0, n.jsx)(l.Spacer, { size: 4 }),
-                        (0, n.jsx)(l.Text, {
+                        (0, r.jsx)(o.LZC, { size: 4 }),
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            children: p.Z.Messages.GUILD_PRODUCT_INFO_MODAL_PRODUCT_OFFER.format({
-                                productType: C,
-                                personName: null !== (a = null == Z ? void 0 : Z.name) && void 0 !== a ? a : ''
+                            children: p.NW.format(p.t.xImSen, {
+                                productType: y,
+                                personName: null != (n = null == O ? void 0 : O.name) ? n : ''
                             })
                         }),
-                        (0, n.jsx)(l.Spacer, { size: 16 }),
-                        (0, n.jsx)(f.Z, { listing: b }),
-                        (0, n.jsx)(l.Spacer, { size: 16 }),
-                        (0, n.jsx)('div', { className: g.seperator }),
-                        (0, n.jsx)(l.Spacer, { size: 16 }),
-                        (0, n.jsx)(l.Heading, {
+                        (0, r.jsx)(o.LZC, { size: 16 }),
+                        (0, r.jsx)(j.Z, { listing: C }),
+                        (0, r.jsx)(o.LZC, { size: 16 }),
+                        (0, r.jsx)('div', { className: g.seperator }),
+                        (0, r.jsx)(o.LZC, { size: 16 }),
+                        (0, r.jsx)(o.X6q, {
                             variant: 'heading-lg/medium',
                             color: 'header-primary',
-                            children: p.Z.Messages.GUILD_PRODUCT_INFO_MODAL_DETAIL_HEADER
+                            children: p.NW.string(p.t.TNnDJi)
                         }),
-                        (0, n.jsx)(l.Spacer, { size: 12 }),
-                        (0, n.jsx)(u.Z, {
+                        (0, r.jsx)(o.LZC, { size: 12 }),
+                        (0, r.jsx)(u.Z, {
                             className: g.description,
                             variant: 'text-md/normal',
                             color: 'text-muted',
-                            text: b.description
+                            text: C.description
                         })
                     ]
                 })
             }),
-            (0, n.jsxs)(l.ModalFooter, {
+            (0, r.jsxs)(o.mzw, {
                 className: g.footer,
                 children: [
-                    (0, n.jsx)(j.Z, {
-                        guildId: I,
-                        guildProductListingId: N,
+                    (0, r.jsx)(_.Z, {
+                        guildId: N,
+                        guildProductListingId: b,
                         sourceAnalyticsLocations: c.Z.GUILD_PRODUCT_INFO_MODAL
                     }),
-                    (0, n.jsx)(l.Text, {
+                    (0, r.jsx)(o.Text, {
                         tag: 'div',
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: O
+                        children: I
                     })
                 ]
             })

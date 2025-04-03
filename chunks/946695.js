@@ -1,24 +1,4 @@
-var r, i;
-n.d(t, {
-    a: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {})).Destroy = 'destroy'),
-    (i.Silence = 'silence'),
-    (i.Connection = 'connection'),
-    (i.DeviceChange = 'devicechange'),
-    (i.VolumeChange = 'volumechange'),
-    (i.VoiceActivity = 'voiceactivity'),
-    (i.WatchdogTimeout = 'watchdogtimeout'),
-    (i.AudioPermission = 'audio-permission'),
-    (i.VideoPermission = 'video-permission'),
-    (i.DesktopSourceEnd = 'desktopsourceend'),
-    (i.ConnectionStats = 'connection-stats'),
-    (i.VideoInputInitialized = 'video-input-initialized'),
-    (i.ClipsRecordingRestartNeeded = 'clips-recording-restart-needed'),
-    (i.ClipsInitFailure = 'clips-init-failure'),
-    (i.ClipsRecordingEnded = 'clips-recording-ended'),
-    (i.NativeScreenSharePickerUpdate = 'native-screenshare-picker-updated'),
-    (i.NativeScreenSharePickerCancel = 'native-screenshare-picker-cancelled'),
-    (i.NativeScreenSharePickerError = 'native-screenshare-picker-error');
+n.d(t, { a: () => r });
+var r = (function (e) {
+    return (e.Destroy = 'destroy'), (e.Silence = 'silence'), (e.Connection = 'connection'), (e.DeviceChange = 'devicechange'), (e.VolumeChange = 'volumechange'), (e.VoiceActivity = 'voiceactivity'), (e.WatchdogTimeout = 'watchdogtimeout'), (e.AudioPermission = 'audio-permission'), (e.VideoPermission = 'video-permission'), (e.DesktopSourceEnd = 'desktopsourceend'), (e.ConnectionStats = 'connection-stats'), (e.VideoInputInitialized = 'video-input-initialized'), (e.AudioInputInitialized = 'audio-input-initialized'), (e.ClipsRecordingRestartNeeded = 'clips-recording-restart-needed'), (e.ClipsInitFailure = 'clips-init-failure'), (e.ClipsRecordingEnded = 'clips-recording-ended'), (e.NativeScreenSharePickerUpdate = 'native-screenshare-picker-updated'), (e.NativeScreenSharePickerCancel = 'native-screenshare-picker-cancelled'), (e.NativeScreenSharePickerError = 'native-screenshare-picker-error'), (e.AudioDeviceModuleError = 'audio-device-module-error'), (e.VoiceFiltersFailed = 'voice-filters-failed'), (e.VideoCodecError = 'video-codec-error'), e;
+})({});

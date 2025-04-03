@@ -1,96 +1,80 @@
 n.d(t, {
-    AH: function () {
-        return g;
-    },
-    CS: function () {
-        return p;
-    },
-    EW: function () {
-        return y;
-    },
-    OR: function () {
-        return D;
-    },
-    QB: function () {
-        return S;
-    },
-    T0: function () {
-        return C;
-    },
-    Wf: function () {
-        return O;
-    },
-    eT: function () {
-        return R;
-    },
-    gl: function () {
-        return N;
-    },
-    is: function () {
-        return m;
-    },
-    m0: function () {
-        return T;
-    },
-    nE: function () {
-        return v;
-    },
-    pf: function () {
-        return A;
-    },
-    xw: function () {
-        return I;
-    }
+    AH: () => T,
+    Ag: () => M,
+    CS: () => v,
+    EW: () => L,
+    OR: () => x,
+    QB: () => N,
+    T0: () => D,
+    Wf: () => P,
+    cT: () => U,
+    eT: () => w,
+    gU: () => B,
+    gl: () => C,
+    is: () => O,
+    lL: () => G,
+    m0: () => S,
+    nE: () => R,
+    pf: () => A,
+    qm: () => k,
+    w: () => j,
+    xw: () => I
 }),
     n(411104);
 var r = n(990547),
     i = n(544891),
-    a = n(570140),
-    s = n(479531),
-    o = n(573261),
-    l = n(617136),
-    u = n(705006),
-    c = n(569984),
-    d = n(497505),
-    _ = n(918701),
-    E = n(566078),
-    f = n(981631),
-    h = n(689938);
-async function p(e) {
+    o = n(570140),
+    a = n(479531),
+    s = n(930446),
+    l = n(844889),
+    c = n(573261),
+    u = n(617136),
+    d = n(705006),
+    f = n(569984),
+    _ = n(497505),
+    p = n(918701),
+    h = n(184299),
+    m = n(720293),
+    g = n(566078),
+    E = n(981631),
+    b = n(388032);
+let y = 5;
+async function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     try {
         let n = (
             await i.tn.post({
-                url: f.ANM.QUEST_ON_CONSOLE_START(e),
+                url: E.ANM.QUEST_ON_CONSOLE_START(e),
                 query: t ? { preview: t } : void 0,
-                failImmediatelyWhenRateLimited: !0
+                failImmediatelyWhenRateLimited: !0,
+                rejectWithError: !1
             })
         ).body;
         if (null != n.quest_user_status)
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'QUESTS_USER_STATUS_UPDATE',
                 user_status: n.quest_user_status
             });
-        else if (null != n.error_hints_v2 && n.error_hints_v2.length > 0) return { errorHints: n.error_hints_v2.slice(0, 5) };
+        else if (null != n.error_hints_v2 && n.error_hints_v2.length > 0) return { errorHints: n.error_hints_v2.slice(0, y) };
     } catch (r) {
         var n;
-        let e = new s.Z(r);
+        let e = new a.Z(r);
         if (429 === e.status)
             return {
                 errorHints: [
                     {
-                        type: d.HW.RATE_LIMITED,
-                        message: h.Z.Messages.RATE_LIMITED,
+                        type: _.HW.RATE_LIMITED,
+                        message: b.NW.string(b.t['Whhv4+']),
                         connected_account_id: '',
                         connected_account_type: ''
                     }
                 ]
             };
-        let t = null !== (n = e.getAnyErrorMessage()) && void 0 !== n ? n : h.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR;
+        let t = null != (n = e.getAnyErrorMessage()) ? n : b.NW.string(b.t.xSCvBQ);
         return {
             errorHints: [
                 {
-                    type: d.HW.GENERIC,
+                    type: _.HW.GENERIC,
                     message: t,
                     connected_account_id: '',
                     connected_account_type: ''
@@ -100,40 +84,49 @@ async function p(e) {
     }
     return { errorHints: [] };
 }
-async function m(e) {
-    await i.tn.post({ url: f.ANM.QUEST_ON_CONSOLE_STOP(e) });
+async function O(e) {
+    await i.tn.post({
+        url: E.ANM.QUEST_ON_CONSOLE_STOP(e),
+        rejectWithError: !1
+    });
 }
 async function I() {
-    if (!c.Z.isFetchingCurrentQuests) {
-        a.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), u.Z.recordQuestRequestAttempt(f.ANM.QUESTS_CURRENT_QUESTS);
+    if (!f.Z.isFetchingCurrentQuests) {
+        o.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), d.Z.recordQuestRequestAttempt(E.ANM.QUESTS_CURRENT_QUESTS);
         try {
-            let e = (await i.tn.get({ url: f.ANM.QUESTS_CURRENT_QUESTS })).body.quests
-                .filter((e) => (0, _.Qe)(e))
-                .map((e) => (0, _.WP)(e))
-                .filter((e) => {
-                    var t;
-                    return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || E.r.build(e.config).rewardPlatforms.length > 0;
-                });
-            a.Z.dispatch({
+            let e = await i.tn.get({
+                    url: E.ANM.QUESTS_CURRENT_QUESTS,
+                    rejectWithError: !1
+                }),
+                t = e.body.quests
+                    .filter((e) => (0, p.Qe)(e))
+                    .map((e) => (0, p.WP)(e))
+                    .filter((e) => {
+                        var t;
+                        return (null == (t = e.userStatus) ? void 0 : t.claimedAt) != null || g.r.build(e.config).rewardPlatforms.length > 0;
+                    }),
+                n = e.body.excluded_quests;
+            o.Z.dispatch({
                 type: 'QUESTS_FETCH_CURRENT_QUESTS_SUCCESS',
-                quests: e
+                quests: t,
+                excludedQuests: n
             }),
-                u.Z.recordQuestRequestApiResponse(f.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !0 });
+                d.Z.recordQuestRequestApiResponse(E.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !0 });
         } catch (e) {
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'QUESTS_FETCH_CURRENT_QUESTS_FAILURE',
-                error: new s.Z(e)
+                error: new a.Z(e)
             }),
-                u.Z.recordQuestRequestApiResponse(f.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !1 });
+                d.Z.recordQuestRequestApiResponse(E.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !1 });
         }
     }
 }
-async function T(e) {
+async function S(e) {
     let { questId: t, streamKey: n, terminal: i = !1 } = e;
     try {
-        var l;
-        let e = await o.Z.post({
-            url: f.ANM.QUESTS_HEARTBEAT(t),
+        var s;
+        let e = await c.Z.post({
+            url: E.ANM.QUESTS_HEARTBEAT(t),
             body: {
                 stream_key: n,
                 terminal: i
@@ -144,90 +137,96 @@ async function T(e) {
                     quest_id: t,
                     terminal: i,
                     is_overlay: __OVERLAY__,
-                    stack_trace: null !== (l = Error().stack) && void 0 !== l ? l : '',
+                    stack_trace: null != (s = Error().stack) ? s : '',
                     is_playtime_eligible: !0
                 }
-            }
+            },
+            rejectWithError: !1
         });
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'QUESTS_SEND_HEARTBEAT_SUCCESS',
-            userStatus: (0, _.U3)(e.body),
+            userStatus: (0, p.U3)(e.body),
             questId: t,
             streamKey: n
         });
     } catch (e) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'QUESTS_SEND_HEARTBEAT_FAILURE',
-            error: new s.Z(e),
+            error: new a.Z(e),
             questId: t,
             streamKey: n
         });
     }
 }
-async function g(e, t) {
+async function T(e, t) {
     if (
         (null != t.questContentCTA &&
-            (0, l._3)({
+            (0, u._3)({
                 questId: e,
                 questContent: t.questContent,
                 questContentCTA: t.questContentCTA,
                 questContentPosition: t.questContentPosition,
                 questContentRowIndex: t.questContentRowIndex
             }),
-        !c.Z.isEnrolling(e))
+        !f.Z.isEnrolling(e))
     ) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'QUESTS_ENROLL_BEGIN',
             questId: e
         });
         try {
             let n = await i.tn.post({
-                url: f.ANM.QUESTS_ENROLL(e),
-                body: { location: t.questContent }
+                url: E.ANM.QUESTS_ENROLL(e),
+                body: { location: t.questContent },
+                rejectWithError: !0
             });
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'QUESTS_ENROLL_SUCCESS',
-                enrolledQuestUserStatus: (0, _.U3)(n.body)
+                enrolledQuestUserStatus: (0, p.U3)(n.body)
             });
         } catch (t) {
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'QUESTS_ENROLL_FAILURE',
                 questId: e
             });
         }
     }
 }
-async function S(e, t, n) {
-    if (!c.Z.isClaimingReward(e)) {
-        a.Z.dispatch({
+async function N(e, t, n) {
+    if (!f.Z.isClaimingReward(e)) {
+        o.Z.dispatch({
             type: 'QUESTS_CLAIM_REWARD_BEGIN',
             questId: e
         });
         try {
             let r = await i.tn.post({
-                    url: f.ANM.QUESTS_CLAIM_REWARD(e),
+                    url: E.ANM.QUESTS_CLAIM_REWARD(e),
                     body: {
                         platform: t,
                         location: n
-                    }
+                    },
+                    rejectWithError: !1
                 }),
-                s = (0, _.Xh)(r.body);
-            0 === s.errors.length
-                ? a.Z.dispatch({
-                      type: 'QUESTS_CLAIM_REWARD_SUCCESS',
-                      questId: e,
-                      entitlements: s
-                  })
-                : a.Z.dispatch({
-                      type: 'QUESTS_CLAIM_REWARD_FAILURE',
-                      error: s.errors,
-                      questId: e
-                  });
+                a = (0, p.Xh)(r.body);
+            return (
+                0 === a.errors.length
+                    ? o.Z.dispatch({
+                          type: 'QUESTS_CLAIM_REWARD_SUCCESS',
+                          questId: e,
+                          entitlements: a
+                      })
+                    : o.Z.dispatch({
+                          type: 'QUESTS_CLAIM_REWARD_FAILURE',
+                          error: a.errors,
+                          questId: e
+                      }),
+                a
+            );
         } catch (t) {
             throw (
-                (a.Z.dispatch({
+                (o.Z.dispatch({
                     type: 'QUESTS_CLAIM_REWARD_FAILURE',
-                    error: new s.Z(t),
+                    error: new a.Z(t),
                     questId: e
                 }),
                 t)
@@ -236,23 +235,26 @@ async function S(e, t, n) {
     }
 }
 async function A(e) {
-    if (!c.Z.isFetchingRewardCode(e)) {
-        a.Z.dispatch({
+    if (!f.Z.isFetchingRewardCode(e)) {
+        o.Z.dispatch({
             type: 'QUESTS_FETCH_REWARD_CODE_BEGIN',
             questId: e
         });
         try {
-            let t = await i.tn.get({ url: f.ANM.QUESTS_REWARD_CODE(e) });
-            a.Z.dispatch({
+            let t = await i.tn.get({
+                url: E.ANM.QUESTS_REWARD_CODE(e),
+                rejectWithError: !1
+            });
+            o.Z.dispatch({
                 type: 'QUESTS_FETCH_REWARD_CODE_SUCCESS',
                 questId: e,
-                rewardCode: (0, _.yI)(t.body)
+                rewardCode: (0, p.yI)(t.body)
             });
         } catch (t) {
             throw (
-                (a.Z.dispatch({
+                (o.Z.dispatch({
                     type: 'QUESTS_FETCH_REWARD_CODE_FAILURE',
-                    error: new s.Z(t),
+                    error: new a.Z(t),
                     questId: e
                 }),
                 t)
@@ -260,103 +262,219 @@ async function A(e) {
         }
     }
 }
-async function N(e, t) {
-    let n = c.Z.isDismissingContent(e),
-        r = (0, _.GN)(t);
+async function C(e, t) {
+    let n = f.Z.isDismissingContent(e),
+        r = (0, p.GN)(t);
     if (!n && r) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'QUESTS_DISMISS_CONTENT_BEGIN',
             questId: e,
             content: t
         });
         try {
             let n = await i.tn.post({
-                url: f.ANM.QUESTS_DISMISS_CONTENT(e, t),
-                body: {}
+                url: E.ANM.QUESTS_DISMISS_CONTENT(e, t),
+                body: {},
+                rejectWithError: !1
             });
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'QUESTS_DISMISS_CONTENT_SUCCESS',
-                dismissedQuestUserStatus: (0, _.U3)(n.body)
+                dismissedQuestUserStatus: (0, p.U3)(n.body)
             });
         } catch (t) {
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'QUESTS_DISMISS_CONTENT_FAILURE',
-                error: new s.Z(t),
+                error: new a.Z(t),
                 questId: e
             });
         }
     }
 }
-function v(e) {
-    a.Z.dispatch({
+function R(e) {
+    o.Z.dispatch({
         type: 'QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE',
         streamKey: e
     });
 }
-async function O(e) {
+async function P(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     try {
-        let t = await i.tn.post({
-            url: f.ANM.QUESTS_PREVIEW_COMPLETE(e),
-            body: {}
+        let n = await i.tn.post({
+            url: E.ANM.QUESTS_PREVIEW_COMPLETE(e),
+            body: { percent: t },
+            rejectWithError: !1
         });
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'QUESTS_PREVIEW_UPDATE_SUCCESS',
-            previewQuestUserStatus: (0, _.U3)(t.body)
+            previewQuestUserStatus: (0, p.U3)(n.body)
         });
     } catch (t) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'QUESTS_PREVIEW_UPDATE_FAILURE',
-            error: new s.Z(t),
+            error: new a.Z(t),
             questId: e
         });
     }
 }
-async function R(e) {
-    try {
-        let t = await i.tn.del({
-            url: f.ANM.QUESTS_PREVIEW_STATUS(e),
-            body: {}
-        });
-        a.Z.dispatch({
-            type: 'QUESTS_PREVIEW_UPDATE_SUCCESS',
-            previewQuestUserStatus: (0, _.U3)(t.body)
-        });
-    } catch (t) {
-        a.Z.dispatch({
-            type: 'QUESTS_PREVIEW_UPDATE_FAILURE',
-            error: new s.Z(t),
-            questId: e
-        });
-    }
-}
-async function C(e) {
+async function w(e) {
     try {
         let t = await i.tn.del({
-            url: f.ANM.QUESTS_PREVIEW_DISMISSIBILITY(e),
-            body: {}
+            url: E.ANM.QUESTS_PREVIEW_STATUS(e),
+            body: {},
+            rejectWithError: !1
         });
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'QUESTS_PREVIEW_UPDATE_SUCCESS',
-            previewQuestUserStatus: (0, _.U3)(t.body)
+            previewQuestUserStatus: (0, p.U3)(t.body)
         });
     } catch (t) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'QUESTS_PREVIEW_UPDATE_FAILURE',
-            error: new s.Z(t),
+            error: new a.Z(t),
             questId: e
         });
     }
 }
-function y(e) {
-    a.Z.dispatch({
+async function D(e) {
+    try {
+        o.Z.dispatch({ type: 'QUESTS_DOCK_RESET_SOFT_DISMISSAL' });
+        let t = await i.tn.del({
+            url: E.ANM.QUESTS_PREVIEW_DISMISSIBILITY(e),
+            body: {},
+            rejectWithError: !1
+        });
+        o.Z.dispatch({
+            type: 'QUESTS_PREVIEW_UPDATE_SUCCESS',
+            previewQuestUserStatus: (0, p.U3)(t.body)
+        });
+    } catch (t) {
+        o.Z.dispatch({
+            type: 'QUESTS_PREVIEW_UPDATE_FAILURE',
+            error: new a.Z(t),
+            questId: e
+        });
+    }
+}
+function L(e) {
+    o.Z.dispatch({
         type: 'QUESTS_DELIVERY_OVERRIDE',
         questId: e
     });
 }
-function D(e, t) {
-    a.Z.dispatch({
+function x(e, t) {
+    o.Z.dispatch({
         type: 'QUESTS_SELECT_TASK_PLATFORM',
         questId: e,
         platform: t
     });
+}
+async function M() {
+    if (!f.Z.isFetchingClaimedQuests) {
+        o.Z.dispatch({ type: 'QUESTS_FETCH_CLAIMED_QUESTS_BEGIN' });
+        try {
+            let e = (
+                await i.tn.get({
+                    url: E.ANM.QUESTS_CLAIMED_QUESTS,
+                    rejectWithError: !1
+                })
+            ).body.quests.map((e) => (0, p.hQ)(e));
+            o.Z.dispatch({
+                type: 'QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS',
+                quests: e
+            });
+        } catch (e) {
+            o.Z.dispatch({
+                type: 'QUESTS_FETCH_CLAIMED_QUESTS_FAILURE',
+                error: new a.Z(e)
+            });
+        }
+    }
+}
+function k(e, t, n) {
+    o.Z.dispatch({
+        type: 'QUESTS_UPDATE_OPTIMISTIC_PROGRESS',
+        questId: e,
+        taskEventName: t,
+        progress: n
+    });
+}
+async function j(e) {
+    o.Z.dispatch({
+        type: 'QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN',
+        placement: e
+    });
+    try {
+        let t = await (0, l.G)(),
+            n = await (0, s.Gy)(),
+            r = (
+                await i.tn.get({
+                    url: E.ANM.QUEST_FETCH_QUEST_TO_DELIVER(e, null == t ? void 0 : t.uuid, n.uuid),
+                    rejectWithError: !1
+                })
+            ).body;
+        o.Z.dispatch({
+            type: 'QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS',
+            decisionId: r.request_id,
+            quest: (0, p.q6)(r.quest),
+            adIdentifiers: (0, p.Sf)(r.ad_identifiers),
+            placement: e
+        });
+    } catch (t) {
+        o.Z.dispatch({
+            type: 'QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE',
+            error: new a.Z(t),
+            placement: e
+        });
+    }
+}
+async function U(e, t) {
+    var n;
+    await c.Z.post({
+        url: E.ANM.QUESTS_VIDEO_PROGRESS(e),
+        body: { timestamp: t },
+        trackedActionData: {
+            event: r.NetworkActionNames.QUEST_VIDEO_PROGRESS,
+            properties: {
+                quest_id: e,
+                timestamp_sec: t.toString(),
+                stack_trace: null != (n = Error().stack) ? n : ''
+            }
+        },
+        rejectWithError: !1
+    });
+}
+async function G(e) {
+    let t = (0, m.z)(m.i.VIDEO_PLAYER_TRANSCRIPT, e);
+    if (null == t)
+        return void h.ZP.getState().setTranscriptAsset({
+            questId: e.id,
+            fetchStatus: h.iF.FAILURE
+        });
+    h.ZP.getState().setTranscriptAsset({
+        questId: e.id,
+        fetchStatus: h.iF.FETCHING
+    });
+    try {
+        let n = await i.tn.get({
+            url: t.url,
+            rejectWithError: !0
+        });
+        h.ZP.getState().setTranscriptAsset({
+            questId: e.id,
+            fetchStatus: h.iF.SUCCESS,
+            text: n.text
+        });
+    } catch (t) {
+        h.ZP.getState().setTranscriptAsset({
+            questId: e.id,
+            fetchStatus: h.iF.FAILURE
+        });
+    }
+}
+async function B(e) {
+    let t = await i.tn.get({
+        url: E.ANM.QUEST(e),
+        rejectWithError: !1
+    });
+    return (0, p.q6)(t.body);
 }

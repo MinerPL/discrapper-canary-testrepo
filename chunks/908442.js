@@ -1,16 +1,8 @@
 n.d(t, {
-    F$: function () {
-        return a;
-    },
-    S6: function () {
-        return i;
-    },
-    ZF: function () {
-        return s;
-    },
-    o0: function () {
-        return r;
-    }
+    F$: () => o,
+    S6: () => i,
+    ZF: () => a,
+    o0: () => r
 });
 let r = {
         discord_marketing: 'Discord Marketing',
@@ -49,7 +41,7 @@ let r = {
             label: '1 Month'
         }
     ],
-    a = [
+    o = [
         {
             value: 'all',
             label: 'All'
@@ -71,4 +63,4 @@ let r = {
             label: 'Staging'
         }
     ],
-    s = 'buildOverride';
+    a = 'buildOverride';

@@ -1,67 +1,63 @@
-a.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var t = a(735250);
-a(470079);
-var c = a(120356),
-    i = a.n(c),
-    o = a(481060),
-    r = a(689938),
-    l = a(543471);
-function d(e) {
-    let { guild: n, speakers: a, speakerCount: c, className: d } = e,
-        s = a.slice(0, 5),
-        u = s.map((e) => {
-            var a, c;
+i.d(n, { Z: () => o });
+var t = i(200651);
+i(192379);
+var l = i(120356),
+    a = i.n(l),
+    r = i(481060),
+    s = i(388032),
+    c = i(449774);
+function o(e) {
+    let { guild: n, speakers: i, speakerCount: l, className: o } = e,
+        u = i.slice(0, 5),
+        d = u.map((e) => {
+            var i, l;
             return (0, t.jsxs)(
                 'div',
                 {
-                    className: l.speakerContainer,
+                    className: c.speakerContainer,
                     children: [
-                        (0, t.jsx)(o.Avatar, {
-                            src: null == e ? void 0 : null === (a = e.user) || void 0 === a ? void 0 : a.getAvatarURL(n.id, 20),
-                            size: o.AvatarSizes.SIZE_20,
-                            className: l.avatar,
+                        (0, t.jsx)(r.qEK, {
+                            src: null == e || null == (i = e.user) ? void 0 : i.getAvatarURL(n.id, 20),
+                            size: r.EFr.SIZE_20,
+                            className: c.avatar,
                             'aria-label': ''.concat(null == e ? void 0 : e.userNick, '-avatar')
                         }),
                         (0, t.jsx)('div', {
-                            className: l.textInGridContainer,
-                            children: (0, t.jsx)(o.Text, {
+                            className: c.textInGridContainer,
+                            children: (0, t.jsx)(r.Text, {
                                 color: 'header-secondary',
                                 variant: 'text-sm/normal',
-                                className: l.textInGrid,
+                                className: c.textInGrid,
                                 children: null == e ? void 0 : e.userNick
                             })
                         })
                     ]
                 },
-                null == e ? void 0 : null === (c = e.user) || void 0 === c ? void 0 : c.id
+                null == e || null == (l = e.user) ? void 0 : l.id
             );
         }),
-        _ = c - s.length;
+        h = l - u.length;
     return (0, t.jsxs)('div', {
-        className: i()(l.grid, d),
+        className: a()(c.grid, o),
         children: [
-            u,
-            _ > 0 &&
+            d,
+            h > 0 &&
                 (0, t.jsxs)('div', {
-                    className: l.speakerContainer,
+                    className: c.speakerContainer,
                     children: [
                         (0, t.jsx)('div', {
-                            className: l.iconMicrophone,
-                            children: (0, t.jsx)(o.MicrophoneIcon, {
+                            className: c.iconMicrophone,
+                            children: (0, t.jsx)(r.S6n, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 height: 12
                             })
                         }),
-                        (0, t.jsx)(o.Text, {
+                        (0, t.jsx)(r.Text, {
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            className: l.textInGrid,
-                            children: r.Z.Messages.STAGE_DISCOVERY_LIVE_STAGE_TILE_SPEAKER_SUMMARY_OVERFLOW.format({ count: _ })
+                            className: c.textInGrid,
+                            children: s.NW.format(s.t['185ggI'], { count: h })
                         })
                     ]
                 })

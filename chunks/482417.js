@@ -1,38 +1,75 @@
-l.d(n, {
-    Z: function () {
-        return s;
-    }
-}),
-    l(47120);
-var t = l(423875),
-    r = l(740605),
-    i = l(206583),
-    a = l(616922),
-    u = l(689938);
-function s(e) {
-    let n,
-        { entry: l, baseEntryData: s } = e,
-        o = l.extra.entries[0].media,
-        c = o.artists[0],
-        { title: d, provider: m, image_url: f } = o,
-        p = c.name,
-        E = () => (0, r.o)(a.Hw.TRACK, o.external_id);
+r.d(t, { Z: () => c }), r(47120);
+var n = r(423875),
+    l = r(740605),
+    i = r(206583),
+    o = r(616922),
+    a = r(388032);
+function c(e) {
+    var t, r;
+    let c,
+        { entry: s, baseEntryData: u } = e,
+        p = s.extra.entries[0].media,
+        d = p.artists[0],
+        { title: f, provider: b, image_url: O } = p,
+        y = d.name,
+        m = {
+            onClick: () => (0, l.o)(o.Hw.TRACK, p.external_id),
+            ariaDescription: a.NW.formatToPlainString(a.t.xTsar6, { itemName: f })
+        },
+        j = {
+            onClick: () => (0, l.o)(o.Hw.ARTIST, d.external_id),
+            ariaDescription: a.NW.formatToPlainString(a.t.xTsar6, { itemName: y })
+        };
     return (
-        m === t.p.SPOTIFY &&
-            (n = {
-                type: i.kG.SPOTIFY,
-                'aria-label': u.Z.Messages.SPOTIFY
+        b === n.p.SPOTIFY && (c = { type: i.kG.SPOTIFY }),
+        (t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, u)),
+        (r = r =
+            {
+                title: f,
+                subtitle: y,
+                thumbnailUrl: O,
+                titleClickable: m,
+                subtitleClickable: j,
+                thumbnailClickable: m,
+                userDescription: a.t.CcVI1d,
+                providerIconProps: c
             }),
-        {
-            ...s,
-            title: d,
-            subtitle: p,
-            thumbnailUrl: f,
-            onClickTitle: E,
-            onClickSubtitle: () => (0, r.o)(a.Hw.ARTIST, c.external_id),
-            onClickThumbnail: E,
-            userDescription: u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
-            providerIconProps: n
-        }
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t
     );
 }

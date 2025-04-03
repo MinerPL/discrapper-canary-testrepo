@@ -1,22 +1,44 @@
-var i = n(735250);
-n(470079);
-var a = n(788307),
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(468363),
+    l = n(326255),
+    a = n(956221),
+    o = n(747017),
     s = n(51144),
-    r = n(17337);
-t.Z = function (e) {
-    let { hovered: t, activities: n, applicationStream: l, status: o, user: c } = e;
-    return n.length > 0
-        ? (0, i.jsx)(a.Z, {
-              className: r.activity,
-              textClassName: r.text,
-              emojiClassName: r.customStatusEmoji,
-              activities: n,
-              applicationStream: l,
-              animate: t,
-              user: c
+    c = n(388032),
+    u = n(223009);
+let d = function (e) {
+    let { hovered: t, activities: n, applicationStream: d, status: p, user: h, userIgnored: f } = e,
+        { voiceActivityStatusEnabled: g } = (0, i.U)({ location: 'StatusText' }),
+        { voiceChannel: m } = (0, a.Z)({
+            userId: null == h ? void 0 : h.id,
+            surface: 'status-text'
+        }),
+        b = g ? m : void 0;
+    return f
+        ? (0, r.jsx)('div', {
+              className: u.text,
+              children: c.NW.string(c.t.tFY5ZW)
           })
-        : (0, i.jsx)('div', {
-              className: r.text,
-              children: (0, s.u5)(o)
-          });
+        : (0, l.Z)({
+                activities: n,
+                status: p,
+                applicationStream: d,
+                voiceChannel: b
+            })
+          ? (0, r.jsx)(o.Z, {
+                textClassName: u.text,
+                emojiClassName: u.customStatusEmoji,
+                activities: n,
+                applicationStream: d,
+                voiceChannel: b,
+                animate: t,
+                user: h,
+                textSize: 'sm'
+            })
+          : (0, r.jsx)('div', {
+                className: u.text,
+                children: (0, s.u5)(p)
+            });
 };

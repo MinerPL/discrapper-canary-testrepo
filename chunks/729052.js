@@ -1,14 +1,10 @@
 n.d(t, {
-    p2: function () {
-        return o;
-    },
-    vS: function () {
-        return l;
-    }
+    p2: () => s,
+    vS: () => l
 });
 var r = n(818083),
     i = n(981631);
-let a = (0, r.B)({
+let o = (0, r.B)({
         kind: 'user',
         id: '2023-11_voice_activity_notification_user',
         label: 'Voice Activity Notifications for User',
@@ -26,7 +22,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    a = (0, r.B)({
         kind: 'guild',
         id: '2023-11_voice_activity_notification_guild',
         label: 'General Voice Channel Notifications for Guild',
@@ -39,19 +35,19 @@ let a = (0, r.B)({
             }
         ]
     });
-function o(e) {
+function s(e) {
     var t;
-    let { voiceChannelActivityNotifsEnabled: n } = s.useExperiment(
+    let { voiceChannelActivityNotifsEnabled: n } = a.useExperiment(
             {
                 location: 'useVoiceActivityNotificationSettingsExperiment',
-                guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.lds
+                guildId: null != (t = null == e ? void 0 : e.getGuildId()) ? t : i.lds
             },
             {
                 disable: (null == e ? void 0 : e.type) !== i.d4z.GUILD_VOICE,
                 autoTrackExposure: !1
             }
         ),
-        { enabled: r } = a.useExperiment(
+        { enabled: r } = o.useExperiment(
             { location: 'useVoiceActivityNotificationSettingsExperiment' },
             {
                 disable: (null == e ? void 0 : e.type) !== i.d4z.GUILD_VOICE || !n,
@@ -62,8 +58,8 @@ function o(e) {
 }
 function l(e) {
     var t;
-    let { voiceChannelActivityNotifsEnabled: n } = s.getCurrentConfig({
-        guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.lds,
+    let { voiceChannelActivityNotifsEnabled: n } = a.getCurrentConfig({
+        guildId: null != (t = null == e ? void 0 : e.getGuildId()) ? t : i.lds,
         location: 'hasVoiceChannelActivityNotifsEnabled'
     });
     return n;

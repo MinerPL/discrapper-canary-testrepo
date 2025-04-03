@@ -1,91 +1,109 @@
-n.d(r, {
-    C3: function () {
-        return m;
-    },
-    O3: function () {
-        return f;
-    },
-    ZP: function () {
-        return _;
-    }
+n.d(t, {
+    C3: () => E,
+    O3: () => b,
+    ZP: () => g
 });
-var l = n(735250),
-    o = n(470079),
-    s = n(120356),
-    t = n.n(s),
-    a = n(512722),
-    c = n.n(a),
-    i = n(699581),
-    d = n(481060),
-    u = n(598),
-    p = n(132805);
-function _(e) {
-    var r, n, s, a, i, _;
-    let {
-            header: m,
-            isLargeModal: f,
-            stepProps: N
-        } = (function (e) {
-            let { header: r, isLargeModal: n, ...l } = e;
-            return {
-                header: r,
-                isLargeModal: n,
-                stepProps: l
-            };
-        })(e),
-        { step: h, stepConfigs: E, setBodyNode: x, setFooterNode: I, setModalOverlayNode: S, setReadySlideId: C } = (0, u.usePaymentContext)(),
-        T = E.find((e) => e.key === h);
-    o.useEffect(() => {
-        S(null);
-    }, [h, S]),
-        c()(null != T, 'Unknown step for current payment flow.');
-    let b = null !== (i = null == T ? void 0 : null === (r = T.options) || void 0 === r ? void 0 : r.hideSlider) && void 0 !== i && i,
-        j = null == T ? void 0 : null === (n = T.options) || void 0 === n ? void 0 : n.bodyClassName,
-        v = void 0 !== f && f ? p.sliderBodyLarge : null == T ? void 0 : null === (s = T.options) || void 0 === s ? void 0 : s.sliderBodyClassName;
-    return (0, l.jsxs)(l.Fragment, {
-        children: [
-            null === (_ = null == T ? void 0 : null === (a = T.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === _ || _ ? m : null,
-            T.renderStep(N),
-            null == h || b
-                ? null
-                : (0, l.jsxs)(l.Fragment, {
-                      children: [
-                          (0, l.jsx)(d.ModalContent, {
-                              className: t()(p.body, j),
-                              children: (0, l.jsx)(d.Slides, {
-                                  activeSlide: h,
-                                  centered: !1,
-                                  onSlideReady: (e) => C(e),
-                                  children: E.filter((e) => null != e.key).map((e) =>
-                                      (0, l.jsx)(
-                                          d.Slide,
-                                          {
-                                              id: e.key,
-                                              children: (0, l.jsx)('form', {
-                                                  className: t()(p.sliderBody, v),
-                                                  ref: (e) => x(e),
-                                                  onSubmit: (e) => e.preventDefault()
-                                              })
-                                          },
-                                          e.key
-                                      )
-                                  )
-                              })
-                          }),
-                          (0, l.jsx)('div', { ref: (e) => I(e) }),
-                          (0, l.jsx)('div', { ref: (e) => S(e) })
-                      ]
-                  })
-        ]
-    });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(512722),
+    l = n.n(s),
+    c = n(995295),
+    u = n(481060),
+    d = n(563132),
+    f = n(409813),
+    _ = n(249779);
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = h(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
 }
 function m(e) {
-    let { children: r } = e,
-        { bodyNode: n } = (0, u.usePaymentContext)();
-    return null == n ? null : i.createPortal(r, n);
+    let { header: t, isLargeModal: n } = e;
+    return {
+        header: t,
+        isLargeModal: n,
+        stepProps: p(e, ['header', 'isLargeModal'])
+    };
 }
-function f(e) {
-    let { children: r } = e,
-        { footerNode: n } = (0, u.usePaymentContext)();
-    return null == n ? null : i.createPortal(r, n);
+function g(e) {
+    var t, n, o, s, c, p;
+    let { header: h, isLargeModal: g, stepProps: E } = m(e),
+        { step: b, stepConfigs: y, setBodyNode: v, setFooterNode: O, setModalOverlayNode: I, setReadySlideId: S } = (0, d.JL)(),
+        T = y.find((e) => e.key === b);
+    i.useEffect(() => {
+        I(null);
+    }, [b, I]),
+        l()(null != T, 'Unknown step for current payment flow.');
+    let N = null != (c = null == T || null == (t = T.options) ? void 0 : t.hideSlider) && c,
+        A = null == T || null == (n = T.options) ? void 0 : n.bodyClassName,
+        C = null == T || null == (o = T.options) ? void 0 : o.sliderBodyClassName;
+    return (
+        void 0 !== g && g && (C = _.sliderBodyLarge),
+        (0, r.jsxs)(r.Fragment, {
+            children: [
+                null == (p = null == T || null == (s = T.options) ? void 0 : s.renderHeader) || p ? h : null,
+                T.renderStep(E),
+                null == b || N
+                    ? null
+                    : (0, r.jsxs)(r.Fragment, {
+                          children: [
+                              (0, r.jsx)(u.hzk, {
+                                  className: a()(A, _.body, _.noRoundedCorners, { [_.reviewStep]: b === f.h8.REVIEW }),
+                                  children: (0, r.jsx)(u.MyZ, {
+                                      activeSlide: b,
+                                      centered: !1,
+                                      onSlideReady: (e) => S(e),
+                                      width: b === f.h8.ADD_PAYMENT_STEPS ? 408 : void 0,
+                                      children: y
+                                          .filter((e) => null != e.key)
+                                          .map((e) =>
+                                              (0, r.jsx)(
+                                                  u.Mi4,
+                                                  {
+                                                      id: e.key,
+                                                      children: (0, r.jsx)('form', {
+                                                          className: a()(_.sliderBody, C),
+                                                          ref: (e) => v(e),
+                                                          onSubmit: (e) => e.preventDefault()
+                                                      })
+                                                  },
+                                                  e.key
+                                              )
+                                          )
+                                  })
+                              }),
+                              (0, r.jsx)('div', { ref: (e) => O(e) }),
+                              (0, r.jsx)('div', { ref: (e) => I(e) })
+                          ]
+                      })
+            ]
+        })
+    );
+}
+function E(e) {
+    let { children: t } = e,
+        { bodyNode: n } = (0, d.JL)();
+    return null == n ? null : c.createPortal(t, n);
+}
+function b(e) {
+    let { children: t } = e,
+        { footerNode: n } = (0, d.JL)();
+    return null == n ? null : c.createPortal(t, n);
 }

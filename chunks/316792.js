@@ -1,6 +1,2 @@
-n.d(t, {
-    L: function () {
-        return r;
-    }
-});
-let r = ['ggsans-400-normalitalic', 'ggsans-700-bold', 'ggsans-700-bolditalic', 'notosans-400-normalitalic', 'notosans-700-bold', 'notosans-700-bolditalic'];
+n.d(t, { L: () => r });
+let r = ['gg-sans/ggsans-400-normalitalic', 'gg-sans/ggsans-700-bold', 'gg-sans/ggsans-700-bolditalic', 'noto-sans/notosans-400-normalitalic', 'noto-sans/notosans-700-bold', 'noto-sans/notosans-700-bolditalic'];

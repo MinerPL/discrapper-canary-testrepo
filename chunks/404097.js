@@ -1,20 +1,11 @@
-var r, i;
 n.d(t, {
-    e: function () {
-        return a;
-    }
+    R: () => r,
+    e: () => i
 }),
-    n(47120),
-    ((i = r || (r = {})).CANARY_RELEASE = 'canaryRelease'),
-    (i.BETA_RELEASE = 'betaRelease'),
-    (i.GOOGLE_RELEASE = 'googleRelease'),
-    (i.CANARY = 'canary'),
-    (i.PTB = 'ptb'),
-    (i.STABLE = 'stable'),
-    (i.ADHOC = 'adhoc'),
-    (i.STAGING = 'staging'),
-    (i.DEVELOPMENT = 'development'),
-    (i.N_A = 'N/A');
-let a = {
+    n(47120);
+var r = (function (e) {
+    return (e.CANARY_RELEASE = 'canaryRelease'), (e.BETA_RELEASE = 'betaRelease'), (e.GOOGLE_RELEASE = 'googleRelease'), (e.CANARY = 'canary'), (e.PTB = 'ptb'), (e.STABLE = 'stable'), (e.ADHOC = 'adhoc'), (e.STAGING = 'staging'), (e.DEVELOPMENT = 'development'), (e.N_A = 'N/A'), e;
+})({});
+let i = {
     ALL: new Set(['N/A', 'adhoc', 'betaRelease', 'canary', 'canaryRelease', 'development', 'googleRelease', 'ptb', 'stable', 'staging'])
 };

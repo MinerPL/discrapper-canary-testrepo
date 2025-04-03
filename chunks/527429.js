@@ -1,13 +1,6 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-}),
-    n(47120);
-var r,
-    i,
-    a = n(470079),
-    s = n(981631);
+n.d(t, { Z: () => s }), n(47120);
+var r = n(192379),
+    i = n(981631);
 function o(e, t, n) {
     return (
         t in e
@@ -21,8 +14,21 @@ function o(e, t, n) {
         e
     );
 }
-((i = r || (r = {})).ARROW_UP = 'ARROW_UP'), (i.ARROW_DOWN = 'ARROW_DOWN'), (i.ARROW_LEFT = 'ARROW_LEFT'), (i.ARROW_RIGHT = 'ARROW_RIGHT');
-class l extends a.Component {
+function a(e) {
+    switch (e) {
+        case i.yXg.ARROW_DOWN:
+            return 'ARROW_DOWN';
+        case i.yXg.ARROW_UP:
+            return 'ARROW_UP';
+        case i.yXg.ARROW_LEFT:
+            return 'ARROW_LEFT';
+        case i.yXg.ARROW_RIGHT:
+            return 'ARROW_RIGHT';
+        default:
+            return null;
+    }
+}
+class s extends r.Component {
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyDown, !0);
     }
@@ -33,13 +39,13 @@ class l extends a.Component {
         let { getItemGrid: t, onFocus: n } = this.props,
             { focusedColumn: r, focusedRow: i } = this.state;
         if (null == e) return;
-        let a = t();
-        if (null == a) return;
-        let s = this.getNext(a, r, i, e);
+        let o = t();
+        if (null == o) return;
+        let a = this.getNext(o, r, i, e);
         this.setState(
             {
-                focusedColumn: s.column,
-                focusedRow: s.row
+                focusedColumn: a.column,
+                focusedRow: a.row
             },
             () => {
                 let e = this.calculateFocusedItem();
@@ -48,61 +54,61 @@ class l extends a.Component {
         );
     }
     getNext(e, t, n, r) {
-        let i, a, s, o;
+        let i, o, a, s;
         if (null == t || null == n)
-            (a = 0),
-                (s = 0),
+            (o = 0),
+                (a = 0),
                 (i = {
                     column: 0,
                     row: 0
                 });
         else
-            switch (((a = t), (s = n), r)) {
+            switch (((o = t), (a = n), r)) {
                 case 'ARROW_UP':
                     i = {
-                        column: a,
-                        row: Math.max(s - 1, 0)
+                        column: o,
+                        row: Math.max(a - 1, 0)
                     };
                     break;
                 case 'ARROW_DOWN':
                     i = {
-                        column: a,
-                        row: Math.min(s + 1, e[a].length - 1)
+                        column: o,
+                        row: Math.min(a + 1, e[o].length - 1)
                     };
                     break;
                 case 'ARROW_LEFT':
-                    i = this.wrapPosition(e, a, s, -1);
+                    i = this.wrapPosition(e, o, a, -1);
                     break;
                 case 'ARROW_RIGHT':
-                    i = this.wrapPosition(e, a, s, 1);
+                    i = this.wrapPosition(e, o, a, 1);
             }
         return (
-            null != i && (o = e[i.column][i.row]),
-            (null == o || null == i) &&
-                (o =
+            null != i && (s = e[i.column][i.row]),
+            (null == s || null == i) &&
+                (s =
                     e[
                         (i = {
-                            column: a,
-                            row: s
+                            column: o,
+                            row: a
                         }).column
                     ][i.row]),
             {
                 column: i.column,
                 row: i.row,
-                id: o
+                id: s
             }
         );
     }
     calculateClosest(e, t) {
-        let n;
-        let r = this.props.getCoordsMap()[e];
+        let n,
+            r = this.props.getCoordsMap()[e];
         if (null == r) return;
         let i = Number.MAX_SAFE_INTEGER;
         for (let e = 0; e < t.length; e++) {
-            let a = this.props.getCoordsMap()[t[e]];
-            if (null == a) continue;
-            let s = Math.abs(a.top - r.top);
-            if (s < i) (i = s), (n = e);
+            let o = this.props.getCoordsMap()[t[e]];
+            if (null == o) continue;
+            let a = Math.abs(o.top - r.top);
+            if (a < i) (i = a), (n = e);
             else break;
         }
         return n;
@@ -125,44 +131,29 @@ class l extends a.Component {
             o(this, 'handleKeyDown', (e) => {
                 let { onSelect: t } = this.props;
                 switch (e.keyCode) {
-                    case s.yXg.ARROW_DOWN:
-                    case s.yXg.ARROW_UP:
-                    case s.yXg.ARROW_LEFT:
-                    case s.yXg.ARROW_RIGHT:
-                        this.focusNext(
-                            (function (e) {
-                                switch (e) {
-                                    case s.yXg.ARROW_DOWN:
-                                        return 'ARROW_DOWN';
-                                    case s.yXg.ARROW_UP:
-                                        return 'ARROW_UP';
-                                    case s.yXg.ARROW_LEFT:
-                                        return 'ARROW_LEFT';
-                                    case s.yXg.ARROW_RIGHT:
-                                        return 'ARROW_RIGHT';
-                                    default:
-                                        return null;
-                                }
-                            })(e.keyCode)
-                        );
+                    case i.yXg.ARROW_DOWN:
+                    case i.yXg.ARROW_UP:
+                    case i.yXg.ARROW_LEFT:
+                    case i.yXg.ARROW_RIGHT:
+                        this.focusNext(a(e.keyCode));
                         break;
-                    case s.yXg.ENTER:
+                    case i.yXg.ENTER:
                         let n = this.calculateFocusedItem();
                         null != n && null != t && (e.preventDefault(), e.stopPropagation(), t(n));
                 }
             }),
             o(this, 'wrapPosition', (e, t, n, r) => {
                 var i;
-                let a = e.length,
-                    s = Math.max(n * a + t + r, 0) % a,
-                    o = null !== (i = this.calculateClosest(e[t][n], e[s])) && void 0 !== i ? i : n,
+                let o = e.length,
+                    a = Math.max(n * o + t + r, 0) % o,
+                    s = null != (i = this.calculateClosest(e[t][n], e[a])) ? i : n,
                     l = 0;
                 return (
-                    r < 0 && s > t && (l = -1),
-                    r > 0 && s < t && (l = 1),
+                    r < 0 && a > t && (l = -1),
+                    r > 0 && a < t && (l = 1),
                     {
-                        column: s,
-                        row: o + l
+                        column: a,
+                        row: s + l
                     }
                 );
             });

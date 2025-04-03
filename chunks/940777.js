@@ -1,144 +1,184 @@
-n.d(t, {
-    Z: function () {
-        return O;
-    }
-}),
-    n(47120),
-    n(724458),
-    n(653041);
-var i = n(735250),
-    l = n(470079),
-    r = n(120356),
-    a = n.n(r),
-    s = n(91192),
-    o = n(442837),
+n.d(t, { Z: () => R }), n(47120), n(653041);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(91192),
+    s = n(442837),
     c = n(481060),
     u = n(493683),
     d = n(239091),
-    h = n(317381),
-    p = n(276952),
-    _ = n(682662),
-    f = n(674552),
-    g = n(593364),
-    m = n(905423),
-    C = n(199902),
-    I = n(592125),
-    E = n(944486),
-    N = n(979651),
-    x = n(709054),
+    p = n(317381),
+    h = n(16609),
+    f = n(540059),
+    g = n(276952),
+    m = n(682662),
+    b = n(674552),
+    y = n(593364),
+    _ = n(905423),
+    v = n(199902),
+    O = n(592125),
+    j = n(944486),
+    x = n(979651),
+    C = n(709054),
     S = n(853856),
-    v = n(593214),
-    Z = n(919755),
-    T = n(110977),
-    L = n(603274),
-    A = n(981631),
-    b = n(689938),
-    M = n(581853);
-let R = {
+    P = n(593214),
+    I = n(919755),
+    N = n(110977),
+    Z = n(603274),
+    w = n(981631),
+    E = n(388032),
+    T = n(940751);
+function A(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+let D = {
     analyticsSource: {
-        page: A.ZY5.GUILD_CHANNEL,
-        section: A.jXE.CHANNEL_LIST,
-        object: A.qAy.CHANNEL
+        page: w.ZY5.GUILD_CHANNEL,
+        section: w.jXE.CHANNEL_LIST,
+        object: w.qAy.CHANNEL
     }
 };
-function O() {
-    let e = (0, s.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, v.up)(),
-        [O, P] = l.useState(!1),
-        { favoriteServerMuted: y, favoriteChannels: j } = (0, o.cj)([S.Z], () => ({
+function R() {
+    var e, t;
+    let l = (0, a.Ie)('favorites'),
+        { favoriteAdded: R, clearFavoriteAdded: L } = (0, P.up)(),
+        [k, M] = i.useState(!1),
+        { favoriteServerMuted: G, favoriteChannels: B } = (0, s.cj)([S.Z], () => ({
             favoriteChannels: S.Z.getFavoriteChannels(),
             favoriteServerMuted: S.Z.favoriteServerMuted
         })),
-        D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
-        w = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
-        U = (0, m.Z)((e) => e.guildId) === A.I_8,
-        { badge: G, unread: k } = (0, Z.Z)(j),
-        B = (function (e) {
-            let t = (0, o.e7)([E.Z], () => E.Z.getVoiceChannelId()),
+        U = (0, s.e7)([j.Z], () => j.Z.getChannelId(w.I_8)),
+        W = (0, s.e7)([O.Z], () => O.Z.getChannel(U)),
+        V = (0, _.Z)((e) => e.guildId) === w.I_8,
+        { badge: F, unread: H } = (0, I.Z)(B),
+        z = (function (e) {
+            let t = (0, s.e7)([j.Z], () => j.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                i = (0, o.e7)([C.Z], () => {
+                r = (0, s.e7)([v.Z], () => {
                     if (!n) return !1;
-                    let t = C.Z.getCurrentUserActiveStream();
+                    let t = v.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                l = (0, o.e7)([C.Z], () => C.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                r = (0, o.e7)([N.Z], () => n && null != t && N.Z.hasVideo(t), [n, t]),
-                a = (0, o.Wu)([h.ZP], () => x.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
-                s = (0, o.e7)([h.ZP], () =>
-                    Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
-                        let { channelId: n } = t;
-                        return null != e[n];
+                i = (0, s.e7)([v.Z], () => v.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                l = (0, s.e7)([x.Z], () => n && null != t && x.Z.hasVideo(t), [n, t]),
+                o = (0, s.Wu)([p.ZP], () => C.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                a = (0, s.e7)([p.ZP], () =>
+                    Array.from(p.ZP.getSelfEmbeddedActivities().values()).some((t) => {
+                        let { location: n } = t,
+                            r = (0, h.pY)(n);
+                        return null != r && null != e[r];
                     })
                 ),
-                c = a.length > 0,
+                c = o.length > 0,
                 u = !1,
                 d = !1,
-                p = !1,
-                _ = !1;
+                f = !1,
+                g = !1;
             return (
-                n ? ((u = !r), (d = r), (p = i), (_ = s)) : ((p = l), (_ = c)),
-                (0, f.Or)({
+                n ? ((u = !l), (d = l), (f = r), (g = a)) : ((f = i), (g = c)),
+                (0, b.Or)({
                     audio: u,
                     video: d,
-                    screenshare: p,
+                    screenshare: f,
                     liveStage: !1,
                     isCurrentUserConnected: n,
-                    activity: _
+                    activity: g
                 })
             );
-        })(j),
-        H = G > 0 ? (0, g.N)(G) : null,
-        V = l.useCallback(() => {
-            r();
-        }, [r]);
-    return (0, i.jsxs)(_.H, {
+        })(B),
+        Y = F > 0 ? (0, y.N)(F) : null,
+        q = (0, f.Q3)('FavoritesButton'),
+        Q = i.useCallback(() => {
+            L();
+        }, [L]);
+    return (0, r.jsxs)(m.H, {
         children: [
-            (0, i.jsx)(p.Z, {
-                selected: U,
-                hovered: O,
-                unread: k && !y,
-                className: M.pill
+            (0, r.jsx)(g.Z, {
+                selected: V,
+                hovered: k,
+                unread: H && !G,
+                className: T.pill
             }),
-            (0, i.jsx)(L.Z, {
-                onShow: V,
-                children: (0, i.jsx)(T.S, {
-                    children: (0, i.jsx)(c.BlobMask, {
-                        selected: U || O,
-                        upperBadge: B,
-                        lowerBadge: H,
-                        children: (0, i.jsx)(c.NavItem, {
-                            ...e,
-                            ariaLabel: b.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
-                                guildName: b.Z.Messages.FAVORITES_GUILD_NAME,
-                                mentions: G
-                            }),
-                            to: {
-                                pathname: A.Z5c.CHANNEL(A.I_8, D),
-                                state: R
-                            },
-                            selected: U || O,
-                            onMouseEnter: () => P(!0),
-                            onMouseLeave: () => P(!1),
-                            onMouseDown: function () {
-                                if (null != w) u.Z.preload(w.guild_id, w.id);
-                            },
-                            onContextMenu: function (e) {
-                                (0, d.jW)(e, async () => {
-                                    let { default: e } = await n.e('3190').then(n.bind(n, 631981));
-                                    return (t) => (0, i.jsx)(e, { ...t });
-                                });
-                            },
-                            children: (0, i.jsx)('div', {
-                                className: a()(M.ring, { [M.ringActive]: t }),
-                                children: (0, i.jsx)(c.StarIcon, {
-                                    size: 'custom',
-                                    color: 'currentColor',
-                                    className: M.favoriteIcon,
-                                    width: 20,
-                                    height: 20
-                                })
-                            })
-                        })
+            (0, r.jsx)(Z.Z, {
+                onShow: Q,
+                children: (0, r.jsx)(N.S, {
+                    children: (0, r.jsx)(c.aRk, {
+                        selected: q || V || k,
+                        upperBadge: z,
+                        lowerBadge: Y,
+                        children: (0, r.jsx)(
+                            c.LYs,
+                            ((e = A({}, l)),
+                            (t = t =
+                                {
+                                    ariaLabel: E.NW.formatToPlainString(E.t['/uzRsr'], {
+                                        guildName: E.NW.string(E.t.wMWycn),
+                                        mentions: F
+                                    }),
+                                    to: {
+                                        pathname: w.Z5c.CHANNEL(w.I_8, U),
+                                        state: D
+                                    },
+                                    selected: V || k,
+                                    onMouseEnter: () => M(!0),
+                                    onMouseLeave: () => M(!1),
+                                    onMouseDown: function () {
+                                        null != W && u.Z.preload(W.guild_id, W.id);
+                                    },
+                                    onContextMenu: function (e) {
+                                        (0, d.jW)(e, async () => {
+                                            let { default: e } = await n.e('3190').then(n.bind(n, 631981));
+                                            return (t) => (0, r.jsx)(e, A({}, t));
+                                        });
+                                    },
+                                    children: (0, r.jsx)('div', {
+                                        className: o()(T.ring, { [T.ringActive]: R }),
+                                        children: (0, r.jsx)(c.r7p, {
+                                            size: 'custom',
+                                            color: 'currentColor',
+                                            className: T.favoriteIcon,
+                                            width: 20,
+                                            height: 20
+                                        })
+                                    })
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(t)).forEach(function (n) {
+                                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                  }),
+                            e)
+                        )
                     })
                 })
             })

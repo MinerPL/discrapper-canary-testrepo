@@ -1,22 +1,7 @@
-var t, r;
-(t = 0),
-    (r = function () {
-        return (function (e) {
-            var t = {};
-            function r(n) {
-                if (t[n]) return t[n].exports;
-                var o = (t[n] = {
-                    exports: {},
-                    id: n,
-                    loaded: !1
-                });
-                return e[n].call(o.exports, o, o.exports, r), (o.loaded = !0), o.exports;
-            }
-            return (r.m = e), (r.c = t), (r.p = ''), r(0);
-        })([
+e.exports = (function () {
+    var e = [
             function (e, t, r) {
-                var n = r(1);
-                e.exports = n;
+                e.exports = r(1);
             },
             function (e, t, r) {
                 var n =
@@ -89,7 +74,7 @@ var t, r;
                         (t.validate = function (r) {
                             var n = arguments[arguments.length - 1],
                                 o = 'function' == typeof n ? n : null,
-                                i = arguments.length - (o ? 1 : 0);
+                                i = arguments.length - +!!o;
                             if (1 === i) return e.validate(r, o);
                             var s = 3 === i ? arguments[2] : {},
                                 a = t.compile(arguments[1]);
@@ -123,7 +108,7 @@ var t, r;
                             if ((o.assert(e && e instanceof i, 'you must provide a joi schema'), o.assert('string' == typeof t, 'path must be a string'), '' === t)) return e;
                             var r = t.split('.'),
                                 n = e._inner.children;
-                            if (!!n)
+                            if (n)
                                 for (var s = r[0], a = 0; a < n.length; ++a) {
                                     var c = n[a];
                                     if (c.key === s) return this.reach(c.schema, t.substr(s.length + 1));
@@ -142,10 +127,9 @@ var t, r;
                                         f = (l.base || e.any()).clone(),
                                         p = f.constructor,
                                         h = (function (e) {
+                                            if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function, not ' + typeof e);
                                             function t() {
-                                                !(function (e, t) {
-                                                    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                                                })(this, t);
+                                                if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
                                                 var r,
                                                     i,
                                                     s,
@@ -153,8 +137,11 @@ var t, r;
                                                         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                                                         return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
                                                     })(this, e.call(this));
-                                                if ((l.base && n(a, f), (a._type = l.name), l.language)) {
-                                                    (a._settings = a._settings || { language: {} }),
+                                                return (
+                                                    l.base && n(a, f),
+                                                    (a._type = l.name),
+                                                    l.language &&
+                                                        ((a._settings = a._settings || { language: {} }),
                                                         (a._settings.language = o.applyToDefaults(
                                                             a._settings.language,
                                                             ((r = {}),
@@ -169,33 +156,29 @@ var t, r;
                                                                   })
                                                                 : (r[i] = s),
                                                             r)
-                                                        ));
-                                                }
-                                                return a;
+                                                        ))),
+                                                    a
+                                                );
                                             }
                                             return (
-                                                !(function (e, t) {
-                                                    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                                                    (e.prototype = Object.create(t && t.prototype, {
-                                                        constructor: {
-                                                            value: e,
-                                                            enumerable: !1,
-                                                            writable: !0,
-                                                            configurable: !0
-                                                        }
-                                                    })),
-                                                        t &&
-                                                            (Object.setPrototypeOf
-                                                                ? Object.setPrototypeOf(e, t)
-                                                                : (function (e, t) {
-                                                                      for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
-                                                                          var o = r[n],
-                                                                              i = Object.getOwnPropertyDescriptor(t, o);
-                                                                          i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
-                                                                      }
-                                                                      return e;
-                                                                  })(e, t));
-                                                })(t, e),
+                                                (t.prototype = Object.create(e && e.prototype, {
+                                                    constructor: {
+                                                        value: t,
+                                                        enumerable: !1,
+                                                        writable: !0,
+                                                        configurable: !0
+                                                    }
+                                                })),
+                                                e &&
+                                                    (Object.setPrototypeOf
+                                                        ? Object.setPrototypeOf(t, e)
+                                                        : (function (e, t) {
+                                                              for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
+                                                                  var o = r[n],
+                                                                      i = Object.getOwnPropertyDescriptor(t, o);
+                                                                  i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
+                                                              }
+                                                          })(t, e)),
                                                 t
                                             );
                                         })(p);
@@ -337,13 +320,12 @@ var t, r;
                             var c = Object.getPrototypeOf(r);
                             c && c.isImmutable ? (s = r) : ((s = Object.create(c)), (a = !0));
                         }
-                        if ((n.set(r, s), a)) {
+                        if ((n.set(r, s), a))
                             for (var u = Object.getOwnPropertyNames(r), l = 0; l < u.length; ++l) {
                                 var f = u[l],
                                     p = Object.getOwnPropertyDescriptor(r, f);
                                 p && (p.get || p.set) ? Object.defineProperty(s, f, p) : (s[f] = t.clone(r[f], n));
                             }
-                        }
                         return s;
                     }),
                         (t.merge = function (r, n, i, s) {
@@ -441,15 +423,17 @@ var t, r;
                         (t.unique = function (e, t) {
                             var r,
                                 n = void 0;
-                            if (t) {
-                                (n = []),
-                                    (r = new Set()),
-                                    e.forEach(function (e) {
-                                        var o = e[t];
-                                        !r.has(o) && (r.add(o), n.push(e));
-                                    });
-                            } else n = Array.from(new Set(e));
-                            return n;
+                            return (
+                                t
+                                    ? ((n = []),
+                                      (r = new Set()),
+                                      e.forEach(function (e) {
+                                          var o = e[t];
+                                          r.has(o) || (r.add(o), n.push(e));
+                                      }))
+                                    : (n = Array.from(new Set(e))),
+                                n
+                            );
                         }),
                         (t.mapToObject = function (e, t) {
                             if (!e) return null;
@@ -498,7 +482,7 @@ var t, r;
                                     for (var m = !1, b = 0; b < r.length && !1 === m; ++b) m = s(r[b], e[v], a) && b;
                                     !1 !== m ? ++f[m] : (l = !0);
                                 }
-                            else {
+                            else
                                 for (var _ = Object.getOwnPropertyNames(e), w = 0; w < _.length; ++w) {
                                     var E = _[w],
                                         x = r.indexOf(E);
@@ -507,7 +491,6 @@ var t, r;
                                         ++f[x];
                                     } else l = !0;
                                 }
-                            }
                             for (var j = !1, O = 0; O < f.length; ++O) if (((j = j || !!f[O]), (n.once && f[O] > 1) || (!n.part && !f[O]))) return !1;
                             return (!n.only || !l) && j;
                         }),
@@ -566,7 +549,7 @@ var t, r;
                         (t.abort = function (e, r) {
                             if ('test' === n.env.NODE_ENV || !0 === t.abortThrow) throw Error(e || 'Unknown error');
                             var o = '';
-                            !r && (o = t.displayStack(1).join('\n\t')), console.log('ABORT: ' + e + '\n\t' + o), n.exit(1);
+                            r || (o = t.displayStack(1).join('\n\t')), console.log('ABORT: ' + e + '\n\t' + o), n.exit(1);
                         }),
                         (t.assert = function (e) {
                             if (!e) {
@@ -634,7 +617,7 @@ var t, r;
                             if (e._hoekOnce) return e;
                             var t = !1,
                                 r = function () {
-                                    !t && ((t = !0), e.apply(null, arguments));
+                                    t || ((t = !0), e.apply(null, arguments));
                                 };
                             return (r._hoekOnce = !0), r;
                         }),
@@ -656,7 +639,7 @@ var t, r;
                                     p = f.split(i),
                                     h = r[f];
                                 t.assert('string' == typeof h, 'All mappings must be "." delineated strings');
-                                for (var d = void 0, g = c; p.length > 1; ) !g[(d = p.shift())] && (g[d] = {}), (g = g[d]);
+                                for (var d = void 0, g = c; p.length > 1; ) g[(d = p.shift())] || (g[d] = {}), (g = g[d]);
                                 g[(d = p.shift())] = t.reach(e, h, n);
                             }
                             return c;
@@ -687,31 +670,6 @@ var t, r;
                     var n = r(4),
                         o = r(5),
                         i = r(6);
-                    (t.Buffer = c),
-                        (t.SlowBuffer = function (e) {
-                            return +e != e && (e = 0), c.alloc(+e);
-                        }),
-                        (t.INSPECT_MAX_BYTES = 50),
-                        (c.TYPED_ARRAY_SUPPORT =
-                            void 0 !== e.TYPED_ARRAY_SUPPORT
-                                ? e.TYPED_ARRAY_SUPPORT
-                                : (function () {
-                                      try {
-                                          var e = new Uint8Array(1);
-                                          return (
-                                              (e.__proto__ = {
-                                                  __proto__: Uint8Array.prototype,
-                                                  foo: function () {
-                                                      return 42;
-                                                  }
-                                              }),
-                                              42 === e.foo() && 'function' == typeof e.subarray && 0 === e.subarray(1, 1).byteLength
-                                          );
-                                      } catch (e) {
-                                          return !1;
-                                      }
-                                  })()),
-                        (t.kMaxLength = s());
                     function s() {
                         return c.TYPED_ARRAY_SUPPORT ? 2147483647 : 1073741823;
                     }
@@ -744,17 +702,14 @@ var t, r;
                                 })(e, t, r)
                               : (function (e, t) {
                                     if (c.isBuffer(t)) {
-                                        var r = 0 | h(t.length);
-                                        return 0 === (e = a(e, r)).length ? e : (t.copy(e, 0, 0, r), e);
+                                        var r,
+                                            n = 0 | h(t.length);
+                                        return 0 === (e = a(e, n)).length || t.copy(e, 0, 0, n), e;
                                     }
                                     if (t) {
-                                        if (('undefined' != typeof ArrayBuffer && t.buffer instanceof ArrayBuffer) || 'length' in t)
-                                            return 'number' != typeof t.length ||
-                                                (function (e) {
-                                                    return e != e;
-                                                })(t.length)
-                                                ? a(e, 0)
-                                                : p(e, t);
+                                        if (('undefined' != typeof ArrayBuffer && t.buffer instanceof ArrayBuffer) || 'length' in t) {
+                                            return 'number' != typeof t.length || (r = t.length) != r ? a(e, 0) : p(e, t);
+                                        }
                                         if ('Buffer' === t.type && i(t.data)) return p(e, t.data);
                                     }
                                     throw TypeError('First argument must be a string, Buffer, ArrayBuffer, Array, or array-like object.');
@@ -764,37 +719,10 @@ var t, r;
                         if ('number' != typeof e) throw TypeError('"size" argument must be a number');
                         if (e < 0) throw RangeError('"size" argument must not be negative');
                     }
-                    (c.poolSize = 8192),
-                        (c._augment = function (e) {
-                            return (e.__proto__ = c.prototype), e;
-                        }),
-                        (c.from = function (e, t, r) {
-                            return u(null, e, t, r);
-                        }),
-                        c.TYPED_ARRAY_SUPPORT &&
-                            ((c.prototype.__proto__ = Uint8Array.prototype),
-                            (c.__proto__ = Uint8Array),
-                            'undefined' != typeof Symbol &&
-                                Symbol.species &&
-                                c[Symbol.species] === c &&
-                                Object.defineProperty(c, Symbol.species, {
-                                    value: null,
-                                    configurable: !0
-                                }));
                     function f(e, t) {
                         if ((l(t), (e = a(e, t < 0 ? 0 : 0 | h(t))), !c.TYPED_ARRAY_SUPPORT)) for (var r = 0; r < t; ++r) e[r] = 0;
                         return e;
                     }
-                    (c.alloc = function (e, t, r) {
-                        var n, o, i, s;
-                        return (n = null), (o = e), (i = t), (s = r), (l(o), o <= 0) ? a(null, o) : void 0 !== i ? ('string' == typeof s ? a(n, o).fill(i, s) : a(n, o).fill(i)) : a(n, o);
-                    }),
-                        (c.allocUnsafe = function (e) {
-                            return f(null, e);
-                        }),
-                        (c.allocUnsafeSlow = function (e) {
-                            return f(null, e);
-                        });
                     function p(e, t) {
                         var r = t.length < 0 ? 0 : 0 | h(t.length);
                         e = a(e, r);
@@ -820,7 +748,7 @@ var t, r;
                                 case 'utf8':
                                 case 'utf-8':
                                 case void 0:
-                                    return T(e).length;
+                                    return A(e).length;
                                 case 'ucs2':
                                 case 'ucs-2':
                                 case 'utf16le':
@@ -829,31 +757,33 @@ var t, r;
                                 case 'hex':
                                     return r >>> 1;
                                 case 'base64':
-                                    return R(e).length;
+                                    return P(e).length;
                                 default:
-                                    if (n) return T(e).length;
+                                    if (n) return A(e).length;
                                     (t = ('' + t).toLowerCase()), (n = !0);
                             }
                     }
                     function g(e, t, r) {
-                        var o = !1;
-                        if (((void 0 === t || t < 0) && (t = 0), t > this.length)) return '';
-                        if (((void 0 === r || r > this.length) && (r = this.length), r <= 0 || (r >>>= 0) <= (t >>>= 0))) return '';
-                        for (!e && (e = 'utf8'); ; )
+                        var o,
+                            i,
+                            s,
+                            a = !1;
+                        if (((void 0 === t || t < 0) && (t = 0), t > this.length || ((void 0 === r || r > this.length) && (r = this.length), r <= 0 || (r >>>= 0) <= (t >>>= 0)))) return '';
+                        for (e || (e = 'utf8'); ; )
                             switch (e) {
                                 case 'hex':
                                     return (function (e, t, r) {
-                                        var n = e.length;
-                                        (!t || t < 0) && (t = 0), (!r || r < 0 || r > n) && (r = n);
-                                        for (var o = '', i = t; i < r; ++i)
-                                            o += (function (e) {
-                                                return e < 16 ? '0' + e.toString(16) : e.toString(16);
-                                            })(e[i]);
-                                        return o;
+                                        var n,
+                                            o = e.length;
+                                        (!t || t < 0) && (t = 0), (!r || r < 0 || r > o) && (r = o);
+                                        for (var i = '', s = t; s < r; ++s) {
+                                            i += (n = e[s]) < 16 ? '0' + n.toString(16) : n.toString(16);
+                                        }
+                                        return i;
                                     })(this, t, r);
                                 case 'utf8':
                                 case 'utf-8':
-                                    return _(this, t, r);
+                                    return b(this, t, r);
                                 case 'ascii':
                                     return (function (e, t, r) {
                                         var n = '';
@@ -870,9 +800,7 @@ var t, r;
                                         return n;
                                     })(this, t, r);
                                 case 'base64':
-                                    return (function (e, t, r) {
-                                        return 0 === t && r === e.length ? n.fromByteArray(e) : n.fromByteArray(e.slice(t, r));
-                                    })(this, t, r);
+                                    return (o = this), (i = t), (s = r), 0 === i && s === o.length ? n.fromByteArray(o) : n.fromByteArray(o.slice(i, s));
                                 case 'ucs2':
                                 case 'ucs-2':
                                 case 'utf16le':
@@ -882,8 +810,8 @@ var t, r;
                                         return o;
                                     })(this, t, r);
                                 default:
-                                    if (o) throw TypeError('Unknown encoding: ' + e);
-                                    (e = (e + '').toLowerCase()), (o = !0);
+                                    if (a) throw TypeError('Unknown encoding: ' + e);
+                                    (e = (e + '').toLowerCase()), (a = !0);
                             }
                     }
                     function y(e, t, r) {
@@ -892,16 +820,17 @@ var t, r;
                     }
                     function v(e, t, r, n, o) {
                         if (0 === e.length) return -1;
-                        if (('string' == typeof r ? ((n = r), (r = 0)) : r > 2147483647 ? (r = 2147483647) : r < -2147483648 && (r = -2147483648), isNaN((r = +r)) && (r = o ? 0 : e.length - 1), r < 0 && (r = e.length + r), r >= e.length)) {
+                        if (('string' == typeof r ? ((n = r), (r = 0)) : r > 2147483647 ? (r = 2147483647) : r < -2147483648 && (r = -2147483648), isNaN((r *= 1)) && (r = o ? 0 : e.length - 1), r < 0 && (r = e.length + r), r >= e.length))
                             if (o) return -1;
-                            r = e.length - 1;
-                        } else if (r < 0) {
+                            else r = e.length - 1;
+                        else if (r < 0)
                             if (!o) return -1;
-                            r = 0;
-                        }
+                            else r = 0;
                         if (('string' == typeof t && (t = c.from(t, n)), c.isBuffer(t))) return 0 === t.length ? -1 : m(e, t, r, n, o);
                         if ('number' == typeof t) {
-                            if (((t &= 255), c.TYPED_ARRAY_SUPPORT && 'function' == typeof Uint8Array.prototype.indexOf)) return o ? Uint8Array.prototype.indexOf.call(e, t, r) : Uint8Array.prototype.lastIndexOf.call(e, t, r);
+                            if (((t &= 255), c.TYPED_ARRAY_SUPPORT && 'function' == typeof Uint8Array.prototype.indexOf))
+                                if (o) return Uint8Array.prototype.indexOf.call(e, t, r);
+                                else return Uint8Array.prototype.lastIndexOf.call(e, t, r);
                             return m(e, [t], r, n, o);
                         }
                         throw TypeError('val must be string, number or Buffer');
@@ -935,9 +864,60 @@ var t, r;
                             }
                         return -1;
                     }
-                    (c.isBuffer = function (e) {
-                        return !!(null != e && e._isBuffer);
-                    }),
+                    (t.Buffer = c),
+                        (t.SlowBuffer = function (e) {
+                            return +e != e && (e = 0), c.alloc(+e);
+                        }),
+                        (t.INSPECT_MAX_BYTES = 50),
+                        (c.TYPED_ARRAY_SUPPORT =
+                            void 0 !== e.TYPED_ARRAY_SUPPORT
+                                ? e.TYPED_ARRAY_SUPPORT
+                                : (function () {
+                                      try {
+                                          var e = new Uint8Array(1);
+                                          return (
+                                              (e.__proto__ = {
+                                                  __proto__: Uint8Array.prototype,
+                                                  foo: function () {
+                                                      return 42;
+                                                  }
+                                              }),
+                                              42 === e.foo() && 'function' == typeof e.subarray && 0 === e.subarray(1, 1).byteLength
+                                          );
+                                      } catch (e) {
+                                          return !1;
+                                      }
+                                  })()),
+                        (t.kMaxLength = s()),
+                        (c.poolSize = 8192),
+                        (c._augment = function (e) {
+                            return (e.__proto__ = c.prototype), e;
+                        }),
+                        (c.from = function (e, t, r) {
+                            return u(null, e, t, r);
+                        }),
+                        c.TYPED_ARRAY_SUPPORT &&
+                            ((c.prototype.__proto__ = Uint8Array.prototype),
+                            (c.__proto__ = Uint8Array),
+                            'undefined' != typeof Symbol &&
+                                Symbol.species &&
+                                c[Symbol.species] === c &&
+                                Object.defineProperty(c, Symbol.species, {
+                                    value: null,
+                                    configurable: !0
+                                })),
+                        (c.alloc = function (e, t, r) {
+                            return (l(e), e <= 0) ? a(null, e) : void 0 !== t ? ('string' == typeof r ? a(null, e).fill(t, r) : a(null, e).fill(t)) : a(null, e);
+                        }),
+                        (c.allocUnsafe = function (e) {
+                            return f(null, e);
+                        }),
+                        (c.allocUnsafeSlow = function (e) {
+                            return f(null, e);
+                        }),
+                        (c.isBuffer = function (e) {
+                            return !!(null != e && e._isBuffer);
+                        }),
                         (c.compare = function (e, t) {
                             if (!c.isBuffer(e) || !c.isBuffer(t)) throw TypeError('Arguments must be Buffers');
                             if (e === t) return 0;
@@ -946,7 +926,7 @@ var t, r;
                                     (r = e[o]), (n = t[o]);
                                     break;
                                 }
-                            return r < n ? -1 : n < r ? 1 : 0;
+                            return r < n ? -1 : +(n < r);
                         }),
                         (c.isEncoding = function (e) {
                             switch (String(e).toLowerCase()) {
@@ -1002,7 +982,7 @@ var t, r;
                         }),
                         (c.prototype.toString = function () {
                             var e = 0 | this.length;
-                            return 0 === e ? '' : 0 == arguments.length ? _(this, 0, e) : g.apply(this, arguments);
+                            return 0 === e ? '' : 0 == arguments.length ? b(this, 0, e) : g.apply(this, arguments);
                         }),
                         (c.prototype.equals = function (e) {
                             if (!c.isBuffer(e)) throw TypeError('Argument must be a Buffer');
@@ -1025,7 +1005,7 @@ var t, r;
                                     (i = u[f]), (s = l[f]);
                                     break;
                                 }
-                            return i < s ? -1 : s < i ? 1 : 0;
+                            return i < s ? -1 : +(s < i);
                         }),
                         (c.prototype.includes = function (e, t, r) {
                             return -1 !== this.indexOf(e, t, r);
@@ -1036,94 +1016,7 @@ var t, r;
                         (c.prototype.lastIndexOf = function (e, t, r) {
                             return v(this, e, t, r, !1);
                         });
-                    function b(e, t, r, n) {
-                        return D(P(t), e, r, n);
-                    }
-                    (c.prototype.write = function (e, t, r, n) {
-                        if (void 0 === t) (n = 'utf8'), (r = this.length), (t = 0);
-                        else if (void 0 === r && 'string' == typeof t) (n = t), (r = this.length), (t = 0);
-                        else if (isFinite(t)) (t |= 0), isFinite(r) ? ((r |= 0), void 0 === n && (n = 'utf8')) : ((n = r), (r = void 0));
-                        else throw Error('Buffer.write(string, encoding, offset[, length]) is no longer supported');
-                        var o,
-                            i,
-                            s,
-                            a,
-                            c,
-                            u,
-                            l,
-                            f,
-                            p,
-                            h,
-                            d,
-                            g,
-                            y,
-                            v,
-                            m,
-                            b,
-                            _ = this.length - t;
-                        if (((void 0 === r || r > _) && (r = _), (e.length > 0 && (r < 0 || t < 0)) || t > this.length)) throw RangeError('Attempt to write outside buffer bounds');
-                        !n && (n = 'utf8');
-                        for (var w = !1; ; )
-                            switch (n) {
-                                case 'hex':
-                                    return (function (e, t, r, n) {
-                                        r = Number(r) || 0;
-                                        var o = e.length - r;
-                                        n ? (n = Number(n)) > o && (n = o) : (n = o);
-                                        var i = t.length;
-                                        if (i % 2 != 0) throw TypeError('Invalid hex string');
-                                        n > i / 2 && (n = i / 2);
-                                        for (var s = 0; s < n; ++s) {
-                                            var a = parseInt(t.substr(2 * s, 2), 16);
-                                            if (isNaN(a)) break;
-                                            e[r + s] = a;
-                                        }
-                                        return s;
-                                    })(this, e, t, r);
-                                case 'utf8':
-                                case 'utf-8':
-                                    return (o = this), (i = e), (s = t), (a = r), D(T(i, o.length - s), o, s, a);
-                                case 'ascii':
-                                    return (c = this), (u = e), (l = t), (f = r), D(P(u), c, l, f);
-                                case 'latin1':
-                                case 'binary':
-                                    return (function (e, t, r, n) {
-                                        var o, i, s, a;
-                                        return (o = e), (i = t), (s = r), (a = n), D(P(i), o, s, a);
-                                    })(this, e, t, r);
-                                case 'base64':
-                                    return (p = this), (h = e), (d = t), (g = r), D(R(h), p, d, g);
-                                case 'ucs2':
-                                case 'ucs-2':
-                                case 'utf16le':
-                                case 'utf-16le':
-                                    return (
-                                        (y = this),
-                                        (v = e),
-                                        (m = t),
-                                        (b = r),
-                                        D(
-                                            (function (e, t) {
-                                                for (var r, n, o, i = [], s = 0; s < e.length && !((t -= 2) < 0); ++s) (n = (r = e.charCodeAt(s)) >> 8), (o = r % 256), i.push(o), i.push(n);
-                                                return i;
-                                            })(v, y.length - m),
-                                            y,
-                                            m,
-                                            b
-                                        )
-                                    );
-                                default:
-                                    if (w) throw TypeError('Unknown encoding: ' + n);
-                                    (n = ('' + n).toLowerCase()), (w = !0);
-                            }
-                    }),
-                        (c.prototype.toJSON = function () {
-                            return {
-                                type: 'Buffer',
-                                data: Array.prototype.slice.call(this._arr || this, 0)
-                            };
-                        });
-                    function _(e, t, r) {
+                    function b(e, t, r) {
                         r = Math.min(e.length, r);
                         for (var n = [], o = t; o < r; ) {
                             var i,
@@ -1149,120 +1042,192 @@ var t, r;
                                 }
                             null === l ? ((l = 65533), (f = 1)) : l > 65535 && ((l -= 65536), n.push(((l >>> 10) & 1023) | 55296), (l = 56320 | (1023 & l))), n.push(l), (o += f);
                         }
-                        return (function (e) {
-                            var t = e.length;
-                            if (t <= 4096) return String.fromCharCode.apply(String, e);
-                            for (var r = '', n = 0; n < t; ) r += String.fromCharCode.apply(String, e.slice(n, (n += 4096)));
-                            return r;
-                        })(n);
+                        var p = n,
+                            h = p.length;
+                        if (h <= 4096) return String.fromCharCode.apply(String, p);
+                        for (var d = '', g = 0; g < h; ) d += String.fromCharCode.apply(String, p.slice(g, (g += 4096)));
+                        return d;
                     }
-                    function w(e, t, r) {
+                    function _(e, t, r) {
                         if (e % 1 != 0 || e < 0) throw RangeError('offset is not uint');
                         if (e + t > r) throw RangeError('Trying to access beyond buffer length');
                     }
-                    function E(e, t, r, n, o, i) {
+                    function w(e, t, r, n, o, i) {
                         if (!c.isBuffer(e)) throw TypeError('"buffer" argument must be a Buffer instance');
                         if (t > o || t < i) throw RangeError('"value" argument is out of bounds');
                         if (r + n > e.length) throw RangeError('Index out of range');
                     }
-                    function x(e, t, r, n) {
+                    function E(e, t, r, n) {
                         t < 0 && (t = 65535 + t + 1);
                         for (var o = 0, i = Math.min(e.length - r, 2); o < i; ++o) e[r + o] = (t & (255 << (8 * (n ? o : 1 - o)))) >>> ((n ? o : 1 - o) * 8);
                     }
-                    function j(e, t, r, n) {
+                    function x(e, t, r, n) {
                         t < 0 && (t = 4294967295 + t + 1);
                         for (var o = 0, i = Math.min(e.length - r, 4); o < i; ++o) e[r + o] = (t >>> ((n ? o : 3 - o) * 8)) & 255;
                     }
-                    function O(e, t, r, n, o, i) {
+                    function j(e, t, r, n, o, i) {
                         if (r + n > e.length || r < 0) throw RangeError('Index out of range');
                     }
+                    function O(e, t, r, n, i) {
+                        return i || j(e, t, r, 4, 3.4028234663852886e38, -3.4028234663852886e38), o.write(e, t, r, n, 23, 4), r + 4;
+                    }
                     function k(e, t, r, n, i) {
-                        return !i && O(e, t, r, 4, 3.4028234663852886e38, -3.4028234663852886e38), o.write(e, t, r, n, 23, 4), r + 4;
+                        return i || j(e, t, r, 8, 1.7976931348623157e308, -1.7976931348623157e308), o.write(e, t, r, n, 52, 8), r + 8;
                     }
-                    function S(e, t, r, n, i) {
-                        return !i && O(e, t, r, 8, 1.7976931348623157e308, -1.7976931348623157e308), o.write(e, t, r, n, 52, 8), r + 8;
-                    }
-                    (c.prototype.slice = function (e, t) {
-                        var r,
-                            n = this.length;
-                        if (((e = ~~e), (t = void 0 === t ? n : ~~t), e < 0 ? (e += n) < 0 && (e = 0) : e > n && (e = n), t < 0 ? (t += n) < 0 && (t = 0) : t > n && (t = n), t < e && (t = e), c.TYPED_ARRAY_SUPPORT)) (r = this.subarray(e, t)).__proto__ = c.prototype;
-                        else {
-                            var o = t - e;
-                            r = new c(o, void 0);
-                            for (var i = 0; i < o; ++i) r[i] = this[i + e];
-                        }
-                        return r;
+                    (c.prototype.write = function (e, t, r, n) {
+                        if (void 0 === t) (n = 'utf8'), (r = this.length), (t = 0);
+                        else if (void 0 === r && 'string' == typeof t) (n = t), (r = this.length), (t = 0);
+                        else if (isFinite(t)) (t |= 0), isFinite(r) ? ((r |= 0), void 0 === n && (n = 'utf8')) : ((n = r), (r = void 0));
+                        else throw Error('Buffer.write(string, encoding, offset[, length]) is no longer supported');
+                        var o,
+                            i,
+                            s,
+                            a,
+                            c,
+                            u,
+                            l,
+                            f,
+                            p = this.length - t;
+                        if (((void 0 === r || r > p) && (r = p), (e.length > 0 && (r < 0 || t < 0)) || t > this.length)) throw RangeError('Attempt to write outside buffer bounds');
+                        n || (n = 'utf8');
+                        for (var h = !1; ; )
+                            switch (n) {
+                                case 'hex':
+                                    return (function (e, t, r, n) {
+                                        r = Number(r) || 0;
+                                        var o = e.length - r;
+                                        n ? (n = Number(n)) > o && (n = o) : (n = o);
+                                        var i = t.length;
+                                        if (i % 2 != 0) throw TypeError('Invalid hex string');
+                                        n > i / 2 && (n = i / 2);
+                                        for (var s = 0; s < n; ++s) {
+                                            var a = parseInt(t.substr(2 * s, 2), 16);
+                                            if (isNaN(a)) break;
+                                            e[r + s] = a;
+                                        }
+                                        return s;
+                                    })(this, e, t, r);
+                                case 'utf8':
+                                case 'utf-8':
+                                    return (o = t), (i = r), R(A(e, this.length - o), this, o, i);
+                                case 'ascii':
+                                    return (s = t), (a = r), R(T(e), this, s, a);
+                                case 'latin1':
+                                case 'binary':
+                                    return (function (e, t, r, n) {
+                                        return R(T(t), e, r, n);
+                                    })(this, e, t, r);
+                                case 'base64':
+                                    return (c = t), (u = r), R(P(e), this, c, u);
+                                case 'ucs2':
+                                case 'ucs-2':
+                                case 'utf16le':
+                                case 'utf-16le':
+                                    return (
+                                        (l = t),
+                                        (f = r),
+                                        R(
+                                            (function (e, t) {
+                                                for (var r, n, o = [], i = 0; i < e.length && !((t -= 2) < 0); ++i) (n = (r = e.charCodeAt(i)) >> 8), o.push(r % 256), o.push(n);
+                                                return o;
+                                            })(e, this.length - l),
+                                            this,
+                                            l,
+                                            f
+                                        )
+                                    );
+                                default:
+                                    if (h) throw TypeError('Unknown encoding: ' + n);
+                                    (n = ('' + n).toLowerCase()), (h = !0);
+                            }
                     }),
+                        (c.prototype.toJSON = function () {
+                            return {
+                                type: 'Buffer',
+                                data: Array.prototype.slice.call(this._arr || this, 0)
+                            };
+                        }),
+                        (c.prototype.slice = function (e, t) {
+                            var r,
+                                n = this.length;
+                            if (((e = ~~e), (t = void 0 === t ? n : ~~t), e < 0 ? (e += n) < 0 && (e = 0) : e > n && (e = n), t < 0 ? (t += n) < 0 && (t = 0) : t > n && (t = n), t < e && (t = e), c.TYPED_ARRAY_SUPPORT)) (r = this.subarray(e, t)).__proto__ = c.prototype;
+                            else {
+                                var o = t - e;
+                                r = new c(o, void 0);
+                                for (var i = 0; i < o; ++i) r[i] = this[i + e];
+                            }
+                            return r;
+                        }),
                         (c.prototype.readUIntLE = function (e, t, r) {
-                            (e |= 0), (t |= 0), !r && w(e, t, this.length);
+                            (e |= 0), (t |= 0), r || _(e, t, this.length);
                             for (var n = this[e], o = 1, i = 0; ++i < t && (o *= 256); ) n += this[e + i] * o;
                             return n;
                         }),
                         (c.prototype.readUIntBE = function (e, t, r) {
-                            (e |= 0), (t |= 0), !r && w(e, t, this.length);
+                            (e |= 0), (t |= 0), r || _(e, t, this.length);
                             for (var n = this[e + --t], o = 1; t > 0 && (o *= 256); ) n += this[e + --t] * o;
                             return n;
                         }),
                         (c.prototype.readUInt8 = function (e, t) {
-                            return !t && w(e, 1, this.length), this[e];
+                            return t || _(e, 1, this.length), this[e];
                         }),
                         (c.prototype.readUInt16LE = function (e, t) {
-                            return !t && w(e, 2, this.length), this[e] | (this[e + 1] << 8);
+                            return t || _(e, 2, this.length), this[e] | (this[e + 1] << 8);
                         }),
                         (c.prototype.readUInt16BE = function (e, t) {
-                            return !t && w(e, 2, this.length), (this[e] << 8) | this[e + 1];
+                            return t || _(e, 2, this.length), (this[e] << 8) | this[e + 1];
                         }),
                         (c.prototype.readUInt32LE = function (e, t) {
-                            return !t && w(e, 4, this.length), (this[e] | (this[e + 1] << 8) | (this[e + 2] << 16)) + 16777216 * this[e + 3];
+                            return t || _(e, 4, this.length), (this[e] | (this[e + 1] << 8) | (this[e + 2] << 16)) + 16777216 * this[e + 3];
                         }),
                         (c.prototype.readUInt32BE = function (e, t) {
-                            return !t && w(e, 4, this.length), 16777216 * this[e] + ((this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3]);
+                            return t || _(e, 4, this.length), 16777216 * this[e] + ((this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3]);
                         }),
                         (c.prototype.readIntLE = function (e, t, r) {
-                            (e |= 0), (t |= 0), !r && w(e, t, this.length);
+                            (e |= 0), (t |= 0), r || _(e, t, this.length);
                             for (var n = this[e], o = 1, i = 0; ++i < t && (o *= 256); ) n += this[e + i] * o;
                             return n >= (o *= 128) && (n -= Math.pow(2, 8 * t)), n;
                         }),
                         (c.prototype.readIntBE = function (e, t, r) {
-                            (e |= 0), (t |= 0), !r && w(e, t, this.length);
+                            (e |= 0), (t |= 0), r || _(e, t, this.length);
                             for (var n = t, o = 1, i = this[e + --n]; n > 0 && (o *= 256); ) i += this[e + --n] * o;
                             return i >= (o *= 128) && (i -= Math.pow(2, 8 * t)), i;
                         }),
                         (c.prototype.readInt8 = function (e, t) {
-                            return (!t && w(e, 1, this.length), 128 & this[e]) ? -((255 - this[e] + 1) * 1) : this[e];
+                            return (t || _(e, 1, this.length), 128 & this[e]) ? -((255 - this[e] + 1) * 1) : this[e];
                         }),
                         (c.prototype.readInt16LE = function (e, t) {
-                            !t && w(e, 2, this.length);
+                            t || _(e, 2, this.length);
                             var r = this[e] | (this[e + 1] << 8);
                             return 32768 & r ? 4294901760 | r : r;
                         }),
                         (c.prototype.readInt16BE = function (e, t) {
-                            !t && w(e, 2, this.length);
+                            t || _(e, 2, this.length);
                             var r = this[e + 1] | (this[e] << 8);
                             return 32768 & r ? 4294901760 | r : r;
                         }),
                         (c.prototype.readInt32LE = function (e, t) {
-                            return !t && w(e, 4, this.length), this[e] | (this[e + 1] << 8) | (this[e + 2] << 16) | (this[e + 3] << 24);
+                            return t || _(e, 4, this.length), this[e] | (this[e + 1] << 8) | (this[e + 2] << 16) | (this[e + 3] << 24);
                         }),
                         (c.prototype.readInt32BE = function (e, t) {
-                            return !t && w(e, 4, this.length), (this[e] << 24) | (this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3];
+                            return t || _(e, 4, this.length), (this[e] << 24) | (this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3];
                         }),
                         (c.prototype.readFloatLE = function (e, t) {
-                            return !t && w(e, 4, this.length), o.read(this, e, !0, 23, 4);
+                            return t || _(e, 4, this.length), o.read(this, e, !0, 23, 4);
                         }),
                         (c.prototype.readFloatBE = function (e, t) {
-                            return !t && w(e, 4, this.length), o.read(this, e, !1, 23, 4);
+                            return t || _(e, 4, this.length), o.read(this, e, !1, 23, 4);
                         }),
                         (c.prototype.readDoubleLE = function (e, t) {
-                            return !t && w(e, 8, this.length), o.read(this, e, !0, 52, 8);
+                            return t || _(e, 8, this.length), o.read(this, e, !0, 52, 8);
                         }),
                         (c.prototype.readDoubleBE = function (e, t) {
-                            return !t && w(e, 8, this.length), o.read(this, e, !1, 52, 8);
+                            return t || _(e, 8, this.length), o.read(this, e, !1, 52, 8);
                         }),
                         (c.prototype.writeUIntLE = function (e, t, r, n) {
-                            if (((e = +e), (t |= 0), (r |= 0), !n)) {
+                            if (((e *= 1), (t |= 0), (r |= 0), !n)) {
                                 var o = Math.pow(2, 8 * r) - 1;
-                                E(this, e, t, r, o, 0);
+                                w(this, e, t, r, o, 0);
                             }
                             var i = 1,
                                 s = 0;
@@ -1270,9 +1235,9 @@ var t, r;
                             return t + r;
                         }),
                         (c.prototype.writeUIntBE = function (e, t, r, n) {
-                            if (((e = +e), (t |= 0), (r |= 0), !n)) {
+                            if (((e *= 1), (t |= 0), (r |= 0), !n)) {
                                 var o = Math.pow(2, 8 * r) - 1;
-                                E(this, e, t, r, o, 0);
+                                w(this, e, t, r, o, 0);
                             }
                             var i = r - 1,
                                 s = 1;
@@ -1280,24 +1245,24 @@ var t, r;
                             return t + r;
                         }),
                         (c.prototype.writeUInt8 = function (e, t, r) {
-                            return (e = +e), (t |= 0), !r && E(this, e, t, 1, 255, 0), !c.TYPED_ARRAY_SUPPORT && (e = Math.floor(e)), (this[t] = 255 & e), t + 1;
+                            return (e *= 1), (t |= 0), r || w(this, e, t, 1, 255, 0), c.TYPED_ARRAY_SUPPORT || (e = Math.floor(e)), (this[t] = 255 & e), t + 1;
                         }),
                         (c.prototype.writeUInt16LE = function (e, t, r) {
-                            return (e = +e), (t |= 0), !r && E(this, e, t, 2, 65535, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8)) : x(this, e, t, !0), t + 2;
+                            return (e *= 1), (t |= 0), r || w(this, e, t, 2, 65535, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8)) : E(this, e, t, !0), t + 2;
                         }),
                         (c.prototype.writeUInt16BE = function (e, t, r) {
-                            return (e = +e), (t |= 0), !r && E(this, e, t, 2, 65535, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 8), (this[t + 1] = 255 & e)) : x(this, e, t, !1), t + 2;
+                            return (e *= 1), (t |= 0), r || w(this, e, t, 2, 65535, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 8), (this[t + 1] = 255 & e)) : E(this, e, t, !1), t + 2;
                         }),
                         (c.prototype.writeUInt32LE = function (e, t, r) {
-                            return (e = +e), (t |= 0), !r && E(this, e, t, 4, 4294967295, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t + 3] = e >>> 24), (this[t + 2] = e >>> 16), (this[t + 1] = e >>> 8), (this[t] = 255 & e)) : j(this, e, t, !0), t + 4;
+                            return (e *= 1), (t |= 0), r || w(this, e, t, 4, 4294967295, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t + 3] = e >>> 24), (this[t + 2] = e >>> 16), (this[t + 1] = e >>> 8), (this[t] = 255 & e)) : x(this, e, t, !0), t + 4;
                         }),
                         (c.prototype.writeUInt32BE = function (e, t, r) {
-                            return (e = +e), (t |= 0), !r && E(this, e, t, 4, 4294967295, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e)) : j(this, e, t, !1), t + 4;
+                            return (e *= 1), (t |= 0), r || w(this, e, t, 4, 4294967295, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e)) : x(this, e, t, !1), t + 4;
                         }),
                         (c.prototype.writeIntLE = function (e, t, r, n) {
-                            if (((e = +e), (t |= 0), !n)) {
+                            if (((e *= 1), (t |= 0), !n)) {
                                 var o = Math.pow(2, 8 * r - 1);
-                                E(this, e, t, r, o - 1, -o);
+                                w(this, e, t, r, o - 1, -o);
                             }
                             var i = 0,
                                 s = 1,
@@ -1306,9 +1271,9 @@ var t, r;
                             return t + r;
                         }),
                         (c.prototype.writeIntBE = function (e, t, r, n) {
-                            if (((e = +e), (t |= 0), !n)) {
+                            if (((e *= 1), (t |= 0), !n)) {
                                 var o = Math.pow(2, 8 * r - 1);
-                                E(this, e, t, r, o - 1, -o);
+                                w(this, e, t, r, o - 1, -o);
                             }
                             var i = r - 1,
                                 s = 1,
@@ -1317,34 +1282,34 @@ var t, r;
                             return t + r;
                         }),
                         (c.prototype.writeInt8 = function (e, t, r) {
-                            return (e = +e), (t |= 0), !r && E(this, e, t, 1, 127, -128), !c.TYPED_ARRAY_SUPPORT && (e = Math.floor(e)), e < 0 && (e = 255 + e + 1), (this[t] = 255 & e), t + 1;
+                            return (e *= 1), (t |= 0), r || w(this, e, t, 1, 127, -128), c.TYPED_ARRAY_SUPPORT || (e = Math.floor(e)), e < 0 && (e = 255 + e + 1), (this[t] = 255 & e), t + 1;
                         }),
                         (c.prototype.writeInt16LE = function (e, t, r) {
-                            return (e = +e), (t |= 0), !r && E(this, e, t, 2, 32767, -32768), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8)) : x(this, e, t, !0), t + 2;
+                            return (e *= 1), (t |= 0), r || w(this, e, t, 2, 32767, -32768), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8)) : E(this, e, t, !0), t + 2;
                         }),
                         (c.prototype.writeInt16BE = function (e, t, r) {
-                            return (e = +e), (t |= 0), !r && E(this, e, t, 2, 32767, -32768), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 8), (this[t + 1] = 255 & e)) : x(this, e, t, !1), t + 2;
+                            return (e *= 1), (t |= 0), r || w(this, e, t, 2, 32767, -32768), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 8), (this[t + 1] = 255 & e)) : E(this, e, t, !1), t + 2;
                         }),
                         (c.prototype.writeInt32LE = function (e, t, r) {
-                            return (e = +e), (t |= 0), !r && E(this, e, t, 4, 2147483647, -2147483648), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8), (this[t + 2] = e >>> 16), (this[t + 3] = e >>> 24)) : j(this, e, t, !0), t + 4;
+                            return (e *= 1), (t |= 0), r || w(this, e, t, 4, 2147483647, -2147483648), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8), (this[t + 2] = e >>> 16), (this[t + 3] = e >>> 24)) : x(this, e, t, !0), t + 4;
                         }),
                         (c.prototype.writeInt32BE = function (e, t, r) {
-                            return (e = +e), (t |= 0), !r && E(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e)) : j(this, e, t, !1), t + 4;
+                            return (e *= 1), (t |= 0), r || w(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e)) : x(this, e, t, !1), t + 4;
                         }),
                         (c.prototype.writeFloatLE = function (e, t, r) {
-                            return k(this, e, t, !0, r);
+                            return O(this, e, t, !0, r);
                         }),
                         (c.prototype.writeFloatBE = function (e, t, r) {
-                            return k(this, e, t, !1, r);
+                            return O(this, e, t, !1, r);
                         }),
                         (c.prototype.writeDoubleLE = function (e, t, r) {
-                            return S(this, e, t, !0, r);
+                            return k(this, e, t, !0, r);
                         }),
                         (c.prototype.writeDoubleBE = function (e, t, r) {
-                            return S(this, e, t, !1, r);
+                            return k(this, e, t, !1, r);
                         }),
                         (c.prototype.copy = function (e, t, r, n) {
-                            if ((!r && (r = 0), !n && 0 !== n && (n = this.length), t >= e.length && (t = e.length), !t && (t = 0), n > 0 && n < r && (n = r), n === r || 0 === e.length || 0 === this.length)) return 0;
+                            if ((r || (r = 0), n || 0 === n || (n = this.length), t >= e.length && (t = e.length), t || (t = 0), n > 0 && n < r && (n = r), n === r || 0 === e.length || 0 === this.length)) return 0;
                             if (t < 0) throw RangeError('targetStart out of bounds');
                             if (r < 0 || r >= this.length) throw RangeError('sourceStart out of bounds');
                             if (n < 0) throw RangeError('sourceEnd out of bounds');
@@ -1368,25 +1333,21 @@ var t, r;
                             } else 'number' == typeof e && (e &= 255);
                             if (t < 0 || this.length < t || this.length < r) throw RangeError('Out of range index');
                             if (r <= t) return this;
-                            if (((t >>>= 0), (r = void 0 === r ? this.length : r >>> 0), !e && (e = 0), 'number' == typeof e)) for (o = t; o < r; ++o) this[o] = e;
+                            if (((t >>>= 0), (r = void 0 === r ? this.length : r >>> 0), e || (e = 0), 'number' == typeof e)) for (o = t; o < r; ++o) this[o] = e;
                             else {
-                                var s = c.isBuffer(e) ? e : T(new c(e, n).toString()),
+                                var s = c.isBuffer(e) ? e : A(new c(e, n).toString()),
                                     a = s.length;
                                 for (o = 0; o < r - t; ++o) this[o + t] = s[o % a];
                             }
                             return this;
                         });
-                    var A = /[^+\/0-9A-Za-z-_]/g;
-                    function T(e, t) {
+                    var S = /[^+\/0-9A-Za-z-_]/g;
+                    function A(e, t) {
                         t = t || 1 / 0;
                         for (var r, n = e.length, o = null, i = [], s = 0; s < n; ++s) {
                             if ((r = e.charCodeAt(s)) > 55295 && r < 57344) {
                                 if (!o) {
-                                    if (r > 56319) {
-                                        (t -= 3) > -1 && i.push(239, 191, 189);
-                                        continue;
-                                    }
-                                    if (s + 1 === n) {
+                                    if (r > 56319 || s + 1 === n) {
                                         (t -= 3) > -1 && i.push(239, 191, 189);
                                         continue;
                                     }
@@ -1415,25 +1376,21 @@ var t, r;
                         }
                         return i;
                     }
-                    function P(e) {
+                    function T(e) {
                         for (var t = [], r = 0; r < e.length; ++r) t.push(255 & e.charCodeAt(r));
                         return t;
                     }
-                    function R(e) {
+                    function P(e) {
                         return n.toByteArray(
                             (function (e) {
-                                if (
-                                    (e = (function (e) {
-                                        return e.trim ? e.trim() : e.replace(/^\s+|\s+$/g, '');
-                                    })(e).replace(A, '')).length < 2
-                                )
-                                    return '';
+                                var t;
+                                if ((e = ((t = e).trim ? t.trim() : t.replace(/^\s+|\s+$/g, '')).replace(S, '')).length < 2) return '';
                                 for (; e.length % 4 != 0; ) e += '=';
                                 return e;
                             })(e)
                         );
                     }
-                    function D(e, t, r, n) {
+                    function R(e, t, r, n) {
                         for (var o = 0; o < n && !(o + r >= t.length) && !(o >= e.length); ++o) t[o + r] = e[o];
                         return o;
                     }
@@ -1465,21 +1422,19 @@ var t, r;
                         for (var t, n = e.length, o = n % 3, i = '', s = [], a = 0, c = n - o; a < c; a += 16383)
                             s.push(
                                 (function (e, t, n) {
-                                    for (var o, i, s = [], a = t; a < n; a += 3) {
-                                        (i = (e[a] << 16) + (e[a + 1] << 8) + e[a + 2]), s.push(r[((o = i) >> 18) & 63] + r[(o >> 12) & 63] + r[(o >> 6) & 63] + r[63 & o]);
-                                    }
-                                    return s.join('');
+                                    for (var o, i = [], s = t; s < n; s += 3) (o = (e[s] << 16) + (e[s + 1] << 8) + e[s + 2]), i.push(r[(o >> 18) & 63] + r[(o >> 12) & 63] + r[(o >> 6) & 63] + r[63 & o]);
+                                    return i.join('');
                                 })(e, a, a + 16383 > c ? c : a + 16383)
                             );
-                        return 1 === o ? (i += r[(t = e[n - 1]) >> 2] + r[(t << 4) & 63] + '==') : 2 === o && (i += r[(t = (e[n - 2] << 8) + e[n - 1]) >> 10] + r[(t >> 4) & 63] + r[(t << 2) & 63] + '='), s.push(i), s.join('');
+                        return 1 === o ? ((i += r[(t = e[n - 1]) >> 2]), (i += r[(t << 4) & 63]), (i += '==')) : 2 === o && ((i += r[(t = (e[n - 2] << 8) + e[n - 1]) >> 10]), (i += r[(t >> 4) & 63]), (i += r[(t << 2) & 63]), (i += '=')), s.push(i), s.join('');
                     });
                 for (var r = [], n = [], o = 'undefined' != typeof Uint8Array ? Uint8Array : Array, i = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', s = 0, a = i.length; s < a; ++s) (r[s] = i[s]), (n[i.charCodeAt(s)] = s);
                 function c(e) {
                     var t = e.length;
                     if (t % 4 > 0) throw Error('Invalid string. Length must be a multiple of 4');
-                    return '=' === e[t - 2] ? 2 : '=' === e[t - 1] ? 1 : 0;
+                    return '=' === e[t - 2] ? 2 : +('=' === e[t - 1]);
                 }
-                (n['-'.charCodeAt(0)] = 62), (n['_'.charCodeAt(0)] = 63);
+                (n[45] = 62), (n[95] = 63);
             },
             function (e, t) {
                 (t.read = function (e, t, r, n, o) {
@@ -1508,11 +1463,11 @@ var t, r;
                             u = 8 * i - o - 1,
                             l = (1 << u) - 1,
                             f = l >> 1,
-                            p = 23 === o ? 5.960464477539062e-8 : 0,
+                            p = 5.960464477539062e-8 * (23 === o),
                             h = n ? 0 : i - 1,
                             d = n ? 1 : -1,
-                            g = t < 0 || (0 === t && 1 / t < 0) ? 1 : 0;
-                        for (isNaN((t = Math.abs(t))) || t === 1 / 0 ? ((a = isNaN(t) ? 1 : 0), (s = l)) : ((s = Math.floor(Math.log(t) / Math.LN2)), t * (c = Math.pow(2, -s)) < 1 && (s--, (c *= 2)), s + f >= 1 ? (t += p / c) : (t += p * Math.pow(2, 1 - f)), t * c >= 2 && (s++, (c /= 2)), s + f >= l ? ((a = 0), (s = l)) : s + f >= 1 ? ((a = (t * c - 1) * Math.pow(2, o)), (s += f)) : ((a = t * Math.pow(2, f - 1) * Math.pow(2, o)), (s = 0))); o >= 8; e[r + h] = 255 & a, h += d, a /= 256, o -= 8);
+                            g = +(t < 0 || (0 === t && 1 / t < 0));
+                        for (isNaN((t = Math.abs(t))) || t === 1 / 0 ? ((a = +!!isNaN(t)), (s = l)) : ((s = Math.floor(Math.log(t) / Math.LN2)), t * (c = Math.pow(2, -s)) < 1 && (s--, (c *= 2)), s + f >= 1 ? (t += p / c) : (t += p * Math.pow(2, 1 - f)), t * c >= 2 && (s++, (c /= 2)), s + f >= l ? ((a = 0), (s = l)) : s + f >= 1 ? ((a = (t * c - 1) * Math.pow(2, o)), (s += f)) : ((a = t * Math.pow(2, f - 1) * Math.pow(2, o)), (s = 0))); o >= 8; e[r + h] = 255 & a, h += d, a /= 256, o -= 8);
                         for (s = (s << o) | a, u += o; u > 0; e[r + h] = 255 & s, h += d, s /= 256, u -= 8);
                         e[r + h - d] |= 128 * g;
                     });
@@ -1536,6 +1491,16 @@ var t, r;
                 function a() {
                     throw Error('clearTimeout has not been defined');
                 }
+                try {
+                    r = 'function' == typeof setTimeout ? setTimeout : s;
+                } catch (e) {
+                    r = s;
+                }
+                try {
+                    n = 'function' == typeof clearTimeout ? clearTimeout : a;
+                } catch (e) {
+                    n = a;
+                }
                 function c(e) {
                     if (r === setTimeout) return setTimeout(e, 0);
                     if ((r === s || !r) && setTimeout) return (r = setTimeout), setTimeout(e, 0);
@@ -1549,23 +1514,11 @@ var t, r;
                         }
                     }
                 }
-                !(function () {
-                    try {
-                        r = 'function' == typeof setTimeout ? setTimeout : s;
-                    } catch (e) {
-                        r = s;
-                    }
-                    try {
-                        n = 'function' == typeof clearTimeout ? clearTimeout : a;
-                    } catch (e) {
-                        n = a;
-                    }
-                })();
                 var u = [],
                     l = !1,
                     f = -1;
                 function p() {
-                    if (!!l && !!o) (l = !1), o.length ? (u = o.concat(u)) : (f = -1), u.length && h();
+                    l && o && ((l = !1), o.length ? (u = o.concat(u)) : (f = -1), u.length && h());
                 }
                 function h() {
                     if (!l) {
@@ -1577,7 +1530,7 @@ var t, r;
                         }
                         (o = null),
                             (l = !1),
-                            !(function (e) {
+                            (function (e) {
                                 if (n === clearTimeout) return clearTimeout(e);
                                 if ((n === a || !n) && clearTimeout) return (n = clearTimeout), clearTimeout(e);
                                 try {
@@ -1599,7 +1552,7 @@ var t, r;
                 (i.nextTick = function (e) {
                     var t = Array(arguments.length - 1);
                     if (arguments.length > 1) for (var r = 1; r < arguments.length; r++) t[r - 1] = arguments[r];
-                    u.push(new d(e, t)), 1 === u.length && !l && c(h);
+                    u.push(new d(e, t)), 1 !== u.length || l || c(h);
                 }),
                     (d.prototype.run = function () {
                         this.fun.apply(null, this.array);
@@ -1638,7 +1591,7 @@ var t, r;
                             var o = e[n];
                             '.' === o ? e.splice(n, 1) : '..' === o ? (e.splice(n, 1), r++) : r && (e.splice(n, 1), r--);
                         }
-                        if (t) for (; r--; r) e.unshift('..');
+                        if (t) for (; r--; ) e.unshift('..');
                         return e;
                     }
                     var n = /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/,
@@ -1654,7 +1607,7 @@ var t, r;
                         for (var t = '', n = !1, o = arguments.length - 1; o >= -1 && !n; o--) {
                             var s = o >= 0 ? arguments[o] : e.cwd();
                             if ('string' != typeof s) throw TypeError('Arguments to path.resolve must be strings');
-                            if (!!s) (t = s + '/' + t), (n = '/' === s.charAt(0));
+                            s && ((t = s + '/' + t), (n = '/' === s.charAt(0)));
                         }
                         return (
                             (t = r(
@@ -1670,13 +1623,13 @@ var t, r;
                             var n = t.isAbsolute(e),
                                 o = '/' === s(e, -1);
                             return (
-                                !(e = r(
+                                (e = r(
                                     i(e.split('/'), function (e) {
                                         return !!e;
                                     }),
                                     !n
-                                ).join('/')) &&
-                                    !n &&
+                                ).join('/')) ||
+                                    n ||
                                     (e = '.'),
                                 e && o && (e += '/'),
                                 (n ? '/' : '') + e
@@ -1782,8 +1735,7 @@ var t, r;
                             return function () {
                                 if (!i) {
                                     if (n.throwDeprecation) throw Error(o);
-                                    n.traceDeprecation ? console.trace(o) : console.error(o);
-                                    i = !0;
+                                    n.traceDeprecation ? console.trace(o) : console.error(o), (i = !0);
                                 }
                                 return r.apply(this, arguments);
                             };
@@ -1803,52 +1755,18 @@ var t, r;
                     function u(e, t) {
                         return e;
                     }
-                    (t.debuglog = function (e) {
-                        if ((m(o) && (o = n.env.NODE_DEBUG || ''), !s[(e = e.toUpperCase())])) {
-                            if (RegExp('\\b' + e + '\\b', 'i').test(o)) {
-                                var r = n.pid;
-                                s[e] = function () {
-                                    var n = t.format.apply(t, arguments);
-                                    console.error('%s %d: %s', e, r, n);
-                                };
-                            } else s[e] = function () {};
-                        }
-                        return s[e];
-                    }),
-                        (t.inspect = a),
-                        (a.colors = {
-                            bold: [1, 22],
-                            italic: [3, 23],
-                            underline: [4, 24],
-                            inverse: [7, 27],
-                            white: [37, 39],
-                            grey: [90, 39],
-                            black: [30, 39],
-                            blue: [34, 39],
-                            cyan: [36, 39],
-                            green: [32, 39],
-                            magenta: [35, 39],
-                            red: [31, 39],
-                            yellow: [33, 39]
-                        }),
-                        (a.styles = {
-                            special: 'cyan',
-                            number: 'yellow',
-                            boolean: 'yellow',
-                            undefined: 'grey',
-                            null: 'bold',
-                            string: 'green',
-                            date: 'magenta',
-                            regexp: 'red'
-                        });
                     function l(e, r, n) {
                         if (e.customInspect && r && x(r.inspect) && r.inspect !== t.inspect && !(r.constructor && r.constructor.prototype === r)) {
                             var o,
                                 i,
-                                s = r.inspect(n, e);
-                            return !v(s) && (s = l(e, s, n)), s;
+                                s,
+                                a,
+                                c,
+                                u,
+                                _ = r.inspect(n, e);
+                            return v(_) || (_ = l(e, _, n)), _;
                         }
-                        var a = (function (e, t) {
+                        var j = (function (e, t) {
                             if (m(t)) return e.stylize('undefined', 'undefined');
                             if (v(t)) {
                                 var r = "'" + JSON.stringify(t).replace(/^"|"$/g, '').replace(/'/g, "\\'").replace(/\\"/g, '"') + "'";
@@ -1856,53 +1774,56 @@ var t, r;
                             }
                             return y(t) ? e.stylize('' + t, 'number') : d(t) ? e.stylize('' + t, 'boolean') : g(t) ? e.stylize('null', 'null') : void 0;
                         })(e, r);
-                        if (a) return a;
-                        var c = Object.keys(r);
-                        var u =
-                            ((o = {}),
-                            c.forEach(function (e, t) {
-                                o[e] = !0;
-                            }),
-                            o);
-                        if ((e.showHidden && (c = Object.getOwnPropertyNames(r)), E(r) && (c.indexOf('message') >= 0 || c.indexOf('description') >= 0))) return f(r);
-                        if (0 === c.length) {
+                        if (j) return j;
+                        var O = Object.keys(r),
+                            k =
+                                ((c = {}),
+                                O.forEach(function (e, t) {
+                                    c[e] = !0;
+                                }),
+                                c);
+                        if ((e.showHidden && (O = Object.getOwnPropertyNames(r)), E(r) && (O.indexOf('message') >= 0 || O.indexOf('description') >= 0))) return f(r);
+                        if (0 === O.length) {
                             if (x(r)) {
-                                var _ = r.name ? ': ' + r.name : '';
-                                return e.stylize('[Function' + _ + ']', 'special');
+                                var A = r.name ? ': ' + r.name : '';
+                                return e.stylize('[Function' + A + ']', 'special');
                             }
                             if (b(r)) return e.stylize(RegExp.prototype.toString.call(r), 'regexp');
                             if (w(r)) return e.stylize(Date.prototype.toString.call(r), 'date');
                             if (E(r)) return f(r);
                         }
-                        var j = '',
-                            O = !1,
-                            k = ['{', '}'];
-                        if ((h(r) && ((O = !0), (k = ['[', ']'])), x(r) && (j = ' [Function' + (r.name ? ': ' + r.name : '') + ']'), b(r) && (j = ' ' + RegExp.prototype.toString.call(r)), w(r) && (j = ' ' + Date.prototype.toUTCString.call(r)), E(r) && (j = ' ' + f(r)), 0 === c.length && (!O || 0 == r.length))) return k[0] + j + k[1];
-                        if (n < 0) return b(r) ? e.stylize(RegExp.prototype.toString.call(r), 'regexp') : e.stylize('[Object]', 'special');
+                        var T = '',
+                            P = !1,
+                            R = ['{', '}'];
+                        if ((h(r) && ((P = !0), (R = ['[', ']'])), x(r) && (T = ' [Function' + (r.name ? ': ' + r.name : '') + ']'), b(r) && (T = ' ' + RegExp.prototype.toString.call(r)), w(r) && (T = ' ' + Date.prototype.toUTCString.call(r)), E(r) && (T = ' ' + f(r)), 0 === O.length && (!P || 0 == r.length))) return R[0] + T + R[1];
+                        if (n < 0)
+                            if (b(r)) return e.stylize(RegExp.prototype.toString.call(r), 'regexp');
+                            else return e.stylize('[Object]', 'special');
                         return (
                             e.seen.push(r),
-                            (i = O
+                            (u = P
                                 ? (function (e, t, r, n, o) {
                                       for (var i = [], s = 0, a = t.length; s < a; ++s) S(t, String(s)) ? i.push(p(e, t, r, n, String(s), !0)) : i.push('');
                                       return (
                                           o.forEach(function (o) {
-                                              !o.match(/^\d+$/) && i.push(p(e, t, r, n, o, !0));
+                                              o.match(/^\d+$/) || i.push(p(e, t, r, n, o, !0));
                                           }),
                                           i
                                       );
-                                  })(e, r, n, u, c)
-                                : c.map(function (t) {
-                                      return p(e, r, n, u, t, O);
+                                  })(e, r, n, k, O)
+                                : O.map(function (t) {
+                                      return p(e, r, n, k, t, P);
                                   })),
                             e.seen.pop(),
-                            (function (e, t, r) {
-                                var n = 0;
-                                return e.reduce(function (e, t) {
-                                    return n++, t.indexOf('\n') >= 0 && n++, e + t.replace(/\u001b\[\d\d?m/g, '').length + 1;
-                                }, 0) > 60
-                                    ? r[0] + ('' === t ? '' : t + '\n ') + ' ' + e.join(',\n  ') + ' ' + r[1]
-                                    : r[0] + t + ' ' + e.join(', ') + ' ' + r[1];
-                            })(i, j, k)
+                            (o = u),
+                            (i = T),
+                            (s = R),
+                            (a = 0),
+                            o.reduce(function (e, t) {
+                                return a++, t.indexOf('\n') >= 0 && a++, e + t.replace(/\u001b\[\d\d?m/g, '').length + 1;
+                            }, 0) > 60
+                                ? s[0] + ('' === i ? '' : i + '\n ') + ' ' + o.join(',\n  ') + ' ' + s[1]
+                                : s[0] + i + ' ' + o.join(', ') + ' ' + s[1]
                         );
                     }
                     function f(e) {
@@ -1912,7 +1833,7 @@ var t, r;
                         var s, a, c;
                         if (
                             ((c = Object.getOwnPropertyDescriptor(t, o) || { value: t[o] }).get ? (a = c.set ? e.stylize('[Getter/Setter]', 'special') : e.stylize('[Getter]', 'special')) : c.set && (a = e.stylize('[Setter]', 'special')),
-                            !S(n, o) && (s = '[' + o + ']'),
+                            S(n, o) || (s = '[' + o + ']'),
                             !a &&
                                 (0 > e.seen.indexOf(c.value)
                                     ? (a = g(r) ? l(e, c.value, null) : l(e, c.value, r - 1)).indexOf('\n') > -1 &&
@@ -1954,18 +1875,12 @@ var t, r;
                     function g(e) {
                         return null === e;
                     }
-                    (t.isArray = h), (t.isBoolean = d), (t.isNull = g);
                     function y(e) {
                         return 'number' == typeof e;
                     }
                     function v(e) {
                         return 'string' == typeof e;
                     }
-                    (t.isNullOrUndefined = function (e) {
-                        return null == e;
-                    }),
-                        (t.isNumber = y),
-                        (t.isString = v);
                     function m(e) {
                         return void 0 === e;
                     }
@@ -1984,24 +1899,69 @@ var t, r;
                     function x(e) {
                         return 'function' == typeof e;
                     }
-                    (t.isSymbol = function (e) {
-                        return 'symbol' == typeof e;
-                    }),
-                        (t.isUndefined = m),
-                        (t.isRegExp = b),
-                        (t.isObject = _),
-                        (t.isDate = w),
-                        (t.isError = E),
-                        (t.isFunction = x);
                     function j(e) {
                         return Object.prototype.toString.call(e);
                     }
                     function O(e) {
                         return e < 10 ? '0' + e.toString(10) : e.toString(10);
                     }
-                    (t.isPrimitive = function (e) {
-                        return null === e || 'boolean' == typeof e || 'number' == typeof e || 'string' == typeof e || 'symbol' == typeof e || void 0 === e;
+                    (t.debuglog = function (e) {
+                        if ((m(o) && (o = n.env.NODE_DEBUG || ''), !s[(e = e.toUpperCase())]))
+                            if (RegExp('\\b' + e + '\\b', 'i').test(o)) {
+                                var r = n.pid;
+                                s[e] = function () {
+                                    var n = t.format.apply(t, arguments);
+                                    console.error('%s %d: %s', e, r, n);
+                                };
+                            } else s[e] = function () {};
+                        return s[e];
                     }),
+                        (t.inspect = a),
+                        (a.colors = {
+                            bold: [1, 22],
+                            italic: [3, 23],
+                            underline: [4, 24],
+                            inverse: [7, 27],
+                            white: [37, 39],
+                            grey: [90, 39],
+                            black: [30, 39],
+                            blue: [34, 39],
+                            cyan: [36, 39],
+                            green: [32, 39],
+                            magenta: [35, 39],
+                            red: [31, 39],
+                            yellow: [33, 39]
+                        }),
+                        (a.styles = {
+                            special: 'cyan',
+                            number: 'yellow',
+                            boolean: 'yellow',
+                            undefined: 'grey',
+                            null: 'bold',
+                            string: 'green',
+                            date: 'magenta',
+                            regexp: 'red'
+                        }),
+                        (t.isArray = h),
+                        (t.isBoolean = d),
+                        (t.isNull = g),
+                        (t.isNullOrUndefined = function (e) {
+                            return null == e;
+                        }),
+                        (t.isNumber = y),
+                        (t.isString = v),
+                        (t.isSymbol = function (e) {
+                            return 'symbol' == typeof e;
+                        }),
+                        (t.isUndefined = m),
+                        (t.isRegExp = b),
+                        (t.isObject = _),
+                        (t.isDate = w),
+                        (t.isError = E),
+                        (t.isFunction = x),
+                        (t.isPrimitive = function (e) {
+                            return null === e || 'boolean' == typeof e || 'number' == typeof e || 'string' == typeof e || 'symbol' == typeof e || void 0 === e;
+                        }),
                         (t.isBuffer = r(11));
                     var k = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
                     function S(e, t) {
@@ -2143,25 +2103,8 @@ var t, r;
                     (e.exports = l.Any =
                         (function () {
                             function e() {
-                                !(function (e, t) {
-                                    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                                })(this, e),
-                                    (u = u || r(19)),
-                                    (this.isJoi = !0),
-                                    (this._type = 'any'),
-                                    (this._settings = null),
-                                    (this._valids = new l.Set()),
-                                    (this._invalids = new l.Set()),
-                                    (this._tests = []),
-                                    (this._refs = []),
-                                    (this._flags = {}),
-                                    (this._description = null),
-                                    (this._unit = null),
-                                    (this._notes = []),
-                                    (this._tags = []),
-                                    (this._examples = []),
-                                    (this._meta = []),
-                                    (this._inner = {});
+                                if (!(this instanceof e)) throw TypeError('Cannot call a class as a function');
+                                (u = u || r(19)), (this.isJoi = !0), (this._type = 'any'), (this._settings = null), (this._valids = new l.Set()), (this._invalids = new l.Set()), (this._tests = []), (this._refs = []), (this._flags = {}), (this._description = null), (this._unit = null), (this._notes = []), (this._tags = []), (this._examples = []), (this._meta = []), (this._inner = {});
                             }
                             return (
                                 (e.prototype.createError = function (e, t, r, n) {
@@ -2193,7 +2136,7 @@ var t, r;
                                             f = e._inner[u];
                                         if (f) {
                                             var p = t._inner[u];
-                                            if (p) {
+                                            if (p)
                                                 if (a && 'children' === u) {
                                                     for (var h = {}, d = 0; d < p.length; ++d) h[p[d].key] = d;
                                                     for (var g = 0; g < f.length; ++g) {
@@ -2206,7 +2149,7 @@ var t, r;
                                                             : p.push(f[g]);
                                                     }
                                                 } else t._inner[u] = t._inner[u].concat(f);
-                                            } else t._inner[u] = f.slice();
+                                            else t._inner[u] = f.slice();
                                         }
                                     }
                                     return t;
@@ -2288,7 +2231,7 @@ var t, r;
                                     return this[t].apply(this, r);
                                 }),
                                 (e.prototype.default = function (e, t) {
-                                    'function' == typeof e && !s.isRef(e) && (!e.description && t && (e.description = t), !this._flags.func && i.assert('string' == typeof e.description && e.description.length > 0, 'description must be provided when default value is a function'));
+                                    'function' == typeof e && !s.isRef(e) && (!e.description && t && (e.description = t), this._flags.func || i.assert('string' == typeof e.description && e.description.length > 0, 'description must be provided when default value is a function'));
                                     var r = this.clone();
                                     return (r._flags.default = e), s.push(r._refs, e), r;
                                 }),
@@ -2355,7 +2298,7 @@ var t, r;
                                     var u = [],
                                         f = function () {
                                             var n = void 0;
-                                            if (!o._flags.strip) {
+                                            if (!o._flags.strip)
                                                 if (void 0 !== e) n = o._flags.raw ? c : e;
                                                 else if (r.noDefaults) n = c;
                                                 else if (s.isRef(o._flags.default)) n = o._flags.default(t.parent, r);
@@ -2366,7 +2309,6 @@ var t, r;
                                                     var f = l._try(o._flags.default, a);
                                                     (n = f.value), f.error && u.push(o.createError('any.default', f.error, t, r));
                                                 }
-                                            }
                                             return {
                                                 value: n,
                                                 errors: u.length ? u : null
@@ -2385,7 +2327,7 @@ var t, r;
                                             e = {};
                                         }
                                     } else if ('required' === h && void 0 === e) return u.push(this.createError('any.required', null, t, r)), f();
-                                    else if ('forbidden' === h) return void 0 === e ? f() : (u.push(this.createError('any.unknown', null, t, r)), f());
+                                    else if ('forbidden' === h) return void 0 === e || u.push(this.createError('any.unknown', null, t, r)), f();
                                     if (this._valids.has(e, t, r, this._flags.insensitive) || (this._invalids.has(e, t, r, this._flags.insensitive) && (u.push(this.createError('' === e ? 'any.empty' : 'any.invalid', null, t, r)), r.abortEarly || void 0 === e))) return f();
                                     if (this._base) {
                                         var d = this._base.call(this, e, t, r);
@@ -2420,7 +2362,7 @@ var t, r;
                                     var e = this,
                                         t = { type: this._type },
                                         r = Object.keys(this._flags);
-                                    if (r.length) {
+                                    if (r.length)
                                         if (
                                             ['empty', 'default', 'lazy', 'label'].some(function (t) {
                                                 return e._flags.hasOwnProperty(t);
@@ -2432,7 +2374,6 @@ var t, r;
                                                 'empty' === o ? (t.flags[o] = this._flags[o].describe()) : 'default' === o ? (s.isRef(this._flags[o]) ? (t.flags[o] = this._flags[o].toString()) : 'function' == typeof this._flags[o] ? (t.flags[o] = this._flags[o].description) : (t.flags[o] = this._flags[o])) : 'lazy' === o || 'label' === o || (t.flags[o] = this._flags[o]);
                                             }
                                         } else t.flags = this._flags;
-                                    }
                                     this._description && (t.description = this._description), this._notes.length && (t.notes = this._notes), this._tags.length && (t.tags = this._tags), this._meta.length && (t.meta = this._meta), this._examples.length && (t.examples = this._examples), this._unit && (t.unit = this._unit);
                                     var i = this._valids.values();
                                     i.length &&
@@ -2463,7 +2404,7 @@ var t, r;
                                         }
                                         t.rules.push(l);
                                     }
-                                    !t.rules.length && delete t.rules;
+                                    t.rules.length || delete t.rules;
                                     var y = this._getLabel();
                                     return y && (t.label = y), t;
                                 }),
@@ -2498,12 +2439,11 @@ var t, r;
                     (l.concatSettings = function (e, t) {
                         if (!e && !t) return null;
                         var r = {};
-                        if ((e && n(r, e), t)) {
+                        if ((e && n(r, e), t))
                             for (var o = Object.keys(t), s = 0; s < o.length; ++s) {
                                 var a = o[s];
                                 'language' === a && r.hasOwnProperty(a) ? (r[a] = i.applyToDefaults(r[a], t[a])) : (r[a] = t[a]);
                             }
-                        }
                         return r;
                     });
             },
@@ -2563,16 +2503,8 @@ var t, r;
                 }),
                     (t.Err = (function () {
                         function e(t, r, n, o, i) {
-                            !(function (e, t) {
-                                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                            })(this, e),
-                                (this.isJoi = !0),
-                                (this.type = t),
-                                (this.context = r || {}),
-                                (this.context.key = n.key),
-                                (this.path = n.path),
-                                (this.options = o),
-                                (this.flags = i);
+                            if (!(this instanceof e)) throw TypeError('Cannot call a class as a function');
+                            (this.isJoi = !0), (this.type = t), (this.context = r || {}), (this.context.key = n.key), (this.path = n.path), (this.options = o), (this.flags = i);
                         }
                         return (
                             (e.prototype.toString = function () {
@@ -2582,7 +2514,7 @@ var t, r;
                                 var r = o.reach(t, this.type) || o.reach(i.errors, this.type),
                                     n = /\{\{\!?key\}\}/.test(r),
                                     a = r.length > 2 && '!' === r[0] && '!' === r[1];
-                                a && (r = r.slice(2)), !n && !a && (r = (o.reach(t, 'key') || o.reach(i.errors, 'key')) + r);
+                                a && (r = r.slice(2)), n || a || (r = (o.reach(t, 'key') || o.reach(i.errors, 'key')) + r);
                                 var c = o.reach(t, 'messages.wrapArrays');
                                 return (
                                     'boolean' != typeof c && (c = i.errors.messages.wrapArrays),
@@ -2653,7 +2585,7 @@ var t, r;
                             r = e ? '' : '\x1B[41m',
                             i = e ? '' : '\x1B[0m';
                         if ('object' !== n(this._object)) return this.details[0].message;
-                        for (var a = o.clone(this._object || {}), c = {}, u = this.details.length - 1; u >= 0; --u) {
+                        for (var a = o.clone(this._object || {}), c = {}, u = this.details.length - 1; u >= 0; --u)
                             for (var l = u + 1, f = this.details[u], p = f.path.split('.'), h = a, d = 0; d < p.length && h; ++d) {
                                 var g = p[d];
                                 if (d + 1 < p.length) h = h[g];
@@ -2661,7 +2593,7 @@ var t, r;
                                     var y = h[g];
                                     if (Array.isArray(h)) {
                                         var v = '_$idx$_' + l + '_$end$_';
-                                        !h.placeholders && (h.placeholders = {}), h.placeholders[g] ? (h.placeholders[g] = h.placeholders[g].replace('_$end$_', ', ' + l + '_$end$_')) : (h.placeholders[g] = v);
+                                        h.placeholders || (h.placeholders = {}), h.placeholders[g] ? (h.placeholders[g] = h.placeholders[g].replace('_$end$_', ', ' + l + '_$end$_')) : (h.placeholders[g] = v);
                                     } else if (void 0 !== y) {
                                         delete h[g];
                                         var m = g + '_$key$_' + l + '_$end$_';
@@ -2673,28 +2605,29 @@ var t, r;
                                     } else h['_$miss$_' + g + '|' + l + '_$end$_'] = '__missing__';
                                 }
                             }
-                        }
-                        var w = /_\$key\$_([, \d]+)_\$end\$_\"/g,
-                            E = /\"_\$miss\$_([^\|]+)\|(\d+)_\$end\$_\"\: \"__missing__\"/g,
-                            x = /\s*\"_\$idx\$_([, \d]+)_\$end\$_\",?\n(.*)/g,
-                            j = /"\[(NaN|Symbol.*|-?Infinity|function.*|\(.*)\]"/g,
-                            O = s
+                        var w = {
+                                key: /_\$key\$_([, \d]+)_\$end\$_\"/g,
+                                missing: /\"_\$miss\$_([^\|]+)\|(\d+)_\$end\$_\"\: \"__missing__\"/g,
+                                arrayIndex: /\s*\"_\$idx\$_([, \d]+)_\$end\$_\",?\n(.*)/g,
+                                specials: /"\[(NaN|Symbol.*|-?Infinity|function.*|\(.*)\]"/g
+                            },
+                            E = s
                                 .safeStringify(a, 2)
-                                .replace(w, function (e, r) {
+                                .replace(w.key, function (e, r) {
                                     return '" ' + t + '[' + r + ']' + i;
                                 })
-                                .replace(E, function (e, n, o) {
+                                .replace(w.missing, function (e, n, o) {
                                     return r + '"' + n + '"' + i + t + ' [' + o + ']: -- missing --' + i;
                                 })
-                                .replace(x, function (e, r, n) {
+                                .replace(w.arrayIndex, function (e, r, n) {
                                     return '\n' + n + ' ' + t + '[' + r + ']' + i;
                                 })
-                                .replace(j, function (e, t) {
+                                .replace(w.specials, function (e, t) {
                                     return t;
                                 });
-                        O = O + '\n' + t;
-                        for (var k = 0; k < this.details.length; ++k) O = O + '\n[' + (k + 1) + '] ' + this.details[k].message;
-                        return (O += i);
+                        E = E + '\n' + t;
+                        for (var x = 0; x < this.details.length; ++x) E = E + '\n[' + (x + 1) + '] ' + this.details[x].message;
+                        return E + i;
                     });
             },
             function (e, t) {
@@ -2844,10 +2777,8 @@ var t, r;
                         o = r(15);
                     e.exports = (function () {
                         function e() {
-                            !(function (e, t) {
-                                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                            })(this, e),
-                                (this._set = []);
+                            if (!(this instanceof e)) throw TypeError('Cannot call a class as a function');
+                            this._set = [];
                         }
                         return (
                             (e.prototype.add = function (e, t) {
@@ -2869,12 +2800,10 @@ var t, r;
                             (e.prototype.has = function (e, r, i, s) {
                                 for (var a = 0; a < this._set.length; ++a) {
                                     var c = this._set[a];
-                                    r && o.isRef(c) && (c = c(r.reference || r.parent, i)), !Array.isArray(c) && (c = [c]);
+                                    r && o.isRef(c) && (c = c(r.reference || r.parent, i)), Array.isArray(c) || (c = [c]);
                                     for (var u = 0; u < c.length; ++u) {
                                         var l = c[u];
-                                        if ((void 0 === e ? 'undefined' : n(e)) === (void 0 === l ? 'undefined' : n(l))) {
-                                            if (e === l || (e instanceof Date && l instanceof Date && e.getTime() === l.getTime()) || (s && 'string' == typeof e && e.toLowerCase() === l.toLowerCase()) || (t.isBuffer(e) && t.isBuffer(l) && e.length === l.length && e.toString('binary') === l.toString('binary'))) return !0;
-                                        }
+                                        if ((void 0 === e ? 'undefined' : n(e)) === (void 0 === l ? 'undefined' : n(l)) && (e === l || (e instanceof Date && l instanceof Date && e.getTime() === l.getTime()) || (s && 'string' == typeof e && e.toLowerCase() === l.toLowerCase()) || (t.isBuffer(e) && t.isBuffer(l) && e.length === l.length && e.toString('binary') === l.toString('binary')))) return !0;
                                     }
                                 }
                                 return !1;
@@ -2923,8 +2852,7 @@ var t, r;
                         object: null
                     };
                 (t.schema = function (e) {
-                    if (((s.any = s.any || new (r(14))()), (s.alt = s.alt || r(28)), (s.object = s.object || r(29)), null != e && (void 0 === e ? 'undefined' : n(e)) === 'object')) return e.isJoi ? e : Array.isArray(e) ? s.alt.try(e) : e instanceof RegExp ? s.string.regex(e) : e instanceof Date ? s.date.valid(e) : s.object.keys(e);
-                    return 'string' == typeof e ? s.string.valid(e) : 'number' == typeof e ? s.number.valid(e) : 'boolean' == typeof e ? s.boolean.valid(e) : i.isRef(e) ? s.any.valid(e) : (o.assert(null === e, 'Invalid schema content:', e), s.any.valid(null));
+                    return ((s.any = s.any || new (r(14))()), (s.alt = s.alt || r(28)), (s.object = s.object || r(29)), null != e && (void 0 === e ? 'undefined' : n(e)) === 'object') ? (e.isJoi ? e : Array.isArray(e) ? s.alt.try(e) : e instanceof RegExp ? s.string.regex(e) : e instanceof Date ? s.date.valid(e) : s.object.keys(e)) : 'string' == typeof e ? s.string.valid(e) : 'number' == typeof e ? s.number.valid(e) : 'boolean' == typeof e ? s.boolean.valid(e) : i.isRef(e) ? s.any.valid(e) : (o.assert(null === e, 'Invalid schema content:', e), s.any.valid(null));
                 }),
                     (t.ref = function (e) {
                         return i.isRef(e) ? e : i.create(e);
@@ -2938,16 +2866,14 @@ var t, r;
                     a = {};
                 (a.isoDate = /^(?:\d{4}(?!\d{2}\b))(?:(-?)(?:(?:0[1-9]|1[0-2])(?:\1(?:[12]\d|0[1-9]|3[01]))?|W(?:[0-4]\d|5[0-2])(?:-?[1-7])?|(?:00[1-9]|0[1-9]\d|[12]\d{2}|3(?:[0-5]\d|6[1-6])))(?![T]$|[T][\d]+Z$)(?:[T\s](?:(?:(?:[01]\d|2[0-3])(?:(:?)[0-5]\d)?|24\:?00)(?:[.,]\d+(?!:))?)(?:\2[0-5]\d(?:[.,]\d+)?)?(?:[Z]|(?:[+-])(?:[01]\d|2[0-3])(?::?[0-5]\d)?)?)?)?$/),
                     (a.invalidDate = new Date('')),
-                    (a.isIsoDate =
-                        ((n = a.isoDate.toString()),
-                        function (e) {
-                            return e && e.toString() === n;
-                        })),
+                    (n = a.isoDate.toString()),
+                    (a.isIsoDate = function (e) {
+                        return e && e.toString() === n;
+                    }),
                     (a.Date = (function (e) {
+                        if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function, not ' + typeof e);
                         function t() {
-                            !(function (e, t) {
-                                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                            })(this, t);
+                            if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
                             var r = (function (e, t) {
                                 if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                                 return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
@@ -2955,28 +2881,24 @@ var t, r;
                             return (r._type = 'date'), r;
                         }
                         return (
-                            !(function (e, t) {
-                                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                                (e.prototype = Object.create(t && t.prototype, {
-                                    constructor: {
-                                        value: e,
-                                        enumerable: !1,
-                                        writable: !0,
-                                        configurable: !0
-                                    }
-                                })),
-                                    t &&
-                                        (Object.setPrototypeOf
-                                            ? Object.setPrototypeOf(e, t)
-                                            : (function (e, t) {
-                                                  for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
-                                                      var o = r[n],
-                                                          i = Object.getOwnPropertyDescriptor(t, o);
-                                                      i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
-                                                  }
-                                                  return e;
-                                              })(e, t));
-                            })(t, e),
+                            (t.prototype = Object.create(e && e.prototype, {
+                                constructor: {
+                                    value: t,
+                                    enumerable: !1,
+                                    writable: !0,
+                                    configurable: !0
+                                }
+                            })),
+                            e &&
+                                (Object.setPrototypeOf
+                                    ? Object.setPrototypeOf(t, e)
+                                    : (function (e, t) {
+                                          for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
+                                              var o = r[n],
+                                                  i = Object.getOwnPropertyDescriptor(t, o);
+                                              i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
+                                          }
+                                      })(t, e)),
                             (t.prototype._base = function (e, t, r) {
                                 var n = { value: (r.convert && a.Date.toDate(e, this._flags.format, this._flags.timestamp, this._flags.multiplier)) || e };
                                 if (n.value instanceof Date && !isNaN(n.value.getTime())) n.errors = null;
@@ -2991,7 +2913,7 @@ var t, r;
                                 if ('string' == typeof e || ('number' == typeof e && !isNaN(e) && isFinite(e))) {
                                     'string' == typeof e && /^[+-]?\d+(\.\d+)?$/.test(e) && (e = parseFloat(e));
                                     var o = void 0;
-                                    if (!isNaN((o = t && a.isIsoDate(t) ? (t.test(e) ? new Date(e) : a.invalidDate) : r && n ? new Date(e * n) : new Date(e)).getTime())) return o;
+                                    if (!isNaN((o = t && a.isIsoDate(t) ? (t.test(e) ? new Date(e) : a.invalidDate) : new Date(r && n ? e * n : e)).getTime())) return o;
                                 }
                                 return null;
                             }),
@@ -3017,7 +2939,7 @@ var t, r;
                             var n = 'now' === r,
                                 o = i.isRef(r);
                             return (
-                                !n && !o && (r = a.Date.toDate(r)),
+                                n || o || (r = a.Date.toDate(r)),
                                 s.assert(r, 'Invalid date format'),
                                 this._test(e, r, function (i, s, c) {
                                     var u = void 0;
@@ -3062,10 +2984,9 @@ var t, r;
                             ipRegex: f.createIpRegex(['ipv4', 'ipv6', 'ipvfuture'], 'optional')
                         };
                     (p.String = (function (e) {
+                        if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function, not ' + typeof e);
                         function t() {
-                            !(function (e, t) {
-                                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                            })(this, t);
+                            if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
                             var r = (function (e, t) {
                                 if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                                 return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
@@ -3073,28 +2994,24 @@ var t, r;
                             return (r._type = 'string'), r._invalids.add(''), r;
                         }
                         return (
-                            !(function (e, t) {
-                                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                                (e.prototype = Object.create(t && t.prototype, {
-                                    constructor: {
-                                        value: e,
-                                        enumerable: !1,
-                                        writable: !0,
-                                        configurable: !0
-                                    }
-                                })),
-                                    t &&
-                                        (Object.setPrototypeOf
-                                            ? Object.setPrototypeOf(e, t)
-                                            : (function (e, t) {
-                                                  for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
-                                                      var o = r[n],
-                                                          i = Object.getOwnPropertyDescriptor(t, o);
-                                                      i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
-                                                  }
-                                                  return e;
-                                              })(e, t));
-                            })(t, e),
+                            (t.prototype = Object.create(e && e.prototype, {
+                                constructor: {
+                                    value: t,
+                                    enumerable: !1,
+                                    writable: !0,
+                                    configurable: !0
+                                }
+                            })),
+                            e &&
+                                (Object.setPrototypeOf
+                                    ? Object.setPrototypeOf(t, e)
+                                    : (function (e, t) {
+                                          for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
+                                              var o = r[n],
+                                                  i = Object.getOwnPropertyDescriptor(t, o);
+                                              i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
+                                          }
+                                      })(t, e)),
                             (t.prototype._base = function (e, t, r) {
                                 if ('string' == typeof e && r.convert) {
                                     if ((this._flags.case && (e = 'upper' === this._flags.case ? e.toLocaleUpperCase() : e.toLocaleLowerCase()), this._flags.trim && (e = e.trim()), this._inner.replacements))
@@ -3173,10 +3090,10 @@ var t, r;
                             }),
                             (t.prototype.ip = function (e) {
                                 var t = p.ipRegex;
-                                (e = e || {}), i.assert((void 0 === e ? 'undefined' : n(e)) === 'object', 'options must be an object'), e.cidr ? (i.assert('string' == typeof e.cidr, 'cidr must be a string'), (e.cidr = e.cidr.toLowerCase()), i.assert(e.cidr in f.cidrs, 'cidr must be one of ' + Object.keys(f.cidrs).join(', ')), !e.version && 'optional' !== e.cidr && (t = f.createIpRegex(['ipv4', 'ipv6', 'ipvfuture'], e.cidr))) : (e.cidr = 'optional');
+                                (e = e || {}), i.assert((void 0 === e ? 'undefined' : n(e)) === 'object', 'options must be an object'), e.cidr ? (i.assert('string' == typeof e.cidr, 'cidr must be a string'), (e.cidr = e.cidr.toLowerCase()), i.assert(e.cidr in f.cidrs, 'cidr must be one of ' + Object.keys(f.cidrs).join(', ')), e.version || 'optional' === e.cidr || (t = f.createIpRegex(['ipv4', 'ipv6', 'ipvfuture'], e.cidr))) : (e.cidr = 'optional');
                                 var r = void 0;
                                 if (e.version) {
-                                    !Array.isArray(e.version) && (e.version = [e.version]), i.assert(e.version.length >= 1, 'version must have at least 1 version specified'), (r = []);
+                                    Array.isArray(e.version) || (e.version = [e.version]), i.assert(e.version.length >= 1, 'version must have at least 1 version specified'), (r = []);
                                     for (var o = 0; o < e.version.length; ++o) {
                                         var s = e.version[o];
                                         i.assert('string' == typeof s, 'version at position ' + o + ' must be a string'), (s = s.toLowerCase()), i.assert(f.versions[s], 'version at position ' + o + ' must be one of ' + Object.keys(f.versions).join(', ')), r.push(s);
@@ -3215,7 +3132,7 @@ var t, r;
                                     s = p.uriRegex;
                                 if (e) {
                                     if ((i.assert((void 0 === e ? 'undefined' : n(e)) === 'object', 'options must be an object'), e.scheme)) {
-                                        i.assert(e.scheme instanceof RegExp || 'string' == typeof e.scheme || Array.isArray(e.scheme), 'scheme must be a RegExp, String, or Array'), !Array.isArray(e.scheme) && (e.scheme = [e.scheme]), i.assert(e.scheme.length >= 1, 'scheme must have at least 1 scheme specified');
+                                        i.assert(e.scheme instanceof RegExp || 'string' == typeof e.scheme || Array.isArray(e.scheme), 'scheme must be a RegExp, String, or Array'), Array.isArray(e.scheme) || (e.scheme = [e.scheme]), i.assert(e.scheme.length >= 1, 'scheme must have at least 1 scheme specified');
                                         for (var a = 0; a < e.scheme.length; ++a) {
                                             var c = e.scheme[a];
                                             i.assert(c instanceof RegExp || 'string' == typeof c, 'scheme at position ' + a + ' must be a RegExp or String'), (t += t ? '|' : ''), c instanceof RegExp ? (t += c.source) : (i.assert(/[a-zA-Z][a-zA-Z0-9+-\.]*/.test(c), 'scheme at position ' + a + ' must be a valid scheme'), (t += i.escapeRegex(c)));
@@ -3265,7 +3182,7 @@ var t, r;
                                     },
                                     n = [];
                                 if (e && e.version) {
-                                    !Array.isArray(e.version) && (e.version = [e.version]), i.assert(e.version.length >= 1, 'version must have at least 1 valid version specified');
+                                    Array.isArray(e.version) || (e.version = [e.version]), i.assert(e.version.length >= 1, 'version must have at least 1 valid version specified');
                                     for (var o = 0; o < e.version.length; ++o) {
                                         var s = e.version[o];
                                         i.assert('string' == typeof s, 'version at position ' + o + ' must be a string'), (s = s.toLowerCase()), i.assert(r[s], 'version at position ' + o + ' must be one of ' + Object.keys(r).join(', ')), i.assert(-1 === n.indexOf(s), 'version at position ' + o + ' must not be a duplicate.'), n.push(s);
@@ -3328,7 +3245,7 @@ var t, r;
                                 'string' == typeof e && (e = RegExp(i.escapeRegex(e), 'g')), i.assert(e instanceof RegExp, 'pattern must be a RegExp'), i.assert('string' == typeof t, 'replacement must be a String');
                                 var r = this.clone();
                                 return (
-                                    !r._inner.replacements && (r._inner.replacements = []),
+                                    r._inner.replacements || (r._inner.replacements = []),
                                     r._inner.replacements.push({
                                         pattern: e,
                                         replacement: t
@@ -3497,8 +3414,7 @@ var t, r;
                             });
                         }),
                         (i.validDomain = function (e, t) {
-                            if (t.tldBlacklist) return Array.isArray(t.tldBlacklist) ? -1 === i.indexOf.call(t.tldBlacklist, e) : !i.hasOwn.call(t.tldBlacklist, e);
-                            return Array.isArray(t.tldWhitelist) ? -1 !== i.indexOf.call(t.tldWhitelist, e) : i.hasOwn.call(t.tldWhitelist, e);
+                            return t.tldBlacklist ? (Array.isArray(t.tldBlacklist) ? -1 === i.indexOf.call(t.tldBlacklist, e) : !i.hasOwn.call(t.tldBlacklist, e)) : Array.isArray(t.tldWhitelist) ? -1 !== i.indexOf.call(t.tldWhitelist, e) : i.hasOwn.call(t.tldWhitelist, e);
                         }),
                         (t.validate = i.validate =
                             function (e, t, r) {
@@ -3661,8 +3577,7 @@ var t, r;
                                                         l(i.diagnoses.errExpectingDTEXT);
                                                         break;
                                                     }
-                                                    (m < 33 || 127 === m) && l(i.diagnoses.rfc5322DomainLiteralOBSDText);
-                                                    (h.literal += E), (h.domain += E), (d.domains[g] += E), ++y;
+                                                    (m < 33 || 127 === m) && l(i.diagnoses.rfc5322DomainLiteralOBSDText), (h.literal += E), (h.domain += E), (d.domains[g] += E), ++y;
                                             }
                                             break;
                                         case i.components.contextQuotedString:
@@ -3720,11 +3635,7 @@ var t, r;
                                                     l(i.diagnoses.cfwsFWS), f.stack.push(f.now), (f.now = i.components.contextFWS), (p = E);
                                                     break;
                                                 default:
-                                                    if ((m = E.charCodeAt(0)) > 127 || 0 === m || 10 === m) {
-                                                        l(i.diagnoses.errExpectingCTEXT);
-                                                        break;
-                                                    }
-                                                    (m < 32 || 127 === m) && l(i.diagnoses.deprecatedCTEXT);
+                                                    (m = E.charCodeAt(0)) > 127 || 0 === m || 10 === m ? l(i.diagnoses.errExpectingCTEXT) : (m < 32 || 127 === m) && l(i.diagnoses.deprecatedCTEXT);
                                             }
                                             break;
                                         case i.components.contextFWS:
@@ -3767,7 +3678,7 @@ var t, r;
                                     else if (t.minDomainAtoms && d.domains.length < t.minDomainAtoms) l(i.diagnoses.errDomainTooShort);
                                     else if (t.tldWhitelist || t.tldBlacklist) {
                                         var P = d.domains[g];
-                                        !i.validDomain(P, t) && l(i.diagnoses.errUnknownTLD);
+                                        i.validDomain(P, t) || l(i.diagnoses.errUnknownTLD);
                                     }
                                 }
                                 var R = !1,
@@ -3777,7 +3688,7 @@ var t, r;
                                         var e = a ? u : u < i.defaultThreshold;
                                         return r && (D ? r(e) : i.defer(r.bind(null, e))), e;
                                     };
-                                if (t.checkDNS && u < i.categories.dnsWarn) {
+                                if (t.checkDNS && u < i.categories.dnsWarn)
                                     0 === g && (h.domain += '.'),
                                         (s = h.domain),
                                         o.resolveMx(s, function (e, t) {
@@ -3795,7 +3706,7 @@ var t, r;
                                             o.resolveCname(s, a), o.resolve4(s, a), o.resolve6(s, a);
                                         }),
                                         (D = !0);
-                                } else {
+                                else {
                                     var I = C();
                                     return (D = !0), I;
                                 }
@@ -3842,15 +3753,17 @@ var t, r;
                         l = '(?:0?0?' + e + '|0?[1-9]' + e + '|1' + e + e + '|2[0-4]' + e + '|25[0-5])';
                     r.rfc3986.IPv4address = '(?:' + l + '\\.){3}' + l;
                     var f = o + '{1,4}',
-                        p = '(?:' + f + ':' + f + '|' + r.rfc3986.IPv4address + ')';
-                    (r.rfc3986.IPv6address = '(?:' + ('(?:' + f + ':){6}') + p + '|' + ('::(?:' + f + ':){5}') + p + '|' + ('(?:' + f + ')?::(?:' + f + ':){4}') + p + '|' + ('(?:(?:' + f + ':){0,1}' + f + ')?::(?:' + f + ':){3}') + p + '|' + ('(?:(?:' + f + ':){0,2}' + f + ')?::(?:' + f + ':){2}') + p + '|' + ('(?:(?:' + f + ':){0,3}' + f + ')?::' + f + ':') + p + '|' + ('(?:(?:' + f + ':){0,4}' + f + ')?::') + p + '|' + ('(?:(?:' + f + ':){0,5}' + f + ')?::') + f + '|' + ('(?:(?:' + f + ':){0,6}' + f) + ')?::)'), (r.rfc3986.IPvFuture = 'v' + o + '+\\.[' + i + s + ':]+'), (r.rfc3986.scheme = '[' + t + '][' + t + '0-9+-\\.]*');
-                    var h = '\\[(?:' + r.rfc3986.IPv6address + '|' + r.rfc3986.IPvFuture + ')\\]',
-                        d = '(?:' + h + '|' + r.rfc3986.IPv4address + '|' + ('[' + i + a + s) + ']{0,255})',
-                        g = '(?:' + ('[' + i + a + s) + ':]*@)?' + d + '(?::' + e + '*)?',
-                        y = u + '+',
-                        v = '(?:\\/' + u + '*)*',
-                        m = '\\/(?:' + y + v + ')?';
-                    (r.rfc3986.hierPart = '(?:(?:\\/\\/' + g + v + ')|' + m + '|' + (y + v) + ')'), (r.rfc3986.relativeRef = '(?:(?:\\/\\/' + g + v + ')|' + m + '|' + ('[' + i + a + s + '@]+') + v + '|)'), (r.rfc3986.query = '[' + c + '\\/\\?]*(?=#|$)'), (r.rfc3986.fragment = '[' + c + '\\/\\?]*');
+                        p = '(?:' + f + ':' + f + '|' + r.rfc3986.IPv4address + ')',
+                        h = '(?:(?:' + f + ':){0,1}' + f + ')?::(?:' + f + ':){3}' + p,
+                        d = '(?:(?:' + f + ':){0,2}' + f + ')?::(?:' + f + ':){2}' + p,
+                        g = '(?:(?:' + f + ':){0,3}' + f + ')?::' + f + ':' + p;
+                    (r.rfc3986.IPv6address = '(?:(?:' + f + ':){6}' + p + '|' + ('::(?:' + f) + ':){5}' + p + '|' + ('(?:' + f + ')?::(?:' + f) + ':){4}' + p + '|' + h + '|' + d + '|' + g + '|' + ('(?:(?:' + f + ':){0,4}' + f) + ')?::' + p + '|' + ('(?:(?:' + f + ':){0,5}' + f) + ')?::' + f + '|' + ('(?:(?:' + f + ':){0,6}') + f + ')?::)'), (r.rfc3986.IPvFuture = 'v' + o + '+\\.[' + i + s + ':]+'), (r.rfc3986.scheme = '[' + t + '][' + t + '0-9+-\\.]*');
+                    var y = '(?:' + ('\\[(?:' + r.rfc3986.IPv6address + '|' + r.rfc3986.IPvFuture + ')\\]') + '|' + r.rfc3986.IPv4address + '|' + ('[' + i + a) + s + ']{0,255})',
+                        v = '(?:' + ('[' + i + a) + s + ':]*@)?' + y + '(?::' + e + '*)?',
+                        m = u + '+',
+                        b = '(?:\\/' + u + '*)*',
+                        _ = '\\/(?:' + m + b + ')?';
+                    (r.rfc3986.hierPart = '(?:(?:\\/\\/' + v + b + ')|' + _ + '|' + (m + b) + ')'), (r.rfc3986.relativeRef = '(?:(?:\\/\\/' + v + b + ')|' + _ + '|' + ('[' + i + a + s) + '@]+' + b + '|)'), (r.rfc3986.query = '[' + c + '\\/\\?]*(?=#|$)'), (r.rfc3986.fragment = '[' + c + '\\/\\?]*');
                 }),
                     r.generate(),
                     (e.exports = r.rfc3986);
@@ -3874,7 +3787,7 @@ var t, r;
                 (o.Ip.createIpRegex = function (e, t) {
                     for (var r = void 0, n = 0; n < e.length; ++n) {
                         var i = e[n];
-                        !r && (r = '^(?:' + o.Ip.versions[i]), (r = r + '|' + o.Ip.versions[i]);
+                        r || (r = '^(?:' + o.Ip.versions[i]), (r = r + '|' + o.Ip.versions[i]);
                     }
                     return RegExp(r + ')' + o.Ip.cidrs[t] + '$');
                 }),
@@ -3886,10 +3799,9 @@ var t, r;
                     i = r(2),
                     s = { precisionRx: /(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/ };
                 (s.Number = (function (e) {
+                    if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function, not ' + typeof e);
                     function t() {
-                        !(function (e, t) {
-                            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                        })(this, t);
+                        if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
                         var r = (function (e, t) {
                             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                             return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
@@ -3897,28 +3809,24 @@ var t, r;
                         return (r._type = 'number'), r._invalids.add(1 / 0), r._invalids.add(-1 / 0), r;
                     }
                     return (
-                        !(function (e, t) {
-                            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                            (e.prototype = Object.create(t && t.prototype, {
-                                constructor: {
-                                    value: e,
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0
-                                }
-                            })),
-                                t &&
-                                    (Object.setPrototypeOf
-                                        ? Object.setPrototypeOf(e, t)
-                                        : (function (e, t) {
-                                              for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
-                                                  var o = r[n],
-                                                      i = Object.getOwnPropertyDescriptor(t, o);
-                                                  i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
-                                              }
-                                              return e;
-                                          })(e, t));
-                        })(t, e),
+                        (t.prototype = Object.create(e && e.prototype, {
+                            constructor: {
+                                value: t,
+                                enumerable: !1,
+                                writable: !0,
+                                configurable: !0
+                            }
+                        })),
+                        e &&
+                            (Object.setPrototypeOf
+                                ? Object.setPrototypeOf(t, e)
+                                : (function (e, t) {
+                                      for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
+                                          var o = r[n],
+                                              i = Object.getOwnPropertyDescriptor(t, o);
+                                          i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
+                                      }
+                                  })(t, e)),
                         (t.prototype._base = function (e, t, r) {
                             var n = {
                                 errors: null,
@@ -3938,7 +3846,7 @@ var t, r;
                         (t.prototype.multiple = function (e) {
                             var t = o.isRef(e);
                             return (
-                                !t && (i.assert('number' == typeof e && isFinite(e), 'multiple must be a number'), i.assert(e > 0, 'multiple must be greater than 0')),
+                                t || (i.assert('number' == typeof e && isFinite(e), 'multiple must be a number'), i.assert(e > 0, 'multiple must be greater than 0')),
                                 this._test('multiple', e, function (r, n, o) {
                                     var i = t ? e(n.reference || n.parent, o) : e;
                                     return t && ('number' != typeof i || !isFinite(i))
@@ -4038,10 +3946,9 @@ var t, r;
                     o = r(2),
                     i = { Set: r(18) };
                 (i.Boolean = (function (e) {
+                    if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function, not ' + typeof e);
                     function t() {
-                        !(function (e, t) {
-                            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                        })(this, t);
+                        if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
                         var r = (function (e, t) {
                             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                             return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
@@ -4049,28 +3956,24 @@ var t, r;
                         return (r._type = 'boolean'), (r._flags.insensitive = !0), (r._inner.truthySet = new i.Set()), (r._inner.falsySet = new i.Set()), r;
                     }
                     return (
-                        !(function (e, t) {
-                            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                            (e.prototype = Object.create(t && t.prototype, {
-                                constructor: {
-                                    value: e,
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0
-                                }
-                            })),
-                                t &&
-                                    (Object.setPrototypeOf
-                                        ? Object.setPrototypeOf(e, t)
-                                        : (function (e, t) {
-                                              for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
-                                                  var o = r[n],
-                                                      i = Object.getOwnPropertyDescriptor(t, o);
-                                                  i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
-                                              }
-                                              return e;
-                                          })(e, t));
-                        })(t, e),
+                        (t.prototype = Object.create(e && e.prototype, {
+                            constructor: {
+                                value: t,
+                                enumerable: !1,
+                                writable: !0,
+                                configurable: !0
+                            }
+                        })),
+                        e &&
+                            (Object.setPrototypeOf
+                                ? Object.setPrototypeOf(t, e)
+                                : (function (e, t) {
+                                      for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
+                                          var o = r[n],
+                                              i = Object.getOwnPropertyDescriptor(t, o);
+                                          i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
+                                      }
+                                  })(t, e)),
                         (t.prototype._base = function (e, t, r) {
                             var n = { value: e };
                             return (n.value = !!this._inner.truthySet.has(e, null, null, this._flags.insensitive) || (!this._inner.falsySet.has(e, null, null, this._flags.insensitive) && e)), (n.errors = 'boolean' == typeof n.value ? null : this.createError('boolean.base', null, t, r)), n;
@@ -4121,10 +4024,9 @@ var t, r;
                     a = r(15),
                     c = {};
                 (c.Alternatives = (function (e) {
+                    if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function, not ' + typeof e);
                     function t() {
-                        !(function (e, t) {
-                            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                        })(this, t);
+                        if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
                         var r = (function (e, t) {
                             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                             return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
@@ -4132,28 +4034,24 @@ var t, r;
                         return (r._type = 'alternatives'), r._invalids.remove(null), (r._inner.matches = []), r;
                     }
                     return (
-                        !(function (e, t) {
-                            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                            (e.prototype = Object.create(t && t.prototype, {
-                                constructor: {
-                                    value: e,
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0
-                                }
-                            })),
-                                t &&
-                                    (Object.setPrototypeOf
-                                        ? Object.setPrototypeOf(e, t)
-                                        : (function (e, t) {
-                                              for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
-                                                  var o = r[n],
-                                                      i = Object.getOwnPropertyDescriptor(t, o);
-                                                  i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
-                                              }
-                                              return e;
-                                          })(e, t));
-                        })(t, e),
+                        (t.prototype = Object.create(e && e.prototype, {
+                            constructor: {
+                                value: t,
+                                enumerable: !1,
+                                writable: !0,
+                                configurable: !0
+                            }
+                        })),
+                        e &&
+                            (Object.setPrototypeOf
+                                ? Object.setPrototypeOf(t, e)
+                                : (function (e, t) {
+                                      for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
+                                          var o = r[n],
+                                              i = Object.getOwnPropertyDescriptor(t, o);
+                                          i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
+                                      }
+                                  })(t, e)),
                         (t.prototype._base = function (e, t, r) {
                             for (var n = [], o = this._inner.matches.length, i = this._settings && this._settings.baseType, s = 0; s < o; ++s) {
                                 var a = this._inner.matches[s],
@@ -4161,7 +4059,7 @@ var t, r;
                                 if (!c) {
                                     if (a.is._validate(a.ref(t.reference || t.parent, r), null, r, t.parent).errors) {
                                         if (a.otherwise) return a.otherwise._validate(e, t, r);
-                                        if (i && s === o - 1) return i._validate(e, t, r);
+                                        else if (i && s === o - 1) return i._validate(e, t, r);
                                     } else if (a.then || i) return (a.then || i)._validate(e, t, r);
                                     continue;
                                 }
@@ -4184,7 +4082,7 @@ var t, r;
                             o.assert(a.isRef(e) || 'string' == typeof e, 'Invalid reference:', e), o.assert(t, 'Missing options'), o.assert((void 0 === t ? 'undefined' : n(t)) === 'object', 'Invalid options'), o.assert(t.hasOwnProperty('is'), 'Missing "is" directive'), o.assert(void 0 !== t.then || void 0 !== t.otherwise, 'options must have at least one of "then" or "otherwise"');
                             var r = this.clone(),
                                 c = s.schema(t.is);
-                            (null === t.is || !(a.isRef(t.is) || t.is instanceof i)) && (c = c.required());
+                            (null !== t.is && (a.isRef(t.is) || t.is instanceof i)) || (c = c.required());
                             var u = {
                                 ref: s.ref(e),
                                 is: c,
@@ -4229,10 +4127,9 @@ var t, r;
                     u = r(15),
                     l = {};
                 (l.Object = (function (e) {
+                    if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function, not ' + typeof e);
                     function t() {
-                        !(function (e, t) {
-                            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                        })(this, t);
+                        if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
                         var r = (function (e, t) {
                             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                             return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
@@ -4240,28 +4137,24 @@ var t, r;
                         return (r._type = 'object'), (r._inner.children = null), (r._inner.renames = []), (r._inner.dependencies = []), (r._inner.patterns = []), r;
                     }
                     return (
-                        !(function (e, t) {
-                            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                            (e.prototype = Object.create(t && t.prototype, {
-                                constructor: {
-                                    value: e,
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0
-                                }
-                            })),
-                                t &&
-                                    (Object.setPrototypeOf
-                                        ? Object.setPrototypeOf(e, t)
-                                        : (function (e, t) {
-                                              for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
-                                                  var o = r[n],
-                                                      i = Object.getOwnPropertyDescriptor(t, o);
-                                                  i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
-                                              }
-                                              return e;
-                                          })(e, t));
-                        })(t, e),
+                        (t.prototype = Object.create(e && e.prototype, {
+                            constructor: {
+                                value: t,
+                                enumerable: !1,
+                                writable: !0,
+                                configurable: !0
+                            }
+                        })),
+                        e &&
+                            (Object.setPrototypeOf
+                                ? Object.setPrototypeOf(t, e)
+                                : (function (e, t) {
+                                      for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
+                                          var o = r[n],
+                                              i = Object.getOwnPropertyDescriptor(t, o);
+                                          i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
+                                      }
+                                  })(t, e)),
                         (t.prototype._base = function (e, t, r) {
                             var i = e,
                                 s = [],
@@ -4318,7 +4211,7 @@ var t, r;
                                             r.abortEarly))
                                     )
                                         return c();
-                                    void 0 === i[g.from] ? delete i[g.to] : (i[g.to] = i[g.from]), (h[g.to] = !0), !g.options.alias && delete i[g.from];
+                                    void 0 === i[g.from] ? delete i[g.to] : (i[g.to] = i[g.from]), (h[g.to] = !0), g.options.alias || delete i[g.from];
                                 }
                             }
                             if (!this._inner.children && !this._inner.patterns.length && !this._inner.dependencies.length) return c();
@@ -4357,7 +4250,7 @@ var t, r;
                                 }
                             var x = Object.keys(y);
                             if (x.length && this._inner.patterns.length) {
-                                for (var j = 0; j < x.length; ++j) {
+                                for (var j = 0; j < x.length; ++j)
                                     for (
                                         var O = x[j],
                                             k = {
@@ -4395,7 +4288,6 @@ var t, r;
                                             void 0 !== P.value && (i[O] = P.value);
                                         }
                                     }
-                                }
                                 x = Object.keys(y);
                             }
                             if ((this._inner.children || this._inner.patterns.length) && x.length) {
@@ -4887,16 +4779,15 @@ var t, r;
                             var P = T;
                             if (x[T]) {
                                 P = null;
-                                for (var R = 0; R < this._items.length; ++R) {
+                                for (var R = 0; R < this._items.length; ++R)
                                     if (!0 !== S[R]) {
-                                        !x[R] && (x[R] = []);
+                                        x[R] || (x[R] = []);
                                         for (var D = x[R].length, C = 0, I = 0; I < D; ++I) A.indexOf(x[R][I]) >= 0 && ++C;
                                         if (C === D) {
                                             P = R;
                                             break;
                                         }
                                     }
-                                }
                             }
                             null !== P && ((S[(P = P.toString())] = !0), A.push(P));
                         }
@@ -4944,10 +4835,9 @@ var t, r;
                     o = r(2),
                     i = {};
                 (i.Lazy = (function (e) {
+                    if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function, not ' + typeof e);
                     function t() {
-                        !(function (e, t) {
-                            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                        })(this, t);
+                        if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
                         var r = (function (e, t) {
                             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                             return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
@@ -4955,28 +4845,24 @@ var t, r;
                         return (r._type = 'lazy'), r;
                     }
                     return (
-                        !(function (e, t) {
-                            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                            (e.prototype = Object.create(t && t.prototype, {
-                                constructor: {
-                                    value: e,
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0
-                                }
-                            })),
-                                t &&
-                                    (Object.setPrototypeOf
-                                        ? Object.setPrototypeOf(e, t)
-                                        : (function (e, t) {
-                                              for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
-                                                  var o = r[n],
-                                                      i = Object.getOwnPropertyDescriptor(t, o);
-                                                  i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
-                                              }
-                                              return e;
-                                          })(e, t));
-                        })(t, e),
+                        (t.prototype = Object.create(e && e.prototype, {
+                            constructor: {
+                                value: t,
+                                enumerable: !1,
+                                writable: !0,
+                                configurable: !0
+                            }
+                        })),
+                        e &&
+                            (Object.setPrototypeOf
+                                ? Object.setPrototypeOf(t, e)
+                                : (function (e, t) {
+                                      for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
+                                          var o = r[n],
+                                              i = Object.getOwnPropertyDescriptor(t, o);
+                                          i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
+                                      }
+                                  })(t, e)),
                         (t.prototype._base = function (e, t, r) {
                             var o = { value: e },
                                 i = this._flags.lazy;
@@ -5012,10 +4898,9 @@ var t, r;
                     --e.length;
                 }),
                     (a.Array = (function (e) {
+                        if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function, not ' + typeof e);
                         function t() {
-                            !(function (e, t) {
-                                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                            })(this, t);
+                            if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
                             var r = (function (e, t) {
                                 if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                                 return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
@@ -5023,28 +4908,24 @@ var t, r;
                             return (r._type = 'array'), (r._inner.items = []), (r._inner.ordereds = []), (r._inner.inclusions = []), (r._inner.exclusions = []), (r._inner.requireds = []), (r._flags.sparse = !1), r;
                         }
                         return (
-                            !(function (e, t) {
-                                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                                (e.prototype = Object.create(t && t.prototype, {
-                                    constructor: {
-                                        value: e,
-                                        enumerable: !1,
-                                        writable: !0,
-                                        configurable: !0
-                                    }
-                                })),
-                                    t &&
-                                        (Object.setPrototypeOf
-                                            ? Object.setPrototypeOf(e, t)
-                                            : (function (e, t) {
-                                                  for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
-                                                      var o = r[n],
-                                                          i = Object.getOwnPropertyDescriptor(t, o);
-                                                      i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
-                                                  }
-                                                  return e;
-                                              })(e, t));
-                            })(t, e),
+                            (t.prototype = Object.create(e && e.prototype, {
+                                constructor: {
+                                    value: t,
+                                    enumerable: !1,
+                                    writable: !0,
+                                    configurable: !0
+                                }
+                            })),
+                            e &&
+                                (Object.setPrototypeOf
+                                    ? Object.setPrototypeOf(t, e)
+                                    : (function (e, t) {
+                                          for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
+                                              var o = r[n],
+                                                  i = Object.getOwnPropertyDescriptor(t, o);
+                                              i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
+                                          }
+                                      })(t, e)),
                             (t.prototype._base = function (e, t, r) {
                                 var n = { value: e };
                                 'string' == typeof e && r.convert && a.safeParse(e, n);
@@ -5111,18 +4992,165 @@ var t, r;
                                                 return o;
                                             break;
                                         }
-                                    if (i) continue;
-                                    if (this._inner.ordereds.length) {
-                                        if (c.length > 0) {
-                                            var v = c.shift();
-                                            if ((g = v._validate(p, d, n)).errors) {
+                                    if (!i) {
+                                        if (this._inner.ordereds.length) {
+                                            if (c.length > 0) {
+                                                var v = c.shift();
+                                                if ((g = v._validate(p, d, n)).errors) {
+                                                    if (
+                                                        (o.push(
+                                                            this.createError(
+                                                                'array.ordered',
+                                                                {
+                                                                    pos: f,
+                                                                    reason: g.errors,
+                                                                    value: p
+                                                                },
+                                                                {
+                                                                    key: r.key,
+                                                                    path: d.path
+                                                                },
+                                                                n
+                                                            )
+                                                        ),
+                                                        n.abortEarly)
+                                                    )
+                                                        return o;
+                                                } else if (v._flags.strip) a.fastSplice(e, f), --f, --l;
+                                                else if (this._flags.sparse || void 0 !== g.value) e[f] = g.value;
+                                                else if (
+                                                    (o.push(
+                                                        this.createError(
+                                                            'array.sparse',
+                                                            null,
+                                                            {
+                                                                key: r.key,
+                                                                path: d.path,
+                                                                pos: f
+                                                            },
+                                                            n
+                                                        )
+                                                    ),
+                                                    n.abortEarly)
+                                                )
+                                                    return o;
+                                                continue;
+                                            } else if (!this._inner.items.length) {
                                                 if (
                                                     (o.push(
                                                         this.createError(
-                                                            'array.ordered',
+                                                            'array.orderedLength',
                                                             {
                                                                 pos: f,
-                                                                reason: g.errors,
+                                                                limit: this._inner.ordereds.length
+                                                            },
+                                                            {
+                                                                key: r.key,
+                                                                path: d.path
+                                                            },
+                                                            n
+                                                        )
+                                                    ),
+                                                    n.abortEarly)
+                                                )
+                                                    return o;
+                                                continue;
+                                            }
+                                        }
+                                        for (var m = [], b = s.length, _ = 0; _ < b; ++_)
+                                            if (!(g = m[_] = s[_]._validate(p, d, n)).errors) {
+                                                if (
+                                                    ((e[f] = g.value),
+                                                    (h = !0),
+                                                    a.fastSplice(s, _),
+                                                    --_,
+                                                    --b,
+                                                    !this._flags.sparse &&
+                                                        void 0 === g.value &&
+                                                        (o.push(
+                                                            this.createError(
+                                                                'array.sparse',
+                                                                null,
+                                                                {
+                                                                    key: r.key,
+                                                                    path: d.path,
+                                                                    pos: f
+                                                                },
+                                                                n
+                                                            )
+                                                        ),
+                                                        n.abortEarly))
+                                                )
+                                                    return o;
+                                                break;
+                                            }
+                                        if (!h) {
+                                            var w = !!n.stripUnknown && (!0 === n.stripUnknown || !!n.stripUnknown.arrays);
+                                            b = u.length;
+                                            for (var E = 0; E < b; ++E) {
+                                                var x = u[E],
+                                                    j = s.indexOf(x);
+                                                if (-1 !== j) g = m[j];
+                                                else if (!(g = x._validate(p, d, n)).errors) {
+                                                    x._flags.strip
+                                                        ? (a.fastSplice(e, f), --f, --l)
+                                                        : this._flags.sparse || void 0 !== g.value
+                                                          ? (e[f] = g.value)
+                                                          : (o.push(
+                                                                this.createError(
+                                                                    'array.sparse',
+                                                                    null,
+                                                                    {
+                                                                        key: r.key,
+                                                                        path: d.path,
+                                                                        pos: f
+                                                                    },
+                                                                    n
+                                                                )
+                                                            ),
+                                                            (i = !0)),
+                                                        (h = !0);
+                                                    break;
+                                                }
+                                                if (1 === b) {
+                                                    if (w) {
+                                                        a.fastSplice(e, f), --f, --l, (h = !0);
+                                                        break;
+                                                    }
+                                                    if (
+                                                        (o.push(
+                                                            this.createError(
+                                                                t ? 'array.includesOne' : 'array.includesOneSingle',
+                                                                {
+                                                                    pos: f,
+                                                                    reason: g.errors,
+                                                                    value: p
+                                                                },
+                                                                {
+                                                                    key: r.key,
+                                                                    path: d.path
+                                                                },
+                                                                n
+                                                            )
+                                                        ),
+                                                        (i = !0),
+                                                        n.abortEarly)
+                                                    )
+                                                        return o;
+                                                    break;
+                                                }
+                                            }
+                                            if (!i && this._inner.inclusions.length && !h) {
+                                                if (w) {
+                                                    a.fastSplice(e, f), --f, --l;
+                                                    continue;
+                                                }
+                                                if (
+                                                    (o.push(
+                                                        this.createError(
+                                                            t ? 'array.includes' : 'array.includesSingle',
+                                                            {
+                                                                pos: f,
                                                                 value: p
                                                             },
                                                             {
@@ -5135,155 +5163,7 @@ var t, r;
                                                     n.abortEarly)
                                                 )
                                                     return o;
-                                            } else if (v._flags.strip) a.fastSplice(e, f), --f, --l;
-                                            else if (this._flags.sparse || void 0 !== g.value) e[f] = g.value;
-                                            else if (
-                                                (o.push(
-                                                    this.createError(
-                                                        'array.sparse',
-                                                        null,
-                                                        {
-                                                            key: r.key,
-                                                            path: d.path,
-                                                            pos: f
-                                                        },
-                                                        n
-                                                    )
-                                                ),
-                                                n.abortEarly)
-                                            )
-                                                return o;
-                                            continue;
-                                        }
-                                        if (!this._inner.items.length) {
-                                            if (
-                                                (o.push(
-                                                    this.createError(
-                                                        'array.orderedLength',
-                                                        {
-                                                            pos: f,
-                                                            limit: this._inner.ordereds.length
-                                                        },
-                                                        {
-                                                            key: r.key,
-                                                            path: d.path
-                                                        },
-                                                        n
-                                                    )
-                                                ),
-                                                n.abortEarly)
-                                            )
-                                                return o;
-                                            continue;
-                                        }
-                                    }
-                                    for (var m = [], b = s.length, _ = 0; _ < b; ++_)
-                                        if (!(g = m[_] = s[_]._validate(p, d, n)).errors) {
-                                            if (
-                                                ((e[f] = g.value),
-                                                (h = !0),
-                                                a.fastSplice(s, _),
-                                                --_,
-                                                --b,
-                                                !this._flags.sparse &&
-                                                    void 0 === g.value &&
-                                                    (o.push(
-                                                        this.createError(
-                                                            'array.sparse',
-                                                            null,
-                                                            {
-                                                                key: r.key,
-                                                                path: d.path,
-                                                                pos: f
-                                                            },
-                                                            n
-                                                        )
-                                                    ),
-                                                    n.abortEarly))
-                                            )
-                                                return o;
-                                            break;
-                                        }
-                                    if (h) continue;
-                                    var w = !!n.stripUnknown && (!0 === n.stripUnknown || !!n.stripUnknown.arrays);
-                                    b = u.length;
-                                    for (var E = 0; E < b; ++E) {
-                                        var x = u[E],
-                                            j = s.indexOf(x);
-                                        if (-1 !== j) g = m[j];
-                                        else if (!(g = x._validate(p, d, n)).errors) {
-                                            x._flags.strip
-                                                ? (a.fastSplice(e, f), --f, --l)
-                                                : this._flags.sparse || void 0 !== g.value
-                                                  ? (e[f] = g.value)
-                                                  : (o.push(
-                                                        this.createError(
-                                                            'array.sparse',
-                                                            null,
-                                                            {
-                                                                key: r.key,
-                                                                path: d.path,
-                                                                pos: f
-                                                            },
-                                                            n
-                                                        )
-                                                    ),
-                                                    (i = !0)),
-                                                (h = !0);
-                                            break;
-                                        }
-                                        if (1 === b) {
-                                            if (w) {
-                                                a.fastSplice(e, f), --f, --l, (h = !0);
-                                                break;
                                             }
-                                            if (
-                                                (o.push(
-                                                    this.createError(
-                                                        t ? 'array.includesOne' : 'array.includesOneSingle',
-                                                        {
-                                                            pos: f,
-                                                            reason: g.errors,
-                                                            value: p
-                                                        },
-                                                        {
-                                                            key: r.key,
-                                                            path: d.path
-                                                        },
-                                                        n
-                                                    )
-                                                ),
-                                                (i = !0),
-                                                n.abortEarly)
-                                            )
-                                                return o;
-                                            break;
-                                        }
-                                    }
-                                    if (!i) {
-                                        if (this._inner.inclusions.length && !h) {
-                                            if (w) {
-                                                a.fastSplice(e, f), --f, --l;
-                                                continue;
-                                            }
-                                            if (
-                                                (o.push(
-                                                    this.createError(
-                                                        t ? 'array.includes' : 'array.includesSingle',
-                                                        {
-                                                            pos: f,
-                                                            value: p
-                                                        },
-                                                        {
-                                                            key: r.key,
-                                                            path: d.path
-                                                        },
-                                                        n
-                                                    )
-                                                ),
-                                                n.abortEarly)
-                                            )
-                                                return o;
                                         }
                                     }
                                 }
@@ -5406,7 +5286,7 @@ var t, r;
                                             var c = r[a],
                                                 u = void 0 === c ? 'undefined' : n(c),
                                                 l = t ? s.custom : s[u];
-                                            if (l) {
+                                            if (l)
                                                 if (Array.isArray(l)) {
                                                     for (var f = 0; f < l.length; ++f)
                                                         if (e(l[f], c))
@@ -5433,7 +5313,6 @@ var t, r;
                                                         );
                                                     l[c] = !0;
                                                 }
-                                            }
                                         }
                                         return r;
                                     })
@@ -5512,10 +5391,9 @@ var t, r;
                         o = r(2),
                         i = {};
                     (i.Binary = (function (e) {
+                        if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function, not ' + typeof e);
                         function r() {
-                            !(function (e, t) {
-                                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                            })(this, r);
+                            if (!(this instanceof r)) throw TypeError('Cannot call a class as a function');
                             var t = (function (e, t) {
                                 if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                                 return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
@@ -5523,28 +5401,24 @@ var t, r;
                             return (t._type = 'binary'), t;
                         }
                         return (
-                            !(function (e, t) {
-                                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                                (e.prototype = Object.create(t && t.prototype, {
-                                    constructor: {
-                                        value: e,
-                                        enumerable: !1,
-                                        writable: !0,
-                                        configurable: !0
-                                    }
-                                })),
-                                    t &&
-                                        (Object.setPrototypeOf
-                                            ? Object.setPrototypeOf(e, t)
-                                            : (function (e, t) {
-                                                  for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
-                                                      var o = r[n],
-                                                          i = Object.getOwnPropertyDescriptor(t, o);
-                                                      i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
-                                                  }
-                                                  return e;
-                                              })(e, t));
-                            })(r, e),
+                            (r.prototype = Object.create(e && e.prototype, {
+                                constructor: {
+                                    value: r,
+                                    enumerable: !1,
+                                    writable: !0,
+                                    configurable: !0
+                                }
+                            })),
+                            e &&
+                                (Object.setPrototypeOf
+                                    ? Object.setPrototypeOf(r, e)
+                                    : (function (e, t) {
+                                          for (var r = Object.getOwnPropertyNames(t), n = 0; n < r.length; n++) {
+                                              var o = r[n],
+                                                  i = Object.getOwnPropertyDescriptor(t, o);
+                                              i && i.configurable && void 0 === e[o] && Object.defineProperty(e, o, i);
+                                          }
+                                      })(r, e)),
                             (r.prototype._base = function (e, r, n) {
                                 var o = { value: e };
                                 if ('string' == typeof e && n.convert)
@@ -5715,6 +5589,16 @@ var t, r;
                     version: '10.0.5'
                 };
             }
-        ]);
-    }),
-    (e.exports = r());
+        ],
+        t = {};
+    function r(n) {
+        if (t[n]) return t[n].exports;
+        var o = (t[n] = {
+            exports: {},
+            id: n,
+            loaded: !1
+        });
+        return e[n].call(o.exports, o, o.exports, r), (o.loaded = !0), o.exports;
+    }
+    return (r.m = e), (r.c = t), (r.p = ''), r(0);
+})();

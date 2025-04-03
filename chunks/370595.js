@@ -1,42 +1,38 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(50493),
-    l = n(689938),
-    r = n(437287),
-    o = n(446926);
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(50493),
+    o = n(388032),
+    a = n(792461),
+    s = n(12740);
 function c(e) {
-    let { onNavigate: t, backPanel: n = s.k.INFO } = e;
-    return (0, i.jsxs)('div', {
-        className: o.header,
+    let { onNavigate: t, backPanel: n = l.k.INFO } = e;
+    return (0, r.jsxs)('div', {
+        className: s.header,
         children: [
-            (0, i.jsx)('div', {
-                className: o.headerTitle,
-                children: (0, i.jsxs)(a.Clickable, {
-                    className: r.backButton,
+            (0, r.jsx)('div', {
+                className: s.headerTitle,
+                children: (0, r.jsxs)(i.P3F, {
+                    className: a.backButton,
                     onClick: () => (null == t ? void 0 : t(n)),
                     children: [
-                        (0, i.jsx)(a.ArrowSmallLeftIcon, {
+                        (0, r.jsx)(i.whL, {
                             size: 'custom',
                             width: 20,
                             height: 20
                         }),
-                        (0, i.jsx)(a.Heading, {
+                        (0, r.jsx)(i.X6q, {
                             variant: 'heading-md/semibold',
-                            children: l.Z.Messages.BACK
+                            children: o.NW.string(o.t['13/7kZ'])
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(a.KeyCombo, {
+            (0, r.jsx)(i.M2$, {
                 shortcut: 'esc',
-                keyClassName: r.keyComboInner,
-                className: r.keyComboContainer
+                keyClassName: a.keyComboInner,
+                className: a.keyComboContainer
             })
         ]
     });

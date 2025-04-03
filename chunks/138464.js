@@ -1,8 +1,4 @@
-n.d(t, {
-    H: function () {
-        return i;
-    }
-});
+n.d(t, { H: () => i });
 var r = n(570140);
 let i = (e) => {
     r.Z.dispatch({

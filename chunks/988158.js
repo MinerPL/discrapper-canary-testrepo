@@ -1,43 +1,46 @@
 n.d(e, {
-    X: function () {
-        return l;
-    },
-    h: function () {
-        return s;
-    }
+    X: () => o,
+    h: () => r
 }),
     n(757143),
+    n(301563),
     n(47120);
-var o = n(470079),
-    a = n(902676);
-function s(t) {
-    let { protocol: e, hostname: n } = o.useMemo(
+var a = n(192379),
+    l = n(902676);
+function r(t) {
+    let { protocol: e, hostname: n } = a.useMemo(
             () => ({
-                protocol: (0, a.E)(t),
-                hostname: (0, a.F)(t)
+                protocol: (0, l.E)(t),
+                hostname: (0, l.F)(t)
             }),
             [t]
         ),
-        s = ''.concat(e, '//').concat(n);
+        r = '//' === t.substr(e.length, 2) ? '//' : '',
+        o = ''.concat(e).concat(r).concat(n);
     return {
         protocol: e,
+        authorityPrefix: r,
         hostname: n,
-        theRestOfTheUrl: t.replace(s, '')
+        theRestOfTheUrl: t.replace(o, '')
     };
 }
-function l(t) {
-    let { url: e, trustUrl: n, onConfirm: a, onClose: l } = t,
-        [r, i] = o.useState(!1),
-        { protocol: c, hostname: d, theRestOfTheUrl: _ } = s(e),
-        u = o.useCallback(() => {
-            r && n(e), null == l || l(), a();
-        }, [e, r, n, a, l]);
+function o(t) {
+    let { url: e, trustUrl: n, onConfirm: l, onCancel: o, onClose: s } = t,
+        [i, c] = a.useState(!1),
+        { protocol: x, authorityPrefix: d, hostname: h, theRestOfTheUrl: m } = r(e),
+        u = a.useCallback(() => {
+            i && n(e), null == s || s(), l();
+        }, [e, i, n, l, s]);
     return {
-        protocol: c,
-        hostname: d,
-        theRestOfTheUrl: _,
-        shouldTrustUrl: r,
-        setShouldTrustUrl: i,
-        handleConfirm: u
+        protocol: x,
+        authorityPrefix: d,
+        hostname: h,
+        theRestOfTheUrl: m,
+        shouldTrustUrl: i,
+        setShouldTrustUrl: c,
+        handleConfirm: u,
+        handleCancel: a.useCallback(() => {
+            null == s || s(), o();
+        }, [o, s])
     };
 }

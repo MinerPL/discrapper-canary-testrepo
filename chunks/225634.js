@@ -1,48 +1,43 @@
 n.d(t, {
-    G: function () {
-        return a;
-    },
-    S: function () {
-        return l;
-    }
+    G: () => l,
+    S: () => o
 });
-var s,
-    a,
-    o = n(689938);
-function l() {
+var r,
+    a = n(388032),
+    l = (((r = {}).UNINTERESTED = 'UNINTERESTED'), (r.ACCIDENT = 'ACCIDENT'), (r.INACTIVE = 'INACTIVE'), (r.UNCOMFORTABLE = 'UNCOMFORTABLE'), (r.DISRUPTIVE = 'DISRUPTIVE'), (r.OVERACTIVE = 'OVERACTIVE'), (r.CONFUSING = 'CONFUSING'), (r.OTHER = 'OTHER'), r);
+function o() {
     return [
         {
             value: 'UNINTERESTED',
-            label: o.Z.Messages.GUILD_LEAVE_FEEDBACK_UNINTERESTED
+            label: a.NW.string(a.t.OXXDs7)
         },
         {
             value: 'ACCIDENT',
-            label: o.Z.Messages.GUILD_LEAVE_FEEDBACK_ACCIDENT
+            label: a.NW.string(a.t['2MK5Z2'])
         },
         {
             value: 'INACTIVE',
-            label: o.Z.Messages.GUILD_LEAVE_FEEDBACK_INACTIVE
+            label: a.NW.string(a.t.TOPdQ0)
         },
         {
             value: 'UNCOMFORTABLE',
-            label: o.Z.Messages.GUILD_LEAVE_FEEDBACK_UNCOMFORTABLE
+            label: a.NW.string(a.t.PSouPj)
         },
         {
             value: 'DISRUPTIVE',
-            label: o.Z.Messages.GUILD_LEAVE_FEEDBACK_DISRUPTIVE
+            label: a.NW.string(a.t.KoIVMz)
         },
         {
             value: 'OVERACTIVE',
-            label: o.Z.Messages.GUILD_LEAVE_FEEDBACK_OVERACTIVE
+            label: a.NW.string(a.t.CcjjRk)
         },
         {
             value: 'CONFUSING',
-            label: o.Z.Messages.GUILD_LEAVE_FEEDBACK_CONFUSING
+            label: a.NW.string(a.t['k+MXS0'])
         },
         {
             value: 'OTHER',
-            label: o.Z.Messages.GUILD_DELETE_FEEDBACK_OTHER
+            label: a.NW.string(a.t.LqXaV1)
         }
     ];
 }
-((s = a || (a = {})).UNINTERESTED = 'UNINTERESTED'), (s.ACCIDENT = 'ACCIDENT'), (s.INACTIVE = 'INACTIVE'), (s.UNCOMFORTABLE = 'UNCOMFORTABLE'), (s.DISRUPTIVE = 'DISRUPTIVE'), (s.OVERACTIVE = 'OVERACTIVE'), (s.CONFUSING = 'CONFUSING'), (s.OTHER = 'OTHER');

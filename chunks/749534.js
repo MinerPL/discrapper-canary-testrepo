@@ -1,25 +1,21 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var r = n(735250);
-n(470079);
-var i = n(481060),
-    a = n(689938),
-    s = n(376807);
+n.d(t, { Z: () => o });
+var r = n(200651);
+n(192379);
+var l = n(481060),
+    i = n(388032),
+    a = n(72336);
 function o(e) {
-    let { children: t } = e;
+    let { children: t, title: n } = e;
     return (0, r.jsxs)('div', {
-        className: s.container,
+        className: a.container,
         children: [
-            (0, r.jsx)(i.Heading, {
-                className: s.header,
-                variant: 'heading-sm/semibold',
-                children: a.Z.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
+            (0, r.jsx)(l.X6q, {
+                className: a.header,
+                variant: 'text-sm/semibold',
+                children: null != n ? n : i.NW.string(i.t['k+QA9P'])
             }),
             (0, r.jsx)('div', {
-                className: s.upsellsContainer,
+                className: a.upsellsContainer,
                 children: t
             })
         ]

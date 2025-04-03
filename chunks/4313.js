@@ -1,41 +1,39 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => f });
 var r = n(175922),
     i = n(759202),
-    a = n(316138),
-    s = n(882159),
-    o = n(977489),
+    o = n(316138),
+    a = n(882159),
+    s = n(977489),
     l = n(285363),
-    u = n(538018),
-    c = n(894417);
-function d(e, t, n) {
+    c = n(538018),
+    u = n(894417);
+function d(e) {
+    var t = e.getBoundingClientRect(),
+        n = (0, u.NM)(t.width) / e.offsetWidth || 1,
+        r = (0, u.NM)(t.height) / e.offsetHeight || 1;
+    return 1 !== n || 1 !== r;
+}
+function f(e, t, n) {
     void 0 === n && (n = !1);
-    var d,
-        _,
-        E,
-        f,
-        h = (0, s.Re)(t);
-    var p = (0, s.Re)(t) && ((_ = (d = t).getBoundingClientRect()), (E = (0, c.NM)(_.width) / d.offsetWidth || 1), (f = (0, c.NM)(_.height) / d.offsetHeight || 1), 1 !== E || 1 !== f),
-        m = (0, l.Z)(t),
-        I = (0, r.Z)(e, p, n),
-        T = {
+    var u = (0, a.Re)(t),
+        f = (0, a.Re)(t) && d(t),
+        _ = (0, l.Z)(t),
+        p = (0, r.Z)(e, f, n),
+        h = {
             scrollLeft: 0,
             scrollTop: 0
         },
-        g = {
+        m = {
             x: 0,
             y: 0
         };
     return (
-        (h || (!h && !n)) && (('body' !== (0, a.Z)(t) || (0, u.Z)(m)) && (T = (0, i.Z)(t)), (0, s.Re)(t) ? ((g = (0, r.Z)(t, !0)), (g.x += t.clientLeft), (g.y += t.clientTop)) : m && (g.x = (0, o.Z)(m))),
+        (u || (!u && !n)) && (('body' !== (0, o.Z)(t) || (0, c.Z)(_)) && (h = (0, i.Z)(t)), (0, a.Re)(t) ? ((m = (0, r.Z)(t, !0)), (m.x += t.clientLeft), (m.y += t.clientTop)) : _ && (m.x = (0, s.Z)(_))),
         {
-            x: I.left + T.scrollLeft - g.x,
-            y: I.top + T.scrollTop - g.y,
-            width: I.width,
-            height: I.height
+            x: p.left + h.scrollLeft - m.x,
+            y: p.top + h.scrollTop - m.y,
+            width: p.width,
+            height: p.height
         }
     );
 }

@@ -1,15 +1,11 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var i = n(314897),
-    a = n(565799),
-    s = n(501655),
-    l = n(88751),
-    r = n(427679);
-function o(e) {
-    if (!e.isGuildStageVoice() || !r.Z.isLive(e.id)) return !1;
-    let t = i.default.getId();
-    return !!(l.ZP.isModerator(t, e.id) && l.ZP.isSpeaker(t, e.id)) && (null == a.Z.getMutableParticipants(e.id).find((n) => n.user.id !== t && l.ZP.isModerator(n.user.id, e.id)) || null == a.Z.getMutableParticipants(e.id, s.pV.SPEAKER).find((n) => n.user.id !== t && l.ZP.isModerator(n.user.id, e.id)));
+n.d(t, { Z: () => s });
+var r = n(314897),
+    i = n(565799),
+    l = n(501655),
+    o = n(88751),
+    a = n(427679);
+function s(e) {
+    if (!e.isGuildStageVoice() || !a.Z.isLive(e.id)) return !1;
+    let t = r.default.getId();
+    return !!o.ZP.isModerator(t, e.id) && !!o.ZP.isSpeaker(t, e.id) && (null == i.Z.getMutableParticipants(e.id).find((n) => n.user.id !== t && o.ZP.isModerator(n.user.id, e.id)) || null == i.Z.getMutableParticipants(e.id, l.pV.SPEAKER).find((n) => n.user.id !== t && o.ZP.isModerator(n.user.id, e.id)));
 }

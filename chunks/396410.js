@@ -1,95 +1,89 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return h;
-        }
-    }),
-    s(47120);
-var n = s(735250),
-    l = s(470079),
-    o = s(990547),
-    a = s(481060),
-    r = s(479531),
-    i = s(213609),
-    u = s(689938),
-    d = s(362542);
-let c = RegExp('(^[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+(\\.[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+)*|^"([\\001-\\010\\013\\014\\016-\\037!#-\\[\\]-\\177]|\\\\[\\001-011\\013\\014\\016-\\177])*")@(?:[A-Z0-9](?:[A-Z0-9-]{0,2000}[A-Z0-9])?\\.)+[A-Z]{2,63}\\.?$', 'i');
+l.d(t, { default: () => h }), l(474991), l(398202), l(301563), l(47120);
+var s = l(200651),
+    n = l(192379),
+    i = l(990547),
+    o = l(481060),
+    r = l(479531),
+    a = l(213609),
+    u = l(388032),
+    c = l(675833);
+let d = RegExp('(^[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+(\\.[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+)*|^"([\\001-\\010\\013\\014\\016-\\037!#-\\[\\]-\\177]|\\\\[\\001-011\\013\\014\\016-\\177])*")@(?:[A-Z0-9](?:[A-Z0-9-]{0,2000}[A-Z0-9])?\\.)+[A-Z]{2,63}\\.?$', 'i');
 function h(e) {
-    let { transitionState: t, onFormSubmit: s, onSuccess: h, onClose: p, headerText: M, confirmButtonText: m, confirmButtonColor: f, impressionName: x } = e,
-        [A, C] = l.useState(!1),
-        [R, _] = l.useState(''),
-        [g, j] = l.useState(null),
-        B = l.useRef(null);
-    (0, i.Z)({
-        type: o.ImpressionTypes.MODAL,
-        name: x
+    let { transitionState: t, onFormSubmit: l, onSuccess: h, onClose: x, headerText: p, confirmButtonText: k, confirmButtonColor: m, impressionName: f } = e,
+        [j, g] = n.useState(!1),
+        [z, A] = n.useState(''),
+        [C, _] = n.useState(null),
+        N = n.useRef(null);
+    (0, a.Z)({
+        type: i.ImpressionTypes.MODAL,
+        name: f
     });
     let Z = async (e) => {
-        if ((e.preventDefault(), j(null), C(!0), !1 === c.test(R))) {
-            j(u.Z.Messages.EMAIL_ENTER_MODAL_INPUT_ERROR), C(!1);
+        if ((e.preventDefault(), _(null), g(!0), !1 === d.test(z))) {
+            _(u.NW.string(u.t.hML7Gx)), g(!1);
             return;
         }
         try {
-            let e = null != s ? await s(R) : void 0;
+            let e = null != l ? await l(z) : void 0;
             null != h &&
                 (null != e
                     ? h({
                           response: e,
-                          email: R
+                          email: z
                       })
-                    : h(R)),
-                p();
+                    : h(z)),
+                x();
         } catch (e) {
-            j(new r.Z(e).getAnyErrorMessage());
+            _(new r.Z(e).getAnyErrorMessage());
         } finally {
-            C(!1);
+            g(!1);
         }
     };
-    return (0, n.jsx)(a.ModalRoot, {
+    return (0, s.jsx)(o.Y0X, {
         transitionState: t,
-        children: (0, n.jsxs)('form', {
+        children: (0, s.jsxs)('form', {
             onSubmit: Z,
             children: [
-                (0, n.jsxs)(a.ModalHeader, {
+                (0, s.jsxs)(o.xBx, {
                     separator: !1,
-                    className: d.header,
+                    className: c.header,
                     children: [
-                        (0, n.jsx)(a.Heading, {
+                        (0, s.jsx)(o.X6q, {
                             variant: 'heading-lg/semibold',
-                            className: d.title,
-                            children: M
+                            className: c.title,
+                            children: p
                         }),
-                        (0, n.jsx)(a.ModalCloseButton, {
-                            onClick: p,
-                            className: d.modalCloseButton
+                        (0, s.jsx)(o.olH, {
+                            onClick: x,
+                            className: c.modalCloseButton
                         })
                     ]
                 }),
-                (0, n.jsx)(a.ModalContent, {
-                    children: (0, n.jsx)(a.FormItem, {
-                        title: u.Z.Messages.YOUR_EMAIL,
-                        error: g,
-                        children: (0, n.jsx)(a.TextInput, {
-                            value: R,
-                            onChange: _,
-                            inputRef: B
+                (0, s.jsx)(o.hzk, {
+                    children: (0, s.jsx)(o.xJW, {
+                        title: u.NW.string(u.t.hvOfmJ),
+                        error: C,
+                        children: (0, s.jsx)(o.oil, {
+                            value: z,
+                            onChange: A,
+                            inputRef: N
                         })
                     })
                 }),
-                (0, n.jsxs)(a.ModalFooter, {
+                (0, s.jsxs)(o.mzw, {
                     children: [
-                        (0, n.jsx)(a.Button, {
+                        (0, s.jsx)(o.zxk, {
                             type: 'submit',
-                            color: null != f ? f : a.Button.Colors.BRAND,
-                            size: a.Button.Sizes.MEDIUM,
-                            submitting: A,
-                            children: m
+                            color: null != m ? m : o.zxk.Colors.BRAND,
+                            size: o.zxk.Sizes.MEDIUM,
+                            submitting: j,
+                            children: k
                         }),
-                        (0, n.jsx)(a.Button, {
-                            look: a.Button.Looks.LINK,
-                            color: a.Button.Colors.PRIMARY,
-                            onClick: p,
-                            children: u.Z.Messages.CANCEL
+                        (0, s.jsx)(o.zxk, {
+                            look: o.zxk.Looks.LINK,
+                            color: o.zxk.Colors.PRIMARY,
+                            onClick: x,
+                            children: u.NW.string(u.t['ETE/oK'])
                         })
                     ]
                 })

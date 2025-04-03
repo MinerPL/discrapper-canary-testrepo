@@ -1,40 +1,35 @@
-n.d(e, {
-    c: function () {
-        return c;
-    }
-}),
-    n(47120);
-var a = n(470079),
+n.d(t, { c: () => i }), n(47120);
+var a = n(192379),
     r = n(489863),
     o = n(828878),
-    s = n(689938);
-function c(t, e, n) {
-    let [c, u] = a.useState(!1),
-        [l, i] = a.useState(null),
-        d = a.useCallback(async () => {
+    l = n(388032);
+function i(e, t, n) {
+    let [i, s] = a.useState(!1),
+        [c, d] = a.useState(null),
+        u = a.useCallback(async () => {
             try {
-                u(!0);
-                let n = await (0, r.tV)(t);
-                u(!1),
-                    e({
-                        userCode: t,
+                s(!0);
+                let n = await (0, r.tV)(e);
+                s(!1),
+                    t({
+                        userCode: e,
                         clientId: n.body.client_id,
                         scopes: n.body.scopes,
                         twoWayLinkCode: n.body.two_way_link_code
                     });
-            } catch (t) {
+            } catch (e) {
                 var a;
-                i(429 === (a = null == t ? void 0 : t.status) ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_RATE_LIMIT : 404 === a || 400 === a ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_BAD_CODE : s.Z.Messages.ACTIVATE_DEVICE_ERROR_UNKNOWN), u(!1), (null == t ? void 0 : t.status) === 401 && n();
+                d(429 === (a = null == e ? void 0 : e.status) ? l.NW.string(l.t.BPmZvr) : 404 === a || 400 === a ? l.NW.string(l.t.aWa1Pz) : l.NW.string(l.t.JNQRU1)), s(!1), (null == e ? void 0 : e.status) === 401 && n();
             }
-        }, [t, e, n]);
+        }, [e, t, n]);
     return (
         a.useEffect(() => {
-            t.length === o.A.USER_CODE_LENGTH ? d() : i(null);
-        }, [t, d]),
+            e.length === o.A.USER_CODE_LENGTH ? u() : d(null);
+        }, [e, u]),
         {
-            manualSubmit: d,
-            error: l,
-            submitting: c
+            manualSubmit: u,
+            error: c,
+            submitting: i
         }
     );
 }

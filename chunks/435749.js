@@ -1,8 +1,4 @@
-n.d(t, {
-    A: function () {
-        return i;
-    }
-});
+n.d(t, { A: () => i });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-03_clickstream_analytics',

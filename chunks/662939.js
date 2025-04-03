@@ -1,2 +1,1 @@
-var e = n(366444);
-t.exports = e;
+t.exports = n(366444);

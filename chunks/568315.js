@@ -1,14 +1,15 @@
+n.d(t, { Z: () => s });
 var r = n(106351),
-    i = n(524437),
-    a = n(695346),
-    s = n(82554),
-    o = n(689938);
-let l = {
-    getTitle: () => o.Z.Messages.IAR_UPSELLS_DM_SPAM_FILTER_TITLE,
-    getDescription: () => o.Z.Messages.IAR_UPSELLS_DM_SPAM_FILTER_DESCRIPTION,
-    eligibleReportSubtypes: [s.i5.SUB_SPAM],
+    l = n(524437),
+    i = n(695346),
+    a = n(82554),
+    o = n(388032);
+let s = {
+    getTitle: () => o.NW.string(o.t.vJOqMD),
+    getDisabledTitle: () => o.NW.string(o.t.B5ZvY2),
+    getDescription: () => o.NW.string(o.t['43UEUl']),
+    eligibleReportSubtypes: [a.i5.SUB_SPAM],
     eligibleChannelTypes: [r.d.DM, r.d.GROUP_DM],
-    onApply: () => a.Xr.updateSetting(i.Xr.NON_FRIENDS),
-    predicate: () => a.Xr.getSetting() === i.Xr.DISABLED
+    onApply: () => i.Xr.updateSetting(l.Xr.NON_FRIENDS),
+    predicate: () => i.Xr.getSetting() === l.Xr.DISABLED
 };
-t.Z = l;

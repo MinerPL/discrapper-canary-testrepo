@@ -1,18 +1,19 @@
-var r = n(735250),
-    a = n(470079),
-    i = n(392711),
-    o = n.n(i),
-    s = n(481060),
-    l = n(481250),
-    c = n(513547),
-    d = n(689938);
+r.d(t, { Z: () => m });
+var n = r(200651),
+    a = r(192379),
+    i = r(392711),
+    s = r.n(i),
+    l = r(481060),
+    o = r(481250),
+    c = r(513547),
+    d = r(388032);
 class u extends a.PureComponent {
     render() {
         let { screenshare: e } = this.props;
-        if (null == e) return (0, r.jsx)(s.Spinner, { type: s.Spinner.Type.SPINNING_CIRCLE });
-        let t = o().map(e, (e, t) => {
+        if (null == e) return (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
+        let t = s().map(e, (e, t) => {
             if (!(c.al[t] || void 0 === e))
-                return (0, r.jsx)(
+                return (0, n.jsx)(
                     c.ck,
                     {
                         label: t,
@@ -21,11 +22,11 @@ class u extends a.PureComponent {
                     t
                 );
         });
-        return (0, r.jsx)(s.FormSection, {
-            tag: s.FormTitleTags.H2,
-            title: d.Z.Messages.RTC_DEBUG_SCREENSHARE,
-            children: (0, l.a)(t)
+        return (0, n.jsx)(l.hjN, {
+            tag: l.RB0.H2,
+            title: d.NW.string(d.t['gWbr/f']),
+            children: (0, o.a)(t)
         });
     }
 }
-t.Z = u;
+let m = u;

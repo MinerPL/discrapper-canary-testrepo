@@ -1,8 +1,4 @@
-n.d(t, {
-    b: function () {
-        return r;
-    }
-});
+n.d(t, { b: () => r });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-04_game_settings_merge',

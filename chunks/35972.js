@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => o });
 var r = n(871074);
 function o() {
     if ('undefined' == typeof Reflect || !r || r.sham) return !1;

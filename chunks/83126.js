@@ -1,10 +1,13 @@
-var r = n(131681),
+n.d(t, { Z: () => s });
+var r = n(592204),
+    l = n(131681),
     i = n(695346),
     a = n(82554),
-    s = n(689938);
-let o = {
-    getTitle: () => s.Z.Messages.IAR_UPSELLS_LANGUAGE_FILTER_TITLE,
-    getDescription: () => s.Z.Messages.IAR_UPSELLS_LANGUAGE_FILTER_DESCRIPTION,
+    o = n(388032);
+let s = {
+    getTitle: () => o.NW.string(o.t.DPVOLS),
+    getDisabledTitle: () => o.NW.string(o.t['B/dag4']),
+    getDescription: () => o.NW.string(o.t['+Esd3N']),
     eligibleReportSubtypes: [a.i5.SUB_GENERAL_HARASSMENT, a.i5.SUB_RACIST_OR_DICRIMINATORY_LANGUAGE_OR_IMAGERY, a.i5.SUB_VULGAR_LANGUAGE],
     onApply: () =>
         i.gw.updateSetting({
@@ -12,6 +15,5 @@ let o = {
             slurs: !0,
             sexualContent: !0
         }),
-    predicate: () => !(0, r.U)()
+    predicate: () => (0, r.pB)({ location: 'iar_settings_upsells' }) && !(0, l.U)()
 };
-t.Z = o;

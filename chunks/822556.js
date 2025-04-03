@@ -1,19 +1,24 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(230711),
-    l = n(981631),
-    r = n(689938);
-function o() {
-    return (0, i.jsx)(a.MenuItem, {
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var l = n(481060),
+    i = n(230711),
+    o = n(549879),
+    a = n(906732),
+    s = n(981631),
+    c = n(388032);
+function u(e) {
+    let { analyticsLocations: t } = (0, a.ZP)();
+    return (0, r.jsx)(l.sNh, {
         id: 'voice-settings',
-        label: r.Z.Messages.VOICE_SETTINGS,
-        action: () => s.Z.open(l.oAB.VOICE),
-        icon: a.SettingsIcon
+        label: c.NW.string(c.t.NiTd0d),
+        action: () => {
+            i.Z.open(s.oAB.VOICE, null, {
+                analyticsLocations: t,
+                appContext: e
+            }),
+                (0, o.i)(e);
+        },
+        icon: l.ewm
     });
 }

@@ -1,2 +1,1 @@
-var s = n(128971)('toUpperCase');
-e.exports = s;
+e.exports = n(128971)('toUpperCase');

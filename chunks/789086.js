@@ -1,43 +1,39 @@
-t.d(r, {
-    Z: function () {
-        return d;
-    }
-});
-var a = t(735250),
-    n = t(442837),
-    i = t(481060),
-    o = t(346486),
-    l = t(146282),
-    c = t(371991),
-    s = t(206583);
+n.d(t, { Z: () => d });
+var r = n(200651),
+    a = n(442837),
+    l = n(481060),
+    i = n(346486),
+    o = n(146282),
+    s = n(371991),
+    c = n(206583);
 function d() {
-    let e = (0, n.e7)([l.Z], () => {
+    let e = (0, a.e7)([o.Z], () => {
             var e;
-            return (null === (e = l.Z.getFeed(s.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.refresh_stale_inbox_after_ms) != null;
+            return (null == (e = o.Z.getFeed(c.YN.GLOBAL_FEED)) ? void 0 : e.refresh_stale_inbox_after_ms) != null;
         }),
-        { loading: r, nextFetchDate: t } = (0, n.cj)([l.Z], () => {
+        { loading: t, nextFetchDate: n } = (0, a.cj)([o.Z], () => {
             var e;
-            return null !== (e = l.Z.getFeedState(s.YN.GLOBAL_FEED)) && void 0 !== e ? e : { loading: !1 };
+            return null != (e = o.Z.getFeedState(c.YN.GLOBAL_FEED)) ? e : { loading: !1 };
         }),
-        d = (0, n.e7)([l.Z], () => l.Z.getLastFeedFetchDate(s.YN.GLOBAL_FEED));
-    return (0, a.jsxs)('div', {
+        d = (0, a.e7)([o.Z], () => o.Z.getLastFeedFetchDate(c.YN.GLOBAL_FEED));
+    return (0, r.jsxs)('div', {
         children: [
-            r
-                ? (0, a.jsx)(i.Text, {
+            t
+                ? (0, r.jsx)(l.Text, {
                       variant: 'text-md/normal',
                       children: '(fetching)'
                   })
-                : (0, a.jsxs)(i.Text, {
+                : (0, r.jsxs)(l.Text, {
                       variant: 'text-md/normal',
-                      children: ['Next fetch: ', null != t ? (0, a.jsx)(o.Z, { deadline: t }) : e ? '(awaiting push)' : '(unscheduled)']
+                      children: ['Next fetch: ', null != n ? (0, r.jsx)(i.Z, { deadline: n }) : e ? '(awaiting push)' : '(unscheduled)']
                   }),
-            (0, a.jsxs)(i.Text, {
+            (0, r.jsxs)(l.Text, {
                 variant: 'text-md/normal',
                 children: [
                     'Last fetch:',
                     ' ',
                     null != d
-                        ? (0, a.jsx)(c.x3, {
+                        ? (0, r.jsx)(s.x3, {
                               inline: !0,
                               entry: { start: d.getTime() }
                           })

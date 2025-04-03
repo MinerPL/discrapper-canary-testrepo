@@ -1,40 +1,27 @@
 n.d(t, {
-    C0: function () {
-        return c;
-    },
-    W3: function () {
-        return E;
-    },
-    X8: function () {
-        return _;
-    },
-    bG: function () {
-        return p;
-    },
-    dG: function () {
-        return f;
-    },
-    pD: function () {
-        return h;
-    },
-    tH: function () {
-        return d;
-    }
+    C0: () => u,
+    W3: () => _,
+    X8: () => f,
+    bG: () => m,
+    dG: () => p,
+    pD: () => h,
+    tH: () => d
 });
 var r = n(544891),
     i = n(570140),
-    a = n(881052),
-    s = n(932015),
-    o = n(209747),
+    o = n(881052),
+    a = n(932015),
+    s = n(209747),
     l = n(78839),
-    u = n(981631);
-async function c(e) {
+    c = n(981631);
+async function u(e) {
     let t = (
         await r.tn.get({
-            url: u.ANM.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
-            oldFormErrors: !0
+            url: c.ANM.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
+            oldFormErrors: !0,
+            rejectWithError: !0
         })
-    ).body.map((e) => s.Z.createFromServer(e));
+    ).body.map((e) => a.Z.createFromServer(e));
     return (
         i.Z.dispatch({
             type: 'GUILD_APPLIED_BOOSTS_FETCH_SUCCESS',
@@ -48,11 +35,12 @@ async function d() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = (
             await r.tn.get({
-                url: u.ANM.USER_APPLIED_GUILD_BOOSTS,
+                url: c.ANM.USER_APPLIED_GUILD_BOOSTS,
                 oldFormErrors: !0,
-                query: { paused: e }
+                query: { paused: e },
+                rejectWithError: !0
             })
-        ).body.map((e) => s.Z.createFromServer(e));
+        ).body.map((e) => a.Z.createFromServer(e));
     return (
         i.Z.dispatch({
             type: 'USER_APPLIED_BOOSTS_FETCH_SUCCESS',
@@ -61,13 +49,14 @@ async function d() {
         t
     );
 }
-async function _() {
+async function f() {
     let e = (
         await r.tn.get({
-            url: u.ANM.USER_GUILD_BOOST_SLOTS,
-            oldFormErrors: !0
+            url: c.ANM.USER_GUILD_BOOST_SLOTS,
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
-    ).body.map((e) => o.Z.createFromServer(e, l.ZP.getSubscriptionById(e.subscription_id)));
+    ).body.map((e) => s.Z.createFromServer(e, l.ZP.getSubscriptionById(e.subscription_id)));
     return (
         i.Z.dispatch({
             type: 'GUILD_BOOST_SLOTS_FETCH_SUCCESS',
@@ -76,25 +65,30 @@ async function _() {
         e
     );
 }
-async function E(e, t) {
+async function _(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     i.Z.dispatch({ type: 'GUILD_APPLY_BOOST_START' });
     try {
-        let n = await r.tn.put({
-                url: u.ANM.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
-                body: { user_premium_guild_subscription_slot_ids: t },
-                oldFormErrors: !0
+        let o = await r.tn.put({
+                url: c.ANM.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
+                body: {
+                    user_premium_guild_subscription_slot_ids: t,
+                    disable_powerup_auto_apply: n
+                },
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
-            a = Array.isArray(n.body) ? n.body.map(s.Z.createFromServer) : [s.Z.createFromServer(n.body)];
+            s = Array.isArray(o.body) ? o.body.map(a.Z.createFromServer) : [a.Z.createFromServer(o.body)];
         return (
             i.Z.dispatch({
                 type: 'GUILD_APPLY_BOOST_SUCCESS',
-                appliedGuildBoost: a
+                appliedGuildBoost: s
             }),
-            _(),
-            a
+            f(),
+            s
         );
     } catch (t) {
-        let e = new a.zN(t);
+        let e = new o.zN(t);
         throw (
             (i.Z.dispatch({
                 type: 'GUILD_APPLY_BOOST_FAIL',
@@ -104,16 +98,17 @@ async function E(e, t) {
         );
     }
 }
-async function f(e, t) {
+async function p(e, t) {
     i.Z.dispatch({ type: 'GUILD_UNAPPLY_BOOST_START' });
     try {
         await r.tn.del({
-            url: u.ANM.APPLIED_GUILD_BOOST(e, t),
-            oldFormErrors: !0
+            url: c.ANM.APPLIED_GUILD_BOOST(e, t),
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
-            _();
+            f();
     } catch (t) {
-        let e = new a.zN(t);
+        let e = new o.zN(t);
         throw (
             (i.Z.dispatch({
                 type: 'GUILD_UNAPPLY_BOOST_FAIL',
@@ -129,10 +124,11 @@ async function f(e, t) {
 }
 async function h(e) {
     let t = await r.tn.post({
-            url: u.ANM.USER_GUILD_BOOST_SLOT_CANCEL(e),
-            oldFormErrors: !0
+            url: c.ANM.USER_GUILD_BOOST_SLOT_CANCEL(e),
+            oldFormErrors: !0,
+            rejectWithError: !0
         }),
-        n = o.Z.createFromServer(t.body, l.ZP.getSubscriptionById(t.body.subscription_id));
+        n = s.Z.createFromServer(t.body, l.ZP.getSubscriptionById(t.body.subscription_id));
     return (
         i.Z.dispatch({
             type: 'GUILD_BOOST_SLOT_UPDATE_SUCCESS',
@@ -141,12 +137,13 @@ async function h(e) {
         n
     );
 }
-async function p(e) {
+async function m(e) {
     let t = await r.tn.post({
-            url: u.ANM.USER_GUILD_BOOST_SLOT_UNCANCEL(e),
-            oldFormErrors: !0
+            url: c.ANM.USER_GUILD_BOOST_SLOT_UNCANCEL(e),
+            oldFormErrors: !0,
+            rejectWithError: !0
         }),
-        n = o.Z.createFromServer(t.body, l.ZP.getSubscriptionById(t.body.subscription_id));
+        n = s.Z.createFromServer(t.body, l.ZP.getSubscriptionById(t.body.subscription_id));
     return (
         i.Z.dispatch({
             type: 'GUILD_BOOST_SLOT_UPDATE_SUCCESS',

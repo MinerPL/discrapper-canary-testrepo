@@ -1,5 +1,6 @@
-var r = n(570140);
-t.Z = {
+t.d(n, { Z: () => i });
+var r = t(570140);
+let i = {
     startTyping(e) {
         r.Z.dispatch({
             type: 'TYPING_START_LOCAL',

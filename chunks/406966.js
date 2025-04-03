@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => c }), n(977457), n(47120);
 var r = n(710845),
     i = n(430824),
-    a = n(287328);
-function s(e, t, n) {
+    o = n(287328);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,16 +15,16 @@ function s(e, t, n) {
         e
     );
 }
-let o = new r.Z('GuildVersions');
-t.Z = new (class e {
+let s = new r.Z('GuildVersions');
+class l {
     async getCommittedVersions() {
         try {
-            let e = a.Z.guildVersions();
+            let e = o.Z.guildVersions();
             if (null == e) return {};
             let t = (await e.getMany()).map((e) => [e.id, e.version]);
             return Object.fromEntries(null != t ? t : []);
         } catch (e) {
-            return o.warn("couldn't load guild versions", e), {};
+            return s.warn("couldn't load guild versions", e), {};
         }
     }
     remove(e, t) {
@@ -42,7 +42,7 @@ t.Z = new (class e {
         var n;
         let r = e.guild,
             i = e.guild.id;
-        this.updateWith(i, [r]), this.updateWith(i, r.emojis), this.updateWith(i, r.stickers), this.updateWith(i, r.channels), this.updateWith(i, null === (n = r.channelUpdates) || void 0 === n ? void 0 : n.writes), this.updateWith(i, Array.isArray(r.roles) ? r.roles : Object.values(r.roles)), this.commit(t);
+        this.updateWith(i, [r]), this.updateWith(i, r.emojis), this.updateWith(i, r.stickers), this.updateWith(i, r.channels), this.updateWith(i, null == (n = r.channelUpdates) ? void 0 : n.writes), this.updateWith(i, Array.isArray(r.roles) ? r.roles : Object.values(r.roles)), this.commit(t);
     }
     handleGuildUpdate(e, t) {
         let n = e.guild,
@@ -86,22 +86,22 @@ t.Z = new (class e {
     updateWith(e, t) {
         if (null != t) {
             var n, r;
-            let i = Math.max(null !== (n = this.committed.get(e)) && void 0 !== n ? n : 0, null !== (r = this.pending.get(e)) && void 0 !== r ? r : 0),
-                a = this.computeLatestVersion(i, t);
-            a > i && this.pending.set(e, a);
+            let i = Math.max(null != (n = this.committed.get(e)) ? n : 0, null != (r = this.pending.get(e)) ? r : 0),
+                o = this.computeLatestVersion(i, t);
+            o > i && this.pending.set(e, o);
         }
     }
     computeLatestVersion(e, t) {
         let n = e;
         for (let e of t) {
             var r;
-            n = Math.max(n, null !== (r = e.version) && void 0 !== r ? r : 0);
+            n = Math.max(n, null != (r = e.version) ? r : 0);
         }
         return n;
     }
     commit(e) {
         if (this.pending.size > 0) {
-            let t = a.Z.guildVersionsTransaction(e);
+            let t = o.Z.guildVersionsTransaction(e);
             for (let [e, n] of this.pending)
                 null != n
                     ? (t.put({
@@ -114,9 +114,9 @@ t.Z = new (class e {
         }
     }
     constructor() {
-        s(this, 'pending', new Map()),
-            s(this, 'committed', new Map()),
-            s(this, 'actions', {
+        a(this, 'pending', new Map()),
+            a(this, 'committed', new Map()),
+            a(this, 'actions', {
                 BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
                 CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
                 CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
@@ -132,4 +132,5 @@ t.Z = new (class e {
                 GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t)
             });
     }
-})();
+}
+let c = new l();

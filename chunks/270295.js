@@ -1,27 +1,22 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-}),
-    n(47120);
-var i = n(470079),
-    a = n(442837),
-    s = n(314897),
-    l = n(471253),
-    r = n(590415);
-function o(e) {
-    let t = (0, a.e7)([s.default], () => s.default.getId()),
-        n = (0, r.ZP)(t, e.id),
-        o = n === r.xO.REQUESTED_TO_SPEAK || n === r.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-        [c, u] = i.useState(o);
+n.d(t, { Z: () => s }), n(47120);
+var r = n(192379),
+    i = n(442837),
+    l = n(314897),
+    o = n(471253),
+    a = n(590415);
+function s(e) {
+    let t = (0, i.e7)([l.default], () => l.default.getId()),
+        n = (0, a.ZP)(t, e.id),
+        s = n === a.xO.REQUESTED_TO_SPEAK || n === a.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+        [c, u] = r.useState(s);
     return (
-        i.useEffect(() => {
-            u(o);
-        }, [o]),
+        r.useEffect(() => {
+            u(s);
+        }, [s]),
         [
             c,
             function () {
-                n === r.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, l.RK)(e, !0) : (0, l.Q1)(e, !c), u(!c);
+                n === a.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, o.RK)(e, !0) : (0, o.Q1)(e, !c), u(!c);
             }
         ]
     );

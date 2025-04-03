@@ -1,99 +1,139 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return I;
-        }
-    }),
-    s(47120);
-var n = s(735250),
-    a = s(470079),
-    l = s(442837),
-    o = s(481060),
-    i = s(239091),
-    r = s(410575),
-    u = s(881052),
-    d = s(299206),
-    _ = s(430824),
-    M = s(236413),
-    c = s(727072),
-    E = s(36459),
-    O = s(65912),
-    T = s(572456),
-    R = s(273504),
-    D = s(981631),
-    U = s(689938);
-function I(e) {
-    let { rule: t, analyticsContext: s, onSelect: I } = e,
-        g = (0, M.Vb)(t),
-        A = (function (e) {
-            let { editingRule: t, setEditingRule: s } = (0, O.V)();
-            return (0, n.jsx)(o.MenuItem, {
+r.d(t, { default: () => m }), r(47120);
+var n = r(200651),
+    o = r(192379),
+    i = r(442837),
+    l = r(481060),
+    c = r(239091),
+    a = r(410575),
+    s = r(881052),
+    u = r(299206),
+    d = r(430824),
+    b = r(236413),
+    p = r(727072),
+    f = r(36459),
+    g = r(65912),
+    y = r(572456),
+    j = r(273504),
+    O = r(981631),
+    h = r(388032);
+function m(e) {
+    let { rule: t, analyticsContext: r, onSelect: m } = e,
+        N = (0, b.Vb)(t),
+        w = (function (e) {
+            let { editingRule: t, setEditingRule: r } = (0, g.V)();
+            return (0, n.jsx)(l.sNh, {
                 id: 'edit-automod-rule',
-                label: U.Z.Messages.GUILD_AUTOMOD_EDIT_RULE,
+                label: h.NW.string(h.t.uQq6Pz),
                 action: () => {
-                    s(e);
+                    r(e);
                 },
                 disabled: null != t
             });
         })(t),
-        L = (function (e) {
-            let { setEditingRule: t } = (0, O.V)(),
-                [s, i] = a.useState(!1),
-                { removeRule: r } = (0, c.pH)(e.guildId),
-                d = (0, l.e7)([_.Z], () => _.Z.getGuild(e.guildId)),
-                M = async () => {
-                    if (!s && !!(await (0, T.gK)(e.name))) {
-                        i(!0);
+        x = (function (e) {
+            let { setEditingRule: t } = (0, g.V)(),
+                [r, c] = o.useState(!1),
+                { removeRule: a } = (0, p.pH)(e.guildId),
+                u = (0, i.e7)([d.Z], () => d.Z.getGuild(e.guildId)),
+                b = async () => {
+                    if (!r && (await (0, y.gK)(e.name))) {
+                        c(!0);
                         try {
-                            await (0, E.mm)(e.id, e.guildId), t(null), r(e.id, e.guildId);
+                            await (0, f.mm)(e.id, e.guildId), t(null), a(e.id, e.guildId);
                         } catch (t) {
                             var n;
-                            let e = new u.Hx(t);
-                            (0, o.showToast)((0, o.createToast)(null !== (n = e.getAnyErrorMessage()) && void 0 !== n ? n : U.Z.Messages.ERROR_OCCURRED_TRY_AGAIN, o.ToastType.FAILURE));
+                            let e = new s.Hx(t);
+                            (0, l.showToast)((0, l.createToast)(null != (n = e.getAnyErrorMessage()) ? n : h.NW.string(h.t.fEptJC), l.ToastType.FAILURE));
                         } finally {
-                            i(!1);
+                            c(!1);
                         }
                     }
                 },
-                I = e.triggerType === R.fX.MENTION_SPAM && (null == d ? void 0 : d.features) != null && d.features.has(D.oNc.COMMUNITY);
-            return (0, n.jsx)(o.MenuItem, {
+                m = e.triggerType === j.fX.MENTION_SPAM && (null == u ? void 0 : u.features) != null && u.features.has(O.oNc.COMMUNITY);
+            return (0, n.jsx)(l.sNh, {
                 id: 'delete-automod-rule',
-                label: U.Z.Messages.GUILD_AUTOMOD_DELETE_RULE,
-                action: I
+                label: h.NW.string(h.t['92m/09']),
+                action: m
                     ? () => {
-                          (0, o.openModal)((e) =>
-                              (0, n.jsx)(o.ConfirmModal, {
-                                  header: U.Z.Messages.GUILD_AUTOMOD_RULE_DELETE_ERROR_CONFIRM_MODAL_HEADER,
-                                  confirmText: U.Z.Messages.OKAY,
-                                  confirmButtonColor: o.Button.Colors.BRAND,
-                                  ...e,
-                                  children: (0, n.jsx)(o.Text, {
-                                      variant: 'text-md/normal',
-                                      children: U.Z.Messages.GUILD_AUTOMOD_RULE_DELETE_ERROR_CONFIRM_MODAL_BODY
-                                  })
-                              })
-                          );
+                          (0, l.h7j)((e) => {
+                              var t, r;
+                              return (0, n.jsx)(
+                                  l.ConfirmModal,
+                                  ((t = (function (e) {
+                                      for (var t = 1; t < arguments.length; t++) {
+                                          var r = null != arguments[t] ? arguments[t] : {},
+                                              n = Object.keys(r);
+                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                              (n = n.concat(
+                                                  Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                      return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                  })
+                                              )),
+                                              n.forEach(function (t) {
+                                                  var n;
+                                                  (n = r[t]),
+                                                      t in e
+                                                          ? Object.defineProperty(e, t, {
+                                                                value: n,
+                                                                enumerable: !0,
+                                                                configurable: !0,
+                                                                writable: !0
+                                                            })
+                                                          : (e[t] = n);
+                                              });
+                                      }
+                                      return e;
+                                  })(
+                                      {
+                                          header: h.NW.string(h.t.MmpqMD),
+                                          confirmText: h.NW.string(h.t.BddRzc),
+                                          confirmButtonColor: l.zxk.Colors.BRAND
+                                      },
+                                      e
+                                  )),
+                                  (r = r =
+                                      {
+                                          children: (0, n.jsx)(l.Text, {
+                                              variant: 'text-md/normal',
+                                              children: h.NW.string(h.t.XMdBLy)
+                                          })
+                                      }),
+                                  Object.getOwnPropertyDescriptors
+                                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                      : (function (e, t) {
+                                            var r = Object.keys(e);
+                                            if (Object.getOwnPropertySymbols) {
+                                                var n = Object.getOwnPropertySymbols(e);
+                                                r.push.apply(r, n);
+                                            }
+                                            return r;
+                                        })(Object(r)).forEach(function (e) {
+                                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                        }),
+                                  t)
+                              );
+                          });
                       }
-                    : M
+                    : b
             });
         })(t),
-        h = (0, d.Z)({
+        v = (0, u.Z)({
             id: t.id,
-            label: U.Z.Messages.COPY_ID_AUTOMOD_RULE
+            label: h.NW.string(h.t.F64hjo)
         });
-    return (0, n.jsx)(r.Z, {
-        context: s,
-        object: D.qAy.CONTEXT_MENU,
-        children: (0, n.jsxs)(o.Menu, {
+    return (0, n.jsx)(a.Z, {
+        context: r,
+        object: O.qAy.CONTEXT_MENU,
+        children: (0, n.jsxs)(l.v2r, {
             navId: 'automod-rule-context',
-            onClose: i.Zy,
-            'aria-label': U.Z.Messages.GUILD_AUTOMOD_RULE_CONTEXT_MENU,
-            onSelect: I,
+            onClose: c.Zy,
+            'aria-label': h.NW.string(h.t.uT36Sk),
+            onSelect: m,
             children: [
-                (0, n.jsxs)(o.MenuGroup, {
-                    children: [A, g && L]
+                (0, n.jsxs)(l.kSQ, {
+                    children: [w, N && x]
                 }),
-                g && (0, n.jsx)(o.MenuGroup, { children: h })
+                N && (0, n.jsx)(l.kSQ, { children: v })
             ]
         })
     });

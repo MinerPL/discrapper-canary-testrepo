@@ -1,15 +1,11 @@
-n.d(o, {
-    Z: function () {
-        return e;
+t.d(r, { Z: () => n });
+function n(e, r) {
+    if (e.score === r.score) {
+        var t, n, o, l, a, i;
+        let c = null != (l = null != (o = e.sortable) ? o : null == (t = e.comparator) ? void 0 : t.toLocaleLowerCase()) ? l : '',
+            u = null != (i = null != (a = e.sortable) ? a : null == (n = r.comparator) ? void 0 : n.toLocaleLowerCase()) ? i : '';
+        if (c < u) return -1;
+        if (c > u) return 1;
     }
-});
-function e(l, o) {
-    if (l.score === o.score) {
-        var n, e, r, t, i, u;
-        let c = null !== (t = null !== (r = l.sortable) && void 0 !== r ? r : null === (n = l.comparator) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && void 0 !== t ? t : '',
-            a = null !== (u = null !== (i = l.sortable) && void 0 !== i ? i : null === (e = o.comparator) || void 0 === e ? void 0 : e.toLocaleLowerCase()) && void 0 !== u ? u : '';
-        if (c < a) return -1;
-        if (c > a) return 1;
-    }
-    return o.score - l.score;
+    return r.score - e.score;
 }

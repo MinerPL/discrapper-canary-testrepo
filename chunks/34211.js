@@ -1,15 +1,10 @@
-a.d(t, {
-    o: function () {
-        return p;
-    }
-}),
-    a(47120);
+a.d(t, { o: () => h }), a(47120);
 var n,
-    i = a(735250),
-    r = a(470079),
+    s = a(200651),
+    r = a(192379),
     l = a(948789),
-    o = a(66037),
-    s = a(248108),
+    i = a(66037),
+    o = a(248108),
     c = a(231338),
     d = a(330711);
 function u(e, t, a) {
@@ -25,168 +20,168 @@ function u(e, t, a) {
         e
     );
 }
-let h = c.j_.MAIN_NAVIGATION_MENU,
-    m = (e, t) => [
+let p = c.j_.MAIN_NAVIGATION_MENU,
+    _ = (e) => [
         {
             route: c.am.DOWNLOAD,
             linkClicked: 'download',
-            title: t.DOWNLOAD
+            title: d.Z.Messages.NAVIGATION_DOWNLOAD
         },
         {
             route: c.am.NITRO,
             linkClicked: 'nitro',
-            title: t.NITRO,
+            title: d.Z.Messages.NAVIGATION_NITRO,
             external: !0
         },
         {
             route: c.am.JOBS,
             linkClicked: 'jobs',
-            title: t.JOBS,
+            title: d.Z.Messages.NAVIGATION_JOBS,
             external: !0
         },
         {
-            title: t.DEVELOPERS,
+            title: d.Z.Messages.NAVIGATION_DEVELOPERS,
             links: [
                 {
                     route: c.am.RICH_PRESENCE,
                     linkClicked: 'rich_presence',
-                    title: t.RICH_PRESENCE
+                    title: d.Z.Messages.NAVIGATION_RICH_PRESENCE
                 },
                 {
                     route: c.am.VERIFICATION,
                     linkClicked: 'verification',
-                    title: t.VERIFICATION,
+                    title: d.Z.Messages.NAVIGATION_VERIFICATION,
                     external: !0
                 },
                 {
                     route: c.yX.DEV_PORTAL,
                     linkClicked: 'developers',
-                    title: t.DEVELOPER_PORTAL,
+                    title: d.Z.Messages.NAVIGATION_DEVELOPER_PORTAL,
                     external: !0
                 },
                 {
                     route: c.yX.DEV_PORTAL_DOCUMENTATION,
                     linkClicked: 'documentation',
-                    title: t.DOCUMENTATION,
+                    title: d.Z.Messages.NAVIGATION_DOCUMENTATION,
                     external: !0
                 }
             ]
         },
         {
-            title: t.COMMUNITY,
+            title: d.Z.Messages.NAVIGATION_COMMUNITY,
             links: [
                 {
                     route: c.am.OPEN_SOURCE,
                     linkClicked: 'open_source',
-                    title: t.OPEN_SOURCE
+                    title: d.Z.Messages.NAVIGATION_OPEN_SOURCE
                 },
                 {
                     route: c.am.PARTNERS,
                     linkClicked: 'partners',
-                    title: t.PARTNERS,
+                    title: d.Z.Messages.NAVIGATION_PARTNERS,
                     external: !0
                 },
                 {
                     route: c.am.HYPESQUAD,
                     linkClicked: 'hypesquad',
-                    title: t.HYPESQUAD,
+                    title: d.Z.Messages.NAVIGATION_HYPESQUAD,
                     external: !0
                 },
                 {
                     route: c.am.GUIDELINES,
                     linkClicked: 'guidelines',
-                    title: t.GUIDELINES,
+                    title: d.Z.Messages.NAVIGATION_GUIDELINES,
                     external: !0
                 }
             ]
         },
         {
-            title: t.SUPPORT,
+            title: d.Z.Messages.NAVIGATION_SUPPORT,
             links: [
                 {
                     route: '//support.discord.com/hc/'.concat(e),
                     linkClicked: 'helpandsupport',
-                    title: t.HELP_AND_SUPPORT,
+                    title: d.Z.Messages.NAVIGATION_HELP_AND_SUPPORT,
                     external: !0
                 },
                 {
                     route: c.yX.STATUS,
                     linkClicked: 'status',
-                    title: t.STATUS,
+                    title: d.Z.Messages.NAVIGATION_STATUS,
                     external: !0
                 },
                 {
                     route: c.am.SAFETY_LANDING,
                     linkClicked: 'safetycenter',
-                    title: t.SAFETY_CENTER,
+                    title: d.Z.Messages.NAVIGATION_SAFETY_CENTER,
                     external: !0
                 }
             ]
         }
     ];
-class p extends (n = r.PureComponent) {
+class h extends (n = r.PureComponent) {
     render() {
-        let e = (0, l.fQ)(this.context.router),
-            { isMobile: t, isVisible: a, styles: n, NavigationMessages: r, TrackClick: u, avoidRouter: p } = this.props,
-            { sectionShown: N } = this.state;
-        return m(null != d.Z ? d.Z.getLocale().toLowerCase() : '', r).map((r) => {
-            if (null != r.links)
-                return (0, i.jsx)(
-                    s.Z,
-                    {
-                        title: r.title,
-                        links: r.links,
-                        isOpen: N === r.title,
-                        isMobile: t,
-                        avoidRouter: p,
-                        TrackClick: u,
-                        onClose: this.closeSubNav,
-                        onOpen: this.openSubNav
-                    },
-                    r.title
-                );
-            if (r.external && null != r.route)
-                return (0, i.jsx)(
-                    'li',
-                    {
-                        className: n.listItemInactive,
-                        role: 'none',
-                        children: (0, i.jsx)(u, {
-                            className: n.mainNavLink,
-                            eventName: h,
-                            data: r.linkClicked ? { linkClicked: r.linkClicked } : {},
-                            href: r.route,
-                            rel: 'me',
-                            children: r.title
-                        })
-                    },
-                    'external_link_'.concat(r.route)
-                );
-            if (null != r.route)
-                return (0, i.jsx)(
-                    'li',
-                    {
-                        className: e(r.route) ? n.listItemActive : n.listItemInactive,
-                        role: 'none',
-                        children: (0, i.jsx)(o.Z, {
-                            avoidRouter: p,
-                            to: r.route,
-                            from: c.j_.MAIN_NAVIGATION_MENU,
-                            tabIndex: a ? 0 : -1,
-                            role: 'menuitem',
-                            children: (0, i.jsx)(u, {
-                                tag: 'span',
+        let e = (0, l.f)(this.context.router),
+            { isMobile: t, isVisible: a, styles: n, TrackClick: r, avoidRouter: u } = this.props,
+            { sectionShown: h } = this.state;
+        return _(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((l) =>
+            null != l.links
+                ? (0, s.jsx)(
+                      o.Z,
+                      {
+                          title: l.title,
+                          links: l.links,
+                          isOpen: h === l.title,
+                          isMobile: t,
+                          avoidRouter: u,
+                          TrackClick: r,
+                          onClose: this.closeSubNav,
+                          onOpen: this.openSubNav
+                      },
+                      l.title
+                  )
+                : l.external && null != l.route
+                  ? (0, s.jsx)(
+                        'li',
+                        {
+                            className: n.listItemInactive,
+                            role: 'none',
+                            children: (0, s.jsx)(r, {
                                 className: n.mainNavLink,
-                                eventName: h,
-                                data: { linkClicked: r.linkClicked },
-                                children: r.title
+                                eventName: p,
+                                data: l.linkClicked ? { linkClicked: l.linkClicked } : {},
+                                href: l.route,
+                                rel: 'me',
+                                children: l.title
                             })
-                        })
-                    },
-                    'link_'.concat(r.route)
-                );
-            return [];
-        });
+                        },
+                        'external_link_'.concat(l.route)
+                    )
+                  : null != l.route
+                    ? (0, s.jsx)(
+                          'li',
+                          {
+                              className: e(l.route) ? n.listItemActive : n.listItemInactive,
+                              role: 'none',
+                              children: (0, s.jsx)(i.Z, {
+                                  avoidRouter: u,
+                                  to: l.route,
+                                  from: c.j_.MAIN_NAVIGATION_MENU,
+                                  tabIndex: a ? 0 : -1,
+                                  role: 'menuitem',
+                                  children: (0, s.jsx)(r, {
+                                      tag: 'span',
+                                      className: n.mainNavLink,
+                                      eventName: p,
+                                      data: { linkClicked: l.linkClicked },
+                                      children: l.title
+                                  })
+                              })
+                          },
+                          'link_'.concat(l.route)
+                      )
+                    : []
+        );
     }
     constructor(...e) {
         super(...e),
@@ -201,7 +196,7 @@ class p extends (n = r.PureComponent) {
             });
     }
 }
-u(p, 'defaultProps', {
+u(h, 'defaultProps', {
     isMobile: !1,
     isVisible: !0
 });

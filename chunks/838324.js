@@ -1,128 +1,123 @@
-n.d(t, {
-    Z: function () {
-        return E;
-    }
-}),
-    n(47120);
-var s = n(735250);
-n(470079);
-var a = n(442837),
-    i = n(692547),
-    r = n(481060),
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    s = n(692547),
+    a = n(481060),
     l = n(45966),
     o = n(637853),
     c = n(889369),
     d = n(974513),
     u = n(290511),
-    _ = n(689938),
-    I = n(408158);
-function E(e) {
+    m = n(388032),
+    g = n(974283);
+function p(e) {
     let { guildId: t, scrollToQuestions: n } = e,
-        E = (0, a.e7)([l.Z], () => l.Z.isAdvancedMode(t)),
-        T = (0, a.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
-        [m, N] = (0, o.VF)(t, T),
-        [S, h] = (0, d.OA)(t, [...T]),
-        g = E ? h.length : N.length,
-        C = E ? S.length : m.length,
-        x = g < u.md,
-        p = C >= u.X,
-        R = h.length - N.length,
-        f = (0, s.jsx)(r.CircleCheckIcon, {
+        p = (0, i.e7)([l.Z], () => l.Z.isAdvancedMode(t)),
+        h = (0, i.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
+        [f, b] = (0, o.VF)(t, h),
+        [x, j] = (0, d.OA)(t, [...h]),
+        N = p ? j.length : b.length,
+        _ = p ? x.length : f.length,
+        v = N < u.md,
+        C = _ >= u.X,
+        O = j.length - b.length,
+        y = (0, r.jsx)(a.owK, {
             size: 'sm',
-            color: i.Z.unsafe_rawColors.BRAND_500.css,
-            secondaryColor: i.Z.unsafe_rawColors.WHITE_100.css,
-            className: I.icon
+            color: s.Z.unsafe_rawColors.BRAND_500.css,
+            secondaryColor: s.Z.unsafe_rawColors.WHITE_100.css,
+            className: g.icon
         }),
-        L = (0, s.jsx)(r.CircleXIcon, {
+        I = (0, r.jsx)(a.k$p, {
             size: 'sm',
-            className: I.icon,
-            color: i.Z.colors.WHITE.css,
-            secondaryColor: i.Z.colors.BACKGROUND_ACCENT.css
+            className: g.icon,
+            color: s.Z.colors.WHITE.css,
+            secondaryColor: s.Z.colors.BACKGROUND_ACCENT.css
         }),
-        O = [(Math.min(u.X, C) / u.md) * 100, (Math.min(u.md, g) / u.md) * 100],
-        A = !x && p ? [i.Z.colors.TEXT_POSITIVE.css, i.Z.colors.TEXT_POSITIVE.css] : [i.Z.colors.TEXT_BRAND.css, i.Z.colors.TEXT_MUTED.css];
-    return (0, s.jsxs)('div', {
-        className: I.container,
+        E = [(Math.min(u.X, _) / u.md) * 100, (Math.min(u.md, N) / u.md) * 100],
+        S = !v && C ? [s.Z.colors.TEXT_POSITIVE.css, s.Z.colors.TEXT_POSITIVE.css] : [s.Z.colors.TEXT_BRAND.css, s.Z.colors.TEXT_MUTED.css];
+    return (0, r.jsxs)('div', {
+        className: g.container,
         children: [
-            (0, s.jsxs)('div', {
-                className: I.header,
+            (0, r.jsxs)('div', {
+                className: g.header,
                 children: [
-                    (0, s.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/bold',
                         color: 'text-brand',
-                        children: _.Z.Messages.DEFAULT_CHANNELS_CHATTABLE_COUNT.format({ count: C })
+                        children: m.NW.format(m.t.kvroKC, { count: _ })
                     }),
-                    (0, s.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/bold',
                         color: 'text-muted',
-                        children: _.Z.Messages.DEFAULT_CHANNELS_TOTAL_COUNT.format({ count: g })
+                        children: m.NW.format(m.t['0MjxJy'], { count: N })
                     })
                 ]
             }),
-            (0, s.jsx)(r.StackedProgress, {
-                foregroundColors: A,
-                percents: O,
-                size: r.StackedProgress.Sizes.XSMALL
+            (0, r.jsx)(a.yGy, {
+                foregroundColors: S,
+                percents: E,
+                size: a.yGy.Sizes.XSMALL
             }),
-            (0, s.jsxs)('div', {
-                className: I.requiredItem,
+            (0, r.jsxs)('div', {
+                className: g.requiredItem,
                 children: [
-                    x ? L : f,
-                    (0, s.jsx)(r.Text, {
+                    v ? I : y,
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
-                        children: _.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_MIN_CHANNELS.format({ count: u.md })
+                        children: m.NW.format(m.t.k0COZW, { count: u.md })
                     })
                 ]
             }),
-            (0, s.jsxs)('div', {
-                className: I.requiredItem,
+            (0, r.jsxs)('div', {
+                className: g.requiredItem,
                 children: [
-                    p ? f : L,
-                    (0, s.jsx)(r.Text, {
+                    C ? y : I,
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
-                        children: _.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_MIN_CHATTABLE_CHANNELS.format({ count: u.X })
+                        children: m.NW.format(m.t.PwXgS0, { count: u.X })
                     })
                 ]
             }),
-            E &&
-                (0, s.jsxs)(s.Fragment, {
+            p &&
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, s.jsxs)('div', {
-                            className: I.requiredItem,
+                        (0, r.jsxs)('div', {
+                            className: g.requiredItem,
                             children: [
-                                (0, s.jsx)(r.CircleInformationIcon, {
+                                (0, r.jsx)(a.d3s, {
                                     size: 'sm',
-                                    color: i.Z.colors.WHITE.css,
-                                    secondaryColor: i.Z.colors.BACKGROUND_ACCENT.css,
-                                    className: I.icon
+                                    color: s.Z.colors.WHITE.css,
+                                    secondaryColor: s.Z.colors.BACKGROUND_ACCENT.css,
+                                    className: g.icon
                                 }),
-                                (0, s.jsx)(r.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: _.Z.Messages.DEFAULT_CHANNELS_ADVANCED_EXPLAINER
+                                    children: m.NW.string(m.t.AyvkOD)
                                 })
                             ]
                         }),
-                        (0, s.jsxs)('div', {
-                            className: I.requiredItem,
+                        (0, r.jsxs)('div', {
+                            className: g.requiredItem,
                             children: [
-                                (0, s.jsx)(r.CircleInformationIcon, {
+                                (0, r.jsx)(a.d3s, {
                                     size: 'sm',
-                                    color: i.Z.colors.WHITE.css,
-                                    secondaryColor: i.Z.colors.BACKGROUND_ACCENT.css,
-                                    className: I.icon
+                                    color: s.Z.colors.WHITE.css,
+                                    secondaryColor: s.Z.colors.BACKGROUND_ACCENT.css,
+                                    className: g.icon
                                 }),
-                                (0, s.jsx)(r.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: _.Z.Messages.DEFAULT_CHANNELS_PREVIEW_ADDITIONAL.format({
-                                        count: R,
+                                    children: m.NW.format(m.t['8Geut7'], {
+                                        count: O,
                                         prejoinHook: (e) =>
-                                            (0, s.jsx)(r.Anchor, {
+                                            (0, r.jsx)(a.eee, {
                                                 onClick: n,
-                                                children: (0, s.jsx)(r.Text, {
+                                                children: (0, r.jsx)(a.Text, {
                                                     tag: 'span',
                                                     variant: 'text-xs/normal',
                                                     color: 'text-link',

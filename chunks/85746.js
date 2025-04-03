@@ -1,17 +1,10 @@
-var r, i, a, s;
 n.d(t, {
-    Z: function () {
-        return i;
-    },
-    l: function () {
-        return r;
-    }
-}),
-    ((a = r || (r = {})).COZY = 'cozy'),
-    (a.COZY_DRAWER = 'cozy-drawer'),
-    (a.COZY_DRAWER_SMOL = 'cozy-drawer-smol'),
-    (a.COMPACT = 'compact'),
-    (a.MINIMAL = 'minimal'),
-    ((s = i || (i = {})).ALL = 'all'),
-    (s.UNREADS = 'unreads'),
-    (s.NONE = 'none');
+    Z: () => i,
+    l: () => r
+});
+var r = (function (e) {
+        return (e.COZY = 'cozy'), (e.COZY_DRAWER = 'cozy-drawer'), (e.COZY_DRAWER_SMOL = 'cozy-drawer-smol'), (e.COMPACT = 'compact'), (e.MINIMAL = 'minimal'), e;
+    })({}),
+    i = (function (e) {
+        return (e.ALL = 'all'), (e.UNREADS = 'unreads'), (e.NONE = 'none'), e;
+    })({});

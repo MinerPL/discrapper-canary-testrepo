@@ -1,104 +1,120 @@
-t.d(a, {
-    M: function () {
-        return C;
-    },
-    a: function () {
-        return S;
-    }
+n.d(t, {
+    M: () => N,
+    a: () => A
 }),
-    t(315314),
-    t(610138),
-    t(216116),
-    t(78328),
-    t(815648),
-    t(47120);
-var s = t(735250),
-    n = t(470079),
-    l = t(772848),
-    r = t(544891),
-    o = t(481060),
-    i = t(355467),
-    c = t(600164),
-    u = t(311821),
-    d = t(591759),
-    E = t(987209),
-    A = t(598),
-    N = t(737143),
-    m = t(362755),
-    _ = t(981631),
-    p = t(474936),
-    h = t(689938),
-    T = t(545533);
-let C = (e) => {
-        let { onPurchaseComplete: a, onHandoffFailure: t } = e,
-            { selectedPlan: c, browserCheckoutState: u, browserCheckoutStateLoadId: C, contextMetadata: S } = (0, A.usePaymentContext)(),
-            { isGift: I } = (0, E.wD)(),
-            [P, R] = n.useState(!1);
+    n(315314),
+    n(309749),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120),
+    n(266796);
+var r = n(200651),
+    i = n(192379),
+    o = n(772848),
+    a = n(544891),
+    s = n(481060),
+    l = n(355467),
+    c = n(821849),
+    u = n(600164),
+    d = n(311821),
+    f = n(591759),
+    _ = n(987209),
+    p = n(563132),
+    h = n(409813),
+    m = n(620824),
+    g = n(737143),
+    E = n(926841),
+    b = n(362755),
+    y = n(981631),
+    v = n(474936),
+    O = n(388032),
+    I = n(940667);
+let S = 1000;
+function T(e, t, n, r, i) {
+    let s = y.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, i),
+        l = new URL(f.Z.makeUrl(y.Z5c.BILLING_LOGIN_HANDOFF)),
+        c = (0, o.Z)();
+    return (
+        l.searchParams.append('handoff_key', c),
+        l.searchParams.append('redirect_to', s),
+        a.tn
+            .post({
+                url: y.ANM.HANDOFF,
+                body: { key: c },
+                oldFormErrors: !0,
+                rejectWithError: !1
+            })
+            .then(
+                (e) => {
+                    l.searchParams.append('handoff_token', e.body.handoff_token), window.open(l.href);
+                },
+                () => {
+                    r();
+                }
+            )
+    );
+}
+let N = (e) => {
+        let t,
+            n,
+            { step: o, onPurchaseComplete: a, onHandoffFailure: u } = e,
+            { selectedPlan: d, setSelectedPlanId: f, setSelectedSkuId: N, browserCheckoutState: A, browserCheckoutStateLoadId: C, browserCheckoutStateSkuId: R, browserCheckoutStatePlanId: P, contextMetadata: w } = (0, p.JL)(),
+            { isGift: D } = (0, _.wD)(),
+            [L, x] = i.useState(!1);
+        switch (o) {
+            case h.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
+                (t = y.i$l.GOOGLE_PAY), (n = (0, E.a)());
+                break;
+            case h.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
+                (t = y.i$l.APPLE_PAY), (n = (0, m.b)());
+                break;
+            default:
+                n = (0, g.q1)();
+        }
         return (
-            n.useEffect(() => {
+            i.useEffect(() => {
                 let e = setTimeout(
                     () => {
                         var e;
-                        if (!P)
-                            R(!0),
-                                (0, i.r5)(S.loadId),
-                                !(function (e, a, t, s) {
-                                    let n = _.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, a, t),
-                                        o = new URL(d.Z.makeUrl(_.Z5c.BILLING_LOGIN_HANDOFF)),
-                                        i = (0, l.Z)();
-                                    o.searchParams.append('handoff_key', i),
-                                        o.searchParams.append('redirect_to', n),
-                                        r.tn
-                                            .post({
-                                                url: _.ANM.HANDOFF,
-                                                body: { key: i },
-                                                oldFormErrors: !0
-                                            })
-                                            .then(
-                                                (e) => {
-                                                    o.searchParams.append('handoff_token', e.body.handoff_token), window.open(o.href);
-                                                },
-                                                () => {
-                                                    s();
-                                                }
-                                            );
-                                })(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : p.Xh.PREMIUM_MONTH_TIER_2, I, S.loadId, t);
+                        L || (x(!0), (0, l.r5)(w.loadId), T(null != (e = null == d ? void 0 : d.id) ? e : v.Xh.PREMIUM_MONTH_TIER_2, D, w.loadId, u, t));
                     },
-                    (0, N.q1)().delay ? 1000 : 0
+                    n.delay ? S : 0
                 );
                 return () => clearTimeout(e);
-            }, [c, I, S, t, R, P]),
-            n.useEffect(() => {
-                C === S.loadId && u === m.Y.DONE && a();
-            }, [u, C, S, a]),
-            (0, s.jsxs)('div', {
-                className: T.body,
+            }, [d, D, w, u, x, L, t, n.delay]),
+            i.useEffect(() => {
+                null !== R && (v.YQ.includes(R) && ((0, c.GZ)(R), (0, l.jg)()), N(R)), null !== P && f(P), C === w.loadId && A === b.Y.DONE && a();
+            }, [N, f, A, C, R, P, w, a]),
+            (0, r.jsxs)('div', {
+                className: I.body,
                 children: [
-                    (0, s.jsx)(o.Heading, {
+                    (0, r.jsx)(s.X6q, {
                         variant: 'heading-xl/bold',
-                        children: h.Z.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_HEADER
+                        children: O.NW.string(O.t.C4HYf3)
                     }),
-                    (0, s.jsx)(o.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        className: T.description,
-                        children: h.Z.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_BODY
+                        className: I.description,
+                        children: O.NW.string(O.t.xfG7Ji)
                     })
                 ]
             })
         );
     },
-    S = (e) => {
-        let { onPrimaryClick: a, onBackClick: t } = e;
-        return (0, s.jsx)('div', {
-            children: (0, s.jsxs)(o.ModalFooter, {
-                justify: c.Z.Justify.BETWEEN,
-                align: c.Z.Align.CENTER,
+    A = (e) => {
+        let { onPrimaryClick: t, onBackClick: n } = e;
+        return (0, r.jsx)('div', {
+            children: (0, r.jsxs)(s.mzw, {
+                justify: u.Z.Justify.BETWEEN,
+                align: u.Z.Align.CENTER,
                 children: [
-                    (0, s.jsx)(u.y, {
-                        onClick: a,
-                        children: h.Z.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_NEXT_BUTTON
+                    (0, r.jsx)(d.y, {
+                        onClick: t,
+                        children: O.NW.string(O.t['4Qvmmp'])
                     }),
-                    (0, s.jsx)(u.Z, { onClick: t })
+                    (0, r.jsx)(d.Z, { onClick: n })
                 ]
             })
         });

@@ -1,22 +1,20 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var i = n(735250);
-n(470079);
-var l = n(120356),
-    r = n.n(l),
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
     a = n(686546),
-    s = n(411861);
-function o(e) {
-    let { className: t } = e;
-    return (0, i.jsx)(a.ZP, {
+    s = n(187105);
+function c(e) {
+    let { className: t } = e,
+        n = (0, o.dQu)(o.TVs.modules.guildbar.AVATAR_SIZE);
+    return (0, r.jsx)(a.ZP, {
         mask: a.ZP.Masks.SQUIRCLE,
-        className: r()(t, s.placeholderMask),
-        width: 48,
-        height: 48,
+        className: l()(t, s.placeholderMask),
+        width: n,
+        height: n,
         style: { display: 'block' },
-        children: (0, i.jsx)('div', { className: s.dragInner })
+        children: (0, r.jsx)('div', { className: s.dragInner })
     });
 }

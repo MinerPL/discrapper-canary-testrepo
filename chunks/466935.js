@@ -1,54 +1,53 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-});
-var i = n(735250),
-    l = n(470079),
-    r = n(442837),
-    a = n(481060),
-    s = n(970606),
-    o = n(693546),
+n.d(t, { Z: () => _ });
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(970606),
+    s = n(693546),
     c = n(826581),
     u = n(246364),
     d = n(98493),
-    h = n(703656),
-    p = n(669405),
-    _ = n(434479),
-    f = n(981631),
-    g = n(176505),
-    m = n(689938);
-function C(e) {
+    p = n(703656),
+    h = n(496675),
+    f = n(785195),
+    g = n(434479),
+    m = n(981631),
+    b = n(176505),
+    y = n(388032);
+function _(e) {
     let { guild: t, selected: n } = e,
-        C = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        I = null != C ? C : 0;
+        _ = (0, l.e7)([h.Z], () => h.Z.can(m.Plq.KICK_MEMBERS, t)),
+        v = (0, l.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        O = _ && null != v ? v : 0;
     return (
-        l.useEffect(() => {
-            o.Z.fetchGuildJoinRequests({
-                guildId: t.id,
-                status: u.wB.SUBMITTED,
-                limit: d.p
-            });
-        }, [t.id]),
-        (0, i.jsx)(_.m, {
+        i.useEffect(() => {
+            _ &&
+                s.Z.fetchGuildJoinRequests({
+                    guildId: t.id,
+                    status: u.wB.SUBMITTED,
+                    limit: d.p
+                });
+        }, [_, t.id]),
+        (0, r.jsx)(g.m, {
             id: 'application-review-'.concat(t.id),
             renderIcon: (e) =>
-                (0, i.jsx)(p.Z, {
+                (0, r.jsx)(f.Z, {
                     className: e,
                     width: 24,
                     height: 24
                 }),
-            text: m.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS,
+            text: y.NW.string(y.t.tcvVXF),
             selected: n,
             onClick: () => {
-                (0, s.Q2)({
+                (0, a.Q2)({
                     guildId: t.id,
-                    source: f.jXE.CHANNEL_LIST,
-                    tab: g.oC.MEMBER_APPLICATIONS
+                    source: m.jXE.CHANNEL_LIST,
+                    tab: b.oC.MEMBER_APPLICATIONS
                 }),
-                    (0, h.uL)(f.Z5c.CHANNEL(t.id, g.oC.MEMBER_APPLICATIONS));
+                    (0, p.uL)(m.Z5c.CHANNEL(t.id, b.oC.MEMBER_APPLICATIONS));
             },
-            trailing: I > 0 ? (0, i.jsx)(a.NumberBadge, { count: I }) : null
+            trailing: O > 0 ? (0, r.jsx)(o.mAB, { count: O }) : null
         })
     );
 }

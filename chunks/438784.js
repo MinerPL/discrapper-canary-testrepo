@@ -1,23 +1,78 @@
 n.d(t, {
-    I: function () {
-        return f;
-    },
-    b: function () {
-        return h;
-    }
+    I: () => I,
+    b: () => S
 }),
     n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(338545),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(642128),
     l = n(481060),
-    u = n(120503);
-function c() {
+    c = n(58178);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function p() {
+    return new Promise((e) => setTimeout(e, 1000));
+}
+function h() {
     return document.hasFocus();
 }
-let d = {
+let m = 0.25,
+    g = 4,
+    E = 1,
+    b = 2.8,
+    y = {
         config: {
             friction: 50,
             tension: 900,
@@ -29,65 +84,64 @@ let d = {
         enter: { dotPosition: 1 },
         leave: { dotPosition: 0 }
     },
-    _ = {
+    v = {
         config: { duration: 2400 },
         from: { dotCycle: 2.8 },
         reset: !0
     };
-function E(e) {
+function O(e) {
     let t = e % 2;
     return t > 1 ? 1 - (t - 1) : t;
 }
-let f = i.memo(function (e) {
-        let { dotRadius: t, dotPosition: n, fill: a = 'currentColor', spacing: s = 2.5 } = e,
-            u = i.useRef(c()),
-            d = i.useRef(!0);
-        i.useEffect(() => () => void (d.current = !1), []);
-        let [f] = (0, l.useSpring)(
-                () => ({
-                    ..._,
-                    to: async (e) => {
-                        let t = 2.8;
-                        for (; d.current; ) {
-                            (u.current = c()),
-                                u.current
-                                    ? ((t += 4),
-                                      await e({
-                                          dotCycle: t,
-                                          immediate: !1
-                                      }))
-                                    : 2.8 !== t
-                                      ? ((t = 2.8),
-                                        await e({
-                                            dotCycle: t,
-                                            immediate: !0
-                                        }))
-                                      : await new Promise((e) => setTimeout(e, 1000));
+let I = i.memo(function (e) {
+        let { dotRadius: t, dotPosition: n, fill: o = 'currentColor', spacing: a = 2.5 } = e,
+            c = i.useRef(h()),
+            u = i.useRef(!0);
+        i.useEffect(() => () => void (u.current = !1), []);
+        let [f] = (0, l.q_F)(
+                () =>
+                    _(d({}, v), {
+                        to: async (e) => {
+                            let t = b;
+                            for (; u.current; )
+                                (c.current = h()),
+                                    c.current
+                                        ? ((t += E * g),
+                                          await e({
+                                              dotCycle: t,
+                                              immediate: !1
+                                          }))
+                                        : t !== b
+                                          ? ((t = b),
+                                            await e({
+                                                dotCycle: t,
+                                                immediate: !0
+                                            }))
+                                          : await p();
                         }
-                    }
-                }),
+                    }),
                 'animate-always'
             ),
-            h = (6 * t + (t / 4) * 2) / 2;
+            y = (2 * t * 3 + (t / 4) * 2) / 2;
         return (0, r.jsx)(r.Fragment, {
             children: [0, 1, 2].map((e) => {
-                let i = 0.25 * e,
-                    l = t + t * s * e;
+                let i = m * e,
+                    l = t + t * a * e;
                 return (0, r.jsx)(
-                    o.animated.circle,
+                    s.animated.circle,
                     {
-                        cx: n ? n.to([0, 1], [h, l]) : l,
+                        cx: n ? n.to([0, 1], [y, l]) : l,
                         cy: t,
                         r: f.dotCycle
-                            .to((e) => E(e - i))
+                            .to((e) => O(e - i))
                             .to([0, 0.4, 0.8, 1], [0.8 * t, 0.8 * t, t, t])
-                            .to((e) => (u.current ? e : t)),
-                        fill: a,
+                            .to((e) => (c.current ? e : t)),
+                        fill: o,
                         style: {
                             opacity: f.dotCycle
-                                .to((e) => E(e - i))
+                                .to((e) => O(e - i))
                                 .to([0, 0.4, 0.8, 1], [0.3, 0.3, 1, 1])
-                                .to((e) => (u.current ? e : 1))
+                                .to((e) => (c.current ? e : 1))
                         }
                     },
                     e
@@ -95,19 +149,16 @@ let f = i.memo(function (e) {
             })
         });
     }),
-    h = i.memo(
+    S = i.memo(
         i.forwardRef(function (e, t) {
-            let { dotRadius: n, x: i, y: a, hide: _ = !1, themed: E = !1, className: h } = e;
-            return (0, l.useTransition)(
-                _,
-                {
-                    ...d,
-                    key: (e) => (e ? 'true' : 'false')
-                },
-                c() ? 'animate-always' : 'animate-never'
-            )((e, l, c) => {
+            let { dotRadius: n, x: i, y: o, hide: u = !1, themed: f = !1, className: p } = e;
+            return (0, l.Yzy)(
+                u,
+                _(d({}, y), { key: (e) => (e ? 'true' : 'false') }),
+                h() ? 'animate-always' : 'animate-never'
+            )((e, l, u) => {
                 let { dotPosition: d } = e,
-                    { key: _ } = c;
+                    { key: _ } = u;
                 return l
                     ? null
                     : (0, r.jsx)(
@@ -115,13 +166,13 @@ let f = i.memo(function (e) {
                           {
                               ref: t,
                               x: i,
-                              y: a,
-                              width: 6 * n + (n / 2) * 2,
+                              y: o,
+                              width: 2 * n * 3 + (n / 2) * 2,
                               height: 2 * n,
-                              className: s()(h, u.dots, E ? u.themed : null),
-                              children: (0, r.jsx)(o.animated.g, {
+                              className: a()(p, c.dots, f ? c.themed : null),
+                              children: (0, r.jsx)(s.animated.g, {
                                   style: { opacity: d.to((e) => Math.min(1, Math.max(e, 0))) },
-                                  children: (0, r.jsx)(f, {
+                                  children: (0, r.jsx)(I, {
                                       dotRadius: n,
                                       dotPosition: d
                                   })

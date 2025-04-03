@@ -1,9 +1,5 @@
-t.d(s, {
-    D: function () {
-        return a;
-    }
-});
-let n = (0, t(818083).B)({
+n.d(t, { D: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-03_text_playground_settings_pane',
     label: 'Text Playground',
@@ -16,6 +12,6 @@ let n = (0, t(818083).B)({
         }
     ]
 });
-function a() {
-    return n.getCurrentConfig({ location: '26c832_1' }, { autoTrackExposure: !0 }).showSetting;
+function i() {
+    return r.getCurrentConfig({ location: '26c832_1' }, { autoTrackExposure: !0 }).showSetting;
 }

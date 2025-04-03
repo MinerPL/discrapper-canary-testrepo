@@ -1,39 +1,35 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var r = n(735250);
-n(470079);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(5192),
-    l = n(829820),
-    u = n(316865);
-function c(e) {
-    let { activity: t, user: n, channelId: i, guildId: c, source: d, size: _, look: E, color: f, className: h, onAction: p } = e,
-        { tooltip: m, loading: I, disabled: T, onClick: g } = (0, l.Fe)(t, n, d, o.ZP.getNickname(c, i, n)),
-        S = () => {
-            null == p || p(), g();
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var l = n(120356),
+    i = n.n(l),
+    o = n(481060),
+    a = n(5192),
+    s = n(829820),
+    c = n(862863);
+function u(e) {
+    let { activity: t, user: n, channelId: l, guildId: u, source: d, size: p, look: f, color: m, className: g, onAction: b } = e,
+        { tooltip: O, loading: y, disabled: h, onClick: v } = (0, s.Fe)(t, n, d, a.ZP.getNickname(u, l, n)),
+        j = () => {
+            null == b || b(), v();
         };
-    return (0, r.jsx)(s.Tooltip, {
-        text: m,
+    return (0, r.jsx)(o.ua7, {
+        text: O,
         children: (e) => {
-            let { onMouseEnter: n, onMouseLeave: i } = e;
-            return (0, r.jsx)(s.Button, {
-                size: _,
-                className: a()(u.syncButton, h),
-                innerClassName: u.syncButtonInner,
-                look: E,
-                color: f,
-                onClick: S,
+            let { onMouseEnter: n, onMouseLeave: l } = e;
+            return (0, r.jsx)(o.zxk, {
+                size: p,
+                className: i()(c.syncButton, g),
+                innerClassName: c.syncButtonInner,
+                look: f,
+                color: m,
+                onClick: j,
                 onMouseEnter: n,
-                onMouseLeave: i,
-                disabled: T,
-                submitting: I,
-                'aria-label': null != m ? m : t.name,
-                children: (0, r.jsx)(s.UserPlayIcon, {
+                onMouseLeave: l,
+                disabled: h,
+                submitting: y,
+                'aria-label': null != O ? O : t.name,
+                children: (0, r.jsx)(o.iOO, {
                     size: 'xs',
                     color: 'currentColor'
                 })

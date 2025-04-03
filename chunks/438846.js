@@ -1,18 +1,14 @@
-t.d(n, {
-    K: function () {
-        return r;
-    }
-});
-var i = t(475468),
-    l = t(19780),
-    o = t(981631);
-let r = {
+n.d(t, { K: () => a });
+var r = n(475468),
+    i = n(19780),
+    s = n(981631);
+let a = {
     binds: ['mod+shift+alt+v'],
     comboKeysBindGlobal: !0,
     action(e) {
         e.preventDefault(), e.stopPropagation();
-        let n = l.Z.getGuildId(),
-            t = l.Z.getChannelId();
-        return null != t && (0, i.K)(null != n ? n : o.ME, t), !1;
+        let t = i.Z.getGuildId(),
+            n = i.Z.getChannelId();
+        return null != n && (0, r.K)(null != t ? t : s.ME, n), !1;
     }
 };

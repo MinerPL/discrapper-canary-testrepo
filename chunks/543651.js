@@ -1,67 +1,68 @@
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    s = n(913527),
-    o = n.n(s),
+    o = n.n(i),
+    a = n(913527),
+    s = n.n(a),
     l = n(442837),
-    u = n(481060),
-    c = n(835473),
+    c = n(481060),
+    u = n(835473),
     d = n(318374),
-    _ = n(925329),
-    E = n(594174),
-    f = n(823379),
-    h = n(689938),
-    p = n(207190);
-t.Z = function (e) {
-    let { createdAt: t, participantIds: n, applicationId: i, title: s, guildId: m, className: I } = e,
-        T = (0, c.q)(i),
-        g = (0, l.Wu)([E.default], () => {
+    f = n(925329),
+    _ = n(594174),
+    p = n(823379),
+    h = n(388032),
+    m = n(352665);
+let g = function (e) {
+    let { createdAt: t, participantIds: n, applicationId: i, title: a, guildId: g, className: E } = e,
+        b = (0, u.q)(i),
+        y = (0, l.Wu)([_.default], () => {
             var e;
-            return null !== (e = n.map((e) => E.default.getUser(e)).filter(f.lm)) && void 0 !== e ? e : [];
+            return null != (e = n.map((e) => _.default.getUser(e)).filter(p.lm)) ? e : [];
         }),
-        S = null == T ? void 0 : T.name,
-        A = o()(t).fromNow();
+        v = null == b ? void 0 : b.name,
+        O = s()(t).fromNow();
     return null == t
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(I, p.container),
+              className: o()(E, m.container),
               children: [
-                  (0, r.jsx)(_.Z, { game: T }),
+                  (0, r.jsx)(f.Z, { game: b }),
                   (0, r.jsxs)('div', {
-                      className: p.textSection,
+                      className: m.textSection,
                       children: [
-                          null != s && '' !== s
-                              ? (0, r.jsx)(u.Text, {
+                          null != a && '' !== a
+                              ? (0, r.jsx)(c.Text, {
                                     variant: 'text-md/semibold',
                                     color: 'interactive-active',
-                                    children: s
+                                    children: a
                                 })
-                              : (0, r.jsx)(u.Text, {
+                              : (0, r.jsx)(c.Text, {
                                     variant: 'text-md/semibold',
                                     color: 'text-muted',
-                                    children: h.Z.Messages.CLIPS_UNTITLED
+                                    children: h.NW.string(h.t.Cyxddn)
                                 }),
-                          (0, r.jsxs)(u.Text, {
+                          (0, r.jsxs)(c.Text, {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
-                              className: p.__invalid_subtitle,
-                              children: [null != S ? ''.concat(S, ' \u2022 ') : null, A]
+                              className: m.__invalid_subtitle,
+                              children: [null != v ? ''.concat(v, ' \u2022 ') : null, O]
                           }),
-                          (0, r.jsx)(u.Text, {
+                          (0, r.jsx)(c.Text, {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
-                              className: p.__invalid_subtitle
+                              className: m.__invalid_subtitle
                           })
                       ]
                   }),
-                  null != g &&
-                      g.length > 0 &&
+                  null != y &&
+                      y.length > 0 &&
                       (0, r.jsx)(d.Z, {
                           maxUsers: 4,
-                          users: g,
-                          className: p.__invalid_facePile,
-                          guildId: m
+                          users: y,
+                          className: m.__invalid_facePile,
+                          guildId: g
                       })
               ]
           });

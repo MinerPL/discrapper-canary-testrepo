@@ -1,45 +1,37 @@
-n(653041);
-var r = n(735250),
-    i = n(470079),
-    a = n(834427),
-    s = n(579806),
-    o = n(403182),
-    l = n(358085),
-    u = n(380684),
-    c = n(861990);
-function d(e) {
-    let t = ['openFile'];
-    e.multiple && t.push('multiSelections');
-    let n = e.filters;
-    s.Z.fileManager
-        .openFiles(
-            {
-                properties: t,
-                filters: n
-            },
-            (0, u.Xv)() ? c.Ld : c.zz
-        )
-        .then((t) => {
-            let n = t.map((e) => o.qF(e));
-            null != n &&
-                e.onChange({
-                    stopPropagation: () => null,
-                    preventDefault: () => null,
-                    currentTarget: { files: n }
-                });
-        })
-        .catch((t) => {
-            e.onChange({
-                stopPropagation: () => null,
-                preventDefault: () => null,
-                currentTarget: {
-                    files: null,
-                    err: t
-                }
-            });
-        });
+n.d(t, { Z: () => c });
+var r = n(200651),
+    i = n(192379),
+    o = n(834427);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-class _ extends i.Component {
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+class l extends i.Component {
     activateUploadDialogue() {
         if (null != this._ref) return this._ref.activateUploadDialogue();
     }
@@ -47,28 +39,10 @@ class _ extends i.Component {
         this._ref = e;
     }
     render() {
-        return (0, r.jsx)(a.S, {
-            ref: this.setRef,
-            handleNativeClick: d,
-            embedded: (0, l.isDesktop)(),
-            ...this.props
-        });
+        return (0, r.jsx)(o.S, s({ ref: this.setRef }, this.props));
     }
     constructor(e) {
-        var t, n, r;
-        super(e),
-            (t = this),
-            (n = '_ref'),
-            (r = i.createRef()),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r),
-            (this.setRef = this.setRef.bind(this));
+        super(e), a(this, '_ref', i.createRef()), (this.setRef = this.setRef.bind(this));
     }
 }
-t.Z = _;
+let c = l;

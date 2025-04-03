@@ -1,121 +1,155 @@
-n.r(t),
-    n.d(t, {
-        InappropriateConversationModalSlideKeys: function () {
-            return s;
-        }
-    }),
+n.d(e, {
+    default: () => b,
+    x: () => x
+}),
     n(47120);
-var s,
-    o,
-    r = n(735250),
-    a = n(470079),
+var r,
+    s = n(200651),
+    o = n(192379),
     i = n(481060),
     c = n(378298),
-    E = n(473092),
-    N = n(684471),
+    a = n(473092),
+    l = n(684471),
     u = n(745982),
-    T = n(463439),
-    I = n(689938),
-    _ = n(303690);
-((o = s || (s = {}))[(o.INTRO = 0)] = 'INTRO'), (o[(o.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (o[(o.TAKE_ACTION = 2)] = 'TAKE_ACTION');
-t.default = (e) => {
-    let { warningId: t, warningType: n, senderId: s, modalProps: o, channelId: l } = e,
-        [A, d] = a.useState(0),
-        R = a.useMemo(
+    d = n(463439),
+    N = n(388032),
+    E = n(257025);
+function h(t) {
+    for (var e = 1; e < arguments.length; e++) {
+        var n = null != arguments[e] ? arguments[e] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                })
+            )),
+            r.forEach(function (e) {
+                var r;
+                (r = n[e]),
+                    e in t
+                        ? Object.defineProperty(t, e, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (t[e] = r);
+            });
+    }
+    return t;
+}
+function _(t, e) {
+    return (
+        (e = null != e ? e : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+            : (function (t, e) {
+                  var n = Object.keys(t);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(t);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(e)).forEach(function (n) {
+                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
+              }),
+        t
+    );
+}
+var x = (((r = {})[(r.INTRO = 0)] = 'INTRO'), (r[(r.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (r[(r.TAKE_ACTION = 2)] = 'TAKE_ACTION'), r);
+let b = (t) => {
+    let { warningId: e, warningType: n, senderId: r, modalProps: x, channelId: b } = t,
+        [f, p] = o.useState(0),
+        g = o.useMemo(
             () => ({
-                channelId: l,
-                senderId: s,
-                warningId: t,
+                channelId: b,
+                senderId: r,
+                warningId: e,
                 warningType: n,
                 isNudgeWarning: !1
             }),
-            [l, s, t, n]
+            [b, r, e, n]
         );
-    a.useEffect(() => {
-        (0, E.KQ)({
-            ...R,
-            viewName: E.pb.SAFETY_TAKEOVER_MODAL
-        });
-    }, [R]);
-    let O = a.useCallback(
-            (e) => {
-                (0, E.qc)({
-                    ...R,
-                    cta: e
-                });
+    o.useEffect(() => {
+        (0, a.KQ)(_(h({}, g), { viewName: a.pb.SAFETY_TAKEOVER_MODAL }));
+    }, [g]);
+    let m = o.useCallback(
+            (t) => {
+                (0, a.qc)(_(h({}, g), { cta: t }));
             },
-            [R]
+            [g]
         ),
-        [C, S] = a.useState(!1);
-    function P(e) {
-        d(e);
+        [C, I] = o.useState(!1);
+    function A(t) {
+        p(t);
     }
-    return (0, r.jsxs)(i.ModalRoot, {
-        transitionState: o.transitionState,
+    return (0, s.jsxs)(i.Y0X, {
+        transitionState: x.transitionState,
         children: [
-            (0, r.jsx)('div', {
-                className: _.container,
-                children: (0, r.jsxs)(i.Slides, {
+            (0, s.jsx)('div', {
+                className: E.container,
+                children: (0, s.jsxs)(i.MyZ, {
                     width: 440,
-                    activeSlide: A,
+                    activeSlide: f,
                     centered: !1,
                     overflow: 'visible',
                     contentDisplay: 'flex',
                     children: [
-                        (0, r.jsx)(i.Slide, {
+                        (0, s.jsx)(i.Mi4, {
                             id: 0,
-                            children: (0, r.jsx)(N.Z, {
-                                warningId: t,
-                                senderId: s,
-                                trackAnalyticsEvent: O,
-                                onNavigate: P
+                            children: (0, s.jsx)(l.Z, {
+                                warningId: e,
+                                senderId: r,
+                                trackAnalyticsEvent: m,
+                                onNavigate: A
                             })
                         }),
-                        (0, r.jsx)(i.Slide, {
+                        (0, s.jsx)(i.Mi4, {
                             id: 1,
-                            children: (0, r.jsx)(u.Z, {
-                                warningId: t,
-                                senderId: s,
-                                trackAnalyticsEvent: O
+                            children: (0, s.jsx)(u.Z, {
+                                warningId: e,
+                                senderId: r,
+                                trackAnalyticsEvent: m
                             })
                         }),
-                        (0, r.jsx)(i.Slide, {
+                        (0, s.jsx)(i.Mi4, {
                             id: 2,
-                            children: (0, r.jsx)(T.Z, {
-                                warningId: t,
-                                senderId: s,
-                                trackAnalyticsEvent: O,
-                                channelId: l,
+                            children: (0, s.jsx)(d.Z, {
+                                warningId: e,
+                                senderId: r,
+                                trackAnalyticsEvent: m,
+                                channelId: b,
                                 hasReported: C,
                                 onReport: function () {
-                                    S(!0);
+                                    I(!0);
                                 }
                             })
                         })
                     ]
                 })
             }),
-            (0, r.jsxs)(i.ModalFooter, {
-                className: _.footer,
+            (0, s.jsxs)(i.mzw, {
+                className: E.footer,
                 children: [
-                    (0, r.jsx)(i.Button, {
-                        className: _.footerButton,
-                        look: i.Button.Looks.LINK,
-                        color: i.Button.Colors.CUSTOM,
-                        size: i.Button.Sizes.MIN,
+                    (0, s.jsx)(i.zxk, {
+                        className: E.footerButton,
+                        look: i.zxk.Looks.LINK,
+                        color: i.zxk.Colors.CUSTOM,
+                        size: i.zxk.Sizes.MIN,
                         onClick: function () {
-                            o.onClose(), (0, c.T)(l, [t]), O(E.NM.USER_TAKEOVER_MODAL_DISMISS);
+                            x.onClose(), (0, c.T)(b, [e]), m(a.NM.USER_TAKEOVER_MODAL_DISMISS);
                         },
-                        children: I.Z.Messages.CLOSE
+                        children: N.NW.string(N.t.cpT0Cg)
                     }),
-                    0 !== A &&
-                        (0, r.jsx)(i.Button, {
-                            className: _.footerButton,
-                            look: i.Button.Looks.LINK,
-                            color: i.Button.Colors.CUSTOM,
-                            size: i.Button.Sizes.MIN,
-                            onClick: () => P(0),
-                            children: I.Z.Messages.BACK
+                    0 !== f &&
+                        (0, s.jsx)(i.zxk, {
+                            className: E.footerButton,
+                            look: i.zxk.Looks.LINK,
+                            color: i.zxk.Colors.CUSTOM,
+                            size: i.zxk.Sizes.MIN,
+                            onClick: () => A(0),
+                            children: N.NW.string(N.t['13/7kZ'])
                         })
                 ]
             })

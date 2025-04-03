@@ -1,87 +1,152 @@
-n.d(t, {
-    Z: function () {
-        return T;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => I });
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    s = n(442837),
-    o = n(481060),
+    o = n.n(i),
+    a = n(442837),
+    s = n(481060),
     l = n(100527),
-    u = n(906732),
-    c = n(849522),
+    c = n(906732),
+    u = n(849522),
     d = n(639119),
-    _ = n(594174),
-    E = n(74538),
-    f = n(694320),
+    f = n(594174),
+    _ = n(74538),
+    p = n(694320),
     h = n(981631),
-    p = n(474936),
-    m = n(689938),
-    I = n(847943);
-function T(e) {
-    var t, n, i, T;
-    let { type: g, textValue: S, maxCharacterCount: A, showRemainingCharsAfterCount: N, className: v } = e,
-        O = (0, s.e7)([_.default], () => E.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())),
-        R = (0, c.Z)(),
-        C = null != A ? A : R,
-        y = null !== (T = null != N ? N : A) && void 0 !== T ? T : R / 10,
-        D = S.length,
-        L = null != g.upsellLongMessages && (null != D ? D : 0) > h.J6R && O,
-        b = null != g.upsellLongMessages && !O,
-        M = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === p.Si.TIER_2,
-        P = C - D,
-        U = P > y,
-        w = P < 0 && M,
-        x = 0 === P ? m.Z.Messages.CHARACTER_COUNT_AT_LIMIT : P > 0 ? m.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({ count: P }) : m.Z.Messages.CHARACTER_COUNT_OVER_LIMIT,
-        { analyticsLocations: G } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
-    return (L && P >= 0) || !U || (b && !U)
-        ? (0, r.jsx)(u.Gt, {
-              value: G,
-              children: (0, r.jsxs)('div', {
-                  className: a()(v, I.characterCount, { [I.error]: P < 0 }),
-                  children: [
-                      (0, r.jsxs)('div', {
-                          className: I.flairContainer,
-                          children: [
-                              L && P >= 0
-                                  ? (0, r.jsx)(o.Tooltip, {
-                                        text: m.Z.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({ maxLength: C }),
-                                        position: 'top',
-                                        children: (e) =>
-                                            (0, r.jsx)(o.NitroWheelIcon, {
-                                                size: 'md',
-                                                color: 'currentColor',
-                                                className: I.premiumFlair,
-                                                ...e
-                                            })
-                                    })
-                                  : null,
-                              U || w
-                                  ? null
-                                  : (0, r.jsx)(o.Tooltip, {
-                                        text: x,
-                                        position: 'top',
-                                        children: (e) =>
-                                            (0, r.jsx)('span', {
-                                                'aria-hidden': !0,
-                                                ...e,
-                                                children: P
-                                            })
-                                    })
-                          ]
-                      }),
-                      (0, r.jsx)(o.HiddenVisually, { children: m.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({ count: P }) }),
-                      b && !U
-                          ? (0, r.jsx)(f.Z, {
-                                className: I.upsell,
-                                iconOnly: (null === (i = g.upsellLongMessages) || void 0 === i ? void 0 : i.iconOnly) || !1,
-                                remaining: P
-                            })
-                          : null
-                  ]
+    m = n(474936),
+    g = n(388032),
+    E = n(317727);
+function b(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
               })
-          })
-        : null;
+            : (e[t] = n),
+        e
+    );
+}
+function y(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                b(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function v(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : v(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function I(e) {
+    var t, n, i, b;
+    let { type: v, textValue: I, maxCharacterCount: S, showRemainingCharsAfterCount: T, className: N } = e,
+        A = (0, a.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
+        C = (0, u.Z)(),
+        R = null != S ? S : C,
+        P = null != (b = null != T ? T : S) ? b : C / 10,
+        w = I.length,
+        D = null != v.upsellLongMessages && (null != w ? w : 0) > h.J6R && A,
+        L = null != v.upsellLongMessages && !A,
+        x = (null == (n = (0, d.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === m.Si.TIER_2,
+        M = R - w,
+        k = M > P,
+        j = M < 0 && x,
+        U = 0 === M ? g.NW.string(g.t.tU6YQ0) : M > 0 ? g.NW.formatToPlainString(g.t.qH8uFR, { count: M }) : g.NW.string(g.t.YSRIqa),
+        { analyticsLocations: G } = (0, c.ZP)(l.Z.CHARACTER_COUNT);
+    if (!((D && M >= 0) || !k || (L && !k))) return null;
+    let B = M >= 0;
+    return (0, r.jsx)(c.Gt, {
+        value: G,
+        children: (0, r.jsxs)('div', {
+            className: o()(N, E.characterCount),
+            children: [
+                (0, r.jsxs)('div', {
+                    className: E.flairContainer,
+                    children: [
+                        D && B
+                            ? (0, r.jsx)(s.ua7, {
+                                  text: g.NW.formatToPlainString(g.t.vcvHa2, { maxLength: R }),
+                                  position: 'top',
+                                  children: (e) =>
+                                      (0, r.jsx)(
+                                          s.SrA,
+                                          y(
+                                              {
+                                                  size: 'md',
+                                                  color: 'currentColor',
+                                                  className: E.premiumFlair
+                                              },
+                                              e
+                                          )
+                                      )
+                              })
+                            : null,
+                        k || j
+                            ? null
+                            : (0, r.jsx)(s.ua7, {
+                                  text: U,
+                                  position: 'top',
+                                  children: (e) =>
+                                      (0, r.jsx)(
+                                          s.Text,
+                                          O(
+                                              y(
+                                                  {
+                                                      variant: 'text-sm/semibold',
+                                                      tabularNumbers: !0,
+                                                      'aria-hidden': !0
+                                                  },
+                                                  e
+                                              ),
+                                              {
+                                                  color: B ? 'text-normal' : 'text-danger',
+                                                  children: M
+                                              }
+                                          )
+                                      )
+                              })
+                    ]
+                }),
+                (0, r.jsx)(s.nn4, { children: g.NW.format(g.t.qH8uFR, { count: M }) }),
+                L && !k
+                    ? (0, r.jsx)(p.Z, {
+                          className: E.upsell,
+                          iconOnly: (null == (i = v.upsellLongMessages) ? void 0 : i.iconOnly) || !1,
+                          remaining: M
+                      })
+                    : null
+            ]
+        })
+    });
 }

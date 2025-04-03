@@ -1,31 +1,26 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return d;
-        },
-        useHasGuildRoleItems: function () {
-            return o;
-        }
-    });
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    s = t(239091),
-    l = t(241635),
-    r = t(689938);
-function o(e, n) {
-    return (0, l.Z)(e, n).length > 0;
+n.d(t, {
+    default: () => c,
+    e: () => s
+});
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(239091),
+    o = n(241635),
+    a = n(388032);
+function s(e, t) {
+    return (0, o.Z)(e, t).length > 0;
 }
-function d(e) {
-    let { role: n, guild: t, onSelect: o } = e,
-        d = (0, l.Z)(t, n);
-    return 0 === d.length
+function c(e) {
+    let { role: t, guild: n, onSelect: s } = e,
+        c = (0, o.Z)(n, t);
+    return 0 === c.length
         ? null
-        : (0, i.jsx)(a.Menu, {
+        : (0, r.jsx)(i.v2r, {
               navId: 'guild-settings-role-context',
-              'aria-label': r.Z.Messages.GUILD_ROLE_ACTIONS_MENU_LABEL,
-              onClose: s.Zy,
-              onSelect: o,
-              children: d
+              'aria-label': a.NW.string(a.t['337Ja2']),
+              onClose: l.Zy,
+              onSelect: s,
+              children: c
           });
 }

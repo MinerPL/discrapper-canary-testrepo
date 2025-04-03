@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var i = n(380349);
-function a(e) {
+n.d(t, { Z: () => i });
+var r = n(380349);
+function i(e) {
     let { currentActivities: t, isSpotifyActivity: n } = e,
-        a = t[0],
-        s = (0, i.Z)(null == a ? void 0 : a.activity, null == a ? void 0 : a.activityUser);
-    return n ? s : null;
+        i = t[0],
+        l = (0, r.Z)(null == i ? void 0 : i.activity, null == i ? void 0 : i.activityUser);
+    return n ? l : null;
 }

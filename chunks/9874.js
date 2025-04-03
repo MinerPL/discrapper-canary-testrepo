@@ -1,10 +1,6 @@
-t.d(A, {
-    F: function () {
-        return n;
-    }
-});
-var a = t(680287);
-function n(e) {
-    let A = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'POST';
-    return new a.Z(e, A, { raiseEndpointErrors: !0 });
+r.d(t, { F: () => A });
+var n = r(680287);
+function A(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'POST';
+    return new n.Z(e, t, { raiseEndpointErrors: !0 });
 }

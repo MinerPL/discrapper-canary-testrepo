@@ -1,47 +1,92 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    a = n.n(i),
     l = n(481060),
-    r = n(871499),
-    o = n(689938),
-    c = n(461245);
+    o = n(871499),
+    s = n(388032),
+    c = n(486748);
 function u(e) {
     let { className: t, count: n } = e;
-    return (0, i.jsxs)('div', {
-        className: s()(c.root, c.comboIcon, t),
+    return (0, r.jsxs)('div', {
+        className: a()(c.root, c.comboIcon, t),
         children: [
-            (0, i.jsx)(l.GroupIcon, {
+            (0, r.jsx)(l.BFJ, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon
             }),
-            (0, i.jsx)(l.Text, {
-                color: 'none',
-                className: c.count,
-                variant: 'text-md/normal',
-                children: n
-            })
+            null != n &&
+                (0, r.jsx)(l.Text, {
+                    color: 'none',
+                    className: c.count,
+                    variant: 'text-md/normal',
+                    children: n
+                })
         ]
     });
 }
 function d(e) {
-    let { count: t, ...n } = e;
-    return (0, i.jsx)(r.Z, {
-        label: o.Z.Messages.CHANNEL_CALL_PARTICIPANTS,
-        iconComponent: (e) => {
-            let { className: n } = e;
-            return (0, i.jsx)(u, {
-                className: n,
-                count: t
-            });
-        },
-        tooltipPosition: 'bottom',
-        ...n
-    });
+    var { count: t } = e,
+        n = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['count']);
+    return (0, r.jsx)(
+        o.Z,
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                label: s.NW.string(s.t.jNqDh4),
+                iconComponent: (e) => {
+                    let { className: n } = e;
+                    return (0, r.jsx)(u, {
+                        className: n,
+                        count: t
+                    });
+                },
+                tooltipPosition: 'bottom'
+            },
+            n
+        )
+    );
 }

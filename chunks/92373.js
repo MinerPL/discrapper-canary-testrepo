@@ -1,77 +1,78 @@
-var a = t(735250),
-    r = t(470079),
-    i = t(120356),
-    s = t.n(i),
-    o = t(481060),
-    l = t(442837),
-    c = t(210753),
-    d = t(77498),
-    u = t(689938),
-    m = t(840078);
-n.Z = function (e) {
-    let { applicationId: n, imageContainerClassName: t, onClick: i, selected: _, locked: f = !1, otherGamesCount: C = 0 } = e,
-        h = (0, o.useToken)(o.tokens.colors.WHITE),
-        { isFetching: x, coverImageUrl: p } = (0, c.$)(n, {
+n.d(t, { Z: () => g });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
+    o = n(442837),
+    c = n(210753),
+    d = n(77498),
+    u = n(388032),
+    m = n(402770);
+let g = function (e) {
+    let { applicationId: t, imageContainerClassName: n, onClick: s, selected: g, locked: p = !1, otherGamesCount: h = 0 } = e,
+        f = (0, l.dQu)(l.TVs.colors.WHITE),
+        { isFetching: b, coverImageUrl: x } = (0, c.$)(t, {
             coverImageHeight: 336,
             coverImageWidth: 252
         }),
-        g = (0, l.e7)([d.Z], () => {
-            var e, t;
-            return null !== (t = null === (e = d.Z.getDetectableGame(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : '';
+        j = (0, o.e7)([d.Z], () => {
+            var e, n;
+            return null != (n = null == (e = d.Z.getDetectableGame(t)) ? void 0 : e.name) ? n : '';
         }),
-        T = r.useCallback(() => {
-            null == i || i(n);
-        }, [n, i]),
-        E = r.useMemo(
+        N = i.useCallback(() => {
+            null == s || s(t);
+        }, [t, s]),
+        _ = i.useMemo(
             () =>
-                x
+                b
                     ? null
-                    : null == p
-                      ? (0, a.jsx)('div', {
+                    : null == x
+                      ? (0, r.jsx)('div', {
                             className: m.gameUnknownImage,
-                            children: (0, a.jsx)(o.UnknownGameIcon, { size: 'lg' })
+                            children: (0, r.jsx)(l.IMN, { size: 'lg' })
                         })
-                      : (0, a.jsx)('img', {
+                      : (0, r.jsx)('img', {
                             className: m.gameImage,
-                            alt: g,
-                            src: p
+                            alt: j,
+                            src: x
                         }),
-            [p, x, g]
+            [x, b, j]
         );
-    return (0, a.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: m.selectedGame,
         children: [
-            (0, a.jsxs)(o.Clickable, {
-                onClick: T,
-                className: s()(t, x ? m.gameImageLoading : void 0, m.gameImageBackground),
+            (0, r.jsxs)(l.P3F, {
+                onClick: N,
+                className: a()(n, b ? m.gameImageLoading : void 0, m.gameImageBackground),
                 children: [
-                    _ &&
-                        (0, a.jsx)('div', {
+                    g &&
+                        (0, r.jsx)('div', {
                             className: m.checkBackground,
-                            children: (0, a.jsx)(o.CircleCheckIcon, {
+                            children: (0, r.jsx)(l.owK, {
                                 size: 'md',
                                 color: 'currentColor',
-                                secondaryColor: h.hex(),
-                                className: s()(m.selectedGameCheck, { [m.selectedGameCheckLocked]: f })
+                                secondaryColor: f.hex(),
+                                className: a()(m.selectedGameCheck, { [m.selectedGameCheckLocked]: p })
                             })
                         }),
-                    E,
-                    C > 0 &&
-                        (0, a.jsx)('div', {
+                    _,
+                    h > 0 &&
+                        (0, r.jsx)('div', {
                             className: m.remainingGame,
-                            children: (0, a.jsx)(o.Text, {
+                            children: (0, r.jsx)(l.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
-                                children: u.Z.Messages.COUNT_REMAINING.format({ count: C })
+                                children: u.NW.format(u.t.F6iMs7, { count: h })
                             })
                         })
                 ]
             }),
-            (0, a.jsxs)(o.Text, {
+            (0, r.jsxs)(l.Text, {
                 className: m.gameName,
                 variant: 'text-xs/normal',
                 color: 'header-primary',
-                children: [g, f && (0, a.jsx)(o.LockIcon, { size: 'xxs' })]
+                children: [j, p && (0, r.jsx)(l.mBM, { size: 'xxs' })]
             })
         ]
     });

@@ -48,24 +48,31 @@ function f() {
         };
     }
     function Z(e, n, r, o) {
-        var a = i((n && n.prototype instanceof A ? n : A).prototype);
+        var a,
+            s,
+            c,
+            l,
+            u = i((n && n.prototype instanceof A ? n : A).prototype);
         return (
-            v(a, '_invoke', {
-                value: (function (e, n, r) {
-                    var o = S;
-                    return function (a, i) {
-                        if (o === N) throw Error('Generator is already running');
-                        if (o === x) {
-                            if ('throw' === a) throw i;
+            v(u, '_invoke', {
+                value:
+                    ((a = e),
+                    (s = r),
+                    (c = new L(o || [])),
+                    (l = S),
+                    function (e, n) {
+                        if (l === N) throw Error('Generator is already running');
+                        if (l === x) {
+                            if ('throw' === e) throw n;
                             return {
                                 value: t,
                                 done: !0
                             };
                         }
-                        for (r.method = a, r.arg = i; ; ) {
-                            var s = r.delegate;
-                            if (s) {
-                                var c = (function e(n, r) {
+                        for (c.method = e, c.arg = n; ; ) {
+                            var r = c.delegate;
+                            if (r) {
+                                var o = (function e(n, r) {
                                     var o = r.method,
                                         a = n.iterator[o];
                                     if (a === t) return (r.delegate = null), ('throw' === o && n.iterator.return && ((r.method = 'return'), (r.arg = t), e(n, r), 'throw' === r.method)) || ('return' !== o && ((r.method = 'throw'), (r.arg = TypeError("The iterator does not provide a '" + o + "' method")))), P;
@@ -73,32 +80,31 @@ function f() {
                                     if ('throw' === i.type) return (r.method = 'throw'), (r.arg = i.arg), (r.delegate = null), P;
                                     var s = i.arg;
                                     return s ? (s.done ? ((r[n.resultName] = s.value), (r.next = n.nextLoc), 'return' !== r.method && ((r.method = 'next'), (r.arg = t)), (r.delegate = null), P) : s) : ((r.method = 'throw'), (r.arg = TypeError('iterator result is not an object')), (r.delegate = null), P);
-                                })(s, r);
-                                if (c) {
-                                    if (c === P) continue;
-                                    return c;
+                                })(r, c);
+                                if (o) {
+                                    if (o === P) continue;
+                                    return o;
                                 }
                             }
-                            if ('next' === r.method) r.sent = r._sent = r.arg;
-                            else if ('throw' === r.method) {
-                                if (o === S) throw ((o = x), r.arg);
-                                r.dispatchException(r.arg);
-                            } else 'return' === r.method && r.abrupt('return', r.arg);
-                            o = N;
-                            var l = w(e, n, r);
-                            if ('normal' === l.type) {
-                                if (((o = r.done ? x : 'suspendedYield'), l.arg === P)) continue;
+                            if ('next' === c.method) c.sent = c._sent = c.arg;
+                            else if ('throw' === c.method) {
+                                if (l === S) throw ((l = x), c.arg);
+                                c.dispatchException(c.arg);
+                            } else 'return' === c.method && c.abrupt('return', c.arg);
+                            l = N;
+                            var i = w(a, s, c);
+                            if ('normal' === i.type) {
+                                if (((l = c.done ? x : 'suspendedYield'), i.arg === P)) continue;
                                 return {
-                                    value: l.arg,
-                                    done: r.done
+                                    value: i.arg,
+                                    done: c.done
                                 };
                             }
-                            'throw' === l.type && ((o = x), (r.method = 'throw'), (r.arg = l.arg));
+                            'throw' === i.type && ((l = x), (c.method = 'throw'), (c.arg = i.arg));
                         }
-                    };
-                })(e, r, new L(o || []))
+                    })
             }),
-            a
+            u
         );
     }
     function w(e, t, n) {

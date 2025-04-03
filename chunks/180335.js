@@ -1,80 +1,44 @@
 n.d(t, {
-    AZ: function () {
-        return f;
-    },
-    Bq: function () {
-        return g;
-    },
-    RL: function () {
-        return I;
-    },
-    Ym: function () {
-        return p;
-    },
-    gr: function () {
-        return h;
-    },
-    pB: function () {
-        return m;
-    },
-    vu: function () {
-        return T;
-    }
+    AZ: () => u,
+    RL: () => p,
+    cN: () => f,
+    gr: () => d,
+    pB: () => _,
+    vu: () => h
 }),
     n(47120);
 var r = n(423875),
-    i = n(442837),
-    a = n(394821),
-    s = n(353647),
-    o = n(146282),
-    l = n(26033),
-    u = n(561308),
-    c = n(206583),
-    d = n(981631),
-    _ = n(616922),
-    E = n(728151);
-function f(e) {
-    if ((0, l.dU)(e)) {
+    i = n(394821),
+    o = n(26033),
+    a = n(561308),
+    s = n(981631),
+    l = n(616922),
+    c = n(728151);
+function u(e) {
+    if ((0, o.dU)(e)) {
         var t, n;
-        return (null === (n = e.extra.entries[0]) || void 0 === n ? void 0 : null === (t = n.media) || void 0 === t ? void 0 : t.provider) === r.p.SPOTIFY;
+        return (null == (n = e.extra.entries[0]) || null == (t = n.media) ? void 0 : t.provider) === r.p.SPOTIFY;
     }
-    return !!(0, l.KF)(e) && e.extra.media.provider === r.p.SPOTIFY;
+    return !!(0, o.KF)(e) && e.extra.media.provider === r.p.SPOTIFY;
 }
-function h(e) {
-    return !!(0, l.y0)(e) && e.extra.application_id === E.sp;
+function d(e) {
+    return !!(0, o.y0)(e) && e.extra.application_id === c.sp;
 }
-function p(e, t) {
+function f(e, t) {
     let n = e.extra;
-    return null != n && (('application_id' in t && t.application_id === n.application_id) || ('game_name' in n && t.name === n.game_name));
+    return null != n && (('application_id' in t && t.application_id === n.application_id) || ('game_name' in n ? t.name === n.game_name : 'activity_name' in n && t.name === n.activity_name));
 }
-function m(e, t) {
-    if (f(e)) {
+function _(e, t) {
+    if (u(e)) {
         var n;
-        return (0, _.Ps)(null === (n = t.party) || void 0 === n ? void 0 : n.id);
+        return (0, l.Ps)(null == (n = t.party) ? void 0 : n.id);
     }
     return !1;
 }
-function I(e, t) {
-    return !!((0, a.Z)(t) && h(e)) && e.extra.media_title === t.details;
+function p(e, t) {
+    return !!((0, i.Z)(t) && d(e)) && e.extra.media_title === t.details;
 }
-function T(e, t) {
-    let n = e.filter(u.kr);
-    return t.type === d.IIU.PLAYING ? n.filter(l.dX).find((e) => p(e, t)) : t.type === d.IIU.LISTENING ? n.filter(l.dU).find((e) => m(e, t)) : t.type === d.IIU.WATCHING ? e.filter(l.y0).find((e) => I(e, t)) : void 0;
-}
-function g(e) {
-    let { activity: t, user: n } = e,
-        r = (0, i.e7)([o.Z], () =>
-            o.Z.getMatchingInboxEntry({
-                activity: t,
-                userId: n.id,
-                feedId: c.YN.GLOBAL_FEED
-            })
-        ),
-        a = (0, i.e7)([s.Z], () =>
-            s.Z.getMatchingOutboxEntry({
-                activity: t,
-                userId: n.id
-            })
-        );
-    return null != r ? r : a;
+function h(e, t) {
+    let n = e.filter(a.kr);
+    return t.type === s.IIU.PLAYING ? n.filter(o.dX).find((e) => f(e, t)) : t.type === s.IIU.LISTENING ? n.filter(o.dU).find((e) => _(e, t)) : t.type === s.IIU.WATCHING ? e.filter(o.y0).find((e) => p(e, t)) : void 0;
 }

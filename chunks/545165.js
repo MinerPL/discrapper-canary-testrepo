@@ -1,30 +1,26 @@
-l.d(n, {
-    SU: function () {
-        return i;
-    },
-    sR: function () {
-        return r;
-    }
+n.d(t, {
+    SU: () => i,
+    sR: () => s
 }),
-    l(47120),
-    l(653041);
-var s = l(442837),
-    a = l(889161);
-l(427679);
-var t = l(984933);
-function i(e, n) {
-    let [l] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [t.ZP];
-    if (null == n) return [];
-    let s = l.getChannels(e)[t.Zb],
+    n(47120),
+    n(653041);
+var r = n(442837),
+    l = n(357156);
+n(427679);
+var a = n(984933);
+function i(e, t) {
+    let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.ZP];
+    if (null == t) return [];
+    let r = n.getChannels(e)[a.Zb],
         i = [];
-    for (let { channel: e } of s) {
-        let { canCreateGuildEvent: l, canManageAllEvents: s } = (0, a.Gw)(e),
-            t = l || s;
-        if (e.type === n) e.isGuildVoice() && t ? i.push(e) : e.isGuildStageVoice() && t && i.push(e);
+    for (let { channel: e } of r) {
+        let { canCreateGuildEvent: n, canManageAllEvents: r } = (0, l.Gw)(e),
+            a = n || r;
+        e.type === t && (e.isGuildVoice() && a ? i.push(e) : e.isGuildStageVoice() && a && i.push(e));
     }
     return i;
 }
-function r(e, n) {
-    return (0, s.Wu)([t.ZP], () => i(e, n, [t.ZP]), [e, n]);
+function s(e, t) {
+    return (0, r.Wu)([a.ZP], () => i(e, t, [a.ZP]), [e, t]);
 }
-l(496675), l(85243);
+n(496675), n(85243);

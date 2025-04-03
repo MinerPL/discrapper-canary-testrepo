@@ -1,23 +1,43 @@
-s.d(n, {
-    Z: function () {
-        return a;
-    }
+n.d(t, {
+    Z: () => d,
+    e: () => u
 });
-var i = s(735250);
-s(470079);
-var l = s(481060),
-    t = s(341896);
-function a(e) {
-    let { text: n, color: s } = e;
-    return (0, i.jsxs)('div', {
-        className: t.upsellFooter,
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    o = n.n(i),
+    l = n(481060),
+    s = n(388032),
+    a = n(978862),
+    c = n(531599);
+function u() {
+    return (0, r.jsxs)('div', {
+        className: o()(a.upsellFooter, a.reverseTrialUpsellContainer),
         children: [
-            (0, i.jsx)(l.NitroWheelIcon, {
-                size: 'md',
-                className: t.upsellFooterIcon,
-                color: s
+            (0, r.jsx)('img', {
+                src: c.Z,
+                alt: 'reverse trial unlock',
+                className: a.unlockIcon
             }),
-            (0, i.jsx)('div', { children: n })
+            (0, r.jsx)(l.Text, {
+                variant: 'text-sm/medium',
+                className: a.upsellText,
+                children: s.NW.format(s.t.f5VHKi, {})
+            })
+        ]
+    });
+}
+function d(e) {
+    let { text: t, color: n } = e;
+    return (0, r.jsxs)('div', {
+        className: a.upsellFooter,
+        children: [
+            (0, r.jsx)(l.SrA, {
+                size: 'md',
+                className: a.upsellFooterIcon,
+                color: n
+            }),
+            (0, r.jsx)('div', { children: t })
         ]
     });
 }

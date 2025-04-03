@@ -1,177 +1,176 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(780384),
+n.d(t, { Z: () => y }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(780384),
     l = n(481060),
-    u = n(410030),
-    c = n(424218),
-    d = n(380684),
-    _ = n(981631),
-    E = n(474936),
-    f = n(689938),
-    h = n(865416);
-let p = [
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_EMOJI_SLOTS,
-        getPerkPreviewLightTheme: () => n(414102),
-        getPerkPreviewDarkTheme: () => n(614600),
-        getTier0Value: () => E.HO[_.Eu4.NONE].limits.emoji,
-        getTier1Value: () => E.HO[_.Eu4.TIER_1].limits.emoji,
-        getTier2Value: () => E.HO[_.Eu4.TIER_2].limits.emoji,
-        getTier3Value: () => E.HO[_.Eu4.TIER_3].limits.emoji
-    },
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STICKER_SLOTS,
-        getPerkPreviewLightTheme: () => n(73541),
-        getPerkPreviewDarkTheme: () => n(43735),
-        getTier0Value: () => E.HO[_.Eu4.NONE].limits.stickers,
-        getTier1Value: () => E.HO[_.Eu4.TIER_1].limits.stickers,
-        getTier2Value: () => E.HO[_.Eu4.TIER_2].limits.stickers,
-        getTier3Value: () => E.HO[_.Eu4.TIER_3].limits.stickers
-    },
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_SOUNDBOARD_SLOTS,
-        getPerkPreviewLightTheme: () => n(69098),
-        getPerkPreviewDarkTheme: () => n(881755),
-        getTier0Value: () => E.HO[_.Eu4.NONE].limits.soundboardSounds,
-        getTier1Value: () => E.HO[_.Eu4.TIER_1].limits.soundboardSounds,
-        getTier2Value: () => E.HO[_.Eu4.TIER_2].limits.soundboardSounds,
-        getTier3Value: () => E.HO[_.Eu4.TIER_3].limits.soundboardSounds
-    },
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STREAM_QUALITY,
-        getPerkPreviewLightTheme: () => n(989015),
-        getPerkPreviewDarkTheme: () => n(815152),
-        getTier0Value: () =>
-            f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
-                resolution: E.HO[_.Eu4.NONE].limits.screenShareQualityResolution,
-                framerate: E.HO[_.Eu4.NONE].limits.screenShareQualityFramerate
-            }),
-        getTier1Value: () =>
-            f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
-                resolution: E.HO[_.Eu4.TIER_1].limits.screenShareQualityResolution,
-                framerate: E.HO[_.Eu4.TIER_1].limits.screenShareQualityFramerate
-            }),
-        getTier2Value: () =>
-            f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
-                resolution: E.HO[_.Eu4.TIER_2].limits.screenShareQualityResolution,
-                framerate: E.HO[_.Eu4.TIER_2].limits.screenShareQualityFramerate
-            }),
-        getTier3Value: () =>
-            f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
-                resolution: E.HO[_.Eu4.TIER_3].limits.screenShareQualityResolution,
-                framerate: E.HO[_.Eu4.TIER_3].limits.screenShareQualityFramerate
-            })
-    },
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VOICE_QUALITY,
-        getPerkPreviewLightTheme: () => n(222185),
-        getPerkPreviewDarkTheme: () => n(415480),
-        getTier0Value: () => f.Z.Messages.BITRATE_KBPS_NO_SPACE.format({ bitrate: E.HO[_.Eu4.NONE].limits.bitrate / 1000 }),
-        getTier1Value: () => f.Z.Messages.BITRATE_KBPS_NO_SPACE.format({ bitrate: E.HO[_.Eu4.TIER_1].limits.bitrate / 1000 }),
-        getTier2Value: () => f.Z.Messages.BITRATE_KBPS_NO_SPACE.format({ bitrate: E.HO[_.Eu4.TIER_2].limits.bitrate / 1000 }),
-        getTier3Value: () => f.Z.Messages.BITRATE_KBPS_NO_SPACE.format({ bitrate: E.HO[_.Eu4.TIER_3].limits.bitrate / 1000 })
-    },
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_UPLOAD_SIZE_LIMIT,
-        getPerkPreviewLightTheme: () => n(825588),
-        getPerkPreviewDarkTheme: () => n(954499),
-        getTier0Value: () => ((0, d.XS)() ? (0, c.BU)(_.WKe / 1024, { useKibibytes: !0 }) : f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.NONE].limits.fileSize / 1024 / 1024 })),
-        getTier1Value: () => ((0, d.XS)() ? (0, c.BU)(_.WKe / 1024, { useKibibytes: !0 }) : f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.TIER_1].limits.fileSize / 1024 / 1024 })),
-        getTier2Value: () => f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.TIER_2].limits.fileSize / 1024 / 1024 }),
-        getTier3Value: () => f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.TIER_3].limits.fileSize / 1024 / 1024 })
-    },
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VIDEO_STAGE_SEATS,
-        getPerkPreviewLightTheme: () => n(241190),
-        getPerkPreviewDarkTheme: () => n(879846),
-        getTier0Value: () => E.HO[_.Eu4.NONE].limits.stageVideoUsers,
-        getTier1Value: () => E.HO[_.Eu4.TIER_1].limits.stageVideoUsers,
-        getTier2Value: () => E.HO[_.Eu4.TIER_2].limits.stageVideoUsers,
-        getTier3Value: () => E.HO[_.Eu4.TIER_3].limits.stageVideoUsers
-    },
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_ANIMATED_GUILD_ICON,
-        getPerkPreviewLightTheme: () => n(499059),
-        getPerkPreviewDarkTheme: () => n(488349),
-        getTier0Value: () => !1,
-        getTier1Value: () => !0,
-        getTier2Value: () => !0,
-        getTier3Value: () => !0
-    },
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_INVITE_BACKGROUND,
-        getPerkPreviewLightTheme: () => n(136631),
-        getPerkPreviewDarkTheme: () => n(692079),
-        getTier0Value: () => !1,
-        getTier1Value: () => !0,
-        getTier2Value: () => !0,
-        getTier3Value: () => !0
-    },
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_BANNER,
-        getPerkPreviewLightTheme: () => n(277822),
-        getPerkPreviewDarkTheme: () => n(866919),
-        getTier0Value: () => !1,
-        getTier1Value: () => !1,
-        getTier2Value: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_STATIC,
-        getTier3Value: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_ANIMATED
-    },
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_CUSTOM_ROLE_ICONS,
-        getPerkPreviewLightTheme: () => n(872259),
-        getPerkPreviewDarkTheme: () => n(876049),
-        getTier0Value: () => !1,
-        getTier1Value: () => !1,
-        getTier2Value: () => !0,
-        getTier3Value: () => !0
-    },
-    {
-        getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VANITY_URL,
-        getPerkPreviewLightTheme: () => n(710717),
-        getPerkPreviewDarkTheme: () => n(945198),
-        getTier0Value: () => !1,
-        getTier1Value: () => !1,
-        getTier2Value: () => !1,
-        getTier3Value: () => !0
-    }
-];
+    c = n(410030),
+    u = n(981631),
+    d = n(474936),
+    f = n(388032),
+    _ = n(755645);
+let p = 1048576,
+    h = [
+        {
+            getPerkHeading: () => f.NW.string(f.t.tIiwur),
+            getPerkPreviewLightTheme: () => n(414102),
+            getPerkPreviewDarkTheme: () => n(614600),
+            getTier0Value: () => d.HO[u.Eu4.NONE].limits.emoji,
+            getTier1Value: () => d.HO[u.Eu4.TIER_1].limits.emoji,
+            getTier2Value: () => d.HO[u.Eu4.TIER_2].limits.emoji,
+            getTier3Value: () => d.HO[u.Eu4.TIER_3].limits.emoji
+        },
+        {
+            getPerkHeading: () => f.NW.string(f.t['3iccen']),
+            getPerkPreviewLightTheme: () => n(73541),
+            getPerkPreviewDarkTheme: () => n(43735),
+            getTier0Value: () => d.HO[u.Eu4.NONE].limits.stickers,
+            getTier1Value: () => d.HO[u.Eu4.TIER_1].limits.stickers,
+            getTier2Value: () => d.HO[u.Eu4.TIER_2].limits.stickers,
+            getTier3Value: () => d.HO[u.Eu4.TIER_3].limits.stickers
+        },
+        {
+            getPerkHeading: () => f.NW.string(f.t['+smCv7']),
+            getPerkPreviewLightTheme: () => n(69098),
+            getPerkPreviewDarkTheme: () => n(881755),
+            getTier0Value: () => d.HO[u.Eu4.NONE].limits.soundboardSounds,
+            getTier1Value: () => d.HO[u.Eu4.TIER_1].limits.soundboardSounds,
+            getTier2Value: () => d.HO[u.Eu4.TIER_2].limits.soundboardSounds,
+            getTier3Value: () => d.HO[u.Eu4.TIER_3].limits.soundboardSounds
+        },
+        {
+            getPerkHeading: () => f.NW.string(f.t.SMYauL),
+            getPerkPreviewLightTheme: () => n(989015),
+            getPerkPreviewDarkTheme: () => n(904257),
+            getTier0Value: () =>
+                f.NW.formatToPlainString(f.t.zZ6Rdn, {
+                    resolution: d.HO[u.Eu4.NONE].limits.screenShareQualityResolution,
+                    framerate: d.HO[u.Eu4.NONE].limits.screenShareQualityFramerate
+                }),
+            getTier1Value: () =>
+                f.NW.formatToPlainString(f.t.zZ6Rdn, {
+                    resolution: d.HO[u.Eu4.TIER_1].limits.screenShareQualityResolution,
+                    framerate: d.HO[u.Eu4.TIER_1].limits.screenShareQualityFramerate
+                }),
+            getTier2Value: () =>
+                f.NW.formatToPlainString(f.t.zZ6Rdn, {
+                    resolution: d.HO[u.Eu4.TIER_2].limits.screenShareQualityResolution,
+                    framerate: d.HO[u.Eu4.TIER_2].limits.screenShareQualityFramerate
+                }),
+            getTier3Value: () =>
+                f.NW.formatToPlainString(f.t.zZ6Rdn, {
+                    resolution: d.HO[u.Eu4.TIER_3].limits.screenShareQualityResolution,
+                    framerate: d.HO[u.Eu4.TIER_3].limits.screenShareQualityFramerate
+                })
+        },
+        {
+            getPerkHeading: () => f.NW.string(f.t['/79IDg']),
+            getPerkPreviewLightTheme: () => n(222185),
+            getPerkPreviewDarkTheme: () => n(415480),
+            getTier0Value: () => f.NW.formatToPlainString(f.t.w1gmLi, { bitrate: d.HO[u.Eu4.NONE].limits.bitrate / 1000 }),
+            getTier1Value: () => f.NW.formatToPlainString(f.t.w1gmLi, { bitrate: d.HO[u.Eu4.TIER_1].limits.bitrate / 1000 }),
+            getTier2Value: () => f.NW.formatToPlainString(f.t.w1gmLi, { bitrate: d.HO[u.Eu4.TIER_2].limits.bitrate / 1000 }),
+            getTier3Value: () => f.NW.formatToPlainString(f.t.w1gmLi, { bitrate: d.HO[u.Eu4.TIER_3].limits.bitrate / 1000 })
+        },
+        {
+            getPerkHeading: () => f.NW.string(f.t.R1U2xM),
+            getPerkPreviewLightTheme: () => n(825588),
+            getPerkPreviewDarkTheme: () => n(954499),
+            getTier0Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.NONE].limits.fileSize / p }),
+            getTier1Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.TIER_1].limits.fileSize / p }),
+            getTier2Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.TIER_2].limits.fileSize / p }),
+            getTier3Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.TIER_3].limits.fileSize / p })
+        },
+        {
+            getPerkHeading: () => f.NW.string(f.t.f6vfsr),
+            getPerkPreviewLightTheme: () => n(241190),
+            getPerkPreviewDarkTheme: () => n(879846),
+            getTier0Value: () => d.HO[u.Eu4.NONE].limits.stageVideoUsers,
+            getTier1Value: () => d.HO[u.Eu4.TIER_1].limits.stageVideoUsers,
+            getTier2Value: () => d.HO[u.Eu4.TIER_2].limits.stageVideoUsers,
+            getTier3Value: () => d.HO[u.Eu4.TIER_3].limits.stageVideoUsers
+        },
+        {
+            getPerkHeading: () => f.NW.string(f.t.qDqUMD),
+            getPerkPreviewLightTheme: () => n(499059),
+            getPerkPreviewDarkTheme: () => n(488349),
+            getTier0Value: () => !1,
+            getTier1Value: () => !0,
+            getTier2Value: () => !0,
+            getTier3Value: () => !0
+        },
+        {
+            getPerkHeading: () => f.NW.string(f.t.uwqgbm),
+            getPerkPreviewLightTheme: () => n(136631),
+            getPerkPreviewDarkTheme: () => n(692079),
+            getTier0Value: () => !1,
+            getTier1Value: () => !0,
+            getTier2Value: () => !0,
+            getTier3Value: () => !0
+        },
+        {
+            getPerkHeading: () => f.NW.string(f.t.zxsDxc),
+            getPerkPreviewLightTheme: () => n(277822),
+            getPerkPreviewDarkTheme: () => n(866919),
+            getTier0Value: () => !1,
+            getTier1Value: () => !1,
+            getTier2Value: () => f.NW.string(f.t['2TNS3t']),
+            getTier3Value: () => f.NW.string(f.t['l+S46e'])
+        },
+        {
+            getPerkHeading: () => f.NW.string(f.t['bHa+ER']),
+            getPerkPreviewLightTheme: () => n(872259),
+            getPerkPreviewDarkTheme: () => n(876049),
+            getTier0Value: () => !1,
+            getTier1Value: () => !1,
+            getTier2Value: () => !0,
+            getTier3Value: () => !0
+        },
+        {
+            getPerkHeading: () => f.NW.string(f.t.QV6MZW),
+            getPerkPreviewLightTheme: () => n(710717),
+            getPerkPreviewDarkTheme: () => n(945198),
+            getTier0Value: () => !1,
+            getTier1Value: () => !1,
+            getTier2Value: () => !1,
+            getTier3Value: () => !0
+        }
+    ];
 function m(e) {
     let { children: t, className: n, tier: i } = e,
-        a = i === _.Eu4.NONE ? 'text-muted' : 'header-primary',
-        o = i === _.Eu4.NONE || null == i ? 'heading-xl/normal' : 'heading-xl/bold';
+        o = i === u.Eu4.NONE ? 'text-muted' : 'header-primary',
+        s = i === u.Eu4.NONE || null == i ? 'heading-xl/normal' : 'heading-xl/bold';
     return (0, r.jsxs)('th', {
-        className: s()(h.columnHeading, n),
+        className: a()(_.columnHeading, n),
         scope: 'col',
         children: [
-            (0, r.jsx)(l.Heading, {
-                color: a,
-                variant: o,
+            (0, r.jsx)(l.X6q, {
+                color: o,
+                variant: s,
                 children: t
             }),
             null != i &&
                 (0, r.jsx)(l.Text, {
-                    color: a,
+                    color: o,
                     variant: 'text-md/normal',
-                    children: f.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({ subscriptions: _.oCV[i] })
+                    children: f.NW.format(f.t['pob/cH'], { subscriptions: u.oCV[i] })
                 })
         ]
     });
 }
-function I(e) {
-    let t;
-    let { className: n, textVariant: i = 'text-md/bold', value: a } = e;
-    if ('boolean' == typeof a) {
-        let e = s()(h.booleanValueIcon, { [h.booleanValueTrue]: a });
-        t = a
-            ? (0, r.jsx)(l.CheckmarkLargeIcon, {
+function g(e) {
+    let t,
+        { className: n, textVariant: i = 'text-md/bold', value: o } = e;
+    if ('boolean' == typeof o) {
+        let e = a()(_.booleanValueIcon, { [_.booleanValueTrue]: o });
+        t = o
+            ? (0, r.jsx)(l.dz2, {
                   size: 'md',
                   color: 'currentColor',
                   className: e
               })
-            : (0, r.jsx)(l.XSmallIcon, {
+            : (0, r.jsx)(l.Dio, {
                   size: 'md',
                   color: 'currentColor',
                   className: e
@@ -180,129 +179,133 @@ function I(e) {
         t = (0, r.jsx)(l.Text, {
             color: 'interactive-active',
             variant: i,
-            children: a
+            children: o
         });
     return (0, r.jsx)('td', {
-        className: s()(h.tableCell, n),
+        className: a()(_.tableCell, n),
         children: t
     });
 }
-function T(e) {
+function E(e) {
+    switch (e) {
+        case u.Eu4.NONE:
+        case u.Eu4.TIER_1:
+            return u.Eu4.TIER_2;
+        case u.Eu4.TIER_2:
+        case u.Eu4.TIER_3:
+            return u.Eu4.TIER_3;
+        default:
+            return null;
+    }
+}
+function b(e) {
     let { currentTier: t } = e,
-        n = (function (e) {
-            switch (e) {
-                case _.Eu4.NONE:
-                case _.Eu4.TIER_1:
-                    return _.Eu4.TIER_2;
-                case _.Eu4.TIER_2:
-                case _.Eu4.TIER_3:
-                    return _.Eu4.TIER_3;
-                default:
-                    return null;
-            }
-        })(t);
+        n = E(t);
     return null == n
         ? null
         : (0, r.jsx)('div', {
-              className: s()(h.recommendedTierHighlight, {
-                  [h.recommendedTierHighlightTier2]: n === _.Eu4.TIER_2,
-                  [h.recommendedTierHighlightTier3]: n === _.Eu4.TIER_3
+              className: a()(_.recommendedTierHighlight, {
+                  [_.recommendedTierHighlightTier2]: n === u.Eu4.TIER_2,
+                  [_.recommendedTierHighlightTier3]: n === u.Eu4.TIER_3
               }),
               children: (0, r.jsx)(l.Text, {
-                  className: h.recommendedTierHighlightTag,
+                  className: _.recommendedTierHighlightTag,
                   color: 'always-white',
                   variant: 'text-xs/bold',
-                  children: t === _.Eu4.TIER_3 ? f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CURRENT_TAG : f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_RECOMMENDED_TAG
+                  children: t === u.Eu4.TIER_3 ? f.NW.string(f.t.d849Ul) : f.NW.string(f.t.dZeX19)
               })
           });
 }
-t.Z = function (e) {
-    let t = (0, u.ZP)(),
-        [n, a] = i.useState(null),
-        { className: c, guild: d, hideHeading: E, hideTier0: g } = e;
-    function S() {
-        a(null);
+let y = function (e) {
+    let t = (0, c.ZP)(),
+        [n, o] = i.useState(null),
+        { className: d, guild: p, hideHeading: E, hideTier0: y } = e;
+    function v(e) {
+        o(e);
+    }
+    function O() {
+        o(null);
     }
     return (0, r.jsxs)('div', {
-        className: c,
+        className: d,
         children: [
             !E &&
-                (0, r.jsx)(l.Heading, {
-                    className: h.heading,
+                (0, r.jsx)(l.X6q, {
+                    className: _.heading,
                     variant: 'heading-xxl/extrabold',
-                    children: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_HEADING
+                    children: f.NW.string(f.t['9GGb9v'])
                 }),
             (0, r.jsxs)('div', {
-                className: h.tableWrapper,
+                className: _.tableWrapper,
                 children: [
-                    null != d && (0, r.jsx)(T, { currentTier: d.premiumTier }),
+                    null != p && (0, r.jsx)(b, { currentTier: p.premiumTier }),
                     (0, r.jsxs)('table', {
-                        className: h.table,
+                        className: _.table,
                         cellPadding: 0,
                         cellSpacing: 0,
                         children: [
                             (0, r.jsx)('thead', {
                                 children: (0, r.jsxs)('tr', {
-                                    className: h.__invalid_tableRow,
+                                    className: _.__invalid_tableRow,
                                     children: [
                                         (0, r.jsx)(m, {
-                                            className: h.tableRowHeading,
-                                            children: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_COLUMN_HEADING_PERKS
+                                            className: _.tableRowHeading,
+                                            children: f.NW.string(f.t.F5MY0t)
                                         }),
-                                        !g &&
+                                        !y &&
                                             (0, r.jsx)(m, {
-                                                tier: _.Eu4.NONE,
-                                                children: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME
+                                                tier: u.Eu4.NONE,
+                                                children: f.NW.string(f.t.mx8j2t)
                                             }),
                                         (0, r.jsx)(m, {
-                                            tier: _.Eu4.TIER_1,
-                                            children: f.Z.Messages.PREMIUM_GUILD_TIER_1
+                                            tier: u.Eu4.TIER_1,
+                                            children: f.NW.string(f.t.nzXtaW)
                                         }),
                                         (0, r.jsx)(m, {
-                                            tier: _.Eu4.TIER_2,
-                                            children: f.Z.Messages.PREMIUM_GUILD_TIER_2
+                                            tier: u.Eu4.TIER_2,
+                                            children: f.NW.string(f.t['h33/ub'])
                                         }),
                                         (0, r.jsx)(m, {
-                                            tier: _.Eu4.TIER_3,
-                                            children: f.Z.Messages.PREMIUM_GUILD_TIER_3
+                                            tier: u.Eu4.TIER_3,
+                                            children: f.NW.string(f.t.BfF6EB)
                                         })
                                     ]
                                 })
                             }),
                             (0, r.jsx)('tbody', {
-                                className: h.__invalid_tableBody,
-                                children: p.map((e, i) => {
-                                    let u = n === i;
+                                className: _.__invalid_tableBody,
+                                children: h.map((e, i) => {
+                                    let o = n === i;
                                     function c() {
-                                        a(i);
+                                        v(i);
                                     }
                                     return void 0 === e.predicate
                                         ? (0, r.jsxs)(
                                               'tr',
                                               {
-                                                  className: h.__invalid_tableRow,
+                                                  className: _.__invalid_tableRow,
                                                   children: [
                                                       (0, r.jsx)('th', {
-                                                          className: s()(h.tableCell, h.tableCellWrapper),
+                                                          className: a()(_.tableCell, _.tableCellWrapper),
                                                           scope: 'row',
-                                                          children: (0, r.jsx)(l.Clickable, {
-                                                              className: s()(h.tableRowHeading, h.tableCell, h.tableCellInner),
+                                                          children: (0, r.jsx)(l.P3F, {
+                                                              className: a()(_.tableRowHeading, _.tableCell, _.tableCellInner),
                                                               onFocus: c,
-                                                              onBlur: S,
+                                                              onBlur: O,
                                                               onMouseEnter: c,
-                                                              onMouseLeave: S,
-                                                              children: (0, r.jsx)(l.Popout, {
+                                                              onMouseLeave: O,
+                                                              children: (0, r.jsx)(l.yRy, {
                                                                   align: 'center',
                                                                   disablePointerEvents: !0,
                                                                   nudgeAlignIntoViewport: !0,
                                                                   position: 'bottom',
                                                                   renderPopout: () =>
                                                                       (0, r.jsx)('img', {
-                                                                          className: h.perkPreviewImage,
-                                                                          src: (0, o.wj)(t) ? e.getPerkPreviewDarkTheme() : e.getPerkPreviewLightTheme(),
+                                                                          className: _.perkPreviewImage,
+                                                                          src: (0, s.wj)(t) ? e.getPerkPreviewDarkTheme() : e.getPerkPreviewLightTheme(),
                                                                           alt: ''
                                                                       }),
-                                                                  shouldShow: u,
+                                                                  shouldShow: o,
                                                                   spacing: 16,
                                                                   children: () =>
                                                                       (0, r.jsx)(l.Text, {
@@ -312,14 +315,14 @@ t.Z = function (e) {
                                                               })
                                                           })
                                                       }),
-                                                      !g &&
-                                                          (0, r.jsx)(I, {
+                                                      !y &&
+                                                          (0, r.jsx)(g, {
                                                               textVariant: 'text-md/normal',
                                                               value: e.getTier0Value()
                                                           }),
-                                                      (0, r.jsx)(I, { value: e.getTier1Value() }),
-                                                      (0, r.jsx)(I, { value: e.getTier2Value() }),
-                                                      (0, r.jsx)(I, { value: e.getTier3Value() })
+                                                      (0, r.jsx)(g, { value: e.getTier1Value() }),
+                                                      (0, r.jsx)(g, { value: e.getTier2Value() }),
+                                                      (0, r.jsx)(g, { value: e.getTier3Value() })
                                                   ]
                                               },
                                               i

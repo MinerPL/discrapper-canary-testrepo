@@ -1,39 +1,40 @@
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(471445),
-    r = n(862099),
-    l = n(938475),
-    o = n(689938),
-    c = n(575319);
-t.Z = function (e) {
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(471445),
+    a = n(862099),
+    o = n(938475),
+    s = n(388032),
+    c = n(376000);
+let u = function (e) {
     let { name: t, channel: n } = e,
-        d = (0, a.Wu)(
-            [l.ZP],
+        u = (0, i.Wu)(
+            [o.ZP],
             () =>
-                l.ZP.getVoiceStatesForChannel(n).map((e) => {
+                o.ZP.getVoiceStatesForChannel(n).map((e) => {
                     let { user: t } = e;
                     return t;
                 }),
             [n]
         ),
-        u = (0, s.KS)(n);
-    return (0, i.jsx)(r.gt, {
-        heading: o.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
+        d = (0, l.KS)(n);
+    return (0, r.jsx)(a.gt, {
+        heading: s.NW.string(s.t['X2K3//']),
         topic: t,
-        location: o.Z.Messages.HUB_STUDY_ROOM_VOICE_CHANNEL_TOOLTIP,
+        location: s.NW.string(s.t.LZA6NT),
         locationIcon:
-            null != u
-                ? (0, i.jsx)(u, {
+            null != d
+                ? (0, r.jsx)(d, {
                       size: 'xs',
                       color: 'currentColor',
                       className: c.icon
                   })
                 : null,
-        children: (0, i.jsx)(r.Co, {
+        children: (0, r.jsx)(a.Co, {
             channel: n,
-            speakers: d,
-            voiceType: r.bZ.STUDY_ROOM
+            speakers: u,
+            voiceType: a.bZ.STUDY_ROOM
         })
     });
 };

@@ -1,64 +1,55 @@
-a.d(n, {
-    AT: function () {
-        return y;
-    },
-    GY: function () {
-        return b;
-    },
-    R4: function () {
-        return _;
-    },
-    oE: function () {
-        return g;
-    },
-    yb: function () {
-        return f;
-    }
+n.d(t, {
+    AT: () => E,
+    GY: () => m,
+    R4: () => h,
+    oE: () => g,
+    yb: () => p
 }),
-    a(47120),
-    a(653041),
-    a(470079);
-var t = a(512722),
-    o = a.n(t),
-    r = a(913527),
-    i = a.n(r),
-    c = a(99945);
-a(442837);
-var s = a(821849),
-    l = a(509545),
-    d = a(74538),
-    u = a(981631),
-    p = a(474936);
-function f(e) {
-    return e.items
-        .map((e) => {
-            let n = l.Z.get(e.planId);
-            return o()(null != n, 'Unable to fetch plan'), n;
-        })
-        .map((e) => e.skuId);
+    n(47120),
+    n(653041),
+    n(192379);
+var r = n(512722),
+    i = n.n(r),
+    o = n(913527),
+    a = n.n(o),
+    s = n(99945);
+n(442837);
+var l = n(821849),
+    c = n(509545),
+    u = n(74538),
+    d = n(981631),
+    f = n(474936);
+function _(e) {
+    return e.items.map((e) => {
+        let t = c.Z.get(e.planId);
+        return i()(null != t, 'Unable to fetch plan'), t;
+    });
 }
-function _(e, n, a) {
-    let t = e.getCurrentSubscriptionPlanIdForGroup(a);
-    return (e.type === u.NYc.PREMIUM && null == t) || (o()(null != t, 'Current subscription has no plan in group'), o()(!(t === p.Xh.PREMIUM_YEAR_TIER_1 && n === p.Xh.PREMIUM_MONTH_TIER_2), 'Unexpected plan switch'), a.indexOf(t) < a.indexOf(n));
+function p(e) {
+    return _(e).map((e) => e.skuId);
 }
-function b(e, n, a) {
-    return !_(e, n, a);
+function h(e, t, n) {
+    let r = e.getCurrentSubscriptionPlanIdForGroup(n);
+    return (e.type === d.NYc.PREMIUM && null == r) || (!e.isPausedAllowsUpdatesButNotResume && (i()(null != r, 'Current subscription has no plan in group'), i()(r !== f.Xh.PREMIUM_YEAR_TIER_1 || t !== f.Xh.PREMIUM_MONTH_TIER_2, 'Unexpected plan switch'), n.indexOf(r) < n.indexOf(t)));
 }
-function g(e, n) {
-    let a = l.Z.get(e);
-    if (null == a) {
-        let a = p.GP[e];
-        o()(null != a, 'Missing hardcoded subscriptionPlan: '.concat(e));
-        let t = (0, d.Wz)(a.skuId);
-        !l.Z.isFetchingForSKU(t) && (0, s.GZ)(t, n);
+function m(e, t, n) {
+    return !h(e, t, n);
+}
+function g(e, t) {
+    let n = c.Z.get(e);
+    if (null == n) {
+        let n = f.GP[e];
+        i()(null != n, 'Missing hardcoded subscriptionPlan: '.concat(e));
+        let r = (0, u.Wz)(n.skuId);
+        c.Z.isFetchingForSKU(r) || (0, l.GZ)(r, t);
     }
-    return a;
+    return n;
 }
-function y(e) {
-    let n = Object.keys(c.T).filter((e) => isNaN(Number(e)));
-    if (e.status !== u.O0b.PAUSED)
+function E(e) {
+    let t = Object.keys(s.T).filter((e) => isNaN(Number(e)));
+    if (e.status !== d.O0b.PAUSED)
         return {
-            durations: n,
+            durations: t,
             currentDaysPaused: 0
         };
     if (null == e.pauseEndsAt)
@@ -67,13 +58,13 @@ function y(e) {
             currentDaysPaused: 0
         };
     {
-        let a = i()(e.currentPeriodStart),
-            t = Math.round(i()(e.pauseEndsAt).diff(a, 'days', !0)),
-            o = [];
-        for (let e of n) c.T[e] > t && o.push(e);
+        let n = a()(e.currentPeriodStart),
+            r = Math.round(a()(e.pauseEndsAt).diff(n, 'days', !0)),
+            i = [];
+        for (let e of t) s.T[e] > r && i.push(e);
         return {
-            durations: o,
-            currentDaysPaused: t
+            durations: i,
+            currentDaysPaused: r
         };
     }
 }

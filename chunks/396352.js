@@ -1,7 +1,8 @@
+n.d(t, { Z: () => p });
 var r,
     i = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,12 +15,23 @@ function s(e, t, n) {
         e
     );
 }
-let o = { topEmojisByGuildId: {} },
-    l = o,
-    u = {};
-class c extends (r = i.ZP.PersistedStore) {
+let s = { topEmojisByGuildId: {} },
+    l = s,
+    c = {};
+function u() {
+    (l = s), (c = {});
+}
+function d(e) {
+    let { guildId: t } = e;
+    c[t] = !0;
+}
+function f(e) {
+    let { guildId: t, topEmojisMetadata: n } = e;
+    (l.topEmojisByGuildId[t] = n.map((e) => e.emojiId)), (c[t] = !1);
+}
+class _ extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        l = null != e ? e : o;
+        l = null != e ? e : s;
     }
     getState() {
         return l;
@@ -28,21 +40,12 @@ class c extends (r = i.ZP.PersistedStore) {
         return l.topEmojisByGuildId[e];
     }
     getIsFetching(e) {
-        return u[e];
+        return c[e];
     }
 }
-s(c, 'displayName', 'TopEmojiStore'),
-    s(c, 'persistKey', 'TopEmojiStore'),
-    (t.Z = new c(a.Z, {
-        LOGOUT: function () {
-            (l = o), (u = {});
-        },
-        TOP_EMOJIS_FETCH: function (e) {
-            let { guildId: t } = e;
-            u[t] = !0;
-        },
-        TOP_EMOJIS_FETCH_SUCCESS: function (e) {
-            let { guildId: t, topEmojisMetadata: n } = e;
-            (l.topEmojisByGuildId[t] = n.map((e) => e.emojiId)), (u[t] = !1);
-        }
-    }));
+a(_, 'displayName', 'TopEmojiStore'), a(_, 'persistKey', 'TopEmojiStore');
+let p = new _(o.Z, {
+    LOGOUT: u,
+    TOP_EMOJIS_FETCH: d,
+    TOP_EMOJIS_FETCH_SUCCESS: f
+});

@@ -1,44 +1,42 @@
-n.d(t, {
-    s: function () {
-        return o;
-    }
-}),
-    n(47120),
-    n(627341);
+n.d(t, { s: () => c }), n(977457), n(47120), n(627341);
 var r = n(278074),
     i = n(264181),
-    a = n(178185),
+    o = n(178185),
+    a = n(272280),
     s = n(806185);
-class o {
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class c {
     static fromServer(e) {
         var t;
-        return new o(
+        return new c(
             Object.fromEntries(
-                Object.entries(null !== (t = e.marketings) && void 0 !== t ? t : {}).map((e) => {
+                Object.entries(null != (t = null == e ? void 0 : e.marketings) ? t : {}).map((e) => {
                     let [t, n] = e;
                     return [
                         t,
                         (0, r.EQ)(n)
                             .with({ type: i.Z.COACHTIP }, (e) => s.Z.fromServer(e))
-                            .with({ type: i.Z.BADGE }, (e) => a.E.fromServer(e))
-                            .otherwise(() => n)
+                            .with({ type: i.Z.BADGE }, (e) => o.E.fromServer(e))
+                            .with({ type: i.Z.BANNER }, (e) => a.I.fromServer(e))
+                            .otherwise(() => void 0)
                     ];
                 })
             )
         );
     }
     constructor(e) {
-        var t, n, r;
-        (t = this),
-            (r = void 0),
-            (n = 'marketingsBySurfaces') in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r),
-            (this.marketingsBySurfaces = e);
+        l(this, 'marketingsBySurfaces', void 0), (this.marketingsBySurfaces = e);
     }
 }

@@ -1,48 +1,37 @@
 n.d(t, {
-    Gg: function () {
-        return d;
-    },
-    Hg: function () {
-        return E;
-    },
-    fr: function () {
-        return c;
-    }
+    G: () => f,
+    f: () => d
 });
 var r = n(772848),
-    i = n(433517);
+    i = n(433517),
+    o = n(686325);
 let a = 'LATEST_SESSION_TIMESTAMP',
     s = 'LATEST_SESSION_UUID',
-    o = 'LATEST_SESSION_INITIALIZED_TIMESTAMP',
-    l = Promise.resolve(),
+    l = 'LATEST_SESSION_INITIALIZED_TIMESTAMP',
+    c = Promise.resolve(),
     u = !1;
-function c(e) {
+function d(e) {
     u = e;
 }
-function d() {
-    return (l = l.then(async () => {
+function f() {
+    return (c = c.then(async () => {
         let e = await _();
-        if (
-            null == e ||
-            (function (e) {
-                return 1800000 + e.lastUsed - Date.now() <= 0;
-            })(e)
-        ) {
+        if (null == e || (0, o.qK)(e)) {
             if (!u) return null;
             let t = {
                 uuid: (0, r.Z)(),
                 initialized: Date.now(),
                 lastUsed: Date.now()
             };
-            i.K.set(s, t.uuid), i.K.set(o, t.initialized.toString()), i.K.set(a, Date.now().toString()), (e = t);
+            i.K.set(s, t.uuid), i.K.set(l, t.initialized.toString()), i.K.set(a, Date.now().toString()), (e = t);
         } else u && i.K.set(a, Date.now().toString());
         return e;
     }));
 }
 async function _() {
     let e = await i.K.getAfterRefresh(s),
-        t = await i.K.getAfterRefresh(o).then(E),
-        n = await i.K.getAfterRefresh(a).then(E);
+        t = await i.K.getAfterRefresh(l).then(o.Hg),
+        n = await i.K.getAfterRefresh(a).then(o.Hg);
     return null != e && null != t
         ? {
               uuid: e,
@@ -50,7 +39,4 @@ async function _() {
               lastUsed: n
           }
         : null;
-}
-function E(e) {
-    return null != e ? Number(e) : 0;
 }

@@ -1,30 +1,25 @@
-a.r(s),
-    a.d(s, {
-        default: function () {
-            return o;
-        }
-    });
-var n = a(735250);
-a(470079);
-var r = a(481060),
-    E = a(239091),
-    t = a(716161),
-    _ = a(647177),
-    i = a(689938);
-function o(e) {
-    let { onSelect: s, backgroundOption: a, optionIsInUse: o } = e;
-    return (0, n.jsx)(r.Menu, {
+n.d(r, { default: () => d });
+var e = n(200651);
+n(192379);
+var i = n(481060),
+    a = n(239091),
+    s = n(716161),
+    o = n(647177),
+    c = n(388032);
+function d(t) {
+    let { onSelect: r, backgroundOption: n, optionIsInUse: d } = t;
+    return (0, e.jsx)(i.v2r, {
         navId: 'video-background-context',
-        onClose: E.Zy,
-        onSelect: s,
-        'aria-label': i.Z.Messages.VIDEO_BACKGROUND_CONTEXT_MENU_LABEL,
-        children: (0, n.jsx)(r.MenuItem, {
+        onClose: a.Zy,
+        onSelect: r,
+        'aria-label': c.NW.string(c.t.ptxALC),
+        children: (0, e.jsx)(i.sNh, {
             id: 'remove',
             action: () => {
-                if (!!(0, _.rD)(a)) (0, t.KH)(a), (0, _.$w)(a);
+                (0, o.rD)(n) && ((0, s.KH)(n), (0, o.$w)(n));
             },
-            label: (0, _.rD)(a) ? (o ? i.Z.Messages.VIDEO_BACKGROUND_CANNOT_REMOVE_SELECTED : i.Z.Messages.VIDEO_BACKGROUND_REMOVE) : i.Z.Messages.VIDEO_BACKGROUND_CANNOT_REMOVE_DEFAULT,
-            disabled: !(0, _.rD)(a) || o,
+            label: (0, o.rD)(n) ? (d ? c.NW.string(c.t['xh/P//']) : c.NW.string(c.t.oKuPwc)) : c.NW.string(c.t.hFYUDA),
+            disabled: !(0, o.rD)(n) || d,
             color: 'danger'
         })
     });

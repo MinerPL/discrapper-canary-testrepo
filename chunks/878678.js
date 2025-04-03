@@ -1,78 +1,108 @@
-n.r(t),
-    n.d(t, {
-        ConfirmModal: function () {
-            return d;
-        },
-        DeclarativeConfirmModal: function () {
-            return _;
-        }
-    });
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(693789),
-    l = n(260034),
+n.d(t, {
+    ConfirmModal: () => p,
+    s: () => h
+});
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(693789),
+    l = n(481060),
+    c = n(540059),
     u = n(709692),
-    c = n(575191);
-function d(e) {
+    d = n(115589);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e) {
     let t,
         n,
-        { header: a, children: d, confirmText: _, cancelText: E, className: f, onConfirm: h, onCancel: p, onClose: m, onCloseCallback: I, bodyClassName: T, transitionState: g, loading: S = !1, confirmButtonColor: A = o.zx.Colors.RED, focusCancel: N = !1 } = e,
-        v = i.useRef(null);
+        { header: o, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: b, bodyClassName: y, transitionState: v, loading: O = !1, confirmButtonColor: I = s.zx.Colors.RED, focusCancel: S = !1, impression: T } = e,
+        N = i.useRef(null),
+        A = (0, c.Q3)('ConfirmModal');
     return (
         i.useEffect(() => {
-            !N &&
+            S ||
                 setTimeout(() => {
                     var e;
-                    return null === (e = v.current) || void 0 === e ? void 0 : e.focus();
+                    return null == (e = N.current) ? void 0 : e.focus();
                 }, 0);
-        }, [N]),
-        i.useLayoutEffect(() => () => (null == I ? void 0 : I())),
-        null != E &&
-            (t = (0, r.jsx)(o.zx, {
+        }, [S]),
+        i.useLayoutEffect(() => () => (null == b ? void 0 : b())),
+        null != p &&
+            (t = (0, r.jsx)(s.zx, {
                 type: 'button',
-                look: o.zx.Looks.LINK,
-                color: o.zx.Colors.PRIMARY,
-                disabled: S,
+                look: A ? s.zx.Looks.FILLED : s.zx.Looks.LINK,
+                color: s.zx.Colors.PRIMARY,
+                className: d.cancelButton,
+                size: s.zx.Sizes.MEDIUM,
+                disabled: O,
                 onClick: () => {
-                    null == p || p(), m();
+                    null == g || g(), E();
                 },
-                autoFocus: N,
-                children: E
+                autoFocus: S,
+                children: p
             })),
         null != _ &&
-            (n = (0, r.jsx)(o.zx, {
-                buttonRef: v,
+            (n = (0, r.jsx)(s.zx, {
+                buttonRef: N,
                 type: 'submit',
-                color: A,
-                submitting: S,
+                size: s.zx.Sizes.MEDIUM,
+                color: I,
+                submitting: O,
                 onClick: async () => {
                     try {
-                        await (null == h ? void 0 : h()), m();
+                        await (null == m ? void 0 : m()), E();
                     } catch (e) {
                         throw e;
                     }
                 },
-                autoFocus: !N,
+                autoFocus: !S,
                 children: _
             })),
         (0, r.jsxs)(u.Y0, {
-            className: f,
-            transitionState: g,
+            className: h,
+            transitionState: v,
+            impression: T,
             children: [
-                null != a
+                null != o
                     ? (0, r.jsx)(u.xB, {
                           separator: !1,
-                          children: (0, r.jsx)(l.X, {
+                          children: (0, r.jsx)(l.X6q, {
                               variant: 'heading-lg/semibold',
-                              children: a
+                              children: o
                           })
                       })
                     : null,
                 (0, r.jsx)(u.hz, {
-                    className: s()(c.content, T),
-                    children: d
+                    className: a()(d.content, y),
+                    children: f
                 }),
                 (0, r.jsxs)(u.mz, {
                     children: [n, t]
@@ -81,13 +111,9 @@ function d(e) {
         })
     );
 }
-function _(e) {
+function h(e) {
     return (0, r.jsx)(u.u_, {
         onCloseRequest: e.dismissable ? e.onCancel : null,
-        renderModal: (t) =>
-            (0, r.jsx)(d, {
-                ...t,
-                ...e
-            })
+        renderModal: (t) => (0, r.jsx)(p, _({}, t, e))
     });
 }

@@ -1,45 +1,46 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(392711),
-    l = n.n(s),
-    r = n(442837),
-    o = n(481060),
+n.d(t, { Z: () => C });
+var r = n(200651),
+    i = n(192379),
+    l = n(392711),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
     c = n(557135),
     u = n(590293),
     d = n(66999),
-    h = n(665906),
-    m = n(496675),
-    p = n(979651),
-    _ = n(585483),
-    f = n(665149),
-    E = n(981631),
-    g = n(689938);
-t.Z = a.memo(function (e) {
+    p = n(665906),
+    h = n(496675),
+    f = n(979651),
+    m = n(585483),
+    g = n(665149),
+    b = n(981631),
+    _ = n(388032);
+let C = i.memo(function (e) {
     let { channel: t } = e,
         n = (0, u.Z)(),
-        s = (0, r.e7)([p.Z], () => p.Z.isInChannel(t.id)),
-        C = (0, r.e7)([p.Z], () => !l().isEmpty(p.Z.getVoiceStatesForChannel(t.id))),
-        I = (0, r.e7)([m.Z], () => m.Z.can(E.Plq.CONNECT, t)),
+        l = (0, a.e7)([f.Z], () => f.Z.isInChannel(t.id)),
+        C = (0, a.e7)([f.Z], () => !o().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
+        y = (0, a.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
         { needSubscriptionToAccess: x } = (0, d.Z)(t.id),
-        T = (0, h.$R)(t),
-        N = a.useCallback(() => {
+        v = (0, p.$R)(t),
+        j = i.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
-                connected: s,
+                connected: l,
                 needSubscriptionToAccess: x,
                 locked: !1
             });
-        }, [t, s, x]);
-    return (a.useEffect(
+        }, [t, l, x]);
+    return (i.useEffect(
         () => (
-            _.S.subscribe(E.CkL.CALL_START, N),
+            m.S.subscribe(b.CkL.CALL_START, j),
             () => {
-                _.S.unsubscribe(E.CkL.CALL_START, N);
+                m.S.unsubscribe(b.CkL.CALL_START, j);
             }
         ),
-        [N]
+        [j]
     ),
-    h.tM.useExperiment(
+    p.tM.useExperiment(
         {
             guildId: t.guild_id,
             location: '63250c_1'
@@ -47,14 +48,14 @@ t.Z = a.memo(function (e) {
         { autoTrackExposure: !1 }
     ).enabled &&
         !n &&
-        !s &&
-        I &&
-        T &&
+        !l &&
+        y &&
+        v &&
         t.isVocalThread())
-        ? (0, i.jsx)(f.ZP.Icon, {
-              icon: o.PhoneCallIcon,
-              onClick: N,
-              tooltip: C ? g.Z.Messages.JOIN_VOICE_CALL : g.Z.Messages.START_VOICE_CALL
+        ? (0, r.jsx)(g.ZP.Icon, {
+              icon: s.Csw,
+              onClick: j,
+              tooltip: C ? _.NW.string(_.t.fdEeb2) : _.NW.string(_.t.focH1t)
           })
         : null;
 });

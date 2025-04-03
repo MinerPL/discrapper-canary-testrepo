@@ -1,84 +1,116 @@
-n.d(t, {
-    Z: function () {
-        return E;
-    }
-}),
-    n(47120);
-var s = n(735250),
-    a = n(470079),
-    i = n(338545),
-    r = n(722770),
+n.d(t, { Z: () => f }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(642128),
+    a = n(722770),
     l = n(481060),
     o = n(236413),
     c = n(85960),
     d = n(65912),
     u = n(564488),
-    _ = n(689938),
-    I = n(261913);
-function E(e) {
+    m = n(388032),
+    g = n(914661);
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function f(e) {
     let { guildId: t, triggerType: n } = e,
-        E = a.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
-        [T] = a.useState(E),
-        [m, N] = a.useState(!1),
-        { editingRule: S, createNewEditingRule: h } = (0, d.V)(),
-        { getDefaultRuleName: g } = c.I6[n],
-        C = !(0, o.Vb)(S) && (null == S ? void 0 : S.triggerType) === n,
-        [x, p] = a.useState(C ? S : T),
-        R = (0, l.useSpring)({
-            opacity: C ? 0 : 1,
+        f = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
+        [b] = i.useState(f),
+        [x, j] = i.useState(!1),
+        { editingRule: N, createNewEditingRule: _ } = (0, d.V)(),
+        { getDefaultRuleName: v } = c.I6[n],
+        C = !(0, o.Vb)(N) && (null == N ? void 0 : N.triggerType) === n,
+        [O, y] = i.useState(C ? N : b),
+        I = (0, l.q_F)({
+            opacity: +!C,
             pointerEvents: C ? 'none' : 'all',
-            config: {
-                ...i.config.stiff,
-                clamp: !0
-            }
+            config: h(p({}, s.config.stiff), { clamp: !0 })
         }),
-        f = (0, l.useSpring)({
-            opacity: C ? 1 : 0,
+        E = (0, l.q_F)({
+            opacity: +!!C,
             pointerEvents: C ? 'all' : 'none',
-            config: {
-                ...i.config.stiff,
-                clamp: !0
-            },
+            config: h(p({}, s.config.stiff), { clamp: !0 }),
             onStart: () => {
-                p(C ? S : T);
+                y(C ? N : b);
             },
             onRest: () => {
-                p(C ? S : T), N(C);
+                y(C ? N : b), j(C);
             }
         });
-    return null == S || C
-        ? (0, s.jsxs)('div', {
-              className: I.mainRuleContainer,
+    return null == N || C
+        ? (0, r.jsxs)('div', {
+              className: g.mainRuleContainer,
               style: { height: C ? 'auto' : '60px' },
               children: [
-                  (0, s.jsx)(i.animated.div, {
-                      className: I.animatedRuleCardContainer,
-                      style: f,
-                      children: (0, s.jsx)(u.Z, {
-                          rule: x,
-                          persistEdit: m
+                  (0, r.jsx)(s.animated.div, {
+                      className: g.animatedRuleCardContainer,
+                      style: E,
+                      children: (0, r.jsx)(u.Z, {
+                          rule: O,
+                          persistEdit: x
                       })
                   }),
-                  (0, s.jsx)(i.animated.div, {
-                      className: I.animatedNewRuleContainer,
-                      style: R,
-                      children: (0, s.jsxs)(l.Clickable, {
-                          className: I.addAnotherRuleCardContainer,
+                  (0, r.jsx)(s.animated.div, {
+                      className: g.animatedNewRuleContainer,
+                      style: I,
+                      children: (0, r.jsxs)(l.P3F, {
+                          className: g.addAnotherRuleCardContainer,
                           onClick: () => {
-                              h(t, n);
+                              _(t, n);
                           },
                           children: [
-                              (0, s.jsx)(l.CirclePlusIcon, {
+                              (0, r.jsx)(l.oFk, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
-                                  color: r.Z.BLUE_345,
-                                  className: I.plusIcon
+                                  color: a.Z.BLUE_345,
+                                  className: g.plusIcon
                               }),
-                              (0, s.jsx)(l.Text, {
+                              (0, r.jsx)(l.Text, {
                                   variant: 'text-md/semibold',
                                   color: 'text-link',
-                                  children: _.Z.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({ ruleName: g() })
+                                  children: m.NW.format(m.t.dNjRAQ, { ruleName: v() })
                               })
                           ]
                       })

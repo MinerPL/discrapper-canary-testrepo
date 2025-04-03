@@ -1,42 +1,37 @@
-t.d(n, {
-    Z: function () {
-        return a;
-    }
-}),
-    t(47120);
-var i = t(470079);
-function a(e, n) {
-    let [t, a] = i.useState(null),
-        s = i.useCallback((e) => {
-            a(e);
+n.d(t, { Z: () => i }), n(47120);
+var r = n(192379);
+function i(e, t) {
+    let [n, i] = r.useState(null),
+        l = r.useCallback((e) => {
+            i(e);
         }, []),
-        l = i.useCallback(() => {
-            a(null);
+        o = r.useCallback(() => {
+            i(null);
         }, []),
-        r = i.useCallback(
-            (i) => {
-                l();
-                let a = e.find((e) => {
-                        let { id: n } = e;
-                        return t === n;
+        a = r.useCallback(
+            (r) => {
+                o();
+                let i = e.find((e) => {
+                        let { id: t } = e;
+                        return n === t;
                     }),
-                    s = e.find((e) => {
-                        let { id: n } = e;
-                        return i === n;
+                    l = e.find((e) => {
+                        let { id: t } = e;
+                        return r === t;
                     });
-                if (null == a || null == s || a === s) return;
-                let r = [...e],
-                    o = r.indexOf(a),
-                    d = r.indexOf(s),
-                    c = d - o > 0 ? 1 : 0;
-                r.splice(o, 1), (d = r.indexOf(s)), r.splice(d + c, 0, a), n(r);
+                if (null == i || null == l || i === l) return;
+                let a = [...e],
+                    s = a.indexOf(i),
+                    c = a.indexOf(l),
+                    d = +(c - s > 0);
+                a.splice(s, 1), (c = a.indexOf(l)), a.splice(c + d, 0, i), t(a);
             },
-            [e, t, l, n]
+            [e, n, o, t]
         );
     return {
-        draggingId: t,
-        handleDragStart: s,
-        handleDragReset: l,
-        handleDragComplete: r
+        draggingId: n,
+        handleDragStart: l,
+        handleDragReset: o,
+        handleDragComplete: a
     };
 }

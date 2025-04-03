@@ -1,5 +1,6 @@
-var r = n(74748);
-t.Z = function (e) {
+r.d(t, { Z: () => o });
+var n = r(74748);
+let o = function (e) {
     var t = new e.constructor(e.byteLength);
-    return new r.Z(t).set(new r.Z(e)), t;
+    return new n.Z(t).set(new n.Z(e)), t;
 };

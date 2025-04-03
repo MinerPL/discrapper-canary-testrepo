@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i }), n(26686);
 var r = n(413135).Buffer;
 function i(e) {
     try {

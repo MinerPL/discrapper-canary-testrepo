@@ -1,32 +1,28 @@
-n.d(t, {
-    g: function () {
-        return m;
-    }
-});
-var i = n(149765),
-    a = n(442837),
+n.d(t, { g: () => s });
+var r = n(149765),
+    l = n(442837),
     o = n(665906),
-    l = n(271383),
-    d = n(496675),
+    i = n(271383),
+    a = n(496675),
     c = n(594174),
-    r = n(981631);
-function m(e) {
+    u = n(981631);
+function s(e) {
     let t = e.getGuildId(),
-        n = (0, a.e7)([l.ZP, c.default], () => {
+        n = (0, l.e7)([i.ZP, c.default], () => {
             var e, n;
-            let i = c.default.getCurrentUser();
-            return null !== (n = null != t && null != i ? (null === (e = l.ZP.getMember(t, i.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== n && n;
+            let r = c.default.getCurrentUser();
+            return null != (n = null != t && null != r ? (null == (e = i.ZP.getMember(t, r.id)) ? void 0 : e.isPending) : null) && n;
         }),
-        { messagesDisabled: m } = (0, a.cj)(
-            [d.Z],
+        { messagesDisabled: s } = (0, l.cj)(
+            [a.Z],
             () => {
                 let t = e.isPrivate(),
-                    a = d.Z.computePermissions(e),
-                    l = i.e$(a, r.Plq.SEND_MESSAGES),
+                    l = a.Z.computePermissions(e),
+                    i = r.e$(l, u.Plq.SEND_MESSAGES),
                     c = (0, o.xl)(e);
-                return { messagesDisabled: n || (!t && !l) || c };
+                return { messagesDisabled: n || (!t && !i) || c };
             },
             [e, n]
         );
-    return !m;
+    return !s;
 }

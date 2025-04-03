@@ -1,161 +1,158 @@
-var r = n(911969),
-    i = n(465343),
-    a = n(706454),
-    s = n(117530),
-    o = n(174212),
-    l = n(456007),
-    u = n(581364),
-    c = n(689079),
-    d = n(689938);
+n.d(t, { Z: () => E }), n(566702);
+var r = n(512722),
+    i = n.n(r),
+    o = n(911969),
+    a = n(465343),
+    s = n(706454),
+    l = n(117530),
+    c = n(160062),
+    u = n(456007),
+    d = n(581364),
+    f = n(388032);
 let _ = {
-        [r.jw.SUB_COMMAND]: () => ({ success: !1 }),
-        [r.jw.SUB_COMMAND_GROUP]: () => ({ success: !1 }),
-        [r.jw.STRING]: (e, t, n) => {
-            var i, a, s;
-            let l =
-                null ===
-                    (i = (function (e) {
-                        switch (e.type) {
-                            case 'emoji':
-                                return e.surrogate;
-                            case 'text':
-                                return e.text;
-                        }
-                    })(e)) || void 0 === i
-                    ? void 0
-                    : i.trim();
-            if (t.autocomplete) {
-                let e = o.Z.getAutocompleteLastChoices(n, t.name);
-                null != e && (l = String(null !== (s = null === (a = e.find((e) => e.name === l)) || void 0 === a ? void 0 : a.value) && void 0 !== s ? s : l));
-            }
-            return null == t.choices || (null != l && t.choices.map((e) => e.displayName).includes(l))
-                ? t.type === r.jw.STRING && (void 0 !== t.minLength || void 0 !== t.maxLength)
-                    ? void 0 !== l
-                        ? (function (e, t, n) {
-                              if ((void 0 !== t.minLength && e.length < t.minLength) || (void 0 !== t.maxLength && e.length > t.maxLength)) {
-                                  if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength)
-                                      return {
-                                          success: !1,
-                                          error: n.exactRangeErrorMessage.format({ value: h(t.minLength) })
-                                      };
-                                  if (void 0 !== t.maxLength && void 0 !== t.minLength)
-                                      return {
-                                          success: !1,
-                                          error: n.rangeErrorMessage.format({
-                                              minimum: h(t.minLength),
-                                              maximum: h(t.maxLength)
-                                          })
-                                      };
-                                  else if (void 0 !== t.minLength)
-                                      return {
-                                          success: !1,
-                                          error: n.minErrorMessage.format({ minimum: h(t.minLength) })
-                                      };
-                                  else if (void 0 !== t.maxLength)
-                                      return {
-                                          success: !1,
-                                          error: n.maxErrorMessage.format({ maximum: h(t.maxLength) })
-                                      };
-                              }
-                              return { success: !0 };
-                          })(l, t, {
-                              exactRangeErrorMessage: d.Z.Messages.COMMAND_VALIDATION_STRING_EXACT_RANGE_ERROR,
-                              rangeErrorMessage: d.Z.Messages.COMMAND_VALIDATION_STRING_RANGE_ERROR,
-                              minErrorMessage: d.Z.Messages.COMMAND_VALIDATION_STRING_MINIMUM_ERROR,
-                              maxErrorMessage: d.Z.Messages.COMMAND_VALIDATION_STRING_MAXIMUM_ERROR
-                          })
-                        : { success: !0 }
-                    : { success: !0 }
-                : { success: !1 };
-        },
-        [r.jw.BOOLEAN]: (e) => {
+        [o.jw.SUB_COMMAND]: () => ({ success: !1 }),
+        [o.jw.SUB_COMMAND_GROUP]: () => ({ success: !1 }),
+        [o.jw.BOOLEAN]: (e) => {
             if ('text' !== e.type) return { success: !1 };
             let t = e.text.trim();
-            return { success: c.ak.map((e) => e.displayName.toLowerCase()).includes(t.toLowerCase()) };
+            return { success: null != (0, c.Kl)(t) };
         },
-        [r.jw.INTEGER]: (e, t, n) => {
-            if ('text' !== e.type || t.type !== r.jw.INTEGER) return { success: !1 };
-            let i = e.text.trim();
-            if (0 === i.length) return { success: !1 };
-            if (null != t.choices) return t.choices.map((e) => e.displayName).includes(i) ? { success: !0 } : { success: !1 };
-            let s = o.Z.getAutocompleteLastChoices(n, t.name);
-            if (null != s && s.map((e) => e.displayName).includes(i)) return { success: !0 };
-            let u = Number(l.AS(a.default.locale, i));
-            return !isNaN(u) && Number.isInteger(u) && Number.isSafeInteger(u) ? f(u, t, d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR) : { success: !1 };
+        [o.jw.STRING]: (e, t, n) => {
+            let r;
+            switch ((i()(t.type === o.jw.STRING, 'option type must match validator type'), e.type)) {
+                case 'emoji':
+                    r = e.surrogate;
+                    break;
+                case 'text':
+                    r = e.text.trim();
+                    break;
+                default:
+                    return { success: !1 };
+            }
+            if (null != t.choices) return { success: null != (0, c.cT)(t.choices, r) };
+            if (t.autocomplete && null != (0, c.Wv)(n, t.name, r)) return { success: !0 };
+            let a = r;
+            if (void 0 !== t.minLength || void 0 !== t.maxLength) {
+                if (null == a) return { success: !1 };
+                let e = m(a, t, {
+                    exactRangeErrorMessage: f.t['e+9/SU'],
+                    rangeErrorMessage: f.t.IE1sTk,
+                    minErrorMessage: f.t.rXAFQE,
+                    maxErrorMessage: f.t.ycEPx8
+                });
+                if (!e.success) return e;
+            }
+            return { success: !0 };
         },
-        [r.jw.NUMBER]: (e, t, n) => {
-            if ('text' !== e.type || t.type !== r.jw.NUMBER) return { success: !1 };
-            let i = e.text.trim();
-            if (0 === i.length) return { success: !1 };
-            if (null != t.choices) return t.choices.map((e) => e.displayName).includes(i) ? { success: !0 } : { success: !1 };
-            let s = o.Z.getAutocompleteLastChoices(n, t.name);
-            if (null != s && s.map((e) => e.displayName).includes(i)) return { success: !0 };
-            let u = Number(l.AS(a.default.locale, i));
-            return isNaN(u) || u > Number.MAX_SAFE_INTEGER || u < Number.MIN_SAFE_INTEGER ? { success: !1 } : f(u, t, d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR);
+        [o.jw.INTEGER]: (e, t, n) => {
+            i()(t.type === o.jw.INTEGER, 'option type must match validator type');
+            let r = 'text' === e.type ? e.text.trim() : null;
+            if (null == r || 0 === r.length) return { success: !1 };
+            if (null != t.choices) return { success: null != (0, c.l1)(t.choices, r) };
+            if (t.autocomplete && null != (0, c.xg)(n, t.name, r)) return { success: !0 };
+            let a = Number(u.AS(s.default.locale, r));
+            return null == a || isNaN(a) || !Number.isInteger(a) || !Number.isSafeInteger(a) ? { success: !1 } : h(a, t, f.t['8Y5zsr'], f.t.CyRLmJ, f.t['VD3Q+f']);
         },
-        [r.jw.USER]: (e, t, n, r) => {
+        [o.jw.NUMBER]: (e, t, n) => {
+            i()(t.type === o.jw.NUMBER, 'option type must match validator type');
+            let r = 'text' === e.type ? e.text.trim() : null;
+            if (null == r || 0 === r.length) return { success: !1 };
+            if (null != t.choices) return { success: null != (0, c.l1)(t.choices, r) };
+            if (t.autocomplete && null != (0, c.xg)(n, t.name, r)) return { success: !0 };
+            let a = Number(u.AS(s.default.locale, r));
+            return isNaN(a) || a > Number.MAX_SAFE_INTEGER || a < Number.MIN_SAFE_INTEGER ? { success: !1 } : h(a, t, f.t['8Y5zsr'], f.t.CyRLmJ, f.t['VD3Q+f']);
+        },
+        [o.jw.USER]: (e, t, n, r) => {
             if ('text' !== e.type) return { success: 'userMention' === e.type };
             {
-                if ((0, u.BH)(e.text)) return { success: !0 };
-                let t = (0, i.K)(e.text, r, n, { allowRoles: !1 });
+                if ((0, d.BH)(e.text)) return { success: !0 };
+                let t = (0, a.K)(e.text, r, n, { allowRoles: !1 });
                 return { success: (null == t ? void 0 : t.type) === 'userMention' };
             }
         },
-        [r.jw.CHANNEL]: (e, t, n, r) => {
+        [o.jw.CHANNEL]: (e, t, n, r) => {
             if ('text' !== e.type) return { success: 'channelMention' === e.type };
             {
-                if ((0, u.BH)(e.text)) return { success: !0 };
-                let t = (0, i.K)(e.text, r, n);
+                if ((0, d.BH)(e.text)) return { success: !0 };
+                let t = (0, a.K)(e.text, r, n);
                 return { success: (null == t ? void 0 : t.type) === 'channelMention' };
             }
         },
-        [r.jw.ROLE]: (e, t, n, r) => {
-            if ('text' !== e.type) return { success: E(e) };
+        [o.jw.ROLE]: (e, t, n, r) => {
+            if ('text' !== e.type) return { success: p(e) };
             {
-                if ((0, u.BH)(e.text)) return { success: !0 };
-                let t = (0, i.K)(e.text, r, n, { allowUsers: !1 });
+                if ((0, d.BH)(e.text)) return { success: !0 };
+                let t = (0, a.K)(e.text, r, n, { allowUsers: !1 });
                 return { success: (null == t ? void 0 : t.type) === 'roleMention' };
             }
         },
-        [r.jw.MENTIONABLE]: (e, t, n, r) => {
-            if ('text' !== e.type) return { success: 'userMention' === e.type || E(e) };
+        [o.jw.MENTIONABLE]: (e, t, n, r) => {
+            if ('text' !== e.type) return { success: 'userMention' === e.type || p(e) };
             {
-                if ((0, u.BH)(e.text)) return { success: !0 };
-                let t = (0, i.K)(e.text, r, n);
-                return { success: null != t && ('userMention' === t.type || E(t)) };
+                if ((0, d.BH)(e.text)) return { success: !0 };
+                let t = (0, a.K)(e.text, r, n);
+                return { success: null != t && ('userMention' === t.type || p(t)) };
             }
         },
-        [r.jw.ATTACHMENT]: (e, t, n, r, i) => {
+        [o.jw.ATTACHMENT]: (e, t, n, r, i) => {
             if ('text' !== e.type) return { success: !1 };
-            let a = s.Z.getUpload(n, t.name, (0, u.D7)(i));
-            return { success: null != a && a.filename === e.text };
+            let o = l.Z.getUpload(n, t.name, (0, d.D7)(i));
+            return { success: null != o && o.filename === e.text };
         }
     },
-    E = (e) => 'roleMention' === e.type || ('textMention' === e.type && '@everyone' === e.text);
-function f(e, t, n, r, i) {
+    p = (e) => 'roleMention' === e.type || ('textMention' === e.type && '@everyone' === e.text);
+function h(e, t, n, r, i) {
     if ((null != t.minValue && e < t.minValue) || (null != t.maxValue && e > t.maxValue)) {
         if (null != t.maxValue && null != t.minValue)
             return {
                 success: !1,
-                error: n.format({
-                    minimum: h(t.minValue),
-                    maximum: h(t.maxValue)
+                error: f.NW.formatToPlainString(n, {
+                    minimum: g(t.minValue),
+                    maximum: g(t.maxValue)
                 })
             };
-        if (null != t.minValue)
+        else if (null != t.minValue)
             return {
                 success: !1,
-                error: r.format({ minimum: h(t.minValue) })
+                error: f.NW.formatToPlainString(r, { minimum: g(t.minValue) })
             };
         else if (null != t.maxValue)
             return {
                 success: !1,
-                error: i.format({ maximum: h(t.maxValue) })
+                error: f.NW.formatToPlainString(i, { maximum: g(t.maxValue) })
             };
     }
     return { success: !0 };
 }
-function h(e) {
-    return e.toLocaleString(d.Z.getLocale(), { useGrouping: !1 });
+function m(e, t, n) {
+    if ((void 0 !== t.minLength && e.length < t.minLength) || (void 0 !== t.maxLength && e.length > t.maxLength)) {
+        if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength)
+            return {
+                success: !1,
+                error: f.NW.formatToPlainString(n.exactRangeErrorMessage, { value: g(t.minLength) })
+            };
+        else if (void 0 !== t.maxLength && void 0 !== t.minLength)
+            return {
+                success: !1,
+                error: f.NW.formatToPlainString(n.rangeErrorMessage, {
+                    minimum: g(t.minLength),
+                    maximum: g(t.maxLength)
+                })
+            };
+        else if (void 0 !== t.minLength)
+            return {
+                success: !1,
+                error: f.NW.formatToPlainString(n.minErrorMessage, { minimum: g(t.minLength) })
+            };
+        else if (void 0 !== t.maxLength)
+            return {
+                success: !1,
+                error: f.NW.formatToPlainString(n.maxErrorMessage, { maximum: g(t.maxLength) })
+            };
+    }
+    return { success: !0 };
 }
-t.Z = _;
+function g(e) {
+    return e.toLocaleString(f.NW.currentLocale, { useGrouping: !1 });
+}
+let E = _;

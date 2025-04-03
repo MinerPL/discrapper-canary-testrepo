@@ -1,29 +1,25 @@
-n.d(a, {
-    l: function () {
-        return s;
-    }
-});
-var t = n(470079),
-    r = n(367907),
-    l = n(981631);
-function s(e, a, n) {
+n.d(t, { l: () => l });
+var r = n(192379),
+    a = n(367907),
+    o = n(981631);
+function l(e, t, n) {
     return {
-        trackPollCreationCancelled: t.useCallback(() => {
-            let t = 0,
-                s = 0,
-                o = 0;
+        trackPollCreationCancelled: r.useCallback(() => {
+            let r = 0,
+                l = 0,
+                i = 0;
             e.forEach((e) => {
-                let a = e.image;
-                null != a && (null != a.emoji ? (s += 1) : null != a.stickerId ? (o += 1) : null != a.mediaAttachmentState && (t += 1));
+                let t = e.image;
+                null != t && (null != t.emoji ? (l += 1) : null != t.stickerId ? (i += 1) : null != t.mediaAttachmentState && (r += 1));
             }),
-                r.ZP.trackWithMetadata(l.rMx.POLL_CREATION_CANCELLED, {
+                a.ZP.trackWithMetadata(o.rMx.POLL_CREATION_CANCELLED, {
                     answers_count: e.length,
-                    attachments_count: t,
-                    emojis_count: s,
-                    stickers_count: o,
-                    allow_multiselect: a,
+                    attachments_count: r,
+                    emojis_count: l,
+                    stickers_count: i,
+                    allow_multiselect: t,
                     layout_type: n
                 });
-        }, [e, a, n])
+        }, [e, t, n])
     };
 }

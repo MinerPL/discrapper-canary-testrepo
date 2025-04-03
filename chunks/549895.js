@@ -1,18 +1,12 @@
 function r(e, t, n) {
-    let r;
-    let i = [],
-        a = function () {
-            for (var s = arguments.length, o = Array(s), l = 0; l < s; l++) o[l] = arguments[l];
-            let u = Date.now();
-            for (null != r && (clearTimeout(r), (r = null)); i.length > 0 && i[0] <= u; ) i.shift();
-            i.length < e ? (i.push(u + t), n(...o)) : (r = setTimeout(() => a(...o), i[0] - u));
+    let r,
+        i = [],
+        o = function () {
+            for (var a = arguments.length, s = Array(a), l = 0; l < a; l++) s[l] = arguments[l];
+            let c = Date.now();
+            for (null != r && (clearTimeout(r), (r = null)); i.length > 0 && i[0] <= c; ) i.shift();
+            i.length < e ? (i.push(c + t), n(...s)) : (r = setTimeout(() => o(...s), i[0] - c));
         };
-    return a;
+    return o;
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    n(653041),
-    n(47120);
+n.d(t, { Z: () => r }), n(653041), n(47120);

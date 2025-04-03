@@ -11,8 +11,10 @@ var r = {
     './el.json': '709790',
     './en-GB': '257037',
     './en-GB.json': '257037',
-    './en-US': '79209',
-    './en-US.js': '79209',
+    './en-US': '83472',
+    './en-US.json': '83472',
+    './es-419': '434903',
+    './es-419.json': '434903',
     './es-ES': '165243',
     './es-ES.json': '165243',
     './fi': '419485',
@@ -63,9 +65,9 @@ var r = {
     './zh-TW.json': '223797'
 };
 function i(e) {
-    return n(a(e));
+    return n(o(e));
 }
-function a(e) {
+function o(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
@@ -75,6 +77,6 @@ function a(e) {
 (i.keys = function () {
     return Object.keys(r);
 }),
-    (i.resolve = a),
+    (i.resolve = o),
     (e.exports = i),
-    (i.id = '292516');
+    (i.id = 292516);

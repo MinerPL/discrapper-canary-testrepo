@@ -1,48 +1,43 @@
 n.d(t, {
-    J: function () {
-        return h;
-    },
-    q: function () {
-        return p;
-    }
+    J: () => h,
+    q: () => m
 }),
     n(47120);
-var r = n(470079),
+var r = n(192379),
     i = n(442837),
-    a = n(524437),
-    s = n(781391),
-    o = n(740492),
+    o = n(524437),
+    a = n(781391),
+    s = n(740492),
     l = n(581883),
-    u = n(626135),
-    c = n(238302),
+    c = n(626135),
+    u = n(238302),
     d = n(514361),
-    _ = n(981631),
-    E = n(474936),
-    f = n(874893);
+    f = n(981631),
+    _ = n(474936),
+    p = n(874893);
 let h = () => {
         let e = (0, i.e7)([d.Z], () => d.Z.gradientPreset),
-            t = (0, i.e7)([o.ZP], () => o.ZP.useSystemTheme === f.K.ON),
-            [n, a] = (0, r.useState)(t);
+            t = (0, i.e7)([s.ZP], () => s.ZP.useSystemTheme === p.KW.ON),
+            [n, o] = (0, r.useState)(t);
         return (
             (0, r.useEffect)(() => {
-                if (null == e) a(t);
+                null == e && o(t);
             }, [e, t]),
             (0, r.useCallback)(() => {
-                if (null == e) return;
-                if (((0, c.kj)(), !!n)) (0, s.hi)(f.K.ON);
+                null != e && ((0, u.kj)(), n && (0, a.hi)(p.KW.ON));
             }, [e, n])
         );
     },
-    p = () => {
-        let { previewPaneVariant: e } = (0, i.cj)([d.Z], () => ({ previewPaneVariant: d.Z.isPreview ? E.h1.FREE : E.h1.PREMIUM_STANDARD })),
+    m = () => {
+        let { previewPaneVariant: e } = (0, i.cj)([d.Z], () => ({ previewPaneVariant: d.Z.isPreview ? _.h1.FREE : _.h1.PREMIUM_STANDARD })),
             t = (0, i.e7)([l.Z], () => {
                 var e;
-                let t = null === (e = l.Z.settings.appearance) || void 0 === e ? void 0 : e.theme;
-                return 'default '.concat(t === a.Q2.LIGHT ? _.BRd.LIGHT : _.BRd.DARK);
+                let t = null == (e = l.Z.settings.appearance) ? void 0 : e.theme;
+                return 'default '.concat(t === o.Q2.LIGHT ? f.BRd.LIGHT : f.BRd.DARK);
             });
         return (0, r.useCallback)(
             (n) => {
-                u.default.track(n, {
+                c.default.track(n, {
                     preview_pane_variant: e,
                     original_theme: t
                 });

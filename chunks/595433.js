@@ -1,15 +1,10 @@
-n.d(t, {
-    H: function () {
-        return r;
-    }
-}),
-    n(47120);
-var a = n(470079),
-    s = n(481060);
-function r() {
-    let [e, t] = a.useState(!0);
+n.d(t, { H: () => i }), n(47120);
+var r = n(192379),
+    a = n(481060);
+function i() {
+    let [e, t] = r.useState(!0);
     return {
-        transitions: (0, s.useTransition)(e, {
+        transitions: (0, a.Yzy)(e, {
             keys: (e) => (e ? 'shown' : 'hidden'),
             config: l,
             from: { opacity: 0 },

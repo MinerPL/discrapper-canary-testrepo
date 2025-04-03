@@ -1,9 +1,4 @@
-var n, a;
-i.d(t, {
-    C: function () {
-        return n;
-    }
-}),
-    i(47120),
-    ((a = n || (n = {}))[(a.APPLICATION = 1)] = 'APPLICATION'),
-    (a[(a.LINK = 2)] = 'LINK');
+n.d(t, { C: () => r }), n(47120);
+var r = (function (e) {
+    return (e[(e.APPLICATION = 1)] = 'APPLICATION'), (e[(e.LINK = 2)] = 'LINK'), (e[(e.APPLICATION_BANNER = 3)] = 'APPLICATION_BANNER'), e;
+})({});

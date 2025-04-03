@@ -1,8 +1,4 @@
-var r, i;
-n.d(t, {
-    Y: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {}))[(i.GUILD_INSTALL = 0)] = 'GUILD_INSTALL'),
-    (i[(i.USER_INSTALL = 1)] = 'USER_INSTALL');
+n.d(t, { Y: () => r });
+var r = (function (e) {
+    return (e[(e.GUILD_INSTALL = 0)] = 'GUILD_INSTALL'), (e[(e.USER_INSTALL = 1)] = 'USER_INSTALL'), e;
+})({});

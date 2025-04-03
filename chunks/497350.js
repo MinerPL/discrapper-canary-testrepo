@@ -1,11 +1,7 @@
-n.d(e, {
-    B: function () {
-        return o;
-    }
-});
+n.d(t, { B: () => o });
 var a = n(159277),
     r = n(981631);
-function o(t) {
-    let e = null;
-    return t === a.t.PLAYSTATION_APPLICATION_ID ? (e = r.ABu.PLAYSTATION) : t === a.t.PLAYSTATION_STAGING_APPLICATION_ID && (e = r.ABu.PLAYSTATION_STAGING), e;
+function o(e) {
+    let t = null;
+    return e === a.t.PLAYSTATION_APPLICATION_ID ? (t = r.ABu.PLAYSTATION) : e === a.t.PLAYSTATION_STAGING_APPLICATION_ID && (t = r.ABu.PLAYSTATION_STAGING), t;
 }

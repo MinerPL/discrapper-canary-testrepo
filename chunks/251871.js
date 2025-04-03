@@ -1,119 +1,111 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return D;
-        }
-    }),
-    t(47120);
-var s = t(735250),
-    o = t(470079),
-    r = t(399606),
-    i = t(481060),
+t.d(n, { default: () => A }), t(47120);
+var i = t(200651),
+    r = t(192379),
+    l = t(399606),
+    s = t(481060),
+    o = t(493773),
     a = t(100527),
-    l = t(906732),
+    d = t(906732),
     u = t(565138),
-    _ = t(314897),
-    d = t(271383),
-    c = t(430824),
-    I = t(626135),
-    A = t(715903),
-    O = t(295474),
-    E = t(273504),
-    M = t(981631),
-    N = t(372897),
-    L = t(689938),
-    U = t(791344);
-function D(e) {
+    c = t(314897),
+    N = t(271383),
+    _ = t(430824),
+    g = t(626135),
+    h = t(715903),
+    I = t(295474),
+    f = t(273504),
+    k = t(981631),
+    x = t(372897),
+    C = t(388032),
+    Z = t(875606);
+function A(e) {
     var n;
-    let { onClose: t, transitionState: D, guildId: R } = e,
-        C = (0, r.e7)([_.default], () => _.default.getId()),
-        T = (0, r.e7)([d.ZP], () => d.ZP.getMember(R, C), [R, C]),
-        f = (0, r.e7)([c.Z], () => c.Z.getGuild(R), [R]),
-        Z = null !== (n = null == f ? void 0 : f.name) && void 0 !== n ? n : '',
-        g = (0, A.no)(T),
-        { analyticsLocations: h } = (0, l.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [P, m] = (0, O.ww)({
-            guildId: R,
-            analyticsLocations: h,
+    let { onClose: t, transitionState: A, guildId: E } = e,
+        m = (0, l.e7)([c.default], () => c.default.getId()),
+        R = (0, l.e7)([N.ZP], () => N.ZP.getMember(E, m), [E, m]),
+        O = (0, l.e7)([_.Z], () => _.Z.getGuild(E), [E]),
+        P = null != (n = null == O ? void 0 : O.name) ? n : '',
+        p = (0, h.no)(R),
+        { analyticsLocations: L } = (0, d.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        [M, U] = (0, I.ww)({
+            guildId: E,
+            analyticsLocations: L,
             openWithoutBackstack: !0
         }),
-        x = g.has(N.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? L.Z.Messages.GUILD_AUTOMOD_USERNAME_INVALID_MODAL_DESCRIPTION_MOBILE : L.Z.Messages.GUILD_AUTOMOD_BIO_INVALID_MODAL_DESCRIPTION_MOBILE;
-    !m && (x = L.Z.Messages.GUILD_AUTOMOD_USERNAME_INVALID_NO_PERMS_MODAL_DESCRIPTION_MOBILE);
-    let G = m ? L.Z.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : L.Z.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
-    return (o.useEffect(() => {
-        I.default.track(M.rMx.OPEN_MODAL, {
-            type: E.dc,
-            guild_id: R,
-            other_user_id: C
+        j = p.has(x.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? C.NW.string(C.t.SpDXIy) : C.NW.string(C.t['QRN+Sk']);
+    U || (j = C.NW.string(C.t.FFj5Dg));
+    let v = U ? C.NW.string(C.t['/PGQf3']) : C.NW.string(C.t.WikgZ2);
+    return ((0, o.ZP)(() => {
+        g.default.track(k.rMx.OPEN_MODAL, {
+            type: f.dc,
+            guild_id: E,
+            other_user_id: m
         });
-    }, []),
-    o.useEffect(() => {
-        if (null == f) {
-            t();
-            return;
-        }
-    }, [f, t]),
-    null == f)
+    }),
+    r.useEffect(() => {
+        if (null == O) return void t();
+    }, [O, t]),
+    null == O)
         ? null
-        : (0, s.jsxs)(i.ModalRoot, {
-              transitionState: D,
-              size: i.ModalSize.SMALL,
+        : (0, i.jsxs)(s.Y0X, {
+              transitionState: A,
+              size: s.CgR.SMALL,
               children: [
-                  (0, s.jsx)(i.ModalHeader, {
+                  (0, i.jsx)(s.xBx, {
                       separator: !1,
-                      children: (0, s.jsxs)('div', {
-                          className: U.headerContainer,
+                      children: (0, i.jsxs)('div', {
+                          className: Z.headerContainer,
                           children: [
-                              (0, s.jsxs)('div', {
-                                  className: U.guildIconContainer,
+                              (0, i.jsxs)('div', {
+                                  className: Z.guildIconContainer,
                                   children: [
-                                      (0, s.jsx)(u.Z, {
-                                          guild: f,
+                                      (0, i.jsx)(u.Z, {
+                                          guild: O,
                                           size: u.Z.Sizes.LARGER
                                       }),
-                                      (0, s.jsx)('div', {
-                                          className: U.statusContainer,
-                                          children: (0, s.jsx)(i.ChatXIcon, {
+                                      (0, i.jsx)('div', {
+                                          className: Z.statusContainer,
+                                          children: (0, i.jsx)(s.ics, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: U.statusIcon
+                                              className: Z.statusIcon
                                           })
                                       })
                                   ]
                               }),
-                              (0, s.jsx)(i.Heading, {
+                              (0, i.jsx)(s.X6q, {
                                   color: 'header-primary',
                                   variant: 'heading-md/semibold',
-                                  children: L.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_MODAL_TITLE_MOBILE.format({ guildName: Z })
+                                  children: C.NW.format(C.t.kcYdTk, { guildName: P })
                               })
                           ]
                       })
                   }),
-                  (0, s.jsx)(i.ModalContent, {
-                      children: (0, s.jsx)('div', {
-                          className: U.descriptionContainer,
-                          children: (0, s.jsx)(i.Text, {
+                  (0, i.jsx)(s.hzk, {
+                      children: (0, i.jsx)('div', {
+                          className: Z.descriptionContainer,
+                          children: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
-                              children: x
+                              children: j
                           })
                       })
                   }),
-                  (0, s.jsxs)(i.ModalFooter, {
+                  (0, i.jsxs)(s.mzw, {
                       children: [
-                          (0, s.jsx)(i.Button, {
+                          (0, i.jsx)(s.zxk, {
                               onClick: () => {
-                                  P(), t();
+                                  M(), t();
                               },
-                              color: i.Button.Colors.BRAND,
-                              look: i.Button.Looks.FILLED,
-                              children: G
+                              color: s.zxk.Colors.BRAND,
+                              look: s.zxk.Looks.FILLED,
+                              children: v
                           }),
-                          (0, s.jsx)(i.Button, {
+                          (0, i.jsx)(s.zxk, {
                               onClick: t,
-                              color: i.Button.Colors.PRIMARY,
-                              look: i.Button.Looks.LINK,
-                              children: L.Z.Messages.CANCEL
+                              color: s.zxk.Colors.PRIMARY,
+                              look: s.zxk.Looks.LINK,
+                              children: C.NW.string(C.t['ETE/oK'])
                           })
                       ]
                   })

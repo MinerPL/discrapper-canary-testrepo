@@ -1,34 +1,30 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var i = n(470079),
-    a = n(442837),
-    s = n(592125),
-    r = n(594174),
-    l = n(900255),
-    o = n(333984);
+n.d(t, { Z: () => c });
+var r = n(192379),
+    i = n(442837),
+    l = n(592125),
+    a = n(594174),
+    o = n(900255),
+    s = n(333984);
 function c() {
-    let e = (0, a.e7)([s.Z], () => s.Z.getPrivateChannelsVersion()),
-        t = (0, a.Wu)(
-            [s.Z, o.Z],
+    let e = (0, i.e7)([l.Z], () => l.Z.getPrivateChannelsVersion()),
+        t = (0, i.Wu)(
+            [l.Z, s.Z],
             () => {
-                let e = s.Z.getMutablePrivateChannels(),
-                    t = Array.from(o.Z.getSpamChannelIds())
+                let e = l.Z.getMutablePrivateChannels(),
+                    t = Array.from(s.Z.getSpamChannelIds())
                         .map((t) => e[t])
                         .filter((e) => null != e);
-                return (0, l.x)(t);
+                return (0, o.x)(t);
             },
             [e]
         ),
-        n = (0, a.cj)(
-            [r.default],
+        n = (0, i.cj)(
+            [a.default],
             () => {
                 let e = {};
                 return (
                     t.forEach((t) => {
-                        let n = r.default.getUser(t.recipients[0]);
+                        let n = a.default.getUser(t.recipients[0]);
                         null != n && (e[t.id] = n);
                     }),
                     e
@@ -36,7 +32,7 @@ function c() {
             },
             [t]
         );
-    return i.useMemo(
+    return r.useMemo(
         () =>
             t.map((e) => ({
                 channel: e,

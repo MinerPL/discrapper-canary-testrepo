@@ -1,37 +1,33 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var i = n(735250);
-n(470079);
-var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
-    s = n(891155);
-function o(e) {
-    let { total: t, users: n, videoLimit: l } = e;
-    return (0, i.jsxs)('div', {
-        className: s.wrapper,
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(656855);
+function s(e) {
+    let { total: t, users: n, videoLimit: i } = e;
+    return (0, r.jsxs)('div', {
+        className: a.wrapper,
         children: [
-            (0, i.jsxs)('span', {
-                className: r()(s.users, {
-                    [s.video]: l,
-                    [s.extraLong]: n >= 100
+            (0, r.jsxs)('span', {
+                className: l()(a.users, {
+                    [a.video]: i,
+                    [a.extraLong]: n >= 100
                 }),
                 children: [
-                    l
-                        ? (0, i.jsx)(a.VideoIcon, {
+                    i
+                        ? (0, r.jsx)(o.Odl, {
                               size: 'md',
                               color: 'currentColor',
-                              className: s.videoIcon
+                              className: a.videoIcon
                           })
                         : null,
                     n.toString().padStart(2, '0')
                 ]
             }),
-            (0, i.jsx)('span', {
-                className: r()(s.total, { [s.extraLong]: t >= 100 }),
+            (0, r.jsx)('span', {
+                className: l()(a.total, { [a.extraLong]: t >= 100 }),
                 children: t.toString().padStart(2, '0')
             })
         ]

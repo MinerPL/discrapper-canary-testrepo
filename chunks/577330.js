@@ -1,15 +1,11 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    i = n(392322);
-function r() {
-    return (0, s.jsx)('div', {
-        className: i.centerContainer,
-        children: (0, s.jsx)(a.Spinner, { type: a.Spinner.Type.SPINNING_CIRCLE })
+n.d(t, { Z: () => a });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(236715);
+function a() {
+    return (0, r.jsx)('div', {
+        className: s.centerContainer,
+        children: (0, r.jsx)(i.$jN, { type: i.$jN.Type.SPINNING_CIRCLE })
     });
 }

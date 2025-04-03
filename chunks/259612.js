@@ -1,10 +1,6 @@
 n.d(t, {
-    R: function () {
-        return a;
-    },
-    W: function () {
-        return i;
-    }
+    R: () => o,
+    W: () => i
 }),
     n(411104);
 var r = n(356659);
@@ -15,16 +11,15 @@ function i(e) {
     if (null == n) throw Error('Could not create canvas context');
     return n.putImageData(new ImageData(e.data, e.width, e.height), 0, 0), t.toDataURL('image/jpeg', 0.9);
 }
-async function a(e, t) {
+async function o(e, t) {
     let n = document.createElement('video');
     (n.muted = !0), (n.src = e), (n.currentTime = t), await n.play(), n.pause();
-    let i = r.f_ / n.videoWidth,
-        a = Math.min(i, r.wD / n.videoHeight),
-        s = n.videoWidth * a,
-        o = n.videoHeight * a,
-        l = document.createElement('canvas');
-    (l.width = s), (l.height = o);
-    let u = l.getContext('2d');
-    if (null == u) throw Error('Could not create canvas context');
-    return u.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, s, o), l.toDataURL('image/jpeg', 0.9);
+    let i = Math.min(r.f_ / n.videoWidth, r.wD / n.videoHeight),
+        o = n.videoWidth * i,
+        a = n.videoHeight * i,
+        s = document.createElement('canvas');
+    (s.width = o), (s.height = a);
+    let l = s.getContext('2d');
+    if (null == l) throw Error('Could not create canvas context');
+    return l.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, o, a), s.toDataURL('image/jpeg', 0.9);
 }

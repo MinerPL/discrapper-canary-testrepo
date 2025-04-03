@@ -1,178 +1,145 @@
-n.d(t, {
-    Z: function () {
-        return k;
+n.d(t, { Z: () => S });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    o = n(481060),
+    a = n(40851),
+    s = n(456100),
+    l = n(841784),
+    c = n(906732),
+    u = n(499254),
+    d = n(827498),
+    f = n(397698),
+    _ = n(541716),
+    p = n(103450),
+    h = n(592125),
+    m = n(944486),
+    g = n(475413),
+    E = n(981631),
+    b = n(388032);
+function y(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                y(e, t, n[t]);
+            });
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(442837),
-    s = n(481060),
-    o = n(278323),
-    l = n(224706),
-    u = n(287734),
-    c = n(566620),
-    d = n(317381),
-    _ = n(638880),
-    E = n(255621),
-    f = n(452634),
-    h = n(620662),
-    p = n(841784),
-    m = n(275920),
-    I = n(906732),
-    T = n(835473),
-    g = n(592745),
-    S = n(592125),
-    A = n(757266),
-    N = n(650774),
-    v = n(430824),
-    O = n(283595),
-    R = n(496675),
-    C = n(699516),
-    y = n(944486),
-    D = n(979651),
-    L = n(181106),
-    b = n(417363),
-    M = n(358085),
-    P = n(804739),
-    U = n(475413),
-    w = n(981631),
-    x = n(701488),
-    G = n(689938);
-function k(e) {
-    let { user: t, currentUser: n, activity: k, onAction: B, onClose: F } = e,
-        { analyticsLocations: V, newestAnalyticsLocation: H } = (0, I.ZP)(),
-        [Z] = (0, T.Z)([null == k ? void 0 : k.application_id]),
-        Y = (0, p.Z)(k),
-        j = null == k ? void 0 : k.application_id,
-        W = null == k ? void 0 : k.session_id,
-        K = (0, f.Z)({
-            activity: k,
-            userId: t.id,
-            channelId: void 0
+    return e;
+}
+function O(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function I(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : O(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function S(e) {
+    let { user: t, activity: n, onAction: y, onClose: O } = e,
+        { newestAnalyticsLocation: S } = (0, c.ZP)(),
+        T = (0, a.bp)() === E.IlC.POPOUT,
+        N = (0, i.e7)([h.Z, m.Z], () => h.Z.getChannel(m.Z.getChannelId())),
+        A = (0, p.e)({
+            activity: null != n ? n : void 0,
+            embeddedActivity: void 0,
+            user: t,
+            onClose: O
         }),
-        z =
-            (0, a.e7)(
-                [O.Z, g.Z, b.Z, A.Z],
-                () =>
-                    null != j &&
-                    (0, P.t)({
-                        applicationId: j,
-                        LibraryApplicationStore: O.Z,
-                        LaunchableGameStore: g.Z,
-                        DispatchApplicationStore: b.Z,
-                        ConnectedAppsStore: A.Z
-                    })
-            ) || Y,
-        q = (0, a.e7)([d.ZP], () =>
-            [...d.ZP.getSelfEmbeddedActivities().values()].some((e) => {
-                let { applicationId: t, channelId: n } = e;
-                return t === j && n === K;
-            })
-        ),
-        Q = (0, a.e7)([L.Z], () => null != j && L.Z.getState(j, w.mFx.JOIN) === w.OcF.LOADING),
-        X = (0, a.e7)([S.Z, v.Z, N.Z, C.Z, y.Z, D.Z, R.Z], () =>
-            (0, E.Z)({
-                user: t,
-                activity: k,
-                application: Z,
-                channelId: K,
-                currentUser: n,
-                isEmbedded: Y,
-                ChannelStore: S.Z,
-                GuildStore: v.Z,
-                GuildMemberCountStore: N.Z,
-                RelationshipStore: C.Z,
-                SelectedChannelStore: y.Z,
-                VoiceStateStore: D.Z,
-                PermissionStore: R.Z
-            })
-        ),
-        [$, J] = i.useState(!1),
-        ee = !X || $ || q || (M.isPlatformEmbedded && !z);
-    if (null == j || (!(0, h.Z)(k, w.xjy.JOIN) && !Y)) return null;
-    let et = async () => {
-            if (
-                Y &&
-                X &&
-                null != K &&
-                null != j &&
-                (await (0, _.Z)({
-                    applicationId: j,
-                    activityChannelId: K,
-                    locationObject: { page: w.ZY5.USER_PROFILE },
-                    analyticsLocations: V
-                }))
-            ) {
-                null == F || F();
-                return;
+        { enabled: C } = s.c.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
+        R = C ? o.iWm : o.jje;
+    if (null == A && null != n && (0, l.Z)(n))
+        return (0, r.jsx)(g.tG, {
+            icon: R,
+            text: b.NW.string(b.t.RscU7O),
+            color: o.Ttl.BRAND,
+            themeColor: 'none',
+            fullWidth: !0,
+            onClick: (e) => {
+                e.stopPropagation(),
+                    null == O || O(),
+                    null == y || y({ action: 'PRESS_PLAY_BUTTON' }),
+                    (null == N ? void 0 : N.isVocal())
+                        ? (0, f.Z)({
+                              context: {
+                                  type: 'channel',
+                                  channel: N
+                              },
+                              analyticsLocation: S,
+                              openInPopout: T
+                          })
+                        : (0, u.__)(d._b.TEXT, _.Ie.NORMAL, { applicationId: n.application_id });
             }
-            if (X && null != j && null != W) {
-                var e;
-                await l.Z.join({
-                    userId: t.id,
-                    sessionId: W,
-                    applicationId: j,
-                    channelId: y.Z.getVoiceChannelId(),
-                    messageId: null,
-                    intent: x.Ws.PLAY,
-                    embedded: Y
-                }),
-                    (0, m.Z)({
-                        type: w.q5t.JOIN,
-                        userId: t.id,
-                        partyId: null == k ? void 0 : null === (e = k.party) || void 0 === e ? void 0 : e.id,
-                        applicationId: j,
-                        analyticsLocations: V
-                    });
-            }
-            if ((J(!0), null != K && null != j))
-                return c.pu({
-                    channelId: K,
-                    applicationId: j,
-                    userId: t.id,
-                    location: H
-                });
-            if (null != k) {
-                let e = await o.Z.sendActivityInviteUser({
-                    type: w.mFx.JOIN_REQUEST,
-                    userId: t.id,
-                    activity: k,
-                    location: w.Sbl.PROFILE_POPOUT
-                });
-                null != e && u.default.selectPrivateChannel(e.id);
-            }
-        },
-        en = () => (t.id === n.id ? G.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : M.isPlatformEmbedded && !z && null != k ? G.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: k.name }) : null);
-    return Y
-        ? (0, r.jsx)(s.Tooltip, {
-              text: en(),
+        });
+    if (null == A) return null;
+    let { isJoining: P, handleJoinRequest: w, buttonCTA: D, tooltip: L, isEnabled: x, isEmbedded: M } = A;
+    return M
+        ? (0, r.jsx)(o.ua7, {
+              text: L,
               children: (e) =>
-                  (0, r.jsx)(U.tG, {
-                      ...e,
-                      icon: s.ActivitiesIcon,
-                      text: G.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY,
-                      disabled: ee,
-                      submitting: Q,
-                      fullWidth: !0,
-                      onClick: () => {
-                          null == B || B({ action: 'PRESS_JOIN_BUTTON' }), et();
-                      }
-                  })
+                  (0, r.jsx)(
+                      g.tG,
+                      I(v({}, e), {
+                          icon: o.YVR,
+                          text: D,
+                          disabled: !x,
+                          submitting: P,
+                          fullWidth: !0,
+                          onClick: (e) => {
+                              e.stopPropagation(), null == y || y({ action: 'PRESS_JOIN_BUTTON' }), w();
+                          }
+                      })
+                  )
           })
-        : (0, r.jsx)(s.Tooltip, {
-              text: en(),
+        : (0, r.jsx)(o.ua7, {
+              text: L,
               children: (e) =>
-                  (0, r.jsx)(U.tG, {
-                      ...e,
-                      icon: s.GameControllerIcon,
-                      text: X ? G.Z.Messages.JOIN : G.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
-                      disabled: ee,
-                      submitting: Q,
-                      fullWidth: !0,
-                      onClick: () => {
-                          null == B || B({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), et();
-                      }
-                  })
+                  (0, r.jsx)(
+                      g.tG,
+                      I(v({}, e), {
+                          icon: o.iWm,
+                          text: D,
+                          disabled: !x,
+                          submitting: P,
+                          fullWidth: !0,
+                          onClick: (e) => {
+                              e.stopPropagation(), null == y || y({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), w();
+                          }
+                      })
+                  )
           });
 }

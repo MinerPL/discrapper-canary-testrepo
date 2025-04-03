@@ -1,23 +1,19 @@
-t.d(n, {
-    Z: function () {
-        return r;
-    }
-});
-var s = t(735250);
-t(470079);
-var i = t(442837),
-    a = t(481060),
-    l = t(888369),
-    u = t(181945),
-    o = t(689938);
-function r(e, n) {
-    let t = e.id,
-        r = (0, i.e7)([l.default], () => l.default.getGuildHasUnreadIgnoreMuted(t), [t]);
-    return (0, s.jsx)(a.MenuItem, {
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    s = n(481060),
+    l = n(888369),
+    a = n(181945),
+    o = n(388032);
+function c(e, t) {
+    let n = e.id,
+        c = (0, r.e7)([l.default], () => l.default.getGuildHasUnreadIgnoreMuted(n), [n]);
+    return (0, i.jsx)(s.sNh, {
         id: 'mark-guild-read',
-        label: o.Z.Messages.MARK_AS_READ,
+        label: o.NW.string(o.t.e6RscX),
         icon: void 0,
-        action: () => (0, u.Z)([t], n.section),
-        disabled: !r
+        action: () => (0, a.Z)([n], t.section),
+        disabled: !c
     });
 }

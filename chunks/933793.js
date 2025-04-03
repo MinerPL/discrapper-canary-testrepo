@@ -1,43 +1,39 @@
-t.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(442837),
-    r = t(481060),
-    d = t(240872),
-    s = t(456269),
-    o = t(346479),
-    u = t(665906),
-    l = t(592125),
-    c = t(176505),
-    Z = t(689938);
-function f(e) {
-    let n = (0, a.e7)([l.Z], () => l.Z.getChannel(e.parent_id)),
-        t = (0, u.Xb)(e),
-        f = (0, s.kF)(e);
-    return (null == n ? void 0 : n.isForumLikeChannel()) && t
-        ? e.hasFlag(c.zZ.PINNED)
-            ? (0, i.jsx)(r.MenuItem, {
+n.d(e, { Z: () => g });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    l = n(240872),
+    s = n(456269),
+    o = n(346479),
+    d = n(665906),
+    c = n(592125),
+    u = n(176505),
+    h = n(388032);
+function g(t) {
+    let e = (0, r.e7)([c.Z], () => c.Z.getChannel(t.parent_id)),
+        n = (0, d.Xb)(t),
+        g = (0, s.kF)(t);
+    return (null == e ? void 0 : e.isForumLikeChannel()) && n
+        ? t.hasFlag(u.zZ.PINNED)
+            ? (0, i.jsx)(a.sNh, {
                   id: 'unpin-thread',
-                  label: Z.Z.Messages.UNPIN_POST,
-                  action: () => o.Z.unpin(e)
+                  label: h.NW.string(h.t.trD8am),
+                  action: () => o.Z.unpin(t)
               })
-            : (0, i.jsx)(r.MenuItem, {
+            : (0, i.jsx)(a.sNh, {
                   id: 'pin-thread',
-                  label: Z.Z.Messages.PIN_POST,
+                  label: h.NW.string(h.t.EnaWho),
                   action: function () {
-                      null != f
-                          ? d.Z.show({
-                                title: Z.Z.Messages.FORUM_PIN_CONFIRM_TITLE,
-                                body: Z.Z.Messages.FORUM_PIN_CONFIRM_BODY,
+                      null != g
+                          ? l.Z.show({
+                                title: h.NW.string(h.t.IMbjxs),
+                                body: h.NW.string(h.t['mi5+Vl']),
                                 onConfirm: async () => {
-                                    await o.Z.unpin(f), o.Z.pin(e);
+                                    await o.Z.unpin(g), o.Z.pin(t);
                                 }
                             })
-                          : o.Z.pin(e);
+                          : o.Z.pin(t);
                   }
               })
         : null;

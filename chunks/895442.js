@@ -1,31 +1,28 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var l = n(592125),
-    a = n(430824),
-    s = n(594174),
+n.d(t, { Z: () => o });
+var a = n(592125),
+    r = n(430824),
+    l = n(594174),
     i = n(981631);
-function r(e) {
+function s(e) {
     if (!e.isPrivate()) {
-        let t = a.Z.getGuild(e.guild_id);
+        let t = r.Z.getGuild(e.guild_id);
         return null != t && t.hasFeature(i.oNc.INTERNAL_EMPLOYEE_ONLY);
     }
     return e.recipients.every((e) => {
-        let t = s.default.getUser(e);
+        let t = l.default.getUser(e);
         return null != t && t.isStaff();
     });
 }
 function o(e, t) {
     var n;
-    if (!(null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff())) return !1;
-    let a = l.Z.getChannel(e.channel_id);
+    if (!(null == (n = l.default.getCurrentUser()) ? void 0 : n.isStaff())) return !1;
+    let r = a.Z.getChannel(e.channel_id);
     return (
-        !!(null != a && r(a)) &&
+        null != r &&
+        !!s(r) &&
         t.some((e) => {
-            let t = l.Z.getChannel(e);
-            return !(null == t || t.isPrivate()) && !r(t);
+            let t = a.Z.getChannel(e);
+            return !(null == t || t.isPrivate()) && !s(t);
         })
     );
 }

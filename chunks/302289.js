@@ -1,38 +1,42 @@
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    r = n(785681),
-    i = n(130310),
-    l = n(689938),
-    o = n(145994),
-    c = n(128216);
-t.Z = () => {
-    let e = (0, r.o)(l.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_TEEN, l.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_PARENT);
-    return (0, s.jsxs)('div', {
-        className: o.container,
+n.d(t, { Z: () => p }), n(266796);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(785681),
+    o = n(130310),
+    c = n(332495),
+    d = n(388032),
+    u = n(175875),
+    m = n(589608),
+    g = n(128216);
+let p = () => {
+    let e = (0, l.o)(d.NW.string(c.Z.i4XFEB), d.NW.string(c.Z.eHQZuL));
+    return (0, r.jsxs)('div', {
+        className: s()(u.container, m.box, m),
         children: [
-            (0, s.jsxs)('div', {
-                className: o.__invalid_content,
+            (0, r.jsxs)('div', {
                 children: [
-                    (0, s.jsx)(a.Heading, {
-                        className: o.header,
+                    (0, r.jsx)(a.X6q, {
+                        className: u.header,
                         variant: 'heading-md/bold',
-                        children: (0, s.jsx)(a.HeadingLevel, { children: l.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_HEADER })
+                        children: (0, r.jsx)(a.y5t, { children: d.NW.string(c.Z.XJabSE) })
                     }),
-                    (0, s.jsx)(a.Text, {
-                        className: o.description,
+                    (0, r.jsx)(a.Text, {
+                        className: u.description,
                         variant: 'text-sm/medium',
                         color: 'text-muted',
                         children: e
                     }),
-                    (0, s.jsx)(i.Z, {})
+                    (0, r.jsx)(o.Z, {})
                 ]
             }),
-            (0, s.jsx)('div', {
-                className: o.artContainer,
-                children: (0, s.jsx)('img', {
-                    src: c,
-                    alt: l.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_ALT
+            (0, r.jsx)('div', {
+                className: u.artContainer,
+                children: (0, r.jsx)('img', {
+                    src: g,
+                    alt: d.NW.string(c.Z.o4pfFB)
                 })
             })
         ]

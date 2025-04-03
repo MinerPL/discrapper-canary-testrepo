@@ -1,64 +1,105 @@
-n(47120);
+n.d(t, { Z: () => A }), n(47120);
 var r = n(392711),
     i = n.n(r),
-    a = n(25209),
-    s = n(691424),
-    o = n(428595),
+    o = n(25209),
+    a = n(691424),
+    s = n(428595),
     l = n(364458);
-let u = null;
-function c(e, t) {
-    let n = {};
-    return null != e.mention && null != u && (n = { mention: u }), (0, l.Z)([e, ...t, n]);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-u = n(878611).Z;
-let d = {
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let _ = null;
+function p(e, t) {
+    let n = {};
+    return null != e.mention && null != _ && (n = { mention: _ }), (0, l.Z)([e, ...t, n]);
+}
+_ = n(878611).Z;
+let h = {
         enableBuildOverrides: !1,
         enableEmojiClick: !0
     },
-    _ = c(o.Z.RULES, [(0, s.Z)({ enableBuildOverrides: !0 })]),
-    E = i().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline'),
-    f = c(o.Z.CHANNEL_TOPIC_RULES, [
-        (0, s.Z)({
-            ...d,
-            emojiTooltipPosition: 'bottom'
-        }),
-        { codeBlock: { react: o.Z.RULES.text.react } }
-    ]),
-    h = c(o.Z.VOICE_CHANNEL_STATUS_RULES, [
-        (0, s.Z)({
-            ...d,
-            enableEmojiClick: !1
-        })
-    ]),
-    p = c(o.Z.EMBED_TITLE_RULES, [(0, s.Z)(d)]),
-    m = c(o.Z.INLINE_REPLY_RULES, [(0, s.Z)(d)]),
-    I = c(o.Z.GUILD_VERIFICATION_FORM_RULES, [(0, s.Z)(d)]),
-    T = c(o.Z.GUILD_EVENT_RULES, [(0, s.Z)(d)]),
-    g = c(o.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.Z)(d)]),
-    S = i().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
-    A = { text: o.Z.RULES.text };
-t.Z = {
-    combineAndInjectMentionRule: c,
-    createReactRules: s.Z,
-    defaultReactRuleOptions: d,
-    defaultRules: _,
-    guildEventRules: T,
-    notifCenterV2MessagePreviewRules: S,
-    lockscreenWidgetMessageRules: A,
-    astParserFor: a._p,
-    reactParserFor: a.w4,
-    parse: a.w4(_),
-    parseTopic: a.w4(f),
-    parseVoiceChannelStatus: a.w4(h),
-    parseEmbedTitle: a.w4(p),
-    parseInlineReply: a.w4(m),
-    parseGuildVerificationFormRule: a.w4(I),
-    parseGuildEventDescription: a.w4(T),
-    parseAutoModerationSystemMessage: a.w4(g),
-    parseForumPostGuidelines: a.w4(E),
-    parseToAST: a._p(_),
-    parseTopicToAST: a._p(f),
-    parseEmbedTitleToAST: a._p(p),
-    parseInlineReplyToAST: a._p(m),
-    parseAutoModerationSystemMessageToAST: a._p(g)
-};
+    m = p(s.Z.RULES, [(0, a.Z)({ enableBuildOverrides: !0 })]),
+    g = i().omit(p(s.Z.RULES, [(0, a.Z)(h)]), 'paragraph', 'newline'),
+    E = p(s.Z.CHANNEL_TOPIC_RULES, [(0, a.Z)(f(u({}, h), { emojiTooltipPosition: 'bottom' })), { codeBlock: { react: s.Z.RULES.text.react } }]),
+    b = p(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, a.Z)(f(u({}, h), { enableEmojiClick: !1 }))]),
+    y = p(s.Z.EMBED_TITLE_RULES, [(0, a.Z)(h)]),
+    v = p(s.Z.INLINE_REPLY_RULES, [(0, a.Z)(h)]),
+    O = p(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, a.Z)(h)]),
+    I = p(s.Z.GUILD_EVENT_RULES, [(0, a.Z)(h)]),
+    S = p(s.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.Z)(h)]),
+    T = i().omit(p(s.Z.RULES, [(0, a.Z)(h)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
+    N = { text: s.Z.RULES.text },
+    A = {
+        combineAndInjectMentionRule: p,
+        createReactRules: a.Z,
+        defaultReactRuleOptions: h,
+        defaultRules: m,
+        guildEventRules: I,
+        notifCenterV2MessagePreviewRules: T,
+        lockscreenWidgetMessageRules: N,
+        astParserFor: o._p,
+        reactParserFor: o.w4,
+        parse: o.w4(m),
+        parseTopic: (e, t, n, r) => o.w4(E)(e, t, u({ allowLinks: !0 }, n), r),
+        parseVoiceChannelStatus: o.w4(b),
+        parseEmbedTitle: o.w4(y),
+        parseInlineReply: o.w4(v),
+        parseGuildVerificationFormRule: o.w4(O),
+        parseGuildEventDescription: o.w4(I),
+        parseAutoModerationSystemMessage: o.w4(S),
+        parseForumPostGuidelines: o.w4(g),
+        parseToAST: o._p(m),
+        parseTopicToAST: o._p(E),
+        parseEmbedTitleToAST: o._p(y),
+        parseInlineReplyToAST: o._p(v),
+        parseAutoModerationSystemMessageToAST: o._p(S)
+    };

@@ -1,22 +1,12 @@
-r.d(t, {
-    JM: function () {
-        return n;
-    },
-    RF: function () {
-        return _;
-    },
-    g_: function () {
-        return i;
-    },
-    is: function () {
-        return o;
-    },
-    uG: function () {
-        return a;
-    }
+a.d(e, {
+    JM: () => r,
+    RF: () => i,
+    g_: () => o,
+    is: () => _,
+    uG: () => n
 });
-let n = 'c',
-    a = 'g',
-    o = 's',
-    i = 'd',
-    _ = 5000;
+let r = 'c',
+    n = 'g',
+    _ = 's',
+    o = 'd',
+    i = 5000;

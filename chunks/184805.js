@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
-var i = n(442837),
-    a = n(314897),
-    s = n(590415);
-function l(e) {
-    let t = (0, i.e7)([a.default], () => a.default.getId());
-    return (0, s.ZP)(t, e) === s.xO.ON_STAGE;
+n.d(t, { Z: () => o });
+var r = n(442837),
+    i = n(314897),
+    l = n(590415);
+function o(e) {
+    let t = (0, r.e7)([i.default], () => i.default.getId());
+    return (0, l.ZP)(t, e) === l.xO.ON_STAGE;
 }

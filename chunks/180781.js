@@ -1,65 +1,61 @@
-n.d(i, {
-    Z: function () {
-        return T;
-    }
-});
-var o = n(735250);
-n(470079);
-var t = n(442837),
-    r = n(481060),
+n.d(e, { Z: () => b });
+var o = n(200651);
+n(192379);
+var r = n(442837),
+    i = n(481060),
     a = n(906732),
     l = n(48217),
-    s = n(26323),
-    c = n(430824),
-    d = n(914010),
-    u = n(709586),
-    _ = n(981631),
-    g = n(30513),
-    E = n(689938),
-    f = n(715183);
-function T(e) {
-    let { analyticsSection: i, analyticsPage: n, isGIF: T, banner: N } = e,
-        I = (0, t.e7)([d.Z], () => d.Z.getGuildId()),
-        h = (0, t.e7)([c.Z], () => c.Z.getGuild(I)),
-        { analyticsLocations: p } = (0, a.ZP)();
-    return null == h || h.hasFeature(_.oNc.ANIMATED_BANNER) || (!T && h.hasFeature(_.oNc.BANNER))
+    c = n(26323),
+    s = n(430824),
+    u = n(914010),
+    _ = n(709586),
+    d = n(981631),
+    f = n(30513),
+    m = n(388032),
+    p = n(273233);
+function b(t) {
+    let { analyticsSection: e, analyticsPage: n, isGIF: b, banner: g } = t,
+        C = (0, r.e7)([u.Z], () => u.Z.getGuildId()),
+        N = (0, r.e7)([s.Z], () => s.Z.getGuild(C)),
+        { analyticsLocations: v } = (0, a.ZP)();
+    return null == N || N.hasFeature(d.oNc.ANIMATED_BANNER) || (!b && N.hasFeature(d.oNc.BANNER))
         ? null
         : (0, o.jsxs)('div', {
-              className: f.container,
+              className: p.container,
               children: [
-                  (0, o.jsx)(u.Z, { className: f.guildBoostingIcon }),
-                  (0, o.jsx)(r.Text, {
+                  (0, o.jsx)(_.Z, { className: p.guildBoostingIcon }),
+                  (0, o.jsx)(i.Text, {
                       color: 'header-primary',
                       variant: 'text-sm/semibold',
-                      children: E.Z.Messages.PREMIUM_GUILD_PREVIEW
+                      children: m.NW.string(m.t['56M7xc'])
                   }),
-                  (0, o.jsx)(r.Button, {
-                      look: r.Button.Looks.LINK,
-                      color: r.Button.Colors.LINK,
-                      className: f.subscribeButton,
+                  (0, o.jsx)(i.zxk, {
+                      look: i.zxk.Looks.LINK,
+                      color: i.zxk.Colors.LINK,
+                      className: p.subscribeButton,
                       onClick: () => {
-                          if (null == h) return;
-                          let e = {
-                              section: i,
+                          if (null == N) return;
+                          let t = {
+                              section: e,
                               page: n,
-                              object: _.qAy.UPSELL_HEADER
+                              object: d.qAy.UPSELL_HEADER
                           };
-                          null != N
+                          null != g
                               ? (0, l.c)({
-                                    analyticsLocations: p,
-                                    analyticsLocation: e,
-                                    guild: h,
-                                    isGIF: T,
-                                    banner: N
+                                    analyticsLocations: v,
+                                    analyticsLocation: t,
+                                    guild: N,
+                                    isGIF: b,
+                                    banner: g
                                 })
-                              : (0, s.Z)({
-                                    analyticsLocations: p,
-                                    analyticsSourceLocation: e,
-                                    guild: h,
-                                    perks: T ? (0, g.zC)() : (0, g.XO)()
+                              : (0, c.Z)({
+                                    analyticsLocations: v,
+                                    analyticsSourceLocation: t,
+                                    guild: N,
+                                    perks: b ? (0, f.zC)() : (0, f.XO)()
                                 });
                       },
-                      children: E.Z.Messages.PREMIUM_GUILD_BOOST_SERVER
+                      children: m.NW.string(m.t.WUHdZW)
                   })
               ]
           });

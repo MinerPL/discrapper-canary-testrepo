@@ -1,40 +1,41 @@
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(658198);
-let u = i.memo(function (e) {
-    let { text: t, variant: n = 'text-xs/medium', color: a = 'text-normal', icon: u, className: c, selected: d, onMouseEnter: _, onMouseLeave: E, onClick: f } = e,
-        h = i.useMemo(() => {
-            if (null != f) return () => f(t);
-        }, [f, t]);
-    return (0, r.jsxs)(o.Clickable, {
-        className: s()(
-            l.trait,
+n.d(t, { Z: () => c });
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(481060),
+    o = n(934846);
+let c = r.memo(function (e) {
+    let { text: t, variant: n = 'text-xs/medium', color: l = 'text-normal', icon: c, className: u, selected: d, onMouseEnter: m, onMouseLeave: f, onClick: g } = e,
+        h = r.useMemo(() => {
+            if (null != g) return () => g(t);
+        }, [g, t]);
+    return (0, i.jsxs)(s.P3F, {
+        tabIndex: null == g ? -1 : 0,
+        className: a()(
+            o.trait,
             {
-                [l.selectable]: null != h && !d,
-                [l.selected]: d,
-                [l.clickable]: null != h
+                [o.selectable]: null != h && !d,
+                [o.selected]: d,
+                [o.clickable]: null != h
             },
-            c
+            u
         ),
-        onMouseEnter: _,
-        onMouseLeave: E,
+        onMouseEnter: m,
+        onMouseLeave: f,
         onClick: h,
         children: [
-            null != u &&
-                (0, r.jsx)(u, {
+            null != c &&
+                (0, i.jsx)(c, {
                     size: 'xs',
                     color: 'currentColor'
                 }),
-            (0, r.jsx)(o.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: n,
-                color: a,
+                color: l,
                 lineClamp: 1,
                 children: t
             })
         ]
     });
 });
-t.Z = u;

@@ -1,53 +1,54 @@
-var n,
-    a = t(735250),
-    i = t(470079),
-    r = t(120356),
-    o = t.n(r),
-    l = t(600164),
-    c = t(400778);
-function d(e, s, t) {
+n.d(t, { Z: () => m });
+var r,
+    i = n(200651),
+    s = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    o = n(600164),
+    c = n(559595);
+function d(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
+            : (e[t] = n),
         e
     );
 }
-class _ extends (n = i.PureComponent) {
+class u extends (r = s.PureComponent) {
     render() {
-        let { children: e, className: s, onMouseEnter: t, onMouseLeave: n } = this.props;
-        return (0, a.jsx)('div', {
-            className: o()(c.card, s),
-            onMouseEnter: t,
-            onMouseLeave: n,
+        let { children: e, className: t, onMouseEnter: n, onMouseLeave: r } = this.props;
+        return (0, i.jsx)('div', {
+            className: l()(c.card, t),
+            onMouseEnter: n,
+            onMouseLeave: r,
             children: e
         });
     }
 }
-d(_, 'Header', (e) => {
-    let { children: s, className: t, splashArtURL: n } = e;
-    return (0, a.jsxs)(l.Z, {
-        className: o()(c.header, t),
-        align: l.Z.Align.CENTER,
+d(u, 'Header', (e) => {
+    let { children: t, className: n, splashArtURL: r } = e;
+    return (0, i.jsxs)(o.Z, {
+        className: l()(c.header, n),
+        align: o.Z.Align.CENTER,
         children: [
-            (0, a.jsx)('div', {
+            (0, i.jsx)('div', {
                 className: c.splashArt,
-                style: null != n ? { backgroundImage: 'url('.concat(n, ')') } : void 0
+                style: null != r ? { backgroundImage: 'url('.concat(r, ')') } : void 0
             }),
-            s
+            t
         ]
     });
 }),
-    d(_, 'Body', (e) => {
-        let { children: s, className: t } = e;
-        return (0, a.jsx)('div', {
-            className: o()(c.body, t),
-            children: s
+    d(u, 'Body', (e) => {
+        let { children: t, className: n } = e;
+        return (0, i.jsx)('div', {
+            className: l()(c.body, n),
+            children: t
         });
-    }),
-    (s.Z = _);
+    });
+let m = u;

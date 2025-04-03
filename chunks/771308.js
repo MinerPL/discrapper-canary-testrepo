@@ -1,57 +1,52 @@
-n.d(t, {
-    Av: function () {
-        return c;
-    },
-    hp: function () {
-        return u;
-    },
-    wE: function () {
-        return d;
-    }
+r.d(t, {
+    Av: () => c,
+    hp: () => d,
+    wE: () => u
 });
-var s = n(544891),
-    a = n(570140),
-    o = n(959776),
-    r = n(626135),
-    l = n(723359),
-    i = n(981631);
+var n = r(544891),
+    a = r(570140),
+    l = r(959776),
+    o = r(626135),
+    i = r(723359),
+    s = r(981631);
 function c(e, t) {
     return (
-        (0, o.Z)(e, t),
-        r.default.track(i.rMx.AGE_GATE_ACTION, {
+        (0, l.Z)(e, t),
+        o.default.track(s.rMx.AGE_GATE_ACTION, {
             source: t,
-            action: l.Al.AGE_GATE_SUBMITTED
+            action: i.Al.AGE_GATE_SUBMITTED
         }),
-        s.tn
+        n.tn
             .patch({
-                url: i.ANM.ME,
+                url: s.ANM.ME,
                 oldFormErrors: !0,
-                body: { date_of_birth: e.format('YYYY-MM-DD') }
+                body: { date_of_birth: e.format('YYYY-MM-DD') },
+                rejectWithError: !1
             })
             .then((e) => {
-                let n = e.body;
+                let r = e.body;
                 a.Z.dispatch({
                     type: 'CURRENT_USER_UPDATE',
-                    user: n
+                    user: r
                 }),
-                    r.default.track(i.rMx.AGE_GATE_ACTION, {
+                    o.default.track(s.rMx.AGE_GATE_ACTION, {
                         source: t,
-                        action: l.Al.AGE_GATE_SUCCESS
+                        action: i.Al.AGE_GATE_SUCCESS
                     });
             })
     );
 }
-function d(e) {
+function u(e) {
     a.Z.dispatch({ type: 'AGE_GATE_PREVENT_UNDERAGE_REGISTRATION' }),
-        r.default.track(i.rMx.AGE_GATE_ACTION, {
+        o.default.track(s.rMx.AGE_GATE_ACTION, {
             source: e,
-            action: l.Al.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
+            action: i.Al.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
         });
 }
-function u(e) {
+function d(e) {
     a.Z.dispatch({ type: 'AGE_GATE_LOGOUT_UNDERAGE_NEW_USER' }),
-        r.default.track(i.rMx.AGE_GATE_ACTION, {
+        o.default.track(s.rMx.AGE_GATE_ACTION, {
             source: e,
-            action: l.Al.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
+            action: i.Al.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
         });
 }

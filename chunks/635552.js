@@ -1,46 +1,50 @@
-n.d(t, {
-    W: function () {
-        return d;
-    }
-}),
-    n(47120);
-var a = n(470079),
-    r = n(979554),
-    s = n(809206),
-    o = n(350327),
-    l = n(884697),
-    i = n(328456),
-    c = n(689938);
-let d = (e) => {
-    let { product: t, onSuccess: d, onError: u } = e,
-        [f, g] = a.useState(!1),
-        { firstAvatarDecoration: p, firstProfileEffect: C } = (0, i.R)(t),
-        v = (0, l.x6)(t) ? c.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION : t.type === r.Z.AVATAR_DECORATION ? c.Z.Messages.COLLECTIBLES_AVATAR_DECO_UPDATED_NOTIFICATION : c.Z.Messages.COLLECTIBLES_PFX_UPDATED_NOTIFICATION;
-    return {
-        handleUseNow: a.useCallback(async () => {
-            g(!0);
-            try {
-                if ((null != p && (await (0, s.Mn)({ avatarDecoration: p })), null != C)) {
-                    let e = { profile_effect_id: C.id };
-                    await (0, o.Z)(e);
+n.d(t, { W: () => d }), n(47120);
+var r = n(192379),
+    i = n(979554),
+    o = n(809206),
+    a = n(350327),
+    s = n(884697),
+    l = n(328456),
+    c = n(388032);
+let u = 6000,
+    d = (e) => {
+        let { product: t, onSuccess: d, onError: f } = e,
+            [_, p] = r.useState(!1),
+            { firstAvatarDecoration: h, firstProfileEffect: m } = (0, l.R)(t),
+            g = (0, s.x6)(t) ? c.NW.string(c.t.tf1ZZ2) : t.type === i.Z.AVATAR_DECORATION ? c.NW.string(c.t.zOA4a2) : t.type === i.Z.NAMEPLATE ? c.NW.string(c.t.gOzMv7) : c.NW.string(c.t.SWm2am);
+        return {
+            handleUseNow: r.useCallback(async () => {
+                p(!0);
+                try {
+                    if (null != h) {
+                        let e = { avatarDecoration: h };
+                        await (0, o.Mn)(e);
+                    }
+                    if (null != m) {
+                        let e = { profile_effect_id: m.id };
+                        await (0, a.Z)(e);
+                    }
+                    if (t.type === i.Z.NAMEPLATE) {
+                        let e = { nameplate: t.items[0] };
+                        await (0, o.Mn)(e);
+                    }
+                    {
+                        let { ToastPosition: e, ToastType: t, createToast: r, popToast: i, showToast: o } = await Promise.resolve().then(n.bind(n, 481060));
+                        i(),
+                            o(
+                                r(g, t.MESSAGE, {
+                                    duration: u,
+                                    position: e.TOP
+                                })
+                            );
+                    }
+                    null == d || d();
+                } catch (e) {
+                    null == f || f(e);
+                } finally {
+                    p(!1);
                 }
-                {
-                    let { ToastPosition: e, ToastType: t, createToast: a, popToast: r, showToast: s } = await Promise.resolve().then(n.bind(n, 481060));
-                    r(),
-                        s(
-                            a(v, t.MESSAGE, {
-                                duration: 6000,
-                                position: e.TOP
-                            })
-                        );
-                }
-                null == d || d();
-            } catch (e) {
-                null == u || u(e);
-            } finally {
-                g(!1);
-            }
-        }, [p, C, d, v, u]),
-        isApplying: f
+            }, [h, m, t, d, g, f]),
+            isApplying: _
+        };
     };
-};

@@ -1,30 +1,32 @@
+n.d(t, { Z: () => d });
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(411198);
-let c = {};
-class d extends (s = o.ZP.Store) {
+    i = n(442837),
+    o = n(570140),
+    a = n(411198);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = {};
+function c(e) {
+    let { invite: t } = e,
+        n = t.guild;
+    if (null == n) return !1;
+    l[n.id] = (0, a.Qs)(n);
+}
+class u extends (r = i.ZP.Store) {
     getGuild(e) {
-        return c[e];
+        return l[e];
     }
 }
-(a = 'AuthInviteStore'),
-    (i = 'displayName') in (r = d)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new d(l.Z, {
-        AUTH_INVITE_UPDATE: function (e) {
-            let { invite: t } = e,
-                n = t.guild;
-            if (null == n) return !1;
-            c[n.id] = (0, u.Qs)(n);
-        }
-    }));
+s(u, 'displayName', 'AuthInviteStore');
+let d = new u(o.Z, { AUTH_INVITE_UPDATE: c });

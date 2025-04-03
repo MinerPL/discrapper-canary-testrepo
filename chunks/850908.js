@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 function i(e) {
     if (null != e.title && null != e.filename) {
         let t = e.filename.lastIndexOf('.'),

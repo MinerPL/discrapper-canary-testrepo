@@ -1,52 +1,53 @@
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(44315),
-    l = n(600164),
-    o = n(120998),
+n.d(t, { Z: () => p });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    a = n(44315),
+    o = n(600164),
+    s = n(120998),
     c = n(353042),
-    d = n(689938),
-    u = n(78555);
-t.Z = function (e) {
+    u = n(388032),
+    d = n(596652);
+let p = function (e) {
     var t;
-    let { title: n, className: a, color: _, animate: E, gradientStopColor: h, getHistoricalTotalBytes: m } = e,
-        I = (0, r.Sl)(_).hex,
-        g = null === (t = (0, r.Sl)(h)) || void 0 === t ? void 0 : t.hex;
-    return (0, i.jsx)(c.Z, {
-        getHistoricalTotalBytes: m,
-        children: (e, t, r) => {
+    let { title: n, className: i, color: p, animate: h, gradientStopColor: f, getHistoricalTotalBytes: g } = e,
+        m = (0, a.Sl)(p).hex,
+        b = null == (t = (0, a.Sl)(f)) ? void 0 : t.hex;
+    return (0, r.jsx)(c.Z, {
+        getHistoricalTotalBytes: g,
+        children: (e, t, a) => {
             var c;
-            return (0, i.jsx)('div', {
-                className: s()(u.monitor, a),
-                children: (0, i.jsxs)(l.Z, {
-                    align: l.Z.Align.CENTER,
+            return (0, r.jsx)('div', {
+                className: l()(d.monitor, i),
+                children: (0, r.jsxs)(o.Z, {
+                    align: o.Z.Align.CENTER,
                     children: [
-                        (0, i.jsxs)(l.Z, {
-                            className: u.text,
-                            direction: l.Z.Direction.VERTICAL,
+                        (0, r.jsxs)(o.Z, {
+                            className: d.text,
+                            direction: o.Z.Direction.VERTICAL,
                             children: [
-                                (0, i.jsx)('div', {
-                                    className: u.title,
+                                (0, r.jsx)('div', {
+                                    className: d.title,
                                     children: n
                                 }),
-                                (0, i.jsx)('div', {
-                                    className: u.rate,
-                                    children: (c = (e[e.length - 1] / t) * 1000) > 1000 ? d.Z.Messages.FILE_RATE_MB.format({ size: Math.round(c / 1000) }) : d.Z.Messages.FILE_RATE_KB.format({ size: Math.round(c) })
+                                (0, r.jsx)('div', {
+                                    className: d.rate,
+                                    children: (c = (e[e.length - 1] / t) * 1000) > 1000 ? u.NW.formatToPlainString(u.t['WU+gTU'], { size: Math.round(c / 1000) }) : u.NW.formatToPlainString(u.t.wnF6TE, { size: Math.round(c) })
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', {
-                            className: u.overflowContainer,
-                            children: (0, i.jsx)(o.Z, {
+                        (0, r.jsx)('div', {
+                            className: d.overflowContainer,
+                            children: (0, r.jsx)(s.Z, {
                                 data: e,
                                 maxValue: Math.max(Math.max.apply(null, e), 1000),
-                                className: u.sparkChart,
+                                className: d.sparkChart,
                                 updateInterval: t,
-                                color: I,
-                                gradientStopColor: g,
-                                numUpdatesToShow: r,
-                                animate: E,
+                                color: m,
+                                gradientStopColor: b,
+                                numUpdatesToShow: a,
+                                animate: h,
                                 pixelWidth: 600,
                                 pixelHeight: 48,
                                 lineWidth: 4

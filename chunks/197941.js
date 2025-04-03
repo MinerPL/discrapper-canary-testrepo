@@ -1,65 +1,108 @@
-n(47120);
-var i = n(735250);
-n(470079);
-var a = n(243814),
-    s = n(481060),
-    r = n(846027),
-    l = n(872810),
-    o = n(594190),
+n.d(t, { Z: () => E }), n(47120);
+var r = n(200651);
+n(192379);
+var i = n(243814),
+    l = n(481060),
+    a = n(846027),
+    o = n(872810),
+    s = n(594190),
     c = n(989941),
-    d = n(173507),
-    u = n(199902),
-    _ = n(131951),
-    E = n(449224),
-    h = n(358085),
-    m = n(452426),
-    I = n(736045),
-    g = n(186901),
-    p = n(981631);
-t.Z = {
-    [p.Etm.TOGGLE_VIDEO]: {
+    u = n(173507),
+    d = n(199902),
+    p = n(131951),
+    h = n(449224),
+    f = n(358085),
+    g = n(452426),
+    m = n(736045),
+    b = n(186901),
+    _ = n(981631);
+let E = {
+    [_.Etm.TOGGLE_VIDEO]: {
         scope: {
-            [g.Gp.ALL]: [a.x.RPC, a.x.RPC_VIDEO_WRITE]
+            [b.Gp.ALL]: [i.x.RPC, i.x.RPC_VIDEO_WRITE]
         },
         handler() {
-            let e = _.Z.isVideoEnabled();
-            if (null != (0, I.Z)()) e ? r.Z.setVideoEnabled(!1) : (0, d.Z)(() => r.Z.setVideoEnabled(!0), p.IlC.APP);
+            let e = p.Z.isVideoEnabled();
+            null != (0, m.Z)() && (e ? a.Z.setVideoEnabled(!1) : (0, u.Z)(() => a.Z.setVideoEnabled(!0), _.IlC.APP));
         }
     },
-    [p.Etm.TOGGLE_SCREENSHARE]: {
+    [_.Etm.TOGGLE_SCREENSHARE]: {
         scope: {
-            [g.Gp.ALL]: [a.x.RPC, a.x.RPC_SCREENSHARE_WRITE]
+            [b.Gp.ALL]: [i.x.RPC, i.x.RPC_SCREENSHARE_WRITE]
         },
         validation: (e) =>
-            (0, m.Z)(e)
+            (0, g.Z)(e)
                 .optional()
                 .keys({ pid: e.number().optional().min(0) }),
         handler(e) {
             let {
                     args: { pid: t }
                 } = e,
-                a = u.Z.getCurrentUserActiveStream(),
-                r = u.Z.getStreamerActiveStreamMetadata(),
-                d = (0, c.Z)(o.ZP, E.Z),
-                _ = (0, I.Z)();
-            if (null != _)
-                null != t && null != r && r.pid !== t && (0, h.isWindows)()
-                    ? (0, l.WH)(_.guild_id, _.id, { pid: t })
-                    : null != a
-                      ? (0, l.L6)(!1)
-                      : null != t && (0, h.isWindows)()
-                        ? (0, l.WH)(_.guild_id, _.id, { pid: t })
-                        : null != d
-                          ? (0, l.WH)(_.guild_id, _.id, { pid: d.pid })
-                          : (0, s.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e('79477'), n.e('50784')]).then(n.bind(n, 60594));
-                                return (t) =>
-                                    (0, i.jsx)(e, {
-                                        ...t,
-                                        guildId: _.guild_id,
-                                        analyticsLocation: p.Sbl.ACTIVITY_RPC
-                                    });
-                            });
+                i = d.Z.getCurrentUserActiveStream(),
+                a = d.Z.getStreamerActiveStreamMetadata(),
+                u = (0, c.Z)(s.ZP, h.Z),
+                p = (0, m.Z)();
+            null != p &&
+                (null != t && null != a && a.pid !== t && (0, f.isWindows)()
+                    ? (0, o.WH)(p.guild_id, p.id, { pid: t })
+                    : null != i
+                      ? (0, o.L6)(!1)
+                      : null != t && (0, f.isWindows)()
+                        ? (0, o.WH)(p.guild_id, p.id, { pid: t })
+                        : null != u
+                          ? (0, o.WH)(p.guild_id, p.id, { pid: u.pid })
+                          : (0, l.ZDy)(async () => {
+                                let { default: e } = await n.e('46746').then(n.bind(n, 60594));
+                                return (t) => {
+                                    var n, i;
+                                    return (0, r.jsx)(
+                                        e,
+                                        ((n = (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var n = null != arguments[t] ? arguments[t] : {},
+                                                    r = Object.keys(n);
+                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                    (r = r.concat(
+                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                        })
+                                                    )),
+                                                    r.forEach(function (t) {
+                                                        var r;
+                                                        (r = n[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: r,
+                                                                      enumerable: !0,
+                                                                      configurable: !0,
+                                                                      writable: !0
+                                                                  })
+                                                                : (e[t] = r);
+                                                    });
+                                            }
+                                            return e;
+                                        })({}, t)),
+                                        (i = i =
+                                            {
+                                                guildId: p.guild_id,
+                                                analyticsLocation: _.Sbl.ACTIVITY_RPC
+                                            }),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                            : (function (e, t) {
+                                                  var n = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, r);
+                                                  }
+                                                  return n;
+                                              })(Object(i)).forEach(function (e) {
+                                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                              }),
+                                        n)
+                                    );
+                                };
+                            }));
         }
     }
 };

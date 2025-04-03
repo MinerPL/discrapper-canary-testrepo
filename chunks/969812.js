@@ -1,21 +1,23 @@
+n.d(t, { Z: () => s });
 var r = n(544891),
     i = n(904245),
-    a = n(981631),
-    s = n(689938);
-t.Z = {
-    changeNickname: (e, t, n, o) =>
+    o = n(981631),
+    a = n(388032);
+let s = {
+    changeNickname: (e, t, n, s) =>
         r.tn
             .patch({
-                url: a.ANM.GUILD_MEMBER_NICK(e, n),
-                body: { nick: o },
-                oldFormErrors: !0
+                url: o.ANM.GUILD_MEMBER_NICK(e, n),
+                body: { nick: s },
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) => {
-                    (o = e.body.nick), i.Z.sendBotMessage(t, null != o && '' !== o ? s.Z.Messages.COMMAND_NICK_SUCCESS.plainFormat({ nick: o }) : s.Z.Messages.COMMAND_NICK_RESET);
+                    (s = e.body.nick), i.Z.sendBotMessage(t, null != s && '' !== s ? a.NW.formatToMarkdownString(a.t['gz+HRk'], { nick: s }) : a.NW.string(a.t.Vhpd9P));
                 },
                 (e) => {
-                    403 === e.status ? i.Z.sendBotMessage(t, s.Z.Messages.COMMAND_NICK_FAILURE_PERMISSION.plainFormat()) : i.Z.sendBotMessage(t, s.Z.Messages.COMMAND_NICK_FAILURE);
+                    403 === e.status ? i.Z.sendBotMessage(t, a.NW.formatToMarkdownString(a.t.Izf9jI, {})) : i.Z.sendBotMessage(t, a.NW.string(a.t['5LO/Sk']));
                 }
             )
 };

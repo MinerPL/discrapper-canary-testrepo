@@ -1,11 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(411104),
-    n(47120),
-    n(17089);
+n.d(t, { Z: () => o }), n(411104), n(47120), n(17089);
 var r = n(570140);
 function i(e, t, n) {
     return (
@@ -20,10 +13,10 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     initialize() {
         this.initializedCount++,
-            !(this.initializedCount > 1) &&
+            this.initializedCount > 1 ||
                 (this._initialize(),
                 Object.entries(this.actions).forEach((e) => {
                     let [t, n] = e;
@@ -34,7 +27,7 @@ class a {
                 }));
     }
     terminate(e) {
-        !(this.initializedCount <= 0) &&
+        this.initializedCount <= 0 ||
             (e ? (this.initializedCount = 0) : this.initializedCount--,
             0 === this.initializedCount &&
                 (this._terminate(),

@@ -1,8 +1,9 @@
+n.d(t, { Z: () => s });
 var r = n(570140),
-    a = n(434404),
-    i = n(821864),
-    E = n(308063);
-t.Z = {
+    i = n(434404),
+    o = n(821864),
+    a = n(308063);
+let s = {
     init() {
         r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_INIT' });
     },
@@ -59,7 +60,7 @@ t.Z = {
     async saveApplicationPermissions(e, t, n) {
         try {
             r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }),
-                await i.U3({
+                await o.U3({
                     applicationId: e,
                     commandId: e,
                     defaultEveryoneValue: !0,
@@ -77,7 +78,7 @@ t.Z = {
     },
     async saveIntegration(e, t) {
         try {
-            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await a.Z.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await i.Z.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
         } catch (e) {
             r.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',
@@ -87,7 +88,7 @@ t.Z = {
     },
     async saveWebhook(e, t) {
         try {
-            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await E.Z.update(e, t.id, t), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await a.Z.update(e, t.id, t), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
         } catch (e) {
             r.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',

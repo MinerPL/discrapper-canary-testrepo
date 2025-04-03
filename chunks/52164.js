@@ -1,83 +1,78 @@
-t.d(s, {
-    Z: function () {
-        return C;
-    }
-}),
-    t(47120);
-var n = t(735250);
-t(470079);
-var a = t(512722),
-    i = t.n(a),
-    r = t(481060),
-    o = t(100527),
-    l = t(906732),
-    c = t(509545),
-    d = t(74538),
-    _ = t(937615),
-    E = t(374649),
-    u = t(474936),
-    I = t(981631),
-    T = t(689938),
-    S = t(642140);
-function N(e) {
-    let { subscription: s, withOverheadSeparator: t } = e,
-        { analyticsLocations: a } = (0, l.ZP)(),
-        [N] = (0, E.ED)({
-            subscriptionId: s.id,
+n.d(t, { Z: () => N }), n(47120);
+var r = n(200651);
+n(192379);
+var i = n(512722),
+    s = n.n(i),
+    a = n(481060),
+    l = n(100527),
+    o = n(906732),
+    c = n(509545),
+    d = n(74538),
+    u = n(937615),
+    m = n(374649),
+    g = n(474936),
+    p = n(981631),
+    h = n(388032),
+    f = n(532897);
+function b(e) {
+    let t,
+        { subscription: n, withOverheadSeparator: i } = e,
+        { analyticsLocations: b } = (0, o.ZP)(),
+        [N] = (0, m.ED)({
+            subscriptionId: n.id,
             renewal: !0,
-            analyticsLocations: a,
-            analyticsLocation: o.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
+            analyticsLocations: b,
+            analyticsLocation: l.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
     if (null == N) return null;
-    let C = t ? S.finePrintWithOverheadSeparator : S.finePrint,
-        m = N.invoiceItems.find((e) => {
-            let { subscriptionPlanId: s } = e;
-            return (0, d.uZ)(s);
+    let x = i ? f.finePrintWithOverheadSeparator : f.finePrint,
+        _ = N.invoiceItems.find((e) => {
+            let { subscriptionPlanId: t } = e;
+            return (0, d.uZ)(t);
         });
-    if (null == m) return null;
-    let A = m.subscriptionPlanId,
-        O = c.Z.get(A);
-    i()(null != O, 'Missing plan');
-    let g = (0, _.T4)(N.total, N.currency),
-        h = '';
+    if (null == _) return null;
+    let E = _.subscriptionPlanId,
+        j = c.Z.get(E);
+    s()(null != j, 'Missing plan');
+    let O = (0, u.T4)(N.total, N.currency);
     return (
-        O.interval === u.rV.YEAR
-            ? (h = T.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
-                  price: g,
-                  termsUrl: I.EYA.TERMS,
-                  paidURL: I.EYA.PAID_TERMS,
-                  privacyUrl: I.EYA.PRIVACY
+        j.interval === g.rV.YEAR
+            ? (t = h.NW.format(h.t['jPz/39'], {
+                  price: O,
+                  termsUrl: p.EYA.TERMS,
+                  paidURL: p.EYA.PAID_TERMS,
+                  privacyUrl: p.EYA.PRIVACY
               }))
-            : O.interval === u.rV.MONTH &&
-              (h =
-                  1 === O.intervalCount
-                      ? T.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
-                            price: g,
-                            termsUrl: I.EYA.TERMS,
-                            paidURL: I.EYA.PAID_TERMS,
-                            privacyUrl: I.EYA.PRIVACY
+            : j.interval === g.rV.MONTH &&
+              (t =
+                  1 === j.intervalCount
+                      ? h.NW.format(h.t.m27GpK, {
+                            price: O,
+                            termsUrl: p.EYA.TERMS,
+                            paidURL: p.EYA.PAID_TERMS,
+                            privacyUrl: p.EYA.PRIVACY
                         })
-                      : T.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
-                            price: g,
-                            termsUrl: I.EYA.TERMS,
-                            paidURL: I.EYA.PAID_TERMS,
-                            privacyUrl: I.EYA.PRIVACY,
-                            intervalCount: O.intervalCount
+                      : h.NW.format(h.t['9xf5V1'], {
+                            price: O,
+                            termsUrl: p.EYA.TERMS,
+                            paidURL: p.EYA.PAID_TERMS,
+                            privacyUrl: p.EYA.PRIVACY,
+                            intervalCount: j.intervalCount
                         })),
-        (0, n.jsx)(r.Text, {
+        (0, r.jsx)(a.Text, {
             color: 'text-muted',
-            className: C,
+            className: x,
             variant: 'text-xs/normal',
-            children: h
+            children: t
         })
     );
 }
-function C(e) {
-    let { subscription: s, withOverheadSeparator: t } = e;
-    return s.status === I.O0b.CANCELED || s.isPurchasedExternally
+function N(e) {
+    let { subscription: t, withOverheadSeparator: n } = e;
+    return t.status === p.O0b.CANCELED || t.isPurchasedExternally
         ? null
-        : (0, n.jsx)(N, {
-              subscription: s,
-              withOverheadSeparator: t
+        : (0, r.jsx)(b, {
+              subscription: t,
+              withOverheadSeparator: n
           });
 }

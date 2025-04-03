@@ -1,201 +1,225 @@
-o.r(l), o(47120), o(653041), o(724458);
-var s = o(735250),
-    r = o(470079),
-    a = o(120356),
-    n = o.n(a),
-    t = o(149765),
-    i = o(442837),
-    d = o(481060),
-    c = o(741361),
-    u = o(911969),
-    _ = o(605436),
-    N = o(430824),
-    h = o(700785),
-    O = o(993259),
-    R = o(689938),
-    M = o(500391);
-function S(e) {
-    return (l) => null != l && !(0, _.pM)(e, l);
+l.d(r, { default: () => b }), l(47120), l(653041);
+var t = l(200651),
+    n = l(192379),
+    a = l(120356),
+    i = l.n(a),
+    o = l(149765),
+    s = l(442837),
+    c = l(481060),
+    d = l(741361),
+    u = l(911969),
+    h = l(605436),
+    f = l(430824),
+    m = l(700785),
+    x = l(993259),
+    p = l(388032),
+    w = l(821383);
+function j(e) {
+    return (r) => null != r && !(0, h.pM)(e, r);
 }
-let m = (e, l, o) => {
-        let s = h.Uu(o, l),
-            [a, n] = r.useState(s);
+let v = (e, r, l) => {
+        let t = m.Uu(l, r),
+            [a, i] = n.useState(t);
         return {
             shouldEveryonePost: a,
-            setShouldEveryonePost: n
+            setShouldEveryonePost: i
         };
     },
-    v = (e) => {
-        let { rolesRow: l } = e;
-        return (0, s.jsx)('div', {
+    N = (e) => {
+        let { rolesRow: r } = e;
+        return (0, t.jsx)('div', {
             'aria-hidden': !0,
-            className: M.roleCircle,
-            style: { backgroundColor: null == l ? void 0 : l.colorString }
+            className: w.roleCircle,
+            style: { backgroundColor: null == r ? void 0 : r.colorString }
         });
-    };
-l.default = (e) => {
-    let { guild: l, channel: o, permission: a, onClose: f, transitionState: p, currentSelectedRoles: E = [] } = e,
-        { shouldEveryonePost: x, setShouldEveryonePost: I } = m(l, o, a),
-        C = r.useRef(null),
-        L = (function (e) {
-            let l = (0, i.e7)([N.Z], () => N.Z.getRoles(e.id));
-            return r.useMemo(() => (0, O.KV)(e, l).filter((l) => S(e.id)(l.id)), [e, l]);
-        })(l),
-        A = L.reduce((e, l) => (e.set(l.id, l), e), new Map()),
-        w = L.map((e) => ({
-            key: e.key,
-            label: e.name,
-            value: e.id
-        })),
-        [g, j] = r.useState(E.map((e) => e.id).filter(S(l.id))),
-        [H, B] = r.useState(!1),
-        [b, D] = r.useState(!1),
-        y = g.length > 0 || x,
-        Z = (function (e, l) {
-            let o = (0, i.e7)([N.Z], () => N.Z.getRoles(e.id));
-            return r.useCallback(
-                (s, r) => {
-                    let a = (0, O.KV)(e, o),
-                        n = new Set(r),
-                        i = { ...l.permissionOverwrites },
-                        d = [],
-                        N = [];
-                    return (
-                        a.forEach((l) => {
-                            var o, r, a, c, O, R, M, S, m, v;
-                            let f = l.id,
-                                p = n.has(f);
-                            p
-                                ? d.push({
-                                      id: f,
-                                      type: u.BN.ROLE,
-                                      allow: p ? t.IH(null !== (c = null === (o = i[f]) || void 0 === o ? void 0 : o.allow) && void 0 !== c ? c : h.Hn, s) : t.Od(null !== (O = null === (r = i[f]) || void 0 === r ? void 0 : r.allow) && void 0 !== O ? O : h.Hn, s),
-                                      deny: t.Od(null !== (R = null === (a = i[f]) || void 0 === a ? void 0 : a.deny) && void 0 !== R ? R : h.Hn, s)
-                                  })
-                                : (0, _.pM)(e.id, f)
-                                  ? d.push({
-                                        id: f,
-                                        type: u.BN.ROLE,
-                                        allow: t.Od(null !== (m = null === (M = i[f]) || void 0 === M ? void 0 : M.allow) && void 0 !== m ? m : h.Hn, s),
-                                        deny: t.IH(null !== (v = null === (S = i[f]) || void 0 === S ? void 0 : S.deny) && void 0 !== v ? v : h.Hn, s)
-                                    })
-                                  : f in i && N.push(f);
-                        }, []),
-                        (0, c.kU)(l.id, d, N)
-                    );
-                },
-                [e, o, l]
-            );
-        })(l, o),
-        k = async () => {
-            if (!y) return;
-            B(!0), D(!1);
-            let e = [...g];
-            if (x) {
-                let o = l.getEveryoneRoleId();
-                e.push(o);
-            }
-            try {
-                await Z(a, e), f();
-            } catch (e) {
-                D(!0);
-            } finally {
-                B(!1);
-            }
-        };
-    return H
-        ? (0, s.jsx)(d.Spinner, {})
-        : (0, s.jsxs)(d.ModalRoot, {
-              transitionState: p,
-              'aria-label': R.Z.Messages.HUB_WAITLIST_MODAL_JOIN_HEADER,
-              children: [
-                  (0, s.jsx)(d.ModalHeader, {
-                      separator: !1,
-                      className: M.modalHeader,
-                      children: (0, s.jsx)(d.Heading, {
-                          variant: 'heading-md/semibold',
-                          className: M.header,
-                          children: R.Z.Messages.FORUM_CHANNEL_ONBOARDING_PERMISSION_MODAL_TITLE
-                      })
-                  }),
-                  (0, s.jsx)(d.ModalContent, {
-                      children: (0, s.jsxs)('div', {
-                          className: M.container,
-                          children: [
-                              (0, s.jsx)('div', {
-                                  className: M.row,
-                                  children: (0, s.jsx)('div', {
-                                      ref: C,
-                                      className: M.__invalid_roleSelectorContainer,
-                                      children: (0, s.jsx)(d.FocusRingScope, {
-                                          containerRef: C,
-                                          children: (0, s.jsx)(d.SearchableSelect, {
-                                              closeOnSelect: !1,
-                                              className: M.roleSelector,
-                                              maxVisibleItems: 5,
-                                              placeholder: R.Z.Messages.FORUM_CHANNEL_ONBOARDING_PERMISSION_MODAL_ROLE_INPUT_PLACEHOLDER,
-                                              multi: !0,
-                                              value: g,
-                                              options: w,
-                                              onChange: (e) => {
-                                                  j(e);
-                                              },
-                                              renderOptionPrefix: (e) => (null != e ? (0, s.jsx)(v, { rolesRow: A.get(e.value) }) : null)
+    },
+    b = (e) => {
+        let { guild: r, channel: l, permission: a, onClose: b, transitionState: g, currentSelectedRoles: k = [] } = e,
+            { shouldEveryonePost: y, setShouldEveryonePost: S } = v(r, l, a),
+            C = n.useRef(null),
+            O = (function (e) {
+                let r = (0, s.e7)([f.Z], () => f.Z.getRoles(e.id));
+                return n.useMemo(() => (0, x.KV)(e, r).filter((r) => j(e.id)(r.id)), [e, r]);
+            })(r),
+            _ = O.reduce((e, r) => (e.set(r.id, r), e), new Map()),
+            z = O.map((e) => ({
+                key: e.key,
+                label: e.name,
+                value: e.id
+            })),
+            [H, R] = n.useState(k.map((e) => e.id).filter(j(r.id))),
+            [P, W] = n.useState(!1),
+            [E, M] = n.useState(!1),
+            B = H.length > 0 || y,
+            L = (function (e, r) {
+                let l = (0, s.e7)([f.Z], () => f.Z.getRoles(e.id));
+                return n.useCallback(
+                    (t, n) => {
+                        let a = (0, x.KV)(e, l),
+                            i = new Set(n),
+                            s = (function (e) {
+                                for (var r = 1; r < arguments.length; r++) {
+                                    var l = null != arguments[r] ? arguments[r] : {},
+                                        t = Object.keys(l);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (t = t.concat(
+                                            Object.getOwnPropertySymbols(l).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(l, e).enumerable;
+                                            })
+                                        )),
+                                        t.forEach(function (r) {
+                                            var t;
+                                            (t = l[r]),
+                                                r in e
+                                                    ? Object.defineProperty(e, r, {
+                                                          value: t,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[r] = t);
+                                        });
+                                }
+                                return e;
+                            })({}, r.permissionOverwrites),
+                            c = [],
+                            f = [];
+                        return (
+                            a.forEach((r) => {
+                                var l, n, a, d, x, p, w, j, v, N;
+                                let b = r.id,
+                                    g = i.has(b);
+                                g
+                                    ? c.push({
+                                          id: b,
+                                          type: u.BN.ROLE,
+                                          allow: g ? o.IH(null != (d = null == (l = s[b]) ? void 0 : l.allow) ? d : m.Hn, t) : o.Od(null != (x = null == (n = s[b]) ? void 0 : n.allow) ? x : m.Hn, t),
+                                          deny: o.Od(null != (p = null == (a = s[b]) ? void 0 : a.deny) ? p : m.Hn, t)
+                                      })
+                                    : (0, h.pM)(e.id, b)
+                                      ? c.push({
+                                            id: b,
+                                            type: u.BN.ROLE,
+                                            allow: o.Od(null != (v = null == (w = s[b]) ? void 0 : w.allow) ? v : m.Hn, t),
+                                            deny: o.IH(null != (N = null == (j = s[b]) ? void 0 : j.deny) ? N : m.Hn, t)
+                                        })
+                                      : b in s && f.push(b);
+                            }, []),
+                            (0, d.kU)(r.id, c, f)
+                        );
+                    },
+                    [e, l, r]
+                );
+            })(r, l),
+            V = async () => {
+                if (!B) return;
+                W(!0), M(!1);
+                let e = [...H];
+                if (y) {
+                    let l = r.getEveryoneRoleId();
+                    e.push(l);
+                }
+                try {
+                    await L(a, e), b();
+                } catch (e) {
+                    M(!0);
+                } finally {
+                    W(!1);
+                }
+            };
+        return P
+            ? (0, t.jsx)(c.$jN, {})
+            : (0, t.jsxs)(c.Y0X, {
+                  transitionState: g,
+                  'aria-label': p.NW.string(p.t['3khS8P']),
+                  children: [
+                      (0, t.jsx)(c.xBx, {
+                          separator: !1,
+                          className: w.modalHeader,
+                          children: (0, t.jsx)(c.X6q, {
+                              variant: 'heading-md/semibold',
+                              className: w.header,
+                              children: p.NW.string(p.t.TFGnmp)
+                          })
+                      }),
+                      (0, t.jsx)(c.hzk, {
+                          children: (0, t.jsxs)('div', {
+                              className: w.container,
+                              children: [
+                                  (0, t.jsx)('div', {
+                                      className: w.row,
+                                      children: (0, t.jsx)('div', {
+                                          ref: C,
+                                          className: w.__invalid_roleSelectorContainer,
+                                          children: (0, t.jsx)(c.JcV, {
+                                              containerRef: C,
+                                              children: (0, t.jsx)(c.VcW, {
+                                                  closeOnSelect: !1,
+                                                  className: w.roleSelector,
+                                                  maxVisibleItems: 5,
+                                                  placeholder: p.NW.string(p.t['8kKqCQ']),
+                                                  multi: !0,
+                                                  value: H,
+                                                  options: z,
+                                                  onChange: (e) => {
+                                                      R(e);
+                                                  },
+                                                  renderOptionPrefix: (e) => (null != e ? (0, t.jsx)(N, { rolesRow: _.get(e.value) }) : null)
+                                              })
                                           })
                                       })
-                                  })
-                              }),
-                              (0, s.jsxs)('div', {
-                                  className: M.row,
-                                  children: [
-                                      (0, s.jsx)(d.FormSwitch, {
-                                          value: x,
-                                          hideBorder: !0,
-                                          onChange: I,
-                                          className: M.switchGroup,
-                                          children: R.Z.Messages.FORUM_CHANNEL_ONBOARDING_PERMISSION_MODAL_LET_EVERYONE_POST
-                                      }),
-                                      (0, s.jsx)(d.Text, {
-                                          variant: 'text-sm/normal',
-                                          children: R.Z.Messages.FORUM_CHANNEL_ONBOARDING_PERMISSION_MODEL_DESCRIPTION.format()
-                                      })
-                                  ]
-                              }),
-                              b
-                                  ? (0, s.jsx)('div', {
-                                        className: M.row,
-                                        children: (0, s.jsx)(d.Text, {
-                                            className: n()(M.row, M.error),
-                                            variant: 'text-sm/normal',
-                                            children: R.Z.Messages.FORUM_CHANNEL_ONBOARDING_PERMISSION_MODEL_ERROR
+                                  }),
+                                  (0, t.jsxs)('div', {
+                                      className: w.row,
+                                      children: [
+                                          (0, t.jsx)(c.j7V, {
+                                              value: y,
+                                              hideBorder: !0,
+                                              onChange: S,
+                                              className: w.switchGroup,
+                                              children: p.NW.string(p.t.kPwwAw)
+                                          }),
+                                          (0, t.jsx)(c.Text, {
+                                              variant: 'text-sm/normal',
+                                              children: p.NW.format(p.t.NjCtHx, {})
+                                          })
+                                      ]
+                                  }),
+                                  E
+                                      ? (0, t.jsx)('div', {
+                                            className: w.row,
+                                            children: (0, t.jsx)(c.Text, {
+                                                className: i()(w.row, w.error),
+                                                variant: 'text-sm/normal',
+                                                children: p.NW.string(p.t.mgZKZG)
+                                            })
                                         })
-                                    })
-                                  : null
+                                      : null
+                              ]
+                          })
+                      }),
+                      (0, t.jsxs)(c.mzw, {
+                          className: w.footer,
+                          children: [
+                              (0, t.jsx)(c.zxk, {
+                                  type: 'submit',
+                                  color: c.zxk.Colors.BRAND,
+                                  size: c.zxk.Sizes.SMALL,
+                                  className: w.button,
+                                  onClick: V,
+                                  disabled: !B,
+                                  autoFocus: !0,
+                                  children: p.NW.string(p.t.R3BPHx)
+                              }),
+                              (0, t.jsx)(c.zxk, {
+                                  color: c.zxk.Colors.PRIMARY,
+                                  size: c.zxk.Sizes.SMALL,
+                                  className: w.button,
+                                  onClick: b,
+                                  children: p.NW.string(p.t['ETE/oK'])
+                              })
                           ]
                       })
-                  }),
-                  (0, s.jsxs)(d.ModalFooter, {
-                      className: M.footer,
-                      children: [
-                          (0, s.jsx)(d.Button, {
-                              type: 'submit',
-                              color: d.Button.Colors.BRAND,
-                              size: d.Button.Sizes.SMALL,
-                              className: M.button,
-                              onClick: k,
-                              disabled: !y,
-                              autoFocus: !0,
-                              children: R.Z.Messages.SAVE
-                          }),
-                          (0, s.jsx)(d.Button, {
-                              color: d.Button.Colors.PRIMARY,
-                              size: d.Button.Sizes.SMALL,
-                              className: M.button,
-                              onClick: f,
-                              children: R.Z.Messages.CANCEL
-                          })
-                      ]
-                  })
-              ]
-          });
-};
+                  ]
+              });
+    };

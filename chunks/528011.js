@@ -1,69 +1,64 @@
-t.d(n, {
-    g: function () {
-        return g;
-    },
-    mI: function () {
-        return I;
-    }
+n.d(t, {
+    g: () => p,
+    mI: () => f
 }),
-    t(47120);
-var r = t(149765),
-    i = t(399606),
-    o = t(581883),
-    l = t(430824),
-    u = t(496675),
-    a = t(914010),
-    s = t(594174),
-    c = t(700785),
-    d = t(709054),
-    _ = t(533244),
-    f = t(487419),
-    E = t(676770);
-t(981631);
-function I(e) {
-    let n = (0, i.e7)([l.Z, u.Z], () => {
-            let n = l.Z.getGuild(e);
-            if (null == n) return !1;
-            let t = u.Z.getGuildPermissions(n);
-            return null != t && r.Db(t, E.cv);
+    n(47120);
+var r = n(149765),
+    i = n(399606),
+    l = n(581883),
+    a = n(430824),
+    s = n(496675),
+    o = n(914010),
+    u = n(594174),
+    c = n(700785),
+    d = n(709054),
+    _ = n(533244),
+    E = n(487419),
+    I = n(676770);
+function f(e) {
+    let t = (0, i.e7)([a.Z, s.Z], () => {
+            let t = a.Z.getGuild(e);
+            if (null == t) return !1;
+            let n = s.Z.getGuildPermissions(t);
+            return null != n && r.Db(n, I.cv);
         }),
-        t = (0, i.e7)([f.Z], () => (null != e ? f.Z.getGuildIncident(e) : null)),
-        o = null != t && (0, _.ur)(t);
+        n = (0, i.e7)([E.Z], () => (null != e ? E.Z.getGuildIncident(e) : null)),
+        l = null != n && (0, _.ur)(n);
     return {
-        shouldShowIncidentActions: n,
-        incidentData: t,
-        isUnderLockdown: o
+        shouldShowIncidentActions: t,
+        incidentData: n,
+        isUnderLockdown: l
     };
 }
-function g() {
+function p() {
     var e;
-    let n = (function (e) {
-            let n = s.default.getCurrentUser(),
-                t = f.Z.getIncidentsByGuild();
-            for (let i of d.default.keys(t).map((e) => l.Z.getGuild(e))) {
+    let t = (function (e) {
+            let t = u.default.getCurrentUser(),
+                n = E.Z.getIncidentsByGuild();
+            for (let i of d.default.keys(n).map((e) => a.Z.getGuild(e))) {
                 if (null == i) continue;
-                let o = t[i.id];
-                if (!(null == o || (!(0, _.i9)(o) && !(0, _.ur)(o)) || ((0, _.ur)(o) && i.id !== e))) {
-                    if (
-                        r.Db(
-                            c.uB({
-                                user: n,
-                                context: i,
-                                checkElevated: !1
-                            }),
-                            E.cv
-                        )
+                let l = n[i.id];
+                if (
+                    !(null == l || (!(0, _.i9)(l) && !(0, _.ur)(l)) || ((0, _.ur)(l) && i.id !== e)) &&
+                    r.Db(
+                        c.uB({
+                            user: t,
+                            context: i,
+                            checkElevated: !1
+                        }),
+                        I.cv
                     )
-                        return i.id;
-                }
+                )
+                    return i.id;
             }
             return null;
-        })(a.Z.getGuildId()),
-        t = null !== (e = o.Z.getGuildsProto()) && void 0 !== e ? e : {},
-        i = null != n ? t[n] : null,
-        u = null != i && i.disableRaidAlertNag;
+        })(o.Z.getGuildId()),
+        n = null != (e = l.Z.getGuildsProto()) ? e : {},
+        i = null != t ? n[t] : null,
+        s = null != i && i.disableRaidAlertNag;
     return {
-        show: null != n && !u,
-        guildId: n
+        show: null != t && !s,
+        guildId: t
     };
 }
+n(981631);

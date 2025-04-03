@@ -1,82 +1,45 @@
-n.d(t, {
-    __: function () {
-        return c;
-    },
-    in: function () {
-        return d;
-    }
-}),
-    n(373793);
+n.d(t, { i: () => a });
 var r = n(39621),
-    i = n(911969),
-    a = n(213459),
-    s = n(581364),
-    o = n(807169),
-    l = n(104793),
-    u = n(689938);
-function c(e, t, n) {
-    var r, u, c, d;
-    let _ = (0, o.Hs)(t, [i.yU.CHAT]),
-        E = (0, a.PL)(!0, !1),
-        f = (0, a.LD)(null == t ? void 0 : t.guild_id, !1),
-        h = (0, s.vC)(null == t ? void 0 : t.guild_id, n);
-    if (null == e || h) return !1;
-    let { context: p, userId: m, roleIds: I, isImpersonating: T } = _,
-        g = null === (u = f.result) || void 0 === u ? void 0 : null === (r = u.sections[e.applicationId]) || void 0 === r ? void 0 : r.descriptor;
-    if (void 0 !== g) {
-        let n = (0, l.ZJ)(g.permissions, t, null == t ? void 0 : t.guild_id),
-            r = (0, l.ML)(g.permissions, p.guild_id, m, I, T);
-        if (
-            (0, l.Ft)(e, _, {
-                applicationAllowedForUser: r,
-                applicationAllowedForChannel: n,
-                commandBotId: g.botId
-            }) === l.mF.ALLOWED
-        )
-            return !1;
-    }
-    let S = null === (d = E.result) || void 0 === d ? void 0 : null === (c = d.sections[e.applicationId]) || void 0 === c ? void 0 : c.commands;
-    return null != S && e.id in S;
-}
-function d(e) {
+    i = n(388032);
+function a(e) {
     switch (e) {
         case r.O.FEATURE_LIMITED:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_FEATURE_LIMITED;
+            return i.NW.string(i.t.WCvmra);
         case r.O.GUILD_FEATURE_LIMITED:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_GUILD_FEATURE_LIMITED;
+            return i.NW.string(i.t['0QUDYW']);
         case r.O.USER_FEATURE_LIMITED:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_USER_FEATURE_LIMITED;
+            return i.NW.string(i.t.gs1sxc);
         case r.O.SLOWMODE:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_SLOWMODE;
+            return i.NW.string(i.t['9UAXh4']);
         case r.O.RATE_LIMIT:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_RATE_LIMIT;
+            return i.NW.string(i.t.zBB9xM);
         case r.O.CANNOT_MESSAGE_USER:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_CANNOT_MESSAGE_USER;
+            return i.NW.string(i.t.w7sHnJ);
         case r.O.USER_VERIFICATION_LEVEL:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_USER_VERIFICATION_LEVEL;
+            return i.NW.string(i.t.SLAkFR);
         case r.O.CANNOT_UNARCHIVE_THREAD:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_CANNOT_UNARCHIVE_THREAD;
+            return i.NW.string(i.t.AIqS3t);
         case r.O.CANNOT_JOIN_THREAD:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_CANNOT_JOIN_THREAD;
+            return i.NW.string(i.t.BqKxlZ);
         case r.O.MISSING_PERMISSIONS:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_MISSING_PERMISSIONS;
+            return i.NW.string(i.t.LLF2DA);
         case r.O.CANNOT_SEND_ATTACHMENTS:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_CANNOT_SEND_ATTACHMENTS;
+            return i.NW.string(i.t.Htl7W1);
         case r.O.CANNOT_SEND_EMBEDS:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_CANNOT_SEND_EMBEDS;
+            return i.NW.string(i.t.vGgPMD);
         case r.O.CANNOT_SEND_STICKERS:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_CANNOT_SEND_STICKERS;
+            return i.NW.string(i.t.byrr7u);
         case r.O.AUTOMOD_BLOCKED:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_AUTOMOD_BLOCKED;
+            return i.NW.string(i.t['24PAJy']);
         case r.O.HARMFUL_LINK:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_HARMFUL_LINK;
+            return i.NW.string(i.t.zeqgmJ);
         case r.O.CANNOT_USE_COMMAND:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_CANNOT_USE_COMMAND;
+            return i.NW.string(i.t.kzMhho);
         case r.O.BETA_GUILD_SIZE:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_BETA;
+            return i.NW.string(i.t.Af3rGR);
         case r.O.CANNOT_USE_EXTERNAL_APPS:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_CANNOT_USE_EXTERNAL_APPS;
+            return i.NW.string(i.t.Ji4l7O);
         default:
-            return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_UNKNOWN;
+            return i.NW.string(i.t['v/OAcn']);
     }
 }

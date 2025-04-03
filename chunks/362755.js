@@ -1,41 +1,53 @@
 n.d(t, {
-    Y: function () {
-        return o;
-    }
+    Y: () => s,
+    Z: () => h
 });
 var r,
-    i,
-    u,
-    l,
-    o,
-    E,
-    a = n(442837),
-    _ = n(570140);
-((r = o || (o = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'), (r[(r.PENDING = 1)] = 'PENDING'), (r[(r.DONE = 2)] = 'DONE');
-let S = 0,
-    s = null;
-class A extends (E = a.ZP.Store) {
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+var s = (function (e) {
+    return (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.DONE = 2)] = 'DONE'), e;
+})({});
+let l = 0,
+    c = null,
+    u = null,
+    d = null;
+function f(e) {
+    (l = 1), (c = e.loadId);
+}
+function _(e) {
+    var t, n;
+    c === e.loadId && ((u = null != (t = e.skuId) ? t : null), (d = null != (n = e.skuSubscriptionPlanId) ? n : null), (l = 2));
+}
+class p extends (r = i.ZP.Store) {
     get browserCheckoutState() {
-        return S;
+        return l;
     }
     get loadId() {
-        return s;
+        return c;
+    }
+    get skuId() {
+        return u;
+    }
+    get planId() {
+        return d;
     }
 }
-(l = 'BrowserCheckoutStateStore'),
-    (u = 'displayName') in (i = A)
-        ? Object.defineProperty(i, u, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[u] = l),
-    (t.Z = new A(_.Z, {
-        USER_PAYMENT_BROWSER_CHECKOUT_STARTED: function (e) {
-            (S = 1), (s = e.loadId);
-        },
-        USER_PAYMENT_BROWSER_CHECKOUT_DONE: function (e) {
-            s === e.loadId && (S = 2);
-        }
-    }));
+a(p, 'displayName', 'BrowserCheckoutStateStore');
+let h = new p(o.Z, {
+    USER_PAYMENT_BROWSER_CHECKOUT_STARTED: f,
+    USER_PAYMENT_BROWSER_CHECKOUT_DONE: _
+});

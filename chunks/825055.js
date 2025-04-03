@@ -1,28 +1,24 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    i = n(759373);
-function r(e) {
+n.d(t, { Z: () => a });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(86055);
+function a(e) {
     let { children: t } = e;
-    return (0, s.jsx)('div', {
-        className: i.container,
-        children: (0, s.jsx)(a.Text, {
+    return (0, r.jsx)('div', {
+        className: s.container,
+        children: (0, r.jsx)(i.Text, {
             variant: 'text-sm/normal',
             color: 'text-normal',
-            className: i.text,
-            children: (0, s.jsxs)(s.Fragment, {
+            className: s.text,
+            children: (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, s.jsx)(a.CircleWarningIcon, {
+                    (0, r.jsx)(i.P4T, {
                         size: 'custom',
                         width: 20,
                         height: 20,
                         color: 'currentColor',
-                        className: i.noticeIcon,
+                        className: s.noticeIcon,
                         'aria-hidden': !0
                     }),
                     t

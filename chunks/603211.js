@@ -1,48 +1,40 @@
-t.d(n, {
-    Z: function () {
-        return l;
-    }
-}),
-    t(47120);
-var i = t(470079),
-    a = t(225857),
-    s = t(290843);
-function l(e) {
-    let { type: n, index: t, optionId: l, onDragStart: r, onDragComplete: o, onDragReset: d } = e,
-        [c, u] = i.useState(!1),
-        [, I] = (0, a.c)({
-            type: n,
+n.d(t, { Z: () => o }), n(47120);
+var r = n(192379),
+    i = n(999153),
+    l = n(584922);
+function o(e) {
+    let { type: t, index: n, optionId: o, onDragStart: a, onDragComplete: s, onDragReset: c } = e,
+        [d, u] = r.useState(!1),
+        [, p] = (0, i.c)({
+            type: t,
             item: () => (
-                r(l),
+                a(o),
                 {
-                    id: l,
-                    position: t
+                    id: o,
+                    position: n
                 }
             ),
-            canDrag: () => c,
+            canDrag: () => d,
             collect: (e) => ({ isDragging: e.isDragging() }),
-            end: (e, n) => {
-                let t = n.getDropResult();
-                if (null == t) {
-                    d();
-                    return;
-                }
-                o(t.optionId);
+            end: (e, t) => {
+                let n = t.getDropResult();
+                if (null == n) return void c();
+                s(n.optionId);
             }
         }),
-        [{ dragSourcePosition: m }, _] = (0, s.L)({
-            accept: n,
+        [{ dragSourcePosition: m }, b] = (0, l.L)({
+            accept: t,
             canDrop: () => !0,
             collect: (e) => {
-                let n = e.getItem();
-                return null != n && e.isOver() && e.canDrop() ? { dragSourcePosition: n.position } : { dragSourcePosition: null };
+                let t = e.getItem();
+                return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
             },
-            drop: () => ({ optionId: l })
+            drop: () => ({ optionId: o })
         });
     return {
-        drag: I,
+        drag: p,
         dragSourcePosition: m,
-        drop: _,
+        drop: b,
         setIsDraggable: u
     };
 }

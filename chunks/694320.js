@@ -1,97 +1,107 @@
-n.d(t, {
-    Z: function () {
-        return N;
-    }
-});
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
+n.d(t, { Z: () => v });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(442837),
     l = n(481060),
-    u = n(100527),
-    c = n(906732),
+    c = n(100527),
+    u = n(906732),
     d = n(436774),
-    _ = n(104494),
-    E = n(639119),
-    f = n(165583),
-    h = n(592125),
-    p = n(944486),
-    m = n(626135),
-    I = n(981631),
-    T = n(474936),
-    g = n(689938),
-    S = n(540451);
-function A() {
-    (0, l.openModalLazy)(async () => {
-        let { default: e } = await n.e('3289').then(n.bind(n, 682609));
-        return (t) =>
-            (0, r.jsx)(e, {
-                channel: null,
-                ...t
+    f = n(592125),
+    _ = n(944486),
+    p = n(626135),
+    h = n(981631),
+    m = n(388032),
+    g = n(714745);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
             });
+    }
+    return e;
+}
+function y() {
+    (0, l.ZDy)(async () => {
+        let { default: e } = await n.e('3289').then(n.bind(n, 682609));
+        return (t) => (0, r.jsx)(e, b({ channel: null }, t));
     });
 }
-function N(e) {
-    var t;
-    let { className: n, iconOnly: a, remaining: N } = e,
-        v = (0, o.e7)([p.Z, h.Z], () => {
-            let e = h.Z.getChannel(p.Z.getChannelId());
-            return (null == e ? void 0 : e.isPrivate()) ? I.ZY5.DM_CHANNEL : I.ZY5.GUILD_CHANNEL;
+function v(e) {
+    let { className: t, iconOnly: n } = e,
+        o = (0, s.e7)([_.Z, f.Z], () => {
+            let e = f.Z.getChannel(_.Z.getChannelId());
+            return (null == e ? void 0 : e.isPrivate()) ? h.ZY5.DM_CHANNEL : h.ZY5.GUILD_CHANNEL;
         }),
-        { analyticsLocations: O } = (0, c.ZP)(u.Z.PREMIUM_UPSELL),
-        R = (0, _.Ng)(),
-        C = (0, E.N)(),
-        y = (0, _.Wp)(R, T.Si.TIER_2),
-        D = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2;
-    return (i.useEffect(() => {
-        m.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
+        { analyticsLocations: E } = (0, u.ZP)(c.Z.PREMIUM_UPSELL);
+    i.useEffect(() => {
+        p.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
             type: 'longer messages inline',
             location: {
-                location_page: v,
-                location_section: I.jXE.CHANNEL_TEXT_AREA
+                location_page: o,
+                location_section: h.jXE.CHANNEL_TEXT_AREA
             },
-            location_stack: O
+            location_stack: E
         });
-    }, [v, O]),
-    (D || y) && N < 0)
-        ? (0, r.jsx)(f.ZP, {
-              type: T.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
-              subscriptionTier: T.Si.TIER_2,
-              context: N,
-              discountOffer: R,
-              trialOffer: C,
-              children: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
-          })
-        : a
-          ? (0, r.jsx)(l.Clickable, {
-                className: S.iconOnly,
-                onClick: () => A(),
-                children: (0, r.jsx)(l.Tooltip, {
-                    text: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
-                    position: 'top',
-                    children: (e) =>
-                        (0, r.jsx)(l.NitroWheelIcon, {
-                            size: 'md',
-                            color: 'currentColor',
-                            className: S.premium,
-                            ...e
-                        })
-                })
-            })
-          : (0, r.jsxs)('div', {
-                className: s()(S.root, n),
+    }, [o, E]);
+    let v = () =>
+            (0, r.jsxs)('div', {
+                className: a()(g.root, t),
                 children: [
-                    (0, r.jsx)(l.NitroWheelIcon, {
+                    (0, r.jsx)(l.SrA, {
                         size: 'md',
-                        className: S.premium,
+                        className: g.premium,
                         color: d.JX.PREMIUM_TIER_2
                     }),
                     (0, r.jsx)(l.Text, {
-                        className: S.text,
+                        className: g.text,
                         variant: 'text-sm/normal',
-                        children: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
+                        children: m.NW.format(m.t.BNAIBQ, { onLearnMore: y })
                     })
                 ]
+            }),
+        O = () =>
+            (0, r.jsx)(l.P3F, {
+                className: g.iconOnly,
+                onClick: () => y(),
+                children: (0, r.jsx)(l.ua7, {
+                    text: m.NW.string(m.t['+eFIjY']),
+                    position: 'top',
+                    children: (e) =>
+                        (0, r.jsx)(
+                            l.SrA,
+                            b(
+                                {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: g.premium
+                                },
+                                e
+                            )
+                        )
+                })
             });
+    return n ? O() : v();
 }

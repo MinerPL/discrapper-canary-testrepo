@@ -1,70 +1,66 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-});
-var a = n(735250);
-n(470079);
-var s = n(120356),
-    r = n.n(s),
+n.d(t, { Z: () => p });
+var r = n(200651);
+n(192379);
+var a = n(120356),
+    i = n.n(a),
     l = n(481060),
-    i = n(228392),
+    s = n(228392),
     o = n(404616),
     c = n(710352),
     d = n(921944),
-    u = n(689938),
-    m = n(50439),
-    h = n(49194),
-    _ = n(643432),
-    g = n(504764);
-function x(e) {
+    u = n(388032),
+    m = n(683999),
+    h = n(297731),
+    g = n(602512),
+    f = n(504764);
+function p(e) {
     let { onDismiss: t } = e;
-    return (0, a.jsxs)(l.Clickable, {
+    return (0, r.jsxs)(l.P3F, {
         onClick: () => {
-            open(c.V8), (0, i.GX)({ readGuideCta: !0 });
+            open(c.V8), (0, s.GX)({ readGuideCta: !0 });
         },
-        className: r()(_.container, h.container, m.mainCard),
+        className: i()(g.container, h.container, m.mainCard),
         children: [
-            (0, a.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: h.inline,
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: h.author,
                         children: [
-                            (0, a.jsx)(l.ClydeIcon, {
+                            (0, r.jsx)(l.gw7, {
                                 size: 'custom',
                                 width: 28,
                                 height: 28,
                                 color: 'currentColor',
                                 className: h.discordIcon
                             }),
-                            (0, a.jsx)(l.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'header-primary',
-                                children: u.Z.Messages.DISCORD_NAME
+                                children: u.NW.string(u.t.uvGmCw)
                             }),
-                            (0, a.jsxs)('div', {
+                            (0, r.jsxs)('div', {
                                 className: h.notice,
                                 children: [
-                                    (0, a.jsx)(l.CircleInformationIcon, {
+                                    (0, r.jsx)(l.d3s, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: h.infoIcon
                                     }),
-                                    (0, a.jsx)(l.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'header-secondary',
-                                        children: u.Z.Messages.FORUM_HELPER_CARD_NOTICE
+                                        children: u.NW.string(u.t.t2GkVV)
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, a.jsx)(l.Clickable, {
+                    (0, r.jsx)(l.P3F, {
                         onClick: (e) => {
-                            e.stopPropagation(), t(d.L.DISMISS), (0, i.GX)({ readGuideCta: !1 });
+                            e.stopPropagation(), t(d.L.DISMISS), (0, s.GX)({ readGuideCta: !1 });
                         },
-                        children: (0, a.jsx)(l.XSmallIcon, {
+                        children: (0, r.jsx)(l.Dio, {
                             size: 'xs',
                             color: 'currentColor',
                             className: h.closeIcon
@@ -72,28 +68,28 @@ function x(e) {
                     })
                 ]
             }),
-            (0, a.jsx)('hr', { className: h.separator }),
-            (0, a.jsxs)('div', {
+            (0, r.jsx)('hr', { className: h.separator }),
+            (0, r.jsxs)('div', {
                 className: h.inline,
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         children: [
-                            (0, a.jsx)(l.Heading, {
-                                className: r()(_.__invalid_channelName, h.title),
+                            (0, r.jsx)(l.X6q, {
+                                className: i()(g.__invalid_channelName, h.title),
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                children: u.Z.Messages.FORUM_HELPER_CARD_TITLE
+                                children: u.NW.string(u.t.JtSpDw)
                             }),
-                            (0, a.jsx)(l.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: u.Z.Messages.FORUM_HELPER_CARD_BODY
+                                children: u.NW.string(u.t.Ajhp09)
                             })
                         ]
                     }),
-                    (0, a.jsx)('img', {
-                        src: g,
-                        alt: u.Z.Messages.FORUM_HELPER_CARD_ALT_TEXT,
+                    (0, r.jsx)('img', {
+                        src: f,
+                        alt: u.NW.string(u.t.gAlJzc),
                         width: o.TJ,
                         height: o.TJ
                     })

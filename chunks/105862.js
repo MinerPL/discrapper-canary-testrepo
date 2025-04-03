@@ -1,67 +1,68 @@
-t.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = t(735250),
-    a = t(470079),
-    l = t(780384),
-    o = t(481060),
-    r = t(410030),
-    s = t(782568),
-    c = t(63063),
-    d = t(827498),
-    u = t(888617),
-    m = t(981631),
-    p = t(689938),
-    _ = t(778762),
-    C = t(983008),
-    f = t(478408);
-function h() {
-    let e = (0, r.ZP)(),
-        n = (0, l.ap)(e) ? f : C,
-        t = a.useCallback(() => {
-            (0, s.Z)(c.Z.getArticleURL(m.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON));
+n.d(t, { Z: () => C });
+var i = n(200651),
+    r = n(192379),
+    l = n(780384),
+    a = n(481060),
+    o = n(410030),
+    c = n(782568),
+    s = n(63063),
+    u = n(827498),
+    d = n(888617),
+    p = n(981631),
+    m = n(388032),
+    f = n(434666),
+    h = n(983008),
+    b = n(478408);
+function C(e) {
+    let { showImage: t = !0, padding: n = !1 } = e,
+        C = (0, o.ZP)(),
+        _ = (0, l.ap)(C) ? b : h,
+        x = r.useCallback(() => {
+            (0, c.Z)(s.Z.getAppsSupportURL(p.BhN.APPS_LEARN_MORE));
         }, []),
-        { trackSectionImpressionRef: h } = (0, u.Z)({
-            sectionName: d.L3.NEW_TO_APPS,
+        { trackSectionImpressionRef: v } = (0, d.Z)({
+            sectionName: u.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1
         });
-    return (0, i.jsxs)('div', {
-        ref: (e) => (h.current = e),
-        className: _.container,
-        children: [
-            (0, i.jsx)('img', {
-                className: _.image,
-                src: n,
-                alt: '',
-                'aria-hidden': !0
-            }),
-            (0, i.jsxs)('div', {
-                className: _.body,
-                children: [
-                    (0, i.jsx)(o.Heading, {
-                        variant: 'heading-lg/bold',
-                        color: 'header-primary',
-                        children: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE
+    return (0, i.jsx)('div', {
+        className: n ? f.containerPadding : void 0,
+        children: (0, i.jsxs)('div', {
+            ref: (e) => (v.current = e),
+            className: f.container,
+            children: [
+                t &&
+                    (0, i.jsx)('img', {
+                        className: f.image,
+                        src: _,
+                        alt: '',
+                        'aria-hidden': !0
                     }),
-                    (0, i.jsx)(o.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'text-normal',
-                        children: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
-                    })
-                ]
-            }),
-            (0, i.jsx)(o.Button, {
-                size: o.Button.Sizes.MEDIUM,
-                'aria-label': p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE_ARIA_LABEL.format({
-                    sectionTitle: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE,
-                    sectionBody: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
+                (0, i.jsxs)('div', {
+                    className: f.body,
+                    children: [
+                        (0, i.jsx)(a.X6q, {
+                            variant: 'heading-lg/bold',
+                            color: 'header-primary',
+                            children: m.NW.string(m.t['kw8/ER'])
+                        }),
+                        (0, i.jsx)(a.Text, {
+                            variant: 'text-xs/normal',
+                            color: 'text-normal',
+                            children: m.NW.string(m.t.GZoV1N)
+                        })
+                    ]
                 }),
-                onClick: t,
-                children: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE
-            })
-        ]
+                (0, i.jsx)(a.zxk, {
+                    size: a.zxk.Sizes.MEDIUM,
+                    'aria-label': m.NW.formatToPlainString(m.t.xx5Sur, {
+                        sectionTitle: m.NW.string(m.t['kw8/ER']),
+                        sectionBody: m.NW.string(m.t.GZoV1N)
+                    }),
+                    onClick: x,
+                    children: m.NW.string(m.t.Ye51oa)
+                })
+            ]
+        })
     });
 }

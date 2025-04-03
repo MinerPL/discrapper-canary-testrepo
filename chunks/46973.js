@@ -1,54 +1,40 @@
 n.d(t, {
-    Mt: function () {
-        return f;
-    },
-    Sh: function () {
-        return u.S;
-    },
-    TO: function () {
-        return l;
-    },
-    W$: function () {
-        return s;
-    },
-    Yn: function () {
-        return d.Yn;
-    },
-    aB: function () {
-        return c.a;
-    },
-    jj: function () {
-        return E;
-    },
-    zZ: function () {
-        return o;
-    }
+    Mt: () => d,
+    Sh: () => r.S,
+    TO: () => l,
+    W$: () => a,
+    Yn: () => o.Yn,
+    aB: () => i.a,
+    jj: () => u,
+    zZ: () => s
 });
-var r,
-    i,
-    a,
-    s,
-    o,
-    l,
-    u = n(839548),
-    c = n(946695),
-    d = n(65154);
-function _(e) {
+var r = n(839548),
+    i = n(946695),
+    o = n(65154),
+    a = (function (e) {
+        return (e.INPUT_DEVICE = 'input_device'), (e.STREAM = 'stream'), e;
+    })({}),
+    s = (function (e) {
+        return (e.NONE = ''), (e.BACKGROUND_BLUR = 'background_blur'), (e.BACKGROUND_REPLACEMENT = 'background_replacement'), e;
+    })({}),
+    l = (function (e) {
+        return (e.CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'), (e.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive'), e;
+    })({});
+function c(e) {
     switch (e) {
-        case d.AS.NATIVE:
+        case o.AS.NATIVE:
             return n(743426).Z;
-        case d.AS.WEBRTC:
+        case o.AS.WEBRTC:
             return n(959856).Z;
-        case d.AS.DUMMY:
+        case o.AS.DUMMY:
         default:
             return n(135670).Z;
     }
 }
-function E() {
+function u() {
     var e;
-    return null !== (e = [d.AS.NATIVE, d.AS.WEBRTC].find((e) => _(e).supported())) && void 0 !== e ? e : d.AS.DUMMY;
+    return null != (e = [o.AS.NATIVE, o.AS.WEBRTC].find((e) => c(e).supported())) ? e : o.AS.DUMMY;
 }
-function f(e) {
-    return new (_(e))();
+function d(e) {
+    return new (c(e))();
 }
-((r = s || (s = {})).INPUT_DEVICE = 'input_device'), (r.STREAM = 'stream'), ((i = o || (o = {})).NONE = ''), (i.BACKGROUND_BLUR = 'background_blur'), (i.BACKGROUND_REPLACEMENT = 'background_replacement'), ((a = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'), (a.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive');

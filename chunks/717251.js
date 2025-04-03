@@ -1,46 +1,42 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    i = n.n(a),
-    r = n(481060),
+n.d(t, { Z: () => c }), n(266796);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
     l = n(2150),
-    o = n(270068);
+    o = n(727001);
 function c(e) {
-    let { title: t, description: n, action: a, highlightColor: c = l.q.NONE, selected: d = !1, subsection: u = null, onClick: _, className: I, disabled: E } = e;
-    return (0, s.jsxs)('div', {
-        className: i()(o.container, I),
+    let { title: t, description: n, action: i, highlightColor: c = l.q.NONE, selected: d = !1, subsection: u = null, onClick: m, className: g, disabled: p } = e;
+    return (0, r.jsxs)('div', {
+        className: s()(o.container, g),
         children: [
-            (0, s.jsx)(r.Clickable, {
-                className: i()(
+            (0, r.jsx)(a.P3F, {
+                className: s()(
                     o.clickableContainer,
                     {
-                        [o.noAction]: null == _,
-                        [o.disabled]: E
+                        [o.noAction]: null == m,
+                        [o.disabled]: p
                     },
-                    I
+                    g
                 ),
-                onClick: E ? void 0 : _,
-                children: (0, s.jsxs)('div', {
-                    className: i()(o.backgroundModifierContainer, o[c], {
+                onClick: p ? void 0 : m,
+                children: (0, r.jsxs)('div', {
+                    className: s()(o.backgroundModifierContainer, o[c], {
                         [o.selected]: d,
-                        [o.disabled]: E,
-                        [o.noAction]: null == _
+                        [o.disabled]: p,
+                        [o.noAction]: null == m
                     }),
                     children: [
-                        (0, s.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             className: o.settingsDescriptionContainer,
                             children: [
-                                (0, s.jsx)(r.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'interactive-active',
                                     children: t
                                 }),
-                                (0, s.jsx)(r.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'interactive-normal',
                                     className: o.description,
@@ -48,15 +44,15 @@ function c(e) {
                                 })
                             ]
                         }),
-                        (0, s.jsx)('div', {
+                        (0, r.jsx)('div', {
                             className: o.__invalid_action,
-                            children: a
+                            children: i
                         })
                     ]
                 })
             }),
             null != u &&
-                (0, s.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: o.subsectionContainer,
                     children: u
                 })

@@ -1,27 +1,19 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
-var s = n(581050),
-    a = n(689938);
-function i(e) {
+n.d(t, { Z: () => s });
+var r = n(581050),
+    i = n(388032);
+function s(e) {
     var t, n;
-    let i = (null == e ? void 0 : null === (t = e.latestRequest) || void 0 === t ? void 0 : t.state) === s.X.REJECTED;
     return {
-        isApplicationRejected: i,
+        isApplicationRejected: (null == e || null == (t = e.latestRequest) ? void 0 : t.state) === r.X.REJECTED,
         requestCooldownDuration: (function (e) {
             let t;
             if (null == e) return;
             let n = Date.parse(e),
-                s = Date.now();
-            if (isNaN(n) || n < s) return;
-            let i = 1440,
-                r = 10080,
-                l = 43200,
-                o = Math.round((n - s) / 60000),
-                c = (e) => Math.round(o / e);
-            return (t = o >= 43200 ? a.Z.Messages.DURATION_MONTHS.format({ months: c(l) }) : o >= r ? a.Z.Messages.DURATION_WEEKS.format({ weeks: c(r) }) : o >= i ? a.Z.Messages.DURATION_DAYS.format({ days: c(i) }) : o >= 60 ? a.Z.Messages.DURATION_HOURS.format({ hours: c(60) }) : a.Z.Messages.DURATION_MINUTES.format({ minutes: o }));
-        })(null == e ? void 0 : null === (n = e.rejection) || void 0 === n ? void 0 : n.can_reapply_at)
+                r = Date.now();
+            if (isNaN(n) || n < r) return;
+            let s = Math.round((n - r) / 60000),
+                a = (e) => Math.round(s / e);
+            return s >= 43200 ? i.NW.formatToPlainString(i.t.kridzM, { months: a(43200) }) : s >= 10080 ? i.NW.formatToPlainString(i.t.EmoBDw, { weeks: a(10080) }) : s >= 1440 ? i.NW.formatToPlainString(i.t.k2UNz8, { days: a(1440) }) : s >= 60 ? i.NW.formatToPlainString(i.t.xCjYxM, { hours: a(60) }) : i.NW.formatToPlainString(i.t.iXLF9f, { minutes: s });
+        })(null == e || null == (n = e.rejection) ? void 0 : n.can_reapply_at)
     };
 }

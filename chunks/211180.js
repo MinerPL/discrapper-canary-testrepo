@@ -1,5 +1,6 @@
 e.exports = function () {
-    this.instances.forEach(function (e) {
+    var e = this;
+    e.instances.forEach(function (e) {
         e.reset();
     });
 };

@@ -1,49 +1,45 @@
-n.d(t, {
-    X: function () {
-        return s;
-    }
-});
+n.d(t, { X: () => a });
 var r = n(829105),
     i = n(150076),
-    a = n(695170);
-function s(e, t, n, s, o, l) {
-    var u = {},
-        c = e.accept;
+    o = n(695170);
+function a(e, t, n, a, s, l) {
+    var c = {},
+        u = e.accept;
     function d(e, t) {
         n.forEach(function (n) {
             n.between(e, t, !0).forEach(function (e) {
-                u[Number(e)] = !0;
+                c[Number(e)] = !0;
             });
         });
     }
-    o.forEach(function (e) {
-        u[Number(new r.M(e, l).rezonedDate())] = !0;
+    s.forEach(function (e) {
+        c[Number(new r.M(e, l).rezonedDate())] = !0;
     }),
         (e.accept = function (e) {
             var t = Number(e);
-            return isNaN(t) ? c.call(this, e) : !!u[t] || (d(new Date(t - 1), new Date(t + 1)), !!u[t]) || ((u[t] = !0), c.call(this, e));
+            return isNaN(t) ? u.call(this, e) : !!c[t] || (d(new Date(t - 1), new Date(t + 1)), !!c[t]) || ((c[t] = !0), u.call(this, e));
         }),
         'between' === e.method &&
             (d(e.args.after, e.args.before),
             (e.accept = function (e) {
                 var t = Number(e);
-                return !!u[t] || ((u[t] = !0), c.call(this, e));
+                return !!c[t] || ((c[t] = !0), u.call(this, e));
             }));
-    for (var _ = 0; _ < s.length; _++) {
-        var E = new r.M(s[_], l).rezonedDate();
-        if (!e.accept(new Date(E.getTime()))) break;
+    for (var f = 0; f < a.length; f++) {
+        var _ = new r.M(a[f], l).rezonedDate();
+        if (!e.accept(new Date(_.getTime()))) break;
     }
     t.forEach(function (t) {
         (0, i.h)(e, t.options);
     });
-    var f = e._result;
-    switch (((0, a.DY)(f), e.method)) {
+    var p = e._result;
+    switch (((0, o.DY)(p), e.method)) {
         case 'all':
         case 'between':
-            return f;
+            return p;
         case 'before':
-            return (f.length && f[f.length - 1]) || null;
+            return (p.length && p[p.length - 1]) || null;
         default:
-            return (f.length && f[0]) || null;
+            return (p.length && p[0]) || null;
     }
 }

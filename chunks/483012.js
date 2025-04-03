@@ -1,10 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(47120),
-    n(653041);
+n.d(t, { Z: () => o }), n(47120), n(653041);
 var r = n(570140);
 function i(e, t, n) {
     return (
@@ -19,9 +13,9 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     static flush(e, t) {
-        for (let n of a.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush();
+        for (let n of o.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush();
     }
     flush() {
         let { action: e } = this;
@@ -45,7 +39,7 @@ class a {
             (this.add = (e) => {
                 this.action = t(this.action, e);
             }),
-            a.batchers.push(this);
+            o.batchers.push(this);
     }
 }
-i(a, 'batchers', []);
+i(o, 'batchers', []);

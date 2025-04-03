@@ -1,59 +1,54 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    l = n(442837),
-    r = n(963838),
-    o = n(37091),
-    c = n(689938),
-    u = n(203218);
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651);
+n(192379);
+var l = n(120356),
+    i = n.n(l),
+    a = n(442837),
+    o = n(963838),
+    s = n(37091),
+    u = n(388032),
+    c = n(690296);
 function d(e) {
     let t,
-        { channelId: n, userId: a } = e,
-        [d, h] = (0, l.Wu)([o.Z], () => [o.Z.getWaitingHighFive(n, a), o.Z.getCompletedHighFive(n, a)]);
-    if (null != h)
-        t = (0, i.jsxs)(i.Fragment, {
+        { channelId: n, userId: l } = e,
+        [d, f] = (0, a.Wu)([s.Z], () => [s.Z.getWaitingHighFive(n, l), s.Z.getCompletedHighFive(n, l)]);
+    if (null != f)
+        t = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)('img', {
-                    alt: c.Z.Messages.CALL_HIGH_FIVE_EXCLAMATION,
-                    src: (0, r._r)({
-                        name: h[0],
+                (0, r.jsx)('img', {
+                    alt: u.NW.string(u.t.W6HwU1),
+                    src: (0, o._r)({
+                        name: f[0],
                         id: null,
                         animated: !1
                     }),
-                    className: s()(u.completeLeft, u.highFive)
+                    className: i()(c.completeLeft, c.highFive)
                 }),
-                (0, i.jsx)('img', {
-                    alt: c.Z.Messages.CALL_HIGH_FIVE_EXCLAMATION,
-                    src: (0, r._r)({
-                        name: h[1],
+                (0, r.jsx)('img', {
+                    alt: u.NW.string(u.t.W6HwU1),
+                    src: (0, o._r)({
+                        name: f[1],
                         id: null,
                         animated: !1
                     }),
-                    className: s()(u.completeRight, u.highFive)
+                    className: i()(c.completeRight, c.highFive)
                 })
             ]
         });
     else {
         if (null == d) return null;
-        t = (0, i.jsx)('img', {
-            alt: c.Z.Messages.CALL_HIGH_FIVE_EXCLAMATION,
-            src: (0, r._r)({
+        t = (0, r.jsx)('img', {
+            alt: u.NW.string(u.t.W6HwU1),
+            src: (0, o._r)({
                 name: d,
                 id: null,
                 animated: !1
             }),
-            className: s()(u.waiting, u.highFive)
+            className: i()(c.waiting, c.highFive)
         });
     }
-    return (0, i.jsx)('div', {
-        className: u.root,
+    return (0, r.jsx)('div', {
+        className: c.root,
         children: t
     });
 }

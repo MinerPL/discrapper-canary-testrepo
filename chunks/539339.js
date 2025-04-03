@@ -1,2 +1,1 @@
-var n = r(473518)(Object.keys, Object);
-e.exports = n;
+t.exports = a(473518)(Object.keys, Object);

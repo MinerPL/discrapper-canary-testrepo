@@ -1,25 +1,15 @@
-var r, i, a, s, o, l;
 n.d(t, {
-    G0: function () {
-        return c;
-    },
-    L3: function () {
-        return u;
-    },
-    LG: function () {
-        return i;
-    },
-    _b: function () {
-        return r;
-    },
-    ti: function () {
-        return a;
-    }
-}),
-    ((s = r || (r = {})).NONE = 'NONE'),
-    (s.TEXT = 'TEXT'),
-    (s.VOICE = 'VOICE');
-let u = {
+    G0: () => o,
+    L3: () => i,
+    LG: () => a,
+    _b: () => r,
+    _y: () => l,
+    ti: () => s
+});
+var r = (function (e) {
+    return (e.NONE = 'NONE'), (e.TEXT = 'TEXT'), (e.VOICE = 'VOICE'), (e.PLAY_TAB = 'PLAY_TAB'), (e.QUICK_LAUNCHER = 'QUICK_LAUNCHER'), e;
+})({});
+let i = {
         SEARCH: 'search',
         RECENT: 'recent',
         INSTALLED: 'installed',
@@ -29,8 +19,16 @@ let u = {
         NEW_TO_APPS: 'new_to_apps',
         APPS_IN_THIS_SERVER: 'apps_in_this_server'
     },
-    c = {
+    o = {
         HOME: 'home',
         APP_DETAIL: 'app_detail'
     };
-((o = i || (i = {})).HOME_EMPTY = 'home_empty'), (o.SEARCH_EMPTY = 'search_empty'), (o.HOME_NO_PERMISSIONS = 'home_no_permissions'), (o.COMMAND_NO_PERMISSIONS = 'command_no_permissions'), (o.COMMAND_NOT_FOUND = 'command_not_found'), ((l = a || (a = {}))[(l.DISMISSED = 0)] = 'DISMISSED'), (l[(l.COMMAND = 1)] = 'COMMAND'), (l[(l.ACTIVITY = 2)] = 'ACTIVITY');
+var a = (function (e) {
+        return (e.HOME_EMPTY = 'home_empty'), (e.SEARCH_EMPTY = 'search_empty'), (e.HOME_NO_PERMISSIONS = 'home_no_permissions'), (e.COMMAND_NO_PERMISSIONS = 'command_no_permissions'), (e.COMMAND_NOT_FOUND = 'command_not_found'), e;
+    })({}),
+    s = (function (e) {
+        return (e[(e.DISMISSED = 0)] = 'DISMISSED'), (e[(e.COMMAND = 1)] = 'COMMAND'), (e[(e.ACTIVITY = 2)] = 'ACTIVITY'), e;
+    })({}),
+    l = (function (e) {
+        return (e.OPEN_APP_DM = 'open_app_dm'), (e.USE_APP_COMMAND = 'use_app_command'), e;
+    })({});

@@ -1,106 +1,144 @@
-n.d(t, {
-    K: function () {
-        return R;
-    }
-}),
-    n(47120),
-    n(627341);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(297821),
-    o = n(338545),
+n.d(t, { K: () => C }), n(47120), n(627341);
+var r = n(200651),
+    i = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    o = n(867824),
+    s = n(642128),
     c = n(278074),
     u = n(748780),
     d = n(481060),
-    _ = n(313201),
-    E = n(542578),
-    I = n(203143),
-    m = n(79390),
-    T = n(839963),
-    h = n(139256),
-    N = n(294608),
-    f = n(689938),
-    C = n(703308);
-function p(e) {
-    let { percentage: t, label: n, canShowVoterDetails: s, answerId: r } = e,
-        o = (0, _.Dt)(),
-        { channelId: c, messageId: u } = (0, N.pE)(),
-        [T, h] = a.useState(''),
-        [f, p] = a.useState(!1),
-        g = '' !== T && f,
-        S = a.useCallback(() => {
-            h((0, m.e1)(u, c, r));
-        }, [u, c, r]),
-        A = a.useCallback(() => {
-            S(), p(!0);
-        }, [S]),
-        R = a.useCallback(() => {
-            p(!1);
+    p = n(313201),
+    m = n(542578),
+    f = n(203143),
+    h = n(79390),
+    g = n(839963),
+    _ = n(139256),
+    b = n(294608),
+    x = n(388032),
+    y = n(709893);
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function v(e) {
+    let { percentage: t, label: n, canShowVoterDetails: a, answerId: l } = e,
+        s = (0, p.Dt)(),
+        { channelId: c, messageId: u } = (0, b.pE)(),
+        [g, _] = i.useState(''),
+        [x, v] = i.useState(!1),
+        O = '' !== g && x,
+        N = i.useCallback(() => {
+            _((0, h.e1)(u, c, l));
+        }, [u, c, l]),
+        j = i.useCallback(() => {
+            N(), v(!0);
+        }, [N]),
+        C = i.useCallback(() => {
+            v(!1);
         }, []),
-        x = a.useCallback(() => {
-            (0, I.n)({
+        I = i.useCallback(() => {
+            (0, f.n)({
                 channelId: c,
                 messageId: u,
-                answerId: r
+                answerId: l
             });
-        }, [c, u, r]);
-    a.useEffect(() => {
-        if (!!f)
+        }, [c, u, l]);
+    i.useEffect(() => {
+        if (x)
             return (
-                E.Z.addReactChangeListener(S),
+                m.Z.addReactChangeListener(N),
                 () => {
-                    E.Z.removeReactChangeListener(S);
+                    m.Z.removeReactChangeListener(N);
                 }
             );
-    }, [f, S]);
-    let O = (0, i.jsx)(d.Text, {
+    }, [x, N]);
+    let S = (0, r.jsx)(d.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
-        className: C.voteCount,
+        className: y.voteCount,
         scaleFontToUserSetting: !0,
         children: n
     });
-    return (0, i.jsxs)('div', {
-        className: C.votesData,
+    return (0, r.jsxs)('div', {
+        className: y.votesData,
         children: [
-            s
-                ? (0, i.jsxs)(i.Fragment, {
+            a
+                ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, i.jsx)(d.Tooltip, {
-                              text: (0, i.jsx)(d.Text, {
+                          (0, r.jsx)(d.ua7, {
+                              text: (0, r.jsx)(d.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-muted',
                                   scaleFontToUserSetting: !0,
-                                  children: T
+                                  children: g
                               }),
-                              forceOpen: g,
+                              forceOpen: O,
                               'aria-label': !1,
-                              children: (e) =>
-                                  (0, i.jsx)(d.Button, {
-                                      ...e,
-                                      onMouseEnter: A,
-                                      onMouseLeave: R,
-                                      onFocus: A,
-                                      onBlur: R,
-                                      onClick: x,
-                                      className: C.voteCountButton,
-                                      'aria-describedby': g ? o : void 0,
-                                      look: d.Button.Looks.BLANK,
-                                      size: d.Button.Sizes.NONE,
-                                      children: O
-                                  })
+                              children: (e) => {
+                                  var t, n;
+                                  return (0, r.jsx)(
+                                      d.zxk,
+                                      ((t = E({}, e)),
+                                      (n = n =
+                                          {
+                                              onMouseEnter: j,
+                                              onMouseLeave: C,
+                                              onFocus: j,
+                                              onBlur: C,
+                                              onClick: I,
+                                              className: y.voteCountButton,
+                                              'aria-describedby': O ? s : void 0,
+                                              look: d.zxk.Looks.BLANK,
+                                              size: d.zxk.Sizes.NONE,
+                                              children: S
+                                          }),
+                                      Object.getOwnPropertyDescriptors
+                                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                          : (function (e, t) {
+                                                var n = Object.keys(e);
+                                                if (Object.getOwnPropertySymbols) {
+                                                    var r = Object.getOwnPropertySymbols(e);
+                                                    n.push.apply(n, r);
+                                                }
+                                                return n;
+                                            })(Object(n)).forEach(function (e) {
+                                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                            }),
+                                      t)
+                                  );
+                              }
                           }),
-                          g &&
-                              (0, i.jsx)(l.T, {
-                                  id: o,
-                                  children: T
+                          O &&
+                              (0, r.jsx)(o.T, {
+                                  id: s,
+                                  children: g
                               })
                       ]
                   })
-                : (0, i.jsx)(i.Fragment, { children: O }),
-            (0, i.jsxs)(d.Text, {
+                : S,
+            (0, r.jsxs)(d.Text, {
                 variant: 'text-md/bold',
                 color: 'none',
                 scaleFontToUserSetting: !0,
@@ -109,9 +147,9 @@ function p(e) {
         ]
     });
 }
-function g(e) {
+function O(e) {
     let { percentage: t, shouldAnimate: n } = e,
-        a = (0, d.useSpring)(
+        i = (0, d.q_F)(
             {
                 from: { width: n ? '0%' : ''.concat(t, '%') },
                 to: { width: ''.concat(t, '%') },
@@ -122,113 +160,135 @@ function g(e) {
             },
             'animate-always'
         );
-    return (0, i.jsx)(o.animated.span, {
-        className: C.votePercentageBar,
-        style: a,
+    return (0, r.jsx)(s.animated.span, {
+        className: y.votePercentageBar,
+        style: i,
         'aria-hidden': !0
     });
 }
-function S(e) {
-    let { answersInteraction: t, isSelected: n, didSelfVote: a, isVictor: s, isExpired: r, className: l } = e;
+function N(e) {
+    let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: a, isExpired: l, className: o } = e;
     return (0, c.EQ)({
         answersInteraction: t,
-        didSelfVote: a
+        didSelfVote: i
     })
-        .with({ answersInteraction: T.Y7.RADIO_BUTTONS }, () =>
-            (0, i.jsx)(h.Og, {
+        .with({ answersInteraction: g.Y7.RADIO_BUTTONS }, () =>
+            (0, r.jsx)(_.Og, {
                 isSelected: n,
                 size: 24,
-                className: l
+                className: o
             })
         )
-        .with({ answersInteraction: T.Y7.CHECKBOXES }, () =>
-            (0, i.jsx)(h.zs, {
+        .with({ answersInteraction: g.Y7.CHECKBOXES }, () =>
+            (0, r.jsx)(_.zs, {
                 isSelected: n,
                 size: 20,
-                className: l
+                className: o
             })
         )
         .with(
             {
-                answersInteraction: T.Y7.LIST,
+                answersInteraction: g.Y7.LIST,
                 didSelfVote: !0
             },
             () =>
-                (0, i.jsx)(h.ZY, {
-                    isVictor: s,
-                    isExpired: r,
+                (0, r.jsx)(_.ZY, {
+                    isVictor: a,
+                    isExpired: l,
                     size: 24,
-                    className: l
+                    className: o
                 })
         )
         .otherwise(() => null);
 }
-function A(e) {
-    let { answer: t, isExpired: n, answersInteraction: a, canShowVoteCounts: s, canShowVoterDetails: o } = e,
+function j(e) {
+    let { answer: t, isExpired: n, answersInteraction: i, canShowVoteCounts: a, canShowVoterDetails: s } = e,
         c = !0 === t.isSelected,
         u = !0 === t.didSelfVote,
-        _ = !0 === t.isVictor,
-        E = t.shouldAnimateTransition;
-    return (0, i.jsx)(i.Fragment, {
-        children: (0, i.jsxs)('div', {
-            className: r()(C.answerInner, {
-                [C.currentlyVoting]: a !== T.Y7.LIST,
-                [C.selected]: c
-            }),
-            children: [
-                s
-                    ? (0, i.jsx)(g, {
-                          percentage: t.votesPercentage,
-                          shouldAnimate: E
-                      })
-                    : null,
-                null != t.pollMedia.emoji &&
-                    (0, i.jsx)(h.sc, {
-                        className: C.emoji,
-                        emoji: t.pollMedia.emoji
-                    }),
-                (0, i.jsx)(d.Text, {
-                    className: C.label,
-                    variant: 'text-sm/semibold',
-                    color: 'none',
-                    scaleFontToUserSetting: !0,
-                    children: t.pollMedia.text
+        p = !0 === t.isVictor,
+        m = t.shouldAnimateTransition;
+    return (0, r.jsxs)('div', {
+        className: l()(y.answerInner, {
+            [y.currentlyVoting]: i !== g.Y7.LIST,
+            [y.selected]: c
+        }),
+        children: [
+            a
+                ? (0, r.jsx)(O, {
+                      percentage: t.votesPercentage,
+                      shouldAnimate: m
+                  })
+                : null,
+            null != t.pollMedia.emoji &&
+                (0, r.jsx)(_.sc, {
+                    className: y.emoji,
+                    emoji: t.pollMedia.emoji
                 }),
-                t.didSelfVote && (0, i.jsx)(l.T, { children: f.Z.Messages.POLL_ANSWER_VOTED_ARIA }),
-                s &&
-                    (0, i.jsx)(p, {
-                        percentage: t.votesPercentage,
-                        label: t.votes,
-                        canShowVoterDetails: o,
-                        answerId: t.answerId
-                    }),
-                (0, i.jsx)(S, {
-                    answersInteraction: a,
-                    isSelected: c,
-                    didSelfVote: u,
-                    isVictor: _,
-                    isExpired: n,
-                    className: C.answerSelectionIcon
-                })
-            ]
-        })
+            (0, r.jsx)(d.Text, {
+                className: y.label,
+                variant: 'text-sm/semibold',
+                color: 'none',
+                scaleFontToUserSetting: !0,
+                children: t.pollMedia.text
+            }),
+            t.didSelfVote && (0, r.jsx)(o.T, { children: x.NW.string(x.t['8DAM+/']) }),
+            a &&
+                (0, r.jsx)(v, {
+                    percentage: t.votesPercentage,
+                    label: t.votes,
+                    canShowVoterDetails: s,
+                    answerId: t.answerId
+                }),
+            (0, r.jsx)(N, {
+                answersInteraction: i,
+                isSelected: c,
+                didSelfVote: u,
+                isVictor: p,
+                isExpired: n,
+                className: y.answerSelectionIcon
+            })
+        ]
     });
 }
-function R(e) {
-    let { isExpired: t, answersInteraction: n, canShowVoteCounts: a, canTapAnswers: s, ...r } = e;
-    return (0, i.jsx)(h.$e, {
-        className: C.answersContainer,
-        answerClassName: C.answer,
-        answersInteraction: n,
-        canTapAnswers: s,
-        renderAnswerContent: (e) =>
-            (0, i.jsx)(A, {
-                answer: e,
-                isExpired: t,
+function C(e) {
+    var { isExpired: t, answersInteraction: n, canShowVoteCounts: i, canTapAnswers: a } = e,
+        l = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['isExpired', 'answersInteraction', 'canShowVoteCounts', 'canTapAnswers']);
+    return (0, r.jsx)(
+        _.$e,
+        E(
+            {
+                className: y.answersContainer,
+                answerClassName: y.answer,
                 answersInteraction: n,
-                canShowVoteCounts: a,
-                canShowVoterDetails: s
-            }),
-        ...r
-    });
+                canTapAnswers: a,
+                renderAnswerContent: (e) =>
+                    (0, r.jsx)(j, {
+                        answer: e,
+                        isExpired: t,
+                        answersInteraction: n,
+                        canShowVoteCounts: i,
+                        canShowVoterDetails: a
+                    })
+            },
+            l
+        )
+    );
 }

@@ -1,30 +1,26 @@
-n.d(t, {
-    b: function () {
-        return C;
-    }
-});
-var i,
-    a,
-    s = n(735250),
-    l = n(470079),
-    r = n(120356),
-    o = n.n(r),
+n.d(t, { b: () => C }), n(26686);
+var r,
+    i,
+    l = n(200651),
+    o = n(192379),
+    a = n(120356),
+    s = n.n(a),
     c = n(500923),
     u = n.n(c),
     d = n(442837),
-    h = n(607070),
-    m = n(484334),
-    p = n(158877),
-    _ = n(178408);
-function f(e) {
-    let t = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
-        n = l.useRef(null);
+    p = n(607070),
+    h = n(484334),
+    f = n(158877),
+    m = n(449696);
+function g(e) {
+    let t = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
+        n = o.useRef(null);
     return (
-        l.useEffect(() => {
-            let i;
+        o.useEffect(() => {
+            let r;
             return (
                 null != n.current &&
-                    (i = u().loadAnimation({
+                    (r = u().loadAnimation({
                         container: n.current,
                         renderer: 'svg',
                         loop: !0,
@@ -32,43 +28,43 @@ function f(e) {
                         animationData: JSON.parse(JSON.stringify(e))
                     })),
                 () => {
-                    null == i || i.destroy();
+                    null == r || r.destroy();
                 }
             );
         }, [n, t, e]),
         n
     );
 }
-function E(e) {
+function b(e) {
     let { className: t } = e;
-    return (0, s.jsx)('div', {
-        ref: f(i || (i = n.t(m, 2))),
-        className: o()(_.glow, t)
+    return (0, l.jsx)('div', {
+        ref: g(r || (r = n.t(h, 2))),
+        className: s()(m.glow, t)
     });
 }
-function g(e) {
+function _(e) {
     let { className: t } = e;
-    return (0, s.jsx)('div', {
-        ref: f(a || (a = n.t(p, 2))),
-        className: o()(_.trinkets, t)
+    return (0, l.jsx)('div', {
+        ref: g(i || (i = n.t(f, 2))),
+        className: s()(m.trinkets, t)
     });
 }
 let C = (e) => {
-    let { children: t, animationContainerClassName: n, glowClassName: i, trinketsClassName: a, onMount: r } = e;
+    let { children: t, animationContainerClassName: n, glowClassName: r, trinketsClassName: i, onMount: a } = e;
     return (
-        l.useEffect(() => {
-            r();
-        }, [r]),
-        (0, s.jsxs)('div', {
+        o.useEffect(() => {
+            a();
+        }, [a]),
+        (0, l.jsxs)('div', {
             className: n,
             children: [
-                (0, s.jsx)(E, { className: i }),
-                (0, s.jsx)('div', { className: _.circleLayer }),
-                (0, s.jsx)('div', {
-                    className: _.entrypoint,
+                (0, l.jsx)(b, { className: r }),
+                (0, l.jsx)('div', { className: m.circleLayer }),
+                (0, l.jsx)('div', {
+                    className: m.entrypoint,
                     children: t
                 }),
-                (0, s.jsx)(g, { className: a })
+                (0, l.jsx)(_, { className: i })
             ]
         })
     );

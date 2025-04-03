@@ -1,4 +1,5 @@
-t.Z = {
+n.d(t, { Z: () => r });
+let r = {
     aa: 'aa-ET',
     af: 'af-ZA',
     ak: 'ak-GH',

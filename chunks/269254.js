@@ -1,61 +1,56 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return E;
-        }
-    });
-var a = n(735250);
-n(470079);
+n.d(e, { default: () => p }), n(301563);
+var r = n(200651);
+n(192379);
 var i = n(828214),
-    l = n(481060),
-    u = n(239091),
-    s = n(299206),
-    o = n(519110),
-    r = n(695346),
-    c = n(572004),
-    I = n(691251),
-    d = n(689938);
-function E(e) {
-    let { target: t, onSelect: n } = e,
-        E = t.getAttribute('data-type'),
-        M = t.getAttribute('data-id'),
-        S = t.getAttribute('data-name'),
-        g = t.getAttribute('data-surrogates'),
-        b = 'true' === t.getAttribute('data-animated'),
-        f = r.Sb.useSetting(),
-        O = (0, o.Z)({
-            type: E,
-            id: M,
-            name: S,
+    o = n(481060),
+    l = n(239091),
+    a = n(299206),
+    c = n(519110),
+    u = n(695346),
+    s = n(572004),
+    b = n(691251),
+    d = n(388032);
+function p(t) {
+    let { target: e, onSelect: n } = t,
+        p = e.getAttribute('data-type'),
+        g = e.getAttribute('data-id'),
+        f = e.getAttribute('data-name'),
+        O = e.getAttribute('data-surrogates'),
+        y = 'true' === e.getAttribute('data-animated'),
+        j = u.Sb.useSetting(),
+        S = (0, c.Z)({
+            type: p,
+            id: g,
+            name: f,
             isInExpressionPicker: !0
         }),
-        Z =
-            null != g
-                ? (0, a.jsx)(i.sN, {
+        v =
+            null != O
+                ? (0, r.jsx)(i.sN, {
                       id: 'copy',
-                      label: d.Z.Messages.COPY_EMOJI,
-                      action: () => (0, c.JG)(g)
+                      label: d.NW.string(d.t.ad58UF),
+                      action: () => (0, s.JG)(O)
                   })
                 : null,
-        C = (0, s.Z)({
-            id: M,
+        E = (0, a.Z)({
+            id: g,
             shiftId:
-                E === I.S.EMOJI
+                p === b.S.EMOJI
                     ? '<'
-                          .concat(b ? 'a' : '', ':')
-                          .concat(null == S ? void 0 : S.split('~')[0], ':')
-                          .concat(M, '>')
+                          .concat(y ? 'a' : '', ':')
+                          .concat(null == f ? void 0 : f.split('~')[0], ':')
+                          .concat(g, '>')
                     : void 0,
-            label: E === I.S.STICKER ? d.Z.Messages.COPY_ID_STICKER : d.Z.Messages.COPY_ID_EMOJI
+            label: p === b.S.STICKER ? d.NW.string(d.t['SJ324+']) : d.NW.string(d.t.Ap2oV1)
         });
-    return (0, a.jsx)(l.Menu, {
+    return (0, r.jsx)(o.v2r, {
         navId: 'expression-picker',
-        onClose: u.Zy,
-        'aria-label': d.Z.Messages.EXPRESSION_PICKER_ACTIONS_MENU_LABEL,
+        onClose: l.Zy,
+        'aria-label': d.NW.string(d.t.XoasSE),
         onSelect: n,
         className: 'context-menu',
-        children: (0, a.jsxs)(l.MenuGroup, {
-            children: [O, c.wS && f ? (null != Z ? Z : C) : null]
+        children: (0, r.jsxs)(o.kSQ, {
+            children: [S, s.wS && j ? (null != v ? v : E) : null]
         })
     });
 }

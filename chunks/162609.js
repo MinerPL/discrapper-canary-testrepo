@@ -1,9 +1,5 @@
-t.d(n, {
-    P: function () {
-        return i;
-    }
-});
-let i = (0, t(818083).B)({
+n.d(t, { P: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-07_contextual_image_recs_user',
     label: 'Contextual Image Recommendations',

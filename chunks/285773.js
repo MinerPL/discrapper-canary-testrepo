@@ -1,35 +1,32 @@
-t.r(s),
-    t.d(s, {
-        default: function () {
-            return h;
-        }
-    });
-var n = t(735250);
-t(470079);
-var a = t(266067),
-    c = t(765717),
-    o = t(384666),
-    r = t(69580),
-    u = t(397394),
-    i = t(981631);
-function h() {
-    return (0, n.jsxs)(a.rs, {
+n.r(t), n.d(t, { default: () => d });
+var r = n(200651);
+n(192379);
+var o = n(765717),
+    i = n(384666),
+    c = n(69580),
+    l = n(397394),
+    s = n(449934),
+    a = n(721751),
+    u = n(981631);
+function d() {
+    return (0, r.jsxs)(a.Z, {
+        splash: (0, s.gK)(),
         children: [
-            (0, n.jsx)(c.Z, {
-                path: i.Z5c.OAUTH2_AUTHORIZED,
-                component: u.Xg
+            (0, r.jsx)(o.Z, {
+                path: u.Z5c.OAUTH2_AUTHORIZED,
+                component: l.Xg
             }),
-            (0, n.jsx)(c.Z, {
-                path: i.Z5c.OAUTH2_AUTHORIZE,
-                component: r.OAuth2AuthorizePage
+            (0, r.jsx)(o.Z, {
+                path: u.Z5c.OAUTH2_AUTHORIZE,
+                component: c.OAuth2AuthorizePage
             }),
-            (0, n.jsx)(c.Z, {
-                path: i.Z5c.OAUTH2_ERROR,
-                component: u.j3
+            (0, r.jsx)(o.Z, {
+                path: u.Z5c.OAUTH2_ERROR,
+                component: l.j3
             }),
-            (0, n.jsx)(c.Z, {
-                path: [i.Z5c.OAUTH2_WHITELIST_ACCEPT, '/oauth2/whitelist/accept'],
-                component: o.Z
+            (0, r.jsx)(o.Z, {
+                path: [u.Z5c.OAUTH2_WHITELIST_ACCEPT, '/oauth2/whitelist/accept'],
+                component: i.Z
             })
         ]
     });

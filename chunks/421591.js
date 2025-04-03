@@ -1,198 +1,235 @@
-t(47120), t(852437);
-var i = t(735250),
-    a = t(470079),
-    l = t(481060),
-    o = t(100527),
-    r = t(367907),
-    s = t(906732),
-    c = t(541099),
-    d = t(695676),
-    u = t(173790),
-    m = t(361917),
-    p = t(684256),
-    _ = t(314734),
-    C = t(981631),
-    f = t(79499);
-let h = {
-        width: _.Gy,
-        height: _.lv
+n.d(t, { Z: () => x }), n(47120), n(852437);
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    a = n(100527),
+    o = n(367907),
+    c = n(906732),
+    s = n(541099),
+    u = n(695676),
+    d = n(173790),
+    p = n(692656),
+    m = n(684256),
+    f = n(314734),
+    h = n(981631),
+    b = n(899429);
+let C = {
+        width: f.Gy,
+        height: f.lv
     },
-    A = { height: _.lv };
-function E(e) {
-    let { children: n } = e,
-        [t, l] = a.useState([{ type: d.gc.HOME }]),
-        [o, r] = a.useState({}),
-        s = t[t.length - 1],
-        [c, u] = a.useState(!1),
-        m = a.useCallback((e) => {
-            l((n) => [...n, e]);
+    _ = { height: f.lv },
+    x = r.memo(
+        r.forwardRef(function (e, t) {
+            let { context: n, entrypoint: l, initHistory: u } = e,
+                { analyticsLocations: d } = (0, c.ZP)(a.Z.APP_LAUNCHER);
+            return (
+                r.useEffect(() => {
+                    (0, o.yw)(h.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
+                        source: l,
+                        location: 'app_launcher'
+                    });
+                }, [l]),
+                r.useEffect(() => {
+                    let e = Date.now();
+                    return () => {
+                        (0, o.yw)(h.rMx.APP_LAUNCHER_CLOSED, {
+                            reason: s.Z.closeReason(),
+                            time_spent: Date.now() - e,
+                            source: l
+                        });
+                    };
+                }, [l]),
+                (0, i.jsx)('div', {
+                    className: b.drawerSizingWrapper,
+                    ref: t,
+                    style: C,
+                    children: (0, i.jsx)('div', {
+                        className: b.contentWrapper,
+                        children: (0, i.jsx)(c.Gt, {
+                            value: d,
+                            children: (0, i.jsx)(v, {
+                                initHistory: u,
+                                children: (0, i.jsx)(y, {
+                                    context: n,
+                                    entrypoint: l
+                                })
+                            })
+                        })
+                    })
+                })
+            );
+        })
+    );
+function v(e) {
+    let { initHistory: t, children: n } = e,
+        [l, a] = r.useState(null != t ? t : [{ type: u.gc.HOME }]),
+        [o, c] = r.useState({}),
+        s = l[l.length - 1],
+        [d, p] = r.useState(!1),
+        m = r.useCallback((e) => {
+            a((t) => [...t, e]);
         }, []),
-        p = a.useCallback(() => {
+        f = r.useCallback(() => {
             let e = null;
-            l((n) => (n.length <= 1 ? n : ((e = n[n.length - 1]), n.slice(0, -1)))),
-                r((n) =>
-                    null == e
-                        ? n
-                        : {
-                              ...n,
-                              [e.type]: e
-                          }
-                );
+            a((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
+                c((t) => {
+                    var n, i;
+                    return null == e
+                        ? t
+                        : ((n = (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var n = null != arguments[t] ? arguments[t] : {},
+                                      i = Object.keys(n);
+                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                      (i = i.concat(
+                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          })
+                                      )),
+                                      i.forEach(function (t) {
+                                          var i;
+                                          (i = n[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
+                                                        value: i,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0
+                                                    })
+                                                  : (e[t] = i);
+                                      });
+                              }
+                              return e;
+                          })({}, t)),
+                          (i = i = { [e.type]: e }),
+                          Object.getOwnPropertyDescriptors
+                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                              : (function (e, t) {
+                                    var n = Object.keys(e);
+                                    if (Object.getOwnPropertySymbols) {
+                                        var i = Object.getOwnPropertySymbols(e);
+                                        n.push.apply(n, i);
+                                    }
+                                    return n;
+                                })(Object(i)).forEach(function (e) {
+                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                }),
+                          n);
+                });
         }, []),
-        _ = a.useCallback(
+        h = r.useCallback(
             (e) => {
-                var n;
-                return null !== (n = t.findLast((n) => n.type === e)) && void 0 !== n ? n : o[e];
+                var t;
+                return null != (t = l.findLast((t) => t.type === e)) ? t : o[e];
             },
-            [t, o]
+            [l, o]
         );
-    return (0, i.jsx)(d.uX.Provider, {
+    return (0, i.jsx)(u.uX.Provider, {
         value: {
-            history: t,
+            history: l,
             discard: o,
             currentView: s,
             pushHistory: m,
-            goBack: p,
-            getMostRecentHistoryItemByType: _,
-            isSlideReady: c,
-            setSlideReady: u
+            goBack: f,
+            getMostRecentHistoryItemByType: h,
+            isSlideReady: d,
+            setSlideReady: p
         },
         children: n
     });
 }
-function N(e) {
-    let { channel: n, entrypoint: t } = e,
-        [o, r] = a.useState(''),
-        { setScroller: s, isCloseToBottom: c } = (function (e) {
-            let [n, t] = a.useState(null),
-                [i, l] = a.useState(!1),
-                o = a.useRef(0);
+function y(e) {
+    let { context: t, entrypoint: n } = e,
+        [a, o] = r.useState(''),
+        { setScroller: c, isCloseToBottom: s } = (function (e) {
+            let [t, n] = r.useState(null),
+                [i, l] = r.useState(!1),
+                a = r.useRef(0);
             return (
-                a.useEffect(() => {
-                    null == n || n.scrollTo(0, 0);
-                }, [n, e]),
-                a.useEffect(() => {
-                    if (null != n)
+                r.useEffect(() => {
+                    null == t || t.scrollTo(0, 0);
+                }, [t, e]),
+                r.useEffect(() => {
+                    if (null != t)
                         return (
-                            n.scrollTo(0, o.current),
-                            n.addEventListener('scroll', e),
+                            t.scrollTo(0, a.current),
+                            t.addEventListener('scroll', e),
                             () => {
-                                n.removeEventListener('scroll', e, !1);
+                                t.removeEventListener('scroll', e, !1);
                             }
                         );
                     function e() {
-                        if (null != n) (o.current = n.scrollTop), l(n.scrollHeight - (n.scrollTop + n.clientHeight) < 0.5 * _.K7);
+                        null != t && ((a.current = t.scrollTop), l(t.scrollHeight - (t.scrollTop + t.clientHeight) < 0.5 * f.K7));
                     }
-                }, [n]),
+                }, [t]),
                 {
-                    setScroller: t,
+                    setScroller: n,
                     isCloseToBottom: i
                 }
             );
-        })(o),
-        { currentView: C, getMostRecentHistoryItemByType: h, setSlideReady: E } = (0, d.hH)();
-    a.useEffect(() => {
-        E(!1);
-    }, [null == C ? void 0 : C.type, E]);
-    let N = a.useCallback(() => {
-        E(!0);
-    }, [E]);
-    if (null == C) return null;
-    let v = h(d.gc.LIST),
-        x = h(d.gc.APPLICATION);
-    return (0, i.jsxs)(l.Slides, {
-        activeSlide: C.type,
-        width: _.Gy,
-        onSlideReady: N,
+        })(a),
+        { currentView: h, getMostRecentHistoryItemByType: C, setSlideReady: x } = (0, u.hH)();
+    r.useEffect(() => {
+        x(!1);
+    }, [null == h ? void 0 : h.type, x]);
+    let v = r.useCallback(() => {
+        x(!0);
+    }, [x]);
+    if (null == h) return null;
+    let y = C(u.gc.LIST),
+        N = C(u.gc.APPLICATION);
+    return (0, i.jsxs)(l.MyZ, {
+        activeSlide: h.type,
+        width: f.Gy,
+        onSlideReady: v,
         children: [
-            (0, i.jsx)(l.Slide, {
-                id: d.gc.HOME,
+            (0, i.jsx)(l.Mi4, {
+                id: u.gc.HOME,
                 children: (0, i.jsx)('div', {
-                    className: f.slideContent,
-                    style: A,
-                    children: (0, i.jsx)(m.Z, {
-                        isScrollCloseToBottom: c,
-                        setScroller: s,
-                        channel: n,
-                        entrypoint: t,
-                        searchQuery: o,
-                        setSearchQuery: r
+                    className: b.slideContent,
+                    style: _,
+                    children: (0, i.jsx)(p.Z, {
+                        isScrollCloseToBottom: s,
+                        setScroller: c,
+                        context: t,
+                        entrypoint: n,
+                        searchQuery: a,
+                        setSearchQuery: o
                     })
                 })
             }),
-            (0, i.jsx)(l.Slide, {
-                id: d.gc.LIST,
+            (0, i.jsx)(l.Mi4, {
+                id: u.gc.LIST,
                 children: (0, i.jsx)('div', {
-                    className: f.slideContent,
-                    style: A,
+                    className: b.slideContent,
+                    style: _,
                     children:
-                        null != v &&
-                        (0, i.jsx)(p.Z, {
-                            channel: n,
-                            entrypoint: t,
-                            title: v.title,
-                            look: v.look,
-                            items: v.items,
-                            sectionName: v.sectionName
+                        null != y &&
+                        (0, i.jsx)(m.Z, {
+                            context: t,
+                            entrypoint: n,
+                            title: y.title,
+                            look: y.look,
+                            items: y.items,
+                            sectionName: y.sectionName,
+                            sectionOverallPosition: y.sectionOverallPosition
                         })
                 })
             }),
-            (0, i.jsx)(l.Slide, {
-                id: d.gc.APPLICATION,
+            (0, i.jsx)(l.Mi4, {
+                id: u.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
-                    className: f.slideContent,
-                    style: A,
+                    className: b.slideContent,
+                    style: _,
                     children:
-                        null != x &&
-                        (0, i.jsx)(u.Z, {
-                            channel: n,
-                            application: x.application,
-                            sectionName: x.sectionName,
-                            installOnDemand: x.installOnDemand
+                        null != N &&
+                        (0, i.jsx)(d.Z, {
+                            context: t,
+                            application: N.application,
+                            sectionName: N.sectionName
                         })
                 })
             })
         ]
     });
 }
-n.Z = a.memo(
-    a.forwardRef(function (e, n) {
-        let { channel: t, entrypoint: l } = e,
-            { analyticsLocations: d } = (0, s.ZP)(o.Z.APP_LAUNCHER);
-        return (
-            a.useEffect(() => {
-                (0, r.yw)(C.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
-                    source: l,
-                    location: 'app_launcher'
-                });
-            }, [l]),
-            a.useEffect(() => {
-                let e = Date.now();
-                return () => {
-                    (0, r.yw)(C.rMx.APP_LAUNCHER_CLOSED, {
-                        reason: c.Z.closeReason(),
-                        time_spent: Date.now() - e,
-                        source: l
-                    });
-                };
-            }, [l]),
-            (0, i.jsx)('div', {
-                className: f.drawerSizingWrapper,
-                ref: n,
-                style: h,
-                children: (0, i.jsx)('div', {
-                    className: f.contentWrapper,
-                    children: (0, i.jsx)(s.Gt, {
-                        value: d,
-                        children: (0, i.jsx)(E, {
-                            children: (0, i.jsx)(N, {
-                                channel: t,
-                                entrypoint: l
-                            })
-                        })
-                    })
-                })
-            })
-        );
-    })
-);

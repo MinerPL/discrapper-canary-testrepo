@@ -1,75 +1,96 @@
-t.d(n, {
-    Z: function () {
-        return M;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(373793),
-    l = t(481060),
-    r = t(700582),
-    s = t(592180),
-    o = t(565138),
-    u = t(430824),
-    d = t(594174),
-    c = t(689938),
-    E = t(919062);
-function M(e) {
-    var n, t, M;
-    if (!(0, s.a)(e)) return null;
-    let I = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[a.Y.USER_INSTALL],
-        m = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[a.Y.GUILD_INSTALL],
-        _ = d.default.getUser(I),
-        g = u.Z.getGuild(m),
-        f = d.default.getUser(null === (M = e.interactionMetadata) || void 0 === M ? void 0 : M.user.id),
-        Z = null;
+n.d(t, { Z: () => O });
+var r = n(200651),
+    i = n(192379),
+    l = n(373793),
+    a = n(442837),
+    o = n(481060),
+    s = n(232567),
+    c = n(700582),
+    u = n(592180),
+    d = n(565138),
+    f = n(171368),
+    g = n(598077),
+    m = n(592125),
+    b = n(430824),
+    p = n(594174),
+    h = n(981631),
+    y = n(388032),
+    N = n(274693);
+function O(e) {
+    var t, n, O, E;
+    let v = null == (t = e.interactionMetadata) ? void 0 : t.authorizing_integration_owners[l.Y.USER_INSTALL],
+        j = null == (n = e.interactionMetadata) ? void 0 : n.authorizing_integration_owners[l.Y.GUILD_INSTALL],
+        S = null == (O = e.interactionMetadata) ? void 0 : O.user.id,
+        P = (0, a.e7)([p.default], () => p.default.getUser(v)),
+        Z = (0, a.e7)([b.Z], () => b.Z.getGuild(j)),
+        I = m.Z.getChannel(e.channel_id),
+        x = null == I ? void 0 : I.getGuildId(),
+        _ = (0, a.e7)([p.default], () => p.default.getUser(S));
+    if (
+        (i.useEffect(() => {
+            null == P && null != v && (0, s.PR)(v);
+        }, [P, v]),
+        !(0, u.a)(e))
+    )
+        return null;
+    null == _ && (_ = new g.Z(null == (E = e.interactionMetadata) ? void 0 : E.user));
+    let T = null;
     return (
-        null != g
-            ? (Z = (0, i.jsx)(l.MenuItem, {
-                  className: E.interactionInfoMenuItem,
+        null != Z
+            ? (T = (0, r.jsx)(o.sNh, {
+                  className: N.interactionInfoMenuItem,
                   disabled: !0,
-                  icon: () =>
-                      (0, i.jsx)(o.Z, {
-                          guild: g,
-                          size: o.Z.Sizes.MINI
+                  iconLeft: () =>
+                      (0, r.jsx)(d.Z, {
+                          guild: Z,
+                          size: d.Z.Sizes.MINI
                       }),
                   id: 'integration-owner',
-                  label: g.name,
-                  showIconFirst: !0,
-                  subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({ application: e.author.username })
+                  label: Z.name,
+                  subtext: y.NW.formatToPlainString(y.t.ShLXXF, { application: e.author.username })
               }))
-            : null != _ &&
-              (Z = (0, i.jsx)(l.MenuItem, {
-                  className: E.interactionInfoMenuItem,
-                  disabled: !0,
-                  icon: () =>
-                      (0, i.jsx)(r.Z, {
-                          user: _,
-                          size: l.AvatarSizes.SIZE_20
+            : null != P &&
+              (T = (0, r.jsx)(o.sNh, {
+                  action: () =>
+                      (0, f.openUserProfileModal)({
+                          userId: P.id,
+                          guildId: x,
+                          channelId: e.channel_id,
+                          analyticsLocation: { object: h.qAy.MESSAGE_ACTION_SHEET }
+                      }),
+                  className: N.interactionInfoMenuItem,
+                  iconLeft: () =>
+                      (0, r.jsx)(c.Z, {
+                          user: P,
+                          size: o.EFr.SIZE_20
                       }),
                   id: 'integration-owner',
-                  label: _.username,
-                  showIconFirst: !0,
-                  subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({ application: e.author.username })
+                  label: P.username,
+                  subtext: y.NW.formatToPlainString(y.t.ShLXXF, { application: e.author.username })
               })),
-        (0, i.jsxs)(l.MenuItem, {
+        (0, r.jsxs)(o.sNh, {
             id: 'view-interaction-info',
-            label: c.Z.Messages.VIEW_INTERACTION_INFO,
+            label: y.NW.string(y.t.Rjezb2),
             children: [
-                Z,
-                null != f
-                    ? (0, i.jsx)(l.MenuItem, {
-                          className: E.interactionInfoMenuItem,
-                          disabled: !0,
-                          icon: () =>
-                              (0, i.jsx)(r.Z, {
-                                  user: f,
-                                  size: l.AvatarSizes.SIZE_20
+                T,
+                null != _
+                    ? (0, r.jsx)(o.sNh, {
+                          action: () =>
+                              (0, f.openUserProfileModal)({
+                                  userId: _.id,
+                                  guildId: x,
+                                  channelId: e.channel_id,
+                                  analyticsLocation: { object: h.qAy.MESSAGE_ACTION_SHEET }
+                              }),
+                          className: N.interactionInfoMenuItem,
+                          iconLeft: () =>
+                              (0, r.jsx)(c.Z, {
+                                  user: _,
+                                  size: o.EFr.SIZE_20
                               }),
                           id: 'interaction-user',
-                          label: f.username,
-                          showIconFirst: !0,
-                          subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_TRIGGERED_BY
+                          label: _.username,
+                          subtext: y.NW.string(y.t['04gxNj'])
                       })
                     : null
             ]

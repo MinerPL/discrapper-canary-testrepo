@@ -1,15 +1,16 @@
-n.d(t, {
-    p: function () {
-        return a;
-    }
-});
 function r(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function i(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function i(e, t, n) {
+function o(e, t, n) {
+    return t && i(e.prototype, t), n && i(e, n), e;
+}
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,21 +23,13 @@ function i(e, t, n) {
         e
     );
 }
-var a = (function () {
-    var e, t, n;
-    function a(e) {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, a),
-            i(this, 'item', void 0),
-            i(this, 'config', void 0),
-            (this.config = e),
-            (this.item = {}),
-            this.initializeExposedProperties();
+n.d(t, { p: () => s });
+var s = (function () {
+    function e(t) {
+        r(this, e), a(this, 'item', void 0), a(this, 'config', void 0), (this.config = t), (this.item = {}), this.initializeExposedProperties();
     }
     return (
-        (e = a),
-        (t = [
+        o(e, [
             {
                 key: 'initializeExposedProperties',
                 value: function () {
@@ -92,7 +85,6 @@ var a = (function () {
                 value: function () {}
             }
         ]),
-        r(e.prototype, t),
-        a
+        e
     );
 })();

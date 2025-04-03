@@ -1,10 +1,11 @@
-var i = n(401430),
-    a = n(283595),
-    s = n(695103);
-t.Z = {
+n.d(t, { Z: () => a });
+var r = n(401430),
+    i = n(283595),
+    l = n(695103);
+let a = {
     init() {
-        a.Z.whenInitialized(() => {
-            null != s.Z.testModeApplicationId && (0, i.Wt)(s.Z.testModeApplicationId, s.Z.testModeOriginURL);
+        i.Z.whenInitialized(() => {
+            null != l.Z.testModeApplicationId && (0, r.Wt)(l.Z.testModeApplicationId, l.Z.testModeOriginURL);
         });
     }
 };

@@ -5,8 +5,4 @@ function r(e) {
         return e.formats[n] || e.formats[e.defaultWidth];
     };
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });

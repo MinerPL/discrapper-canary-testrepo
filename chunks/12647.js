@@ -1,5 +1,6 @@
+n.d(t, { Z: () => i });
 var r = n(998502);
-t.Z = {
+let i = {
     flushDNSCache() {
         r.ZP.flushDNSCache();
     },
@@ -15,5 +16,6 @@ t.Z = {
     submitLiveCrashReport: (e) => r.ZP.submitLiveCrashReport(e),
     getPidFromDesktopSource: (e) => r.ZP.getPidFromDesktopSource(e),
     getAudioPid: (e) => r.ZP.getAudioPid(e),
-    generateSessionFromPid: (e) => r.ZP.generateSessionFromPid(e)
+    generateSessionFromPid: (e) => r.ZP.generateSessionFromPid(e),
+    getAppHardwareAccelerationEnabled: () => r.ZP.getEnableHardwareAcceleration()
 };

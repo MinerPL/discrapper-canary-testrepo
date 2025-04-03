@@ -1,20 +1,20 @@
-n(653041), n(47120);
+n.d(t, { Z: () => k }), n(653041), n(47120);
 var r,
     i = n(392711),
-    a = n.n(i),
-    s = n(31775),
-    o = n.n(s),
+    o = n.n(i),
+    a = n(31775),
+    s = n.n(a),
     l = n(442837),
-    u = n(570140),
-    c = n(704907),
+    c = n(570140),
+    u = n(704907),
     d = n(581883),
-    _ = n(594174),
-    E = n(164878),
-    f = n(763296),
+    f = n(594174),
+    _ = n(164878),
+    p = n(763296),
     h = n(697426),
-    p = n(710111),
-    m = n(526761);
-function I(e, t, n) {
+    m = n(710111),
+    g = n(526761);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,104 +27,139 @@ function I(e, t, n) {
         e
     );
 }
-let T = [],
-    g = new (o())({ max: p.zb }),
-    S = new c.Z({
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function v(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : y(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let O = [],
+    I = new (s())({ max: m.zb }),
+    S = new u.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
             return e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t;
         },
-        lookupKey: (e) => f.Z.getSoundById(e),
+        lookupKey: (e) => p.Z.getSoundById(e),
         afterCompute: () => {},
-        numFrequentlyItems: p.O6
+        numFrequentlyItems: m.O6
     });
-function A() {
-    var e, t;
-    if (!N()) return;
-    let n = null === (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
-    S.overwriteHistory(
-        ((t = null != n ? n : {}),
-        a().mapValues(t, (e) => ({
-            ...e,
-            recentUses: e.recentUses.map(Number).filter((e) => e > 0)
-        }))),
-        T
-    );
+function T(e) {
+    let { sound: t, trigger: n } = e;
+    if (!x()) return;
+    let r = t.soundId.toString();
+    n === h.YQ.SOUNDBOARD && C(r);
 }
-function N() {
-    return (0, E.v)({
+function N(e) {
+    var t;
+    let { soundId: n, userId: r } = e;
+    if (!L()) return;
+    let i = n.toString();
+    r !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && R(i) && A(i);
+}
+function A(e) {
+    I.set(e, e);
+}
+function C(e) {
+    S.track(e),
+        O.push({
+            key: e,
+            timestamp: Date.now()
+        }),
+        S.compute();
+}
+function R(e) {
+    for (let t of p.Z.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
+    return !1;
+}
+function P(e) {
+    return o().mapValues(e, (e) => v(b({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) }));
+}
+function w() {
+    var e;
+    if (!x()) return;
+    let t = null == (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) ? void 0 : e.playedSounds;
+    S.overwriteHistory(P(null != t ? t : {}), O);
+}
+function D(e) {
+    let {
+        settings: { type: t },
+        wasSaved: n
+    } = e;
+    x() && t === g.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (O = []);
+}
+function L() {
+    return (0, _.v)({
+        location: 'soundboard_event_store',
+        autoTrackExposure: !1
+    }).canSeeRecentlyHeard;
+}
+function x() {
+    return (0, _.v)({
         location: 'soundboard_event_store',
         autoTrackExposure: !1
     }).canSeeFrequentlyPlayed;
 }
-class v extends (r = l.ZP.PersistedStore) {
+class M extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(_.default, f.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && g.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (T = e.playedEventsPendingFlush), this.syncWith([d.Z], A);
+        this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (O = e.playedEventsPendingFlush), this.syncWith([d.Z], w);
     }
     getState() {
         return {
-            recentlyHeardCache: g.dump(),
-            playedEventsPendingFlush: T
+            recentlyHeardCache: I.dump(),
+            playedEventsPendingFlush: O
         };
     }
     hasPendingUsage() {
-        return T.length > 0;
+        return O.length > 0;
     }
     get playedSoundHistory() {
         return S.usageHistory;
     }
     get recentlyHeardSoundIds() {
-        return g.values();
+        return I.values();
     }
     get frecentlyPlayedSounds() {
         return S.frequently;
     }
 }
-I(v, 'displayName', 'SoundboardEventStore'),
-    I(v, 'persistKey', 'SoundboardEventStore'),
-    (t.Z = new v(u.Z, {
-        GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function (e) {
-            let { sound: t, trigger: n } = e;
-            if (!N()) return;
-            let r = t.soundId.toString();
-            n === h.YQ.SOUNDBOARD &&
-                (function (e) {
-                    S.track(e),
-                        T.push({
-                            key: e,
-                            timestamp: Date.now()
-                        }),
-                        S.compute();
-                })(r);
-        },
-        GUILD_SOUNDBOARD_SOUND_PLAY_START: function (e) {
-            var t;
-            let { soundId: n, userId: r } = e;
-            if (
-                !(function () {
-                    return (0, E.v)({
-                        location: 'soundboard_event_store',
-                        autoTrackExposure: !1
-                    }).canSeeRecentlyHeard;
-                })()
-            )
-                return;
-            let i = n.toString();
-            r !== (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) &&
-                (function (e) {
-                    for (let t of f.Z.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
-                    return !1;
-                })(i) &&
-                (function (e) {
-                    g.set(e, e);
-                })(i);
-        },
-        USER_SETTINGS_PROTO_UPDATE: function (e) {
-            let {
-                settings: { type: t },
-                wasSaved: n
-            } = e;
-            N() && t === m.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (T = []);
-        }
-    }));
+E(M, 'displayName', 'SoundboardEventStore'), E(M, 'persistKey', 'SoundboardEventStore');
+let k = new M(c.Z, {
+    GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: T,
+    GUILD_SOUNDBOARD_SOUND_PLAY_START: N,
+    USER_SETTINGS_PROTO_UPDATE: D
+});

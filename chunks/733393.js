@@ -1,29 +1,15 @@
-n.d(t, {
-    V: function () {
-        return s;
-    }
-}),
-    n(518263),
-    n(970173),
-    n(520712),
-    n(268111),
-    n(941497),
-    n(32026),
-    n(480839),
-    n(744285),
-    n(492257),
-    n(873817);
+n.d(t, { V: () => a }), n(610885), n(126298), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
 var r = n(710845),
     i = n(358085),
-    a = n(998502);
-function s() {
+    o = n(998502);
+function a() {
     if (i.isPlatformEmbedded) {
         let e;
         try {
-            e = a.ZP.requireModule('discord_erlpack');
+            e = o.ZP.requireModule('discord_erlpack');
         } catch (t) {
             try {
-                e = a.ZP.requireModule('erlpack');
+                e = o.ZP.requireModule('erlpack');
             } catch (e) {}
         }
         if (null != e)

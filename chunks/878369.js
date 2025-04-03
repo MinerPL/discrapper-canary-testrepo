@@ -1,9 +1,7 @@
-n.d(t, {
-    D: function () {
-        return i;
-    }
-});
+n.d(t, { D: () => i });
 var r = n(721056),
-    i = function (e, t) {
-        (this.inlineSize = e), (this.blockSize = t), (0, r.v)(this);
-    };
+    i = (function () {
+        return function (e, t) {
+            (this.inlineSize = e), (this.blockSize = t), (0, r.v)(this);
+        };
+    })();

@@ -1,60 +1,54 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
+n.d(t, { Z: () => m }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    i = n(120356),
+    a = n.n(i),
     o = n(481060),
-    l = n(454585),
-    u = n(572004),
-    c = n(689938),
-    d = n(888245);
-function _(e) {
+    s = n(454585),
+    c = n(572004),
+    d = n(388032),
+    u = n(163124);
+function m(e) {
     let {
             element: {
-                data: { title: t, body: n, sms: a, is_localized: _ }
+                data: { title: t, body: n, sms: i, is_localized: m }
             }
         } = e,
-        [E, f] = i.useState(!1),
-        h = i.useRef(l.Z.reactParserFor(l.Z.defaultRules));
-    return _
+        [x, p] = l.useState(!1),
+        f = l.useRef(s.Z.reactParserFor(s.Z.defaultRules));
+    return m
         ? (0, r.jsxs)('div', {
-              className: d.container,
+              className: u.container,
               children: [
-                  (0, r.jsx)(o.Heading, {
+                  (0, r.jsx)(o.X6q, {
                       variant: 'heading-sm/semibold',
                       color: 'header-secondary',
-                      className: d.header,
+                      className: u.header,
                       children: t
                   }),
                   (0, r.jsx)(o.Text, {
                       variant: 'text-sm/normal',
-                      className: d.bodyText,
-                      children: h.current(n)
+                      className: u.bodyText,
+                      children: f.current(n)
                   }),
                   (0, r.jsx)('div', {
-                      className: d.__invalid_smsInfoContainer,
                       children: (0, r.jsxs)('div', {
-                          className: s()(d.smsNumberContainer, { [d.copied]: E }),
+                          className: a()(u.smsNumberContainer, { [u.copied]: x }),
                           children: [
                               (0, r.jsx)(o.Text, {
                                   variant: 'text-md/normal',
                                   selectable: !0,
-                                  className: d.smsNumberText,
-                                  children: a
+                                  className: u.smsNumberText,
+                                  children: i
                               }),
-                              (0, r.jsx)(o.Button, {
-                                  size: o.Button.Sizes.SMALL,
-                                  className: d.__invalid_trailingButton,
+                              (0, r.jsx)(o.zxk, {
+                                  size: o.zxk.Sizes.SMALL,
+                                  className: u.__invalid_trailingButton,
                                   onClick: () => {
-                                      (0, u.JG)(a) && f(!0);
+                                      (0, c.JG)(i) && p(!0);
                                   },
-                                  color: o.Button.Colors.PRIMARY,
-                                  children: E ? c.Z.Messages.COPIED : c.Z.Messages.COPY
+                                  color: o.zxk.Colors.PRIMARY,
+                                  children: x ? d.NW.string(d.t['t5VZ8/']) : d.NW.string(d.t.OpuAlJ)
                               })
                           ]
                       })

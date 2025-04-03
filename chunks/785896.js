@@ -1,66 +1,64 @@
-n.d(t, {
-    i: function () {
-        return d;
-    }
-}),
-    n(47120);
-var r = n(470079),
+n.d(t, { i: () => d }), n(47120);
+var r = n(192379),
     i = n(399606),
-    a = n(430824),
-    s = n(339085),
-    o = n(906411),
+    o = n(430824),
+    a = n(339085),
+    s = n(906411),
     l = n(231053),
-    u = n(981631);
-let c = (e, t, n) => {
+    c = n(981631);
+let u = (e, t, n) => {
         let r = null != n ? e.getCustomEmojiById(n) : null;
-        if ((null == r ? void 0 : r.type) === o.B.GUILD)
-            return {
-                emoji: r,
-                joinedEmojiSourceGuildRecord: t.getGuild(null == r ? void 0 : r.guildId)
-            };
-        return {
-            emoji: null,
-            joinedEmojiSourceGuildRecord: null
-        };
+        return (null == r ? void 0 : r.type) === s.B.GUILD
+            ? {
+                  emoji: r,
+                  joinedEmojiSourceGuildRecord: t.getGuild(null == r ? void 0 : r.guildId)
+              }
+            : {
+                  emoji: null,
+                  joinedEmojiSourceGuildRecord: null
+              };
     },
     d = (e) => {
         let { emojiId: t, refreshPositionKey: n } = e,
-            { joinedEmojiSourceGuildRecord: o, emoji: d } = (0, i.cj)([s.ZP, a.Z], () => c(s.ZP, a.Z, t)),
-            _ = null != o,
-            E = null != o && o.hasFeature(u.oNc.DISCOVERABLE),
-            f = (!_ || E) && null != t,
-            [h, p] = r.useState(f),
-            [m, I] = r.useState(null),
-            T = null != o ? l.JO.createFromGuildRecord(o) : null,
-            [g, S] = r.useState(T),
-            [A, N] = r.useState(null);
+            { joinedEmojiSourceGuildRecord: s, emoji: d } = (0, i.cj)([a.ZP, o.Z], () => u(a.ZP, o.Z, t)),
+            f = null != s,
+            _ = null != s && s.hasFeature(c.oNc.DISCOVERABLE),
+            p = (!f || _) && null != t,
+            [h, m] = r.useState(p),
+            [g, E] = r.useState(null),
+            b = null != s ? l.JO.createFromGuildRecord(s) : null,
+            [y, v] = r.useState(b),
+            [O, I] = r.useState(null),
+            S = r.useRef(n);
         return (
             r.useEffect(() => {
-                null == n || n();
-                let e = async () => {
-                    let e = null != t ? await (0, l.Fi)(t) : null;
-                    if (null != e)
-                        switch ((I(e.type), e.type)) {
+                S.current = n;
+            }),
+            r.useEffect(() => {
+                var e, n;
+                null == (e = S.current) || e.call(S);
+                let r = async () => {
+                    var e;
+                    let n = null != t ? await (0, l.Fi)(t) : null;
+                    if (null != n)
+                        switch ((E(n.type), n.type)) {
                             case l.w6.APPLICATION:
-                                N(e.application);
+                                I(n.application);
                                 break;
                             case l.w6.GUILD:
-                                S(e.guild);
+                                v(n.guild);
                         }
-                    p(!1), null == n || n();
+                    m(!1), null == (e = S.current) || e.call(S);
                 };
-                if (f) {
-                    e();
-                    return;
-                }
-                null == n || n();
-            }, [t, f]),
+                if (p) return void r();
+                null == (n = S.current) || n.call(S);
+            }, [t, p]),
             {
-                expressionSourceGuild: g,
-                expressionSourceApplication: A,
-                sourceType: m,
-                joinedEmojiSourceGuildRecord: o,
-                hasJoinedEmojiSourceGuild: _,
+                expressionSourceGuild: y,
+                expressionSourceApplication: O,
+                sourceType: g,
+                joinedEmojiSourceGuildRecord: s,
+                hasJoinedEmojiSourceGuild: f,
                 emoji: d,
                 isFetching: h
             }

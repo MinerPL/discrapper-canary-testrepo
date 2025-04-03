@@ -1,81 +1,126 @@
-n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(481060),
-    l = n(579185),
-    r = n(420212),
-    o = n(212374);
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(579185),
+    a = n(420212),
+    s = n(940221);
 function c(e) {
-    let { renderPopout: t, onMouseEnter: n, onMouseLeave: s, closePopout: l, isHovered: r, ...o } = e;
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function u(e) {
+    var { renderPopout: t, onMouseEnter: n, onMouseLeave: l, closePopout: o, isHovered: a } = e,
+        s = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['renderPopout', 'onMouseEnter', 'onMouseLeave', 'closePopout', 'isHovered']);
     return (
-        a.useEffect(() => {
-            !r && l();
-        }, [l, r]),
-        (0, i.jsx)('div', {
+        i.useEffect(() => {
+            a || o();
+        }, [o, a]),
+        (0, r.jsx)('div', {
             onMouseEnter: n,
-            onMouseLeave: s,
-            children: t({
-                closePopout: l,
-                ...o
-            })
+            onMouseLeave: l,
+            children: t(c({ closePopout: o }, s))
         })
     );
 }
-t.Z = a.forwardRef(function (e, t) {
-    let { renderPopout: n, children: u } = e,
-        [d, h] = a.useState(!1),
-        { isHovered: m, setIsHovered: p, onMouseEnter: _, onMouseLeave: f, cancelTimers: E } = (0, l.Z)(200, 300);
-    function g(e) {
-        'focus' !== e.type && !d && _();
+let d = i.forwardRef(function (e, t) {
+    let { renderPopout: n, children: d, align: p = 'left', isPopoutBlocked: h, onPopoutOpen: f, onPopoutClose: m } = e,
+        [g, b] = i.useState(!1),
+        { isHovered: _, setIsHovered: C, onMouseEnter: y, onMouseLeave: x, cancelTimers: v } = (0, o.Z)(200, 300);
+    function j(e) {
+        'focus' === e.type || g || y();
     }
-    function C() {
-        !d && f();
+    function O() {
+        g || x();
     }
-    function I(e) {
-        E(), h(!d), (!m || d) && e();
+    function E(e) {
+        v(), b(!g), g ? null == m || m() : null == f || f(), (!_ || g) && e();
     }
-    a.useImperativeHandle(
+    i.useImperativeHandle(
         t,
         () => ({
             hidePopout() {
-                p(!1), h(!1);
+                C(!1), b(!1);
             }
         }),
-        [p, h]
+        [C, b]
     );
-    let x = m || d;
-    return (0, i.jsx)(s.Popout, {
-        animation: s.Popout.Animation.FADE,
-        shouldShow: x,
+    let N = (_ && !h) || g;
+    return (0, r.jsx)(l.yRy, {
+        animation: l.yRy.Animation.FADE,
+        shouldShow: N,
         animationPosition: 'top',
         position: 'top',
-        align: 'left',
+        align: p,
         spacing: 16,
         onRequestClose: () => {
-            p(!1), h(!1);
+            C(!1), b(!1), null == m || m();
         },
         renderPopout: (e) =>
-            (0, i.jsx)(c, {
-                isHovered: x,
-                onFocus: () => h(!0),
-                onMouseEnter: _,
-                onMouseLeave: C,
-                renderPopout: n,
-                ...e
-            }),
+            (0, r.jsx)(
+                u,
+                c(
+                    {
+                        isHovered: N,
+                        onFocus: () => b(!0),
+                        onMouseEnter: y,
+                        onMouseLeave: O,
+                        renderPopout: n
+                    },
+                    e
+                )
+            ),
         children: (e) => {
             let { onClick: t, onKeyDown: n } = e;
-            return (0, i.jsx)(i.Fragment, {
-                children: u({
-                    onClick: (e) => I(() => t(e)),
+            return (0, r.jsx)(r.Fragment, {
+                children: d({
+                    onClick: (e) => E(() => t(e)),
                     onKeyDown: (e) => {
-                        var t, i;
-                        return (t = e), (i = n), void ((t.key === r.vn.ENTER || t.key === r.vn.SPACE) && I(() => i(t)));
+                        (e.key === a.vn.ENTER || e.key === a.vn.SPACE) && E(() => n(e));
                     },
-                    className: o.actionBarButton,
-                    onMouseEnter: g,
-                    onMouseLeave: C,
-                    isActive: x
+                    className: s.actionBarButton,
+                    onMouseEnter: j,
+                    onMouseLeave: O,
+                    isActive: g
                 })
             });
         }

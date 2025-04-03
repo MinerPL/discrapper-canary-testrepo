@@ -1,12 +1,19 @@
 var r = n(575270).RBTree;
 function i(e, t, n) {
-    (this.discrete = !1 === e), (this.delta = e || 0.01), (this.K = void 0 === t ? 25 : t), (this.CX = void 0 === n ? 1.1 : n), (this.centroids = new r(a)), (this.nreset = 0), this.reset();
+    (this.discrete = !1 === e), (this.delta = e || 0.01), (this.K = void 0 === t ? 25 : t), (this.CX = void 0 === n ? 1.1 : n), (this.centroids = new r(o)), (this.nreset = 0), this.reset();
 }
-function a(e, t) {
+function o(e, t) {
     return e.mean > t.mean ? 1 : e.mean < t.mean ? -1 : 0;
 }
-function s(e, t) {
+function a(e, t) {
     return e.mean_cumn - t.mean_cumn;
+}
+function s(e) {
+    var t = Math.floor(Math.random() * e.length);
+    return e.splice(t, 1)[0];
+}
+function l(e) {
+    (this.config = e || {}), (this.mode = this.config.mode || 'auto'), i.call(this, 'cont' === this.mode && e.delta), (this.digest_ratio = this.config.ratio || 0.9), (this.digest_thresh = this.config.thresh || 1000), (this.n_unique = 0);
 }
 (i.prototype.reset = function () {
     this.centroids.clear(), (this.n = 0), (this.nreset += 1), (this.last_cumulate = 0);
@@ -43,8 +50,9 @@ function s(e, t) {
         for (var t = 0; t < e.length; t++) this._digest(e[t].mean, e[t].n);
     }),
     (i.prototype._cumulate = function (e) {
-        if (this.n !== this.last_cumulate && (!!e || !this.CX || !(this.CX > this.n / this.last_cumulate))) {
-            var t = 0;
+        if (this.n !== this.last_cumulate && (e || !this.CX || !(this.CX > this.n / this.last_cumulate))) {
+            var t = 0,
+                n = this;
             this.centroids.each(function (e) {
                 (e.mean_cumn = t + e.n / 2), (t = e.cumn = t + e.n);
             }),
@@ -79,8 +87,8 @@ function s(e, t) {
         else if (i === r) this._new_centroid(e, t, this.n);
         else if (this.discrete) this._new_centroid(e, t, i.cumn);
         else {
-            var a = i.mean_cumn / this.n;
-            Math.floor(4 * this.n * this.delta * a * (1 - a)) - i.n >= t ? this._addweight(i, e, t) : this._new_centroid(e, t, i.cumn);
+            var o = i.mean_cumn / this.n;
+            Math.floor(4 * this.n * this.delta * o * (1 - o)) - i.n >= t ? this._addweight(i, e, t) : this._new_centroid(e, t, i.cumn);
         }
         this._cumulate(!1), !this.discrete && this.K && this.size() > this.K / this.delta && this.compress();
     }),
@@ -108,9 +116,9 @@ function s(e, t) {
         }
     }),
     (i.prototype.bound_mean_cumn = function (e) {
-        this.centroids._comparator = s;
-        var t = this.centroids.upperBound({ mean_cumn: e });
         this.centroids._comparator = a;
+        var t = this.centroids.upperBound({ mean_cumn: e });
+        this.centroids._comparator = o;
         var n = t.prev(),
             r = n && n.mean_cumn === e ? n : t.next();
         return [n, r];
@@ -121,48 +129,38 @@ function s(e, t) {
     }),
     (i.prototype._percentile = function (e) {
         if (0 !== this.size()) {
-            this._cumulate(!0), this.centroids.min(), this.centroids.max();
-            var t = this.n * e,
-                n = this.bound_mean_cumn(t),
-                r = n[0],
-                i = n[1];
-            if (i === r || null === r || null === i) return (r || i).mean;
-            if (!this.discrete) return r.mean + ((t - r.mean_cumn) * (i.mean - r.mean)) / (i.mean_cumn - r.mean_cumn);
-            if (t <= r.cumn) return r.mean;
-            else return i.mean;
+            this._cumulate(!0);
+            var t = this.centroids.min(),
+                n = this.centroids.max(),
+                r = this.n * e,
+                i = this.bound_mean_cumn(r),
+                o = i[0],
+                a = i[1];
+            return a === o || null === o || null === a ? (o || a).mean : this.discrete ? (r <= o.cumn ? o.mean : a.mean) : o.mean + ((r - o.mean_cumn) * (a.mean - o.mean)) / (a.mean_cumn - o.mean_cumn);
         }
-    });
-function o(e) {
-    (this.config = e || {}), (this.mode = this.config.mode || 'auto'), i.call(this, 'cont' === this.mode && e.delta), (this.digest_ratio = this.config.ratio || 0.9), (this.digest_thresh = this.config.thresh || 1000), (this.n_unique = 0);
-}
-(i.prototype.compress = function () {
-    if (!this.compressing) {
-        var e = this.toArray();
-        for (this.reset(), this.compressing = !0; e.length > 0; )
-            this.push_centroid(
-                (function (e) {
-                    var t = Math.floor(Math.random() * e.length);
-                    return e.splice(t, 1)[0];
-                })(e)
-            );
-        this._cumulate(!0), (this.compressing = !1);
-    }
-}),
-    (o.prototype = Object.create(i.prototype)),
-    (o.prototype.constructor = o),
-    (o.prototype.push = function (e) {
+    }),
+    (i.prototype.compress = function () {
+        if (!this.compressing) {
+            var e = this.toArray();
+            for (this.reset(), this.compressing = !0; e.length > 0; ) this.push_centroid(s(e));
+            this._cumulate(!0), (this.compressing = !1);
+        }
+    }),
+    (l.prototype = Object.create(i.prototype)),
+    (l.prototype.constructor = l),
+    (l.prototype.push = function (e) {
         i.prototype.push.call(this, e), this.check_continuous();
     }),
-    (o.prototype._new_centroid = function (e, t, n) {
+    (l.prototype._new_centroid = function (e, t, n) {
         (this.n_unique += 1), i.prototype._new_centroid.call(this, e, t, n);
     }),
-    (o.prototype._addweight = function (e, t, n) {
+    (l.prototype._addweight = function (e, t, n) {
         1 === e.n && (this.n_unique -= 1), i.prototype._addweight.call(this, e, t, n);
     }),
-    (o.prototype.check_continuous = function () {
-        return !('auto' !== this.mode || this.size() < this.digest_thresh) && !!(this.n_unique / this.size() > this.digest_ratio) && ((this.mode = 'cont'), (this.discrete = !1), (this.delta = this.config.delta || 0.01), this.compress(), !0);
+    (l.prototype.check_continuous = function () {
+        return !('auto' !== this.mode || this.size() < this.digest_thresh) && this.n_unique / this.size() > this.digest_ratio && ((this.mode = 'cont'), (this.discrete = !1), (this.delta = this.config.delta || 0.01), this.compress(), !0);
     }),
     (e.exports = {
         TDigest: i,
-        Digest: o
+        Digest: l
     });

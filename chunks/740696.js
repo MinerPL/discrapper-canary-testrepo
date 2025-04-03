@@ -1,135 +1,172 @@
-s.r(a),
-    s.d(a, {
-        default: function () {
-            return u;
-        }
-    }),
-    s(47120);
-var t = s(735250),
-    n = s(470079),
-    r = s(442837),
-    o = s(481060),
-    _ = s(313201),
-    i = s(430824),
-    c = s(496675),
-    l = s(228392),
-    d = s(941848),
-    M = s(710352),
-    E = s(981631),
-    m = s(921944),
-    g = s(689938),
-    T = s(683477);
-let S = () => [
+a.d(t, { default: () => f }), a(47120);
+var n = a(200651),
+    r = a(192379),
+    s = a(442837),
+    i = a(481060),
+    o = a(313201),
+    c = a(430824),
+    l = a(496675),
+    d = a(228392),
+    m = a(941848),
+    g = a(710352),
+    u = a(981631),
+    N = a(921944),
+    x = a(388032),
+    p = a(74891);
+let h = () => [
     {
         id: 0,
-        name: g.Z.Messages.FORUM_UPSELL_DEMO_TAG_NAME_1
+        name: x.NW.string(x.t.HTA519)
     },
     {
         id: 1,
-        name: g.Z.Messages.FORUM_UPSELL_DEMO_TAG_NAME_2
+        name: x.NW.string(x.t.IHjjY2)
     },
     {
         id: 2,
-        name: g.Z.Messages.FORUM_UPSELL_DEMO_TAG_NAME_3
+        name: x.NW.string(x.t.x3drh4)
     }
 ];
-function u(e) {
-    let { guildId: a, shouldUpsellCreation: u, transitionState: O, onClose: L } = e,
-        x = (0, r.e7)([i.Z], () => i.Z.getGuild(a), [a]),
-        h = (0, r.e7)([c.Z], () => c.Z.can(E.Plq.MANAGE_CHANNELS, x)),
-        R = S(),
-        [A, N] = n.useState(0),
-        U = (0, _.Dt)();
-    return (0, t.jsxs)(o.ModalRoot, {
-        transitionState: O,
-        'aria-labelledby': U,
-        size: o.ModalSize.LARGE,
+function f(e) {
+    let { guildId: t, shouldUpsellCreation: f, transitionState: j, onClose: v } = e,
+        b = (0, s.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        y = (0, s.e7)([l.Z], () => l.Z.can(u.Plq.MANAGE_CHANNELS, b)),
+        W = h(),
+        [P, S] = r.useState(0),
+        O = (0, o.Dt)();
+    return (0, n.jsxs)(i.Y0X, {
+        transitionState: j,
+        'aria-labelledby': O,
+        size: i.CgR.LARGE,
         children: [
-            (0, t.jsxs)(o.ModalHeader, {
+            (0, n.jsxs)(i.xBx, {
                 separator: !1,
-                className: T.header,
+                className: p.header,
                 children: [
-                    (0, t.jsx)(o.Heading, {
+                    (0, n.jsx)(i.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: g.Z.Messages.FORUM_UPSELL_MODAL_HEADER
+                        children: x.NW.string(x.t['6S6WCQ'])
                     }),
-                    (0, t.jsx)(o.ModalCloseButton, { onClick: () => L() })
+                    (0, n.jsx)(i.olH, { onClick: () => v() })
                 ]
             }),
-            (0, t.jsx)(o.ModalContent, {
-                children: (0, t.jsxs)('div', {
-                    className: T.content,
+            (0, n.jsx)(i.hzk, {
+                children: (0, n.jsxs)('div', {
+                    className: p.content,
                     children: [
-                        (0, t.jsx)(o.Text, {
+                        (0, n.jsx)(i.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            children: g.Z.Messages.FORUM_UPSELL_MODAL_BODY
+                            children: x.NW.string(x.t.I2BA8P)
                         }),
-                        (0, t.jsx)('div', {
-                            className: T.tabBar,
-                            children: (0, t.jsx)(o.TabBar, {
-                                selectedItem: A,
+                        (0, n.jsx)('div', {
+                            className: p.tabBar,
+                            children: (0, n.jsx)(i.njP, {
+                                selectedItem: P,
                                 type: 'top',
                                 onItemSelect: (e) => {
-                                    N(e), (0, l.ws)({ forumDemoId: e });
+                                    S(e), (0, d.ws)({ forumDemoId: e });
                                 },
-                                className: T.tags,
-                                children: R.map((e, a) =>
-                                    (0, t.jsx)(
-                                        o.TabBar.Item,
+                                className: p.tags,
+                                children: W.map((e, t) =>
+                                    (0, n.jsx)(
+                                        i.njP.Item,
                                         {
-                                            id: a,
+                                            id: t,
                                             children: e.name
                                         },
-                                        a
+                                        t
                                     )
                                 )
                             })
                         }),
-                        (0, t.jsx)(d.Z, { id: A })
+                        (0, n.jsx)(m.Z, { id: P })
                     ]
                 })
             }),
-            h &&
-                (0, t.jsxs)(o.ModalFooter, {
-                    className: T.footer,
+            y &&
+                (0, n.jsxs)(i.mzw, {
+                    className: p.footer,
                     children: [
-                        (0, t.jsxs)('div', {
-                            className: T.buttons,
+                        (0, n.jsxs)('div', {
+                            className: p.buttons,
                             children: [
-                                (0, t.jsx)(o.Button, {
-                                    look: o.Button.Looks.BLANK,
-                                    color: o.Button.Colors.PRIMARY,
-                                    onClick: () => L(m.L.SECONDARY),
-                                    className: T.button,
-                                    children: u ? g.Z.Messages.MAYBE_LATER : g.Z.Messages.GOT_IT
+                                (0, n.jsx)(i.zxk, {
+                                    look: i.zxk.Looks.BLANK,
+                                    color: i.zxk.Colors.PRIMARY,
+                                    onClick: () => v(N.L.SECONDARY),
+                                    className: p.button,
+                                    children: f ? x.NW.string(x.t.TulDPj) : x.NW.string(x.t['NX+WJC'])
                                 }),
-                                u &&
-                                    (0, t.jsx)(o.Button, {
+                                f &&
+                                    (0, n.jsx)(i.zxk, {
                                         onClick: () => {
-                                            (0, o.openModalLazy)(async () => {
-                                                let { default: e } = await Promise.all([s.e('45094'), s.e('58983')]).then(s.bind(s, 218613));
-                                                return (s) =>
-                                                    (0, t.jsx)(e, {
-                                                        ...s,
-                                                        channelType: E.d4z.GUILD_FORUM,
-                                                        guildId: a,
-                                                        prefillChannelName: u ? g.Z.Messages.FORUM_CHANNEL_NAME_PLACEHOLDER : void 0
-                                                    });
+                                            (0, i.ZDy)(async () => {
+                                                let { default: e } = await Promise.all([a.e('45094'), a.e('45822')]).then(a.bind(a, 218613));
+                                                return (a) => {
+                                                    var r, s;
+                                                    return (0, n.jsx)(
+                                                        e,
+                                                        ((r = (function (e) {
+                                                            for (var t = 1; t < arguments.length; t++) {
+                                                                var a = null != arguments[t] ? arguments[t] : {},
+                                                                    n = Object.keys(a);
+                                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                                    (n = n.concat(
+                                                                        Object.getOwnPropertySymbols(a).filter(function (e) {
+                                                                            return Object.getOwnPropertyDescriptor(a, e).enumerable;
+                                                                        })
+                                                                    )),
+                                                                    n.forEach(function (t) {
+                                                                        var n;
+                                                                        (n = a[t]),
+                                                                            t in e
+                                                                                ? Object.defineProperty(e, t, {
+                                                                                      value: n,
+                                                                                      enumerable: !0,
+                                                                                      configurable: !0,
+                                                                                      writable: !0
+                                                                                  })
+                                                                                : (e[t] = n);
+                                                                    });
+                                                            }
+                                                            return e;
+                                                        })({}, a)),
+                                                        (s = s =
+                                                            {
+                                                                channelType: u.d4z.GUILD_FORUM,
+                                                                guildId: t,
+                                                                prefillChannelName: f ? x.NW.string(x.t['5z1Xam']) : void 0
+                                                            }),
+                                                        Object.getOwnPropertyDescriptors
+                                                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
+                                                            : (function (e, t) {
+                                                                  var a = Object.keys(e);
+                                                                  if (Object.getOwnPropertySymbols) {
+                                                                      var n = Object.getOwnPropertySymbols(e);
+                                                                      a.push.apply(a, n);
+                                                                  }
+                                                                  return a;
+                                                              })(Object(s)).forEach(function (e) {
+                                                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
+                                                              }),
+                                                        r)
+                                                    );
+                                                };
                                             }),
-                                                L(m.L.PRIMARY);
+                                                v(N.L.PRIMARY);
                                         },
-                                        children: g.Z.Messages.CREATE_FORUM_CHANNEL
+                                        children: x.NW.string(x.t['1X8SKy'])
                                     })
                             ]
                         }),
-                        (0, t.jsx)(o.Button, {
-                            look: o.Button.Looks.LINK,
-                            color: o.Button.Colors.LINK,
+                        (0, n.jsx)(i.zxk, {
+                            look: i.zxk.Looks.LINK,
+                            color: i.zxk.Colors.LINK,
                             onClick: () => {
-                                open(M.V8);
+                                open(g.V8);
                             },
-                            children: g.Z.Messages.LEARN_MORE
+                            children: x.NW.string(x.t.hvVgAQ)
                         })
                     ]
                 })

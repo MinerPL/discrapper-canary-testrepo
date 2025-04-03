@@ -1,26 +1,22 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(442837),
-    r = n(481060),
-    l = n(468706),
-    o = n(774863),
-    c = n(689938);
+n.d(t, { Z: () => u });
+var r = n(200651),
+    i = n(192379),
+    a = n(442837),
+    l = n(481060),
+    o = n(468706),
+    s = n(774863),
+    c = n(388032);
 function u(e) {
     let { messageId: t, channelId: n } = e,
-        u = (0, s.e7)([o.Z], () => o.Z.canSubmitFpReport(t)),
-        d = a.useCallback(() => {
-            (0, l.e)(n, t);
+        u = (0, a.e7)([s.Z], () => s.Z.canSubmitFpReport(t)),
+        d = i.useCallback(() => {
+            (0, o.e)(n, t);
         }, [n, t]);
-    return (0, i.jsx)(r.Button, {
-        size: r.Button.Sizes.MEDIUM,
-        color: r.Button.Colors.PRIMARY,
+    return (0, r.jsx)(l.zxk, {
+        size: l.zxk.Sizes.MEDIUM,
+        color: l.zxk.Colors.PRIMARY,
         onClick: d,
         disabled: !u,
-        children: c.Z.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE
+        children: c.NW.string(c.t['4q1ElZ'])
     });
 }

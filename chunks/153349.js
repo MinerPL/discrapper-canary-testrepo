@@ -1,234 +1,287 @@
-n.d(t, {
-    Z: function () {
-        return y;
-    }
-}),
-    n(47120);
-var i,
-    a,
-    s = n(735250),
-    l = n(470079),
-    r = n(120356),
-    o = n.n(r),
-    c = n(512722),
-    u = n.n(c),
-    d = n(442837),
-    h = n(481060),
-    m = n(239091),
+n.d(t, { Z: () => k }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(512722),
+    s = n.n(a),
+    c = n(442837),
+    u = n(481060),
+    d = n(239091),
     p = n(99690),
-    _ = n(58540),
-    f = n(665149),
-    E = n(484459),
-    g = n(103575),
-    C = n(271383),
-    I = n(496675),
-    x = n(158776),
-    T = n(471253),
-    N = n(431328),
-    v = n(145834),
-    S = n(590415),
-    Z = n(614173),
-    A = n(618896),
-    M = n(231338),
-    b = n(689938),
-    R = n(470407);
-let j = l.memo(function (e) {
+    h = n(493773),
+    f = n(616780),
+    m = n(665149),
+    g = n(484459),
+    b = n(347475),
+    _ = n(271383),
+    C = n(496675),
+    y = n(158776),
+    x = n(471253),
+    v = n(431328),
+    j = n(145834),
+    O = n(590415),
+    E = n(614173),
+    N = n(618896),
+    I = n(231338),
+    P = n(388032),
+    S = n(916396);
+function Z(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function T(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let A = i.memo(function (e) {
         let { toggleRequestToSpeakSidebar: t, chatOpen: n } = e,
-            i = (0, s.jsx)(f.ZP.Icon, {
-                icon: h.XSmallIcon,
-                tooltip: b.Z.Messages.CLOSE,
+            i = (0, r.jsx)(m.ZP.Icon, {
+                icon: u.Dio,
+                tooltip: P.NW.string(P.t.cpT0Cg),
                 onClick: t
             });
-        return (0, s.jsxs)(f.ZP, {
+        return (0, r.jsxs)(m.ZP, {
             toolbar: i,
-            className: o()(R.headerContainer, { [R.chatOpen]: n }),
+            className: o()(S.headerContainer, { [S.chatOpen]: n }),
             children: [
-                (0, s.jsx)(f.ZP.Icon, {
-                    icon: h.HandRequestSpeakIcon,
+                (0, r.jsx)(m.ZP.Icon, {
+                    icon: u.V9,
                     disabled: !0,
-                    'aria-label': b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
+                    'aria-label': P.NW.string(P.t.TYZgzc)
                 }),
-                (0, s.jsx)(f.ZP.Title, { children: b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE })
+                (0, r.jsx)(m.ZP.Title, { children: P.NW.string(P.t.TYZgzc) })
             ]
         });
     }),
-    L = l.memo(function (e) {
-        let { channel: t, participant: i, tempDisableOnInit: a = !1 } = e,
-            [r, c] = l.useState(a);
-        l.useEffect(() => {
-            if (!r) return;
-            let e = setTimeout(() => c(!1), 1000);
+    w = i.memo(function (e) {
+        let { channel: t, participant: l, tempDisableOnInit: a = !1 } = e,
+            [m, C] = i.useState(a);
+        (0, h.ZP)(() => {
+            if (!m) return;
+            let e = setTimeout(() => C(!1), 1000);
             return () => clearTimeout(e);
-        }, []);
-        let f = t.getGuildId();
-        u()(null != f, 'Channel cannot be guildless');
-        let { isMobile: I, status: N } = (0, d.cj)([x.Z], () => ({
-                isMobile: x.Z.isMobileOnline(i.user.id),
-                status: x.Z.getStatus(i.user.id, f)
+        });
+        let v = t.getGuildId();
+        s()(null != v, 'Channel cannot be guildless');
+        let { isMobile: E, status: N } = (0, c.cj)([y.Z], () => ({
+                isMobile: y.Z.isMobileOnline(l.user.id),
+                status: y.Z.getStatus(l.user.id, v)
             })),
-            Z = (0, d.e7)([C.ZP], () => C.ZP.getMember(f, i.user.id)),
-            A = l.useMemo(() => ({ [f]: [i.user.id] }), [f, i.user.id]);
-        (0, _.$)(A);
-        let M = i.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-        function j() {
-            (0, T.DT)(t, i.user.id, !1);
+            I = (0, c.e7)([_.ZP], () => _.ZP.getMember(v, l.user.id)),
+            A = i.useMemo(() => ({ [v]: [l.user.id] }), [v, l.user.id]);
+        (0, f.$)(A);
+        let w = l.rtsState === O.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+        function R() {
+            (0, x.DT)(t, l.user.id, !1);
         }
-        function L() {
-            (0, T.DT)(t, i.user.id, !0);
+        function M() {
+            (0, x.DT)(t, l.user.id, !0);
         }
-        let P = (e) => {
-            (0, m.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
+        let k = (e) => {
+            (0, d.jW)(e, async () => {
+                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
                 return (n) =>
-                    (0, s.jsx)(e, {
-                        ...n,
-                        user: i.user,
-                        guildId: f,
-                        channel: t,
-                        showMediaItems: !0
-                    });
+                    (0, r.jsx)(
+                        e,
+                        T(Z({}, n), {
+                            user: l.user,
+                            guildId: v,
+                            channel: t,
+                            showMediaItems: !0
+                        })
+                    );
             });
         };
-        return (0, s.jsxs)('div', {
-            className: R.participantRowContainer,
+        return (0, r.jsxs)('div', {
+            className: S.participantRowContainer,
             children: [
-                (0, s.jsx)(h.Popout, {
+                (0, r.jsx)(u.yRy, {
                     preload: () =>
-                        (0, E.Z)(i.user.id, i.user.getAvatarURL(t.guild_id, 80), {
+                        (0, g.Z)(l.user.id, l.user.getAvatarURL(t.guild_id, 80), {
                             guildId: t.guild_id,
                             channelId: t.id
                         }),
                     renderPopout: (e) =>
-                        (0, s.jsx)(g.Z, {
-                            ...e,
-                            location: 'RequestToSpeakSidebar',
-                            userId: i.user.id,
-                            guildId: f,
-                            channelId: t.id
-                        }),
+                        (0, r.jsx)(
+                            b.Z,
+                            T(Z({}, e), {
+                                userId: l.user.id,
+                                guildId: v,
+                                channelId: t.id
+                            })
+                        ),
                     position: 'left',
                     spacing: 16,
+                    clickTrap: !0,
                     children: (e) => {
                         var t;
-                        return (0, s.jsxs)(h.Clickable, {
-                            className: R.participantMemberContainer,
-                            onContextMenu: P,
-                            ...e,
-                            children: [
-                                (0, s.jsx)(p.Z, {
-                                    size: h.AvatarSizes.SIZE_40,
-                                    className: R.participantAvatar,
-                                    user: i.user,
-                                    isMobile: I,
-                                    status: N
-                                }),
-                                (0, s.jsxs)('div', {
-                                    className: R.participantTextContainer,
+                        return (0, r.jsxs)(
+                            u.P3F,
+                            T(
+                                Z(
+                                    {
+                                        className: S.participantMemberContainer,
+                                        onContextMenu: k
+                                    },
+                                    e
+                                ),
+                                {
                                     children: [
-                                        (0, s.jsx)(h.NameWithRole, {
-                                            name: i.userNick,
-                                            color: null !== (t = null == Z ? void 0 : Z.colorString) && void 0 !== t ? t : void 0,
-                                            className: R.participantName
+                                        (0, r.jsx)(p.Z, {
+                                            size: u.EFr.SIZE_40,
+                                            className: S.participantAvatar,
+                                            user: l.user,
+                                            isMobile: E,
+                                            status: N
                                         }),
-                                        (0, s.jsx)(h.Text, {
-                                            variant: 'text-xs/normal',
-                                            color: 'header-secondary',
-                                            children: (0, v.$)(i)
+                                        (0, r.jsxs)('div', {
+                                            className: S.participantTextContainer,
+                                            children: [
+                                                (0, r.jsx)(u.PUh, {
+                                                    name: l.userNick,
+                                                    color: null != (t = null == I ? void 0 : I.colorString) ? t : void 0,
+                                                    className: S.participantName
+                                                }),
+                                                (0, r.jsx)(u.Text, {
+                                                    variant: 'text-xs/normal',
+                                                    color: 'header-secondary',
+                                                    children: (0, j.$)(l)
+                                                })
+                                            ]
                                         })
                                     ]
-                                })
-                            ]
-                        });
+                                }
+                            )
+                        );
                     }
                 }),
-                (0, s.jsx)(h.Tooltip, {
-                    text: M ? b.Z.Messages.REQUEST_TO_SPEAK_INVITATION_SEND : b.Z.Messages.REQUEST_TO_SPEAK_ACCEPT,
+                (0, r.jsx)(u.ua7, {
+                    text: w ? P.NW.string(P.t.h9rsTU) : P.NW.string(P.t.f0T7hI),
                     children: (e) =>
-                        (0, s.jsx)(h.Button, {
-                            ...e,
-                            innerClassName: R.buttonContainer,
-                            look: h.Button.Looks.BLANK,
-                            size: h.Button.Sizes.NONE,
-                            onClick: j,
-                            disabled: M || r,
-                            children: (0, s.jsx)(h.MicrophoneArrowRightIcon, {
-                                size: 'xs',
-                                color: 'currentColor'
+                        (0, r.jsx)(
+                            u.zxk,
+                            T(Z({}, e), {
+                                innerClassName: S.buttonContainer,
+                                look: u.zxk.Looks.BLANK,
+                                size: u.zxk.Sizes.NONE,
+                                onClick: R,
+                                disabled: w || m,
+                                children: (0, r.jsx)(u.Lrb, {
+                                    size: 'xs',
+                                    color: 'currentColor'
+                                })
                             })
-                        })
+                        )
                 }),
-                (0, s.jsx)(h.Tooltip, {
-                    text: b.Z.Messages.REQUEST_TO_SPEAK_DECLINE,
+                (0, r.jsx)(u.ua7, {
+                    text: P.NW.string(P.t.moABMz),
                     children: (e) =>
-                        (0, s.jsx)(h.Button, {
-                            ...e,
-                            innerClassName: o()(R.buttonContainer, R.buttonMargin),
-                            look: h.Button.Looks.BLANK,
-                            size: h.Button.Sizes.NONE,
-                            onClick: L,
-                            children: (0, s.jsx)(h.XSmallIcon, {
-                                size: 'xs',
-                                color: 'currentColor'
+                        (0, r.jsx)(
+                            u.zxk,
+                            T(Z({}, e), {
+                                innerClassName: o()(S.buttonContainer, S.buttonMargin),
+                                look: u.zxk.Looks.BLANK,
+                                size: u.zxk.Sizes.NONE,
+                                onClick: M,
+                                children: (0, r.jsx)(u.Dio, {
+                                    size: 'xs',
+                                    color: 'currentColor'
+                                })
                             })
-                        })
+                        )
                 })
             ]
         });
     }),
-    P = l.memo(function (e) {
+    R = i.memo(function (e) {
         let { channel: t } = e,
-            [n, i] = (0, Z.h)(t.id);
-        return (0, s.jsx)(h.FormSwitch, {
-            className: R.toggle,
+            [n, i] = (0, E.h)(t.id);
+        return (0, r.jsx)(u.j7V, {
+            className: S.toggle,
             onChange: i,
             value: n,
-            children: b.Z.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
+            children: P.NW.string(P.t.GYCh0d)
         });
     }),
-    O = l.memo(function () {
-        return (0, s.jsxs)('div', {
-            className: R.emptyStateContainer,
+    M = i.memo(function () {
+        return (0, r.jsxs)('div', {
+            className: S.emptyStateContainer,
             children: [
-                (0, s.jsx)(A.Z, {}),
-                (0, s.jsx)(h.Text, {
-                    className: R.emptyStateTitle,
+                (0, r.jsx)(N.Z, {}),
+                (0, r.jsx)(u.Text, {
+                    className: S.emptyStateTitle,
                     variant: 'text-lg/semibold',
                     color: 'header-primary',
-                    children: b.Z.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_TITLE
+                    children: P.NW.string(P.t['7R24mZ'])
                 }),
-                (0, s.jsx)(h.Text, {
-                    className: R.emptyStateBody,
+                (0, r.jsx)(u.Text, {
+                    className: S.emptyStateBody,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: b.Z.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_BODY
+                    children: P.NW.string(P.t.Rpr2s7)
                 })
             ]
         });
     });
-function y(e) {
+function k(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
-        a = (0, N.Fd)(t.id),
-        l = [(0, d.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, a.length)];
-    return (0, s.jsxs)('div', {
-        className: o()(R.container, { [R.chatOpen]: i }),
+        l = (0, v.Fd)(t.id),
+        a = [+!!(0, c.e7)([C.Z], () => C.Z.can(I.Pl.MANAGE_CHANNELS, t) || C.Z.can(I.Pl.MANAGE_ROLES, t)), Math.max(1, l.length)];
+    return (0, r.jsxs)('div', {
+        className: o()(S.container, { [S.chatOpen]: i }),
         children: [
-            (0, s.jsx)(j, {
+            (0, r.jsx)(A, {
                 toggleRequestToSpeakSidebar: n,
                 chatOpen: i
             }),
-            (0, s.jsx)(h.List, {
-                className: R.contentContainer,
-                sections: l,
+            (0, r.jsx)(u.aVo, {
+                className: S.contentContainer,
+                sections: a,
                 sectionHeight: function (e) {
-                    if (1 === e) return 40;
-                    return 0;
+                    return 40 * (1 === e);
                 },
                 rowHeight: function (e) {
                     switch (e) {
                         case 0:
                             return 66;
                         case 1:
-                            if (0 === a.length) return 178;
+                            if (0 === l.length) return 178;
                             return 48;
                     }
                     return 0;
@@ -237,12 +290,12 @@ function y(e) {
                     let { section: n, row: i } = e;
                     switch (n) {
                         case 0:
-                            return (0, s.jsx)(P, { channel: t }, 'rts-toggle');
+                            return (0, r.jsx)(R, { channel: t }, 'rts-toggle');
                         case 1: {
-                            if (0 === a.length) return (0, s.jsx)(O, {}, 'participants-empty');
-                            let e = a[i];
-                            return (0, s.jsx)(
-                                L,
+                            if (0 === l.length) return (0, r.jsx)(M, {}, 'participants-empty');
+                            let e = l[i];
+                            return (0, r.jsx)(
+                                w,
                                 {
                                     channel: t,
                                     participant: e,
@@ -256,21 +309,20 @@ function y(e) {
                 },
                 renderSection: function (e) {
                     let { section: t } = e;
-                    if (1 === t)
-                        return (0, s.jsx)(
-                            h.Text,
-                            {
-                                className: R.listTitle,
-                                variant: 'text-xs/bold',
-                                color: 'header-secondary',
-                                children: a.length > 0 ? b.Z.Messages.REQUEST_TO_SPEAK_LIST_TITLE.format({ numHands: a.length }) : b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
-                            },
-                            'participants-section'
-                        );
-                    return null;
+                    return 1 === t
+                        ? (0, r.jsx)(
+                              u.Text,
+                              {
+                                  className: S.listTitle,
+                                  variant: 'text-xs/bold',
+                                  color: 'header-secondary',
+                                  children: l.length > 0 ? P.NW.formatToPlainString(P.t['5z7q5e'], { numHands: l.length }) : P.NW.string(P.t.TYZgzc)
+                              },
+                              'participants-section'
+                          )
+                        : null;
                 }
             })
         ]
     });
 }
-((a = i || (i = {}))[(a.TOGGLE_REQUEST_TO_SPEAK = 0)] = 'TOGGLE_REQUEST_TO_SPEAK'), (a[(a.PARTICIPANTS = 1)] = 'PARTICIPANTS');

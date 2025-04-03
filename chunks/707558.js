@@ -1,43 +1,39 @@
-t.d(s, {
-    Z: function () {
-        return c;
-    }
-});
-var n = t(735250);
-t(470079);
-var a = t(120356),
-    i = t.n(a),
-    r = t(600164),
-    o = t(526097),
-    l = t(224499);
+n.d(t, { Z: () => c }), n(266796);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(600164),
+    l = n(841111),
+    o = n(20493);
 function c(e) {
-    let { features: s } = e;
-    return (0, n.jsx)(n.Fragment, {
-        children: s.map((e, s) =>
-            (0, n.jsxs)(
-                r.Z,
+    let { features: t } = e;
+    return (0, r.jsx)(r.Fragment, {
+        children: t.map((e, t) =>
+            (0, r.jsxs)(
+                a.Z,
                 {
-                    align: r.Z.Align.CENTER,
-                    className: i()(l.marginTop20, o.feature, { [o.featureBorder]: 0 !== s }),
+                    align: a.Z.Align.CENTER,
+                    className: s()(o.marginTop20, l.feature, { [l.featureBorder]: 0 !== t }),
                     children: [
-                        null != e.icon ? (0, n.jsx)('div', { className: i()(o.icon, e.icon) }) : null,
-                        (0, n.jsxs)('div', {
+                        null != e.icon ? (0, r.jsx)('div', { className: s()(l.icon, e.icon) }) : null,
+                        (0, r.jsxs)('div', {
                             children: [
                                 null != e.title
-                                    ? (0, n.jsx)('div', {
-                                          className: i()(l.marginBottom8, o.title),
+                                    ? (0, r.jsx)('div', {
+                                          className: s()(o.marginBottom8, l.title),
                                           children: e.title
                                       })
                                     : null,
-                                (0, n.jsx)('div', {
-                                    className: o.description,
+                                (0, r.jsx)('div', {
+                                    className: l.description,
                                     children: e.description
                                 })
                             ]
                         })
                     ]
                 },
-                s
+                t
             )
         )
     });

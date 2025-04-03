@@ -1,18 +1,12 @@
-n.d(t, {
-    $: function () {
-        return _;
-    }
-}),
-    n(653041),
-    n(47120);
-var r = n(470079),
+n.d(t, { $: () => p }), n(653041), n(47120);
+var r = n(192379),
     i = n(392711),
-    a = n.n(i),
-    s = n(442837),
-    o = n(846519),
+    o = n.n(i),
+    a = n(442837),
+    s = n(846519),
     l = n(224706),
-    u = n(669764);
-function c(e, t, n) {
+    c = n(669764);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,28 +19,30 @@ function c(e, t, n) {
         e
     );
 }
-let d = new (class e {
+let d = 20;
+class f {
     request(e) {
-        !(this._pending.has(e) || this._fetched.has(e)) && (this._pending.add(e), this._flushHandler.delay(!1));
+        this._pending.has(e) || this._fetched.has(e) || (this._pending.add(e), this._flushHandler.delay(!1));
     }
     _flush() {
         let e = [];
         this._pending.forEach((t) => {
             this._fetched.add(t), e.push(t);
         }),
-            a()
-                .chunk(e, 20)
+            o()
+                .chunk(e, d)
                 .forEach((e) => {
                     l.Z.getDetectableGamesSupplemental(e);
                 });
     }
     constructor() {
-        c(this, '_fetched', new Set()), c(this, '_pending', new Set()), c(this, '_flushHandler', new o.sW(0, () => this._flush()));
+        u(this, '_fetched', new Set()), u(this, '_pending', new Set()), u(this, '_flushHandler', new s.sW(0, () => this._flush()));
     }
-})();
-function _(e, t) {
+}
+let _ = new f();
+function p(e, t) {
     r.useEffect(() => {
-        null != e && d.request(e);
+        null != e && _.request(e);
     }, [e]);
     let n = r.useMemo(
         () =>
@@ -58,7 +54,7 @@ function _(e, t) {
                 : void 0,
         [t]
     );
-    return (0, s.cj)([u.Z], () =>
+    return (0, a.cj)([c.Z], () =>
         null == e
             ? {
                   isFetching: !1,
@@ -67,10 +63,10 @@ function _(e, t) {
                   coverImageUrl: void 0
               }
             : {
-                  isFetching: u.Z.isFetching(e),
-                  localizedName: u.Z.getLocalizedName(e),
-                  themes: u.Z.getThemes(e),
-                  coverImageUrl: u.Z.getCoverImageUrl(e, n)
+                  isFetching: c.Z.isFetching(e),
+                  localizedName: c.Z.getLocalizedName(e),
+                  themes: c.Z.getThemes(e),
+                  coverImageUrl: c.Z.getCoverImageUrl(e, n)
               }
     );
 }

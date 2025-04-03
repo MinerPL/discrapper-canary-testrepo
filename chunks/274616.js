@@ -1,38 +1,36 @@
 n.d(t, {
-    Z: function () {
-        return _;
-    },
-    o: function () {
-        return d;
-    }
+    Z: () => _,
+    o: () => f
 }),
     n(47120);
 var r = n(392711),
     i = n.n(r),
-    a = n(544891),
-    s = n(570140),
-    o = n(503013),
+    o = n(544891),
+    a = n(570140),
+    s = n(503013),
     l = n(283595),
-    u = n(804739),
-    c = n(981631);
-async function d() {
+    c = n(804739),
+    u = n(981631);
+let d = 50;
+async function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z.entitledBranchIds;
-    if (!(0, u.Q)() || 0 === e.length) return [];
-    let t = i().chunk(e, 50);
+    if (!(0, c.Q)() || 0 === e.length) return [];
+    let t = i().chunk(e, d);
     try {
         let e = t.map(async (e) =>
                 (
-                    await a.tn.post({
-                        url: c.ANM.APPLICATION_BRANCHES,
+                    await o.tn.post({
+                        url: u.ANM.APPLICATION_BRANCHES,
                         body: { branch_ids: e },
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !0
                     })
-                ).body.map(o.Z.createFromServer)
+                ).body.map(s.Z.createFromServer)
             ),
             n = await Promise.all(e),
             r = i().flatten(n);
         return (
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'APPLICATION_BRANCHES_FETCH_SUCCESS',
                 branches: r
             }),
@@ -40,7 +38,7 @@ async function d() {
         );
     } catch (t) {
         return (
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'APPLICATION_BRANCHES_FETCH_FAIL',
                 branchIds: e
             }),
@@ -50,13 +48,14 @@ async function d() {
 }
 async function _(e) {
     try {
-        let t = await a.tn.get({
-                url: c.ANM.OWNED_APPLICATION_BRANCHES(e),
-                oldFormErrors: !0
+        let t = await o.tn.get({
+                url: u.ANM.OWNED_APPLICATION_BRANCHES(e),
+                oldFormErrors: !0,
+                rejectWithError: !0
             }),
-            n = Array.isArray(t.body) ? t.body.map(o.Z.createFromServer) : [];
+            n = Array.isArray(t.body) ? t.body.map(s.Z.createFromServer) : [];
         return (
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS',
                 applicationId: e,
                 branches: n
@@ -65,7 +64,7 @@ async function _(e) {
         );
     } catch (t) {
         return (
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'OWNED_APPLICATION_BRANCHES_FETCH_FAIL',
                 applicationId: e
             }),

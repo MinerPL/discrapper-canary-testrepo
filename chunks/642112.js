@@ -1,63 +1,58 @@
-r.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var n = r(573736),
-    a = r(886115);
-function o(e, t, r = 250, o, E, s, c) {
-    if (!s.exception || !s.exception.values || !c || !(0, n.V9)(c.originalException, Error)) return;
-    let I = s.exception.values.length > 0 ? s.exception.values[s.exception.values.length - 1] : void 0;
-    I &&
-        (s.exception.values = (function (e, t) {
-            return e.map((e) => (e.value && (e.value = (0, a.$G)(e.value, t)), e));
-        })(
-            (function e(t, r, a, o, E, s, c, I) {
-                if (s.length >= a + 1) return s;
+a.d(e, { Z: () => _ });
+var r = a(573736),
+    n = a(886115);
+function _(t, e, a = 250, c, s, E, l) {
+    var u, I;
+    if (!E.exception || !E.exception.values || !l || !(0, r.V9)(l.originalException, Error)) return;
+    let R = E.exception.values.length > 0 ? E.exception.values[E.exception.values.length - 1] : void 0;
+    R &&
+        (E.exception.values =
+            ((u = (function t(e, a, n, _, c, s, E, l) {
+                if (s.length >= n + 1) return s;
                 let u = [...s];
-                if ((0, n.V9)(o[E], Error)) {
-                    i(c, I);
-                    let n = t(r, o[E]),
+                if ((0, r.V9)(_[c], Error)) {
+                    o(E, l);
+                    let r = e(a, _[c]),
                         s = u.length;
-                    _(n, E, s, I), (u = e(t, r, a, o[E], E, [n, ...u], n, s));
+                    i(r, c, s, l), (u = t(e, a, n, _[c], c, [r, ...u], r, s));
                 }
                 return (
-                    Array.isArray(o.errors) &&
-                        o.errors.forEach((o, s) => {
-                            if ((0, n.V9)(o, Error)) {
-                                i(c, I);
-                                let n = t(r, o),
-                                    l = u.length;
-                                _(n, `errors[${s}]`, l, I), (u = e(t, r, a, o, E, [n, ...u], n, l));
+                    Array.isArray(_.errors) &&
+                        _.errors.forEach((_, s) => {
+                            if ((0, r.V9)(_, Error)) {
+                                o(E, l);
+                                let r = e(a, _),
+                                    I = u.length;
+                                i(r, `errors[${s}]`, I, l), (u = t(e, a, n, _, c, [r, ...u], r, I));
                             }
                         }),
                     u
                 );
-            })(e, t, E, c.originalException, o, s.exception.values, I, 0),
-            r
-        ));
+            })(t, e, s, l.originalException, c, E.exception.values, R, 0)),
+            (I = a),
+            u.map((t) => (t.value && (t.value = (0, n.$G)(t.value, I)), t))));
 }
-function i(e, t) {
-    (e.mechanism = e.mechanism || {
+function o(t, e) {
+    (t.mechanism = t.mechanism || {
         type: 'generic',
         handled: !0
     }),
-        (e.mechanism = {
-            ...e.mechanism,
-            ...('AggregateError' === e.type && { is_exception_group: !0 }),
-            exception_id: t
+        (t.mechanism = {
+            ...t.mechanism,
+            ...('AggregateError' === t.type && { is_exception_group: !0 }),
+            exception_id: e
         });
 }
-function _(e, t, r, n) {
-    (e.mechanism = e.mechanism || {
+function i(t, e, a, r) {
+    (t.mechanism = t.mechanism || {
         type: 'generic',
         handled: !0
     }),
-        (e.mechanism = {
-            ...e.mechanism,
+        (t.mechanism = {
+            ...t.mechanism,
             type: 'chained',
-            source: t,
-            exception_id: r,
-            parent_id: n
+            source: e,
+            exception_id: a,
+            parent_id: r
         });
 }

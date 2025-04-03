@@ -1,24 +1,20 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(834129),
-    r = n(689938),
-    l = n(397381);
-function o(e) {
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    a = n(834129),
+    l = n(388032),
+    o = n(482893);
+function s(e) {
     let { message: t, compact: n } = e;
-    return (0, i.jsx)(s.Z, {
-        iconNode: (0, i.jsx)(a.ThreadIcon, {
+    return (0, r.jsx)(a.Z, {
+        iconNode: (0, r.jsx)(i.or_, {
             size: 'md',
             color: 'currentColor',
-            className: l.icon
+            className: o.icon
         }),
         timestamp: t.timestamp,
         compact: n,
-        children: r.Z.Messages.THREAD_STARTER_MESSAGE_NOT_LOADED
+        children: l.NW.string(l.t.OCs36O)
     });
 }

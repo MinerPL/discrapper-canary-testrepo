@@ -1,88 +1,90 @@
 n.d(t, {
-    F: function () {
-        return _;
-    },
-    Y: function () {
-        return d;
-    }
+    F: () => _,
+    Y: () => f
 });
-var r = n(735250),
-    i = n(470079),
-    a = n(772848),
-    s = n(993365),
-    o = n(481060),
+var r = n(200651),
+    i = n(192379),
+    o = n(772848),
+    a = n(993365),
+    s = n(481060),
     l = n(245216),
-    u = n(561466),
-    c = n(810819);
-function d(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.si,
-        { position: r = u.si.position, component: i = u.si.component, duration: s = u.si.duration } = n;
+    c = n(561466),
+    u = n(986449);
+function d(e) {
+    switch (e) {
+        case c.pC.SUCCESS:
+            return (0, r.jsx)(s.dz2, {
+                size: 'md',
+                className: u.icon,
+                color: s.TVs.colors.STATUS_POSITIVE.css
+            });
+        case c.pC.FAILURE:
+            return (0, r.jsx)(s.Uz9, {
+                size: 'md',
+                className: u.icon,
+                color: s.TVs.colors.STATUS_DANGER.css
+            });
+        case c.pC.CLIP:
+            return (0, r.jsx)(s.AlX, {
+                size: 'xs',
+                className: u.clipIcon,
+                color: s.TVs.colors.HEADER_PRIMARY.css
+            });
+        case c.pC.LINK:
+            return (0, r.jsx)(s.xPt, {
+                className: u.icon,
+                color: s.TVs.colors.HEADER_PRIMARY.css
+            });
+        case c.pC.FORWARD:
+            return (0, r.jsx)(l.Z, {
+                className: u.icon,
+                color: s.TVs.colors.STATUS_POSITIVE.css
+            });
+        case c.pC.INVITE:
+            return (0, r.jsx)(s._XJ, {
+                className: u.icon,
+                color: s.TVs.colors.TEXT_BRAND.css
+            });
+        case c.pC.BOOKMARK:
+            return (0, r.jsx)(s.plf, {
+                className: u.icon,
+                color: s.TVs.colors.HEADER_PRIMARY.css
+            });
+        case c.pC.CLOCK:
+            return (0, r.jsx)(s.T39, {
+                className: u.icon,
+                color: s.TVs.colors.HEADER_PRIMARY.css
+            });
+        default:
+            return null;
+    }
+}
+function f(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.si,
+        { position: r = c.si.position, component: i = c.si.component, duration: a = c.si.duration } = n;
     return {
         message: e,
-        id: (0, a.Z)(),
+        id: (0, o.Z)(),
         type: t,
         options: {
             position: r,
             component: i,
-            duration: s
+            duration: a
         }
     };
 }
 let _ = i.memo(function (e) {
-    let { message: t, type: n, id: i, options: { component: a = u.si.component } = u.si } = e;
-    return null != a
-        ? (0, r.jsx)(r.Fragment, { children: a })
+    let { message: t, type: n, id: i, options: { component: o = c.si.component } = c.si } = e;
+    return null != o
+        ? o
         : (0, r.jsxs)('div', {
               id: i,
-              className: c.toast,
+              className: u.toast,
+              'data-type': n,
               children: [
-                  (function (e) {
-                      switch (e) {
-                          case u.pC.SUCCESS:
-                              return (0, r.jsx)(o.CheckmarkLargeIcon, {
-                                  size: 'md',
-                                  className: c.icon,
-                                  color: o.tokens.colors.STATUS_POSITIVE.css
-                              });
-                          case u.pC.FAILURE:
-                              return (0, r.jsx)(o.XLargeIcon, {
-                                  size: 'md',
-                                  className: c.icon,
-                                  color: o.tokens.colors.STATUS_DANGER.css
-                              });
-                          case u.pC.CLIP:
-                              return (0, r.jsx)(o.ClipsIcon, {
-                                  size: 'xs',
-                                  className: c.clipIcon,
-                                  color: o.tokens.colors.HEADER_PRIMARY.css
-                              });
-                          case u.pC.LINK:
-                              return (0, r.jsx)(o.LinkIcon, {
-                                  className: c.icon,
-                                  color: o.tokens.colors.HEADER_PRIMARY.css
-                              });
-                          case u.pC.FORWARD:
-                              return (0, r.jsx)(l.Z, {
-                                  className: c.icon,
-                                  color: o.tokens.colors.STATUS_POSITIVE.css
-                              });
-                          case u.pC.BOOKMARK:
-                              return (0, r.jsx)(o.BookmarkIcon, {
-                                  className: c.icon,
-                                  color: o.tokens.colors.HEADER_PRIMARY.css
-                              });
-                          case u.pC.CLOCK:
-                              return (0, r.jsx)(o.ClockIcon, {
-                                  className: c.icon,
-                                  color: o.tokens.colors.HEADER_PRIMARY.css
-                              });
-                          default:
-                              return null;
-                      }
-                  })(n),
-                  (0, r.jsx)(s.x, {
-                      className: c.__invalid_content,
-                      color: 'header-primary',
+                  d(n),
+                  (0, r.jsx)(a.x, {
+                      className: u.content,
                       variant: 'text-md/normal',
                       children: t
                   })

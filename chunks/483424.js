@@ -1,46 +1,57 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(70956),
-    s = n(709054),
-    o = n(27144),
-    l = n(929498),
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    o = n(468363),
+    a = n(158776),
+    s = n(885110),
+    l = n(369566),
+    c = n(29899),
     u = n(151545),
-    c = n(527790),
-    d = n(304042);
-function _(e) {
-    let { user: t, currentUser: n, className: _, onClose: E } = e,
-        { live: f, recent: h, stream: p } = (0, l.Z)(t.id),
-        [m] = f,
-        { mostRecentActivityEnabled: I } = (0, o.z)({ location: 'UserProfileFeaturedActivity' }),
-        T = i.useMemo(() => h.find((e) => s.default.age(e.id) / a.Z.Millis.HOUR < 24), [h]);
-    return null != p
-        ? (0, r.jsx)(d.Z, {
+    d = n(493043),
+    f = n(864141),
+    _ = n(231338);
+function p(e) {
+    let { user: t, currentUser: n, displayProfile: p, guildId: h, className: m, onClose: g } = e,
+        { live: E, stream: b } = (0, l.Z)(t.id),
+        [y] = E,
+        { voiceChannel: v } = (0, c.Z)({
+            userId: t.id,
+            guildId: h,
+            surface: 'user-profile-featured-activity'
+        }),
+        O = t.id === n.id,
+        I = (0, i.e7)([s.Z, a.Z], () => {
+            let e = O ? s.Z.getStatus() : a.Z.getStatus(t.id, h);
+            return e === _.Sk.OFFLINE || e === _.Sk.INVISIBLE;
+        }),
+        { voiceActivityStatusEnabled: S } = (0, o.U)({ location: 'UserProfileFeaturedActivity' });
+    return I || null == b
+        ? I || null == y
+            ? S && !I && null != v
+                ? (0, r.jsx)(f.Z, {
+                      user: t,
+                      currentUser: n,
+                      voiceChannel: v,
+                      className: m,
+                      onClose: g
+                  })
+                : null
+            : (0, r.jsx)(u.Z, {
+                  user: t,
+                  currentUser: n,
+                  activity: y,
+                  profileGuildId: null == p ? void 0 : p.guildId,
+                  className: m,
+                  onClose: g
+              })
+        : (0, r.jsx)(d.Z, {
+              location: 'UserProfileFeaturedActivity',
               user: t,
               currentUser: n,
-              stream: p,
-              className: _,
-              onClose: E
-          })
-        : null != m
-          ? (0, r.jsx)(u.Z, {
-                user: t,
-                currentUser: n,
-                activity: m,
-                className: _,
-                onClose: E
-            })
-          : I && null != T
-            ? (0, r.jsx)(c.Z, {
-                  user: t,
-                  entry: T,
-                  className: _,
-                  onClose: E
-              })
-            : null;
+              stream: b,
+              profileGuildId: null == p ? void 0 : p.guildId,
+              className: m,
+              onClose: g
+          });
 }

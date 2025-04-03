@@ -1,11 +1,7 @@
-n.d(t, {
-    A: function () {
-        return r;
-    }
-});
-var s = n(570140);
-function r(e) {
-    s.Z.dispatch({
+n.d(t, { A: () => i });
+var r = n(570140);
+function i(e) {
+    r.Z.dispatch({
         type: 'AUTH_INVITE_UPDATE',
         invite: e
     });

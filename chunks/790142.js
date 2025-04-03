@@ -50,7 +50,7 @@ t.exports = function (t, r, n, u, y, x, E) {
         _ = (!m && M) || F(y),
         R = ('Array' === r && D.entries) || M;
     if (
-        (R && (P = f(R.call(new t()))) !== Object.prototype && P.next && (!i && f(P) !== b && (a ? a(P, b) : !s(P[S]) && l(P, S, A)), p(P, I, !0, !0), i && (h[I] = A)),
+        (R && (P = f(R.call(new t()))) !== Object.prototype && P.next && (!i && f(P) !== b && (a ? a(P, b) : s(P[S]) || l(P, S, A)), p(P, I, !0, !0), i && (h[I] = A)),
         d &&
             y === O &&
             M &&
@@ -62,7 +62,7 @@ t.exports = function (t, r, n, u, y, x, E) {
                       return o(M, this);
                   }))),
         y)
-    ) {
+    )
         if (
             ((T = {
                 values: F(O),
@@ -71,7 +71,7 @@ t.exports = function (t, r, n, u, y, x, E) {
             }),
             E)
         )
-            for (k in T) (m || L || !(k in D)) && l(D, k, T[k]);
+            for (k in T) (!m && !L && k in D) || l(D, k, T[k]);
         else
             e(
                 {
@@ -81,6 +81,5 @@ t.exports = function (t, r, n, u, y, x, E) {
                 },
                 T
             );
-    }
     return (!i || E) && D[S] !== _ && l(D, S, _, { name: y }), (h[r] = _), T;
 };

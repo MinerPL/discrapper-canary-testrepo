@@ -1,10 +1,6 @@
 n.d(t, {
-    G: function () {
-        return a;
-    },
-    U: function () {
-        return i;
-    }
+    G: () => o,
+    U: () => i
 });
 var r = n(570140);
 function i(e, t, n, i) {
@@ -16,7 +12,7 @@ function i(e, t, n, i) {
         startPosition: i
     });
 }
-function a(e, t, n) {
+function o(e, t, n) {
     r.Z.dispatch({
         type: 'BURST_REACTION_PICKER_ANIMATION_CLEAR',
         messageId: e,

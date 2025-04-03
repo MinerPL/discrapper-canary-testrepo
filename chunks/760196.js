@@ -1,58 +1,86 @@
-n(653041);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
+n.d(t, {
+    Z: () => g,
+    c: () => m
+}),
+    n(653041);
+var r = n(200651),
+    i = n(192379),
     o = n(442837),
-    l = n(998698),
-    u = n(824203),
-    c = n(713583),
-    d = n(920455),
-    _ = n(931981),
-    E = n(407661),
-    f = n(305489);
-t.Z = i.memo((e) => {
-    let { channel: t, type: n, activeCommand: i, pendingReply: a } = e,
-        { activeCommandOption: h, activeCommandOptionStates: p } = (0, o.cj)([l.Z], () => ({
-            activeCommandOption: l.Z.getActiveOption(t.id),
-            activeCommandOptionStates: l.Z.getOptionStates(t.id)
+    a = n(998698),
+    s = n(713583),
+    l = n(931981),
+    c = n(898188),
+    u = n(328908),
+    d = n(832820),
+    f = n(841284),
+    _ = n(541716),
+    p = n(407661),
+    h = n(302195);
+function m(e) {
+    let { channel: t, type: n, activeCommand: m, pendingReply: g, pendingScheduledMessage: E } = e,
+        { activeCommandOption: b, activeCommandOptionStates: y } = (0, o.cj)([a.Z], () => ({
+            activeCommandOption: a.Z.getActiveOption(t.id),
+            activeCommandOptionStates: a.Z.getOptionStates(t.id)
         })),
-        m = (0, _.e)(t),
-        I = (0, u.__)(i, t, { location: 'ChannelTextAreaBars' }),
-        T = [];
-    return (null != i &&
-        (I && T.push((0, r.jsx)(d.Z, { activeCommand: i })),
-        T.push(
-            (0, r.jsx)(c.Z, {
-                activeCommand: i,
-                activeOption: null != h ? h : null,
-                optionStates: p,
-                channelId: t.id
-            })
-        )),
-    null != a &&
-        T.push(
-            (0, r.jsx)(E.Z, {
-                reply: a,
-                chatInputType: n
-            })
-        ),
-    m && T.push((0, r.jsx)(_.V, {})),
-    0 ===
-        (T = T.map((e, t) => {
-            let n = t === T.length - 1;
-            return (0, r.jsx)(
-                'div',
-                {
-                    className: s()({ [f.stackedAttachedBar]: !n }),
-                    children: e
-                },
-                t
-            );
-        })).length)
+        v = (0, l.e)(t),
+        O = (0, u.LN)(t.id);
+    return i.useMemo(() => {
+        let e = [],
+            i = [];
+        return (
+            null != t.guild_id &&
+                n === _.Ie.NORMAL &&
+                i.push(
+                    (0, r.jsx)(c.Z, {
+                        guildId: t.guild_id,
+                        channel: t,
+                        className: h.newMemberActionBar
+                    })
+                ),
+            null != m &&
+                e.push(
+                    (0, r.jsx)(s.Z, {
+                        activeCommand: m,
+                        activeOption: null != b ? b : null,
+                        optionStates: y,
+                        channelId: t.id
+                    })
+                ),
+            null != g &&
+                e.push(
+                    (0, r.jsx)(p.Z, {
+                        reply: g,
+                        chatInputType: n
+                    })
+                ),
+            v && e.push((0, r.jsx)(l.V, {})),
+            O && e.push((0, r.jsx)(d.Z, { channel: t })),
+            null != E && e.push((0, r.jsx)(f.y, { pendingScheduledMessage: E })),
+            {
+                stacked: e,
+                floating: i
+            }
+        );
+    }, [m, b, y, t, g, v, n, O, E]);
+}
+function g(e) {
+    let { bars: t } = e,
+        n = t.stacked.map((e, t) => (0, r.jsx)('div', { children: e }, t)),
+        o = t.floating.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t));
+    return 0 === n.length && 0 === o.length
         ? null
-        : (0, r.jsx)('div', {
-              className: f.attachedBars,
-              children: T
+        : (0, r.jsxs)(i.Fragment, {
+              children: [
+                  o.length > 0 &&
+                      (0, r.jsx)('div', {
+                          className: h.floatingBars,
+                          children: o
+                      }),
+                  n.length > 0 &&
+                      (0, r.jsx)('div', {
+                          className: h.stackedBars,
+                          children: n
+                      })
+              ]
           });
-});
+}

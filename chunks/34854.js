@@ -1,11 +1,13 @@
-var s = t(544891),
-    i = t(981631);
-n.Z = {
+t.d(n, { Z: () => i });
+var r = t(544891),
+    o = t(981631);
+let i = {
     updateNote(e, n) {
-        s.tn.put({
-            url: i.ANM.NOTE(e),
+        r.tn.put({
+            url: o.ANM.NOTE(e),
             body: { note: n },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !0
         });
     }
 };

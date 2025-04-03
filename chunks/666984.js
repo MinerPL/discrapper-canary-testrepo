@@ -1,53 +1,46 @@
-n.d(t, {
-    Z: function () {
-        return E;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => _ });
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(620662),
-    s = n(503438),
-    o = n(829820),
+    o = n(620662),
+    a = n(503438),
+    s = n(829820),
     l = n(395361),
-    u = n(475413),
-    c = n(981631),
-    d = n(689938),
-    _ = n(139665);
-function E(e) {
-    var t;
-    let { user: n, activity: E, onAction: f } = e,
-        h = (0, o.Ih)(E, n),
-        p = (0, o.Fe)(E, n);
-    return (0, s.Z)(E) && ((0, a.Z)(E, c.xjy.PLAY) || (0, a.Z)(E, c.xjy.SYNC))
+    c = n(475413),
+    u = n(981631),
+    d = n(388032),
+    f = n(227832);
+function _(e) {
+    var t, n;
+    let { user: _, activity: p, onAction: h } = e,
+        m = (0, s.Ih)(p, _),
+        g = (0, s.Fe)(p, _);
+    return (0, a.Z)(p) && ((0, o.Z)(p, u.xjy.PLAY) || (0, o.Z)(p, u.xjy.SYNC))
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(u.ef, {
-                      icon: i.UserPlayIcon,
-                      tooltipText: null !== (t = p.tooltip) && void 0 !== t ? t : d.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG,
-                      disabled: p.disabled,
-                      submitting: p.loading,
-                      fullWidth: !0,
-                      onClick: () => {
-                          null == f || f({ action: 'PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON' }), p.onClick();
-                      }
+                  (0, r.jsx)(i.DY3, {
+                      text: m.tooltip,
+                      className: f.primaryButton,
+                      children: (0, r.jsx)(c.tG, {
+                          icon: () => (0, r.jsx)(l.Z, {}),
+                          text: null != (t = m.label) ? t : d.NW.string(d.t.rRffNz),
+                          disabled: m.disabled,
+                          submitting: m.loading,
+                          wrapperClassName: f.primaryButton,
+                          fullWidth: !0,
+                          onClick: (e) => {
+                              null == e || e.stopPropagation(), null == h || h({ action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON' }), m.onClick();
+                          }
+                      })
                   }),
-                  (0, r.jsx)(i.Tooltip, {
-                      text: h.tooltip,
-                      children: (e) => {
-                          var t;
-                          return (0, r.jsx)(u.tG, {
-                              ...e,
-                              icon: () => (0, r.jsx)(l.Z, {}),
-                              text: null !== (t = h.label) && void 0 !== t ? t : d.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
-                              disabled: h.disabled,
-                              submitting: h.loading,
-                              wrapperClassName: _.primaryButton,
-                              fullWidth: !0,
-                              onClick: () => {
-                                  null == f || f({ action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON' }), h.onClick();
-                              }
-                          });
+                  (0, r.jsx)(c.ef, {
+                      icon: i.iOO,
+                      tooltipText: null != (n = g.tooltip) ? n : d.NW.string(d.t.eU3inJ),
+                      disabled: g.disabled,
+                      submitting: g.loading,
+                      fullWidth: !0,
+                      onClick: (e) => {
+                          e.stopPropagation(), null == h || h({ action: 'PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON' }), g.onClick();
                       }
                   })
               ]

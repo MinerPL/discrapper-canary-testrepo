@@ -1,15 +1,9 @@
 n.d(t, {
-    Ii: function () {
-        return s;
-    },
-    pY: function () {
-        return i;
-    },
-    sp: function () {
-        return a;
-    }
+    Ii: () => a,
+    pY: () => i,
+    sp: () => o
 });
 var r = n(243814);
 let i = 'https://crunchyroll.com',
-    a = '981509069309354054',
-    s = [r.x.ACTIVITIES_WRITE, r.x.EMAIL, r.x.IDENTIFY];
+    o = '981509069309354054',
+    a = [r.x.ACTIVITIES_WRITE, r.x.EMAIL, r.x.IDENTIFY];

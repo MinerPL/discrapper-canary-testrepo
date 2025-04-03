@@ -1,10 +1,7 @@
 n.d(t, {
-    N4: function () {
-        return d;
-    },
-    n: function () {
-        return o;
-    }
+    N4: () => d,
+    ZP: () => u,
+    n: () => o
 });
 var i = n(799761),
     a = {
@@ -43,7 +40,7 @@ function d(e) {
         return a[e];
     });
 }
-var u = {
+let u = {
     ordinalNumber: function (e, t) {
         return d(Number(e));
     },
@@ -152,4 +149,3 @@ var u = {
         defaultFormattingWidth: 'wide'
     })
 };
-t.ZP = u;

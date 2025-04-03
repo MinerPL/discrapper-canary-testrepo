@@ -1,9 +1,22 @@
-n(47120);
+n.d(t, { Z: () => c }), n(47120);
 var r = n(213919),
     i = n(570140),
-    a = n(317770),
-    s = n(358085);
-class o extends a.Z {
+    o = n(317770),
+    a = n(358085);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class l extends o.Z {
     _initialize() {
         i.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen);
     }
@@ -11,21 +24,10 @@ class o extends a.Z {
         i.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen);
     }
     constructor(...e) {
-        var t, n, i;
         super(...e),
-            (t = this),
-            (n = 'handleConnectionOpen'),
-            (i = (e) => {
-                ((0, s.isWindows)() || (0, s.isMac)()) && r.encryptAndStoreTokens();
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = i);
+            s(this, 'handleConnectionOpen', (e) => {
+                ((0, a.isWindows)() || (0, a.isMac)()) && r.encryptAndStoreTokens();
+            });
     }
 }
-t.Z = new o();
+let c = new l();

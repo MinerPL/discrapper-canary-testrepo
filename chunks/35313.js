@@ -1,18 +1,14 @@
-t.d(n, {
-    f: function () {
-        return o;
-    }
-});
-var a = t(748780),
-    r = t(442837),
-    i = t(481060),
-    s = t(607070);
-function o() {
-    let e = (0, r.e7)([s.Z], () => s.Z.useReducedMotion);
-    return (0, i.useSpring)(
+n.d(t, { f: () => l });
+var r = n(748780),
+    i = n(442837),
+    s = n(481060),
+    a = n(607070);
+function l() {
+    let e = (0, i.e7)([a.Z], () => a.Z.useReducedMotion);
+    return (0, s.q_F)(
         {
             from: {
-                opacity: e ? 1 : 0,
+                opacity: +!!e,
                 transform: e ? 'scale(1)' : 'scale(1.2)'
             },
             to: {
@@ -20,8 +16,8 @@ function o() {
                 transform: 'scale(1)'
             },
             config: {
-                easing: a.Z.Easing.quad,
-                duration: e ? 0 : 200,
+                easing: r.Z.Easing.quad,
+                duration: 200 * !e,
                 clamp: !0
             }
         },

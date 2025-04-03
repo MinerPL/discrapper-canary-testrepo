@@ -1,81 +1,150 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return C;
-        }
-    });
-var r = t(735250);
-t(470079);
-var a = t(100527),
-    o = t(906732),
-    i = t(987209),
-    s = t(598),
-    l = t(409813),
-    c = t(791785),
-    d = t(276442),
-    u = t(793541),
-    f = t(380898),
-    h = t(710094),
-    p = t(865921),
-    g = t(853872),
-    b = t(806984),
-    x = t(464797),
-    m = t(946211),
-    _ = t(231338);
-let v = [
+r.d(t, { default: () => S });
+var n = r(200651);
+r(192379);
+var o = r(100527),
+    c = r(906732),
+    l = r(987209),
+    i = r(563132),
+    u = r(409813),
+    a = r(107998),
+    s = r(791785),
+    f = r(276442),
+    b = r(793541),
+    d = r(380898),
+    p = r(710094),
+    O = r(865921),
+    y = r(853872),
+    j = r(806984),
+    g = r(464797),
+    P = r(946211),
+    h = r(231338);
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+let x = [
     {
         key: null,
-        renderStep: (e) => (0, r.jsx)(p.v, { ...e })
+        renderStep: (e) => (0, n.jsx)(O.v, v({}, e))
     },
     {
-        key: l.h8.ADD_PAYMENT_STEPS,
+        key: u.h8.ADD_PAYMENT_STEPS,
         renderStep: (e) =>
-            (0, r.jsx)(d.J, {
-                ...e,
-                onReturn: () => {
-                    0 === Object.keys(g.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(l.h8.REVIEW, { trackedFromStep: l.h8.ADD_PAYMENT_STEPS });
-                }
-            })
+            (0, n.jsx)(
+                f.J,
+                m(v({}, e), {
+                    onReturn: () => {
+                        0 === Object.keys(y.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(u.h8.REVIEW, { trackedFromStep: u.h8.ADD_PAYMENT_STEPS });
+                    }
+                })
+            )
     },
     {
-        key: l.h8.AWAITING_PURCHASE_TOKEN_AUTH,
-        renderStep: () => (0, r.jsx)(f.Z, {})
+        key: u.h8.AWAITING_PURCHASE_TOKEN_AUTH,
+        renderStep: () => (0, n.jsx)(d.Z, {})
     },
     {
-        key: l.h8.AWAITING_AUTHENTICATION,
-        renderStep: () => (0, r.jsx)(u.Z, {})
+        key: u.h8.AWAITING_AUTHENTICATION,
+        renderStep: () => (0, n.jsx)(b.Z, {})
     },
     {
-        key: l.h8.REVIEW,
-        renderStep: (e) => (0, r.jsx)(h.l, { ...e })
+        key: u.h8.REVIEW,
+        renderStep: (e) => (0, n.jsx)(p.l, v({}, e))
     },
     {
-        key: l.h8.CONFIRM,
-        renderStep: (e) => (0, r.jsx)(b.Z, { ...e })
+        key: u.h8.CONFIRM,
+        renderStep: (e) => (0, n.jsx)(j.Z, v({}, e))
     }
 ];
-function C(e) {
-    let { guildProductContext: n, sourceAnalyticsLocations: t, applicationId: l, ...d } = e,
-        { analyticsLocations: u } = (0, o.ZP)(t, a.Z.GUILD_PRODUCT_PAYMENT_MODAL);
-    return (0, r.jsx)(x.R, {
-        ...n,
-        children: (0, r.jsx)(o.Gt, {
-            value: u,
-            children: (0, r.jsx)(s.PaymentContextProvider, {
-                stepConfigs: v,
-                applicationId: l,
-                skuIDs: [d.skuId],
-                activeSubscription: null,
-                purchaseType: _.GZ.ONE_TIME,
-                children: (0, r.jsx)(i.KB, {
-                    children: (0, r.jsx)(c.PaymentModal, {
-                        initialPlanId: null,
-                        analyticsLocations: u,
-                        renderHeader: m.L,
-                        ...d
+function S(e) {
+    var { guildProductContext: t, sourceAnalyticsLocations: r, applicationId: u } = e,
+        f = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        o = {},
+                        c = Object.keys(e);
+                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var c = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < c.length; n++) (r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+            }
+            return o;
+        })(e, ['guildProductContext', 'sourceAnalyticsLocations', 'applicationId']);
+    let { analyticsLocations: b } = (0, c.ZP)(r, o.Z.GUILD_PRODUCT_PAYMENT_MODAL);
+    return (0, n.jsx)(
+        g.R,
+        m(v({}, t), {
+            children: (0, n.jsx)(c.Gt, {
+                value: b,
+                children: (0, n.jsx)(i.PaymentContextProvider, {
+                    stepConfigs: x,
+                    applicationId: u,
+                    skuIDs: [f.skuId],
+                    activeSubscription: null,
+                    purchaseType: h.GZ.ONE_TIME,
+                    children: (0, n.jsx)(a.c1, {
+                        children: (0, n.jsx)(l.KB, {
+                            children: (0, n.jsx)(
+                                s.PaymentModal,
+                                v(
+                                    {
+                                        initialPlanId: null,
+                                        analyticsLocations: b,
+                                        renderHeader: P.L
+                                    },
+                                    f
+                                )
+                            )
+                        })
                     })
                 })
             })
         })
-    });
+    );
 }

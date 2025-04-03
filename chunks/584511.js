@@ -1,14 +1,13 @@
+n.d(t, { Z: () => h });
 var r,
-    i,
-    a,
-    s = n(735250),
-    o = n(470079),
-    l = n(120356),
-    u = n.n(l),
-    c = n(481060),
-    d = n(686546),
-    _ = n(721311);
-function E(e, t, n) {
+    i = n(200651),
+    o = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    l = n(481060),
+    c = n(686546),
+    u = n(138821);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,48 +20,75 @@ function E(e, t, n) {
         e
     );
 }
-((r = i || (i = {}))[(r.OUTGOING = 0)] = 'OUTGOING'), (r[(r.INCOMING = 1)] = 'INCOMING');
-class f extends (a = o.PureComponent) {
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+var _ = (function (e) {
+    return (e[(e.OUTGOING = 0)] = 'OUTGOING'), (e[(e.INCOMING = 1)] = 'INCOMING'), e;
+})(_ || {});
+class p extends (r = o.PureComponent) {
     renderStatus() {
         let { muted: e, deafen: t } = this.props,
-            n = t ? c.HeadphonesSlashIcon : c.MicrophoneSlashIcon;
-        return e || t ? (0, s.jsx)(n, { className: _.status }, 'status') : null;
+            n = t ? l.wE8 : l.nRN;
+        return e || t
+            ? (0, i.jsx)(
+                  n,
+                  {
+                      className: u.status,
+                      color: l.TVs.colors.WHITE.css
+                  },
+                  'status'
+              )
+            : null;
     }
     renderBorder() {
         let { speaking: e } = this.props;
-        return (0, s.jsx)('div', { className: u()(_.border, { [_.speaking]: e }) }, 'border');
+        return (0, i.jsx)('div', { className: s()(u.border, { [u.speaking]: e }) }, 'border');
     }
     renderMask() {
         let { muted: e, speaking: t, deafen: n } = this.props;
         return e && t
-            ? (0, s.jsxs)(s.Fragment, {
+            ? (0, i.jsxs)(i.Fragment, {
                   children: [this.renderBorder(), this.renderStatus()]
               })
             : e || n
-              ? (0, s.jsx)(s.Fragment, { children: this.renderStatus() })
-              : (0, s.jsx)(s.Fragment, { children: this.renderBorder() });
+              ? (0, i.jsx)(i.Fragment, { children: this.renderStatus() })
+              : (0, i.jsx)(i.Fragment, { children: this.renderBorder() });
     }
     renderVoiceCallAvatar() {
-        let { src: e, disabled: t, ringing: n, ringingType: r, avatarClassName: i, muted: a, deafen: o, size: l, renderIcon: E } = this.props,
-            f = (0, c.getAvatarSize)(l),
-            h = (0, s.jsx)('img', {
+        let { src: e, disabled: t, ringing: n, ringingType: r, avatarClassName: o, muted: a, deafen: d, size: f, renderIcon: _ } = this.props,
+            p = (0, l.pxk)(f),
+            h = (0, i.jsx)('img', {
                 src: e,
                 alt: ' ',
-                className: u()(_.voiceAvatar, i, { [_.ringingOutgoing]: n && 0 === r })
+                className: s()(u.voiceAvatar, o, { [u.ringingOutgoing]: n && 0 === r })
             });
         if (t) return h;
-        let p = d.QS.AVATAR_DEFAULT;
+        let m = c.QS.AVATAR_DEFAULT;
         return (
-            null != E ? (p = l === c.AvatarSizes.SIZE_32 ? d.QS.AVATAR_CALL_ICON_32 : d.QS.AVATAR_CALL_ICON) : (a || o) && (p = d.QS.AVATAR_VOICE_CALL_80),
-            (0, s.jsxs)('div', {
-                className: _.callAvatarMaskContainer,
+            null != _ ? (m = f === l.EFr.SIZE_32 ? c.QS.AVATAR_CALL_ICON_32 : c.QS.AVATAR_CALL_ICON) : (a || d) && (m = c.QS.AVATAR_VOICE_CALL_80),
+            (0, i.jsxs)('div', {
+                className: u.callAvatarMaskContainer,
                 children: [
-                    (0, s.jsxs)(d.ZP, {
-                        className: _.callAvatarMask,
-                        width: f,
-                        height: f,
-                        mask: p,
-                        children: [null == E ? void 0 : E(), h]
+                    (0, i.jsxs)(c.ZP, {
+                        className: u.callAvatarMask,
+                        width: p,
+                        height: p,
+                        mask: m,
+                        children: [null == _ ? void 0 : _(), h]
                     }),
                     this.renderMask()
                 ]
@@ -70,32 +96,34 @@ class f extends (a = o.PureComponent) {
         );
     }
     render() {
-        let { size: e, onClick: t, style: n, onContextMenu: r, className: i, ringingType: a, ringing: o } = this.props,
-            l = u()(
-                _.wrapper,
+        let { size: e, onClick: t, style: n, onContextMenu: r, className: o, ringingType: a, ringing: c } = this.props,
+            d = s()(
+                u.wrapper,
                 {
-                    [_.clickable]: null != t,
-                    [_.ringingOutgoing]: o && 0 === a,
-                    [_.ringingIncoming]: o && 1 === a
+                    [u.clickable]: null != t,
+                    [u.ringingOutgoing]: c && 0 === a,
+                    [u.ringingIncoming]: c && 1 === a
                 },
-                i
+                o
             ),
-            d = (0, c.getAvatarSize)(e),
-            E = {
-                height: d,
-                width: d,
-                ...n
-            };
-        return (0, s.jsx)('div', {
-            style: E,
+            _ = (0, l.pxk)(e),
+            p = f(
+                {
+                    height: _,
+                    width: _
+                },
+                n
+            );
+        return (0, i.jsx)('div', {
+            style: p,
             onContextMenu: r,
-            className: l,
+            className: d,
             children: this.renderVoiceCallAvatar()
         });
     }
 }
-E(f, 'defaultProps', {
-    size: c.AvatarSizes.SIZE_80,
+d(p, 'defaultProps', {
+    size: l.EFr.SIZE_80,
     ringingType: 0,
     speaking: !1,
     soundsharing: !1,
@@ -107,5 +135,5 @@ E(f, 'defaultProps', {
     disabled: !1,
     paused: !1
 }),
-    E(f, 'RingingType', i),
-    (t.Z = f);
+    d(p, 'RingingType', _);
+let h = p;

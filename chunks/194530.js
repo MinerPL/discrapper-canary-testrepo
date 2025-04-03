@@ -1,133 +1,127 @@
-t.r(s),
-    t.d(s, {
-        default: function () {
-            return E;
-        }
-    }),
-    t(47120);
-var o = t(735250),
-    n = t(470079),
-    l = t(442837),
-    a = t(481060),
-    r = t(809206),
-    i = t(112831),
-    u = t(25990),
-    d = t(155433),
-    c = t(981631),
-    _ = t(689938),
-    S = t(312254);
-function E(e) {
-    var s, t, E, R;
-    let { transitionState: M, onSuccess: T, onClose: A, requirementsUpdated: h, noSkip: m = !1 } = e,
-        [v, C] = n.useState(''),
-        [N, p] = n.useState(''),
-        [P, x] = n.useState(''),
-        [I, Z] = n.useState(null),
-        [f, D] = n.useState(null),
-        O = (0, l.e7)([u.Z], () => u.Z.getErrors()),
-        w = (0, l.e7)([u.Z], () => u.Z.getFormState()),
-        b = n.useRef(null);
-    async function g(e) {
-        e.preventDefault(), (0, r.b9)();
-        let s = !1;
-        if (('' === N ? (Z(_.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), (s = !0)) : Z(null), N !== P ? (D(_.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), (s = !0)) : D(null), s)) return;
-        let t = await (0, r.Mn)({
-            password: v,
-            newPassword: N
+n.d(t, { default: () => p }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(809206),
+    o = n(118012),
+    c = n(25990),
+    d = n(155433),
+    u = n(981631),
+    m = n(388032),
+    g = n(132709);
+function p(e) {
+    var t, n, p, h;
+    let { transitionState: f, onSuccess: b, onClose: N, requirementsUpdated: x, noSkip: _ = !1 } = e,
+        [E, j] = i.useState(''),
+        [O, C] = i.useState(''),
+        [S, v] = i.useState(''),
+        [T, I] = i.useState(null),
+        [y, A] = i.useState(null),
+        P = (0, s.e7)([c.Z], () => c.Z.getErrors()),
+        R = (0, s.e7)([c.Z], () => c.Z.getFormState()),
+        D = i.useRef(null);
+    async function Z(e) {
+        e.preventDefault(), (0, l.b9)();
+        let t = !1;
+        if (('' === O ? (I(m.NW.string(m.t['/7/oPT'])), (t = !0)) : I(null), O !== S ? (A(m.NW.string(m.t.IEKYZ2)), (t = !0)) : A(null), t)) return;
+        let n = await (0, l.Mn)({
+            password: E,
+            newPassword: O
         });
-        if (null == t ? void 0 : t.ok) T();
+        if (null == n ? void 0 : n.ok) b();
         else {
-            var o;
-            (null == t ? void 0 : null === (o = t.body) || void 0 === o ? void 0 : o.username) != null && (0, d.P)();
+            var r;
+            (null == n || null == (r = n.body) ? void 0 : r.username) != null && (0, d.P)();
         }
     }
     return (
-        n.useEffect(() => {
-            if (M === a.ModalTransitionState.ENTERED) {
+        i.useEffect(() => {
+            if (f === a.Dvm.ENTERED) {
                 var e;
-                null === (e = b.current) || void 0 === e || e.focus();
+                null == (e = D.current) || e.focus();
             }
-        }, [M]),
-        (0, o.jsxs)(a.ModalRoot, {
-            transitionState: M,
+        }, [f]),
+        (0, r.jsxs)(a.Y0X, {
+            transitionState: f,
             children: [
-                (0, o.jsxs)(a.ModalHeader, {
+                (0, r.jsxs)(a.xBx, {
                     separator: !1,
-                    className: S.header,
+                    className: g.header,
                     children: [
-                        (0, o.jsx)(i.Z, {
-                            color: i.Z.Colors.HEADER_PRIMARY,
-                            size: i.Z.Sizes.SIZE_24,
-                            className: S.title,
-                            children: _.Z.Messages.UPDATE_PASSWORD
+                        (0, r.jsx)(o.Z, {
+                            color: o.Z.Colors.HEADER_PRIMARY,
+                            size: o.Z.Sizes.SIZE_24,
+                            className: g.title,
+                            children: m.NW.string(m.t['geta7+'])
                         }),
-                        (0, o.jsx)(a.Text, {
+                        (0, r.jsx)(a.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            className: S.subtitle,
-                            children: h ? _.Z.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
+                            className: g.subtitle,
+                            children: x ? m.NW.string(m.t['37iHbW']) : m.NW.string(m.t.iOurYm)
                         }),
-                        !0 !== m &&
-                            (0, o.jsx)(a.ModalCloseButton, {
-                                onClick: A,
-                                className: S.modalCloseButton
+                        !0 !== _ &&
+                            (0, r.jsx)(a.olH, {
+                                onClick: N,
+                                className: g.modalCloseButton
                             })
                     ]
                 }),
-                (0, o.jsxs)('form', {
-                    onSubmit: g,
+                (0, r.jsxs)('form', {
+                    onSubmit: Z,
                     children: [
-                        (0, o.jsxs)(a.ModalContent, {
-                            className: S.content,
+                        (0, r.jsxs)(a.hzk, {
+                            className: g.content,
                             children: [
-                                (0, o.jsx)(a.FormItem, {
-                                    title: _.Z.Messages.FORM_LABEL_CURRENT_PASSWORD,
-                                    error: null == O ? void 0 : null === (s = O.password) || void 0 === s ? void 0 : s[0],
-                                    children: (0, o.jsx)(a.TextInput, {
+                                (0, r.jsx)(a.xJW, {
+                                    title: m.NW.string(m.t.WBqMRU),
+                                    error: null == P || null == (t = P.password) ? void 0 : t[0],
+                                    children: (0, r.jsx)(a.oil, {
                                         type: 'password',
-                                        value: v,
-                                        onChange: C,
-                                        inputRef: b
+                                        value: E,
+                                        onChange: j,
+                                        inputRef: D
                                     })
                                 }),
-                                (0, o.jsx)(a.FormItem, {
-                                    className: S.newPassword,
-                                    title: _.Z.Messages.FORM_LABEL_NEW_PASSWORD,
-                                    error: null !== (R = null !== (E = null == O ? void 0 : null === (t = O.new_password) || void 0 === t ? void 0 : t[0]) && void 0 !== E ? E : I) && void 0 !== R ? R : void 0,
-                                    children: (0, o.jsx)(a.TextInput, {
+                                (0, r.jsx)(a.xJW, {
+                                    className: g.newPassword,
+                                    title: m.NW.string(m.t['8dM4FB']),
+                                    error: null != (h = null != (p = null == P || null == (n = P.new_password) ? void 0 : n[0]) ? p : T) ? h : void 0,
+                                    children: (0, r.jsx)(a.oil, {
                                         type: 'password',
-                                        value: N,
-                                        onChange: p
+                                        value: O,
+                                        onChange: C
                                     })
                                 }),
-                                (0, o.jsx)(a.FormItem, {
-                                    className: S.newPassword,
-                                    title: _.Z.Messages.FORM_LABEL_CONFIRM_NEW_PASSWORD,
-                                    error: null != f ? f : void 0,
-                                    children: (0, o.jsx)(a.TextInput, {
+                                (0, r.jsx)(a.xJW, {
+                                    className: g.newPassword,
+                                    title: m.NW.string(m.t.iQG2KC),
+                                    error: null != y ? y : void 0,
+                                    children: (0, r.jsx)(a.oil, {
                                         type: 'password',
-                                        value: P,
-                                        onChange: x
+                                        value: S,
+                                        onChange: v
                                     })
                                 })
                             ]
                         }),
-                        (0, o.jsxs)(a.ModalFooter, {
+                        (0, r.jsxs)(a.mzw, {
                             children: [
-                                (0, o.jsx)(a.Button, {
+                                (0, r.jsx)(a.zxk, {
                                     type: 'submit',
-                                    color: a.Button.Colors.BRAND,
-                                    size: a.Button.Sizes.MEDIUM,
-                                    submitting: w === c.QZA.SUBMITTING,
-                                    children: _.Z.Messages.DONE
+                                    color: a.zxk.Colors.BRAND,
+                                    size: a.zxk.Sizes.MEDIUM,
+                                    submitting: R === u.QZA.SUBMITTING,
+                                    children: m.NW.string(m.t.i4jeWV)
                                 }),
-                                !0 !== m &&
-                                    (0, o.jsx)(a.Button, {
-                                        className: S.cancel,
-                                        look: a.Button.Looks.LINK,
-                                        color: a.Button.Colors.PRIMARY,
-                                        onClick: A,
-                                        children: _.Z.Messages.CANCEL
+                                !0 !== _ &&
+                                    (0, r.jsx)(a.zxk, {
+                                        className: g.cancel,
+                                        look: a.zxk.Looks.LINK,
+                                        color: a.zxk.Colors.PRIMARY,
+                                        onClick: N,
+                                        children: m.NW.string(m.t['ETE/oK'])
                                     })
                             ]
                         })

@@ -1,52 +1,70 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(392711),
-    o = n(772848),
+n.d(t, { Z: () => g }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(392711),
+    s = n(772848),
     c = n(442837),
     u = n(570140),
     d = n(596454),
-    h = n(607070),
-    m = n(377107);
-let p = [m.emoji1, m.emoji2, m.emoji3, m.emoji4],
-    _ = a.memo(function (e) {
+    p = n(607070),
+    h = n(301222);
+let f = [h.emoji1, h.emoji2, h.emoji3, h.emoji4],
+    m = i.memo(function (e) {
         var t;
-        let { emoji: n, onAnimationEnd: s } = e,
-            o = (0, r.sample)(p),
-            c = a.useCallback(() => {
-                s(n.key);
-            }, [n.key, s]);
-        return (0, i.jsx)('div', {
-            className: l()(m.emoji, o),
+        let { emoji: n, onAnimationEnd: l } = e,
+            s = (0, a.sample)(f),
+            c = i.useCallback(() => {
+                l(n.key);
+            }, [n.key, l]);
+        return (0, r.jsx)('div', {
+            className: o()(h.emoji, s),
             onAnimationEnd: c,
-            children: (0, i.jsx)(d.Z, {
+            children: (0, r.jsx)(d.Z, {
                 emojiId: n.id,
                 emojiName: n.name,
-                animated: null !== (t = n.animated) && void 0 !== t && t
+                animated: null != (t = n.animated) && t
             })
         });
     });
-function f(e) {
+function g(e) {
     let { channelId: t, callHeight: n } = e,
-        s = (0, c.e7)([h.Z], () => h.Z.useReducedMotion),
-        [l, r] = a.useState([]);
-    a.useEffect(() => {
+        l = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
+        [o, a] = i.useState([]);
+    i.useEffect(() => {
         function e(e) {
-            let { channelId: n, emoji: i } = e;
-            if (n === t && !s && null != i)
-                r((e) => [
+            let { channelId: n, emoji: r } = e;
+            n !== t ||
+                l ||
+                null == r ||
+                a((e) => [
                     ...e,
-                    {
-                        key: (0, o.Z)(),
-                        ...i
-                    }
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({ key: (0, s.Z)() }, r)
                 ]);
         }
         return (
@@ -55,19 +73,22 @@ function f(e) {
                 u.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, s]);
-    let d = a.useCallback((e) => {
-        r((t) => t.filter((t) => t.key !== e));
+    }, [t, l]);
+    let d = i.useCallback((e) => {
+        a((t) => t.filter((t) => t.key !== e));
     }, []);
-    return s
+    return l
         ? null
-        : (0, i.jsx)('div', {
-              className: m.container,
-              style: { top: n - 16 },
+        : (0, r.jsx)('div', {
+              className: h.container,
+              style: {
+                  top: n - 50,
+                  left: '52%'
+              },
               'aria-hidden': !0,
-              children: l.map((e) =>
-                  (0, i.jsx)(
-                      _,
+              children: o.map((e) =>
+                  (0, r.jsx)(
+                      m,
                       {
                           emoji: e,
                           onAnimationEnd: d

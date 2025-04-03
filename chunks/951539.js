@@ -1,49 +1,42 @@
-a.d(n, {
-    ZP: function () {
-        return b;
-    },
-    so: function () {
-        return h;
-    },
-    wg: function () {
-        return p;
-    }
+t.d(n, {
+    ZP: () => g,
+    so: () => m,
+    wg: () => b
 }),
-    a(47120);
-var t = a(442837),
-    c = a(159300),
-    i = a(427679),
-    o = a(592125),
-    r = a(984933),
-    l = a(430824),
-    d = a(496675),
-    s = a(700785),
-    u = a(924301),
-    _ = a(765305),
-    f = a(981631);
-function p(e) {
-    var n;
-    let [a] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.Z];
-    let { entityType: t, channelId: c } =
-        'entity_type' in (n = e)
-            ? {
-                  entityType: n.entity_type,
-                  channelId: n.channel_id
-              }
-            : n;
-    if (t === _.WX.EXTERNAL) return !0;
-    let i = a.getChannel(c);
-    return null != i && s.Uu(f.Plq.VIEW_CHANNEL, i);
-}
-function h(e) {
-    let [n, a, t, s] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.ZP, o.Z, l.Z, i.Z];
-    if ((0, u.Z2)(e)) return !1;
-    let { guild_id: f, channel_id: h } = e,
-        b = e.entity_type === _.WX.EXTERNAL ? n.getDefaultChannel(e.guild_id) : a.getChannel(h),
-        m = t.getGuild(f),
-        v = s.getStageInstanceByChannel(h);
-    return !!(0, c.b)(d.Z, m, b, v) && null != b && p(e, [a]);
-}
+    t(47120);
+var i = t(442837),
+    a = t(159300),
+    r = t(427679),
+    o = t(592125),
+    d = t(984933),
+    _ = t(430824),
+    l = t(496675),
+    c = t(700785),
+    s = t(924301),
+    p = t(765305),
+    u = t(981631);
 function b(e) {
-    return (0, t.e7)([r.ZP, o.Z, l.Z, i.Z], () => h(e, [r.ZP, o.Z, l.Z, i.Z]), [e]);
+    let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.Z],
+        { entityType: t, channelId: i } =
+            'entity_type' in e
+                ? {
+                      entityType: e.entity_type,
+                      channelId: e.channel_id
+                  }
+                : e;
+    if (t === p.WX.EXTERNAL) return !0;
+    let a = n.getChannel(i);
+    return null != a && c.Uu(u.Plq.VIEW_CHANNEL, a);
+}
+function m(e) {
+    let [n, t, i, c] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [d.ZP, o.Z, _.Z, r.Z];
+    if ((0, s.Z2)(e)) return !1;
+    let { guild_id: u, channel_id: m } = e,
+        g = e.entity_type === p.WX.EXTERNAL ? n.getDefaultChannel(e.guild_id) : t.getChannel(m),
+        I = i.getGuild(u),
+        N = c.getStageInstanceByChannel(m);
+    return !!(0, a.b)(l.Z, I, g, N) && null != g && b(e, [t]);
+}
+function g(e) {
+    return (0, i.e7)([d.ZP, o.Z, _.Z, r.Z], () => m(e, [d.ZP, o.Z, _.Z, r.Z]), [e]);
 }

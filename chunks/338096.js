@@ -1,10 +1,6 @@
 n.d(t, {
-    G: function () {
-        return r;
-    },
-    k: function () {
-        return i;
-    }
+    G: () => r,
+    k: () => i
 });
 let r = 'dmSettingsUpsellLastShown',
     i = 604800000;

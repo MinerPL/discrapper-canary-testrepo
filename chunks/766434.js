@@ -1,49 +1,43 @@
 n.d(t, {
-    Br: function () {
-        return i;
-    },
-    Uj: function () {
-        return r;
-    },
-    j0: function () {
-        return a;
-    }
+    Br: () => s,
+    Uj: () => a,
+    j0: () => i
 }),
     n(47120);
-var s = n(198139);
-let a = (e) => {
+var r = n(198139);
+let i = (e) => {
     var t, n;
-    let s = Object.values(null !== (n = null == e ? void 0 : e.ppgs) && void 0 !== n ? n : {})[0],
-        a = null == s ? void 0 : s.status,
-        i = null == s ? void 0 : null === (t = s.payout) || void 0 === t ? void 0 : t.status,
-        r = null == s ? void 0 : s.deferral_reasons;
+    let r = Object.values(null != (n = null == e ? void 0 : e.ppgs) ? n : {})[0],
+        i = null == r ? void 0 : r.status,
+        s = null == r || null == (t = r.payout) ? void 0 : t.status;
     return {
-        ppgStatus: a,
-        payoutStatus: i,
-        ppgDeferralReasons: r,
-        periodEndDate: null == s ? void 0 : s.period_ending_at
+        ppgStatus: i,
+        payoutStatus: s,
+        ppgDeferralReasons: null == r ? void 0 : r.deferral_reasons,
+        periodEndDate: null == r ? void 0 : r.period_ending_at
     };
 };
-function i(e) {
-    let t, n;
-    let { ppgStatus: i } = a(e[0]);
+function s(e) {
+    let t,
+        n,
+        { ppgStatus: s } = i(e[0]);
     return (
-        i === s.x_.OPEN ? ([t, ...n] = e) : (n = e),
+        s === r.x_.OPEN ? ([t, ...n] = e) : (n = e),
         {
             currentPeriod: t,
             previousPeriods: n
         }
     );
 }
-function r(e, t) {
-    let n, s, a, i;
+function a(e, t) {
+    let n, r, i, s;
     return (
-        null != e && ((n = e.amount), (a = e.paymentsCount), null != t && ((s = e.amount / t.amount - 1), (i = e.paymentsCount - t.paymentsCount))),
+        null != e && ((n = e.amount), (i = e.paymentsCount), null != t && ((r = e.amount / t.amount - 1), (s = e.paymentsCount - t.paymentsCount))),
         {
             revenue: n,
-            revenuePctChange: s,
-            paymentsCount: a,
-            paymentsCountChange: i
+            revenuePctChange: r,
+            paymentsCount: i,
+            paymentsCountChange: s
         }
     );
 }

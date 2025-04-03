@@ -1,15 +1,10 @@
 let r;
 n.d(t, {
-    Rp: function () {
-        return i.Rp;
-    },
-    _p: function () {
-        return s;
-    },
-    w4: function () {
-        return a;
-    }
+    Rp: () => i.Rp,
+    _p: () => a,
+    w4: () => o
 });
 var i = n(840498);
-let a = (r = n(842091).Z).reactParserFor,
-    s = r.astParserFor;
+n(411226);
+let o = (r = n(842091).Z).reactParserFor,
+    a = r.astParserFor;

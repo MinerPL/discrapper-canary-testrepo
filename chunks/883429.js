@@ -1,26 +1,33 @@
+n.d(t, { Z: () => p });
 var r = n(544891),
     i = n(570140),
-    a = n(668781),
-    s = n(346479),
-    o = n(929991),
+    o = n(668781),
+    a = n(346479),
+    s = n(929991),
     l = n(480739),
-    u = n(985518),
-    c = n(228392),
+    c = n(985518),
+    u = n(228392),
     d = n(981631),
-    _ = n(689938);
-async function E(e, t, n) {
+    f = n(388032);
+async function _(e, t, n) {
     try {
         return await e();
     } catch (e) {
-        var r;
-        (null === (r = e.body) || void 0 === r ? void 0 : r.code) === d.evJ.NON_MODERATED_TAG_REQUIRED &&
-            a.Z.show({
-                title: t,
-                body: n
-            });
+        var r, i, a;
+        (null == (r = e.body) ? void 0 : r.code) === d.evJ.NON_MODERATED_TAG_REQUIRED
+            ? o.Z.show({
+                  title: t,
+                  body: n
+              })
+            : (null == (i = e.body) ? void 0 : i.code) === d.evJ.INVALID_FORM_BODY &&
+              (null == (a = e.body) ? void 0 : a.errors.emoji) &&
+              o.Z.show({
+                  title: f.NW.string(f.t.T8sBLC),
+                  body: f.NW.string(f.t.aHt1BQ)
+              });
     }
 }
-t.Z = {
+let p = {
     resort(e) {
         i.Z.dispatch({
             type: 'RESORT_THREADS',
@@ -35,7 +42,8 @@ t.Z = {
                 emoji_id: e.emojiId,
                 emoji_name: null != e.emojiId ? void 0 : e.emojiName,
                 moderated: e.moderated
-            }
+            },
+            rejectWithError: !1
         }),
     updateForumTag(e, t) {
         let n = r.tn.put({
@@ -45,19 +53,24 @@ t.Z = {
                 emoji_id: e.emojiId,
                 emoji_name: null == e.emojiId ? e.emojiName : void 0,
                 moderated: e.moderated
-            }
+            },
+            rejectWithError: !1
         });
-        E(() => n, _.Z.Messages.FORUM_TAG_EDIT_ERROR, _.Z.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED);
+        _(() => n, f.NW.string(f.t.T8sBLC), f.NW.string(f.t.imcb5u));
     },
     deleteForumTag(e, t) {
-        let n = r.tn.del({ url: d.ANM.FORUM_TAG(e, t) });
-        E(() => n, _.Z.Messages.FORUM_TAG_REMOVE_ERROR, _.Z.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED);
+        let n = r.tn.del({
+            url: d.ANM.FORUM_TAG(e, t),
+            rejectWithError: !1
+        });
+        _(() => n, f.NW.string(f.t['0ZkNDQ']), f.NW.string(f.t.imcb5u));
     },
     updateForumPostTags: async (e, t) => (
-        await s.Z.unarchiveThreadIfNecessary(e),
+        await a.Z.unarchiveThreadIfNecessary(e),
         r.tn.patch({
             url: d.ANM.CHANNEL(e),
-            body: { applied_tags: t }
+            body: { applied_tags: t },
+            rejectWithError: !1
         })
     ),
     hideAdminOnboarding(e, t) {
@@ -68,14 +81,14 @@ t.Z = {
         });
     },
     markPostAsSeen(e, t, n) {
-        (0, o.a8)((0, u.UP)(e), t, n);
+        (0, s.a8)((0, c.UP)(e), t, n);
     },
     markPostAsUnseen(e, t, n) {
-        (0, o.FL)((0, u.UP)(e), t, n);
+        (0, s.FL)((0, c.UP)(e), t, n);
     },
     flushSeenItems(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.cs.IMMEDIATE_WITH_COOLDOWN;
-        (0, o.rS)((0, u.UP)(e), t);
+        (0, s.rS)((0, c.UP)(e), t);
     },
     async searchForumPosts(e, t, n, r) {
         i.Z.dispatch({
@@ -83,18 +96,18 @@ t.Z = {
             channelId: t
         });
         try {
-            let a = await s.Z.searchThreads(e, t, n, r);
-            (0, c.Js)({
+            let o = await a.Z.searchThreads(e, t, n, r);
+            (0, u.Js)({
                 guildId: e,
                 channelId: t,
-                numSearchResults: a.length
+                numSearchResults: o.length
             }),
                 i.Z.dispatch({
                     type: 'FORUM_SEARCH_SUCCESS',
                     channelId: t,
-                    threadIds: a
+                    threadIds: o
                 });
-        } catch {
+        } catch (e) {
             i.Z.dispatch({
                 type: 'FORUM_SEARCH_FAILURE',
                 channelId: t

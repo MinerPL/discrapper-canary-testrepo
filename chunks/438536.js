@@ -1,25 +1,21 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(442837),
-    s = n(481060),
-    r = n(569471),
-    l = n(346479),
-    o = n(689938);
-function c(e, t) {
-    return (0, a.e7)([r.Z], () => r.Z.hasJoined(e.id))
-        ? (0, i.jsx)(s.MenuItem, {
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    l = n(569471),
+    o = n(346479),
+    d = n(388032);
+function u(e, t) {
+    return (0, r.e7)([l.Z], () => l.Z.hasJoined(e.id))
+        ? (0, i.jsx)(a.sNh, {
               id: 'leave-thread',
-              label: e.isForumPost() ? o.Z.Messages.LEAVE_FORUM_POST : o.Z.Messages.LEAVE_THREAD,
-              action: () => l.Z.leaveThread(e, t)
+              label: e.isForumPost() ? d.NW.string(d.t['2LsZdX']) : d.NW.string(d.t['fa/84u']),
+              action: () => o.Z.leaveThread(e, t)
           })
-        : (0, i.jsx)(s.MenuItem, {
+        : (0, i.jsx)(a.sNh, {
               id: 'join-thread',
-              label: e.isForumPost() ? o.Z.Messages.JOIN_FORUM_POST : o.Z.Messages.JOIN_THREAD,
-              action: () => l.Z.joinThread(e, t)
+              label: e.isForumPost() ? d.NW.string(d.t.ihLPiI) : d.NW.string(d.t['10kukZ']),
+              action: () => o.Z.joinThread(e, t)
           });
 }

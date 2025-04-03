@@ -1,18 +1,22 @@
-var o = s(735250);
-s(470079);
+s.d(t, { Z: () => a });
+var r = s(200651);
+s(192379);
 var n = s(703656),
-    r = s(153069),
-    a = s(576920);
-t.Z = (e) => {
+    o = s(153069),
+    i = s(577658);
+let a = (e) => {
     let { onClose: t } = e;
-    return (0, o.jsx)(r.Z, {
-        transitionTo: (e) => {
-            (0, n.uL)(e);
-        },
-        replaceWith: (e) => {
-            (0, n.dL)(e);
-        },
-        authBoxClassName: a.card,
-        closeLogin: t
+    return (0, r.jsx)('div', {
+        className: i.container,
+        children: (0, r.jsx)(o.Z, {
+            transitionTo: (e) => {
+                (0, n.uL)(e);
+            },
+            replaceWith: (e) => {
+                (0, n.dL)(e);
+            },
+            authBoxClassName: i.card,
+            closeLogin: t
+        })
     });
 };

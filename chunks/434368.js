@@ -1,130 +1,153 @@
-l.d(t, {
-    Z: function () {
-        return h;
+n.d(t, { Z: () => j });
+var r = n(200651),
+    l = n(192379),
+    o = n(498607),
+    a = n.n(o),
+    i = n(399606),
+    s = n(481060),
+    c = n(203893),
+    u = n(910693),
+    d = n(893966),
+    C = n(527379),
+    m = n(981631),
+    b = n(388032),
+    p = n(771221);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-});
-var n = l(735250),
-    a = l(470079),
-    o = l(498607),
-    s = l.n(o),
-    i = l(399606),
-    r = l(481060),
-    C = l(203893),
-    c = l(910693),
-    d = l(893966),
-    u = l(527379),
-    m = l(981631),
-    _ = l(689938),
-    E = l(39283);
-function h(e) {
-    let { guildId: t, onClose: l } = e,
-        o = (0, i.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], s()),
-        h = (0, c.dW)(t),
-        M = a.useCallback(() => {
-            !o.requireUnusualDmActivity && h(c.aY.UNUSUAL_DM_ACTIVITY),
-                (0, u.Dr)(t, {
-                    ...o,
-                    requireUnusualDmActivity: !o.requireUnusualDmActivity
-                });
-        }, [t, o, h]),
-        x = a.useCallback(() => {
-            !o.requireCommunicationDisabled && h(c.aY.COMMUNICATION_DISABLED),
-                (0, u.Dr)(t, {
-                    ...o,
-                    requireCommunicationDisabled: !o.requireCommunicationDisabled
-                });
-        }, [t, o, h]),
-        b = a.useCallback(() => {
-            !o.requireUnusualAccountActivity && h(c.aY.UNUSUAL_ACCOUNT_ACTIVITY),
-                (0, u.Dr)(t, {
-                    ...o,
-                    requireUnusualAccountActivity: !o.requireUnusualAccountActivity
-                });
-        }, [t, o, h]),
-        T = a.useCallback(() => {
-            !o.requireUsernameQuarantined && h(c.aY.USERNAME_QUARANTINED),
-                (0, u.Dr)(t, {
-                    ...o,
-                    requireUsernameQuarantined: !o.requireUsernameQuarantined
-                });
-        }, [t, o, h]);
-    return (0, n.jsx)(r.Menu, {
+    return e;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function j(e) {
+    let { guildId: t, onClose: n } = e,
+        o = (0, i.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], a()),
+        j = (0, u.dW)(t),
+        g = l.useCallback(() => {
+            o.requireUnusualDmActivity || j(u.aY.UNUSUAL_DM_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualDmActivity: !o.requireUnusualDmActivity }));
+        }, [t, o, j]),
+        x = l.useCallback(() => {
+            o.requireCommunicationDisabled || j(u.aY.COMMUNICATION_DISABLED), (0, C.Dr)(t, h(f({}, o), { requireCommunicationDisabled: !o.requireCommunicationDisabled }));
+        }, [t, o, j]),
+        y = l.useCallback(() => {
+            o.requireUnusualAccountActivity || j(u.aY.UNUSUAL_ACCOUNT_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualAccountActivity: !o.requireUnusualAccountActivity }));
+        }, [t, o, j]),
+        v = l.useCallback(() => {
+            o.requireUsernameQuarantined || j(u.aY.USERNAME_QUARANTINED), (0, C.Dr)(t, h(f({}, o), { requireUsernameQuarantined: !o.requireUsernameQuarantined }));
+        }, [t, o, j]);
+    return (0, r.jsx)(s.v2r, {
         navId: 'member-safety-flags',
-        onClose: l,
-        'aria-label': _.Z.Messages.MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE,
+        onClose: n,
+        'aria-label': b.NW.string(b.t.k9m8Rk),
         onSelect: m.dG4,
-        children: (0, n.jsxs)(r.MenuGroup, {
+        children: (0, r.jsxs)(s.kSQ, {
             children: [
-                (0, n.jsx)(r.MenuCheckboxItem, {
+                (0, r.jsx)(s.S89, {
                     id: 'toggle-require-unusual-dm-activity',
-                    label: (0, n.jsxs)('div', {
-                        className: E.checkboxLabel,
+                    label: (0, r.jsxs)('div', {
+                        className: p.checkboxLabel,
                         children: [
-                            (0, n.jsx)(r.ChatWarningIcon, {
+                            (0, r.jsx)(s.b6m, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
                                 height: 16,
-                                className: E.unusualDMLabelIcon
+                                className: p.unusualDMLabelIcon
                             }),
-                            _.Z.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY
+                            b.NW.string(b.t.ZRnONz)
                         ]
                     }),
-                    action: M,
+                    action: g,
                     checked: o.requireUnusualDmActivity
                 }),
-                (0, n.jsx)(r.MenuCheckboxItem, {
+                (0, r.jsx)(s.S89, {
                     id: 'toggle-require-communication-disabled',
-                    label: (0, n.jsxs)('div', {
-                        className: E.checkboxLabel,
+                    label: (0, r.jsxs)('div', {
+                        className: p.checkboxLabel,
                         children: [
-                            (0, n.jsx)(r.ClockWarningIcon, {
+                            (0, r.jsx)(s.YlB, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
                                 height: 16,
-                                className: E.timeoutLabelIcon
+                                className: p.timeoutLabelIcon
                             }),
-                            _.Z.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED
+                            b.NW.string(b.t.z3wbj4)
                         ]
                     }),
                     action: x,
                     checked: o.requireCommunicationDisabled
                 }),
-                (0, n.jsxs)(n.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, n.jsx)(r.MenuCheckboxItem, {
+                        (0, r.jsx)(s.S89, {
                             id: 'toggle-require-unusual-account-activity',
-                            label: (0, n.jsxs)('div', {
-                                className: E.checkboxLabel,
+                            label: (0, r.jsxs)('div', {
+                                className: p.checkboxLabel,
                                 children: [
-                                    (0, n.jsx)(C.Z, {
+                                    (0, r.jsx)(c.Z, {
                                         width: 16,
                                         height: 16,
-                                        className: E.unusualAccountActivityLabelIcon
+                                        className: p.unusualAccountActivityLabelIcon
                                     }),
-                                    _.Z.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY
+                                    b.NW.string(b.t.DIQsDw)
                                 ]
                             }),
-                            action: b,
+                            action: y,
                             checked: o.requireUnusualAccountActivity
                         }),
-                        (0, n.jsx)(r.MenuCheckboxItem, {
+                        (0, r.jsx)(s.S89, {
                             id: 'toggle-require-username-quarantined',
-                            label: (0, n.jsxs)('div', {
-                                className: E.checkboxLabel,
+                            label: (0, r.jsxs)('div', {
+                                className: p.checkboxLabel,
                                 children: [
-                                    (0, n.jsx)(r.ChatXIcon, {
+                                    (0, r.jsx)(s.ics, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 16,
                                         height: 16,
-                                        className: E.quarantinedLabelIcon
+                                        className: p.quarantinedLabelIcon
                                     }),
-                                    _.Z.Messages.MEMBER_SAFETY_USERNAME_QUARANTINED
+                                    b.NW.string(b.t.Jloklp)
                                 ]
                             }),
-                            action: T,
+                            action: v,
                             checked: o.requireUsernameQuarantined
                         })
                     ]

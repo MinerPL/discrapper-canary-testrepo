@@ -3,10 +3,6 @@ function r(e) {
 }
 function i(e) {
     var t, n;
-    return !1 !== r(e) && (void 0 === (t = e.constructor) || (!1 !== r((n = t.prototype)) && !1 !== n.hasOwnProperty('isPrototypeOf') && !0));
+    return !1 !== r(e) && (void 0 === (t = e.constructor) || (!1 !== r((n = t.prototype)) && !1 !== n.hasOwnProperty('isPrototypeOf')));
 }
-n.d(t, {
-    P: function () {
-        return i;
-    }
-});
+n.d(t, { P: () => i });

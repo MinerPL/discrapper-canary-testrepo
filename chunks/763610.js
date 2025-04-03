@@ -1,43 +1,39 @@
-s.d(l, {
-    Z: function () {
-        return d;
-    }
-});
-var t = s(735250),
-    n = s(470079),
-    i = s(120356),
-    a = s.n(i),
-    o = s(481060),
-    r = s(53281),
-    u = s(899044);
-function d(e) {
-    let { filename: l, className: s, filters: i, buttonText: d, placeholder: c, onFileSelect: I } = e,
-        m = n.useRef(null);
-    return (0, t.jsxs)('div', {
-        className: a()(s, u.fileUpload),
+l.d(t, { Z: () => c });
+var n = l(200651),
+    i = l(192379),
+    r = l(120356),
+    s = l.n(r),
+    a = l(481060),
+    o = l(53281),
+    u = l(121746);
+function c(e) {
+    let { filename: t, className: l, filters: r, buttonText: c, placeholder: d, onFileSelect: m } = e,
+        f = i.useRef(null);
+    return (0, n.jsxs)('div', {
+        className: s()(l, u.fileUpload),
         children: [
-            (0, t.jsx)('input', {
+            (0, n.jsx)('input', {
                 className: u.fileUploadInput,
                 tabIndex: -1,
                 readOnly: !0,
-                placeholder: c,
+                placeholder: d,
                 type: 'text',
-                value: l
+                value: t
             }),
-            (0, t.jsxs)(o.Button, {
-                size: o.Button.Sizes.MIN,
+            (0, n.jsxs)(a.zxk, {
+                size: a.zxk.Sizes.MIN,
                 className: u.fileUploadButton,
                 children: [
-                    d,
-                    (0, t.jsx)(r.Z, {
-                        ref: m,
+                    c,
+                    (0, n.jsx)(o.Z, {
+                        ref: f,
                         tabIndex: -1,
                         onChange: (e) => {
-                            var l;
-                            I(null === (l = e.currentTarget.files) || void 0 === l ? void 0 : l[0]);
+                            var t;
+                            m(null == (t = e.currentTarget.files) ? void 0 : t[0]);
                         },
                         multiple: !1,
-                        filters: i
+                        filters: r
                     })
                 ]
             })

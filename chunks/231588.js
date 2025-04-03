@@ -1,29 +1,24 @@
-l.r(n);
-var a = l(735250),
-    r = l(470079),
-    i = l(442837),
-    t = l(749210),
+l.r(n), l.d(n, { default: () => g });
+var t = l(200651),
+    r = l(192379),
+    a = l(442837),
+    i = l(749210),
     s = l(112724),
-    d = l(923029),
+    c = l(923029),
     o = l(353926),
-    c = l(931261),
+    d = l(931261),
     u = l(333323),
-    h = l(430824);
-let m = (0, s.Z)(u.Z);
-n.default = function (e) {
-    let { guildId: n } = e,
-        l = (0, i.e7)([h.Z], () => h.Z.getGuild(n), [n]),
-        s = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
-        u = (0, c.g)(n);
-    return (r.useEffect(() => {
-        if (!!s) {
-            if (!u) {
-                t.Z.escapeToDefaultChannel(n);
-                return;
-            }
-        }
-    }, [n, s, u]),
-    null != l && u)
-        ? (0, a.jsx)(m, { guild: l })
-        : (0, a.jsx)(d.Z, { channelId: void 0 });
-};
+    m = l(430824);
+let h = (0, s.Z)(u.Z),
+    g = function (e) {
+        let { guildId: n } = e,
+            l = (0, a.e7)([m.Z], () => m.Z.getGuild(n), [n]),
+            s = (0, a.e7)([o.Z], () => o.Z.hasLoadedExperiments),
+            u = (0, d.g)(n);
+        return (r.useEffect(() => {
+            if (s && !u) return void i.Z.escapeToDefaultChannel(n);
+        }, [n, s, u]),
+        null != l && u)
+            ? (0, t.jsx)(h, { guild: l })
+            : (0, t.jsx)(c.Z, { channelId: void 0 });
+    };

@@ -1,152 +1,146 @@
-l.d(n, {
-    I: function () {
-        return Z;
-    },
-    S: function () {
-        return A;
-    }
+n.d(t, {
+    I: () => O,
+    S: () => y
 }),
-    l(47120);
-var s = l(735250),
-    a = l(470079),
-    t = l(120356),
-    i = l.n(t),
-    r = l(533800),
-    o = l(442837),
-    d = l(846519),
-    c = l(481060),
-    u = l(914010),
-    E = l(246946),
-    _ = l(626135),
-    I = l(572004),
-    x = l(630388),
-    m = l(971130),
-    N = l(530436),
-    T = l(245335),
-    h = l(981631),
-    g = l(689938),
-    v = l(324655),
-    S = l(787223),
-    C = l(257995),
-    L = l(224499);
-let A = o.ZP.connectStores([E.Z], () => ({ hideValue: E.Z.hideInstantInvites }))((e) => {
-        let { value: n, autoFocus: l, hideValue: t, onCopy: r, disabled: o } = e,
-            [u, E] = a.useState(!1),
-            [_, x] = a.useState(!1),
-            m = a.useMemo(() => new d.sW(1000, () => x(!1)), [x]);
-        return (
-            a.useEffect(
-                () => () => {
-                    m.cancel();
-                },
-                [m]
-            ),
-            (0, s.jsxs)('div', {
-                className: i()(S.input, C.__invalid_flexJustifyBetween, C.flexCenter, {
-                    [S.success]: _,
-                    [S.focused]: u
-                }),
-                children: [
-                    (0, s.jsx)(c.TextInput, {
-                        className: v.copyInput,
-                        name: 'invite',
-                        value: t ? g.Z.Messages.INSTANT_INVITE_HIDDEN : n,
-                        editable: !1,
-                        inputClassName: v.input,
-                        autoFocus: l,
-                        onFocus: () => (l ? E(!0) : null),
-                        onBlur: () => (l ? E(!1) : null),
-                        spellCheck: 'false',
-                        onClick: (e) => e.currentTarget.select(),
-                        'aria-label': g.Z.Messages.FORM_LABEL_INVITE_LINK,
-                        disabled: o
-                    }),
-                    I.wS
-                        ? (0, s.jsx)(c.Button, {
-                              size: c.Button.Sizes.SMALL,
-                              color: _ ? c.Button.Colors.GREEN : c.Button.Colors.BRAND,
-                              className: v.copyButton,
-                              onClick: () => {
-                                  x(!0), m.delay(), r(n);
-                              },
-                              disabled: o,
-                              children: _ ? g.Z.Messages.INVITE_COPIED : g.Z.Messages.COPY
-                          })
-                        : null
-                ]
-            })
-        );
+    n(789020);
+var r = n(200651),
+    l = n(192379),
+    a = n(120356),
+    i = n.n(a),
+    s = n(533800),
+    o = n(442837),
+    c = n(481060),
+    u = n(484614),
+    d = n(914010),
+    m = n(246946),
+    x = n(626135),
+    g = n(630388),
+    h = n(971130),
+    v = n(530436),
+    f = n(245335),
+    p = n(981631),
+    j = n(388032),
+    N = n(821022),
+    b = n(20493);
+let y = o.ZP.connectStores([m.Z], () => ({ hideValue: m.Z.hideInstantInvites }))((e) => {
+        let { value: t, autoFocus: n, hideValue: l, onCopy: a, disabled: i } = e;
+        return (0, r.jsx)(u.Z, {
+            value: l ? j.NW.string(j.t['6HzNgY']) : t,
+            buttonColor: c.zxk.Colors.BRAND,
+            onCopy: a,
+            autoFocus: n,
+            disabled: i
+        });
     }),
-    Z = (e) => {
-        let { guild: n, noInvitesAvailable: l, showFriends: t, onClose: o, modalState: d, isGuestInviteCreationToggleEnabled: E, inviteFlags: S, setInviteFlags: C, showGuestInviteToggleForCurrentVoiceChannel: Z, copyValue: f, changePage: j, inviteChannel: M, source: D, code: R, guildScheduledEvent: p, disabled: V } = e,
-            { maxAge: G, maxUses: O, networkError: U, showVanityURL: y } = d,
-            b = a.useCallback(() => {
-                (0, I.JG)(f),
-                    _.default.track(h.rMx.COPY_INSTANT_INVITE, {
-                        server: u.Z.getGuildId(),
-                        channel: null == M ? void 0 : M.id,
-                        channel_type: null == M ? void 0 : M.type,
-                        location: D,
-                        code: R,
-                        guild_scheduled_event_id: null == p ? void 0 : p.id
-                    });
-            }, [f, M, D, R, p]);
-        return (0, s.jsxs)(s.Fragment, {
+    O = (e) => {
+        let { guild: t, noInvitesAvailable: n, showFriends: a, onClose: o, modalState: u, isApplicationBypassToggleEnabled: m, setInviteFlags: O, copyValue: E, changePage: C, inviteChannel: I, source: S, code: T, guildScheduledEvent: P, disabled: W, application: w } = e,
+            { maxAge: Z, maxUses: k, networkError: _, showVanityURL: D, flags: R } = u,
+            A = l.useCallback(() => {
+                x.default.track(p.rMx.COPY_INSTANT_INVITE, {
+                    server: d.Z.getGuildId(),
+                    channel: null == I ? void 0 : I.id,
+                    channel_type: null == I ? void 0 : I.type,
+                    location: S,
+                    code: T,
+                    guild_scheduled_event_id: null == P ? void 0 : P.id,
+                    application_id: null == w ? void 0 : w.id
+                });
+            }, [null == w ? void 0 : w.id, I, S, T, P]);
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, s.jsx)(A, {
-                    value: f,
-                    autoFocus: t,
-                    onCopy: b,
-                    disabled: V
+                (0, r.jsx)(y, {
+                    value: E,
+                    autoFocus: a,
+                    onCopy: A,
+                    disabled: W
                 }),
-                E
-                    ? (0, s.jsx)('div', {
-                          className: v.temporaryMembershipContainerBackground,
-                          children: (0, s.jsx)(c.FormSwitch, {
-                              className: v.temporaryMembershipContainer,
-                              value: (0, x.yE)(S, r.$.IS_GUEST_INVITE),
-                              onChange: (e) => C((0, x.mB)(S, r.$.IS_GUEST_INVITE, e)),
-                              note: g.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
-                              disabled: V,
-                              hideBorder: !0,
-                              children: Z ? g.Z.Messages.GRANT_GUEST_MEMBERSHIP_VOICE_ONLY : g.Z.Messages.GRANT_GUEST_MEMBERSHIP
-                          })
-                      })
-                    : null,
-                l || y
+                m &&
+                    (0, r.jsxs)(r.Fragment, {
+                        children: [
+                            (0, r.jsx)('div', { className: N.divider }),
+                            (0, r.jsx)(c.j7V, {
+                                className: N.toggle,
+                                value: (0, g.yE)(R, s.$.IS_APPLICATION_BYPASS),
+                                onChange: (e) => O((0, g.mB)(R, s.$.IS_APPLICATION_BYPASS, e)),
+                                disabled: W,
+                                hideBorder: !0,
+                                children: (0, r.jsxs)('div', {
+                                    className: N.formText,
+                                    children: [
+                                        (0, r.jsx)(c.Text, {
+                                            variant: 'text-md/semibold',
+                                            children: j.NW.string(j.t['1i1bUl'])
+                                        }),
+                                        (0, r.jsx)(c.ua7, {
+                                            text: j.NW.string(j.t['jvd/LC']),
+                                            children: (e) =>
+                                                (0, r.jsx)(
+                                                    c.d3s,
+                                                    (function (e) {
+                                                        for (var t = 1; t < arguments.length; t++) {
+                                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                                r = Object.keys(n);
+                                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                                (r = r.concat(
+                                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                    })
+                                                                )),
+                                                                r.forEach(function (t) {
+                                                                    var r;
+                                                                    (r = n[t]),
+                                                                        t in e
+                                                                            ? Object.defineProperty(e, t, {
+                                                                                  value: r,
+                                                                                  enumerable: !0,
+                                                                                  configurable: !0,
+                                                                                  writable: !0
+                                                                              })
+                                                                            : (e[t] = r);
+                                                                });
+                                                        }
+                                                        return e;
+                                                    })(
+                                                        {
+                                                            size: 'xs',
+                                                            color: 'currentColor'
+                                                        },
+                                                        e
+                                                    )
+                                                )
+                                        })
+                                    ]
+                                })
+                            })
+                        ]
+                    }),
+                n || D
                     ? null
-                    : (0, s.jsxs)(c.Text, {
+                    : (0, r.jsxs)(c.Text, {
                           variant: 'text-xs/normal',
-                          className: i()(L.marginTop8, v.footerText),
+                          className: i()(b.marginTop8, N.footerText),
                           children: [
-                              (0, m.Vg)(G, O),
+                              (0, h.Vg)(Z, k),
                               ' ',
-                              t
-                                  ? (0, s.jsx)(c.Anchor, {
-                                        onClick: () => j(T.RV.SETTINGS),
-                                        children: g.Z.Messages.INVITE_EDIT_LINK
+                              a
+                                  ? (0, r.jsx)(c.eee, {
+                                        onClick: () => C(f.RV.SETTINGS),
+                                        children: j.NW.string(j.t.VNe8Pz)
                                     })
                                   : null
                           ]
                       }),
-                !l && t && y
-                    ? (0, s.jsxs)(c.Text, {
+                !n && a && D
+                    ? (0, r.jsxs)(c.Text, {
                           variant: 'text-xs/normal',
-                          className: i()(L.marginTop8, v.footerText),
-                          children: [
-                              g.Z.Messages.INVITE_VANITY_USED,
-                              ' ',
-                              (0, s.jsx)(c.Anchor, {
-                                  onClick: () => j(T.RV.SETTINGS),
-                                  children: g.Z.Messages.INVITE_EDIT_LINK
-                              })
-                          ]
+                          className: i()(b.marginTop8, N.footerText),
+                          children: [j.NW.string(j.t['0M2U9/']), ' ']
                       })
                     : null,
-                null != U
-                    ? (0, s.jsx)(N.W, {
-                          guild: n,
-                          error: U,
+                null != _
+                    ? (0, r.jsx)(v.W, {
+                          guild: t,
+                          error: _,
                           onClose: o
                       })
                     : null

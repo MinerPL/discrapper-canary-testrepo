@@ -1,29 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(739566),
-    s = n(834129),
-    r = n(689938);
-function l(e) {
-    let { message: t, channel: l, targetUser: o, actorUsernameHook: c, targetUsernameHook: u, compact: d } = e,
-        _ = (0, a.ZP)(t),
-        E = (0, a.Sw)(o, l),
-        I = c(_),
-        m = u(null != E ? E : void 0),
-        T = r.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_REMOVE.format({
-            actorName: _.nick,
-            actorHook: I,
-            targetName: null == E ? void 0 : E.nick,
-            targetHook: m
+n.d(t, { Z: () => o });
+var r = n(200651);
+n(192379);
+var i = n(739566),
+    a = n(834129),
+    l = n(388032);
+function o(e) {
+    let { message: t, channel: o, targetUser: s, actorUsernameHook: c, targetUsernameHook: u, compact: d } = e,
+        p = (0, i.ZP)(t),
+        m = (0, i.Sw)(s, o),
+        f = c(p),
+        h = u(null != m ? m : void 0),
+        g = l.NW.format(l.t['32QI5+'], {
+            actorName: p.nick,
+            actorHook: f,
+            targetName: null == m ? void 0 : m.nick,
+            targetHook: h
         });
-    return (0, i.jsx)(s.Z, {
+    return (0, r.jsx)(a.Z, {
         icon: n(474019),
         timestamp: t.timestamp,
         compact: d,
-        children: T
+        children: g
     });
 }

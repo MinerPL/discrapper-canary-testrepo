@@ -1,41 +1,40 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
 var i = n(442837),
-    a = n(481060),
+    o = n(481060),
+    a = n(549879),
     s = n(906732),
-    o = n(189432),
-    l = n(189357),
+    l = n(189432),
+    c = n(189357),
     u = n(434404),
-    c = n(314897),
-    d = n(944486),
+    d = n(314897),
+    f = n(944486),
     _ = n(475413),
-    E = n(176505),
-    f = n(50493),
-    h = n(689938);
-function p(e) {
-    let { user: t, guildId: n, channelId: p, onClose: m } = e,
-        { newestAnalyticsLocation: I } = (0, s.ZP)(),
-        T = (0, i.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)),
-        g = (0, l.ms)(null != n ? n : null, !0),
-        S = (0, i.e7)([d.Z], () => (null != p ? p : d.Z.getChannelId(n, !0)), [p, n]);
-    return null == n || !g || T
+    p = n(176505),
+    h = n(50493),
+    m = n(388032);
+function g(e) {
+    let { user: t, guildId: n, channelId: g, onClose: E, appContext: b, shouldShowTooltip: y } = e,
+        { newestAnalyticsLocation: v } = (0, s.ZP)(),
+        O = (0, i.e7)([d.default], () => d.default.getId() === (null == t ? void 0 : t.id)),
+        I = (0, c.m)(null != n ? n : null),
+        S = (0, i.e7)([f.Z], () => (null != g ? g : f.Z.getChannelId(n, !0)), [g, n]);
+    return null == n || !I || O
         ? null
         : (0, r.jsx)(_.oY, {
               action: 'PRESS_MOD_VIEW',
-              icon: a.ModerationIcon,
-              tooltipText: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
+              icon: o.HI3,
+              shouldShowTooltip: y,
+              tooltipText: m.NW.string(m.t.kj3tz8),
               onClick: () => {
                   u.Z.close(),
-                      (0, o.r)(n, t.id, null != S ? S : E.oC.MEMBER_SAFETY, {
-                          modViewPanel: f.k.INFO,
-                          sourceLocation: I
+                      (0, a.i)(b),
+                      (0, l.r)(n, t.id, null != S ? S : p.oC.MEMBER_SAFETY, {
+                          modViewPanel: h.k.INFO,
+                          sourceLocation: v
                       }),
-                      null == m || m();
+                      null == E || E();
               }
           });
 }

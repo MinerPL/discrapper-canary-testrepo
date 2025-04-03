@@ -1,18 +1,15 @@
-var i = n(735250),
-    s = n(470079);
-class a extends s.PureComponent {
-    render() {
-        let { layout: e, layoutSize: t, className: n, renderWidget: s } = this.props;
-        return null != e
-            ? (0, i.jsx)('div', {
-                  className: n,
-                  style: {
-                      width: t.width,
-                      height: t.height
-                  },
-                  children: e.widgets.map((e) => s(e, t))
-              })
-            : null;
-    }
-}
-t.Z = a;
+n.d(t, { Z: () => r });
+var i = n(200651);
+let r = n(192379).memo(function (e) {
+    let { layout: t, layoutSize: n, className: r, renderWidget: s } = e;
+    return null != t
+        ? (0, i.jsx)('div', {
+              className: r,
+              style: {
+                  width: n.width,
+                  height: n.height
+              },
+              children: t.widgets.map((e) => s(e, n))
+          })
+        : null;
+});

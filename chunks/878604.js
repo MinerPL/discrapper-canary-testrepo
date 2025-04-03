@@ -7,10 +7,6 @@ function i(e, t) {
     return null == n ? e.any : n;
 }
 n.d(t, {
-    F: function () {
-        return i;
-    },
-    f: function () {
-        return r;
-    }
+    F: () => i,
+    f: () => r
 });

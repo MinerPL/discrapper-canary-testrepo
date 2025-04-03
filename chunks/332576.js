@@ -1,33 +1,29 @@
-t.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var a = t(735250);
-t(470079);
-var i = t(442837),
-    s = t(481060),
-    l = t(475179),
-    o = t(358221),
-    r = t(979651),
-    u = t(981631),
-    d = t(689938);
-function c(e, n) {
-    let t = (0, i.e7)([o.Z], () => e === o.Z.getSelectedParticipantId(n), [n, e]);
-    return (0, i.e7)(
-        [o.Z, r.Z],
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    r = n(481060),
+    a = n(475179),
+    o = n(358221),
+    s = n(979651),
+    u = n(981631),
+    c = n(388032);
+function d(e, t) {
+    let n = (0, l.e7)([o.Z], () => e === o.Z.getSelectedParticipantId(t), [t, e]);
+    return (0, l.e7)(
+        [o.Z, s.Z],
         () => {
-            let t = r.Z.isInChannel(n, e) && r.Z.hasVideo(n),
-                a = o.Z.getLayout(n),
-                i = a === u.AEg.MINIMUM || a === u.AEg.NORMAL;
-            return !t || i;
+            let n = s.Z.isInChannel(t, e) && s.Z.hasVideo(t),
+                i = o.Z.getLayout(t),
+                l = i === u.AEg.MINIMUM || i === u.AEg.NORMAL;
+            return !n || l;
         },
-        [n, e]
+        [t, e]
     )
         ? null
-        : (0, a.jsx)(s.MenuItem, {
+        : (0, i.jsx)(r.sNh, {
               id: 'focus-video',
-              label: t ? d.Z.Messages.UNFOCUS_PARTICIPANT : d.Z.Messages.FOCUS_PARTICIPANT,
-              action: () => l.Z.selectParticipant(n, t ? null : e)
+              label: n ? c.NW.string(c.t.KJPKUV) : c.NW.string(c.t['77cRNz']),
+              action: () => a.Z.selectParticipant(t, n ? null : e)
           });
 }

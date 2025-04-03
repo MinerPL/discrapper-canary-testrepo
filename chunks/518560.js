@@ -1,51 +1,52 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(286379),
-    l = n(481060),
-    r = n(797614),
-    o = n(626135),
-    c = n(103879),
-    _ = n(451284),
-    u = n(802429),
-    d = n(846488),
-    E = n(181211),
-    T = n(811085),
-    S = n(967254),
-    A = n(981631),
-    I = n(689938),
-    N = n(120951);
-function g() {
-    let e = (0, E.Z)(),
-        t = (0, d.e)(),
-        n = (0, _.P)(),
-        g = (0, u.i)();
-    return (a.useEffect(() => {
-        c.yq();
-    }, []),
-    a.useEffect(() => {
-        t && (o.default.track(A.rMx.SAFETY_HUB_VIEWED, { account_standing: n.state }), r.Z.increment({ name: s.V.SAFETY_HUB_VIEW }));
+s.d(t, { Z: () => f });
+var a = s(200651),
+    n = s(192379),
+    i = s(286379),
+    r = s(481060),
+    l = s(493773),
+    c = s(797614),
+    o = s(626135),
+    d = s(103879),
+    u = s(451284),
+    m = s(802429),
+    h = s(846488),
+    x = s(181211),
+    g = s(811085),
+    j = s(967254),
+    N = s(981631),
+    p = s(388032),
+    v = s(618983);
+function f() {
+    let e = (0, x.Z)(),
+        t = (0, h.e)(),
+        s = (0, u.P)(),
+        f = (0, m.i)();
+    (0, l.ZP)(() => {
+        d.yq();
+    });
+    let S = n.useRef(s);
+    return (n.useEffect(() => {
+        S.current = s;
+    }),
+    n.useEffect(() => {
+        t && (o.default.track(N.rMx.SAFETY_HUB_VIEWED, { account_standing: S.current.state }), c.Z.increment({ name: i.V.SAFETY_HUB_VIEW }));
     }, [t]),
     e)
-        ? (0, i.jsx)('div', { children: (0, i.jsx)(l.Spinner, {}) })
-        : null != g
-          ? (0, i.jsxs)(l.Notice, {
-                color: l.NoticeColors.DANGER,
-                className: N.nagbar,
+        ? (0, a.jsx)('div', { children: (0, a.jsx)(r.$jN, {}) })
+        : null != f
+          ? (0, a.jsxs)(r.qXd, {
+                color: r.DM8.DANGER,
+                className: v.nagbar,
                 children: [
-                    I.Z.Messages.SAFETY_HUB_ERROR_MESSAGE,
-                    (0, i.jsx)(l.NoticeButton, {
-                        onClick: () => c.yq(),
-                        children: I.Z.Messages.SAFETY_HUB_ERROR_ACTION_BUTTON
+                    p.NW.string(p.t.TDRvqq),
+                    (0, a.jsx)(r.EyT, {
+                        onClick: () => d.yq(),
+                        children: p.NW.string(p.t.R1AN4O)
                     })
                 ]
             })
-          : (0, i.jsxs)('div', {
-                className: N.container,
-                children: [(0, i.jsx)(T.Z, {}), (0, i.jsx)(S.N, {})]
+          : (0, a.jsxs)('div', {
+                className: v.container,
+                children: [(0, a.jsx)(g.Z, {}), (0, a.jsx)(j.N, {})]
             });
 }

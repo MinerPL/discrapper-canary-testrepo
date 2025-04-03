@@ -1,110 +1,153 @@
-t.r(s), t(653041), t(47120);
-var a = t(735250),
-    l = t(470079),
-    i = t(120356),
-    n = t.n(i),
-    o = t(149765),
-    r = t(442837),
-    c = t(692547),
-    d = t(780384),
-    _ = t(481060),
-    E = t(785697),
-    N = t(933557),
-    I = t(313201),
-    T = t(434404),
-    M = t(764260),
-    m = t(999382),
-    x = t(416162),
-    u = t(422559),
-    L = t(210887),
-    O = t(984933),
-    C = t(430824),
-    h = t(699516),
-    A = t(594174),
-    p = t(626135),
-    S = t(63063),
-    f = t(700785),
-    g = t(245315),
-    v = t(135899),
-    b = t(981631),
-    D = t(689938),
-    j = t(670960),
-    R = t(289575),
-    U = t(371411),
-    B = t(112847),
-    P = t(516954),
-    Z = t(674889),
-    F = t(162752),
-    Y = t(438825);
-let y = (e) => {
-        let { guild: s, onAcceptVerificationLevel: t, onAcceptContentFilter: l, disableContentFilter: i, disableVerificationLevel: n, headerId: o, theme: c } = e,
-            E = (0, r.e7)([C.Z], () => C.Z.getGuild(s.id), [s.id]),
-            N = null != E && E.verificationLevel > b.sFg.NONE,
-            I = (null == E ? void 0 : E.explicitContentFilter) === b.lxg.ALL_MEMBERS,
-            T = (0, d.wj)(c) ? Z : F;
-        return (0, a.jsxs)('div', {
-            className: j.container,
+s.d(t, { default: () => V }), s(266796), s(653041), s(47120);
+var i = s(200651),
+    n = s(192379),
+    l = s(120356),
+    a = s.n(l),
+    r = s(149765),
+    o = s(442837),
+    c = s(692547),
+    d = s(780384),
+    u = s(481060),
+    m = s(785697),
+    x = s(933557),
+    N = s(313201),
+    f = s(434404),
+    p = s(764260),
+    h = s(999382),
+    b = s(416162),
+    v = s(422559),
+    g = s(210887),
+    j = s(984933),
+    C = s(430824),
+    _ = s(699516),
+    S = s(594174),
+    I = s(626135),
+    E = s(63063),
+    W = s(700785),
+    O = s(245315),
+    T = s(135899),
+    w = s(981631),
+    y = s(388032),
+    R = s(341190),
+    L = s(289575),
+    M = s(371411),
+    P = s(112847),
+    Z = s(516954),
+    A = s(674889),
+    k = s(162752),
+    D = s(438825);
+function G(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var s = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(s);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(s).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(s, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = s[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i);
+            });
+    }
+    return e;
+}
+function X(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var s = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      s.push.apply(s, i);
+                  }
+                  return s;
+              })(Object(t)).forEach(function (s) {
+                  Object.defineProperty(e, s, Object.getOwnPropertyDescriptor(t, s));
+              }),
+        e
+    );
+}
+let F = (e) => {
+        let { guild: t, onAcceptVerificationLevel: s, onAcceptContentFilter: n, disableContentFilter: l, disableVerificationLevel: a, headerId: r, theme: c } = e,
+            m = (0, o.e7)([C.Z], () => C.Z.getGuild(t.id), [t.id]),
+            x = null != m && m.verificationLevel > w.sFg.NONE,
+            N = (null == m ? void 0 : m.explicitContentFilter) === w.lxg.ALL_MEMBERS,
+            f = (0, d.wj)(c) ? A : k;
+        return (0, i.jsxs)('div', {
+            className: R.container,
             children: [
-                (0, a.jsxs)('div', {
-                    className: j.content,
+                (0, i.jsxs)('div', {
+                    className: R.content,
                     children: [
-                        (0, a.jsx)('img', {
+                        (0, i.jsx)('img', {
                             alt: '',
-                            src: T,
+                            src: f,
                             width: 80
                         }),
-                        (0, a.jsx)(_.Heading, {
+                        (0, i.jsx)(u.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: j.header,
-                            id: o,
-                            children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_STEP_1_HEADER
+                            className: R.header,
+                            id: r,
+                            children: y.NW.string(y.t.QrjLYm)
                         }),
-                        (0, a.jsx)(_.Text, {
+                        (0, i.jsx)(u.Text, {
                             color: 'none',
                             variant: 'text-md/normal',
-                            className: j.headerCaption,
-                            children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_STEP_1_BODY
+                            className: R.headerCaption,
+                            children: y.NW.string(y.t.i1STws)
                         })
                     ]
                 }),
-                (0, a.jsxs)('div', {
-                    className: j.form,
+                (0, i.jsxs)('div', {
+                    className: R.form,
                     children: [
-                        (0, a.jsx)(_.FormTitle, { children: D.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL }),
-                        (0, a.jsx)(_.FormText, {
-                            type: _.FormTextTypes.DESCRIPTION,
-                            className: j.description,
-                            children: N ? D.Z.Messages.ENABLE_COMMUNITY_MODAL_VERIFICATION_LEVEL_MET : D.Z.Messages.ENABLE_COMMUNITY_MODAL_VERIFICATION_LEVEL_HELP
+                        (0, i.jsx)(u.vwX, { children: y.NW.string(y.t.DpRdYG) }),
+                        (0, i.jsx)(u.R94, {
+                            type: u.geA.DESCRIPTION,
+                            className: R.description,
+                            children: x ? y.NW.string(y.t.k5crqq) : y.NW.string(y.t.fHiGAw)
                         }),
-                        (0, a.jsx)(_.Checkbox, {
-                            type: _.Checkbox.Types.ROW,
-                            disabled: n,
-                            value: s.verificationLevel > b.sFg.NONE,
-                            onChange: t,
-                            children: (0, a.jsx)(_.Text, {
+                        (0, i.jsx)(u.XZJ, {
+                            type: u.XZJ.Types.ROW,
+                            disabled: a,
+                            value: t.verificationLevel > w.sFg.NONE,
+                            onChange: s,
+                            children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
-                                children: D.Z.Messages.ENABLE_PUBLIC_MODAL_VERIFICATION_LEVEL_DESCRIPTION
+                                children: y.NW.string(y.t.x4hbeX)
                             })
                         })
                     ]
                 }),
-                (0, a.jsxs)('div', {
-                    className: j.form,
+                (0, i.jsxs)('div', {
+                    className: R.form,
                     children: [
-                        (0, a.jsx)(_.FormTitle, { children: D.Z.Messages.FORM_LABEL_EXPLICIT_CONTENT_FILTER }),
-                        (0, a.jsx)(_.FormText, {
-                            type: _.FormTextTypes.DESCRIPTION,
-                            className: j.description,
-                            children: I ? D.Z.Messages.ENABLE_COMMUNITY_MODAL_CONTENT_FILTER_MET : D.Z.Messages.ENABLE_PUBLIC_MODAL_CONTENT_FILTER_HELP
+                        (0, i.jsx)(u.vwX, { children: y.NW.string(y.t.COu4bm) }),
+                        (0, i.jsx)(u.R94, {
+                            type: u.geA.DESCRIPTION,
+                            className: R.description,
+                            children: N ? y.NW.string(y.t.qgQLpq) : y.NW.string(y.t.b0MaDQ)
                         }),
-                        (0, a.jsx)(_.Checkbox, {
-                            type: _.Checkbox.Types.ROW,
-                            disabled: i,
-                            value: s.explicitContentFilter === b.lxg.ALL_MEMBERS,
-                            onChange: l,
-                            children: (0, a.jsx)(_.Text, {
+                        (0, i.jsx)(u.XZJ, {
+                            type: u.XZJ.Types.ROW,
+                            disabled: l,
+                            value: t.explicitContentFilter === w.lxg.ALL_MEMBERS,
+                            onChange: n,
+                            children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
-                                children: D.Z.Messages.EXPLICIT_CONTENT_FILTER_HIGH
+                                children: y.NW.string(y.t.WAUiMj)
                             })
                         })
                     ]
@@ -112,71 +155,71 @@ let y = (e) => {
             ]
         });
     },
-    G = (e) => {
-        let { selectableChannels: s, onRuleChannelChange: t, ruleChannel: i, onPublicUpdatesChannelChange: n, publicUpdatesChannel: o, headerId: r, theme: c, guildId: E } = e;
-        l.useEffect(() => {
-            (0, g.BF)({
-                fromStep: v.IO.SAFETY_CHECK,
-                toStep: v.IO.BASICS,
-                guildId: E
+    q = (e) => {
+        let { selectableChannels: t, onRuleChannelChange: s, ruleChannel: l, onPublicUpdatesChannelChange: a, publicUpdatesChannel: r, headerId: o, theme: c, guildId: m } = e;
+        n.useEffect(() => {
+            (0, O.BF)({
+                fromStep: T.IO.SAFETY_CHECK,
+                toStep: T.IO.BASICS,
+                guildId: m
             });
-        }, [E]);
-        let N = (0, d.wj)(c) ? R : U;
-        return (0, a.jsxs)('div', {
-            className: j.container,
+        }, [m]);
+        let x = (0, d.wj)(c) ? L : M;
+        return (0, i.jsxs)('div', {
+            className: R.container,
             children: [
-                (0, a.jsxs)('div', {
-                    className: j.content,
+                (0, i.jsxs)('div', {
+                    className: R.content,
                     children: [
-                        (0, a.jsx)('img', {
+                        (0, i.jsx)('img', {
                             alt: '',
-                            src: N,
+                            src: x,
                             width: 80
                         }),
-                        (0, a.jsx)(_.Heading, {
+                        (0, i.jsx)(u.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: j.header,
-                            id: r,
-                            children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_STEP_2_HEADER
+                            className: R.header,
+                            id: o,
+                            children: y.NW.string(y.t.YtXpEh)
                         }),
-                        (0, a.jsx)(_.Text, {
+                        (0, i.jsx)(u.Text, {
                             color: 'none',
                             variant: 'text-md/normal',
-                            className: j.headerCaption,
-                            children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_STEP_2_BODY
+                            className: R.headerCaption,
+                            children: y.NW.string(y.t['J/fYR0'])
                         })
                     ]
                 }),
-                (0, a.jsxs)('div', {
-                    className: j.form,
+                (0, i.jsxs)('div', {
+                    className: R.form,
                     children: [
-                        (0, a.jsx)(_.FormTitle, { children: D.Z.Messages.ENABLE_PUBLIC_MODAL_RULES_CHANNEL_TITLE }),
-                        (0, a.jsx)(_.FormText, {
-                            type: _.FormTextTypes.DESCRIPTION,
-                            className: j.description,
-                            children: D.Z.Messages.ENABLE_PUBLIC_MODAL_RULES_CHANNEL_HELP
+                        (0, i.jsx)(u.vwX, { children: y.NW.string(y.t.dYrhCA) }),
+                        (0, i.jsx)(u.R94, {
+                            type: u.geA.DESCRIPTION,
+                            className: R.description,
+                            children: y.NW.string(y.t['+Af+V1'])
                         }),
-                        (0, a.jsx)(_.SearchableSelect, {
-                            options: s,
-                            onChange: t,
-                            value: i,
+                        (0, i.jsx)(u.VcW, {
+                            options: t,
+                            onChange: s,
+                            value: l,
                             maxVisibleItems: 4
                         })
                     ]
                 }),
-                (0, a.jsxs)('div', {
-                    className: j.form,
+                (0, i.jsxs)('div', {
+                    className: R.form,
                     children: [
-                        (0, a.jsx)(_.FormTitle, { children: D.Z.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE }),
-                        (0, a.jsx)(_.FormText, {
-                            type: _.FormTextTypes.DESCRIPTION,
-                            className: j.description,
-                            children: D.Z.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_HELP
+                        (0, i.jsx)(u.vwX, { children: y.NW.string(y.t.vAyDGR) }),
+                        (0, i.jsx)(u.R94, {
+                            type: u.geA.DESCRIPTION,
+                            className: R.description,
+                            children: y.NW.string(y.t.ZFeonp)
                         }),
-                        (0, a.jsx)(_.SearchableSelect, {
-                            options: s,
-                            onChange: n,
-                            value: o,
+                        (0, i.jsx)(u.VcW, {
+                            options: t,
+                            onChange: a,
+                            value: r,
                             popoutPosition: 'top',
                             maxVisibleItems: 4
                         })
@@ -185,129 +228,143 @@ let y = (e) => {
             ]
         });
     },
-    k = (e) => {
-        let { guild: s, policyAccepted: t, everyoneRolePermissionsAccepted: i, onAcceptPolicy: o, onAcceptDefaultNotifications: r, onAcceptEveryoneRolePermissions: c, disableDefaultNotifications: E, disableEveryoneRolePermissions: N, headerId: I, theme: T } = e,
-            M = (0, d.wj)(T) ? B : P;
+    B = (e) => {
+        let { guild: t, policyAccepted: s, everyoneRolePermissionsAccepted: l, onAcceptPolicy: r, onAcceptDefaultNotifications: o, onAcceptEveryoneRolePermissions: c, disableDefaultNotifications: m, disableEveryoneRolePermissions: x, headerId: N, theme: f } = e,
+            p = (0, d.wj)(f) ? P : Z;
         return (
-            l.useEffect(() => {
-                (0, g.BF)({
-                    fromStep: v.IO.BASICS,
-                    toStep: v.IO.FINISH,
-                    guildId: s.id
+            n.useEffect(() => {
+                (0, O.BF)({
+                    fromStep: T.IO.BASICS,
+                    toStep: T.IO.FINISH,
+                    guildId: t.id
                 });
-            }, [s.id]),
-            (0, a.jsxs)('div', {
-                className: j.container,
+            }, [t.id]),
+            (0, i.jsxs)('div', {
+                className: R.container,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: j.content,
+                    (0, i.jsxs)('div', {
+                        className: R.content,
                         children: [
-                            (0, a.jsx)('img', {
+                            (0, i.jsx)('img', {
                                 alt: '',
-                                src: M,
+                                src: p,
                                 width: 80
                             }),
-                            (0, a.jsx)(_.Heading, {
+                            (0, i.jsx)(u.X6q, {
                                 variant: 'heading-xl/semibold',
-                                className: j.header,
-                                id: I,
-                                children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_HEADER
+                                className: R.header,
+                                id: N,
+                                children: y.NW.string(y.t['Pj/s/f'])
                             }),
-                            (0, a.jsx)(_.Text, {
+                            (0, i.jsx)(u.Text, {
                                 color: 'none',
                                 variant: 'text-md/normal',
-                                className: j.headerCaption,
-                                children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_BODY
+                                className: R.headerCaption,
+                                children: y.NW.string(y.t['IL7/np'])
                             })
                         ]
                     }),
-                    (0, a.jsx)('div', {
-                        className: j.form,
-                        children: (0, a.jsx)(_.Tooltip, {
-                            text: E ? D.Z.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP : null,
-                            'aria-label': !!E && D.Z.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP,
+                    (0, i.jsx)('div', {
+                        className: R.form,
+                        children: (0, i.jsx)(u.ua7, {
+                            text: m ? y.NW.string(y.t.PHjrpq) : null,
+                            'aria-label': !!m && y.NW.string(y.t.PHjrpq),
                             children: (e) =>
-                                (0, a.jsx)('div', {
-                                    ...e,
-                                    children: (0, a.jsx)(_.Checkbox, {
-                                        type: _.Checkbox.Types.ROW,
-                                        disabled: E,
-                                        value: s.defaultMessageNotifications === b.bL.ONLY_MENTIONS,
-                                        onChange: r,
-                                        className: n()({ [j.disabled]: E }),
-                                        children: (0, a.jsx)(_.Text, {
+                                (0, i.jsx)(
+                                    'div',
+                                    X(G({}, e), {
+                                        children: (0, i.jsx)(u.XZJ, {
+                                            type: u.XZJ.Types.ROW,
+                                            disabled: m,
+                                            value: t.defaultMessageNotifications === w.bL.ONLY_MENTIONS,
+                                            onChange: o,
+                                            className: a()({ [R.disabled]: m }),
+                                            children: (0, i.jsx)(u.Text, {
+                                                variant: 'text-sm/normal',
+                                                children: y.NW.format(y.t.K8Eg4O, {
+                                                    infoHook: () =>
+                                                        (0, i.jsx)(u.ua7, {
+                                                            text: y.NW.string(y.t['3h2WyM']),
+                                                            'aria-label': y.NW.string(y.t['3h2WyM']),
+                                                            children: (e) =>
+                                                                (0, i.jsx)(
+                                                                    u.d3s,
+                                                                    G(
+                                                                        {
+                                                                            size: 'xs',
+                                                                            color: 'currentColor',
+                                                                            className: R.icon
+                                                                        },
+                                                                        e
+                                                                    )
+                                                                )
+                                                        })
+                                                })
+                                            })
+                                        })
+                                    })
+                                )
+                        })
+                    }),
+                    (0, i.jsx)(u.ua7, {
+                        text: x ? y.NW.string(y.t.PHjrpq) : null,
+                        'aria-label': !!x && y.NW.string(y.t.PHjrpq),
+                        children: (e) =>
+                            (0, i.jsx)(
+                                'div',
+                                X(G({}, e), {
+                                    className: R.checkboxOption,
+                                    children: (0, i.jsx)(u.XZJ, {
+                                        type: u.XZJ.Types.ROW,
+                                        disabled: x,
+                                        value: l,
+                                        onChange: c,
+                                        className: a()({ [R.disabled]: x }),
+                                        children: (0, i.jsx)(u.Text, {
                                             variant: 'text-sm/normal',
-                                            children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_LABEL.format({
+                                            children: y.NW.format(y.t.v8qCoK, {
                                                 infoHook: () =>
-                                                    (0, a.jsx)(_.Tooltip, {
-                                                        text: D.Z.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
-                                                        'aria-label': D.Z.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
+                                                    (0, i.jsx)(u.ua7, {
+                                                        text: y.NW.string(y.t['+IyaiY']),
+                                                        'aria-label': y.NW.string(y.t['+IyaiY']),
                                                         children: (e) =>
-                                                            (0, a.jsx)(_.CircleInformationIcon, {
-                                                                size: 'xs',
-                                                                color: 'currentColor',
-                                                                className: j.icon,
-                                                                ...e
-                                                            })
+                                                            (0, i.jsx)(
+                                                                u.d3s,
+                                                                G(
+                                                                    {
+                                                                        size: 'xs',
+                                                                        color: 'currentColor',
+                                                                        className: R.icon
+                                                                    },
+                                                                    e
+                                                                )
+                                                            )
                                                     })
                                             })
                                         })
                                     })
                                 })
-                        })
+                            )
                     }),
-                    (0, a.jsx)(_.Tooltip, {
-                        text: N ? D.Z.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP : null,
-                        'aria-label': !!N && D.Z.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP,
-                        children: (e) =>
-                            (0, a.jsx)('div', {
-                                ...e,
-                                className: j.checkboxOption,
-                                children: (0, a.jsx)(_.Checkbox, {
-                                    type: _.Checkbox.Types.ROW,
-                                    disabled: N,
-                                    value: i,
-                                    onChange: c,
-                                    className: n()({ [j.disabled]: N }),
-                                    children: (0, a.jsx)(_.Text, {
-                                        variant: 'text-sm/normal',
-                                        children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_LABEL.format({
-                                            infoHook: () =>
-                                                (0, a.jsx)(_.Tooltip, {
-                                                    text: D.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_TOOLTIP,
-                                                    'aria-label': D.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_TOOLTIP,
-                                                    children: (e) =>
-                                                        (0, a.jsx)(_.CircleInformationIcon, {
-                                                            size: 'xs',
-                                                            color: 'currentColor',
-                                                            className: j.icon,
-                                                            ...e
-                                                        })
-                                                })
-                                        })
-                                    })
-                                })
-                            })
-                    }),
-                    (0, a.jsxs)('div', {
-                        className: j.form,
+                    (0, i.jsxs)('div', {
+                        className: R.form,
                         children: [
-                            (0, a.jsx)(_.FormTitle, { children: D.Z.Messages.PUBLIC_GUILD_POLICY_TITLE }),
-                            (0, a.jsx)(_.FormText, {
-                                type: _.FormTextTypes.DESCRIPTION,
-                                className: j.description,
-                                children: D.Z.Messages.COMMUNITY_GUIDELINES_AND_TYPES_OF_SPACES_POLICIES.format({
-                                    communityGuidelines: S.Z.getArticleURL(b.BhN.PUBLIC_GUILD_GUILDLINES),
-                                    typesOfGuilds: S.Z.getArticleURL(b.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
+                            (0, i.jsx)(u.vwX, { children: y.NW.string(y.t['k+b2CQ']) }),
+                            (0, i.jsx)(u.R94, {
+                                type: u.geA.DESCRIPTION,
+                                className: R.description,
+                                children: y.NW.format(y.t['BwbW/f'], {
+                                    communityGuidelines: E.Z.getArticleURL(w.BhN.PUBLIC_GUILD_GUILDLINES),
+                                    typesOfGuilds: E.Z.getArticleURL(w.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
                                 })
                             }),
-                            (0, a.jsx)(_.Checkbox, {
-                                type: _.Checkbox.Types.ROW,
-                                value: t,
-                                onChange: o,
-                                children: (0, a.jsx)(_.Text, {
+                            (0, i.jsx)(u.XZJ, {
+                                type: u.XZJ.Types.ROW,
+                                value: s,
+                                onChange: r,
+                                children: (0, i.jsx)(u.Text, {
                                     variant: 'text-sm/normal',
-                                    children: D.Z.Messages.PUBLIC_GUILD_POLICY_ACCEPT
+                                    children: y.NW.string(y.t['9AG3wM'])
                                 })
                             })
                         ]
@@ -316,97 +373,97 @@ let y = (e) => {
             })
         );
     };
-function w(e) {
-    let { guild: s } = e,
-        t = (0, r.e7)([C.Z], () => C.Z.getRole(s.id, s.getEveryoneRoleId()));
-    if (null == t) return null;
-    let { name: l, color: i } = t;
-    return (0, a.jsx)('div', {
-        className: j.__invalid_role,
-        children: (0, a.jsxs)('span', {
-            className: j.roleRow,
+function U(e) {
+    let { guild: t } = e,
+        s = (0, o.e7)([C.Z], () => C.Z.getRole(t.id, t.getEveryoneRoleId()));
+    if (null == s) return null;
+    let { name: n, color: l } = s;
+    return (0, i.jsx)('div', {
+        className: R.__invalid_role,
+        children: (0, i.jsxs)('span', {
+            className: R.roleRow,
             children: [
-                (0, a.jsx)(_.RoleDot, {
-                    className: j.roleDot,
-                    color: i.toString(),
+                (0, i.jsx)(u.FhE, {
+                    className: R.roleDot,
+                    color: l.toString(),
                     background: !1,
                     tooltip: !1
                 }),
-                (0, a.jsx)(_.Text, {
-                    className: j.roleName,
+                (0, i.jsx)(u.Text, {
+                    className: R.roleName,
                     variant: 'text-sm/medium',
                     color: 'interactive-active',
-                    children: l
+                    children: n
                 })
             ]
         })
     });
 }
-function H(e) {
-    let { enabledPermissions: s, onGetPermisisonName: t } = e;
-    return (0, a.jsxs)('div', {
-        className: j.tableContainer,
+function Y(e) {
+    let { enabledPermissions: t, onGetPermisisonName: s } = e;
+    return (0, i.jsxs)('div', {
+        className: R.tableContainer,
         children: [
-            (0, a.jsx)(_.Text, {
-                className: j.tableHeader,
+            (0, i.jsx)(u.Text, {
+                className: R.tableHeader,
                 variant: 'text-xs/semibold',
                 color: 'text-muted',
-                children: D.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLING_PERMISSIONS
+                children: y.NW.string(y.t.xU8RDg)
             }),
-            (0, a.jsx)('div', {
-                className: j.permissionsTable,
-                children: s.map((e, s) =>
-                    (0, a.jsxs)(
+            (0, i.jsx)('div', {
+                className: R.permissionsTable,
+                children: t.map((e, t) =>
+                    (0, i.jsxs)(
                         'div',
                         {
-                            className: j.permissionRow,
+                            className: R.permissionRow,
                             children: [
-                                (0, a.jsx)('div', { className: j.bulletWarning }),
-                                (0, a.jsx)(_.Text, {
+                                (0, i.jsx)('div', { className: R.bulletWarning }),
+                                (0, i.jsx)(u.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-normal',
-                                    children: t(e)
+                                    children: s(e)
                                 })
                             ]
                         },
-                        s
+                        t
                     )
                 )
             })
         ]
     });
 }
-function V(e) {
-    let { disabledPermissions: s, onGetPermisisonName: t } = e,
-        l = D.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED_PERMISSIONS;
+function H(e) {
+    let { disabledPermissions: t, onGetPermisisonName: s } = e,
+        n = y.NW.string(y.t.Yo5qlp);
     return (
-        s.length === v.$X.length && (l = D.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED),
-        (0, a.jsxs)('div', {
-            className: j.tableContainer,
+        t.length === T.$X.length && (n = y.NW.string(y.t.FgMS6u)),
+        (0, i.jsxs)('div', {
+            className: R.tableContainer,
             children: [
-                (0, a.jsx)(_.Text, {
-                    className: j.tableHeader,
+                (0, i.jsx)(u.Text, {
+                    className: R.tableHeader,
                     variant: 'text-xs/semibold',
                     color: 'text-muted',
-                    children: l
+                    children: n
                 }),
-                (0, a.jsx)('div', {
-                    className: j.permissionsTable,
-                    children: s.map((e, s) =>
-                        (0, a.jsxs)(
+                (0, i.jsx)('div', {
+                    className: R.permissionsTable,
+                    children: t.map((e, t) =>
+                        (0, i.jsxs)(
                             'div',
                             {
-                                className: j.permissionRow,
+                                className: R.permissionRow,
                                 children: [
-                                    (0, a.jsx)('div', { className: j.bullet }),
-                                    (0, a.jsx)(_.Text, {
+                                    (0, i.jsx)('div', { className: R.bullet }),
+                                    (0, i.jsx)(u.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-muted',
-                                        children: t(e)
+                                        children: s(e)
                                     })
                                 ]
                             },
-                            s
+                            t
                         )
                     )
                 })
@@ -414,339 +471,329 @@ function V(e) {
         })
     );
 }
-function q(e) {
-    let { permissions: s } = e,
-        t = (e) => {
+function z(e) {
+    let { permissions: t } = e,
+        s = (e) => {
             switch (e.toString()) {
-                case b.Plq.MENTION_EVERYONE.toString():
-                    return D.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
-                case b.Plq.CREATE_GUILD_EXPRESSIONS.toString():
-                    return D.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_CREATE_EMOJI;
-                case b.Plq.MANAGE_GUILD_EXPRESSIONS.toString():
-                    return D.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MANAGE_EMOJI;
+                case w.Plq.MENTION_EVERYONE.toString():
+                    return y.NW.string(y.t.yCpsQ0);
+                case w.Plq.CREATE_GUILD_EXPRESSIONS.toString():
+                    return y.NW.string(y.t.vo2LdX);
+                case w.Plq.MANAGE_GUILD_EXPRESSIONS.toString():
+                    return y.NW.string(y.t.cmp2W1);
                 default:
-                    return (0, u.wt)(e);
+                    return (0, v.wt)(e);
             }
         },
-        { enabledPermissions: l, disabledPermissions: i } = s;
-    return (0, a.jsxs)('div', {
-        className: j.table,
+        { enabledPermissions: n, disabledPermissions: l } = t;
+    return (0, i.jsxs)('div', {
+        className: R.table,
         children: [
-            0 !== l.length
-                ? (0, a.jsx)(H, {
-                      enabledPermissions: l,
-                      onGetPermisisonName: t
+            0 !== n.length
+                ? (0, i.jsx)(Y, {
+                      enabledPermissions: n,
+                      onGetPermisisonName: s
                   })
                 : null,
-            (0, a.jsx)(V, {
-                disabledPermissions: i,
-                onGetPermisisonName: t
+            (0, i.jsx)(H, {
+                disabledPermissions: l,
+                onGetPermisisonName: s
             })
         ]
     });
 }
-let z = (e) => {
-    let { guild: s, policyAccepted: t, onAcceptPolicy: i, headerId: n, theme: o } = e,
-        r = (0, d.wj)(o) ? B : P;
-    l.useEffect(() => {
-        (0, g.BF)({
-            fromStep: v.IO.BASICS,
-            toStep: v.IO.FINISH,
-            guildId: s.id
-        });
-    }, [s.id]);
-    let E = l.useMemo(() => {
-        let e = [],
-            t = [];
-        return (
-            v.$X.map((a) => {
-                f.oz(a, s) ? e.push(a) : t.push(a);
-            }),
-            {
-                enabledPermissions: e,
-                disabledPermissions: t
-            }
-        );
-    }, [s]);
-    return (0, a.jsxs)('div', {
-        className: j.container,
-        children: [
-            (0, a.jsxs)('div', {
-                className: j.content,
-                children: [
-                    (0, a.jsx)('img', {
-                        alt: '',
-                        src: r,
-                        width: 80
-                    }),
-                    (0, a.jsx)(_.Heading, {
-                        variant: 'heading-xl/semibold',
-                        className: j.updatedHeader,
-                        id: n,
-                        children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_HEADER
-                    })
-                ]
-            }),
-            (0, a.jsxs)('div', {
-                className: j.updatedForm,
-                children: [
-                    (0, a.jsx)(_.FormTitle, {
-                        className: j.formTitle,
-                        children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_UPDATED_SETTINGS_LABEL
-                    }),
-                    (0, a.jsxs)('div', {
-                        className: j.checklistRow,
-                        children: [
-                            (0, a.jsx)(_.CircleCheckIcon, {
-                                size: 'md',
-                                className: j.checklistIcon,
-                                color: c.Z.unsafe_rawColors.GREEN_360.css,
-                                secondaryColor: c.Z.unsafe_rawColors.WHITE_500.css
-                            }),
-                            (0, a.jsx)(_.Text, {
-                                variant: 'text-md/normal',
-                                children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_LABEL.format({
-                                    infoHook: () =>
-                                        (0, a.jsx)(_.Tooltip, {
-                                            text: D.Z.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
-                                            'aria-label': D.Z.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
-                                            children: (e) =>
-                                                (0, a.jsx)(_.CircleInformationIcon, {
-                                                    size: 'xs',
-                                                    color: 'currentColor',
-                                                    className: j.icon,
-                                                    ...e
-                                                })
-                                        })
-                                })
-                            })
-                        ]
-                    }),
-                    (0, a.jsxs)('div', {
-                        className: j.checklistRow,
-                        children: [
-                            (0, a.jsx)(_.CircleCheckIcon, {
-                                size: 'md',
-                                className: j.checklistIcon,
-                                color: c.Z.unsafe_rawColors.GREEN_360.css,
-                                secondaryColor: c.Z.unsafe_rawColors.WHITE_500.css
-                            }),
-                            (0, a.jsx)(_.Text, {
-                                variant: 'text-md/normal',
-                                children: D.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_LABEL_UPDATED
-                            }),
-                            (0, a.jsx)(w, { guild: s })
-                        ]
-                    }),
-                    (0, a.jsx)(q, { permissions: E })
-                ]
-            }),
-            (0, a.jsxs)('div', {
-                className: j.updatedForm,
-                children: [
-                    (0, a.jsx)(_.FormTitle, {
-                        className: j.formTitle,
-                        children: D.Z.Messages.PUBLIC_GUILD_POLICY_TITLE
-                    }),
-                    (0, a.jsx)(_.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'text-muted',
-                        className: j.description,
-                        children: D.Z.Messages.COMMUNITY_GUIDELINES_AND_TYPES_OF_SPACES_POLICIES.format({
-                            communityGuidelines: S.Z.getArticleURL(b.BhN.PUBLIC_GUILD_GUILDLINES),
-                            typesOfGuilds: S.Z.getArticleURL(b.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
-                        })
-                    }),
-                    (0, a.jsx)(_.Checkbox, {
-                        type: _.Checkbox.Types.ROW,
-                        value: t,
-                        onChange: i,
-                        children: (0, a.jsx)(_.Text, {
-                            className: j.acceptText,
-                            variant: 'text-md/medium',
-                            color: 'header-primary',
-                            children: D.Z.Messages.PUBLIC_GUILD_POLICY_ACCEPT
-                        })
-                    })
-                ]
-            })
-        ]
-    });
-};
-s.default = (e) => {
-    var s;
-    let { transitionState: t, onClose: i } = e;
-    l.useEffect(() => {
-        p.default.track(b.rMx.OPEN_MODAL, { type: v.tA });
-    }, []);
-    let { guild: n } = (0, r.cj)([m.Z], () => m.Z.getProps()),
-        c = (0, r.e7)([L.Z], () => L.Z.theme),
-        [d, _] = l.useState(!1),
-        [u, S] = l.useState(!v.$X.some((e) => f.oz(e, n))),
-        [g, R] = l.useState(v.b4),
-        [U, B] = l.useState(v.b4),
-        [P] = l.useState(null == n ? void 0 : n.defaultMessageNotifications),
-        [Z] = l.useState(null == n ? void 0 : n.verificationLevel),
-        [F] = l.useState(null == n ? void 0 : n.explicitContentFilter),
-        [w] = l.useState(u),
-        H = (0, r.e7)([C.Z], () => (null != n ? C.Z.getRole(n.id, n.getEveryoneRoleId()) : void 0)),
-        V = (0, r.e7)([O.ZP], () => (null != n ? O.ZP.getChannels(n.id) : null)),
-        q = (0, I.Dt)(),
-        { enabled: W } = (0, E.D2)(null !== (s = null == n ? void 0 : n.id) && void 0 !== s ? s : b.lds);
-    if (null == n) return null;
-    let X = [
-        {
-            value: v.b4,
-            label: D.Z.Messages.ENABLE_PUBLIC_MODAL_CREATE_CHANNEL
-        }
-    ];
-    V[O.sH].forEach((e) => {
-        let { channel: s } = e;
-        s.type === b.d4z.GUILD_TEXT &&
-            X.push({
-                value: s.id,
-                label: (0, N.F6)(s, A.default, h.Z, !0)
+let J = (e) => {
+        let { guild: t, policyAccepted: s, onAcceptPolicy: l, headerId: a, theme: r } = e,
+            o = (0, d.wj)(r) ? P : Z;
+        n.useEffect(() => {
+            (0, O.BF)({
+                fromStep: T.IO.BASICS,
+                toStep: T.IO.FINISH,
+                guildId: t.id
             });
-    });
-    let Q = Z !== b.sFg.NONE,
-        K = F === b.lxg.ALL_MEMBERS,
-        $ = P === b.bL.ONLY_MENTIONS,
-        J = async () => {
-            if (null == H || !d) return;
-            let e = new Set(n.features);
-            e.add(b.oNc.COMMUNITY);
-            let s = u ? o.Od(H.permissions, v.mu) : H.permissions,
-                t = {
-                    ...H,
-                    permissions: s
-                };
-            s !== H.permissions && (await (0, M.Gf)(n.id, [t])),
-                T.Z.updateGuild({
-                    features: e,
-                    rulesChannelId: g,
-                    publicUpdatesChannelId: U
+        }, [t.id]);
+        let m = n.useMemo(() => {
+            let e = [],
+                s = [];
+            return (
+                T.$X.map((i) => {
+                    W.oz(i, t) ? e.push(i) : s.push(i);
                 }),
-                await T.Z.saveGuild(n.id, {
-                    features: e,
-                    rulesChannelId: g,
-                    verificationLevel: n.verificationLevel,
-                    explicitContentFilter: n.explicitContentFilter,
-                    publicUpdatesChannelId: U,
-                    defaultMessageNotifications: n.defaultMessageNotifications
+                {
+                    enabledPermissions: e,
+                    disabledPermissions: s
+                }
+            );
+        }, [t]);
+        return (0, i.jsxs)('div', {
+            className: R.container,
+            children: [
+                (0, i.jsxs)('div', {
+                    className: R.content,
+                    children: [
+                        (0, i.jsx)('img', {
+                            alt: '',
+                            src: o,
+                            width: 80
+                        }),
+                        (0, i.jsx)(u.X6q, {
+                            variant: 'heading-xl/semibold',
+                            className: R.updatedHeader,
+                            id: a,
+                            children: y.NW.string(y.t['Pj/s/f'])
+                        })
+                    ]
                 }),
-                setTimeout(() => {
-                    i();
-                }, 0);
-        },
-        ee = (0, a.jsx)(y, {
-            guild: n,
-            disableVerificationLevel: Q,
-            disableContentFilter: K,
-            onAcceptVerificationLevel: (e, s) => {
-                if (!s) {
-                    T.Z.updateGuild({ verificationLevel: Z });
-                    return;
-                }
-                s && T.Z.updateGuild({ verificationLevel: b.sFg.LOW });
-            },
-            onAcceptContentFilter: (e, s) => {
-                if (!s) {
-                    T.Z.updateGuild({ explicitContentFilter: F });
-                    return;
-                }
-                T.Z.updateGuild({ explicitContentFilter: b.lxg.ALL_MEMBERS });
-            },
-            headerId: q,
-            theme: c
-        }),
-        es = (0, a.jsx)(G, {
-            selectableChannels: X,
-            onRuleChannelChange: (e) => {
-                R(e);
-            },
-            onPublicUpdatesChannelChange: (e) => {
-                B(e);
-            },
-            ruleChannel: g,
-            publicUpdatesChannel: U,
-            headerId: q,
-            theme: c,
-            guildId: n.id
-        }),
-        et = W
-            ? (0, a.jsx)(z, {
-                  guild: n,
-                  policyAccepted: d,
-                  onAcceptPolicy: (e, s) => {
-                      if (s) {
-                          _(!0), !$ && T.Z.updateGuild({ defaultMessageNotifications: b.bL.ONLY_MENTIONS }), !u && null != H && S(!0);
-                          return;
-                      }
-                      _(!1), $ && T.Z.updateGuild({ defaultMessageNotifications: P }), u && null != H && S(!1);
-                  },
-                  headerId: q,
-                  theme: c
-              })
-            : (0, a.jsx)(k, {
-                  guild: n,
-                  disableDefaultNotifications: $,
-                  disableEveryoneRolePermissions: w,
-                  policyAccepted: d,
-                  everyoneRolePermissionsAccepted: u,
-                  onAcceptPolicy: (e, s) => {
-                      if (s) {
-                          _(!0);
-                          return;
-                      }
-                      _(!1);
-                  },
-                  onAcceptDefaultNotifications: (e, s) => {
-                      if (!s) {
-                          T.Z.updateGuild({ defaultMessageNotifications: P });
-                          return;
-                      }
-                      T.Z.updateGuild({ defaultMessageNotifications: b.bL.ONLY_MENTIONS });
-                  },
-                  onAcceptEveryoneRolePermissions: (e, s) => {
-                      null != H && (s ? S(!0) : S(!1));
-                  },
-                  headerId: q,
-                  theme: c
-              }),
-        ea = (0, a.jsx)('img', {
-            alt: '',
-            src: Y,
-            className: j.footerImage,
-            width: 240
-        }),
-        el = [
+                (0, i.jsxs)('div', {
+                    className: R.updatedForm,
+                    children: [
+                        (0, i.jsx)(u.vwX, {
+                            className: R.formTitle,
+                            children: y.NW.string(y.t['0q344e'])
+                        }),
+                        (0, i.jsxs)('div', {
+                            className: R.checklistRow,
+                            children: [
+                                (0, i.jsx)(u.owK, {
+                                    size: 'md',
+                                    className: R.checklistIcon,
+                                    color: c.Z.unsafe_rawColors.GREEN_360.css,
+                                    secondaryColor: c.Z.unsafe_rawColors.WHITE_500.css
+                                }),
+                                (0, i.jsx)(u.Text, {
+                                    variant: 'text-md/normal',
+                                    children: y.NW.format(y.t.K8Eg4O, {
+                                        infoHook: () =>
+                                            (0, i.jsx)(u.ua7, {
+                                                text: y.NW.string(y.t['3h2WyM']),
+                                                'aria-label': y.NW.string(y.t['3h2WyM']),
+                                                children: (e) =>
+                                                    (0, i.jsx)(
+                                                        u.d3s,
+                                                        G(
+                                                            {
+                                                                size: 'xs',
+                                                                color: 'currentColor',
+                                                                className: R.icon
+                                                            },
+                                                            e
+                                                        )
+                                                    )
+                                            })
+                                    })
+                                })
+                            ]
+                        }),
+                        (0, i.jsxs)('div', {
+                            className: R.checklistRow,
+                            children: [
+                                (0, i.jsx)(u.owK, {
+                                    size: 'md',
+                                    className: R.checklistIcon,
+                                    color: c.Z.unsafe_rawColors.GREEN_360.css,
+                                    secondaryColor: c.Z.unsafe_rawColors.WHITE_500.css
+                                }),
+                                (0, i.jsx)(u.Text, {
+                                    variant: 'text-md/normal',
+                                    children: y.NW.string(y.t.LfeFFh)
+                                }),
+                                (0, i.jsx)(U, { guild: t })
+                            ]
+                        }),
+                        (0, i.jsx)(z, { permissions: m })
+                    ]
+                }),
+                (0, i.jsxs)('div', {
+                    className: R.updatedForm,
+                    children: [
+                        (0, i.jsx)(u.vwX, {
+                            className: R.formTitle,
+                            children: y.NW.string(y.t['k+b2CQ'])
+                        }),
+                        (0, i.jsx)(u.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'text-muted',
+                            className: R.description,
+                            children: y.NW.format(y.t['BwbW/f'], {
+                                communityGuidelines: E.Z.getArticleURL(w.BhN.PUBLIC_GUILD_GUILDLINES),
+                                typesOfGuilds: E.Z.getArticleURL(w.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
+                            })
+                        }),
+                        (0, i.jsx)(u.XZJ, {
+                            type: u.XZJ.Types.ROW,
+                            value: s,
+                            onChange: l,
+                            children: (0, i.jsx)(u.Text, {
+                                className: R.acceptText,
+                                variant: 'text-md/medium',
+                                color: 'header-primary',
+                                children: y.NW.string(y.t['9AG3wM'])
+                            })
+                        })
+                    ]
+                })
+            ]
+        });
+    },
+    V = (e) => {
+        var t;
+        let { transitionState: s, onClose: l } = e;
+        n.useEffect(() => {
+            I.default.track(w.rMx.OPEN_MODAL, { type: T.tA });
+        }, []);
+        let { guild: a } = (0, o.cj)([h.Z], () => h.Z.getProps()),
+            c = (0, o.e7)([g.Z], () => g.Z.theme),
+            [d, u] = n.useState(!1),
+            [v, E] = n.useState(!T.$X.some((e) => W.oz(e, a))),
+            [O, L] = n.useState(T.b4),
+            [M, P] = n.useState(T.b4),
+            [Z] = n.useState(null == a ? void 0 : a.defaultMessageNotifications),
+            [A] = n.useState(null == a ? void 0 : a.verificationLevel),
+            [k] = n.useState(null == a ? void 0 : a.explicitContentFilter),
+            [U] = n.useState(v),
+            Y = (0, o.e7)([C.Z], () => (null != a ? C.Z.getRole(a.id, a.getEveryoneRoleId()) : void 0)),
+            H = (0, o.e7)([j.ZP], () => (null != a ? j.ZP.getChannels(a.id) : null)),
+            z = (0, N.Dt)(),
+            { enabled: V } = (0, m.D2)(null != (t = null == a ? void 0 : a.id) ? t : w.lds);
+        if (null == a) return null;
+        let K = [
             {
-                modalContent: ee,
-                disableNextStep: n.explicitContentFilter !== b.lxg.ALL_MEMBERS || n.verificationLevel === b.sFg.NONE,
-                overviewTitle: D.Z.Messages.ENABLE_COMMUNITY_MODAL_STEP_1_TITLE
-            },
-            {
-                modalContent: es,
-                disableNextStep: null == g || null == U,
-                overviewTitle: D.Z.Messages.ENABLE_COMMUNITY_MODAL_STEP_2_TITLE
-            },
-            {
-                modalContent: et,
-                disableNextStep: !d,
-                overviewTitle: D.Z.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_TITLE
+                value: T.b4,
+                label: y.NW.string(y.t.Cla0ra)
             }
         ];
-    return (0, a.jsx)(x.Z, {
-        stepData: el,
-        title: D.Z.Messages.ENABLE_COMMUNITY_MODAL_TITLE,
-        transitionState: t,
-        onClose: () => {
-            i(), p.default.track(b.rMx.MODAL_DISMISSED, { type: v.tA });
-        },
-        completeButtonText: D.Z.Messages.ENABLE_COMMUNITY_BUTTON_TEXT,
-        onComplete: J,
-        overviewFooter: ea,
-        sequencerClassName: j.container,
-        autoCloseOnComplete: !1
-    });
-};
+        H[j.sH].forEach((e) => {
+            let { channel: t } = e;
+            t.type === w.d4z.GUILD_TEXT &&
+                K.push({
+                    value: t.id,
+                    label: (0, x.F6)(t, S.default, _.Z, !0)
+                });
+        });
+        let Q = A !== w.sFg.NONE,
+            $ = k === w.lxg.ALL_MEMBERS,
+            ee = Z === w.bL.ONLY_MENTIONS,
+            et = async () => {
+                if (null == Y || !d) return;
+                let e = new Set(a.features);
+                e.add(w.oNc.COMMUNITY);
+                let t = v ? r.Od(Y.permissions, T.mu) : Y.permissions,
+                    s = X(G({}, Y), { permissions: t });
+                t !== Y.permissions && (await (0, p.Gf)(a.id, [s])),
+                    f.Z.updateGuild({
+                        features: e,
+                        rulesChannelId: O,
+                        publicUpdatesChannelId: M
+                    }),
+                    await f.Z.saveGuild(a.id, {
+                        features: e,
+                        rulesChannelId: O,
+                        verificationLevel: a.verificationLevel,
+                        explicitContentFilter: a.explicitContentFilter,
+                        publicUpdatesChannelId: M,
+                        defaultMessageNotifications: a.defaultMessageNotifications
+                    }),
+                    setTimeout(() => {
+                        l();
+                    }, 0);
+            },
+            es = (0, i.jsx)(F, {
+                guild: a,
+                disableVerificationLevel: Q,
+                disableContentFilter: $,
+                onAcceptVerificationLevel: (e, t) => {
+                    if (!t) return void f.Z.updateGuild({ verificationLevel: A });
+                    t && f.Z.updateGuild({ verificationLevel: w.sFg.LOW });
+                },
+                onAcceptContentFilter: (e, t) => {
+                    if (!t) return void f.Z.updateGuild({ explicitContentFilter: k });
+                    f.Z.updateGuild({ explicitContentFilter: w.lxg.ALL_MEMBERS });
+                },
+                headerId: z,
+                theme: c
+            }),
+            ei = (0, i.jsx)(q, {
+                selectableChannels: K,
+                onRuleChannelChange: (e) => {
+                    L(e);
+                },
+                onPublicUpdatesChannelChange: (e) => {
+                    P(e);
+                },
+                ruleChannel: O,
+                publicUpdatesChannel: M,
+                headerId: z,
+                theme: c,
+                guildId: a.id
+            }),
+            en = V
+                ? (0, i.jsx)(J, {
+                      guild: a,
+                      policyAccepted: d,
+                      onAcceptPolicy: (e, t) => {
+                          if (t) {
+                              u(!0), ee || f.Z.updateGuild({ defaultMessageNotifications: w.bL.ONLY_MENTIONS }), v || null == Y || E(!0);
+                              return;
+                          }
+                          u(!1), ee && f.Z.updateGuild({ defaultMessageNotifications: Z }), v && null != Y && E(!1);
+                      },
+                      headerId: z,
+                      theme: c
+                  })
+                : (0, i.jsx)(B, {
+                      guild: a,
+                      disableDefaultNotifications: ee,
+                      disableEveryoneRolePermissions: U,
+                      policyAccepted: d,
+                      everyoneRolePermissionsAccepted: v,
+                      onAcceptPolicy: (e, t) => {
+                          if (t) return void u(!0);
+                          u(!1);
+                      },
+                      onAcceptDefaultNotifications: (e, t) => {
+                          if (!t) return void f.Z.updateGuild({ defaultMessageNotifications: Z });
+                          f.Z.updateGuild({ defaultMessageNotifications: w.bL.ONLY_MENTIONS });
+                      },
+                      onAcceptEveryoneRolePermissions: (e, t) => {
+                          null != Y && (t ? E(!0) : E(!1));
+                      },
+                      headerId: z,
+                      theme: c
+                  }),
+            el = (0, i.jsx)('img', {
+                alt: '',
+                src: D,
+                className: R.footerImage,
+                width: 240
+            }),
+            ea = [
+                {
+                    modalContent: es,
+                    disableNextStep: a.explicitContentFilter !== w.lxg.ALL_MEMBERS || a.verificationLevel === w.sFg.NONE,
+                    overviewTitle: y.NW.string(y.t.PpYoSk)
+                },
+                {
+                    modalContent: ei,
+                    disableNextStep: null == O || null == M,
+                    overviewTitle: y.NW.string(y.t['7MEtIS'])
+                },
+                {
+                    modalContent: en,
+                    disableNextStep: !d,
+                    overviewTitle: y.NW.string(y.t.Pj9P8P)
+                }
+            ];
+        return (0, i.jsx)(b.Z, {
+            stepData: ea,
+            title: y.NW.string(y.t['6U5XTk']),
+            transitionState: s,
+            onClose: () => {
+                l(), I.default.track(w.rMx.MODAL_DISMISSED, { type: T.tA });
+            },
+            completeButtonText: y.NW.string(y.t.XGl4bW),
+            onComplete: et,
+            overviewFooter: el,
+            sequencerClassName: R.container,
+            autoCloseOnComplete: !1
+        });
+    };

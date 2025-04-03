@@ -1,65 +1,75 @@
+n.d(t, { Z: () => v });
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(881052);
-let c = null,
-    d = null,
-    _ = null;
-function E(e) {
+    i = n(442837),
+    o = n(570140),
+    a = n(881052);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = null,
+    c = null,
+    u = null;
+function d(e) {
     let { error: t } = e;
-    c = t;
+    l = t;
 }
 function f() {
-    c = null;
+    h();
 }
-class h extends (s = o.ZP.Store) {
+function _(e) {
+    let { message: t, code: n } = e;
+    l = new a.HF(t, n);
+}
+function p(e) {
+    let { message: t, code: n } = e;
+    l = new a.HF(t, n);
+}
+function h() {
+    l = null;
+}
+function m(e) {
+    (c = e.giftCode), (u = e.skuId);
+}
+function g(e) {
+    let { giftCode: t } = e;
+    if (0 !== t.uses || t.sku_id !== u) return !1;
+    c = t.code;
+}
+function E(e) {
+    l = e.error;
+}
+function b(e) {
+    e.isGift && (u = e.skuId);
+}
+class y extends (r = i.ZP.Store) {
     get paymentError() {
-        return c;
+        return l;
     }
     getGiftCode(e) {
-        return e === _ ? d : null;
+        return e === u ? c : null;
     }
 }
-(a = 'PremiumPaymentModalStore'),
-    (i = 'displayName') in (r = h)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new h(l.Z, {
-        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: E,
-        PREMIUM_PAYMENT_UPDATE_FAIL: E,
-        PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function () {
-            f();
-        },
-        PREMIUM_PAYMENT_UPDATE_SUCCESS: f,
-        PREMIUM_PAYMENT_ERROR_CLEAR: f,
-        BRAINTREE_TOKENIZE_PAYPAL_FAIL: function (e) {
-            let { message: t, code: n } = e;
-            c = new u.HF(t, n);
-        },
-        BRAINTREE_TOKENIZE_VENMO_FAIL: function (e) {
-            let { message: t, code: n } = e;
-            c = new u.HF(t, n);
-        },
-        SKU_PURCHASE_SUCCESS: function (e) {
-            (d = e.giftCode), (_ = e.skuId);
-        },
-        SKU_PURCHASE_FAIL: function (e) {
-            c = e.error;
-        },
-        SKU_PURCHASE_AWAIT_CONFIRMATION: function (e) {
-            e.isGift && (_ = e.skuId);
-        },
-        GIFT_CODE_CREATE: function (e) {
-            let { giftCode: t } = e;
-            if (0 !== t.uses || t.sku_id !== _) return !1;
-            d = t.code;
-        }
-    }));
+s(y, 'displayName', 'PremiumPaymentModalStore');
+let v = new y(o.Z, {
+    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: d,
+    PREMIUM_PAYMENT_UPDATE_FAIL: d,
+    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: f,
+    PREMIUM_PAYMENT_UPDATE_SUCCESS: h,
+    PREMIUM_PAYMENT_ERROR_CLEAR: h,
+    BRAINTREE_TOKENIZE_PAYPAL_FAIL: _,
+    BRAINTREE_TOKENIZE_VENMO_FAIL: p,
+    SKU_PURCHASE_SUCCESS: m,
+    SKU_PURCHASE_FAIL: E,
+    SKU_PURCHASE_AWAIT_CONFIRMATION: b,
+    GIFT_CODE_CREATE: g
+});

@@ -1,58 +1,53 @@
-t.d(s, {
-    Z: function () {
-        return d;
-    }
-}),
-    t(47120);
-var n = t(735250),
-    a = t(470079),
-    i = t(481060),
-    r = t(401190),
-    o = t(689938),
-    l = t(232610);
-function c(e, s, t) {
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(401190),
+    l = n(388032),
+    o = n(585777);
+function c(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
+            : (e[t] = n),
         e
     );
 }
-class d extends a.PureComponent {
+class d extends i.PureComponent {
     renderErrorMessage() {
         let { hasError: e } = this.state;
         return e
-            ? (0, n.jsx)('div', {
-                  className: l.error,
-                  children: o.Z.Messages.HYPESQUAD_LEAVE_ERROR
+            ? (0, r.jsx)('div', {
+                  className: o.error,
+                  children: l.NW.string(l.t.UUcECA)
               })
             : null;
     }
     render() {
         let { isRequestPending: e } = this.state,
-            { isHypeSquadOnlineMember: s } = this.props;
-        return s
-            ? (0, n.jsxs)('div', {
-                  className: l.leaveActionWrapper,
+            { isHypeSquadOnlineMember: t } = this.props;
+        return t
+            ? (0, r.jsxs)('div', {
+                  className: o.leaveActionWrapper,
                   children: [
                       this.renderErrorMessage(),
-                      (0, n.jsxs)(i.Text, {
+                      (0, r.jsxs)(s.Text, {
                           variant: 'text-sm/normal',
                           children: [
-                              o.Z.Messages.HYPESQUAD_LEAVE_PROMPT,
-                              (0, n.jsx)(i.Button, {
-                                  className: l.leaveButton,
-                                  color: i.Button.Colors.LINK,
-                                  look: i.Button.Looks.LINK,
+                              l.NW.string(l.t.ziWmcH),
+                              (0, r.jsx)(s.zxk, {
+                                  className: o.leaveButton,
+                                  color: s.zxk.Colors.LINK,
+                                  look: s.zxk.Looks.LINK,
                                   onClick: this.handleLeaveHypeSquadClick,
-                                  size: i.Button.Sizes.NONE,
+                                  size: s.zxk.Sizes.NONE,
                                   submitting: e,
-                                  children: o.Z.Messages.HYPESQUAD_LEAVE_ACTION
+                                  children: l.NW.string(l.t['WH+dho'])
                               })
                           ]
                       })
@@ -71,7 +66,7 @@ class d extends a.PureComponent {
             }),
             c(this, 'handleLeaveHypeSquadClick', () => {
                 this.setState({ isRequestPending: !0 }, () => {
-                    r.Z.leaveHypeSquadOnline()
+                    a.Z.leaveHypeSquadOnline()
                         .then(() => {
                             this.setState({ isRequestPending: !1 });
                         })

@@ -5,10 +5,6 @@ function i() {
     return null;
 }
 n.d(t, {
-    K: function () {
-        return r;
-    },
-    d: function () {
-        return i;
-    }
+    K: () => r,
+    d: () => i
 });

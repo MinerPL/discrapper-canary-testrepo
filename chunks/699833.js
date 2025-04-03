@@ -1,36 +1,32 @@
-n.d(t, {
-    i: function () {
-        return _;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(913527),
-    s = n.n(a),
-    r = n(692547),
-    l = n(481060),
-    o = n(800530),
-    c = n(689938),
-    u = n(660921);
-let d = (e) => s()().diff(s().unix(e), 'days');
-function _(e) {
-    var t, a, s, _, E;
+n.d(t, { i: () => p });
+var r = n(200651);
+n(192379);
+var i = n(913527),
+    a = n.n(i),
+    l = n(692547),
+    o = n(481060),
+    s = n(800530),
+    c = n(388032),
+    u = n(524438);
+let d = (e) => a()().diff(a().unix(e), 'days');
+function p(e) {
+    var t, i, a, p, m;
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
-    let I = e.message.embeds[0],
-        m = null !== (s = null === (t = I.fields) || void 0 === t ? void 0 : t.find((e) => e.rawName === o.Cg.CLASSIFICATION_ID)) && void 0 !== s ? s : void 0,
-        T = null !== (_ = null == m ? void 0 : m.rawValue) && void 0 !== _ ? _ : void 0,
-        h = null !== (E = null === (a = I.fields) || void 0 === a ? void 0 : a.find((e) => e.rawName === o.Cg.INCIDENT_TIMESTAMP)) && void 0 !== E ? E : void 0,
-        N = null == h || null == h.rawValue ? void 0 : parseFloat(h.rawValue);
-    return null == T || null == N
+    let f = e.message.embeds[0],
+        h = null != (a = null == (t = f.fields) ? void 0 : t.find((e) => e.rawName === s.Cg.CLASSIFICATION_ID)) ? a : void 0,
+        g = null != (p = null == h ? void 0 : h.rawValue) ? p : void 0,
+        _ = null != (m = null == (i = f.fields) ? void 0 : i.find((e) => e.rawName === s.Cg.INCIDENT_TIMESTAMP)) ? m : void 0,
+        b = null == _ || null == _.rawValue ? void 0 : parseFloat(_.rawValue);
+    return null == g || null == b
         ? null
-        : (0, i.jsxs)(l.Clickable, {
+        : (0, r.jsxs)(o.P3F, {
               onClick: () => {
-                  (0, l.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e('18831'), n.e('73255')]).then(n.bind(n, 41164));
+                  (0, o.ZDy)(async () => {
+                      let { default: e } = await Promise.all([n.e('3940'), n.e('25183'), n.e('18831'), n.e('68464')]).then(n.bind(n, 41164));
                       return (t) =>
-                          (0, i.jsx)(e, {
-                              classificationId: T,
-                              source: o.s.SystemDM,
+                          (0, r.jsx)(e, {
+                              classificationId: g,
+                              source: s.s.SystemDM,
                               transitionState: t.transitionState,
                               onClose: t.onClose
                           });
@@ -38,46 +34,46 @@ function _(e) {
               },
               className: u.safetyPolicyNoticeContainer,
               children: [
-                  (0, i.jsxs)('div', {
+                  (0, r.jsxs)('div', {
                       className: u.noticeContent,
                       children: [
-                          (0, i.jsxs)('div', {
+                          (0, r.jsxs)('div', {
                               className: u.headerRow,
                               children: [
-                                  (0, i.jsx)(l.WarningIcon, {
+                                  (0, r.jsx)(o.aNP, {
                                       className: u.warningIcon,
-                                      color: r.Z.colors.STATUS_DANGER
+                                      color: l.Z.colors.STATUS_DANGER
                                   }),
-                                  (0, i.jsx)(l.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: 'text-md/semibold',
-                                      children: c.Z.Messages.SAFETY_POLICY_NOTICE_HEADER
+                                      children: c.NW.string(c.t['4CxGXl'])
                                   })
                               ]
                           }),
-                          (0, i.jsx)('div', {
+                          (0, r.jsx)('div', {
                               className: u.incidentTiming,
-                              children: (0, i.jsx)(l.Text, {
+                              children: (0, r.jsx)(o.Text, {
                                   variant: 'text-xs/medium',
-                                  children: c.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({ daysAgo: d(N) })
+                                  children: c.NW.format(c.t.eevFb2, { daysAgo: d(b) })
                               })
                           }),
-                          (0, i.jsx)('div', {
+                          (0, r.jsx)('div', {
                               className: u.noticeBody,
-                              children: (0, i.jsx)(l.Text, {
+                              children: (0, r.jsx)(o.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
-                                  children: c.Z.Messages.SAFETY_POLICY_NOTICE_BODY
+                                  children: c.NW.string(c.t['5CLb0N'])
                               })
                           })
                       ]
                   }),
-                  (0, i.jsx)('div', {
+                  (0, r.jsx)('div', {
                       className: u.footerContainer,
-                      children: (0, i.jsx)(l.Button, {
-                          look: l.Button.Looks.BLANK,
+                      children: (0, r.jsx)(o.zxk, {
+                          look: o.zxk.Looks.BLANK,
                           className: u.detailsButton,
-                          color: l.Button.Colors.WHITE,
-                          children: c.Z.Messages.SAFETY_POLICY_NOTICE_BUTTON
+                          color: o.zxk.Colors.WHITE,
+                          children: c.NW.string(c.t.zKnzws)
                       })
                   })
               ]

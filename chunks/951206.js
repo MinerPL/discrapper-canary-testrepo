@@ -1,19 +1,15 @@
-t.d(n, {
-    F: function () {
-        return d;
-    }
-});
-var l = t(512722),
-    i = t.n(l),
-    u = t(846027),
-    r = t(287734),
-    a = t(131951),
-    o = t(254238),
-    s = t(893387);
-function d(e, n) {
-    var t;
-    let l = null !== (t = e.sessionId) && void 0 !== t ? t : '';
-    (0, o._)(l), (0, o.s6)();
-    let d = null != n ? n : e.channelId;
-    i()(null != d, 'attempted to transfer to unknown channel'), e.selfMute !== a.Z.isSelfMute() && u.Z.toggleSelfMute(), e.selfDeaf !== a.Z.isSelfDeaf() && u.Z.toggleSelfDeaf(), (0, s.Z)(d, 'discord_client', l), r.default.selectVoiceChannel(d, !1);
+n.d(t, { F: () => u });
+var i = n(512722),
+    r = n.n(i),
+    d = n(846027),
+    a = n(287734),
+    l = n(131951),
+    _ = n(254238),
+    s = n(893387);
+function u(e, t) {
+    var n;
+    let i = null != (n = e.sessionId) ? n : '';
+    (0, _._)(i), (0, _.s6)();
+    let u = null != t ? t : e.channelId;
+    r()(null != u, 'attempted to transfer to unknown channel'), e.selfMute !== l.Z.isSelfMute() && d.Z.toggleSelfMute(), e.selfDeaf !== l.Z.isSelfDeaf() && d.Z.toggleSelfDeaf(), (0, s.Z)(u, 'discord_client', i), a.default.selectVoiceChannel(u, !1);
 }

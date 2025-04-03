@@ -1,32 +1,53 @@
-t.d(n, {
-    Z: function () {
-        return l;
-    }
-}),
-    t(789020);
-var i = t(904245),
-    s = t(667204);
-function l(e, n, t) {
+n.d(t, { Z: () => l }), n(789020);
+var r = n(904245),
+    i = n(667204);
+function l(e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    if ((i.Z.deleteMessage(e.id, n.id, !0), n.isCommandType())) {
-        null != n.interactionData && null != l.applicationId && (0, s.d)(n, e, l.applicationId);
+    if ((r.Z.deleteMessage(e.id, t.id, !0), t.isCommandType())) {
+        null != t.interactionData && null != l.applicationId && (0, i.d)(t, e, l);
         return;
     }
-    let { content: a, tts: r, messageReference: o, flags: u, nonce: d } = n;
-    i.Z.sendMessage(
+    let { content: a, tts: o, messageReference: s, flags: c, nonce: u } = t;
+    r.Z.sendMessage(
         e.id,
         {
             content: a,
-            tts: r,
+            tts: o,
             invalidEmojis: [],
             validNonShortcutEmojis: []
         },
         void 0,
-        {
-            nonce: d,
-            flags: u,
-            messageReference: null != o ? o : void 0,
-            ...l
-        }
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                nonce: u,
+                flags: c,
+                messageReference: null != s ? s : void 0
+            },
+            l
+        )
     );
 }

@@ -1,21 +1,16 @@
-n.d(t, {
-    P: function () {
-        return _;
-    }
-}),
-    n(789020);
+n.d(t, { P: () => f }), n(789020);
 var r = n(592125),
     i = n(271383),
-    a = n(430824),
-    s = n(630388),
-    o = n(563534),
+    o = n(430824),
+    a = n(630388),
+    s = n(563534),
     l = n(846121),
-    u = n(199689),
-    c = n(981631),
+    c = n(199689),
+    u = n(981631),
     d = n(372897);
-function _(e, t) {
-    var n, _;
-    let E = a.Z.getGuild(e),
-        f = r.Z.getChannel(t);
-    return null != E && null != f && (0, u.Z)(E) && E.hasFeature(c.oNc.GUILD_SERVER_GUIDE) && !s.yE(null !== (_ = null === (n = i.ZP.getSelfMember(E.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== _ ? _ : 0, d.q.COMPLETED_HOME_ACTIONS) && o.Z.hasMemberAction(E.id, f.id) && !l.Z.hasCompletedActionForChannel(E.id, f.id);
+function f(e, t) {
+    var n, f;
+    let _ = o.Z.getGuild(e),
+        p = r.Z.getChannel(t);
+    return null != _ && null != p && (0, c.Z)(_) && _.hasFeature(u.oNc.GUILD_SERVER_GUIDE) && !a.yE(null != (f = null == (n = i.ZP.getSelfMember(_.id)) ? void 0 : n.flags) ? f : 0, d.q.COMPLETED_HOME_ACTIONS) && s.Z.hasMemberAction(_.id, p.id) && !l.Z.hasCompletedActionForChannel(_.id, p.id);
 }

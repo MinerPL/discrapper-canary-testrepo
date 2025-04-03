@@ -1,50 +1,81 @@
-l.d(n, {
-    Z: function () {
-        return m;
-    }
-});
-var t = l(470079),
-    r = l(835473),
-    i = l(81063),
-    a = l(49012),
-    u = l(591759),
-    s = l(561308),
-    o = l(206583),
-    c = l(701488),
-    d = l(689938);
-function m(e) {
-    let n,
-        { entry: l, baseEntryData: m } = e,
-        f = (0, r.q)(l.extra.application_id),
-        p = null == f ? void 0 : f.getIconURL(128),
-        E = (0, i.getAssetImage)(l.extra.application_id, l.extra.media_assets_large_image, [c.Si.LARGE, c.Si.LARGE]),
-        v = l.extra.media_subtitle,
-        C = (0, s.kr)(l) && !(0, s.n2)(l) ? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
-        h = {
-            type: o.kG.CRUNCHYROLL,
-            'aria-label': d.Z.Messages.CRUNCHYROLL
-        },
-        x = t.useMemo(() => {
-            if (null == l.extra.url) return;
-            let e = u.Z.safeParseWithQuery(l.extra.url);
+r.d(t, { Z: () => p });
+var n = r(192379),
+    l = r(835473),
+    i = r(81063),
+    o = r(591759),
+    a = r(561308),
+    c = r(206583),
+    s = r(701488),
+    u = r(388032);
+function p(e) {
+    var t, r;
+    let p,
+        { entry: d, baseEntryData: f } = e,
+        b = (0, l.q)(d.extra.application_id),
+        O = null == b ? void 0 : b.getIconURL(128),
+        y = (0, i.xF)(d.extra.application_id, d.extra.media_assets_large_image, [s.Si.LARGE, s.Si.LARGE]),
+        m = d.extra.media_title,
+        j = d.extra.media_subtitle,
+        g = (0, a.Jg)(d) ? u.t['LH+Z39'] : u.t.YuKgmp,
+        h = { type: c.kG.CRUNCHYROLL },
+        v = n.useMemo(() => {
+            if (null == d.extra.url) return;
+            let e = o.Z.safeParseWithQuery(d.extra.url);
             if (null != e && null != e.protocol && null != e.hostname) return e;
-        }, [l.extra.url]);
+        }, [d.extra.url]);
     return (
-        null != x &&
-            (n = () =>
-                (0, a.q)({
-                    href: u.Z.format(x),
-                    trusted: !0
-                })),
-        {
-            ...m,
-            thumbnailUrl: null != E ? E : p,
-            title: l.extra.media_title,
-            onClickTitle: n,
-            onClickThumbnail: n,
-            subtitle: v,
-            userDescription: C,
-            providerIconProps: h
-        }
+        null != v &&
+            (p = {
+                href: o.Z.format(v),
+                ariaDescription: u.NW.formatToPlainString(u.t.aFFQ3t, { title: m })
+            }),
+        (t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, f)),
+        (r = r =
+            {
+                thumbnailUrl: null != y ? y : O,
+                title: m,
+                titleClickable: p,
+                thumbnailClickable: p,
+                subtitle: j,
+                userDescription: g,
+                providerIconProps: h
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t
     );
 }

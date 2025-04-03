@@ -1,226 +1,298 @@
-t.d(s, {
-    Z: function () {
-        return D;
+n.d(t, { Z: () => R });
+var r = n(200651);
+n(192379);
+var i = n(512722),
+    s = n.n(i),
+    a = n(442837),
+    l = n(481060),
+    o = n(295474),
+    c = n(150039),
+    d = n(126631),
+    u = n(433411),
+    m = n(532432),
+    g = n(134795),
+    p = n(513901),
+    h = n(451392),
+    f = n(906364),
+    b = n(643879),
+    N = n(621853),
+    x = n(271383),
+    _ = n(594174),
+    E = n(74538),
+    j = n(51144),
+    O = n(18438),
+    C = n(778825),
+    S = n(52597),
+    v = n(430131),
+    T = n(133484),
+    I = n(388032),
+    y = n(565872);
+function A(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-});
-var n = t(735250);
-t(470079);
-var a = t(512722),
-    i = t.n(a),
-    r = t(442837),
-    o = t(481060),
-    l = t(295474),
-    c = t(150039),
-    d = t(126631),
-    _ = t(433411),
-    E = t(532432),
-    u = t(134795),
-    I = t(513901),
-    T = t(451392),
-    S = t(906364),
-    N = t(621853),
-    C = t(271383),
-    m = t(594174),
-    A = t(74538),
-    O = t(51144),
-    g = t(18438),
-    h = t(778825),
-    p = t(52597),
-    R = t(430131),
-    x = t(133484),
-    M = t(689938),
-    f = t(84482);
-function D(e) {
-    var s, t, a, D;
-    let { guild: P } = e,
-        L = (0, r.e7)([m.default], () => {
-            let e = m.default.getCurrentUser();
-            return i()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
+    return e;
+}
+function P(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function R(e) {
+    var t, n, i, R;
+    let { guild: D } = e,
+        Z = (0, a.e7)([_.default], () => {
+            let e = _.default.getCurrentUser();
+            return s()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         {
-            pendingAvatar: b,
-            pendingNickname: Z,
-            pendingBanner: v,
-            pendingBio: j,
+            pendingAvatar: w,
+            pendingNickname: k,
+            pendingBanner: W,
+            pendingBio: L,
             pendingPronouns: B,
-            pendingThemeColors: U,
-            errors: G,
-            guild: F
-        } = (0, r.cj)([h.Z], () => {
-            let { pendingAvatar: e, pendingNickname: s, pendingBio: t, pendingPronouns: n, pendingBanner: a, pendingThemeColors: i } = h.Z.getAllPending();
+            pendingThemeColors: M,
+            errors: U,
+            guild: V
+        } = (0, a.cj)([C.Z], () => {
+            let { pendingAvatar: e, pendingNickname: t, pendingBio: n, pendingPronouns: r, pendingBanner: i, pendingThemeColors: s } = C.Z.getAllPending();
             return {
                 pendingAvatar: e,
-                pendingNickname: s,
-                pendingBanner: a,
-                pendingBio: t,
-                pendingPronouns: n,
-                pendingThemeColors: i,
-                errors: h.Z.getErrors(),
-                guild: h.Z.getGuild()
+                pendingNickname: t,
+                pendingBanner: i,
+                pendingBio: n,
+                pendingPronouns: r,
+                pendingThemeColors: s,
+                errors: C.Z.getErrors(),
+                guild: C.Z.getGuild()
             };
         }),
-        y = null != P ? P : F;
-    i()(null != y, 'guild should not be null');
-    let V = (0, l.gS)(y.id),
-        Y = (0, r.e7)([C.ZP], () => (null == y.id ? null : C.ZP.getMember(y.id, L.id))),
-        w = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(L.id, y.id)),
-        k = A.ZP.canUsePremiumProfileCustomization(L),
-        H = (0, c.gd)(b, null == Y ? void 0 : Y.avatar),
-        W = (0, c.f$)(v, null == w ? void 0 : w.banner),
-        K = (0, p.p)(U, null == w ? void 0 : w.themeColors),
-        z = null !== (s = null == w ? void 0 : w.bio) && void 0 !== s ? s : '',
-        Q = null !== (t = null == w ? void 0 : w.pronouns) && void 0 !== t ? t : '',
-        X = (e, s, t) => {
-            t(null != e ? e : null != s ? null : void 0);
+        G = (0, b.SD)({
+            userId: Z.id,
+            image: w
+        }),
+        F = null != D ? D : V;
+    s()(null != F, 'guild should not be null');
+    let H = (0, o.gS)(F.id),
+        z = (0, a.e7)([x.ZP], () => (null == F.id ? null : x.ZP.getMember(F.id, Z.id))),
+        Y = (0, a.e7)([N.Z], () => N.Z.getGuildMemberProfile(Z.id, F.id)),
+        K = E.ZP.canUsePremiumProfileCustomization(Z),
+        q = (0, c.gd)(w, null == z ? void 0 : z.avatar),
+        X = (0, c.f$)(W, null == Y ? void 0 : Y.banner),
+        J = (0, S.p)(M, null == Y ? void 0 : Y.themeColors),
+        Q = null != (t = null == Y ? void 0 : Y.bio) ? t : '',
+        $ = null != (n = null == Y ? void 0 : Y.pronouns) ? n : '',
+        ee = (e, t, n) => {
+            n(null != e ? e : null != t ? null : void 0);
         };
-    return (0, n.jsxs)('div', {
-        className: f.sectionsContainer,
+    return (0, r.jsxs)('div', {
+        className: y.sectionsContainer,
         children: [
-            (0, n.jsx)(
-                R.Z,
+            (0, r.jsx)(
+                v.Z,
                 {
-                    errors: null !== (a = null == G ? void 0 : G.nick) && void 0 !== a ? a : null == V ? void 0 : V.nick,
-                    username: O.ZP.getName(L),
-                    pendingNick: Z,
-                    currentNick: null == Y ? void 0 : Y.nick,
-                    guild: y
+                    errors: null != (i = null == U ? void 0 : U.nick) ? i : null == H ? void 0 : H.nick,
+                    username: j.ZP.getName(Z),
+                    pendingNick: k,
+                    currentNick: null == z ? void 0 : z.nick,
+                    guild: F
                 },
                 'nick'
             ),
-            (0, n.jsx)(
-                S.Z,
+            (0, r.jsx)(
+                f.Z,
                 {
-                    sectionTitle: M.Z.Messages.USER_SETTINGS_PRONOUNS,
-                    errors: null == G ? void 0 : G.pronouns,
+                    sectionTitle: I.NW.string(I.t['+T3RIy']),
+                    errors: null == U ? void 0 : U.pronouns,
                     onPronounsChange: (e) => {
-                        (0, p.xs)(e, Q);
+                        (0, S.xs)(e, $);
                     },
                     pendingPronouns: B,
-                    currentPronouns: Q
+                    currentPronouns: $
                 },
                 'pronouns'
             ),
-            (0, n.jsxs)(x.Z, {
-                user: L,
-                showOverlay: !k,
+            (0, r.jsxs)(T.Z, {
+                user: Z,
+                showOverlay: !K,
                 children: [
-                    (0, n.jsx)(
-                        E.Z,
+                    (0, r.jsx)(
+                        m.Z,
                         {
-                            sectionTitle: (0, n.jsxs)(n.Fragment, {
+                            sectionTitle: (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    M.Z.Messages.USER_SETTINGS_AVATAR,
-                                    (0, n.jsx)(o.Tooltip, {
-                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                    I.NW.string(I.t.lqaIxM),
+                                    (0, r.jsx)(l.ua7, {
+                                        text: I.NW.string(I.t['5AFxuL']),
                                         children: (e) =>
-                                            (0, n.jsx)(o.NitroWheelIcon, {
-                                                size: 'md',
-                                                color: 'currentColor',
-                                                ...e,
-                                                className: f.nitroWheel
-                                            })
+                                            (0, r.jsx)(
+                                                l.SrA,
+                                                P(
+                                                    A(
+                                                        {
+                                                            size: 'md',
+                                                            color: 'currentColor'
+                                                        },
+                                                        e
+                                                    ),
+                                                    { className: y.nitroWheel }
+                                                )
+                                            )
                                     })
                                 ]
                             }),
-                            showRemoveAvatarButton: H,
-                            onAvatarChange: (e) => X(e, null == Y ? void 0 : Y.avatar, g.I5),
-                            errors: null == G ? void 0 : G.avatar,
-                            guildId: y.id,
-                            disabled: !k
+                            showRemoveAvatarButton: q,
+                            onAvatarChange: (e) => ee(e, null == z ? void 0 : z.avatar, O.I5),
+                            errors: null == U ? void 0 : U.avatar,
+                            guildId: F.id,
+                            disabled: !K
                         },
                         'avatar'
                     ),
-                    (0, n.jsx)(
-                        _.Z,
+                    (0, r.jsx)(
+                        u.Z,
                         {
-                            sectionTitle: (0, n.jsxs)(n.Fragment, {
+                            sectionTitle: (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    M.Z.Messages.USER_SETTINGS_AVATAR_DECORATION,
-                                    (0, n.jsx)(o.Tooltip, {
-                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                    I.NW.string(I.t['7v0T9P']),
+                                    (0, r.jsx)(l.ua7, {
+                                        text: I.NW.string(I.t['5AFxuL']),
                                         children: (e) =>
-                                            (0, n.jsx)(o.NitroWheelIcon, {
-                                                size: 'md',
-                                                color: 'currentColor',
-                                                ...e,
-                                                className: f.nitroWheel
-                                            })
+                                            (0, r.jsx)(
+                                                l.SrA,
+                                                P(
+                                                    A(
+                                                        {
+                                                            size: 'md',
+                                                            color: 'currentColor'
+                                                        },
+                                                        e
+                                                    ),
+                                                    { className: y.nitroWheel }
+                                                )
+                                            )
                                     })
                                 ]
                             }),
-                            user: L,
-                            guild: y
+                            user: Z,
+                            guild: F
                         },
                         'decoration'
                     ),
-                    (0, n.jsx)(
-                        I.Z,
+                    (0, r.jsx)(
+                        p.Z,
                         {
-                            sectionTitle: (0, n.jsxs)(n.Fragment, {
+                            sectionTitle: (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    M.Z.Messages.USER_SETTINGS_PROFILE_EFFECT,
-                                    (0, n.jsx)(o.Tooltip, {
-                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                    I.NW.string(I.t.wR5wOj),
+                                    (0, r.jsx)(l.ua7, {
+                                        text: I.NW.string(I.t['5AFxuL']),
                                         children: (e) =>
-                                            (0, n.jsx)(o.NitroWheelIcon, {
-                                                size: 'md',
-                                                color: 'currentColor',
-                                                ...e,
-                                                className: f.nitroWheel
-                                            })
+                                            (0, r.jsx)(
+                                                l.SrA,
+                                                P(
+                                                    A(
+                                                        {
+                                                            size: 'md',
+                                                            color: 'currentColor'
+                                                        },
+                                                        e
+                                                    ),
+                                                    { className: y.nitroWheel }
+                                                )
+                                            )
                                     })
                                 ]
                             }),
-                            user: L,
-                            guild: y
+                            user: Z,
+                            guild: F
                         },
                         'effect'
                     ),
-                    (0, n.jsx)(
-                        u.Z,
+                    (0, r.jsx)(
+                        g.Z,
                         {
-                            showRemoveBannerButton: W,
-                            errors: null == G ? void 0 : G.banner,
-                            onBannerChange: (e) => X(e, null == w ? void 0 : w.banner, g.g_),
-                            guildId: null == y ? void 0 : y.id,
-                            disabled: !k
+                            showRemoveBannerButton: X,
+                            errors: null == U ? void 0 : U.banner,
+                            onBannerChange: (e) => ee(e, null == Y ? void 0 : Y.banner, O.g_),
+                            guildId: null == F ? void 0 : F.id,
+                            disabled: !K
                         },
                         'banner'
                     ),
-                    (0, n.jsx)(T.Z, {
-                        user: L,
-                        pendingAvatar: b,
-                        pendingColors: U,
+                    (0, r.jsx)(h.Z, {
+                        user: Z,
+                        pendingAvatarSrc: G,
+                        pendingColors: M,
                         onThemeColorsChange: (e) => {
-                            (0, p.ce)(e, null == w ? void 0 : w.themeColors);
+                            (0, S.ce)(e, null == Y ? void 0 : Y.themeColors);
                         },
-                        guildId: null == y ? void 0 : y.id,
-                        showResetThemeButton: K
+                        guildId: null == F ? void 0 : F.id,
+                        showResetThemeButton: J
                     }),
-                    (0, n.jsx)(
+                    (0, r.jsx)(
                         d.Z,
                         {
-                            placeholder: M.Z.Messages.CHANGE_IDENTITY_BIO_PLACEHOLDER,
-                            sectionTitle: (0, n.jsxs)(n.Fragment, {
+                            placeholder: I.NW.string(I.t['/7NKgo']),
+                            sectionTitle: (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    M.Z.Messages.USER_PROFILE_ABOUT_ME,
-                                    (0, n.jsx)(o.Tooltip, {
-                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                    I.NW.string(I.t.jGoPJS),
+                                    (0, r.jsx)(l.ua7, {
+                                        text: I.NW.string(I.t['5AFxuL']),
                                         children: (e) =>
-                                            (0, n.jsx)(o.NitroWheelIcon, {
-                                                size: 'md',
-                                                color: 'currentColor',
-                                                ...e,
-                                                className: f.nitroWheel
-                                            })
+                                            (0, r.jsx)(
+                                                l.SrA,
+                                                P(
+                                                    A(
+                                                        {
+                                                            size: 'md',
+                                                            color: 'currentColor'
+                                                        },
+                                                        e
+                                                    ),
+                                                    { className: y.nitroWheel }
+                                                )
+                                            )
                                     })
                                 ]
                             }),
-                            onBioChange: (e) => (0, p.qN)(e, z),
-                            errors: null !== (D = null == G ? void 0 : G.bio) && void 0 !== D ? D : null == V ? void 0 : V.bio,
-                            pendingBio: j,
-                            currentBio: z,
-                            disabled: !k
+                            onBioChange: (e) => (0, S.qN)(e, Q),
+                            errors: null != (R = null == U ? void 0 : U.bio) ? R : null == H ? void 0 : H.bio,
+                            pendingBio: L,
+                            currentBio: Q,
+                            disabled: !K
                         },
                         'about'
                     )

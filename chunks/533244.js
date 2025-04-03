@@ -1,100 +1,78 @@
 n.d(t, {
-    CG: function () {
-        return c;
-    },
-    OY: function () {
-        return I;
-    },
-    SG: function () {
-        return m;
-    },
-    T1: function () {
-        return _;
-    },
-    i9: function () {
-        return u;
-    },
-    kk: function () {
-        return d;
-    },
-    lk: function () {
-        return f;
-    },
-    pQ: function () {
-        return l;
-    },
-    sN: function () {
-        return p;
-    },
-    sO: function () {
-        return E;
-    },
-    ur: function () {
-        return h;
-    }
+    CG: () => u,
+    OY: () => E,
+    SG: () => g,
+    T1: () => f,
+    i9: () => c,
+    kk: () => d,
+    lk: () => p,
+    pQ: () => l,
+    sN: () => m,
+    sO: () => _,
+    ur: () => h
 }),
     n(653041);
 var r = n(913527),
     i = n.n(r),
-    a = n(666657),
-    s = n(676770),
-    o = n(689938);
+    o = n(666657),
+    a = n(676770),
+    s = n(388032);
 let l = {
     month: 'numeric',
     day: 'numeric',
     hour: 'numeric',
     minute: '2-digit'
 };
-function u(e) {
-    return (null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(s.lp, 'hours') > i()()) || (null != e.raidDetectedAt && i()(e.raidDetectedAt).add(s.lp, 'hours') > i()());
-}
 function c(e) {
-    return null != e.raidDetectedAt && i()(e.raidDetectedAt).add(s.lp, 'hours') > i()();
+    return (null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(a.lp, 'hours') > i()()) || (null != e.raidDetectedAt && i()(e.raidDetectedAt).add(a.lp, 'hours') > i()());
+}
+function u(e) {
+    return null != e.raidDetectedAt && i()(e.raidDetectedAt).add(a.lp, 'hours') > i()();
 }
 function d(e) {
-    return null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(s.lp, 'hours') > i()();
+    return null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(a.lp, 'hours') > i()();
 }
-function _(e) {
-    return null == e ? void 0 : c(e) ? a.Hl.JOIN_RAID : a.Hl.DM_RAID;
+function f(e) {
+    return null == e ? void 0 : u(e) ? o.Hl.JOIN_RAID : o.Hl.DM_RAID;
 }
-function E(e, t) {
+function _(e, t) {
     let n = [];
-    return e && n.push(a.dj.INVITES_DISABLED), t && n.push(a.dj.DMS_DISABLED), n;
+    return e && n.push(o.dj.INVITES_DISABLED), t && n.push(o.dj.DMS_DISABLED), n;
 }
-function f(e, t) {
+function p(e, t) {
     let n = [];
-    return !e && n.push(a.dj.INVITES_DISABLED), !t && n.push(a.dj.DMS_DISABLED), n;
+    return e || n.push(o.dj.INVITES_DISABLED), t || n.push(o.dj.DMS_DISABLED), n;
 }
 function h(e) {
     return (null != e.dmsDisabledUntil && new Date(e.dmsDisabledUntil) > new Date()) || (null != e.invitesDisabledUntil && new Date(e.invitesDisabledUntil) > new Date());
 }
-function p(e) {
+function m(e) {
     return (null == e ? void 0 : e.dmsDisabledUntil) != null && new Date(e.dmsDisabledUntil) > new Date();
 }
-function m(e) {
+function g(e) {
     return (null == e ? void 0 : e.invitesDisabledUntil) != null && new Date(e.invitesDisabledUntil) > new Date();
 }
-function I(e, t) {
+function E(e, t) {
     var n;
-    let r = null !== (n = e.dmsDisabledUntil) && void 0 !== n ? n : e.invitesDisabledUntil;
+    let r = null != (n = e.dmsDisabledUntil) ? n : e.invitesDisabledUntil;
     if (null == r) return '';
     let i = null != e.dmsDisabledUntil,
-        a = null != e.invitesDisabledUntil;
+        o = null != e.invitesDisabledUntil;
     switch (!0) {
-        case i && a:
-            return o.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_AND_JOINS_NAGBAR_MESSAGE_NEW.format({
+        case i && o:
+            return s.NW.formatToPlainString(s.t.hCZitb, {
                 guildName: t,
-                time: new Date(r).toLocaleString(o.Z.getLocale(), l)
+                time: new Date(r).toLocaleString(s.NW.currentLocale, l)
             });
         case i:
-            return o.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_NAGBAR_MESSAGE_NEW.format({
+            return s.NW.formatToPlainString(s.t.HNKxf3, {
                 guildName: t,
-                time: new Date(r).toLocaleString(o.Z.getLocale(), l)
+                time: new Date(r).toLocaleString(s.NW.currentLocale, l)
             });
-        case a:
-            return o.Z.Messages.GUILD_ANTIRAID_PAUSE_JOINS_NAGBAR_MESSAGE_NEW.format({
+        case o:
+            return s.NW.formatToPlainString(s.t.M3iSyM, {
                 guildName: t,
-                time: new Date(r).toLocaleString(o.Z.getLocale(), l)
+                time: new Date(r).toLocaleString(s.NW.currentLocale, l)
             });
         default:
             return '';

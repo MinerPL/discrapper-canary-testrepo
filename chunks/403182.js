@@ -1,57 +1,39 @@
 n.d(t, {
-    Ng: function () {
-        return g;
-    },
-    OC: function () {
-        return v;
-    },
-    dg: function () {
-        return S;
-    },
-    dp: function () {
-        return p;
-    },
-    f3: function () {
-        return I;
-    },
-    nA: function () {
-        return A;
-    },
-    qF: function () {
-        return h;
-    },
-    uV: function () {
-        return T;
-    },
-    vY: function () {
-        return N;
-    }
+    Ng: () => O,
+    OC: () => A,
+    dg: () => I,
+    dp: () => E,
+    f3: () => y,
+    iL: () => C,
+    nA: () => S,
+    qF: () => g,
+    uV: () => v,
+    vY: () => N
 }),
-    n(47120);
-var r = n(112456),
-    i = n.n(r),
+    n(301563),
+    n(47120),
+    n(757143);
+var r = n(200651),
+    i = n(112456),
+    o = n.n(i),
     a = n(392711),
     s = n.n(a),
-    o = n(206744),
-    l = n(948350),
-    u = n(430824),
+    l = n(430824),
     c = n(594174),
-    d = n(380684),
-    _ = n(74538),
-    E = n(981631),
-    f = n(474936);
-function h(e, t) {
-    return e instanceof File ? e : p(e.data, e.filename, t);
+    u = n(424218),
+    d = n(74538),
+    f = n(981631),
+    _ = n(474936),
+    p = n(388032);
+let h = 524288000,
+    m = 524288000;
+function g(e, t) {
+    return e instanceof File ? e : E(e.data.buffer, e.filename, null != t ? t : 'text/plain');
 }
-function p(e, t, r) {
-    let i = n(643907);
-    if (null == t && ((t = 'unknown'), 'type' in e)) {
-        let n = i.extension(e.type);
-        n && (t += '.'.concat(n));
-    }
-    return null == r && ('type' in e && (r = e.type), (r = null != r ? r : i.lookup(t))), new File([e], t, { type: r });
+function E(e, t, n) {
+    return new File([e], t, { type: n });
 }
-let m = [
+let b = [
     {
         reType: /^image\/vnd.adobe.photoshop/,
         klass: 'photoshop'
@@ -105,45 +87,53 @@ let m = [
         klass: 'webcode'
     },
     {
-        reName: /\.(?:mp3|ogg|wav|flac)$/,
+        reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/,
         klass: 'audio'
     }
 ];
-function I(e) {
-    return T(e.name, e.type);
+function y(e) {
+    return v(e.name, e.type);
 }
-function T(e, t) {
+function v(e, t) {
     var n;
-    e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : '';
-    let r = s().find(m, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
+    e = null != (n = null == e ? void 0 : e.toLowerCase()) ? n : '';
+    let r = s().find(b, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
     return null != r ? r.klass : 'unknown';
 }
-function g(e) {
-    return i().filesize(e);
+function O(e) {
+    return o().filesize(e);
 }
-function S(e) {
-    let t = c.default.getCurrentUser();
-    o.Z.trackExposure({ location: 'de18ec_1' }), l.Z.trackExposure({ location: 'de18ec_2' });
-    let n = _.ZP.getUserMaxFileSize(t);
+function I(e) {
+    let t = c.default.getCurrentUser(),
+        n = d.ZP.getUserMaxFileSize(t);
     if (null == e) return n;
-    let r = u.Z.getGuild(e),
-        i = null != r ? f.HO[r.premiumTier].limits.fileSize : E.mBz;
-    return (0, d.XS)() && null != r && r.premiumTier < 2 && n < i ? n : Math.max(i, n);
+    let r = l.Z.getGuild(e);
+    return Math.max(null != r ? _.HO[r.premiumTier].limits.fileSize : f.mBz, n);
 }
-function A(e, t) {
-    let n = S(t);
+function S(e, t) {
+    let n = I(t);
     return Array.from(e).some((e) => e.size > n);
 }
-function N(e) {
-    return (
-        (function (e) {
-            let t = 0;
-            for (let n of e) t += n.size;
-            return t;
-        })(e) > v()
-    );
+function T(e) {
+    let t = 0;
+    for (let n of e) t += n.size;
+    return t;
 }
-function v() {
+function N(e) {
+    return T(e) > A();
+}
+function A() {
     let e = c.default.getCurrentUser();
-    return null != e && e.isStaff() ? ((0, d.Xv)() ? 1073741824 : 524288000) : (0, d.Xv)() ? 1073741824 : 524288000;
+    return null != e && e.isStaff() ? m : h;
+}
+function C(e) {
+    let { guildId: t, onClick: n } = e,
+        i = (0, u.BU)(I(t) / 1024, { useKibibytes: !0 }),
+        o = (0, u.BU)(_.Uq / 1024, { useKibibytes: !0 }),
+        a = p.NW.formatToPlainString(p.t.q5fTZm, { maxSize: i }),
+        s = p.NW.formatToPlainString(p.t.htbuIS, { premiumMaxSize: o }),
+        l = p.NW.format(p.t.fjSvsL, { onClick: n });
+    return (0, r.jsxs)(r.Fragment, {
+        children: [a, ' ', s.replace('\n', ' '), '. ', l]
+    });
 }

@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var i = n(735250);
-n(470079);
-var l = n(682662),
-    r = n(983777);
-function a() {
-    return (0, i.jsx)(l.H, { children: (0, i.jsx)('div', { className: r.guildSeparator }) });
+n.d(t, { Z: () => o });
+var r = n(200651);
+n(192379);
+var i = n(682662),
+    l = n(287170);
+function o() {
+    return (0, r.jsx)(i.H, { children: (0, r.jsx)('div', { className: l.guildSeparator }) });
 }

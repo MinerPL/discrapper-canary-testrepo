@@ -1,8 +1,4 @@
-n.d(t, {
-    L: function () {
-        return r;
-    }
-});
+n.d(t, { L: () => r });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-11_midjourney_onboarding',

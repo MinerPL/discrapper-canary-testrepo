@@ -1,30 +1,26 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var r = n(735250);
-n(470079);
-var i = n(246841),
-    a = n(620662),
-    s = n(503438),
-    o = n(981631),
-    l = n(120297);
-function u(e) {
-    let { activity: t, user: n, source: u, look: c, color: d, onAction: _ } = e;
-    return null != t && (0, a.Z)(t, o.xjy.PLAY) && (0, s.Z)(t)
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var l = n(246841),
+    i = n(620662),
+    o = n(503438),
+    a = n(981631),
+    s = n(145131);
+function c(e) {
+    let { activity: t, user: n, source: c, look: u, color: d, onAction: p } = e;
+    return null != t && (0, i.Z)(t, a.xjy.PLAY) && (0, o.Z)(t)
         ? (0, r.jsx)(
-              i.Z,
+              l.Z,
               {
-                  className: l.button,
-                  size: l.buttonSize,
-                  look: c,
+                  className: s.button,
+                  size: s.buttonSize,
+                  look: u,
                   color: d,
                   fullWidth: !0,
                   activity: t,
                   user: n,
-                  source: u,
-                  onAction: _
+                  source: c,
+                  onAction: p
               },
               'play'
           )

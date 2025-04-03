@@ -1,87 +1,93 @@
-t.r(s), t(47120);
-var a = t(735250),
-    l = t(470079),
-    n = t(481060),
-    o = t(600164),
-    r = t(538211),
-    _ = t(698066),
-    i = t(111810),
-    E = t(689938),
-    R = t(906433),
-    u = t(276713);
-function c(e, s, t) {
+n.d(e, { default: () => h }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    s = n(481060),
+    a = n(600164),
+    i = n(538211),
+    o = n(698066),
+    c = n(648159),
+    u = n(388032),
+    d = n(424698),
+    b = n(679335);
+function m(t, e, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
-        e
+            : (t[e] = n),
+        t
     );
 }
-class M extends l.PureComponent {
+class f extends l.PureComponent {
     render() {
-        let { isStreamer: e, transitionState: s, onClose: t } = this.props,
+        let { isStreamer: t, transitionState: e, onClose: n } = this.props,
             { problem: l } = this.state;
-        return (0, a.jsxs)(n.ModalRoot, {
-            transitionState: s,
-            size: n.ModalSize.SMALL,
-            'aria-label': E.Z.Messages.STREAM_REPORT_A_PROBLEM,
+        return (0, r.jsxs)(s.Y0X, {
+            transitionState: e,
+            size: s.CgR.SMALL,
+            'aria-label': u.NW.string(u.t.qnJ9W1),
             children: [
-                (0, a.jsx)(i.Z, {}),
-                (0, a.jsxs)(n.ModalHeader, {
+                (0, r.jsx)(c.Z, {}),
+                (0, r.jsxs)(s.xBx, {
                     separator: !1,
+                    className: d.modalHeader,
                     children: [
-                        (0, a.jsx)(n.ModalCloseButton, {
-                            className: u.closeButton,
-                            onClick: t
+                        (0, r.jsx)(s.X6q, {
+                            variant: 'text-md/semibold',
+                            className: b.title,
+                            children: u.NW.string(u.t.qnJ9W1)
                         }),
-                        (0, a.jsx)(n.FormTitle, {
-                            tag: 'h2',
-                            className: u.title,
-                            children: E.Z.Messages.STREAM_REPORT_A_PROBLEM
+                        (0, r.jsx)(s.olH, {
+                            className: b.closeButton,
+                            innerClassName: d.modalInnerCloseButton,
+                            onClick: n
                         })
                     ]
                 }),
-                (0, a.jsxs)(n.ModalContent, {
-                    className: u.content,
+                (0, r.jsxs)(s.hzk, {
+                    className: b.content,
                     children: [
-                        (0, a.jsx)(n.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            children: E.Z.Messages.STREAM_REPORT_PROBLEM_BODY
+                            children: u.NW.string(u.t['7vw0h4'])
                         }),
-                        (0, a.jsx)(n.FormItem, {
-                            title: E.Z.Messages.STREAM_REPORT_LABEL,
-                            children: (0, a.jsx)(n.SingleSelect, {
-                                placeholder: E.Z.Messages.STREAM_REPORT_PLACEHOLDER,
-                                options: (0, r.Z)(e, !1),
+                        (0, r.jsx)(s.xJW, {
+                            title: u.NW.string(u.t['6Y1t5O']),
+                            children: (0, r.jsx)(s.q4e, {
+                                placeholder: u.NW.string(u.t.U0kGk5),
+                                options: (0, i.Z)({
+                                    isStreamer: t,
+                                    isEndStream: !1,
+                                    showVibesHoneypot: !1
+                                }),
                                 onChange: this.handleChanged,
                                 value: l,
                                 maxVisibleItems: 4
                             })
                         }),
-                        (0, a.jsx)('div', { className: R.art })
+                        (0, r.jsx)('div', { className: d.art })
                     ]
                 }),
-                (0, a.jsxs)(n.ModalFooter, {
-                    className: u.__invalid_footer,
+                (0, r.jsxs)(s.mzw, {
+                    className: b.__invalid_footer,
                     children: [
-                        (0, a.jsx)(n.Button, {
-                            color: n.Button.Colors.BRAND,
+                        (0, r.jsx)(s.zxk, {
+                            color: s.zxk.Colors.BRAND,
                             disabled: null == l,
                             onClick: this.handleSubmit,
-                            children: E.Z.Messages.STREAM_REPORT_SUBMIT
+                            children: u.NW.string(u.t.E48BIS)
                         }),
-                        (0, a.jsx)(o.Z, {
-                            children: (0, a.jsx)(n.Button, {
-                                look: n.Button.Looks.LINK,
-                                color: n.Button.Colors.PRIMARY,
-                                size: n.Button.Sizes.NONE,
-                                onClick: t,
-                                children: E.Z.Messages.CANCEL
+                        (0, r.jsx)(a.Z, {
+                            children: (0, r.jsx)(s.zxk, {
+                                look: s.zxk.Looks.LINK,
+                                color: s.zxk.Colors.PRIMARY,
+                                size: s.zxk.Sizes.NONE,
+                                onClick: n,
+                                children: u.NW.string(u.t['ETE/oK'])
                             })
                         })
                     ]
@@ -89,33 +95,48 @@ class M extends l.PureComponent {
             ]
         });
     }
-    constructor(...e) {
-        super(...e),
-            c(this, 'state', { problem: null }),
-            c(this, 'handleChanged', (e) => {
-                this.setState({ problem: null != e ? e : null });
+    constructor(...t) {
+        super(...t),
+            m(this, 'state', { problem: null }),
+            m(this, 'handleChanged', (t) => {
+                this.setState({ problem: null != t ? t : null });
             }),
-            c(this, 'handleSubmit', () => {
-                let { stream: e, streamApplication: s, analyticsData: l, onClose: o } = this.props,
-                    { problem: r } = this.state;
-                (0, _.Z)({
-                    problem: r,
-                    stream: e,
+            m(this, 'handleSubmit', () => {
+                let { stream: t, streamApplication: e, analyticsData: l, onClose: a } = this.props,
+                    { problem: i } = this.state;
+                (0, o.Z)({
+                    problem: i,
+                    stream: t,
                     feedback: '',
-                    streamApplication: s,
+                    streamApplication: e,
                     analyticsData: l,
                     location: 'Stream'
                 }),
-                    o(),
-                    (0, n.openModalLazy)(async () => {
-                        let { default: e } = await t.e('14466').then(t.bind(t, 729328));
-                        return (s) =>
-                            (0, a.jsx)(e, {
-                                body: E.Z.Messages.STREAM_REPORTED_BODY,
-                                ...s
-                            });
+                    a(),
+                    (0, s.ZDy)(async () => {
+                        let { default: t } = await n.e('14466').then(n.bind(n, 729328));
+                        return (e) =>
+                            (0, r.jsx)(
+                                t,
+                                (function (t) {
+                                    for (var e = 1; e < arguments.length; e++) {
+                                        var n = null != arguments[e] ? arguments[e] : {},
+                                            r = Object.keys(n);
+                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (t) {
+                                                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                                })
+                                            )),
+                                            r.forEach(function (e) {
+                                                m(t, e, n[e]);
+                                            });
+                                    }
+                                    return t;
+                                })({ body: u.NW.string(u.t.mMTVnp) }, e)
+                            );
                     });
             });
     }
 }
-s.default = M;
+let h = f;

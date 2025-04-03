@@ -15,7 +15,7 @@ var r = n(67867),
     y = n(735471),
     v = n(141603),
     g = n(476508),
-    b = n(327192),
+    b = n(174525),
     _ = n(28886),
     k = n(982665),
     C = n(342545),
@@ -72,9 +72,7 @@ var r = n(67867),
         try {
             return z(n);
         } catch (e) {
-            for (; r; ) {
-                n = Q(n, er[(t = r--) - 1] || (er[t - 1] = H('((?:%[\\da-f]{2}){' + t + '})', 'gi')), eo);
-            }
+            for (; r; ) n = Q(n, er[(t = r--) - 1] || (er[t - 1] = H('((?:%[\\da-f]{2}){' + t + '})', 'gi')), eo);
             return n;
         }
     },
@@ -154,14 +152,13 @@ ed.prototype = {
                     });
     },
     parseQuery: function (e) {
-        if (e) {
+        if (e)
             for (var t, n, r = this.entries, o = ee(e, '&'), a = 0; a < o.length; )
                 (t = o[a++]).length &&
                     $(r, {
                         key: ea(J((n = ee(t, '=')))),
                         value: ea(G(n, '='))
                     });
-        }
     },
     serialize: function () {
         for (var e, t = this.entries, n = [], r = 0; r < t.length; ) $(n, el((e = t[r++]).key) + '=' + el(e.value));
@@ -178,7 +175,7 @@ var ep = function () {
         m(this, eh);
         var e = arguments.length > 0 ? arguments[0] : void 0,
             t = I(this, new ed(e));
-        !s && (this.size = t.entries.length);
+        s || (this.size = t.entries.length);
     },
     eh = ep.prototype;
 if (
@@ -202,7 +199,7 @@ if (
                         if ((X(r, c, 1), void 0 !== i)) break;
                     } else c++;
                 }
-                !s && (this.size = r.length), t.updateURL();
+                s || (this.size = r.length), t.updateURL();
             },
             get: function (e) {
                 var t = M(this).entries;
@@ -228,12 +225,12 @@ if (
                     r = M(this);
                 P(arguments.length, 1);
                 for (var o = r.entries, a = !1, i = C(e), c = C(t), l = 0; l < o.length; l++) (n = o[l]).key === i && (a ? X(o, l--, 1) : ((a = !0), (n.value = c)));
-                !a &&
+                a ||
                     $(o, {
                         key: i,
                         value: c
                     }),
-                    !s && (this.size = o.length),
+                    s || (this.size = o.length),
                     r.updateURL();
             },
             sort: function () {
@@ -294,7 +291,7 @@ if (
                     n = e.body;
                 if (b(n) === O)
                     return (
-                        !ef((t = e.headers ? new j(e.headers) : new j()), 'content-type') && em(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
+                        ef((t = e.headers ? new j(e.headers) : new j()), 'content-type') || em(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
                         Z(e, {
                             body: w(0, C(n)),
                             headers: w(0, t)

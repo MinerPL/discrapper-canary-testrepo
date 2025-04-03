@@ -1,10 +1,7 @@
-n.d(t, {
-    t: function () {
-        return a;
-    }
-});
+n.d(t, { t: () => a });
 var r = n(638214);
-let i = 30717;
+let i = 32768,
+    o = 161789;
 function a() {
-    return (0, r.P)() ? 32768 | i : i;
+    return (0, r.P)() ? o | i : o;
 }

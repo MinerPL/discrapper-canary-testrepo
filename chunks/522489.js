@@ -1,9 +1,5 @@
-t.d(n, {
-    m: function () {
-        return s;
-    }
-});
-let s = (0, t(818083).B)({
+n.d(t, { m: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-06_repeat_gift_purchase',
     label: 'Repeat Gift Purchase',

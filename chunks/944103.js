@@ -1,52 +1,22 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
-var i = n(470079),
-    a = n(442837),
-    s = n(131704),
-    l = n(9156),
-    r = n(423589),
-    o = n(674190),
-    c = n(624617),
-    u = n(490897);
-let d = Object.freeze({
-    NOTICE_RENDER: {
-        MAX: 1,
-        PER_SECONDS: 600
-    },
-    CHANNEL_VISTS: {
-        MIN: 2,
-        PER_SECONDS: 86400
-    }
-});
-function h(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, r.Mn)('useShouldRenderBanner'),
-        h = (0, a.e7)(
-            [c.Z, l.ZP],
-            () => {
-                let { guild_id: t, id: n } = e;
-                if (!s.$N.has(e.type)) return !1;
-                let i = l.ZP.resolveUnreadSetting(e),
-                    a = l.ZP.getChannelUnreadSetting(t, n),
-                    r = c.Z.getNumberOfRendersSince(d.NOTICE_RENDER.PER_SECONDS),
-                    o = c.Z.getNumberOfChannelVisitsSince(t, n, d.CHANNEL_VISTS.PER_SECONDS);
-                return a === u.i.UNSET && i !== u.i.ALL_MESSAGES && r <= d.NOTICE_RENDER.MAX && o >= d.CHANNEL_VISTS.MIN;
-            },
-            [e]
-        );
-    return (
-        i.useEffect(() => {
-            t && h && (0, o.g)(e.guild_id, e.id);
-        }, [t, h, e.guild_id, e.id]),
-        i.useEffect(() => {
-            s.$N.has(e.type) && (0, o.a)(e.guild_id, e.id);
-        }, [e.guild_id, e.id, e.type]),
-        {
-            canRenderNotice: h && n,
-            recordNoticeRender: () => (0, o.g)(e.guild_id, e.id)
-        }
-    );
+n.d(t, { Z: () => s }), n(47120);
+var r = n(192379),
+    i = n(442837),
+    l = n(131704),
+    o = n(423589),
+    a = n(390289);
+function s(e) {
+    let t = (0, o.Mn)('useShouldRenderBanner'),
+        [n, s] = r.useState('');
+    r.useEffect(() => {
+        s('');
+    }, [e.id]);
+    let c = (0, i.e7)([a.Z], () => a.Z.getLastActionTime(e.id));
+    r.useEffect(() => {
+        l.$N.has(e.type) && n !== e.id && t && a.Z.maybeAutoUpgradeChannel(e.id) && s(e.id);
+    }, [n, t, c, e]);
+    let u = r.useCallback(() => s(''), []);
+    return {
+        showUnreadsNotice: n === e.id,
+        clearUnreadsNotice: u
+    };
 }

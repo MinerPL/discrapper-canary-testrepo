@@ -1,54 +1,13 @@
-var r = n(470079),
-    i = n(844303),
-    a = n(464854),
-    s = function (e) {
-        var t = e.color,
-            n = e.onClick,
-            s = e.onSwatchHover,
-            o = e.hover,
-            l = e.active,
-            u = e.circleSize,
-            c = e.circleSpacing,
-            d = (0, i.default)(
-                {
-                    default: {
-                        swatch: {
-                            width: u,
-                            height: u,
-                            marginRight: c,
-                            marginBottom: c,
-                            transform: 'scale(1)',
-                            transition: '100ms transform ease'
-                        },
-                        Swatch: {
-                            borderRadius: '50%',
-                            background: 'transparent',
-                            boxShadow: 'inset 0 0 0 ' + (u / 2 + 1) + 'px ' + t,
-                            transition: '100ms box-shadow ease'
-                        }
-                    },
-                    hover: { swatch: { transform: 'scale(1.2)' } },
-                    active: { Swatch: { boxShadow: 'inset 0 0 0 3px ' + t } }
-                },
-                {
-                    hover: o,
-                    active: l
-                }
-            );
-        return r.createElement(
-            'div',
-            { style: d.swatch },
-            r.createElement(a.m4, {
-                style: d.Swatch,
-                color: t,
-                onClick: n,
-                onHover: s,
-                focusStyle: { boxShadow: d.Swatch.boxShadow + ', 0 0 5px ' + t }
-            })
-        );
-    };
-(s.defaultProps = {
-    circleSize: 28,
-    circleSpacing: 14
-}),
-    (t.Z = (0, i.handleHover)(s));
+n.d(t, { Z: () => o });
+var r = n(442837),
+    l = n(592125),
+    i = n(430824),
+    s = n(944486);
+function o() {
+    let e = (0, r.e7)([s.Z, l.Z], () => l.Z.getChannel(s.Z.getVoiceChannelId())),
+        t = null == e ? void 0 : e.getGuildId();
+    return (0, r.e7)([i.Z], () => {
+        var e;
+        return null != t ? (null == (e = i.Z.getGuild(t)) ? void 0 : e.premiumTier) : null;
+    });
+}

@@ -1,9 +1,4 @@
-n.d(t, {
-    l: function () {
-        return i;
-    }
-}),
-    n(724458);
+n.d(t, { l: () => i });
 var r = n(301766);
 function i(e) {
     return null == e

@@ -1,126 +1,118 @@
-l.r(s),
-    l.d(s, {
-        GuildSelectModalBody: function () {
-            return E;
-        },
-        GuildSelectModalHeader: function () {
-            return x;
-        },
-        default: function () {
-            return U;
-        }
-    }),
-    l(724458),
+l.d(t, {
+    default: () => v,
+    e: () => C,
+    g: () => j
+}),
     l(653041),
     l(47120);
-var n = l(735250),
-    t = l(470079),
-    r = l(658722),
-    a = l.n(r),
-    i = l(442837),
-    o = l(481060),
-    d = l(37234),
-    u = l(565138),
-    c = l(703656),
-    C = l(430824),
-    m = l(771845),
-    S = l(267642),
-    I = l(981631),
-    M = l(689938),
-    _ = l(294503);
-function x(e) {
-    let { isTransfer: s = !1, setQuery: l, query: t } = e;
-    return (0, n.jsxs)(o.ModalHeader, {
-        className: _.selectHeaderContainer,
+var n = l(200651),
+    r = l(192379),
+    s = l(658722),
+    i = l.n(s),
+    o = l(442837),
+    a = l(481060),
+    c = l(37234),
+    d = l(565138),
+    u = l(703656),
+    m = l(430824),
+    x = l(771845),
+    h = l(267642),
+    g = l(981631),
+    f = l(388032),
+    p = l(544197);
+function j(e) {
+    let { isTransfer: t = !1, setQuery: l, query: r } = e;
+    return (0, n.jsxs)(a.xBx, {
+        className: p.selectHeaderContainer,
         children: [
-            (0, n.jsx)(o.Heading, {
-                className: _.selectHeader,
+            (0, n.jsx)(a.X6q, {
+                className: p.selectHeader,
                 variant: 'heading-md/semibold',
-                children: s ? M.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : M.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
+                children: t ? f.NW.string(f.t.IB13DQ) : f.NW.string(f.t.cQYceX)
             }),
-            (0, n.jsx)(o.SearchBar, {
-                size: o.SearchBar.Sizes.MEDIUM,
-                placeholder: M.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
-                'aria-label': M.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
-                className: _.selectSearch,
-                query: t,
+            (0, n.jsx)(a.E1j, {
+                size: a.E1j.Sizes.MEDIUM,
+                placeholder: f.NW.string(f.t.vf3ZTU),
+                'aria-label': f.NW.string(f.t.vf3ZTU),
+                className: p.selectSearch,
+                query: r,
                 onChange: l,
                 onClear: () => l('')
             })
         ]
     });
 }
-function E(e) {
-    let { isTransfer: s = !1, selectedSlotGuilds: l, onClose: t, onSelectGuild: r, query: x } = e,
-        E = (0, i.e7)([m.ZP], () => m.ZP.getFlattenedGuildIds()),
-        U = (0, i.Wu)([C.Z], () =>
-            E.reduce((e, s) => {
-                let n = C.Z.getGuild(s);
-                return null == n || (null != l && l.some((e) => e.id === s)) ? e : ((x.length <= 0 || a()(x.toLowerCase(), null == n ? void 0 : n.name.toLowerCase())) && e.push(n), e);
+function C(e) {
+    let { isTransfer: t = !1, selectedSlotGuilds: l, onClose: r, onSelectGuild: s, query: j } = e,
+        C = (0, o.e7)([x.ZP], () => x.ZP.getFlattenedGuildIds()),
+        v = (0, o.Wu)([m.Z], () =>
+            C.reduce((e, t) => {
+                let n = m.Z.getGuild(t);
+                return null == n || (null != l && l.some((e) => e.id === t)) || ((j.length <= 0 || i()(j.toLowerCase(), null == n ? void 0 : n.name.toLowerCase())) && e.push(n)), e;
             }, [])
         );
-    function R() {
-        t(), (0, d.xf)(), (0, c.uL)(I.Z5c.GUILD_DISCOVERY);
+    function N() {
+        r(), (0, c.xf)(), (0, u.uL)(g.Z5c.GUILD_DISCOVERY);
     }
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            0 === U.length &&
+            0 === v.length &&
                 (0, n.jsx)('div', {
-                    className: _.emptyStateWrapper,
-                    children: (0, n.jsx)(o.Text, {
+                    className: p.emptyStateWrapper,
+                    children: (0, n.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         children:
-                            0 === E.length
-                                ? M.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_NON_GUILD_MEMBER.format({
-                                      publicGuildDirectoryHook: (e, s) =>
+                            0 === C.length
+                                ? f.NW.format(f.t['E3tB6+'], {
+                                      publicGuildDirectoryHook: (e, t) =>
                                           (0, n.jsx)(
-                                              o.Clickable,
+                                              a.P3F,
                                               {
-                                                  onClick: R,
+                                                  onClick: N,
                                                   tag: 'a',
                                                   children: e
                                               },
-                                              s
+                                              t
                                           )
                                   })
-                                : M.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_GUILD_NOT_FOUND
+                                : f.NW.string(f.t.w3GLl5)
                     })
                 }),
-            U.map((e) =>
+            v.map((e) =>
                 (0, n.jsxs)(
-                    o.Clickable,
+                    a.P3F,
                     {
-                        className: _.selectGuild,
+                        className: p.selectGuild,
                         onClick: () => {
-                            r(e);
+                            s(e);
                         },
                         children: [
-                            (0, n.jsx)(u.Z, {
-                                className: _.selectGuildIcon,
+                            (0, n.jsx)(d.Z, {
+                                className: p.selectGuildIcon,
                                 guild: e,
-                                size: u.Z.Sizes.SMALL
+                                size: d.Z.Sizes.SMALL
                             }),
                             (0, n.jsxs)('div', {
-                                className: _.selectGuildCopy,
+                                className: p.selectGuildCopy,
                                 children: [
-                                    (0, n.jsx)(o.Text, {
-                                        className: _.selectGuildName,
+                                    (0, n.jsx)(a.Text, {
+                                        className: p.selectGuildName,
                                         variant: 'text-md/normal',
                                         children: e.name
                                     }),
-                                    (0, n.jsx)(o.Text, {
-                                        className: _.selectGuildLevel,
+                                    (0, n.jsx)(a.Text, {
+                                        className: p.selectGuildLevel,
                                         color: 'text-muted',
                                         variant: 'text-xs/normal',
-                                        children: (0, S.nW)(e.premiumTier)
+                                        children: (0, h.nW)(e.premiumTier)
                                     })
                                 ]
                             }),
-                            (0, n.jsx)(o.Text, {
-                                className: _.selectGuildPseudoCta,
+                            (0, n.jsx)(a.Text, {
+                                className: p.selectGuildPseudoCta,
                                 color: 'always-white',
                                 variant: 'text-sm/medium',
-                                children: s ? M.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : M.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION
+                                children: t ? f.NW.string(f.t.dUgaFx) : f.NW.string(f.t.Uj0md3)
                             })
                         ]
                     },
@@ -130,29 +122,29 @@ function E(e) {
         ]
     });
 }
-function U(e) {
-    let { onClose: s, onSelectGuild: l, transitionState: r } = e,
-        [a, i] = t.useState('');
-    return (0, n.jsxs)(o.ModalRoot, {
-        transitionState: r,
-        className: _.modal,
-        size: o.ModalSize.SMALL,
+function v(e) {
+    let { onClose: t, onSelectGuild: l, transitionState: s } = e,
+        [i, o] = r.useState('');
+    return (0, n.jsxs)(a.Y0X, {
+        transitionState: s,
+        className: p.modal,
+        size: a.CgR.SMALL,
         children: [
-            (0, n.jsx)(x, {
-                query: a,
-                setQuery: i
+            (0, n.jsx)(j, {
+                query: i,
+                setQuery: o
             }),
-            (0, n.jsx)(o.ModalContent, {
-                className: _.modalContent,
-                children: (0, n.jsx)(E, {
-                    onClose: s,
+            (0, n.jsx)(a.hzk, {
+                className: p.modalContent,
+                children: (0, n.jsx)(C, {
+                    onClose: t,
                     onSelectGuild: l,
-                    query: a
+                    query: i
                 })
             }),
-            (0, n.jsx)(o.ModalCloseButton, {
-                className: _.modalCloseButton,
-                onClick: s
+            (0, n.jsx)(a.olH, {
+                className: p.modalCloseButton,
+                onClick: t
             })
         ]
     });

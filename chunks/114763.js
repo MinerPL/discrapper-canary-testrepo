@@ -1,13 +1,9 @@
-n.d(t, {
-    N: function () {
-        return _;
-    }
-});
+n.d(t, { N: () => E });
 var r = n(717029),
     i = n(25487),
-    a = n(846042);
-function s(e) {
-    return (s =
+    o = n(846042);
+function a(e) {
+    return (a =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -16,31 +12,68 @@ function s(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function o(e, t) {
+function s(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function l(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function l(e, t) {
-    return (l =
+function c(e, t, n) {
+    return t && l(e.prototype, t), n && l(e, n), e;
+}
+function u(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
+    (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+            value: e,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        t && d(e, t);
+}
+function d(e, t) {
+    return (d =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-function u(e) {
+function f(e) {
+    var t = h();
+    return function () {
+        var n,
+            r = m(e);
+        return (n = t ? Reflect.construct(r, arguments, m(this).constructor) : r.apply(this, arguments)), _(this, n);
+    };
+}
+function _(e, t) {
+    return t && ('object' === a(t) || 'function' == typeof t) ? t : p(e);
+}
+function p(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function c(e) {
-    return (c = Object.setPrototypeOf
+function h() {
+    if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
+    if ('function' == typeof Proxy) return !0;
+    try {
+        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+    } catch (e) {
+        return !1;
+    }
+}
+function m(e) {
+    return (m = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function d(e, t, n) {
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,66 +86,28 @@ function d(e, t, n) {
         e
     );
 }
-var _ = (function (e) {
-    !(function (e, t) {
-        if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
-        (e.prototype = Object.create(t && t.prototype, {
-            constructor: {
-                value: e,
-                writable: !0,
-                configurable: !0
-            }
-        })),
-            t && l(e, t);
-    })(h, e);
-    var t,
-        n,
-        r,
-        _,
-        E,
-        f =
-            ((t = h),
-            (n = (function () {
-                if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
-                if ('function' == typeof Proxy) return !0;
-                try {
-                    return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
-                } catch (e) {
-                    return !1;
-                }
-            })()),
-            function () {
-                var e,
-                    r = c(t);
-                return (
-                    (e = n ? Reflect.construct(r, arguments, c(this).constructor) : r.apply(this, arguments)),
-                    (function (e, t) {
-                        return t && ('object' === s(t) || 'function' == typeof t) ? t : u(e);
-                    })(this, e)
-                );
-            });
-    function h() {
+var E = (function (e) {
+    u(n, e);
+    var t = f(n);
+    function n() {
         var e;
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, h);
-        for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-        return d(u((e = f.call.apply(f, [this].concat(n)))), 'priority', 90), d(u(e), 'subpriority', 1), d(u(e), 'incompatibleTokens', ['Y', 'R', 'q', 'Q', 'M', 'L', 'w', 'I', 'd', 'E', 'i', 'e', 'c', 't', 'T']), e;
+        s(this, n);
+        for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
+        return g(p((e = t.call.apply(t, [this].concat(i)))), 'priority', 90), g(p(e), 'subpriority', 1), g(p(e), 'incompatibleTokens', ['Y', 'R', 'q', 'Q', 'M', 'L', 'w', 'I', 'd', 'E', 'i', 'e', 'c', 't', 'T']), e;
     }
     return (
-        (r = h),
-        (_ = [
+        c(n, [
             {
                 key: 'parse',
                 value: function (e, t, n) {
                     switch (t) {
                         case 'D':
                         case 'DD':
-                            return (0, a.ie)(i.z.dayOfYear, e);
+                            return (0, o.ie)(i.z.dayOfYear, e);
                         case 'Do':
                             return n.ordinalNumber(e, { unit: 'date' });
                         default:
-                            return (0, a.ZL)(t.length, e);
+                            return (0, o.ZL)(t.length, e);
                     }
                 }
             },
@@ -120,7 +115,7 @@ var _ = (function (e) {
                 key: 'validate',
                 value: function (e, t) {
                     var n = e.getUTCFullYear();
-                    return (0, a.kT)(n) ? t >= 1 && t <= 366 : t >= 1 && t <= 365;
+                    return (0, o.kT)(n) ? t >= 1 && t <= 366 : t >= 1 && t <= 365;
                 }
             },
             {
@@ -130,7 +125,6 @@ var _ = (function (e) {
                 }
             }
         ]),
-        o(r.prototype, _),
-        h
+        n
     );
 })(r._);

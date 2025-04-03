@@ -1,41 +1,28 @@
 n.d(t, {
-    Gx: function () {
-        return d;
-    },
-    Op: function () {
-        return h;
-    },
-    T4: function () {
-        return u;
-    },
-    V_: function () {
-        return c;
-    }
-});
-var i,
-    a,
-    s = n(539573),
-    l = n(689938);
-function r(e, t) {
+    Gx: () => s,
+    Op: () => c,
+    T4: () => a,
+    V_: () => o
+}),
+    n(566702);
+var r = n(539573),
+    i = n(388032);
+function l(e, t) {
     return {
         type: e,
         message: null != t ? t : null
     };
 }
-function o(e) {
-    return r(0, e);
+function o() {
+    return l(0, i.NW.string(i.t['uXA57+']));
 }
-function c() {
-    return r(0, l.Z.Messages.FORM_THREAD_NAME_REQUIRED_ERROR);
+function a() {
+    return l(0, i.NW.string(i.t.kesTVV));
 }
-function u() {
-    return r(0, l.Z.Messages.FORM_THREAD_STARTER_MESSAGE_REQUIRED_ERROR);
+function s(e, t) {
+    return l(1, (0, r.$q)(e, null == t ? void 0 : t.id));
 }
-function d(e, t) {
-    return r(1, (0, s.$q)(e, null == t ? void 0 : t.id));
-}
-function h(e, t) {
+function c(e, t) {
     var n;
-    return null == e || (0 === e.type && null != t.content && t.content.trim().length > 0) ? null : null !== (n = e.message) && void 0 !== n ? n : null;
+    return null == e || (0 === e.type && null != t.content && t.content.trim().length > 0) ? null : null != (n = e.message) ? n : null;
 }
-((i = a || (a = {}))[(i.EmptyContent = 0)] = 'EmptyContent'), (i[(i.AutomodViolation = 1)] = 'AutomodViolation');

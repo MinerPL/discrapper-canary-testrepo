@@ -3,8 +3,4 @@ function r(e) {
     var t = Number(e);
     return isNaN(t) ? t : t < 0 ? Math.ceil(t) : Math.floor(t);
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });

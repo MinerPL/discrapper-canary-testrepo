@@ -1,91 +1,90 @@
-n.d(t, {
-    n: function () {
-        return E;
-    }
-});
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(1561),
+n.d(t, { n: () => m });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(1561),
     l = n(84735),
+    c = n(670596),
     u = n(922770),
-    c = n(481060),
-    d = n(689938),
-    _ = n(457390);
-let E = i.forwardRef(function (e, t) {
-    var n, a, E;
-    let { query: f, onChange: h, loading: p = !1, disabled: m = !1, placeholder: I = d.Z.Messages.SEARCH, 'aria-label': T } = e,
-        g = i.useRef(null),
-        S = i.useRef(null);
+    d = n(481060),
+    f = n(388032),
+    _ = n(11159);
+let p = 18;
+function h(e, t, n) {
+    return t
+        ? (0, r.jsx)('div', {
+              className: _.iconContainer,
+              children: (0, r.jsx)(u.$, {
+                  type: u.$.Type.SPINNING_CIRCLE,
+                  className: _.icon
+              })
+          })
+        : e.length > 0
+          ? (0, r.jsx)(s.P, {
+                'aria-label': f.NW.string(f.t['78fJND']),
+                className: a()(_.iconContainer, _.iconClickable),
+                onClick: (e) => {
+                    e.stopPropagation(), n('');
+                },
+                onMouseDown: (e) => {
+                    e.preventDefault(), e.stopPropagation();
+                },
+                focusProps: {
+                    offset: {
+                        top: -3,
+                        right: -3,
+                        bottom: -3,
+                        left: -3
+                    }
+                },
+                children: (0, r.jsx)(d.Dio, {
+                    size: 'custom',
+                    color: 'currentColor',
+                    width: p,
+                    height: p,
+                    className: _.icon,
+                    'aria-label': f.NW.string(f.t.cpT0Cg)
+                })
+            })
+          : (0, r.jsx)('div', {
+                className: _.iconContainer,
+                children: (0, r.jsx)(d._Ve, {
+                    size: 'custom',
+                    color: 'currentColor',
+                    width: p,
+                    height: p,
+                    className: _.icon,
+                    'aria-label': f.NW.string(f.t['5h0QOD'])
+                })
+            });
+}
+let m = i.forwardRef(function (e, t) {
+    let { query: n, onChange: o, loading: a = !1, disabled: s = !1, placeholder: u = f.NW.string(f.t['5h0QOD']), 'aria-label': d, onInteraction: p } = e,
+        m = i.useRef(null),
+        g = i.useRef(null);
     i.useImperativeHandle(
         t,
         () => ({
             focus: () => {
                 var e;
-                return null === (e = S.current) || void 0 === e ? void 0 : e.focus();
+                return null == (e = g.current) ? void 0 : e.focus();
             },
             blur: () => {
                 var e;
-                return null === (e = S.current) || void 0 === e ? void 0 : e.blur();
+                return null == (e = g.current) ? void 0 : e.blur();
             },
             activate: () => !1
         }),
         []
     );
-    let A =
-        ((n = f),
-        (a = p),
-        (E = h),
-        a
-            ? (0, r.jsx)('div', {
-                  className: _.iconContainer,
-                  children: (0, r.jsx)(u.$, {
-                      type: u.$.Type.SPINNING_CIRCLE,
-                      className: s()(_.icon)
-                  })
-              })
-            : n.length > 0
-              ? (0, r.jsx)(o.P, {
-                    'aria-label': d.Z.Messages.SEARCH_CLEAR,
-                    className: s()(_.iconContainer, _.iconClickable),
-                    onClick: (e) => {
-                        e.stopPropagation(), E('');
-                    },
-                    onMouseDown: (e) => {
-                        e.preventDefault(), e.stopPropagation();
-                    },
-                    focusProps: {
-                        offset: {
-                            top: -3,
-                            right: -3,
-                            bottom: -3,
-                            left: -3
-                        }
-                    },
-                    children: (0, r.jsx)(c.XSmallIcon, {
-                        size: 'custom',
-                        color: 'currentColor',
-                        width: 18,
-                        height: 18,
-                        className: _.icon,
-                        'aria-label': d.Z.Messages.CLOSE
-                    })
-                })
-              : (0, r.jsx)('div', {
-                    className: _.iconContainer,
-                    children: (0, r.jsx)(c.MagnifyingGlassIcon, {
-                        size: 'custom',
-                        color: 'currentColor',
-                        width: 18,
-                        height: 18,
-                        className: _.icon,
-                        'aria-label': d.Z.Messages.SEARCH
-                    })
-                }));
+    let E = h(n, a, o),
+        b = (e) => {
+            o(e.currentTarget.value), null == p || p(c.U.SEARCH);
+        };
     return (0, r.jsx)(l.t, {
-        focusTarget: S,
-        ringTarget: g,
+        focusTarget: g,
+        ringTarget: m,
         offset: {
             top: 2,
             bottom: 2,
@@ -94,20 +93,20 @@ let E = i.forwardRef(function (e, t) {
         },
         children: (0, r.jsxs)('div', {
             className: _.container,
-            ref: g,
+            ref: m,
             children: [
                 (0, r.jsx)('input', {
                     role: 'searchbox',
-                    'aria-busy': p,
-                    ref: S,
+                    'aria-busy': a,
+                    ref: g,
                     className: _.input,
-                    value: f,
-                    onChange: (e) => h(e.currentTarget.value),
-                    'aria-label': T,
-                    placeholder: I,
-                    disabled: m
+                    value: n,
+                    onChange: b,
+                    'aria-label': d,
+                    placeholder: u,
+                    disabled: s
                 }),
-                A
+                E
             ]
         })
     });

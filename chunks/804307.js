@@ -1,21 +1,17 @@
-t.d(n, {
-    Z: function () {
-        return m;
-    }
-});
-var i = t(735250),
-    a = t(470079),
-    l = t(120356),
-    o = t.n(l),
-    r = t(442837),
-    s = t(481060),
-    c = t(607070),
-    d = t(98880),
-    u = t(202558);
-function m(e) {
-    let { look: n = d.U4.LARGE_BANNER } = e,
-        t = (0, r.e7)([c.Z], () => c.Z.useReducedMotion),
-        { styleLarge: l, styleSmall: m } = a.useMemo(
+n.d(t, { Z: () => p });
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(442837),
+    c = n(481060),
+    s = n(607070),
+    u = n(98880),
+    d = n(85884);
+function p(e) {
+    let { look: t = u.U4.LARGE_BANNER } = e,
+        n = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
+        { styleLarge: l, styleSmall: p } = r.useMemo(
             () => ({
                 styleLarge: { width: ''.concat(10 + 50 * Math.random(), '%') },
                 styleSmall: { width: ''.concat(30 + 60 * Math.random(), '%') }
@@ -23,30 +19,30 @@ function m(e) {
             []
         );
     return (0, i.jsxs)('div', {
-        className: o()(u.container, u.loadingAnimation, {
-            [u.noAnimation]: t,
-            [u.containerBorderRadius]: n !== d.U4.ROW,
-            [u.rowContainer]: n === d.U4.ROW
+        className: a()(d.container, d.loadingAnimation, {
+            [d.noAnimation]: n,
+            [d.containerBorderRadius]: t !== u.U4.ROW,
+            [d.rowContainer]: t === u.U4.ROW
         }),
         children: [
             (0, i.jsx)('div', {
-                className: o()(u.bannerImage, {
-                    [u.mediumBanner]: n === d.U4.MEDIUM_BANNER,
-                    [u.largeBanner]: n === d.U4.LARGE_BANNER
+                className: a()(d.bannerImage, {
+                    [d.mediumBanner]: t === u.U4.MEDIUM_BANNER,
+                    [d.largeBanner]: t === u.U4.LARGE_BANNER
                 })
             }),
             (0, i.jsxs)('div', {
-                className: o()(u.appDetailsContainer, { [u.appDetailsRowContainer]: n === d.U4.ROW }),
+                className: a()(d.appDetailsContainer, { [d.appDetailsRowContainer]: t === u.U4.ROW }),
                 children: [
-                    (0, i.jsx)('div', { className: o()(u.iconPlaceholder, { [u.rowIconPlaceholder]: n === d.U4.ROW }) }),
+                    (0, i.jsx)('div', { className: a()(d.iconPlaceholder, { [d.rowIconPlaceholder]: t === u.U4.ROW }) }),
                     (0, i.jsxs)('div', {
-                        className: u.textContainer,
+                        className: d.textContainer,
                         children: [
                             (0, i.jsx)('div', {
-                                className: u.textPlaceholder,
+                                className: d.textPlaceholder,
                                 style: l,
-                                children: (0, i.jsx)(s.Heading, {
-                                    className: u.hidden,
+                                children: (0, i.jsx)(c.X6q, {
+                                    className: d.hidden,
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
                                     lineClamp: 1,
@@ -54,10 +50,10 @@ function m(e) {
                                 })
                             }),
                             (0, i.jsx)('div', {
-                                className: u.textPlaceholder,
-                                style: m,
-                                children: (0, i.jsx)(s.Text, {
-                                    className: u.hidden,
+                                className: d.textPlaceholder,
+                                style: p,
+                                children: (0, i.jsx)(c.Text, {
+                                    className: d.hidden,
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
                                     lineClamp: 1,
@@ -66,7 +62,7 @@ function m(e) {
                             })
                         ]
                     }),
-                    n === d.U4.ROW && (0, i.jsx)('div', { className: u.rowDivider })
+                    t === u.U4.ROW && (0, i.jsx)('div', { className: d.rowDivider })
                 ]
             })
         ]

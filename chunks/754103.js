@@ -1,89 +1,149 @@
-t(47120);
-var s = t(735250),
-    n = t(470079),
-    l = t(120356),
-    r = t.n(l),
-    o = t(481060),
-    i = t(600164),
-    c = t(702512);
-function u(e, a, t) {
+n.d(t, { Z: () => g }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(600164),
+    c = n(360797);
+function u(e, t, n) {
     return (
-        a in e
-            ? Object.defineProperty(e, a, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[a] = t),
+            : (e[t] = n),
         e
     );
 }
-class d extends n.PureComponent {
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = h(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+class m extends i.PureComponent {
     componentDidUpdate(e) {
         if (this.props.formError !== e.formError) this.setState({ changedSinceError: new Set() });
         else if (null != this.props.formError) {
-            let { changedSinceError: a } = this.state;
-            this.getChangedValues(e).forEach((e) => a.add(e)), this.setState({ changedSinceError: a });
+            let { changedSinceError: t } = this.state;
+            this.getChangedValues(e).forEach((e) => t.add(e)), this.setState({ changedSinceError: t });
         }
     }
     getChangedValues(e) {
-        let { values: a } = this.props,
-            { values: t } = e;
-        return Object.keys(a).filter((e) => a[e] !== t[e]);
+        let { values: t } = this.props,
+            { values: n } = e;
+        return Object.keys(t).filter((e) => t[e] !== n[e]);
     }
     getError(e) {
-        let { errors: a, formError: t } = this.props;
-        return null != a[e] ? a[e] : null == t || this.state.changedSinceError.has(e) ? null : t.getFieldMessage(e);
+        let { errors: t, formError: n } = this.props;
+        return null != t[e] ? t[e] : null == n || this.state.changedSinceError.has(e) ? null : n.getFieldMessage(e);
     }
     render() {
-        let { form: e, className: a } = this.props,
-            t = e.map(this.renderFormRow);
-        return (0, s.jsx)('div', {
-            className: a,
-            children: t
+        let { form: e, className: t } = this.props,
+            n = e.map(this.renderFormRow);
+        return (0, r.jsx)('div', {
+            className: t,
+            children: n
         });
     }
     constructor(...e) {
         super(...e),
             u(this, 'state', { changedSinceError: new Set() }),
             u(this, 'renderFormSection', (e) => {
-                let { values: a, onFieldChange: t, onFieldFocus: n, onFieldBlur: l, layout: i, ...c } = this.props,
-                    { getClassNameForLayout: u, renderInput: d, title: E, name: A, id: N, placeholder: m, ..._ } = e,
-                    p = {
-                        ..._,
-                        placeholder: null == m ? void 0 : m(),
-                        layout: i,
-                        error: this.getError(A),
-                        value: a[A],
-                        name: A,
-                        'aria-labelledby': N,
-                        onChange: t,
-                        onFocus: n,
+                let t = this.props,
+                    { values: n, onFieldChange: i, onFieldFocus: o, onFieldBlur: l, layout: c } = t,
+                    u = p(t, ['values', 'onFieldChange', 'onFieldFocus', 'onFieldBlur', 'layout']),
+                    { getClassNameForLayout: f, renderInput: h, title: m, name: g, id: E, placeholder: b } = e,
+                    y = _(d({}, p(e, ['getClassNameForLayout', 'renderInput', 'title', 'name', 'id', 'placeholder'])), {
+                        placeholder: null == b ? void 0 : b(),
+                        layout: c,
+                        error: this.getError(g),
+                        value: n[g],
+                        name: g,
+                        'aria-labelledby': E,
+                        onChange: i,
+                        onFocus: o,
                         onBlur: l
-                    };
-                return (0, s.jsx)(
-                    o.FormSection,
+                    });
+                return (0, r.jsx)(
+                    s.hjN,
                     {
-                        className: r()(null == u ? void 0 : u(i)),
-                        title: E(),
-                        titleId: N,
-                        children: d(p, c)
+                        className: a()(null == f ? void 0 : f(c)),
+                        title: m(),
+                        titleId: E,
+                        children: h(y, u)
                     },
-                    A
+                    g
                 );
             }),
             u(this, 'renderFormRow', (e) => {
-                let a = e.fields.map(this.renderFormSection);
-                return (0, s.jsx)(
-                    i.Z,
+                let t = e.fields.map(this.renderFormSection);
+                return (0, r.jsx)(
+                    l.Z,
                     {
-                        className: r()(c.row, e.className),
-                        children: a
+                        className: a()(c.row, e.className),
+                        children: t
                     },
                     e.fields.map((e) => e.name).join('')
                 );
             });
     }
 }
-a.Z = d;
+let g = m;

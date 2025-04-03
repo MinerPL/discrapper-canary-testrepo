@@ -1,20 +1,16 @@
-n.d(t, {
-    A: function () {
-        return s;
-    }
-});
-var i = n(981631),
-    a = n(689938);
-function s(e) {
-    let { application: t, username: n, usernameHook: s = i.dG4 } = e;
+n.d(t, { A: () => a });
+var r = n(981631),
+    i = n(388032);
+function a(e) {
+    let { application: t, username: n, usernameHook: a = r.dG4 } = e;
     return null != t
-        ? a.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE.format({
+        ? i.NW.format(i.t.dXdgnp, {
               username: n,
               applicationName: t.name,
-              usernameHook: s
+              usernameHook: a
           })
-        : a.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION.format({
+        : i.NW.format(i.t.O829Ul, {
               username: n,
-              usernameHook: s
+              usernameHook: a
           });
 }

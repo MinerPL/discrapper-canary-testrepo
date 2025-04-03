@@ -1,156 +1,220 @@
-a.r(n), a(47120), a(411104);
-var t = a(735250),
-    r = a(470079),
-    o = a(442837),
-    i = a(780384),
-    _ = a(481060),
-    s = a(366939),
-    I = a(911969),
-    l = a(410030),
-    c = a(100527),
-    u = a(906732),
-    d = a(583046),
-    f = a(963249),
-    N = a(853872),
-    T = a(509545),
-    C = a(626135),
-    E = a(74538),
-    R = a(937615),
-    M = a(212895),
-    O = a(296848),
-    L = a(374649),
-    m = a(973159),
-    p = a(798769),
-    g = a(317269),
-    A = a(474936),
-    b = a(981631),
-    P = a(689938),
-    S = a(309461);
-n.default = (e) => {
-    var n, a, h, U;
-    let { daysLeft: B, premiumType: Z, premiumSubscription: G, analyticsSource: x, ...F } = e,
-        H = (0, l.ZP)(),
-        [W, D] = r.useState(!1),
-        { analyticsLocations: Y } = (0, u.ZP)(c.Z.PREMIUM_UNCANCEL_MODAL),
-        y = (0, o.e7)([N.Z], () => ((null == G ? void 0 : G.paymentSourceId) != null ? N.Z.getPaymentSource(G.paymentSourceId) : null), [G]),
-        v = G.items[0].planId,
-        k = (0, E.Wz)(A.GP[v].skuId),
-        { priceOptions: j } = (0, d.Z)({
+r.d(t, { default: () => M }), r(47120), r(411104);
+var n = r(200651),
+    o = r(192379),
+    i = r(442837),
+    l = r(780384),
+    a = r(481060),
+    s = r(366939),
+    u = r(911969),
+    c = r(410030),
+    d = r(100527),
+    _ = r(906732),
+    m = r(583046),
+    f = r(963249),
+    p = r(853872),
+    N = r(509545),
+    C = r(626135),
+    h = r(74538),
+    I = r(937615),
+    b = r(212895),
+    g = r(296848),
+    y = r(374649),
+    T = r(807163),
+    x = r(798769),
+    E = r(317269),
+    P = r(474936),
+    O = r(981631),
+    W = r(388032),
+    S = r(349641);
+let M = (e) => {
+    var t,
+        r,
+        M,
+        j,
+        k,
+        v,
+        { daysLeft: R, premiumType: U, premiumSubscription: A, analyticsSource: L } = e,
+        w = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        o = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+            }
+            return o;
+        })(e, ['daysLeft', 'premiumType', 'premiumSubscription', 'analyticsSource']);
+    let Z = (0, c.ZP)(),
+        [F, X] = o.useState(!1),
+        { analyticsLocations: Y } = (0, _.ZP)(d.Z.PREMIUM_UNCANCEL_MODAL),
+        D = (0, i.e7)([p.Z], () => ((null == A ? void 0 : A.paymentSourceId) != null ? p.Z.getPaymentSource(A.paymentSourceId) : null), [A]),
+        B = A.items[0].planId,
+        H = (0, h.Wz)(P.GP[B].skuId),
+        { priceOptions: z } = (0, m.Z)({
             activeSubscription: null,
-            skuIDs: [k],
-            paymentSourceId: null == G ? void 0 : G.paymentSourceId,
+            skuIDs: [H],
+            paymentSourceId: null == A ? void 0 : A.paymentSourceId,
             isGift: !1
         }),
-        [w] = (0, L.ED)({
-            subscriptionId: G.id,
+        [G] = (0, y.ED)({
+            subscriptionId: A.id,
             items: [
                 {
-                    planId: v,
+                    planId: B,
                     quantity: 1
                 }
             ],
             renewal: !0,
-            paymentSourceId: null == G ? void 0 : G.paymentSourceId,
-            currency: j.currency,
-            analyticsLocations: (0, u.ZP)(c.Z.PREMIUM_UNCANCEL_MODAL),
-            analyticsLocation: c.Z.PREMIUM_UNCANCEL_MODAL
+            paymentSourceId: null == A ? void 0 : A.paymentSourceId,
+            currency: z.currency,
+            analyticsLocations: (0, _.ZP)(d.Z.PREMIUM_UNCANCEL_MODAL),
+            analyticsLocation: d.Z.PREMIUM_UNCANCEL_MODAL
         }),
-        K = (0, o.e7)([T.Z], () => (0, O.oE)(v), [v]),
-        X = (0, o.e7)([T.Z], () => T.Z.isFetchingForSKU(k)),
-        z = null == w ? void 0 : null === (U = w.invoiceItems) || void 0 === U ? void 0 : null === (h = U.find((e) => e.subscriptionPlanId === v)) || void 0 === h ? void 0 : null === (a = h.discounts) || void 0 === a ? void 0 : null === (n = a.find((e) => e.type === I.eW.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount,
-        Q = null != K ? (0, E.aS)(K.id, !1, !1, j) : null,
-        V = null != Q && null != z ? (0, R.T4)(Q.amount - (null != z ? z : 0), Q.currency) : null,
-        { intervalType: q, intervalCount: J } = E.ZP.getInterval(v),
-        $ = Z === A.p9.TIER_1,
-        ee = null != Q ? (0, R.T4)(Q.amount, Q.currency) : null;
+        K = (0, i.e7)([N.Z], () => (0, g.oE)(B), [B]),
+        Q = (0, i.e7)([N.Z], () => N.Z.isFetchingForSKU(H)),
+        V = null == G || null == (v = G.invoiceItems) || null == (k = v.find((e) => e.subscriptionPlanId === B)) || null == (j = k.discounts) || null == (M = j.find((e) => e.type === u.eW.SUBSCRIPTION_PLAN)) ? void 0 : M.amount,
+        q = null != K ? (0, h.aS)(K.id, !1, !1, z) : null,
+        J = null != q && null != V ? (0, I.T4)(q.amount - (null != V ? V : 0), q.currency) : null,
+        { intervalType: $, intervalCount: ee } = h.ZP.getInterval(B),
+        et = U === P.p9.TIER_1,
+        er = null != q ? (0, I.T4)(q.amount, q.currency) : null;
     return (
-        r.useEffect(() => {
-            C.default.track(b.rMx.OPEN_MODAL, {
+        o.useEffect(() => {
+            C.default.track(O.rMx.OPEN_MODAL, {
                 type: 'Premium Uncancel Winback',
-                source: x
+                source: L
             });
-        }, [x]),
-        (0, t.jsx)(_.ModalRoot, {
-            ...F,
-            className: S.modal,
-            children: W
-                ? (0, t.jsxs)(t.Fragment, {
-                      children: [
-                          (0, t.jsx)(p.Z, {
-                              premiumType: Z,
-                              onClose: F.onClose
-                          }),
-                          (0, t.jsx)(g.ZP, {
-                              planId: v,
-                              onClose: F.onClose,
-                              paymentSourceType: null == y ? void 0 : y.type
+        }, [L]),
+        (0, n.jsx)(
+            a.Y0X,
+            ((t = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var r = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(r);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            })
+                        )),
+                        n.forEach(function (t) {
+                            var n;
+                            (n = r[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: n,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = n);
+                        });
+                }
+                return e;
+            })({}, w)),
+            (r = r =
+                {
+                    className: S.modal,
+                    children: F
+                        ? (0, n.jsxs)(n.Fragment, {
+                              children: [
+                                  (0, n.jsx)(x.Z, {
+                                      premiumType: U,
+                                      onClose: w.onClose
+                                  }),
+                                  (0, n.jsx)(E.ZP, {
+                                      planId: B,
+                                      onClose: w.onClose,
+                                      paymentSourceType: null == D ? void 0 : D.type
+                                  })
+                              ]
                           })
-                      ]
-                  })
-                : (0, t.jsx)(m.Z, {
-                      premiumType: Z,
-                      titleText: $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE_TIER_1.format({ daysLeft: B }) : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE.format({ daysLeft: B }),
-                      subtitleText: $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE_TIER_1.format() : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE.format(),
-                      footer: (0, t.jsxs)('div', {
-                          children: [
-                              null !== ee
-                                  ? (0, t.jsx)(_.Text, {
-                                        variant: 'text-sm/normal',
-                                        children: (function (e) {
-                                            switch (q) {
-                                                case A.rV.YEAR:
-                                                    return $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1.format({ price: e }) : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY.format({ price: e });
-                                                case A.rV.MONTH:
-                                                    if (null != V)
-                                                        return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER.format({
-                                                            discountPrice: V,
-                                                            defaultPrice: e
-                                                        });
-                                                    if ($) return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MONTHLY_TIER_1.format({ price: e });
-                                                    if (1 === J) return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MONTHLY.format({ price: e });
-                                                    else
-                                                        return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MULTI_MONTH.format({
-                                                            price: e,
-                                                            intervalCount: J
-                                                        });
-                                                default:
-                                                    throw Error('Unknown interval type '.concat(q));
-                                            }
-                                        })(ee)
-                                    })
-                                  : (0, t.jsx)(_.Spinner, { type: _.SpinnerTypes.SPINNING_CIRCLE }),
-                              (0, t.jsxs)('div', {
-                                  className: S.footer,
+                        : (0, n.jsx)(T.Z, {
+                              premiumType: U,
+                              titleText: et ? W.NW.formatToPlainString(W.t.Sngnzs, { daysLeft: R }) : W.NW.formatToPlainString(W.t.tdvIlZ, { daysLeft: R }),
+                              subtitleText: et ? W.NW.format(W.t['6Su2XV'], {}) : W.NW.format(W.t['lE+P8f'], {}),
+                              footer: (0, n.jsxs)('div', {
                                   children: [
-                                      (0, t.jsx)(_.Button, {
-                                          disabled: X,
-                                          onClick: () => {
-                                              if (null != G) {
-                                                  let e = (0, M.tD)(v, G.currency, null == y ? void 0 : y.id);
-                                                  null != y && y.id === G.paymentSourceId && e
-                                                      ? (s.O5(G, Y, b.Sbl.UNCANCEL_WINBACK_MODAL), D(!0))
-                                                      : (F.onClose(),
-                                                        (0, f.Z)({
-                                                            initialPlanId: v,
-                                                            analyticsLocations: Y,
-                                                            analyticsLocation: b.Sbl.UNCANCEL_WINBACK_MODAL
-                                                        }));
-                                              }
-                                          },
-                                          children: P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO
-                                      }),
-                                      (0, t.jsx)(_.Button, {
-                                          look: _.Button.Looks.LINK,
-                                          color: (0, i.wj)(H) ? _.Button.Colors.WHITE : _.Button.Colors.PRIMARY,
-                                          onClick: F.onClose,
-                                          children: P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL
+                                      null !== er
+                                          ? (0, n.jsx)(a.Text, {
+                                                variant: 'text-sm/normal',
+                                                children: (function (e) {
+                                                    switch ($) {
+                                                        case P.rV.YEAR:
+                                                            return et ? W.NW.format(W.t.O7JRzc, { price: e }) : W.NW.format(W.t['0y5kAA'], { price: e });
+                                                        case P.rV.MONTH:
+                                                            if (null != J)
+                                                                return W.NW.format(W.t['1/ucvr'], {
+                                                                    discountPrice: J,
+                                                                    defaultPrice: e
+                                                                });
+                                                            if (et) return W.NW.format(W.t.rbwRlZ, { price: e });
+                                                            if (1 === ee) return W.NW.format(W.t.C9oRCw, { price: e });
+                                                            return W.NW.format(W.t.TmmTgo, {
+                                                                price: e,
+                                                                intervalCount: ee
+                                                            });
+                                                        default:
+                                                            throw Error('Unknown interval type '.concat($));
+                                                    }
+                                                })(er)
+                                            })
+                                          : (0, n.jsx)(a.$jN, { type: a.RAz.SPINNING_CIRCLE }),
+                                      (0, n.jsxs)('div', {
+                                          className: S.footer,
+                                          children: [
+                                              (0, n.jsx)(a.zxk, {
+                                                  disabled: Q,
+                                                  onClick: () => {
+                                                      if (null != A) {
+                                                          let e = (0, b.tD)(B, A.currency, null == D ? void 0 : D.id);
+                                                          null != D && D.id === A.paymentSourceId && e
+                                                              ? (s.O5(A, Y, O.Sbl.UNCANCEL_WINBACK_MODAL), X(!0))
+                                                              : (w.onClose(),
+                                                                (0, f.Z)({
+                                                                    initialPlanId: B,
+                                                                    analyticsLocations: Y,
+                                                                    analyticsLocation: O.Sbl.UNCANCEL_WINBACK_MODAL
+                                                                }));
+                                                      }
+                                                  },
+                                                  children: W.NW.string(W.t['2+luBg'])
+                                              }),
+                                              (0, n.jsx)(a.zxk, {
+                                                  look: a.zxk.Looks.LINK,
+                                                  color: (0, l.wj)(Z) ? a.zxk.Colors.WHITE : a.zxk.Colors.PRIMARY,
+                                                  onClick: w.onClose,
+                                                  children: W.NW.string(W.t.XDpS4O)
+                                              })
+                                          ]
                                       })
                                   ]
-                              })
-                          ]
-                      }),
-                      onClose: F.onClose
-                  })
-        })
+                              }),
+                              onClose: w.onClose
+                          })
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                : (function (e, t) {
+                      var r = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var n = Object.getOwnPropertySymbols(e);
+                          r.push.apply(r, n);
+                      }
+                      return r;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                  }),
+            t)
+        )
     );
 };

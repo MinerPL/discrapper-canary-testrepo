@@ -1,40 +1,35 @@
-t.d(n, {
-    MY: function () {
-        return u;
-    },
-    RC: function () {
-        return a;
-    },
-    UF: function () {
-        return E;
-    }
+n.d(t, {
+    MY: () => c,
+    RC: () => o,
+    UF: () => l,
+    ZP: () => d
 });
-var i = t(857595),
-    l = t(607070),
-    o = t(981631);
-function r(e) {
-    return o.yqN.ZOOM_SCALES[Math.max(0, Math.min(o.yqN.ZOOM_SCALES.indexOf(l.Z.zoom) + e, o.yqN.ZOOM_SCALES.length - 1))];
+var r = n(857595),
+    i = n(607070),
+    s = n(981631);
+function a(e) {
+    return s.yqN.ZOOM_SCALES[Math.max(0, Math.min(s.yqN.ZOOM_SCALES.indexOf(i.Z.zoom) + e, s.yqN.ZOOM_SCALES.length - 1))];
 }
-let E = {
+let l = {
         binds: ['mod+plus'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, i.cq)(r(1)), !1)
+        action: () => ((0, r.cq)(a(1)), !1)
     },
-    a = {
+    o = {
         binds: ['mod+minus'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, i.cq)(r(-1)), !1)
+        action: () => ((0, r.cq)(a(-1)), !1)
     },
-    u = {
+    c = {
         binds: ['mod+0'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, i.cq)(o.yqN.ZOOM_DEFAULT), !1)
-    };
-n.ZP =
-    12633 == t.j
-        ? {
-              ZOOM_IN: E,
-              ZOOM_OUT: a,
-              ZOOM_RESET: u
-          }
-        : null;
+        action: () => ((0, r.cq)(s.yqN.ZOOM_DEFAULT), !1)
+    },
+    d =
+        12633 == n.j
+            ? {
+                  ZOOM_IN: l,
+                  ZOOM_OUT: o,
+                  ZOOM_RESET: c
+              }
+            : null;

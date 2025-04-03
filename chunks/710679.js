@@ -1,106 +1,147 @@
-i.d(n, {
-    Z: function () {
-        return T;
-    }
-});
-var l = i(735250);
-i(470079);
-var t = i(442837),
-    a = i(724912),
-    r = i(41776),
-    s = i(501655),
-    o = i(427679),
-    c = i(592125),
-    u = i(496675),
-    d = i(19780),
-    E = i(594174),
-    g = i(15274),
-    h = i(924301),
-    v = i(951539),
-    Z = i(146768),
-    C = i(592126),
-    m = i(236373),
-    N = i(230900),
-    x = i(854698),
-    f = i(405613),
-    _ = i(460838),
-    I = i(462179),
-    p = i(981631);
-function T(e) {
-    var n;
-    let { guildEvent: i, guildId: T, truncate: j, onActionTaken: L, className: M, isNew: k } = e,
-        { id: P, guild_id: G, channel_id: D, creator_id: S, name: y, description: A, entity_type: R, image: U, recurrence_rule: b } = i,
-        V = (0, x.DK)(i),
-        O = (0, t.e7)([h.ZP], () => h.ZP.isInterestedInEventRecurrence(P, V), [P, V]),
-        H = (0, t.e7)([r.Z], () => r.Z.isLurking(G), [G]),
-        w = (0, t.e7)([o.Z], () => o.Z.getStageInstanceByChannel(D), [D]),
-        z = (0, t.e7)([c.Z], () => c.Z.getChannel(D), [D]),
-        B = (0, t.e7)([E.default], () => E.default.getUser(S), [S]),
-        { speakers: J } = (0, Z.Z)({
+t.d(n, { Z: () => P }), t(266796);
+var r = t(200651);
+t(192379);
+var i = t(442837),
+    l = t(724912),
+    o = t(41776),
+    c = t(501655),
+    a = t(427679),
+    s = t(592125),
+    u = t(496675),
+    d = t(19780),
+    g = t(594174),
+    p = t(15274),
+    h = t(924301),
+    f = t(951539),
+    v = t(146768),
+    m = t(592126),
+    j = t(236373),
+    b = t(230900),
+    y = t(854698),
+    x = t(405613),
+    Z = t(460838),
+    O = t(462179),
+    N = t(981631);
+function P(e) {
+    var n, t, P;
+    let { guildEvent: C, guildId: E, truncate: k, onActionTaken: w, className: I, isNew: S } = e,
+        { id: T, guild_id: _, channel_id: D, creator_id: G, name: W, description: L, entity_type: R, image: M, recurrence_rule: U } = C,
+        H = (0, y.DK)(C),
+        A = (0, i.e7)([h.ZP], () => h.ZP.isInterestedInEventRecurrence(T, H), [T, H]),
+        z = (0, i.e7)([o.Z], () => o.Z.isLurking(_), [_]),
+        B = (0, i.e7)([a.Z], () => a.Z.getStageInstanceByChannel(D), [D]),
+        X = (0, i.e7)([s.Z], () => s.Z.getChannel(D), [D]),
+        J = (0, i.e7)([g.default], () => g.default.getUser(G), [G]),
+        { speakers: V } = (0, v.Z)({
             id: D,
             data: {
                 guild: null,
-                instance: w,
+                instance: B,
                 speakers: [],
                 participantCount: 0
             },
             context: {
-                guildId: G,
-                instance: w
+                guildId: _,
+                instance: B
             }
         }),
-        X = (0, t.e7)([d.Z], () => d.Z.getChannelId()),
-        W = (0, h.xt)(i),
-        q = X === D && null != X && W,
-        F = J.filter((e) => e.type === s.Ui.VOICE),
-        K = F.length,
-        Y = (0, t.e7)([u.Z], () => u.Z.can(p.Plq.CONNECT, z), [z]),
-        Q = (0, v.ZP)(i),
-        { isMember: $, guild: ee } = (0, C.Z)(G, P),
-        en = (0, I.Z)({
-            guild: ee,
-            channel: z,
-            guildScheduledEvent: i,
-            isActive: W,
-            recurrenceId: V,
-            onActionTaken: L
+        q = (0, i.e7)([d.Z], () => d.Z.getChannelId()),
+        K = (0, h.xt)(C),
+        F = q === D && null != q && K,
+        Q = V.filter((e) => e.type === c.Ui.VOICE),
+        Y = Q.length,
+        $ = (0, i.e7)([u.Z], () => u.Z.can(N.Plq.CONNECT, X), [X]),
+        ee = (0, f.ZP)(C),
+        { isMember: en, guild: et } = (0, m.Z)(_, T),
+        er = (0, O.Z)({
+            guild: et,
+            channel: X,
+            guildScheduledEvent: C,
+            isActive: K,
+            recurrenceId: H,
+            onActionTaken: w
         }),
-        ei = (0, a.Z)(T),
-        el = H
+        ei = (0, l.Z)(E),
+        el = z
             ? void 0
             : (e) =>
-                  (0, g.bO)({
-                      eventId: P,
-                      parentGuildId: T,
+                  (0, p.bO)({
+                      eventId: T,
+                      parentGuildId: E,
                       recurrenceId: e
                   });
-    return (0, l.jsx)(_.Z, {
-        guild: ee,
-        channel: z,
-        creator: B,
-        name: y,
-        entityType: R,
-        description: null != A ? A : void 0,
-        location: null !== (n = (0, N.cS)(i)) && void 0 !== n ? n : void 0,
-        imageSource: null != U ? (0, f.Z)(i) : void 0,
-        imageLocation: _.Q.THUMBNAIL,
-        isActive: W,
-        isUserLurking: H,
-        isJoined: q,
-        isMember: $,
-        isHub: ei,
-        speakers: F,
-        canConnect: Y,
-        speakerCount: K,
-        rsvped: O,
-        canInvite: Q,
-        ...en,
-        className: M,
-        onClick: el,
-        truncate: j,
-        isNew: k,
-        guildEvent: i,
-        recurrenceRule: (0, m.KV)(b),
-        recurrenceId: V
-    });
+    return (0, r.jsx)(
+        Z.Z,
+        ((t = (function (e) {
+            for (var n = 1; n < arguments.length; n++) {
+                var t = null != arguments[n] ? arguments[n] : {},
+                    r = Object.keys(t);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (n) {
+                        var r;
+                        (r = t[n]),
+                            n in e
+                                ? Object.defineProperty(e, n, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[n] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                guild: et,
+                channel: X,
+                creator: J,
+                name: W,
+                entityType: R,
+                description: null != L ? L : void 0,
+                location: null != (n = (0, b.cS)(C)) ? n : void 0,
+                imageSource: null != M ? (0, x.Z)(C) : void 0,
+                imageLocation: Z.Q.THUMBNAIL,
+                isActive: K,
+                isUserLurking: z,
+                isJoined: F,
+                isMember: en,
+                isHub: ei,
+                speakers: Q,
+                canConnect: $,
+                speakerCount: Y,
+                rsvped: A,
+                canInvite: ee
+            },
+            er
+        )),
+        (P = P =
+            {
+                className: I,
+                onClick: el,
+                truncate: k,
+                isNew: S,
+                guildEvent: C,
+                recurrenceRule: (0, j.KV)(U),
+                recurrenceId: H
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(P))
+            : (function (e, n) {
+                  var t = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      t.push.apply(t, r);
+                  }
+                  return t;
+              })(Object(P)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(P, e));
+              }),
+        t)
+    );
 }

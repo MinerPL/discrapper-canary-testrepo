@@ -1,49 +1,44 @@
-t.d(r, {
-    Z: function () {
-        return d;
-    }
-}),
-    t(47120);
-var a = t(735250),
-    n = t(470079),
-    i = t(120356),
-    o = t.n(i),
-    l = t(347469),
-    c = t(545219);
-function s(e) {
-    let { resizableNode: r, minHeight: t, onResize: n } = e,
-        i = (0, l.Z)({
-            minDimension: t,
-            resizableDomNodeRef: r,
-            onElementResize: n,
-            orientation: l.y.VERTICAL_TOP,
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    l = n(120356),
+    i = n.n(l),
+    o = n(347469),
+    s = n(191810);
+function c(e) {
+    let { resizableNode: t, minHeight: n, onResize: a } = e,
+        l = (0, o.Z)({
+            minDimension: n,
+            resizableDomNodeRef: t,
+            onElementResize: a,
+            orientation: o.y.VERTICAL_TOP,
             usePointerEvents: !0
         });
-    return (0, a.jsx)('div', {
-        onPointerDown: i,
-        className: c.resizeHandle
+    return (0, r.jsx)('div', {
+        onPointerDown: l,
+        className: s.resizeHandle
     });
 }
 function d(e) {
-    let { children: r, className: t, initialHeight: i, minHeight: l } = e,
-        d = n.useRef(null),
-        [u, h] = n.useState(i);
-    return (0, a.jsxs)('div', {
+    let { children: t, className: n, initialHeight: l, minHeight: o } = e,
+        d = a.useRef(null),
+        [u, m] = a.useState(l);
+    return (0, r.jsxs)('div', {
         ref: d,
-        className: c.container,
+        className: s.container,
         style: {
-            minHeight: l,
+            minHeight: o,
             height: u
         },
         children: [
-            (0, a.jsx)(s, {
+            (0, r.jsx)(c, {
                 resizableNode: d,
-                minHeight: l,
-                onResize: h
+                minHeight: o,
+                onResize: m
             }),
-            (0, a.jsx)('div', {
-                className: o()(c.subPanelContent, t),
-                children: r
+            (0, r.jsx)('div', {
+                className: i()(s.subPanelContent, n),
+                children: t
             })
         ]
     });

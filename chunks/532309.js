@@ -1,28 +1,24 @@
-t.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = t(990547),
-    a = t(442837),
-    l = t(213609),
-    o = t(541099),
-    r = t(312871);
-function s(e) {
-    let { applicationId: n, commandId: t, searchResultsPosition: s, query: c } = e,
-        d = (0, a.e7)([o.Z], () => o.Z.entrypoint());
+n.d(t, { Z: () => c });
+var i = n(990547),
+    r = n(442837),
+    l = n(213609),
+    a = n(541099),
+    o = n(312871);
+function c(e) {
+    let { applicationId: t, commandId: n, searchResultsPosition: c, query: s } = e,
+        u = (0, r.e7)([a.Z], () => a.Z.entrypoint());
     return {
-        trackSearchResultsItemImpressionRef: (0, r.Z)({
+        trackSearchResultsItemImpressionRef: (0, o.Z)({
             onVisible: () => {
                 (0, l.h)({
                     type: i.ImpressionTypes.VIEW,
                     name: i.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: {
-                        application_id: n,
-                        command_id: t,
-                        search_results_position: s,
-                        query: c,
-                        source: d
+                        application_id: t,
+                        command_id: n,
+                        search_results_position: c,
+                        query: s,
+                        source: u
                     }
                 });
             },

@@ -1,140 +1,181 @@
-n(47120);
-var a = n(735250),
-    s = n(470079),
-    r = n(120356),
-    l = n.n(r),
-    i = n(338545),
-    o = n(481060),
-    c = n(787014),
-    d = n(454585),
-    u = n(456269),
-    m = n(470623),
-    h = n(981631),
-    _ = n(689938),
-    g = n(421076),
-    x = n(910212);
-t.Z = s.memo(function (e) {
-    let { channel: t, onChange: r } = e,
-        f = (0, m.AF)(),
-        { guidelinesOpen: C } = (0, m.xH)((e) => {
+n.d(t, { Z: () => b }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    l = n.n(i),
+    s = n(642128),
+    o = n(788347),
+    c = n(481060),
+    d = n(787014),
+    u = n(454585),
+    m = n(456269),
+    h = n(470623),
+    g = n(981631),
+    f = n(388032),
+    p = n(761852),
+    x = n(73433);
+let b = a.memo(function (e) {
+    let { channel: t, onChange: i } = e,
+        b = (0, h.AF)(),
+        { guidelinesOpen: j } = (0, h.xH)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
-        }),
-        p = (0, u.r_)(t),
-        [T, I] = s.useState(!1),
-        E = s.useCallback(
+        }, o.X),
+        v = (0, m.r_)(t),
+        [C, _] = a.useState(!1),
+        y = a.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = e.clientHeight >= 220;
-                t !== T && I(t);
+                t !== C && _(t);
             },
-            [T]
+            [C]
         );
-    s.useLayoutEffect(() => {
-        setTimeout(r, 350);
-    }, [C, r]);
-    let [N, b] = s.useState(!C),
-        v = (0, o.useSpring)({
-            opacity: C ? 1 : 0,
-            maxHeight: C ? 500 : 0,
+    a.useLayoutEffect(() => {
+        setTimeout(i, 350);
+    }, [j, i]);
+    let [N, O] = a.useState(!j),
+        w = (0, c.q_F)({
+            opacity: +!!j,
+            maxHeight: 500 * !!j,
             config: { duration: 300 },
-            onRest: () => b(!C)
+            onRest: () => O(!j)
         });
     return null != t.topic && t.topic.length > 0
-        ? (0, a.jsx)(i.animated.div, {
-              style: v,
-              className: N ? g.hiddenVisually : void 0,
-              children: (0, a.jsxs)('div', {
-                  className: g.container,
+        ? (0, r.jsx)(s.animated.div, {
+              style: w,
+              className: N ? p.hiddenVisually : void 0,
+              children: (0, r.jsxs)('div', {
+                  className: p.container,
                   children: [
-                      (0, a.jsxs)('div', {
-                          className: g.headerContainer,
+                      (0, r.jsxs)('div', {
+                          className: p.headerContainer,
                           children: [
-                              (0, a.jsxs)(o.Heading, {
+                              (0, r.jsxs)(c.X6q, {
                                   variant: 'heading-lg/semibold',
-                                  className: g.guidelinesHeader,
+                                  className: p.guidelinesHeader,
                                   children: [
-                                      (0, a.jsx)(o.BookCheckIcon, {
+                                      (0, r.jsx)(c.snC, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 20,
                                           height: 20
                                       }),
-                                      _.Z.Messages.FORUM_POST_GUIDELINES_TITLE,
-                                      p &&
-                                          (0, a.jsx)(o.Clickable, {
+                                      f.NW.string(f.t['4d4T4u']),
+                                      v &&
+                                          (0, r.jsx)(c.P3F, {
                                               onClick: () => {
-                                                  c.ZP.open(t.id, void 0, h.ZfP.TOPIC);
+                                                  d.ZP.open(t.id, void 0, g.ZfP.TOPIC);
                                               },
                                               tag: 'span',
-                                              className: g.clickable,
-                                              children: (0, a.jsx)(o.PencilIcon, {
+                                              className: p.clickable,
+                                              children: (0, r.jsx)(c.vdY, {
                                                   size: 'xs',
                                                   color: 'currentColor'
                                               })
                                           })
                                   ]
                               }),
-                              (0, a.jsx)(o.Clickable, {
-                                  'aria-label': _.Z.Messages.CLOSE,
-                                  className: g.clickable,
+                              (0, r.jsx)(c.P3F, {
+                                  'aria-label': f.NW.string(f.t.cpT0Cg),
+                                  className: p.clickable,
                                   onClick: () => {
-                                      f.getState().setGuidelinesOpen(!1);
+                                      b.getState().setGuidelinesOpen(!1);
                                   },
-                                  children: (0, a.jsx)(o.XSmallIcon, {
+                                  children: (0, r.jsx)(c.Dio, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   })
                               })
                           ]
                       }),
-                      (0, a.jsxs)('div', {
-                          className: g.descriptionContainer,
+                      (0, r.jsxs)('div', {
+                          className: p.descriptionContainer,
                           children: [
-                              (0, a.jsx)(o.Text, {
+                              (0, r.jsx)(c.Text, {
                                   selectable: !0,
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   style: { maxHeight: 220 },
-                                  className: l()(g.guidelines, x.markup),
-                                  children: (0, a.jsx)('div', {
-                                      ref: E,
-                                      children: d.Z.parseForumPostGuidelines(t.topic, !0, {
+                                  className: l()(p.guidelines, x.markup),
+                                  children: (0, r.jsx)('div', {
+                                      ref: y,
+                                      children: u.Z.parseForumPostGuidelines(t.topic, !0, {
                                           channelId: t.id,
                                           allowHeading: !0,
                                           allowList: !0
                                       })
                                   })
                               }),
-                              T &&
-                                  (0, a.jsxs)('div', {
-                                      className: g.showMore,
+                              C &&
+                                  (0, r.jsxs)('div', {
+                                      className: p.showMore,
                                       children: [
-                                          (0, a.jsx)('div', { className: g.gradient }),
-                                          (0, a.jsx)('div', {
-                                              className: g.linkContainer,
-                                              children: (0, a.jsx)(o.Clickable, {
-                                                  className: g.showMoreLink,
+                                          (0, r.jsx)('div', { className: p.gradient }),
+                                          (0, r.jsx)('div', {
+                                              className: p.linkContainer,
+                                              children: (0, r.jsx)(c.P3F, {
+                                                  className: p.showMoreLink,
                                                   onClick: () => {
-                                                      (0, o.openModalLazy)(async () => {
+                                                      (0, c.ZDy)(async () => {
                                                           let { default: e } = await n.e('78712').then(n.bind(n, 223164));
-                                                          return (n) =>
-                                                              (0, a.jsx)(e, {
-                                                                  ...n,
-                                                                  channel: t
-                                                              });
+                                                          return (n) => {
+                                                              var a, i;
+                                                              return (0, r.jsx)(
+                                                                  e,
+                                                                  ((a = (function (e) {
+                                                                      for (var t = 1; t < arguments.length; t++) {
+                                                                          var n = null != arguments[t] ? arguments[t] : {},
+                                                                              r = Object.keys(n);
+                                                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                                                              (r = r.concat(
+                                                                                  Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                                  })
+                                                                              )),
+                                                                              r.forEach(function (t) {
+                                                                                  var r;
+                                                                                  (r = n[t]),
+                                                                                      t in e
+                                                                                          ? Object.defineProperty(e, t, {
+                                                                                                value: r,
+                                                                                                enumerable: !0,
+                                                                                                configurable: !0,
+                                                                                                writable: !0
+                                                                                            })
+                                                                                          : (e[t] = r);
+                                                                              });
+                                                                      }
+                                                                      return e;
+                                                                  })({}, n)),
+                                                                  (i = i = { channel: t }),
+                                                                  Object.getOwnPropertyDescriptors
+                                                                      ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
+                                                                      : (function (e, t) {
+                                                                            var n = Object.keys(e);
+                                                                            if (Object.getOwnPropertySymbols) {
+                                                                                var r = Object.getOwnPropertySymbols(e);
+                                                                                n.push.apply(n, r);
+                                                                            }
+                                                                            return n;
+                                                                        })(Object(i)).forEach(function (e) {
+                                                                            Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(i, e));
+                                                                        }),
+                                                                  a)
+                                                              );
+                                                          };
                                                       });
                                                   },
-                                                  children: (0, a.jsxs)(o.Text, {
+                                                  children: (0, r.jsxs)(c.Text, {
                                                       variant: 'text-sm/semibold',
                                                       color: 'text-brand',
-                                                      className: g.showMoreText,
+                                                      className: p.showMoreText,
                                                       children: [
-                                                          _.Z.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL,
-                                                          (0, a.jsx)(o.MaximizeIcon, {
+                                                          f.NW.string(f.t.Vu7odH),
+                                                          (0, r.jsx)(c.bJT, {
                                                               size: 'xs',
                                                               color: 'currentColor',
-                                                              className: g.showMoreIcon
+                                                              className: p.showMoreIcon
                                                           })
                                                       ]
                                                   })

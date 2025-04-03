@@ -1,44 +1,40 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(442837),
-    l = n(481060),
-    o = n(797258),
+n.d(t, { Z: () => m });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    a = n(442837),
+    o = n(481060),
+    s = n(797258),
     c = n(374129),
-    d = n(639351),
-    u = n(565473),
-    _ = n(927923),
-    E = n(689938),
-    h = n(490599);
-function m(e) {
+    u = n(639351),
+    d = n(565473),
+    p = n(927923),
+    h = n(388032),
+    f = n(356849);
+function g(e) {
     let { platform: t } = e;
-    return t === _.YE.XBOX ? (0, i.jsx)(d.Z, { className: h.icon }) : t === _.YE.PLAYSTATION ? (0, i.jsx)(c.Z, { className: h.icon }) : null;
+    return t === p.YE.XBOX ? (0, r.jsx)(u.Z, { className: f.icon }) : t === p.YE.PLAYSTATION ? (0, r.jsx)(c.Z, { className: f.icon }) : null;
 }
-function I(e) {
+function m(e) {
     let { voiceState: t, awaitingRemoteSessionInfo: n } = e,
-        a = null != n ? (0, u.y)(n.type) : null,
-        c = (0, r.e7)([o.Z], () => {
+        i = null != n ? (0, d.y)(n.type) : null,
+        c = (0, a.e7)([s.Z], () => {
             var e, n;
-            return null === (e = o.Z.getSessionById(null !== (n = null == t ? void 0 : t.sessionId) && void 0 !== n ? n : '')) || void 0 === e ? void 0 : e.clientInfo.os;
+            return null == (e = s.Z.getSessionById(null != (n = null == t ? void 0 : t.sessionId) ? n : '')) ? void 0 : e.clientInfo.os;
         }),
-        d = null != a ? a : c;
-    if (null == d || !_.al.has(d)) return null;
-    let I = null != n,
-        g = I ? (d === _.YE.XBOX ? E.Z.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.Z.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS) : d === _.YE.XBOX ? E.Z.Messages.XBOX_REMOTE_CONNECTED.format() : E.Z.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
-    return (0, i.jsxs)('div', {
-        className: s()(h.root, I ? h.connecting : h.connected),
+        u = null != i ? i : c;
+    if (null == u || !p.al.has(u)) return null;
+    let m = null != n,
+        b = m ? (u === p.YE.XBOX ? h.NW.string(h.t.UjA4HR) : h.NW.string(h.t.QCw1oa)) : u === p.YE.XBOX ? h.NW.format(h.t['ynEs/f'], {}) : h.NW.format(h.t.TZ17Bg, {});
+    return (0, r.jsxs)('div', {
+        className: l()(f.root, m ? f.connecting : f.connected),
         children: [
-            (0, i.jsx)(m, { platform: d }),
-            (0, i.jsx)(l.Text, {
-                color: I ? 'header-primary' : 'always-white',
+            (0, r.jsx)(g, { platform: u }),
+            (0, r.jsx)(o.Text, {
+                color: m ? 'header-primary' : 'always-white',
                 variant: 'text-xs/medium',
-                children: g
+                children: b
             })
         ]
     });

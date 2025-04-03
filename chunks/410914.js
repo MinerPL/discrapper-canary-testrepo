@@ -1,9 +1,5 @@
-n.d(t, {
-    _: function () {
-        return i;
-    }
-});
-var r = n(727067);
-function i(e, t, n) {
-    (0, r.E)(e, t), t.set(e, n);
+r.d(e, { _: () => i });
+var n = r(727067);
+function i(t, e, r) {
+    (0, n.E)(t, e), e.set(t, r);
 }

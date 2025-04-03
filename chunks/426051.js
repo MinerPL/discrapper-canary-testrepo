@@ -1,73 +1,69 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(286379),
-    r = n(481060),
-    l = n(797614),
-    o = n(359110),
+n.d(t, { Z: () => b });
+var r = n(200651),
+    i = n(192379),
+    l = n(286379),
+    a = n(481060),
+    o = n(797614),
+    s = n(359110),
     c = n(6025),
-    d = n(433355),
-    u = n(26373),
-    _ = n(486622),
-    E = n(376191),
-    h = n(86203),
-    m = n(689938),
-    I = n(747689);
-function g(e) {
-    let { active: t, user: n, channel: g } = e,
-        p = (0, u.V)(),
-        T = a.useCallback(() => {
-            (0, r.showToast)((0, r.createToast)(m.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE)), l.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+    u = n(433355),
+    d = n(26373),
+    p = n(486622),
+    h = n(376191),
+    f = n(86203),
+    g = n(388032),
+    m = n(972308);
+function b(e) {
+    let { active: t, user: n, channel: b } = e,
+        _ = (0, d.V)(),
+        E = i.useCallback(() => {
+            (0, a.showToast)((0, a.createToast)(g.NW.string(g.t.pIQ3h4), a.ToastType.FAILURE)), o.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
-        S = a.useCallback(() => {
-            c.Z.closeChannelSidebar(d.uZ);
+        O = i.useCallback(() => {
+            c.Z.closeChannelSidebar(u.uZ);
         }, []),
-        f = a.useCallback(() => {
-            c.Z.closeChannelSidebar(d.uZ), p && (0, o.Kh)(g.id);
-        }, [g.id, p]),
+        N = i.useCallback(() => {
+            c.Z.closeChannelSidebar(u.uZ), _ && (0, s.Kh)(b.id);
+        }, [b.id, _]),
         {
-            acceptMessageRequest: C,
-            isAcceptLoading: N,
-            isUserProfileLoading: A,
-            isOptimisticAccepted: v
-        } = (0, _.m)({
+            acceptMessageRequest: y,
+            isAcceptLoading: I,
+            isUserProfileLoading: v,
+            isOptimisticAccepted: C
+        } = (0, p.m)({
             user: n,
-            onAcceptSuccess: f,
-            onRejectSuccess: S,
-            onError: T
+            onAcceptSuccess: N,
+            onRejectSuccess: O,
+            onError: E
         }),
-        Z = N || A,
-        L = Z || v;
-    return (0, i.jsxs)('div', {
-        className: I.container,
+        S = I || v,
+        T = S || C;
+    return (0, r.jsxs)('div', {
+        className: m.container,
         children: [
-            (0, i.jsx)(E.Z, {
+            (0, r.jsx)(h.Z, {
                 otherUser: n,
-                channel: g,
+                channel: b,
                 active: t
             }),
-            (0, i.jsxs)('div', {
-                className: I.actions,
+            (0, r.jsxs)('div', {
+                className: m.actions,
                 children: [
-                    (0, i.jsx)(r.Button, {
-                        className: I.button,
-                        color: r.ButtonColors.PRIMARY,
-                        size: r.Button.Sizes.SMALL,
+                    (0, r.jsx)(a.zxk, {
+                        className: m.button,
+                        color: a.Ttl.PRIMARY,
+                        size: a.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            C(g.id), e.stopPropagation();
+                            y(b.id), e.stopPropagation();
                         },
-                        disabled: L,
-                        submitting: Z,
-                        children: m.Z.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
+                        disabled: T,
+                        submitting: S,
+                        children: g.NW.string(g.t.vicfl5)
                     }),
-                    (0, i.jsx)(h.Z, {
-                        className: I.button,
-                        channel: g,
-                        buttonSize: r.Button.Sizes.SMALL
+                    (0, r.jsx)(f.Z, {
+                        className: m.button,
+                        channel: b,
+                        buttonSize: a.zxk.Sizes.SMALL
                     })
                 ]
             })

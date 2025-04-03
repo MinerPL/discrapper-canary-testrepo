@@ -1,47 +1,68 @@
 n.d(t, {
-    n: function () {
-        return a;
-    }
+    Z: () => f,
+    n: () => g
 });
-var s,
-    a,
-    i = n(735250),
-    r = n(470079),
-    l = n(120356),
-    o = n.n(l),
-    c = n(748780),
-    d = n(215569),
-    u = n(572599);
-((s = a || (a = {}))[(s.RIGHT = -1)] = 'RIGHT'), (s[(s.LEFT = 1)] = 'LEFT');
-let _ = {
+var r,
+    i = n(200651),
+    s = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    o = n(748780),
+    c = n(215569),
+    d = n(65187);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+var g = (((r = {})[(r.RIGHT = -1)] = 'RIGHT'), (r[(r.LEFT = 1)] = 'LEFT'), r);
+let p = {
     friction: 10,
     tension: 40,
     overshootClamping: !0
 };
-class I extends r.PureComponent {
+class h extends s.PureComponent {
     componentWillEnter(e) {
         var t, n;
-        null === (t = (n = this.props).onAnimationStart) || void 0 === t || t.call(n),
+        null == (t = (n = this.props).onAnimationStart) || t.call(n),
             this._animated.setValue(-this.props.direction),
-            c.Z.spring(this._animated, {
-                toValue: 0,
-                ..._
-            }).start(() => {
+            o.Z.spring(this._animated, m({ toValue: 0 }, p)).start(() => {
                 var t, n;
-                e(), null === (t = (n = this.props).onAnimationEnd) || void 0 === t || t.call(n);
+                e(), null == (t = (n = this.props).onAnimationEnd) || t.call(n);
             });
     }
     componentDidAppear() {
         this._animated.setValue(0);
     }
     componentWillLeave(e) {
-        c.Z.spring(this._animated, {
-            toValue: this.props.direction,
-            ..._
-        }).start(e);
+        o.Z.spring(this._animated, m({ toValue: this.props.direction }, p)).start(e);
     }
     getStyle() {
-        return c.Z.accelerate({
+        return o.Z.accelerate({
             transform: [
                 {
                     translateX: this._animated.interpolate({
@@ -53,39 +74,27 @@ class I extends r.PureComponent {
         });
     }
     render() {
-        return (0, i.jsx)(c.Z.div, {
+        return (0, i.jsx)(o.Z.div, {
             style: this.getStyle(),
-            className: u.item,
+            className: d.item,
             children: this.props.children
         });
     }
     constructor(e) {
-        var t, n, s;
-        super(e),
-            (t = this),
-            (s = void 0),
-            (n = '_animated') in t
-                ? Object.defineProperty(t, n, {
-                      value: s,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = s),
-            (this._animated = new c.Z.Value(-1 * e.direction));
+        super(e), u(this, '_animated', void 0), (this._animated = new o.Z.Value(-1 * e.direction));
     }
 }
-t.Z = (e) => {
-    let { children: t, step: n, direction: s, className: a, onAnimationStart: r, onAnimationEnd: l } = e;
-    return (0, i.jsx)(d.W, {
+let f = (e) => {
+    let { children: t, step: n, direction: r, className: s, onAnimationStart: a, onAnimationEnd: o } = e;
+    return (0, i.jsx)(c.W, {
         component: 'div',
-        className: o()(u.animator, a),
+        className: l()(d.animator, s),
         children: (0, i.jsx)(
-            I,
+            h,
             {
-                direction: s,
-                onAnimationStart: r,
-                onAnimationEnd: l,
+                direction: r,
+                onAnimationStart: a,
+                onAnimationEnd: o,
                 children: t
             },
             n

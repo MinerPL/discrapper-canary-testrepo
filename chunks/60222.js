@@ -1,20 +1,16 @@
-o.d(t, {
-    A: function () {
-        return a;
-    },
-    m: function () {
-        return d;
-    }
+o.d(a, {
+    A: () => c,
+    m: () => i
 }),
     o(47120);
-var n = o(442837),
-    r = o(430824),
-    i = o(981631);
-function a(e) {
-    var t;
-    let [o] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.Z];
-    return !!(null === (t = o.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(i.oNc.COMMUNITY));
+var r = o(442837),
+    t = o(430824),
+    n = o(981631);
+function c(e) {
+    var a;
+    let [o] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [t.Z];
+    return !!(null == (a = o.getGuild(e)) ? void 0 : a.hasFeature(n.oNc.COMMUNITY));
 }
-function d(e) {
-    return (0, n.e7)([r.Z], () => a(e, [r.Z]), [e]);
+function i(e) {
+    return (0, r.e7)([t.Z], () => c(e, [t.Z]), [e]);
 }

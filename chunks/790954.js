@@ -1,35 +1,29 @@
-n.d(r, {
-    Mf: function () {
-        return a;
-    },
-    Y6: function () {
-        return i;
-    },
-    pF: function () {
-        return c;
-    }
+r.d(t, {
+    Mf: () => a,
+    Y6: () => c,
+    pF: () => l
 });
-var t = n(652874),
-    l = n(731965);
-let o = Object.freeze({
+var n = r(230383),
+    o = r(731965);
+let i = Object.freeze({
         inspectedStickerPosition: {
             rowIndex: -1,
             columnIndex: -1
         }
     }),
-    s = (0, t.Z)((e) => o),
-    i = s,
-    a = (e, r, n) => {
-        (0, l.j)(() =>
+    s = (0, n.U)((e) => i),
+    c = s,
+    a = (e, t, r) => {
+        (0, o.j)(() =>
             s.setState({
                 inspectedStickerPosition: {
-                    rowIndex: r,
+                    rowIndex: t,
                     columnIndex: e,
-                    source: n
+                    source: r
                 }
             })
         );
     },
-    c = () => {
+    l = () => {
         a(-1, -1);
     };

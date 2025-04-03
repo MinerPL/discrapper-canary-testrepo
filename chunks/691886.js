@@ -1,50 +1,44 @@
-n.d(t, {
-    Z: function () {
-        return R;
-    }
-}),
-    n(653041),
-    n(47120);
-var s = n(735250),
-    a = n(470079),
-    i = n(120356),
-    r = n.n(i),
+n.d(t, { Z: () => O }), n(653041), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(933557),
     d = n(471445),
     u = n(131704),
-    _ = n(324067),
-    I = n(699516),
-    E = n(594174),
-    T = n(303737),
-    m = n(981631),
-    N = n(689938),
-    S = n(919319);
-function h(e) {
+    m = n(324067),
+    g = n(699516),
+    p = n(594174),
+    h = n(303737),
+    f = n(981631),
+    b = n(388032),
+    x = n(621885);
+function j(e) {
     return String(e);
 }
-function g(e) {
-    let { icon: t, title: n, subtitle: a, className: i } = e;
-    return (0, s.jsxs)('div', {
-        className: r()(S.label, i),
+function N(e) {
+    let { icon: t, title: n, subtitle: i, className: s } = e;
+    return (0, r.jsxs)('div', {
+        className: a()(x.label, s),
         children: [
             t,
-            (0, s.jsxs)('div', {
-                className: S.labelText,
+            (0, r.jsxs)('div', {
+                className: x.labelText,
                 children: [
-                    (0, s.jsx)(o.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         color: 'none',
-                        className: S.labelTitle,
+                        className: x.labelTitle,
                         children: n
                     }),
-                    null != a && '' !== a
-                        ? (0, s.jsx)(o.Text, {
+                    null != i && '' !== i
+                        ? (0, r.jsx)(o.Text, {
                               variant: 'text-xs/semibold',
                               color: 'text-muted',
-                              className: S.labelSubtitle,
-                              children: a
+                              className: x.labelSubtitle,
+                              children: i
                           })
                         : null
                 ]
@@ -52,93 +46,135 @@ function g(e) {
         ]
     });
 }
-function C() {
-    return (0, s.jsx)(g, {
-        icon: (0, s.jsx)(o.PlusSmallIcon, {
+function _() {
+    return (0, r.jsx)(N, {
+        icon: (0, r.jsx)(o.qJs, {
             size: 'md',
             color: 'currentColor',
-            className: S.labelIcon
+            className: x.labelIcon
         }),
-        title: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
-        className: S.createLabel
+        title: b.NW.string(b.t.d7YJMD),
+        className: x.createLabel
     });
 }
-function x(e) {
+function v(e) {
     var t;
     let { channelId: n } = e,
-        a = (0, T.m7)(n),
-        i = (0, T.m7)(null !== (t = null == a ? void 0 : a.parent_id) && void 0 !== t ? t : m.lds);
-    if (null == a) return null;
-    let r = (0, d.KS)(a),
-        l = (0, c.F6)(a, E.default, I.Z),
-        o = null != i ? (0, c.F6)(i, E.default, I.Z) : void 0;
-    return (0, s.jsx)(g, {
-        icon: null != r && (0, s.jsx)(r, { className: S.labelIcon }),
+        i = (0, h.m7)(n),
+        s = (0, h.m7)(null != (t = null == i ? void 0 : i.parent_id) ? t : f.lds);
+    if (null == i) return null;
+    let a = (0, d.KS)(i),
+        l = (0, c.F6)(i, p.default, g.Z),
+        o = null != s ? (0, c.F6)(s, p.default, g.Z) : void 0;
+    return (0, r.jsx)(N, {
+        icon: null != a && (0, r.jsx)(a, { className: x.labelIcon }),
         title: l,
         subtitle: o
     });
 }
-function p(e) {
+function C(e) {
     let { value: t } = e;
-    return null != t ? (0, s.jsx)(x, { channelId: t }) : (0, s.jsx)(C, {});
+    return null != t ? (0, r.jsx)(v, { channelId: t }) : (0, r.jsx)(_, {});
 }
-function R(e) {
-    let { guildId: t, value: i, initialChannelId: r, omitChannelIds: d, 'aria-labelledby': S, onChange: g } = e,
-        C = N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
-        x = (0, l.e7)([_.Z], () => _.Z.getCategories(t), [t]),
-        R = (0, T.m7)(null != i ? i : m.lds),
-        f = a.useMemo(() => {
+function O(e) {
+    let { guildId: t, value: s, initialChannelId: a, omitChannelIds: d, 'aria-labelledby': x, onChange: N } = e,
+        _ = b.NW.string(b.t.d7YJMD),
+        v = (0, l.e7)([m.Z], () => m.Z.getCategories(t), [t]),
+        O = (0, h.m7)(null != s ? s : f.lds),
+        y = i.useMemo(() => {
             let e = [
                     {
                         value: null,
-                        label: C
+                        label: _
                     }
                 ],
                 t = !1;
-            for (let n of x._categories)
-                for (let { channel: s } of x[n.channel.id]) {
-                    if (!!(0, u.r8)(s.type) || !!(0, u.bw)(s.type))
-                        (!(s.id !== i && (null == d ? void 0 : d.has(s.id))) || (s.id === r && i !== r)) &&
-                            (i === s.id && (t = !0),
+            for (let n of v._categories)
+                for (let { channel: r } of v[n.channel.id])
+                    ((0, u.r8)(r.type) || (0, u.bw)(r.type)) &&
+                        ((r.id !== s && (null == d ? void 0 : d.has(r.id)) && (r.id !== a || s === a)) ||
+                            (s === r.id && (t = !0),
                             e.push({
-                                value: s.id,
-                                label: (0, c.F6)(s, E.default, I.Z)
-                            }));
-                }
+                                value: r.id,
+                                label: (0, c.F6)(r, p.default, g.Z)
+                            })));
             return (
-                null != i &&
-                    !t &&
-                    null != R &&
+                null == s ||
+                    t ||
+                    null == O ||
                     e.push({
-                        value: i,
-                        label: R.name
+                        value: s,
+                        label: O.name
                     }),
                 e
             );
-        }, [C, i, R, x, d, r]);
-    return (0, s.jsx)(o.Select, {
-        placeholder: N.Z.Messages.CHANNEL_SELECT,
-        options: f,
+        }, [_, s, O, v, d, a]);
+    return (0, r.jsx)(o.PhF, {
+        placeholder: b.NW.string(b.t.r2pts7),
+        options: y,
         select: function (e) {
             null == e
-                ? (0, o.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e('7590'), n.e('45094'), n.e('2367')]).then(n.bind(n, 797671));
-                      return (n) =>
-                          (0, s.jsx)(e, {
-                              ...n,
-                              guildId: t,
-                              onSubmit: g
-                          });
+                ? (0, o.ZDy)(async () => {
+                      let { default: e } = await Promise.all([n.e('7590'), n.e('45094'), n.e('99927')]).then(n.bind(n, 797671));
+                      return (n) => {
+                          var i, s;
+                          return (0, r.jsx)(
+                              e,
+                              ((i = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(n);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                              })
+                                          )),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: r,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = r);
+                                          });
+                                  }
+                                  return e;
+                              })({}, n)),
+                              (s = s =
+                                  {
+                                      guildId: t,
+                                      onSubmit: N
+                                  }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                                  : (function (e, t) {
+                                        var n = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, r);
+                                        }
+                                        return n;
+                                    })(Object(s)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                    }),
+                              i)
+                          );
+                      };
                   })
-                : g(e);
+                : N(e);
         },
-        isSelected: (e) => null != i && h(e) === h(i),
-        serialize: h,
-        renderOptionLabel: p,
+        isSelected: (e) => null != s && j(e) === j(s),
+        serialize: j,
+        renderOptionLabel: C,
         renderOptionValue: (e) => {
             let [t] = e;
-            return p(t);
+            return C(t);
         },
-        'aria-labelledby': S
+        'aria-labelledby': x
     });
 }

@@ -1,13 +1,7 @@
 n.d(t, {
-    Sv: function () {
-        return a;
-    },
-    mb: function () {
-        return r;
-    },
-    v0: function () {
-        return i;
-    }
+    Sv: () => o,
+    mb: () => r,
+    v0: () => i
 }),
     n(258558);
 try {
@@ -16,14 +10,14 @@ try {
 let r = (() => {
         try {
             var e;
-            return null !== (e = n.g.performance.timing.navigationStart) && void 0 !== e ? e : n.g.performance.now();
+            return null != (e = n.g.performance.timing.navigationStart) ? e : n.g.performance.now();
         } catch (e) {}
         return Date.now();
     })(),
     i = (() => {
         try {
             var e;
-            return null !== (e = n.g.performance.timeOrigin) && void 0 !== e ? e : r;
+            return null != (e = n.g.performance.timeOrigin) ? e : r;
         } catch (e) {}
         return Date.now();
     })();
@@ -35,4 +29,4 @@ if (null == n.g.performance.timeOrigin)
     try {
         n.g.performance.timeOrigin = i;
     } catch (e) {}
-let a = n.g.performance;
+let o = n.g.performance;

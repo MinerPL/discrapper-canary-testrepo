@@ -1,56 +1,58 @@
-s(47120);
-var i = s(735250),
-    n = s(470079),
-    a = s(120356),
-    l = s.n(a),
-    r = s(802433),
-    o = s(680295),
-    d = s(808055),
-    u = s(241822);
-t.Z = (e) => {
-    let { profileEffectId: t, isHovering: s, forCollectedModal: a = !1, isPurchased: c, removeSetHeight: h = !1 } = e,
-        p = a ? 250 : 0.1,
-        [f, m] = n.useState(!0);
-    return (n.useEffect(() => {
-        if (!0 !== a) m(!1);
-        else {
-            let e = setTimeout(() => {
-                m(!1);
-            }, p);
-            return () => {
-                clearTimeout(e);
-            };
-        }
-    }, [p, a]),
-    null != t)
-        ? (0, i.jsxs)('div', {
-              className: l()(d.previewContainer, {
-                  [d.previewContainerAnimation]: a,
-                  [d.previewContainerSetHeight]: !h
-              }),
-              children: [
-                  (0, i.jsx)('img', {
-                      src: u,
-                      alt: ' ',
-                      className: a ? d.previewForCollected : d.preview,
-                      'aria-hidden': !0
+n.d(t, { Z: () => _ }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(802433),
+    l = n(680295),
+    c = n(313305),
+    u = n(241822);
+let d = 0.1,
+    f = 250,
+    _ = (e) => {
+        let { profileEffectId: t, isHovering: n, forCollectedModal: o = !1, isPurchased: _, removeSetHeight: p = !1 } = e,
+            h = o ? f : d,
+            [m, g] = i.useState(!0);
+        return (i.useEffect(() => {
+            if (!0 !== o) g(!1);
+            else {
+                let e = setTimeout(() => {
+                    g(!1);
+                }, h);
+                return () => {
+                    clearTimeout(e);
+                };
+            }
+        }, [h, o]),
+        null != t)
+            ? (0, r.jsxs)('div', {
+                  className: a()(c.previewContainer, {
+                      [c.previewContainerAnimation]: o,
+                      [c.previewContainerSetHeight]: !p
                   }),
-                  !f &&
-                      (0, i.jsx)('div', {
-                          className: c ? d.purchasedEffect : void 0,
-                          children: (0, i.jsx)(o.Z, {
-                              profileEffectId: t,
-                              useThumbnail: !0,
-                              autoPlay: a,
-                              restartMethod: r.j.FromStart,
-                              resetOnHover: !0,
-                              isHovering: s,
-                              introDelay: p,
-                              useOpacityOnHover: !1,
-                              shopPreview: !0
+                  children: [
+                      (0, r.jsx)('img', {
+                          src: u,
+                          alt: ' ',
+                          className: o ? c.previewForCollected : c.preview,
+                          'aria-hidden': !0
+                      }),
+                      !m &&
+                          (0, r.jsx)('div', {
+                              className: _ ? c.purchasedEffect : void 0,
+                              children: (0, r.jsx)(l.Z, {
+                                  profileEffectId: t,
+                                  useThumbnail: !0,
+                                  autoPlay: o,
+                                  restartMethod: s.j.FromStart,
+                                  resetOnHover: !0,
+                                  isHovering: n,
+                                  introDelay: h,
+                                  useOpacityOnHover: !1,
+                                  shopPreview: !0
+                              })
                           })
-                      })
-              ]
-          })
-        : null;
-};
+                  ]
+              })
+            : null;
+    };

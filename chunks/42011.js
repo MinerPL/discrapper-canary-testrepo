@@ -1,24 +1,20 @@
-t.d(n, {
-    W: function () {
-        return l;
-    }
-});
-var o = t(735250);
-t(470079);
-var i = t(376340),
-    s = t(689938),
-    r = t(290661);
-function l(e) {
-    let { onClose: n } = e;
+n.d(e, { W: () => c });
+var o = n(200651);
+n(192379);
+var i = n(376340),
+    r = n(388032),
+    s = n(629582);
+function c(t) {
+    let { onClose: e } = t;
     return (0, o.jsx)(i.L, {
         img: (0, o.jsx)('img', {
-            src: r,
-            width: '241 ',
-            height: '118',
+            src: s.Z,
+            width: '124 ',
+            height: '160',
             alt: ''
         }),
-        title: s.Z.Messages.PS_LINK_SUCCESS_TITLE,
-        body: s.Z.Messages.PS_LINK_SUCCESS_BODY,
-        onClose: n
+        title: r.NW.string(r.t.e6SOl5),
+        body: r.NW.string(r.t.QjAZAQ),
+        onClose: e
     });
 }

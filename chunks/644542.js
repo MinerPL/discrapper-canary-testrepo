@@ -1,23 +1,13 @@
 n.d(t, {
-    $i: function () {
-        return u;
-    },
-    Xv: function () {
-        return a;
-    },
-    Zo: function () {
-        return s;
-    },
-    ai: function () {
-        return o;
-    },
-    jJ: function () {
-        return l;
-    }
+    $i: () => c,
+    Xv: () => o,
+    Zo: () => a,
+    ai: () => s,
+    jJ: () => l
 });
 var r = n(818083),
     i = n(293810);
-let a = (0, r.B)({
+let o = (0, r.B)({
         kind: 'guild',
         id: '2021-06_guild_role_subscriptions',
         label: 'Guild Role Subscriptions',
@@ -30,7 +20,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    a = (0, r.B)({
         kind: 'user',
         id: '2021-08_guild_role_subscription_users',
         label: 'Guild Role Subscription Users',
@@ -56,7 +46,7 @@ let a = (0, r.B)({
         }
     ]
 });
-let o = (0, r.B)({
+let s = (0, r.B)({
     kind: 'guild',
     id: '2022-07_guild_role_subscriptions_variable_max_tiers',
     label: 'Guild Role Subscription Max Tiers',
@@ -121,7 +111,7 @@ let l = (0, r.B)({
             }
         ]
     }),
-    u = (0, r.B)({
+    c = (0, r.B)({
         kind: 'user',
         id: '2023-04_server_subscriptions_tier_templates_user',
         label: 'Server Subscriptions Tier Templates',

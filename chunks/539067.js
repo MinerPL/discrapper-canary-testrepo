@@ -1,44 +1,36 @@
-n.d(t, {
-    y: function () {
-        return u;
-    }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(442837),
-    a = n(19780),
-    s = n(615830),
-    o = n(630759),
-    E = n(760373);
-function u(e) {
+r.d(t, { y: () => a }), r(47120);
+var n = r(192379),
+    l = r(442837),
+    i = r(19780),
+    u = r(630759),
+    s = r(760373);
+function a(e) {
     let { userId: t } = e,
-        n = (0, i.e7)([a.Z], () => a.Z.getSecureFramesRosterMapEntry(t)),
-        u = (0, i.e7)([s.Z], () => s.Z.getPersistentCodesEnabled()),
-        [c, l] = r.useState(!0),
-        [d, _] = r.useState(!1),
-        [f, I] = r.useState(!1),
-        S = r.useCallback(async (e, t) => {
-            l(!0);
+        r = (0, l.e7)([i.Z], () => i.Z.getSecureFramesRosterMapEntry(t)),
+        [a, o] = n.useState(!0),
+        [c, d] = n.useState(!1),
+        [f, E] = n.useState(!1),
+        g = n.useCallback(async (e, t) => {
+            o(!0);
             try {
-                let n = E.GB,
-                    r = await (0, o.uX)(n),
-                    i = await (0, o.J6)(e, t, n);
-                _(r), I(i);
+                let r = s.GB,
+                    n = await (0, u.uX)(r),
+                    l = await (0, u.J6)(e, t, r);
+                d(n), E(l);
             } catch (e) {
-                _(!1), I(!1);
+                d(!1), E(!1);
             } finally {
-                l(!1);
+                o(!1);
             }
         }, []);
     return (
-        r.useEffect(() => {
-            u && null != n ? S(t, n) : (_(!1), I(!1), l(!1));
-        }, [u, n, S, t]),
+        n.useEffect(() => {
+            null == r ? (d(!1), E(!1), o(!1)) : g(t, r);
+        }, [r, g, t]),
         {
-            loading: c,
-            isCurrentUserPersistent: d,
-            isOtherUserPersistent: f,
-            isPersistentCode: d && f
+            loading: a,
+            isCurrentUserKeyPersistent: c,
+            isOtherUserKeyPersistent: f
         }
     );
 }

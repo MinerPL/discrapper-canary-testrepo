@@ -1,164 +1,178 @@
-n(610138), n(216116), n(78328), n(815648), n(47120), n(757143);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(266067),
-    o = n(873546),
+n.d(t, { Z: () => x }), n(610138), n(216116), n(78328), n(815648), n(47120), n(301563), n(757143);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(512969),
+    s = n(873546),
     c = n(442837),
-    d = n(481060),
-    u = n(570140),
-    _ = n(150063),
-    E = n(758059),
-    h = n(252618),
-    m = n(313201),
-    I = n(5254),
-    g = n(984370),
-    p = n(518311),
-    T = n(199104),
-    S = n(108427),
-    f = n(210887),
-    C = n(974042),
-    N = n(792125),
-    A = n(666286),
-    v = n(596957),
-    Z = n(981631),
-    L = n(723359),
-    O = n(689938),
-    R = n(676277);
-function x() {
-    return (0, i.jsxs)('div', {
-        className: R.inviteToolbar,
-        children: [(0, i.jsx)(p.Z, { tooltip: O.Z.Messages.NEW_GROUP_DM }), (0, i.jsx)(g.Z.Divider, {})]
+    u = n(481060),
+    d = n(570140),
+    p = n(150063),
+    h = n(529103),
+    f = n(252618),
+    g = n(313201),
+    m = n(540059),
+    b = n(5254),
+    _ = n(984370),
+    E = n(518311),
+    O = n(199104),
+    N = n(108427),
+    y = n(210887),
+    I = n(974042),
+    v = n(849862),
+    C = n(666286),
+    S = n(596957),
+    T = n(981631),
+    P = n(723359),
+    j = n(388032),
+    A = n(610725);
+function Z() {
+    return (0, r.jsx)('div', {
+        className: A.inviteToolbar,
+        children: (0, r.jsx)(E.Z, { tooltip: j.NW.string(j.t.HfOgAw) })
     });
 }
-t.Z = function (e) {
+let x = function (e) {
     let { initialSection: t } = e,
-        n = (0, l.TH)(),
-        s = (0, l.k6)();
-    a.useEffect(() => {
+        n = (0, o.TH)(),
+        l = (0, o.k6)(),
+        E = (0, m.Q3)('PeoplePage');
+    i.useEffect(() => {
         'true' === new URLSearchParams(n.search).get('confirm-age') &&
-            u.Z.dispatch({
+            d.Z.dispatch({
                 type: 'AGE_GATE_MODAL_OPEN',
-                source: L.L0.DEEP_LINK_PROMPT
+                source: P.L0.DEEP_LINK_PROMPT
             }).then(() => {
-                s.replace(Z.Z5c.ME);
+                l.replace(T.Z5c.ME);
             });
-    }, [s, n]),
-        a.useEffect(() => {
-            _.Y(Z.Z5c.FRIENDS), (0, S.e)('friends');
-        }, []),
-        a.useEffect(() => {
-            null != t && E.Z.setInitialSection(t);
-        }, [t]);
-    let p = (0, c.e7)([f.Z], () => f.Z.theme),
-        { section: b, pendingCount: P } = (0, c.cj)([C.ZP], () => C.ZP.getState()),
-        M = (0, c.cj)([I.Z], () => I.Z.getSuggestionCount()),
-        D = (0, m.Dt)(),
-        y = (0, m.Dt)();
-    return (0, i.jsxs)('main', {
-        className: R.container,
-        'aria-label': O.Z.Messages.FRIENDS,
+    }, [l, n]),
+        i.useEffect(() => {
+            p.Y(T.Z5c.FRIENDS), (0, N.e)('friends');
+        }, []);
+    let x = (0, c.e7)([y.Z], () => y.Z.theme),
+        L = (0, v.If)(),
+        { section: w, rows: R } = (0, c.cj)([I.ZP], () => I.ZP.getState()),
+        D = (0, c.e7)([b.Z], () => b.Z.getSuggestionCount()),
+        k = i.useMemo(() => R.getRelationshipCounts(), [R]);
+    i.useEffect(() => {
+        null != t && h.Z.setInitialSection(t), 0 === k[T.OGo.FRIEND] && 0 === k[T.OGo.PENDING_INCOMING] && 0 === k[T.OGo.PENDING_OUTGOING] && 0 === k[T.OGo.BLOCKED] && h.Z.setSection(T.pJs.ADD_FRIEND);
+    }, [t, k]);
+    let M = (e) => {
+            h.Z.setSection(e);
+        },
+        U = (0, g.Dt)(),
+        G = (0, g.Dt)(),
+        W = [
+            {
+                id: T.pJs.ONLINE,
+                show: !E || R.filter(T.pJs.ONLINE).length > 0,
+                content: j.NW.string(j.t.b9w3bG),
+                className: A.item
+            },
+            {
+                id: T.pJs.ALL,
+                show: !E || k[T.OGo.FRIEND] > 0,
+                content: j.NW.string(j.t.PfjFjY),
+                className: A.item
+            },
+            {
+                id: T.pJs.PENDING,
+                show: !E || R.filter(T.pJs.PENDING).length > 0,
+                content: (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        j.NW.string(j.t.p6IHGB),
+                        L > 0 &&
+                            (0, r.jsx)(u.mAB, {
+                                count: L,
+                                className: A.badge
+                            })
+                    ]
+                }),
+                ariaLabel: j.NW.formatToPlainString(j.t.OAC0Z2, { count: L.toString() }),
+                className: A.item
+            },
+            {
+                id: T.pJs.SUGGESTIONS,
+                show: D > 0,
+                content: (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        j.NW.string(j.t['8rSi19']),
+                        (0, r.jsx)(u.mAB, {
+                            count: D,
+                            className: A.badge
+                        })
+                    ]
+                }),
+                ariaLabel: j.NW.formatToPlainString(j.t.AbMQp6, { count: D.toString() }),
+                className: A.item
+            },
+            {
+                id: T.pJs.ADD_FRIEND,
+                show: !0,
+                content: (0, r.jsx)('span', { children: j.NW.string(j.t.j0wbEx) }),
+                ariaLabel: j.NW.string(j.t.j0wbEx),
+                className: a()(A.item, A.addFriend)
+            }
+        ];
+    return (0, r.jsxs)('main', {
+        className: A.container,
+        'aria-label': j.NW.string(j.t.TdEu5e),
         children: [
-            (0, i.jsx)(h.yY, { location: O.Z.Messages.FRIENDS }),
-            (0, i.jsxs)(g.Z, {
-                className: (0, N.Q)(p),
-                toolbar: (0, i.jsx)(x, {}),
-                scrollable: o.tq,
-                role: 'navigation',
-                'aria-labelledby': D,
-                children: [
-                    (0, i.jsx)(g.Z.Icon, {
-                        icon: d.FriendsIcon,
-                        'aria-hidden': !0
-                    }),
-                    (0, i.jsx)(g.Z.Title, {
-                        id: D,
-                        children: O.Z.Messages.FRIENDS
-                    }),
-                    (0, i.jsx)(g.Z.Divider, {}),
-                    (0, i.jsxs)(d.TabBar, {
-                        'aria-label': O.Z.Messages.FRIENDS,
-                        selectedItem: b,
-                        type: 'top-pill',
-                        onItemSelect: (e) => {
-                            E.Z.setSection(e);
-                        },
-                        className: R.tabBar,
+            (0, r.jsx)(f.yY, { location: j.NW.string(j.t.TdEu5e) }),
+            (0, r.jsx)(u.f6W, {
+                theme: x,
+                children: (e) =>
+                    (0, r.jsxs)(_.Z, {
+                        className: e,
+                        toolbar: (0, r.jsx)(Z, {}),
+                        scrollable: s.tq,
+                        role: 'navigation',
+                        'aria-labelledby': U,
                         children: [
-                            (0, i.jsx)(d.TabBar.Item, {
-                                id: Z.pJs.ONLINE,
-                                className: R.item,
-                                children: O.Z.Messages.FRIENDS_SECTION_ONLINE
+                            (0, r.jsx)(_.Z.Icon, {
+                                icon: u.iFz,
+                                'aria-hidden': !0
                             }),
-                            (0, i.jsx)(d.TabBar.Item, {
-                                id: Z.pJs.ALL,
-                                className: R.item,
-                                children: O.Z.Messages.FRIENDS_SECTION_ALL
+                            (0, r.jsx)(_.Z.Title, {
+                                id: U,
+                                children: j.NW.string(j.t.TdEu5e)
                             }),
-                            (0, i.jsxs)(d.TabBar.Item, {
-                                id: Z.pJs.PENDING,
-                                className: R.item,
-                                'aria-label': O.Z.Messages.FRIENDS_SECTION_PENDING,
-                                children: [
-                                    O.Z.Messages.FRIENDS_SECTION_PENDING,
-                                    P > 0
-                                        ? (0, i.jsx)(d.NumberBadge, {
-                                              count: P,
-                                              className: R.badge,
-                                              style: { paddingRight: 0 }
-                                          })
-                                        : null
-                                ]
-                            }),
-                            M > 0
-                                ? (0, i.jsxs)(d.TabBar.Item, {
-                                      id: Z.pJs.SUGGESTIONS,
-                                      className: R.item,
-                                      'aria-label': O.Z.Messages.FRIENDS_SECTION_SUGGESTIONS,
-                                      children: [
-                                          O.Z.Messages.FRIENDS_SECTION_SUGGESTIONS,
-                                          (0, i.jsx)(d.NumberBadge, {
-                                              count: M,
-                                              className: R.badge,
-                                              style: { paddingRight: 0 }
-                                          })
-                                      ]
-                                  })
-                                : null,
-                            (0, i.jsx)(d.TabBar.Item, {
-                                id: Z.pJs.BLOCKED,
-                                className: R.item,
-                                children: O.Z.Messages.BLOCKED
-                            }),
-                            (0, i.jsx)(d.TabBar.Item, {
-                                'aria-label': O.Z.Messages.FRIENDS_SECTION_ADD_FRIEND,
-                                className: r()(R.item, R.addFriend),
-                                id: Z.pJs.ADD_FRIEND,
-                                children: (0, i.jsx)('span', { children: O.Z.Messages.FRIENDS_SECTION_ADD_FRIEND })
+                            (0, r.jsx)(_.Z.Divider, {}),
+                            (0, r.jsx)(u.njP, {
+                                'aria-label': j.NW.string(j.t.TdEu5e),
+                                selectedItem: w,
+                                type: 'top-pill',
+                                onItemSelect: M,
+                                className: A.tabBar,
+                                children: W.filter((e) => e.show).map((e) =>
+                                    (0, r.jsx)(
+                                        u.njP.Item,
+                                        {
+                                            id: e.id,
+                                            className: e.className,
+                                            'aria-label': e.ariaLabel,
+                                            children: e.content
+                                        },
+                                        e.id
+                                    )
+                                )
                             })
                         ]
                     })
-                ]
             }),
-            (0, i.jsxs)('div', {
-                className: R.tabBody,
+            (0, r.jsxs)('div', {
+                className: A.tabBody,
                 children: [
-                    (0, i.jsx)(d.TabBar.Panel, {
-                        id: b,
-                        className: R.peopleColumn,
-                        'aria-labelledby': y,
-                        children:
-                            b === Z.pJs.ADD_FRIEND
-                                ? (0, i.jsx)(A.Z, {})
-                                : (0, i.jsx)(v.Z, {
-                                      titleId: y,
-                                      sectionFilter: b
-                                  })
+                    (0, r.jsx)(u.njP.Panel, {
+                        id: w,
+                        className: A.peopleColumn,
+                        'aria-labelledby': G,
+                        children: w === T.pJs.ADD_FRIEND ? (0, r.jsx)(C.Z, {}) : (0, r.jsx)(S.Z, { titleId: G })
                     }),
-                    (0, i.jsx)('div', {
-                        className: R.nowPlayingColumn,
-                        children: (0, i.jsx)(T.Z, {})
+                    (0, r.jsx)('div', {
+                        className: A.nowPlayingColumn,
+                        children: (0, r.jsx)(O.Z, {})
                     })
                 ]
             })

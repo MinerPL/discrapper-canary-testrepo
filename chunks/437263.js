@@ -1,17 +1,4 @@
-var r, i;
-n.d(t, {
-    z: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {})).State = 'state'),
-    (i.Speaking = 'speaking'),
-    (i.VideoSourceQualityChanged = 'video-source-quality-changed'),
-    (i.Video = 'video'),
-    (i.Flags = 'flags'),
-    (i.Platform = 'platform'),
-    (i.Ping = 'ping'),
-    (i.ClientConnect = 'client-connect'),
-    (i.ClientDisconnect = 'client-disconnect'),
-    (i.OutboundLossRate = 'outboundlossrate'),
-    (i.SecureFramesUpdate = 'secure-frames-update');
+n.d(t, { z: () => r });
+var r = (function (e) {
+    return (e.State = 'state'), (e.Speaking = 'speaking'), (e.VideoSourceQualityChanged = 'video-source-quality-changed'), (e.Video = 'video'), (e.Flags = 'flags'), (e.Platform = 'platform'), (e.Ping = 'ping'), (e.ClientConnect = 'client-connect'), (e.ClientDisconnect = 'client-disconnect'), (e.OutboundLossRate = 'outboundlossrate'), (e.SecureFramesUpdate = 'secure-frames-update'), (e.RosterMapUpdate = 'roster-map-update'), e;
+})({});

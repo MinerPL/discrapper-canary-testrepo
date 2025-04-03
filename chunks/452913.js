@@ -1,30 +1,28 @@
-var i = t(392711),
-    l = t.n(i),
-    o = t(853856),
-    r = t(706590),
-    E = t(905423),
-    a = t(592125),
-    u = t(496675),
-    s = t(944486),
-    d = t(771845),
-    _ = t(774343),
-    c = t(475468),
-    C = t(981631);
-n.Z = l().throttle(function () {
+n.d(t, { Z: () => h });
+var r = n(392711),
+    i = n.n(r),
+    s = n(853856),
+    a = n(706590),
+    l = n(905423),
+    o = n(592125),
+    c = n(496675),
+    d = n(944486),
+    u = n(771845),
+    m = n(774343),
+    g = n(475468),
+    p = n(981631);
+let h = i().throttle(function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-        n = d.ZP.getFlattenedGuildIds(),
-        t = (function (e) {
-            let n = E.Z.getState().guildId;
-            if (null == n) return -2;
-            if (n === C.I_8) return -1;
-            let t = e.indexOf(n);
-            return -1 === t ? -2 : t;
-        })(n);
-    if ((-1 === (t += e) && !(0, r.z)(o.Z, a.Z, u.Z) && (t += e), -3 === t && (t = n.length - 1), t >= n.length || -2 === t)) {
-        (0, c.z)(_.Z.getHomeLink());
-        return;
-    }
-    let i = -1 === t ? C.I_8 : n[t],
-        l = s.Z.getChannelId(i);
-    (0, c.K)(i, l === i ? null : l, !1);
-}, C.aZC);
+        t = u.ZP.getFlattenedGuildIds(),
+        n = (function (e) {
+            let t = l.Z.getState().guildId;
+            if (null == t) return -2;
+            if (t === p.I_8) return -1;
+            let n = e.indexOf(t);
+            return -1 === n ? -2 : n;
+        })(t);
+    if ((-1 !== (n += e) || (0, a.z)(s.Z, o.Z, c.Z) || (n += e), -3 === n && (n = t.length - 1), n >= t.length || -2 === n)) return void (0, g.z)(m.Z.getHomeLink());
+    let r = -1 === n ? p.I_8 : t[n],
+        i = d.Z.getChannelId(r);
+    (0, g.K)(r, i === r ? null : i, !1);
+}, p.aZC);

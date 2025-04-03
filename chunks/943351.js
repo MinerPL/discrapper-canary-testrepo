@@ -1,17 +1,10 @@
 t.d(n, {
-    V3: function () {
-        return a;
-    },
-    bp: function () {
-        return s;
-    },
-    hp: function () {
-        return i;
-    },
-    nl: function () {
-        return l;
-    }
+    V3: () => a,
+    bp: () => i,
+    hp: () => r,
+    nl: () => l
 }),
+    t(26686),
     t(47120);
 let l = {
         waveformBlockWidth: 2,
@@ -27,5 +20,5 @@ let l = {
             .concat(e.byteLength);
         return ''.concat(t, '-').concat(JSON.stringify(n));
     },
-    i = (e) => ''.concat(e.name, '-').concat(e.size, '-').concat(e.lastModified),
-    s = new Set(['audio/mpeg', 'audio/mp3', 'audio/wav', 'audio/x-wav', 'audio/ogg', 'video/mp4']);
+    r = (e) => ''.concat(e.name, '-').concat(e.size, '-').concat(e.lastModified),
+    i = new Set(['audio/mpeg', 'audio/mp3', 'audio/wav', 'audio/x-wav', 'audio/ogg', 'video/mp4']);

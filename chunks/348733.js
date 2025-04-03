@@ -1,43 +1,64 @@
-var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    o = n.n(a),
-    r = n(442837),
-    l = n(215569),
+n.d(t, { Z: () => y }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    l = n(392711),
+    a = n(442837),
     c = n(261435),
-    d = n(237997),
-    u = n(438015),
-    h = n(981631),
-    p = n(459742);
-class f extends s.Component {
-    render() {
-        let { keybind: e, notifications: t, position: n, locked: s } = this.props;
-        if (n === h._vf.DISABLED) return null;
-        let a = -1;
-        return (0, i.jsx)(l.W, {
-            component: 'div',
-            className: o()(p.container, p[n]),
-            children: t.map((t) =>
-                s && t.status === h._1z.TIMED_OUT
+    u = n(237997),
+    d = n(486016),
+    h = n(692546),
+    p = n(438015),
+    f = n(624864),
+    g = n(981631),
+    m = n(993798);
+function y(e) {
+    let { locked: t, keybind: n } = e,
+        s = r.useRef(null),
+        p = (0, a.Wu)([c.Z], () => c.Z.getNotifications()),
+        y = (0, a.e7)([u.default], () => u.default.getNotificationPositionMode());
+    if ((0, a.e7)([f.Z], () => f.Z.isNotificationDisabled(d.OverlayNotificationDisabledSetting.TEXT_CHAT)) || y === g._vf.DISABLED) return null;
+    let v = p.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
+        x = (0, l.groupBy)(v, (e) => e.type);
+    return (0, i.jsx)(h.Z, {
+        contentDomRef: s,
+        observeInterval: 200,
+        children: (0, i.jsx)('div', {
+            ref: s,
+            className: o()(m.container, m[y]),
+            children: Object.entries(x).map((e) => {
+                let [r, s] = e;
+                return 0 === s.length
                     ? null
-                    : ((a += 1),
-                      (0, i.jsx)(
-                          u.Z,
+                    : (0, i.jsx)(
+                          O,
                           {
-                              index: a,
-                              zIndex: 100 - a,
-                              position: n,
-                              notification: t,
-                              keybind: e,
-                              locked: s
+                              locked: t,
+                              keybind: n,
+                              position: y,
+                              notification: s[0]
                           },
-                          t.id
-                      ))
-            )
-        });
-    }
+                          r
+                      );
+            })
+        })
+    });
 }
-t.Z = r.ZP.connectStores([c.Z, d.Z], () => ({
-    notifications: c.Z.getNotifications(),
-    position: d.Z.getNotificationPositionMode()
-}))(f);
+function O(e) {
+    let { notification: t, position: n, keybind: r, locked: s } = e;
+    return (0, i.jsx)('div', {
+        className: m.notificationGroup,
+        children: (0, i.jsx)(
+            p.Z,
+            {
+                zIndex: 100,
+                position: n,
+                notification: t,
+                keybind: r,
+                locked: s
+            },
+            t.id
+        )
+    });
+}

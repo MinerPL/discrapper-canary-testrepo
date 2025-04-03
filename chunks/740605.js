@@ -1,11 +1,14 @@
 n.d(t, {
-    o: function () {
-        return a;
-    }
+    Y: () => a,
+    o: () => s
 });
 var r = n(18323),
-    i = n(616922);
-function a(e, t) {
-    let n = r.Z.isProtocolRegistered() ? i.C7.PLAYER_OPEN(e, t) : i.C7.WEB_OPEN(e, t);
-    window.open(n);
+    i = n(358085),
+    o = n(616922);
+function a(e) {
+    let t = null;
+    (0, i.isDesktop)() || (t = window.open('', '_blank')), null != t ? (t.location.href = e) : window.open(e);
+}
+function s(e, t) {
+    a(r.Z.isProtocolRegistered() ? o.C7.PLAYER_OPEN(e, t) : o.C7.WEB_OPEN(e, t));
 }

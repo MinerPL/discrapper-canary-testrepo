@@ -1,53 +1,47 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(47120);
-var s = n(735250),
-    a = n(470079),
-    i = n(120356),
-    r = n.n(i),
-    l = n(442837),
-    o = n(481060),
-    c = n(749210),
-    d = n(493544),
-    u = n(607070),
-    _ = n(714939),
-    I = n(981631),
-    E = n(689938),
-    T = n(329349);
-function m(e) {
+n.d(t, { Z: () => x }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
+    o = n(749210),
+    c = n(493544),
+    d = n(607070),
+    u = n(714939),
+    m = n(981631),
+    g = n(388032),
+    p = n(406116);
+function h(e) {
     let { color: t, children: n } = e;
-    return (0, s.jsxs)('div', {
-        className: T.roleTag,
+    return (0, r.jsxs)('div', {
+        className: p.roleTag,
         children: [
-            (0, s.jsx)(o.RoleCircle, {
-                className: T.roleDot,
+            (0, r.jsx)(l.xko, {
+                className: p.roleDot,
                 color: t
             }),
-            (0, s.jsx)('span', {
-                className: T.roleText,
+            (0, r.jsx)('span', {
+                className: p.roleText,
                 children: n
             })
         ]
     });
 }
-function N(e) {
+function f(e) {
     let { guild: t, display: n } = e;
-    return (0, s.jsxs)('div', {
-        className: r()(T.banner, t.backgroundClass, { [T.bannerOut]: !n }),
+    return (0, r.jsxs)('div', {
+        className: a()(p.banner, t.backgroundClass, { [p.bannerOut]: !n }),
         children: [
-            (0, s.jsx)('div', {
-                className: T.roles,
+            (0, r.jsx)('div', {
+                className: p.roles,
                 children: t.roles.map((e, t) =>
-                    (0, s.jsx)(
+                    (0, r.jsx)(
                         'div',
                         {
-                            className: T.rolesRow,
+                            className: p.rolesRow,
                             children: e.map((e) =>
-                                (0, s.jsx)(
-                                    m,
+                                (0, r.jsx)(
+                                    h,
                                     {
                                         color: e.color,
                                         children: e.name
@@ -60,21 +54,21 @@ function N(e) {
                     )
                 )
             }),
-            (0, s.jsx)('div', {
-                className: T.profileCard,
-                children: (0, s.jsxs)('div', {
-                    className: T.avatarContainer,
+            (0, r.jsx)('div', {
+                className: p.profileCard,
+                children: (0, r.jsxs)('div', {
+                    className: p.avatarContainer,
                     children: [
-                        (0, s.jsx)(o.Avatar, {
-                            size: o.AvatarSizes.SIZE_56,
+                        (0, r.jsx)(l.qEK, {
+                            size: l.EFr.SIZE_56,
                             'aria-hidden': !0,
-                            status: I.Skl.ONLINE,
+                            status: m.Skl.ONLINE,
                             src: t.avatar
                         }),
-                        (0, s.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             color: 'header-primary',
                             variant: 'text-md/bold',
-                            className: T.avatarName,
+                            className: p.avatarName,
                             children: t.username
                         })
                     ]
@@ -83,110 +77,109 @@ function N(e) {
         ]
     });
 }
-function S() {
-    let e = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        t = a.useMemo(
+function b() {
+    let e = i.useMemo(
             () => [
                 {
-                    backgroundClass: T.bannerClubs,
+                    backgroundClass: p.bannerClubs,
                     username: 'Wumpus#0000',
                     avatar: n(91055),
                     roles: [
                         [
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_1,
+                                name: g.NW.string(g.t['7oaPPj']),
                                 color: '#7e00fc'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_2,
+                                name: g.NW.string(g.t['Z/HN6+']),
                                 color: '#faa61a'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_3,
+                                name: g.NW.string(g.t.lvHTg4),
                                 color: '#f06ea8'
                             }
                         ],
                         [
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_4,
+                                name: g.NW.string(g.t['6yECkp']),
                                 color: '#45ddc0'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_5,
+                                name: g.NW.string(g.t['5DabCQ']),
                                 color: '#00b0f4'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_6,
+                                name: g.NW.string(g.t.bB900d),
                                 color: '#ba1616'
                             }
                         ]
                     ]
                 },
                 {
-                    backgroundClass: T.bannerGaming,
+                    backgroundClass: p.bannerGaming,
                     username: 'Graggle#0000',
                     avatar: n(507003),
                     roles: [
                         [
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_1,
+                                name: g.NW.string(g.t['xz/Vfn']),
                                 color: '#4a76e6'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_2,
+                                name: g.NW.string(g.t.Bceru7),
                                 color: '#ad87ff'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_3,
+                                name: g.NW.string(g.t.W51slp),
                                 color: '#6defcf'
                             }
                         ],
                         [
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_4,
+                                name: g.NW.string(g.t.y9gTiY),
                                 color: '#ff73fa'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_5,
+                                name: g.NW.string(g.t.HslvdX),
                                 color: '#3ba55c'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_6,
+                                name: g.NW.string(g.t.ipL1AA),
                                 color: '#ff1b66'
                             }
                         ]
                     ]
                 },
                 {
-                    backgroundClass: T.bannerHobbies,
+                    backgroundClass: p.bannerHobbies,
                     username: 'Mallow#0000',
                     avatar: n(552557),
                     roles: [
                         [
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_1,
+                                name: g.NW.string(g.t.pAFEbm),
                                 color: '#20d6b8'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_2,
+                                name: g.NW.string(g.t['p/HZEB']),
                                 color: '#236136'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_3,
+                                name: g.NW.string(g.t['9Qp/JS']),
                                 color: '#ff9a15'
                             }
                         ],
                         [
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_4,
+                                name: g.NW.string(g.t.craF5e),
                                 color: '#ff78b9'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_5,
+                                name: g.NW.string(g.t.L1TvXF),
                                 color: '#00b0f4'
                             },
                             {
-                                name: E.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_6,
+                                name: g.NW.string(g.t.lqKz9P),
                                 color: '#6f52e4'
                             }
                         ]
@@ -195,71 +188,75 @@ function S() {
             ],
             []
         ),
-        [i, r] = a.useState(0);
+        [t, s] = i.useState(0),
+        a = i.useRef(e);
     return (
-        a.useEffect(() => {
-            if (e) return;
-            let n = setTimeout(() => r((i + 1) % t.length), 6332);
-            return () => clearTimeout(n);
-        }, [i]),
-        (0, s.jsx)('div', {
-            className: T.bannerContainer,
+        i.useEffect(() => {
+            a.current = e;
+        }),
+        i.useEffect(() => {
+            if (d.Z.useReducedMotion) return;
+            let e = setTimeout(() => s((t + 1) % a.current.length), 6332);
+            return () => clearTimeout(e);
+        }, [t]),
+        (0, r.jsx)('div', {
+            className: p.bannerContainer,
             'aria-hidden': !0,
-            children: t.map((e, t) =>
-                (0, s.jsx)(
-                    N,
+            children: e.map((e, n) =>
+                (0, r.jsx)(
+                    f,
                     {
                         guild: e,
-                        display: t === i
+                        display: n === t
                     },
-                    t
+                    n
                 )
             )
         })
     );
 }
-function h(e) {
-    let { guild: t, everyoneRole: n, setEditRoleId: i } = e,
-        [r, l] = a.useState(!1),
-        u = async () => {
-            l(!0), await c.Z.createRole(t.id), l(!1);
+function x(e) {
+    let { guild: t, everyoneRole: n, setEditRoleId: s } = e,
+        [a, d] = i.useState(!1),
+        m = async () => {
+            d(!0), await o.Z.createRole(t.id), d(!1);
         },
-        I = a.useCallback(() => {
-            i(n.id);
-        }, [i, n.id]);
-    return (0, s.jsx)(d.NM, {
-        children: (0, s.jsxs)(o.FormSection, {
-            className: T.section,
-            title: E.Z.Messages.ROLES,
-            tag: o.FormTitleTags.H2,
+        h = i.useCallback(() => {
+            s(n.id);
+        }, [s, n.id]);
+    return (0, r.jsx)(c.NM, {
+        children: (0, r.jsxs)(l.hjN, {
+            className: p.section,
+            title: g.NW.string(g.t.LPJmLy),
+            tag: l.RB0.H2,
             children: [
-                (0, s.jsxs)('div', {
-                    className: T.container,
+                (0, r.jsxs)('div', {
+                    className: p.container,
                     children: [
-                        (0, s.jsx)(S, {}),
-                        (0, s.jsx)(o.Heading, {
+                        (0, r.jsx)(b, {}),
+                        (0, r.jsx)(l.X6q, {
                             variant: 'heading-xl/semibold',
-                            children: E.Z.Messages.ROLE_OVERVIEW_EMPTY_SUBHEADER
+                            children: g.NW.string(g.t.ALlnbm)
                         }),
-                        (0, s.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            className: T.introBody,
-                            children: E.Z.Messages.ROLE_OVERVIEW_DESCRIPTION
+                            className: p.introBody,
+                            children: g.NW.string(g.t['1ydhVl'])
                         }),
-                        (0, s.jsx)(o.Button, {
-                            className: T.button,
-                            size: o.Button.Sizes.MEDIUM,
-                            onClick: u,
-                            submitting: r,
-                            children: E.Z.Messages.ROLE_CREATE_CTA
+                        (0, r.jsx)(l.zxk, {
+                            className: p.button,
+                            size: l.zxk.Sizes.MEDIUM,
+                            onClick: m,
+                            submitting: a,
+                            children: g.NW.string(g.t.JZZjQE)
                         })
                     ]
                 }),
-                (0, s.jsx)(o.FormDivider, { className: T.divider }),
-                (0, s.jsx)(_.Z, {
+                (0, r.jsx)(l.$i$, { className: p.divider }),
+                (0, r.jsx)(u.Z, {
                     role: n,
-                    onClick: I
+                    onClick: h
                 })
             ]
         })

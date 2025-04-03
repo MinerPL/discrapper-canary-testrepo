@@ -1,12 +1,8 @@
-r.d(t, {
-    B: function () {
-        return a;
-    }
-});
-let n = r(899517).n;
-function a() {
-    let e = n.chrome,
-        t = e && e.app && e.app.runtime,
-        r = 'history' in n && !!n.history.pushState && !!n.history.replaceState;
-    return !t && r;
+a.d(e, { B: () => n });
+let r = a(899517).n;
+function n() {
+    let t = r.chrome,
+        e = t && t.app && t.app.runtime,
+        a = 'history' in r && !!r.history.pushState && !!r.history.replaceState;
+    return !e && a;
 }

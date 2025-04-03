@@ -1,56 +1,57 @@
-var s = t(735250),
-    n = t(470079),
-    l = t(442837),
-    r = t(481060),
-    o = t(219929),
-    i = t(975060),
-    c = t(559725),
-    u = t(439041),
-    d = t(689938),
-    E = t(152029);
-class A extends n.PureComponent {
+n.d(t, { Z: () => p });
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(219929),
+    l = n(975060),
+    c = n(559725),
+    u = n(439041),
+    d = n(388032),
+    f = n(261959);
+class _ extends i.PureComponent {
     componentDidMount() {
-        null == this.props.adyenPaymentData && c.cp();
+        null == this.props.adyenPaymentData && null != this.props.cashAppPayComponent && c.cp();
     }
     render() {
-        var e, a;
-        let { className: t, cashAppPayComponent: n } = this.props,
-            l = this.props.adyenPaymentData,
-            i = null !== (a = null == l ? void 0 : null === (e = l.paymentMethod) || void 0 === e ? void 0 : e.cashtag) && void 0 !== a ? a : '',
-            c = null != l && '' !== i;
-        return (0, s.jsxs)('div', {
-            className: t,
+        var e, t;
+        let { className: n, cashAppPayComponent: i } = this.props,
+            o = this.props.adyenPaymentData,
+            l = null != (t = null == o || null == (e = o.paymentMethod) ? void 0 : e.cashtag) ? t : '',
+            c = null != o && '' !== l;
+        return (0, r.jsxs)('div', {
+            className: n,
             children: [
-                (0, s.jsx)(o.ZP, {
-                    type: o.ZP.Types.CASH_APP,
-                    size: o.Uy.MEDIUM,
-                    className: E.icon
+                (0, r.jsx)(s.ZP, {
+                    type: s.ZP.Types.CASH_APP,
+                    size: s.Uy.MEDIUM,
+                    className: f.icon
                 }),
                 c
-                    ? (0, s.jsxs)(s.Fragment, {
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, s.jsx)(r.Heading, {
-                                  variant: i.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
-                                  className: E.connectionInstructions,
-                                  children: d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTED_SUCCESS.format({ cashtag: i })
+                              (0, r.jsx)(a.X6q, {
+                                  variant: l.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
+                                  className: f.connectionInstructions,
+                                  children: d.NW.format(d.t['ze/1yM'], { cashtag: l })
                               }),
-                              (0, s.jsx)(r.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: 'text-md/medium',
-                                  className: E.connectionInstructions,
-                                  children: d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTED_SUCCESS_INSTRUCTIONS
+                                  className: f.connectionInstructions,
+                                  children: d.NW.string(d.t.VPOx7O)
                               })
                           ]
                       })
-                    : (0, s.jsx)(r.Text, {
+                    : (0, r.jsx)(a.Text, {
                           variant: 'text-md/medium',
-                          className: E.connectionInstructions,
-                          children: null == n ? d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_LOADING : d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTION_INSTRUCTIONS
+                          className: f.connectionInstructions,
+                          children: null == i ? d.NW.string(d.t['CgVe//']) : d.NW.string(d.t['1MqcjI'])
                       })
             ]
         });
     }
 }
-a.Z = l.ZP.connectStores([u.Z, i.Z], () => ({
+let p = o.ZP.connectStores([u.Z, l.Z], () => ({
     cashAppPayComponent: u.Z.cashAppPayComponent,
-    adyenPaymentData: i.Z.adyenPaymentData
-}))(A);
+    adyenPaymentData: l.Z.adyenPaymentData
+}))(_);

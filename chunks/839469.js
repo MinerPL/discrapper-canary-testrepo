@@ -1,29 +1,24 @@
-t.d(s, {
-    E: function () {
-        return l;
-    }
-}),
-    t(47120);
-var n = t(470079),
-    a = t(170401),
-    i = t(996733),
-    r = t(394644),
-    o = t(726985);
-function l() {
-    let e = (0, i.Z7)(),
-        s = (0, r.Pt)(),
-        t = n.useRef(new a.Z((0, r.ji)(s))),
-        [l, c] = n.useState(!1),
-        [d, _] = n.useState(o.QF),
-        E = n.useCallback(async (e) => {
-            _(await t.current.search(e.trim())), c(!0);
+n.d(t, { E: () => o }), n(47120), n(301563), n(566702);
+var r = n(192379),
+    i = n(170401),
+    s = n(996733),
+    a = n(991346),
+    l = n(726985);
+function o() {
+    let e = (0, s.Z7)(),
+        t = (0, a.Pt)(),
+        n = r.useRef(new i.Z((0, a.ji)(t))),
+        [o, c] = r.useState(!1),
+        [d, u] = r.useState(l.QF),
+        m = r.useCallback(async (e) => {
+            u(await n.current.search(e.trim())), c(!0);
         }, []);
     return (
-        n.useEffect(() => {
-            '' === e || e.length < 2 ? (_(o.QF), c(!1)) : E(e);
-        }, [e, E]),
+        r.useEffect(() => {
+            '' === e || e.length < 2 ? (u(l.QF), c(!1)) : m(e);
+        }, [e, m]),
         {
-            hasSearchResults: l,
+            hasSearchResults: o,
             searchResults: d
         }
     );

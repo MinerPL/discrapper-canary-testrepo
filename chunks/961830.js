@@ -1,65 +1,107 @@
 n.d(t, {
-    F7: function () {
-        return m;
-    },
-    WA: function () {
-        return _;
-    },
-    s2: function () {
-        return f;
-    },
-    wo: function () {
-        return S;
-    },
-    yp: function () {
-        return p;
-    }
+    F7: () => O,
+    WA: () => g,
+    s2: () => E,
+    wo: () => v,
+    yp: () => I
 });
-var r = n(735250);
-n(470079);
-var a = n(853872),
-    i = n(409813),
-    l = n(276442),
+var r = n(200651);
+n(192379);
+var i = n(853872),
+    o = n(409813),
+    a = n(276442),
     s = n(793541),
-    o = n(380898),
-    u = n(713316),
-    c = n(710094),
+    l = n(380898),
+    c = n(713316),
+    u = n(710094),
     d = n(865921),
-    I = n(689938);
-let _ = {
-        key: null,
-        renderStep: (e) => (0, r.jsx)(d.v, { ...e })
-    },
-    f = {
-        key: i.h8.ADD_PAYMENT_STEPS,
-        renderStep: (e) =>
-            (0, r.jsx)(r.Fragment, {
-                children: (0, r.jsx)(l.J, {
-                    ...e,
-                    breadcrumbSteps: [i.h8.ADD_PAYMENT_STEPS, i.h8.REVIEW, i.h8.CONFIRM],
-                    onReturn: () => {
-                        0 === Object.keys(a.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(i.h8.REVIEW, { trackedFromStep: i.h8.ADD_PAYMENT_STEPS });
-                    }
+    f = n(388032);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
-            }),
-        options: { renderHeader: !0 }
-    },
-    h = {
-        key: i.h8.AWAITING_PURCHASE_TOKEN_AUTH,
-        renderStep: () => (0, r.jsx)(o.Z, {})
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let g = {
+        key: null,
+        renderStep: (e) => (0, r.jsx)(d.v, p({}, e))
     },
     E = {
-        key: i.h8.AWAITING_AUTHENTICATION,
+        key: o.h8.ADD_PAYMENT_STEPS,
+        renderStep: (e) =>
+            (0, r.jsx)(
+                a.J,
+                m(p({}, e), {
+                    breadcrumbSteps: [o.h8.ADD_PAYMENT_STEPS, o.h8.REVIEW, o.h8.CONFIRM],
+                    onReturn: () => {
+                        0 === Object.keys(i.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(o.h8.REVIEW, { trackedFromStep: o.h8.ADD_PAYMENT_STEPS });
+                    }
+                })
+            ),
+        options: { renderHeader: !0 }
+    },
+    b = {
+        key: o.h8.AWAITING_PURCHASE_TOKEN_AUTH,
+        renderStep: () => (0, r.jsx)(l.Z, {})
+    },
+    y = {
+        key: o.h8.AWAITING_AUTHENTICATION,
         renderStep: () => (0, r.jsx)(s.Z, {}),
         options: { renderHeader: !0 }
     },
-    S = {
-        key: i.h8.REVIEW,
-        renderStep: (e) => (0, r.jsx)(c.l, { ...e }),
-        options: { useBreadcrumbLabel: () => I.Z.Messages.BILLING_STEP_REVIEW }
+    v = {
+        key: o.h8.REVIEW,
+        renderStep: (e) => (0, r.jsx)(u.l, p({}, e)),
+        options: { useBreadcrumbLabel: () => f.NW.string(f.t.QBnNHh) }
     },
-    m = {
-        key: i.h8.CONFIRM,
-        renderStep: (e) => (0, r.jsx)(u.w, { ...e })
+    O = {
+        key: o.h8.CONFIRM,
+        renderStep: (e) => (0, r.jsx)(c.w, p({}, e))
     },
-    p = [h, E];
+    I = [b, y];

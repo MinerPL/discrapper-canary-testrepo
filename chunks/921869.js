@@ -1,75 +1,92 @@
-t.d(a, {
-    m: function () {
-        return d;
-    }
-});
-var n = t(735250);
-t(470079);
-var r = t(442837),
-    s = t(481060),
-    o = t(600164),
-    l = t(553795),
-    c = t(689938),
-    i = t(564510);
-function d(e) {
-    let { platformType: a, onContinue: t, onClose: d, img: u, headerConnect: x, headerReconnect: N, body: h, learnMoreLink: m, valueProps: C } = e,
-        j = (0, r.e7)([l.Z], () => {
-            let e = l.Z.getAccount(null, a);
+r.d(a, { m: () => h });
+var s = r(200651),
+    t = r(192379),
+    l = r(442837),
+    n = r(481060),
+    o = r(600164),
+    c = r(553795),
+    i = r(424071),
+    d = r(239358),
+    x = r(388032),
+    u = r(475286);
+function h(e) {
+    let { platformType: a, onContinue: r, onClose: h, img: N, headerConnect: m, headerReconnect: C, body: j, learnMoreLink: k, valueProps: v } = e,
+        p = (0, l.e7)([c.Z], () => {
+            let e = c.Z.getAccount(null, a);
             return (null == e ? void 0 : e.twoWayLink) === !1;
         });
-    return (0, n.jsxs)(n.Fragment, {
+    return (0, s.jsxs)(i.Z, {
         children: [
-            (0, n.jsxs)(s.ModalHeader, {
+            (0, s.jsxs)(n.xBx, {
                 direction: o.Z.Direction.VERTICAL,
-                className: i.header,
+                className: u.header,
                 separator: !1,
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: i.illustration,
-                        children: [u, ' ']
+                    (0, s.jsxs)('div', {
+                        className: u.illustration,
+                        children: [N, ' ']
                     }),
-                    (0, n.jsx)(s.Heading, {
-                        className: i.title,
+                    (0, s.jsx)(n.X6q, {
+                        className: u.title,
                         variant: 'heading-xl/extrabold',
-                        children: j && null != N ? N : x
+                        children: p && null != C ? C : m
                     }),
-                    (0, n.jsx)(s.ModalCloseButton, {
-                        className: i.closeButton,
-                        onClick: d
+                    (0, s.jsx)(n.olH, {
+                        className: u.closeButton,
+                        onClick: h
                     })
                 ]
             }),
-            (0, n.jsxs)(s.ModalContent, {
-                className: i.body,
-                paddingFix: !1,
+            (0, s.jsxs)(n.hzk, {
+                className: u.body,
                 children: [
-                    (0, n.jsx)(s.Text, {
+                    (0, s.jsx)(n.Text, {
                         tag: 'p',
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: h
+                        children: j
                     }),
-                    (0, n.jsx)('div', {
-                        className: i.valueProps,
-                        children: C
+                    (0, s.jsx)('div', {
+                        className: u.valueProps,
+                        children: v.map((e, a) => {
+                            let { label: r, subLabel: l, icon: n } = e;
+                            return (0, s.jsxs)(
+                                t.Fragment,
+                                {
+                                    children: [
+                                        (0, s.jsx)(
+                                            d.Z,
+                                            {
+                                                label: r,
+                                                subLabel: l,
+                                                icon: n
+                                            },
+                                            r
+                                        ),
+                                        a !== v.length - 1 && (0, s.jsx)('div', { className: u.valuePropDivider })
+                                    ]
+                                },
+                                r
+                            );
+                        })
                     }),
-                    null != m
-                        ? (0, n.jsx)(s.Text, {
+                    null != k
+                        ? (0, s.jsx)(n.Text, {
                               tag: 'p',
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
-                              children: c.Z.Messages.CONNECT_CONSOLE_LANDING_BODY_LEARN_MORE.format({ helpCenterLink: m })
+                              children: x.NW.format(x.t['/l3n+/'], { helpCenterLink: k })
                           })
                         : null
                 ]
             }),
-            (0, n.jsx)(s.ModalFooter, {
-                className: i.footer,
-                children: (0, n.jsx)(s.Button, {
-                    className: i.footerButton,
-                    color: s.Button.Colors.BRAND,
-                    onClick: t,
-                    children: c.Z.Messages.CONTINUE
+            (0, s.jsx)(n.mzw, {
+                className: u.footer,
+                children: (0, s.jsx)(n.zxk, {
+                    className: u.footerButton,
+                    color: n.zxk.Colors.BRAND,
+                    onClick: r,
+                    children: x.NW.string(x.t['3PatS0'])
                 })
             })
         ]

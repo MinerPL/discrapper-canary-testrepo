@@ -1,32 +1,33 @@
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => l });
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(921944),
-    s = n(689938),
-    o = n(716483);
-t.Z = (e) => {
+    o = n(921944),
+    a = n(388032),
+    s = n(17213);
+let l = (e) => {
     let { markAsDismissed: t } = e;
     return (0, r.jsxs)('div', {
-        className: o.wrapper,
+        className: s.wrapper,
         children: [
-            (0, r.jsx)(i.HeartIcon, {
+            (0, r.jsx)(i.h_8, {
                 size: 'md',
                 color: 'currentColor',
-                className: o.icon
+                className: s.icon
             }),
             (0, r.jsx)('div', {
-                className: o.content,
+                className: s.content,
                 children: (0, r.jsx)(i.Text, {
                     variant: 'text-xs/normal',
-                    children: s.Z.Messages.EMOJI_PICKER_FAVORITES_TIP
+                    children: a.NW.string(a.t['xdRf6+'])
                 })
             }),
-            (0, r.jsx)(i.Clickable, {
-                onClick: () => t(a.L.UNKNOWN),
-                children: (0, r.jsx)(i.XSmallIcon, {
+            (0, r.jsx)(i.P3F, {
+                onClick: () => t(o.L.UNKNOWN),
+                children: (0, r.jsx)(i.Dio, {
                     size: 'md',
                     color: 'currentColor',
-                    className: o.close
+                    className: s.close
                 })
             })
         ]

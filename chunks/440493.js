@@ -1,7 +1,3 @@
-var i;
-n.d(t, {
-    r: function () {
-        return i;
-    }
-}),
-    ((i || (i = {})).REAL_NAME_PROMPT = 'REAL_NAME_PROMPT');
+n.d(t, { r: () => i });
+var r,
+    i = (((r = {}).REAL_NAME_PROMPT = 'REAL_NAME_PROMPT'), r);

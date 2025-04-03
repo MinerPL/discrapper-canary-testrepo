@@ -1,79 +1,99 @@
-a.r(t),
-    a.d(t, {
-        default: function () {
-            return m;
-        }
-    });
-var n = a(735250),
-    s = a(470079),
-    l = a(481060),
-    i = a(332664),
-    o = a(142497),
-    r = a(626135),
-    c = a(672655),
-    d = a(768015),
-    u = a(701488),
-    _ = a(981631),
-    T = a(190378),
-    I = a(689938);
-let b = [u.K8.OTHER, u.K8.ADS, u.K8.NOT_FUN];
-function m(e) {
+n.d(t, { default: () => p });
+var a = n(200651),
+    i = n(192379),
+    l = n(481060),
+    r = n(332664),
+    o = n(142497),
+    c = n(626135),
+    s = n(672655),
+    u = n(768015),
+    d = n(701488),
+    m = n(981631),
+    b = n(190378),
+    _ = n(388032);
+let f = [d.K8.OTHER, d.K8.ADS, d.K8.NOT_FUN];
+function p(e) {
     var t;
-    let { channel: m, activityApplication: C, onClose: A, transitionState: f, analyticsData: E } = e;
-    s.useEffect(() => {
-        r.default.track(_.rMx.OPEN_MODAL, {
+    let { channel: p, embeddedActivityLocation: x, activityApplication: h, onClose: v, transitionState: N, analyticsData: g } = e;
+    i.useEffect(() => {
+        c.default.track(m.rMx.OPEN_MODAL, {
             type: 'Activity Feedback Modal',
-            application_id: C.id,
-            application_name: C.name,
-            game_id: C.id,
+            application_id: h.id,
+            application_name: h.name,
+            game_id: h.id,
             source: 'Activity End'
         });
-    }, [C]);
-    let p = (null === (t = C.embeddedActivityConfig) || void 0 === t ? void 0 : t.displays_advertisements) === !0;
-    return (0, n.jsx)(i.Z, {
-        header: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_HEADER.format({ applicationName: C.name }),
-        body: I.Z.Messages.ACTIVITY_REPORT_ACTIVITY_BODY,
-        problemTitle: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE,
-        problems: (0, c.Z)(!0, p),
-        feedbackProblems: b,
+    }, [h]);
+    let j = (null == (t = h.embeddedActivityConfig) ? void 0 : t.displays_advertisements) === !0;
+    return (0, a.jsx)(r.Z, {
+        modalType: 'activity',
+        header: _.NW.formatToPlainString(_.t.QXYwoK, { applicationName: h.name }),
+        body: _.NW.string(_.t['9hk2KC']),
+        problemTitle: _.NW.string(_.t.g1q5fn),
+        problems: (0, s.Z)(!0, j),
+        freeformNeededProblems: f,
         onSubmit: function (e) {
-            let { rating: t, problem: s, dontShowAgain: i, feedback: c } = e;
-            if (
-                (i &&
-                    !(function (e) {
-                        let { applicationId: t, rating: a } = e;
-                        r.default.track(_.rMx.ACTIVITY_REPORT_DONT_SHOW, {
-                            application_id: t,
-                            rating: a
-                        }),
-                            (0, o.Kw)(T.v.POST_ACTIVITY_FEEDBACK);
-                    })({
-                        rating: t,
-                        applicationId: C.id
+            var t;
+            let { rating: i, problem: r, dontShowAgain: s, feedback: d } = e;
+            s &&
+                (function (e) {
+                    let { applicationId: t, rating: n } = e;
+                    c.default.track(m.rMx.ACTIVITY_REPORT_DONT_SHOW, {
+                        application_id: t,
+                        rating: n
                     }),
-                null != t)
-            )
-                (0, d.Z)({
-                    problem: s,
-                    channel: m,
-                    feedback: c,
-                    activityApplication: C,
-                    analyticsData: E,
-                    location: 'Activity End',
-                    rating: t
+                        (0, o.Kw)(b.v.POST_ACTIVITY_FEEDBACK);
+                })({
+                    rating: i,
+                    applicationId: h.id
                 }),
-                    null != s &&
-                        (0, l.openModalLazy)(async () => {
-                            let { default: e } = await a.e('14466').then(a.bind(a, 729328));
+                null != i &&
+                    ((0, u.Z)({
+                        problem: null != (t = null == r ? void 0 : r.value) ? t : null,
+                        channel: p,
+                        embeddedActivityLocation: x,
+                        feedback: d,
+                        activityApplication: h,
+                        analyticsData: g,
+                        location: 'Activity End',
+                        rating: i
+                    }),
+                    null != r &&
+                        (0, l.ZDy)(async () => {
+                            let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
-                                (0, n.jsx)(e, {
-                                    body: I.Z.Messages.ACTIVITY_REPORTED_BODY,
-                                    ...t
-                                });
-                        });
+                                (0, a.jsx)(
+                                    e,
+                                    (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                a = Object.keys(n);
+                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                (a = a.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    })
+                                                )),
+                                                a.forEach(function (t) {
+                                                    var a;
+                                                    (a = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: a,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0
+                                                              })
+                                                            : (e[t] = a);
+                                                });
+                                        }
+                                        return e;
+                                    })({ body: _.NW.string(_.t['zuHR+/']) }, t)
+                                );
+                        }));
         },
-        onClose: A,
-        transitionState: f,
-        otherKey: u.K8.OTHER
+        onClose: v,
+        transitionState: N,
+        otherKey: d.K8.OTHER
     });
 }

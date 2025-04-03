@@ -1,9 +1,4 @@
-n.d(t, {
-    F: function () {
-        return a;
-    }
-}),
-    n(411104);
+n.d(t, { F: () => o }), n(411104);
 var r = n(153102);
 function i(e, t, n) {
     return (
@@ -18,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     attach(e) {
         let { stores: t } = this;
         t.forEach((t, n) => {
@@ -36,7 +31,7 @@ class a {
             i(this, 'storeVersionHandled', void 0),
             i(this, 'handleStoreChange', () => {
                 let e = r.Z.getChangeSentinel();
-                if (this.storeVersionHandled !== e) this.changeCallback(), (this.storeVersionHandled = e);
+                this.storeVersionHandled !== e && (this.changeCallback(), (this.storeVersionHandled = e));
             }),
             (this.stores = e),
             (this.changeCallback = t);

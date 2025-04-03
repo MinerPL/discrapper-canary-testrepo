@@ -1,8 +1,4 @@
-n.d(t, {
-    g: function () {
-        return i;
-    }
-});
+n.d(t, { g: () => i });
 var r = n(890465);
 class i {
     create(e) {

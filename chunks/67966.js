@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 var r = n(882159);
 function i(e, t) {
     var n = t.getRootNode && t.getRootNode();

@@ -1,3 +1,1 @@
-n(804217);
-var r = n(387992);
-e.exports = r('Array', 'findIndex');
+n(804217), (e.exports = n(387992)('Array', 'findIndex'));

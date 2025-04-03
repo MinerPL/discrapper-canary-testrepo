@@ -1,54 +1,50 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(259580),
-    r = n(528027),
+n.d(t, { Z: () => d }), n(266796);
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    a = n(259580),
+    o = n(528027),
     l = n(686807),
-    o = n(113318),
-    c = n(173825);
-function u(e) {
-    let { benefit: t, guildId: n, onClick: u } = e,
-        d = (0, o.Z)(n, t.ref_id),
-        _ = (0, i.jsx)(r.Z, {
+    s = n(113318),
+    c = n(604528);
+function d(e) {
+    let { benefit: t, guildId: n, onClick: d } = e,
+        u = (0, s.Z)(n, t.ref_id),
+        _ = (0, r.jsx)(o.Z, {
             guildId: n,
             emojiId: t.emoji_id,
             emojiName: t.emoji_name
         });
-    return (0, i.jsxs)(a.Clickable, {
+    return (0, r.jsxs)(i.P3F, {
         className: c.container,
         onClick: () => {
-            null == d || d.navigateToChannel(), u();
+            null == u || u.navigateToChannel(), d();
         },
-        'aria-label': null == d ? void 0 : d.ariaLabel,
+        'aria-label': null == u ? void 0 : u.ariaLabel,
         role: 'link',
         children: [
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: c.emojiContainer,
                 children: _
             }),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: c.infoContainer,
                 children: [
-                    (0, i.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
                         className: c.name,
                         children: (0, l.Z)(t)
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: 'interactive-normal',
                         variant: 'text-sm/normal',
                         children: t.description
                     })
                 ]
             }),
-            (0, i.jsx)(s.Z, {
-                direction: s.Z.Directions.RIGHT,
+            (0, r.jsx)(a.Z, {
+                direction: a.Z.Directions.RIGHT,
                 className: c.caret
             })
         ]

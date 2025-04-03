@@ -1,19 +1,14 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-}),
-    n(653041);
-var s = n(442837),
-    a = n(977258),
-    i = n(958832),
-    r = n(592125),
+n.d(t, { Z: () => o }), n(653041), n(230036);
+var r = n(442837),
+    i = n(977258),
+    s = n(958832),
+    a = n(592125),
     l = n(981631);
 function o(e) {
-    return (0, s.Wu)([i.Z, r.Z], () => {
+    return (0, r.Wu)([s.Z, a.Z], () => {
         var t;
-        let n = (null !== (t = i.Z.getTopChannelIds(e.id)) && void 0 !== t ? t : []).map((e) => r.Z.getChannel(e)).filter((t) => null == t || t.id !== e.rulesChannelId),
-            s = [],
+        let n = (null != (t = s.Z.getTopChannelIds(e.id)) ? t : []).map((e) => a.Z.getChannel(e)).filter((t) => null == t || t.id !== e.rulesChannelId),
+            r = [],
             o = 0;
         return (
             n.forEach((e) => {
@@ -21,10 +16,10 @@ function o(e) {
                     if (o >= 2) return;
                     o++;
                 }
-                s.length < 5 && !s.includes(e) && s.push(e);
+                r.length < 5 && !r.includes(e) && r.push(e);
             }),
-            s.sort((t, n) => ((0, a.s)(e.id, n.id) ? 1 : 0) - ((0, a.s)(e.id, t.id) ? 1 : 0)),
-            s
+            r.sort((t, n) => +!!(0, i.s)(e.id, n.id) - +!!(0, i.s)(e.id, t.id)),
+            r
         );
     });
 }

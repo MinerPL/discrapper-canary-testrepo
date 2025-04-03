@@ -1,55 +1,45 @@
 n.d(t, {
-    IV: function () {
-        return o;
-    },
-    P: function () {
-        return u;
-    },
-    fH: function () {
-        return c;
-    },
-    sk: function () {
-        return _;
-    },
-    xt: function () {
-        return d;
-    }
+    IV: () => s,
+    P: () => u,
+    fH: () => c,
+    sk: () => p,
+    xt: () => d
 });
-var i = n(166459),
-    a = n(966390),
-    s = n(476326),
-    r = n(703558),
-    l = n(398805);
-async function o(e, t, n) {
-    let i = (0, l.Yk)(t, n),
-        a = await fetch(n);
-    return c(e, t, new File([await a.blob()], i, { type: 'image/gif' })), n;
+var r = n(166459),
+    i = n(966390),
+    a = n(476326),
+    l = n(703558),
+    o = n(398805);
+async function s(e, t, n) {
+    let r = (0, o.Yk)(t, n),
+        i = await fetch(n);
+    return c(e, t, new File([await i.blob()], r, { type: 'image/gif' })), n;
 }
 function c(e, t, n) {
-    let a = {
+    let i = {
         id: t,
         channelId: e,
         file: n,
-        platform: s.ow.WEB
+        platform: a.ow.WEB
     };
-    i.Z.addFile({
-        file: a,
+    r.Z.addFile({
+        file: i,
         channelId: e,
-        draftType: r.d.Poll
+        draftType: l.d.Poll
     });
 }
 async function u(e, t, n) {
-    i.Z.remove(e, t, r.d.Poll);
+    r.Z.remove(e, t, l.d.Poll);
 }
 async function d(e) {
-    i.Z.clearAll(e, r.d.Poll);
+    r.Z.clearAll(e, l.d.Poll);
 }
-async function _(e) {
-    let { channel: t, items: n, poll: i, nonce: s, maxSizeCallback: l } = e;
-    return a.Z.uploadFiles({
+async function p(e) {
+    let { channel: t, items: n, poll: r, nonce: a, maxSizeCallback: o } = e;
+    return i.Z.uploadFiles({
         channelId: t.id,
         uploads: n,
-        draftType: r.d.Poll,
+        draftType: l.d.Poll,
         parsedMessage: {
             content: '',
             tts: !1,
@@ -57,8 +47,8 @@ async function _(e) {
             validNonShortcutEmojis: []
         },
         options: {
-            nonce: s,
-            poll: i
+            nonce: a,
+            poll: r
         },
         raiseEndpointErrors: !0
     });

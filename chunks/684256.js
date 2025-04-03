@@ -1,61 +1,58 @@
-t.d(n, {
-    Z: function () {
-        return C;
-    }
-});
-var i = t(735250),
-    a = t(470079),
-    l = t(120356),
-    o = t.n(l),
-    r = t(481060),
-    s = t(895924),
-    c = t(424602),
-    d = t(827498),
-    u = t(98880),
-    m = t(772606),
-    p = t(689938),
-    _ = t(622443);
-function C(e) {
-    let { channel: n, entrypoint: t, title: l, look: C, items: f, sectionName: h } = e,
-        { clickOnHomeActivityOpensAppDetail: A } = c.m1.getCurrentConfig({ location: 'AppLauncherApplicationListViewScreen' }, { autoTrackExposure: !1 }),
-        E = a.useMemo(() => (t === d._b.TEXT ? u.kA : u.qR), [t]);
+n.d(t, { Z: () => h });
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(481060),
+    c = n(895924),
+    s = n(827498),
+    u = n(106066),
+    d = n(98880),
+    p = n(772606),
+    m = n(388032),
+    f = n(655420);
+function h(e) {
+    let { context: t, entrypoint: n, title: l, look: h, items: b, sectionName: C, sectionOverallPosition: _ } = e,
+        x = (0, u.s)('AppLauncherApplicationListViewScreen'),
+        v = r.useMemo(() => (n === s._b.TEXT ? d.kA : d.qR), [n]);
     return (0, i.jsxs)('section', {
-        className: _.container,
-        'aria-label': p.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({ sectionTitle: l }),
+        className: f.container,
+        'aria-label': m.NW.formatToPlainString(m.t.iobNIC, { sectionTitle: l }),
         children: [
             (0, i.jsxs)('div', {
-                className: _.header,
+                className: f.header,
                 children: [
-                    (0, i.jsx)(m.Z, { className: _.backButton }),
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(p.Z, { className: f.backButton }),
+                    (0, i.jsx)(o.X6q, {
                         variant: 'heading-md/medium',
                         color: 'header-primary',
                         children: l
                     })
                 ]
             }),
-            (0, i.jsx)(r.Scroller, {
+            (0, i.jsx)(o.Ttm, {
                 children: (0, i.jsx)('div', {
-                    className: o()({
-                        [_.appGrid]: C !== u.U4.ROW,
-                        [_.rows]: C === u.U4.ROW
+                    className: a()({
+                        [f.appGrid]: h !== d.U4.ROW,
+                        [f.rows]: h === d.U4.ROW
                     }),
-                    children: f.map((e, t) => {
-                        let { application: a, isPartner: l, installOnDemand: o } = e;
+                    children: b.map((e, n) => {
+                        let { application: r, installOnDemand: l, showsPromoted: a } = e;
                         return (0, i.jsx)(
-                            E,
+                            v,
                             {
-                                channel: n,
-                                application: a,
-                                look: C,
-                                isPartner: l,
-                                sectionName: h,
-                                resultsPosition: t,
-                                location: s.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
-                                installOnDemand: o,
-                                isOneClickCTA: A
+                                context: t,
+                                application: r,
+                                look: h,
+                                sectionName: C,
+                                resultsPosition: n,
+                                location: c.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
+                                installOnDemand: l,
+                                isOneClickCTA: x,
+                                sectionOverallPosition: _,
+                                showsPromoted: a
                             },
-                            a.id
+                            r.id
                         );
                     })
                 })

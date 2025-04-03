@@ -1,6 +1,7 @@
-var r,
-    i = n(451530);
-var a = (r = /[^.]+$/.exec((i.Z && i.Z.keys && i.Z.keys.IE_PROTO) || '')) ? 'Symbol(src)_1.' + r : '';
-t.Z = function (e) {
+r.d(t, { Z: () => i });
+var n,
+    o = r(451530),
+    a = (n = /[^.]+$/.exec((o.Z && o.Z.keys && o.Z.keys.IE_PROTO) || '')) ? 'Symbol(src)_1.' + n : '';
+let i = function (e) {
     return !!a && a in e;
 };

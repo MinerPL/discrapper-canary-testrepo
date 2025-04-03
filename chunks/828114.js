@@ -1,86 +1,85 @@
-var n = r(147018),
-    o = r(926515),
-    i = r(992051),
-    c = r(539459),
-    u = r(354848),
-    a = r(673743),
-    s = r(144748),
-    f = r(276321),
-    p = r(865312),
-    l = r(251069),
-    y = r(859209),
-    v = r(641236),
-    d = r(874652),
-    h = r(84297),
-    L = c.PROPER,
-    O = c.CONFIGURABLE,
-    S = h.IteratorPrototype,
-    g = h.BUGGY_SAFARI_ITERATORS,
-    x = v('iterator'),
-    m = 'keys',
-    T = 'values',
-    b = 'entries',
-    _ = function () {
+var n = e(147018),
+    o = e(926515),
+    i = e(992051),
+    a = e(539459),
+    s = e(354848),
+    u = e(673743),
+    c = e(144748),
+    f = e(276321),
+    l = e(865312),
+    p = e(251069),
+    v = e(859209),
+    h = e(641236),
+    d = e(874652),
+    y = e(84297),
+    g = a.PROPER,
+    L = a.CONFIGURABLE,
+    m = y.IteratorPrototype,
+    x = y.BUGGY_SAFARI_ITERATORS,
+    S = h('iterator'),
+    k = 'keys',
+    M = 'values',
+    T = 'entries',
+    b = function () {
         return this;
     };
-t.exports = function (t, e, r, c, v, h, A) {
-    a(r, e, c);
-    var k,
-        P,
-        j,
-        w = function (t) {
-            if (t === v && M) return M;
-            if (!g && t && t in C) return C[t];
+t.exports = function (t, r, e, a, h, y, A) {
+    u(e, r, a);
+    var O,
+        w,
+        C,
+        I = function (t) {
+            if (t === h && E) return E;
+            if (!x && t && t in G) return G[t];
             switch (t) {
-                case m:
+                case k:
+                case M:
                 case T:
-                case b:
                     return function () {
-                        return new r(this, t);
+                        return new e(this, t);
                     };
             }
             return function () {
-                return new r(this);
+                return new e(this);
             };
         },
-        R = e + ' Iterator',
-        I = !1,
-        C = t.prototype,
-        G = C[x] || C['@@iterator'] || (v && C[v]),
-        M = (!g && G) || w(v),
-        E = ('Array' === e && C.entries) || G;
+        P = r + ' Iterator',
+        R = !1,
+        G = t.prototype,
+        j = G[S] || G['@@iterator'] || (h && G[h]),
+        E = (!x && j) || I(h),
+        D = ('Array' === r && G.entries) || j;
     if (
-        (E && (k = s(E.call(new t()))) !== Object.prototype && k.next && (!i && s(k) !== S && (f ? f(k, S) : !u(k[x]) && y(k, x, _)), p(k, R, !0, !0), i && (d[R] = _)),
-        L &&
-            v === T &&
-            G &&
-            G.name !== T &&
-            (!i && O
-                ? l(C, 'name', T)
-                : ((I = !0),
-                  (M = function () {
-                      return o(G, this);
+        (D && (O = c(D.call(new t()))) !== Object.prototype && O.next && (!i && c(O) !== m && (f ? f(O, m) : s(O[S]) || v(O, S, b)), l(O, P, !0, !0), i && (d[P] = b)),
+        g &&
+            h === M &&
+            j &&
+            j.name !== M &&
+            (!i && L
+                ? p(G, 'name', M)
+                : ((R = !0),
+                  (E = function () {
+                      return o(j, this);
                   }))),
-        v)
-    ) {
+        h)
+    )
         if (
-            ((P = {
-                values: w(T),
-                keys: h ? M : w(m),
-                entries: w(b)
+            ((w = {
+                values: I(M),
+                keys: y ? E : I(k),
+                entries: I(T)
             }),
             A)
         )
-            for (j in P) (g || I || !(j in C)) && y(C, j, P[j]);
+            for (C in w) (!x && !R && C in G) || v(G, C, w[C]);
         else
             n(
                 {
-                    target: e,
+                    target: r,
                     proto: !0,
-                    forced: g || I
+                    forced: x || R
                 },
-                P
+                w
             );
-    }
-    return (!i || A) && C[x] !== M && y(C, x, M, { name: v }), (d[e] = M), P;
+    return (!i || A) && G[S] !== E && v(G, S, E, { name: h }), (d[r] = E), w;
 };

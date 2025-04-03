@@ -1,154 +1,193 @@
-n.d(t, {
-    F0: function () {
-        return A;
-    },
-    HR: function () {
-        return v;
-    },
-    ZP: function () {
-        return Z;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(990547),
-    r = n(442837),
-    l = n(544891),
-    o = n(481060),
+n.d(t, { Z: () => T }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(990547),
+    a = n(442837),
+    o = n(544891),
+    s = n(481060),
     c = n(893776),
-    d = n(37234),
-    u = n(809206),
-    _ = n(110924),
-    E = n(714338),
-    h = n(213609),
-    m = n(429142),
-    I = n(144114),
-    g = n(210887),
-    p = n(23434),
-    T = n(1964),
-    S = n(762756),
-    f = n(981631),
-    C = n(815660),
-    N = n(689938);
-let A = 'Email Verification',
-    v = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
-function Z() {
-    let { action: e, theme: t } = (0, r.cj)([p.Z, g.Z], () => ({
-            action: p.Z.getAction(),
-            theme: g.Z.theme
+    u = n(37234),
+    d = n(809206),
+    p = n(110924),
+    h = n(714338),
+    f = n(213609),
+    g = n(429142),
+    m = n(144114),
+    b = n(210887),
+    _ = n(23434),
+    E = n(1964),
+    O = n(762756),
+    N = n(308569),
+    y = n(981631),
+    I = n(815660),
+    v = n(388032);
+function C(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function S(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function T() {
+    let { action: e, theme: t } = (0, a.cj)([_.Z, b.Z], () => ({
+            action: _.Z.getAction(),
+            theme: b.Z.theme
         })),
-        Z = T.Z.getVerificationTypes(e),
-        [L, O] = a.useState(0),
-        R = (0, _.Z)(Z);
-    (0, h.Z)(
+        T = E.Z.getVerificationTypes(e),
+        [P, j] = i.useState(0),
+        A = (0, p.Z)(T);
+    (0, f.Z)(
         {
-            type: s.ImpressionTypes.MODAL,
-            name: s.ImpressionNames.USER_ACTION_REQUIRED,
+            type: l.ImpressionTypes.MODAL,
+            name: l.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: Z[0],
-                verification_types: Z
+                verification_type: T[0],
+                verification_types: T
             }
         },
         {},
-        [Z.toString()]
+        [T.toString()]
     );
-    let x = () => {
-            (0, u.FD)(),
-                (0, o.openModalLazy)(
+    let Z = () => {
+            (0, d.FD)(),
+                (0, s.ZDy)(
                     async () => {
                         let { default: e } = await n.e('35401').then(n.bind(n, 284549));
-                        return (t) => (0, i.jsx)(e, { ...t });
+                        return (t) => (0, r.jsx)(e, C({}, t));
                     },
                     {
-                        modalKey: A,
-                        Layer: m.ZP
+                        modalKey: N.F0,
+                        Layer: g.ZP
                     }
                 );
         },
-        b = () => {
-            (0, o.openModalLazy)(
+        x = () => {
+            (0, s.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('76540'), n.e('40857')]).then(n.bind(n, 607018));
-                    return (t) =>
-                        (0, i.jsx)(e, {
-                            reason: I.L.USER_ACTION_REQUIRED,
-                            ...t
-                        });
+                    let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
+                    return (t) => (0, r.jsx)(e, C({ reason: m.L.USER_ACTION_REQUIRED }, t));
                 },
                 {
-                    modalKey: C.M,
-                    Layer: m.ZP
+                    modalKey: I.M,
+                    Layer: g.ZP
                 }
             );
         };
     return (
-        a.useEffect(
+        i.useEffect(
             () => (
-                E.Z.disable(),
+                h.Z.disable(),
                 () => {
-                    E.Z.enable();
+                    h.Z.enable();
                 }
             ),
             []
         ),
-        a.useEffect(() => {
-            (null == R ? void 0 : R[0]) === f.PUi.PHONE &&
-                (null == Z ? void 0 : Z[0]) === f.PUi.EMAIL &&
-                (0, o.openModalLazy)(
+        i.useEffect(() => {
+            (null == A ? void 0 : A[0]) === y.PUi.PHONE &&
+                (null == T ? void 0 : T[0]) === y.PUi.EMAIL &&
+                (0, s.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
-                            (0, i.jsx)(e, {
-                                ...t,
-                                title: N.Z.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_TITLE,
-                                body: N.Z.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_BODY,
-                                confirmText: N.Z.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_CONFIRM
-                            });
+                            (0, r.jsx)(
+                                e,
+                                S(C({}, t), {
+                                    title: v.NW.string(v.t.KLnLIC),
+                                    body: v.NW.string(v.t.XGbCq6),
+                                    confirmText: v.NW.string(v.t['3oK4q6'])
+                                })
+                            );
                     },
                     {
-                        modalKey: v,
-                        Layer: m.ZP,
-                        onCloseCallback: x
+                        modalKey: N.HR,
+                        Layer: g.ZP,
+                        onCloseCallback: Z
                     }
                 );
-        }, [Z, R]),
-        (0, i.jsx)(S.Z, {
-            types: Z,
-            captchaKey: L,
+        }, [T, A]),
+        (0, r.jsx)(O.Z, {
+            types: T,
+            captchaKey: P,
             onCaptchaVerify: (e) => {
-                l.tn
+                o.tn
                     .post({
-                        url: f.ANM.CAPTCHA,
+                        url: y.ANM.CAPTCHA,
                         body: { captcha_key: e },
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !0
                     })
-                    .then(d.xf, () => {
-                        O((e) => e + 1);
+                    .then(u.xf, () => {
+                        j((e) => e + 1);
                     });
             },
             theme: t,
             onClick: (e) => {
-                e === f.PUi.EMAIL_OR_PHONE || e === f.PUi.EMAIL || e === f.PUi.REVERIFY_EMAIL ? x() : b();
+                e === y.PUi.EMAIL_OR_PHONE || e === y.PUi.EMAIL || e === y.PUi.REVERIFY_EMAIL ? Z() : x();
             },
             onLogout: () => {
-                (0, o.openModalLazy)(
+                (0, s.ZDy)(
                     async () => {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>
-                            (0, i.jsx)(e, {
-                                header: N.Z.Messages.LOGOUT,
-                                confirmText: N.Z.Messages.LOGOUT,
-                                cancelText: N.Z.Messages.CANCEL,
-                                onConfirm: () => c.Z.logout(),
-                                ...n,
-                                children: (0, i.jsx)(t, {
-                                    variant: 'text-md/normal',
-                                    children: N.Z.Messages.USER_SETTINGS_CONFIRM_LOGOUT
-                                })
-                            });
+                            (0, r.jsx)(
+                                e,
+                                S(
+                                    C(
+                                        {
+                                            header: v.NW.string(v.t['2jxGen']),
+                                            confirmText: v.NW.string(v.t['2jxGen']),
+                                            cancelText: v.NW.string(v.t['ETE/oK']),
+                                            onConfirm: () => c.Z.logout()
+                                        },
+                                        n
+                                    ),
+                                    {
+                                        children: (0, r.jsx)(t, {
+                                            variant: 'text-md/normal',
+                                            children: v.NW.string(v.t.SUnWBA)
+                                        })
+                                    }
+                                )
+                            );
                     },
-                    { Layer: m.ZP }
+                    { Layer: g.ZP }
                 );
             }
         })

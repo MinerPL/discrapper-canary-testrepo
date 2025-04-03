@@ -1,248 +1,294 @@
 n.d(t, {
-    I6: function () {
-        return g;
-    },
-    J7: function () {
-        return N;
-    },
-    JM: function () {
-        return S;
-    },
-    WL: function () {
-        return m;
-    },
-    ak: function () {
-        return f;
-    },
-    d$: function () {
-        return p;
-    },
-    eE: function () {
-        return A;
-    },
-    ic: function () {
-        return h;
-    },
-    lt: function () {
-        return _;
-    },
-    pX: function () {
-        return T;
-    },
-    sq: function () {
-        return E;
-    },
-    wk: function () {
-        return v;
-    },
-    zd: function () {
-        return I;
-    }
+    DG: () => m,
+    I6: () => O,
+    J7: () => T,
+    JM: () => I,
+    Jw: () => h,
+    WL: () => b,
+    ak: () => p,
+    d$: () => E,
+    eE: () => S,
+    ic: () => g,
+    pX: () => v,
+    sq: () => _,
+    uu: () => A,
+    wk: () => N,
+    zd: () => y
 });
 var r = n(367907),
     i = n(427679),
-    a = n(23750),
-    s = n(598077),
-    o = n(91156),
-    l = n(82554),
-    u = n(185625),
+    o = n(23750),
+    a = n(598077),
+    s = n(82554),
+    l = n(185625),
     c = n(443599),
-    d = n(981631);
-function _(e, t) {
-    O(l.b.GUILD_DISCOVERY, { guild_id: e.id }),
-        (0, c.m)(
-            {
-                name: l.b.GUILD_DISCOVERY,
-                record: e
-            },
-            {},
-            t
-        );
+    u = n(981631);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-function E(e, t) {
-    O(l.b.GUILD_DIRECTORY_ENTRY, {
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function _(e, t) {
+    C(s.b.GUILD_DIRECTORY_ENTRY, {
         channel_id: e.channelId,
         guild_id: e.guildId
     }),
         (0, c.m)(
             {
-                name: l.b.GUILD_DIRECTORY_ENTRY,
+                name: s.b.GUILD_DIRECTORY_ENTRY,
                 record: e
             },
             {},
-            t
+            { onSubmit: t }
         );
 }
-function f(e, t, n) {
-    O(l.b.MESSAGE, {
+function p(e, t, n) {
+    C(s.b.MESSAGE, {
         message_id: e.id,
         channel_id: e.channel_id
-    });
-    let r = (0, o.p)(t);
-    (0, c.m)(
-        {
-            name: l.b.MESSAGE,
-            record: e
-        },
-        { variant: r ? '5_dislike_experiment' : void 0 },
-        n
-    );
+    }),
+        (0, c.m)(
+            {
+                name: s.b.MESSAGE,
+                record: e
+            },
+            {},
+            { onSubmit: n }
+        );
 }
-function h(e, t) {
+function h(e, t, n) {
+    C(s.b.MESSAGE, {
+        message_id: e.id,
+        channel_id: e.channel_id
+    }),
+        (0, c.m)(
+            {
+                name: s.b.MESSAGE,
+                record: e
+            },
+            { variant: 'staff' },
+            { onSubmit: n }
+        );
+}
+function m(e, t, n) {
+    C(s.b.GUILD, { guild_id: e.id }),
+        (0, c.m)(
+            {
+                name: s.b.GUILD,
+                record: e
+            },
+            { variant: 'staff' },
+            { onSubmit: n }
+        );
+}
+function g(e, t) {
     let n = i.Z.getStageInstanceByChannel(e.id);
-    if (null != n)
-        O(l.b.STAGE_CHANNEL, {
+    null != n &&
+        (C(s.b.STAGE_CHANNEL, {
             stage_instance_id: n.id,
             channel_id: n.channel_id,
             guild_id: n.guild_id
         }),
-            (0, c.m)(
-                {
-                    name: l.b.STAGE_CHANNEL,
-                    record: n
-                },
-                {},
-                t
-            );
+        (0, c.m)(
+            {
+                name: s.b.STAGE_CHANNEL,
+                record: n
+            },
+            {},
+            { onSubmit: t }
+        ));
 }
-function p(e, t) {
+function E(e, t) {
     var n;
-    O(l.b.GUILD_SCHEDULED_EVENT, {
+    C(s.b.GUILD_SCHEDULED_EVENT, {
         guild_scheduled_event_id: e.id,
         guild_id: e.guild_id,
-        channel_id: null !== (n = e.channel_id) && void 0 !== n ? n : void 0
+        channel_id: null != (n = e.channel_id) ? n : void 0
     }),
         (0, c.m)(
             {
-                name: l.b.GUILD_SCHEDULED_EVENT,
+                name: s.b.GUILD_SCHEDULED_EVENT,
                 record: e
             },
             {},
-            t
+            { onSubmit: t }
         );
 }
-function m(e, t) {
-    O(l.b.FIRST_DM, {
+function b(e, t) {
+    C(s.b.FIRST_DM, {
         message_id: e.id,
         channel_id: e.channel_id
     }),
         (0, c.m)(
             {
-                name: l.b.FIRST_DM,
+                name: s.b.FIRST_DM,
                 record: e
             },
             {},
-            t,
-            void 0,
-            !1
+            {
+                onSubmit: t,
+                isEligibleForFeedback: !1
+            }
         );
 }
-async function I(e, t) {
+async function y(e, t) {
     try {
-        await (0, u.ox)(
+        await (0, l.ox)(
             {
-                name: l.b.FIRST_DM,
+                name: s.b.FIRST_DM,
                 record: e
             },
             { variant: '_first_dm_ham_v1' }
         ),
             null == t || t();
-    } catch {}
+    } catch (e) {}
 }
-function T(e, t, n) {
-    O(l.b.USER, { reported_user_id: e.id }),
+function v(e, t, n, r) {
+    C(s.b.USER, { reported_user_id: e.id }),
         (0, c.m)(
             {
-                name: l.b.USER,
+                name: s.b.USER,
                 record: e,
                 contextualGuildId: t
             },
             {},
-            n,
-            void 0,
-            !1
+            {
+                onSubmit: n,
+                appContext: r
+            }
         );
 }
-function g(e, t, n) {
-    O(l.b.USER, { reported_user_id: e.id }),
+function O(e, t, n, r) {
+    C(s.b.USER, { reported_user_id: e.id }),
         (0, c.m)(
             {
-                name: l.b.USER,
+                name: s.b.USER,
                 record: e,
                 contextualGuildId: t
             },
             { variant: 'staff' },
-            n,
-            void 0,
-            !1
+            {
+                onSubmit: n,
+                isEligibleForFeedback: !1,
+                appContext: r
+            }
         );
 }
-function S(e, t) {
-    let n = new s.Z({});
-    O(l.BM.USER, { reported_user_id: n.id }),
+function I(e, t) {
+    let n = new a.Z({});
+    C(s.BM.USER, { reported_user_id: n.id }),
         (0, c.m)(
             {
-                name: l.BM.USER,
+                name: s.BM.USER,
                 record: n
             },
             {},
-            t,
-            void 0,
-            !1,
-            !1,
-            e
+            {
+                onSubmit: t,
+                isEligibleForFeedback: !1,
+                isAuthenticated: !1,
+                emailToken: e
+            }
         );
 }
-function A(e, t) {
-    let n = new a.ZP({});
-    O(l.BM.MESSAGE, {
+function S(e, t) {
+    let n = new o.ZP({});
+    C(s.BM.MESSAGE, {
         message_id: void 0,
         channel_id: void 0
     }),
         (0, c.m)(
             {
-                name: l.BM.MESSAGE,
+                name: s.BM.MESSAGE,
                 record: n
             },
             {},
-            t,
-            void 0,
-            !1,
-            !1,
-            e
+            {
+                onSubmit: t,
+                isEligibleForFeedback: !1,
+                isAuthenticated: !1,
+                emailToken: e
+            }
         );
 }
-async function N(e, t, n) {
+async function T(e, t, n) {
     try {
-        await (0, u.ox)(
+        await (0, l.ox)(
             {
-                name: l.b.MESSAGE,
+                name: s.b.MESSAGE,
                 record: e
             },
             { variant: 'safety_alerts_headless_v1' }
         ),
             null == t || t();
-    } catch {
+    } catch (e) {
         null == n || n();
     }
 }
-function v(e, t) {
-    O(l.b.MESSAGE, {
+function N(e, t) {
+    C(s.b.MESSAGE, {
         message_id: e.id,
         channel_id: e.channel_id
     }),
         (0, c.m)(
             {
-                name: l.b.MESSAGE,
+                name: s.b.MESSAGE,
                 record: e
             },
             { variant: 'safety_alerts_v1' },
-            t
+            { onSubmit: t }
         );
 }
-function O(e, t) {
-    r.ZP.trackWithMetadata(d.rMx.IAR_MODAL_OPEN, {
-        report_type: e,
-        ...t
-    });
+function A(e) {
+    let { application: t, entrypoint: n, contextualGuildId: i, contextualChannelId: o, onSubmit: a, appContext: l } = e;
+    r.ZP.trackWithMetadata(u.rMx.REPORT_APPLICATION_CLICKED, {
+        application_id: t.id,
+        location: n
+    }),
+        C(s.b.APPLICATION, {
+            application_id: t.id,
+            guild_id: i,
+            channel_id: o
+        }),
+        (0, c.m)(
+            {
+                name: s.b.APPLICATION,
+                record: t,
+                contextualGuildId: i,
+                contextualChannelId: o,
+                entrypoint: n
+            },
+            {},
+            {
+                onSubmit: a,
+                appContext: l
+            }
+        );
+}
+function C(e, t) {
+    r.ZP.trackWithMetadata(u.rMx.IAR_MODAL_OPEN, f({ report_type: e }, t));
 }

@@ -1,21 +1,17 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => l });
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    s = n(228168),
-    o = n(770912);
+    o = n.n(i),
+    a = n(228168),
+    s = n(405751);
 function l(e) {
     let { profileType: t, children: n } = e;
     return (0, r.jsx)('div', {
-        className: a()(o.wrapper, {
-            [o.biteSize]: t === s.y0.BITE_SIZE,
-            [o.fullSize]: t === s.y0.FULL_SIZE,
-            [o.panel]: t === s.y0.PANEL
+        className: o()(s.wrapper, {
+            [s.biteSize]: t === a.y0.BITE_SIZE,
+            [s.fullSize]: t === a.y0.FULL_SIZE,
+            [s.panel]: t === a.y0.PANEL
         }),
         children: n
     });

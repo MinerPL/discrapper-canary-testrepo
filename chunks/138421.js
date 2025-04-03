@@ -1,8 +1,4 @@
-n.d(t, {
-    WL: function () {
-        return i;
-    }
-});
+n.d(t, { WL: () => i });
 var r = n(483360);
 n(285651);
 let i = (e) =>

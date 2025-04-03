@@ -1,8 +1,4 @@
-n.d(t, {
-    m: function () {
-        return i;
-    }
-});
+n.d(t, { m: () => i });
 var r = n(212605);
 function i(e) {
     if ('custom' === e) return null;

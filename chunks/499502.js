@@ -1,40 +1,36 @@
-t.d(e, {
-    Z: function () {
-        return s;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    l = t(695346),
-    r = t(572004),
-    d = t(689938);
-function s(n, e) {
-    let t = e.primarySkuId,
-        s = l.Sb.useSetting();
-    return !__OVERLAY__ && s && r.wS
-        ? (0, i.jsxs)(a.MenuItem, {
+n.d(t, { Z: () => o });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(695346),
+    a = n(572004),
+    c = n(388032);
+function o(e, t) {
+    let n = t.primarySkuId,
+        o = l.Sb.useSetting();
+    return !__OVERLAY__ && o && a.wS
+        ? (0, r.jsxs)(i.sNh, {
               id: 'application-dev',
-              label: d.Z.Messages.COPY,
-              action: () => (0, r.JG)(e.id),
+              label: c.NW.string(c.t.OpuAlJ),
+              action: () => (0, a.JG)(t.id),
               children: [
-                  (0, i.jsx)(a.MenuItem, {
+                  (0, r.jsx)(i.sNh, {
                       id: 'app-id',
-                      label: d.Z.Messages.APPLICATION_CONTEXT_MENU_APPLICATION_ID,
-                      action: () => (0, r.JG)(e.id)
+                      label: c.NW.string(c.t.qSHsho),
+                      action: () => (0, a.JG)(t.id)
                   }),
-                  null != n
-                      ? (0, i.jsx)(a.MenuItem, {
+                  null != e
+                      ? (0, r.jsx)(i.sNh, {
                             id: 'branch-id',
-                            label: d.Z.Messages.APPLICATION_CONTEXT_MENU_BRANCH_ID,
-                            action: () => (0, r.JG)(n.branchId)
+                            label: c.NW.string(c.t.g7oyys),
+                            action: () => (0, a.JG)(e.branchId)
                         })
                       : null,
-                  null != t
-                      ? (0, i.jsx)(a.MenuItem, {
+                  null != n
+                      ? (0, r.jsx)(i.sNh, {
                             id: 'sku-id',
-                            label: d.Z.Messages.APPLICATION_CONTEXT_MENU_SKU_ID,
-                            action: () => (0, r.JG)(t)
+                            label: c.NW.string(c.t.hReUdH),
+                            action: () => (0, a.JG)(n)
                         })
                       : null
               ]

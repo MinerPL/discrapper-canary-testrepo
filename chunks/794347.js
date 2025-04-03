@@ -1,97 +1,62 @@
 n.d(t, {
-    _: function () {
-        return I;
-    }
-}),
-    n(47120);
-var s,
-    a = n(735250),
-    r = n(470079),
-    i = n(120356),
-    l = n.n(i),
+    Z: () => N,
+    _: () => h
+});
+var r,
+    i = n(200651),
+    s = n(192379),
+    a = n(120356),
+    l = n.n(a),
     o = n(692547),
     c = n(477690),
-    d = n(162168),
-    _ = n(624138),
-    u = n(589698);
-function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
+    d = n(393238),
+    u = n(162168),
+    m = n(624138),
+    g = n(182323);
+let p = (0, m.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH);
+var h = (((r = {}).BLACK = 'BLACK'), (r.GRAY = 'GRAY'), r);
+let f = {
+    BLACK: g.black,
+    GRAY: g.gray
+};
+function b(e) {
+    return Math.round(e / p) * p;
 }
-let T = (0, _.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
-    I = Object.freeze({
-        BLACK: u.black,
-        GRAY: u.gray
-    });
-class R extends (s = r.Component) {
-    componentDidMount() {
-        this.computeBars(), window.addEventListener('resize', this.computeBars);
-    }
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.computeBars);
-    }
-    roundToNearestStep(e) {
-        return Math.round(e / T) * T;
-    }
-    getProgressStyles() {
-        let { progress: e } = this.props,
-            t = Math.max(0, Math.min(100, e)),
-            { barWidth: n } = this.state,
-            s = Math.abs(this.roundToNearestStep((n * (100 - t)) / 100) - n);
-        return { transform: 'translateX('.concat(s, 'px)') };
-    }
-    getGradientStyles() {
-        let { gradientEnd: e, gradientStart: t, progress: n } = this.props,
-            { barWidth: s } = this.state;
-        return {
-            width: ''.concat(s, 'px'),
-            background: n <= 0 ? 'none' : 'linear-gradient(to right, '.concat(t, ', ').concat(e, ')')
-        };
-    }
-    render() {
-        let { className: e, notchBackground: t } = this.props,
-            { barWidth: n } = this.state;
-        return (0, a.jsx)('div', {
-            className: u.wrapper,
-            ref: this.sizerRef,
-            children: (0, a.jsxs)('div', {
-                className: l()(u.container, e),
-                style: this.getGradientStyles(),
+function N(e) {
+    let { notchBackground: t, progress: n, gradientStart: r = o.Z.unsafe_rawColors.YELLOW_260.css, gradientEnd: a = o.Z.unsafe_rawColors.GREEN_360.css, className: c, children: m } = e,
+        { ref: p, width: h } = (0, d.Z)(),
+        N = s.useMemo(() => (null != h ? b(h) : 0), [h]),
+        x = s.useMemo(() => {
+            let e = Math.abs(b((N * (100 - Math.max(0, Math.min(100, n)))) / 100) - N);
+            return { transform: 'translateX('.concat(e, 'px)') };
+        }, [n, N]),
+        _ = s.useMemo(
+            () => ({
+                width: ''.concat(N, 'px'),
+                background: n <= 0 ? 'none' : 'linear-gradient(to right, '.concat(r, ', ').concat(a, ')')
+            }),
+            [a, r, n, N]
+        );
+    return (0, i.jsxs)('div', {
+        className: g.wrapper,
+        ref: p,
+        children: [
+            (0, i.jsxs)('div', {
+                className: l()(g.container, c),
+                style: _,
                 children: [
-                    (0, a.jsx)('div', {
-                        className: u.progress,
-                        style: this.getProgressStyles()
+                    (0, i.jsx)('div', {
+                        className: g.progress,
+                        style: x
                     }),
-                    0 !== n &&
-                        (0, a.jsx)(d.Z, {
-                            width: n,
-                            className: l()(u.notches, t)
+                    0 !== N &&
+                        (0, i.jsx)(u.Z, {
+                            width: N,
+                            className: l()(g.notches, f[t])
                         })
                 ]
-            })
-        });
-    }
-    constructor(...e) {
-        super(...e),
-            E(this, 'state', { barWidth: 0 }),
-            E(this, 'sizerRef', r.createRef()),
-            E(this, 'computeBars', () => {
-                let { current: e } = this.sizerRef;
-                this.setState({ barWidth: null != e ? this.roundToNearestStep(e.clientWidth) : 0 });
-            });
-    }
+            }),
+            m
+        ]
+    });
 }
-E(R, 'defaultProps', {
-    gradientStart: o.Z.unsafe_rawColors.YELLOW_260.css,
-    gradientEnd: o.Z.unsafe_rawColors.GREEN_360.css
-}),
-    (t.Z = R);

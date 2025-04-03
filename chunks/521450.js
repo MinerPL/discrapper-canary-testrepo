@@ -1,86 +1,88 @@
-var s = n(735250),
-    a = n(470079),
-    r = n(120356),
-    i = n.n(r),
-    l = n(613828),
+n.d(t, { Z: () => E });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(568611),
     o = n(435935),
     c = n(442837),
     d = n(481060),
-    _ = n(37234),
-    u = n(960412),
-    E = n(151662),
-    T = n(695346),
-    I = n(981631),
-    R = n(930441),
-    C = n(689938),
-    g = n(284725),
-    p = n(224499);
-t.Z = () => {
-    let e = T.Ex.useSetting(),
-        { categories: t, initialized: n } = (0, c.cj)([E.Z], () => E.Z.getEmailSettings());
+    u = n(37234),
+    m = n(960412),
+    g = n(151662),
+    p = n(695346),
+    h = n(981631),
+    f = n(930441),
+    b = n(332495),
+    N = n(388032),
+    x = n(128607),
+    _ = n(20493);
+let E = () => {
+    let e = p.Ex.useSetting(),
+        { categories: t, initialized: n } = (0, c.cj)([g.Z], () => g.Z.getEmailSettings());
     return (
-        a.useEffect(() => {
-            null == n && (0, u.Y7)();
+        i.useEffect(() => {
+            null == n && (0, m.Y7)();
         }, [n]),
-        (0, s.jsxs)('div', {
-            className: g.container,
+        (0, r.jsxs)('div', {
+            className: x.container,
             children: [
-                (0, s.jsx)(d.Text, {
+                (0, r.jsx)(d.Text, {
                     variant: 'eyebrow',
                     color: 'text-muted',
-                    children: C.Z.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
+                    children: N.NW.string(b.Z.USIXU1)
                 }),
-                (0, s.jsx)(d.FormSwitch, {
-                    className: i()(p.marginTop8, p.marginBottom20),
+                (0, r.jsx)(d.j7V, {
+                    className: a()(_.marginTop8, _.marginBottom20),
                     value: e,
-                    note: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
+                    note: N.NW.string(b.Z['5MdB3t']),
                     hideBorder: !0,
-                    onChange: T.Ex.updateSetting,
-                    children: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
+                    onChange: p.Ex.updateSetting,
+                    children: N.NW.string(b.Z.zkEceX)
                 }),
                 e
-                    ? (0, s.jsx)(d.Card, {
-                          className: g.enableCard,
-                          type: d.Card.Types.CUSTOM,
+                    ? (0, r.jsx)(d.Zbd, {
+                          className: x.enableCard,
+                          type: d.Zbd.Types.CUSTOM,
                           outline: !0,
-                          children: (0, s.jsxs)(o.k, {
+                          children: (0, r.jsxs)(o.k, {
                               justify: o.k.Justify.END,
                               children: [
-                                  (0, s.jsx)(o.k.Child, {
-                                      children: (0, s.jsx)(d.Text, {
+                                  (0, r.jsx)(o.k.Child, {
+                                      children: (0, r.jsx)(d.Text, {
                                           variant: 'text-sm/semibold',
                                           color: 'text-normal',
-                                          children: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
+                                          children: N.NW.string(b.Z.xAVm7O)
                                       })
                                   }),
-                                  (0, s.jsx)(d.Clickable, {
-                                      children: (0, s.jsx)(l.rU, {
-                                          onClick: _.xf,
+                                  (0, r.jsx)(d.P3F, {
+                                      children: (0, r.jsx)(l.rU, {
+                                          onClick: u.xf,
                                           to: {
-                                              pathname: I.Z5c.FAMILY_CENTER,
+                                              pathname: h.Z5c.FAMILY_CENTER,
                                               state: { scrollRestoration: !1 }
                                           },
-                                          children: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
+                                          children: N.NW.string(b.Z.cUIXFR)
                                       })
                                   }),
-                                  (0, s.jsx)(d.IconBadge, {
-                                      icon: d.ArrowSmallRightIcon,
-                                      className: g.arrow,
+                                  (0, r.jsx)(d.G2e, {
+                                      icon: d.ZSh,
+                                      className: x.arrow,
                                       disableColor: !0
                                   })
                               ]
                           })
                       })
                     : null,
-                (0, s.jsx)(d.FormSwitch, {
-                    className: i()(p.marginTop20, p.marginBottom20),
-                    value: !!t[R.$Z.FAMILY_CENTER_DIGEST],
-                    note: C.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
+                (0, r.jsx)(d.j7V, {
+                    className: a()(_.marginTop20, _.marginBottom20),
+                    value: !!t[f.$Z.FAMILY_CENTER_DIGEST],
+                    note: N.NW.string(b.Z['y34S4+']),
                     hideBorder: !0,
                     onChange: function (e) {
-                        (0, u.pR)(R.$Z.FAMILY_CENTER_DIGEST, e);
+                        (0, m.pR)(f.$Z.FAMILY_CENTER_DIGEST, e);
                     },
-                    children: C.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
+                    children: N.NW.string(b.Z.irvJKS)
                 })
             ]
         })

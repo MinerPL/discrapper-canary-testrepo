@@ -1,34 +1,29 @@
-t.d(s, {
-    Z: function () {
-        return o;
-    }
-}),
-    t(47120);
-var n = t(735250),
-    a = t(470079),
-    i = t(173511),
-    r = t(481060);
-function o() {
-    let [e, s] = a.useState('');
-    return (0, n.jsxs)(r.FormSection, {
+n.d(t, { Z: () => l }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(173511),
+    a = n(481060);
+function l() {
+    let [e, t] = i.useState('');
+    return (0, r.jsxs)(a.hjN, {
         title: 'Text components',
-        tag: r.FormTitleTags.H1,
+        tag: a.RB0.H1,
         children: [
-            (0, n.jsx)(r.TextInput, {
+            (0, r.jsx)(a.oil, {
                 placeholder: 'Enter custom text...',
-                onChange: (e) => s(e)
+                onChange: (e) => t(e)
             }),
-            (0, n.jsx)(r.FormDivider, { style: { margin: '10px 0' } }),
-            i.O.map((s) =>
-                'code' === s
+            (0, r.jsx)(a.$i$, { style: { margin: '10px 0' } }),
+            s.O.map((t) =>
+                'code' === t
                     ? null
-                    : (0, n.jsx)(
-                          r.Text,
+                    : (0, r.jsx)(
+                          a.Text,
                           {
-                              variant: s,
-                              children: '' !== e ? ''.concat(e, ' (').concat(s, ')') : s
+                              variant: t,
+                              children: '' !== e ? ''.concat(e, ' (').concat(t, ')') : t
                           },
-                          s
+                          t
                       )
             )
         ]

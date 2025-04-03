@@ -1,1 +1,1 @@
-e.exports = '/assets/010d46247262121f2127.svg';
+e.exports = { container: 'container__09ccc' };

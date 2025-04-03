@@ -1,31 +1,27 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(600164),
-    l = n(991797);
-function r(e) {
-    let { icon: t, onClick: n, label: r } = e;
-    return (0, i.jsx)(a.Button, {
-        look: a.Button.Looks.BLANK,
-        size: a.Button.Sizes.MIN,
-        className: l.button,
+n.d(t, { Z: () => a });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(600164),
+    o = n(180546);
+function a(e) {
+    let { icon: t, onClick: n, label: a } = e;
+    return (0, r.jsx)(i.zxk, {
+        look: i.zxk.Looks.BLANK,
+        size: i.zxk.Sizes.MIN,
+        className: o.button,
         onClick: n,
-        children: (0, i.jsxs)(s.Z, {
-            align: s.Z.Align.CENTER,
+        children: (0, r.jsxs)(l.Z, {
+            align: l.Z.Align.CENTER,
             children: [
-                (0, i.jsx)('div', {
-                    className: l.buttonIcon,
+                (0, r.jsx)('div', {
+                    className: o.buttonIcon,
                     children: t
                 }),
-                (0, i.jsx)(a.Text, {
+                (0, r.jsx)(i.Text, {
                     variant: 'text-md/normal',
                     color: 'none',
-                    children: r
+                    children: a
                 })
             ]
         })

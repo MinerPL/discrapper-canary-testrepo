@@ -1,35 +1,21 @@
 n.d(t, {
-    $l: function () {
-        return l;
-    },
-    C2: function () {
-        return u;
-    },
-    DL: function () {
-        return o;
-    },
-    EI: function () {
-        return s;
-    },
-    Nn: function () {
-        return d;
-    },
-    X_: function () {
-        return c;
-    },
-    n4: function () {
-        return r;
-    },
-    zr: function () {
-        return a;
-    }
+    $l: () => l,
+    C2: () => u,
+    DL: () => s,
+    EI: () => a,
+    Nn: () => _,
+    X_: () => c,
+    cH: () => d,
+    n4: () => o,
+    zr: () => i
 });
-var i = n(689938);
-let a = 'SAFETY_WARNING_BANNER_WEB',
-    s = 'https://www.crisistextline.org/',
-    r = 'https://nofiltr.org/resources-hub/',
+var r = n(388032);
+let i = 'SAFETY_WARNING_BANNER_WEB',
+    a = 'https://www.crisistextline.org/',
+    o = 'https://nofiltr.org/resources-hub/',
     l = 'https://discord.findahelpline.com/',
-    o = 'InappropriateConversationModal-web',
+    s = 'InappropriateConversationModal-web',
     c = 'PRIVATE_DM_SAFETY_TOOLS_MODAL',
-    u = () => [i.Z.Messages.STRANGER_DANGER_TIPS_1, i.Z.Messages.STRANGER_DANGER_TIPS_2, i.Z.Messages.STRANGER_DANGER_TIPS_3],
-    d = () => [i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_1, i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_2, i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_3];
+    d = 'SafetyToolsActionSheet-web',
+    u = () => [r.NW.string(r.t['26fDv7']), r.NW.string(r.t.togDfn), r.NW.string(r.t.O4LjcX)],
+    _ = () => [r.NW.string(r.t.bCWw8v), r.NW.string(r.t.mzSuc3), r.NW.string(r.t.ZkmC7u)];

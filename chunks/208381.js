@@ -1,61 +1,57 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(990547),
-    s = n(481060),
-    r = n(313201),
-    l = n(758119),
-    o = n(689938),
-    c = n(741694);
-function d(e) {
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(990547),
+    l = n(481060),
+    a = n(313201),
+    o = n(758119),
+    s = n(388032),
+    c = n(377671);
+function u(e) {
     let { transitionState: t } = e,
-        d = (0, r.Dt)();
-    return (0, i.jsxs)(s.ModalRoot, {
+        u = (0, a.Dt)();
+    return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
-        size: s.ModalSize.SMALL,
-        'aria-labelledby': d,
+        size: l.CgR.SMALL,
+        'aria-labelledby': u,
         impression: {
-            impressionName: a.ImpressionNames.USER_AGE_GATE,
+            impressionName: i.ImpressionNames.USER_AGE_GATE,
             impressionProperties: { existing_user: !0 }
         },
         children: [
-            (0, i.jsx)(s.ModalContent, {
-                children: (0, i.jsxs)('div', {
+            (0, r.jsx)(l.hzk, {
+                children: (0, r.jsxs)('div', {
                     className: c.container,
                     children: [
-                        (0, i.jsx)('img', {
+                        (0, r.jsx)('img', {
                             alt: '',
                             src: n(863181),
                             className: c.img
                         }),
-                        (0, i.jsx)(s.Heading, {
+                        (0, r.jsx)(l.X6q, {
                             variant: 'heading-xl/semibold',
                             className: c.title,
-                            id: d,
-                            children: o.Z.Messages.AGE_GATE_AGE_VERIFIED
+                            id: u,
+                            children: s.NW.string(s.t.gUiIGR)
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(l.Text, {
                             color: 'header-secondary',
                             className: c.subtitle,
                             variant: 'text-sm/normal',
-                            children: o.Z.Messages.AGE_GATE_AGE_VERIFIED_BODY
+                            children: s.NW.string(s.t.susqq6)
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(s.ModalFooter, {
-                children: (0, i.jsx)(s.Button, {
-                    size: s.ButtonSizes.SMALL,
+            (0, r.jsx)(l.mzw, {
+                children: (0, r.jsx)(l.zxk, {
+                    size: l.PhG.SMALL,
                     fullWidth: !0,
                     onClick: function () {
-                        (0, l.qV)();
+                        (0, o.qV)();
                     },
                     autoFocus: !0,
-                    children: o.Z.Messages.CLOSE
+                    children: s.NW.string(s.t.cpT0Cg)
                 })
             })
         ]

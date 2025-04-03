@@ -1,47 +1,42 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651),
+    i = n(192379),
     s = n(481060),
-    r = n(921944),
-    l = n(689938),
-    o = n(828287);
+    a = n(921944),
+    l = n(388032),
+    o = n(548672);
 function c(e) {
     let { markAsDismissed: t } = e;
     return (
-        a.useEffect(() => {
+        i.useEffect(() => {
             let e = setTimeout(() => {
-                t(r.L.AUTO_DISMISS);
+                t(a.L.AUTO_DISMISS);
             }, 8000);
             return () => {
                 clearTimeout(e);
             };
         }, [t]),
-        (0, i.jsxs)(s.Clickable, {
+        (0, r.jsxs)(s.P3F, {
             className: o.container,
             onClick: () => {
-                t(r.L.USER_DISMISS);
+                t(a.L.USER_DISMISS);
             },
             children: [
-                (0, i.jsx)(s.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: l.Z.Messages.PROFILE_LOOKING_GOOD_TOOLTIP_TEXT
+                    children: l.NW.string(l.t.fJNqJi)
                 }),
-                (0, i.jsx)('div', { className: o.pointer })
+                (0, r.jsx)('div', { className: o.pointer })
             ]
         })
     );
 }
 function d(e) {
     let { children: t, markAsDismissed: n } = e,
-        [r, l] = a.useState(!1);
+        [a, l] = i.useState(!1);
     return (
-        a.useEffect(() => {
+        i.useEffect(() => {
             let e = setTimeout(() => {
                 l(!0);
             }, 1000);
@@ -49,11 +44,11 @@ function d(e) {
                 clearTimeout(e);
             };
         }, [l]),
-        (0, i.jsx)(s.Popout, {
+        (0, r.jsx)(s.yRy, {
             position: 'top',
             align: 'left',
-            shouldShow: r,
-            renderPopout: () => (0, i.jsx)(c, { markAsDismissed: n }),
+            shouldShow: a,
+            renderPopout: () => (0, r.jsx)(c, { markAsDismissed: n }),
             children: t
         })
     );

@@ -1,10 +1,3 @@
-var n, s;
-a.d(t, {
-    A: function () {
-        return n;
-    }
-}),
-    ((s = n || (n = {}))[(s.INFO = 0)] = 'INFO'),
-    (s[(s.EDIT_SCREEN = 1)] = 'EDIT_SCREEN'),
-    (s[(s.FINISH_LATER = 2)] = 'FINISH_LATER'),
-    (s[(s.SUGGESTIONS = 3)] = 'SUGGESTIONS');
+r.d(t, { A: () => i });
+var n,
+    i = (((n = {})[(n.INFO = 0)] = 'INFO'), (n[(n.EDIT_SCREEN = 1)] = 'EDIT_SCREEN'), (n[(n.FINISH_LATER = 2)] = 'FINISH_LATER'), (n[(n.SUGGESTIONS = 3)] = 'SUGGESTIONS'), n);

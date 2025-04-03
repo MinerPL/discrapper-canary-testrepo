@@ -1,40 +1,32 @@
-t.d(n, {
-    Z: function () {
-        return r;
-    }
-}),
-    t(47120);
-var a = t(470079),
-    l = t(512722),
-    s = t.n(l),
-    i = t(157925),
-    o = t(765305);
-function r(e) {
-    let { stageInstance: n, defaultStep: t, error: l, onSave: r } = e,
-        [c, d] = a.useState(t),
-        [u, _] = a.useState(),
-        [m, h] = a.useState(null);
+n.d(t, { Z: () => c }), n(47120);
+var r = n(192379),
+    i = n(512722),
+    l = n.n(i),
+    a = n(157925),
+    o = n(765305);
+function c(e) {
+    let { stageInstance: t, defaultStep: n, error: i, onSave: c } = e,
+        [s, d] = r.useState(n),
+        [u, h] = r.useState(),
+        [g, _] = r.useState(null);
     return (
-        a.useEffect(() => {
-            null != l && d(i.lv.STAGE_CHANNEL_SETTINGS);
-        }, [l]),
+        r.useEffect(() => {
+            null != i && d(a.lv.STAGE_CHANNEL_SETTINGS);
+        }, [i]),
         {
-            modalStep: c,
+            modalStep: s,
             setModalStep: d,
-            readySlide: m,
+            readySlide: g,
             handleSlideReady: function (e) {
-                return h(e);
+                return _(e);
             },
             savedOptions: u,
             handleSettingsSave: function (e) {
-                if ((_(e), e.privacyLevel === o.j8.PUBLIC && (null == n ? void 0 : n.privacy_level) !== o.j8.PUBLIC)) {
-                    d(i.lv.PUBLIC_STAGE_PREVIEW);
-                    return;
-                }
-                r(e);
+                if ((h(e), e.privacyLevel === o.j8.PUBLIC && (null == t ? void 0 : t.privacy_level) !== o.j8.PUBLIC)) return void d(a.lv.PUBLIC_STAGE_PREVIEW);
+                c(e);
             },
             handleDelayedSave: function () {
-                s()(null != u, 'Must have some saved options.'), r(u);
+                l()(null != u, 'Must have some saved options.'), c(u);
             }
         }
     );

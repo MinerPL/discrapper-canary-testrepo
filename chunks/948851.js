@@ -1,71 +1,69 @@
-t.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var l = t(735250);
-t(470079);
-var s = t(120356),
-    a = t.n(s),
-    i = t(481060),
-    r = t(971130),
-    o = t(689938),
-    d = t(793762),
-    u = t(224499);
-let c = r.ZP.getMaxAgeOptions;
+n.d(t, { Z: () => h });
+var l = n(200651);
+n(192379);
+var i = n(533800),
+    s = n(481060),
+    r = n(630388),
+    a = n(971130),
+    o = n(388032),
+    d = n(842515);
+let u = a.ZP.getMaxAgeOptions,
+    c = a.ZP.getMaxUsesOptions;
 function h(e) {
-    let { temporary: n, shouldHide: t, onToggleTemporary: s } = e;
-    return t
-        ? (0, l.jsx)('div', { className: u.marginTop20 })
-        : (0, l.jsx)(i.FormItem, {
-              className: a()(u.marginTop20, d.switch),
-              children: (0, l.jsx)(i.FormSwitch, {
-                  value: n,
-                  onChange: (e) => s(e),
-                  note: o.Z.Messages.TEMPORARY_MEMBERSHIP_EXPLANATION,
-                  hideBorder: !0,
-                  children: (0, l.jsx)(i.Text, {
-                      variant: 'text-sm/normal',
-                      children: o.Z.Messages.GRANT_TEMPORARY_MEMBERSHIP
-                  })
-              })
-          });
-}
-let I = r.ZP.getMaxUsesOptions;
-function g(e) {
-    var n;
-    let { shouldHideTemporaryInviteToggle: t, maxAge: s, maxUses: r, temporary: g, onGenerateNewLink: E, onToggleTemporary: _, onSelectMaxAge: m, onSelectMaxUses: T } = e,
-        N = c.find((e) => e.value === s),
-        v = I.find((e) => e.value === r);
+    var t;
+    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: h, temporary: g, onGenerateNewLink: m, onToggleTemporary: x, onSelectMaxAge: v, onSelectMaxUses: p, isGuestInviteCreationToggleEnabled: N, inviteFlags: I, onSetInviteFlags: f } = e,
+        j = u.find((e) => e.value === a),
+        S = c.find((e) => e.value === h);
     return (0, l.jsx)('div', {
         className: d.settingsContent,
         children: (0, l.jsxs)('form', {
-            onSubmit: E,
+            onSubmit: m,
+            className: d.settingsForm,
             children: [
-                (0, l.jsx)(i.FormItem, {
-                    title: o.Z.Messages.EXPIRE_AFTER,
-                    className: u.marginTop20,
-                    children: (0, l.jsx)(i.SingleSelect, {
-                        value: null !== (n = null == N ? void 0 : N.value) && void 0 !== n ? n : c[0].value,
+                (0, l.jsx)(s.xJW, {
+                    title: o.NW.string(o.t['60qw29']),
+                    children: (0, l.jsx)(s.VcW, {
+                        options: u,
+                        value: null != (t = null == j ? void 0 : j.value) ? t : u[0].value,
+                        onChange: v
+                    })
+                }),
+                (0, l.jsx)(s.xJW, {
+                    title: o.NW.string(o.t.jDqWHR),
+                    children: (0, l.jsx)(s.VcW, {
                         options: c,
-                        onChange: m,
-                        maxVisibleItems: 8
+                        value: null == S ? void 0 : S.value,
+                        onChange: p
                     })
                 }),
-                (0, l.jsx)(i.FormItem, {
-                    title: o.Z.Messages.MAX_NUMBER_OF_USES,
-                    className: a()(u.marginTop20, u.marginBottom4),
-                    children: (0, l.jsx)(i.SingleSelect, {
-                        value: null == v ? void 0 : v.value,
-                        options: I,
-                        onChange: T
+                !n &&
+                    (0, l.jsx)(s.xJW, {
+                        children: (0, l.jsx)(s.j7V, {
+                            className: d.switch,
+                            value: g,
+                            onChange: (e) => x(e),
+                            note: o.NW.string(o.t.UN5IRU),
+                            hideBorder: !0,
+                            children: (0, l.jsx)(s.Text, {
+                                variant: 'text-sm/normal',
+                                children: o.NW.string(o.t['wE+9dn'])
+                            })
+                        })
+                    }),
+                N &&
+                    (0, l.jsx)(s.xJW, {
+                        children: (0, l.jsx)(s.j7V, {
+                            className: d.switch,
+                            value: (0, r.yE)(I, i.$.IS_GUEST_INVITE),
+                            onChange: (e) => f((0, r.mB)(I, i.$.IS_GUEST_INVITE, e)),
+                            note: o.NW.string(o.t['/FeTKy']),
+                            hideBorder: !0,
+                            children: (0, l.jsx)(s.Text, {
+                                variant: 'text-sm/normal',
+                                children: o.NW.string(o.t.siexRU)
+                            })
+                        })
                     })
-                }),
-                (0, l.jsx)(h, {
-                    temporary: g,
-                    shouldHide: t,
-                    onToggleTemporary: _
-                })
             ]
         })
     });

@@ -1,27 +1,20 @@
-n.d(t, {
-    QH: function () {
-        return o;
-    },
-    Z7: function () {
-        return a;
-    },
-    yN: function () {
-        return r;
-    }
-});
-var i = n(652874),
-    s = n(731965);
-let l = (0, i.Z)(() => ({
+s.d(t, {
+    QH: () => i,
+    Z7: () => o,
+    yN: () => n
+}),
+    s(566702);
+let r = (0, s(972959).H)(() => ({
     query: '',
     isActive: !1,
     selected: null
 }));
-function r(e) {
-    (0, s.j)(() => l.setState({ query: e }));
+function n(e) {
+    r.setState({ query: e });
 }
-function o(e) {
-    (0, s.j)(() => l.setState({ isActive: e }));
+function i(e) {
+    r.setState({ isActive: e });
 }
-function a() {
-    return l().query;
+function o() {
+    return r.useField('query');
 }

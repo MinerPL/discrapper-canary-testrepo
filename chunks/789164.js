@@ -1,36 +1,53 @@
-n.d(t, {
-    h: function () {
-        return u;
+n.d(t, { h: () => d });
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
+    a = n(15127),
+    s = n(512983),
+    l = n(377747);
+function c(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = u(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
-});
-var r = n(735250),
-    i = n(470079),
-    a = n(337033),
-    s = n(15127),
-    o = n(512983),
-    l = n(70638);
-let u = i.forwardRef(function (e, t) {
-    var n;
-    let { children: u, className: c, titleClassName: d, title: _, icon: E, disabled: f, htmlFor: h, tag: p = 'h5', ...m } = e,
-        I = i.useId(),
-        T = null !== (n = m.titleId) && void 0 !== n ? n : I;
+    return i;
+}
+function u(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let d = i.forwardRef(function (e, t) {
+    var n,
+        { children: u, className: d, titleClassName: f, title: _, icon: p, disabled: h, htmlFor: m, tag: g = 'h5' } = e,
+        E = c(e, ['children', 'className', 'titleClassName', 'title', 'icon', 'disabled', 'htmlFor', 'tag']);
+    let b = i.useId(),
+        y = null != (n = E.titleId) ? n : b;
     return (0, r.jsx)('div', {
         ref: t,
-        className: c,
+        className: d,
         children:
             null != _
-                ? (0, r.jsx)(a.y, {
+                ? (0, r.jsx)(o.y5t, {
                       component: (0, r.jsxs)('div', {
                           className: l.sectionTitle,
                           children: [
-                              E,
+                              p,
                               null != _
-                                  ? (0, r.jsx)(o.v, {
-                                        tag: p,
-                                        id: T,
-                                        htmlFor: h,
-                                        disabled: f,
-                                        className: d,
+                                  ? (0, r.jsx)(s.v, {
+                                        tag: g,
+                                        id: y,
+                                        htmlFor: m,
+                                        disabled: h,
+                                        className: f,
                                         children: _
                                     })
                                   : null
@@ -38,8 +55,8 @@ let u = i.forwardRef(function (e, t) {
                       }),
                       children: (0, r.jsx)('div', {
                           className: l.children,
-                          children: (0, r.jsx)(s.ol, {
-                              titleId: T,
+                          children: (0, r.jsx)(a.ol, {
+                              titleId: y,
                               children: u
                           })
                       })

@@ -1,65 +1,61 @@
-r.d(t, {
-    Y: function () {
-        return T;
-    }
-});
-var n = r(395848),
-    a = r(140955),
-    o = r(596308),
-    i = r(622574),
-    _ = r(433691),
-    E = r(412828),
-    s = r(662355);
-let c = [200, 500],
-    I = () => (0, E.U)() - 0,
+a.d(e, { Y: () => A });
+var r = a(395848),
+    n = a(140955),
+    _ = a(596308),
+    o = a(622574),
+    i = a(433691),
+    c = a(412828),
+    s = a(662355);
+let E = [200, 500],
+    l = () => (0, c.U)() - 0,
     u = [],
-    l = {},
-    R = (e) => {
-        let t = u[u.length - 1],
-            r = l[e.interactionId];
-        if (r || u.length < 10 || (t && e.duration > t.latency)) {
-            if (r) r.entries.push(e), (r.latency = Math.max(r.latency, e.duration));
+    I = {},
+    R = (t) => {
+        let e = u[u.length - 1],
+            a = I[t.interactionId];
+        if (a || u.length < 10 || (e && t.duration > e.latency)) {
+            if (a) a.entries.push(t), (a.latency = Math.max(a.latency, t.duration));
             else {
-                let t = {
-                    id: e.interactionId,
-                    latency: e.duration,
-                    entries: [e]
+                let e = {
+                    id: t.interactionId,
+                    latency: t.duration,
+                    entries: [t]
                 };
-                (l[t.id] = t), u.push(t);
+                (I[e.id] = e), u.push(e);
             }
-            u.sort((e, t) => t.latency - e.latency),
-                u.splice(10).forEach((e) => {
-                    delete l[e.id];
+            u.sort((t, e) => e.latency - t.latency),
+                u.splice(10).forEach((t) => {
+                    delete I[t.id];
                 });
         }
     },
-    A = () => {
-        let e = Math.min(u.length - 1, Math.floor(I() / 50));
-        return u[e];
+    d = () => {
+        let t = Math.min(u.length - 1, Math.floor(l() / 50));
+        return u[t];
     },
-    T = (e, t = {}) => {
+    A = (t, e = {}) => {
         (0, s.A)(() => {
-            let r;
-            (0, E.Y)();
-            let s = (0, o.I)('INP'),
-                l = (e) => {
-                    e.forEach((e) => {
-                        e.interactionId && R(e), 'first-input' === e.entryType && !u.some((t) => t.entries.some((t) => e.duration === t.duration && e.startTime === t.startTime)) && R(e);
+            let a;
+            (0, c.Y)();
+            let s = (0, _.I)('INP'),
+                I = (t) => {
+                    t.forEach((t) => {
+                        t.interactionId && R(t), 'first-input' === t.entryType && (u.some((e) => e.entries.some((e) => t.duration === e.duration && t.startTime === e.startTime)) || R(t));
                     });
-                    let t = A();
-                    t && t.latency !== s.value && ((s.value = t.latency), (s.entries = t.entries), r());
+                    let e = d();
+                    e && e.latency !== s.value && ((s.value = e.latency), (s.entries = e.entries), a());
                 },
-                T = (0, i.N)('event', l, { durationThreshold: null != t.durationThreshold ? t.durationThreshold : 40 });
-            (r = (0, a._)(e, s, c, t.reportAllChanges)),
-                T &&
-                    ('PerformanceEventTiming' in n.m &&
+                A = (0, o.N)('event', I, { durationThreshold: null != e.durationThreshold ? e.durationThreshold : 40 });
+            (a = (0, n._)(t, s, E, e.reportAllChanges)),
+                A &&
+                    ('PerformanceEventTiming' in r.m &&
                         'interactionId' in PerformanceEventTiming.prototype &&
-                        T.observe({
+                        A.observe({
                             type: 'first-input',
                             buffered: !0
                         }),
-                    (0, _.u)(() => {
-                        l(T.takeRecords()), s.value < 0 && I() > 0 && ((s.value = 0), (s.entries = [])), r(!0);
+                    (0, i.u)(() => {
+                        I(A.takeRecords()), s.value < 0 && l() > 0 && ((s.value = 0), (s.entries = [])), a(!0);
                     }));
         });
     };

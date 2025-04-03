@@ -1,73 +1,106 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var s,
-    a,
-    i = n(735250),
-    r = n(470079),
-    l = n(755930),
-    o = n(267101),
-    c = n(689938),
-    d = n(193578);
-((s = a || (a = {})).LISTING_NAME = 'LISTING_NAME'), (s.PAYMENTS_COUNT = 'PAYMENTS_COUNT'), (s.PRICE = 'PRICE');
-let u = (0, l.Yn)([
-    (0, l.nn)({
+n.d(t, { Z: () => d });
+var r = n(200651),
+    i = n(192379),
+    s = n(755930),
+    a = n(267101),
+    l = n(388032),
+    o = n(963877);
+let c = (0, s.Yn)([
+    (0, s.nn)({
         key: 'LISTING_NAME',
-        cellClassName: d.listingNameColumn,
-        renderHeader: () => (0, i.jsx)(l.qN, { children: c.Z.Messages.GUILD_PRODUCT_EARNINGS_TABLE_LISTING_COLUMN_TITLE }),
-        sort: (0, l.Qg)((e) => e.listing.name.toLowerCase())
+        cellClassName: o.listingNameColumn,
+        renderHeader: () => (0, r.jsx)(s.qN, { children: l.NW.string(l.t.OGpGqK) }),
+        sort: (0, s.Qg)((e) => e.listing.name.toLowerCase())
     }),
-    (0, l.GW)({
+    (0, s.GW)({
         key: 'PAYMENTS_COUNT',
-        cellClassName: d.paymentsCountColumn,
-        renderHeader: () => (0, i.jsx)(l.qN, { children: c.Z.Messages.GUILD_PRODUCT_EARNINGS_TABLE_PURCHASES_COLUMN_TITLE }),
+        cellClassName: o.paymentsCountColumn,
+        renderHeader: () => (0, r.jsx)(s.qN, { children: l.NW.string(l.t.vpHXJy) }),
         getCount: (e) => e.paymentsCount,
-        sort: (0, l.Qg)((e) => {
+        sort: (0, s.Qg)((e) => {
             var t;
-            return null !== (t = e.paymentsCount) && void 0 !== t ? t : 0;
+            return null != (t = e.paymentsCount) ? t : 0;
         })
     }),
-    (0, l.i$)({
+    (0, s.i$)({
         key: 'PRICE',
-        cellClassName: d.priceColumn,
-        renderHeader: () => (0, i.jsx)(l.qN, { children: c.Z.Messages.GUILD_PRODUCT_EARNINGS_TABLE_PRICE_COLUMN_TITLE }),
+        cellClassName: o.priceColumn,
+        renderHeader: () => (0, r.jsx)(s.qN, { children: l.NW.string(l.t.VodAGR) }),
         getAmount(e) {
             let { listing: t } = e;
             return t.price_tier;
         },
-        sort: (0, l.Qg)((e) => {
+        sort: (0, s.Qg)((e) => {
             var t;
-            return null !== (t = e.listing.price_tier) && void 0 !== t ? t : 0;
+            return null != (t = e.listing.price_tier) ? t : 0;
         })
     })
 ]);
-function _(e) {
+function d(e) {
     let { earningsData: t, guildId: n } = e,
-        s = (0, o.ue)(n, { publishedOnly: !1 }),
-        a = t.currentPeriod,
-        c = r.useMemo(
+        l = (0, a.ue)(n, { publishedOnly: !1 }),
+        o = t.currentPeriod,
+        d = i.useMemo(
             () =>
-                s
+                l
                     .map((e) => {
-                        var t;
-                        let n = null == a ? void 0 : a.ppgs[e.id];
-                        return {
-                            ...(null != n ? n : {}),
-                            key: e.id,
-                            listing: e,
-                            paymentsCount: null !== (t = null == n ? void 0 : n.purchase_count) && void 0 !== t ? t : 0
-                        };
+                        var t, n, r;
+                        let i = null == o ? void 0 : o.ppgs[e.id];
+                        return (
+                            (n = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, null != i ? i : {})),
+                            (r = r =
+                                {
+                                    key: e.id,
+                                    listing: e,
+                                    paymentsCount: null != (t = null == i ? void 0 : i.purchase_count) ? t : 0
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(r)).forEach(function (e) {
+                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                  }),
+                            n
+                        );
                     })
                     .filter((e) => e.listing.published || e.paymentsCount > 0),
-            [s, null == a ? void 0 : a.ppgs]
+            [l, null == o ? void 0 : o.ppgs]
         );
-    return null == s || 0 === s.length
+    return null == l || 0 === l.length
         ? null
-        : (0, i.jsx)(l.ZP, {
-              columns: u,
-              data: c,
+        : (0, r.jsx)(s.ZP, {
+              columns: c,
+              data: d,
               initialSortKey: 'LISTING_NAME'
           });
 }

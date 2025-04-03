@@ -11,12 +11,12 @@ function r(e, t, n) {
         e
     );
 }
-n(733860), n(653041);
+n.d(t, { Z: () => s }), n(733860), n(653041);
 let i = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime(),
-    a = 'undefined' != typeof performance;
-t.Z = new (class e {
+    o = 'undefined' != typeof performance;
+class a {
     get isTracing() {
-        return !!a && !!this.isTracing_ && (!(Date.now() > this.endTime_) || ((this.isTracing_ = !1), !1));
+        return !!o && !!this.isTracing_ && (!(Date.now() > this.endTime_) || ((this.isTracing_ = !1), !1));
     }
     get endTime() {
         return this.endTime_;
@@ -25,7 +25,7 @@ t.Z = new (class e {
         (this.endTime_ = e), (this.isTracing_ = !0);
     }
     resumeTracing() {
-        !this.isTracing &&
+        this.isTracing ||
             (this.logGroups.unshift({
                 index: this.logGroups.length,
                 timestamp: Date.now(),
@@ -69,16 +69,16 @@ t.Z = new (class e {
     markAt(e, t, n) {
         var r, i;
         if (!this.isTracing) return;
-        let a = 0;
-        for (; a < this.logs.length; a++) {
-            let { timestamp: e } = this.logs[a];
+        let o = 0;
+        for (; o < this.logs.length; o++) {
+            let { timestamp: e } = this.logs[o];
             if (null != e && e > n) break;
         }
-        this.logs.splice(a, 0, {
+        this.logs.splice(o, 0, {
             emoji: e,
             log: t,
             timestamp: n,
-            prefix: null !== (i = null === (r = this.logs[a]) || void 0 === r ? void 0 : r.prefix) && void 0 !== i ? i : ''
+            prefix: null != (i = null == (r = this.logs[o]) ? void 0 : r.prefix) ? i : ''
         });
     }
     addDetail(e, t) {
@@ -94,17 +94,17 @@ t.Z = new (class e {
         let r = this.prefix;
         this.mark(e, 'Start '.concat(t)), (this.prefix += '| ');
         let i = Date.now(),
-            a = n(),
-            s = Date.now() - i;
-        return (this.prefix = r), this.mark(e, 'Finish '.concat(t), s), a;
+            o = n(),
+            a = Date.now() - i;
+        return (this.prefix = r), this.mark(e, 'Finish '.concat(t), a), o;
     }
     async timeAsync(e, t, n) {
         if (!this.isTracing) return n();
         this.mark(e, 'Start '.concat(t));
         let r = Date.now(),
             i = await n(),
-            a = Date.now() - r;
-        return this.mark(e, 'Finish '.concat(t), a), i;
+            o = Date.now() - r;
+        return this.mark(e, 'Finish '.concat(t), o), i;
     }
     setServerTrace(e) {
         this.logGroups[0].serverTrace = e;
@@ -124,4 +124,5 @@ t.Z = new (class e {
             r(this, 'logs', this.logGroups[0].logs),
             r(this, 'prefix', '');
     }
-})();
+}
+let s = new a();

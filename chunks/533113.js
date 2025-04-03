@@ -76,28 +76,23 @@ r(
             void 0 !== e && a(e);
             var t,
                 n,
-                r,
-                o = i(this);
-            if (Z) return void 0 === e ? g(o) : g(o, e);
-            var u = [],
-                p = s(o);
-            for (r = 0; r < p; r++) r in o && b(u, o[r]);
+                r = i(this);
+            if (Z) return void 0 === e ? g(r) : g(r, e);
+            var o = [],
+                u = s(r);
+            for (n = 0; n < u; n++) n in r && b(o, r[n]);
             for (
-                d(
-                    u,
-                    ((t = e),
-                    function (e, n) {
-                        return void 0 === n ? -1 : void 0 === e ? 1 : void 0 !== t ? +t(e, n) || 0 : l(e) > l(n) ? 1 : -1;
-                    })
-                ),
-                    n = s(u),
-                    r = 0;
-                r < n;
+                d(o, function (t, n) {
+                    return void 0 === n ? -1 : void 0 === t ? 1 : void 0 !== e ? +e(t, n) || 0 : l(t) > l(n) ? 1 : -1;
+                }),
+                    t = s(o),
+                    n = 0;
+                n < t;
 
             )
-                o[r] = u[r++];
-            for (; r < p; ) c(o, r++);
-            return o;
+                r[n] = o[n++];
+            for (; n < u; ) c(r, n++);
+            return r;
         }
     }
 );

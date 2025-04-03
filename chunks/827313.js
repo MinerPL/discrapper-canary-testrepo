@@ -1,26 +1,22 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(702557),
-    s = n(475413),
-    o = n(228168),
-    l = n(689938),
-    u = n(53892);
-function c(e) {
-    let { userId: t, isHovering: n, onOpenProfile: c } = e,
-        { note: d } = (0, a.Z)(t),
-        _ = null != d && '' !== d;
-    return (0, r.jsx)(s.y, {
+    o = n(531301),
+    a = n(475413),
+    s = n(228168),
+    l = n(388032),
+    c = n(148488);
+function u(e) {
+    let { userId: t, isHovering: n, onOpenProfile: u } = e,
+        { note: d } = (0, o.Z)(t),
+        f = null != d && '' !== d;
+    return (0, r.jsx)(a.y, {
         action: 'PRESS_ADD_NOTE',
-        icon: _ ? i.PaperIcon : i.PaperPlusIcon,
-        tooltipText: _ ? d : l.Z.Messages.ADD_NOTE,
-        tooltipClassName: _ ? u.tooltip : void 0,
+        icon: f ? i.hH0 : i.Wos,
+        tooltipText: f ? d : l.NW.string(l.t['1ZZttr']),
+        tooltipClassName: f ? c.tooltip : void 0,
         isHovering: n,
-        onClick: () => (null == c ? void 0 : c({ subsection: o.Tb.NOTE }))
+        onClick: () => (null == u ? void 0 : u({ subsection: s.Tb.NOTE }))
     });
 }

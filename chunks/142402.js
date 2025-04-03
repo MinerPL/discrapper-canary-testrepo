@@ -1,67 +1,114 @@
-n.r(a),
-    n.d(a, {
-        default: function () {
-            return b;
-        }
-    });
-var t = n(735250),
-    s = n(470079),
-    l = n(481060),
-    r = n(332664),
-    o = n(538211),
-    i = n(698066),
-    c = n(142497),
-    u = n(626135),
-    _ = n(981631),
-    d = n(70722),
-    E = n(190378),
-    R = n(689938);
-let m = [d.kr.OTHER];
-function b(e) {
-    let { isStreamer: a, stream: b, streamApplication: T, onClose: S, transitionState: M, analyticsData: O } = e,
-        f = a ? R.Z.Messages.STREAM_REPORT_RATING_BODY_STREAMER : R.Z.Messages.STREAM_REPORT_RATING_BODY;
-    return (
-        s.useEffect(() => {
-            u.default.track(_.rMx.OPEN_MODAL, {
-                type: 'Stream Problem Report',
-                other_user_id: b.ownerId,
-                application_id: null != T ? T.id : null,
-                application_name: null != T ? T.name : null,
-                game_id: null != T ? T.id : null,
-                source: 'Stream End'
-            });
-        }, [b.ownerId, T]),
-        (0, t.jsx)(r.Z, {
-            header: R.Z.Messages.STREAM_REPORT_A_PROBLEM_POST_STREAM,
-            body: f,
-            problemTitle: R.Z.Messages.STREAM_REPORT_LABEL,
-            problems: (0, o.Z)(a, !0),
-            feedbackProblems: m,
-            onSubmit: function (e) {
-                let { rating: a, problem: s, dontShowAgain: r, feedback: o } = e;
-                if ((r && (0, c.Kw)(E.v.REPORT_PROBLEM_POST_STREAM), null != a))
-                    (0, i.Z)({
-                        problem: s,
-                        stream: b,
-                        feedback: o,
-                        streamApplication: T,
-                        analyticsData: O,
+n.d(t, { default: () => x });
+var r = n(200651),
+    l = n(192379),
+    i = n(990547),
+    a = n(481060),
+    o = n(891802),
+    s = n(332664),
+    c = n(538211),
+    u = n(698066),
+    d = n(142497),
+    m = n(626135),
+    b = n(981631),
+    p = n(531578),
+    _ = n(70722),
+    f = n(190378),
+    h = n(388032);
+let O = [_.kr.OTHER];
+function x(e) {
+    let { isStreamer: t, stream: x, streamApplication: g, onClose: N, transitionState: j, analyticsData: v } = e;
+    l.useEffect(() => {
+        m.default.track(b.rMx.OPEN_MODAL, {
+            type: 'Stream Problem Report',
+            other_user_id: x.ownerId,
+            application_id: null != g ? g.id : null,
+            application_name: null != g ? g.name : null,
+            game_id: null != g ? g.id : null,
+            source: 'Stream End'
+        });
+    }, [x.ownerId, g]);
+    let { showFormStyleSurvey: y, hideNeutralOption: S, showVibesHoneypot: k } = (0, o.X)({ location: 'StreamFeedback' }),
+        E = y ? h.NW.string(h.t.OR6KNz) : h.NW.string(h.t['5smP3d']),
+        R = y ? void 0 : h.NW.string(h.t['0uxA2d']),
+        w = y ? void 0 : h.NW.string(h.t.CqjnLC),
+        L = S ? [p.aZ.BAD, p.aZ.GOOD] : void 0,
+        P = y
+            ? {
+                  [p.aZ.BAD]: h.NW.string(h.t.ISINlJ),
+                  [p.aZ.GOOD]: h.NW.string(h.t.IySkjY)
+              }
+            : void 0;
+    return (0, r.jsx)(s.Z, {
+        modalType: 'stream',
+        header: E,
+        impression: {
+            impressionName: i.ImpressionNames.STREAM_FEEDBACK_MODAL,
+            impressionProperties: {
+                media_session_id: v.media_session_id,
+                rtc_connection_id: v.rtc_connection_id,
+                parent_media_session_id: v.parent_media_session_id
+            }
+        },
+        body: t ? R : w,
+        ratingOptions: L,
+        ratingTextLabels: P,
+        problemTitle: h.NW.string(h.t['6Y1t5O']),
+        problems: (0, c.Z)({
+            isStreamer: t,
+            isEndStream: !0,
+            showVibesHoneypot: k
+        }),
+        freeformNeededProblems: O,
+        onSubmit: function (e) {
+            var t;
+            let { rating: l, problem: i, dontShowAgain: o, feedback: s } = e;
+            o && (0, d.Kw)(f.v.REPORT_PROBLEM_POST_STREAM),
+                null != l &&
+                    ((0, u.Z)({
+                        problem: null != (t = null == i ? void 0 : i.value) ? t : null,
+                        stream: x,
+                        feedback: s,
+                        streamApplication: g,
+                        analyticsData: v,
                         location: 'Stream End',
-                        rating: a
+                        rating: l
                     }),
-                        null != s &&
-                            (0, l.openModalLazy)(async () => {
-                                let { default: e } = await n.e('14466').then(n.bind(n, 729328));
-                                return (a) =>
-                                    (0, t.jsx)(e, {
-                                        body: R.Z.Messages.STREAM_REPORTED_BODY,
-                                        ...a
-                                    });
-                            });
-            },
-            onClose: S,
-            transitionState: M,
-            otherKey: d.kr.OTHER
-        })
-    );
+                    null != i &&
+                        (0, a.ZDy)(async () => {
+                            let { default: e } = await n.e('14466').then(n.bind(n, 729328));
+                            return (t) =>
+                                (0, r.jsx)(
+                                    e,
+                                    (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                r = Object.keys(n);
+                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                (r = r.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    })
+                                                )),
+                                                r.forEach(function (t) {
+                                                    var r;
+                                                    (r = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: r,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0
+                                                              })
+                                                            : (e[t] = r);
+                                                });
+                                        }
+                                        return e;
+                                    })({ body: h.NW.string(h.t.mMTVnp) }, t)
+                                );
+                        }));
+        },
+        onClose: N,
+        transitionState: j,
+        otherKey: _.kr.OTHER
+    });
 }

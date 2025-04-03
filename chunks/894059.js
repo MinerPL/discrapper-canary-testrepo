@@ -1,32 +1,68 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var a = t(735250);
-t(470079);
-var i = t(481060),
-    l = t(518756),
-    s = t(576749),
-    o = t(689938);
-function u(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        u = (0, l.Z)(e),
-        r = (0, s.Z)();
-    return u
-        ? (0, a.jsx)(i.MenuItem, {
+r.d(t, { Z: () => a });
+var n = r(200651);
+r(192379);
+var i = r(481060),
+    o = r(518756),
+    l = r(576749),
+    c = r(388032);
+function a(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        a = (0, o.Z)(e),
+        u = (0, l.Z)();
+    return a
+        ? (0, n.jsx)(i.sNh, {
               id: 'create-event',
-              label: o.Z.Messages.SCHEDULE_EVENT,
-              icon: n ? i.CalendarPlusIcon : void 0,
+              label: c.NW.string(c.t['60lJ0N']),
+              icon: t ? i.VZI : void 0,
               action: () => {
-                  (0, i.openModalLazy)(async () => {
-                      let { default: n } = await Promise.all([t.e('18543'), t.e('53115'), t.e('22347'), t.e('58023'), t.e('6719')]).then(t.bind(t, 779250));
-                      return (t) =>
-                          (0, a.jsx)(n, {
-                              ...t,
-                              guildId: e
-                          });
-                  }, r);
+                  (0, i.ZDy)(async () => {
+                      let { default: t } = await Promise.all([r.e('18543'), r.e('22347'), r.e('82758'), r.e('58023'), r.e('74367')]).then(r.bind(r, 779250));
+                      return (r) => {
+                          var i, o;
+                          return (0, n.jsx)(
+                              t,
+                              ((i = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var r = null != arguments[t] ? arguments[t] : {},
+                                          n = Object.keys(r);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (n = n.concat(
+                                              Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                              })
+                                          )),
+                                          n.forEach(function (t) {
+                                              var n;
+                                              (n = r[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: n,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = n);
+                                          });
+                                  }
+                                  return e;
+                              })({}, r)),
+                              (o = o = { guildId: e }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                                  : (function (e, t) {
+                                        var r = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var n = Object.getOwnPropertySymbols(e);
+                                            r.push.apply(r, n);
+                                        }
+                                        return r;
+                                    })(Object(o)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                                    }),
+                              i)
+                          );
+                      };
+                  }, u);
               }
           })
         : null;

@@ -1,69 +1,112 @@
-t.d(n, {
-    Z: function () {
-        return c;
+n.d(t, { Z: () => b });
+var r = n(200651);
+n(192379);
+var l = n(442837),
+    i = n(481060),
+    o = n(357156),
+    c = n(924301),
+    a = n(894017),
+    u = n(79874),
+    s = n(576749),
+    d = n(388032);
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-});
-var l = t(735250);
-t(470079);
-var i = t(442837),
-    u = t(481060),
-    s = t(889161),
-    r = t(924301),
-    a = t(894017),
-    d = t(79874),
-    E = t(576749),
-    o = t(689938);
-function c(e) {
-    let { guildEventId: n, guild: c, channel: _, recurrenceId: T, isRecurrenceItem: N } = e,
-        { canManageGuildEvent: I } = (0, s.XJ)(null != _ ? _ : c),
-        Z = (0, i.e7)([r.ZP], () => r.ZP.getGuildScheduledEvent(n)),
-        f = I(Z),
-        g = (0, E.Z)(),
-        M = (0, a.Z)(T, null == Z ? void 0 : Z.id),
-        D = (0, d.zI)(n, T);
-    if (!f || null == D || null == Z) return null;
-    let v = null != Z.recurrence_rule && !N,
-        S = (e) => {
-            (null == T || e) && !N
-                ? (0, u.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([t.e('58023'), t.e('3802')]).then(t.bind(t, 779250));
-                      return (t) =>
-                          (0, l.jsx)(e, {
-                              ...t,
-                              guildScheduledEventId: n,
-                              guildId: c.id
-                          });
-                  }, g)
-                : null != T &&
-                  (0, u.openModalLazy)(async () => {
-                      let { default: e } = await t.e('27919').then(t.bind(t, 379038));
+    return e;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function b(e) {
+    let { guildEventId: t, guild: b, channel: p, recurrenceId: v, isRecurrenceItem: h } = e,
+        { canManageGuildEvent: y } = (0, o.XJ)(null != p ? p : b),
+        O = (0, l.e7)([c.ZP], () => c.ZP.getGuildScheduledEvent(t)),
+        N = y(O),
+        j = (0, s.Z)(),
+        E = (0, a.Z)(v, null == O ? void 0 : O.id),
+        m = (0, u.zI)(t, v);
+    if (!N || null == m || null == O) return null;
+    let P = null != O.recurrence_rule && !h,
+        _ = (e) => {
+            (null == v || e) && !h
+                ? (0, i.ZDy)(async () => {
+                      let { default: e } = await Promise.all([n.e('49049'), n.e('82758'), n.e('58023'), n.e('71874')]).then(n.bind(n, 779250));
                       return (n) =>
-                          (0, l.jsx)(e, {
-                              ...n,
-                              guildEvent: Z,
-                              recurrenceId: T
-                          });
-                  }, g);
+                          (0, r.jsx)(
+                              e,
+                              f(g({}, n), {
+                                  guildScheduledEventId: t,
+                                  guildId: b.id
+                              })
+                          );
+                  }, j)
+                : null != v &&
+                  (0, i.ZDy)(async () => {
+                      let { default: e } = await n.e('27919').then(n.bind(n, 379038));
+                      return (t) =>
+                          (0, r.jsx)(
+                              e,
+                              f(g({}, t), {
+                                  guildEvent: O,
+                                  recurrenceId: v
+                              })
+                          );
+                  }, j);
         };
-    return (0, l.jsx)(u.MenuItem, {
-        id: o.Z.Messages.EDIT_EVENT,
-        label: o.Z.Messages.EDIT_EVENT,
-        action: v ? void 0 : () => S(!0),
+    return (0, r.jsx)(i.sNh, {
+        id: d.NW.string(d.t.Rgy2dX),
+        label: d.NW.string(d.t.Rgy2dX),
+        action: P ? void 0 : () => _(!0),
         children:
-            v &&
-            (0, l.jsxs)(l.Fragment, {
+            P &&
+            (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, l.jsx)(u.MenuItem, {
-                        id: o.Z.Messages.EDIT_THIS_EVENT,
-                        label: o.Z.Messages.EDIT_THIS_EVENT,
-                        action: () => S(!1),
-                        disabled: (null == M ? void 0 : M.is_canceled) || D.startTime.getTime() < Date.now()
+                    (0, r.jsx)(i.sNh, {
+                        id: d.NW.string(d.t.wmVmXF),
+                        label: d.NW.string(d.t.wmVmXF),
+                        action: () => _(!1),
+                        disabled: (null == E ? void 0 : E.is_canceled) || m.startTime.getTime() < Date.now()
                     }),
-                    (0, l.jsx)(u.MenuItem, {
-                        id: o.Z.Messages.EDIT_ALL_EVENTS,
-                        label: o.Z.Messages.EDIT_ALL_EVENTS,
-                        action: () => S(!0),
-                        disabled: new Date(Z.scheduled_start_time).getTime() < Date.now()
+                    (0, r.jsx)(i.sNh, {
+                        id: d.NW.string(d.t.BW1Qoq),
+                        label: d.NW.string(d.t.BW1Qoq),
+                        action: () => _(!0),
+                        disabled: new Date(O.scheduled_start_time).getTime() < Date.now()
                     })
                 ]
             })

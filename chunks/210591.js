@@ -1,70 +1,64 @@
-n.d(t, {
-    Z: function () {
-        return T;
-    }
-}),
-    n(47120),
-    n(390547);
-var s = n(735250),
-    a = n(470079),
-    i = n(120356),
-    r = n.n(i),
-    l = n(338545),
+n.d(t, { Z: () => h }), n(47120), n(13667), n(390547), n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(642128),
     o = n(692547),
     c = n(481060),
     d = n(259580),
     u = n(293810),
-    _ = n(689938),
-    I = n(347878);
-function E(e) {
+    m = n(388032),
+    g = n(218801);
+function p(e) {
     let { checked: t, children: n } = e;
-    return (0, s.jsxs)('div', {
-        className: I.row,
+    return (0, r.jsxs)('div', {
+        className: g.row,
         children: [
-            (0, s.jsx)(c.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: 'text-md/normal',
                 color: 'interactive-active',
-                className: I.rowText,
+                className: g.rowText,
                 children: n
             }),
             t
-                ? (0, s.jsx)(c.CircleCheckIcon, {
+                ? (0, r.jsx)(c.owK, {
                       size: 'md',
                       color: 'currentColor',
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: r()(I.rowIcon, I.rowIconChecked)
+                      className: a()(g.rowIcon, g.rowIconChecked)
                   })
-                : (0, s.jsx)('div', { className: r()(I.rowIcon, I.rowIconEmpty) })
+                : (0, r.jsx)('div', { className: a()(g.rowIcon, g.rowIconEmpty) })
         ]
     });
 }
-function T(e) {
+function h(e) {
     let { children: t } = e,
-        [n, i] = a.useState(!1),
-        r = t.flatMap((e) => e.items.map((e) => e.completed)),
-        o = r.filter((e) => e).length / r.length,
-        T = 1 === o,
-        m = (0, c.useSpring)({ width: ''.concat(100 * o, '%') }),
-        N = [_.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_PROMO_PAGE.format({ promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }), _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_CASE_STUDIES.format({ caseStudiesUrl: u.iv.CASE_STUDIES }), _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_SUBSCRIPTION_OFFERING.format({ subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }), _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_TIER_STRUCTURE.format({ tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE })],
-        S = n
+        [n, s] = i.useState(!1),
+        a = t.flatMap((e) => e.items.map((e) => e.completed)),
+        o = a.filter((e) => e).length / a.length,
+        h = 1 === o,
+        f = (0, c.q_F)({ width: ''.concat(100 * o, '%') }),
+        b = [m.NW.format(m.t.wtQtXl, { promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }), m.NW.format(m.t['0Fo0wc'], { caseStudiesUrl: u.iv.CASE_STUDIES }), m.NW.format(m.t['7JdzjI'], { subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }), m.NW.format(m.t.zkXN6O, { tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE })],
+        x = n
             ? null
-            : (0, s.jsxs)(s.Fragment, {
+            : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      !T &&
+                      !h &&
                           t.map((e, t) => {
-                              let { title: n, items: i } = e;
-                              return (0, s.jsxs)(
-                                  a.Fragment,
+                              let { title: n, items: s } = e;
+                              return (0, r.jsxs)(
+                                  i.Fragment,
                                   {
                                       children: [
-                                          t > 0 && (0, s.jsx)(c.FormDivider, { className: I.divider }),
-                                          (0, s.jsx)(c.FormTitle, {
-                                              className: I.categoryTitle,
+                                          t > 0 && (0, r.jsx)(c.$i$, { className: g.divider }),
+                                          (0, r.jsx)(c.vwX, {
+                                              className: g.categoryTitle,
                                               children: n
                                           }),
-                                          i.map((e, t) =>
-                                              (0, s.jsx)(
-                                                  E,
+                                          s.map((e, t) =>
+                                              (0, r.jsx)(
+                                                  p,
                                                   {
                                                       children: e.description,
                                                       checked: e.completed
@@ -77,17 +71,17 @@ function T(e) {
                                   t
                               );
                           }),
-                      (0, s.jsx)(c.FormDivider, { className: I.divider }),
-                      (0, s.jsx)(c.FormTitle, {
-                          className: I.categoryTitle,
-                          children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LEARN_MORE_SECTION_TITLE
+                      (0, r.jsx)(c.$i$, { className: g.divider }),
+                      (0, r.jsx)(c.vwX, {
+                          className: g.categoryTitle,
+                          children: m.NW.string(m.t.FO0AIS)
                       }),
-                      N.map((e, t) =>
-                          (0, s.jsx)(
+                      b.map((e, t) =>
+                          (0, r.jsx)(
                               'div',
                               {
-                                  className: I.row,
-                                  children: (0, s.jsx)(c.Text, {
+                                  className: g.row,
+                                  children: (0, r.jsx)(c.Text, {
                                       variant: 'text-md/normal',
                                       children: e
                                   })
@@ -97,35 +91,35 @@ function T(e) {
                       )
                   ]
               });
-    return (0, s.jsx)('div', {
-        className: I.checklist,
-        children: (0, s.jsxs)('div', {
-            className: I.container,
+    return (0, r.jsx)('div', {
+        className: g.checklist,
+        children: (0, r.jsxs)('div', {
+            className: g.container,
             children: [
-                (0, s.jsxs)(c.Clickable, {
-                    className: I.headerBar,
-                    onClick: () => i((e) => !e),
+                (0, r.jsxs)(c.P3F, {
+                    className: g.headerBar,
+                    onClick: () => s((e) => !e),
                     children: [
-                        (0, s.jsx)(c.Heading, {
+                        (0, r.jsx)(c.X6q, {
                             variant: 'heading-md/semibold',
-                            className: I.headerText,
-                            children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_HEADER
+                            className: g.headerText,
+                            children: m.NW.string(m.t['2Xbd/P'])
                         }),
-                        (0, s.jsx)(d.Z, {
+                        (0, r.jsx)(d.Z, {
                             direction: n ? d.Z.Directions.DOWN : d.Z.Directions.UP,
-                            className: I.headerCaret
+                            className: g.headerCaret
                         })
                     ]
                 }),
-                !T &&
-                    (0, s.jsx)('div', {
-                        className: I.progressBarOuter,
-                        children: (0, s.jsx)(l.animated.div, {
-                            className: I.progressBarInner,
-                            style: m
+                !h &&
+                    (0, r.jsx)('div', {
+                        className: g.progressBarOuter,
+                        children: (0, r.jsx)(l.animated.div, {
+                            className: g.progressBarInner,
+                            style: f
                         })
                     }),
-                S
+                x
             ]
         })
     });

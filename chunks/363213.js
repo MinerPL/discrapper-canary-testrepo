@@ -1,3 +1,1 @@
-n(728810);
-var r = n(974802);
-e.exports = r.Number.isNaN;
+n(728810), (e.exports = n(974802).Number.isNaN);

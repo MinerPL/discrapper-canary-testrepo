@@ -1,122 +1,155 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return D;
-        }
-    }),
-    n(47120);
-var s = n(735250),
-    i = n(470079),
-    a = n(442837),
+n.d(t, { default: () => f }), n(47120);
+var r = n(200651),
+    s = n(192379),
+    i = n(442837),
     o = n(481060),
-    r = n(660216),
+    a = n(660216),
     l = n(825209),
-    d = n(714338),
-    c = n(777036),
-    u = n(556296),
-    h = n(13140),
-    _ = n(710111),
+    c = n(714338),
+    d = n(556296),
+    u = n(13140),
+    h = n(710111),
     p = n(981631),
-    b = n(689938),
-    E = n(77733);
-function D(e) {
+    b = n(388032),
+    m = n(267205);
+function f(e) {
     var t;
-    let { transitionState: n, onClose: D } = e,
-        g = (0, a.e7)([u.Z], () => u.Z.getKeybindForAction(p.kg4.SOUNDBOARD_HOLD)),
-        [R, m] = i.useState(null !== (t = null == g ? void 0 : g.shortcut) && void 0 !== t ? t : []);
+    let { transitionState: n, onClose: f } = e,
+        g = (0, i.e7)([d.ZP], () => d.ZP.getKeybindForAction(p.kg4.SOUNDBOARD_HOLD)),
+        [_, N] = s.useState(null != (t = null == g ? void 0 : g.shortcut) ? t : []);
     return (
-        i.useEffect(
+        s.useEffect(
             () => (
-                d.Z.disable(),
+                c.Z.disable(),
                 () => {
-                    d.Z.enable();
+                    c.Z.enable();
                 }
             ),
             []
         ),
-        (0, s.jsxs)(o.ModalRoot, {
+        (0, r.jsxs)(o.Y0X, {
             transitionState: n,
             children: [
-                (0, s.jsxs)(o.ModalHeader, {
+                (0, r.jsxs)(o.xBx, {
                     separator: !1,
                     children: [
-                        (0, s.jsx)(o.Heading, {
-                            className: E.header,
+                        (0, r.jsx)(o.X6q, {
+                            className: m.header,
                             variant: 'heading-xl/semibold',
-                            children: b.Z.Messages.SOUNDBOARD_KEYBIND_MODAL_HEADER
+                            children: b.NW.string(b.t['0Osu39'])
                         }),
-                        (0, s.jsx)(o.ModalCloseButton, {
-                            className: E.closeButton,
-                            onClick: D
+                        (0, r.jsx)(o.olH, {
+                            className: m.closeButton,
+                            onClick: f
                         })
                     ]
                 }),
-                (0, s.jsxs)(o.ModalContent, {
-                    className: E.content,
+                (0, r.jsxs)(o.hzk, {
+                    className: m.content,
                     children: [
-                        (0, s.jsx)(c.Z, {
-                            className: E.warning,
-                            messageType: c.Q.WARNING,
-                            children: b.Z.Messages.SOUNDBOARD_KEYBIND_MODAL_KEYBINDS_DISABLED_MESSAGE
+                        (0, r.jsx)(o.Wn, {
+                            className: m.warning,
+                            messageType: o.QYI.WARNING,
+                            children: b.NW.string(b.t['O2v/eH'])
                         }),
-                        (0, s.jsx)(o.Heading, {
-                            className: E.formHeader,
+                        (0, r.jsx)(o.X6q, {
+                            className: m.formHeader,
                             variant: 'eyebrow',
                             color: 'header-secondary',
-                            children: b.Z.Messages.USER_SETTINGS_KEYBINDS_ACTION
+                            children: b.NW.string(b.t.UUpADw)
                         }),
-                        (0, s.jsx)(o.Text, {
-                            className: E.action,
+                        (0, r.jsx)(o.Text, {
+                            className: m.action,
                             variant: 'text-md/normal',
-                            children: b.Z.Messages.KEYBIND_SOUNDBOARD_HOLD
+                            children: b.NW.string(b.t['1xFbPz'])
                         }),
-                        (0, s.jsx)(o.Text, {
-                            className: E.actionDescription,
+                        (0, r.jsx)(o.Text, {
+                            className: m.actionDescription,
                             variant: 'text-sm/normal',
-                            children: b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD
+                            children: b.NW.string(b.t.laNlTk)
                         }),
-                        (0, s.jsx)(o.Heading, {
-                            className: E.formHeader,
+                        (0, r.jsx)(o.X6q, {
+                            className: m.formHeader,
                             variant: 'eyebrow',
                             color: 'header-secondary',
-                            children: b.Z.Messages.USER_SETTINGS_KEYBINDS_KEYBIND
+                            children: b.NW.string(b.t['1La4tL'])
                         }),
-                        (0, s.jsx)(l.Z, {
-                            defaultValue: R,
-                            onChange: m
+                        (0, r.jsx)(l.Z, {
+                            defaultValue: _,
+                            onChange: N
                         }),
-                        (0, s.jsx)(o.Anchor, {
-                            className: E.resetButton,
-                            onClick: () => m((0, h.Kd)(_.D_)),
-                            children: b.Z.Messages.SOUNDBOARD_KEYBIND_MODAL_RESET_KEYBIND
+                        (0, r.jsx)(o.eee, {
+                            className: m.resetButton,
+                            onClick: () => N((0, u.Kd)(h.D_)),
+                            children: b.NW.string(b.t['s7+2ra'])
                         })
                     ]
                 }),
-                (0, s.jsxs)(o.ModalFooter, {
+                (0, r.jsxs)(o.mzw, {
                     children: [
-                        (0, s.jsx)(o.Button, {
+                        (0, r.jsx)(o.zxk, {
                             onClick: function () {
-                                if (0 === R.length) return null != g && r.Z.deleteKeybind(g.id), D();
-                                null == g
-                                    ? r.Z.addKeybind({
-                                          action: p.kg4.SOUNDBOARD_HOLD,
-                                          shortcut: R,
-                                          enabled: !0,
-                                          params: {}
-                                      })
-                                    : r.Z.setKeybind({
-                                          ...g,
-                                          shortcut: R
-                                      });
-                                D();
+                                if (0 === _.length) return null != g && a.Z.deleteKeybind(g.id), f();
+                                if (null == g)
+                                    a.Z.addKeybind({
+                                        action: p.kg4.SOUNDBOARD_HOLD,
+                                        shortcut: _,
+                                        enabled: !0,
+                                        params: {}
+                                    });
+                                else {
+                                    var e, t;
+                                    a.Z.setKeybind(
+                                        ((e = (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var n = null != arguments[t] ? arguments[t] : {},
+                                                    r = Object.keys(n);
+                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                    (r = r.concat(
+                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                        })
+                                                    )),
+                                                    r.forEach(function (t) {
+                                                        var r;
+                                                        (r = n[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: r,
+                                                                      enumerable: !0,
+                                                                      configurable: !0,
+                                                                      writable: !0
+                                                                  })
+                                                                : (e[t] = r);
+                                                    });
+                                            }
+                                            return e;
+                                        })({}, g)),
+                                        (t = t = { shortcut: _ }),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                            : (function (e, t) {
+                                                  var n = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, r);
+                                                  }
+                                                  return n;
+                                              })(Object(t)).forEach(function (n) {
+                                                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                              }),
+                                        e)
+                                    );
+                                }
+                                f();
                             },
-                            children: b.Z.Messages.SAVE
+                            children: b.NW.string(b.t.R3BPHx)
                         }),
-                        (0, s.jsx)(o.Button, {
-                            onClick: D,
-                            look: o.Button.Looks.LINK,
-                            color: o.Button.Colors.PRIMARY,
-                            children: b.Z.Messages.CANCEL
+                        (0, r.jsx)(o.zxk, {
+                            onClick: f,
+                            look: o.zxk.Looks.LINK,
+                            color: o.zxk.Colors.PRIMARY,
+                            children: b.NW.string(b.t['ETE/oK'])
                         })
                     ]
                 })

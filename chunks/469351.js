@@ -1,140 +1,131 @@
-n.d(t, {
-    t: function () {
-        return D;
-    }
-}),
-    n(47120),
-    n(627341);
-var s,
-    a,
-    i = n(735250),
-    r = n(470079),
-    l = n(278074),
-    o = n(399606),
-    c = n(481060),
-    d = n(76535),
-    u = n(395586),
-    _ = n(204875),
-    I = n(715796),
-    E = n(411667),
-    T = n(434404),
-    m = n(962086),
-    N = n(225675),
-    S = n(703656),
-    h = n(430824),
-    g = n(594174),
-    C = n(63063),
-    x = n(267101),
-    p = n(294294),
-    R = n(310800),
-    f = n(833695),
-    L = n(981631),
-    O = n(176505),
-    A = n(689938),
-    M = n(33706);
-function D(e) {
+n.d(t, { t: () => S }), n(47120), n(627341);
+var r = n(200651),
+    i = n(192379),
+    s = n(278074),
+    a = n(399606),
+    l = n(481060),
+    o = n(76535),
+    c = n(395586),
+    d = n(204875),
+    u = n(715796),
+    m = n(411667),
+    g = n(434404),
+    p = n(962086),
+    h = n(225675),
+    f = n(703656),
+    b = n(430824),
+    x = n(594174),
+    j = n(63063),
+    N = n(267101),
+    _ = n(294294),
+    v = n(310800),
+    C = n(833695),
+    O = n(981631),
+    y = n(176505),
+    I = n(388032),
+    E = n(560131);
+function S(e) {
     let { guildId: t, hasValidApplication: n } = e,
-        { listingsLoaded: s } = (0, x.eD)(t),
-        a = (0, o.e7)([h.Z], () => h.Z.getGuild(t)),
-        D = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        v = (null == a ? void 0 : a.isOwner(D)) === !0,
-        { loading: j } = (0, d.H)(t),
-        [Z, b] = r.useState(n ? 'manage_listings' : 'payment');
-    (0, I.P)(a);
-    let U = r.useCallback(() => {
-        if (null == a) return;
-        let e = h.Z.getRole(a.id, a.getEveryoneRoleId());
+        { listingsLoaded: S } = (0, N.eD)(t),
+        T = (0, a.e7)([b.Z], () => b.Z.getGuild(t)),
+        P = (0, a.e7)([x.default], () => x.default.getCurrentUser()),
+        w = (null == T ? void 0 : T.isOwner(P)) === !0,
+        { loading: R } = (0, o.H)(t),
+        [Z, D] = i.useState(n ? 'manage_listings' : 'payment');
+    (0, u.P)(T);
+    let A = i.useCallback(() => {
+        if (null == T) return;
+        let e = b.Z.getRole(T.id, T.getEveryoneRoleId());
         if (null == e) return;
-        T.Z.close();
+        g.Z.close();
         let t = { [e.id]: e };
-        (0, m.iD)(a.id, {
-            type: N.z.SERVER_SHOP,
+        (0, p.iD)(T.id, {
+            type: h.z.SERVER_SHOP,
             roles: t,
             initialTab: 'guild_products',
-            returnToSection: L.pNK.GUILD_PRODUCTS
+            returnToSection: O.pNK.GUILD_PRODUCTS
         }),
-            (0, S.uL)(L.Z5c.CHANNEL(a.id, O.oC.GUILD_SHOP));
-    }, [a]);
-    if (!s || j) return (0, i.jsx)(c.Spinner, {});
-    if (null == a) return null;
-    let G = (0, i.jsxs)(i.Fragment, {
+            (0, f.uL)(O.Z5c.CHANNEL(T.id, y.oC.GUILD_SHOP));
+    }, [T]);
+    if (!S || R) return (0, r.jsx)(l.$jN, {});
+    if (null == T) return null;
+    let k = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(c.FormTitle, {
-                    tag: c.FormTitleTags.H1,
-                    children: A.Z.Messages.GUILD_PRODUCTS_TITLE
+                (0, r.jsx)(l.vwX, {
+                    tag: l.RB0.H1,
+                    children: I.NW.string(I.t.X6h2g4)
                 }),
-                (0, i.jsx)(c.FormText, {
-                    type: c.FormText.Types.DESCRIPTION,
-                    children: A.Z.Messages.GUILD_PRODUCTS_SETTINGS_DESCRIPTION.format({
-                        monetizationPolicyLink: C.Z.getArticleURL(L.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: C.Z.getCreatorSupportArticleURL(L.BhN.SERVER_PRODUCTS)
+                (0, r.jsx)(l.R94, {
+                    type: l.R94.Types.DESCRIPTION,
+                    children: I.NW.format(I.t.xiYuDg, {
+                        monetizationPolicyLink: j.Z.getArticleURL(O.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: j.Z.getCreatorSupportArticleURL(O.BhN.SERVER_PRODUCTS)
                     })
                 })
             ]
         }),
-        P = (0, i.jsxs)(c.TabBar, {
+        W = (0, r.jsxs)(l.njP, {
             type: 'top',
             look: 'brand',
-            className: M.tabBar,
-            'aria-label': A.Z.Messages.GUILD_PRODUCTS_TITLE,
+            className: E.tabBar,
+            'aria-label': I.NW.string(I.t.X6h2g4),
             selectedItem: Z,
-            onItemSelect: b,
+            onItemSelect: D,
             children: [
-                (0, i.jsx)(_.Z, {
+                (0, r.jsx)(d.Z, {
                     id: 'basic_info',
-                    disabledTooltip: A.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+                    disabledTooltip: I.NW.string(I.t.NVDuUV),
                     disabled: !n,
-                    children: A.Z.Messages.GUILD_PRODUCTS_BASIC_INFO_SECTION
+                    children: I.NW.string(I.t.w27QAQ)
                 }),
-                (0, i.jsx)(_.Z, {
+                (0, r.jsx)(d.Z, {
                     id: 'manage_listings',
-                    disabledTooltip: A.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+                    disabledTooltip: I.NW.string(I.t.NVDuUV),
                     disabled: !n,
-                    children: A.Z.Messages.GUILD_PRODUCTS_LISTINGS_SECTION
+                    children: I.NW.string(I.t.wlZ1mp)
                 }),
-                v
-                    ? (0, i.jsx)(c.TabBar.Item, {
+                w
+                    ? (0, r.jsx)(l.njP.Item, {
                           id: 'payment',
-                          className: M.tabBarItem,
-                          children: A.Z.Messages.GUILD_PRODUCTS_PAYMENT_SECTION
+                          className: E.tabBarItem,
+                          children: I.NW.string(I.t.YBrFe3)
                       })
                     : null,
                 n
-                    ? (0, i.jsx)('div', {
-                          className: M.previewButton,
-                          children: (0, i.jsx)(c.Button, {
-                              onClick: U,
-                              color: c.Button.Colors.PRIMARY,
-                              size: c.Button.Sizes.SMALL,
-                              look: c.Button.Looks.OUTLINED,
-                              children: A.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW
+                    ? (0, r.jsx)('div', {
+                          className: E.previewButton,
+                          children: (0, r.jsx)(l.zxk, {
+                              onClick: A,
+                              color: l.zxk.Colors.PRIMARY,
+                              size: l.zxk.Sizes.SMALL,
+                              look: l.zxk.Looks.OUTLINED,
+                              children: I.NW.string(I.t.vM81yc)
                           })
                       })
                     : null
             ]
         }),
-        B = (0, l.EQ)(Z)
-            .with('basic_info', () => (0, i.jsx)(p.Z, { guildId: t }))
-            .with('manage_listings', () => (0, i.jsx)(R.Z, { guildId: t }))
-            .with('payment', () => (0, i.jsx)(f.Z, { guildId: t }))
+        L = (0, s.EQ)(Z)
+            .with('basic_info', () => (0, r.jsx)(_.Z, { guildId: t }))
+            .with('manage_listings', () => (0, r.jsx)(v.Z, { guildId: t }))
+            .with('payment', () => (0, r.jsx)(C.Z, { guildId: t }))
             .exhaustive(),
-        y = s
-            ? (0, i.jsx)(c.TabBar.Panel, {
+        M = S
+            ? (0, r.jsx)(l.njP.Panel, {
                   id: Z,
-                  children: B
+                  children: L
               })
-            : (0, i.jsx)(c.Spinner, {});
-    return (0, i.jsxs)(u.AL, {
+            : (0, r.jsx)(l.$jN, {});
+    return (0, r.jsxs)(c.AL, {
         guildId: t,
         children: [
-            G,
-            (0, i.jsx)(E.Z, { guild: a }),
-            (0, i.jsx)('div', {
-                className: M.tabBarContainer,
-                children: P
+            k,
+            (0, r.jsx)(m.Z, { guild: T }),
+            (0, r.jsx)('div', {
+                className: E.tabBarContainer,
+                children: W
             }),
-            y
+            M
         ]
     });
 }
-((a = s || (s = {})).MANAGE_LISTINGS = 'manage_listings'), (a.PAYMENT = 'payment'), (a.BASIC_INFO = 'basic_info');

@@ -1,47 +1,43 @@
-l.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var t = l(735250);
-l(470079);
-var r = l(442837),
-    i = l(481060),
-    a = l(430824),
-    s = l(594174),
-    u = l(979651),
-    d = l(471253),
-    o = l(200498),
-    c = l(88751),
-    Z = l(267980),
-    E = l(623633),
-    M = l(689938);
-function _(e) {
-    var n;
-    let l = (0, E.Z)(),
-        _ = null == l ? void 0 : l.id,
-        f = null == l ? void 0 : l.guild_id,
-        g = (0, r.e7)([a.Z], () => a.Z.getGuild(f), [f]),
-        I = (0, r.e7)([u.Z], () => (null != _ ? u.Z.getVoiceStateForChannel(_, e.id) : null), [_, e.id]),
-        m = (null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === e.id,
-        R = (0, Z.Z)(),
-        N = (0, r.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, _), [_, e.id]),
-        A = (0, o.B)(_);
-    if (null == l || null == g || null == I || N.speaker) return null;
-    let C = () => {
-        m ? (0, d.RK)(l, !1) : (0, d._0)(l, e.id);
+n.d(t, { Z: () => Z });
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    r = n(481060),
+    a = n(430824),
+    o = n(594174),
+    s = n(979651),
+    u = n(471253),
+    c = n(200498),
+    d = n(88751),
+    g = n(267980),
+    f = n(623633),
+    b = n(388032);
+function Z(e) {
+    var t;
+    let n = (0, f.Z)(),
+        Z = null == n ? void 0 : n.id,
+        N = null == n ? void 0 : n.guild_id,
+        m = (0, l.e7)([a.Z], () => a.Z.getGuild(N), [N]),
+        v = (0, l.e7)([s.Z], () => (null != Z ? s.Z.getVoiceStateForChannel(Z, e.id) : null), [Z, e.id]),
+        p = (null == (t = o.default.getCurrentUser()) ? void 0 : t.id) === e.id,
+        O = (0, g.Z)(),
+        h = (0, l.e7)([d.ZP], () => d.ZP.getPermissionsForUser(e.id, Z), [Z, e.id]),
+        j = (0, c.B)(Z);
+    if (null == n || null == m || null == v || h.speaker) return null;
+    let x = () => {
+        p ? (0, u.RK)(n, !1) : (0, u._0)(n, e.id);
     };
-    return A
-        ? (0, t.jsx)(i.MenuItem, {
+    return j
+        ? (0, i.jsx)(r.sNh, {
               id: 'invite-speaker',
-              label: m ? M.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : M.Z.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
-              action: C
+              label: p ? b.NW.string(b.t['W6c/VV']) : b.NW.string(b.t.VUCWcH),
+              action: x
           })
-        : R && m
-          ? (0, t.jsx)(i.MenuItem, {
+        : O && p
+          ? (0, i.jsx)(r.sNh, {
                 id: 'invite-speaker',
-                label: M.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER,
-                action: C
+                label: b.NW.string(b.t['W6c/VV']),
+                action: x
             })
           : null;
 }

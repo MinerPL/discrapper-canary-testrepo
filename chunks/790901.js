@@ -1,8 +1,4 @@
-n.d(t, {
-    u: function () {
-        return i;
-    }
-});
-function i(e) {
+n.d(t, { u: () => r });
+function r(e) {
     return e.length > 0;
 }

@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => O }), n(47120);
 var r = n(133080),
     i = n(592125),
-    a = n(412788);
-function s(e, t, n) {
+    o = n(412788);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,98 +15,99 @@ function s(e, t, n) {
         e
     );
 }
-let o = new Set(),
+let s = new Set(),
     l = new Set(),
-    u = !1,
-    c = null;
+    c = !1,
+    u = null;
 function d(e) {
     return e.isMessageRequest && !e.isSpam;
 }
-function _(e) {
-    let t = !1;
-    return d(e) && !o.has(e.id) && (o.add(e.id), (t = !0)), !d(e) && o.has(e.id) && (o.delete(e.id), (t = !0)), !d(e) && l.has(e.id) && (l.delete(e.id), (t = !0)), t;
-}
-function E(e) {
-    var t;
-    if (null != e) c = null !== (t = (0, r.Zz)(e)) && void 0 !== t ? t : (0, r.K4)();
-}
 function f(e) {
-    'CONNECTION_OPEN' === e.type && E(e.countryCode),
-        o.clear(),
+    let t = !1;
+    return d(e) && !s.has(e.id) && (s.add(e.id), (t = !0)), !d(e) && s.has(e.id) && (s.delete(e.id), (t = !0)), !d(e) && l.has(e.id) && (l.delete(e.id), (t = !0)), t;
+}
+function _(e) {
+    var t;
+    null != e && (u = null != (t = (0, r.Zz)(e)) ? t : (0, r.K4)());
+}
+function p(e) {
+    'CONNECTION_OPEN' === e.type && _(e.countryCode),
+        s.clear(),
         l.clear(),
         Object.values(i.Z.getMutablePrivateChannels()).forEach((e) => {
-            _(e);
+            f(e);
         }),
-        (u = !0);
+        (c = !0);
 }
 function h(e) {
     let { channelId: t } = e;
     l.add(t);
 }
-function p(e) {
-    let { channel: t } = e;
-    return _(t);
-}
 function m(e) {
-    let { channels: t } = e;
-    for (let e of t) _(e);
-}
-function I(e) {
     let { channel: t } = e;
-    return !!o.has(t.id) && (o.delete(t.id), !0);
-}
-function T(e) {
-    let { messageRequestChannelIds: t } = e;
-    t.forEach((e) => o.add(e));
+    return f(t);
 }
 function g(e) {
-    let { countryCode: t } = e;
-    E(t);
+    let { channels: t } = e;
+    for (let e of t) f(e);
 }
-class S extends a.Z {
+function E(e) {
+    let { channel: t } = e;
+    return !!s.has(t.id) && (s.delete(t.id), !0);
+}
+function b(e) {
+    let { messageRequestChannelIds: t } = e;
+    t.forEach((e) => s.add(e));
+}
+function y(e) {
+    let { countryCode: t } = e;
+    _(t);
+}
+class v extends o.Z {
     initialize() {
         this.waitFor(i.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(S.LATEST_SNAPSHOT_VERSION);
-        null != e && (o = new Set(e));
+        let e = this.readSnapshot(v.LATEST_SNAPSHOT_VERSION);
+        null != e && (s = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: S.LATEST_SNAPSHOT_VERSION,
-            data: Array.from(o)
+            version: v.LATEST_SNAPSHOT_VERSION,
+            data: Array.from(s)
         };
     }
     getMessageRequestChannelIds() {
-        return o;
+        return s;
     }
     getMessageRequestsCount() {
-        return o.size;
+        return s.size;
     }
     isMessageRequest(e) {
-        return o.has(e);
+        return s.has(e);
     }
     isAcceptedOptimistic(e) {
         return l.has(e);
     }
     getUserCountryCode() {
-        return c;
+        return u;
     }
     isReady() {
-        return u;
+        return c;
     }
     constructor() {
         super({
-            CONNECTION_OPEN: f,
-            CONNECTION_OPEN_SUPPLEMENTAL: f,
+            CONNECTION_OPEN: p,
+            CONNECTION_OPEN_SUPPLEMENTAL: p,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            OVERLAY_INITIALIZE: T,
-            CHANNEL_CREATE: p,
-            CHANNEL_UPDATES: m,
-            CHANNEL_DELETE: I,
-            SET_LOCATION_METADATA: g,
+            OVERLAY_INITIALIZE: b,
+            CHANNEL_CREATE: m,
+            CHANNEL_UPDATES: g,
+            CHANNEL_DELETE: E,
+            SET_LOCATION_METADATA: y,
             MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
         });
     }
 }
-s(S, 'displayName', 'MessageRequestStore'), s(S, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new S());
+a(v, 'displayName', 'MessageRequestStore'), a(v, 'LATEST_SNAPSHOT_VERSION', 1);
+let O = new v();

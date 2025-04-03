@@ -1,47 +1,38 @@
-n.d(t, {
-    _: function () {
-        return c;
-    }
-});
-var l = n(470079),
-    a = n(442837),
+n.d(t, { _: () => u });
+var r = n(192379),
+    l = n(442837),
     s = n(594174),
-    i = n(823379),
-    r = n(51144),
-    o = n(689938);
-function c(e) {
-    let t = (0, a.Wu)([s.default], () =>
+    a = n(823379),
+    i = n(51144),
+    o = n(388032);
+function u(e) {
+    let t = (0, l.Wu)([s.default], () =>
         e.recipients
             .map((e) => s.default.getUser(e))
-            .filter(i.lm)
-            .map((e) => r.ZP.getName(e))
+            .filter(a.lm)
+            .map((e) => i.ZP.getName(e))
     );
-    return l.useMemo(
-        () =>
-            '' === e.name
-                ? null
-                : (function (e) {
-                      if (0 === e.length) return null;
-                      if (1 === e.length) return o.Z.Messages.USER_SUMMARY_ONE.format({ first: e[0] });
-                      if (2 === e.length)
-                          return o.Z.Messages.USER_SUMMARY_TWO.format({
-                              first: e[0],
-                              second: e[1]
-                          });
-                      if (3 === e.length)
-                          return o.Z.Messages.USER_SUMMARY_THREE.format({
-                              first: e[0],
-                              second: e[1],
-                              third: e[2]
-                          });
-                      let t = e.length - 3;
-                      return o.Z.Messages.USER_SUMMARY_THREE_AND_OTHERS.format({
-                          first: e[0],
-                          second: e[1],
-                          third: e[2],
-                          count: t
-                      });
-                  })(t),
-        [e, t]
-    );
+    return r.useMemo(() => {
+        if ('' === e.name) return null;
+        if (0 === t.length) return null;
+        if (1 === t.length) return o.NW.formatToPlainString(o.t['J+Wpsr'], { first: t[0] });
+        if (2 === t.length)
+            return o.NW.formatToPlainString(o.t.gwRP0d, {
+                first: t[0],
+                second: t[1]
+            });
+        if (3 === t.length)
+            return o.NW.formatToPlainString(o.t.QDB5en, {
+                first: t[0],
+                second: t[1],
+                third: t[2]
+            });
+        let n = t.length - 3;
+        return o.NW.formatToPlainString(o.t.VYfueX, {
+            first: t[0],
+            second: t[1],
+            third: t[2],
+            count: n
+        });
+    }, [e, t]);
 }

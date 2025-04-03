@@ -1,49 +1,52 @@
-var i = n(544891),
-    r = n(570140),
-    s = n(881052),
+n.d(t, { Z: () => c });
+var r = n(544891),
+    i = n(570140),
+    a = n(881052),
     l = n(122289),
-    a = n(981631);
-let o = Object.freeze({});
-async function u(e) {
-    let { code: t, options: n = o, onRedeemed: u, onError: d } = e,
-        { channelId: c = null, paymentSource: _ = null } = n;
-    r.Z.dispatch({
-        type: 'GIFT_CODE_REDEEM',
-        code: t
-    });
-    try {
-        let e = await i.tn.post({
-            url: a.ANM.GIFT_CODE_REDEEM(t),
-            body: {
-                channel_id: c,
-                payment_source_id: null == _ ? void 0 : _.id,
-                gateway_checkout_context: await (0, l.cn)(_)
-            },
-            oldFormErrors: !0
-        });
-        return (
-            r.Z.dispatch({
-                type: 'GIFT_CODE_REDEEM_SUCCESS',
-                code: t,
-                entitlement: e.body
-            }),
-            null == u || u(),
-            {
-                code: t,
-                entitlement: e
+    o = n(981631);
+let s = Object.freeze({}),
+    c = {
+        redeemGiftCode: async function (e) {
+            let { code: t, options: n = s, onRedeemed: c, onError: u } = e,
+                { channelId: d = null, paymentSource: p = null } = n;
+            i.Z.dispatch({
+                type: 'GIFT_CODE_REDEEM',
+                code: t
+            });
+            try {
+                let e = await r.tn.post({
+                    url: o.ANM.GIFT_CODE_REDEEM(t),
+                    body: {
+                        channel_id: d,
+                        payment_source_id: null == p ? void 0 : p.id,
+                        gateway_checkout_context: await (0, l.cn)(p)
+                    },
+                    oldFormErrors: !0,
+                    rejectWithError: !1
+                });
+                return (
+                    i.Z.dispatch({
+                        type: 'GIFT_CODE_REDEEM_SUCCESS',
+                        code: t,
+                        entitlement: e.body
+                    }),
+                    null == c || c(),
+                    {
+                        code: t,
+                        entitlement: e
+                    }
+                );
+            } catch (n) {
+                let e = new a.HF(n);
+                throw (
+                    (i.Z.dispatch({
+                        type: 'GIFT_CODE_REDEEM_FAILURE',
+                        code: t,
+                        error: e
+                    }),
+                    null == u || u(e),
+                    e)
+                );
             }
-        );
-    } catch (n) {
-        let e = new s.HF(n);
-        throw (
-            (r.Z.dispatch({
-                type: 'GIFT_CODE_REDEEM_FAILURE',
-                code: t,
-                error: e
-            }),
-            null == d || d(e),
-            e)
-        );
-    }
-}
-t.Z = { redeemGiftCode: u };
+        }
+    };

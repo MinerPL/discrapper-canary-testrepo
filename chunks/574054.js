@@ -1,23 +1,22 @@
-r.d(t, {
-    R: function () {
-        return function e(t, r, _, E = 0) {
-            return new n.cW((n, s) => {
-                let c = t[E];
-                if (null === r || 'function' != typeof c) n(r);
+a.d(e, {
+    R: () =>
+        function t(e, a, i, c = 0) {
+            return new r.cW((r, s) => {
+                let E = e[c];
+                if (null === a || 'function' != typeof E) r(a);
                 else {
-                    let I = c({ ...r }, _);
-                    i.X && c.id && null === I && a.kg.log(`Event processor "${c.id}" dropped event`),
-                        (0, o.J8)(I)
-                            ? I.then((r) => e(t, r, _, E + 1).then(n)).then(null, s)
-                            : e(t, I, _, E + 1)
-                                  .then(n)
+                    let l = E({ ...a }, i);
+                    o.X && E.id && null === l && n.kg.log(`Event processor "${E.id}" dropped event`),
+                        (0, _.J8)(l)
+                            ? l.then((a) => t(e, a, i, c + 1).then(r)).then(null, s)
+                            : t(e, l, i, c + 1)
+                                  .then(r)
                                   .then(null, s);
                 }
             });
-        };
-    }
+        }
 });
-var n = r(928541),
-    a = r(622916),
-    o = r(573736),
-    i = r(255768);
+var r = a(928541),
+    n = a(622916),
+    _ = a(573736),
+    o = a(255768);

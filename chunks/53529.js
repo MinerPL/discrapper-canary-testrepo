@@ -1,21 +1,16 @@
-n.d(t, {
-    T: function () {
-        return s;
-    }
-}),
-    n(47120),
-    n(653041);
+n.d(t, { T: () => s }), n(47120), n(653041);
 var r = n(887490);
-let i = new WeakMap(),
+let i = 250,
+    o = new WeakMap(),
     a = new WeakMap(),
     s = {
         isMerging(e) {
             var t;
-            return null === (t = a.get(e)) || void 0 === t || t;
+            return null == (t = a.get(e)) || t;
         },
         isSaving(e) {
             var t;
-            return null === (t = i.get(e)) || void 0 === t || t;
+            return null == (t = o.get(e)) || t;
         },
         withoutMerging(e, t) {
             let n = this.isMerging(e);
@@ -28,15 +23,15 @@ let i = new WeakMap(),
         },
         withoutSaving(e, t) {
             let n = this.isSaving(e);
-            i.set(e, !1);
+            o.set(e, !1);
             try {
                 t();
             } finally {
-                i.set(e, n);
+                o.set(e, n);
             }
         },
-        withSingleEntry: (e, t) => o(e, 'other', !1, t),
-        withMergedEntry: (e, t) => o(e, 'other', !0, t),
+        withSingleEntry: (e, t) => l(e, 'other', !1, t),
+        withMergedEntry: (e, t) => l(e, 'other', !0, t),
         currentEntry: (e) => (e.history.stack.length > 0 ? e.history.stack[e.history.index] : null),
         insertOrMergeEntry(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -45,38 +40,38 @@ let i = new WeakMap(),
         },
         insertEntry(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                i = arguments.length > 3 ? arguments[3] : void 0,
+                o = arguments.length > 3 ? arguments[3] : void 0,
                 a = arguments.length > 4 ? arguments[4] : void 0;
-            (a = null != a ? a : e.selection), (i = null != i ? i : r.bN.richValue(e));
-            let { history: o } = e,
-                l = s.currentEntry(e);
-            for (null != l && (l.mergeable = !1), o.stack.length > 0 && (o.stack.length = o.index + 1); o.stack.length >= 250; ) o.stack.shift();
-            o.stack.push({
+            (a = null != a ? a : e.selection), (o = null != o ? o : r.bN.richValue(e));
+            let { history: l } = e,
+                c = s.currentEntry(e);
+            for (null != c && (c.mergeable = !1), l.stack.length > 0 && (l.stack.length = l.index + 1); l.stack.length >= i; ) l.stack.shift();
+            l.stack.push({
                 type: t,
                 mergeable: n,
                 createdAt: Date.now(),
-                value: i,
+                value: o,
                 selection: a
             }),
-                (o.index = o.stack.length - 1);
+                (l.index = l.stack.length - 1);
         },
         mergeEntry(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 { selection: n } = e,
                 i = r.bN.richValue(e),
-                a = s.currentEntry(e);
-            null != a && ((a.value = i), (a.selection = n), !t && (a.mergeable = !1));
+                o = s.currentEntry(e);
+            null != o && ((o.value = i), (o.selection = n), t || (o.mergeable = !1));
         }
     };
-function o(e, t, n, a) {
-    let o = e.children,
+function l(e, t, n, i) {
+    let a = e.children,
         l = e.selection,
-        u = s.isSaving(e);
-    i.set(e, !1);
+        c = s.isSaving(e);
+    o.set(e, !1);
     try {
-        let i = a();
-        return u && (n ? s.mergeEntry(e) : e.children !== o ? s.insertEntry(e, t, !1) : s.isMerging(e) && null != e.selection && (null == l || !r.M8.equals(e.selection, l)) && s.mergeEntry(e)), i;
+        let o = i();
+        return c && (n ? s.mergeEntry(e) : e.children !== a ? s.insertEntry(e, t, !1) : s.isMerging(e) && null != e.selection && (null == l || !r.M8.equals(e.selection, l)) && s.mergeEntry(e)), o;
     } finally {
-        i.set(e, u);
+        o.set(e, c);
     }
 }

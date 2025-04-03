@@ -1,59 +1,79 @@
 n.d(t, {
-    DE: function () {
-        return f;
-    },
-    gr: function () {
-        return p;
-    },
-    i1: function () {
-        return E;
-    },
-    tD: function () {
-        return h;
-    }
+    DE: () => g,
+    gr: () => b,
+    i1: () => m,
+    tD: () => E
 }),
-    n(47120);
-var r = n(470079),
+    n(47120),
+    n(26686);
+var r = n(192379),
     i = n(512722),
-    a = n.n(i),
-    s = n(570140),
-    o = n(821849),
+    o = n.n(i),
+    a = n(570140),
+    s = n(821849),
     l = n(15640),
-    u = n(509545),
-    c = n(74538),
+    c = n(509545),
+    u = n(74538),
     d = n(981631),
-    _ = n(474936);
-function E(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [..._.YQ];
-    return null == e || u.Z.hasPaymentSourceForSKUIds(e, t)
+    f = n(474936);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let h = 10027;
+function m(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...f.YQ];
+    return null == e || c.Z.hasPaymentSourceForSKUIds(e, t)
         ? Promise.resolve()
         : new Promise((e, n) => {
-              s.Z.wait(async () => {
+              a.Z.wait(async () => {
                   try {
-                      await (0, o.Gn)(t), e();
+                      await (0, s.Gn)(t), e();
                   } catch (e) {
                       n(e);
                   }
               });
           });
 }
-function f(e, t, n) {
+function g(e, t, n) {
     let r,
         i = [],
-        s = [],
-        o = { purchaseType: n ? d.tuJ.GIFT : d.tuJ.DEFAULT };
-    return (r = 'string' == typeof e ? u.Z.get(e) : e), a()(r, 'subscription plan not loaded'), null != t && u.Z.hasPaymentSourceForSKUId(t, r.skuId) && (o.paymentSourceId = t), (i = (s = (0, c.T4)(r.id, o)).map((e) => e.currency)).length < 1 && (i = [d.pKx.USD]), i;
+        a = [],
+        s = { purchaseType: n ? d.tuJ.GIFT : d.tuJ.DEFAULT };
+    return (r = 'string' == typeof e ? c.Z.get(e) : e), o()(r, 'subscription plan not loaded'), null != t && c.Z.hasPaymentSourceForSKUId(t, r.skuId) && (s.paymentSourceId = t), (i = (a = (0, u.T4)(r.id, s)).map((e) => e.currency)).length < 1 && (i = [d.pKx.USD]), i;
 }
-function h(e, t, n) {
-    let r = u.Z.get(e);
-    return a()(null != r, 'plan is undefined'), f(r, n, !1).includes(t);
+function E(e, t, n) {
+    let r = c.Z.get(e);
+    return o()(null != r, 'plan is undefined'), g(r, n, !1).includes(t);
 }
-function p(e, t, n, i, a) {
-    let [s, o] = r.useReducer(
-            (e, t) => ({
-                ...e,
-                ...t
-            }),
+function b(e, t, n, i, o) {
+    let [a, s] = r.useReducer(
+            (e, t) => p({}, e, t),
             null != n
                 ? {
                       paymentSourceId: n,
@@ -65,35 +85,41 @@ function p(e, t, n, i, a) {
                       loaded: !1
                   }
         ),
-        c = (0, l.V)(a);
+        u = (0, l.V)(o),
+        d = JSON.stringify(o),
+        f = r.useRef(o);
     r.useEffect(() => {
-        (async () => {
-            try {
-                await E(n, a);
-            } catch (e) {
-                if (10027 !== e.code) throw e;
-            }
-            let e = [];
-            null != t && null != u.Z.get(t) && (e = f(t, n, i)),
-                e.length > 0
-                    ? o({
-                          paymentSourceId: n,
-                          currency: e[0],
-                          loaded: !0
-                      })
-                    : o({
-                          paymentSourceId: n,
-                          loaded: !1
-                      });
-        })();
-    }, [n, JSON.stringify(a), t, i, c]);
-    let d = s.paymentSourceId !== n || null == t || !c || !0 !== s.loaded;
+        f.current = o;
+    }),
+        r.useEffect(() => {
+            (async () => {
+                let { current: e } = f;
+                try {
+                    await m(n, e);
+                } catch (e) {
+                    if (e.code !== h) throw e;
+                }
+                let r = [];
+                null != t && null != c.Z.get(t) && (r = g(t, n, i)),
+                    r.length > 0
+                        ? s({
+                              paymentSourceId: n,
+                              currency: r[0],
+                              loaded: !0
+                          })
+                        : s({
+                              paymentSourceId: n,
+                              loaded: !1
+                          });
+            })();
+        }, [n, d, t, i, u]);
+    let _ = a.paymentSourceId !== n || null == t || !u || !0 !== a.loaded;
     return {
-        hasFetchedSubscriptionPlans: c,
-        priceOptions: s,
+        hasFetchedSubscriptionPlans: u,
+        priceOptions: a,
         setCurrency: (e) => {
-            o({ currency: e });
+            s({ currency: e });
         },
-        currencyLoading: d
+        currencyLoading: _
     };
 }

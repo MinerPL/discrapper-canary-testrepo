@@ -1,77 +1,74 @@
 n.d(t, {
-    B_: function () {
-        return c;
-    },
-    Lm: function () {
-        return s;
-    },
-    Ol: function () {
-        return o;
-    },
-    P4: function () {
-        return l;
-    },
-    Tk: function () {
-        return _;
-    },
-    cO: function () {
-        return u;
-    },
-    cj: function () {
-        return a;
-    },
-    qu: function () {
-        return d;
-    }
+    B_: () => _,
+    Lm: () => c,
+    Ol: () => u,
+    P4: () => d,
+    Tk: () => m,
+    cO: () => f,
+    cj: () => a,
+    qi: () => h,
+    qu: () => p
 }),
+    n(301563),
     n(411104);
 var r = n(654861),
     i = n.n(r);
-let a = 1420070400000;
-function s(e) {
-    return Math.floor(Number(e) / 4194304) + a;
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-function o(e) {
+let a = 1420070400000,
+    s = 4095,
+    l = 22;
+function c(e) {
+    return Math.floor(Number(e) / 2 ** l) + a;
+}
+function u(e) {
     let t = e - a;
-    return t <= 0 ? '0' : i()(t).shiftLeft(22).toString();
+    return t <= 0 ? '0' : i()(t).shiftLeft(l).toString();
 }
-function l(e, t) {
+function d(e, t) {
     let n = e - a;
     return i()(n <= 0 ? 0 : n)
-        .shiftLeft(22)
+        .shiftLeft(l)
         .add(t.next())
         .toString();
 }
-function u(e) {
-    return o(s(e) - 1);
+function f(e) {
+    return u(c(e) - 1);
 }
-function c(e) {
-    return Date.now() - s(e);
+function _(e) {
+    return Date.now() - c(e);
 }
-function d(e, t) {
+function p(e, t) {
     return e === t ? 0 : null == t ? 1 : null == e ? -1 : e.length > t.length ? 1 : e.length < t.length ? -1 : e > t ? 1 : -1;
 }
-class _ {
+function h(e) {
+    if (null == e || !/^\d{17,19}$/.test(e)) return !1;
+    try {
+        return c(e) >= a;
+    } catch (e) {
+        return !1;
+    }
+}
+class m {
     next() {
-        if (this.seq > 4095) throw Error('Snowflake sequence number overflow: '.concat(this.seq));
+        if (this.seq > s) throw Error('Snowflake sequence number overflow: '.concat(this.seq));
         return this.seq++;
     }
     reset() {
         this.seq = 0;
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (t = 'seq'),
-            (n = void 0),
-            'seq' in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n),
-            (this.seq = 0);
+        o(this, 'seq', void 0), (this.seq = 0);
     }
 }

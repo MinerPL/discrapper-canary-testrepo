@@ -1,22 +1,18 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => a });
 var r = n(668781),
     i = n(624138),
-    a = n(689938);
-function s(e, t, n, s) {
-    var o;
+    o = n(388032);
+function a(e, t, n, a) {
+    var s;
     r.Z.show({
-        title: a.Z.Messages.EMBEDDED_ACTIVITY_CHANGE_CONFIRM_TITLE,
-        cancelText: a.Z.Messages.CANCEL,
-        confirmText: a.Z.Messages.CONFIRM,
+        title: o.NW.string(o.t.XkIWkp),
+        cancelText: o.NW.string(o.t['ETE/oK']),
+        confirmText: o.NW.string(o.t['cY+Ooa']),
         onConfirm: n,
-        onCancel: s,
-        body: a.Z.Messages.EMBEDDED_ACTIVITY_CHANGE_ACTIVITY_CONFIRM_BODY.format({
-            currentApplicationName: null !== (o = null == e ? void 0 : e.name) && void 0 !== o ? o : a.Z.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_DEFAULT,
-            currentApplicationChannelName: (0, i.Ew)(null == t ? void 0 : t.name) ? a.Z.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_CHANNEL_DEFAULT : null == t ? void 0 : t.name
+        onCancel: a,
+        body: o.NW.format(o.t['5/Xorq'], {
+            currentApplicationName: null != (s = null == e ? void 0 : e.name) ? s : o.NW.string(o.t.G99XFh),
+            currentApplicationChannelName: (0, i.Ew)(null == t ? void 0 : t.name) ? o.NW.string(o.t.OGUjmp) : null == t ? void 0 : t.name
         })
     });
 }

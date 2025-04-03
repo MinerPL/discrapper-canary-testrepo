@@ -1,7 +1,8 @@
-var i = t(585483),
-    l = t(981631);
-n.Z = {
+n.d(t, { Z: () => s });
+var r = n(585483),
+    i = n(981631);
+let s = {
     binds: ['mod+shift+b'],
     comboKeysBindGlobal: !0,
-    action: () => (i.S.dispatch(l.CkL.TOGGLE_SOUNDBOARD), !1)
+    action: () => (r.S.dispatch(i.CkL.TOGGLE_SOUNDBOARD), !1)
 };

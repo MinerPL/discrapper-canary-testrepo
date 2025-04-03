@@ -1,27 +1,26 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
-var i = n(735250);
-n(470079);
-var s = n(13245),
-    a = n(593481),
-    o = n(703656),
-    r = n(974180),
-    l = n(237997),
-    c = n(150097),
-    d = n(557177),
-    u = n(312839),
-    h = n(981631),
-    p = n(987650),
-    f = n(689938);
-function _(e, t, n, _) {
-    var g;
-    let { icon: m, title: E, body: Z } = (0, c.Xi)(e, t, n),
-        { trackView: I, trackClick: S } = (0, u.R)(p.n0.TextChat, {
-            notif_type: p.n0.TextChat,
-            notif_user_id: null === (g = t.author) || void 0 === g ? void 0 : g.id,
+n.d(t, { Z: () => O });
+var i = n(200651);
+n(192379);
+var r = n(13245),
+    s = n(864060),
+    o = n(371651),
+    l = n(703656),
+    a = n(460181),
+    c = n(974180),
+    u = n(237997),
+    d = n(358085),
+    h = n(998502),
+    p = n(145597),
+    f = n(312839),
+    g = n(981631),
+    m = n(987650),
+    y = n(388032);
+function O(e, t, n, O) {
+    var v;
+    let { icon: x, title: b, body: S } = (0, s.Xi)(e, t, n),
+        { trackView: E, trackClick: j } = (0, f.R)(m.n0.TextChat, {
+            notif_type: m.n0.TextChat,
+            notif_user_id: null == (v = t.author) ? void 0 : v.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -29,26 +28,28 @@ function _(e, t, n, _) {
             channel_type: e.type
         });
     return {
-        colorScheme: a.IC.PRIMARY,
-        icon: m,
-        title: E,
-        body: Z,
+        icon: x,
+        title: b,
+        body: S,
         renderFooter: (e) =>
             e
                 ? (0, i.jsx)('div', {
                       style: { textAlign: 'center' },
-                      children: f.Z.Messages.OVERLAY_CLICK_TO_JUMP_TO_CHANNEL
+                      children: y.NW.string(y.t['+MJm39'])
                   })
                 : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            _ && (0, d.GN)(r.Ay, r.yk), I();
+            O && (0, a.GN)(c.Ay, c.yk), E();
         },
         onNotificationClick: () => {
-            (0, o.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), S('jump'), l.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
+            if (o.default.isOverlayOOPEnabledForPid((0, p.getPID)())) {
+                let n = (0, p.getPID)();
+                u.default.isInstanceLocked() ? (j('unlock'), r.Z.setInputLocked(!1, n)) : (j('jump'), (0, l.uL)(g.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && h.ZP.focus());
+            } else (0, l.uL)(g.Z5c.CHANNEL(e.guild_id, e.id)), j('jump'), u.default.isInstanceLocked() && r.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            S('dismiss');
+            j('dismiss');
         }
     };
 }

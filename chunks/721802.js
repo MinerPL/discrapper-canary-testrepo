@@ -1,5 +1,10 @@
 e.exports = {
-    pageContainer: 'pageContainer_cc3078',
-    joinCtaTitle: 'joinCtaTitle_cc3078',
-    joinCtaSubtitle: 'joinCtaSubtitle_cc3078'
+    header: 'header_da32a8',
+    headerLeft: 'headerLeft_da32a8',
+    headerBell: 'headerBell_da32a8',
+    sectionContent: 'sectionContent_da32a8',
+    sectionContentPadding: 'sectionContentPadding_da32a8',
+    sectionHeader: 'sectionHeader_da32a8',
+    sectionHeaderTitle: 'sectionHeaderTitle_da32a8',
+    content: 'content_da32a8'
 };

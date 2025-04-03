@@ -1,108 +1,134 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-}),
-    n(47120);
-var s = n(735250),
-    r = n(470079),
+n.d(t, { Z: () => j }), n(47120);
+var r = n(200651),
+    l = n(192379),
     o = n(399606),
-    l = n(780384),
-    i = n(481060),
-    a = n(410030),
-    d = n(367907),
-    c = n(863249),
-    u = n(944163),
-    m = n(768762),
-    p = n(454585),
-    h = n(626135),
-    g = n(981631),
-    x = n(689938),
-    f = n(379946);
-function _(e) {
+    s = n(481060),
+    a = n(367907),
+    i = n(863249),
+    c = n(944163),
+    u = n(768762),
+    d = n(454585),
+    m = n(626135),
+    h = n(981631),
+    x = n(388032),
+    p = n(903864);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function j(e) {
     var t;
-    let { guild: n, prompts: _, completeOnboarding: N, setCurrentStep: I, disableTracking: b, previousPromptIndex: C } = e,
-        E = r.useRef(null),
-        v = (0, o.e7)([u.Z], () => u.Z.getRulesPrompt(n.id)),
-        [j, O] = r.useState(null !== (t = null == v ? void 0 : v.response) && void 0 !== t && t),
-        Z = (0, o.e7)([u.Z], () => u.Z.get(n.id)),
-        B = (0, a.ZP)(),
-        R = r.useRef(null),
-        T = r.useRef(null),
-        D = (0, l.wj)(B) ? 'linear-gradient(to top, rgba(54, 57, 63, 1), rgba(54, 57, 63, 0))' : 'linear-gradient(to top, rgba(242, 243, 245, 1), rgba(242, 243, 245, 0))',
-        M = r.useCallback(async () => {
-            if (null != Z && null != v) {
+    let { guild: n, prompts: j, completeOnboarding: N, setCurrentStep: v, disableTracking: _, previousPromptIndex: b } = e,
+        C = l.useRef(null),
+        O = (0, o.e7)([c.Z], () => c.Z.getRulesPrompt(n.id)),
+        [E, I] = l.useState(null != (t = null == O ? void 0 : O.response) && t),
+        k = (0, o.e7)([c.Z], () => c.Z.get(n.id)),
+        Z = l.useRef(null),
+        y = l.useRef(null),
+        P = l.useCallback(async () => {
+            if (null != k && null != O) {
                 try {
-                    await c.Z.submitVerificationForm(n.id, {
-                        ...Z,
-                        formFields: [
-                            {
-                                ...v,
-                                response: j
-                            }
-                        ]
-                    });
-                } catch {}
+                    await i.ZP.submitVerificationForm(n.id, g(f({}, k), { formFields: [g(f({}, O), { response: E })] }));
+                } catch (e) {}
                 N();
             }
-        }, [n.id, Z, v, j, N]);
-    function P(e) {
+        }, [n.id, k, O, E, N]);
+    function w(e) {
         let [t] = e;
-        t.isIntersecting && O(!0);
+        t.isIntersecting && I(!0);
     }
-    return (r.useEffect(() => {
-        let e = new IntersectionObserver(P, {
-                root: R.current,
+    return (l.useEffect(() => {
+        let e = new IntersectionObserver(w, {
+                root: Z.current,
                 rootMargin: '0px',
                 threshold: 0
             }),
-            t = T.current;
+            t = y.current;
         return (
             null != t && null != t.lastElementChild && e.observe(t.lastElementChild),
             () => {
                 null != t && null != t.lastElementChild && e.unobserve(t.lastElementChild);
             }
         );
-    }, [T, R]),
-    null == v)
+    }, [y, Z]),
+    null == O)
         ? null
-        : (0, s.jsx)('div', {
-              className: f.prompt,
-              children: (0, s.jsxs)('div', {
-                  className: f.promptContent,
-                  ref: R,
+        : (0, r.jsx)('div', {
+              className: p.prompt,
+              children: (0, r.jsxs)('div', {
+                  className: p.promptContent,
+                  ref: Z,
                   children: [
-                      (0, s.jsxs)(i.AdvancedScrollerThin, {
-                          className: f.scrollerContent,
-                          ref: E,
+                      (0, r.jsxs)(s.h21, {
+                          className: p.scrollerContent,
+                          ref: C,
                           children: [
-                              (0, s.jsx)(i.Text, {
+                              (0, r.jsx)(s.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'text-muted',
-                                  children: x.Z.Messages.ONBOARDING_RULES_STEP
+                                  children: x.NW.string(x.t['b1JC+v'])
                               }),
-                              (0, s.jsx)(i.Heading, {
+                              (0, r.jsx)(s.X6q, {
                                   variant: 'heading-xl/semibold',
-                                  children: x.Z.Messages.ONBOARDING_RULES_TITLE
+                                  children: x.NW.string(x.t.prJqwc)
                               }),
-                              (0, s.jsx)('div', {
-                                  className: f.termsFieldBody,
-                                  ref: T,
-                                  children: v.values.map((e, t) =>
-                                      (0, s.jsxs)(
+                              (0, r.jsx)('div', {
+                                  className: p.termsFieldBody,
+                                  ref: y,
+                                  children: O.values.map((e, t) =>
+                                      (0, r.jsxs)(
                                           'div',
                                           {
-                                              className: f.termsRow,
+                                              className: p.termsRow,
                                               children: [
-                                                  (0, s.jsx)(i.Text, {
+                                                  (0, r.jsx)(s.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'text-muted',
                                                       children: ''.concat(t + 1, '.')
                                                   }),
-                                                  (0, s.jsx)(i.Text, {
+                                                  (0, r.jsx)(s.Text, {
                                                       variant: 'text-sm/normal',
-                                                      className: f.termsRowContent,
-                                                      children: p.Z.parseGuildVerificationFormRule(e, !0, { channelId: n.rulesChannelId })
+                                                      className: p.termsRowContent,
+                                                      children: d.Z.parseGuildVerificationFormRule(e, !0, { channelId: n.rulesChannelId })
                                                   })
                                               ]
                                           },
@@ -112,72 +138,73 @@ function _(e) {
                               })
                           ]
                       }),
-                      (0, s.jsx)('div', {
-                          className: f.overlay,
-                          style: { background: D }
-                      }),
-                      (0, s.jsxs)('div', {
-                          className: f.navButtons,
+                      (0, r.jsx)('div', { className: p.overlay }),
+                      (0, r.jsxs)('div', {
+                          className: p.navButtons,
                           children: [
-                              (0, s.jsx)('div', {
-                                  className: f.leftButtons,
+                              (0, r.jsx)('div', {
+                                  className: p.leftButtons,
                                   children:
-                                      -1 !== C &&
-                                      (0, s.jsxs)(i.Button, {
-                                          innerClassName: f.buttonInner,
+                                      -1 !== b &&
+                                      (0, r.jsxs)(s.zxk, {
+                                          innerClassName: p.buttonInner,
                                           onClick: () => {
-                                              !b &&
-                                                  (h.default.track(g.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
-                                                      ...(0, d.hH)(n.id),
-                                                      step: -1,
-                                                      skipped: !1,
-                                                      back: !0,
-                                                      options_selected: 0,
-                                                      in_onboarding: !0,
-                                                      is_final_step: !1
-                                                  }),
-                                                  C >= 0 &&
-                                                      h.default.track(g.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
-                                                          ...(0, d.hH)(n.id),
-                                                          step: C,
-                                                          required: _[C].required
-                                                      })),
-                                                  I(C);
+                                              !_ &&
+                                                  (m.default.track(
+                                                      h.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
+                                                      g(f({}, (0, a.hH)(n.id)), {
+                                                          step: -1,
+                                                          skipped: !1,
+                                                          back: !0,
+                                                          options_selected: 0,
+                                                          in_onboarding: !0,
+                                                          is_final_step: !1
+                                                      })
+                                                  ),
+                                                  b >= 0 &&
+                                                      m.default.track(
+                                                          h.rMx.GUILD_ONBOARDING_STEP_VIEWED,
+                                                          g(f({}, (0, a.hH)(n.id)), {
+                                                              step: b,
+                                                              required: j[b].required
+                                                          })
+                                                      )),
+                                                  v(b);
                                           },
-                                          size: i.Button.Sizes.MEDIUM,
-                                          look: i.Button.Looks.OUTLINED,
+                                          size: s.zxk.Sizes.MEDIUM,
+                                          look: s.zxk.Looks.OUTLINED,
                                           grow: !1,
-                                          color: i.Button.Colors.PRIMARY,
+                                          color: s.zxk.Colors.PRIMARY,
                                           children: [
-                                              (0, s.jsx)(m.Z, {
-                                                  className: f.arrow,
-                                                  direction: m.Z.Directions.LEFT
+                                              (0, r.jsx)(u.Z, {
+                                                  className: p.arrow,
+                                                  direction: u.Z.Directions.LEFT
                                               }),
-                                              x.Z.Messages.BACK
+                                              x.NW.string(x.t['13/7kZ'])
                                           ]
                                       })
                               }),
-                              (0, s.jsxs)('div', {
-                                  className: f.rightButtons,
+                              (0, r.jsxs)('div', {
+                                  className: p.rightButtons,
                                   children: [
-                                      (0, s.jsx)(i.Text, {
-                                          className: f.helpText,
+                                      (0, r.jsx)(s.Text, {
+                                          className: p.helpText,
                                           variant: 'text-xs/normal',
                                           color: 'text-muted',
-                                          children: j ? x.Z.Messages.MEMBER_VERIFICATION_READ_AGREE_RULES : x.Z.Messages.MEMBER_VERIFICATION_MUST_READ_RULES
+                                          children: E ? x.NW.string(x.t.arAe3N) : x.NW.string(x.t.D0CVAQ)
                                       }),
-                                      (0, s.jsxs)(i.Button, {
-                                          innerClassName: f.buttonInner,
-                                          onClick: M,
-                                          disabled: !j,
-                                          size: i.Button.Sizes.MEDIUM,
-                                          look: i.Button.Looks.FILLED,
+                                      (0, r.jsxs)(s.zxk, {
+                                          innerClassName: p.buttonInner,
+                                          onClick: P,
+                                          disabled: !E,
+                                          size: s.zxk.Sizes.MEDIUM,
+                                          look: s.zxk.Looks.FILLED,
                                           grow: !1,
-                                          color: i.Button.Colors.BRAND,
+                                          color: s.zxk.Colors.BRAND,
                                           children: [
-                                              x.Z.Messages.FINISH,
-                                              (0, s.jsx)('span', {
-                                                  className: f.finishEmoji,
+                                              x.NW.string(x.t['8SuVoK']),
+                                              (0, r.jsx)('span', {
+                                                  className: p.finishEmoji,
                                                   role: 'img',
                                                   'aria-hidden': !0,
                                                   children: '\uD83C\uDF89'

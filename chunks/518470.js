@@ -1,16 +1,12 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
-var s = n(470079),
-    a = n(689938);
-function i() {
-    return s.useMemo(
+n.d(t, { Z: () => s });
+var r = n(192379),
+    i = n(388032);
+function s() {
+    return r.useMemo(
         () => [
             {
                 value: null,
-                label: a.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_NONE_OPTION
+                label: i.NW.string(i.t.zHfL6u)
             },
             {
                 value: 10,

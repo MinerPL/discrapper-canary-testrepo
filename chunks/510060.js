@@ -1,26 +1,14 @@
 n.d(t, {
-    I8: function () {
-        return i;
-    },
-    KW: function () {
-        return m;
-    },
-    LT: function () {
-        return u;
-    },
-    Me: function () {
-        return o;
-    },
-    eU: function () {
-        return c;
-    },
-    rI: function () {
-        return d;
-    }
+    I8: () => s,
+    KW: () => m,
+    LT: () => u,
+    Me: () => o,
+    eU: () => c,
+    rI: () => d
 });
-var a = n(512722),
-    s = n.n(a);
-function r(e, t, n) {
+var r = n(512722),
+    a = n.n(r);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +22,7 @@ function r(e, t, n) {
     );
 }
 let l = 2 / 3,
-    i = 12;
+    s = 12;
 class o {
     getWidth(e) {
         return this.getRenderOptions(e).columnWidth;
@@ -47,14 +35,14 @@ class o {
             };
         let t = e / this.maxWidth,
             n = Math.max(Math.floor(t + (e / this.minWidth - t) / 2), 1),
-            a = this.gap * (n - 1);
+            r = this.gap * (n - 1);
         return {
             columns: n,
-            columnWidth: (e - a) / n
+            columnWidth: (e - r) / n
         };
     }
     constructor({ minWidth: e, maxWidth: t, gap: n }) {
-        r(this, 'minWidth', void 0), r(this, 'maxWidth', void 0), r(this, 'gap', void 0), s()(e < t, 'minWidth needs to be smaller than maxWidth'), (this.minWidth = e), (this.maxWidth = t), (this.gap = n);
+        i(this, 'minWidth', void 0), i(this, 'maxWidth', void 0), i(this, 'gap', void 0), a()(e < t, 'minWidth needs to be smaller than maxWidth'), (this.minWidth = e), (this.maxWidth = t), (this.gap = n);
     }
 }
 let c = {
@@ -67,4 +55,4 @@ let c = {
         return [t, n];
     },
     u = 12,
-    m = (e) => 60 + d(e - 2 * u)[1] + 24 + 3 * i;
+    m = (e) => 60 + d(e - 2 * u)[1] + 24 + 3 * s;

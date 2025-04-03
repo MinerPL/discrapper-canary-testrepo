@@ -1,49 +1,53 @@
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    r = n.n(a),
-    i = n(338545),
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(642128),
     l = n(481060),
-    o = n(104494),
-    c = n(639119),
-    d = n(318747),
-    _ = n(409100),
-    u = n(474936),
-    E = n(981631),
-    T = n(225133);
-t.Z = function (e) {
+    o = n(410030),
+    c = n(104494),
+    d = n(639119),
+    u = n(318747),
+    m = n(409100),
+    g = n(474936),
+    p = n(981631),
+    h = n(993229);
+let f = function (e) {
     var t, n;
-    let { isVisible: a, isFullscreen: I, subscriptionTier: R } = e,
-        C = null === (t = (0, c.N)()) || void 0 === t ? void 0 : t.subscription_trial,
-        g = (0, o.Ng)(),
-        p = (0, o.Wp)(g, u.Si.TIER_2) ? u.Si.TIER_2 : void 0,
-        N = (0, l.useSpring)({
-            transform: a ? 'translateY(-100%)' : 'translateY(0%)',
-            opacity: a ? 1 : 0,
+    let { isVisible: i, isFullscreen: f, subscriptionTier: b, isMarketingPageV2: N } = e,
+        x = null == (t = (0, d.N)()) ? void 0 : t.subscription_trial,
+        _ = (0, c.Ng)(),
+        E = (0, c.Wp)(_, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
+        j = (0, l.q_F)({
+            transform: i ? 'translateY(-100%)' : 'translateY(0%)',
+            opacity: +!!i,
             config: {
                 tension: 120,
                 friction: 12
             }
         }),
-        A = { section: E.jXE.MARKETING_FLOATING_CTA };
-    return (0, s.jsx)(i.animated.div, {
-        className: r()(T.wrapper, {
-            [T.fullscreenWrapper]: I,
-            [T.invisible]: !a
+        O = { section: p.jXE.MARKETING_FLOATING_CTA },
+        C = (0, o.ZP)(),
+        S = (0, l.wjy)(C);
+    return (0, r.jsx)(a.animated.div, {
+        className: s()(h.wrapper, {
+            [h.fullscreenWrapper]: f,
+            [h.invisible]: !i
         }),
-        style: N,
-        children: (0, s.jsxs)('div', {
-            className: T.innerWrapper,
+        style: j,
+        children: (0, r.jsxs)('div', {
+            className: N ? h.innerWrapperV2 : h.innerWrapperV1,
             children: [
-                (0, s.jsx)(_.Z, {
-                    className: T.button,
-                    subscriptionTier: null !== (n = null != R ? R : null == C ? void 0 : C.sku_id) && void 0 !== n ? n : p,
-                    premiumModalAnalyticsLocation: A,
+                (0, r.jsx)(m.Z, {
+                    className: s()(h.button, { [h.subButton]: S }),
+                    subscriptionTier: null != (n = null != b ? b : null == x ? void 0 : x.sku_id) ? n : E,
+                    premiumModalAnalyticsLocation: O,
                     isPersistentCTA: !0
                 }),
-                (0, s.jsx)(d.Z, {
-                    className: T.button,
-                    premiumModalAnalyticsLocation: A
+                (0, r.jsx)(u.Z, {
+                    className: h.button,
+                    premiumModalAnalyticsLocation: O
                 })
             ]
         })

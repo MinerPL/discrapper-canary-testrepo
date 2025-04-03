@@ -1,47 +1,103 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
+n.d(t, { Z: () => b }), n(47120);
 var r = n(570140),
     i = n(367907),
-    a = n(932724),
-    s = n(634041),
-    o = n(647177),
+    o = n(932724),
+    a = n(634041),
+    s = n(647177),
     l = n(592125),
-    u = n(131951),
-    c = n(19780),
+    c = n(131951),
+    u = n(19780),
     d = n(944486),
-    _ = n(594174);
-let E = (e, t) => ({
-        channel_id: e.id,
-        channel_type: e.type,
-        guild_id: e.getGuildId(),
-        rtc_connection_id: c.Z.getRTCConnectionId(),
-        duration: c.Z.getDuration(),
-        media_session_id: c.Z.getMediaSessionId(),
-        ...(0, i.kO)(c.Z.getGuildId(), c.Z.getChannelId(), t)
-    }),
-    f = () => {
+    f = n(594174);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let g = (e, t) => {
+        let n = u.Z.getVoiceFilterSpeakingDurationMs();
+        return m(
+            p(
+                {
+                    channel_id: e.id,
+                    channel_type: e.type,
+                    guild_id: e.getGuildId(),
+                    rtc_connection_id: u.Z.getRTCConnectionId(),
+                    duration: u.Z.getDuration(),
+                    media_session_id: u.Z.getMediaSessionId()
+                },
+                (0, i.kO)(u.Z.getGuildId(), u.Z.getChannelId(), t)
+            ),
+            {
+                duration_speaking_voice_filter_ids: null != n ? [...n.keys()] : null,
+                duration_speaking_voice_filter_ms: null != n ? [...n.values()] : null
+            }
+        );
+    },
+    E = () => {
         var e;
-        let t = (0, a.P)(_.default.getCurrentUser());
+        let t = (0, o.P)(f.default.getCurrentUser());
         return {
-            video_device_name: null === (e = u.Z.getVideoDevices()[u.Z.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
-            video_hardware_scaling_enabled: u.Z.getHardwareEncoding(),
-            video_effect_type: (0, o.TA)(t),
-            video_effect_detail: (0, o.V$)(t)
+            video_device_name: null == (e = c.Z.getVideoDevices()[c.Z.getVideoDeviceId()]) ? void 0 : e.name,
+            video_hardware_scaling_enabled: c.Z.getHardwareEncoding(),
+            video_effect_type: (0, s.TA)(t),
+            video_effect_detail: (0, s.V$)(t)
         };
     };
-function h(e, t, n, i) {
-    let a = d.Z.getVoiceChannelId(),
-        o = l.Z.getChannel(a);
-    if (null == t && null != a && null != o) {
-        let t = E(o, i);
-        if ((e(), s.Z.hasUsedBackgroundInCall)) {
-            let e = {
-                ...t,
-                ...f()
-            };
+function b(e, t, n, i) {
+    let o = d.Z.getVoiceChannelId(),
+        s = l.Z.getChannel(o);
+    if (null == t && null != o && null != s) {
+        let t = g(s, i);
+        if ((e(), a.Z.hasUsedBackgroundInCall)) {
+            let e = p({}, t, E());
             r.Z.dispatch({
                 type: 'VIDEO_BACKGROUND_SHOW_FEEDBACK',
                 analyticsData: e

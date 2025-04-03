@@ -1,71 +1,67 @@
-t.d(n, {
-    Z: function () {
-        return E;
-    }
-});
-var l = t(735250);
-t(470079);
-var s = t(120356),
-    a = t.n(s),
-    r = t(481060),
-    i = t(884338),
-    o = t(933557),
-    c = t(471445),
-    u = t(5192),
-    d = t(689938),
-    m = t(640436);
-function E(e) {
-    let { channel: n, users: t, selected: s = !1 } = e,
-        E = (0, o.ZP)(n),
-        _ = null;
-    null != t &&
-        t.length > 0 &&
-        (_ = (0, l.jsx)(i.Z, {
-            guildId: n.guild_id,
-            className: m.voiceUserList,
-            users: t,
+n.d(t, { Z: () => m });
+var r = n(200651);
+n(192379);
+var l = n(120356),
+    i = n.n(l),
+    s = n(481060),
+    o = n(884338),
+    a = n(933557),
+    c = n(471445),
+    d = n(5192),
+    u = n(388032),
+    f = n(304118);
+function m(e) {
+    let { channel: t, users: n, selected: l = !1 } = e,
+        m = (0, a.ZP)(t),
+        h = null;
+    null != n &&
+        n.length > 0 &&
+        (h = (0, r.jsx)(o.Z, {
+            guildId: t.guild_id,
+            className: f.voiceUserList,
+            users: n,
             renderUser: (e) => {
                 if (null == e) return null;
-                let t = u.ZP.getName(n.guild_id, n.id, e),
-                    s = e.getAvatarURL(n.guild_id, 24);
-                return (0, l.jsx)(r.TooltipContainer, {
-                    text: t,
-                    children: (0, l.jsx)('img', {
-                        src: null != s ? s : void 0,
+                let n = d.ZP.getName(t.guild_id, t.id, e),
+                    l = e.getAvatarURL(t.guild_id, 24);
+                return (0, r.jsx)(s.DY3, {
+                    text: n,
+                    children: (0, r.jsx)('img', {
+                        src: null != l ? l : void 0,
                         'aria-label': e.username,
                         alt: '',
-                        className: m.avatar
+                        className: f.avatar
                     })
                 });
             },
             renderMoreUsers: (e) => {
-                let s = (function (e, n) {
-                    let t = n.id,
-                        l = n.guild_id;
+                let l = (function (e, t) {
+                    let n = t.id,
+                        r = t.guild_id;
                     return e.length <= 1
                         ? null
                         : 2 === e.length
-                          ? d.Z.Messages.GO_LIVE_MODAL_OVERFLOW_TWO_USERS.format({
-                                nickname0: u.ZP.getName(l, t, e[0]),
-                                nickname1: u.ZP.getName(l, t, e[1])
+                          ? u.NW.formatToPlainString(u.t.MlgLFx, {
+                                nickname0: d.ZP.getName(r, n, e[0]),
+                                nickname1: d.ZP.getName(r, n, e[1])
                             })
                           : 3 === e.length
-                            ? d.Z.Messages.GO_LIVE_MODAL_OVERFLOW_THREE_USERS.format({
-                                  nickname0: u.ZP.getName(l, t, e[0]),
-                                  nickname1: u.ZP.getName(l, t, e[1]),
-                                  nickname2: u.ZP.getName(l, t, e[2])
+                            ? u.NW.formatToPlainString(u.t.sihix8, {
+                                  nickname0: d.ZP.getName(r, n, e[0]),
+                                  nickname1: d.ZP.getName(r, n, e[1]),
+                                  nickname2: d.ZP.getName(r, n, e[2])
                               })
-                            : d.Z.Messages.GO_LIVE_MODAL_OVERFLOW_FOUR_OR_MORE_USERS.format({
-                                  nickname0: u.ZP.getName(l, t, e[0]),
-                                  nickname1: u.ZP.getName(l, t, e[1]),
+                            : u.NW.formatToPlainString(u.t['824IXV'], {
+                                  nickname0: d.ZP.getName(r, n, e[0]),
+                                  nickname1: d.ZP.getName(r, n, e[1]),
                                   remainingCount: e.length - 2
                               });
-                })(t.slice(4), n);
-                return (0, l.jsx)('div', {
-                    children: (0, l.jsx)(r.TooltipContainer, {
-                        text: s,
-                        children: (0, l.jsx)('div', {
-                            className: m.userListOverflow,
+                })(n.slice(4), t);
+                return (0, r.jsx)('div', {
+                    children: (0, r.jsx)(s.DY3, {
+                        text: l,
+                        children: (0, r.jsx)('div', {
+                            className: f.userListOverflow,
                             children: e
                         })
                     })
@@ -74,16 +70,16 @@ function E(e) {
             max: 5,
             showUserPopout: !1
         }));
-    let S = (0, c.KS)(n);
-    return (0, l.jsxs)('div', {
-        className: a()(m.channelInfo, { [m.selected]: s }),
+    let x = (0, c.KS)(t);
+    return (0, r.jsxs)('div', {
+        className: i()(f.channelInfo, { [f.selected]: l }),
         children: [
-            (0, l.jsx)(S, { className: m.channelIcon }),
-            (0, l.jsx)('div', {
-                className: m.channelName,
-                children: E
+            (0, r.jsx)(x, { className: f.channelIcon }),
+            (0, r.jsx)('div', {
+                className: f.channelName,
+                children: m
             }),
-            _
+            h
         ]
     });
 }

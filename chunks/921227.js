@@ -1,5 +1,6 @@
-var i,
-    s = n(442837),
+n.d(t, { Z: () => u });
+var r,
+    i = n(442837),
     o = n(570140);
 function a(e, t, n) {
     return (
@@ -14,22 +15,20 @@ function a(e, t, n) {
         e
     );
 }
-let l = {};
-class r extends (i = s.ZP.PersistedStore) {
+let s = {};
+function l(e) {
+    return (s[e.key] = e.value), !0;
+}
+class c extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        Object.assign(l, e);
+        Object.assign(s, e);
     }
     getState() {
-        return l;
+        return s;
     }
     shouldShowEducation(e) {
-        return !0 !== l[e];
+        return !0 !== s[e];
     }
 }
-a(r, 'displayName', 'ActivityInviteEducationStore'),
-    a(r, 'persistKey', 'ActivityInviteEducationExperimentStore'),
-    (t.Z = new r(o.Z, {
-        ACTIVITY_INVITE_EDUCATION_DISMISS: function (e) {
-            return (l[e.key] = e.value), !0;
-        }
-    }));
+a(c, 'displayName', 'ActivityInviteEducationStore'), a(c, 'persistKey', 'ActivityInviteEducationExperimentStore');
+let u = new c(o.Z, { ACTIVITY_INVITE_EDUCATION_DISMISS: l });

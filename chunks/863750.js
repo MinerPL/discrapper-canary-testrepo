@@ -1,73 +1,61 @@
-t(47120);
-var r,
-    i = t(442837),
-    o = t(570140);
-function a(e, n, t) {
+n.d(t, { Z: () => h }), n(47120);
+var i,
+    s = n(442837),
+    l = n(570140);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = t),
+            : (e[t] = n),
         e
     );
 }
-let c = {
-        disable_alpha_voice_panel: "Disable new Voice Panel UI: Currently the new voice ui is defaulted ON for staff.  It's not feature complete so if there's something you are missing, or you find a problem, you can disable it here.",
+let a = {
         enable_recently_active: 'Enable recently active channels',
-        happening_main_tab: 'Enable Happening tab containing summaries',
-        enable_recently_active_summaries: 'Enable summaries in recently active view',
-        disable_theme_key: 'Disable reloading the entire app when the theme changes',
         theme_setting_in_account_sheet: 'Show theme settings in the Account action sheet',
-        cozy_header: 'Cozy header',
         mobile_profile_effect_debug_controls: 'mobile_profile_effect_debug_controls',
         nav_experiment_server_drawer_enabled: '[NavI] Enable expandable server drawer',
-        nav_experiment_server_drawer_no_activity: '[NavI] Hide activity in server drawer',
-        nav_experiment_you_bar_grounded: '[NavI] Grounded you bar',
-        nav_experiment_you_bar_large_buttons: '[NavI] Small buttons in you bar',
-        nav_experiment_you_bar_large_messages: '[NavI] Large avatars in messages',
-        force_channel_list_v2: 'Force channel list V2',
         shop_include_unpublished: '[Shop] show unpublished items in shop',
-        disable_channel_list: "Disable channel list -- for performance testing. You probably don't want to turn this on, lol",
         show_icymi_debug_scores: 'Show ICYMI debug scores',
-        only_channel_screen: 'Down with PanelsView, rely on only ChannelScreen!'
+        channel_list_scrim: 'Dim the channel list when chat appears'
     },
-    l = {};
-class s extends (r = i.ZP.DeviceSettingsStore) {
+    d = {};
+class o extends (i = s.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: l };
+        return { toggleStates: d };
     }
     initialize(e) {
-        for (var n in c) {
-            var t, r;
-            let i = null !== (r = null == e ? void 0 : null === (t = e.toggleStates) || void 0 === t ? void 0 : t[n]) && void 0 !== r && r;
-            l[n] = i;
+        for (var t in a) {
+            var n, i;
+            let s = null != (i = null == e || null == (n = e.toggleStates) ? void 0 : n[t]) && i;
+            d[t] = s;
         }
     }
     get(e) {
-        var n;
-        return null !== (n = l[e]) && void 0 !== n && n;
+        var t;
+        return null != (t = d[e]) && t;
     }
-    set(e, n) {
-        return (l[e] = n), n;
+    set(e, t) {
+        return (d[e] = t), t;
     }
     all() {
-        return l;
+        return d;
     }
     allWithDescriptions() {
-        return Object.entries(l).map((e) => {
-            let [n, t] = e;
-            return [n, t, c[n]];
+        return Object.entries(d).map((e) => {
+            let [t, n] = e;
+            return [t, n, a[t]];
         });
     }
 }
-a(s, 'displayName', 'DevToolsDesignTogglesStore'),
-    a(s, 'persistKey', 'DevToolsDesignTogglesStore'),
-    (n.Z = new s(o.Z, {
-        DEV_TOOLS_DESIGN_TOGGLE_SET: function (e) {
-            l[e.toggle] = e.value;
-        }
-    }));
+r(o, 'displayName', 'DevToolsDesignTogglesStore'), r(o, 'persistKey', 'DevToolsDesignTogglesStore');
+let h = new o(l.Z, {
+    DEV_TOOLS_DESIGN_TOGGLE_SET: function (e) {
+        d[e.toggle] = e.value;
+    }
+});

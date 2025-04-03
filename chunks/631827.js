@@ -1,62 +1,52 @@
-function i(e, n) {
-    var t, i, a, l, o;
-    let r;
-    let s = null !== (t = n.limit) && void 0 !== t ? t : 1 / 0,
-        c = (function (e, n) {
-            return e.filter((e) => n.every((n) => n(e)));
-        })(e, null !== (i = n.filterPredicates) && void 0 !== i ? i : []);
-    return (function (e, n, t) {
+function i(e, t) {
+    var n, i, r, l, a, o, c;
+    let s,
+        u = null != (n = t.limit) ? n : 1 / 0,
+        d = ((o = e), (c = null != (i = t.filterPredicates) ? i : []), o.filter((e) => c.every((t) => t(e))));
+    return (function (e, t, n) {
         let i = [];
-        for (let a of e) {
-            let e = (function (e, n) {
-                return e.sort((e, t) => {
-                    for (let i of n) {
-                        let n = i(e, t);
-                        if (0 !== n) return n;
+        for (let r of e) {
+            let e = (function (e, t) {
+                return e.sort((e, n) => {
+                    for (let i of t) {
+                        let t = i(e, n);
+                        if (0 !== t) return t;
                     }
                     return 0;
                 });
-            })(a, n);
-            if ((i.push(...e), i.length >= t)) break;
+            })(r, t);
+            if ((i.push(...e), i.length >= n)) break;
         }
         return i;
     })(
-        (r =
-            null != n.bucketPredicates && n.bucketPredicates.length > 0
-                ? s >= c.length
-                    ? (function (e, n) {
-                          let t = Array(n.length)
-                              .fill(null)
-                              .map(() => []);
-                          for (let i of e)
-                              for (let e = 0; e < n.length; e++)
-                                  if (n[e](i)) {
-                                      t[e].push(i);
-                                      break;
-                                  }
-                          return t;
-                      })(c, null !== (a = n.bucketPredicates) && void 0 !== a ? a : [])
-                    : (function (e, n, t) {
-                          let i = [],
-                              a = e;
-                          for (let e of n) {
-                              let n = [],
-                                  l = [];
-                              for (let t of a) e(t) ? l.push(t) : n.push(t);
-                              if ((i.push(l), (a = n), i.reduce((e, n) => n.length + e, 0) >= t)) break;
-                          }
-                          return i;
-                      })(c, null !== (l = n.bucketPredicates) && void 0 !== l ? l : [], s)
-                : [c]),
-        null !== (o = n.sortComparers) && void 0 !== o ? o : [],
-        s
-    ).slice(0, s);
+        null != t.bucketPredicates && t.bucketPredicates.length > 0
+            ? u >= d.length
+                ? (function (e, t) {
+                      let n = Array(t.length)
+                          .fill(null)
+                          .map(() => []);
+                      for (let i of e)
+                          for (let e = 0; e < t.length; e++)
+                              if (t[e](i)) {
+                                  n[e].push(i);
+                                  break;
+                              }
+                      return n;
+                  })(d, null != (r = t.bucketPredicates) ? r : [])
+                : (function (e, t, n) {
+                      let i = [],
+                          r = e;
+                      for (let e of t) {
+                          let t = [],
+                              l = [];
+                          for (let n of r) e(n) ? l.push(n) : t.push(n);
+                          if ((i.push(l), (r = t), i.reduce((e, t) => t.length + e, 0) >= n)) break;
+                      }
+                      return i;
+                  })(d, null != (l = t.bucketPredicates) ? l : [], u)
+            : [d],
+        null != (a = t.sortComparers) ? a : [],
+        u
+    ).slice(0, u);
 }
-t.d(n, {
-    N: function () {
-        return i;
-    }
-}),
-    t(653041),
-    t(47120),
-    t(724458);
+n.d(t, { N: () => i }), n(653041), n(47120), n(230036);

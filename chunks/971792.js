@@ -1,12 +1,8 @@
-t.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var r = t(442837),
-    i = t(430824),
-    o = t(584825);
-function l(e, n) {
-    let t = (0, o.jO)(n);
-    return (0, r.e7)([i.Z], () => (null != e && null != t ? i.Z.getRole(e, t.role_id) : void 0));
+r.d(t, { Z: () => i });
+var n = r(442837),
+    h = r(430824),
+    v = r(584825);
+function i(e, t) {
+    let r = (0, v.jO)(t);
+    return (0, n.e7)([h.Z], () => (null != e && null != r ? h.Z.getRole(e, r.role_id) : void 0));
 }

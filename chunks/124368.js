@@ -1,72 +1,51 @@
 n.d(t, {
-    AX: function () {
-        return u;
-    },
-    M3: function () {
-        return d;
-    },
-    RN: function () {
-        return p;
-    },
-    SX: function () {
-        return i;
-    },
-    dg: function () {
-        return E;
-    },
-    fZ: function () {
-        return m;
-    },
-    iN: function () {
-        return f;
-    },
-    on: function () {
-        return r;
-    },
-    vw: function () {
-        return c;
-    },
-    yX: function () {
-        return _;
-    },
-    zb: function () {
-        return h;
-    }
+    AX: () => o,
+    M3: () => s,
+    RN: () => p,
+    SX: () => _,
+    dg: () => c,
+    fZ: () => h,
+    iN: () => u,
+    on: () => d,
+    vw: () => a,
+    yX: () => l,
+    zb: () => f
 }),
     n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(981631),
-    l = n(689938);
-let u = 4320,
-    c = 50,
-    d = 100000,
-    _ = 50,
-    E = 25,
-    f = {
+var r = n(981631),
+    i = n(388032);
+let o = 4320,
+    a = 50,
+    s = 100000,
+    l = 50,
+    c = 25,
+    u = {
         HAS_INTERACTED: 1,
         ALL_MESSAGES: 2,
         ONLY_MENTIONS: 4,
         NO_MESSAGES: 8
     };
-function h() {
+var d = (function (e) {
+    return (e.EMBED = 'Embed'), (e.BROWSER = 'Thread Browser'), (e.POPOUT = 'Active Threads Popout'), (e.CHANNEL_LIST = 'Channel List'), (e.GUILD_ACTIVE_THREADS_MODAL = 'Guild Active Threads Modal'), (e.INBOX = 'Inbox'), (e.FORUM = 'Forum'), (e.VOICE_AUTO_OPEN = 'Voice Auto Open'), e;
+})({});
+function f() {
     return [
         {
-            setting: f.ALL_MESSAGES,
-            label: l.Z.Messages.FORM_LABEL_ALL_MESSAGES
+            setting: u.ALL_MESSAGES,
+            label: i.NW.string(i.t['n/bTaW'])
         },
         {
-            setting: f.ONLY_MENTIONS,
-            label: l.Z.Messages.FORM_LABEL_ONLY_MENTIONS.format()
+            setting: u.ONLY_MENTIONS,
+            label: i.NW.format(i.t.L2hmY2, {})
         },
         {
-            setting: f.NO_MESSAGES,
-            label: l.Z.Messages.FORM_LABEL_NOTHING
+            setting: u.NO_MESSAGES,
+            label: i.NW.string(i.t.CtVGyc)
         }
     ];
 }
-((a = r || (r = {})).EMBED = 'Embed'), (a.BROWSER = 'Thread Browser'), (a.POPOUT = 'Active Threads Popout'), (a.CHANNEL_LIST = 'Channel List'), (a.GUILD_ACTIVE_THREADS_MODAL = 'Guild Active Threads Modal'), (a.INBOX = 'Inbox'), (a.FORUM = 'Forum'), (a.VOICE_AUTO_OPEN = 'Voice Auto Open'), ((s = i || (i = {})).LATEST_ACTIVITY = 'Last Message'), (s.CREATION_DATE = 'Creation');
-let p = new Set([o.evJ.TOO_MANY_ATTACHMENTS, o.evJ.EXPLICIT_CONTENT, o.evJ.ENTITY_TOO_LARGE, o.evJ.EXPLICIT_CONTENT]),
-    m = new Set([o.evJ.AUTOMOD_MESSAGE_BLOCKED, o.evJ.AUTOMOD_TITLE_BLOCKED]);
+var _ = (function (e) {
+    return (e.LATEST_ACTIVITY = 'Last Message'), (e.CREATION_DATE = 'Creation'), e;
+})({});
+let p = new Set([r.evJ.TOO_MANY_ATTACHMENTS, r.evJ.EXPLICIT_CONTENT, r.evJ.ENTITY_TOO_LARGE, r.evJ.EXPLICIT_CONTENT]),
+    h = new Set([r.evJ.AUTOMOD_MESSAGE_BLOCKED, r.evJ.AUTOMOD_TITLE_BLOCKED]);

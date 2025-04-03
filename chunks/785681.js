@@ -1,7 +1,3 @@
-n.d(t, {
-    o: function () {
-        return a;
-    }
-});
-var s = n(880257);
-let a = (e, t) => ((0, s.Z)() ? t : e);
+n.d(t, { o: () => i });
+var r = n(880257);
+let i = (e, t) => ((0, r.Z)() ? t : e);

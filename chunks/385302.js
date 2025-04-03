@@ -1,37 +1,32 @@
-t.d(n, {
-    Z: function () {
-        return M;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(442837),
-    l = t(481060),
-    r = t(668781),
-    s = t(79390),
-    o = t(222677),
-    u = t(665906),
-    d = t(496675),
-    c = t(981631),
-    E = t(689938);
-function M(e, n) {
-    let t = (0, u.$R)(n),
-        M = (0, a.e7)([d.Z], () => d.Z.can(c.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
-    return !M || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, s.eQ)(e))
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(668781),
+    o = n(79390),
+    s = n(222677),
+    c = n(665906),
+    u = n(496675),
+    d = n(981631),
+    f = n(388032);
+function g(e, t) {
+    let n = (0, c.$R)(t);
+    return !(0, i.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_MESSAGES, t) && n, [t, n]) || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
         ? null
-        : (0, i.jsx)(l.MenuItem, {
+        : (0, r.jsx)(l.sNh, {
               id: 'remove-reactions',
-              label: E.Z.Messages.REMOVE_ALL_REACTIONS,
-              action: function (t) {
-                  t.shiftKey
-                      ? (0, o.wX)(n.id, e.id)
-                      : r.Z.show({
-                            title: E.Z.Messages.REMOVE_ALL_REACTIONS_CONFIRM_TITLE,
-                            body: E.Z.Messages.REMOVE_ALL_REACTIONS_CONFIRM_BODY,
-                            confirmText: E.Z.Messages.YES_TEXT,
-                            cancelText: E.Z.Messages.NO_TEXT,
+              label: f.NW.string(f.t.ZbtGBg),
+              action: function (n) {
+                  n.shiftKey
+                      ? (0, s.wX)(t.id, e.id)
+                      : a.Z.show({
+                            title: f.NW.string(f.t.iz3vYW),
+                            body: f.NW.string(f.t.VpjOCg),
+                            confirmText: f.NW.string(f.t.p89ACg),
+                            cancelText: f.NW.string(f.t.gm1Ven),
                             onConfirm: () => {
-                                (0, o.wX)(n.id, e.id);
+                                (0, s.wX)(t.id, e.id);
                             }
                         });
               },

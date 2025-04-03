@@ -1,23 +1,24 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(770146),
-    r = n(689938),
-    l = n(977412);
-class o extends a.PureComponent {
+n.d(t, { Z: () => c });
+var r = n(200651),
+    i = n(192379),
+    l = n(770146),
+    a = n(388032),
+    o = n(716147);
+class s extends i.PureComponent {
     render() {
         let { className: e, sku: t } = this.props;
         return null == t.legalNotice
             ? null
-            : (0, i.jsxs)('div', {
+            : (0, r.jsxs)('div', {
                   className: e,
                   children: [
-                      (0, i.jsx)(s.Z, { children: r.Z.Messages.APPLICATION_STORE_SECTION_TITLE_COPYRIGHT }),
-                      (0, i.jsx)('div', {
-                          className: l.content,
+                      (0, r.jsx)(l.Z, { children: a.NW.string(a.t.m8OiMj) }),
+                      (0, r.jsx)('div', {
+                          className: o.content,
                           children: t.legalNotice
                       })
                   ]
               });
     }
 }
-t.Z = o;
+let c = s;

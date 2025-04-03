@@ -1,13 +1,9 @@
-s.d(t, {
-    b: function () {
-        return i;
-    },
-    x: function () {
-        return n;
-    }
+n.d(t, {
+    b: () => a,
+    x: () => r
 });
-let n = 1000,
-    i = Object.freeze({
+let r = 1000,
+    a = Object.freeze({
         SMALL: 'small',
         LARGE: 'large'
     });

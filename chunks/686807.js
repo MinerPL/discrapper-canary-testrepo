@@ -1,47 +1,43 @@
-t.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var r = t(735250);
-t(470079);
-var i = t(481060),
-    o = t(201895),
-    l = t(471445),
-    u = t(823379),
-    a = t(303737),
-    s = t(293810),
-    c = t(689938),
-    d = t(70197);
-function _(e) {
-    let { channelId: n } = e,
-        t = (0, a.m7)(n);
-    if (null == t) return (0, r.jsx)(r.Fragment, { children: '['.concat(c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, ']') });
-    let u = t.isMediaChannel() ? i.ImageIcon : (0, l.Th)(t.type);
-    return (0, r.jsxs)(r.Fragment, {
+r.d(t, { Z: () => p });
+var n = r(200651);
+r(192379);
+var h = r(481060),
+    v = r(201895),
+    i = r(471445),
+    l = r(823379),
+    o = r(303737),
+    a = r(293810),
+    s = r(388032),
+    c = r(310045);
+function f(e) {
+    let { channelId: t } = e,
+        r = (0, o.m7)(t);
+    if (null == r) return '['.concat(s.NW.string(s.t.bz1PZW), ']');
+    let l = r.isMediaChannel() ? h.XBm : (0, i.Th)(r.type);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, r.jsx)(i.HiddenVisually, { children: (0, o.ZP)({ channel: t }) }),
-            (0, r.jsxs)('div', {
+            (0, n.jsx)(h.nn4, { children: (0, v.ZP)({ channel: r }) }),
+            (0, n.jsxs)('div', {
                 'aria-hidden': !0,
                 children: [
-                    null != u &&
-                        (0, r.jsx)(u, {
-                            className: d.icon,
+                    null != l &&
+                        (0, n.jsx)(l, {
+                            className: c.icon,
                             'aria-hidden': !0
                         }),
-                    t.name
+                    r.name
                 ]
             })
         ]
     });
 }
-function f(e) {
+function p(e) {
     switch (e.ref_type) {
-        case s.Qs.CHANNEL:
-            return (0, r.jsx)(_, { channelId: e.ref_id });
-        case s.Qs.INTANGIBLE:
+        case a.Qs.CHANNEL:
+            return (0, n.jsx)(f, { channelId: e.ref_id });
+        case a.Qs.INTANGIBLE:
             return e.name;
         default:
-            (0, u.vE)(e);
+            (0, l.vE)(e);
     }
 }

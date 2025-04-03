@@ -1,31 +1,27 @@
-t.d(e, {
-    Z: function () {
-        return c;
-    }
-});
-var i = t(735250);
-t(470079);
-var a = t(442837),
-    l = t(481060),
-    r = t(417363),
-    d = t(877481),
-    s = t(358085),
-    u = t(689938);
-function c(n, e) {
-    let t = n.getBranchedName(e),
-        c = (0, a.e7)(
-            [r.Z],
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(417363),
+    c = n(877481),
+    o = n(358085),
+    u = n(388032);
+function s(e, t) {
+    let n = e.getBranchedName(t),
+        s = (0, i.e7)(
+            [a.Z],
             () => {
-                let e = r.Z.getState(n.id, n.branchId);
-                return null == e ? void 0 : e.installPath;
+                let t = a.Z.getState(e.id, e.branchId);
+                return null == t ? void 0 : t.installPath;
             },
-            [n.branchId, n.id]
+            [e.branchId, e.id]
         );
-    return null != c && (0, s.isDesktop)()
-        ? (0, i.jsx)(l.MenuItem, {
+    return null != s && (0, o.isDesktop)()
+        ? (0, r.jsx)(l.sNh, {
               id: 'create-shortcut',
-              label: u.Z.Messages.APPLICATION_CONTEXT_MENU_CREATE_DESKTOP_SHORTCUT,
-              action: () => d.Z.createShortcuts(!0, !1, t, n.id, c)
+              label: u.NW.string(u.t.T4tecH),
+              action: () => c.Z.createShortcuts(!0, !1, n, e.id, s)
           })
         : null;
 }

@@ -1,15 +1,11 @@
-n.d(t, {
-    _: function () {
-        return d;
-    }
-});
+n.d(t, { _: () => f });
 var r,
-    i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    o = n.n(s),
-    l = n(306524);
-function u(e, t, n) {
+    i = n(200651),
+    o = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    l = n(584209);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,45 +18,46 @@ function u(e, t, n) {
         e
     );
 }
-let c = Object.freeze({
-    SMALL: 1,
-    MEDIUM: 2,
-    LARGE: 4
-});
-class d extends (r = a.Component) {
+let u = Object.freeze({
+        SMALL: 1,
+        MEDIUM: 2,
+        LARGE: 4
+    }),
+    d = 20;
+class f extends (r = o.Component) {
     renderCircle() {
         let { strokeSize: e, percent: t, colorOverride: n, background: r } = this.props,
-            a = Math.min(Math.max(t, 0), 100),
-            s = (20 - e) / 2,
-            u = s * Math.PI * 2;
+            o = Math.min(Math.max(t, 0), 100),
+            a = (d - e) / 2,
+            c = a * Math.PI * 2;
         return (0, i.jsxs)('svg', {
-            viewBox: '0 0 '.concat(20, ' ').concat(20),
+            viewBox: '0 0 '.concat(d, ' ').concat(d),
             className: l.circle,
             children: [
                 (0, i.jsx)('circle', {
                     className: l.circleBackgroundAlt,
-                    cx: 10,
-                    cy: 10,
-                    r: 10
+                    cx: d / 2,
+                    cy: d / 2,
+                    r: d / 2
                 }),
                 (0, i.jsx)('circle', {
-                    className: o()(l.circleBackground, r),
-                    cx: 10,
-                    cy: 10,
-                    r: (20 - 2 * e) / 2
+                    className: s()(l.circleBackground, r),
+                    cx: d / 2,
+                    cy: d / 2,
+                    r: (d - 2 * e) / 2
                 }),
                 (0, i.jsx)('circle', {
                     className: l.circleProgress,
-                    cx: 10,
-                    cy: 10,
-                    r: s,
+                    cx: d / 2,
+                    cy: d / 2,
+                    r: a,
                     strokeWidth: ''.concat(e, 'px'),
                     strokeLinecap: 'round',
-                    transform: 'rotate(-90 '.concat(10, ' ').concat(10, ')'),
+                    transform: 'rotate(-90 '.concat(d / 2, ' ').concat(d / 2, ')'),
                     stroke: null != n ? n : 'currentColor',
                     style: {
-                        strokeDasharray: u,
-                        strokeDashoffset: (1 - a / 100) * u
+                        strokeDasharray: c,
+                        strokeDashoffset: (1 - o / 100) * c
                     }
                 })
             ]
@@ -69,7 +66,7 @@ class d extends (r = a.Component) {
     render() {
         let { className: e, children: t } = this.props;
         return (0, i.jsxs)('div', {
-            className: o()(l.progressCircle, e),
+            className: s()(l.progressCircle, e),
             children: [
                 this.renderCircle(),
                 null != t
@@ -82,4 +79,4 @@ class d extends (r = a.Component) {
         });
     }
 }
-u(d, 'StrokeSizes', c), u(d, 'defaultProps', { strokeSize: c.MEDIUM });
+c(f, 'StrokeSizes', u), c(f, 'defaultProps', { strokeSize: u.MEDIUM });

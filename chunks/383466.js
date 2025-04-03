@@ -1,16 +1,8 @@
 n.d(t, {
-    jD: function () {
-        return s;
-    },
-    kK: function () {
-        return a;
-    },
-    xj: function () {
-        return i;
-    },
-    zd: function () {
-        return r;
-    }
+    jD: () => a,
+    kK: () => o,
+    xj: () => i,
+    zd: () => r
 });
 var r = function (e) {
         return e instanceof SVGElement && 'getBBox' in e;
@@ -22,16 +14,18 @@ var r = function (e) {
                 i = t.height;
             return !n && !i;
         }
-        var a = e.offsetWidth,
-            s = e.offsetHeight;
+        var o = e,
+            a = o.offsetWidth,
+            s = o.offsetHeight;
         return !(a || s || e.getClientRects().length);
     },
-    a = function (e) {
+    o = function (e) {
         var t,
-            n = null === (t = null == e ? void 0 : e.ownerDocument) || void 0 === t ? void 0 : t.defaultView;
-        return !!(n && e instanceof n.Element);
+            n,
+            r = null == (n = null == (t = e) ? void 0 : t.ownerDocument) ? void 0 : n.defaultView;
+        return !!(r && e instanceof r.Element);
     },
-    s = function (e) {
+    a = function (e) {
         switch (e.tagName) {
             case 'INPUT':
                 if ('image' !== e.type) break;

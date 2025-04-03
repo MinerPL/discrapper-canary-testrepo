@@ -1,75 +1,71 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-});
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    i = n.n(a),
-    r = n(481060),
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
     l = n(100527),
     o = n(906732),
     c = n(678558),
-    d = n(689938),
-    u = n(726930);
-let _ = (e) => {
+    d = n(388032),
+    u = n(669116);
+let m = (e) => {
     let {
             guild: t,
             analyticsLocation: n,
-            className: a,
-            buttonProps: i = {
-                color: r.ButtonColors.BRAND_INVERTED,
-                text: d.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_BUTTON
+            className: i,
+            buttonProps: s = {
+                color: a.Ttl.BRAND_INVERTED,
+                text: d.NW.string(d.t.oqweNz)
             }
         } = e,
-        { color: l, text: o } = i,
+        { color: l, text: o } = s,
         u = t.premiumTier + 1;
-    return (0, s.jsx)(c.Z, {
+    return (0, r.jsx)(c.Z, {
         color: l,
         analyticsLocation: n,
         guild: t,
         buttonText: o,
         targetBoostedGuildTier: u,
-        className: a
+        className: i
     });
 };
-function I(e) {
-    let { header: t, text: a, analyticsLocation: c, guild: d, className: I, textColor: E, headerColor: T, buttonProps: m } = e,
-        { analyticsLocations: N } = (0, o.ZP)(l.Z.GUILD_BOOSTING_UPSELL_BANNER);
-    return (0, s.jsx)(o.Gt, {
-        value: N,
-        children: (0, s.jsxs)('div', {
-            className: i()(u.banner, I),
+function g(e) {
+    let { header: t, text: i, analyticsLocation: c, guild: d, className: g, textColor: p, headerColor: h, buttonProps: f } = e,
+        { analyticsLocations: b } = (0, o.ZP)(l.Z.GUILD_BOOSTING_UPSELL_BANNER);
+    return (0, r.jsx)(o.Gt, {
+        value: b,
+        children: (0, r.jsxs)('div', {
+            className: s()(u.banner, g),
             children: [
-                (0, s.jsx)('img', {
+                (0, r.jsx)('img', {
                     className: u.__invalid_headerGraphic,
                     alt: '',
                     src: n(322393)
                 }),
-                (0, s.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     className: u.content,
                     children: [
-                        (0, s.jsx)(r.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: 'text-lg/semibold',
-                            color: null != T ? T : 'always-white',
+                            color: null != h ? h : 'always-white',
                             className: u.header,
                             children: t
                         }),
-                        (0, s.jsx)(r.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: 'text-sm/normal',
-                            color: null != E ? E : 'always-white',
-                            children: a
+                            color: null != p ? p : 'always-white',
+                            children: i
                         })
                     ]
                 }),
-                (0, s.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: u.ctaContainer,
-                    children: (0, s.jsx)(_, {
+                    children: (0, r.jsx)(m, {
                         guild: d,
                         analyticsLocation: c,
                         className: u.button,
-                        buttonProps: m
+                        buttonProps: f
                     })
                 })
             ]

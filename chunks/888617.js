@@ -1,23 +1,21 @@
-t.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = t(990547),
-    a = t(213609),
-    l = t(312871);
+n.d(t, { Z: () => o });
+var i = n(990547),
+    r = n(213609),
+    l = n(541099),
+    a = n(312871);
 function o(e) {
-    let { sectionName: n, numItems: t, numVisibleItems: o } = e;
+    let { sectionName: t, numItems: n, numVisibleItems: o } = e;
     return {
-        trackSectionImpressionRef: (0, l.Z)({
+        trackSectionImpressionRef: (0, a.Z)({
             onVisible: () => {
-                (0, a.h)({
+                (0, r.h)({
                     type: i.ImpressionTypes.VIEW,
                     name: i.ImpressionNames.APP_LAUNCHER_SECTION,
                     properties: {
-                        section_name: n,
-                        num_items: t,
-                        num_visible_items: o
+                        section_name: t,
+                        num_items: n,
+                        num_visible_items: o,
+                        source: l.Z.entrypoint()
                     }
                 });
             },

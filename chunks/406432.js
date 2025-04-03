@@ -1,41 +1,36 @@
 n.d(t, {
-    CO: function () {
-        return o;
-    },
-    NU: function () {
-        return E;
-    },
-    X2: function () {
-        return f;
-    },
-    cb: function () {
-        return _;
-    },
-    d$: function () {
-        return c;
-    },
-    tw: function () {
-        return l;
-    }
+    CO: () => s,
+    NU: () => b,
+    X2: () => y,
+    cb: () => E,
+    d$: () => u,
+    tw: () => l
 }),
-    n(47120);
+    n(47120),
+    n(301563);
 var r = n(358085);
 let i = (e, t) => {
         if (null == e) return !1;
         let [n, r] = e.split(/\?/, 1);
         return t.test(n);
     },
-    a = (e, t) => {
+    o = (e, t) => {
         if (null == e) return !1;
         let [n, r] = e.split('/');
         return n === t;
     },
-    s = /\.(png|jpe?g|webp|gif|heic|heif|dng)$/i,
-    o = (e) => null != e && s.test(e),
-    l = (e) => a(e, 'image'),
-    u = /\.(webp|gif)$/i,
-    c = (e) => i(e, u),
-    d = (0, r.isIOS)() ? /\.(mp4|mov)$/i : ((0, r.isAndroid)(), /\.(mp4|webm|mov)$/i),
-    _ = (e) => i(e, d),
-    E = (e) => null != e && d.test(e),
-    f = (e) => a(e, 'video');
+    a = /\.(png|jpe?g|webp|gif|heic|heif|dng|avif)$/i,
+    s = (e) => null != e && a.test(e),
+    l = (e) => o(e, 'image'),
+    c = /\.(webp|gif|avif)$/i,
+    u = (e) => i(e, c),
+    d = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
+    f = /\.(mp3|m4a|wav|ogg|opus|flac)$/i,
+    _ = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
+    p = ((0, r.isIOS)() || (0, r.isAndroid)(), /\.(mp4|mov)$/i),
+    h = /\.(mp4|webm|mov)$/i,
+    m = /\.(mp4|webm|mov)$/i,
+    g = (0, r.isIOS)() ? p : (0, r.isAndroid)() ? h : m,
+    E = (e) => i(e, g),
+    b = (e) => null != e && g.test(e),
+    y = (e) => o(e, 'video');

@@ -1,23 +1,19 @@
-n.d(t, {
-    S: function () {
-        return a;
-    }
-});
-var i = n(137006);
-function a(e, t) {
+n.d(t, { S: () => i });
+var r = n(137006);
+function i(e, t) {
     var n;
-    let { scope: a, handler: s } = t,
-        r = {
-            scope: a,
-            handler: s
+    let { scope: i, handler: l } = t,
+        a = {
+            scope: i,
+            handler: l
         },
-        l = null === (n = i.m[e]) || void 0 === n ? void 0 : n.request,
-        o = null;
+        o = null == (n = r.m[e]) ? void 0 : n.request,
+        s = null;
     return (
-        null != l &&
-            (r.validation = function (e) {
-                return null == o && (o = l(e)), o;
+        null != o &&
+            (a.validation = function (e) {
+                return null == s && (s = o(e)), s;
             }),
-        r
+        a
     );
 }

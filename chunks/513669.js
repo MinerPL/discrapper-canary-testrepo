@@ -1,176 +1,230 @@
-t.d(A, {
-    Z: function () {
-        return C;
+r.d(t, { Z: () => p }), r(47120);
+var n = r(200651),
+    A = r(192379),
+    a = r(120356),
+    o = r.n(a),
+    l = r(481060),
+    i = r(813197),
+    s = r(388032),
+    c = r(887670);
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
     }
-}),
-    t(47120);
-var a = t(735250),
-    n = t(470079),
-    r = t(120356),
-    s = t.n(r),
-    o = t(481060),
-    l = t(813197),
-    i = t(689938),
-    d = t(709908);
-let c = 'custom-image',
-    u = n.forwardRef(function (e, A) {
-        let { selectedImageName: t, onChange: n, disabled: r = !1, name: l, alt: i, data: c } = e,
-            u = l === t,
-            C = (0, o.useRadioItem)({
-                isSelected: u,
-                label: i
+    return e;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+let g = 'custom-image',
+    f = A.forwardRef(function (e, t) {
+        let { selectedImageName: r, onChange: A, disabled: a = !1, name: i, alt: s, data: g } = e,
+            f = i === r,
+            p = (0, l.xUy)({
+                isSelected: f,
+                label: s
             }),
-            g = r
+            h = a
                 ? void 0
                 : () => {
-                      n(c, l);
+                      A(g, i);
                   };
-        return (0, a.jsx)(o.Clickable, {
-            ref: A,
-            className: s()(d.radioOption, {
-                [d.selected]: u,
-                [d.disabled]: r
-            }),
-            onClick: g,
-            'aria-disabled': r,
-            ...C,
-            children: (0, a.jsx)('img', {
-                src: c,
-                alt: i,
-                className: d.radioOptionImage
-            })
-        });
+        return (0, n.jsx)(
+            l.P3F,
+            u(
+                d(
+                    {
+                        ref: t,
+                        className: o()(c.radioOption, {
+                            [c.selected]: f,
+                            [c.disabled]: a
+                        }),
+                        onClick: h,
+                        'aria-disabled': a
+                    },
+                    p
+                ),
+                {
+                    children: (0, n.jsx)('img', {
+                        src: g,
+                        alt: s,
+                        className: c.radioOptionImage
+                    })
+                }
+            )
+        );
     });
-function C(e) {
-    let { presetImages: A, image: t, imageName: r, savedImageName: C, onChange: g, uploadButtonLabel: T = i.Z.Messages.UPLOAD_IMAGE, radioGroupAriaLabel: p = i.Z.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL, disabled: h = !1 } = e,
-        m = r === c,
-        [I, U] = n.useState(m ? t : null),
-        [f, v] = n.useState(null),
-        q = n.useRef(null),
-        E = n.useRef(null);
-    n.useEffect(() => {
-        C !== c && (U(null), v(null));
-    }, [C]);
-    let N = null != f ? i.Z.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({ filename: f }) : i.Z.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE,
-        D = (0, o.useRadioGroup)({
+function p(e) {
+    let { presetImages: t, image: r, imageName: a, savedImageName: p, onChange: h, uploadButtonLabel: m = s.NW.string(s.t['MsUY/f']), radioGroupAriaLabel: b = s.NW.string(s.t['0Q0UJi']), disabled: v = !1 } = e,
+        C = a === g,
+        [q, x] = A.useState(C ? r : null),
+        [j, N] = A.useState(null),
+        O = A.useRef(null),
+        U = A.useRef(null);
+    A.useEffect(() => {
+        p !== g && (x(null), N(null));
+    }, [p]);
+    let P = null != j ? s.NW.formatToPlainString(s.t['Kw+5YW'], { filename: j }) : s.NW.string(s.t.SNPvSk),
+        y = (0, l.arW)({
             orientation: 'horizontal',
-            isDisabled: h
+            isDisabled: v
         }),
-        O = () => {
+        V = () => {
             var e;
-            return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
+            return null == (e = O.current) ? void 0 : e.activateUploadDialogue();
         },
-        R = () => {
-            r === c && g(A[0].data, A[0].name), U(null), v(null);
+        W = () => {
+            a === g && h(t[0].data, t[0].name), x(null), N(null);
         };
     return (
-        n.useEffect(() => {
-            if (m && null != f) {
-                var e, A;
-                null === (A = E.current) || void 0 === A || null === (e = A.ref) || void 0 === e || e.focus();
+        A.useEffect(() => {
+            if (C && null != j) {
+                var e, t;
+                null == (t = U.current) || null == (e = t.ref) || e.focus();
             }
-        }, [m, f]),
-        (0, a.jsxs)('div', {
-            className: d.imageSelectionContainer,
+        }, [C, j]),
+        (0, n.jsxs)('div', {
+            className: c.imageSelectionContainer,
             children: [
-                (0, a.jsx)(o.FocusRing, {
+                (0, n.jsx)(l.tEY, {
                     within: !0,
-                    children: (0, a.jsxs)('div', {
-                        className: s()(d.uploadButton, {
-                            [d.disabled]: h,
-                            [d.hidden]: null != I
+                    children: (0, n.jsxs)('div', {
+                        className: o()(c.uploadButton, {
+                            [c.disabled]: v,
+                            [c.hidden]: null != q
                         }),
-                        'aria-disabled': h,
+                        'aria-disabled': v,
                         children: [
-                            (0, a.jsx)(o.ImagePlusIcon, {
+                            (0, n.jsx)(l.FmF, {
                                 size: 'xs',
                                 color: 'currentColor',
                                 'aria-hidden': !0
                             }),
-                            (0, a.jsx)(o.Text, {
+                            (0, n.jsx)(l.Text, {
                                 variant: 'text-xxs/normal',
                                 color: 'text-muted',
                                 'aria-hidden': !0,
-                                children: T
+                                children: m
                             }),
-                            (0, a.jsx)(l.ZP, {
-                                ref: q,
+                            (0, n.jsx)(i.ZP, {
+                                ref: O,
                                 tabIndex: 0,
-                                onChange: (e, A) => {
-                                    null != A && (v(A.name), U(e), g(e, c));
+                                onChange: (e, t) => {
+                                    null != t && (N(t.name), x(e), h(e, g));
                                 },
-                                'aria-label': T
+                                'aria-label': m
                             })
                         ]
                     })
                 }),
-                null != I &&
-                    (0, a.jsxs)('div', {
-                        className: d.customImageActionContainer,
+                null != q &&
+                    (0, n.jsxs)('div', {
+                        className: c.customImageActionContainer,
                         children: [
-                            (0, a.jsx)(o.Tooltip, {
-                                text: i.Z.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_IMAGE_TOOLTIP,
+                            (0, n.jsx)(l.ua7, {
+                                text: s.NW.string(s.t.AQYXMD),
                                 hideOnClick: !0,
                                 children: (e) =>
-                                    (0, a.jsx)(o.Clickable, {
-                                        ...e,
-                                        className: d.customImageAction,
-                                        onClick: O,
-                                        'aria-label': i.Z.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_CUSTOM_IMAGE_ARIA_LABEL.format({ filename: f }),
-                                        children: (0, a.jsx)(o.PencilIcon, {
-                                            size: 'xs',
-                                            color: 'currentColor',
-                                            className: d.editIcon
+                                    (0, n.jsx)(
+                                        l.P3F,
+                                        u(d({}, e), {
+                                            className: c.customImageAction,
+                                            onClick: V,
+                                            'aria-label': s.NW.formatToPlainString(s.t.Qc9Lg4, { filename: j }),
+                                            children: (0, n.jsx)(l.vdY, {
+                                                size: 'xs',
+                                                color: 'currentColor',
+                                                className: c.editIcon
+                                            })
                                         })
-                                    })
+                                    )
                             }),
-                            (0, a.jsx)(o.Tooltip, {
-                                text: i.Z.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_IMAGE_TOOLTIP,
+                            (0, n.jsx)(l.ua7, {
+                                text: s.NW.string(s.t.WxqWU1),
                                 hideOnClick: !0,
                                 children: (e) =>
-                                    (0, a.jsx)(o.Clickable, {
-                                        ...e,
-                                        className: d.customImageAction,
-                                        onClick: R,
-                                        'aria-label': i.Z.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({ filename: f }),
-                                        children: (0, a.jsx)(o.TrashIcon, {
-                                            size: 'md',
-                                            color: 'currentColor',
-                                            className: d.deleteIcon
+                                    (0, n.jsx)(
+                                        l.P3F,
+                                        u(d({}, e), {
+                                            className: c.customImageAction,
+                                            onClick: W,
+                                            'aria-label': s.NW.formatToPlainString(s.t.Z43V9f, { filename: j }),
+                                            children: (0, n.jsx)(l.XHJ, {
+                                                size: 'md',
+                                                color: 'currentColor',
+                                                className: c.deleteIcon
+                                            })
                                         })
-                                    })
+                                    )
                             })
                         ]
                     }),
-                (0, a.jsxs)('div', {
-                    'aria-label': p,
-                    ...D,
-                    className: d.radioGroup,
-                    children: [
-                        null != I &&
-                            (0, a.jsx)(u, {
-                                ref: E,
-                                selectedImageName: r,
-                                onChange: g,
-                                disabled: h,
-                                name: c,
-                                alt: N,
-                                data: I
-                            }),
-                        A.map((e) =>
-                            (0, a.jsx)(
-                                u,
-                                {
-                                    selectedImageName: r,
-                                    onChange: g,
-                                    disabled: h,
-                                    ...e
-                                },
-                                e.name
+                (0, n.jsxs)(
+                    'div',
+                    u(d({ 'aria-label': b }, y), {
+                        className: c.radioGroup,
+                        children: [
+                            null != q &&
+                                (0, n.jsx)(f, {
+                                    ref: U,
+                                    selectedImageName: a,
+                                    onChange: h,
+                                    disabled: v,
+                                    name: g,
+                                    alt: P,
+                                    data: q
+                                }),
+                            t.map((e) =>
+                                (0, n.jsx)(
+                                    f,
+                                    d(
+                                        {
+                                            selectedImageName: a,
+                                            onChange: h,
+                                            disabled: v
+                                        },
+                                        e
+                                    ),
+                                    e.name
+                                )
                             )
-                        )
-                    ]
-                })
+                        ]
+                    })
+                )
             ]
         })
     );

@@ -1,26 +1,21 @@
-t.d(s, {
-    Z: function () {
-        return r;
-    }
-}),
-    t(47120);
-var n = t(442837),
-    a = t(687476),
-    i = t(293810);
-function r() {
-    return (0, n.e7)([a.Z], () =>
+n.d(t, { Z: () => a }), n(47120);
+var r = n(442837),
+    i = n(687476),
+    s = n(293810);
+function a() {
+    return (0, r.e7)([i.Z], () =>
         (function () {
-            let [e] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [a.Z],
-                s = e.getGuildIdsWithPurchasableRoles(),
-                t = !1;
-            return (s.forEach((s) => {
-                e.getUserSubscriptionRoles(s).size > 0 && (t = !0);
+            let [e] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.Z],
+                t = e.getGuildIdsWithPurchasableRoles(),
+                n = !1;
+            return (t.forEach((t) => {
+                e.getUserSubscriptionRoles(t).size > 0 && (n = !0);
             }),
-            t)
-                ? i.PY.SUBSCRIBED
-                : 0 === s.size
-                  ? i.PY.NONE
-                  : i.PY.IN_SUBSCRIPTION_SERVER;
-        })([a.Z])
+            n)
+                ? s.PY.SUBSCRIBED
+                : 0 === t.size
+                  ? s.PY.NONE
+                  : s.PY.IN_SUBSCRIPTION_SERVER;
+        })([i.Z])
     );
 }

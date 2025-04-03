@@ -1,310 +1,371 @@
-n.r(t), n(47120), n(411104);
-var r = n(735250),
-    i = n(470079),
-    a = n(392711),
-    s = n(36793),
+n.d(t, { default: () => x }), n(47120), n(411104);
+var i = n(200651),
+    r = n(192379),
+    o = n(392711),
+    a = n(36793),
     l = n(481060),
-    u = n(100527),
+    s = n(100527),
     c = n(906732),
-    o = n(488499),
-    h = n(626135),
-    d = n(197712),
-    A = n(511004),
-    E = n(486324),
-    g = n(981631),
-    p = n(678916),
-    C = n(689938),
-    m = n(323125);
-t.default = (e) => {
-    let { file: t, imgURI: n, transitionState: f, allowSkip: w = !1, onCrop: R, onClose: M, uploadType: _ = E.pC.AVATAR, showUpsellHeader: N = !1, analyticsPage: L } = e,
-        [v, I] = i.useState({
+    u = n(540059),
+    d = n(488499),
+    h = n(222062),
+    g = n(530329),
+    _ = n(626135),
+    m = n(197712),
+    f = n(511004),
+    p = n(486324),
+    b = n(981631),
+    E = n(678916),
+    N = n(388032),
+    C = n(817056);
+let x = (e) => {
+    let { file: t, imageUri: n, transitionState: x, allowSkip: R = !1, onCrop: A, onClose: v, uploadType: w = p.pC.AVATAR, showUpsellHeader: T = !1, analyticsPage: y } = e,
+        [I, j] = r.useState({
             width: 0,
             height: 0
         }),
-        [D, x] = i.useState({
+        [O, B] = r.useState({
             top: 0,
             bottom: 0,
             left: 0,
             right: 0
         }),
-        [O, y] = i.useState(!1),
-        [T, B] = i.useState(1),
-        [b, S] = i.useState({
+        [P, k] = r.useState(!1),
+        [M, D] = r.useState(1),
+        [S, L] = r.useState({
             x: 0,
             y: 0
         }),
-        [P, V] = i.useState(null),
-        [j, G] = i.useState(!1),
-        { analyticsLocations: k } = (0, c.ZP)(u.Z.IMAGE_CROPPING_MODAL),
-        U = i.useRef({
+        [G, Z] = r.useState(null),
+        [U, W] = r.useState(!1),
+        { analyticsLocations: V } = (0, c.ZP)(s.Z.IMAGE_CROPPING_MODAL),
+        z = (0, u.Q3)('ImageCroppingNModal'),
+        H = r.useRef({
             x: 0,
             y: 0
         }),
-        F = i.useRef(null),
-        H = i.useRef(null),
-        z = 'image/gif' === t.type;
-    i.useEffect(() => {
-        (0, A.Z)();
+        F = r.useRef(null),
+        X = r.useRef(null),
+        Y = 'image/gif' === t.type;
+    r.useEffect(() => {
+        (0, f.Z)();
     }, []),
-        i.useEffect(() => {
-            z &&
-                N &&
-                h.default.track(g.rMx.OPEN_MODAL, {
-                    type: g.jXE.CROP_GIF_MODAL,
-                    location: { page: L }
+        r.useEffect(() => {
+            Y &&
+                T &&
+                _.default.track(b.rMx.OPEN_MODAL, {
+                    type: b.jXE.CROP_GIF_MODAL,
+                    location: { page: y }
                 });
-        }, [N, L, z]);
-    let Z = () => {
-            switch (_) {
-                case E.pC.BANNER:
+        }, [T, y, Y]);
+    let K = () => {
+            switch (w) {
+                case p.pC.BANNER:
                     return {
-                        height: E.f,
-                        width: E.L0
+                        height: p.f,
+                        width: p.L0
                     };
-                case E.pC.VIDEO_BACKGROUND:
-                    return p.HE;
-                case E.pC.AVATAR:
-                case E.pC.AVATAR_DECORATION:
+                case p.pC.VIDEO_BACKGROUND:
+                    return E.HE;
+                case p.pC.AVATAR:
+                case p.pC.AVATAR_DECORATION:
                     return {
-                        height: g.dGM,
-                        width: g.dGM
+                        height: b.dGM,
+                        width: b.dGM
                     };
-                case E.pC.GUILD_BANNER:
+                case p.pC.GUILD_BANNER:
                     return {
-                        height: E._T,
-                        width: E.X_
+                        height: p._T,
+                        width: p.X_
                     };
-                case E.pC.SCHEDULED_EVENT_IMAGE:
+                case p.pC.SCHEDULED_EVENT_IMAGE:
                     return {
-                        height: E.xT,
-                        width: E.d6
+                        height: p.xT,
+                        width: p.d6
                     };
-                case E.pC.HOME_HEADER:
+                case p.pC.HOME_HEADER:
                     return {
-                        height: E.Uo,
-                        width: E.N8
+                        height: p.Uo,
+                        width: p.N8
                     };
             }
         },
-        Y = i.useCallback(
+        q = r.useCallback(
             (e, t, n) => {
-                (U.current = (0, d.U$)(e, t, n)), null != F.current && (F.current.style.transform = 'translate3d('.concat(U.current.x, 'px, ').concat(U.current.y, 'px, 0)'));
+                (H.current = (0, m.U$)(e, t, n)), null != F.current && (F.current.style.transform = 'translate3d('.concat(H.current.x, 'px, ').concat(H.current.y, 'px, 0)'));
             },
             [F]
         ),
-        J = i.useCallback(() => {
-            if (null == F.current || T > 1) return;
+        Q = r.useCallback(() => {
+            if (null == F.current || M > 1) return;
             let { width: e, height: t } = F.current.getBoundingClientRect(),
-                { width: n, height: r } = (0, d.Es)(_, e, t),
-                i = (0, d.AK)(_, n, r, t);
-            V({
+                { width: n, height: i } = (0, m.Es)(w, e, t, z),
+                r = (0, m.AK)(w, n, i, t, z);
+            Z({
                 width: n,
-                height: r
+                height: i
             }),
-                I(i),
-                x((0, d.kH)(n, r, i));
-        }, [_, T]),
-        K = i.useCallback(
+                j(r),
+                B((0, m.kH)(n, i, r));
+        }, [z, w, M]),
+        $ = r.useCallback(
             (e) => {
-                let { x: t, y: n } = U.current;
-                if (!O || (e.clientX === t && e.clientY === n)) return;
-                let r = e.clientX - b.x;
-                Y(r, e.clientY - b.y, D);
+                let { x: t, y: n } = H.current;
+                if (P && (e.clientX !== t || e.clientY !== n)) q(e.clientX - S.x, e.clientY - S.y, O);
             },
-            [D, O, b, Y]
+            [O, P, S, q]
         ),
-        X = () => {
-            y(!1);
+        J = () => {
+            k(!1);
         },
-        W = () => {
-            let e = Z();
+        ee = () => {
+            let e = K();
             return e.width !== e.height;
         },
-        $ = async () => {
+        et = async () => {
             let e;
             if (null == F.current) return;
-            G(!0);
+            W(!0);
             let n = F.current,
-                r = Z();
-            if (z)
+                i = K();
+            if (Y)
                 try {
-                    let { result: i, cancelFn: a } = await (0, d.$p)(t, n, v, U.current, r);
-                    (H.current = a), (e = await i), (H.current = null);
+                    let { result: r, cancelFn: o } = await (0, m.$p)({
+                        file: t,
+                        image: n,
+                        cropDimensions: I,
+                        cropOriginCoordinates: H.current,
+                        maxDimensions: i
+                    });
+                    (X.current = o), (e = await r), (X.current = null);
                 } catch (e) {
-                    var i;
-                    throw (null === (i = H.current) || void 0 === i || i.call(H), (H.current = null), Error('Error cropping GIF'));
+                    var r;
+                    throw (null == (r = X.current) || r.call(X), (X.current = null), Error('Error cropping GIF'));
                 }
-            else e = (0, s.PT)(n, v, U.current, r);
-            await R(e, t), G(!1), M();
+            else
+                e = (0, a.PT)({
+                    image: n,
+                    cropDimensions: I,
+                    cropOriginCoordinates: H.current,
+                    maxDimensions: i
+                });
+            await A({
+                imageUri: e,
+                file: t
+            }),
+                W(!1),
+                v();
         };
-    return (
-        i.useEffect(
-            () => (
-                window.addEventListener('mouseup', X),
-                window.addEventListener('resize', J),
-                () => {
-                    window.removeEventListener('mouseup', X), window.removeEventListener('resize', J);
-                }
-            ),
-            [J]
+    r.useEffect(
+        () => (
+            window.addEventListener('mouseup', J),
+            window.addEventListener('resize', Q),
+            () => {
+                window.removeEventListener('mouseup', J), window.removeEventListener('resize', Q);
+            }
         ),
-        i.useEffect(
+        [Q]
+    ),
+        r.useEffect(
             () => () => {
-                null != H.current && H.current();
+                null != X.current && X.current();
             },
             []
         ),
-        i.useEffect(() => {
-            if (O) return window.addEventListener('mousemove', K), () => window.removeEventListener('mousemove', K);
-        }, [K, O]),
-        (0, r.jsx)(c.Gt, {
-            value: k,
-            children: (0, r.jsxs)(l.ModalRoot, {
-                onAnimationEnd: J,
-                transitionState: f,
-                size: l.ModalSize.MEDIUM,
-                children: [
-                    N &&
-                        (0, r.jsx)(o.Z, {
-                            type: _,
-                            analyticsPage: L,
-                            analyticsSection: g.jXE.CROP_GIF_MODAL,
-                            isGIF: z,
-                            banner: n
-                        }),
-                    (0, r.jsx)(l.ModalHeader, {
-                        separator: !1,
-                        children: (0, r.jsx)(l.FormTitle, {
-                            className: m.titleCase,
-                            tag: l.FormTitleTags.H1,
-                            children: C.Z.Messages.AVATAR_UPLOAD_EDIT_MEDIA
-                        })
+        r.useEffect(() => {
+            if (P) return window.addEventListener('mousemove', $), () => window.removeEventListener('mousemove', $);
+        }, [$, P]);
+    let en = w === p.pC.AVATAR || w === p.pC.BANNER,
+        ei = (0, h.M)(!en);
+    return (0, i.jsx)(c.Gt, {
+        value: V,
+        children: (0, i.jsxs)(l.Y0X, {
+            onAnimationEnd: Q,
+            transitionState: x,
+            size: l.CgR.MEDIUM,
+            children: [
+                T &&
+                    !ei &&
+                    (0, i.jsx)(d.Z, {
+                        type: w,
+                        analyticsPage: y,
+                        analyticsSection: b.jXE.CROP_GIF_MODAL,
+                        isGIF: Y,
+                        banner: n
                     }),
-                    (0, r.jsxs)(l.ModalContent, {
-                        className: m.modalContent,
-                        children: [
-                            (0, r.jsxs)('div', {
-                                className: m.editingContainer,
-                                children: [
-                                    (0, r.jsx)('img', {
-                                        style: {
-                                            opacity: null == P ? 0 : 1,
-                                            transform: 'translate3d('.concat(U.current.x, 'px, ').concat(U.current.y, 'px, 0px)'),
-                                            ...(() => {
-                                                if (null == P) return {};
-                                                let e = P.width / P.height,
-                                                    t = W() && e > E.MY ? v.height / P.height : 1;
-                                                return {
-                                                    width: P.width * T * t,
-                                                    minWidth: P.width * T * t,
-                                                    height: P.height * T * t
-                                                };
-                                            })()
-                                        },
-                                        className: j ? m.imageDisabled : m.imageEnabled,
-                                        src: n,
-                                        alt: 'avatar',
-                                        ref: F,
-                                        onMouseDown: (e) => {
-                                            let t = e.clientX - U.current.x;
-                                            S({
-                                                x: t,
-                                                y: e.clientY - U.current.y
-                                            }),
-                                                y(!0);
-                                        },
-                                        draggable: !1
-                                    }),
-                                    (0, r.jsx)('div', {
-                                        className: _ === E.pC.AVATAR ? m.overlayAvatar : m.overlayBanner,
-                                        style: {
-                                            opacity: null == P ? 0 : 1,
-                                            width: v.width,
-                                            height: v.height
-                                        }
-                                    })
-                                ]
-                            }),
-                            (0, r.jsxs)('div', {
-                                className: m.sliderContainer,
-                                children: [
-                                    (0, r.jsx)(l.ImageIcon, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: m.icon
-                                    }),
-                                    (0, r.jsx)(l.Slider, {
-                                        initialValue: 1,
-                                        minValue: 1,
-                                        maxValue: 2,
-                                        keyboardStep: 0.025,
-                                        asValueChanges: (e) => {
-                                            if (null == P) return;
-                                            let { width: t, height: n } = P,
-                                                r = (0, d.kH)(t * e, n * e, v),
-                                                { x: i, y: s } = U.current;
-                                            (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && Y(i, s, r), B(e), x(r);
-                                        },
-                                        disabled: j,
-                                        equidistant: !0,
-                                        hideBubble: !0,
-                                        'aria-label': C.Z.Messages.FORM_LABEL_AVATAR_SIZE
-                                    }),
-                                    (0, r.jsx)(l.ImageIcon, {
-                                        size: 'custom',
-                                        color: 'currentColor',
-                                        className: m.icon,
-                                        width: 48,
-                                        height: 48
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    (0, r.jsxs)(l.ModalFooter, {
-                        className: m.modalFooter,
-                        children: [
-                            w
-                                ? (0, r.jsx)(l.Button, {
-                                      className: m.cancelButton,
-                                      look: l.Button.Looks.LINK,
-                                      color: l.Button.Colors.PRIMARY,
-                                      size: l.ButtonSizes.SMALL,
-                                      onClick: () => {
-                                          w && (R(n, t), M());
-                                      },
-                                      children: C.Z.Messages.AVATAR_UPLOAD_SKIP
-                                  })
-                                : null,
-                            (0, r.jsxs)('div', {
-                                className: m.buttonsRight,
-                                children: [
-                                    (0, r.jsx)(l.Button, {
-                                        className: m.cancelButton,
-                                        look: l.Button.Looks.LINK,
-                                        color: l.Button.Colors.PRIMARY,
-                                        size: l.ButtonSizes.SMALL,
-                                        onClick: () => {
-                                            if (null != H.current) {
-                                                H.current(), (H.current = null), G(!1);
-                                                return;
-                                            }
-                                            M();
-                                        },
-                                        children: C.Z.Messages.AVATAR_UPLOAD_CANCEL
-                                    }),
-                                    (0, r.jsx)(l.Button, {
-                                        submitting: j,
-                                        size: l.ButtonSizes.SMALL,
-                                        onClick: $,
-                                        children: C.Z.Messages.AVATAR_UPLOAD_APPLY
-                                    })
-                                ]
-                            })
-                        ]
+                (0, i.jsx)(l.xBx, {
+                    separator: !1,
+                    children: (0, i.jsx)(l.vwX, {
+                        className: C.titleCase,
+                        tag: l.RB0.H1,
+                        children: N.NW.string(N.t.DxAYCA)
                     })
-                ]
-            })
+                }),
+                (0, i.jsxs)(l.hzk, {
+                    className: C.modalContent,
+                    children: [
+                        (0, i.jsxs)('div', {
+                            className: C.editingContainer,
+                            children: [
+                                (0, i.jsx)('img', {
+                                    style: (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                i = Object.keys(n);
+                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                (i = i.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    })
+                                                )),
+                                                i.forEach(function (t) {
+                                                    var i;
+                                                    (i = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: i,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0
+                                                              })
+                                                            : (e[t] = i);
+                                                });
+                                        }
+                                        return e;
+                                    })(
+                                        {
+                                            opacity: +(null != G),
+                                            transform: 'translate3d('.concat(H.current.x, 'px, ').concat(H.current.y, 'px, 0px)')
+                                        },
+                                        (() => {
+                                            if (null == G) return {};
+                                            let e = G.width / G.height,
+                                                t = ee() && e > p.MY ? I.height / G.height : 1;
+                                            return {
+                                                width: G.width * M * t,
+                                                minWidth: G.width * M * t,
+                                                height: G.height * M * t
+                                            };
+                                        })()
+                                    ),
+                                    className: U ? C.imageDisabled : C.imageEnabled,
+                                    src: n,
+                                    alt: 'avatar',
+                                    ref: F,
+                                    onMouseDown: (e) => {
+                                        L({
+                                            x: e.clientX - H.current.x,
+                                            y: e.clientY - H.current.y
+                                        }),
+                                            k(!0);
+                                    },
+                                    draggable: !1
+                                }),
+                                (0, i.jsx)('div', {
+                                    className: w === p.pC.AVATAR ? C.overlayAvatar : C.overlayBanner,
+                                    style: {
+                                        opacity: +(null != G),
+                                        width: I.width,
+                                        height: I.height
+                                    }
+                                })
+                            ]
+                        }),
+                        (0, i.jsxs)('div', {
+                            className: C.sliderContainer,
+                            children: [
+                                (0, i.jsx)(l.XBm, {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: C.icon
+                                }),
+                                (0, i.jsx)(l.iRW, {
+                                    initialValue: 1,
+                                    minValue: 1,
+                                    maxValue: 2,
+                                    keyboardStep: 0.025,
+                                    asValueChanges: (e) => {
+                                        if (null == G) return;
+                                        let { width: t, height: n } = G,
+                                            i = (0, m.kH)(t * e, n * e, I),
+                                            { x: r, y: a } = H.current;
+                                        ((0, o.inRange)(r, i.right, i.left) && (0, o.inRange)(a, i.top, i.bottom)) || q(r, a, i), D(e), B(i);
+                                    },
+                                    disabled: U,
+                                    equidistant: !0,
+                                    hideBubble: !0,
+                                    'aria-label': N.NW.string(N.t.dnvZSk)
+                                }),
+                                (0, i.jsx)(l.XBm, {
+                                    size: 'custom',
+                                    color: 'currentColor',
+                                    className: C.icon,
+                                    width: 48,
+                                    height: 48
+                                })
+                            ]
+                        }),
+                        T &&
+                            ei &&
+                            (0, i.jsx)('div', {
+                                children: (0, i.jsx)(g.Z, {
+                                    uploadType: w,
+                                    showUpsell: !0,
+                                    position: 'inline',
+                                    className: C.nitroUpsell,
+                                    showShadow: !1
+                                })
+                            })
+                    ]
+                }),
+                (0, i.jsxs)(l.mzw, {
+                    className: C.modalFooter,
+                    children: [
+                        R
+                            ? (0, i.jsx)(l.zxk, {
+                                  className: C.cancelButton,
+                                  look: l.zxk.Looks.LINK,
+                                  color: l.zxk.Colors.PRIMARY,
+                                  size: l.PhG.SMALL,
+                                  onClick: () => {
+                                      R &&
+                                          (A({
+                                              imageUri: n,
+                                              file: t
+                                          }),
+                                          v());
+                                  },
+                                  children: N.NW.string(N.t.B944ys)
+                              })
+                            : null,
+                        (0, i.jsxs)('div', {
+                            className: C.buttonsRight,
+                            children: [
+                                (0, i.jsx)(l.zxk, {
+                                    className: C.cancelButton,
+                                    look: l.zxk.Looks.LINK,
+                                    color: l.zxk.Colors.PRIMARY,
+                                    size: l.PhG.SMALL,
+                                    onClick: () => {
+                                        if (null != X.current) {
+                                            X.current(), (X.current = null), W(!1);
+                                            return;
+                                        }
+                                        v();
+                                    },
+                                    children: N.NW.string(N.t['9TG40t'])
+                                }),
+                                (0, i.jsx)(l.zxk, {
+                                    submitting: U,
+                                    size: l.PhG.SMALL,
+                                    onClick: et,
+                                    children: N.NW.string(N.t.ZSHmKC)
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
         })
-    );
+    });
 };

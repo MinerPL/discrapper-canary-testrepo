@@ -1,119 +1,110 @@
-l.d(n, {
-    HI: function () {
-        return f;
-    },
-    _H: function () {
-        return p;
-    },
-    af: function () {
-        return E;
-    },
-    tx: function () {
-        return v;
-    }
+r.d(t, {
+    HI: () => f,
+    _H: () => b,
+    af: () => O,
+    tx: () => y
 }),
-    l(47120);
-var t = l(524846),
-    r = l(911969),
-    i = l(592125),
-    a = l(271383),
-    u = l(430824),
-    s = l(594174),
-    o = l(483360),
-    c = l(823379),
-    d = l(5192),
-    m = l(280501);
-l(892902);
+    r(47120);
+var n = r(524846),
+    l = r(911969),
+    i = r(592125),
+    o = r(271383),
+    a = r(430824),
+    c = r(594174),
+    s = r(483360),
+    u = r(823379),
+    p = r(5192),
+    d = r(280501);
+r(892902);
 let f = 1000;
-function p(e, n, l) {
-    let t = i.Z.getChannel(l);
-    if (null == t) return [];
-    let a = e === r.re.USER_SELECT || e === r.re.MENTIONABLE_SELECT,
-        u = e === r.re.ROLE_SELECT || e === r.re.MENTIONABLE_SELECT,
-        { users: s, roles: c } = o.ZP.queryMentionResults({
-            query: n,
-            channel: t,
+function b(e, t, r) {
+    let n = i.Z.getChannel(r);
+    if (null == n) return [];
+    let o = e === l.re.USER_SELECT || e === l.re.MENTIONABLE_SELECT,
+        a = e === l.re.ROLE_SELECT || e === l.re.MENTIONABLE_SELECT,
+        { users: c, roles: u } = s.ZP.queryMentionResults({
+            query: t,
+            channel: n,
             canMentionEveryone: !1,
             canMentionHere: !1,
-            canMentionUsers: a,
-            canMentionRoles: u,
+            canMentionUsers: o,
+            canMentionRoles: a,
             includeAllGuildUsers: !0,
             includeNonMentionableRoles: !0,
             checkRecentlyTalkedOnEmptyQuery: !1,
             limit: 15
-        }),
-        f = s.map((e) => {
-            var n;
-            let r = d.ZP.getNickname(t.getGuildId(), l, e.user);
-            return {
-                type: m.tM.USER,
-                value: e.user.id,
-                label: null !== (n = null != r ? r : e.user.globalName) && void 0 !== n ? n : e.user.username
-            };
         });
     return [
-        ...f,
-        ...c.map((e) => ({
-            type: m.tM.ROLE,
+        ...c.map((e) => {
+            var t;
+            let l = p.ZP.getNickname(n.getGuildId(), r, e.user);
+            return {
+                type: d.tM.USER,
+                value: e.user.id,
+                label: null != (t = null != l ? l : e.user.globalName) ? t : e.user.username
+            };
+        }),
+        ...u.map((e) => ({
+            type: d.tM.ROLE,
             value: e.id,
             label: e.name
         }))
     ];
 }
-function E(e, n, l) {
-    let t = i.Z.getChannel(n);
-    return null == t
+function O(e, t, r) {
+    let n = i.Z.getChannel(t);
+    return null == n
         ? []
-        : o.ZP.queryApplicationCommandChannelResults({
+        : s.ZP.queryApplicationCommandChannelResults({
               query: e,
-              channel: t,
-              channelTypes: l,
+              channel: n,
+              channelTypes: r,
               limit: 15
           }).channels.map((e) => ({
-              type: m.tM.CHANNEL,
+              type: d.tM.CHANNEL,
               value: e.id,
               label: e.name
           }));
 }
-function v(e, n) {
-    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+function y(e, t) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     if (null == e) return;
-    let r = u.Z.getGuild(n);
+    let l = a.Z.getGuild(t);
     return e
         .map((e) => {
             switch (e.type) {
-                case t.$.USER: {
-                    var n;
-                    let l = s.default.getUser(e.id);
+                case n.$.USER: {
+                    var t;
+                    let r = c.default.getUser(e.id);
+                    if (null == r) return null;
+                    let n = null != l ? o.ZP.getNick(l.id, r.id) : void 0;
+                    return {
+                        type: d.tM.USER,
+                        value: r.id,
+                        label: null != (t = null != n ? n : r.globalName) ? t : r.username
+                    };
+                }
+                case n.$.ROLE: {
                     if (null == l) return null;
-                    let t = null != r ? a.ZP.getNick(r.id, l.id) : void 0;
+                    let t = a.Z.getRole(l.id, e.id);
+                    if (null == t) return null;
                     return {
-                        type: m.tM.USER,
-                        value: l.id,
-                        label: null !== (n = null != t ? t : l.globalName) && void 0 !== n ? n : l.username
+                        type: d.tM.ROLE,
+                        value: t.id,
+                        label: t.name
                     };
                 }
-                case t.$.ROLE: {
-                    if (null == r) return null;
-                    let n = u.Z.getRole(r.id, e.id);
-                    if (null == n) return null;
+                case n.$.CHANNEL: {
+                    if (null == l) return null;
+                    let t = i.Z.getChannel(e.id);
+                    if (null == t || t.guild_id !== l.id || (r.length > 0 && !r.includes(t.type))) return null;
                     return {
-                        type: m.tM.ROLE,
-                        value: n.id,
-                        label: n.name
-                    };
-                }
-                case t.$.CHANNEL: {
-                    if (null == r) return null;
-                    let n = i.Z.getChannel(e.id);
-                    if (null == n || n.guild_id !== r.id || (l.length > 0 && !l.includes(n.type))) return null;
-                    return {
-                        type: m.tM.CHANNEL,
-                        value: n.id,
-                        label: n.name
+                        type: d.tM.CHANNEL,
+                        value: t.id,
+                        label: t.name
                     };
                 }
             }
         })
-        .filter(c.lm);
+        .filter(u.lm);
 }

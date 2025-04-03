@@ -1,60 +1,128 @@
 n.d(t, {
-    P: function () {
-        return E;
-    },
-    r: function () {
-        return _;
-    }
+    P: () => b,
+    r: () => E
 });
-var r = n(735250);
-n(470079);
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    s = n(442837),
-    o = n(756715),
+    o = n.n(i),
+    a = n(442837),
+    s = n(756715),
     l = n(607070),
-    u = n(109161),
-    c = n(389901);
-function d(e) {
-    let { roleStyle: t, name: n, color: i, roleName: s, dotAlignment: o = 'left', className: l } = e,
+    c = n(109161),
+    u = n(827171);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = m(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function g(e) {
+    let { roleStyle: t, name: n, color: i, roleName: a, dotAlignment: s = 'left', className: l } = e,
         d = 'username' === t,
-        _ =
+        f =
             'dot' === t
-                ? (0, r.jsx)(u.F, {
+                ? (0, r.jsx)(c.F, {
                       color: i,
-                      name: s,
-                      className: 'left' === o ? c.roleDotLeft : c.roleDotRight
+                      name: a,
+                      className: 'left' === s ? u.roleDotLeft : u.roleDotRight
                   })
                 : null;
     return (0, r.jsxs)('span', {
         style: { color: d && null != i ? i : void 0 },
-        className: a()(l, { [c.username]: d }),
-        children: ['left' === o && _, n, 'right' === o && _]
-    });
-}
-function _(e) {
-    let { name: t, color: n, roleName: i, dotAlignment: a, className: u, ...c } = e,
-        _ = (0, s.e7)([l.Z], () => l.Z.roleStyle),
-        E = 'username' === _,
-        f = (0, r.jsx)(d, {
-            roleStyle: _,
-            name: t,
-            color: n,
-            roleName: i,
-            dotAlignment: a,
-            className: u
-        }),
-        h = E ? { color: n } : void 0;
-    return (0, r.jsx)(o.e, {
-        ...c,
-        children: f,
-        style: h
+        className: o()(l, { [u.username]: d }),
+        children: ['left' === s && f, n, 'right' === s && f]
     });
 }
 function E(e) {
-    let t = (0, s.e7)([l.Z], () => l.Z.roleStyle);
-    return (0, r.jsx)(d, {
-        ...e,
-        roleStyle: t
-    });
+    let { name: t, color: n, roleName: i, dotAlignment: o, className: c } = e,
+        u = h(e, ['name', 'color', 'roleName', 'dotAlignment', 'className']),
+        d = (0, a.e7)([l.Z], () => l.Z.roleStyle),
+        _ = 'username' === d,
+        m = (0, r.jsx)(g, {
+            roleStyle: d,
+            name: t,
+            color: n,
+            roleName: i,
+            dotAlignment: o,
+            className: c
+        }),
+        E = _ ? { color: n } : void 0;
+    return (0, r.jsx)(
+        s.Anchor,
+        p(f({}, u), {
+            children: m,
+            style: E
+        })
+    );
+}
+function b(e) {
+    let t = (0, a.e7)([l.Z], () => l.Z.roleStyle);
+    return (0, r.jsx)(g, p(f({}, e), { roleStyle: t }));
 }

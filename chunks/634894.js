@@ -1,8 +1,4 @@
-n.d(t, {
-    j: function () {
-        return i;
-    }
-});
+n.d(t, { j: () => i });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-09_trigger_debugging_aa',

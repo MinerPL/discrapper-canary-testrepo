@@ -1,78 +1,74 @@
-n.d(t, {
-    C: function () {
-        return h;
-    }
-});
-var i = n(735250),
-    a = n(470079),
-    s = n(481060),
-    r = n(359110),
-    l = n(6025),
-    o = n(433355),
+n.d(t, { C: () => f });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    a = n(359110),
+    o = n(6025),
+    s = n(433355),
     c = n(26373),
-    d = n(486622),
-    u = n(376191),
-    _ = n(689938),
-    E = n(846482);
-function h(e) {
-    let { active: t, user: n, channel: h } = e,
-        m = (0, c.K)(),
-        I = a.useCallback(() => {
-            (0, s.showToast)((0, s.createToast)(_.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, s.ToastType.FAILURE));
+    u = n(486622),
+    d = n(376191),
+    p = n(388032),
+    h = n(23704);
+function f(e) {
+    let { active: t, user: n, channel: f } = e,
+        g = (0, c.K)(),
+        m = i.useCallback(() => {
+            (0, l.showToast)((0, l.createToast)(p.NW.string(p.t.EDYbS0), l.ToastType.FAILURE));
         }, []),
-        g = a.useCallback(() => {
-            l.Z.closeChannelSidebar(o.uZ);
+        b = i.useCallback(() => {
+            o.Z.closeChannelSidebar(s.uZ);
         }, []),
-        p = a.useCallback(() => {
-            l.Z.closeChannelSidebar(o.uZ), m && (0, r.Kh)(h.id);
-        }, [h.id, m]),
+        _ = i.useCallback(() => {
+            o.Z.closeChannelSidebar(s.uZ), g && (0, a.Kh)(f.id);
+        }, [f.id, g]),
         {
-            acceptMessageRequest: T,
-            rejectMessageRequest: S,
-            isAcceptLoading: f,
-            isRejectLoading: C,
-            isUserProfileLoading: N,
-            isOptimisticAccepted: A,
-            isOptimisticRejected: v
-        } = (0, d.m)({
+            acceptMessageRequest: E,
+            rejectMessageRequest: O,
+            isAcceptLoading: N,
+            isRejectLoading: y,
+            isUserProfileLoading: I,
+            isOptimisticAccepted: v,
+            isOptimisticRejected: C
+        } = (0, u.m)({
             user: n,
-            onAcceptSuccess: p,
-            onRejectSuccess: g,
-            onError: I
+            onAcceptSuccess: _,
+            onRejectSuccess: b,
+            onError: m
         }),
-        Z = f || C || N || A || v;
-    return (0, i.jsxs)('div', {
-        className: E.container,
+        S = N || y || I || v || C;
+    return (0, r.jsxs)('div', {
+        className: h.container,
         children: [
-            (0, i.jsx)(u.Z, {
-                channel: h,
+            (0, r.jsx)(d.Z, {
+                channel: f,
                 otherUser: n,
                 active: t
             }),
-            (0, i.jsxs)('div', {
-                className: E.actions,
+            (0, r.jsxs)('div', {
+                className: h.actions,
                 children: [
-                    (0, i.jsx)(s.Button, {
-                        className: E.button,
-                        color: s.ButtonColors.PRIMARY,
-                        size: s.Button.Sizes.SMALL,
+                    (0, r.jsx)(l.zxk, {
+                        className: h.button,
+                        color: l.Ttl.PRIMARY,
+                        size: l.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            e.stopPropagation(), S(h.id);
+                            e.stopPropagation(), O(f.id);
                         },
-                        disabled: Z,
-                        submitting: C || v,
-                        children: _.Z.Messages.MESSAGE_REQUEST_IGNORE
+                        disabled: S,
+                        submitting: y || C,
+                        children: p.NW.string(p.t.B2nygY)
                     }),
-                    (0, i.jsx)(s.Button, {
-                        className: E.button,
-                        color: s.ButtonColors.BRAND,
-                        size: s.Button.Sizes.SMALL,
+                    (0, r.jsx)(l.zxk, {
+                        className: h.button,
+                        color: l.Ttl.BRAND,
+                        size: l.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            e.stopPropagation(), T(h.id);
+                            e.stopPropagation(), E(f.id);
                         },
-                        disabled: Z,
-                        submitting: f || N || A,
-                        children: _.Z.Messages.MESSAGE_REQUEST_ACCEPT
+                        disabled: S,
+                        submitting: N || I || v,
+                        children: p.NW.string(p.t.Kz8Pws)
                     })
                 ]
             })

@@ -1,172 +1,190 @@
-s.r(a),
-    s.d(a, {
-        default: function () {
-            return k;
-        }
-    }),
-    s(47120);
-var t = s(735250),
-    l = s(470079),
-    n = s(120356),
-    r = s.n(n),
-    i = s(512722),
-    o = s.n(i),
-    c = s(442837),
-    d = s(481060),
-    u = s(749210),
-    h = s(600164),
-    m = s(218867),
-    C = s(430824),
-    b = s(399860),
-    x = s(335049),
-    I = s(689079),
-    M = s(689938),
-    f = s(361307);
-function k(e) {
-    let { editPermissions: a, guildId: s, hasMemberSearch: n, headerText: i, onClose: k, overwrittenKeys: p, search: g, searchPlaceholderText: N, selectedPermissionCount: _, transitionState: S } = e,
-        j = (0, c.e7)([C.Z], () => C.Z.getGuild(s), [s]);
-    o()(null != j, '');
-    let [E, A] = l.useState(null),
-        { query: T, results: y, setQuery: Z } = g(s),
-        [B, D] = l.useState({}),
-        R = l.useMemo(() => Object.keys(B).length, [B]),
-        O = R + _ >= I._n,
-        v = l.useMemo(
+r.d(t, { default: () => j }), r(301563), r(47120);
+var l = r(200651),
+    n = r(192379),
+    s = r(120356),
+    i = r.n(s),
+    a = r(512722),
+    o = r.n(a),
+    c = r(442837),
+    d = r(481060),
+    u = r(749210),
+    h = r(600164),
+    b = r(218867),
+    m = r(430824),
+    x = r(399860),
+    p = r(335049),
+    f = r(689079),
+    k = r(388032),
+    g = r(969957);
+function j(e) {
+    let { editPermissions: t, guildId: r, hasMemberSearch: s, headerText: a, onClose: j, overwrittenKeys: y, search: C, searchPlaceholderText: _, selectedPermissionCount: E, transitionState: N } = e,
+        w = (0, c.e7)([m.Z], () => m.Z.getGuild(r), [r]);
+    o()(null != w, '');
+    let [v, O] = n.useState(null),
+        { query: I, results: Z, setQuery: z } = C(r),
+        [T, D] = n.useState({}),
+        M = n.useMemo(() => Object.keys(T).length, [T]),
+        S = M + E >= f._n,
+        B = n.useMemo(
             () =>
-                y.filter((e) => {
-                    let a = (0, b.rE)(e.id, e.type);
-                    return !p.includes(a);
+                Z.filter((e) => {
+                    let t = (0, x.rE)(e.id, e.type);
+                    return !y.includes(t);
                 }),
-            [p, y]
+            [y, Z]
         ),
-        L = l.useCallback(
-            (e, a) => {
-                D((s) => {
-                    let t = (0, b.rE)(e, a),
-                        l = { ...s };
+        X = n.useCallback(
+            (e, t) => {
+                D((r) => {
+                    let l = (0, x.rE)(e, t),
+                        n = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var r = null != arguments[t] ? arguments[t] : {},
+                                    l = Object.keys(r);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (l = l.concat(
+                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                        })
+                                    )),
+                                    l.forEach(function (t) {
+                                        var l;
+                                        (l = r[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: l,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = l);
+                                    });
+                            }
+                            return e;
+                        })({}, r);
                     return (
-                        t in s
-                            ? delete l[t]
-                            : !O &&
-                              (l[t] = {
+                        l in r
+                            ? delete n[l]
+                            : S ||
+                              (n[l] = {
                                   id: e,
                                   permission: !0,
-                                  type: a
+                                  type: t
                               }),
-                        l
+                        n
                     );
                 });
             },
-            [O, D]
+            [S, D]
         ),
-        P = l.useCallback(() => {
-            a(B, []), k();
-        }, [a, k, B]);
-    l.useEffect(() => () => clearTimeout(E), [E]);
-    let w = l.useCallback(
+        q = n.useCallback(() => {
+            t(T, []), j();
+        }, [t, j, T]);
+    n.useEffect(() => () => clearTimeout(v), [v]);
+    let P = n.useCallback(
             (e) => {
-                Z(e),
-                    n &&
-                        A((a) =>
-                            (clearTimeout(a), 0 === e.length)
+                z(e),
+                    s &&
+                        O((t) =>
+                            (clearTimeout(t), 0 === e.length)
                                 ? null
                                 : setTimeout(() => {
-                                      u.Z.requestMembers(s, e, 200, !1);
+                                      u.Z.requestMembers(r, e, 200, !1);
                                   }, 500)
                         );
             },
-            [s, n, Z, A]
+            [r, s, z, O]
         ),
-        H = l.useCallback(
+        R = n.useCallback(
             (e) => {
-                let a = v[e],
-                    s = (0, b.rE)(a.id, a.type),
-                    l = s in B,
-                    n = O && !l;
-                return (0, t.jsx)(
+                let t = B[e],
+                    r = (0, x.rE)(t.id, t.type),
+                    n = r in T,
+                    s = S && !n;
+                return (0, l.jsx)(
                     'div',
                     {
-                        className: f.item,
-                        children: (0, t.jsx)(d.Checkbox, {
-                            type: d.Checkbox.Types.INVERTED,
-                            className: r()({ [f.checkboxItemDisabled]: n }),
-                            disabled: n,
-                            value: l,
-                            onChange: () => L(a.id, a.type),
-                            children: (0, t.jsx)(x.Z, {
-                                guild: j,
-                                id: a.id,
-                                type: a.type,
+                        className: g.item,
+                        children: (0, l.jsx)(d.XZJ, {
+                            type: d.XZJ.Types.INVERTED,
+                            className: i()({ [g.checkboxItemDisabled]: s }),
+                            disabled: s,
+                            value: n,
+                            onChange: () => X(t.id, t.type),
+                            children: (0, l.jsx)(p.Z, {
+                                guild: w,
+                                id: t.id,
+                                type: t.type,
                                 isLocked: !1
                             })
                         })
                     },
-                    s
+                    r
                 );
             },
-            [v, j, O, L, B]
+            [B, w, S, X, T]
         );
     return (
-        l.useEffect(() => {
-            u.Z.requestMembers(s, void 0, 200, !1);
-        }, [s]),
-        (0, t.jsxs)(d.ModalRoot, {
-            'aria-label': M.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_PERMISSIONS_MODIFY,
-            transitionState: S,
+        n.useEffect(() => {
+            u.Z.requestMembers(r, void 0, 200, !1);
+        }, [r]),
+        (0, l.jsxs)(d.Y0X, {
+            'aria-label': k.NW.string(k.t['N+InBQ']),
+            transitionState: N,
             children: [
-                (0, t.jsxs)(d.ModalHeader, {
+                (0, l.jsxs)(d.xBx, {
                     separator: !1,
                     direction: h.Z.Direction.VERTICAL,
                     children: [
-                        (0, t.jsx)(d.Heading, {
+                        (0, l.jsx)(d.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: f.header,
-                            children: i
+                            className: g.header,
+                            children: a
                         }),
-                        O
-                            ? (0, t.jsx)(d.Heading, {
+                        S
+                            ? (0, l.jsx)(d.X6q, {
                                   variant: 'heading-sm/medium',
                                   color: 'text-danger',
-                                  children: M.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_MAX
+                                  children: k.NW.string(k.t.XTwtW1)
                               })
                             : null
                     ]
                 }),
-                (0, t.jsxs)(d.ModalContent, {
-                    className: f.modalContent,
+                (0, l.jsxs)(d.hzk, {
+                    className: g.modalContent,
                     children: [
-                        (0, t.jsx)(d.SearchBar, {
-                            className: f.searchBar,
-                            query: T,
-                            placeholder: N,
-                            'aria-label': N,
-                            onChange: w,
-                            onClear: () => Z(''),
-                            size: d.SearchBar.Sizes.MEDIUM
+                        (0, l.jsx)(d.E1j, {
+                            className: g.searchBar,
+                            query: I,
+                            placeholder: _,
+                            'aria-label': _,
+                            onChange: P,
+                            onClear: () => z(''),
+                            size: d.E1j.Sizes.MEDIUM
                         }),
-                        (0, t.jsx)(m.Z, {
+                        (0, l.jsx)(b.Z, {
                             role: 'listbox',
-                            renderRow: H,
-                            rowCount: v.length,
-                            rowCountBySection: [v.length],
+                            renderRow: R,
+                            rowCount: B.length,
+                            rowCountBySection: [B.length],
                             rowHeight: 36,
-                            className: f.__invalid_list
+                            className: g.__invalid_list
                         })
                     ]
                 }),
-                (0, t.jsxs)(d.ModalFooter, {
+                (0, l.jsxs)(d.mzw, {
                     children: [
-                        (0, t.jsx)(d.Button, {
+                        (0, l.jsx)(d.zxk, {
                             type: 'submit',
-                            onClick: P,
-                            disabled: 0 === R,
-                            children: M.Z.Messages.ADD
+                            onClick: q,
+                            disabled: 0 === M,
+                            children: k.NW.string(k.t.OYkgVl)
                         }),
-                        (0, t.jsx)(d.Button, {
-                            onClick: k,
-                            look: d.Button.Looks.LINK,
-                            color: d.Button.Colors.PRIMARY,
-                            children: M.Z.Messages.CANCEL
+                        (0, l.jsx)(d.zxk, {
+                            onClick: j,
+                            look: d.zxk.Looks.LINK,
+                            color: d.zxk.Colors.PRIMARY,
+                            children: k.NW.string(k.t['ETE/oK'])
                         })
                     ]
                 })

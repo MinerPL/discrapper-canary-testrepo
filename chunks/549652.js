@@ -1,58 +1,54 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return g;
-        }
-    });
-var s = n(735250),
-    a = n(470079),
-    i = n(593473),
-    r = n(442837),
-    l = n(544891),
-    o = n(536285),
-    c = n(388905),
-    u = n(600164),
-    d = n(703656),
-    p = n(314897),
-    m = n(981631),
-    x = n(689938),
-    h = n(999730),
-    N = n(224499);
-function f(e, t, n) {
+s.r(t), s.d(t, { default: () => E }), s(301563);
+var n = s(200651),
+    r = s(192379),
+    i = s(593473),
+    a = s(442837),
+    o = s(544891),
+    d = s(536285),
+    l = s(388905),
+    c = s(600164),
+    h = s(703656),
+    f = s(314897),
+    u = s(981631),
+    p = s(388032),
+    N = s(396096),
+    g = s(20493);
+function m(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = s),
         e
     );
 }
-r.ZP.initialize();
-let b = {
+a.ZP.initialize();
+let D = {
     HANDOFF: 'handoff',
     DONE: 'done',
     FAILED: 'failed'
 };
-function _() {
+function x() {
     try {
         window.close();
     } catch (e) {}
 }
-class g extends a.PureComponent {
+class E extends r.PureComponent {
     componentDidMount() {
         let { stage: e, key: t } = this.state;
-        e === b.DONE
-            ? _()
-            : p.default.isAuthenticated()
-              ? l.tn
+        e === D.DONE
+            ? x()
+            : f.default.isAuthenticated()
+              ? o.tn
                     .post({
-                        url: m.ANM.HANDOFF,
+                        url: u.ANM.HANDOFF,
                         body: { key: t },
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !0
                     })
                     .then(
                         (e) => this.handoff(e.body.handoff_token),
@@ -61,107 +57,107 @@ class g extends a.PureComponent {
               : this.handoff();
     }
     handoff(e) {
-        o.default
-            .requestRedirect(m.Etm.BROWSER_HANDOFF, {
+        d.default
+            .requestRedirect(u.Etm.BROWSER_HANDOFF, {
                 handoffToken: e,
-                fingerprint: p.default.getFingerprint()
+                fingerprint: f.default.getFingerprint()
             })
             .then(this.done, this.failed);
     }
     renderDone() {
-        return (0, s.jsxs)(c.ZP, {
+        return (0, n.jsxs)(l.ZP, {
             children: [
-                (0, s.jsx)(c.Ee, {
-                    src: n(69008),
-                    className: N.marginBottom20
+                (0, n.jsx)(l.Ee, {
+                    src: s(69008),
+                    className: g.marginBottom20
                 }),
-                (0, s.jsx)(c.Dx, {
-                    className: N.marginBottom8,
-                    children: x.Z.Messages.BROWSER_HANDOFF_DONE_TITLE
+                (0, n.jsx)(l.Dx, {
+                    className: g.marginBottom8,
+                    children: p.NW.string(p.t.YsLqvr)
                 }),
-                (0, s.jsx)(c.DK, {
-                    className: N.marginBottom40,
-                    children: x.Z.Messages.BROWSER_HANDOFF_DONE_SAFE_TO_CLOSE
+                (0, n.jsx)(l.DK, {
+                    className: g.marginBottom40,
+                    children: p.NW.string(p.t.CSBYDg)
                 }),
-                (0, s.jsx)(c.zx, {
+                (0, n.jsx)(l.zx, {
                     onClick: this.handleOpenApp,
-                    children: x.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: p.NW.string(p.t.fIv16O)
                 })
             ]
         });
     }
     renderFailed() {
-        return (0, s.jsxs)(c.ZP, {
+        return (0, n.jsxs)(l.ZP, {
             children: [
-                (0, s.jsx)(c.Ee, {
-                    src: n(69008),
-                    className: N.marginBottom20
+                (0, n.jsx)(l.Ee, {
+                    src: s(69008),
+                    className: g.marginBottom20
                 }),
-                (0, s.jsx)(c.Dx, {
-                    className: N.marginBottom8,
-                    children: x.Z.Messages.BROWSER_HANDOFF_FAILED_TITLE
+                (0, n.jsx)(l.Dx, {
+                    className: g.marginBottom8,
+                    children: p.NW.string(p.t.hsLIsb)
                 }),
-                (0, s.jsx)(c.DK, {
-                    className: N.marginBottom40,
-                    children: x.Z.Messages.BROWSER_HANDOFF_DONE_SAFE_TO_CLOSE
+                (0, n.jsx)(l.DK, {
+                    className: g.marginBottom40,
+                    children: p.NW.string(p.t.CSBYDg)
                 }),
-                (0, s.jsx)(c.zx, {
+                (0, n.jsx)(l.zx, {
                     onClick: this.handleOpenApp,
-                    children: x.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: p.NW.string(p.t.fIv16O)
                 })
             ]
         });
     }
     renderHandoff() {
-        return (0, s.jsxs)(c.ZP, {
+        return (0, n.jsxs)(l.ZP, {
             children: [
-                (0, s.jsx)(c.Hh, {}),
-                (0, s.jsx)(c.Dx, {
-                    className: N.marginBottom8,
-                    children: x.Z.Messages.BROWSER_HANDOFF_AUTHENTICATING_TITLE
+                (0, n.jsx)(l.Hh, {}),
+                (0, n.jsx)(l.Dx, {
+                    className: g.marginBottom8,
+                    children: p.NW.string(p.t['ctWa6+'])
                 }),
-                (0, s.jsx)(c.DK, { children: x.Z.Messages.BROWSER_HANDOFF_AUTHENTICATING_DESCRIPTION })
+                (0, n.jsx)(l.DK, { children: p.NW.string(p.t['53IHoq']) })
             ]
         });
     }
     render() {
-        let e;
-        let { stage: t } = this.state;
+        let e,
+            { stage: t } = this.state;
         switch (t) {
-            case b.DONE:
+            case D.DONE:
                 e = this.renderDone();
                 break;
-            case b.FAILED:
+            case D.FAILED:
                 e = this.renderFailed();
                 break;
-            case b.HANDOFF:
+            case D.HANDOFF:
             default:
                 e = this.renderHandoff();
         }
-        return (0, s.jsx)(u.Z, {
-            justify: u.Z.Justify.CENTER,
-            align: u.Z.Align.CENTER,
-            className: h.wrapper,
+        return (0, n.jsx)(c.Z, {
+            justify: c.Z.Justify.CENTER,
+            align: c.Z.Align.CENTER,
+            className: N.wrapper,
             children: e
         });
     }
     constructor(e) {
         var t;
         super(e),
-            f(this, 'done', () => {
-                _(), this.setState({ stage: b.DONE });
+            m(this, 'done', () => {
+                x(), this.setState({ stage: D.DONE });
             }),
-            f(this, 'failed', () => {
-                this.setState({ stage: b.FAILED }), _();
+            m(this, 'failed', () => {
+                this.setState({ stage: D.FAILED }), x();
             }),
-            f(this, 'handleOpenApp', () => {
-                (0, d.uL)(m.Z5c.ME);
+            m(this, 'handleOpenApp', () => {
+                (0, h.uL)(u.Z5c.ME);
             });
-        let { search: n } = e.location,
-            s = null != n && '' !== n ? (0, i.parse)(n) : {};
+        let { search: s } = e.location,
+            n = null != s && '' !== s ? (0, i.parse)(s) : {};
         this.state = {
-            key: null !== (t = s.key) && void 0 !== t ? t : '',
-            stage: 'true' === s.done ? b.DONE : b.HANDOFF
+            key: null != (t = n.key) ? t : '',
+            stage: 'true' === n.done ? D.DONE : D.HANDOFF
         };
     }
 }

@@ -1,16 +1,12 @@
-t.d(s, {
-    D2: function () {
-        return r;
-    },
-    SE: function () {
-        return c;
-    }
+s.d(t, {
+    D2: () => o,
+    SE: () => c
 });
-var a = t(442837),
-    l = t(818083),
-    i = t(496675),
-    n = t(981631);
-let o = (0, l.B)({
+var i = s(442837),
+    n = s(818083),
+    l = s(496675),
+    a = s(981631);
+let r = (0, n.B)({
     kind: 'guild',
     id: '2022-11_default_disable_mass_mention',
     label: 'Disable mass mentions for communities by default',
@@ -23,8 +19,8 @@ let o = (0, l.B)({
         }
     ]
 });
-function r(e) {
-    return o.useExperiment(
+function o(e) {
+    return r.useExperiment(
         {
             guildId: e,
             location: 'dd4beb_1'
@@ -33,16 +29,16 @@ function r(e) {
     );
 }
 function c(e) {
-    var s;
-    let t = (0, a.e7)([i.Z], () => i.Z.can(n.Plq.MANAGE_GUILD, e)),
-        { enabled: l } = o.useExperiment(
+    var t;
+    let s = (0, i.e7)([l.Z], () => l.Z.can(a.Plq.MANAGE_GUILD, e)),
+        { enabled: n } = r.useExperiment(
             {
-                guildId: null !== (s = null == e ? void 0 : e.id) && void 0 !== s ? s : n.lds,
+                guildId: null != (t = null == e ? void 0 : e.id) ? t : a.lds,
                 location: 'dd4beb_3'
             },
             { autoTrackExposure: !0 }
         );
     if (null == e) return !1;
-    let r = e.hasFeature(n.oNc.COMMUNITY);
-    return t && r && l;
+    let o = e.hasFeature(a.oNc.COMMUNITY);
+    return s && o && n;
 }

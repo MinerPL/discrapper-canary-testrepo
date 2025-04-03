@@ -1,56 +1,57 @@
-I.r(_);
-var A = I(735250);
-I(470079);
-var O = I(481060),
-    T = I(230711),
-    S = I(181211),
-    C = I(188879),
-    N = I(981631),
-    D = I(726985),
-    R = I(689938),
-    e = I(729129),
-    V = I(170143);
-_.default = (E) => {
-    let { transitionState: _, onClose: I, classificationId: P, source: i } = E,
-        n = (0, S.Z)(),
-        t = () => {
-            I(), T.Z.open(N.oAB.PRIVACY_AND_SAFETY, D.s6.PRIVACY_ACCOUNT_STANDING);
+n.d(t, { default: () => p });
+var i = n(200651);
+n(192379);
+var a = n(481060),
+    l = n(230711),
+    r = n(181211),
+    o = n(188879),
+    s = n(981631),
+    c = n(726985),
+    d = n(388032),
+    u = n(688443),
+    m = n(170143);
+let p = (e) => {
+    let { transitionState: t, onClose: n, classificationId: p, source: h } = e,
+        f = (0, r.Z)(),
+        g = () => {
+            n(), l.Z.open(s.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
         };
-    return (0, A.jsxs)(O.ModalRoot, {
-        className: e.modalRoot,
-        transitionState: _,
+    return (0, i.jsxs)(a.Y0X, {
+        className: u.modalRoot,
+        transitionState: t,
         children: [
-            (0, A.jsxs)('div', {
-                className: e.modalHeader,
+            (0, i.jsxs)('div', {
+                className: u.modalHeader,
                 children: [
-                    (0, A.jsx)('img', {
-                        className: e.image,
-                        src: V,
+                    (0, i.jsx)('img', {
+                        className: u.image,
+                        src: m,
                         alt: ''
                     }),
-                    (0, A.jsx)(O.ModalCloseButton, {
-                        className: e.modalClose,
-                        onClick: I
+                    (0, i.jsx)(a.olH, {
+                        className: u.modalClose,
+                        onClick: n
                     })
                 ]
             }),
-            (0, A.jsx)(O.ModalContent, {
-                className: e.modalContent,
-                children: n
-                    ? (0, A.jsx)(O.Spinner, {})
-                    : (0, A.jsx)(C.Z, {
-                          classificationId: P,
-                          source: i,
-                          onError: t
+            (0, i.jsx)(a.hzk, {
+                className: u.modalContent,
+                children: f
+                    ? (0, i.jsx)(a.$jN, {})
+                    : (0, i.jsx)(o.Z, {
+                          classificationId: p,
+                          source: h,
+                          onError: g,
+                          onClose: g
                       })
             }),
-            (0, A.jsx)(O.ModalFooter, {
-                children: (0, A.jsx)(O.Button, {
-                    className: e.__invalid_button,
+            (0, i.jsx)(a.mzw, {
+                children: (0, i.jsx)(a.zxk, {
+                    className: u.__invalid_button,
                     type: 'button',
-                    color: O.Button.Colors.BRAND,
-                    onClick: t,
-                    children: R.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2
+                    color: a.zxk.Colors.BRAND,
+                    onClick: g,
+                    children: d.NW.string(d.t.elrEjI)
                 })
             })
         ]

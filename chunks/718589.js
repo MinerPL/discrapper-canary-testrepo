@@ -1,17 +1,12 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var i = n(981631),
-    l = n(689938);
-function r(e) {
+n.d(t, { Z: () => l });
+var r = n(981631),
+    i = n(388032);
+function l(e) {
     let { channel: t, embeddedApps: n } = e;
-    if (t.type === i.d4z.GUILD_VOICE) {
-        if (null == n || !(n.length > 0)) return;
-        {
+    if (t.type === r.d4z.GUILD_VOICE) {
+        if (null != n && n.length > 0) {
             let e = n.map((e) => e.application.name);
-            return l.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_DESCRIBED_BY_LABEL_ACTIVITIES.format({ activeActivities: e.join(', ') });
+            return i.NW.formatToPlainString(i.t.LmYuHR, { activeActivities: e.join(', ') });
         }
     }
 }

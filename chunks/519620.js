@@ -1,39 +1,34 @@
-d.r(n),
-    d.d(n, {
-        default: function () {
-            return _;
-        }
-    });
-var a = d(735250);
-d(470079);
-var s = d(481060),
-    i = d(239091),
-    l = d(592125),
-    t = d(626135),
-    r = d(479313),
-    u = d(981631),
-    c = d(689938);
-function _(e) {
-    let { summary: n, onSelect: d } = e;
-    return (0, a.jsx)(s.Menu, {
-        onSelect: d,
+n.d(d, { default: () => o });
+var i = n(200651);
+n(192379);
+var a = n(481060),
+    t = n(239091),
+    l = n(592125),
+    s = n(626135),
+    r = n(479313),
+    c = n(981631),
+    u = n(388032);
+function o(e) {
+    let { summary: d, onSelect: n } = e;
+    return (0, i.jsx)(a.v2r, {
+        onSelect: n,
         navId: 'channel-summaries-context-menu',
-        'aria-label': c.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
-        onClose: i.Zy,
-        children: (0, a.jsx)(s.MenuGroup, {
-            children: (0, a.jsx)(s.MenuItem, {
+        'aria-label': u.NW.string(u.t.ogxXGh),
+        onClose: t.Zy,
+        children: (0, i.jsx)(a.kSQ, {
+            children: (0, i.jsx)(a.sNh, {
                 id: 'delete-summary',
                 color: 'danger',
-                label: c.Z.Messages.SUMMARIES_DELETE_SUMMARY,
+                label: u.NW.string(u.t['5AwUIi']),
                 action: () => {
-                    (0, r.$l)(n);
-                    let e = l.Z.getChannel(n.channelId);
-                    t.default.track(u.rMx.SUMMARY_DELETED, {
+                    (0, r.$l)(d);
+                    let e = l.Z.getChannel(d.channelId);
+                    s.default.track(c.rMx.SUMMARY_DELETED, {
                         guild_id: null == e ? void 0 : e.guild_id,
                         channel_id: null == e ? void 0 : e.id,
-                        summary_id: n.id,
-                        start_message_id: n.startId,
-                        end_message_id: n.endId
+                        summary_id: d.id,
+                        start_message_id: d.startId,
+                        end_message_id: d.endId
                     });
                 }
             })

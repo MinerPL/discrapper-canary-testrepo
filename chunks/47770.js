@@ -1,11 +1,19 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => o }), n(47120);
 var r = n(836560);
-class i {
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class o {
     on(e, t) {
         this.emitter.on(e, t);
     }
@@ -36,17 +44,6 @@ class i {
         return this.emitter.listenerCount(e);
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (t = 'emitter'),
-            (n = new r.EventEmitter()),
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        i(this, 'emitter', new r.EventEmitter());
     }
 }

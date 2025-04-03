@@ -1,9 +1,5 @@
-n.d(t, {
-    m: function () {
-        return i;
-    }
-});
-let i = [
+n.d(t, { m: () => r });
+let r = [
     {
         id: '749054660769218631',
         format_type: 3,

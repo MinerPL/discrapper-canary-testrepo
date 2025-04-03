@@ -1,31 +1,27 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var o = t(735250);
-t(470079);
-var r = t(481060),
-    a = t(626135),
-    i = t(695346),
-    c = t(981631),
-    l = t(689938);
-function u() {
-    let e = i.dN.useSetting(),
-        n = i.R$.useSetting();
+r.d(t, { Z: () => s });
+var n = r(200651);
+r(192379);
+var i = r(481060),
+    o = r(626135),
+    c = r(695346),
+    a = r(981631),
+    l = r(388032);
+function s() {
+    let e = c.dN.useSetting(),
+        t = c.R$.useSetting();
     return e
         ? null
-        : (0, o.jsx)(r.MenuCheckboxItem, {
+        : (0, n.jsx)(i.S89, {
               id: 'preview-markdown-toggle',
-              label: l.Z.Messages.PREVIEW_MARKDOWN,
+              label: l.NW.string(l.t.sHJ9wc),
               action: () => {
-                  let e = !n;
-                  a.default.track(c.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+                  let e = !t;
+                  o.default.track(a.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                       enabled: e,
-                      location: { section: c.jXE.SETTINGS_CONTEXT_MENU }
+                      location: { section: a.jXE.SETTINGS_CONTEXT_MENU }
                   }),
-                      i.R$.updateSetting(e);
+                      c.R$.updateSetting(e);
               },
-              checked: n
+              checked: t
           });
 }

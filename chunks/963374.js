@@ -1,19 +1,12 @@
-n.d(t, {
-    nC: function () {
-        return d;
-    }
-}),
-    n(47120),
-    n(757143),
-    n(653041);
+n.d(t, { nC: () => d }), n(47120), n(757143), n(301563), n(653041);
 var i = n(392711),
-    s = n.n(i),
+    r = n.n(i),
     o = n(697741);
 let a = new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in', 'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the', 'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will', 'with']);
-function l(e) {
+function s(e) {
     return e.replace(/('|\u2019|\uFF07)(s|S)$/, '');
 }
-function r(e) {
+function l(e) {
     return e.toLowerCase();
 }
 function c(e) {
@@ -23,8 +16,7 @@ function u(e) {
     return 0 === e.length;
 }
 function d(e) {
-    var t;
-    let n = new Set(((t = e), s()(t.split(/\W+/)).map(l).reject(u).map(r).reject(c).map(o.$).value()));
+    let t = new Set(r()(e.split(/\W+/)).map(s).reject(u).map(l).reject(c).map(o.$).value());
     return (e) =>
         (function e(t, n) {
             if (Array.isArray(t)) t.forEach((t) => e(t, n));
@@ -32,19 +24,19 @@ function d(e) {
                 let e = [],
                     i = '';
                 t.content.split(/(\W+)/g).forEach((t) => {
-                    var s, a;
-                    if (((s = t), (a = n), !u((s = r(l(s)))) && !c(s) && a.has((0, o.$)(s))))
-                        i.length > 0 &&
-                            e.push({
-                                type: 'text',
-                                content: i
-                            }),
-                            e.push({
-                                type: 'highlight',
-                                content: t
-                            }),
-                            (i = '');
-                    else i += t;
+                    var r;
+                    !u((r = l(s((r = t))))) && !c(r) && n.has((0, o.$)(r))
+                        ? (i.length > 0 &&
+                              e.push({
+                                  type: 'text',
+                                  content: i
+                              }),
+                          e.push({
+                              type: 'highlight',
+                              content: t
+                          }),
+                          (i = ''))
+                        : (i += t);
                 }),
                     e.length > 0 &&
                         (i.length > 0 &&
@@ -62,5 +54,5 @@ function d(e) {
                               ]));
             } else null != t.content && e(t.content, n);
             return t;
-        })(e, n);
+        })(e, t);
 }

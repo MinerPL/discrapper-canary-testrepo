@@ -1,48 +1,44 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
-var i = n(525654),
-    r = n.n(i),
-    s = n(39612),
-    l = n(271579),
-    a = n(756647),
-    o = n(232567),
-    u = n(703656),
-    d = n(314897),
-    c = n(896797),
-    _ = n(626135),
-    E = n(954824),
-    h = n(981631);
-async function p(e) {
+n.d(t, { Z: () => h });
+var r = n(525654),
+    i = n.n(r),
+    l = n(39612),
+    a = n(271579),
+    o = n(756647),
+    s = n(232567),
+    c = n(703656),
+    u = n(314897),
+    d = n(896797),
+    m = n(626135),
+    f = n(954824),
+    p = n(981631);
+async function b(e) {
     var t, n;
-    let i = null === (t = r().os) || void 0 === t ? void 0 : t.family;
-    if ('Android' === i || 'iOS' === i) {
-        let t = null !== (n = d.default.getFingerprint()) && void 0 !== n ? n : d.default.getId(),
-            i = (0, l.WS)();
-        if (null == t && d.default.isAuthenticated())
+    let r = null == (t = i().os) ? void 0 : t.family;
+    if ('Android' === r || 'iOS' === r) {
+        let t = null != (n = u.default.getFingerprint()) ? n : u.default.getId(),
+            r = (0, a.WS)();
+        if (null == t && u.default.isAuthenticated())
             try {
-                await (0, o.k)(), (t = d.default.getId());
-            } catch {}
-        return (0, l.ZP)((0, s.Gk)(), {
+                await (0, s.k)(), (t = u.default.getId());
+            } catch (e) {}
+        return (0, a.ZP)((0, l.Gk)(), {
             utmSource: e,
             fingerprint: t,
-            attemptId: i
+            attemptId: r
         });
     }
     return 'discord://';
 }
-async function f(e) {
-    let t = await p(e),
-        n = (0, l.zS)(t);
+async function h(e) {
+    let t = await b(e),
+        n = (0, a.zS)(t);
     null != n &&
-        _.default.track(h.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, a.K)(n.fingerprint),
+        m.default.track(p.rMx.DEEP_LINK_CLICKED, {
+            fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),
-        E.Z.launch(t, (e) => {
-            !e && (0, u.dL)(c.Z.fallbackRoute);
+        f.Z.launch(t, (e) => {
+            e || (0, c.dL)(d.Z.fallbackRoute);
         });
 }

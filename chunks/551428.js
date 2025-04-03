@@ -1,56 +1,94 @@
 let r;
-n(47120), n(411104);
+n.d(t, { Z: () => N }), n(47120), n(411104);
 var i,
-    u,
-    l,
-    o,
-    E = n(442837),
+    o = n(442837),
     a = n(570140),
-    _ = n(706454),
-    S = n(156570),
-    s = n(823379);
-let A = {},
-    c = {},
-    I = {},
-    T = {};
-function d(e) {
+    s = n(706454),
+    l = n(156570),
+    c = n(823379);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let d = {},
+    f = {},
+    _ = {},
+    p = {},
+    h = new Set();
+function m(e) {
     let t = e.id,
         n = e.sku.id,
-        r = A[t],
-        i = S.Z.createFromServer(e);
-    if (!(null != r && !r.isSlimDirectoryVersion() && i.isSlimDirectoryVersion())) !1 === e.published ? (null == I[n] && (I[n] = new Set()), I[n].add(t)) : (T[n] = t), (A[t] = i);
+        r = d[t],
+        i = l.Z.createFromServer(e);
+    (null != r && !r.isSlimDirectoryVersion() && i.isSlimDirectoryVersion()) || (!1 === e.published ? (null == _[n] && (_[n] = new Set()), _[n].add(t)) : (p[n] = t), (d[t] = i), h.delete(e.sku.id));
 }
-function R(e, t) {
+function g(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function C() {
-    (A = {}), (T = {}), (I = {}), (c = {});
+function E(e) {
+    let { storeListings: t } = e;
+    for (let e of t) m(e);
 }
-function N() {
-    if (r === _.default.locale) return !1;
-    C(), (r = _.default.locale);
+function b(e) {
+    let { storeListing: t, channelId: n } = e;
+    if (null != n) {
+        let e = l.Z.createFromServer(t);
+        (f[g(n, e.skuId)] = e), (p[e.skuId] = e.id);
+    } else m(t);
 }
-class M extends (i = E.ZP.Store) {
+function y(e) {
+    let { giftCode: t } = e;
+    if (null == t.store_listing) return !1;
+    m(t.store_listing);
+}
+function v(e) {
+    let { skuId: t } = e;
+    h.add(t);
+}
+function O(e) {
+    let { skuId: t } = e;
+    h.delete(t);
+}
+function I() {
+    (d = {}), (p = {}), (_ = {}), (f = {}), (h = new Set());
+}
+function S() {
+    if (r === s.default.locale) return !1;
+    I(), (r = s.default.locale);
+}
+class T extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(_.default), this.syncWith([_.default], N), (r = _.default.locale);
+        this.waitFor(s.default), this.syncWith([s.default], S), (r = s.default.locale);
     }
     get(e) {
-        return A[e];
+        return d[e];
     }
     getForSKU(e, t) {
-        let n = T[e];
-        return null != t ? c[R(t, e)] : null != n ? A[n] : null;
+        let n = p[e];
+        return null != t ? f[g(t, e)] : null != n ? d[n] : null;
     }
     getUnpublishedForSKU(e) {
-        let t = I[e];
+        let t = _[e];
         return null == t
             ? []
             : Array.from(t)
-                  .map((e) => A[e])
-                  .filter(s.lm);
+                  .map((e) => d[e])
+                  .filter(c.lm);
     }
     getForChannel(e, t) {
-        return c[R(e, t)];
+        return f[g(e, t)];
+    }
+    isFetchingForSKU(e) {
+        return h.has(e);
     }
     getStoreListing(e) {
         let { storeListingId: t, skuId: n, channelId: r, isTestMode: i } = e;
@@ -63,36 +101,16 @@ class M extends (i = E.ZP.Store) {
             if (null == n) throw Error('getStoreListing with channel expects a skuId');
             return this.getForChannel(r, n);
         }
-        if (null != n) return this.getForSKU(n);
-        return null;
+        return null != n ? this.getForSKU(n) : null;
     }
 }
-(o = 'StoreListingStore'),
-    (l = 'displayName') in (u = M)
-        ? Object.defineProperty(u, l, {
-              value: o,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (u[l] = o),
-    (t.Z = new M(a.Z, {
-        STORE_LISTINGS_FETCH_SUCCESS: function (e) {
-            let { storeListings: t } = e;
-            for (let e of t) d(e);
-        },
-        STORE_LISTING_FETCH_SUCCESS: function (e) {
-            let { storeListing: t, channelId: n } = e;
-            if (null != n) {
-                let e = S.Z.createFromServer(t);
-                (c[R(n, e.skuId)] = e), (T[e.skuId] = e.id);
-            } else d(t);
-        },
-        USER_SETTINGS_PROTO_UPDATE: N,
-        APPLICATION_STORE_CLEAR_DATA: C,
-        GIFT_CODE_RESOLVE_SUCCESS: function (e) {
-            let { giftCode: t } = e;
-            if (null == t.store_listing) return !1;
-            d(t.store_listing);
-        }
-    }));
+u(T, 'displayName', 'StoreListingStore');
+let N = new T(a.Z, {
+    STORE_LISTINGS_FETCH_START: v,
+    STORE_LISTINGS_FETCH_FAIL: O,
+    STORE_LISTINGS_FETCH_SUCCESS: E,
+    STORE_LISTING_FETCH_SUCCESS: b,
+    USER_SETTINGS_PROTO_UPDATE: S,
+    APPLICATION_STORE_CLEAR_DATA: I,
+    GIFT_CODE_RESOLVE_SUCCESS: y
+});

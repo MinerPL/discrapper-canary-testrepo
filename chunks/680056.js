@@ -1,34 +1,35 @@
-var l = a(470079),
-    n = a(906732),
-    s = a(407316),
-    i = a(937784);
-t.Z = (e) => {
-    let { channelId: t, setExporting: a } = e,
-        { analyticsLocations: o } = (0, n.ZP)();
+n.d(t, { Z: () => o });
+var r = n(192379),
+    l = n(906732),
+    a = n(407316),
+    i = n(937784);
+let o = (e) => {
+    let { channelId: t, setExporting: n } = e,
+        { analyticsLocations: o } = (0, l.ZP)();
     return {
-        onShareClick: l.useCallback(
+        onShareClick: r.useCallback(
             async (e) => {
-                let { clip: l, cropData: n, applicationAudioEnabled: r, voiceAudioEnabled: c, onShareComplete: d } = e;
-                a(l.id);
+                let { clip: r, cropData: l, applicationAudioEnabled: s, voiceAudioEnabled: c, onShareComplete: u } = e;
+                n(r.id);
                 try {
-                    var u, m, p, C, v, h, x, g, L, f;
-                    let e = (0, s.W)(t);
-                    await (0, i.e)(l, {
+                    var d, p, m, f, b, g, j, h, y, x;
+                    let e = (0, a.W)(t);
+                    await (0, i.e)(r, {
                         channelId: e ? t : void 0,
                         analyticsLocations: o,
                         editMetadata: {
-                            start: null !== (h = null !== (v = null == n ? void 0 : n.start) && void 0 !== v ? v : null === (u = l.editMetadata) || void 0 === u ? void 0 : u.start) && void 0 !== h ? h : 0,
-                            end: null !== (g = null !== (x = null == n ? void 0 : n.end) && void 0 !== x ? x : null === (m = l.editMetadata) || void 0 === m ? void 0 : m.end) && void 0 !== g ? g : l.length / 1000,
-                            applicationAudio: null === (L = null != r ? r : null === (p = l.editMetadata) || void 0 === p ? void 0 : p.applicationAudio) || void 0 === L || L,
-                            voiceAudio: null === (f = null != c ? c : null === (C = l.editMetadata) || void 0 === C ? void 0 : C.voiceAudio) || void 0 === f || f
+                            start: null != (g = null != (b = null == l ? void 0 : l.start) ? b : null == (d = r.editMetadata) ? void 0 : d.start) ? g : 0,
+                            end: null != (h = null != (j = null == l ? void 0 : l.end) ? j : null == (p = r.editMetadata) ? void 0 : p.end) ? h : r.length / 1000,
+                            applicationAudio: null == (y = null != s ? s : null == (m = r.editMetadata) ? void 0 : m.applicationAudio) || y,
+                            voiceAudio: null == (x = null != c ? c : null == (f = r.editMetadata) ? void 0 : f.voiceAudio) || x
                         }
                     });
                 } catch (e) {
                 } finally {
-                    null == d || d(), a(null);
+                    null == u || u(), n(null);
                 }
             },
-            [t, o, a]
+            [t, o, n]
         )
     };
 };

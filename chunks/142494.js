@@ -1,23 +1,18 @@
 let r, i;
 n.d(t, {
-    FC: function () {
-        return f;
-    },
-    _H: function () {
-        return _;
-    },
-    yR: function () {
-        return E;
-    }
+    FC: () => m,
+    _H: () => f,
+    yR: () => h
 }),
     n(47120),
+    n(301563),
     n(757143);
-var a = n(400053),
-    s = n.n(a),
-    o = n(302454),
-    l = n.n(o),
-    u = n(20970),
-    c = n(959525);
+var o = n(400053),
+    a = n.n(o),
+    s = n(477660),
+    l = n.n(s),
+    c = n(20970),
+    u = n(959525);
 function d(e, t, n) {
     return (
         t in e
@@ -31,7 +26,7 @@ function d(e, t, n) {
         e
     );
 }
-class _ {
+class f {
     format(e) {
         if (!this.hasMarkdown) return this.intlMessage.format(e);
         let [t, n] = this.getContext(e);
@@ -45,50 +40,52 @@ class _ {
         return this.intlMessage.format(e);
     }
     getContext(e) {
-        let t = c.yF.test(this.message),
-            n = {};
-        if (t) {
-            let t = 0;
-            for (let [r, i] of Object.entries(e)) this.message.includes('!!{'.concat(r, '}!!')) && ((n[++t] = i), (e[r] = t));
+        let t = e,
+            n = u.yF.test(this.message),
+            r = {};
+        if (n) {
+            let e = 0;
+            for (let [n, i] of Object.entries(t)) this.message.includes('!!{'.concat(n, '}!!')) && ((r[++e] = i), (t[n] = e));
         }
-        return [e, n];
+        return [t, r];
     }
     constructor(e, t, n) {
-        d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), (this.message = n ? e : e.replace(c.hN, '')), (this.hasMarkdown = n), (this.intlMessage = new (s())(this.message, t));
+        d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), (this.message = n ? e : e.replace(u.hN, '')), (this.hasMarkdown = n), (this.intlMessage = new (a())(this.message, t));
     }
 }
-function E(e) {
-    (r = (function (e, t) {
-        let n = l().parserFor(t(e)),
-            r = l().reactFor(l().ruleOutput(e, 'react'));
-        return (e, t, i) => {
-            let a = !e.includes('\n\n');
-            return (
-                !a && (e += '\n\n'),
-                r(
-                    n(e, {
-                        inline: a,
-                        context: t,
-                        unsafeContext: i
-                    })
-                )
-            );
-        };
-    })(u.j, e)),
-        (i = (function (e) {
-            let t = l().parserFor(e);
-            return (e, n, r) =>
-                t(e + '\n\n', {
-                    inline: !1,
-                    context: n,
-                    unsafeContext: r
-                });
-        })(u.j));
+function _(e, t) {
+    let n = l().parserFor(t(e)),
+        r = l().reactFor(l().ruleOutput(e, 'react'));
+    return (e, t, i) => {
+        let o = !e.includes('\n\n');
+        return (
+            o || (e += '\n\n'),
+            r(
+                n(e, {
+                    inline: o,
+                    context: t,
+                    unsafeContext: i
+                })
+            )
+        );
+    };
 }
-function f(e, t) {
+function p(e) {
+    let t = l().parserFor(e);
+    return (e, n, r) =>
+        t(e + '\n\n', {
+            inline: !1,
+            context: n,
+            unsafeContext: r
+        });
+}
+function h(e) {
+    (r = _(c.j, e)), (i = p(c.j));
+}
+function m(e, t) {
     if (null == e) return '';
-    null == r && E(n(281071).Z), (e = e.replace(/^\n+|\n+$/g, ''));
-    let i = c.aT.test(e),
-        a = c.b9.test(e);
-    return i || a ? new _(e, t, a) : e;
+    null == r && h(n(281071).Z), (e = e.replace(/^\n+|\n+$/g, ''));
+    let i = u.aT.test(e),
+        o = u.b9.test(e);
+    return i || o ? new f(e, t, o) : e;
 }

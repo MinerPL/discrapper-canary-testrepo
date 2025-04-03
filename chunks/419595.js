@@ -1,4 +1,5 @@
-var a = {
+a.d(t, { Z: () => r });
+var n = {
     lessThanXSeconds: {
         one: 'по-малко от секунда',
         other: 'по-малко от {{count}} секунди'
@@ -61,9 +62,11 @@ var a = {
         other: 'почти {{count}} години'
     }
 };
-t.Z = function (e, t, n) {
+let r = function (e, t, a) {
     var r,
-        i = a[e];
-    if (((r = 'string' == typeof i ? i : 1 === t ? i.one : i.other.replace('{{count}}', String(t))), null != n && n.addSuffix)) return n.comparison && n.comparison > 0 ? 'след ' + r : 'преди ' + r;
+        i = n[e];
+    if (((r = 'string' == typeof i ? i : 1 === t ? i.one : i.other.replace('{{count}}', String(t))), null != a && a.addSuffix))
+        if (a.comparison && a.comparison > 0) return 'след ' + r;
+        else return 'преди ' + r;
     return r;
 };

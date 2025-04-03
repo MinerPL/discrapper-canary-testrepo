@@ -1,137 +1,142 @@
-n(724458), n(47120);
-var s = n(735250),
-    a = n(470079),
-    r = n(120356),
-    i = n.n(r),
+n.d(t, { Z: () => S }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(622535),
     c = n(481060),
     d = n(607070),
-    _ = n(100527),
-    u = n(906732),
-    E = n(410154),
-    T = n(626135),
-    I = n(915296),
-    R = n(103433),
-    C = n(166021),
-    g = n(32173),
-    p = n(391110),
-    N = n(75077),
-    A = n(981631),
-    m = n(689938),
-    f = n(396001),
-    S = n(865215);
-t.Z = (e) => {
+    u = n(100527),
+    m = n(906732),
+    g = n(975298),
+    p = n(626135),
+    h = n(695349),
+    f = n(103433),
+    b = n(166021),
+    N = n(32173),
+    x = n(391110),
+    _ = n(75077),
+    E = n(981631),
+    j = n(388032),
+    O = n(614729),
+    C = n(865215);
+let S = (e) => {
     let t,
         n,
-        { isAllPerksVisible: r, setIsAllPerksVisible: h, previousComponent: M, isFullScreen: x } = e,
-        O = a.useRef(null),
-        b = Object.entries((0, g.Z)()).reduce((e, t) => {
-            let [n, s] = t;
-            return !1 !== s.canReveal && 'upcomingDropUntimed' !== s.name && (e[n] = s), e;
+        { isAllPerksVisible: s, setIsAllPerksVisible: S, previousComponent: v, isFullScreen: T } = e,
+        I = i.useRef(null),
+        y = i.useRef(null),
+        A = Object.entries((0, N.Z)()).reduce((e, t) => {
+            let [n, r] = t;
+            return !1 !== r.canReveal && 'upcomingDropUntimed' !== r.name && (e[n] = r), e;
         }, {}),
-        P = (0, I.HI)({ location: p.MQ.SEE_ALL }),
-        { analyticsLocations: v } = (0, u.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [L, Z] = a.useState(!1),
-        D = (0, E.ZP)('perks-discoverability'),
-        B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        j = (0, N.mN)();
+        { analyticsLocations: P } = (0, m.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [R, D] = i.useState(!1),
+        Z = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        w = (0, _.mN)(),
+        { fractionalState: k } = (0, g.Z)(),
+        W = (0, h.W)();
     return (
-        P === I.mJ.DEFAULT ? ((t = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
-        (0, s.jsx)(c.AdvancedScrollerAuto, {
-            className: i()(f.allPerksScroller, {
-                [f.open]: r,
-                [f.openCloseReduceMotion]: B
+        w ? ((t = j.NW.string(j.t['+vt7w8'])), (n = j.NW.string(j.t.LgHbnJ))) : ((t = j.NW.string(j.t.LgHbnJ)), (n = j.NW.string(j.t['+vt7w8']))),
+        (0, r.jsx)(c.yWw, {
+            className: a()(O.allPerksScroller, {
+                [O.open]: s,
+                [O.openCloseReduceMotion]: Z
             }),
-            ref: O,
-            children: (0, s.jsx)('div', {
-                className: f.container,
-                children: (0, s.jsxs)(u.Gt, {
-                    value: v,
+            ref: I,
+            children: (0, r.jsx)('div', {
+                className: O.container,
+                children: (0, r.jsxs)(m.Gt, {
+                    value: P,
                     children: [
-                        (0, s.jsx)(R.Z, {
-                            className: f.heroHeading,
+                        (0, r.jsx)(f.Z, {
+                            className: O.heroHeading,
                             onBackClick: () => {
-                                h(!1),
-                                    T.default.track(A.rMx.NITRO_HOME_NAVIGATION, {
-                                        current_component: p.MQ.SEE_ALL,
-                                        next_component: M,
+                                S(!1),
+                                    p.default.track(E.rMx.NITRO_HOME_NAVIGATION, {
+                                        current_component: x.MQ.SEE_ALL,
+                                        next_component: v,
                                         interaction_component: 'Back Button'
                                     });
                             }
                         }),
-                        (0, s.jsxs)('div', {
-                            className: f.column,
+                        (0, r.jsxs)('div', {
+                            className: O.column,
                             children: [
-                                (0, s.jsx)(c.Heading, {
+                                (0, r.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: f.heading,
+                                    className: O.heading,
                                     children: t
                                 }),
-                                (0, s.jsx)(C.Z, {
-                                    className: f.cardCarousel,
-                                    cards: (0, N.sP)({
-                                        perksCards: b,
-                                        variant: p.R0.CARD_CAROUSEL_FIRST_ROW,
-                                        shopMarketingVariation: D,
-                                        tileOrderVariant: P,
-                                        isPremiumSubscriber: j,
-                                        isFullScreen: x
+                                (0, r.jsx)(b.Z, {
+                                    className: O.cardCarousel,
+                                    cards: (0, _.sP)({
+                                        perksCards: A,
+                                        variant: x.R0.CARD_CAROUSEL_FIRST_ROW,
+                                        isPremiumSubscriber: w,
+                                        isFullScreen: T,
+                                        fractionalState: k,
+                                        isInReverseTrial: W
                                     }),
-                                    cardType: p.R0.CARD_CAROUSEL_FIRST_ROW
+                                    cardType: x.R0.CARD_CAROUSEL_FIRST_ROW
                                 }),
-                                (0, s.jsx)(c.Heading, {
+                                (0, r.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: f.heading,
+                                    className: O.heading,
                                     children: n
                                 }),
-                                (0, s.jsx)(C.Z, {
-                                    className: f.cardCarousel,
-                                    cards: (0, N.sP)({
-                                        perksCards: b,
-                                        variant: p.R0.CARD_CAROUSEL_SECOND_ROW,
-                                        shopMarketingVariation: D,
-                                        tileOrderVariant: P,
-                                        isPremiumSubscriber: j,
-                                        isFullScreen: x
+                                (0, r.jsx)(b.Z, {
+                                    className: O.cardCarousel,
+                                    cards: (0, _.sP)({
+                                        perksCards: A,
+                                        variant: x.R0.CARD_CAROUSEL_SECOND_ROW,
+                                        isPremiumSubscriber: w,
+                                        isFullScreen: T,
+                                        fractionalState: k,
+                                        isInReverseTrial: W
                                     }),
-                                    cardType: p.R0.CARD_CAROUSEL_SECOND_ROW
+                                    cardType: x.R0.CARD_CAROUSEL_SECOND_ROW
                                 }),
-                                (0, s.jsx)(c.Heading, {
+                                (0, r.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: f.heading,
-                                    children: m.Z.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
+                                    className: O.heading,
+                                    children: j.NW.string(j.t.LTaxu7)
                                 }),
-                                (0, s.jsx)(C.Z, {
-                                    className: f.cardCarousel,
-                                    cards: (0, N.sP)({
-                                        perksCards: b,
-                                        variant: p.R0.CARD_CAROUSEL_THIRD_ROW,
-                                        shopMarketingVariation: D,
-                                        tileOrderVariant: P,
-                                        isPremiumSubscriber: j,
-                                        isFullScreen: x
+                                (0, r.jsx)(b.Z, {
+                                    className: O.cardCarousel,
+                                    cards: (0, _.sP)({
+                                        perksCards: A,
+                                        variant: x.R0.CARD_CAROUSEL_THIRD_ROW,
+                                        isPremiumSubscriber: w,
+                                        isFullScreen: T,
+                                        fractionalState: k,
+                                        isInReverseTrial: W
                                     }),
-                                    cardType: p.R0.CARD_CAROUSEL_THIRD_ROW
+                                    cardType: x.R0.CARD_CAROUSEL_THIRD_ROW
                                 })
                             ]
                         }),
-                        (0, s.jsx)('div', { className: f.footerSpacing }),
-                        (0, s.jsx)(o.$, {
+                        (0, r.jsx)('div', { className: O.footerSpacing }),
+                        (0, r.jsx)(o.$, {
+                            innerRef: y,
                             onChange: (e) => {
-                                e && !L && (T.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: v }), Z(!0));
+                                e && !R && (p.default.track(E.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: P }), D(!0));
                             },
-                            children: (0, s.jsx)('div', { className: f.bottomOfPageVisibilitySensor })
+                            children: (0, r.jsx)('div', {
+                                ref: y,
+                                className: O.bottomOfPageVisibilitySensor
+                            })
                         }),
-                        (0, s.jsx)(c.Image, {
-                            src: S,
-                            className: f.bottomIllustration,
+                        (0, r.jsx)('img', {
+                            src: C,
+                            className: O.bottomIllustration,
                             width: 112,
                             height: 85,
-                            zoomable: !1
+                            alt: j.NW.string(j.t.X4IxWF)
                         })
                     ]
                 })

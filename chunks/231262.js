@@ -1,45 +1,39 @@
-a.d(t, {
-    h: function () {
-        return m;
-    }
-});
-var n = a(735250),
-    i = a(470079),
+a.d(t, { h: () => _ });
+var n = a(200651),
+    s = a(192379),
     r = a(557533),
     l = a.n(r),
-    o = a(794010),
-    s = a(653371),
+    i = a(794010),
+    o = a(653371),
     c = a(388755),
     d = a(330711),
-    u = a(705669);
-let h = null;
-class m extends i.PureComponent {
+    u = a(419920);
+let p = null;
+class _ extends s.PureComponent {
     render() {
-        let { token: e, className: t, onChangeLocale: a, mainContentId: r, mobileClassName: o, avoidRouter: m, authRedirectTo: p, openNavAriaLabel: N, hideNavAriaLabel: k, skipToContentLabel: _ } = this.props;
-        return null == h
+        let { token: e, className: t, onChangeLocale: a, mainContentId: r, mobileClassName: i, avoidRouter: d, authRedirectTo: _, openNavAriaLabel: h, hideNavAriaLabel: m, skipToContentLabel: N } = this.props;
+        return null == p
             ? null
-            : (0, n.jsxs)(i.Fragment, {
+            : (0, n.jsxs)(s.Fragment, {
                   children: [
-                      (0, n.jsx)(s.a, {
+                      (0, n.jsx)(o.a, {
                           className: l()(u.desktopHeader, t),
-                          TrackClick: h,
+                          TrackClick: p,
                           token: e,
-                          avoidRouter: m,
-                          authRedirectTo: p,
-                          NavigationMessages: d.Z.Messages.Navigation,
+                          avoidRouter: d,
+                          authRedirectTo: _,
                           onChangeLocale: a,
                           mainContentId: r,
-                          skipToContentLabel: _
+                          skipToContentLabel: N
                       }),
                       (0, n.jsx)(c.D, {
-                          className: l()(u.mobileHeader, o),
+                          className: l()(u.mobileHeader, i),
                           token: e,
-                          avoidRouter: m,
-                          TrackClick: h,
-                          NavigationMessages: d.Z.Messages.Navigation,
+                          avoidRouter: d,
+                          TrackClick: p,
                           onChangeLocale: a,
-                          openNavAriaLabel: N,
-                          hideNavAriaLabel: k
+                          openNavAriaLabel: h,
+                          hideNavAriaLabel: m
                       })
                   ]
               });
@@ -47,11 +41,40 @@ class m extends i.PureComponent {
     constructor(e) {
         super(e),
             null != e.locale && d.Z.setLocale(e.locale),
-            (h = (t) =>
-                (0, n.jsx)(o.Z, {
-                    track: e.track,
-                    trackOutboundLink: e.trackOutboundLink,
-                    ...t
-                }));
+            (p = (t) =>
+                (0, n.jsx)(
+                    i.Z,
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var a = null != arguments[t] ? arguments[t] : {},
+                                n = Object.keys(a);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (n = n.concat(
+                                    Object.getOwnPropertySymbols(a).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(a, e).enumerable;
+                                    })
+                                )),
+                                n.forEach(function (t) {
+                                    var n;
+                                    (n = a[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: n,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = n);
+                                });
+                        }
+                        return e;
+                    })(
+                        {
+                            track: e.track,
+                            trackOutboundLink: e.trackOutboundLink
+                        },
+                        t
+                    )
+                ));
     }
 }

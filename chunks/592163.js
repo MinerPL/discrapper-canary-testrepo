@@ -1,40 +1,83 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return d;
-        }
-    });
-var o = n(735250);
-n(470079);
-var a = n(98278),
-    r = n(790527),
-    s = n(474936),
-    c = n(981631),
-    i = n(689938),
-    u = n(289372),
-    _ = n(399103);
-function d(t) {
-    let { onClose: e, analyticsSource: n, onLearnMore: d, ...p } = t,
-        L = s.Si.TIER_2,
-        O = i.Z.Messages.VIDEO_BACKGROUND_UPSELL_BODY.format({
+r.d(t, { default: () => f });
+var n = r(200651);
+r(192379);
+var o = r(98278),
+    c = r(790527),
+    a = r(474936),
+    i = r(981631),
+    u = r(388032),
+    l = r(881782),
+    s = r(954696);
+function f(e) {
+    var { onClose: t, analyticsSource: r, onLearnMore: f } = e,
+        b = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        o = {},
+                        c = Object.keys(e);
+                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var c = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < c.length; n++) (r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+            }
+            return o;
+        })(e, ['onClose', 'analyticsSource', 'onLearnMore']);
+    let p = a.Si.TIER_2,
+        d = u.NW.format(u.t.hDMlqK, {
             onLearnMore: function () {
-                null == d || d(), e(), (0, a.z)();
+                null == f || f(), t(), (0, o.z)();
             }
         });
-    return (0, o.jsx)(r.Z, {
-        artURL: _,
-        artContainerClassName: u.videoBackgroundArt,
-        type: s.cd.VIDEO_BACKGROUNDS_MODAL,
-        title: i.Z.Messages.VIDEO_BACKGROUND_UPSELL_TITLE,
-        body: O,
-        glowUp: O,
-        analyticsSource: n,
-        analyticsLocation: {
-            page: c.ZY5.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS,
-            object: c.qAy.BUTTON_CTA
-        },
-        onClose: e,
-        subscriptionTier: L,
-        ...p
-    });
+    return (0, n.jsx)(
+        c.Z,
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })(
+            {
+                artURL: s.Z,
+                artContainerClassName: l.videoBackgroundArt,
+                type: a.cd.VIDEO_BACKGROUNDS_MODAL,
+                title: u.NW.string(u.t.fHqiDQ),
+                body: d,
+                glowUp: d,
+                analyticsSource: r,
+                analyticsLocation: {
+                    page: i.ZY5.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS,
+                    object: i.qAy.BUTTON_CTA
+                },
+                onClose: t,
+                subscriptionTier: p
+            },
+            b
+        )
+    );
 }

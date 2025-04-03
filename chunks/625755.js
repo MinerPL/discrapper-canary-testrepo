@@ -1,4 +1,5 @@
-var n = {
+n.d(t, { Z: () => r });
+var a = {
     lastWeek: '先週のeeeeのp',
     yesterday: '昨日のp',
     today: '今日のp',
@@ -6,6 +7,6 @@ var n = {
     nextWeek: '翌週のeeeeのp',
     other: 'P'
 };
-e.Z = function (t, e, a, r) {
-    return n[t];
+let r = function (e, t, n, r) {
+    return a[e];
 };

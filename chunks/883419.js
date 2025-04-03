@@ -1,142 +1,156 @@
-n.d(t, {
-    Z: function () {
-        return N;
-    }
-}),
-    n(47120),
-    n(789020);
-var r = n(735250),
-    a = n(470079),
-    i = n(512722),
-    l = n.n(i),
+n.d(t, { Z: () => O }), n(47120), n(789020);
+var r = n(200651),
+    i = n(192379),
+    l = n(512722),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
-    o = n(330726),
+    c = n(330726),
     u = n(716534),
-    c = n(171246),
-    d = n(598),
-    I = n(409813),
-    _ = n(45572),
-    f = n(51499),
-    h = n(678334),
-    E = n(456251),
-    S = n(614277),
-    m = n(698708),
-    p = n(43542),
-    T = n(689938),
-    C = n(600962);
-function N(e) {
-    var t;
-    let { backButtonEligible: n, prevStep: i, showGuildPicker: N, handleStepChange: A, trialFooterMessageOverride: O, reviewWarningMessage: P, planGroup: b, openInvoiceId: g, analyticsData: v, analyticsLocation: L, eligibleApplicationSubscriptionGuilds: x, handleClose: R } = e,
-        { activeSubscription: M, application: k, setUpdatedSubscription: B, contextMetadata: j, currencies: U, paymentSources: Z, priceOptions: y, purchaseError: D, purchaseTokenAuthState: w, selectedPlan: F, selectedSku: H, setCurrency: V, setPaymentSourceId: G, setPurchaseState: W, setPurchaseError: K, purchaseState: Y, subscriptionMetadataRequest: X, setSubscriptionMetadataRequest: z, setHasAcceptedTerms: J } = (0, d.usePaymentContext)();
-    l()(null != F, 'Expected plan to be selected'), l()(null != k, 'Expected application');
-    let q = a.useRef(null),
-        [Q, $] = (0, o.Z)(!1, 500),
-        [ee, et] = a.useState(null == X ? void 0 : X.guild_id),
-        en = (0, c.KW)(null !== (t = null == H ? void 0 : H.flags) && void 0 !== t ? t : 0);
-    a.useEffect(() => {
-        null != D && null != q.current && q.current.scrollIntoView({ behavior: 'smooth' });
-    }, [D]);
-    let er = a.useCallback(
+    d = n(664891),
+    m = n(171246),
+    f = n(430824),
+    p = n(563132),
+    b = n(409813),
+    h = n(45572),
+    g = n(51499),
+    x = n(678334),
+    N = n(456251),
+    v = n(614277),
+    j = n(698708),
+    y = n(388032),
+    C = n(856461);
+function O(e) {
+    var t, n;
+    let { backButtonEligible: l, prevStep: O, handleStepChange: S, trialFooterMessageOverride: P, reviewWarningMessage: k, planGroup: W, openInvoiceId: _, analyticsData: E, analyticsLocation: T, handleClose: w } = e,
+        { activeSubscription: Z, application: I, setUpdatedSubscription: A, contextMetadata: D, currencies: L, paymentSources: R, priceOptions: B, purchaseError: F, purchaseTokenAuthState: M, selectedPlan: H, selectedSku: z, setCurrency: K, setPaymentSourceId: G, setPurchaseState: Y, setPurchaseError: V, purchaseState: q, subscriptionMetadataRequest: Q, setHasAcceptedTerms: J } = (0, p.JL)();
+    a()(null != H, 'Expected plan to be selected');
+    let X = i.useRef(null),
+        [U, $] = (0, c.Z)(!1, 500),
+        ee = null == Q ? void 0 : Q.guild_id,
+        et = (0, o.e7)([f.Z], () => f.Z.getGuild(ee), [ee]),
+        [en, er] = i.useState(null),
+        ei = (0, m.KW)(null != (t = null == z ? void 0 : z.flags) ? t : 0);
+    i.useEffect(() => {
+        null != F && null != X.current && X.current.scrollIntoView({ behavior: 'smooth' });
+    }, [F]);
+    let el = i.useCallback(
             (e) => {
-                B(e), A(I.h8.CONFIRM);
+                A(e), S(b.h8.CONFIRM);
             },
-            [A, B]
+            [S, A]
         ),
-        ea = a.useCallback(
-            (e) => {
-                et(e),
-                    z({
-                        ...X,
-                        guild_id: e
-                    });
-            },
-            [et, z, X]
-        ),
-        ei = a.useRef(null);
-    return Y === _.A.PURCHASING
-        ? (0, r.jsx)(E.Z, {})
+        ea = i.useRef(null);
+    return q === h.A.PURCHASING
+        ? (0, r.jsx)(N.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(f.Z, { className: C.breadcrumbs }),
-                  (0, r.jsxs)(S.C3, {
+                  (0, r.jsx)(g.Z, { className: C.breadcrumbs }),
+                  (0, r.jsxs)(v.C3, {
                       children: [
-                          (0, r.jsx)(m.Z, {}),
-                          en &&
+                          (0, r.jsx)(j.Z, {}),
+                          ei &&
                               (0, r.jsxs)('div', {
                                   className: C.userSubscriptionDetailsContainer,
                                   children: [
                                       (0, r.jsx)(s.Text, {
                                           variant: 'eyebrow',
                                           color: 'header-secondary',
-                                          children: T.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_TITLE
+                                          children: y.NW.string(y.t.nf5LOT)
                                       }),
                                       (0, r.jsx)(s.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'interactive-normal',
-                                          children: T.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_SUBTITLE.format({ applicationName: k.name })
+                                          children: y.NW.format(y.t.y4n0GR, { applicationName: null == I ? void 0 : I.name })
                                       })
                                   ]
                               }),
-                          N &&
-                              !en &&
+                          !ei &&
                               (0, r.jsxs)('div', {
                                   className: C.guildPickerContainer,
                                   children: [
-                                      (0, r.jsx)(s.FormTitle, {
-                                          tag: s.FormTitleTags.H5,
-                                          children: T.Z.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_TITLE
+                                      (0, r.jsx)(s.vwX, {
+                                          tag: s.RB0.H5,
+                                          children: y.NW.string(y.t['5qyruL'])
                                       }),
-                                      (0, r.jsx)(s.FormText, {
-                                          type: s.FormText.Types.DESCRIPTION,
-                                          className: C.guildPickerDescription,
-                                          children: T.Z.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_SUBTITLE
-                                      }),
-                                      (0, r.jsx)(p.y, {
-                                          selectedGuildId: ee,
-                                          onGuildChange: ea,
-                                          eligibleApplicationSubscriptionGuilds: x
+                                      (0, r.jsxs)('div', {
+                                          className: C.guildNameContainer,
+                                          children: [
+                                              (0, r.jsx)(s.Text, {
+                                                  variant: 'text-md/normal',
+                                                  children: y.NW.string(y.t.dBih7e)
+                                              }),
+                                              (0, r.jsx)(s.Text, {
+                                                  variant: 'text-md/normal',
+                                                  lineClamp: 1,
+                                                  children: null != (n = null == et ? void 0 : et.name) ? n : y.NW.string(y.t.dtwqPT)
+                                              })
+                                          ]
                                       })
                                   ]
                               }),
-                          (0, r.jsx)(u.Z, {
-                              selectedPlanId: F.id,
-                              paymentSources: Z,
-                              onPaymentSourceChange: (e) => G(null != e ? e.id : null),
-                              priceOptions: y,
-                              currencies: U,
-                              onCurrencyChange: (e) => V(e),
-                              handlePaymentSourceAdd: () => A(I.h8.ADD_PAYMENT_STEPS),
-                              setHasAcceptedTerms: J,
-                              legalTermsNodeRef: ei,
-                              hasLegalTermsFlash: Q,
-                              trialFooterMessageOverride: O,
-                              reviewWarningMessage: P,
-                              metadata: N || en ? void 0 : X,
-                              purchaseState: Y,
-                              hideSubscriptionDetails: !0,
-                              handleClose: R
-                          })
+                          null == Z
+                              ? (0, r.jsx)(u.Z, {
+                                    selectedPlanId: H.id,
+                                    paymentSources: R,
+                                    onPaymentSourceChange: (e) => G(null != e ? e.id : null),
+                                    priceOptions: B,
+                                    currencies: L,
+                                    onCurrencyChange: (e) => K(e),
+                                    handlePaymentSourceAdd: () => S(b.h8.ADD_PAYMENT_STEPS),
+                                    setHasAcceptedTerms: J,
+                                    legalTermsNodeRef: ea,
+                                    hasLegalTermsFlash: U,
+                                    trialFooterMessageOverride: P,
+                                    reviewWarningMessage: k,
+                                    metadata: ei ? void 0 : Q,
+                                    purchaseState: q,
+                                    hideSubscriptionDetails: !0,
+                                    handleClose: w
+                                })
+                              : (0, r.jsx)(d.Z, {
+                                    premiumSubscription: Z,
+                                    paymentSources: R,
+                                    priceOptions: B,
+                                    onPaymentSourceChange: (e) => G(null != e ? e.id : null),
+                                    onPaymentSourceAdd: () => {
+                                        S(b.h8.ADD_PAYMENT_STEPS);
+                                    },
+                                    planId: H.id,
+                                    setHasAcceptedTerms: J,
+                                    legalTermsNodeRef: ea,
+                                    hasLegalTermsFlash: U,
+                                    onInvoiceError: (e) => {
+                                        er(e);
+                                    },
+                                    planGroup: W,
+                                    currencies: L,
+                                    onCurrencyChange: (e) => K(e),
+                                    hasOpenInvoice: null != _,
+                                    purchaseState: q,
+                                    handleClose: w
+                                })
                       ]
                   }),
-                  (0, r.jsx)(S.O3, {
-                      children: (0, r.jsx)(h.Z, {
-                          premiumSubscription: null != M ? M : null,
-                          setPurchaseState: W,
-                          onBack: () => null != i && A(i),
-                          onNext: er,
-                          onPurchaseError: (e) => K(e),
-                          legalTermsNodeRef: ei,
+                  (0, r.jsx)(v.O3, {
+                      children: (0, r.jsx)(x.Z, {
+                          premiumSubscription: null != Z ? Z : null,
+                          setPurchaseState: Y,
+                          onBack: () => null != O && S(O),
+                          onNext: el,
+                          onPurchaseError: (e) => V(e),
+                          legalTermsNodeRef: ea,
                           flashLegalTerms: () => $(!0),
-                          analyticsLocation: L,
-                          baseAnalyticsData: v,
-                          flowStartTime: j.startTime,
-                          planGroup: b,
-                          purchaseTokenAuthState: w,
-                          openInvoiceId: g,
-                          metadata: en ? void 0 : X,
-                          backButtonEligible: n,
-                          invoiceError: null,
-                          disablePurchase: (null == X ? void 0 : X.guild_id) == null && !en
+                          analyticsLocation: T,
+                          baseAnalyticsData: E,
+                          flowStartTime: D.startTime,
+                          planGroup: W,
+                          purchaseTokenAuthState: M,
+                          openInvoiceId: _,
+                          metadata: ei ? void 0 : Q,
+                          backButtonEligible: l,
+                          invoiceError: en,
+                          disablePurchase: (null == Q ? void 0 : Q.guild_id) == null && !ei
                       })
                   })
               ]

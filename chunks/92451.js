@@ -1,358 +1,104 @@
-a.r(l), a(47120);
-var n = a(735250),
-    t = a(470079),
-    s = a(120356),
-    r = a.n(s),
-    o = a(97613),
-    i = a.n(o),
-    u = a(225857),
-    d = a(290843),
-    c = a(442837),
-    E = a(780384),
-    f = a(481060),
-    _ = a(410575),
-    m = a(881052),
-    R = a(410030),
-    I = a(541716),
-    C = a(752305),
-    x = a(893718),
-    h = a(44315),
-    M = a(592125),
-    g = a(984933),
-    p = a(246364),
-    N = a(915509),
-    L = a(592286),
-    v = a(981631),
-    B = a(689938),
-    j = a(330771);
-let T = 'RULE';
-function A(e) {
-    let { rule: l, rulesChannel: a, index: s, onChange: o, onKeyDown: i, onClear: c, onRuleReorder: E, isDropHovered: _, focused: m, onFocus: R, previewEnabled: h } = e,
-        M = t.useRef(null),
-        g = t.useRef(null),
-        [{ textValue: p, richValue: N }, v] = t.useState((0, C.eK)(l.value)),
-        [, A, b] = (0, u.c)({
-            type: T,
-            item: {
-                rule: l,
-                index: s
-            },
-            end: (e, l) => {
-                null != e && !l.didDrop() && E(e.rule, null, !0);
-            }
-        }),
-        [, S] = (0, d.L)({
-            accept: T,
-            hover: (e, l) => {
-                var a;
-                let { index: n } = e,
-                    t = null === (a = M.current) || void 0 === a ? void 0 : a.getBoundingClientRect(),
-                    r = l.getClientOffset();
-                if (null == t || null == r) return;
-                let o = (t.bottom - t.top) / 2,
-                    i = r.y - t.top;
-                (!(n < s) || !(i < o)) && (!(n > s) || !(i > o)) && E(e.rule, s, !1);
-            },
-            drop: (e) => {
-                E(e.rule, s, !0);
-            }
-        });
-    t.useLayoutEffect(
-        () => (
-            A(g),
-            b(S(M)),
-            () => {
-                A(null), S(null);
-            }
-        ),
-        [A, S, b]
-    );
-    if (
-        (t.useEffect(() => {
-            '' !== l.value && '' === p && v((0, C.eK)(l.value));
-        }, [l.value, p]),
-        null == a)
-    )
-        return null;
-    let F = '' !== l.value ? l.value : l.id;
-    return (0, n.jsxs)('div', {
-        ref: M,
-        className: r()(j.draggableInputContainer, { [j.dragging]: _ }),
-        'data-dnd-name': F,
-        children: [
-            (0, n.jsxs)('div', {
-                className: j.inputWrapper,
-                children: [
-                    (0, n.jsx)(f.Clickable, {
-                        onMouseDown: () => R(s),
-                        children: (0, n.jsx)(x.Z, {
-                            innerClassName: j.rulesTextAreaInput,
-                            type: I.I.RULES_INPUT,
-                            textValue: p,
-                            richValue: N,
-                            channel: a,
-                            placeholder: B.Z.Messages.MEMBER_VERIFICATION_RULE_PLACEHOLDER,
-                            focused: m,
-                            onChange: (e, l, a) => {
-                                let n = l;
-                                n.length > L.fn && (n = n.slice(0, L.fn)),
-                                    l !== n && ((l = n), (a = (0, C.JM)(n))),
-                                    o(l),
-                                    v({
-                                        textValue: l,
-                                        richValue: a
-                                    });
-                            },
-                            onKeyDown: i,
-                            canMentionChannels: h,
-                            canMentionRoles: h,
-                            maxCharacterCount: L.fn,
-                            characterCountClassName: j.characterCount,
-                            onSubmit: () =>
-                                Promise.resolve({
-                                    shouldClear: !1,
-                                    shouldRefocus: !0
-                                })
-                        })
-                    }),
-                    (0, n.jsx)(f.Button, {
-                        className: j.clearButton,
-                        onClick: c,
-                        look: f.Button.Looks.BLANK,
-                        size: f.Button.Sizes.NONE,
-                        children: (0, n.jsx)(f.CircleXIcon, {
-                            size: 'md',
-                            color: 'currentColor',
-                            className: j.clearIcon
-                        })
-                    }),
-                    (0, n.jsx)(f.Text, {
-                        className: j.rulesInputNumber,
-                        variant: 'text-md/normal',
-                        color: 'text-muted',
-                        children: ''.concat(s + 1, '.')
-                    })
-                ]
-            }),
-            (0, n.jsx)('div', {
-                ref: g,
-                className: j.dragContainer,
-                'data-dnd-name': F,
-                children: (0, n.jsx)(f.DragIcon, {
-                    size: 'xs',
-                    color: 'currentColor',
-                    className: j.dragIcon
-                })
-            })
-        ]
-    });
-}
-function b(e) {
-    let { shortRule: l, fullRule: a, disabled: t, onClick: s } = e;
-    return t
-        ? (0, n.jsx)(f.Tooltip, {
-              text: B.Z.Messages.MEMBER_VERIFICATION_RULE_LIMIT.format({ number: L.X2 }),
-              children: (e) =>
-                  (0, n.jsx)('div', {
-                      ...e,
-                      className: r()(j.exampleRule, { [j.disabled]: t }),
-                      children: (0, n.jsx)(f.Text, {
-                          variant: 'text-sm/normal',
-                          color: 'header-secondary',
-                          children: l
-                      })
-                  })
-          })
-        : (0, n.jsx)(f.Clickable, {
-              className: r()(j.exampleRule, { [j.disabled]: t }),
-              onClick: () => s(a),
-              children: (0, n.jsx)(f.Text, {
-                  variant: 'text-sm/normal',
-                  color: 'header-secondary',
-                  children: l
-              })
-          });
-}
-l.default = function (e) {
-    let { field: l, onSave: a, onClose: s, guild: r } = e,
-        o = (0, R.ZP)(),
-        u = r.rulesChannelId,
-        d = r.hasFeature(v.oNc.PREVIEW_ENABLED),
-        I = (0, c.e7)([M.Z], () => (null != u ? M.Z.getChannel(u) : null)),
-        C = (0, c.e7)([g.ZP], () => g.ZP.getDefaultChannel(r.id)),
-        [x, T] = t.useState(
-            (null == l ? void 0 : l.values) != null
-                ? null == l
+n.d(t, { default: () => g }), n(47120), n(566702);
+var r = n(200651),
+    l = n(192379),
+    a = n(97613),
+    o = n.n(a),
+    i = n(410575),
+    c = n(881052),
+    s = n(246364),
+    u = n(296991),
+    d = n(915509),
+    p = n(981631),
+    b = n(388032);
+let g = function (e) {
+    var t, n;
+    let { field: a, onSave: g, onClose: f, guild: m } = e,
+        [x, j] = l.useState(
+            (null == a ? void 0 : a.values) != null
+                ? null == a
                     ? void 0
-                    : l.values.map((e) => ({
-                          id: i()(),
+                    : a.values.map((e) => ({
+                          id: o()(),
                           value: e
                       }))
                 : [
                       {
-                          id: i()(),
+                          id: o()(),
                           value: ''
                       }
                   ]
         ),
-        [S, F] = t.useState(null),
-        [U, O] = t.useState(null),
-        [Z, k] = t.useState(0),
-        y = (e) => {
-            if (x.length !== L.X2) {
-                if (null != e && '' === x[x.length - 1].value) {
-                    let l = [...x];
-                    (l[x.length - 1].value = e), T(l), k(l.length - 1);
-                } else
-                    T([
-                        ...x,
-                        {
-                            id: i()(),
-                            value: null != e ? e : ''
-                        }
-                    ]),
-                        k(x.length);
-            }
-        },
-        V = (e, l) => {
-            let a = [...x];
-            (a[l].value = e), T(a);
-        },
-        P = (e) => {
-            let l = [...x.slice(0, e), ...x.slice(e + 1)];
-            T(
-                0 === l.length
-                    ? [
-                          {
-                              id: i()(),
-                              value: ''
-                          }
-                      ]
-                    : l
-            );
-        },
-        D = t.useCallback(
-            (e, l, a) => {
-                if (null == x) return;
-                let n = x.indexOf(e);
-                if (null != l && l !== n) {
-                    let a = [...x];
-                    a.splice(n, 1), a.splice(l, 0, e), T(a);
-                }
-                a ? null !== U && O(null) : l !== U && O(l);
-            },
-            [U, x]
-        ),
-        w = async () => {
-            null != S && F(null);
+        [y, h] = l.useState(null),
+        O = async () => {
+            null != y && h(null);
             let e = x.map((e) => e.value.trim()).filter((e) => '' !== e);
-            if (0 === e.length) {
-                F(B.Z.Messages.MEMBER_VERIFICATION_RULES_REQUIRED_ERROR);
-                return;
-            }
-            let l = {
-                field_type: p.QJ.TERMS,
-                label: B.Z.Messages.MEMBER_VERIFICATION_FORM_RULES_LABEL,
+            if (0 === e.length) return void h(b.NW.string(b.t.TCHkcX));
+            let t = {
+                field_type: s.QJ.TERMS,
+                label: b.NW.string(b.t['9suSIC']),
                 values: e,
                 required: !0
             };
             try {
-                await a(l), s();
+                await g(t), f();
             } catch (e) {
-                F(new m.Hx(e).getAnyErrorMessage());
+                h(new c.Hx(e).getAnyErrorMessage());
             }
-        },
-        z = x.length === L.X2;
-    return (0, n.jsx)(_.Z, {
-        page: v.ZY5.GUILD_RULES_CREATE_MODAL,
-        children: (0, n.jsxs)(N.Z, {
-            ...e,
-            errorText: S,
-            title: B.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_RULES,
-            onCancel: s,
-            onConfirm: w,
-            children: [
-                x.map((e, l) =>
-                    (0, n.jsx)(
-                        A,
-                        {
-                            rulesChannel: null != I ? I : C,
-                            rule: e,
-                            index: l,
-                            onChange: (e) => V(e, l),
-                            onClear: () => P(l),
-                            onRuleReorder: D,
-                            isDropHovered: l === U,
-                            focused: l === Z,
-                            onFocus: k,
-                            previewEnabled: null == d || d
-                        },
-                        e.id
-                    )
-                ),
-                !z &&
-                    (0, n.jsxs)('div', {
-                        className: j.addItemContainer,
-                        children: [
-                            (0, n.jsx)(f.CirclePlusIcon, {
-                                size: 'custom',
-                                height: 17,
-                                width: 17,
-                                color: (0, h.Lq)((0, E.wj)(o) ? v.Ilk.BLUE_345 : v.Ilk.BLUE_430)
-                            }),
-                            (0, n.jsx)(f.Clickable, {
-                                className: j.addItemButton,
-                                onClick: () => y(),
-                                children: (0, n.jsx)(f.Text, {
-                                    color: 'text-link',
-                                    variant: 'text-md/normal',
-                                    children: B.Z.Messages.MEMBER_VERIFICATION_ADD_RULE
-                                })
+        };
+    return (0, r.jsx)(i.Z, {
+        page: p.ZY5.GUILD_RULES_CREATE_MODAL,
+        children: (0, r.jsx)(
+            d.Z,
+            ((t = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
-                        ]
-                    }),
-                (0, n.jsx)('div', { className: j.divider }),
-                (0, n.jsx)(f.FormTitle, { children: B.Z.Messages.MEMBER_VERIFICATION_EXAMPLE_RULES_SUBTITLE }),
-                (0, n.jsxs)('div', {
-                    className: j.termsExampleRulesContainer,
-                    children: [
-                        (0, n.jsxs)('div', {
-                            className: j.termsExampleRulePairContainer,
-                            children: [
-                                (0, n.jsx)(b, {
-                                    shortRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_BE_RESPECTFUL,
-                                    fullRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_BE_RESPECTFUL_FULL,
-                                    disabled: z,
-                                    onClick: y
-                                }),
-                                (0, n.jsx)(b, {
-                                    shortRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_NO_SPAM,
-                                    fullRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_NO_SPAM_FULL,
-                                    disabled: z,
-                                    onClick: y
-                                })
-                            ]
-                        }),
-                        (0, n.jsxs)('div', {
-                            className: j.termsExampleRulePairContainer,
-                            children: [
-                                (0, n.jsx)(b, {
-                                    shortRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_NO_NSFW,
-                                    fullRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_NO_NSFW_FULL,
-                                    disabled: z,
-                                    onClick: y
-                                }),
-                                (0, n.jsx)(b, {
-                                    shortRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_SAFE,
-                                    fullRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_SAFE_FULL,
-                                    disabled: z,
-                                    onClick: y
-                                })
-                            ]
-                        })
-                    ]
-                })
-            ]
-        })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, e)),
+            (n = n =
+                {
+                    errorText: y,
+                    title: b.NW.string(b.t['3pz9t7']),
+                    onCancel: f,
+                    onConfirm: O,
+                    children: (0, r.jsx)(u.k, {
+                        guild: m,
+                        rules: x,
+                        setRules: j
+                    })
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  }),
+            t)
+        )
     });
 };

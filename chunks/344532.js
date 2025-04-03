@@ -1,8 +1,8 @@
-n(724458);
+n.d(t, { Z: () => g });
 var r,
     i = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,23 +15,39 @@ function s(e, t, n) {
         e
     );
 }
-let o = {},
+let s = {},
     l = null,
-    u = null;
-function c(e, t) {
-    null == t ? e in o && delete o[e] : null != e && (o[e] = t);
+    c = null;
+function u(e, t) {
+    null == t ? e in s && delete s[e] : null != e && (s[e] = t);
 }
 function d(e) {
-    let { user: t } = e;
-    u = t.id;
+    let { required_actions: t, user_id: n } = e;
+    u((l = n), t);
 }
-class _ extends (r = i.ZP.PersistedStore) {
+function f(e) {
+    let { user: t } = e;
+    c = t.id;
+}
+function _(e) {
+    let { userId: t } = e;
+    u(t, null);
+}
+function p(e) {
+    let { isSwitchingAccount: t } = e;
+    t || null == c || u(c, null);
+}
+function h(e) {
+    let { userId: t } = e;
+    u(t, null);
+}
+class m extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (o = e);
+        null != e && (s = e);
     }
     requiredActions(e) {
         var t;
-        return null !== (t = o[e]) && void 0 !== t ? t : null;
+        return null != (t = s[e]) ? t : null;
     }
     requiredActionsIncludes(e, t) {
         let n = this.requiredActions(e);
@@ -41,28 +57,15 @@ class _ extends (r = i.ZP.PersistedStore) {
         return l === e;
     }
     getState() {
-        return o;
+        return s;
     }
 }
-s(_, 'displayName', 'LoginRequiredActionStore'),
-    s(_, 'persistKey', 'LoginRequiredActionStore'),
-    (t.Z = new _(a.Z, {
-        LOGIN_ATTEMPTED: function (e) {
-            let { required_actions: t, user_id: n } = e;
-            c((l = n), t);
-        },
-        CONNECTION_OPEN: d,
-        CURRENT_USER_UPDATE: d,
-        LOGOUT: function (e) {
-            let { isSwitchingAccount: t } = e;
-            !t && null != u && c(u, null);
-        },
-        PASSWORD_UPDATED: function (e) {
-            let { userId: t } = e;
-            c(t, null);
-        },
-        MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
-            let { userId: t } = e;
-            c(t, null);
-        }
-    }));
+a(m, 'displayName', 'LoginRequiredActionStore'), a(m, 'persistKey', 'LoginRequiredActionStore');
+let g = new m(o.Z, {
+    LOGIN_ATTEMPTED: d,
+    CONNECTION_OPEN: f,
+    CURRENT_USER_UPDATE: f,
+    LOGOUT: p,
+    PASSWORD_UPDATED: _,
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: h
+});

@@ -1,43 +1,38 @@
-n.d(t, {
-    O: function () {
-        return l;
-    }
-});
-var r = n(735250);
-n(470079);
+n.d(t, { O: () => c });
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(626135),
+    o = n(626135),
+    a = n(799352),
     s = n(110223),
-    o = n(981631);
-function l(e) {
-    let { channelId: t, blockedUserIds: l } = e;
-    (0, i.openModalLazy)(
+    l = n(981631);
+function c(e) {
+    let { channelId: t, blockedUserIds: c, ignoredUserIds: u } = e;
+    (0, i.ZDy)(
         async () => {
-            let { default: e } = await n.e('87337').then(n.bind(n, 164375));
+            let { default: e } = await Promise.all([n.e('25176'), n.e('2908')]).then(n.bind(n, 164375));
             return (n) => {
-                let { transitionState: i, onClose: a } = n;
+                let { transitionState: i, onClose: o } = n;
                 return (0, r.jsx)(e, {
                     channelId: t,
-                    blockedUserIds: l,
+                    blockedUserIds: c,
+                    ignoredUserIds: u,
                     transitionState: i,
-                    onClose: a
+                    onClose: o
                 });
             };
         },
         {
             onCloseCallback: () => {
-                a.default.track(o.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: s.q.DISMISS,
-                    channel_id: t,
-                    warning_medium: s.X.MODAL,
-                    blocked_user_ids: l
-                });
+                (0, a.O)(t),
+                    o.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                        action: s.q.DISMISS,
+                        channel_id: t,
+                        warning_medium: s.WR.MODAL,
+                        blocked_user_ids: c,
+                        ignored_user_ids: u
+                    });
             }
         }
-    ),
-        a.default.track(o.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
-            channel_id: t,
-            warning_medium: s.X.MODAL,
-            blocked_user_ids: l
-        });
+    );
 }

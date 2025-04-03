@@ -1,13 +1,9 @@
-n.d(t, {
-    W: function () {
-        return i;
-    }
-});
+n.d(t, { W: () => i });
 var r = n(726074);
 class i {
     enqueueTask(e) {
         let { queue: t, requestFlush: n } = this;
-        !t.length && (n(), (this.flushing = !0)), (t[t.length] = e);
+        t.length || (n(), (this.flushing = !0)), (t[t.length] = e);
     }
     constructor() {
         (this.queue = []),

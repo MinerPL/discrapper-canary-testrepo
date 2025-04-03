@@ -1,27 +1,22 @@
-n.d(e, {
-    Z: function () {
-        return o;
-    }
-}),
-    n(47120);
-var a = n(470079),
-    s = n(881052);
-function o(t) {
+n.d(e, { Z: () => s }), n(47120);
+var i = n(192379),
+    a = n(881052);
+function s(t) {
     let { onSubmit: e, onClose: n } = t,
-        [o, i] = a.useState(!1),
-        [r, c] = a.useState(null),
-        l = a.useCallback(async () => {
-            if (!o) {
-                i(!0), c(null);
+        [s, c] = i.useState(!1),
+        [r, o] = i.useState(null),
+        l = i.useCallback(async () => {
+            if (!s) {
+                c(!0), o(null);
                 try {
                     await e(), n();
                 } catch (t) {
-                    c(new s.Hx(t).getAnyErrorMessage()), i(!1);
+                    o(new a.Hx(t).getAnyErrorMessage()), c(!1);
                 }
             }
-        }, [n, e, o]);
+        }, [n, e, s]);
     return {
-        submitting: o,
+        submitting: s,
         errorMessage: r,
         onSubmit: l
     };

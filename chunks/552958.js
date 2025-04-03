@@ -1,21 +1,16 @@
-t.d(n, {
-    Z: function () {
-        return r;
-    }
-}),
-    t(47120);
-var i = t(470079),
-    a = t(974180),
-    l = t(557177);
-function r() {
+t.d(n, { Z: () => c }), t(47120);
+var i = t(192379),
+    a = t(460181),
+    o = t(974180);
+function c() {
     let [e, n] = i.useState(),
         t = i.useRef(-1);
     return {
         playSound: i.useCallback((e) => {
             n(e),
-                l.GN(
-                    a.Ay,
-                    a.yk,
+                a.GN(
+                    o.Ay,
+                    o.yk,
                     () => {
                         clearTimeout(t.current),
                             (t.current = setTimeout(() => {

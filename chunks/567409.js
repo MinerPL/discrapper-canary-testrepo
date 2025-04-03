@@ -1,35 +1,34 @@
-a.d(s, {
-    Z: function () {
-        return d;
-    }
-}),
-    a(47120);
-var n = a(470079),
-    l = a(392711),
-    r = a.n(l),
-    t = a(876215),
-    i = a(442837),
-    o = a(146282),
-    E = a(897674),
-    c = a(709054),
-    _ = a(206583);
-let I = new Set([t.s.PLAYED_GAME]),
-    u = (e) => I.has(e.content_type);
-function d() {
-    let e = (0, E.Z)(_.YN.GAME_PROFILE_FEED),
-        s = (0, E.Z)(_.YN.GLOBAL_FEED),
-        a = n.useMemo(
-            () =>
-                r()(s)
-                    .unionBy(e, (e) => e.id)
-                    .filter(u)
-                    .orderBy((e) => c.default.extractTimestamp(e.id), 'desc')
-                    .uniqWith((e, s) => e.author_id === s.author_id && e.extra.application_id === s.extra.application_id)
-                    .value(),
-            [e, s]
-        );
-    return {
-        requestId: (0, i.e7)([o.Z], () => o.Z.getFeedRequestId(_.YN.GAME_PROFILE_FEED)),
-        entries: a
-    };
+r.d(t, { Ns: () => g }), r(47120);
+var n = r(192379),
+    a = r(392711),
+    o = r.n(a),
+    i = r(876215),
+    l = r(442837),
+    s = r(146282),
+    c = r(26033),
+    u = r(897674),
+    d = r(709054),
+    p = r(206583);
+let f = new Set([i.s.PLAYED_GAME, i.s.LAUNCHED_ACTIVITY]),
+    m = (e) => f.has(e.content_type);
+function g(e) {
+    let { entries: t } = (function () {
+        let e = (0, u.Z)(p.YN.GAME_PROFILE_FEED),
+            t = (0, u.Z)(p.YN.GLOBAL_FEED),
+            r = n.useMemo(
+                () =>
+                    o()(t)
+                        .unionBy(e, (e) => e.id)
+                        .filter(m)
+                        .orderBy((e) => d.default.extractTimestamp(e.id), 'desc')
+                        .uniqWith((e, t) => e.author_id === t.author_id && e.extra.application_id === t.extra.application_id)
+                        .value(),
+                [e, t]
+            );
+        return {
+            requestId: (0, l.e7)([s.Z], () => s.Z.getFeedRequestId(p.YN.GAME_PROFILE_FEED)),
+            entries: r
+        };
+    })();
+    return n.useMemo(() => (null == t ? void 0 : t.filter((t) => ((0, c.dX)(t) || (0, c.Mq)(t)) && t.extra.application_id === e)), [t, e]);
 }

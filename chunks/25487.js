@@ -1,10 +1,6 @@
 n.d(t, {
-    s: function () {
-        return i;
-    },
-    z: function () {
-        return r;
-    }
+    s: () => i,
+    z: () => r
 });
 var r = {
         month: /^(1[0-2]|0?\d)/,

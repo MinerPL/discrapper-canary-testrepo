@@ -1,24 +1,23 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
-var i = n(399606),
-    a = n(317381),
-    s = n(917107),
-    l = n(592125),
-    r = n(226027),
-    o = n(918559);
-let c = 'no_text_activity',
-    u = {
-        [c]: [r.E.NEW_MESSAGES, r.E.OPT_IN_CHANNEL, r.E.SUMMARIES],
-        [o.Ez.DISCONNECTED]: [r.E.NEW_MESSAGES, r.E.OPT_IN_CHANNEL, r.E.SUMMARIES],
-        [o.Ez.LAUNCHING_WITH_ORIENTATION_CHANGE]: [r.E.NEW_MESSAGES, r.E.OPT_IN_CHANNEL, r.E.SUMMARIES],
-        [o.Ez.PANEL]: [],
-        [o.Ez.PIP]: [r.E.NEW_MESSAGES, r.E.OPT_IN_CHANNEL, r.E.SUMMARIES]
+n.d(t, { Z: () => p });
+var r = n(399606),
+    i = n(317381),
+    l = n(16609),
+    o = n(917107),
+    a = n(592125),
+    s = n(226027),
+    c = n(918559);
+let u = 'no_text_activity',
+    d = {
+        [u]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES],
+        [c.Ez.DISCONNECTED]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES],
+        [c.Ez.LAUNCHING_WITH_ORIENTATION_CHANGE]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES],
+        [c.Ez.PANEL]: [],
+        [c.Ez.PIP]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES],
+        [c.Ez.ACTIVITY_POPOUT_WINDOW]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES]
     };
-function d() {
-    let e = (0, i.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
-        t = (0, i.e7)([a.ZP], () => a.ZP.getActivityPanelMode());
-    return void 0 === e || (0, s.Z)(null == e ? void 0 : e.channelId, l.Z) ? u[c] : u[t];
+function p() {
+    let e = (0, r.e7)([i.ZP], () => i.ZP.getCurrentEmbeddedActivity()),
+        t = (0, r.e7)([i.ZP], () => i.ZP.getActivityPanelMode()),
+        n = (0, l.pY)(null == e ? void 0 : e.location);
+    return void 0 === e || (0, o.Z)(n, a.Z) ? d[u] : d[t];
 }

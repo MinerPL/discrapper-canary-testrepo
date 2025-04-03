@@ -1,90 +1,85 @@
-o.r(n),
-    o.d(n, {
-        default: function () {
-            return _;
-        },
-        openInteractionModal: function () {
-            return m;
-        }
+n.r(t),
+    n.d(t, {
+        default: () => d,
+        openInteractionModal: () => p
     });
-var t = o(735250);
-o(470079);
-var i = o(481060),
-    a = o(112831),
-    r = o(777036),
-    c = o(970184),
-    d = o(471073),
-    l = o(293979),
-    s = o(954654),
-    u = o(689938),
-    f = o(167990);
-function _(e) {
-    let { title: n, onClose: o, transitionState: _ } = e,
-        { components: m, applicationIconURL: p, applicationName: I, submissionState: h, error: b, validators: C, onSubmit: g } = (0, l.X9)(e, o);
-    return (0, t.jsx)('form', {
+var i = n(200651);
+n(192379);
+var o = n(481060),
+    r = n(118012),
+    a = n(970184),
+    l = n(471073),
+    c = n(293979),
+    s = n(954654),
+    _ = n(388032),
+    u = n(994186);
+function d(e) {
+    let { title: t, onClose: n, transitionState: d } = e,
+        { components: p, applicationIconURL: f, applicationName: I, submissionState: m, error: S, validators: C, onSubmit: T } = (0, c.X9)(e, n);
+    return (0, i.jsx)('form', {
         onSubmit: (e) => {
-            e.preventDefault(), g();
+            e.preventDefault(), T();
         },
-        children: (0, t.jsxs)(i.ModalRoot, {
-            transitionState: _,
+        children: (0, i.jsxs)(o.Y0X, {
+            transitionState: d,
             children: [
-                (0, t.jsxs)(i.ModalHeader, {
+                (0, i.jsxs)(o.xBx, {
                     separator: !1,
                     children: [
-                        (0, t.jsx)(i.Avatar, {
-                            src: p,
-                            size: i.AvatarSizes.SIZE_24,
+                        (0, i.jsx)(o.qEK, {
+                            src: f,
+                            size: o.EFr.SIZE_24,
                             'aria-label': I,
-                            className: f.applicationIcon
+                            className: u.applicationIcon
                         }),
-                        (0, t.jsx)(a.Z, {
-                            color: a.Z.Colors.HEADER_PRIMARY,
-                            size: a.Z.Sizes.SIZE_24,
-                            children: n
+                        (0, i.jsx)(r.Z, {
+                            color: r.Z.Colors.HEADER_PRIMARY,
+                            size: r.Z.Sizes.SIZE_24,
+                            children: t
                         }),
-                        (0, t.jsx)(i.ModalCloseButton, {
-                            onClick: o,
-                            className: f.closeButton
+                        (0, i.jsx)(o.olH, {
+                            onClick: n,
+                            className: u.closeButton
                         })
                     ]
                 }),
-                (0, t.jsxs)(i.ModalContent, {
+                (0, i.jsxs)(o.hzk, {
                     children: [
-                        null != b && '' !== b
-                            ? (0, t.jsx)(r.Z, {
-                                  messageType: r.Q.ERROR,
-                                  className: f.submissionWarning,
-                                  children: b
+                        null != S && '' !== S
+                            ? (0, i.jsx)(o.Wn, {
+                                  messageType: o.QYI.ERROR,
+                                  className: u.submissionWarning,
+                                  children: S
                               })
                             : null,
-                        (0, t.jsx)(r.Z, {
-                            messageType: r.Q.WARNING,
-                            className: f.submissionWarning,
-                            children: u.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({ applicationName: I })
+                        (0, i.jsx)(o.Wn, {
+                            messageType: o.QYI.WARNING,
+                            className: u.submissionWarning,
+                            children: _.NW.format(_.t['dSTy//'], { applicationName: I })
                         }),
-                        (0, t.jsx)(i.FormSection, {
-                            children: (0, t.jsx)(c.Il, {
+                        (0, i.jsx)(o.hjN, {
+                            children: (0, i.jsx)(a.Il, {
                                 modal: e,
                                 validators: C,
-                                children: (0, s.xX)(m)
+                                children: (0, s.xX)(p)
                             })
                         })
                     ]
                 }),
-                (0, t.jsxs)(i.ModalFooter, {
+                (0, i.jsxs)(o.mzw, {
                     children: [
-                        (0, t.jsx)(i.Button, {
+                        (0, i.jsx)(o.zxk, {
                             type: 'submit',
-                            color: i.Button.Colors.BRAND,
-                            size: i.Button.Sizes.MEDIUM,
-                            submitting: h === d.i.IN_FLIGHT,
-                            children: u.Z.Messages.SUBMIT
+                            color: o.zxk.Colors.BRAND,
+                            size: o.zxk.Sizes.MEDIUM,
+                            submitting: m === l.i.IN_FLIGHT,
+                            children: _.NW.string(_.t.geKm7u)
                         }),
-                        (0, t.jsx)(i.Button, {
-                            look: i.Button.Looks.LINK,
-                            color: i.Button.Colors.PRIMARY,
-                            onClick: o,
-                            children: u.Z.Messages.CANCEL
+                        (0, i.jsx)(o.zxk, {
+                            look: o.zxk.Looks.LINK,
+                            color: o.zxk.Colors.PRIMARY,
+                            onClick: n,
+                            children: _.NW.string(_.t['ETE/oK'])
                         })
                     ]
                 })
@@ -92,11 +87,35 @@ function _(e) {
         })
     });
 }
-function m(e) {
-    (0, i.openModal)((n) =>
-        (0, t.jsx)(_, {
-            ...n,
-            ...e
-        })
+function p(e) {
+    (0, o.h7j)((t) =>
+        (0, i.jsx)(
+            d,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        i = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (i = i.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: i,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = i);
+                        });
+                }
+                return e;
+            })({}, t, e)
+        )
     );
 }

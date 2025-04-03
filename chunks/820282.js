@@ -1,3 +1,2 @@
-var t,
-    n = function () {};
-e.exports = n;
+var t = function () {};
+e.exports = t;

@@ -1,81 +1,128 @@
-n.d(t, {
-    Z: function () {
-        return E;
-    }
-});
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(239091),
+n.d(t, { Z: () => g }), n(266796);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(239091),
     l = n(962293),
-    u = n(555573),
-    c = n(665692),
-    d = n(689938),
-    _ = n(286378);
-function E(e) {
+    c = n(555573),
+    u = n(665692),
+    d = n(388032),
+    f = n(168362);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function g(e) {
     var t;
-    let a,
-        E,
-        f,
-        { className: h, activeCommand: p, activeOption: m, optionStates: I, channelId: T } = e,
-        g = i.useCallback(
+    let o,
+        _,
+        h,
+        { className: g, activeCommand: E, activeOption: b, optionStates: y, channelId: v } = e,
+        O = i.useCallback(
             (e) => {
                 var t;
-                let i = null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id;
-                if (null == i) {
-                    e.preventDefault();
-                    return;
-                }
-                (0, o.jW)(e, async () => {
+                let i = null == E || null == (t = E.rootCommand) ? void 0 : t.id;
+                if (null == i) return void e.preventDefault();
+                (0, s.jW)(e, async () => {
                     let { default: e } = await n.e('5396').then(n.bind(n, 731646));
                     return (t) =>
-                        (0, r.jsx)(e, {
-                            ...t,
-                            id: i,
-                            label: d.Z.Messages.COPY_ID_COMMAND
-                        });
+                        (0, r.jsx)(
+                            e,
+                            m(p({}, t), {
+                                id: i,
+                                label: d.NW.string(d.t.oJ1Mu7)
+                            })
+                        );
                 });
             },
-            [null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id]
+            [null == E || null == (t = E.rootCommand) ? void 0 : t.id]
         ),
-        S = i.useCallback(() => {
-            u.Po({
-                channelId: T,
+        I = i.useCallback(() => {
+            c.Po({
+                channelId: v,
                 command: null,
                 section: null
             });
-        }, [T]);
-    if (null == p) return null;
-    if (null != m) {
-        let e = I[m.name].lastValidationResult;
-        (a = m.displayName), (E = m.displayDescription), (f = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
-    } else (a = ''.concat(c.GI).concat(p.displayName)), (E = p.displayDescription), (f = null);
+        }, [v]);
+    if (null == E) return null;
+    if (null != b) {
+        let e = y[b.name].lastValidationResult;
+        (o = b.displayName), (_ = b.displayDescription), (h = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
+    } else (o = ''.concat(u.GI).concat(E.displayName)), (_ = E.displayDescription), (h = null);
     return (0, r.jsxs)('div', {
-        className: s()(h, _.bar),
-        onContextMenu: g,
+        className: a()(g, f.bar),
+        onContextMenu: O,
         children: [
             (0, r.jsxs)('div', {
-                className: _.commandInfo,
+                className: f.commandInfo,
                 children: [
                     (0, r.jsx)('span', {
-                        className: _.name,
-                        children: a
+                        className: f.name,
+                        children: o
                     }),
-                    null != f
+                    null != h
                         ? (0, r.jsx)('span', {
-                              className: _.error,
-                              children: f
+                              className: f.error,
+                              children: h
                           })
                         : (0, r.jsx)('span', {
-                              className: _.description,
-                              children: E
+                              className: f.description,
+                              children: _
                           })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: _.actions,
-                children: (0, r.jsx)(l.B, { onClick: S })
+                className: f.actions,
+                children: (0, r.jsx)(l.B, { onClick: I })
             })
         ]
     });

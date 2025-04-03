@@ -1,95 +1,76 @@
-o.r(s), o(47120);
-var r = o(735250),
-    t = o(470079),
-    n = o(512722),
-    l = o.n(n),
-    a = o(481060),
-    c = o(985002),
-    d = o(880257),
-    i = o(198952),
-    u = o(329242),
-    C = o(689938),
-    _ = o(289686);
-s.default = (e) => {
-    let { currentUser: s, otherUser: o, transitionState: n, onClose: h } = e,
-        [E, L] = t.useState(!1),
-        x = t.useCallback(() => {
-            L(!0);
+t.d(r, { default: () => f }), t(47120);
+var n = t(200651),
+    o = t(192379),
+    s = t(512722),
+    c = t.n(s),
+    i = t(481060),
+    l = t(985002),
+    a = t(880257),
+    d = t(957656),
+    u = t(332495),
+    b = t(388032),
+    h = t(570580);
+let f = (e) => {
+    let { currentUser: r, otherUser: t, transitionState: s, onClose: f } = e,
+        [j, p] = o.useState(!1),
+        x = o.useCallback(() => {
+            p(!0);
         }, []),
-        N = t.useCallback(() => {
-            L(!1);
+        y = o.useCallback(() => {
+            p(!1);
         }, []),
-        b = t.useCallback(() => {
-            h();
-        }, [h]),
-        M = (0, d.Z)(),
-        { cancelLinkRequest: f, isCancelLoading: m } = (0, c.G)({
+        m = o.useCallback(() => {
+            f();
+        }, [f]),
+        O = (0, a.Z)(),
+        { cancelLinkRequest: g, isCancelLoading: v } = (0, l.G)({
             onError: x,
-            onSuccess: b
+            onSuccess: m
         });
     return (
-        l()(M, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'),
-        (0, r.jsx)(a.ModalRoot, {
-            transitionState: n,
-            children: (0, r.jsxs)('form', {
+        c()(O, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'),
+        (0, n.jsx)(d.Z, {
+            transitionState: s,
+            children: (0, n.jsxs)('form', {
                 onSubmit: (e) => {
-                    e.preventDefault(), f(o);
+                    e.preventDefault(), g(t);
                 },
                 children: [
-                    E
-                        ? (0, r.jsx)(a.FormErrorBlock, {
-                              className: _.error,
-                              onDismiss: N,
-                              children: C.Z.Messages.FAMILY_CENTER_CANCEL_LINK_MODAL_ERROR
-                          })
-                        : null,
-                    (0, r.jsx)(a.ModalContent, {
-                        children: (0, r.jsxs)('div', {
-                            className: _.header,
-                            children: [
-                                (0, r.jsx)(i.Z, {
-                                    currentUser: s,
-                                    otherUser: o,
-                                    children: (0, r.jsx)(a.XSmallIcon, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: _.closeIcon
-                                    })
-                                }),
-                                (0, r.jsx)(a.Heading, {
-                                    className: _.headerText,
-                                    variant: 'text-lg/bold',
-                                    children: C.Z.Messages.FAMILY_CENTER_CANCEL_LINK_MODAL_TITLE
-                                }),
-                                (0, r.jsx)(u.Z, {
-                                    user: o,
-                                    fill: !0
-                                })
-                            ]
+                    (0, n.jsx)(d.Z.Error, {
+                        error: j ? b.NW.string(u.Z['6gyAQU']) : void 0,
+                        onDismiss: y
+                    }),
+                    (0, n.jsx)(i.hzk, {
+                        children: (0, n.jsx)(d.Z.Header, {
+                            currentUser: r,
+                            otherUser: t,
+                            header: b.NW.string(u.Z.HynllZ),
+                            icon: (0, n.jsx)(i.Dio, {
+                                size: 'md',
+                                color: 'currentColor',
+                                className: h.closeIcon
+                            })
                         })
                     }),
-                    (0, r.jsx)(a.ModalFooter, {
-                        children: (0, r.jsxs)('div', {
-                            className: _.footer,
+                    (0, n.jsx)(i.mzw, {
+                        children: (0, n.jsxs)(d.Z.ButtonFooter, {
                             children: [
-                                (0, r.jsx)(a.Button, {
-                                    className: _.button,
+                                (0, n.jsx)(i.zxk, {
                                     type: 'button',
-                                    disabled: m,
-                                    look: a.Button.Looks.LINK,
-                                    color: a.Button.Colors.PRIMARY,
-                                    onClick: h,
-                                    size: a.Button.Sizes.SMALL,
-                                    children: C.Z.Messages.FAMILY_CENTER_CANCEL_REQUEST_BACK
+                                    disabled: v,
+                                    look: i.zxk.Looks.LINK,
+                                    color: i.zxk.Colors.PRIMARY,
+                                    onClick: f,
+                                    size: i.zxk.Sizes.SMALL,
+                                    children: b.NW.string(u.Z.czincX)
                                 }),
-                                (0, r.jsx)(a.Button, {
-                                    className: _.button,
+                                (0, n.jsx)(i.zxk, {
                                     type: 'submit',
-                                    disabled: m || E,
-                                    submitting: m,
-                                    color: a.ButtonColors.RED,
-                                    size: a.Button.Sizes.SMALL,
-                                    children: C.Z.Messages.FAMILY_CENTER_CANCEL_REQUEST
+                                    disabled: v || j,
+                                    submitting: v,
+                                    color: i.Ttl.RED,
+                                    size: i.zxk.Sizes.SMALL,
+                                    children: b.NW.string(u.Z.mK40bm)
                                 })
                             ]
                         })

@@ -1,68 +1,101 @@
-n(47120);
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(570140),
-    r = n(317770),
-    l = n(314897),
-    o = n(592125),
+n.d(t, { Z: () => g }), n(47120);
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(570140),
+    a = n(317770),
+    o = n(314897),
+    s = n(592125),
     c = n(797258),
-    d = n(590415),
-    u = n(981631);
-let _ = 'STAGE_INVITED_TO_SPEAK_MODAL';
-class E extends r.Z {
+    u = n(590415),
+    d = n(981631);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let h = 'STAGE_INVITED_TO_SPEAK_MODAL';
+class f extends a.Z {
     _initialize() {
-        s.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
+        l.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
     _terminate() {
-        s.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
+        l.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
     constructor(...e) {
-        var t, s, r;
         super(...e),
-            (t = this),
-            (s = 'handleVoiceStateUpdates'),
-            (r = (e) => {
+            p(this, 'handleVoiceStateUpdates', (e) => {
                 var t;
-                let { voiceStates: s } = e,
-                    r = l.default.getId(),
-                    E = null === (t = c.Z.getSession()) || void 0 === t ? void 0 : t.sessionId,
-                    h = s.find((e) => e.userId === r && e.sessionId === E);
-                if (null == h) return;
-                let m = h.channelId;
+                let { voiceStates: l } = e,
+                    a = o.default.getId(),
+                    f = null == (t = c.Z.getSession()) ? void 0 : t.sessionId,
+                    g = l.find((e) => e.userId === a && e.sessionId === f);
+                if (null == g) return;
+                let m = g.channelId;
                 if (null == m) {
-                    (0, a.hasModalOpen)(_) && (0, a.closeModal)(_);
+                    (0, i.nfh)(h) && (0, i.Mr3)(h);
                     return;
                 }
-                let I = o.Z.getChannel(m);
-                if (!(null == I ? void 0 : I.isGuildStageVoice())) return;
-                let g = (0, d.gf)(h) === d.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-                if (null != I && g) {
-                    if ((0, a.hasModalOpen)(_)) return;
-                    (0, a.openModalLazy)(
+                let b = s.Z.getChannel(m);
+                if (!(null == b ? void 0 : b.isGuildStageVoice())) return;
+                let _ = (0, u.gf)(g) === u.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+                if (null != b && _) {
+                    if ((0, i.nfh)(h)) return;
+                    (0, i.ZDy)(
                         async () => {
                             let { default: e } = await n.e('13878').then(n.bind(n, 113140));
-                            return (t) =>
-                                (0, i.jsx)(e, {
-                                    ...t,
-                                    channel: I
-                                });
+                            return (t) => {
+                                var n, i;
+                                return (0, r.jsx)(
+                                    e,
+                                    ((n = (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                r = Object.keys(n);
+                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                (r = r.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    })
+                                                )),
+                                                r.forEach(function (t) {
+                                                    p(e, t, n[t]);
+                                                });
+                                        }
+                                        return e;
+                                    })({}, t)),
+                                    (i = i = { channel: b }),
+                                    Object.getOwnPropertyDescriptors
+                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                        : (function (e, t) {
+                                              var n = Object.keys(e);
+                                              if (Object.getOwnPropertySymbols) {
+                                                  var r = Object.getOwnPropertySymbols(e);
+                                                  n.push.apply(n, r);
+                                              }
+                                              return n;
+                                          })(Object(i)).forEach(function (e) {
+                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                          }),
+                                    n)
+                                );
+                            };
                         },
                         {
-                            modalKey: _,
-                            onCloseRequest: u.VqG
+                            modalKey: h,
+                            onCloseRequest: d.VqG
                         }
                     );
                 }
-            }),
-            s in t
-                ? Object.defineProperty(t, s, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[s] = r);
+            });
     }
 }
-t.Z = new E();
+let g = new f();

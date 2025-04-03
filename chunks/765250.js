@@ -1,78 +1,77 @@
 n.d(t, {
-    A4: function () {
-        return d;
-    },
-    E9: function () {
-        return u;
-    },
-    Os: function () {
-        return o;
-    },
-    jx: function () {
-        return _;
-    },
-    nv: function () {
-        return s;
-    },
-    sz: function () {
-        return c;
-    },
-    te: function () {
-        return a;
-    },
-    xh: function () {
-        return l;
-    }
+    A4: () => _,
+    E9: () => d,
+    Os: () => c,
+    jx: () => p,
+    nv: () => l,
+    sz: () => f,
+    te: () => s,
+    xh: () => u,
+    zG: () => h
 });
 var r = n(570140),
-    i = n(145597);
-function a(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Gr;
+    i = n(444295),
+    o = n(355863),
+    a = n(145597);
+function s(e, t, n) {
+    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.OVERLAY_DEFAULT_RESOLUTION;
     r.Z.dispatch({
         type: 'LAYOUT_CREATE',
         layoutId: e,
         widgets: t,
-        defaultResolution: n
+        version: n,
+        defaultResolution: i
     });
 }
-function s(e, t, n) {
+function l(e) {
+    let { widgetId: t, anchor: n, size: i, opacity: o } = e;
     r.Z.dispatch({
         type: 'LAYOUT_UPDATE_WIDGET',
-        widgetId: e,
-        anchor: t,
-        size: n
+        widgetId: t,
+        anchor: n,
+        size: i,
+        opacity: o
     });
 }
-function o(e) {
+function c(e) {
     r.Z.dispatch({
         type: 'LAYOUT_SET_TOP_WIDGET',
         widgetId: e
     });
 }
-function l(e) {
+function u(e) {
     r.Z.dispatch({
         type: 'LAYOUT_SET_PINNED',
         widgetId: e
     });
+    let t = o.Z.getWidget(e);
+    null != t && (0, i.JS)(t.type, { pinned: !t.pinned });
 }
-function u(e) {
+function d(e) {
     r.Z.dispatch({
         type: 'LAYOUT_DELETE_WIDGET',
         widgetId: e
     });
 }
-function c(e) {
+function f(e) {
     r.Z.dispatch({
         type: 'LAYOUT_DELETE_ALL_WIDGETS',
         layoutId: e
     });
 }
-function d(e) {
-    _([e]);
-}
 function _(e) {
+    p([e]);
+}
+function p(e) {
     r.Z.dispatch({
         type: 'LAYOUT_CREATE_WIDGETS',
         widgetConfigs: e
+    });
+}
+function h(e, t) {
+    r.Z.dispatch({
+        type: 'LAYOUT_SET_WIDGET_META',
+        widgetId: e,
+        meta: t
     });
 }

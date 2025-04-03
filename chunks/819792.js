@@ -1,43 +1,44 @@
-var i = n(735250);
-n(470079);
-var a = n(338545),
-    s = n(442837),
-    r = n(481060),
-    l = n(536442),
-    o = n(984933),
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
+var i = n(642128),
+    l = n(442837),
+    a = n(481060),
+    o = n(536442),
+    s = n(984933),
     c = n(496675),
-    d = n(51382),
-    u = n(91326),
-    _ = n(503856),
-    E = n(981631);
-function h(e) {
+    u = n(51382),
+    d = n(91326),
+    p = n(503856),
+    h = n(981631);
+function f(e) {
     let { channel: t, guild: n } = e,
-        o = (0, s.e7)([l.qc], () => l.qc.hasHotspot(l.v6.HUB_STUDY_ROOM_NOTICE)),
-        c = (0, _.r)(t.guild_id),
-        E = (0, r.useSpring)({
-            maxHeight: c ? 0 : 300,
+        s = (0, l.e7)([o.qc], () => o.qc.hasHotspot(o.v6.HUB_STUDY_ROOM_NOTICE)),
+        c = (0, p.r)(t.guild_id),
+        h = (0, a.q_F)({
+            maxHeight: 300 * !c,
             overflow: 'hidden',
             delay: 400
         });
-    return (0, i.jsx)(a.animated.div, {
-        style: E,
-        children: o
-            ? (0, i.jsx)(d.Z, {
+    return (0, r.jsx)(i.animated.div, {
+        style: h,
+        children: s
+            ? (0, r.jsx)(u.Z, {
                   channel: t,
                   guild: n
               })
-            : (0, i.jsx)(u.Z, {
+            : (0, r.jsx)(d.Z, {
                   name: '\uD83D\uDCDA\u2615 '.concat(t.name),
                   channel: t
               })
     });
 }
-t.Z = function (e) {
+let g = function (e) {
     let { guild: t } = e,
-        n = (0, s.e7)([o.ZP], () => o.ZP.getChannels(t.id)[o.Zb][0]),
-        a = (0, s.e7)([c.Z], () => null != n && c.Z.can(E.Plq.CONNECT, n.channel));
-    return t.hasFeature(E.oNc.HUB) && null != n && a
-        ? (0, i.jsx)(h, {
+        n = (0, l.e7)([s.ZP], () => s.ZP.getChannels(t.id)[s.Zb][0]),
+        i = (0, l.e7)([c.Z], () => null != n && c.Z.can(h.Plq.CONNECT, n.channel));
+    return t.hasFeature(h.oNc.HUB) && null != n && i
+        ? (0, r.jsx)(f, {
               channel: n.channel,
               guild: t
           })

@@ -1,233 +1,221 @@
-n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(704215),
-    r = n(780384),
-    l = n(481060),
-    o = n(906732),
-    c = n(380009),
-    d = n(282051),
-    u = n(243778),
-    _ = n(26323),
-    E = n(433280),
-    h = n(34131),
-    m = n(434404),
-    I = n(567458),
-    g = n(782959),
-    p = n(276645),
-    T = n(970731),
-    S = n(626135),
-    f = n(267642),
-    C = n(981631),
-    N = n(921944),
-    A = n(30513),
-    v = n(474936),
-    Z = n(689938),
-    L = n(764842),
-    O = n(928874),
-    R = n(741160),
-    x = n(829972),
-    b = n(31932),
-    P = n(642301);
-function M(e) {
-    if (null != e) m.Z.open(e.id, C.pNK.OVERVIEW, { section: C.jXE.PREMIUM_GUILD_PROGRESS_BAR }, C.KsC.DISPLAY);
+n.d(t, { Z: () => D }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(704215),
+    a = n(780384),
+    o = n(481060),
+    s = n(906732),
+    c = n(243778),
+    u = n(26323),
+    d = n(433280),
+    p = n(34131),
+    h = n(434404),
+    f = n(978946),
+    g = n(567458),
+    m = n(782959),
+    b = n(276645),
+    _ = n(970731),
+    E = n(626135),
+    O = n(267642),
+    N = n(337721),
+    y = n(981631),
+    I = n(921944),
+    v = n(30513),
+    C = n(474936),
+    S = n(388032),
+    T = n(540835),
+    P = n(519254),
+    j = n(741160),
+    A = n(829972),
+    Z = n(31932),
+    x = n(642301);
+function L(e) {
+    null != e && h.Z.open(e.id, (0, f.r)(e.id), { section: y.jXE.PREMIUM_GUILD_PROGRESS_BAR }, y.KsC.DISPLAY);
 }
-function D(e, t) {
-    t && m.Z.open(e.id, C.pNK.DISCOVERY);
-}
-function y(e, t) {
-    if (null != t)
-        (0, f.f2)(t, C.Eu4.TIER_1)
-            ? m.Z.open(t.id, C.pNK.OVERVIEW, { section: C.jXE.PREMIUM_GUILD_INVITE_SPLASH }, C.KsC.INVITE)
-            : (0, _.Z)({
+function w(e, t) {
+    null != t &&
+        ((0, O.f2)(t, y.Eu4.TIER_1)
+            ? h.Z.open(t.id, (0, f.r)(t.id), { section: y.jXE.PREMIUM_GUILD_INVITE_SPLASH }, y.KsC.INVITE)
+            : (0, u.Z)({
                   analyticsLocations: e,
-                  analyticsSourceLocation: C.jXE.PREMIUM_GUILD_INVITE_SPLASH,
+                  analyticsSourceLocation: y.jXE.PREMIUM_GUILD_INVITE_SPLASH,
                   guild: t,
-                  perks: (0, A.o9)()
-              });
+                  perks: (0, v.o9)()
+              }));
 }
-function j(e) {
+function R(e) {
     let { renderPopout: t, renderGuildHeaderDropdownButton: n } = e;
-    return (0, i.jsx)(l.Popout, {
+    return (0, r.jsx)(o.yRy, {
         renderPopout: () =>
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 onClick: (e) => e.stopPropagation(),
                 children: t
             }),
         position: 'bottom',
         align: 'center',
-        animation: l.Popout.Animation.TRANSLATE,
+        animation: o.yRy.Animation.TRANSLATE,
         shouldShow: !0,
         children: () => n()
     });
 }
-t.Z = a.memo(function (e) {
-    let { contentTypes: t, theme: n, guild: a, renderGuildHeaderDropdownButton: l } = e,
-        { analyticsLocations: _ } = (0, o.ZP)(),
-        A = () => {
-            S.default.track(C.rMx.TOOLTIP_VIEWED, {
-                type: v.cd.PREMIUM_PROGRESS_BAR,
-                location: { page: C.ZY5.GUILD_CHANNEL }
+let D = i.memo(function (e) {
+    let { contentTypes: t, theme: n, guild: i, renderGuildHeaderDropdownButton: o } = e,
+        { analyticsLocations: u } = (0, s.ZP)(),
+        f = () => {
+            E.default.track(y.rMx.TOOLTIP_VIEWED, {
+                type: C.cd.PREMIUM_PROGRESS_BAR,
+                location: { page: y.ZY5.GUILD_CHANNEL }
             });
         },
-        U = () => {
-            S.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: v.cd.INVITE_SPLASH_UPSELL,
-                location: { page: C.ZY5.GUILD_CHANNEL },
-                location_stack: _
+        v = () => {
+            E.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: C.cd.INVITE_SPLASH_UPSELL,
+                location: { page: y.ZY5.GUILD_CHANNEL },
+                location_stack: u
             });
         },
-        G = (0, r.wj)(n) ? x : b,
-        [k, w] = (0, u.US)(t, N.R.GUILD_HEADER_TOOLTIPS);
-    return (0, i.jsx)(i.Fragment, {
+        D = (0, a.wj)(n) ? A : Z,
+        [k, M] = (0, c.US)(t, I.R.GUILD_HEADER_TOOLTIPS);
+    return (0, r.jsx)(r.Fragment, {
         children: (() => {
             switch (k) {
-                case s.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK:
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(p.Z, {
-                            guildId: a.id,
-                            markAsDismissed: w
+                case l.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK:
+                    return (0, r.jsx)(R, {
+                        renderPopout: (0, r.jsx)(b.Z, {
+                            guildId: i.id,
+                            markAsDismissed: M
                         }),
-                        renderGuildHeaderDropdownButton: l
+                        renderGuildHeaderDropdownButton: o
                     });
-                case s.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(T.ZP, {
-                            onComponentMount: A,
-                            header: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
-                            asset: (0, i.jsx)('img', {
+                case l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
+                    return (0, r.jsx)(R, {
+                        renderPopout: (0, r.jsx)(_.ZP, {
+                            onComponentMount: f,
+                            header: S.NW.string(S.t.nxtaFx),
+                            asset: (0, r.jsx)('img', {
                                 alt: '',
-                                src: G,
-                                className: O.fullWidthImage
+                                src: D,
+                                className: P.fullWidthImage
                             }),
-                            content: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
-                            buttonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
-                            secondaryButtonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
-                            onSecondaryClick: () => M(),
-                            onClick: () => M(a),
-                            markAsDismissed: w
+                            content: S.NW.format(S.t.ujItEh, {}),
+                            buttonCTA: S.NW.string(S.t.UzVPra),
+                            secondaryButtonCTA: S.NW.string(S.t['KkK/aG']),
+                            onSecondaryClick: () => L(),
+                            onClick: () => L(i),
+                            markAsDismissed: M
                         }),
-                        renderGuildHeaderDropdownButton: l
+                        renderGuildHeaderDropdownButton: o
                     });
-                case s.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(T.ZP, {
-                            onComponentMount: A,
-                            header: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
-                            asset: (0, i.jsx)('img', {
+                case l.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
+                    return (0, r.jsx)(R, {
+                        renderPopout: (0, r.jsx)(_.ZP, {
+                            onComponentMount: f,
+                            header: S.NW.string(S.t.KAsfPT),
+                            asset: (0, r.jsx)('img', {
                                 alt: '',
-                                src: G,
-                                className: O.fullWidthImage
+                                src: D,
+                                className: P.fullWidthImage
                             }),
-                            content: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
-                            buttonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
-                            secondaryButtonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
-                            onSecondaryClick: () => M(),
-                            onClick: () => M(a),
-                            markAsDismissed: w
+                            content: S.NW.format(S.t.zK1hpq, {}),
+                            buttonCTA: S.NW.string(S.t.UzVPra),
+                            secondaryButtonCTA: S.NW.string(S.t['KkK/aG']),
+                            onSecondaryClick: () => L(),
+                            onClick: () => L(i),
+                            markAsDismissed: M
                         }),
-                        renderGuildHeaderDropdownButton: l
+                        renderGuildHeaderDropdownButton: o
                     });
-                case s.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(E.Z, {
-                            guildId: a.id,
-                            markAsDismissed: w
+                case l.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
+                    return (0, r.jsx)(R, {
+                        renderPopout: (0, r.jsx)(d.Z, {
+                            guildId: i.id,
+                            markAsDismissed: M
                         }),
-                        renderGuildHeaderDropdownButton: l
+                        renderGuildHeaderDropdownButton: o
                     });
-                case s.z.GUILD_HEADER_SERVER_DISCOVERY_TOOLTIP:
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(d.Z, {
-                            onClick: () => D(a, !0),
-                            onSecondaryClick: () => D(a),
-                            markAsDismissed: w
+                case l.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
+                    return (0, r.jsx)(R, {
+                        renderPopout: (0, r.jsx)(N.Z, {
+                            guild: i,
+                            markAsDismissed: M
                         }),
-                        renderGuildHeaderDropdownButton: l
+                        renderGuildHeaderDropdownButton: o
                     });
-                case s.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(c.Z, {
-                            guild: a,
-                            markAsDismissed: w
-                        }),
-                        renderGuildHeaderDropdownButton: l
-                    });
-                case s.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, f.f2)(a, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({ boostCount: (0, f.KK)(a, C.Eu4.TIER_1) }),
-                        t = (0, f.f2)(a, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : Z.Z.Messages.LEARN_MORE;
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(T.ZP, {
-                            onComponentMount: U,
-                            header: Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
-                            asset: (0, i.jsx)('img', {
+                case l.z.GUILD_HEADER_INVITE_SPLASH:
+                    let e = (0, O.f2)(i, y.Eu4.TIER_1) ? S.NW.format(S.t.DDzEVl, {}) : S.NW.formatToPlainString(S.t.pMftkJ, { boostCount: (0, O.KK)(i, y.Eu4.TIER_1) }),
+                        t = (0, O.f2)(i, y.Eu4.TIER_1) ? S.NW.string(S.t.rOFcBg) : S.NW.string(S.t.hvVgAQ);
+                    return (0, r.jsx)(R, {
+                        renderPopout: (0, r.jsx)(_.ZP, {
+                            onComponentMount: v,
+                            header: S.NW.string(S.t['36wK8/']),
+                            asset: (0, r.jsx)('img', {
                                 alt: '',
-                                src: R,
-                                className: O.fullWidthImage
+                                src: j,
+                                className: P.fullWidthImage
                             }),
                             content: e,
                             buttonCTA: t,
-                            secondaryButtonCTA: Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
-                            onSecondaryClick: () => y(_),
-                            onClick: () => y(_, a),
-                            markAsDismissed: w
+                            secondaryButtonCTA: S.NW.string(S.t.hBIHLS),
+                            onSecondaryClick: () => w(u),
+                            onClick: () => w(u, i),
+                            markAsDismissed: M
                         }),
-                        renderGuildHeaderDropdownButton: l
+                        renderGuildHeaderDropdownButton: o
                     });
-                case s.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(I.Z, { markAsDismissed: w }),
-                        renderGuildHeaderDropdownButton: l
+                case l.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
+                    return (0, r.jsx)(R, {
+                        renderPopout: (0, r.jsx)(g.Z, { markAsDismissed: M }),
+                        renderGuildHeaderDropdownButton: o
                     });
-                case s.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(T.ZP, {
-                            className: L.tooltipOverrideColor,
-                            header: Z.Z.Messages.ACTIVE_THREADS_UPSELL_HEADER,
-                            content: Z.Z.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
-                            buttonCTA: Z.Z.Messages.GOT_IT,
-                            onClick: () => w(N.L.UNKNOWN),
-                            markAsDismissed: w
+                case l.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
+                    return (0, r.jsx)(R, {
+                        renderPopout: (0, r.jsx)(_.ZP, {
+                            className: T.tooltipOverrideColor,
+                            header: S.NW.string(S.t.hLUL3t),
+                            content: S.NW.string(S.t.ahWaPT),
+                            buttonCTA: S.NW.string(S.t['NX+WJC']),
+                            onClick: () => M(I.L.UNKNOWN),
+                            markAsDismissed: M
                         }),
-                        renderGuildHeaderDropdownButton: l
+                        renderGuildHeaderDropdownButton: o
                     });
-                case s.z.GUILD_HEADER_SOUNDBOARD_PERMISSION:
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(T.ZP, {
-                            header: Z.Z.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
-                            content: Z.Z.Messages.SOUNDBOARD_TOOLTIP_BODY,
-                            buttonCTA: Z.Z.Messages.CHECK_IT_OUT,
-                            secondaryButtonCTA: Z.Z.Messages.NO_THANKS,
-                            asset: (0, i.jsx)('img', {
+                case l.z.GUILD_HEADER_SOUNDBOARD_PERMISSION:
+                    return (0, r.jsx)(R, {
+                        renderPopout: (0, r.jsx)(_.ZP, {
+                            header: S.NW.string(S.t.PZNQKC),
+                            content: S.NW.string(S.t.jQIyyM),
+                            buttonCTA: S.NW.string(S.t.RzWDqa),
+                            secondaryButtonCTA: S.NW.string(S.t.f3Pet7),
+                            asset: (0, r.jsx)('img', {
                                 alt: '',
-                                src: P,
-                                className: O.fullWidthImage
+                                src: x,
+                                className: P.fullWidthImage
                             }),
                             onClick: () => {
-                                m.Z.open(a.id, C.pNK.ROLES), m.Z.selectRole(a.getEveryoneRoleId(), Z.Z.Messages.USE_SOUNDBOARD);
+                                h.Z.open(i.id, y.pNK.ROLES), h.Z.selectRole(i.getEveryoneRoleId(), S.NW.string(S.t.Bco7ND));
                             },
-                            markAsDismissed: w
+                            markAsDismissed: M
                         }),
-                        renderGuildHeaderDropdownButton: l
+                        renderGuildHeaderDropdownButton: o
                     });
-                case s.z.MEDIA_CHANNEL_UPSELL:
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(g.Z, {
-                            guildId: a.id,
-                            markAsDismissed: w
+                case l.z.MEDIA_CHANNEL_UPSELL:
+                    return (0, r.jsx)(R, {
+                        renderPopout: (0, r.jsx)(m.Z, {
+                            guildId: i.id,
+                            markAsDismissed: M
                         }),
-                        renderGuildHeaderDropdownButton: l
+                        renderGuildHeaderDropdownButton: o
                     });
-                case s.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
-                    return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(h.Z, {
-                            guildId: a.id,
-                            markAsDismissed: w
+                case l.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
+                    return (0, r.jsx)(R, {
+                        renderPopout: (0, r.jsx)(p.Z, {
+                            guildId: i.id,
+                            markAsDismissed: M
                         }),
-                        renderGuildHeaderDropdownButton: l
+                        renderGuildHeaderDropdownButton: o
                     });
                 default:
-                    return l();
+                    return o();
             }
         })()
     });

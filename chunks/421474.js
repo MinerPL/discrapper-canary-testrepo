@@ -11,11 +11,8 @@ function i(e) {
     };
 }
 n.d(t, {
-    Q: function () {
-        return i;
-    },
-    l: function () {
-        return r;
-    }
+    Q: () => i,
+    l: () => r
 }),
+    n(301563),
     n(47120);

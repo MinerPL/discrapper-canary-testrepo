@@ -1,78 +1,119 @@
-a.r(s),
-    a.d(s, {
-        default: function () {
-            return c;
-        }
-    });
-var n = a(735250);
-a(470079);
-var I = a(442837),
-    t = a(481060),
-    i = a(239091),
-    r = a(100527),
-    o = a(970606),
-    E = a(299206),
-    l = a(693546),
-    M = a(246364),
-    u = a(937111),
-    d = a(703656),
-    _ = a(914010),
-    C = a(981631),
-    A = a(689938);
-function c(e) {
-    let { guild: s, onSelect: a } = e,
-        c = s.id,
-        N = (0, E.Z)({
-            id: s.id,
-            label: A.Z.Messages.COPY_ID_GUILD
+r.d(t, { default: () => j });
+var n = r(200651);
+r(192379);
+var i = r(442837),
+    o = r(481060),
+    c = r(239091),
+    a = r(100527),
+    l = r(970606),
+    s = r(299206),
+    u = r(693546),
+    p = r(246364),
+    d = r(937111),
+    b = r(703656),
+    f = r(914010),
+    g = r(981631),
+    O = r(388032);
+function j(e) {
+    let { guild: t, onSelect: r } = e,
+        j = t.id,
+        y = (0, s.Z)({
+            id: t.id,
+            label: O.NW.string(O.t['94lLDw'])
         }),
-        L = (0, I.e7)([u.Z], () => u.Z.getRequest(c)),
-        R = () => {
-            l.Z.removeGuildJoinRequest(c), _.Z.getGuildId() === c && (0, d.uL)(C.Z5c.ME);
+        h = (0, i.e7)([d.Z], () => d.Z.getRequest(j)),
+        w = () => {
+            u.Z.removeGuildJoinRequest(j), f.Z.getGuildId() === j && (0, b.uL)(g.Z5c.ME);
         };
-    return (0, n.jsxs)(t.Menu, {
+    return (0, n.jsxs)(o.v2r, {
         navId: 'join-request-guild-context',
-        onClose: i.Zy,
-        'aria-label': A.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
-        onSelect: a,
+        onClose: c.Zy,
+        'aria-label': O.NW.string(O.t.HpQykZ),
+        onSelect: r,
         children: [
-            (null == L ? void 0 : L.applicationStatus) === M.wB.REJECTED &&
-                (0, n.jsx)(t.MenuItem, {
+            (null == h ? void 0 : h.applicationStatus) === p.wB.REJECTED &&
+                (0, n.jsx)(o.sNh, {
                     id: 'reapply',
-                    label: A.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY,
+                    label: O.NW.string(O.t.rpFCLi),
                     action: () => {
-                        s.hasFeature(C.oNc.CLAN) &&
-                            (0, o.Vr)({
-                                guildId: c,
-                                source: r.Z.CLAN_REAPPLY
+                        t.hasFeature(g.oNc.CLAN) &&
+                            (0, l.Vr)({
+                                guildId: j,
+                                source: a.Z.CLAN_REAPPLY
                             }),
-                            l.Z.resetGuildJoinRequest(c).then(() => {
-                                (0, d.uL)(C.Z5c.GUILD_MEMBER_VERIFICATION(c));
+                            u.Z.resetGuildJoinRequest(j).then(() => {
+                                (0, b.uL)(g.Z5c.GUILD_MEMBER_VERIFICATION(j));
                             });
                     },
                     color: 'default'
                 }),
-            (0, n.jsx)(t.MenuItem, {
+            (0, n.jsx)(o.sNh, {
                 id: 'withdraw',
-                label: A.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
+                label: (null == h ? void 0 : h.applicationStatus) === p.wB.STARTED ? O.NW.string(O.t.OQFlFB) : O.NW.string(O.t.mqtdmZ),
                 action: () => {
-                    (0, t.openModal)((e) =>
-                        (0, n.jsx)(t.ConfirmModal, {
-                            header: A.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
-                            confirmText: A.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
-                            cancelText: A.Z.Messages.CANCEL,
-                            onConfirm: R,
-                            ...e,
-                            children: (0, n.jsx)(t.Text, {
-                                variant: 'text-md/normal',
-                                children: A.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: s.name })
-                            })
-                        })
-                    );
+                    (0, o.h7j)((e) => {
+                        var r, i;
+                        return (0, n.jsx)(
+                            o.ConfirmModal,
+                            ((r = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var r = null != arguments[t] ? arguments[t] : {},
+                                        n = Object.keys(r);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (n = n.concat(
+                                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                            })
+                                        )),
+                                        n.forEach(function (t) {
+                                            var n;
+                                            (n = r[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: n,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = n);
+                                        });
+                                }
+                                return e;
+                            })(
+                                {
+                                    header: O.NW.string(O.t.y0CVen),
+                                    confirmText: O.NW.string(O.t.p89ACg),
+                                    cancelText: O.NW.string(O.t.oEAioK),
+                                    onConfirm: w
+                                },
+                                e
+                            )),
+                            (i = i =
+                                {
+                                    children: (0, n.jsx)(o.Text, {
+                                        variant: 'text-md/normal',
+                                        children: (null == h ? void 0 : h.applicationStatus) === p.wB.STARTED ? O.NW.string(O.t.fJwWVl) : O.NW.format(O.t['9ZezpK'], { name: t.name })
+                                    })
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                                : (function (e, t) {
+                                      var r = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var n = Object.getOwnPropertySymbols(e);
+                                          r.push.apply(r, n);
+                                      }
+                                      return r;
+                                  })(Object(i)).forEach(function (e) {
+                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                                  }),
+                            r)
+                        );
+                    });
                 },
                 color: 'danger'
             }),
-            (0, n.jsx)(t.MenuGroup, { children: N })
+            (0, n.jsx)(o.kSQ, { children: y })
         ]
     });
 }

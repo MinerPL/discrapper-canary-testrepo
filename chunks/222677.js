@@ -1,56 +1,101 @@
 n.d(t, {
-    $E: function () {
-        return R;
-    },
-    T6: function () {
-        return v;
-    },
-    TW: function () {
-        return i;
-    },
-    U0: function () {
-        return A;
-    },
-    WO: function () {
-        return C;
-    },
-    rU: function () {
-        return N;
-    },
-    wX: function () {
-        return O;
-    }
+    $E: () => L,
+    T6: () => w,
+    TW: () => S,
+    U0: () => R,
+    WO: () => x,
+    rU: () => P,
+    wX: () => D
 });
-var r,
-    i,
-    a = n(544891),
-    s = n(780384),
+var r = n(544891),
+    i = n(780384),
     o = n(570140),
-    l = n(668781),
-    u = n(566006),
+    a = n(668781),
+    s = n(367907),
+    l = n(566006),
     c = n(346479),
-    d = n(314897),
-    _ = n(375954),
-    E = n(585483),
-    f = n(70956),
-    h = n(176354),
-    p = n(563114),
-    m = n(981631),
-    I = n(689938);
+    u = n(314897),
+    d = n(592125),
+    f = n(375954),
+    _ = n(626135),
+    p = n(585483),
+    h = n(70956),
+    m = n(176354),
+    g = n(563114),
+    E = n(981631),
+    b = n(388032);
+function y(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                y(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function O(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function I(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : O(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var S = (function (e) {
+    return (e.MESSAGE = 'Message'), (e.FORUM_TOOLBAR = 'Forum Toolbar'), (e.MOBILE_MEDIA_VIEWER = 'Mobile Media Viewer'), (e.MESSAGE_HOVER_BAR = 'Message Hover Bar'), (e.MESSAGE_INLINE_BUTTON = 'Message Inline Button'), (e.MESSAGE_CONTEXT_MENU = 'Message Context Menu'), (e.MESSAGE_REACTION_PICKER = 'Message Reaction Picker'), (e.MESSAGE_SHORTCUT = 'Message Shortcut'), e;
+})({});
 function T(e, t, n) {
-    let { status: r, body: i } = e;
-    if (429 === r) return setTimeout(t, e.body.retry_after * f.Z.Millis.SECOND), !1;
-    if (403 === r)
-        switch (i && i.code) {
-            case m.evJ.TOO_MANY_REACTIONS:
-                l.Z.show({
-                    title: I.Z.Messages.TOO_MANY_REACTIONS_ALERT_HEADER,
-                    body: I.Z.Messages.TOO_MANY_REACTIONS_ALERT_BODY,
-                    confirmText: I.Z.Messages.OKAY
+    let { headers: r, status: i, body: o } = e;
+    if (429 === i) {
+        let e = parseInt(r['retry-after']);
+        return isNaN(e) || setTimeout(t, e * h.Z.Millis.SECOND), !1;
+    }
+    if (403 === i)
+        switch (o && o.code) {
+            case E.evJ.TOO_MANY_REACTIONS:
+                a.Z.show({
+                    title: b.NW.string(b.t.lFddsb),
+                    body: b.NW.string(b.t.h27eIi),
+                    confirmText: b.NW.string(b.t.BddRzc)
                 });
                 break;
-            case m.evJ.REACTION_BLOCKED:
-                E.S.dispatch(m.CkL.SHAKE_APP, {
+            case E.evJ.REACTION_BLOCKED:
+                p.S.dispatch(E.CkL.SHAKE_APP, {
                     duration: 200,
                     intensity: 2
                 });
@@ -58,128 +103,137 @@ function T(e, t, n) {
     else if (!n.isRetry) return t(), !1;
     return !0;
 }
-function g(e, t, n, r, i) {
+function N(e, t, n, r, i) {
     var a, s;
     o.Z.dispatch({
         type: e,
         channelId: t,
         messageId: n,
-        userId: null !== (a = null == i ? void 0 : i.userId) && void 0 !== a ? a : d.default.getId(),
+        userId: null != (a = null == i ? void 0 : i.userId) ? a : u.default.getId(),
         emoji: r,
         optimistic: !0,
-        colors: null !== (s = null == i ? void 0 : i.colors) && void 0 !== s ? s : [],
-        reactionType: (null == i ? void 0 : i.burst) ? u.O.BURST : u.O.NORMAL
+        colors: null != (s = null == i ? void 0 : i.colors) ? s : [],
+        reactionType: (null == i ? void 0 : i.burst) ? l.O.BURST : l.O.NORMAL
     });
 }
-function S(e) {
-    let { channelId: t, messageId: n, emoji: r, userId: i, useTypeEndpoint: a = !1, type: s = u.O.NORMAL } = e,
-        o = null != r.id ? ''.concat(r.name, ':').concat(r.id) : r.name;
-    return null == i ? m.ANM.REACTIONS(t, n, o) : a ? m.ANM.REACTION_WITH_TYPE(t, n, o, i, s) : m.ANM.REACTION(t, n, o, i);
+function A(e) {
+    let { channelId: t, messageId: n, emoji: r, userId: i, useTypeEndpoint: o = !1, type: a = l.O.NORMAL } = e,
+        s = null != r.id ? ''.concat(r.name, ':').concat(r.id) : r.name;
+    return null == i ? E.ANM.REACTIONS(t, n, s) : o ? E.ANM.REACTION_WITH_TYPE(t, n, s, i, a) : E.ANM.REACTION(t, n, s, i);
 }
-((r = i || (i = {})).MESSAGE = 'Message'), (r.FORUM_TOOLBAR = 'Forum Toolbar'), (r.MOBILE_MEDIA_VIEWER = 'Mobile Media Viewer'), (r.MESSAGE_HOVER_BAR = 'Message Hover Bar'), (r.MESSAGE_INLINE_BUTTON = 'Message Inline Button'), (r.MESSAGE_CONTEXT_MENU = 'Message Context Menu'), (r.MESSAGE_REACTION_PICKER = 'Message Reaction Picker');
-async function A(e) {
-    let { channelId: t, messageId: n, emoji: r, limit: i, after: s, type: l } = e,
-        c =
-            l === u.O.VOTE
-                ? (function (e, t, n) {
-                      var r;
-                      let i = null !== (r = n.id) && void 0 !== r ? r : n.name;
-                      return m.ANM.POLL_ANSWER_VOTERS(e, t, i);
-                  })(t, n, r)
-                : S({
+function C(e, t, n) {
+    var r;
+    let i = null != (r = n.id) ? r : n.name;
+    return E.ANM.POLL_ANSWER_VOTERS(e, t, i);
+}
+async function R(e) {
+    let { channelId: t, messageId: n, emoji: i, limit: a, after: s, type: c } = e,
+        u =
+            c === l.O.VOTE
+                ? C(t, n, i)
+                : A({
                       channelId: t,
                       messageId: n,
-                      emoji: r
+                      emoji: i
                   }),
-        d = await a.tn.get({
-            url: c,
+        d = await r.tn.get({
+            url: u,
             query: {
-                limit: i,
+                limit: a,
                 after: s,
-                type: l
+                type: c
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
-        _ = l === u.O.VOTE ? d.body.users : d.body;
+        f = c === l.O.VOTE ? d.body.users : d.body;
     return (
         o.Z.dispatch({
             type: 'MESSAGE_REACTION_ADD_USERS',
             channelId: t,
             messageId: n,
-            users: _,
-            emoji: r,
-            reactionType: l
+            users: f,
+            emoji: i,
+            reactionType: c
         }),
-        _
+        f
     );
 }
-async function N(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'Message',
-        i = arguments.length > 4 ? arguments[4] : void 0,
-        o = null != i && !!i.burst,
-        d = null != i && !!i.isRetry;
-    if (
-        !d &&
-        (function (e, t, n, r) {
-            let i = _.Z.getMessage(e, t);
-            return null != i && i.userHasReactedWithEmoji(n, r);
-        })(e, t, n, o)
-    ) {
-        l.Z.show({
-            title: I.Z.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_TITLE,
-            body: I.Z.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_BODY,
-            confirmText: I.Z.Messages.GOT_IT
+async function P(e, t, n) {
+    let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'Message',
+        u = arguments.length > 4 ? arguments[4] : void 0,
+        f = null != u && !!u.burst,
+        p = null != u && !!u.isRetry;
+    if (!p && k(e, t, n, f))
+        return void a.Z.show({
+            title: b.NW.string(b.t['uaUU/v']),
+            body: b.NW.string(b.t.psMorq),
+            confirmText: b.NW.string(b.t['NX+WJC'])
         });
-        return;
-    }
-    let E = await y(n, o);
+    let h = await M(n, f);
     return (
-        g('MESSAGE_REACTION_ADD', e, t, n, {
-            burst: o,
-            colors: E
+        N('MESSAGE_REACTION_ADD', e, t, n, {
+            burst: f,
+            colors: h
         }),
         await c.Z.unarchiveThreadIfNecessary(e),
-        a.tn
+        r.tn
             .put({
-                url: S({
+                url: A({
                     channelId: e,
                     messageId: t,
                     emoji: n,
                     userId: '@me'
                 }),
                 query: {
-                    location: r,
-                    type: o ? u.O.BURST : u.O.NORMAL
+                    location: o,
+                    type: f ? l.O.BURST : l.O.NORMAL
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
-                o
-                    ? (s.uv.announce(I.Z.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format({ name: n.name })),
-                      p.Z.triggerFullscreenAnimation({
+                if ('Message Shortcut' === o) {
+                    var r;
+                    let i = d.Z.getChannel(e);
+                    _.default.track(
+                        E.rMx.MESSAGE_SHORTCUT_ACTION_SENT,
+                        v(
+                            {
+                                channel_id: e,
+                                guild_id: null == i ? void 0 : i.guild_id,
+                                original_message_id: t,
+                                emoji_id: null != (r = n.id) ? r : n.name,
+                                action: 'react'
+                            },
+                            (0, s.hH)(null == i ? void 0 : i.guild_id),
+                            (0, s.v_)(i)
+                        )
+                    );
+                }
+                f
+                    ? (i.uv.announce(b.NW.formatToPlainString(b.t['RJlG+f'], { name: n.name })),
+                      g.Z.triggerFullscreenAnimation({
                           channelId: e,
                           messageId: t,
-                          emoji: {
-                              ...n,
-                              animated: !1
-                          }
+                          emoji: I(v({}, n), { animated: !1 })
                       }))
-                    : s.uv.announce(I.Z.Messages.REACTION_ADD_SUCCESS_A11Y.format({ name: n.name }));
+                    : i.uv.announce(b.NW.formatToPlainString(b.t.ol4acH, { name: n.name }));
             })
-            .catch((i) => {
+            .catch((r) => {
                 T(
-                    i,
+                    r,
                     () =>
-                        N(e, t, n, r, {
-                            burst: o,
+                        P(e, t, n, o, {
+                            burst: f,
                             isRetry: !0
                         }),
-                    { isRetry: d }
-                ) && (g('MESSAGE_REACTION_REMOVE', e, t, n, { burst: o }), o ? s.uv.announce(I.Z.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({ name: n.name })) : s.uv.announce(I.Z.Messages.REACTION_ADD_ERROR_A11Y.format({ name: n.name })));
+                    { isRetry: p }
+                ) && (N('MESSAGE_REACTION_REMOVE', e, t, n, { burst: f }), f ? i.uv.announce(b.NW.formatToPlainString(b.t['fJeu8/'], { name: n.name })) : i.uv.announce(b.NW.formatToPlainString(b.t.UUn5V1, { name: n.name })));
             })
     );
 }
-function v(e) {
+function w(e) {
     let { channelId: t, messageId: n, emoji: r, key: i } = e;
     o.Z.dispatch({
         type: 'BURST_REACTION_EFFECT_PLAY',
@@ -189,93 +243,100 @@ function v(e) {
         key: i
     });
 }
-async function O(e, t, n) {
-    let r = null != n && !!n.isRetry;
+async function D(e, t, n) {
+    let i = null != n && !!n.isRetry;
     await c.Z.unarchiveThreadIfNecessary(e),
-        a.tn
+        r.tn
             .del({
-                url: m.ANM.REMOVE_REACTIONS(e, t),
-                oldFormErrors: !0
+                url: E.ANM.REMOVE_REACTIONS(e, t),
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .catch((n) => {
-                T(n, () => O(e, t, { isRetry: !0 }), { isRetry: r });
+                T(n, () => D(e, t, { isRetry: !0 }), { isRetry: i });
             });
 }
-async function R(e, t, n, r) {
-    let i = null != r && !!r.isRetry;
+async function L(e, t, n, i) {
+    let o = null != i && !!i.isRetry;
     await c.Z.unarchiveThreadIfNecessary(e);
-    let s = null === n.id ? n.name : ''.concat(n.name, ':').concat(n.id);
-    a.tn
+    let a = null === n.id ? n.name : ''.concat(n.name, ':').concat(n.id);
+    r.tn
         .del({
-            url: m.ANM.REMOVE_EMOJI_REACTIONS(e, t, s),
-            oldFormErrors: !0
+            url: E.ANM.REMOVE_EMOJI_REACTIONS(e, t, a),
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .catch((r) => {
-            T(r, () => R(e, t, n, { isRetry: !0 }), { isRetry: i });
+            T(r, () => L(e, t, n, { isRetry: !0 }), { isRetry: o });
         });
 }
-async function C(e) {
-    let { channelId: t, messageId: n, emoji: r, location: i = 'Message', userId: o, options: l } = e,
-        d = null != l && !!l.burst,
-        _ = null != l && !!l.isRetry;
-    g('MESSAGE_REACTION_REMOVE', t, n, r, {
-        userId: o,
+async function x(e) {
+    let { channelId: t, messageId: n, emoji: o, location: a = 'Message', userId: s, options: u } = e,
+        d = null != u && !!u.burst,
+        f = null != u && !!u.isRetry;
+    N('MESSAGE_REACTION_REMOVE', t, n, o, {
+        userId: s,
         burst: d
     }),
         await c.Z.unarchiveThreadIfNecessary(t),
-        a.tn
+        r.tn
             .del({
-                url: S({
+                url: A({
                     channelId: t,
                     messageId: n,
-                    emoji: r,
-                    userId: null != o ? o : '@me',
-                    type: d ? u.O.BURST : u.O.NORMAL,
+                    emoji: o,
+                    userId: null != s ? s : '@me',
+                    type: d ? l.O.BURST : l.O.NORMAL,
                     useTypeEndpoint: !0
                 }),
                 query: {
-                    location: i,
+                    location: a,
                     burst: d
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
-                (null == l ? void 0 : l.burst) ? s.uv.announce(I.Z.Messages.BURST_REACTION_REMOVE_SUCCESS_A11Y.format({ name: r.name })) : s.uv.announce(I.Z.Messages.REACTION_REMOVE_SUCCESS_A11Y.format({ name: r.name }));
+                (null == u ? void 0 : u.burst) ? i.uv.announce(b.NW.formatToPlainString(b.t['3l9f6u'], { name: o.name })) : i.uv.announce(b.NW.formatToPlainString(b.t['DQxi+/'], { name: o.name }));
             })
             .catch(async (e) => {
                 if (
                     T(
                         e,
                         () =>
-                            C({
+                            x({
                                 channelId: t,
                                 messageId: n,
-                                emoji: r,
-                                location: i,
-                                userId: o,
+                                emoji: o,
+                                location: a,
+                                userId: s,
                                 options: {
                                     burst: d,
                                     isRetry: !0
                                 }
                             }),
-                        { isRetry: _ }
+                        { isRetry: f }
                     )
                 ) {
-                    let e = await y(r, d);
-                    g('MESSAGE_REACTION_ADD', t, n, r, {
-                        userId: o,
+                    let e = await M(o, d);
+                    N('MESSAGE_REACTION_ADD', t, n, o, {
+                        userId: s,
                         burst: d,
                         colors: e
                     }),
-                        (null == l ? void 0 : l.burst) ? s.uv.announce(I.Z.Messages.BURST_REACTION_REMOVE_ERROR_A11Y.format({ name: r.name })) : s.uv.announce(I.Z.Messages.REACTION_REMOVE_ERROR_A11Y.format({ name: r.name }));
+                        (null == u ? void 0 : u.burst) ? i.uv.announce(b.NW.formatToPlainString(b.t.OamVbW, { name: o.name })) : i.uv.announce(b.NW.formatToPlainString(b.t['tD9+b2'], { name: o.name }));
                 }
             });
 }
-async function y(e, t) {
+async function M(e, t) {
     let n = [];
     if (t)
         try {
-            n = await (0, h.B6)(e);
-        } catch {}
+            n = await (0, m.B6)(e);
+        } catch (e) {}
     return n;
+}
+function k(e, t, n, r) {
+    let i = f.Z.getMessage(e, t);
+    return null != i && i.userHasReactedWithEmoji(n, r);
 }

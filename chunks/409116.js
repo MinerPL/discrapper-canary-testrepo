@@ -1,48 +1,41 @@
-n.d(t, {
-    F: function () {
-        return u;
-    }
-}),
-    n(757143);
-var s = n(735250);
-n(470079);
-var r = n(120356),
-    a = n.n(r),
-    i = n(481060),
-    o = n(937615),
-    c = n(884697),
-    l = n(222541);
-let d = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
-    u = (e) => {
+n.d(t, { F: () => d }), n(757143), n(301563);
+var r = n(200651);
+n(192379);
+var l = n(120356),
+    a = n.n(l),
+    o = n(481060),
+    i = n(937615),
+    s = n(884697),
+    c = n(864356);
+let u = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
+    d = (e) => {
         var t;
         let {
-                price: { amount: n, currency: r },
-                renderPrice: u,
-                icon: f,
+                price: { amount: n, currency: l },
+                renderPrice: d,
+                icon: b,
                 className: p,
-                discount: g = c.f_,
-                variant: C = 'heading-md/semibold'
+                discount: f = s.f_,
+                variant: g = 'heading-md/semibold'
             } = e,
-            _ = d((0, o.T4)(n, r)),
+            h = u((0, i.T4)(n, l)),
             m =
-                g !== c.f_ && g.discountPercentage >= 5
-                    ? (0, s.jsxs)(s.Fragment, {
+                f !== s.f_ && f.discountPercentage >= 5
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              _,
-                              (0, s.jsx)(i.Heading, {
-                                  variant: C,
+                              h,
+                              (0, r.jsx)(o.X6q, {
+                                  variant: g,
                                   color: 'text-positive',
-                                  className: l.discount,
-                                  children: ' (-'.concat(g.discountPercentage, '%)')
+                                  className: c.discount,
+                                  children: ' (-'.concat(f.discountPercentage, '%)')
                               })
                           ]
                       })
-                    : _;
-        return (0, s.jsx)(s.Fragment, {
-            children: (0, s.jsxs)(i.Heading, {
-                variant: C,
-                className: a()(l.container, p),
-                children: [f, null !== (t = null == u ? void 0 : u(m)) && void 0 !== t ? t : m]
-            })
+                    : h;
+        return (0, r.jsxs)(o.X6q, {
+            variant: g,
+            className: a()(c.container, p),
+            children: [b, null != (t = null == d ? void 0 : d(m)) ? t : m]
         });
     };

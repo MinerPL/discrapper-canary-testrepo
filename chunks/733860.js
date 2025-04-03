@@ -1,39 +1,38 @@
 var e = r(147018),
-    i = r(339718),
+    a = r(339718),
     u = r(49693),
-    o = r(610148),
-    a = r(708517),
-    c = r(886960),
-    s = 1 !== [].unshift(0);
+    i = r(610148),
+    o = r(708517),
+    f = r(886960);
 e(
     {
         target: 'Array',
         proto: !0,
         arity: 1,
         forced:
-            s ||
+            1 !== [].unshift(0) ||
             !(function () {
                 try {
                     Object.defineProperty([], 'length', { writable: !1 }).unshift();
-                } catch (n) {
-                    return n instanceof TypeError;
+                } catch (t) {
+                    return t instanceof TypeError;
                 }
             })()
     },
     {
-        unshift: function (n) {
-            var t = i(this),
-                r = u(t),
+        unshift: function (t) {
+            var n = a(this),
+                r = u(n),
                 e = arguments.length;
             if (e) {
-                c(r + e);
-                for (var s = r; s--; ) {
-                    var f = s + e;
-                    s in t ? (t[f] = t[s]) : a(t, f);
+                f(r + e);
+                for (var c = r; c--; ) {
+                    var s = c + e;
+                    c in n ? (n[s] = n[c]) : o(n, s);
                 }
-                for (var l = 0; l < e; l++) t[l] = arguments[l];
+                for (var l = 0; l < e; l++) n[l] = arguments[l];
             }
-            return o(t, r + e);
+            return i(n, r + e);
         }
     }
 );
