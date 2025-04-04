@@ -1,56 +1,62 @@
 n.d(t, {
-    AG: () => h,
-    PJ: () => _,
-    eW: () => f,
-    pf: () => p,
-    rs: () => m,
-    u2: () => d
+    $R: () => b,
+    AG: () => g,
+    PJ: () => h,
+    eW: () => p,
+    pf: () => m,
+    rs: () => E,
+    u2: () => _
 }),
     n(411104);
-var r = n(259443);
-let i = null,
-    o = new r.Yd('libdiscore');
-function a(e) {
-    o.error(e);
-}
-function s(e) {
-    o.warn(e);
-}
+var r = n(608787),
+    i = n(259443);
+let o = null,
+    a = null,
+    s = new i.Yd('libdiscore');
 function l(e) {
-    o.info(e);
+    s.error(e);
 }
 function c(e) {
-    o.verbose(e);
+    s.warn(e);
 }
 function u(e) {
-    o.trace(e);
+    s.info(e);
 }
-function d() {
-    return null !== i;
+function d(e) {
+    s.verbose(e);
 }
-function f() {
-    if (null !== i) throw Error('libdiscore already initialized');
-    return n
-        .e('63614')
-        .then(n.bind(n, 718493))
-        .then(async (e) => {
-            e.installLogCallback(a, s, l, c, u), await e.initLibdiscore(), (i = e);
-        })
-        .catch((e) => {
-            throw e;
-        });
+function f(e) {
+    s.trace(e);
 }
-function _(e) {
-    var t;
-    return null === i ? null : null != (t = i.BlockedDomainsStore.isBlockedDomain(e)) ? t : null;
+function _() {
+    return null !== o;
 }
 function p() {
-    null !== i && i.BlockedDomainsStore.startFetchingBlockedDomains();
+    if (null == a)
+        return (a = (async () => {
+            let e = await (0, r.wE)({
+                createPromise: () => n.e('18639').then(n.bind(n, 718493)),
+                webpackId: 718493
+            });
+            e.installLogCallback(l, c, u, d, f), await e.initLibdiscore(), (o = e);
+        })());
+    throw Error('initLibdiscore called multiple times');
 }
-function h() {
+function h(e) {
+    var t;
+    return null === o ? null : null != (t = o.BlockedDomainsStore.isBlockedDomain(e)) ? t : null;
+}
+function m(e) {
+    null !== o && o.BlockedDomainsStore.startFetchingBlockedDomains(e);
+}
+function g() {
     return 'libdiscore logs are part of the main app logs';
 }
-function m(e, t) {
-    if (null === i) throw Error('libdiscore not initialized');
-    return i.rustMultiply(e, t);
+function E(e, t) {
+    if (null === o) throw Error('libdiscore not initialized');
+    return o.rustMultiply(e, t);
+}
+function b() {
+    if (null === o) throw Error('libdiscore not initialized');
+    o.crash();
 }

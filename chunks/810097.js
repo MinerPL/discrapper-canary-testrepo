@@ -89,61 +89,64 @@ let N = 2700,
         [b.n_.ACTIVITY]: () => y.NW.string(y.t.ObfsSk)
     };
 function P(e) {
-    let { user: t, sourceType: n, isVisible: o, isExpandable: O, interactionSourceId: S, onAction: N, renderMoreButtonPopout: A } = e,
-        P = (0, c.e7)([p.default], () => p.default.getId() === t.id),
-        w = (0, h.Z)(t.id),
-        { profileType: D } = (0, E.z)(),
-        { onInteraction: L } = (0, g.Xo)(),
-        { live: x, stream: M } = (0, m.Z)(t.id),
-        k =
+    let { user: t, sourceType: n, isVisible: o, isExpandable: O, interactionSourceId: S, targetRef: N, onAction: A, renderMoreButtonPopout: P } = e,
+        w = i.useRef(null),
+        D = (0, c.e7)([p.default], () => p.default.getId() === t.id),
+        L = (0, h.Z)(t.id),
+        { profileType: x } = (0, E.z)(),
+        { onInteraction: M, onInteractionPopoutTargetRefChange: k } = (0, g.Xo)(),
+        { live: j, stream: U } = (0, m.Z)(t.id),
+        G =
             !o &&
-            D !== b.y0.FULL_SIZE &&
+            x !== b.y0.FULL_SIZE &&
             (0, l.EQ)(n)
-                .with(b.n_.STATUS, () => 0 === x.length && null == M)
+                .with(b.n_.STATUS, () => 0 === j.length && null == U)
                 .with(b.n_.ACTIVITY, () => !0)
                 .with(b.n_.AVATAR, () => !1)
                 .exhaustive(),
-        [j, U] = i.useState(k);
+        [B, F] = i.useState(G);
     if (
         (i.useEffect(() => {
-            j && !k && U(!1);
-        }, [j, k]),
-        t.bot || P || !w)
+            B && !G && F(!1);
+        }, [B, G]),
+        t.bot || D || !L)
     )
         return null;
-    let G = () => {
-            n === b.n_.AVATAR ? N({ action: 'PRESS_REACT_AVATAR' }) : n === b.n_.STATUS ? N({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : N({ action: 'PRESS_REACT_ACTIVITY' }),
-                null == L ||
-                    L({
+    let V = () => {
+            k(N),
+                n === b.n_.AVATAR ? A({ action: 'PRESS_REACT_AVATAR' }) : n === b.n_.STATUS ? A({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : A({ action: 'PRESS_REACT_ACTIVITY' }),
+                null == M ||
+                    M({
                         interactionType: b.P.REACT,
                         interactionSource: n,
                         interactionSourceId: S
                     }),
-                D === b.y0.BITE_SIZE && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                x === b.y0.BITE_SIZE && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
-        B = () => {
-            n === b.n_.AVATAR ? N({ action: 'PRESS_REPLY_AVATAR' }) : n === b.n_.STATUS ? N({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : N({ action: 'PRESS_REPLY_ACTIVITY' }),
-                null == L ||
-                    L({
+        Z = () => {
+            k(N),
+                n === b.n_.AVATAR ? A({ action: 'PRESS_REPLY_AVATAR' }) : n === b.n_.STATUS ? A({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : A({ action: 'PRESS_REPLY_ACTIVITY' }),
+                null == M ||
+                    M({
                         interactionType: b.P.REPLY,
                         interactionSource: n,
                         interactionSourceId: S
                     }),
-                D === b.y0.BITE_SIZE && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                x === b.y0.BITE_SIZE && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
-        F = (e) => {
-            e.animationName === (0, s.get)(v, 'fadeInAndOut') && U(!1);
+        H = (e) => {
+            e.animationName === (0, s.get)(v, 'fadeInAndOut') && F(!1);
         };
     return (0, r.jsxs)(f.ZP, {
         className: a()(v.popover, {
-            [v.fadeInAndOut]: j,
+            [v.fadeInAndOut]: B,
             [v.visible]: o,
             [v.expandable]: O,
             [v.statusPopover]: n === b.n_.STATUS,
             [v.avatarPopover]: n === b.n_.AVATAR,
             [v.activityPopover]: n === b.n_.ACTIVITY
         }),
-        onAnimationEnd: j ? F : void 0,
+        onAnimationEnd: B ? H : void 0,
         children: [
             (0, r.jsx)(d.DY3, {
                 text: y.NW.string(y.t.nhaI4e),
@@ -152,7 +155,7 @@ function P(e) {
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(f.zx, {
-                    onClick: G,
+                    onClick: V,
                     className: v.button,
                     'aria-label': C[n](),
                     'aria-haspopup': 'dialog',
@@ -169,7 +172,7 @@ function P(e) {
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(f.zx, {
-                    onClick: B,
+                    onClick: Z,
                     className: v.button,
                     'aria-label': R[n](),
                     'aria-haspopup': 'dialog',
@@ -179,10 +182,14 @@ function P(e) {
                     })
                 })
             }),
-            null == A
+            null == P
                 ? void 0
-                : A((e) =>
-                      (0, r.jsx)(d.DY3, {
+                : P((e) => {
+                      let t = () => {
+                          var t;
+                          k(w), null == (t = e.onClick) || t.call(e);
+                      };
+                      return (0, r.jsx)(d.DY3, {
                           text: y.NW.string(y.t.UKOtz8),
                           shouldShow: o,
                           className: v.tooltipContainer,
@@ -190,7 +197,8 @@ function P(e) {
                           'aria-label': !1,
                           children: (0, r.jsx)(
                               f.zx,
-                              T(I({}, e), {
+                              T(I({ ref: w }, e), {
+                                  onClick: t,
                                   className: v.button,
                                   'aria-label': y.NW.string(y.t.UKOtz8),
                                   children: (0, r.jsx)(d.xhG, {
@@ -199,8 +207,8 @@ function P(e) {
                                   })
                               })
                           )
-                      })
-                  )
+                      });
+                  })
         ]
     });
 }

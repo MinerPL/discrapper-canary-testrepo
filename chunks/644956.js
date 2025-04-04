@@ -134,6 +134,7 @@ function k(e) {
                               {
                                   selected: l,
                                   colorString: t.colorString,
+                                  colorStrings: t.colorStrings,
                                   colorRoleName: a.name,
                                   user: f,
                                   isOwner: t.userId === s,

@@ -1,45 +1,49 @@
-n.d(t, { H: () => J }), n(47120), n(998459);
+n.d(t, { H: () => en }), n(47120), n(998459);
 var l = n(200651),
     i = n(192379),
     s = n(120356),
     r = n.n(s),
     a = n(91192),
     o = n(442837),
-    d = n(481060),
-    u = n(447543),
-    c = n(247272),
-    h = n(700582),
-    g = n(630810),
-    m = n(724757),
-    x = n(100527),
-    v = n(906732),
-    p = n(447003),
-    N = n(933557),
-    I = n(600164),
-    f = n(266076),
-    j = n(227672),
-    S = n(448486),
-    E = n(427679),
-    T = n(592125),
-    C = n(984933),
-    b = n(341165),
-    _ = n(751771),
-    y = n(496675),
-    O = n(158776),
-    P = n(699516),
-    Z = n(944486),
-    A = n(971130),
-    w = n(51144),
-    k = n(264229),
-    R = n(277364),
-    M = n(666258),
-    W = n(895976),
-    L = n(245335),
-    D = n(981631),
-    U = n(176505),
-    V = n(388032),
-    B = n(910420);
-function z(e) {
+    d = n(902704),
+    u = n(481060),
+    c = n(447543),
+    h = n(247272),
+    g = n(700582),
+    m = n(630810),
+    x = n(724757),
+    v = n(100527),
+    p = n(906732),
+    N = n(447003),
+    I = n(933557),
+    f = n(600164),
+    j = n(266076),
+    S = n(227672),
+    E = n(810123),
+    T = n(448486),
+    b = n(427679),
+    C = n(592125),
+    _ = n(984933),
+    y = n(430824),
+    O = n(341165),
+    P = n(751771),
+    Z = n(496675),
+    A = n(158776),
+    w = n(699516),
+    k = n(944486),
+    R = n(971130),
+    M = n(51144),
+    W = n(264229),
+    L = n(277364),
+    D = n(666258),
+    U = n(530436),
+    V = n(895976),
+    B = n(245335),
+    F = n(981631),
+    G = n(176505),
+    z = n(388032),
+    H = n(910420);
+function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -64,34 +68,34 @@ function z(e) {
     }
     return e;
 }
-let { INVITE_OPTIONS_7_DAYS: F, INVITE_OPTIONS_UNLIMITED: G } = A.ZP,
-    H = {
-        max_age: F.value,
-        max_uses: G.value
+let { INVITE_OPTIONS_7_DAYS: Y, INVITE_OPTIONS_UNLIMITED: K } = R.ZP,
+    X = {
+        max_age: Y.value,
+        max_uses: K.value
     };
-function q(e) {
+function J(e) {
     let { icon: t, label: n, subLabel: i, onClick: s, isSelected: r, disabled: a } = e;
-    return (0, l.jsxs)(d.P3F, {
+    return (0, l.jsxs)(u.P3F, {
         'aria-disabled': a,
-        className: B.recipientRow,
+        className: H.recipientRow,
         onClick: s,
         children: [
             (0, l.jsx)('div', {
-                className: B.recipientAsset,
+                className: H.recipientAsset,
                 children: t
             }),
             (0, l.jsxs)('div', {
-                className: B.recipientLabels,
+                className: H.recipientLabels,
                 children: [
-                    (0, l.jsx)(d.Text, {
-                        className: B.recipientLabel,
+                    (0, l.jsx)(u.Text, {
+                        className: H.recipientLabel,
                         variant: 'text-md/medium',
                         lineClamp: 1,
                         children: n
                     }),
                     void 0 !== i
-                        ? (0, l.jsx)(d.Text, {
-                              className: B.recipientSublabel,
+                        ? (0, l.jsx)(u.Text, {
+                              className: H.recipientSublabel,
                               variant: 'text-xs/normal',
                               color: 'text-muted',
                               children: i
@@ -99,98 +103,132 @@ function q(e) {
                         : null
                 ]
             }),
-            (0, l.jsx)(d.XZJ, {
-                type: d.XZJ.Types.INVERTED,
+            (0, l.jsx)(u.XZJ, {
+                type: u.XZJ.Types.INVERTED,
                 displayOnly: !0,
                 size: 24,
                 value: r,
-                className: B.checkbox
+                className: H.checkbox
             })
         ]
     });
 }
-function Y(e) {
+function Q(e) {
     let { user: t, onToggle: n, isSelected: s, disabled: r } = e,
-        a = w.ZP.useName(t),
-        u = w.ZP.useUserTag(t, { decoration: 'never' }),
-        [c, g] = (0, o.Wu)([P.Z, O.Z], () => [P.Z.getNickname(t.id), O.Z.getStatus(t.id)], [t]),
+        a = M.ZP.useName(t),
+        d = M.ZP.useUserTag(t, { decoration: 'never' }),
+        [c, h] = (0, o.Wu)([w.Z, A.Z], () => [w.Z.getNickname(t.id), A.Z.getStatus(t.id)], [t]),
         m = i.useCallback(() => n(t.id), [n, t.id]);
-    return (0, l.jsx)(q, {
-        icon: (0, l.jsx)(h.Z, {
+    return (0, l.jsx)(J, {
+        icon: (0, l.jsx)(g.Z, {
             'aria-hidden': !0,
-            size: d.EFr.SIZE_32,
+            size: u.EFr.SIZE_32,
             user: t,
-            status: g
+            status: h
         }),
         label: null != c ? c : a,
-        subLabel: u,
+        subLabel: d,
         onClick: m,
         isSelected: s,
         disabled: r
     });
 }
-function K(e) {
+function $(e) {
     var t, n;
     let { channel: s, onToggle: r, isSelected: a, disabled: o } = e,
-        u = i.useCallback(() => r(s.id), [r, s.id]),
-        c = null != (t = (0, N.ZP)(s)) ? t : '',
-        h = null != (n = (0, S._)(s)) ? n : '';
-    return (0, l.jsx)(q, {
-        icon: (0, l.jsx)(f.Z, {
+        d = i.useCallback(() => r(s.id), [r, s.id]),
+        c = null != (t = (0, I.ZP)(s)) ? t : '',
+        h = null != (n = (0, T._)(s)) ? n : '';
+    return (0, l.jsx)(J, {
+        icon: (0, l.jsx)(j.Z, {
             'aria-hidden': !0,
-            size: d.EFr.SIZE_32,
+            size: u.EFr.SIZE_32,
             channel: s,
             experimentLocation: 'instant_invite_modal'
         }),
         label: c,
         subLabel: h,
-        onClick: u,
+        onClick: d,
         isSelected: a,
         disabled: o
     });
 }
-function X(e) {
+function ee(e) {
+    var t, n;
+    let { channel: s, onToggle: r, isSelected: a, disabled: d } = e,
+        u = (0, o.e7)([y.Z], () => y.Z.getGuild(null == s ? void 0 : s.guild_id)),
+        c = i.useCallback(() => r(s.id), [r, s.id]),
+        h = null != (t = (0, I.ZP)(s)) ? t : '',
+        g = null != (n = null == u ? void 0 : u.name) ? n : '';
+    return (0, l.jsx)(J, {
+        icon: (0, l.jsx)(E.Z, {
+            size: E.E.SMALL_32,
+            guild: u,
+            channel: s
+        }),
+        label: h,
+        subLabel: g,
+        onClick: c,
+        isSelected: a,
+        disabled: d
+    });
+}
+function et(e) {
     let { rows: t, onToggle: n, selection: s, scrollerRef: r, disabled: o } = e,
-        u = i.useMemo(() => [t.length], [t.length]),
-        c = (0, m.Z)('instant_invite_modal', r),
+        d = i.useMemo(() => [t.length], [t.length]),
+        c = (0, x.Z)('instant_invite_modal', r),
         h = i.useCallback(
             (e) => {
-                var i, r;
-                let a,
-                    { section: d, row: u } = e;
-                if (d > 0) return;
-                let c = t[u];
-                switch (c.type) {
-                    case A.bm.FRIEND:
-                    case A.bm.DM:
-                        let h = c.item;
+                var i, r, a;
+                let d,
+                    { section: u, row: c } = e;
+                if (u > 0) return;
+                let h = t[c];
+                switch (h.type) {
+                    case R.bm.FRIEND:
+                    case R.bm.DM:
+                        let g = h.item;
                         return (
-                            (a = null != (i = s.includes(h.id)) && i),
+                            (d = null != (i = s.includes(g.id)) && i),
                             (0, l.jsx)(
-                                Y,
+                                Q,
                                 {
-                                    user: h,
-                                    isSelected: a,
-                                    onToggle: n,
-                                    disabled: o
-                                },
-                                h.id
-                            )
-                        );
-                    case A.bm.GROUP_DM:
-                    case A.bm.CHANNEL:
-                        let g = c.item;
-                        return (
-                            (a = null != (r = s.includes(g.id)) && r),
-                            (0, l.jsx)(
-                                K,
-                                {
-                                    channel: g,
-                                    isSelected: a,
+                                    user: g,
+                                    isSelected: d,
                                     onToggle: n,
                                     disabled: o
                                 },
                                 g.id
+                            )
+                        );
+                    case R.bm.GROUP_DM:
+                        let m = h.item;
+                        return (
+                            (d = null != (r = s.includes(m.id)) && r),
+                            (0, l.jsx)(
+                                $,
+                                {
+                                    channel: m,
+                                    isSelected: d,
+                                    onToggle: n,
+                                    disabled: o
+                                },
+                                m.id
+                            )
+                        );
+                    case R.bm.CHANNEL:
+                        let x = h.item;
+                        return (
+                            (d = null != (a = s.includes(x.id)) && a),
+                            (0, l.jsx)(
+                                ee,
+                                {
+                                    channel: x,
+                                    isSelected: d,
+                                    onToggle: n,
+                                    disabled: o
+                                },
+                                x.id
                             )
                         );
                     default:
@@ -201,7 +239,7 @@ function X(e) {
         ),
         g = i.useCallback(() => 56, []);
     return 0 === t.length
-        ? (0, l.jsx)(d.OZU, { children: V.NW.string(V.t.ojoWgY) })
+        ? (0, l.jsx)(u.OZU, { children: z.NW.string(z.t.ojoWgY) })
         : (0, l.jsx)(a.bG, {
               navigator: c,
               children: (0, l.jsx)(a.SJ, {
@@ -229,10 +267,10 @@ function X(e) {
                               return i;
                           })(e, ['ref']);
                       return (0, l.jsx)(
-                          d.YAO,
-                          ((t = z(
+                          u.YAO,
+                          ((t = q(
                               {
-                                  className: B.recipientList,
+                                  className: H.recipientList,
                                   style: { '--custom-recipient-row-height': ''.concat(56, 'px') },
                                   scrollerRef: (e) => {
                                       null !== e && ((r.current = e), (i.current = e.getScrollerNode()));
@@ -242,7 +280,7 @@ function X(e) {
                           )),
                           (n = n =
                               {
-                                  sections: u,
+                                  sections: d,
                                   sectionHeight: 0,
                                   renderRow: h,
                                   rowHeight: g
@@ -265,141 +303,136 @@ function X(e) {
               })
           });
 }
-function J(e) {
-    let { transitionState: t, onClose: n, guild: s, channel: a, source: h, streamUserId: m, applicationId: N } = e,
-        [f, S] = i.useState([]),
-        [O, P] = i.useState(''),
-        [w, F] = i.useState(z({}, H)),
-        [G, q] = i.useState(!1),
-        [Y, K] = i.useState(null),
-        J = i.useRef(null),
-        Q = i.useRef(null),
-        $ = null;
-    null != m ? ($ = L.Iq.STREAM) : null != N && ($ = L.Iq.EMBEDDED_APPLICATION);
-    let { analyticsLocations: ee } = (0, v.ZP)(x.Z.INSTANT_INVITE_MODAL),
-        et = i.useCallback(
+function en(e) {
+    let { transitionState: t, onClose: n, guild: s, channel: a, source: g, streamUserId: x, applicationId: I } = e,
+        j = null;
+    null != x ? (j = B.Iq.STREAM) : null != I && (j = B.Iq.EMBEDDED_APPLICATION);
+    let [E, T] = i.useState([]),
+        [y, A] = i.useState(''),
+        [w, M] = i.useState(q({}, X, null == I ? {} : { target_application_id: I }, null == j ? {} : { target_type: j }, null == x ? {} : { target_user_id: x })),
+        [Y, K] = i.useState(!1),
+        [J, Q] = i.useState(null),
+        $ = i.useRef(null),
+        ee = i.useRef(null),
+        { analyticsLocations: en } = (0, p.ZP)(v.Z.INSTANT_INVITE_MODAL),
+        el = i.useCallback(
             (e) => {
                 var t;
-                null == (t = Q.current) || t.scrollTo({ to: 0 }), P(e), (0, c.C)(e);
+                null == (t = ee.current) || t.scrollTo({ to: 0 }), A(e), (0, h.C)(e);
             },
-            [P]
+            [A]
         ),
-        en = i.useCallback(() => {
-            et('');
-        }, [et]),
-        el = i.useCallback((e) => F((t) => z({}, t, e)), [F]),
         ei = i.useCallback(() => {
-            S([]), F(z({}, H)), en(), q(!1), K(null);
-        }, [en]),
-        es = i.useCallback((e) => {
-            S((t) => {
+            el('');
+        }, [el]),
+        es = i.useCallback((e) => M((t) => q({}, t, e)), [M]),
+        er = i.useCallback(() => {
+            T([]), M(q({}, X)), ei(), K(!1), Q(null);
+        }, [ei]),
+        ea = i.useCallback((e) => {
+            T((t) => {
                 let n = t.findIndex((t) => t === e);
                 if (-1 === n) return [e, ...t];
                 let l = [...t];
                 return l.splice(n, 1), l;
             });
         }, []),
-        er = (0, o.e7)(
-            [Z.Z, T.Z, C.ZP],
+        eo = (0, o.e7)(
+            [k.Z, C.Z, _.ZP],
             () => {
                 var e;
                 if (null != a) return a;
-                let t = Z.Z.getChannelId(),
-                    n = null == t || (0, U.AB)(t) ? null : T.Z.getChannel(t);
-                return (null == n ? void 0 : n.isThread()) && (n = T.Z.getChannel(n.parent_id)), null != (e = null != n ? n : C.ZP.getDefaultChannel(s.id, !0, D.Plq.CREATE_INSTANT_INVITE)) ? e : null;
+                let t = k.Z.getChannelId(),
+                    n = null == t || (0, G.AB)(t) ? null : C.Z.getChannel(t);
+                return (null == n ? void 0 : n.isThread()) && (n = C.Z.getChannel(n.parent_id)), null != (e = null != n ? n : _.ZP.getDefaultChannel(s.id, !0, F.Plq.CREATE_INSTANT_INVITE)) ? e : null;
             },
             [s.id, a]
         ),
-        ea = (0, o.e7)([y.Z], () => null != er && y.Z.can(D.Plq.CREATE_INSTANT_INVITE, er), [er]),
-        eo = (0, o.e7)(
-            [b.Z],
-            () =>
-                null == er
-                    ? null
-                    : b.Z.getInvite(er.id, {
-                          targetType: $,
-                          targetUserId: m,
-                          targetApplicationId: N
-                      }),
-            [N, er, m, $]
+        ed = (0, o.e7)([Z.Z], () => null != eo && Z.Z.can(F.Plq.CREATE_INSTANT_INVITE, eo), [eo]),
+        eu = (0, o.e7)(
+            [O.Z],
+            () => {
+                if (null == eo) return null;
+                let e = O.Z.getInvite(eo.id, {
+                    targetType: j,
+                    targetUserId: x,
+                    targetApplicationId: I
+                });
+                return null != e && null != J && Q(null), e;
+            },
+            [eo, j, x, I, J]
         ),
-        ed = (0, p.Z)(er),
-        eu = !ea && !(null == er ? void 0 : er.isGuildVocal()) && null != s.vanityURLCode,
-        ec = null === eo || !ea,
-        eh = (null == er ? void 0 : er.type) === D.d4z.GUILD_VOICE && !eu && !ec && !ed,
-        { enabled: eg } = j.o.useExperiment(
+        ec = !ed && !(null == eo ? void 0 : eo.isGuildVocal()) && void 0 !== s.vanityURLCode,
+        eh = null === eu || !ed,
+        eg = (0, N.Z)(eo),
+        em = (null == eo ? void 0 : eo.type) === F.d4z.GUILD_VOICE && !ec && !eh && !eg,
+        { enabled: ex } = S.o.useExperiment(
             {
                 guildId: s.id,
                 location: 'instant_invite_modal'
             },
-            { autoTrackExposure: eh }
+            { autoTrackExposure: em }
         ),
-        { canCreateApplicationBypassInvites: em, isManualApprovalGuild: ex } = (0, R.R)(s),
-        ev = eg && eh,
-        { rows: ep } = (0, W.B)({
+        { canCreateApplicationBypassInvites: ev, isManualApprovalGuild: ep } = (0, L.R)(s),
+        eN = ex && em,
+        { rows: eI } = (0, V.B)({
             guild: s,
-            inviteChannel: er,
-            inviteTargetType: $,
-            applicationId: N
+            inviteChannel: eo,
+            inviteTargetType: j,
+            applicationId: I
         }),
-        eN = (0, o.e7)(
-            [E.Z],
-            () => {
-                var e;
-                return null != (e = E.Z.getStageInstanceByChannel(null == er ? void 0 : er.id)) ? e : null;
-            },
-            [er]
-        ),
-        eI = i.useMemo(() => {
-            let e;
-            return null === (e = eu && void 0 !== s.vanityURLCode ? s.vanityURLCode : (null == eN ? void 0 : eN.invite_code) !== void 0 ? eN.invite_code : null != eo ? eo.code : null) ? null : (0, k.tV)({ baseCode: e });
-        }, [eu, s, eN, eo]),
-        ef = i.useCallback(() => {
-            let e = null == er ? void 0 : er.id;
-            (0 !== w.max_uses || 0 !== w.max_age || w.temporary || !eu) &&
-                null != e &&
-                u.ZP.createInvite(e, w, h).catch((e) => {
-                    K(e);
-                });
-        }, [er, w, eu, h]),
+        ef = i.useMemo(() => {
+            var e;
+            let t,
+                n = null != (e = b.Z.getStageInstanceByChannel(null == eo ? void 0 : eo.id)) ? e : null;
+            return null === (t = ec && null != s.vanityURLCode ? s.vanityURLCode : (null == n ? void 0 : n.invite_code) != null ? n.invite_code : null != eu ? eu.code : null) ? null : (0, W.tV)({ baseCode: t });
+        }, [ec, s, eu, eo]),
         ej = i.useCallback(() => {
-            ei(), n();
-        }, [ei, n]),
-        eS = i.useCallback(async () => {
-            if (G || null === eI) return;
-            q(!0);
-            let e = ep
-                .filter((e) => f.includes(e.item.id))
+            let e = null == eo ? void 0 : eo.id;
+            ((0, d.Z)(w, X) && ec) ||
+                (null != e &&
+                    c.ZP.createInvite(e, w, g).catch((e) => {
+                        Q(e);
+                    }));
+        }, [eo, w, ec, g]),
+        eS = i.useCallback(() => {
+            er(), n();
+        }, [er, n]),
+        eE = i.useCallback(async () => {
+            if (Y || null === ef) return;
+            K(!0);
+            let e = eI
+                .filter((e) => E.includes(e.item.id))
                 .map((e) => {
                     var t;
                     let n,
-                        l = D.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
-                        i = null != (t = _.Z.getSelectedInviteMetadata(e)) ? t : null;
+                        l = F.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
+                        i = null != (t = P.Z.getSelectedInviteMetadata(e)) ? t : null;
                     switch (e.type) {
-                        case A.bm.FRIEND:
-                        case A.bm.DM:
+                        case R.bm.FRIEND:
+                        case R.bm.DM:
                             n = {
-                                type: g.m.USER,
+                                type: m.m.USER,
                                 user: e.item,
-                                inviteKey: eI,
+                                inviteKey: ef,
                                 location: l,
                                 suggested: i
                             };
                             break;
-                        case A.bm.CHANNEL:
+                        case R.bm.CHANNEL:
                             n = {
-                                type: g.m.CHANNEL,
+                                type: m.m.CHANNEL,
                                 channel: e.item,
-                                inviteKey: eI,
+                                inviteKey: ef,
                                 location: l,
                                 suggested: i
                             };
                             break;
-                        case A.bm.GROUP_DM:
+                        case R.bm.GROUP_DM:
                             n = {
-                                type: g.m.GROUP_DM,
+                                type: m.m.GROUP_DM,
                                 channel: e.item,
-                                inviteKey: eI,
+                                inviteKey: ef,
                                 location: l,
                                 suggested: i
                             };
@@ -408,93 +441,101 @@ function J(e) {
                             return Promise.resolve();
                     }
                     return new Promise((e, t) => {
-                        g.Z.enqueue(n, (n) => {
+                        m.Z.enqueue(n, (n) => {
                             n ? e() : t();
                         });
                     });
                 });
             try {
                 if ((await Promise.allSettled(e), e.length > 0)) {
-                    let e = f.length > 1 ? V.NW.string(V.t['4pl/xs']) : V.NW.string(V.t.sVwWdX);
-                    (0, d.showToast)((0, d.createToast)(e, d.ToastType.INVITE));
+                    let e = E.length > 1 ? z.NW.string(z.t['4pl/xs']) : z.NW.string(z.t.sVwWdX);
+                    (0, u.showToast)((0, u.createToast)(e, u.ToastType.INVITE));
                 }
             } catch (e) {
+                Q(e);
             } finally {
-                ej();
+                eS();
             }
-        }, [G, q, f, eI, ep, ej]);
-    if (
-        (i.useEffect(() => {
-            !eu && ea && ef();
-        }, [er, eu, ea, ef]),
-        null !== eI && null !== er)
-    )
-        return (0, l.jsx)(v.Gt, {
-            value: ee,
-            children: (0, l.jsxs)(d.Y0X, {
-                className: r()(B.modal, { [B.disabled]: G }),
-                transitionState: t,
-                children: [
-                    (0, l.jsxs)(d.xBx, {
-                        className: B.header,
-                        children: [
-                            (0, l.jsxs)('div', {
-                                className: B.titleLine,
-                                children: [
-                                    (0, l.jsx)('div', {
-                                        className: B.title,
-                                        children: (0, l.jsxs)(d.X6q, {
-                                            variant: 'heading-lg/semibold',
-                                            children: [V.NW.string(V.t.BN75l5), (0, l.jsx)('span', { children: null === eo && 'No Invite Key' }), (0, l.jsx)('span', { children: null === eo && 'No Invite' })]
-                                        })
-                                    }),
-                                    (0, l.jsx)(d.olH, {
-                                        className: B.closeButton,
-                                        onClick: ej
+        }, [Y, K, E, ef, eI, eS]);
+    i.useEffect(() => {
+        !ec && ed && ej();
+    }, [eo, ec, ed, ej]);
+    let eT = null === ef || null === eo;
+    return (0, l.jsx)(p.Gt, {
+        value: en,
+        children: (0, l.jsxs)(u.Y0X, {
+            className: r()(H.modal, { [H.disabled]: Y }),
+            transitionState: t,
+            children: [
+                (0, l.jsxs)(u.xBx, {
+                    className: H.header,
+                    children: [
+                        (0, l.jsxs)('div', {
+                            className: H.titleLine,
+                            children: [
+                                (0, l.jsx)('div', {
+                                    className: H.title,
+                                    children: (0, l.jsx)(u.X6q, {
+                                        variant: 'heading-lg/semibold',
+                                        children: z.NW.string(z.t.BN75l5)
                                     })
-                                ]
-                            }),
-                            (0, l.jsx)(d.E1j, {
-                                ref: J,
-                                size: d.E1j.Sizes.MEDIUM,
-                                query: O,
-                                onChange: et,
-                                onClear: en,
-                                placeholder: V.NW.string(V.t['5h0QOD']),
-                                'aria-label': V.NW.string(V.t['5h0QOD']),
-                                autoFocus: !0
-                            })
-                        ]
-                    }),
-                    (0, l.jsx)(d.hzk, {
-                        className: r()(B.body, { [B.empty]: 0 === ep.length }),
-                        children: (0, l.jsx)(X, {
-                            rows: ep,
-                            onToggle: es,
-                            scrollerRef: Q,
-                            selection: f,
-                            disabled: G
+                                }),
+                                (0, l.jsx)(u.olH, {
+                                    className: H.closeButton,
+                                    onClick: eS
+                                })
+                            ]
+                        }),
+                        (0, l.jsx)(u.E1j, {
+                            ref: $,
+                            size: u.E1j.Sizes.MEDIUM,
+                            query: y,
+                            onChange: el,
+                            onClear: ei,
+                            placeholder: z.NW.string(z.t['5h0QOD']),
+                            'aria-label': z.NW.string(z.t['5h0QOD']),
+                            autoFocus: !0
                         })
-                    }),
-                    (0, l.jsx)(d.mzw, {
-                        direction: I.Z.Direction.HORIZONTAL,
-                        className: B.footer,
-                        children: (0, l.jsx)(M.f, {
-                            className: B.footerContent,
+                    ]
+                }),
+                (0, l.jsx)(u.hzk, {
+                    className: r()(H.body, { [H.empty]: 0 === eI.length }),
+                    children: (0, l.jsx)(et, {
+                        rows: eI,
+                        onToggle: ea,
+                        scrollerRef: ee,
+                        selection: E,
+                        disabled: eT || Y
+                    })
+                }),
+                (0, l.jsxs)(u.mzw, {
+                    direction: f.Z.Direction.VERTICAL,
+                    className: H.footer,
+                    children: [
+                        (0, l.jsx)(D.f, {
+                            className: H.footerContent,
                             guild: s,
                             channel: null != a ? a : null,
-                            inviteTarget: er,
-                            inviteKey: eI,
-                            sendInvite: eS,
-                            sending: G,
+                            inviteChannel: eo,
+                            inviteKey: ef,
+                            sendInvite: eE,
+                            sending: Y,
                             options: w,
-                            setOptions: el,
-                            isGuestInviteAllowed: ev,
-                            isTemporaryInviteAllowed: !ev && !ex,
-                            isApplicationBypassAllowed: em && !ec
-                        })
-                    })
-                ]
-            })
-        });
+                            setOptions: es,
+                            isGuestInviteAllowed: eN,
+                            isTemporaryInviteAllowed: !eN && !ep,
+                            isApplicationBypassAllowed: ev && !eh,
+                            setError: Q
+                        }),
+                        null !== J &&
+                            (0, l.jsx)(U.W, {
+                                guild: s,
+                                error: J,
+                                onClose: eS
+                            })
+                    ]
+                })
+            ]
+        })
+    });
 }

@@ -76,7 +76,9 @@ function T(e) {
         renderPopout: (e) => {
             let { position: t, closePopout: n, setPopoutRef: i } = e;
             return (0, r.jsx)(s.VqE, {
-                ref: i,
+                ref: (e) => {
+                    null == i || i(e);
+                },
                 children: (0, r.jsx)(d.ZP, {
                     className: M,
                     asset: (0, r.jsx)('img', {

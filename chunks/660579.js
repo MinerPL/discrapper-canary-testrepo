@@ -78,6 +78,7 @@ function u(e) {
                 o.ZP,
                 s(
                     {
+                        targetRef: u,
                         isVisible: d,
                         isExpandable: !1
                     },

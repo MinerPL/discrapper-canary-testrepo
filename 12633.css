@@ -284,8 +284,12 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     text-decoration: underline !important
 }
 
-.desaturate__41f68,
 [data-accessibility*=desaturate] {
+    filter: saturate(1);
+    filter: saturate(var(--saturation-factor, 1))
+}
+
+.desaturate__41f68 {
     filter: saturate(1);
     filter: saturate(var(--saturation-factor, 1))
 }
@@ -1101,10 +1105,13 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     color: var(--text-normal)
 }
 
-.images-dark .lookLink__201d5.colorPrimary__201d5:disabled .contents__201d5,
-.images-dark .lookLink__201d5.colorPrimary__201d5[aria-disabled=true] .contents__201d5,
 .images-light .lookLink__201d5.colorPrimary__201d5:disabled .contents__201d5,
 .images-light .lookLink__201d5.colorPrimary__201d5[aria-disabled=true] .contents__201d5 {
+    background-image: none
+}
+
+.images-dark .lookLink__201d5.colorPrimary__201d5:disabled .contents__201d5,
+.images-dark .lookLink__201d5.colorPrimary__201d5[aria-disabled=true] .contents__201d5 {
     background-image: none
 }
 
@@ -2498,6 +2505,92 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     font-size: .75rem
 }
 
+.container__35859 {
+    display: flex;
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box
+}
+
+.icon__35859 {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0
+}
+
+.iconDiv__35859 {
+    display: flex
+}
+
+.text__35859 {
+    margin-left: 10px;
+    flex: 1;
+    align-self: center
+}
+
+.text__35859 p {
+    margin: 0
+}
+
+.text__35859 p~p {
+    margin-top: 8px
+}
+
+.positive__35859 {
+    background: var(--info-positive-background);
+    border: 1px solid var(--info-positive-foreground);
+    color: var(--info-positive-text)
+}
+
+.positive__35859 .icon__35859 {
+    color: var(--info-positive-foreground)
+}
+
+.warning__35859 {
+    background: var(--info-warning-background);
+    border: 1px solid var(--info-warning-foreground);
+    color: var(--info-warning-text)
+}
+
+.warning__35859 .icon__35859 {
+    color: var(--info-warning-foreground)
+}
+
+.info__35859 {
+    background: var(--info-help-background);
+    border: 1px solid var(--info-help-foreground);
+    color: var(--info-help-text)
+}
+
+.info__35859 .icon__35859 {
+    color: var(--info-help-foreground)
+}
+
+.error__35859 {
+    background: var(--info-danger-background);
+    border: 1px solid var(--info-danger-foreground);
+    color: var(--info-danger-text)
+}
+
+.error__35859 .icon__35859 {
+    color: var(--info-danger-foreground)
+}
+
+.visual-refresh .container__35859 {
+    border-radius: var(--radius-sm)
+}
+
+.visual-refresh .icon__35859 {
+    width: 20px;
+    height: 20px
+}
+
+.visual-refresh .text__35859 {
+    margin-left: var(--space-8)
+}
+
 .stack_dbd263 {
     width: 100%;
     display: flex
@@ -2590,7 +2683,11 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     color: var(--text-link)
 }
 
-.linkButton_a995b9:hover .text_a995b9,
+.linkButton_a995b9:hover .text_a995b9 {
+    -webkit-text-decoration: underline;
+    text-decoration: underline
+}
+
 :where(.decorate-links) .text_a995b9 {
     -webkit-text-decoration: underline;
     text-decoration: underline
@@ -2620,15 +2717,12 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .primary__06eda:hover:not(.disabled__06eda) {
+    background-color: var(--background-secondary);
     color: var(--interactive-active)
 }
 
-.primary__06eda:hover:not(.disabled__06eda),
 .secondary__06eda {
-    background-color: var(--background-secondary)
-}
-
-.secondary__06eda {
+    background-color: var(--background-secondary);
     color: var(--header-secondary)
 }
 
@@ -8786,7 +8880,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .colorable_f1ceac.green_f1ceac.active_f1ceac,
-.colorable_f1ceac.green_f1ceac:hover,
+.colorable_f1ceac.green_f1ceac:hover {
+    background: var(--green-360)
+}
+
 .colorable_f1ceac.join_f1ceac {
     background: var(--green-360)
 }
@@ -8987,6 +9084,7 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 
 .caretButtonContainer_f1ceac.disabled_f1ceac {
     color: var(--interactive-muted) !important;
+    background-color: transparent !important;
     cursor: not-allowed !important
 }
 
@@ -8994,7 +9092,6 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     pointer-events: none
 }
 
-.caretButtonContainer_f1ceac.disabled_f1ceac,
 .caretButtonContainer_f1ceac.disabled_f1ceac:hover {
     background-color: transparent !important
 }
@@ -9146,7 +9243,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     opacity: .3
 }
 
-.mediaBarInteraction_b26b79:hover .bubble_b26b79,
+.mediaBarInteraction_b26b79:hover .bubble_b26b79 {
+    opacity: 1
+}
+
 .mediaBarInteractionDragging_b26b79 .bubble_b26b79 {
     opacity: 1
 }
@@ -9210,10 +9310,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     top: 0;
     left: 0;
     height: 100%;
-    opacity: .3
+    opacity: .3;
+    background-color: var(--white-500)
 }
 
-.buffer_b26b79,
 .buffer_b26b79:after,
 .buffer_b26b79:before {
     background-color: var(--white-500)
@@ -9222,10 +9322,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 .mediaBarWrapper_b26b79 {
     position: relative;
     flex: 1 1 auto;
-    height: 6px
+    height: 6px;
+    background-color: hsl(var(--primary-300-hsl)/.3)
 }
 
-.mediaBarWrapper_b26b79,
 .mediaBarWrapper_b26b79:after,
 .mediaBarWrapper_b26b79:before {
     background-color: hsl(var(--primary-300-hsl)/.3)
@@ -9251,21 +9351,20 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 
 .mediaBarPreview_b26b79 {
     z-index: 0;
-    opacity: 0
+    opacity: 0;
+    background-color: var(--white-500)
 }
 
-.mediaBarPreview_b26b79,
 .mediaBarPreview_b26b79:after,
 .mediaBarPreview_b26b79:before {
     background-color: var(--white-500)
 }
 
 .mediaBarProgress_b26b79 {
-    z-index: 3
+    z-index: 3;
+    background-color: var(--brand-500)
 }
 
-.mediaBarGrabber_b26b79,
-.mediaBarProgress_b26b79,
 .mediaBarProgress_b26b79:after,
 .mediaBarProgress_b26b79:before {
     background-color: var(--brand-500)
@@ -9281,6 +9380,7 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     border-radius: 5px;
     margin-top: -5px;
     margin-right: -5px;
+    background-color: var(--brand-500);
     transform: scale(0);
     transform-origin: 50% 50%;
     cursor: grab
@@ -9292,6 +9392,7 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 
 .bubble_b26b79 {
     border-radius: 3px;
+    position: absolute;
     top: -28px;
     padding: 0 8px;
     transform: translateX(-50%);
@@ -9304,21 +9405,18 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     color: var(--primary-100);
     opacity: 0;
     transition: opacity .2s ease-out;
+    pointer-events: none;
     background-color: var(--black-500)
 }
 
-.bubble_b26b79,
 .bubble_b26b79:before {
     position: absolute;
-    pointer-events: none
-}
-
-.bubble_b26b79:before {
     top: 100%;
     left: 50%;
     content: " ";
     width: 0;
     height: 0;
+    pointer-events: none;
     margin-left: -5px;
     border: 5px solid transparent;
     border-top: 5px solid var(--black-500)
@@ -11621,10 +11719,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     text-align: center;
     padding: 8px 8px 8px 10px;
     cursor: pointer;
-    overflow: hidden
+    overflow: hidden;
+    color: var(--interactive-active)
 }
 
-.topicsPillText__0f481,
 .topicsPillText__0f481:hover .topicsPillDropdownCaret__0f481 {
     color: var(--interactive-active)
 }
@@ -12620,12 +12718,12 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     transition: box-shadow .1s ease-in-out, transform .2s ease
 }
 
-.inlineButton__5cc6a:active,
 .inlineButton__5cc6a:hover {
     border: 1px solid hsla(0, 0%, 100%, .5)
 }
 
 .inlineButton__5cc6a:active {
+    border: 1px solid hsla(0, 0%, 100%, .5);
     background: var(--card-primary-pressed-bg);
     box-shadow: none
 }
@@ -13630,19 +13728,19 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .closeButton_c2b141:hover {
+    color: var(--interactive-hover);
     background-color: var(--background-modifier-hover)
 }
 
-.closeButton_c2b141:hover,
 .closeButton_c2b141:hover+.keybind_c2b141 {
     color: var(--interactive-hover)
 }
 
 .closeButton_c2b141:active {
+    color: var(--interactive-active);
     background-color: var(--background-modifier-active)
 }
 
-.closeButton_c2b141:active,
 .closeButton_c2b141:active+.keybind_c2b141 {
     color: var(--interactive-active)
 }
@@ -15658,7 +15756,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     opacity: .3
 }
 
-.clickable__91a9d.container__91a9d:hover,
+.clickable__91a9d.container__91a9d:hover {
+    color: var(--interactive-hover)
+}
+
 .clickable__91a9d.container__91a9d:hover .muted__91a9d {
     color: var(--interactive-hover)
 }
@@ -15770,6 +15871,57 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     margin-left: 8px
 }
 
+.twoColorGradient__65640 {
+    background: linear-gradient(90deg, var(--custom-gradient-color-1), var(--custom-gradient-color-2), var(--custom-gradient-color-1));
+    background-size: 100px auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.threeColorGradient__65640 {
+    background: linear-gradient(90deg, var(--custom-gradient-color-1), var(--custom-gradient-color-2), var(--custom-gradient-color-3), var(--custom-gradient-color-1));
+    background-size: 100px auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.threeColorGradient__65640:after,
+.twoColorGradient__65640:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(7px) brightness(1.2);
+    animation: inherit;
+    opacity: .5
+}
+
+.gradient__65640:hover {
+    animation: gradient__65640 2.5s linear infinite
+}
+
+.gradientText__65640 {
+    position: relative;
+    z-index: 1
+}
+
+@keyframes gradient__65640 {
+    0% {
+        background-position: 0
+    }
+
+    to {
+        background-position: 100px
+    }
+}
+
 .nitroRewardTileAssetContainer_a92e89 {
     display: flex;
     align-content: center;
@@ -15877,7 +16029,10 @@ html:not(.visual-refresh).theme-light .container_a3e8db.default_a3e8db {
     background-color: var(--primary-100)
 }
 
-html:not(.visual-refresh).theme-light .container_a3e8db.highlighted_a3e8db,
+html:not(.visual-refresh).theme-light .container_a3e8db.highlighted_a3e8db {
+    background-color: var(--primary-130)
+}
+
 html:not(.visual-refresh).theme-light .container_a3e8db.selected_a3e8db {
     background-color: var(--primary-130)
 }
@@ -15886,7 +16041,10 @@ html:not(.visual-refresh).theme-dark .container_a3e8db.default_a3e8db {
     background: var(--primary-700)
 }
 
-html:not(.visual-refresh).theme-dark .container_a3e8db.highlighted_a3e8db,
+html:not(.visual-refresh).theme-dark .container_a3e8db.highlighted_a3e8db {
+    background: var(--primary-630)
+}
+
 html:not(.visual-refresh).theme-dark .container_a3e8db.selected_a3e8db {
     background: var(--primary-630)
 }
@@ -16016,26 +16174,29 @@ div.modalHeader_c28af8 {
 }
 
 .rewardHighlight__28141:after {
-    border-radius: inherit;
-    border: 1px solid var(--opacity-white-16)
-}
-
-.borderOverlay__28141:before,
-.rewardHighlight__28141:after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    box-sizing: border-box
+    border-radius: inherit;
+    box-sizing: border-box;
+    border: 1px solid var(--opacity-white-16)
 }
 
 .borderOverlay__28141:before {
     border: 2px solid var(--white-500);
     border-radius: inherit;
+    box-sizing: border-box;
+    content: "";
+    height: 100%;
+    left: 0;
     -webkit-mask-image: linear-gradient(-45deg, transparent 50%, #000);
     mask-image: linear-gradient(-45deg, transparent 50%, #000);
+    position: absolute;
+    top: 0;
+    width: 100%;
     z-index: 1
 }
 
@@ -22212,11 +22373,11 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     border-radius: 4px;
     cursor: pointer;
     display: block;
+    outline: none;
     padding: var(--custom-emoji-picker-constants-emoji-container-padding-vertical) var(--custom-emoji-picker-constants-emoji-container-padding-horizontal);
     position: relative
 }
 
-.emojiItem_fc7141,
 .emojiItem_fc7141:focus {
     outline: none
 }
@@ -22856,7 +23017,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     cursor: pointer
 }
 
-.clickable__13533[aria-disabled=false]>.base__13533:hover,
+.clickable__13533[aria-disabled=false]>.base__13533:hover {
+    background-color: var(--background-modifier-hover)
+}
+
 .clickable__13533[aria-selected=true]>.base__13533 {
     background-color: var(--background-modifier-hover)
 }
@@ -24394,7 +24558,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     cursor: pointer
 }
 
-.sectionHeader__61424:hover,
+.sectionHeader__61424:hover {
+    color: var(--interactive-active)
+}
+
 .sectionHeader__61424:hover .sectionTitle__61424 {
     color: var(--interactive-active)
 }
@@ -24617,7 +24784,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     border-color: ButtonText
 }
 
-.enable-forced-colors .stickerCategoryGenericDisabled__3ad28,
+.enable-forced-colors .stickerCategoryGenericDisabled__3ad28 {
+    color: GrayText
+}
+
 .enable-forced-colors .stickerCategoryGenericDisabled__3ad28.stickerCategory__3ad28:hover {
     color: GrayText
 }
@@ -25186,10 +25356,14 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     background-color: var(--background-modifier-hover)
 }
 
-.navButton__08434:active,
-.navButtonActive__08434 {
+.navButton__08434:active {
     color: var(--interactive-active);
     background-color: var(--background-modifier-selected)
+}
+
+.navButtonActive__08434 {
+    background-color: var(--background-modifier-selected);
+    color: var(--interactive-active)
 }
 
 .navButtonActive__08434:active,
@@ -26358,8 +26532,12 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     border-bottom: 1px solid var(--background-secondary-alt)
 }
 
-.floatingBars__74017:empty+.stackedBars__74017:nth-child(2),
 .stackedBars__74017:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px
+}
+
+.floatingBars__74017:empty+.stackedBars__74017:nth-child(2) {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px
 }
@@ -26372,8 +26550,12 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     border-bottom: 1px solid var(--border-subtle)
 }
 
-.floatingBars__74017:empty+.visual-refresh .stackedBars__74017:nth-child(2),
 .visual-refresh .stackedBars__74017:first-child {
+    border-top-left-radius: var(--radius-sm);
+    border-top-right-radius: var(--radius-sm)
+}
+
+.floatingBars__74017:empty+.visual-refresh .stackedBars__74017:nth-child(2) {
     border-top-left-radius: var(--radius-sm);
     border-top-right-radius: var(--radius-sm)
 }
@@ -28353,6 +28535,13 @@ html:not(.visual-refresh) .root_e5f3a9 {
 }
 
 .cardIcon__29abc:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
     background-image: url(/assets/22f7eeb9ea9904c1.svg);
     background-size: 100% 100%;
     border-radius: 2px;
@@ -28360,20 +28549,16 @@ html:not(.visual-refresh) .root_e5f3a9 {
     transform: rotateY(0deg)
 }
 
-.cardIcon__29abc:after,
-.cardIcon__29abc:before {
+.cardIcon__29abc:after {
     content: "";
+    background: url(/assets/fea1d83d02c90c67.svg);
+    background-size: 100% 100%;
     position: absolute;
     top: 0;
     left: 0;
+    display: block;
     width: 100%;
     height: 100%;
-    display: block
-}
-
-.cardIcon__29abc:after {
-    background: url(/assets/fea1d83d02c90c67.svg);
-    background-size: 100% 100%;
     transform: rotateY(180deg)
 }
 
@@ -28463,7 +28648,10 @@ html:not(.visual-refresh) .root_e5f3a9 {
     background-image: url(/assets/3de97fb87787f20b.svg)
 }
 
-.cardIcon__29abc.apple__29abc:before,
+.cardIcon__29abc.apple__29abc:before {
+    background-image: url(/assets/824341c879ac6d59.svg)
+}
+
 .cardIcon__29abc.apple_light__29abc:before {
     background-image: url(/assets/824341c879ac6d59.svg)
 }
@@ -28622,10 +28810,10 @@ html:not(.visual-refresh) .root_e5f3a9 {
 
 .paypalInput_a76d33 {
     padding-left: 48px;
-    cursor: default
+    cursor: default;
+    border-color: var(--opacity-black-28)
 }
 
-.paypalInput_a76d33,
 .paypalInput_a76d33:focus,
 .paypalInput_a76d33:hover {
     border-color: var(--opacity-black-28)
@@ -28961,7 +29149,10 @@ html:not(.visual-refresh) .root_e5f3a9 {
 }
 
 .enable-forced-colors .cardInput__8b579:focus,
-.enable-forced-colors .cardInput__8b579:hover,
+.enable-forced-colors .cardInput__8b579:hover {
+    border-color: Highlight
+}
+
 .enable-forced-colors .cardInputFocused__8b579 {
     border-color: Highlight
 }
@@ -29077,7 +29268,10 @@ html:not(.visual-refresh) .root_e5f3a9 {
     background-image: url(/assets/3b5c40ec70355fde.svg)
 }
 
-.cardFormHeader__3e8d5.unionpay__3e8d5:before,
+.cardFormHeader__3e8d5.unionpay__3e8d5:before {
+    background-image: url(/assets/3472374445e1b6b0.svg)
+}
+
 .theme-light .cardFormHeader__3e8d5.unionpay__3e8d5:before {
     background-image: url(/assets/3472374445e1b6b0.svg)
 }
@@ -30440,8 +30634,16 @@ html:not(.visual-refresh) .root_e5f3a9 {
     color: #000
 }
 
-.adyen-checkout__issuer-button:not(.adyen-checkout__issuer-button--selected):focus,
-.adyen-checkout__issuer-button:not(.adyen-checkout__issuer-button--selected):focus-visible,
+.adyen-checkout__issuer-button:not(.adyen-checkout__issuer-button--selected):focus {
+    box-shadow: inset 0 0 0 2px #99a3ad;
+    outline: none
+}
+
+.adyen-checkout__issuer-button:not(.adyen-checkout__issuer-button--selected):focus-visible {
+    box-shadow: inset 0 0 0 2px #99a3ad;
+    outline: none
+}
+
 .adyen-checkout__issuer-button:not(.adyen-checkout__issuer-button--selected):hover {
     box-shadow: inset 0 0 0 2px #99a3ad;
     outline: none
@@ -33515,7 +33717,10 @@ html:not(.visual-refresh) .root_e5f3a9 {
     width: 18px
 }
 
-.addButton__8564e>*,
+.addButton__8564e>* {
+    margin-right: 4px
+}
+
 .soundIcon__8564e {
     margin-right: 4px
 }
@@ -35482,16 +35687,18 @@ html:not(.visual-refresh) .root_e5f3a9 {
 
 .overlay_f9d668:after {
     content: "";
+    position: absolute;
     z-index: 0;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
     border-radius: var(--radius-round);
-    background-color: var(--opacity-black-40)
+    background-color: var(--opacity-black-40);
+    opacity: 0;
+    transition: opacity .2s ease
 }
 
-.overlay_f9d668:after,
 .overlayIcon_f9d668 {
     position: absolute;
     opacity: 0;
@@ -37056,7 +37263,10 @@ div.modalOverrideBody__34eac {
     border-top: 10px solid var(--brand-500)
 }
 
-div.popoutCloseButton__1e3f8,
+div.popoutCloseButton__1e3f8 {
+    background-color: var(--opacity-black-24)
+}
+
 div.popoutCloseButton__1e3f8:hover {
     background-color: var(--opacity-black-24)
 }
@@ -38184,26 +38394,29 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 }
 
 .outer_ab8609:before {
-    top: -8px;
-    left: 10px;
-    width: 20px;
-    height: 20px
-}
-
-.outer_ab8609:after,
-.outer_ab8609:before {
     content: "";
     position: absolute;
+    top: -8px;
+    left: 10px;
     box-sizing: border-box;
     box-shadow: inherit;
     background: inherit;
     border: inherit;
-    border-radius: 50%
+    border-radius: 50%;
+    width: 20px;
+    height: 20px
 }
 
 .outer_ab8609:after {
+    content: "";
+    position: absolute;
     top: -15px;
     left: -3px;
+    box-sizing: border-box;
+    box-shadow: inherit;
+    background: inherit;
+    border: inherit;
+    border-radius: 50%;
     width: 10px;
     height: 10px
 }
@@ -38669,8 +38882,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     align-items: center
 }
 
-.badgesContainerCard__635ed>:nth-child(n+3),
 :where(.badgesContainer__635ed):empty {
+    display: none
+}
+
+.badgesContainerCard__635ed>:nth-child(n+3) {
     display: none
 }
 
@@ -41177,6 +41393,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     color: var(--white-500)
 }
 
+.visual-refresh .whiteText_f43ba5,
+.visual-refresh .whiteText_f43ba5 a {
+    color: inherit
+}
+
 .children__7bffb {
     flex-direction: column
 }
@@ -43592,10 +43813,13 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     color: var(--text-secondary)
 }
 
-.visual-refresh .brand_b3f026.item_b3f026:active,
 .visual-refresh .brand_b3f026.item_b3f026:hover,
-.visual-refresh .themed_b3f026.item_b3f026:active,
 .visual-refresh .themed_b3f026.item_b3f026:hover {
+    color: var(--text-primary)
+}
+
+.visual-refresh .brand_b3f026.item_b3f026:active,
+.visual-refresh .themed_b3f026.item_b3f026:active {
     color: var(--text-primary)
 }
 
@@ -43671,8 +43895,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     border-bottom-color: var(--interactive-hover)
 }
 
-.top_b3f026 .selected_b3f026.themed_b3f026.item_b3f026,
 .top_b3f026 .themed_b3f026.item_b3f026:active {
+    border-bottom-color: var(--interactive-active)
+}
+
+.top_b3f026 .selected_b3f026.themed_b3f026.item_b3f026 {
     border-bottom-color: var(--interactive-active)
 }
 
@@ -43680,7 +43907,10 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     border-bottom-color: var(--brand-500)
 }
 
-.top_b3f026 .brand_b3f026.item_b3f026:active,
+.top_b3f026 .brand_b3f026.item_b3f026:active {
+    border-bottom-color: var(--control-brand-foreground)
+}
+
 .top_b3f026 .brand_b3f026.selected_b3f026.item_b3f026 {
     border-bottom-color: var(--control-brand-foreground)
 }
@@ -44826,13 +45056,13 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     overflow: hidden
 }
 
-.buttonShine__6a443,
 .shinyButton__6a443>* {
     pointer-events: none
 }
 
 .buttonShine__6a443 {
-    color: var(--opacity-white-8)
+    color: var(--opacity-white-8);
+    pointer-events: none
 }
 
 .full-motion .buttonShine__6a443 {
@@ -44971,8 +45201,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     color: var(--interactive-hover)
 }
 
-.clear_d727b3:focus,
 .clearIcon_d727b3:focus {
+    color: var(--interactive-active)
+}
+
+.clear_d727b3:focus {
     color: var(--interactive-active)
 }
 
@@ -46373,92 +46606,6 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     opacity: 1
 }
 
-.container__6436f {
-    display: flex;
-    border-radius: 4px;
-    font-weight: 500;
-    padding: 8px;
-    width: 100%;
-    box-sizing: border-box
-}
-
-.icon__6436f {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0
-}
-
-.iconDiv__6436f {
-    display: flex
-}
-
-.text__6436f {
-    margin-left: 10px;
-    flex: 1;
-    align-self: center
-}
-
-.text__6436f p {
-    margin: 0
-}
-
-.text__6436f p~p {
-    margin-top: 8px
-}
-
-.positive__6436f {
-    background: var(--info-positive-background);
-    border: 1px solid var(--info-positive-foreground);
-    color: var(--info-positive-text)
-}
-
-.positive__6436f .icon__6436f {
-    color: var(--info-positive-foreground)
-}
-
-.warning__6436f {
-    background: var(--info-warning-background);
-    border: 1px solid var(--info-warning-foreground);
-    color: var(--info-warning-text)
-}
-
-.warning__6436f .icon__6436f {
-    color: var(--info-warning-foreground)
-}
-
-.info__6436f {
-    background: var(--info-help-background);
-    border: 1px solid var(--info-help-foreground);
-    color: var(--info-help-text)
-}
-
-.info__6436f .icon__6436f {
-    color: var(--info-help-foreground)
-}
-
-.error__6436f {
-    background: var(--info-danger-background);
-    border: 1px solid var(--info-danger-foreground);
-    color: var(--info-danger-text)
-}
-
-.error__6436f .icon__6436f {
-    color: var(--info-danger-foreground)
-}
-
-.visual-refresh .container__6436f {
-    border-radius: var(--radius-sm)
-}
-
-.visual-refresh .icon__6436f {
-    width: 20px;
-    height: 20px
-}
-
-.visual-refresh .text__6436f {
-    margin-left: var(--space-8)
-}
-
 .focusLock__49fc1 {
     min-height: 0;
     max-width: 100%
@@ -47002,8 +47149,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     margin-right: 4px
 }
 
-.viewersIcon_d6b206.activeButton_d6b206,
 .viewersIcon_d6b206:hover {
+    color: var(--white-500)
+}
+
+.viewersIcon_d6b206.activeButton_d6b206 {
     color: var(--white-500)
 }
 
@@ -48600,11 +48750,6 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 }
 
 .wrapper_f910d0.ringingOutgoing_f910d0:after {
-    animation: outgoing-call-pulse_f910d0 var(--custom-call-avatar-outgoing-duration) infinite ease-out
-}
-
-.wrapper_f910d0.ringingIncoming_f910d0:after,
-.wrapper_f910d0.ringingOutgoing_f910d0:after {
     content: "";
     position: absolute;
     pointer-events: none;
@@ -48615,23 +48760,38 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     border-radius: 100%;
     background: transparent;
     border: 3px solid var(--interactive-active);
-    transform-origin: center
+    transform-origin: center;
+    animation: outgoing-call-pulse_f910d0 var(--custom-call-avatar-outgoing-duration) infinite ease-out
 }
 
 .wrapper_f910d0.ringingIncoming_f910d0:after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    left: -3px;
+    top: -3px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: transparent;
+    border: 3px solid var(--interactive-active);
+    transform-origin: center;
     animation: incoming-call-pulse_f910d0 var(--custom-call-avatar-incoming-duration) infinite ease-out
 }
 
-.status_f910d0 {
-    background-clip: padding-box;
-    border-radius: 50%;
-    padding: 4px;
-    width: 16px;
-    height: 16px;
+.statusContainer_f910d0 {
     position: absolute;
     right: 0;
     bottom: 0;
-    background-color: var(--red-400)
+    background-color: var(--red-400);
+    border-radius: 50%;
+    padding: 4px
+}
+
+.status_f910d0,
+.statusContainer_f910d0 {
+    width: 16px;
+    height: 16px
 }
 
 .voiceAvatar_f910d0 {
@@ -48724,7 +48884,6 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 }
 
 .preview__2dbe1,
-.preview__2dbe1:after,
 .previewRoot__2dbe1 {
     position: absolute;
     top: 0;
@@ -48735,6 +48894,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 
 .preview__2dbe1:after {
     content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(#18191c, transparent 84px, transparent 183px, #18191c)
 }
 
@@ -49213,12 +49377,18 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     margin-left: auto
 }
 
-.closeInner__6a6d6,
+.closeInner__6a6d6 {
+    color: var(--interactive-normal) !important
+}
+
+.closeInner__6a6d6 {
+    background-color: var(--background-secondary)
+}
+
 .closeInner__6a6d6:hover {
     color: var(--interactive-normal) !important
 }
 
-.closeInner__6a6d6,
 .closeInner__6a6d6:hover {
     background-color: var(--background-secondary)
 }
@@ -49469,10 +49639,6 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     height: 80vh;
     padding-top: var(--spacing-16);
     justify-content: center
-}
-
-.blurToggle_f86e69 {
-    padding: 12px 10px !important
 }
 
 [data-popout-root],
@@ -55767,28 +55933,28 @@ html.disable-forced-colors * {
 
 .visual-refresh.theme-dark,
 .visual-refresh .theme-dark {
-    --activity-card-background: var(--neutral-66);
-    --autocomplete-bg: var(--neutral-66);
-    --background-floating: var(--neutral-66);
+    --activity-card-background: var(--neutral-64);
+    --autocomplete-bg: var(--neutral-64);
+    --background-floating: var(--neutral-64);
     --background-mentioned: hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196);
     --background-mentioned-hover: hsl(var(--opacity-yellow-4-hsl)/0.0392156862745098);
     --background-message-highlight: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --background-message-highlight-hover: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
-    --background-message-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --background-message-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-modifier-accent: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-modifier-active: hsl(var(--opacity-16-hsl)/0.1607843137254902);
-    --background-modifier-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --background-modifier-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-modifier-selected: hsl(var(--opacity-24-hsl)/0.23921568627450981);
-    --background-primary: var(--neutral-69);
-    --background-secondary: var(--neutral-72);
-    --background-tertiary: var(--neutral-76);
-    --bg-base-primary: var(--neutral-69);
-    --bg-base-secondary: var(--neutral-72);
-    --bg-base-tertiary: var(--neutral-76);
+    --background-primary: var(--neutral-66);
+    --background-secondary: var(--neutral-69);
+    --background-tertiary: var(--neutral-73);
+    --bg-base-primary: var(--neutral-66);
+    --bg-base-secondary: var(--neutral-69);
+    --bg-base-tertiary: var(--neutral-73);
     --bg-brand: var(--blurple-50);
     --bg-mod-faint: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --bg-mod-strong: hsl(var(--opacity-24-hsl)/0.23921568627450981);
-    --bg-mod-subtle: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --bg-mod-subtle: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --border-faint: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --border-strong: hsl(var(--opacity-44-hsl)/0.4392156862745098);
     --border-subtle: hsl(var(--opacity-12-hsl)/0.12156862745098039);
@@ -55827,58 +55993,58 @@ html.disable-forced-colors * {
     --button-transparent-background-active: hsl(var(--primary-500-hsl)/0.3);
     --button-transparent-background-hover: hsl(var(--opacity-20-hsl)/0.2);
     --button-transparent-text: var(--neutral-6);
-    --card-primary-bg: var(--neutral-66);
-    --card-secondary-bg: hsl(var(--opacity-8-hsl)/0.0784313725490196);
-    --channel-icon: var(--neutral-29);
-    --channels-default: var(--neutral-29);
+    --card-primary-bg: var(--neutral-64);
+    --card-secondary-bg: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --channel-icon: var(--neutral-27);
+    --channels-default: var(--neutral-27);
     --header-muted: var(--neutral-22);
     --header-primary: var(--neutral-1);
-    --header-secondary: var(--neutral-11);
+    --header-secondary: var(--neutral-9);
     --icon-muted: var(--neutral-22);
     --icon-primary: var(--neutral-2);
     --icon-secondary: var(--neutral-15);
     --info-danger-background: hsl(var(--opacity-red-8-hsl)/0.0784313725490196);
-    --info-danger-text: var(--red-new-23);
+    --info-danger-text: var(--red-new-21);
     --info-help-background: hsl(var(--opacity-blue-8-hsl)/0.0784313725490196);
-    --info-help-text: var(--blue-new-25);
+    --info-help-text: var(--blue-new-24);
     --info-positive-background: hsl(var(--opacity-green-8-hsl)/0.0784313725490196);
-    --info-positive-text: var(--green-new-26);
+    --info-positive-text: var(--green-new-24);
     --info-warning-background: hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196);
-    --info-warning-text: var(--yellow-new-24);
-    --input-background: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
+    --info-warning-text: var(--yellow-new-22);
+    --input-background: hsl(var(--opacity-black-20-hsl)/0.2);
     --input-border: hsl(var(--opacity-20-hsl)/0.2);
     --input-focused-border: hsl(var(--white-hsl)/0.04);
-    --input-placeholder-text: var(--neutral-31);
+    --input-placeholder-text: var(--neutral-32);
     --interactive-active: var(--neutral-1);
     --interactive-hover: var(--neutral-1);
     --interactive-normal: var(--neutral-15);
     --mention-background: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
-    --mention-foreground: var(--blurple-10);
+    --mention-foreground: var(--blurple-8);
     --message-reacted-background: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
-    --message-reacted-text: var(--blurple-5);
-    --modal-background: var(--neutral-66);
-    --modal-footer-background: var(--neutral-66);
+    --message-reacted-text: var(--blurple-3);
+    --modal-background: var(--neutral-64);
+    --modal-footer-background: var(--neutral-64);
     --premium-nitro-pink-text: var(--pink-33);
     --scrollbar-auto-scrollbar-color-thumb: var(--neutral-38);
-    --scrollbar-auto-scrollbar-color-track: var(--neutral-75);
-    --scrollbar-auto-thumb: var(--neutral-37);
+    --scrollbar-auto-scrollbar-color-track: var(--neutral-74);
+    --scrollbar-auto-thumb: var(--neutral-36);
     --scrollbar-auto-track: hsl(var(--transparent-hsl)/0);
-    --scrollbar-thin-thumb: var(--neutral-39);
+    --scrollbar-thin-thumb: var(--neutral-38);
     --spine-default: hsl(var(--opacity-44-hsl)/0.4392156862745098);
-    --spoiler-hidden-background: var(--neutral-37);
+    --spoiler-hidden-background: var(--neutral-36);
     --text-brand: var(--blurple-25);
     --text-link: var(--blue-new-26);
     --text-muted: var(--neutral-22);
-    --text-normal: var(--neutral-11);
-    --text-positive: var(--green-new-26);
+    --text-normal: var(--neutral-9);
+    --text-positive: var(--green-new-24);
     --text-primary: var(--neutral-1);
     --text-secondary: var(--neutral-15);
-    --text-warning: var(--yellow-new-24);
-    --app-background-frame: var(--neutral-81);
+    --text-warning: var(--yellow-new-22);
+    --app-background-frame: var(--neutral-78);
     --app-border-frame: hsl(var(--opacity-12-hsl)/0.12156862745098039);
-    --background-base-low: var(--neutral-69);
-    --background-base-lower: var(--neutral-72);
-    --background-base-lowest: var(--neutral-76);
+    --background-base-low: var(--neutral-66);
+    --background-base-lower: var(--neutral-69);
+    --background-base-lowest: var(--neutral-73);
     --background-code: hsl(var(--opacity-blurple-4-hsl)/0.0392156862745098);
     --background-code-addition: hsl(var(--opacity-green-12-hsl)/0.12156862745098039);
     --background-code-deletion: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
@@ -55889,45 +56055,46 @@ html.disable-forced-colors * {
     --background-mod-faint: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --background-mod-normal: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --background-mod-strong: hsl(var(--opacity-24-hsl)/0.23921568627450981);
-    --background-mod-subtle: hsl(var(--opacity-8-hsl)/0.0784313725490196);
-    --background-surface-high: var(--neutral-66);
-    --background-surface-higher: var(--neutral-63);
+    --background-mod-subtle: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --background-surface-high: var(--neutral-64);
+    --background-surface-higher: var(--neutral-62);
     --background-surface-highest: var(--neutral-60);
     --border-feedback-critical: hsl(var(--opacity-red-20-hsl)/0.2);
     --border-normal: hsl(var(--opacity-20-hsl)/0.2);
-    --chat-background-default: var(--neutral-69);
+    --chat-background-default: var(--neutral-64);
+    --chat-text-muted: var(--neutral-27);
     --checkbox-background-checked: var(--blurple-50);
     --checkbox-background-default: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --checkbox-border-checked: var(--blurple-50);
     --checkbox-border-default: var(--neutral-34);
     --icon-default: var(--neutral-2);
     --icon-tertiary: var(--neutral-22);
-    --notice-background-critical: var(--red-new-76);
-    --notice-background-info: var(--blue-new-77);
-    --notice-background-positive: var(--green-new-77);
-    --notice-background-warning: var(--yellow-new-76);
+    --notice-background-critical: var(--red-new-74);
+    --notice-background-info: var(--blue-new-76);
+    --notice-background-positive: var(--green-new-76);
+    --notice-background-warning: var(--yellow-new-75);
     --notice-text-critical: var(--red-new-1);
-    --notice-text-info: var(--blue-new-2);
-    --notice-text-positive: var(--green-new-4);
+    --notice-text-info: var(--blue-new-1);
+    --notice-text-positive: var(--green-new-2);
     --notice-text-warning: var(--yellow-new-1);
-    --spoiler-hidden-background-hover: var(--neutral-28);
-    --text-code-addition: var(--green-new-13);
-    --text-code-builtin: var(--orange-new-12);
-    --text-code-bullet: var(--yellow-new-13);
-    --text-code-comment: var(--neutral-28);
-    --text-code-default: var(--blue-new-14);
-    --text-code-deletion: var(--red-new-9);
-    --text-code-keyword: var(--red-new-11);
-    --text-code-section: var(--blue-new-14);
-    --text-code-string: var(--teal-new-15);
-    --text-code-tag: var(--green-new-15);
-    --text-code-title: var(--blurple-13);
-    --text-code-variable: var(--blue-new-14);
-    --text-default: var(--neutral-11);
-    --text-feedback-critical: var(--red-new-23);
-    --text-feedback-info: var(--blue-new-25);
-    --text-feedback-positive: var(--green-new-26);
-    --text-feedback-warning: var(--yellow-new-24);
+    --spoiler-hidden-background-hover: var(--neutral-27);
+    --text-code-addition: var(--green-new-10);
+    --text-code-builtin: var(--orange-new-10);
+    --text-code-bullet: var(--yellow-new-10);
+    --text-code-comment: var(--neutral-26);
+    --text-code-default: var(--blue-new-11);
+    --text-code-deletion: var(--red-new-6);
+    --text-code-keyword: var(--red-new-8);
+    --text-code-section: var(--blue-new-11);
+    --text-code-string: var(--teal-new-12);
+    --text-code-tag: var(--green-new-13);
+    --text-code-title: var(--blurple-10);
+    --text-code-variable: var(--blue-new-11);
+    --text-default: var(--neutral-9);
+    --text-feedback-critical: var(--red-new-21);
+    --text-feedback-info: var(--blue-new-24);
+    --text-feedback-positive: var(--green-new-24);
+    --text-feedback-warning: var(--yellow-new-22);
     --text-tertiary: var(--neutral-22)
 }
 
@@ -55935,78 +56102,78 @@ html.disable-forced-colors * {
 
     .visual-refresh.theme-dark,
     .visual-refresh .theme-dark {
-        --activity-card-background: color-mix(in oklab, var(--neutral-66) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --autocomplete-bg: color-mix(in oklab, var(--neutral-66) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --background-floating: color-mix(in oklab, var(--neutral-66) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --activity-card-background: color-mix(in oklab, var(--neutral-64) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --autocomplete-bg: color-mix(in oklab, var(--neutral-64) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --background-floating: color-mix(in oklab, var(--neutral-64) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-mentioned: color-mix(in oklab, hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
         --background-mentioned-hover: color-mix(in oklab, hsl(var(--opacity-yellow-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
         --background-message-highlight: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--theme-base-color-amount, 0%));
         --background-message-highlight-hover: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
-        --background-message-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
-        --background-primary: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --background-secondary: color-mix(in oklab, var(--neutral-72) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --background-tertiary: color-mix(in oklab, var(--neutral-76) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --bg-base-primary: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --bg-base-secondary: color-mix(in oklab, var(--neutral-72) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --bg-base-tertiary: color-mix(in oklab, var(--neutral-76) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --background-message-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
+        --background-primary: color-mix(in oklab, var(--neutral-66) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --background-secondary: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --background-tertiary: color-mix(in oklab, var(--neutral-73) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --bg-base-primary: color-mix(in oklab, var(--neutral-66) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --bg-base-secondary: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --bg-base-tertiary: color-mix(in oklab, var(--neutral-73) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --bg-mod-faint: color-mix(in oklab, hsl(var(--opacity-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
         --bg-mod-strong: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--theme-base-color-amount, 0%));
-        --bg-mod-subtle: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
+        --bg-mod-subtle: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
         --border-faint: color-mix(in oklab, hsl(var(--opacity-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
         --border-strong: color-mix(in oklab, hsl(var(--opacity-44-hsl)/0.4392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.4392156862745098) var(--theme-base-color-amount, 0%));
         --border-subtle: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
-        --card-primary-bg: color-mix(in oklab, var(--neutral-66) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --card-secondary-bg: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
-        --channel-icon: color-mix(in oklab, var(--neutral-29) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --channels-default: color-mix(in oklab, var(--neutral-29) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --card-primary-bg: color-mix(in oklab, var(--neutral-64) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --card-secondary-bg: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
+        --channel-icon: color-mix(in oklab, var(--neutral-27) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --channels-default: color-mix(in oklab, var(--neutral-27) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-muted: color-mix(in oklab, var(--neutral-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-primary: color-mix(in oklab, var(--neutral-1) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --header-secondary: color-mix(in oklab, var(--neutral-11) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --header-secondary: color-mix(in oklab, var(--neutral-9) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --icon-muted: color-mix(in oklab, var(--neutral-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --icon-primary: color-mix(in oklab, var(--neutral-2) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --icon-secondary: color-mix(in oklab, var(--neutral-15) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --info-danger-background: color-mix(in oklab, hsl(var(--opacity-red-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
-        --info-danger-text: color-mix(in oklab, var(--red-new-23) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --info-danger-text: color-mix(in oklab, var(--red-new-21) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --info-help-background: color-mix(in oklab, hsl(var(--opacity-blue-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
-        --info-help-text: color-mix(in oklab, var(--blue-new-25) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --info-help-text: color-mix(in oklab, var(--blue-new-24) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --info-positive-background: color-mix(in oklab, hsl(var(--opacity-green-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
-        --info-positive-text: color-mix(in oklab, var(--green-new-26) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --info-positive-text: color-mix(in oklab, var(--green-new-24) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --info-warning-background: color-mix(in oklab, hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
-        --info-warning-text: color-mix(in oklab, var(--yellow-new-24) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --input-background: color-mix(in oklab, hsl(var(--opacity-black-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
+        --info-warning-text: color-mix(in oklab, var(--yellow-new-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --input-background: color-mix(in oklab, hsl(var(--opacity-black-20-hsl)/0.2) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2) var(--theme-base-color-amount, 0%));
         --input-border: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2) var(--theme-base-color-amount, 0%));
         --input-focused-border: color-mix(in oklab, hsl(var(--white-hsl)/0.04) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.04) var(--theme-base-color-amount, 0%));
-        --input-placeholder-text: color-mix(in oklab, var(--neutral-31) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --input-placeholder-text: color-mix(in oklab, var(--neutral-32) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --interactive-active: color-mix(in oklab, var(--neutral-1) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --interactive-hover: color-mix(in oklab, var(--neutral-1) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --interactive-normal: color-mix(in oklab, var(--neutral-15) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --mention-background: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--theme-base-color-amount, 0%));
-        --mention-foreground: color-mix(in oklab, var(--blurple-10) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --mention-foreground: color-mix(in oklab, var(--blurple-8) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --message-reacted-background: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--theme-base-color-amount, 0%));
-        --message-reacted-text: color-mix(in oklab, var(--blurple-5) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --modal-background: color-mix(in oklab, var(--neutral-66) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --modal-footer-background: color-mix(in oklab, var(--neutral-66) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --message-reacted-text: color-mix(in oklab, var(--blurple-3) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --modal-background: color-mix(in oklab, var(--neutral-64) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --modal-footer-background: color-mix(in oklab, var(--neutral-64) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --premium-nitro-pink-text: color-mix(in oklab, var(--pink-33) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --scrollbar-auto-scrollbar-color-thumb: color-mix(in oklab, var(--neutral-38) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --scrollbar-auto-scrollbar-color-track: color-mix(in oklab, var(--neutral-75) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --scrollbar-auto-thumb: color-mix(in oklab, var(--neutral-37) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --scrollbar-auto-scrollbar-color-track: color-mix(in oklab, var(--neutral-74) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --scrollbar-auto-thumb: color-mix(in oklab, var(--neutral-36) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-track: color-mix(in oklab, hsl(var(--transparent-hsl)/0) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0) var(--theme-base-color-amount, 0%));
-        --scrollbar-thin-thumb: color-mix(in oklab, var(--neutral-39) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --scrollbar-thin-thumb: color-mix(in oklab, var(--neutral-38) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --spine-default: color-mix(in oklab, hsl(var(--opacity-44-hsl)/0.4392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.4392156862745098) var(--theme-base-color-amount, 0%));
-        --spoiler-hidden-background: color-mix(in oklab, var(--neutral-37) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --spoiler-hidden-background: color-mix(in oklab, var(--neutral-36) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--blurple-25) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-link: color-mix(in oklab, var(--blue-new-26) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-muted: color-mix(in oklab, var(--neutral-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-normal: color-mix(in oklab, var(--neutral-11) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-positive: color-mix(in oklab, var(--green-new-26) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-normal: color-mix(in oklab, var(--neutral-9) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-positive: color-mix(in oklab, var(--green-new-24) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-primary: color-mix(in oklab, var(--neutral-1) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-secondary: color-mix(in oklab, var(--neutral-15) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-warning: color-mix(in oklab, var(--yellow-new-24) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --app-background-frame: color-mix(in oklab, var(--neutral-81) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --text-warning: color-mix(in oklab, var(--yellow-new-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --app-background-frame: color-mix(in oklab, var(--neutral-78) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --app-border-frame: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
-        --background-base-low: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --background-base-lower: color-mix(in oklab, var(--neutral-72) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --background-base-lowest: color-mix(in oklab, var(--neutral-76) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --background-base-low: color-mix(in oklab, var(--neutral-66) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --background-base-lower: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --background-base-lowest: color-mix(in oklab, var(--neutral-73) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-code: color-mix(in oklab, hsl(var(--opacity-blurple-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
         --background-code-addition: color-mix(in oklab, hsl(var(--opacity-green-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
         --background-code-deletion: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
@@ -56014,44 +56181,45 @@ html.disable-forced-colors * {
         --background-feedback-info: color-mix(in oklab, hsl(var(--opacity-blue-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
         --background-feedback-positive: color-mix(in oklab, hsl(var(--opacity-green-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
         --background-feedback-warning: color-mix(in oklab, hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
-        --background-surface-high: color-mix(in oklab, var(--neutral-66) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --background-surface-higher: color-mix(in oklab, var(--neutral-63) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --background-surface-high: color-mix(in oklab, var(--neutral-64) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --background-surface-higher: color-mix(in oklab, var(--neutral-62) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-surface-highest: color-mix(in oklab, var(--neutral-60) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --border-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-20-hsl)/0.2) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2) var(--theme-base-color-amount, 0%));
         --border-normal: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2) var(--theme-base-color-amount, 0%));
-        --chat-background-default: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --chat-background-default: color-mix(in oklab, var(--neutral-64) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --chat-text-muted: color-mix(in oklab, var(--neutral-27) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --checkbox-background-checked: color-mix(in oklab, var(--blurple-50) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --checkbox-background-default: color-mix(in oklab, hsl(var(--opacity-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
         --checkbox-border-checked: color-mix(in oklab, var(--blurple-50) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --checkbox-border-default: color-mix(in oklab, var(--neutral-34) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-2) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --icon-tertiary: color-mix(in oklab, var(--neutral-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --notice-background-critical: color-mix(in oklab, var(--red-new-76) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --notice-background-info: color-mix(in oklab, var(--blue-new-77) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --notice-background-positive: color-mix(in oklab, var(--green-new-77) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --notice-background-warning: color-mix(in oklab, var(--yellow-new-76) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --notice-background-critical: color-mix(in oklab, var(--red-new-74) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --notice-background-info: color-mix(in oklab, var(--blue-new-76) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --notice-background-positive: color-mix(in oklab, var(--green-new-76) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --notice-background-warning: color-mix(in oklab, var(--yellow-new-75) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --notice-text-critical: color-mix(in oklab, var(--red-new-1) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --notice-text-info: color-mix(in oklab, var(--blue-new-2) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --notice-text-positive: color-mix(in oklab, var(--green-new-4) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --notice-text-info: color-mix(in oklab, var(--blue-new-1) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --notice-text-positive: color-mix(in oklab, var(--green-new-2) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --notice-text-warning: color-mix(in oklab, var(--yellow-new-1) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-28) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --text-code-addition: color-mix(in oklab, var(--green-new-13) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-code-builtin: color-mix(in oklab, var(--orange-new-12) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-code-bullet: color-mix(in oklab, var(--yellow-new-13) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-code-comment: color-mix(in oklab, var(--neutral-28) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-code-default: color-mix(in oklab, var(--blue-new-14) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-code-deletion: color-mix(in oklab, var(--red-new-9) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-code-keyword: color-mix(in oklab, var(--red-new-11) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-code-section: color-mix(in oklab, var(--blue-new-14) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-code-string: color-mix(in oklab, var(--teal-new-15) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-code-tag: color-mix(in oklab, var(--green-new-15) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-code-title: color-mix(in oklab, var(--blurple-13) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-code-variable: color-mix(in oklab, var(--blue-new-14) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-default: color-mix(in oklab, var(--neutral-11) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-feedback-critical: color-mix(in oklab, var(--red-new-23) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-feedback-info: color-mix(in oklab, var(--blue-new-25) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-feedback-positive: color-mix(in oklab, var(--green-new-26) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-feedback-warning: color-mix(in oklab, var(--yellow-new-24) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-27) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --text-code-addition: color-mix(in oklab, var(--green-new-10) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-code-builtin: color-mix(in oklab, var(--orange-new-10) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-code-bullet: color-mix(in oklab, var(--yellow-new-10) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-code-comment: color-mix(in oklab, var(--neutral-26) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-code-default: color-mix(in oklab, var(--blue-new-11) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-code-deletion: color-mix(in oklab, var(--red-new-6) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-code-keyword: color-mix(in oklab, var(--red-new-8) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-code-section: color-mix(in oklab, var(--blue-new-11) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-code-string: color-mix(in oklab, var(--teal-new-12) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-code-tag: color-mix(in oklab, var(--green-new-13) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-code-title: color-mix(in oklab, var(--blurple-10) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-code-variable: color-mix(in oklab, var(--blue-new-11) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-default: color-mix(in oklab, var(--neutral-9) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-feedback-critical: color-mix(in oklab, var(--red-new-21) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-feedback-info: color-mix(in oklab, var(--blue-new-24) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-feedback-positive: color-mix(in oklab, var(--green-new-24) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-feedback-warning: color-mix(in oklab, var(--yellow-new-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-tertiary: color-mix(in oklab, var(--neutral-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%))
     }
 }
@@ -56123,7 +56291,7 @@ html.disable-forced-colors * {
     --channels-default: var(--neutral-42);
     --header-muted: var(--neutral-38);
     --header-primary: var(--neutral-71);
-    --header-secondary: var(--neutral-67);
+    --header-secondary: var(--neutral-69);
     --icon-muted: var(--neutral-38);
     --icon-primary: var(--neutral-59);
     --icon-secondary: var(--neutral-44);
@@ -56153,7 +56321,7 @@ html.disable-forced-colors * {
     --text-brand: var(--blurple-49);
     --text-link: var(--blue-new-49);
     --text-muted: var(--neutral-38);
-    --text-normal: var(--neutral-67);
+    --text-normal: var(--neutral-69);
     --text-positive: var(--green-new-55);
     --text-primary: var(--neutral-71);
     --text-secondary: var(--neutral-44);
@@ -56180,6 +56348,7 @@ html.disable-forced-colors * {
     --border-feedback-critical: hsl(var(--opacity-red-24-hsl)/0.23921568627450981);
     --border-normal: hsl(var(--opacity-36-hsl)/0.3607843137254902);
     --chat-background-default: var(--neutral-1);
+    --chat-text-muted: var(--neutral-39);
     --checkbox-border-default: var(--neutral-29);
     --icon-default: var(--neutral-59);
     --icon-tertiary: var(--neutral-38);
@@ -56204,7 +56373,7 @@ html.disable-forced-colors * {
     --text-code-tag: var(--green-new-68);
     --text-code-title: var(--blurple-68);
     --text-code-variable: var(--blue-new-68);
-    --text-default: var(--neutral-67);
+    --text-default: var(--neutral-69);
     --text-feedback-critical: var(--red-new-54);
     --text-feedback-info: var(--blue-new-56);
     --text-feedback-positive: var(--green-new-55);
@@ -56241,7 +56410,7 @@ html.disable-forced-colors * {
         --channels-default: color-mix(in oklab, var(--neutral-42) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-muted: color-mix(in oklab, var(--neutral-38) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-primary: color-mix(in oklab, var(--neutral-71) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --header-secondary: color-mix(in oklab, var(--neutral-67) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --header-secondary: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --icon-muted: color-mix(in oklab, var(--neutral-38) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --icon-primary: color-mix(in oklab, var(--neutral-59) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --icon-secondary: color-mix(in oklab, var(--neutral-44) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -56271,7 +56440,7 @@ html.disable-forced-colors * {
         --text-brand: color-mix(in oklab, var(--blurple-49) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-link: color-mix(in oklab, var(--blue-new-49) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-muted: color-mix(in oklab, var(--neutral-38) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-normal: color-mix(in oklab, var(--neutral-67) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-normal: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-positive: color-mix(in oklab, var(--green-new-55) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-primary: color-mix(in oklab, var(--neutral-71) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-secondary: color-mix(in oklab, var(--neutral-44) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -56294,6 +56463,7 @@ html.disable-forced-colors * {
         --border-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-24-hsl)/0.23921568627450981) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--theme-base-color-amount, 0%));
         --border-normal: color-mix(in oklab, hsl(var(--opacity-36-hsl)/0.3607843137254902) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.3607843137254902) var(--theme-base-color-amount, 0%));
         --chat-background-default: color-mix(in oklab, var(--neutral-1) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --chat-text-muted: color-mix(in oklab, var(--neutral-39) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --checkbox-border-default: color-mix(in oklab, var(--neutral-29) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-59) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --icon-tertiary: color-mix(in oklab, var(--neutral-38) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -56318,7 +56488,7 @@ html.disable-forced-colors * {
         --text-code-tag: color-mix(in oklab, var(--green-new-68) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-code-title: color-mix(in oklab, var(--blurple-68) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-code-variable: color-mix(in oklab, var(--blue-new-68) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --text-default: color-mix(in oklab, var(--neutral-67) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --text-default: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-feedback-critical: color-mix(in oklab, var(--red-new-54) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-feedback-info: color-mix(in oklab, var(--blue-new-56) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-feedback-positive: color-mix(in oklab, var(--green-new-55) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -56448,7 +56618,8 @@ html.disable-forced-colors * {
     --background-surface-highest: var(--neutral-83);
     --border-feedback-critical: hsl(var(--opacity-red-24-hsl)/0.23921568627450981);
     --border-normal: hsl(var(--opacity-32-hsl)/0.3215686274509804);
-    --chat-background-default: var(--neutral-92);
+    --chat-background-default: var(--neutral-91);
+    --chat-text-muted: var(--neutral-37);
     --checkbox-border-default: var(--neutral-43);
     --icon-default: var(--neutral-14);
     --icon-tertiary: var(--neutral-33);
@@ -56560,7 +56731,8 @@ html.disable-forced-colors * {
         --background-surface-highest: color-mix(in oklab, var(--neutral-83) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --border-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-24-hsl)/0.23921568627450981) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--theme-base-color-amount, 0%));
         --border-normal: color-mix(in oklab, hsl(var(--opacity-32-hsl)/0.3215686274509804) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.3215686274509804) var(--theme-base-color-amount, 0%));
-        --chat-background-default: color-mix(in oklab, var(--neutral-92) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --chat-background-default: color-mix(in oklab, var(--neutral-91) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --chat-text-muted: color-mix(in oklab, var(--neutral-37) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --checkbox-border-default: color-mix(in oklab, var(--neutral-43) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-14) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --icon-tertiary: color-mix(in oklab, var(--neutral-33) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -56739,7 +56911,8 @@ html.disable-forced-colors * {
     --background-surface-highest: var(--neutral-73);
     --border-feedback-critical: hsl(var(--opacity-red-20-hsl)/0.2);
     --border-normal: hsl(var(--opacity-20-hsl)/0.2);
-    --chat-background-default: var(--neutral-81);
+    --chat-background-default: var(--neutral-80);
+    --chat-text-muted: var(--neutral-34);
     --checkbox-background-checked: var(--blurple-50);
     --checkbox-background-default: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --checkbox-border-checked: var(--blurple-50);
@@ -56861,7 +57034,8 @@ html.disable-forced-colors * {
         --background-surface-highest: color-mix(in oklab, var(--neutral-73) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --border-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-20-hsl)/0.2) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2) var(--theme-base-color-amount, 0%));
         --border-normal: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2) var(--theme-base-color-amount, 0%));
-        --chat-background-default: color-mix(in oklab, var(--neutral-81) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --chat-background-default: color-mix(in oklab, var(--neutral-80) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --chat-text-muted: color-mix(in oklab, var(--neutral-34) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --checkbox-background-checked: color-mix(in oklab, var(--blurple-50) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --checkbox-background-default: color-mix(in oklab, hsl(var(--opacity-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
         --checkbox-border-checked: color-mix(in oklab, var(--blurple-50) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -56993,7 +57167,10 @@ html.disable-forced-colors * {
     --spacing-64: 64px;
     --spacing-72: 72px;
     --spacing-80: 80px;
-    --spacing-96: 96px;
+    --spacing-96: 96px
+}
+
+:root {
     --size-0: 0px;
     --size-4: 4px;
     --size-8: 8px;
@@ -57052,6 +57229,7 @@ html.disable-forced-colors * {
     --space-128: 128px;
     --space-160: 160px;
     --space-192: 192px;
+    --space-xxs: var(--space-4);
     --space-xs: var(--space-8);
     --space-sm: var(--space-12);
     --space-md: var(--space-16);
@@ -57060,12 +57238,8 @@ html.disable-forced-colors * {
     --space-xxl: var(--space-32)
 }
 
-.density-compact,
-:root {
-    --space-xxs: var(--space-4)
-}
-
 .density-compact {
+    --space-xxs: var(--space-4);
     --space-xs: var(--space-6);
     --space-sm: var(--space-10);
     --space-md: var(--space-12);
@@ -57409,28 +57583,24 @@ html.disable-forced-colors * {
 }
 
 :root {
+    --font-primary: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-display: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-headline: "ABC Ginto Nord", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-code: "gg mono", "Source Code Pro", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
     --font-clan-body: Fraunces, "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
-:root,
 :root:lang(bg),
 :root:lang(el),
 :root:lang(ru),
 :root:lang(uk) {
     --font-primary: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-code: "gg mono", "Source Code Pro", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace
-}
-
-:root:lang(bg),
-:root:lang(el),
-:root:lang(ru),
-:root:lang(uk) {
     --font-headline: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-code: "gg mono", "Source Code Pro", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
     --font-clan-body: Fraunces, "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -57679,7 +57849,10 @@ code {
 
 :root {
     --custom-index-scrollbar-width: 10px;
-    --custom-index-scrollbar-margin: 3px;
+    --custom-index-scrollbar-margin: 3px
+}
+
+:root {
     --custom-auth-box-auth-box-padding: 32px;
     --custom-wave-splash-responsive-width-mobile: 485px;
     --custom-wave-splash-responsive-width-mobile-first: 486px;
@@ -57756,13 +57929,22 @@ code {
     --custom-media-queries-media-query-mobile: 768px;
     --custom-scrollbar-scrollbar-width: 14px;
     --custom-scrollbar-scrollbar-margin: 3px;
-    --custom-scrollbar-border-radius: calc(var(--custom-scrollbar-scrollbar-width)/2);
+    --custom-scrollbar-border-radius: calc(var(--custom-scrollbar-scrollbar-width)/2)
+}
+
+:root {
     --custom-create-welcome-channel-modal-emoji-size: 20px;
-    --custom-create-welcome-channel-modal-input-elements-padding: 10px;
+    --custom-create-welcome-channel-modal-input-elements-padding: 10px
+}
+
+:root {
     --custom-voice-channel-effect-voice-channel-effect-animation-size: 800px;
     --custom-voice-channel-effects-bar-effect-bar-padding-x: 16px;
     --custom-voice-channel-effects-bar-effect-bar-padding-y: 12px;
-    --custom-voice-channel-effects-bar-max-width: 498px;
+    --custom-voice-channel-effects-bar-max-width: 498px
+}
+
+:root {
     --custom-base-tile-border-radius: 8px
 }
 
@@ -57771,7 +57953,10 @@ code {
 }
 
 :root {
-    --custom-summary-avatars-avatar-diameter: 16px;
+    --custom-summary-avatars-avatar-diameter: 16px
+}
+
+:root {
     --custom-guild-settings-premium-tier-status-progress-with-subscriptions-margin-top: 7px;
     --custom-guild-stickers-tiers-grid-breakpoint: 1010px;
     --custom-guild-sticker-upload-modal-emoji-size: 22px;
@@ -57806,9 +57991,18 @@ code {
     --custom-stickers-constants-sticker-picker-breakpoint-small: 360px;
     --custom-stickers-constants-sticker-picker-breakpoint-medium: 446px;
     --custom-stickers-constants-category-separator-size: 1px;
-    --custom-stickers-constants-category-separator-margin-vertical: 12px;
-    --custom-header-icon-color-expired: #4e5058;
-    --custom-reaction-picker-border-radius: 8px;
+    --custom-stickers-constants-category-separator-margin-vertical: 12px
+}
+
+:root {
+    --custom-header-icon-color-expired: #4e5058
+}
+
+:root {
+    --custom-reaction-picker-border-radius: 8px
+}
+
+:root {
     --custom-outbound-promotion-redemption-modal-art-height: 120px;
     --custom-premium-colors-premium-gradient-tier-0: linear-gradient(90deg, var(--premium-tier-0-purple-for-gradients), var(--premium-tier-0-blue-for-gradients));
     --custom-premium-colors-premium-gradient-tier-1: linear-gradient(90deg, var(--premium-tier-1-blue-for-gradients), var(--premium-tier-1-dark-blue-for-gradients));
@@ -57820,17 +58014,38 @@ code {
     --custom-premium-colors-premium-gradient-tier-2-tri-color-vertical: linear-gradient(0deg, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-purple-for-gradients-2), var(--premium-tier-2-pink-for-gradients));
     --custom-premium-colors-premium-gradient-tier-2-old: linear-gradient(90deg, var(--premium-tier-2-purple), var(--premium-tier-2-pink));
     --custom-premium-colors-banner-yellow: #ffeaa0;
-    --custom-premium-colors-banner-black: #232428;
+    --custom-premium-colors-banner-black: #232428
+}
+
+:root {
     --custom-pending-row-max-width: 1040px;
-    --custom-people-page-max-width-with-toolbar: 940px;
-    --custom-family-center-page-responsive-width-mobile: 900px;
+    --custom-people-page-max-width-with-toolbar: 940px
+}
+
+:root {
+    --custom-family-center-page-responsive-width-mobile: 900px
+}
+
+:root {
     --custom-text-widget-background-color-header-default: var(--primary-600);
     --custom-voice-widget-top-margin: calc(var(--custom-widget-bar-height) + var(--custom-widget-bar-padding)*2);
-    --custom-voice-widget-widget-width: 272px;
+    --custom-voice-widget-widget-width: 272px
+}
+
+:root {
     --custom-o-auth-2-page-oauth-2-max-width: 568px;
-    --custom-o-auth-2-page-oauth-2-min-height: 366px;
-    --custom-party-avatars-avatar-diameter: 24px;
-    --custom-mobile-web-handoff-link-mobile-web-handoff-height: 70px;
+    --custom-o-auth-2-page-oauth-2-min-height: 366px
+}
+
+:root {
+    --custom-party-avatars-avatar-diameter: 24px
+}
+
+:root {
+    --custom-mobile-web-handoff-link-mobile-web-handoff-height: 70px
+}
+
+:root {
     --custom-embedded-application-invite-content-height: 130px;
     --custom-embedded-application-invite-content-height-tall: 162px;
     --custom-embedded-application-invite-content-width: 576px;
@@ -57838,26 +58053,47 @@ code {
     --custom-embedded-application-invite-image-width-large: 288px;
     --custom-message-helpers-popout-content-width: 256px;
     --custom-message-helpers-popout-padding-width: 16px;
-    --custom-message-helpers-popout-container-width: calc(var(--custom-message-helpers-popout-content-width) + var(--custom-message-helpers-popout-padding-width)*2);
+    --custom-message-helpers-popout-container-width: calc(var(--custom-message-helpers-popout-content-width) + var(--custom-message-helpers-popout-padding-width)*2)
+}
+
+:root {
     --custom-media-post-attachments-horizontal-padding: 48px;
     --custom-media-post-embed-spoiler-blur-radius: 20px;
-    --custom-media-post-embed-transition-duration: 170ms;
-    --custom-raging-demon-duration: 0.15s;
+    --custom-media-post-embed-transition-duration: 170ms
+}
+
+:root {
+    --custom-raging-demon-duration: 0.15s
+}
+
+:root {
     --custom-interaction-iframe-modal-modal-min-width: 320px;
     --custom-interaction-iframe-modal-modal-margin: 80px;
     --custom-interaction-iframe-modal-modal-max-width: 1280px;
-    --custom-interaction-iframe-modal-modal-header-height: 52px;
+    --custom-interaction-iframe-modal-modal-header-height: 52px
+}
+
+:root {
     --custom-accept-invite-detail-components-small-mobile-breakpoint: 640px;
-    --custom-accept-invite-mobile-small-mobile-breakpoint: 640px;
+    --custom-accept-invite-mobile-small-mobile-breakpoint: 640px
+}
+
+:root {
     --custom-hub-discovery-add-hub-card-card-height: 320px;
     --custom-hub-discovery-guild-list-card-height: 320px;
     --custom-hub-discovery-guild-list-min-card-width: 248px;
     --custom-hub-discovery-guild-list-gutter-size: 16px;
-    --custom-hub-discovery-page-max-page-width: 1608px;
+    --custom-hub-discovery-page-max-page-width: 1608px
+}
+
+:root {
     --custom-guild-tooltip-icon-size: 20px;
     --custom-guild-tooltip-icon-size-v-2: 16px;
     --custom-folder-item-animation-duration: 150ms;
-    --custom-folder-item-guild-icon-margin: 8px;
+    --custom-folder-item-guild-icon-margin: 8px
+}
+
+:root {
     --custom-category-channel-space-before-category: 16px
 }
 
@@ -57879,8 +58115,14 @@ code {
     --custom-guild-settings-community-intro-text-spacing: 8px;
     --custom-guild-settings-discovery-landing-page-max-width-tab: 905px;
     --custom-guild-settings-discovery-landing-page-settings-max-width: 520px;
-    --custom-guild-settings-partner-content-spacing: 32px;
-    --custom-event-detail-info-tab-base-spacing: 8px;
+    --custom-guild-settings-partner-content-spacing: 32px
+}
+
+:root {
+    --custom-event-detail-info-tab-base-spacing: 8px
+}
+
+:root {
     --custom-subscription-listing-previews-carousel-cards-get-cut-off-width: 724px;
     --custom-editable-benefits-list-emoji-size: 24px;
     --custom-edit-benefit-modal-emoji-size: 22px;
@@ -57896,40 +58138,79 @@ code {
     --custom-historic-earnings-table-toggle-expand-column-width: 30px;
     --custom-guild-role-subscription-card-basic-info-tier-image-size: 80px;
     --custom-guild-role-subscription-card-basic-info-tier-image-size-mobile: 48px;
-    --custom-guild-role-subscriptions-overview-page-page-max-width: 1180px;
+    --custom-guild-role-subscriptions-overview-page-page-max-width: 1180px
+}
+
+:root {
     --custom-guild-dialog-popout-width: 250px;
     --custom-guild-dialog-splash-ratio: 1.77778;
     --custom-guild-dialog-icon-size: 84px;
-    --custom-guild-dialog-icon-padding: 4px;
-    --custom-guild-product-download-modal-header-image-width: 119px;
+    --custom-guild-dialog-icon-padding: 4px
+}
+
+:root {
+    --custom-guild-product-download-modal-header-image-width: 119px
+}
+
+:root {
     --custom-guild-onboarding-home-page-max-page-width: 1128px;
     --custom-guild-onboarding-home-page-max-single-column-width: 704px;
-    --custom-home-resource-channels-obscured-blur-radius: 20px;
-    --custom-guild-member-application-review-sidebar-width: 29vw;
-    --custom-featured-items-popout-featured-items-popout-footer-height: 120px;
+    --custom-home-resource-channels-obscured-blur-radius: 20px
+}
+
+:root {
+    --custom-guild-member-application-review-sidebar-width: 29vw
+}
+
+:root {
+    --custom-featured-items-popout-featured-items-popout-footer-height: 120px
+}
+
+:root {
     --custom-guild-boosting-sidebar-display-conditional-bottom-margin: 12px;
     --custom-guild-boosting-marketing-progress-bar-marker-dimensions: 32px;
     --custom-guild-boosting-marketing-progress-bar-end-markers-margin: 4px;
     --custom-guild-boosting-marketing-progress-bar-marker-marker-dimensions: 32px;
-    --custom-guild-boosting-marketing-tier-cards-tier-card-border-radius: 16px;
-    --custom-go-live-modal-art-height: 112px;
+    --custom-guild-boosting-marketing-tier-cards-tier-card-border-radius: 16px
+}
+
+:root {
+    --custom-go-live-modal-art-height: 112px
+}
+
+:root {
     --custom-gif-picker-gutter-size: 0 16px 12px 16px;
-    --custom-gif-picker-search-results-desired-item-width: 160px;
+    --custom-gif-picker-search-results-desired-item-width: 160px
+}
+
+:root {
     --custom-forum-composer-attachments-attachment-size: 78px;
     --custom-forum-post-obscured-blur-radius: 20px;
     --custom-forum-post-grid-view-obscured-blur-radius: 20px;
     --custom-demo-forum-channel-padding-large: 20px;
     --custom-demo-forum-channel-post-padding: 12px;
-    --custom-demo-forum-channel-gap-size: 8px;
+    --custom-demo-forum-channel-gap-size: 8px
+}
+
+:root {
     --custom-feedback-modal-emoji-size: 64px;
-    --custom-feedback-modal-close-button-margin: 12px;
+    --custom-feedback-modal-close-button-margin: 12px
+}
+
+:root {
     --custom-expression-suggestions-container-padding: 8px;
     --custom-expression-suggestions-sticker-suggestion-size: 48px;
-    --custom-expression-suggestions-sticker-suggestion-margin: 8px;
+    --custom-expression-suggestions-sticker-suggestion-margin: 8px
+}
+
+:root {
     --custom-expression-picker-constants-expression-picker-list-section-heading-height: 32px;
     --custom-expression-picker-constants-expression-picker-inspector-bar-graphic-primary-dimensions: 28px;
     --custom-expression-picker-constants-expression-picker-inspector-bar-graphic-secondary-dimensions: 32px;
-    --custom-expression-picker-constants-expression-picker-inspector-bar-height: 48px;
+    --custom-expression-picker-constants-expression-picker-inspector-bar-height: 48px
+}
+
+:root {
     --custom-emoji-picker-border-radius: 8px;
     --custom-emoji-picker-constants-min-emoji-picker-width: 498px;
     --custom-emoji-picker-constants-emoji-size-medium: 40px;
@@ -57954,18 +58235,27 @@ code {
     --custom-emoji-picker-constants-diversity-emoji-size: 24px;
     --custom-emoji-picker-constants-emoji-premium-upsell-height: 54px;
     --custom-emoji-picker-constants-emoji-premium-upsell-margin-top: 16px;
-    --custom-emoji-picker-constants-newly-added-emoji-badge-height: 16px;
+    --custom-emoji-picker-constants-newly-added-emoji-badge-height: 16px
+}
+
+:root {
     --custom-discover-static-guild-card-card-height: 258px;
     --custom-discover-featured-guilds-section-card-height: 320px;
     --custom-discover-featured-guilds-section-min-card-width: 248px;
     --custom-discover-featured-guilds-section-gutter-size: 16px;
-    --custom-discover-search-results-max-search-bar-width: 720px;
+    --custom-discover-search-results-max-search-bar-width: 720px
+}
+
+:root {
     --custom-guild-directory-min-card-width: 248px;
     --custom-guild-directory-gutter-size: 16px;
     --custom-guild-directory-min-content-width: 320px;
     --custom-guild-directory-max-page-width: 1608px;
     --custom-guild-directory-entry-card-card-height: 274px;
-    --custom-guild-directory-landing-min-header-height: 200px;
+    --custom-guild-directory-landing-min-header-height: 200px
+}
+
+:root {
     --custom-guild-shop-page-two-column-max-width: 1439px;
     --custom-aspect-stable-image-container-padding: 20px;
     --custom-monetization-info-table-expandable-rows-toggle-expand-column-width: 30px;
@@ -57979,26 +58269,50 @@ code {
     --custom-guild-shop-preview-pill-shadow-dark: -4px 5px #1d1d1d;
     --custom-guild-shop-preview-pill-shadow-light: -4px 5px #d7dce8;
     --custom-guild-shop-gradient-start: #686bff;
-    --custom-guild-shop-gradient-end: #c356fd;
-    --custom-guild-role-connections-modal-close-button-margin: 12px;
+    --custom-guild-shop-gradient-end: #c356fd
+}
+
+:root {
+    --custom-guild-role-connections-modal-close-button-margin: 12px
+}
+
+:root {
     --custom-clips-enabled-indicator-medium-break-point: 920px;
-    --custom-clips-enabled-indicator-badge-icon-dimension-override: 20px;
+    --custom-clips-enabled-indicator-badge-icon-dimension-override: 20px
+}
+
+:root {
     --custom-client-themes-editor-content-width: calc(var(--custom-theme-selection-selection-size)*3 + var(--custom-theme-selection-group-column-gap)*2);
     --custom-client-themes-editor-editor-padding: 16px;
     --custom-theme-selection-selection-size: 60px;
-    --custom-theme-selection-group-column-gap: 24px;
+    --custom-theme-selection-group-column-gap: 24px
+}
+
+:root {
     --custom-channel-attachment-upload-spoiler-blur-radius: 44px;
     --custom-channel-attachment-upload-mini-attachment-size: 78px;
     --custom-channel-textarea-text-area-height: 44px;
     --custom-channel-textarea-text-area-max-height: 50vh;
-    --custom-channel-textarea-app-launcher-button-gap: 8px;
+    --custom-channel-textarea-app-launcher-button-gap: 8px
+}
+
+:root {
     --custom-channel-notice-icon-size: 16px;
-    --custom-channel-notice-padding: 12px;
+    --custom-channel-notice-padding: 12px
+}
+
+:root {
     --custom-channel-call-participants-popout-padding-value: 16px;
     --custom-stream-upsell-modal-art-height: 149px;
     --custom-voice-channel-status-modal-emoji-size: 22px;
-    --custom-voice-channel-status-modal-emoji-margin: 10px;
-    --custom-broadcasting-tooltip-image-offset: 40px;
+    --custom-voice-channel-status-modal-emoji-margin: 10px
+}
+
+:root {
+    --custom-broadcasting-tooltip-image-offset: 40px
+}
+
+:root {
     --custom-application-directory-content-min-width: 600px;
     --custom-application-directory-content-max-width: 1024px;
     --custom-guild-count-small-icon-size: 16px;
@@ -58014,7 +58328,10 @@ code {
     --custom-application-directory-profile-sidebar-margin-right: 48px;
     --custom-application-directory-profile-icon-size: 122px;
     --custom-application-directory-search-sidebar-width: 200px;
-    --custom-application-directory-search-sidebar-margin-right: 32px;
+    --custom-application-directory-search-sidebar-margin-right: 32px
+}
+
+:root {
     --custom-activity-bookmark-embed-image-width: 356px;
     --custom-activity-bookmark-embed-image-height: 200px;
     --custom-activity-bookmark-embed-content-height: 400px;
@@ -58032,9 +58349,15 @@ code {
     --custom-activity-shelf-modal-modal-header-developer-controls-height: 176px;
     --custom-activity-shelf-modal-dividers-height: 2px;
     --custom-activity-shelf-modal-divider-height: 1px;
-    --custom-activity-shelf-slide-activity-directory-shelf-grid-gap: 16px;
+    --custom-activity-shelf-slide-activity-directory-shelf-grid-gap: 16px
+}
+
+:root {
     --custom-accept-invite-modal-invite-modal-height: 420px;
-    --custom-accept-invite-modal-small-screen-width: 720px;
+    --custom-accept-invite-modal-small-screen-width: 720px
+}
+
+:root {
     --custom-avatar-avatar-decoration-border-position: calc((0.5 - var(--decoration-to-avatar-ratio)/2)*100%);
     --custom-button-button-xl-width: 148px;
     --custom-button-button-xl-height: 50px;
@@ -58052,13 +58375,22 @@ code {
     --custom-button-filled-hover: 0.1;
     --custom-button-filled-active: 0.2;
     --custom-button-transition-duration: 170ms;
-    --custom-modal-min-width-large: 800px;
+    --custom-modal-min-width-large: 800px
+}
+
+:root {
     --custom-special-markdown-small-break-point: 600px;
     --custom-special-markdown-medium-break-point: 768px;
     --custom-user-profile-hype-squad-badge-icon-size: 24px;
-    --custom-user-profile-hype-squad-badge-shine-size-offset: 64px;
+    --custom-user-profile-hype-squad-badge-shine-size-offset: 64px
+}
+
+:root {
     --custom-guild-discovery-gutter-size: 16px;
-    --custom-guild-discovery-max-page-width: 1608px;
+    --custom-guild-discovery-max-page-width: 1608px
+}
+
+:root {
     --custom-dropdown-button-small-dropdown-size: 16px;
     --custom-dropdown-button-medium-dropdown-size: 24px;
     --custom-dropdown-button-large-dropdown-size: 32px;
@@ -58071,7 +58403,10 @@ code {
     --custom-application-store-home-store-home-width: 1245px;
     --custom-application-store-listing-body-max-width: 880px;
     --custom-store-colors-primary-750: #191b1d;
-    --custom-store-colors-premium-gradient: linear-gradient(90deg, var(--premium-tier-2-purple), var(--premium-tier-2-pink));
+    --custom-store-colors-premium-gradient: linear-gradient(90deg, var(--premium-tier-2-purple), var(--premium-tier-2-pink))
+}
+
+:root {
     --custom-member-list-item-avatar-decoration-padding: 2px;
     --custom-messages-popout-messages-popout-footer-height: 120px;
     --custom-radio-image-border-thickness: 2px;
@@ -58086,7 +58421,10 @@ code {
 }
 
 :root {
-    --decoration-to-avatar-ratio: 1.2;
+    --decoration-to-avatar-ratio: 1.2
+}
+
+:root {
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
