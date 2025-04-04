@@ -42,6 +42,7 @@ let A = Object.freeze({
         USER_PROFILE: (t) => '/users/'.concat(t, '/profile'),
         USER_GUILD_PROFILE: (t, e) => '/guilds/'.concat(t, '/profile/').concat(e),
         USER_CHANNELS: '/users/@me/channels',
+        USER_WARP_LICENSE: '/users/@me/warp/license',
         DM_CHANNEL: (t) => '/users/@me/dms/'.concat(t),
         USER_SETTINGS_PROTO: (t) => '/users/@me/settings-proto/'.concat(t),
         USER_ACTIVITY_METADATA: (t, e, a) =>
@@ -1409,7 +1410,7 @@ var N =
     (r.SPAM_MESSAGE_REQUESTS_VIEWED = 'spam_message_requests_viewed'),
     (r.MESSAGE_REQUESTS_VIEWED = 'message_requests_viewed'),
     (r.MESSAGE_REQUEST_PREVIEW_VIEWED = 'message_request_preview_viewed'),
-    (r.EXPLICIT_MEDIA_OBSCURITY_TOGGLE = 'explicit_media_obscurity_toggle'),
+    (r.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2 = 'explicit_media_obscurity_toggle_v2'),
     (r.EXPLICIT_MEDIA_ACTION = 'explicit_media_action'),
     (r.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT = 'explicit_media_scan_client_timed_out'),
     (r.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED = 'explicit_media_redactable_messages_loaded'),
