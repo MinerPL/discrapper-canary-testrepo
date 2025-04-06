@@ -20,8 +20,8 @@ var s = n(442837),
     b = n(205355),
     x = n(558381),
     y = n(223245),
-    E = n(491428),
-    v = n(401430),
+    v = n(491428),
+    E = n(401430),
     O = n(230711),
     N = n(726542),
     j = n(100527),
@@ -98,25 +98,31 @@ function ey(e) {
     }
     return e;
 }
-let eE = (e) => {
+let ev = (e) => {
         var t;
-        let { error: n, location: i } = e,
-            a = null == (t = (0, Z.hp)(n)) ? void 0 : t.errorCode,
-            l = eb.NW.formatToPlainString(eb.t['ejOT9/'], { errorCode: a }),
-            { avErrorUIEnabled: o } = (0, k.JN)({ location: i });
-        return (
-            o &&
-            (0, r.jsx)(c.Text, {
-                variant: 'text-sm/bold',
-                color: 'currentColor',
-                tag: 'span',
-                className: ex.errorCodeNoticeText,
-                selectable: !0,
-                children: l
-            })
-        );
+        let { error: n, location: i, allowClick: a = !1 } = e,
+            l = null == (t = (0, Z.hp)(n)) ? void 0 : t.errorCode,
+            o = eb.NW.formatToPlainString(eb.t['ejOT9/'], { errorCode: l }),
+            { avErrorUIEnabled: s } = (0, k.JN)({ location: i });
+        if (!s) return null;
+        let u = (0, r.jsx)(c.Text, {
+            variant: 'text-sm/bold',
+            color: 'currentColor',
+            tag: 'span',
+            className: ex.errorCodeNoticeText,
+            selectable: !0,
+            children: o
+        });
+        return a
+            ? (0, r.jsx)(c.P3F, {
+                  tag: 'span',
+                  className: ex.errorCodeNoticeClickable,
+                  onClick: () => a && open(eu.Z.getArticleURL(ef.BhN.AV_ERROR_CODES)),
+                  children: u
+              })
+            : u;
     },
-    ev = () =>
+    eE = () =>
         (0, r.jsxs)(c.qXd, {
             color: c.DM8.DANGER,
             children: [
@@ -126,7 +132,7 @@ let eE = (e) => {
                     }
                 }),
                 eb.NW.string(eb.t.o3zuY2),
-                (0, r.jsx)(eE, {
+                (0, r.jsx)(ev, {
                     error: Z.u.NO_INPUT_DEVICES,
                     location: 'AudioIssueNoticeInputDevices'
                 }),
@@ -146,7 +152,7 @@ let eE = (e) => {
                     }
                 }),
                 eb.NW.string(eb.t.nCO9bG),
-                (0, r.jsx)(eE, {
+                (0, r.jsx)(ev, {
                     error: Z.u.NO_AUDIO_INPUT_DETECTED,
                     location: 'AudioIssueNoticeHelpdesk'
                 }),
@@ -166,7 +172,8 @@ let eE = (e) => {
                     }
                 }),
                 eb.NW.string(eb.t.dNAJ19),
-                (0, r.jsx)(eE, {
+                (0, r.jsx)(ev, {
+                    allowClick: !0,
                     error: Z.u.NO_AUDIO_INPUT_DETECTED,
                     location: 'AudioIssueNoticeMicTester'
                 }),
@@ -190,15 +197,15 @@ let eC =
                   Z = (0, s.e7)([es.ZP], () => es.ZP.getNotice()),
                   k = (0, s.e7)([et.Z], () => et.Z.getGuild(j)),
                   { analyticsLocations: em } = (0, C.ZP)(),
-                  eE = null == Z ? void 0 : Z.type,
+                  ev = null == Z ? void 0 : Z.type,
                   eC = (0, F.J)(j);
               i.useEffect(() => {
-                  null != eE &&
+                  null != ev &&
                       (function (e, t) {
                           let n = { notice_type: e };
                           null != t && (n.guild_id = t), ec.default.track(ef.rMx.APP_NOTICE_VIEWED, n);
-                      })(eE, j);
-              }, [eE, j]),
+                      })(ev, j);
+              }, [ev, j]),
                   i.useEffect(() => {
                       if (null != Z && Z.type === ef.kVF.SURVEY && null != Z.metadata) {
                           let { metadata: e } = Z,
@@ -206,12 +213,12 @@ let eC =
                           null != t && (0, R.W9)(e.id, t),
                               (async () => {
                                   var e, t;
-                                  (null == (e = Z.metadata) ? void 0 : e.id) != null && (await (0, E.g8)(null == (t = Z.metadata) ? void 0 : t.id));
+                                  (null == (e = Z.metadata) ? void 0 : e.id) != null && (await (0, v.g8)(null == (t = Z.metadata) ? void 0 : t.id));
                               })();
                       }
                   }, [Z]);
-              let eI = null != eE ? es.o[eE] : null,
-                  eS = null != eE ? es.m9[eE] : null;
+              let eI = null != ev ? es.o[ev] : null,
+                  eS = null != ev ? es.m9[ev] : null;
               if (null == Z) return null;
               if (null != eI)
                   return (0, r.jsx)(w.q, {
@@ -319,7 +326,7 @@ let eC =
                               eb.NW.string(eb.t.bOQ3jY),
                               (0, r.jsx)(c.NoS, {
                                   onClick: () => {
-                                      let e = er.Z.getRemoteDisconnectVoiceChannelId();
+                                      let e = er.ZP.getRemoteDisconnectVoiceChannelId();
                                       null != e && null != ee.Z.getChannel(e) && _.default.selectVoiceChannel(e);
                                   },
                                   noticeType: ef.kVF.VOICE_DISABLED,
@@ -340,7 +347,7 @@ let eC =
                               eb.NW.string(eb.t.jY2lUF),
                               (0, r.jsx)(c.NoS, {
                                   onClick: () => {
-                                      let e = er.Z.getLastSessionVoiceChannelId();
+                                      let e = er.ZP.getLastSessionVoiceChannelId();
                                       null != e && null != ee.Z.getChannel(e) && _.default.selectVoiceChannel(e);
                                   },
                                   noticeType: ef.kVF.VOICE_CONNECTED_LAST_SESSION,
@@ -428,7 +435,7 @@ let eC =
                       if (!en.Z.supports(e_.AN.LOOPBACK)) return (0, r.jsx)(eO, {});
                       return (0, r.jsx)(eN, {});
                   case ef.kVF.NO_INPUT_DEVICES_DETECTED:
-                      return (0, r.jsx)(ev, {});
+                      return (0, r.jsx)(eE, {});
                   case ef.kVF.HARDWARE_MUTE:
                       if (null == Z.metadata) return null;
                       let { vendor: eR, model: eD } = Z.metadata;
@@ -576,14 +583,14 @@ let eC =
                               (0, r.jsx)(c.RyX, {
                                   noticeType: ef.kVF.SURVEY,
                                   onClick: () => {
-                                      (0, E.hZ)(t, !0);
+                                      (0, v.hZ)(t, !0);
                                   }
                               }),
                               n,
                               (0, r.jsx)(c.NoS, {
                                   noticeType: ef.kVF.SURVEY,
                                   onClick: () => {
-                                      window.open(a, '_blank'), (0, E.hZ)(t, !1);
+                                      window.open(a, '_blank'), (0, v.hZ)(t, !1);
                                   },
                                   children: i
                               })
@@ -708,7 +715,7 @@ let eC =
                                   children: [
                                       (0, r.jsx)('div', { children: eb.NW.format(eb.t['1qxVe3'], { applicationName: Z.metadata.applicationName }) }),
                                       (0, r.jsx)(c.RyX, {
-                                          onClick: v.mc,
+                                          onClick: E.mc,
                                           noticeType: ef.kVF.APPLICATION_TEST_MODE
                                       })
                                   ]
@@ -739,7 +746,7 @@ let eC =
                                       children: eb.NW.string(eb.t.Q5ZgpK)
                                   }),
                                   (0, r.jsx)(c.RyX, {
-                                      onClick: v.mc,
+                                      onClick: E.mc,
                                       noticeType: ef.kVF.APPLICATION_TEST_MODE
                                   })
                               ]
@@ -812,7 +819,7 @@ let eC =
                           color: c.DM8.WARNING,
                           children: [
                               (0, r.jsx)(c.RyX, {
-                                  noticeType: eE,
+                                  noticeType: ev,
                                   onClick: () => {
                                       ej(eK);
                                   }
