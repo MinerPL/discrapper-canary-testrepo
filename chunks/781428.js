@@ -2,8 +2,8 @@ n.d(t, {
     Z: () => $,
     q: () => X
 }),
-    n(26686),
-    n(301563);
+    n(49124),
+    n(35282);
 var r,
     i = n(200651),
     o = n(192379),
@@ -45,7 +45,7 @@ var r,
     G = n(494526),
     U = n(163671),
     F = n(981631),
-    z = n(58346),
+    z = n(260539),
     V = n(388032),
     H = n(555763),
     K = n(20493);
@@ -624,7 +624,8 @@ class Q extends (r = o.PureComponent) {
                         source: F.uRl.QR_CODE,
                         login_source: this.loginSource,
                         gift_code_sku_id: this.giftCodeSKUId,
-                        is_new_user: !1
+                        is_new_user: !1,
+                        login_method: 'remote_auth'
                     });
             }),
             q(this, 'loginReset', () => {
