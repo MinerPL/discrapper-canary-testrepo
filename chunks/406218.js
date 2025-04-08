@@ -4,8 +4,8 @@ n.d(t, {
     sO: () => _,
     xo: () => f
 }),
-    n(47120),
-    n(266796);
+    n(388685),
+    n(953529);
 var r = n(345074),
     i = n(339085),
     o = n(633302),
@@ -76,7 +76,9 @@ function f(e) {
         badge: e.badge,
         badgeColorPrimary: e.badge_color_primary,
         badgeColorSecondary: e.badge_color_secondary,
-        badgeHash: e.badge_hash
+        badgeHash: e.badge_hash,
+        premiumSubscriberCount: e.premium_subscription_count,
+        premiumTier: e.premium_tier
     };
 }
 function _(e) {
@@ -149,6 +151,8 @@ function h(e) {
                 badge: null,
                 badgeHash: null,
                 badgeColorPrimary: null,
-                badgeColorSecondary: null
+                badgeColorSecondary: null,
+                premiumSubscriberCount: l.premium_subscription_count,
+                premiumTier: l.premium_tier
             };
 }

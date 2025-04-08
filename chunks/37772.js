@@ -17,14 +17,14 @@ var r = n(200651),
     b = n(709054),
     x = n(594173),
     y = n(786761),
-    E = n(493892),
-    v = n(901461),
-    O = n(739566),
-    N = n(443877),
+    v = n(493892),
+    E = n(901461),
+    N = n(739566),
+    O = n(443877),
     j = n(492593),
     C = n(938353),
-    I = n(25015),
-    S = n(689674),
+    S = n(25015),
+    I = n(689674),
     T = n(963550),
     P = n(845080),
     A = n(295790),
@@ -91,21 +91,21 @@ let F = i.memo(function e(t) {
         ee = h.QK.useSetting(),
         et = (0, u.A)((null != (n = k.editedTimestamp) ? n : k.timestamp).valueOf()),
         en = (0, d.Z)(null == s ? void 0 : s.id),
-        { disableReactionCreates: er } = (0, N.Z)(s),
-        { content: ei, hasSpoilerEmbeds: ea } = (0, I.Z)(k, {
+        { disableReactionCreates: er } = (0, O.Z)(s),
+        { content: ei, hasSpoilerEmbeds: ea } = (0, S.Z)(k, {
             hideSimpleEmbedContent: J && $,
             allowList: et,
             allowHeading: et,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        el = (0, O.ZP)(k),
+        el = (0, N.ZP)(k),
         eo = null != (i = k.getGuildId()) ? i : void 0,
         es = (0, m.Z)(el),
         ec = (0, o.e7)([g.Z], () => k.hasFlag(R.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(k.id))),
         eu = k.type === R.uaV.THREAD_STARTER_MESSAGE && X.state === f.Y.LOADED && null != q,
         ed = !eu && void 0 === a,
-        ep = (0, S.Z)({
+        ep = (0, I.Z)({
             message: k,
             channel: s,
             enabled: ed
@@ -122,7 +122,7 @@ let F = i.memo(function e(t) {
                   hasThread: !1
               })
           )
-        : (_.Z.isBlockedForMessage(k) ? (a = D.t['+FcYMz']) : _.Z.isIgnoredForMessage(k) ? (a = D.t.VFWjc3) : (0, E.DQ)(k) && K && (a = D.t.xfkfTE), void 0 !== a)
+        : (_.Z.isBlockedForMessage(k) ? (a = D.t['+FcYMz']) : _.Z.isIgnoredForMessage(k) ? (a = D.t.VFWjc3) : (0, v.DQ)(k) && K && (a = D.t.xfkfTE), void 0 !== a)
           ? (0, r.jsx)(B, {
                 className: F,
                 compact: L,
@@ -164,8 +164,7 @@ let F = i.memo(function e(t) {
                     showMaskedLinks: et,
                     shouldHideMediaOptions: en,
                     shouldRedactExplicitContent: em,
-                    ctaButtonType: ef,
-                    hasInlineForwardButton: !1
+                    ctaButtonType: ef
                 }),
                 childrenExecutedCommand: (0, w.Z)(k, s, L),
                 childrenMessageContent: (0, T.Z)(t, ei),
@@ -174,7 +173,7 @@ let F = i.memo(function e(t) {
                 onClick: H,
                 hasThread: !1 !== z && null != ec && k.hasFlag(R.iLy.HAS_THREAD),
                 hasReply: k.type === R.uaV.REPLY,
-                isSystemMessage: (0, v.Z)(k),
+                isSystemMessage: (0, E.Z)(k),
                 messageRef: ep,
                 guildId: eo,
                 authorHasGradientRole: es

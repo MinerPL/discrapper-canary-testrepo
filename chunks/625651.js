@@ -1,4 +1,4 @@
-r.d(t, { default: () => j });
+r.d(t, { default: () => k });
 var n = r(200651),
     o = r(192379),
     a = r(442837),
@@ -6,18 +6,18 @@ var n = r(200651),
     s = r(14263),
     i = r(650774),
     l = r(430824),
-    u = r(156732),
+    u = r(795338),
     d = r(17622),
     m = r(279604),
     b = r(535396),
     p = r(680278),
     f = r(388032),
-    x = r(340114);
-function j(e) {
+    g = r(340114);
+function k(e) {
     var t,
         r,
-        { guildId: j, powerup: O } = e,
-        k = (function (e, t) {
+        { guildId: k, powerup: j } = e,
+        x = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -36,51 +36,51 @@ function j(e) {
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let { onDeactivate: I, error: _, isLoading: h } = (0, m.ZP)(j, O),
-        { onClose: N } = k,
-        g = o.useCallback(
+    let { onDeactivate: _, error: I, isLoading: O } = (0, m.ZP)(k, j),
+        { onClose: h } = x,
+        v = o.useCallback(
             (e) => {
-                I(e).then(() => {
-                    null == N || N();
+                _(e).then(() => {
+                    null == h || h();
                 });
             },
-            [N, I]
+            [h, _]
         ),
-        v = (0, u.Z)(O),
-        C = (function (e, t) {
+        N = (function (e, t) {
             let r = (0, a.e7)([i.Z], () => i.Z.getMemberCount(e)),
                 n = (0, s.Z)(e),
                 c = (0, a.e7)(
                     [l.Z],
-                    () => {
-                        if (t.skuId !== b.If || null == n) return 0;
-                        Object.values(l.Z.getRoles(e))
-                            .filter((e) => {
-                                var t;
-                                return (null == (t = e.colorStrings) ? void 0 : t.secondaryColor) != null;
-                            })
-                            .reduce((e, t) => {
-                                var r;
-                                return e + (null != (r = n[t.id]) ? r : 0);
-                            }, 0);
-                    },
+                    () =>
+                        t.skuId !== b.If || null == n
+                            ? 0
+                            : Object.values(l.Z.getRoles(e))
+                                  .filter((e) => {
+                                      var t;
+                                      return (null == (t = e.colorStrings) ? void 0 : t.secondaryColor) != null;
+                                  })
+                                  .reduce((e, t) => {
+                                      var r;
+                                      return e + (null != (r = n[t.id]) ? r : 0);
+                                  }, 0),
                     [e, t.skuId, n]
-                ),
-                u = o.useMemo(() => {
-                    if (t.type === b.Us.LEVEL) return r;
-                    switch (t.skuId) {
-                        case b.If:
-                            return c;
-                        case b.IN:
-                        default:
-                            return r;
-                    }
-                }, [t, c, r]);
-            return f.NW.formatToPlainString(p.Z['4jSvr6'], {
-                perk: t.title,
-                memberCount: u
-            });
-        })(j, O);
+                );
+            return o.useMemo(
+                () =>
+                    t.skuId === b.If
+                        ? c > 0
+                            ? f.NW.formatToPlainString(p.Z['4jSvr6'], {
+                                  perk: t.title,
+                                  memberCount: c
+                              })
+                            : f.NW.formatToPlainString(p.Z.cavtEh, { perk: t.title })
+                        : f.NW.formatToPlainString(p.Z['4jSvr6'], {
+                              perk: t.title,
+                              memberCount: r
+                          }),
+                [t, c, r]
+            );
+        })(k, j);
     return (0, n.jsxs)(
         c.Y0X,
         ((t = (function (e) {
@@ -109,86 +109,85 @@ function j(e) {
             return e;
         })(
             {
-                className: x.modal,
+                className: g.modal,
                 size: c.CgR.SMALL
             },
-            k
+            x
         )),
         (r = r =
             {
                 children: [
                     (0, n.jsxs)(c.hzk, {
-                        className: x.modalContentContainer,
+                        className: g.modalContentContainer,
                         scrollbarType: 'none',
                         children: [
                             (0, n.jsxs)('div', {
-                                className: x.headerContainer,
+                                className: g.headerContainer,
                                 children: [
                                     (0, n.jsxs)('div', {
-                                        className: x.header,
+                                        className: g.header,
                                         children: [
                                             (0, n.jsx)(c.X6q, {
                                                 variant: 'heading-md/semibold',
-                                                children: f.NW.formatToPlainString(p.Z.iEBw1N, { perk: O.title })
+                                                children: f.NW.formatToPlainString(p.Z.iEBw1N, { perk: j.title })
                                             }),
                                             (0, n.jsx)(c.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: f.NW.formatToPlainString(p.Z['7o0K+/'], { perk: O.title })
+                                                children: f.NW.formatToPlainString(p.Z['7o0K+/'], { perk: j.title })
                                             })
                                         ]
                                     }),
-                                    (0, n.jsx)(c.olH, { onClick: k.onClose })
+                                    (0, n.jsx)(c.olH, { onClick: x.onClose })
                                 ]
                             }),
                             (() => {
-                                switch (O.type) {
+                                switch (j.type) {
                                     case b.Us.LEVEL:
-                                        return (0, n.jsx)(d.Z, { powerup: O });
+                                        return (0, n.jsx)(d.Z, { powerup: j });
                                     case b.Us.PERK:
-                                        return (0, n.jsx)('img', {
-                                            alt: '',
-                                            src: v,
-                                            className: x.exampleImage
+                                        return (0, n.jsx)(u.m, {
+                                            className: g.image,
+                                            powerup: j
                                         });
                                 }
                             })(),
                             (0, n.jsxs)('div', {
-                                className: x.warningContainer,
+                                className: g.warningContainer,
                                 children: [
                                     (0, n.jsx)(c.Text, {
-                                        color: 'status-warning',
+                                        color: 'text-danger',
                                         variant: 'eyebrow',
                                         children: f.NW.string(p.Z.OVt5CA)
                                     }),
                                     (0, n.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
-                                        children: C
+                                        children: N
                                     })
                                 ]
                             }),
-                            null != _ &&
+                            null != I &&
                                 (0, n.jsx)(c.Text, {
-                                    className: x.errorText,
-                                    color: 'status-danger',
+                                    className: g.errorText,
+                                    color: 'text-danger',
                                     variant: 'text-sm/semibold',
-                                    children: _
+                                    children: I
                                 })
                         ]
                     }),
                     (0, n.jsxs)(c.mzw, {
-                        className: x.footer,
+                        className: g.footer,
                         children: [
                             (0, n.jsx)(c.zxk, {
-                                submitting: h,
+                                submitting: O,
                                 color: c.Ttl.RED,
-                                className: x.button,
-                                onClick: g,
+                                className: g.button,
+                                onClick: v,
                                 children: f.NW.string(p.Z.PYPdl5)
                             }),
                             (0, n.jsx)(c.zxk, {
                                 color: c.Ttl.PRIMARY,
-                                className: x.button,
-                                onClick: k.onClose,
+                                className: g.button,
+                                onClick: x.onClose,
                                 children: f.NW.string(f.t['ETE/oK'])
                             })
                         ]

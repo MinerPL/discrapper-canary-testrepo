@@ -1,42 +1,36 @@
-t.d(n, { Z: () => g }), t(47120), t(266796);
+t.d(n, { Z: () => v }), t(388685), t(953529);
 var r = t(200651),
     o = t(192379),
-    i = t(120356),
-    s = t.n(i),
+    s = t(120356),
+    i = t.n(s),
     a = t(793030),
-    l = t(156732),
-    c = t(690786),
-    d = t(838968),
+    l = t(690786),
+    c = t(838968),
     u = t(262212),
+    d = t(795338),
     m = t(279604),
-    p = t(535396),
-    x = t(680278),
-    _ = t(388032),
-    v = t(117172);
-function g(e) {
+    p = t(680278),
+    x = t(388032),
+    _ = t(117172);
+function v(e) {
     let { guildId: n, powerup: t } = e,
-        i = null != (0, c.Z)(n, t),
-        [g, f] = o.useState(void 0),
-        b = (0, l.Z)(t);
+        s = null != (0, l.Z)(n, t),
+        [v, g] = o.useState(void 0);
     return (
-        (0, m.KT)(g),
-        (0, r.jsxs)(d.Z, {
+        (0, m.KT)(v),
+        (0, r.jsxs)(c.Z, {
             guildId: n,
             powerup: t,
             children: [
-                (0, r.jsx)('div', {
-                    className: v.imageContainer,
-                    children: (0, r.jsx)('img', {
-                        className: s()(v.image, { [v.gradientRoleColorsImage]: t.skuId === p.If }),
-                        alt: '',
-                        src: b
-                    })
+                (0, r.jsx)(d.m, {
+                    className: _.image,
+                    powerup: t
                 }),
                 (0, r.jsxs)('div', {
-                    className: v.contentContainer,
+                    className: _.contentContainer,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: v.headerContainer,
+                            className: _.headerContainer,
                             children: [
                                 (0, r.jsx)(a.X6, {
                                     variant: 'heading-md/bold',
@@ -44,29 +38,29 @@ function g(e) {
                                 }),
                                 t.bundle &&
                                     (0, r.jsx)(a.xv, {
-                                        className: s()(v.bundle, { [v.active]: i }),
+                                        className: i()(_.bundle, { [_.active]: s }),
                                         variant: 'text-xs/semibold',
-                                        children: _.NW.string(x.Z.j2jUjY)
+                                        children: x.NW.string(p.Z.j2jUjY)
                                     })
                             ]
                         }),
                         (0, r.jsx)(a.xv, {
-                            className: v.description,
+                            className: _.description,
                             variant: 'text-sm/medium',
                             children: t.description
                         }),
-                        (0, r.jsx)(d.u, {
+                        (0, r.jsx)(c.u, {
                             guildId: n,
                             powerup: t
                         })
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: v.buttonContainer,
+                    className: _.buttonContainer,
                     children: (0, r.jsx)(u.ZP, {
                         guildId: n,
                         powerup: t,
-                        onError: f
+                        onError: g
                     })
                 })
             ]

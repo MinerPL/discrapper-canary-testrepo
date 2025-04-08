@@ -1,25 +1,28 @@
 n.d(t, {
     I: () => c,
-    Z: () => _
+    Z: () => u
 });
-var l = n(442837),
-    o = n(430824),
-    r = n(50101),
-    i = n(317169),
-    a = n(981631);
+var r = n(442837),
+    i = n(430824),
+    o = n(905128),
+    a = n(50101),
+    s = n(317169),
+    l = n(981631);
 function c(e) {
     var t, n;
-    let l = (0, r.gV)(e, 'useGuildPowerupsBoostCount'),
-        c = (0, i.I)(e),
-        _ = null != (n = null == (t = o.Z.getGuild(e)) ? void 0 : t.premiumTier) ? n : a.Eu4.NONE;
-    return l ? a.oCV[_] + c.available : c.total;
+    let r = (0, a.gV)(e, 'useGuildPowerupsBoostCount'),
+        c = (0, s.I)(e),
+        u = null != (n = null == (t = i.Z.getGuild(e)) ? void 0 : t.premiumTier) ? n : l.Eu4.NONE,
+        d = o.Z.hasFetchedUnlockedPowerups(e);
+    return r ? (d ? l.oCV[u] + c.available : 0) : c.total;
 }
-function _(e) {
-    let t = (0, r.Ek)(e, 'useGuildPowerupsBoostCount'),
-        n = (0, i.Z)(e),
-        c = (0, l.e7)([o.Z], () => {
+function u(e) {
+    let t = (0, a.Ek)(e, 'useGuildPowerupsBoostCount'),
+        n = (0, s.Z)(e),
+        c = (0, r.e7)([i.Z], () => {
             var t, n;
-            return null != (n = null == (t = o.Z.getGuild(e)) ? void 0 : t.premiumTier) ? n : a.Eu4.NONE;
-        });
-    return t ? a.oCV[c] + n.available : n.total;
+            return null != (n = null == (t = i.Z.getGuild(e)) ? void 0 : t.premiumTier) ? n : l.Eu4.NONE;
+        }),
+        u = (0, r.e7)([o.Z], () => o.Z.hasFetchedUnlockedPowerups(e));
+    return t ? (u ? l.oCV[c] + n.available : 0) : n.total;
 }

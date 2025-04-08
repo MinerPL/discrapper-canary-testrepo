@@ -2,8 +2,8 @@ n.d(t, {
     Z: () => C,
     a: () => f
 }),
-    n(47120),
-    n(266796);
+    n(388685),
+    n(953529);
 var r,
     i = n(442837),
     o = n(570140),
@@ -262,6 +262,7 @@ let C = new A(o.Z, {
     GUILD_PROFILE_UPDATE_FAILURE: y,
     MEMBER_VERIFICATION_FORM_UPDATE: O,
     INVITE_RESOLVE_SUCCESS: I,
+    INSTANT_INVITE_CREATE_SUCCESS: I,
     CREATE_CHANNEL_MODAL_SUBMIT: S,
     GUILD_SETTINGS_SET_WIDGET: T,
     GUILD_UPDATE: N,

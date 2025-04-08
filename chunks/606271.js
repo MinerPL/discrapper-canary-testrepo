@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(47120);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(392711),
     i = n.n(r),
     l = n(442837),
@@ -63,7 +63,7 @@ class P {
                     reason: t
                 });
             });
-        let e = [s.Z, c.ZP, p.Z, b.Z, d.Z, h.Z];
+        let e = [s.Z, c.ZP, p.Z, b.Z, d.Z, h.ZP];
         new l.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), a.Z.subscribe('MESSAGE_CREATE', this.handleMessage), a.Z.subscribe('MESSAGE_UPDATE', this.handleMessage), a.Z.subscribe('MESSAGE_DELETE', this.handleMessage), a.Z.subscribe('SPEAKING', this.handleSpeaking), a.Z.subscribe('OAUTH2_TOKEN_REVOKE', this.handleOAuth2TokenRevoke), a.Z.subscribe('GUILD_CREATE', this.handleGuildCreate), a.Z.subscribe('CHANNEL_CREATE', this.handleChannelCreate), a.Z.subscribe('LOGOUT', this.handleLogout), a.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), a.Z.subscribe('RPC_NOTIFICATION_CREATE', this.handleNotificationCreate), a.Z.subscribe('ACTIVITY_JOIN', this.handleActivityJoin), a.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', this.handleActivityLayoutModeUpdate), a.Z.subscribe('THERMAL_STATE_CHANGE', this.handleThermalStateChange), a.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', this.handleScreenOrientationUpdate), a.Z.subscribe('EMBEDDED_ACTIVITY_UPDATE', this.handleEmbeddedActivityUpdate), a.Z.subscribe('RELATIONSHIP_ADD', this.handleRelationshipAdd), a.Z.subscribe('RELATIONSHIP_UPDATE', this.handleRelationshipUpdate), a.Z.subscribe('RELATIONSHIP_REMOVE', this.handleRelationshipRemove), a.Z.subscribe('PRESENCE_UPDATES', this.handlePresenceUpdates), a.Z.subscribe('PRESENCES_REPLACE', this.handlePresencesReplace), a.Z.subscribe('USER_UPDATE', this.handleUserUpdate), a.Z.subscribe('ENTITLEMENT_CREATE', this.handleEntitlementCreate), a.Z.subscribe('ENTITLEMENT_DELETE', this.handleEntitlementDelete);
     }
     terminate() {
@@ -205,7 +205,13 @@ class P {
                         });
                         break;
                     case v.mFx.JOIN_REQUEST:
-                        this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_JOIN_REQUEST, (e) => e.socket.application.id === c, { user: (0, I.Z)(a) });
+                        this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_JOIN_REQUEST, (e) => e.socket.application.id === c, {
+                            user: (0, I.Z)(a),
+                            activity: s,
+                            type: l.type,
+                            channel_id: n,
+                            message_id: r.id
+                        });
                 }
             }),
             T(this, 'handleOAuth2TokenRevoke', (e) => {
