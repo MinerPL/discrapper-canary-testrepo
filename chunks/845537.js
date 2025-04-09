@@ -16,12 +16,12 @@ var i = n(442837),
     a = n(596454),
     s = n(99690),
     l = n(607070),
-    c = n(927723),
+    c = n(797610),
     u = n(754688),
     d = n(699450),
     f = n(303694),
     _ = n(124072),
-    p = n(692629);
+    p = n(891984);
 n(763296);
 var h = n(592125),
     m = n(430824),
@@ -185,6 +185,7 @@ function x(e) {
         d = 'username' === s && c;
     return (0, r.jsxs)(_.Z, {
         color: d ? a.color : null,
+        roleColors: d ? a.colorStrings : null,
         children: [
             u &&
                 (0, r.jsx)(o.FhE, {

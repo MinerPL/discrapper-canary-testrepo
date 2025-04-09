@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(477747),
     v = n(598077),
     y = n(496675),
-    C = n(764260),
-    O = n(95242),
+    O = n(764260),
+    C = n(95242),
     I = n(541575),
     E = n(420966),
     S = n(337344),
@@ -38,7 +38,7 @@ let L = (0, h.Un)({
         createPromise: () => n.e('4848').then(n.bind(n, 797967)),
         webpackId: 797967
     }),
-    M = o().debounce((e, t) => (0, C.Uv)(e, t), 200);
+    M = o().debounce((e, t) => (0, O.Uv)(e, t), 200);
 function G(e) {
     let { role: t, disabled: n } = e,
         [s, a] = i.useState(t.name);
@@ -79,11 +79,11 @@ let U = [
     }
 ];
 function B(e) {
-    let { role: t, guildId: n, selectedStyle: i, onStyleSelect: s } = e,
-        l = z(D.NW.string(D.t.Mi9KbW)),
-        o = (0, g.ZP)(),
-        d = (0, b.oC)(n, t),
-        p = {
+    let { role: t, guildId: n, selectedStyle: i, onStyleSelect: s, disabled: l } = e,
+        o = z(D.NW.string(D.t.Mi9KbW)),
+        d = (0, g.ZP)(),
+        p = (0, b.oC)(n, t),
+        h = {
             dark: {
                 src: k,
                 name: t.name
@@ -98,11 +98,14 @@ function B(e) {
         children: (0, r.jsx)('div', {
             className: Z.roleStyleContainer,
             children: U.map((e) => {
-                let { id: n, colors: g, labelString: h } = e;
+                let { id: n, colors: g, labelString: f } = e;
                 return (0, r.jsxs)(
                     'button',
                     {
-                        className: a()(Z.roleStylePreviewContainer, { [Z.selected]: i === n }),
+                        className: a()(Z.roleStylePreviewContainer, {
+                            [Z.selected]: i === n,
+                            [Z.disabled]: l
+                        }),
                         onClick: () =>
                             (function (e) {
                                 let n;
@@ -130,7 +133,7 @@ function B(e) {
                                             tertiary_color: void 0
                                         };
                                 }
-                                (0, C.TW)(r, n);
+                                (0, O.TW)(r, n);
                             })(n),
                         children: [
                             (0, r.jsx)(m.Rny, {
@@ -138,7 +141,7 @@ function B(e) {
                                     className: Z.roleStyleMessageContainer,
                                     children: (0, r.jsx)(N.Z, {
                                         author: {
-                                            nick: l.author.username,
+                                            nick: o.author.username,
                                             colorStrings: {
                                                 primaryColor: null != g.primary_color ? (0, c.Rf)(g.primary_color) : void 0,
                                                 secondaryColor: null != g.secondary_color ? (0, c.Rf)(g.secondary_color) : void 0,
@@ -146,9 +149,9 @@ function B(e) {
                                             },
                                             colorString: null != g.primary_color ? (0, c.Rf)(g.primary_color) : void 0
                                         },
-                                        message: l,
+                                        message: o,
                                         preview: !0,
-                                        roleIcon: null != d ? d : (0, u.ap)(o) ? p.light : p.dark,
+                                        roleIcon: null != p ? p : (0, u.ap)(d) ? h.light : h.dark,
                                         isGroupStart: !0,
                                         disableInteraction: !0
                                     })
@@ -156,7 +159,7 @@ function B(e) {
                             }),
                             (0, r.jsx)('div', {
                                 className: Z.roleStyleLabel,
-                                children: D.NW.string(h)
+                                children: D.NW.string(f)
                             })
                         ]
                     },
@@ -186,7 +189,7 @@ function F(e) {
                     disabled: n,
                     onChange: (e) => {
                         var n;
-                        return (n = e), void (t.color !== n && (n !== w.p6O || 0 !== t.color) && (n === w.p6O && (n = 0), (0, C.OW)(t.id, n)));
+                        return (n = e), void (t.color !== n && (n !== w.p6O || 0 !== t.color) && (n === w.p6O && (n = 0), (0, O.OW)(t.id, n)));
                     },
                     customPickerPosition: 'right'
                 },
@@ -321,7 +324,7 @@ function V(e) {
             (0, r.jsx)(m.j7V, {
                 disabled: n,
                 value: t.hoist,
-                onChange: (e) => (0, C.we)(t.id, e, t.mentionable),
+                onChange: (e) => (0, O.we)(t.id, e, t.mentionable),
                 hideBorder: !0,
                 children: D.NW.string(D.t.vceJPj)
             }),
@@ -329,7 +332,7 @@ function V(e) {
             (0, r.jsx)(m.j7V, {
                 disabled: n,
                 value: t.mentionable,
-                onChange: (e) => (0, C.we)(t.id, t.hoist, e),
+                onChange: (e) => (0, O.we)(t.id, t.hoist, e),
                 note: D.NW.string(D.t.kRg5W1),
                 hideBorder: !0,
                 children: D.NW.format(D.t.DTXoJS, {})
@@ -348,7 +351,7 @@ function Y(e) {
         h = (0, p.pM)(null == t ? void 0 : t.id, n.id),
         f = s || h,
         b = (0, d.e7)([y.Z], () => y.Z.canImpersonateRole(t, n)),
-        { headerHeight: x, headerRef: j } = (0, O.Z)(0),
+        { headerHeight: x, headerRef: j } = (0, C.Z)(0),
         { scrolledToTop: N, handleScroll: v } = (0, E.V)();
     return (0, r.jsx)(m.yWw, {
         className: Z.scroller,
@@ -381,7 +384,8 @@ function Y(e) {
                         role: n,
                         guildId: t.id,
                         selectedStyle: u,
-                        onStyleSelect: g
+                        onStyleSelect: g,
+                        disabled: f
                     }),
                 (0, r.jsx)(F, {
                     role: n,

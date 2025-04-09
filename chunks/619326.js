@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(47120);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -83,11 +83,31 @@ function j(e) {
             orientation: 'horizontal',
             isDisabled: s
         }),
+        { ref: y } = v,
+        O = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        s = Object.keys(e);
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var s = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(v, ['ref']),
         C = (0, o.xUy)({
             isSelected: j,
             label: g.NW.formatToPlainString(g.t.ZC69mJ, { colorHex: (0, l.Rf)(m.p6O) })
         }),
-        O = (0, o.xUy)({
+        I = (0, o.xUy)({
             isSelected: !j,
             label: g.NW.formatToPlainString(g.t['3kiLZW'], { colorHex: (0, l.Rf)(t) })
         });
@@ -97,9 +117,10 @@ function j(e) {
             h(
                 {
                     className: p.buttonsContainer,
-                    'aria-label': g.NW.string(g.t.FJjrIy)
+                    'aria-label': g.NW.string(g.t.FJjrIy),
+                    ref: y
                 },
-                v
+                O
             ),
             {
                 children: [
@@ -149,7 +170,7 @@ function j(e) {
                                             onClick: s ? void 0 : u,
                                             'aria-disabled': s
                                         },
-                                        O
+                                        I
                                     ),
                                     {
                                         children: [

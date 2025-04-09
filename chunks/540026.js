@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(47120);
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(200651),
     o = n(192379),
@@ -85,7 +85,9 @@ class h extends (r = o.Component) {
                 className: s()(r, o ? c.mediaBarInteractionDragging : c.mediaBarInteraction, t === _.VOLUME ? c.mediaBarInteractionVolume : null),
                 onMouseDown: this.handleDragStart,
                 onMouseMove: this.handleMouseMove,
-                ref: (e) => (this.wrapper = e),
+                ref: (e) => {
+                    this.wrapper = e;
+                },
                 children: (0, i.jsxs)('div', {
                     className: s()(c.mediaBarWrapper, t === _.VOLUME ? c.mediaBarWrapperVolume : null),
                     children: [

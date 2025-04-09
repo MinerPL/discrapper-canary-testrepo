@@ -1,4 +1,4 @@
-n.d(t, { default: () => E }), n(47120);
+n.d(t, { default: () => A }), n(388685);
 var r = n(200651),
     a = n(192379),
     o = n(120356),
@@ -54,7 +54,7 @@ function N(e) {
         ]
     });
 }
-function A(e) {
+function E(e) {
     let { selectedDuration: t, onSelect: n } = e,
         a = (0, g.Z)(),
         o = a[t];
@@ -91,7 +91,7 @@ function A(e) {
         ]
     });
 }
-function E(e) {
+function A(e) {
     let { channel: t, transitionState: n, onClose: o } = e,
         d = (0, p._N)();
     (0, u.Z)({
@@ -136,7 +136,7 @@ function E(e) {
             (e) => {
                 var n, a;
                 return (0, r.jsx)(
-                    E,
+                    A,
                     ((n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -272,9 +272,15 @@ function E(e) {
                                         answerTextInputRefs: k,
                                         error: null == V ? void 0 : V['answer-'.concat(e.localCreationAnswerId)],
                                         canRemoveAnswer: q,
-                                        ref: (e) => (C.current[n] = e),
-                                        inputRef: (e) => (k.current[n] = e),
-                                        deleteButtonRef: (e) => (S.current[n] = e)
+                                        ref: (e) => {
+                                            C.current[n] = e;
+                                        },
+                                        inputRef: (e) => {
+                                            k.current[n] = e;
+                                        },
+                                        deleteButtonRef: (e) => {
+                                            S.current[n] = e;
+                                        }
                                     },
                                     e.localCreationAnswerId
                                 )
@@ -303,7 +309,7 @@ function E(e) {
                         ]
                     }),
                     (0, r.jsx)(c.LZC, { size: 18 }),
-                    (0, r.jsx)(A, {
+                    (0, r.jsx)(E, {
                         selectedDuration: U,
                         onSelect: M
                     })

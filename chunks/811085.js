@@ -1,4 +1,4 @@
-s.d(t, { Z: () => j }), s(47120), s(266796);
+s.d(t, { Z: () => j }), s(388685), s(953529);
 var a = s(200651),
     n = s(192379),
     i = s(392711),
@@ -132,7 +132,9 @@ function j() {
                                     'div',
                                     {
                                         className: g.statusOption,
-                                        ref: (e) => (N.current[parseInt(n)] = e),
+                                        ref: (e) => {
+                                            N.current[parseInt(n)] = e;
+                                        },
                                         children: [
                                             r
                                                 ? (0, a.jsx)(T, {

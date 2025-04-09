@@ -6,8 +6,8 @@ n.d(t, {
     sc: () => R,
     zs: () => U
 }),
-    n(627341),
-    n(266796);
+    n(314940),
+    n(953529);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -26,8 +26,8 @@ var r = n(200651),
     b = n(79390),
     x = n(839963),
     y = n(294608),
-    E = n(65145),
-    v = n(981631),
+    v = n(65145),
+    E = n(981631),
     O = n(388032),
     N = n(56228);
 function j(e) {
@@ -73,7 +73,7 @@ function C(e, t) {
         e
     );
 }
-function I(e) {
+function S(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)('ul', {
         'aria-label': O.NW.string(O.t.sJpqBQ),
@@ -81,7 +81,7 @@ function I(e) {
         children: n
     });
 }
-function S(e) {
+function I(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)('div', {
         'aria-label': O.NW.string(O.t.sJpqBQ),
@@ -92,18 +92,47 @@ function S(e) {
 }
 function T(e) {
     let { className: t, children: n } = e,
-        i = (0, s.arW)({ orientation: 'vertical' });
+        i = (0, s.arW)({ orientation: 'vertical' }),
+        { ref: a } = i,
+        l = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(i, ['ref']);
     return (0, r.jsx)(
         'div',
-        C(j({ 'aria-label': O.NW.string(O.t.sJpqBQ) }, i), {
-            className: t,
-            children: n
-        })
+        C(
+            j(
+                {
+                    'aria-label': O.NW.string(O.t.sJpqBQ),
+                    ref: a
+                },
+                l
+            ),
+            {
+                className: t,
+                children: n
+            }
+        )
     );
 }
 function P(e) {
     let { className: t, onClick: n, isSelected: i, isFirstAnswer: a, children: o } = e,
-        { pollAnswerRef: c } = (0, E.dv)();
+        { pollAnswerRef: c } = (0, v.dv)();
     return (0, r.jsx)(s.P3F, {
         role: 'checkbox',
         className: l()(t, N.enabled),
@@ -115,7 +144,7 @@ function P(e) {
 }
 function A(e) {
     let { className: t, children: n, onClick: i, isSelected: a, hasSelectedAnyAnswer: o, isFirstAnswer: c } = e,
-        { pollAnswerRef: u } = (0, E.dv)();
+        { pollAnswerRef: u } = (0, v.dv)();
     return (0, r.jsx)(s.P3F, {
         role: 'radio',
         className: l()(t, N.enabled),
@@ -137,7 +166,7 @@ function w(e) {
                 answerElementType: 1
             }))
             .with({ answersInteraction: x.Y7.CHECKBOXES }, () => ({
-                ContainerComponent: S,
+                ContainerComponent: I,
                 answerElementType: 2
             }))
             .with(
@@ -146,12 +175,12 @@ function w(e) {
                     answersInteraction: x.Y7.LIST
                 },
                 () => ({
-                    ContainerComponent: I,
+                    ContainerComponent: S,
                     answerElementType: 3
                 })
             )
             .otherwise(() => ({
-                ContainerComponent: I,
+                ContainerComponent: S,
                 answerElementType: 0
             }));
     return (0, r.jsx)(d, {
@@ -288,7 +317,7 @@ function M(e) {
                 },
                 () => ({
                     color: d.Z.BUTTON_POSITIVE_BACKGROUND,
-                    backgroundColor: (0, u.Lq)(v.Ilk.WHITE_500)
+                    backgroundColor: (0, u.Lq)(E.Ilk.WHITE_500)
                 })
             )
             .with(
@@ -302,8 +331,8 @@ function M(e) {
                 })
             )
             .otherwise(() => ({
-                color: (0, u.Lq)(v.Ilk.BRAND_500),
-                backgroundColor: (0, u.Lq)(v.Ilk.WHITE_500)
+                color: (0, u.Lq)(E.Ilk.BRAND_500),
+                backgroundColor: (0, u.Lq)(E.Ilk.WHITE_500)
             }));
     return (0, r.jsx)(s.owK, {
         size: 'custom',
@@ -349,7 +378,7 @@ function U(e) {
                 size: 'custom',
                 width: a,
                 height: a,
-                color: (0, u.Lq)(v.Ilk.WHITE_500)
+                color: (0, u.Lq)(E.Ilk.WHITE_500)
             })
     });
 }

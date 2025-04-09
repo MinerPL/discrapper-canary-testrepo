@@ -59,15 +59,15 @@ function N(e, t) {
     );
 }
 let _ = function (e) {
-    var t, s, _, v, C;
-    let { guildId: O, action: y, actionIndex: I, onChange: E, onDelete: S, onDragStart: T, onDragComplete: P, onDragReset: w } = e,
-        R = (0, l.e7)([p.Z], () => p.Z.getChannel(y.channelId)),
-        Z = (0, l.e7)([h.Z], () => h.Z.getGuild(O)),
-        { customEmoji: D, unicodeEmoji: A } = (0, u.Z)(null == (t = y.emoji) ? void 0 : t.id, null == (s = y.emoji) ? void 0 : s.name),
-        k = null == y.emoji || null != D || null != A,
+    var t, s, _, v, y;
+    let { guildId: O, action: C, actionIndex: I, onChange: E, onDelete: S, onDragStart: T, onDragComplete: P, onDragReset: w } = e,
+        R = (0, l.e7)([p.Z], () => p.Z.getChannel(C.channelId)),
+        D = (0, l.e7)([h.Z], () => h.Z.getGuild(O)),
+        { customEmoji: Z, unicodeEmoji: A } = (0, u.Z)(null == (t = C.emoji) ? void 0 : t.id, null == (s = C.emoji) ? void 0 : s.name),
+        k = null == C.emoji || null != Z || null != A,
         W = f.ZP.getNewMemberActionIconURL({
-            channelId: y.channelId,
-            icon: y.icon
+            channelId: C.channelId,
+            icon: C.icon
         }),
         L = null;
     null != R && (0, m.kb)(R) ? k || (L = b.NW.string(b.t.wAkIZW)) : (L = b.NW.string(b.t.CbTEKC));
@@ -79,7 +79,7 @@ let _ = function (e) {
         } = (0, d.Z)({
             type: 'NEW_MEMBER_ACTION',
             index: I,
-            optionId: y.channelId,
+            optionId: C.channelId,
             onDragStart: T,
             onDragComplete: P,
             onDragReset: w
@@ -93,15 +93,15 @@ let _ = function (e) {
                             e,
                             N(j({}, t), {
                                 guildId: O,
-                                action: y,
+                                action: C,
                                 onSave: (e, t, n) => E(I, e, t, n),
                                 onDelete: () => S(I)
                             })
                         );
                 });
-        }, [O, y, I, E, S]);
-    if (null == R || null == Z) return null;
-    let z = null != (C = (0, c.KS)(R)) ? C : o.VL1;
+        }, [O, C, I, E, S]);
+    if (null == R || null == D) return null;
+    let z = null != (y = (0, c.KS)(R)) ? y : o.VL1;
     return (0, r.jsxs)('div', {
         className: x.actionItemContainer,
         children: [
@@ -111,7 +111,9 @@ let _ = function (e) {
                     [x.dropIndicatorAfter]: null != G && I > G,
                     [x.actionItemError]: null != L
                 }),
-                ref: (e) => M(U(e)),
+                ref: (e) => {
+                    M(U(e));
+                },
                 children: [
                     (0, r.jsx)('div', {
                         className: x.dragContainer,
@@ -138,8 +140,8 @@ let _ = function (e) {
                         : (0, r.jsx)('div', {
                               className: x.actionItemEmojiWrapper,
                               children: (0, r.jsx)(g.Z, {
-                                  emojiId: null == (_ = y.emoji) ? void 0 : _.id,
-                                  emojiName: null == (v = y.emoji) ? void 0 : v.name,
+                                  emojiId: null == (_ = C.emoji) ? void 0 : _.id,
+                                  emojiName: null == (v = C.emoji) ? void 0 : v.name,
                                   size: g.R.MEDIUM,
                                   defaultComponent: (0, r.jsx)(z, {})
                               })
@@ -150,7 +152,7 @@ let _ = function (e) {
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                children: y.title
+                                children: C.title
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-xs/medium',

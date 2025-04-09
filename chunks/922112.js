@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(266796);
+n.d(t, { Z: () => x }), n(953529);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -57,10 +57,10 @@ function b(e, t) {
 }
 let x = function (e) {
     let { guildId: t, resourceChannel: s, index: x, onDragComplete: j, onDragStart: N, onDragReset: _ } = e,
-        { title: v, channelId: C, description: O } = s,
-        y = d.Z.getChannel(C),
+        { title: v, channelId: y, description: O } = s,
+        C = d.Z.getChannel(y),
         I = null;
-    (null != y && (0, c.k3)(y)) || (I = p.NW.string(p.t.kTdL8f));
+    (null != C && (0, c.k3)(C)) || (I = p.NW.string(p.t.kTdL8f));
     let E = null == O || 0 === O.length,
         S = u.ZP.getResourceChannelIconURL({
             channelId: s.channelId,
@@ -79,13 +79,13 @@ let x = function (e) {
             onDragComplete: j,
             onDragReset: _
         }),
-        Z = i.useCallback(
+        D = i.useCallback(
             (e) => {
                 (0, m.XG)(s.channelId, e);
             },
             [s.channelId]
         ),
-        D = i.useCallback(
+        Z = i.useCallback(
             (e, n) => {
                 let r = g.Z.getSettings();
                 null != r &&
@@ -106,15 +106,15 @@ let x = function (e) {
                             b(f({}, n), {
                                 guildId: t,
                                 resourceChannel: s,
-                                onSave: Z,
+                                onSave: D,
                                 onDelete: () => (0, m.Hz)(s.channelId),
-                                onIconUpload: D
+                                onIconUpload: Z
                             })
                         );
                 }),
-            [t, s, Z, D]
+            [t, s, D, Z]
         );
-    return null == y
+    return null == C
         ? null
         : (0, r.jsxs)('div', {
               className: h.resourceChannelContainer,
@@ -125,7 +125,9 @@ let x = function (e) {
                           [h.dropIndicatorAfter]: null != P && x > P,
                           [h.resourceChannelError]: null != I
                       }),
-                      ref: (e) => T(w(e)),
+                      ref: (e) => {
+                          T(w(e));
+                      },
                       children: [
                           (0, r.jsx)('div', {
                               className: h.dragContainer,

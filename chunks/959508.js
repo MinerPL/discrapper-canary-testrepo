@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -19,20 +19,20 @@ var r = n(200651),
     N = n(388032),
     _ = n(434840);
 let v = { optionErrors: [] };
-function C(e) {
+function y(e) {
     var t;
-    let { guild: n, prompt: s, disableAutofocus: d, promptIndex: x, dragIndex: C, includeCount: I, singleColumn: E, onPromptDragComplete: S, onPromptDragStart: T, onPromptDragReset: P } = e,
+    let { guild: n, prompt: s, disableAutofocus: d, promptIndex: x, dragIndex: y, includeCount: I, singleColumn: E, onPromptDragComplete: S, onPromptDragStart: T, onPromptDragReset: P } = e,
         { dropdownsAllowed: w } = (0, m.Ug)(n.id),
         R = (0, l.e7)([h.Z], () => h.Z.editedDefaultChannelIds),
-        Z = w ? j.qm : j.M$,
+        D = w ? j.qm : j.M$,
         {
-            drag: D,
+            drag: Z,
             dragSourcePosition: A,
             drop: k,
             setIsDraggable: W
         } = (0, c.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
-            index: C,
+            index: y,
             optionId: s.id,
             onDragStart: T,
             onDragComplete: S,
@@ -73,7 +73,9 @@ function C(e) {
                       [_.dropIndicatorAfter]: null != A && x > A,
                       [_.containerFocused]: U
                   }),
-                  ref: (e) => D(k(e)),
+                  ref: (e) => {
+                      Z(k(e));
+                  },
                   children: [
                       (0, r.jsx)('div', {
                           className: _.dragContainer,
@@ -130,7 +132,9 @@ function C(e) {
                       [_.dropIndicatorAfter]: null != A && x > A,
                       [_.containerFocused]: U
                   }),
-                  ref: (e) => D(k(e)),
+                  ref: (e) => {
+                      Z(k(e));
+                  },
                   children: [
                       (0, r.jsx)('div', {
                           className: _.dragContainer,
@@ -169,14 +173,14 @@ function C(e) {
                           children: H
                               ? N.NW.formatToPlainString(N.t.AbvhZG, {
                                     count: s.options.length,
-                                    total: Z
+                                    total: D
                                 })
                               : N.NW.formatToPlainString(N.t.b7VxYW, {
                                     count: s.options.length,
-                                    total: Z
+                                    total: D
                                 })
                       }),
-                      (0, r.jsx)(y, {
+                      (0, r.jsx)(C, {
                           guild: n,
                           prompt: s,
                           promptIndex: x,
@@ -280,7 +284,7 @@ function O(e) {
         ]
     });
 }
-function y(e) {
+function C(e) {
     let { guild: t, prompt: n, promptIndex: i, singleColumn: s, errors: a } = e,
         { dropdownsAllowed: l } = (0, m.Ug)(t.id),
         o = l ? j.qm : j.M$,

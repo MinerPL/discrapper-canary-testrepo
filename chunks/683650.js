@@ -1,68 +1,70 @@
-n.d(t, {
-    o: function () {
-        return m;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(481060),
-    l = n(471985),
-    o = n(266843),
-    c = n(341907),
-    u = n(46140),
-    d = n(689938),
-    _ = n(695623),
-    E = n(87181);
-function I() {
-    let e = (0, l.Z)(u.dr.EMBED_DESKTOP);
-    return (0, i.jsx)('div', {
-        className: _.buttonContainer,
-        children: (0, i.jsx)(r.Button, {
-            className: _.button,
-            color: r.ButtonColors.BRAND,
+n.d(t, { o: () => h });
+var r = n(200651);
+n(192379);
+var s = n(120356),
+    o = n.n(s),
+    i = n(481060),
+    a = n(617136),
+    l = n(497505),
+    c = n(266843),
+    u = n(341907),
+    d = n(46140),
+    m = n(388032),
+    p = n(444879),
+    x = n(87181);
+function g() {
+    return (0, r.jsx)('div', {
+        className: p.buttonContainer,
+        children: (0, r.jsx)(i.zxk, {
+            className: p.button,
+            color: i.Ttl.BRAND,
             onClick: () => {
-                (0, c.navigateToQuestHome)(u.dr.EMBED_DESKTOP);
+                (0, u.navigateToQuestHome)({ fromContent: l.jn.QUESTS_EMBED });
             },
-            children: e ? d.Z.Messages.QUESTS : d.Z.Messages.GIFT_INVENTORY
+            children: m.NW.string(m.t.GURBQk)
         })
     });
 }
-function m() {
-    let { containerRef: e, size: t } = (0, o.h)();
-    return (0, i.jsxs)('div', {
-        ref: (t) => (e.current = t),
-        className: s()(_.container, {
-            [_.wide]: 'lg' === t,
-            [_.tall]: 'lg' !== t
-        }),
-        children: [
-            (0, i.jsxs)('div', {
-                className: _.contentContainer,
-                children: [
-                    (0, i.jsx)(r.Heading, {
-                        variant: 'lg' === t ? 'heading-xl/bold' : 'heading-lg/bold',
-                        color: 'header-primary',
-                        children: d.Z.Messages.QUESTS_EMBED_INVALID_HEADING
-                    }),
-                    (0, i.jsx)(r.Text, {
-                        variant: 'lg' === t ? 'text-sm/medium' : 'text-xs/medium',
-                        color: 'text-normal',
-                        className: _.__invalid_mobileWebCopy,
-                        children: d.Z.Messages.QUESTS_EMBED_INVALID_BODY_2
-                    }),
-                    (0, i.jsx)(I, {})
-                ]
+function h(e) {
+    let { questId: t } = e,
+        { containerRef: n, size: s } = (0, c.h)();
+    return (
+        (0, a.Zk)(d.V_.UNKNOWN_QUEST, t),
+        (0, r.jsxs)('div', {
+            ref: (e) => {
+                n.current = e;
+            },
+            className: o()(p.container, {
+                [p.wide]: 'lg' === s,
+                [p.tall]: 'lg' !== s
             }),
-            (0, i.jsx)('div', {
-                className: _.imgContainer,
-                children: (0, i.jsx)('img', {
-                    src: E,
-                    alt: '',
-                    className: _.missingQuestImage
+            children: [
+                (0, r.jsxs)('div', {
+                    className: p.contentContainer,
+                    children: [
+                        (0, r.jsx)(i.X6q, {
+                            variant: 'lg' === s ? 'heading-xl/bold' : 'heading-lg/bold',
+                            color: 'header-primary',
+                            children: m.NW.string(m.t.vnP31d)
+                        }),
+                        (0, r.jsx)(i.Text, {
+                            variant: 'lg' === s ? 'text-sm/medium' : 'text-xs/medium',
+                            color: 'text-normal',
+                            className: p.__invalid_mobileWebCopy,
+                            children: m.NW.string(m.t.CTn0yc)
+                        }),
+                        (0, r.jsx)(g, {})
+                    ]
+                }),
+                (0, r.jsx)('div', {
+                    className: p.imgContainer,
+                    children: (0, r.jsx)('img', {
+                        src: x,
+                        alt: '',
+                        className: p.missingQuestImage
+                    })
                 })
-            })
-        ]
-    });
+            ]
+        })
+    );
 }
