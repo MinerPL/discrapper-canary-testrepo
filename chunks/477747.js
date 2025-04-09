@@ -1,10 +1,12 @@
-n.d(t, { Z: () => a });
-var r = n(442837),
-    l = n(430824),
-    o = n(50101),
-    i = n(981631);
-function a(e, t) {
-    let n = (0, r.e7)([l.Z], () => l.Z.getGuild(e)),
-        a = (0, o.Ek)(null == n ? void 0 : n.id, t);
-    return null != n && a && n.hasFeature(i.oNc.ENHANCED_ROLE_COLORS);
+r.d(t, { Z: () => o });
+var n = r(442837),
+    l = r(430824),
+    i = r(50101),
+    a = r(981631);
+function o(e, t) {
+    let r = (0, n.e7)([l.Z], () => {
+        let t = l.Z.getGuild(e);
+        return null != t && t.hasFeature(a.oNc.ENHANCED_ROLE_COLORS);
+    });
+    return (0, i.Ek)(null != e ? e : void 0, t) && r;
 }

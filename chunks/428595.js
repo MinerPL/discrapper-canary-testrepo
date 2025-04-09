@@ -1,9 +1,9 @@
-n.d(t, { Z: () => er }), n(301563), n(757143), n(653041), n(627494), n(47120), n(566702), n(474991), n(398202);
+n.d(t, { Z: () => er }), n(35282), n(704826), n(539854), n(804061), n(388685), n(781311), n(413496), n(433524);
 var r = n(392711),
     i = n.n(r),
     o = n(477660),
     a = n.n(o),
-    s = n(927723),
+    s = n(797610),
     l = n(633302),
     c = n(181918),
     u = n(11637),
@@ -85,7 +85,7 @@ let k = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     U = /^ *>>> ?/,
     G = /^ *> ?/gm,
     B = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
-function F(e) {
+function V(e) {
     let t = (0, b.yw)(e[1]);
     if (null == t)
         return {
@@ -105,11 +105,11 @@ function F(e) {
         title: void 0
     };
 }
-let V = (e) => {
+let F = (e) => {
         let t = d.Z.getChannel(e);
         return null == t ? void 0 : t.getGuildId();
     },
-    Z = (e) => (null != e.guildId ? f.Z.getGuild(e.guildId) : null != e.channelId ? f.Z.getGuild(V(e.channelId)) : null),
+    Z = (e) => (null != e.guildId ? f.Z.getGuild(e.guildId) : null != e.channelId ? f.Z.getGuild(F(e.channelId)) : null),
     H = {
         newline: a().defaultRules.newline,
         paragraph: a().defaultRules.paragraph,
@@ -148,8 +148,11 @@ let V = (e) => {
             }
         }),
         link: b.ZP,
-        autolink: M(L({}, a().defaultRules.autolink), { parse: F }),
-        mailto: M(L({}, a().defaultRules.mailto), { requiredFirstCharacters: ['<'] }),
+        autolink: M(L({}, a().defaultRules.autolink), { parse: V }),
+        mailto: M(L({}, a().defaultRules.mailto), {
+            match: a().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
+            requiredFirstCharacters: ['<']
+        }),
         tel: M(L({}, a().defaultRules.mailto), {
             requiredFirstCharacters: ['<'],
             match: a().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:([0-9]+|\([0-9]+\)))(?:[- .\/]?([0-9]+|\([0-9]+\)))+)>/),
@@ -191,7 +194,7 @@ let V = (e) => {
                 }
                 return n;
             },
-            parse: F
+            parse: V
         }),
         strong: a().defaultRules.strong,
         em: a().defaultRules.em,
@@ -443,7 +446,7 @@ let V = (e) => {
                     itemContent: l(s),
                     itemId: o,
                     id: i,
-                    guildId: V(n.channelId),
+                    guildId: F(n.channelId),
                     channelId: i
                 };
             }
